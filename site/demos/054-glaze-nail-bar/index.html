@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="054">
+<meta name="demo:brand" content="Glaze Nail Bar">
+<title>Glaze Nail Bar — nail salon, Chatswood</title>
+<meta name="description" content="Glaze Nail Bar is a fictional nail salon in Chatswood, NSW, with a live nail designer: pick a nail, colour, finish, art and shape, then save your set.">
+<meta name="theme-color" content="#F7F3FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Tilt+Warp&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--pearl:#F7F3FF;--lilac:#D7C9FF;--silver:#C0C0C8;--aub:#2A1B3D;--mute:#5A4C6E;--line:#E2DAF3;
+--disp:"Tilt Warp","Arial Rounded MT Bold","Trebuchet MS",sans-serif;--sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--holo:conic-gradient(from calc(var(--mx,.5) * 360deg),#ffd9f1,#d7c9ff,#c3ecff,#d4ffe9,#fff3c6,#ffd9f1);
+--pad:clamp(16px,4vw,56px);--mx:.5;--my:.5}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--pearl);color:var(--aub);font:400 16.5px/1.6 var(--sans);overflow-x:clip}
+body::before{content:"";position:fixed;inset:-20% -10% auto;height:120vh;z-index:-1;pointer-events:none;background:radial-gradient(40% 36% at 18% 22%,rgba(215,201,255,.55),transparent 70%),radial-gradient(34% 30% at 86% 14%,rgba(195,236,255,.5),transparent 70%),radial-gradient(38% 34% at 70% 70%,rgba(255,217,241,.45),transparent 70%)}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:400}
+button,input,select,textarea{font:inherit;color:inherit}
+svg{display:block}
+:focus-visible{outline:2.5px solid var(--aub);outline-offset:3px}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;padding:12px 16px;border-radius:12px;background:var(--aub);color:var(--pearl);font-weight:600}
+.skip:focus{top:12px}
+.eyebrow{margin:0 0 8px;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.chrome{background:linear-gradient(100deg,#2A1B3D 0%,#4b3a6b 16%,#a99bd6 27%,#2A1B3D 38%,#5e4c85 56%,#b9aee2 66%,#3a2a55 78%,#2A1B3D 100%);background-size:220% 100%;background-position:calc(var(--mx) * 100%) 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2{font-family:var(--disp);font-size:clamp(36px,5.4vw,64px);line-height:1;letter-spacing:-.01em}
+.h2::after{content:"";display:block;width:88px;height:6px;margin:16px 0 4px;border-radius:6px;background:linear-gradient(90deg,#ffd9f1,#d7c9ff,#c3ecff,#d4ffe9,#fff3c6)}
+.visit .h2{margin-bottom:14px}
+.holo-border{position:relative;isolation:isolate}
+.holo-border::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;padding:1.5px;background:var(--holo);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border:0;border-radius:999px;background:var(--aub);color:var(--pearl);font-weight:600;font-size:15.5px;text-decoration:none;cursor:pointer;box-shadow:0 10px 24px -12px rgba(42,27,61,.7),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 14px 30px -12px rgba(42,27,61,.75),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:rgba(255,255,255,.7);color:var(--aub);box-shadow:inset 0 0 0 1.5px var(--silver)}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;padding:max(10px,env(safe-area-inset-top)) var(--pad) 10px}
+.top-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:12px 24px;padding:8px 8px 8px 20px;border-radius:999px;background:rgba(247,243,255,.72);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);box-shadow:0 8px 30px -16px rgba(42,27,61,.35)}
+.logo{font:22px/1.05 var(--disp);text-decoration:none;min-width:0;overflow-wrap:anywhere}
+.top nav{margin-left:auto}
+.top ul{display:flex;gap:2px;list-style:none;margin:0;padding:0}
+.top nav a{display:inline-flex;align-items:center;min-height:42px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.top nav a:hover{background:rgba(215,201,255,.5)}
+.top .btn{min-height:44px;padding:0 20px;flex:none}
+
+/* hero + designer */
+.hero{padding:clamp(18px,3vw,34px) var(--pad) 40px}
+.hero-head{max-width:880px;margin:0 auto 12px;text-align:center}
+.word{display:block;font-family:var(--disp);font-size:clamp(46px,6.4vw,88px);line-height:.95;letter-spacing:-.015em;overflow-wrap:anywhere;filter:drop-shadow(0 2px 0 #fff)}
+.lede{max-width:62ch;margin:10px auto 0;font-size:17px;color:var(--mute)}
+.vanity{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr) minmax(0,350px);grid-template-areas:"l m r";gap:clamp(16px,2.6vw,36px);align-items:center}
+.pane{display:grid;gap:14px;align-content:center}
+.pane-l{grid-area:l}.pane-r{grid-area:r}
+.grp,.summary{padding:15px 16px 16px;border-radius:24px;background:rgba(255,255,255,.62);box-shadow:0 18px 40px -28px rgba(42,27,61,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.glabel{display:flex;justify-content:space-between;gap:8px;margin:0 0 10px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.glabel span{font-weight:500;letter-spacing:0;text-transform:none;color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:42px;padding:0 14px;border:0;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600;font-size:14.5px;cursor:pointer;transition:transform .12s,box-shadow .15s,background .15s}
+.chip:hover{box-shadow:inset 0 0 0 1.5px var(--silver)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed=true]{background:var(--lilac);box-shadow:inset 0 0 0 2px var(--aub)}
+.chip svg{display:inline-block;vertical-align:-3px;margin-right:6px}
+.swatches{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}
+.sw{position:relative;aspect-ratio:1;min-width:40px;border:0;border-radius:50%;cursor:pointer;background:var(--c);box-shadow:inset 0 -6px 10px rgba(0,0,0,.18),inset 0 5px 8px rgba(255,255,255,.55),0 0 0 1px rgba(42,27,61,.12);transition:transform .15s}
+.sw::after{content:"";position:absolute;left:24%;top:16%;width:26%;height:18%;border-radius:50%;background:rgba(255,255,255,.75);filter:blur(.5px)}
+.sw:hover{transform:scale(1.08)}
+.sw[aria-pressed=true]{box-shadow:inset 0 -6px 10px rgba(0,0,0,.18),inset 0 5px 8px rgba(255,255,255,.55),0 0 0 2.5px var(--pearl),0 0 0 5px var(--aub)}
+.custom{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:14px;font-weight:600;color:var(--mute)}
+.custom input{width:44px;height:32px;padding:0;border:0;border-radius:10px;background:none;cursor:pointer}
+.mirror-wrap{grid-area:m;position:relative;display:grid;justify-items:center}
+.mirror{position:relative;width:min(100%,450px);aspect-ratio:47/58;border-radius:50%;background:radial-gradient(60% 50% at 38% 30%,#fff,rgba(255,255,255,0) 70%),linear-gradient(160deg,#fbf9ff,#ece6fa 60%,#e2daf6);box-shadow:0 40px 70px -40px rgba(42,27,61,.55),inset 0 0 0 10px rgba(255,255,255,.5)}
+.mirror::before{content:"";position:absolute;inset:-9px;border-radius:50%;padding:9px;background:var(--holo);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);box-shadow:0 0 0 1px rgba(255,255,255,.6)}
+.mirror::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.55) 44%,transparent 52%);background-size:220% 220%;background-position:calc(var(--mx) * 100%) calc(var(--my) * 100%);mix-blend-mode:soft-light}
+#hand{position:absolute;left:50%;bottom:-2%;width:98%;height:auto;transform:translateX(-50%);overflow:visible;border-radius:0 0 50% 50%}
+.nail{cursor:pointer}
+.nail .ring{fill:none;stroke:var(--aub);stroke-width:1.6;stroke-dasharray:3 4;opacity:0;animation:ants 1.6s linear infinite}
+.nail.sel .ring{opacity:1}
+@keyframes ants{to{stroke-dashoffset:-14}}
+.tap-hint{margin:14px 0 0;font-size:14px;color:var(--mute)}
+.tabs{display:none}
+.summary ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14.5px}
+.summary li{display:flex;gap:10px;align-items:center}
+.summary i{flex:none;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 1px rgba(42,27,61,.2)}
+.summary b{font-weight:600;min-width:52px}
+.save-row{display:flex;gap:10px;flex-wrap:wrap}
+.save-row .btn{flex:1}
+.saved{max-width:1240px;margin:34px auto 0}
+.saved-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin-bottom:12px}
+.saved-head h2{font:24px/1.1 var(--disp)}
+.saved-head p{margin:0;font-size:14px;color:var(--mute)}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,280px);gap:16px;overflow-x:auto;padding:6px 4px 18px;scroll-snap-type:x proximity}
+.card{scroll-snap-align:start;border-radius:22px;padding:14px 16px 16px;background:rgba(255,255,255,.75);box-shadow:0 18px 40px -28px rgba(42,27,61,.5);animation:cardin .5s cubic-bezier(.2,1.3,.4,1)}
+@keyframes cardin{from{opacity:0;transform:translateY(12px) scale(.96)}}
+.card svg{width:100%;height:auto;border-radius:14px;background:linear-gradient(160deg,#fbf9ff,#ece6fa)}
+.card h3{font:18px/1.2 var(--disp);margin:10px 0 2px}
+.card p{margin:0;font-size:13.5px;color:var(--mute)}
+.card .row{display:flex;gap:8px;margin-top:10px}
+.card .chip{min-height:40px;font-size:13.5px}
+.empty{display:grid;place-items:center;min-height:120px;padding:18px;border-radius:22px;border:1.5px dashed var(--silver);color:var(--mute);font-size:14.5px;text-align:center}
+#sparkle{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45}
+
+/* services */
+section{scroll-margin-top:84px}
+.sec{padding:clamp(56px,8vw,110px) var(--pad)}
+.sec-head{max-width:1240px;margin:0 auto 36px;display:grid;grid-template-columns:1fr minmax(0,420px);gap:12px 40px;align-items:end}
+.sec-head p:last-child{margin:0;color:var(--mute)}
+.shelf{list-style:none;margin:0 auto;padding:0 0 26px;max-width:1240px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;position:relative}
+.shelf::after{content:"";position:absolute;left:-10px;right:-10px;bottom:0;height:14px;border-radius:8px;background:linear-gradient(180deg,#fff,#cfcfd8 40%,#9d9cab 70%,#e6e6ee);box-shadow:0 12px 20px -10px rgba(42,27,61,.4)}
+.bottle{position:relative;overflow:hidden;display:flex;flex-direction:column;border-radius:34px 34px 26px 26px;padding:18px 18px 20px;background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.55));box-shadow:0 20px 40px -30px rgba(42,27,61,.6)}
+.bottle::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.75) 48%,rgba(215,201,255,.35) 54%,transparent 64%);transform:translateX(-110%);transition:transform .7s ease}
+.bottle:hover::after{transform:translateX(110%)}
+.bottle svg{width:64px;height:auto;margin:0 0 12px}
+.bottle h3{font:22px/1.1 var(--disp)}
+.bottle .d{font-size:14.5px;margin:6px 0 10px}
+.bottle ul{margin:0 0 12px;padding-left:18px;font-size:14px;color:var(--mute)}
+.bottle .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;padding-top:10px;border-top:1px solid var(--line);font-size:14px}
+.bottle .meta b{font:18px/1 var(--disp)}
+
+/* prices */
+.menu{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:clamp(22px,4vw,44px);border-radius:32px;background:#fff;box-shadow:0 30px 60px -40px rgba(42,27,61,.5)}
+.menu h3{font:22px/1.1 var(--disp);margin-bottom:10px}
+.menu dl{margin:0}
+.menu .it{display:flex;align-items:baseline;gap:8px;padding:8px 0;font-size:15px}
+.menu .it dt{flex:0 1 auto}
+.menu .it::after{content:"";order:1;flex:1;min-width:14px;border-bottom:1.5px dotted var(--silver);transform:translateY(-4px)}
+.menu .it dd{order:2;margin:0;font-weight:700;white-space:nowrap}
+.menu-note{grid-column:1/-1;margin:6px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+
+/* aftercare */
+.care{list-style:none;margin:0 auto;padding:0;max-width:1240px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.care li{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:18px;border-radius:24px;background:rgba(255,255,255,.6)}
+.care .n{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(145deg,#fff,#cfcfd8 55%,#f3f3f7);box-shadow:inset 0 0 0 1px rgba(42,27,61,.12),0 6px 14px -8px rgba(42,27,61,.5);font:20px/1 var(--disp)}
+.care h3{font-weight:700;font-size:16.5px;margin:2px 0 4px}
+.care p{margin:0;font-size:15px;color:var(--mute)}
+.allergy{max-width:1240px;margin:22px auto 0;font-size:14.5px;color:var(--mute)}
+
+/* book */
+.book-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:clamp(24px,5vw,64px)}
+.book-card{padding:clamp(20px,3vw,34px);border-radius:32px;background:rgba(255,255,255,.8);box-shadow:0 30px 60px -40px rgba(42,27,61,.55)}
+.fl{display:block;margin:16px 0 8px;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.fl:first-child{margin-top:0}
+.book-card select,.book-card input,.book-card textarea{width:100%;min-height:48px;padding:10px 14px;border:0;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font-size:16px}
+.book-card textarea{min-height:84px;resize:vertical}
+.days,.times{display:flex;flex-wrap:wrap;gap:8px}
+.days .chip{display:grid;line-height:1.15;padding:6px 12px;text-align:center}
+.days .chip small{font-weight:500;font-size:12px;color:var(--mute)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book-card .btn{width:100%;margin-top:20px}
+.req{margin-top:16px;padding:14px 16px;border-radius:18px;background:var(--lilac);font-size:14.5px}
+.req[hidden]{display:none}
+.visit dl{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:18px 0}
+.visit dt{font-weight:700}
+.visit dd{margin:0}
+.visit .contact a{font-weight:600}
+.foot{padding:40px var(--pad) calc(70px + env(safe-area-inset-bottom));text-align:center}
+.foot .word{font-size:clamp(40px,7vw,80px)}
+.foot p{margin:12px 0 0;font-size:14px;color:var(--mute)}
+
+@media (max-width:1100px){
+.vanity{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"m m" "l r"}
+.shelf{grid-template-columns:repeat(3,1fr)}
+.menu{grid-template-columns:1fr 1fr}
+.care{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+.top nav{display:none}
+.top .btn{margin-left:auto}
+.vanity{grid-template-columns:minmax(0,1fr);grid-template-areas:"m" "nails" "tabs" "ctrl" "save" "sum";gap:14px}
+.pane{display:contents}
+.g-nails{grid-area:nails}.tabs{grid-area:tabs}.g-colour,.g-finish,.g-art,.g-shape{grid-area:ctrl}.save-row{grid-area:save}.summary{grid-area:sum}
+.vanity:not([data-tab=colour]) .g-colour,.vanity:not([data-tab=finish]) .g-finish,.vanity:not([data-tab=art]) .g-art,.vanity:not([data-tab=shape]) .g-shape{display:none}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line)}
+.tabs button{min-height:42px;border:0;border-radius:999px;background:none;font-weight:600;font-size:14.5px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--aub);color:var(--pearl)}
+.g-nails .chips{display:grid;grid-template-columns:repeat(3,1fr)}
+.mirror{width:min(100%,340px)}
+.grp,.summary{padding:14px 14px 16px;border-radius:20px}
+.sec-head,.book-in{grid-template-columns:1fr}
+.shelf{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1 * var(--pad));padding:0 var(--pad) 26px;scroll-padding:0 var(--pad)}
+.shelf li{scroll-snap-align:start}
+.shelf::after{left:var(--pad);right:var(--pad)}
+.menu,.care{grid-template-columns:1fr}
+.two{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="skin" x1="0" x2="1"><stop offset="0" stop-color="#DCD2F0"/><stop offset=".22" stop-color="#F3EEFB"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset=".78" stop-color="#EEE8F8"/><stop offset="1" stop-color="#D6CBEC"/></linearGradient>
+<radialGradient id="palm" cx=".45" cy=".35" r=".75"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#F1ECFA"/><stop offset="1" stop-color="#D9CFEF"/></radialGradient>
+<linearGradient id="cuff" x1="0" x2="1"><stop offset="0" stop-color="#9e9aae"/><stop offset=".18" stop-color="#e9e7f0"/><stop offset=".32" stop-color="#ffffff"/><stop offset=".5" stop-color="#b9b6c4"/><stop offset=".7" stop-color="#f4f2f8"/><stop offset=".86" stop-color="#a8a4b8"/><stop offset="1" stop-color="#e2dfe9"/></linearGradient>
+<linearGradient id="silv" x1="0" x2="1"><stop offset="0" stop-color="#9a98a6"/><stop offset=".45" stop-color="#ffffff"/><stop offset="1" stop-color="#b8b7c4"/></linearGradient>
+<pattern id="glit" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r=".9" fill="#fff"/><circle cx="9" cy="8" r=".6" fill="#fff"/><circle cx="5" cy="10" r=".5" fill="#fff"/></pattern>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.5"/></filter>
+<filter id="mt" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="1" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 -.3"/></filter>
+</defs></svg>
+<a class="skip" href="#main">Skip to the designer</a>
+<canvas id="sparkle" aria-hidden="true"></canvas>
+
+<header class="top">
+<div class="top-in">
+<a class="logo chrome" href="#design" data-brand>Glaze Nail Bar</a>
+<nav aria-label="Sections"><ul><li><a href="#design">Design</a></li><li><a href="#services">Services</a></li><li><a href="#prices">Prices</a></li><li><a href="#care">Aftercare</a></li><li><a href="#visit">Visit</a></li></ul></nav>
+<a class="btn" href="#book">Book a chair</a>
+</div>
+</header>
+
+<main id="main">
+<section class="hero" id="design" aria-labelledby="t-word">
+<div class="hero-head">
+<p class="eyebrow">Nail bar · Chatswood, NSW</p>
+<h1 class="word chrome" id="t-word" data-brand>Glaze Nail Bar</h1>
+<p class="lede">Gel, builder gel, extensions and art that catches the light. Design your set here, nail by nail, then bring it in.</p>
+</div>
+
+<div class="vanity" id="vanity" data-tab="colour">
+<div class="pane pane-l">
+<div class="grp g-nails"><p class="glabel">1 · Pick a nail <span id="selname">Middle</span></p><div class="chips" role="group" aria-label="Nail to paint" id="nailbtns"></div></div>
+<div class="grp g-shape"><p class="glabel">Shape <span>applies to all five</span></p><div class="chips" role="group" aria-label="Nail shape" id="shapes"></div></div>
+<div class="summary"><p class="glabel">Your set</p><ul id="summary"></ul><p class="sr-only" id="live" aria-live="polite"></p></div>
+</div>
+<div class="mirror-wrap">
+<div class="mirror"><svg id="hand" viewBox="0 0 420 540" role="img" aria-labelledby="hand-t"><title id="hand-t">A porcelain display hand wearing your current nail set</title><g id="handbody"></g><g id="nails"></g></svg></div>
+<p class="tap-hint">Tap a nail on the hand to select it, or choose “All five”.</p>
+</div>
+<div class="pane pane-r">
+<div class="tabs" role="group" aria-label="Designer panels"><button type="button" data-tab="colour" aria-pressed="true">Colour</button><button type="button" data-tab="finish" aria-pressed="false">Finish</button><button type="button" data-tab="art" aria-pressed="false">Art</button><button type="button" data-tab="shape" aria-pressed="false">Shape</button></div>
+<div class="grp g-colour"><p class="glabel">2 · Colour <span id="cname">Lilac Haze</span></p><div class="swatches" role="group" aria-label="Polish colour" id="swatches"></div><label class="custom" for="customc">Or mix your own <input type="color" id="customc" value="#c9b6f2"></label></div>
+<div class="grp g-finish"><p class="glabel">3 · Finish</p><div class="chips" role="group" aria-label="Finish" id="finishes"></div></div>
+<div class="grp g-art"><p class="glabel">4 · Art</p><div class="chips" role="group" aria-label="Nail art" id="arts"></div></div>
+<div class="save-row"><button class="btn" type="button" id="save">Save my set</button><button class="btn ghost" type="button" id="reset">Start over</button></div>
+</div>
+</div>
+
+<div class="saved">
+<div class="saved-head"><h2>Saved sets</h2><p id="savedcount">Save up to six designs to show us in the chair.</p></div>
+<div class="rail" id="rail"><div class="empty" id="empty">Your saved sets appear here as cards.</div></div>
+</div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="t-serv">
+<div class="sec-head"><div><p class="eyebrow">Services</p><h2 class="h2" id="t-serv">On the shelf</h2></div><p>Five things we do all day. Every service starts with a proper prep: that’s where the three weeks of wear comes from.</p></div>
+<ul class="shelf">
+<li class="bottle"><svg viewBox="0 0 64 92" aria-hidden="true"><rect x="22" y="2" width="20" height="30" rx="4" fill="#2A1B3D"/><rect x="8" y="30" width="48" height="58" rx="16" fill="#C9B6F2"/><rect x="14" y="38" width="8" height="40" rx="4" fill="#fff" opacity=".6"/></svg><h3>Gel manicure</h3><p class="d">Shape, cuticle care and a gel colour that lasts about three weeks.</p><ul><li>File and shape</li><li>Cuticle tidy and oil</li><li>Gel colour of your choice</li></ul><p class="meta"><span>45 min</span><b>from $55</b></p></li>
+<li class="bottle"><svg viewBox="0 0 64 92" aria-hidden="true"><rect x="22" y="2" width="20" height="30" rx="4" fill="#2A1B3D"/><rect x="8" y="30" width="48" height="58" rx="16" fill="#F2E6DC"/><rect x="14" y="38" width="8" height="40" rx="4" fill="#fff" opacity=".7"/></svg><h3>Builder gel</h3><p class="d">A strengthening overlay on your own nails; good for growing them out.</p><ul><li>Prep and structure</li><li>Clear, nude or colour</li><li>Infill every 3–4 weeks</li></ul><p class="meta"><span>60 min</span><b>from $70</b></p></li>
+<li class="bottle"><svg viewBox="0 0 64 92" aria-hidden="true"><rect x="22" y="2" width="20" height="30" rx="4" fill="#2A1B3D"/><rect x="8" y="30" width="48" height="58" rx="16" fill="#E8A5B8"/><rect x="14" y="38" width="8" height="40" rx="4" fill="#fff" opacity=".6"/></svg><h3>Extensions</h3><p class="d">Soft-gel tips in almond, square or coffin, to the length you like.</p><ul><li>Full set of soft-gel tips</li><li>Shaping and length</li><li>Gel colour included</li></ul><p class="meta"><span>90 min</span><b>from $95</b></p></li>
+<li class="bottle"><svg viewBox="0 0 64 92" aria-hidden="true"><rect x="22" y="2" width="20" height="30" rx="4" fill="#2A1B3D"/><rect x="8" y="30" width="48" height="58" rx="16" fill="#C0C0C8"/><path d="M20 44l3 6 6 3-6 3-3 6-3-6-6-3 6-3zM40 62l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#fff"/></svg><h3>Nail art</h3><p class="d">Chrome, cat-eye, French, dots, stripes and stars, or bring a picture.</p><ul><li>Add to any service</li><li>One accent nail or all ten</li><li>Hand-painted, no stickers</li></ul><p class="meta"><span>15–40 min</span><b>from $5/nail</b></p></li>
+<li class="bottle"><svg viewBox="0 0 64 92" aria-hidden="true"><rect x="22" y="2" width="20" height="30" rx="4" fill="#2A1B3D"/><rect x="8" y="30" width="48" height="58" rx="16" fill="#A9BFA0"/><rect x="14" y="38" width="8" height="40" rx="4" fill="#fff" opacity=".6"/></svg><h3>Pedicure</h3><p class="d">Soak, scrub, shape and gel colour, in a chair that actually reclines.</p><ul><li>Warm soak and exfoliation</li><li>Nails and cuticles tidied</li><li>Gel colour to finish</li></ul><p class="meta"><span>50 min</span><b>from $65</b></p></li>
+</ul>
+</section>
+
+<section class="sec" id="prices" aria-labelledby="t-prices" style="padding-top:0">
+<div class="sec-head"><div><p class="eyebrow">Price list</p><h2 class="h2" id="t-prices">The menu</h2></div><p>Prices include removal of our own gel when you rebook within four weeks.</p></div>
+<div class="menu holo-border">
+<div><h3>Hands</h3><dl><div class="it"><dt>Gel manicure</dt><dd>$55</dd></div><div class="it"><dt>Builder gel overlay</dt><dd>$70</dd></div><div class="it"><dt>Builder gel infill</dt><dd>$60</dd></div><div class="it"><dt>Soft-gel extensions</dt><dd>$95</dd></div><div class="it"><dt>Express polish</dt><dd>$30</dd></div><div class="it"><dt>Removal from elsewhere</dt><dd>$20</dd></div></dl></div>
+<div><h3>Feet</h3><dl><div class="it"><dt>Gel pedicure</dt><dd>$65</dd></div><div class="it"><dt>Classic pedicure</dt><dd>$55</dd></div><div class="it"><dt>Gel toes only</dt><dd>$40</dd></div><div class="it"><dt>Hands + feet together</dt><dd>$110</dd></div></dl></div>
+<div><h3>Art &amp; finishes</h3><dl><div class="it"><dt>Chrome or cat-eye</dt><dd>+$15</dd></div><div class="it"><dt>French tip</dt><dd>+$15</dd></div><div class="it"><dt>Art, per nail</dt><dd>from $5</dd></div><div class="it"><dt>Art, full set</dt><dd>from $25</dd></div><div class="it"><dt>Nail repair</dt><dd>$8</dd></div></dl></div>
+<p class="menu-note"><b>Sample prices</b> for this demo, in AUD. Time needed depends on length and art; we’ll confirm when you book.</p>
+</div>
+</section>
+
+<section class="sec" id="care" aria-labelledby="t-care" style="padding-top:0">
+<div class="sec-head"><div><p class="eyebrow">Aftercare</p><h2 class="h2" id="t-care">Keep the shine</h2></div><p>Six habits that decide whether a set lasts ten days or three weeks.</p></div>
+<ol class="care">
+<li><span class="n" aria-hidden="true">1</span><div><h3>Oil, twice a day</h3><p>A drop of cuticle oil morning and night keeps gel flexible and cuticles soft.</p></div></li>
+<li><span class="n" aria-hidden="true">2</span><div><h3>Gloves for chores</h3><p>Detergents dull gloss faster than anything. Gloves for dishes and cleaning.</p></div></li>
+<li><span class="n" aria-hidden="true">3</span><div><h3>Don’t pick</h3><p>Peeling gel takes layers of your own nail with it. Book a removal instead.</p></div></li>
+<li><span class="n" aria-hidden="true">4</span><div><h3>Easy on day one</h3><p>Skip very hot baths, saunas and long swims for the first 24 hours.</p></div></li>
+<li><span class="n" aria-hidden="true">5</span><div><h3>Nails aren’t tools</h3><p>Use a coin, not a nail, for can tabs, lids and stickers.</p></div></li>
+<li><span class="n" aria-hidden="true">6</span><div><h3>Book the infill</h3><p>Builder gel and extensions want an infill every three to four weeks.</p></div></li>
+</ol>
+<p class="allergy">Allergic to gel or acrylates, or had a reaction before? Tell us before your visit and we’ll suggest a regular polish instead. General information only.</p>
+</section>
+
+<section class="sec" id="book" aria-labelledby="t-book" style="padding-top:0">
+<div class="book-in">
+<div class="visit" id="visit">
+<p class="eyebrow">Book &amp; visit</p><h2 class="h2" id="t-book">Take a seat</h2>
+<p>Choose a service and a time and we’ll hold the chair while we confirm by text. Walk-ins welcome when a chair is free.</p>
+<dl><dt>Where</dt><dd>Chatswood, NSW · upstairs, two minutes from the station</dd><dt>Tue–Wed</dt><dd>10am – 6pm</dd><dt>Thu</dt><dd>10am – 8pm (late night)</dd><dt>Fri</dt><dd>10am – 7pm</dd><dt>Sat</dt><dd>9am – 5pm</dd><dt>Sun</dt><dd>10am – 4pm</dd><dt>Mon</dt><dd>Closed</dd></dl>
+<p class="contact"><a href="tel:+61255507780">(02) 5550 7780</a> · <a href="mailto:hello@example.com">hello@example.com</a></p>
+</div>
+<form class="book-card holo-border" id="bookform" novalidate>
+<label class="fl" for="svc">Service</label>
+<select id="svc"><option>Gel manicure · 45 min</option><option>Builder gel overlay · 60 min</option><option>Soft-gel extensions · 90 min</option><option>Gel pedicure · 50 min</option><option>Hands + feet · 95 min</option></select>
+<p class="fl" id="day-l">Day</p><div class="days" id="days" role="group" aria-labelledby="day-l"></div>
+<p class="fl" id="time-l">Time</p><div class="times" id="times" role="group" aria-labelledby="time-l"></div>
+<div class="two"><div><label class="fl" for="bn">Name</label><input id="bn" autocomplete="name"></div><div><label class="fl" for="bm">Mobile</label><input id="bm" type="tel" inputmode="tel" autocomplete="tel"></div></div>
+<label class="fl" for="notes">Notes for your nail tech</label><textarea id="notes" placeholder="Length, shape, a saved set, anything we should know"></textarea>
+<button class="btn" type="submit">Request this appointment</button>
+<p class="req" id="req" hidden></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<p class="word chrome" data-brand>Glaze Nail Bar</p>
+<p>Chatswood, NSW · A concept demo for a fictional salon · Sample prices</p>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var d=document,NS="http://www.w3.org/2000/svg";function $(id){return d.getElementById(id)}
+var RM=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
+function reduced(){return !!((window.DemoKit&&DemoKit.reducedMotion)||RM.matches)}
+var store={get:function(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+var COLS=[["Pearl Drop","#F4EEF8"],["Milk Bath","#EFDDD2"],["Butter Silk","#F2DF97"],["Chrome Rose","#E8A5B8"],["Coral Crush","#F27C6B"],["Cherry Cola","#7A1E2C"],["Lilac Haze","#C9B6F2"],["Harbour Blue","#6F8FC9"],["Sage Tea","#A9BFA0"],["Espresso","#4A3228"],["Aubergine Night","#3B2352"],["Black Opal","#1E1B24"]];
+var FIN=[["gloss","Gloss"],["matte","Matte"],["chrome","Chrome"],["cateye","Cat-eye"]];
+var ART=[["none","None"],["french","French tip"],["dots","Dots"],["stripes","Stripes"],["stars","Stars"]];
+var SHAPES=[["almond","Almond"],["square","Square"],["coffin","Coffin"]];
+var F=[{n:"Thumb",x:176,y:440,a:-40,len:190,w:48},{n:"Index",x:170,y:318,a:-5,len:192,w:43},{n:"Middle",x:214,y:308,a:0,len:212,w:45},{n:"Ring",x:258,y:314,a:5,len:196,w:43},{n:"Little",x:299,y:334,a:11,len:156,w:37}];
+var DEF={shape:"almond",nails:[{c:"#C9B6F2",f:"chrome",a:"none"},{c:"#F4EEF8",f:"gloss",a:"stars"},{c:"#3B2352",f:"cateye",a:"none"},{c:"#C9B6F2",f:"chrome",a:"french"},{c:"#F4EEF8",f:"gloss",a:"dots"}]};
+var S=JSON.parse(JSON.stringify(DEF)),sel=2,ver=0,catPos=.5;
+
+function hexRGB(h){var n=parseInt(h.slice(1),16);return[n>>16&255,n>>8&255,n&255]}
+function lum(h){var c=hexRGB(h).map(function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+function mix(h,t){var c=hexRGB(h),g=t>0?255:0,k=Math.abs(t);c=c.map(function(v){return Math.round(v+(g-v)*k)});return"#"+((1<<24)|(c[0]<<16)|(c[1]<<8)|c[2]).toString(16).slice(1)}
+function cname(h){for(var i=0;i<COLS.length;i++)if(COLS[i][1].toLowerCase()===h.toLowerCase())return COLS[i][0];return"Custom "+h.toUpperCase()}
+function label(a,v){for(var i=0;i<a.length;i++)if(a[i][0]===v)return a[i][1];return v}
+function f1(v){return Math.round(v*10)/10}
+
+/* nail geometry: cuticle at 0,0, nail points up */
+function nailDims(i,shape){var w=F[i].w*.78;return{w:w,L:w*(shape==="square"?1.45:shape==="almond"?1.95:2)}}
+function nailPath(shape,w,L){
+  var h=w/2,c=w*.16;
+  if(shape==="square"){var r=w*.16,h2=h*1.04;return"M"+f1(-h)+" "+f1(-c)+"L"+f1(-h2)+" "+f1(-L+r)+"Q"+f1(-h2)+" "+f1(-L)+" "+f1(-h2+r)+" "+f1(-L)+"L"+f1(h2-r)+" "+f1(-L)+"Q"+f1(h2)+" "+f1(-L)+" "+f1(h2)+" "+f1(-L+r)+"L"+f1(h)+" "+f1(-c)+"Q0 "+f1(c*1.2)+" "+f1(-h)+" "+f1(-c)+"Z"}
+  if(shape==="almond")return"M"+f1(-h)+" "+f1(-c)+"C"+f1(-h*1.06)+" "+f1(-L*.55)+" "+f1(-h*.5)+" "+f1(-L*.94)+" 0 "+f1(-L)+"C"+f1(h*.5)+" "+f1(-L*.94)+" "+f1(h*1.06)+" "+f1(-L*.55)+" "+f1(h)+" "+f1(-c)+"Q0 "+f1(c*1.2)+" "+f1(-h)+" "+f1(-c)+"Z";
+  var t=w*.3;return"M"+f1(-h)+" "+f1(-c)+"C"+f1(-h*1.05)+" "+f1(-L*.45)+" "+f1(-t*1.12)+" "+f1(-L*.8)+" "+f1(-t)+" "+f1(-L+2)+"Q"+f1(-t)+" "+f1(-L)+" "+f1(-t+3)+" "+f1(-L)+"L"+f1(t-3)+" "+f1(-L)+"Q"+f1(t)+" "+f1(-L)+" "+f1(t)+" "+f1(-L+2)+"C"+f1(t*1.12)+" "+f1(-L*.8)+" "+f1(h*1.05)+" "+f1(-L*.45)+" "+f1(h)+" "+f1(-c)+"Q0 "+f1(c*1.2)+" "+f1(-h)+" "+f1(-c)+"Z";
+}
+function star(x,y,s){var k=s*.2;return"M"+f1(x)+" "+f1(y-s)+"Q"+f1(x+k)+" "+f1(y-k)+" "+f1(x+s)+" "+f1(y)+"Q"+f1(x+k)+" "+f1(y+k)+" "+f1(x)+" "+f1(y+s)+"Q"+f1(x-k)+" "+f1(y+k)+" "+f1(x-s)+" "+f1(y)+"Q"+f1(x-k)+" "+f1(y-k)+" "+f1(x)+" "+f1(y-s)+"Z"}
+function paint(id,n,shape,w,L){
+  var p=nailPath(shape,w,L),c=n.c,dk=mix(c,-.4),lt=mix(c,.6),light=lum(c)>.42,ink=light?"#2A1B3D":"#F7F3FF";
+  var defs='<clipPath id="'+id+'c"><path d="'+p+'"/></clipPath>',fill=c,over="",art="",hl="";
+  if(n.f==="chrome"){defs+='<linearGradient id="'+id+'g" x1="0" x2="1" y1=".2" y2="0"><stop offset="0" stop-color="'+dk+'"/><stop offset=".22" stop-color="'+c+'"/><stop offset=".4" stop-color="'+lt+'"/><stop offset=".47" stop-color="#fff"/><stop offset=".6" stop-color="'+c+'"/><stop offset=".86" stop-color="'+dk+'"/><stop offset="1" stop-color="'+mix(c,.25)+'"/></linearGradient>';fill="url(#"+id+"g)"}
+  else if(n.f==="cateye"){fill=mix(c,-.45);defs+='<linearGradient id="'+id+'g" class="cat" x1="0" y1="1" x2=".3" y2="0">'+catStops(lt)+'</linearGradient>';over='<rect x="'+f1(-w)+'" y="'+f1(-L-4)+'" width="'+f1(w*2)+'" height="'+f1(L+8)+'" fill="url(#'+id+'g)"/><rect x="'+f1(-w)+'" y="'+f1(-L-4)+'" width="'+f1(w*2)+'" height="'+f1(L+8)+'" fill="url(#glit)" opacity=".55"/>'}
+  else if(n.f==="matte"){fill=mix(c,light?-.05:.05);over='<rect x="'+f1(-w)+'" y="'+f1(-L-4)+'" width="'+f1(w*2)+'" height="'+f1(L+8)+'" filter="url(#mt)" opacity=".22"/>'}
+  if(n.a==="french"){var tip=lum(c)>.7?"#2A1B3D":"#FBF9FF";art='<path d="M'+f1(-w)+" "+f1(-L-4)+"H"+f1(w)+"V"+f1(-L*.76)+"Q0 "+f1(-L*.6)+" "+f1(-w)+" "+f1(-L*.76)+'Z" fill="'+tip+'"/>'}
+  else if(n.a==="dots"){[[-.2,.28],[.2,.4],[-.18,.58],[.16,.74],[0,.9]].forEach(function(q){art+='<circle cx="'+f1(q[0]*w)+'" cy="'+f1(-q[1]*L)+'" r="'+f1(w*.085)+'" fill="'+ink+'"/>'})}
+  else if(n.a==="stripes"){[-.24,0,.24].forEach(function(x){art+='<rect x="'+f1(x*w-w*.035)+'" y="'+f1(-L-4)+'" width="'+f1(w*.07)+'" height="'+f1(L+8)+'" fill="url(#silv)"/>'})}
+  else if(n.a==="stars"){[[-.16,.34,.16],[.18,.56,.12],[-.06,.8,.1]].forEach(function(q){art+='<path d="'+star(q[0]*w,-q[1]*L,q[2]*w*1.6)+'" fill="'+(light?"url(#silv)":"#fff")+'" stroke="'+(light?"#8f8da0":"none")+'" stroke-width=".6"/>'})}
+  if(n.f!=="matte")hl='<path d="M'+f1(-w*.24)+" "+f1(-L*.18)+"C"+f1(-w*.3)+" "+f1(-L*.48)+" "+f1(-w*.22)+" "+f1(-L*.74)+" "+f1(-w*.08)+" "+f1(-L*.88)+'" stroke="#fff" stroke-width="'+f1(w*.09)+'" stroke-linecap="round" fill="none" opacity=".72"/><circle cx="'+f1(w*.14)+'" cy="'+f1(-L*.8)+'" r="'+f1(w*.045)+'" fill="#fff" opacity=".8"/>';
+  return'<defs>'+defs+'</defs><path d="'+p+'" fill="'+fill+'"/><g clip-path="url(#'+id+'c)">'+over+art+hl+'</g><path d="'+p+'" fill="none" stroke="'+dk+'" stroke-opacity=".5" stroke-width="1"/>';
+}
+function catStops(lt){var p=catPos;return'<stop offset="'+(p-.24).toFixed(2)+'" stop-color="'+lt+'" stop-opacity="0"/><stop offset="'+p.toFixed(2)+'" stop-color="'+lt+'" stop-opacity=".95"/><stop offset="'+(p+.24).toFixed(2)+'" stop-color="'+lt+'" stop-opacity="0"/>'}
+
+/* the hand */
+function fingerPath(len,w){var h=w/2,t=w*.43;return"M"+(-h)+" 12L"+f1(-t)+" "+f1(-len+t)+"A"+f1(t)+" "+f1(t)+" 0 0 1 "+f1(t)+" "+f1(-len+t)+"L"+h+" 12Z"}
+function buildHand(){
+  var palm="M150 320C140 352 142 400 154 436C162 460 168 478 170 494V540H284V494C290 468 304 438 312 402C320 368 322 344 316 330C292 304 180 296 150 320Z",out="",fill="";
+  F.forEach(function(f){var g='<g transform="translate('+f.x+" "+f.y+") rotate("+f.a+')">';out+=g+'<path d="'+fingerPath(f.len,f.w)+'" fill="#CBBEE6" stroke="#CBBEE6" stroke-width="5"/></g>';fill+=g+'<path d="'+fingerPath(f.len,f.w)+'" fill="url(#skin)"/><path d="M'+f1(-f.w*.22)+" "+f1(-f.len*.44)+"q"+f1(f.w*.2)+" 3 "+f1(f.w*.44)+' 0" fill="none" stroke="#DCD2F1" stroke-width="1.4" stroke-linecap="round"/></g>'});
+  $("handbody").innerHTML=out+'<path d="'+palm+'" fill="#CBBEE6" stroke="#CBBEE6" stroke-width="5"/>'+fill+'<path d="'+palm+'" fill="url(#palm)"/><g fill="#fff" filter="url(#soft)" opacity=".85"><ellipse cx="172" cy="334" rx="12" ry="7"/><ellipse cx="215" cy="324" rx="13" ry="7"/><ellipse cx="258" cy="330" rx="12" ry="7"/><ellipse cx="297" cy="348" rx="10" ry="6"/></g><path d="M192 330c14 4 28 4 42 0M238 332c12 4 22 6 34 4" fill="none" stroke="#E3DAF4" stroke-width="2" stroke-linecap="round" filter="url(#soft)"/><rect x="160" y="484" width="134" height="26" rx="9" fill="url(#cuff)" stroke="#a6a2b6"/><rect x="178" y="510" width="98" height="34" fill="url(#cuff)"/>';
+  var ng="";
+  F.forEach(function(f,i){ng+='<g transform="translate('+f.x+" "+f.y+") rotate("+f.a+") translate(0 "+f1(-f.len+f.w*1.02)+')"><g class="nail" data-i="'+i+'"><ellipse class="ring"/><g class="paint"></g></g></g>'});
+  $("nails").innerHTML=ng;
+}
+var nailEls=[];
+function ringFor(i){var dm=nailDims(i,S.shape),r=nailEls[i].querySelector(".ring");r.setAttribute("cx",0);r.setAttribute("cy",f1(-dm.L/2));r.setAttribute("rx",f1(dm.w*.86));r.setAttribute("ry",f1(dm.L*.64))}
+function draw(i,anim){
+  var dm=nailDims(i,S.shape),g=nailEls[i];
+  ringFor(i);
+  if(g._a)g._a();
+  var id="n"+i+"v"+(++ver),html=paint(id,S.nails[i],S.shape,dm.w,dm.L),base=g.querySelector(".paint");
+  if(!anim||reduced()){base.innerHTML=html;return}
+  var nu=d.createElementNS(NS,"g");nu.setAttribute("class","paint");
+  nu.innerHTML='<defs><clipPath id="'+id+'w"><rect x="-60" y="12" width="120" height="0"/></clipPath></defs><g clip-path="url(#'+id+'w)">'+html+"</g>";
+  g.appendChild(nu);
+  var rect=nu.querySelector("rect"),tot=dm.L+24,t0=performance.now(),dur=420,raf=0,fin=false,to;
+  function done(){if(fin)return;fin=true;cancelAnimationFrame(raf);clearTimeout(to);g.querySelectorAll(".paint").forEach(function(p){if(p!==nu)p.remove()});nu.innerHTML=html;g._a=null}
+  function step(now){var k=Math.max(0,Math.min(1,(now-t0)/dur));k=1-Math.pow(1-k,3);var hgt=tot*k;rect.setAttribute("y",f1(12-hgt));rect.setAttribute("height",f1(hgt+2));if(k<1)raf=requestAnimationFrame(step);else done()}
+  to=setTimeout(done,dur+260);g._a=done;raf=requestAnimationFrame(step);
+}
+function drawAll(anim){for(var i=0;i<5;i++)draw(i,anim)}
+
+/* controls */
+function mkChips(host,items,cls,fn){items.forEach(function(it){var b=d.createElement("button");b.type="button";b.className="chip "+(cls||"");b.setAttribute("data-v",it[0]);b.textContent=it[1];b.setAttribute("aria-pressed","false");b.addEventListener("click",function(){fn(it[0])});host.appendChild(b)})}
+var nailBtns=$("nailbtns");
+F.forEach(function(f,i){var b=d.createElement("button");b.type="button";b.className="chip";b.textContent=f.n;b.setAttribute("data-v",i);b.addEventListener("click",function(){select(i)});nailBtns.appendChild(b)});
+(function(){var b=d.createElement("button");b.type="button";b.className="chip";b.textContent="All five";b.setAttribute("data-v","all");b.addEventListener("click",function(){select("all")});nailBtns.appendChild(b)})();
+COLS.forEach(function(c){var b=d.createElement("button");b.type="button";b.className="sw";b.style.setProperty("--c",c[1]);b.setAttribute("aria-label",c[0]);b.title=c[0];b.setAttribute("data-v",c[1]);b.addEventListener("click",function(){apply("c",c[1])});$("swatches").appendChild(b)});
+mkChips($("finishes"),FIN,"",function(v){apply("f",v)});
+mkChips($("arts"),ART,"",function(v){apply("a",v)});
+mkChips($("shapes"),SHAPES,"",function(v){S.shape=v;drawAll(true);sync();say("Shape: "+v+" on all five nails.")});
+$("customc").addEventListener("input",function(e){apply("c",e.target.value.toUpperCase(),true)});
+function targets(){return sel==="all"?[0,1,2,3,4]:[sel]}
+function apply(k,v,quiet){targets().forEach(function(i){S.nails[i][k]=v;draw(i,true)});sync();if(!quiet)say((sel==="all"?"All five":F[sel].n)+": "+(k==="c"?cname(v):k==="f"?label(FIN,v):label(ART,v)))}
+function select(i){sel=i;nailEls.forEach(function(g,k){g.classList.toggle("sel",i==="all"||i===k)});sync()}
+var liveT=0;function say(t){clearTimeout(liveT);liveT=setTimeout(function(){$("live").textContent=t},250)}
+function sync(){
+  var ref=S.nails[sel==="all"?0:sel],same=function(k){return sel!=="all"||S.nails.every(function(n){return n[k]===ref[k]})};
+  nailBtns.querySelectorAll(".chip").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-v")===String(sel)))});
+  $("selname").textContent=sel==="all"?"All five":F[sel].n;
+  d.querySelectorAll("#swatches .sw").forEach(function(b){b.setAttribute("aria-pressed",String(same("c")&&b.getAttribute("data-v").toLowerCase()===ref.c.toLowerCase()))});
+  $("cname").textContent=same("c")?cname(ref.c):"Mixed";
+  d.querySelectorAll("#finishes .chip").forEach(function(b){b.setAttribute("aria-pressed",String(same("f")&&b.getAttribute("data-v")===ref.f))});
+  d.querySelectorAll("#arts .chip").forEach(function(b){b.setAttribute("aria-pressed",String(same("a")&&b.getAttribute("data-v")===ref.a))});
+  d.querySelectorAll("#shapes .chip").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-v")===S.shape))});
+  $("customc").value=/^#[0-9a-f]{6}$/i.test(ref.c)?ref.c.toLowerCase():"#c9b6f2";
+  $("summary").innerHTML=S.nails.map(function(n,i){return'<li style="--c:'+n.c+'"><i></i><b>'+F[i].n+"</b><span>"+cname(n.c)+" · "+label(FIN,n.f)+(n.a!=="none"?" · "+label(ART,n.a):"")+"</span></li>"}).join("");
+}
+d.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){$("vanity").setAttribute("data-tab",b.getAttribute("data-tab"));d.querySelectorAll(".tabs button").forEach(function(o){o.setAttribute("aria-pressed",String(o===b))})})});
+$("reset").addEventListener("click",function(){S=JSON.parse(JSON.stringify(DEF));drawAll(true);select(2);say("Back to the house set.")});
+
+/* saved sets */
+var saved=store.get("glaze-sets")||[];
+var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(dt){return DAYS[dt.getDay()]+" "+dt.getDate()+" "+MON[dt.getMonth()]}
+function setName(set){var c={};set.nails.forEach(function(n){c[n.c]=(c[n.c]||0)+1});var top=Object.keys(c).sort(function(a,b){return c[b]-c[a]})[0],fins={};set.nails.forEach(function(n){fins[n.f]=1});return cname(top).replace("Custom ","")+" "+(Object.keys(fins).length>1?"mix":label(FIN,set.nails[0].f).toLowerCase())}
+function mini(set,k){var out='<svg viewBox="0 0 220 96" role="img" aria-label="Five nails: '+set.nails.map(function(n){return cname(n.c)}).join(", ")+'">';set.nails.forEach(function(n,i){var w=26,L=w*(set.shape==="square"?1.45:set.shape==="almond"?1.95:2);out+='<g transform="translate('+(26+i*42)+' 84)">'+paint("s"+k+"_"+i,n,set.shape,w,L)+"</g>"});return out+"</svg>"}
+function renderSaved(){
+  var rail=$("rail");rail.innerHTML="";
+  if(!saved.length){rail.innerHTML='<div class="empty">Your saved sets appear here as cards.</div>'}
+  saved.forEach(function(set,k){var c=d.createElement("article");c.className="card holo-border";c.innerHTML=mini(set,k+"_"+set.t)+"<h3>"+set.name+"</h3><p>"+label(SHAPES,set.shape)+" · saved "+set.day+'</p><div class="row"><button type="button" class="chip" data-act="book">Book this set</button><button type="button" class="chip" data-act="del" aria-label="Remove '+set.name+'">Remove</button></div>';
+    c.querySelector('[data-act=book]').addEventListener("click",function(){$("notes").value="Saved set “"+set.name+"” ("+label(SHAPES,set.shape)+"): "+set.nails.map(function(n,i){return F[i].n+" "+cname(n.c)+" "+label(FIN,n.f)+(n.a!=="none"?" + "+label(ART,n.a):"")}).join("; ");$("book").scrollIntoView({behavior:reduced()?"auto":"smooth"});setTimeout(function(){$("svc").focus({preventScroll:true})},reduced()?0:600)});
+    c.querySelector('[data-act=del]').addEventListener("click",function(){saved.splice(k,1);store.set("glaze-sets",saved);renderSaved();say("Set removed.")});
+    rail.appendChild(c)});
+  $("savedcount").textContent=saved.length?saved.length+" of 6 saved on this device.":"Save up to six designs to show us in the chair.";
+}
+$("save").addEventListener("click",function(){
+  var set={shape:S.shape,nails:JSON.parse(JSON.stringify(S.nails)),day:fmt(new Date()),t:Date.now()};set.name=setName(set);
+  saved.unshift(set);if(saved.length>6)saved.pop();store.set("glaze-sets",saved);renderSaved();
+  $("rail").scrollTo({left:0,behavior:reduced()?"auto":"smooth"});say("Saved “"+set.name+"”.");
+});
+
+/* booking */
+var OPEN={0:[10,16],2:[10,18],3:[10,18],4:[10,20],5:[10,19],6:[9,17]},pickDay=null,pickTime=null;
+(function(){var now=new Date(),n=0;for(var i=0;i<14&&n<7;i++){var dt=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);if(!OPEN[dt.getDay()])continue;n++;
+  var b=d.createElement("button");b.type="button";b.className="chip";b.setAttribute("aria-pressed","false");b.innerHTML=DAYS[dt.getDay()]+"<small>"+dt.getDate()+" "+MON[dt.getMonth()]+"</small>";b.setAttribute("aria-label",fmt(dt));
+  (function(dt,b){b.addEventListener("click",function(){pickDay=dt;pickTime=null;$("days").querySelectorAll(".chip").forEach(function(o){o.setAttribute("aria-pressed",String(o===b))});times()})})(dt,b);$("days").appendChild(b);if(n===1){pickDay=dt;b.setAttribute("aria-pressed","true")}}})();
+function times(){var host=$("times");host.innerHTML="";if(!pickDay){host.innerHTML='<p style="margin:0;color:var(--mute);font-size:14.5px">Pick a day to see times.</p>';return}
+  var o=OPEN[pickDay.getDay()],busy=(pickDay.getDate()*7)%5;for(var h=o[0],k=0;h<o[1]-1;h+=1.5,k++){var hh=Math.floor(h),mm=h%1?"30":"00",lab=(hh>12?hh-12:hh)+":"+mm+(hh>=12?"pm":"am");var b=d.createElement("button");b.type="button";b.className="chip";b.textContent=lab;b.setAttribute("aria-pressed","false");if(k%5===busy){b.disabled=true;b.style.opacity=".4";b.textContent=lab+" · taken"}
+    (function(b,lab){b.addEventListener("click",function(){pickTime=lab;host.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))})})})(b,lab);host.appendChild(b)}}
+times();
+$("bookform").addEventListener("submit",function(e){e.preventDefault();var r=$("req"),miss=[];if(!pickDay)miss.push("a day");if(!pickTime)miss.push("a time");if(!$("bn").value.trim())miss.push("your name");if(!$("bm").value.trim())miss.push("a mobile number");
+  r.hidden=false;if(miss.length){r.textContent="Almost there: please add "+miss.join(", ")+".";return}
+  r.textContent="Request ready: "+$("svc").value.split(" · ")[0]+", "+fmt(pickDay)+" at "+pickTime+" for "+$("bn").value.trim()+". In this demo nothing is sent — a real salon would text you to confirm.";
+  if(window.DemoKit)DemoKit.toast("Demo only — no appointment was booked. A real salon would text to confirm.")});
+
+/* shimmer + sparkle */
+var cv=$("sparkle"),cx=cv.getContext("2d"),parts=[],raf=0,dpr=Math.min(window.devicePixelRatio||1,2),lastX=-99,lastY=-99,pend=0,mxv=.5,myv=.5;
+function size(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr}
+size();window.addEventListener("resize",size);
+var HUES=["#ffd9f1","#d7c9ff","#c3ecff","#d4ffe9","#fff3c6","#ffffff"];
+function loop(){cx.clearRect(0,0,cv.width,cv.height);var now=performance.now();parts=parts.filter(function(p){return now-p.t<p.l});
+  parts.forEach(function(p){var k=(now-p.t)/p.l,s=p.s*(1-k)*dpr,x=p.x*dpr,y=(p.y-k*14)*dpr;cx.globalAlpha=1-k;cx.fillStyle=p.c;cx.beginPath();cx.moveTo(x,y-s);cx.quadraticCurveTo(x+s*.2,y-s*.2,x+s,y);cx.quadraticCurveTo(x+s*.2,y+s*.2,x,y+s);cx.quadraticCurveTo(x-s*.2,y+s*.2,x-s,y);cx.quadraticCurveTo(x-s*.2,y-s*.2,x,y-s);cx.fill()});
+  cx.globalAlpha=1;raf=parts.length&&!d.hidden?requestAnimationFrame(loop):0}
+function catUpdate(){d.querySelectorAll("linearGradient.cat").forEach(function(g){var st=g.querySelectorAll("stop");st[0].setAttribute("offset",(catPos-.24).toFixed(2));st[1].setAttribute("offset",catPos.toFixed(2));st[2].setAttribute("offset",(catPos+.24).toFixed(2))})}
+window.addEventListener("pointermove",function(e){
+  mxv=e.clientX/innerWidth;myv=e.clientY/innerHeight;
+  if(!pend){pend=requestAnimationFrame(function(){pend=0;var r=d.documentElement.style;r.setProperty("--mx",mxv.toFixed(3));r.setProperty("--my",myv.toFixed(3));catPos=.3+mxv*.4;catUpdate()})}
+  if(reduced()||e.pointerType==="touch")return;
+  var dx=e.clientX-lastX,dy=e.clientY-lastY;if(dx*dx+dy*dy<420)return;lastX=e.clientX;lastY=e.clientY;
+  parts.push({x:e.clientX+(Math.random()-.5)*10,y:e.clientY+(Math.random()-.5)*10,s:3+Math.random()*4,c:HUES[(Math.random()*HUES.length)|0],t:performance.now(),l:600+Math.random()*400});
+  if(parts.length>60)parts.shift();if(!raf)raf=requestAnimationFrame(loop);
+},{passive:true});
+
+/* go */
+buildHand();
+nailEls=[].slice.call(d.querySelectorAll("#nails .nail"));
+nailEls.forEach(function(g,i){g.addEventListener("click",function(){select(i)})});
+drawAll(false);select(2);renderSaved();
+})();
+</script>
+</body>
+</html>

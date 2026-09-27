@@ -1,0 +1,8 @@
+{
+  "id": "002",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "IntersectionObserver", "Bilingual toggle", "Date logic"],
+  "features": ["ordering", "bilingual"],
+  "interaction": "Browse four tabbed dim sum categories and add dishes: each one drops a labelled bamboo steamer onto a growing stack with a running total and a 'good for N people' suggestion; tap a basket (or −) to take it off, and 'Send order' ends in a demo toast. On phones the stack lives in a floating tray that opens a bottom sheet.",
+  "fonts": ["Noto Serif SC", "Outfit"],
+  "notes": "The order is not saved between visits. 'Today' hours follow the visitor's device clock."
+}

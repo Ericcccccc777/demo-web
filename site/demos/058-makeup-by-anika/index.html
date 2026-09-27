@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="058">
+<meta name="demo:brand" content="Makeup by Anika">
+<title>Makeup by Anika — bridal &amp; event makeup, Sydney</title>
+<meta name="description" content="Makeup by Anika is a fictional Sydney bridal and event makeup artist: swipe through an illustrated lookbook, save favourite looks and attach them to an enquiry.">
+<meta name="theme-color" content="#F7D6E0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600&family=Parisienne&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --pink:#F7D6E0;--peach:#FBD9C9;--champ:#F3E7D3;--plum:#5D3A5A;--plum2:#6B4A67;--cream:#FFF8F3;--rose:#EBBFCC;--line:rgba(93,58,90,.18);
+  --sans:"Epilogue",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --script:"Parisienne","Snell Roundhand",cursive;
+  --soft:0 30px 60px -30px rgba(93,58,90,.45),0 8px 18px -10px rgba(93,58,90,.25);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--plum);font:400 16.5px/1.65 var(--sans);background:var(--cream) radial-gradient(1200px 700px at 90% -10%,var(--pink),transparent 60%) no-repeat,radial-gradient(900px 600px at -10% 40%,var(--peach),transparent 60%) no-repeat}
+body::before{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.22;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .36 0 0 0 0 .23 0 0 0 0 .35 0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--plum);outline-offset:4px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[id]{scroll-margin-top:20px}
+.wrap{max-width:1300px;margin:0 auto;padding:0 clamp(18px,4vw,56px)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+h2{font-weight:300;font-size:clamp(34px,3.2vw + 14px,62px);line-height:1.04;letter-spacing:-.025em;margin:14px 0 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border:1px solid var(--plum);border-radius:999px;font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .2s}
+.btn:active{transform:scale(.97)}
+.btn-plum{background:var(--plum);color:var(--champ)}
+.btn-plum:hover{background:#4B2E48}
+.btn-line{background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.6)}
+.sm{min-height:44px;padding:10px 20px;font-size:14px}
+
+/* header */
+.top{display:flex;align-items:center;gap:20px;padding-top:22px;padding-bottom:22px}
+.wm{font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;overflow-wrap:anywhere}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{padding:10px 14px;font-size:14px;text-decoration:none;border-radius:999px}
+.nav a:hover{background:rgba(255,255,255,.7)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(24px,4vw,64px);align-items:center;padding-top:28px;padding-bottom:80px}
+h1{font-weight:300;font-size:clamp(44px,4.6vw + 16px,90px);line-height:.98;letter-spacing:-.035em;margin:18px 0 22px;text-wrap:balance}
+h1 em{font-style:normal;font-weight:400;background:linear-gradient(transparent 62%,var(--rose) 62% 90%,transparent 90%)}
+.lead{max-width:30em;font-size:clamp(16.5px,.3vw + 15px,19px);color:var(--plum2)}
+.sig{margin:26px 0 0;font:400 clamp(58px,5vw,84px)/1 var(--script);transform:rotate(-6deg);transform-origin:left;width:max-content}
+.sig-note{margin:4px 0 30px;font-size:13px;letter-spacing:.06em;color:var(--plum2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* lookbook deck */
+.book{position:relative;display:flex;flex-direction:column;align-items:center}
+.book::before{content:"";position:absolute;left:50%;top:0;width:min(560px,100%);aspect-ratio:1;transform:translate(-50%,-4%);border-radius:50%;background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.7),transparent 30%),repeating-radial-gradient(circle at 50% 50%,rgba(93,58,90,.045) 0 1.5px,transparent 1.5px 5px),radial-gradient(circle,#F4C7D4 55%,#E7AFC0 100%);box-shadow:0 0 0 14px #F1E3CB,0 0 0 16px #DCC6A2,var(--soft);opacity:.9}
+.deck{position:relative;display:grid;width:min(362px,calc(100% - 28px));margin-right:24px;touch-action:pan-y;outline:none;border-radius:30px}
+.deck:focus-visible{box-shadow:0 0 0 3px var(--cream),0 0 0 5px var(--plum)}
+.card{grid-area:1/1;position:relative;display:flex;flex-direction:column;background:var(--cream);border-radius:30px;box-shadow:var(--soft);overflow:hidden;transform-origin:50% 90%;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s;-webkit-user-select:none;user-select:none;cursor:grab}
+.card:active{cursor:grabbing}
+.card svg{display:block;width:100%;height:auto;pointer-events:none}
+.card-art{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.5),transparent)}
+.card-no{position:absolute;top:14px;left:14px;padding:5px 10px;border-radius:999px;background:rgba(255,248,243,.9);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.card-body{padding:4px 24px 22px}
+.card h3{font-weight:300;font-size:32px;line-height:1.05;letter-spacing:-.02em}
+.card-desc{margin:6px 0 8px;font-size:14px;line-height:1.55;color:var(--plum2)}
+.best{font-size:13px}
+.best b{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;margin-right:6px}
+.pal{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px}
+.pal li{display:flex;align-items:center;gap:7px}
+.pal i{width:18px;height:18px;border-radius:50%;background:var(--c);box-shadow:inset 0 -3px 5px rgba(0,0,0,.15),inset 0 2px 3px rgba(255,255,255,.5),0 0 0 2px #fff}
+.ctl{position:relative;z-index:2;display:flex;align-items:center;gap:14px;margin-top:26px}
+.round{display:grid;place-items:center;width:52px;height:52px;border:1px solid var(--plum);border-radius:50%;background:rgba(255,248,243,.85);cursor:pointer;transition:background .2s}
+.round:hover{background:#fff}
+.round svg{width:20px;height:20px}
+.save{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:12px 26px;border:0;border-radius:999px;background:var(--plum);color:var(--champ);font-weight:600;font-size:15px;cursor:pointer}
+.save svg{width:20px;height:20px}
+.save .fill{opacity:0;transition:opacity .2s}
+.save[aria-pressed="true"]{background:#B7657F;color:#fff}
+.save[aria-pressed="true"] .fill{opacity:1}
+.poof{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--c);pointer-events:none;animation:poof .75s cubic-bezier(.2,.7,.3,1) forwards}
+@keyframes poof{to{transform:translate(var(--dx),var(--dy)) scale(.2);opacity:0}}
+.hint{position:relative;z-index:2;margin-top:12px;font-size:13px;color:var(--plum2);text-align:center}
+.mine{position:relative;z-index:2;width:min(460px,100%);margin-top:22px;padding:16px 18px;border-radius:24px;background:rgba(255,248,243,.82);box-shadow:0 10px 30px -18px rgba(93,58,90,.5)}
+.mine-h{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:4px 4px 4px 6px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13.5px}
+.chip .sw{width:22px;height:22px;border-radius:50%;flex:none}
+.chip .go{min-height:36px;padding:0 6px;border:0;background:none;cursor:pointer;font-weight:600}
+.chip .x{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:50%;background:var(--pink);cursor:pointer;font-size:16px;line-height:1}
+.empty{margin-top:8px;font-size:13.5px;color:var(--plum2)}
+.strip:not(:empty)+.empty{display:none}
+
+/* services */
+.sec{padding-top:90px;padding-bottom:90px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:54px}
+.sec-head .note{color:var(--plum2);max-width:36em}
+.pans{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px}
+.pan{text-align:center}
+.disc{display:block;width:min(190px,78%);aspect-ratio:1;margin:0 auto 24px;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.8),transparent 32%),repeating-radial-gradient(circle at 50% 50%,rgba(93,58,90,.05) 0 1.5px,transparent 1.5px 4.5px),radial-gradient(circle,var(--c) 56%,var(--d) 100%);box-shadow:0 0 0 12px #F1E3CB,0 0 0 14px #DCC6A2,0 26px 40px -18px rgba(93,58,90,.5);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.pan:hover .disc{transform:rotate(-8deg) scale(1.03)}
+.pan h3{font-weight:400;font-size:22px;letter-spacing:-.01em}
+.pan p{margin-top:8px;font-size:15px;color:var(--plum2)}
+
+/* packages */
+.packages{position:relative}
+.pk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--plum);border-bottom:1px solid var(--plum)}
+.pk{padding:34px 30px 36px;border-left:1px solid var(--line)}
+.pk:first-child{border-left:0;padding-left:0}
+.pk-no{font-size:12px;font-weight:600;letter-spacing:.2em}
+.pk h3{margin-top:16px;font-weight:400;font-size:26px}
+.pk-price{margin:10px 0 6px;font-weight:300;font-size:clamp(46px,3.6vw + 14px,70px);line-height:1;letter-spacing:-.04em}
+.pk-price small{font-size:16px;letter-spacing:0;color:var(--plum2)}
+.pk-time{font-size:14px;color:var(--plum2)}
+.pk ul{margin-top:18px;display:grid;gap:9px;font-size:15px}
+.pk li{display:grid;grid-template-columns:16px 1fr;gap:10px}
+.pk li::before{content:"";width:9px;height:9px;margin-top:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 3px #fff}
+.pk-feature{background:linear-gradient(180deg,rgba(247,214,224,.55),rgba(247,214,224,0))}
+.travel{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 30px;align-items:baseline;margin-top:34px;padding:24px 28px;border-radius:26px;background:var(--champ)}
+.travel h3{font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.travel p{font-size:15.5px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;gap:18px;align-items:center;min-height:64px;padding:12px 0;font-size:18px;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;border-right:1.5px solid var(--plum);border-bottom:1.5px solid var(--plum);transform:rotate(45deg) translate(-3px,-3px);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(225deg)}
+.faq details p{padding:0 0 20px;max-width:56ch;color:var(--plum2)}
+
+/* enquire */
+.enq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.contact{display:grid;gap:12px;margin-top:26px}
+.contact div{display:grid;grid-template-columns:70px 1fr;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.contact dt{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding-top:3px}
+.enq{display:grid;gap:18px;padding:clamp(22px,3vw,38px);border-radius:34px;background:rgba(255,248,243,.9);box-shadow:var(--soft)}
+.enq label{display:grid;gap:7px;font-size:13px;font-weight:600;letter-spacing:.06em}
+.enq input,.enq select,.enq textarea{width:100%;min-height:50px;padding:12px 16px;border:1px solid var(--line);border-radius:16px;background:#fff;font-size:16px;font-weight:400;letter-spacing:0}
+.enq textarea{resize:vertical}
+.enq input:focus-visible,.enq select:focus-visible,.enq textarea:focus-visible{outline:2px solid var(--plum);outline-offset:1px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.attached{padding:16px 18px;border-radius:22px;background:var(--pink)}
+.att-h{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.fine{font-size:13px;color:var(--plum2)}
+
+/* footer */
+.foot{margin-top:40px;background:var(--plum);color:var(--champ);--f:var(--champ)}
+.foot :focus-visible{outline-color:var(--champ)}
+.foot-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 56px;align-items:end;padding-top:70px;padding-bottom:40px}
+.foot-sig{font:400 clamp(84px,9vw,150px)/.9 var(--script);color:var(--pink)}
+.foot-name{font-weight:600;font-size:14px;letter-spacing:.24em;text-transform:uppercase;overflow-wrap:anywhere}
+.foot p{color:#F3E7D3}
+.foot a{color:#fff}
+.foot .small{grid-column:1/-1;padding-top:22px;border-top:1px solid rgba(243,231,211,.25);font-size:13px;color:#E9D8DF}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .nav{display:none}
+  .top .btn{margin-left:auto}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .pans{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+  .sec-head,.faq-grid,.enq-grid{grid-template-columns:minmax(0,1fr);gap:18px}
+}
+@media (max-width:720px){
+  .hero{padding-bottom:56px}
+  .sig{margin-top:18px}
+  .sig-note{margin-bottom:24px}
+  .deck{margin-right:18px}
+  .card h3{font-size:28px}
+  .card-body{padding:2px 18px 18px}
+  .pk-grid{grid-template-columns:minmax(0,1fr)}
+  .pk{padding:28px 0;border-left:0;border-top:1px solid var(--line)}
+  .pk:first-child{border-top:0}
+  .pk-feature{padding-left:18px;padding-right:18px;border-radius:0}
+  .travel{grid-template-columns:minmax(0,1fr);padding:20px}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .foot-in{grid-template-columns:minmax(0,1fr)}
+  .sec{padding-top:64px;padding-bottom:64px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card,.disc,.save .fill{transition:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .poof{display:none}
+}
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <a class="wm" href="#top" data-brand>Makeup by Anika</a>
+  <nav class="nav" aria-label="Sections"><a href="#lookbook">Lookbook</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#faq">FAQ</a></nav>
+  <a class="btn btn-plum sm" href="#enquire">Enquire</a>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="h1">
+    <div>
+      <p class="kicker">Bridal &amp; event makeup · Sydney</p>
+      <h1 id="h1">Makeup for the day you’ll <em>look back on</em></h1>
+      <p class="lead">Soft, long-wearing looks for brides, bridal parties and big nights — applied at your home, venue or hotel, anywhere around Sydney.</p>
+      <p class="sig" aria-hidden="true">Anika</p>
+      <p class="sig-note">Freelance makeup artist · Marrickville, NSW</p>
+      <div class="cta"><a class="btn btn-plum" href="#lookbook">Browse the lookbook</a><a class="btn btn-line" href="#enquire">Enquire about your date</a></div>
+    </div>
+
+    <div class="book" id="lookbook" role="region" aria-roledescription="carousel" aria-label="Lookbook">
+      <div class="deck" id="deck" tabindex="0" aria-describedby="deck-hint"></div>
+      <div class="ctl">
+        <button class="round" id="prev" type="button" aria-label="Previous look"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="save" id="save" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="currentColor"/><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span id="save-t">Save this look</span></button>
+        <button class="round" id="next" type="button" aria-label="Next look"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <p class="hint" id="deck-hint">Drag or swipe the card, or use ← → · press S to save</p>
+      <div class="mine">
+        <p class="mine-h"><span>My looks</span><span id="mine-n">0 saved</span></p>
+        <ul class="strip" id="strip"></ul>
+        <p class="empty">Nothing saved yet — tap “Save this look” on one you love. Saved looks ride along with your enquiry.</p>
+      </div>
+      <p class="sr" id="deck-live" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="services" aria-labelledby="s-h">
+    <div class="sec-head rv">
+      <div><p class="kicker">Services</p><h2 id="s-h">Four ways I can help</h2></div>
+      <p class="note">Every face starts with skin prep and a chat about how you want to feel on the day. I bring the lot — light, chair and a full kit.</p>
+    </div>
+    <ul class="pans">
+      <li class="pan rv"><span class="disc" style="--c:#F4C9D5;--d:#E2A5B8" aria-hidden="true"></span><h3>Bridal makeup</h3><p>A trial first, then your wedding-day look — long-wearing and made for the camera.</p></li>
+      <li class="pan rv"><span class="disc" style="--c:#FBD3BF;--d:#EDAE92" aria-hidden="true"></span><h3>Bridal party</h3><p>Bridesmaids, mothers and flower girls, each in a look that suits them.</p></li>
+      <li class="pan rv"><span class="disc" style="--c:#F1E1C6;--d:#DCC19A" aria-hidden="true"></span><h3>Special events</h3><p>Formals, engagements, galas and milestone birthdays.</p></li>
+      <li class="pan rv"><span class="disc" style="--c:#E6CFE0;--d:#C9A5C0" aria-hidden="true"></span><h3>Makeup lessons</h3><p>One-on-one: learn a five-minute everyday face with your own kit.</p></li>
+    </ul>
+  </section>
+
+  <section class="sec wrap packages" id="packages" aria-labelledby="p-h">
+    <div class="sec-head rv">
+      <div><p class="kicker">Bridal packages</p><h2 id="p-h">Clear prices, no surprises</h2></div>
+      <p class="note">Sample prices for this concept demo, in AUD. A written quote follows your enquiry.</p>
+    </div>
+    <div class="pk-grid rv">
+      <article class="pk"><p class="pk-no">01</p><h3>Bridal trial</h3><p class="pk-price">$180</p><p class="pk-time">90 minutes · at my Marrickville studio</p><ul><li>Try two looks side by side</li><li>Daylight photos to take home</li><li>Notes on skin prep for the weeks before</li></ul></article>
+      <article class="pk pk-feature"><p class="pk-no">02</p><h3>Wedding day</h3><p class="pk-price">$390</p><p class="pk-time">For the bride · on location</p><ul><li>Skin prep, full makeup and lashes</li><li>A touch-up kit with your lip colour</li><li>Stay for photos: $120 an hour</li></ul></article>
+      <article class="pk"><p class="pk-no">03</p><h3>Bridal party</h3><p class="pk-price">$150<small> each</small></p><p class="pk-time">Bridesmaids and mothers · flower girls $60</p><ul><li>Looks that belong together</li><li>Lashes included</li><li>Two or more people alongside the bride</li></ul></article>
+    </div>
+    <div class="travel rv"><h3>Travel</h3><p>Within 25 km of the Sydney CBD, travel is included. Further afield it’s $1.20 per kilometre, return, and starts before 6am add $60. Destination weddings are quoted per trip. (Sample prices.)</p></div>
+  </section>
+
+  <section class="sec wrap faq" id="faq" aria-labelledby="q-h">
+    <div class="faq-grid">
+      <div class="rv"><p class="kicker">FAQ</p><h2 id="q-h">Good questions</h2></div>
+      <div class="rv">
+        <details><summary>Do I need a trial?</summary><p>Not always, but most brides like one. It’s where we settle the look, test how it wears and take photos in daylight.</p></details>
+        <details><summary>I have sensitive skin. Is that okay?</summary><p>Let me know when you enquire. I can patch test at your trial and I’m happy to work with products you already know suit you.</p></details>
+        <details><summary>How long does it take?</summary><p>Around 75 minutes for the bride and 40 minutes for each person in the bridal party. I’ll build a timeline with you.</p></details>
+        <details><summary>Can you work with my traditions?</summary><p>Yes. Tell me about the ceremony, the outfits and any changes through the day, and I’ll plan the looks — and the timing — around them.</p></details>
+        <details><summary>How far ahead should I book?</summary><p>Popular dates go early, so enquire as soon as you have yours. A deposit holds the date once you’re happy with the quote.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="enquire" aria-labelledby="e-h">
+    <div class="enq-grid">
+      <div class="rv">
+        <p class="kicker">Enquire</p>
+        <h2 id="e-h">Tell me about your day</h2>
+        <p class="note" style="color:var(--plum2)">Share the date, where you’re getting ready and how many faces — and attach any looks you saved in the lookbook.</p>
+        <dl class="contact">
+          <div><dt>Call</dt><dd><a href="tel:0491570110">0491 570 110</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:anika@example.com">anika@example.com</a></dd></div>
+          <div><dt>Studio</dt><dd>Marrickville, NSW · by appointment</dd></div>
+        </dl>
+      </div>
+      <form class="enq" id="enq">
+        <div class="two"><label>Your name<input name="name" autocomplete="name" placeholder="First and last name"></label><label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com"></label></div>
+        <div class="two"><label>Wedding or event date<input type="date" name="date"></label><label>Getting ready in (suburb)<input name="suburb" placeholder="e.g. Newtown" autocomplete="address-level2"></label></div>
+        <label>How many people need makeup?<select name="people"><option>Just me</option><option>2–3</option><option>4–6</option><option>7 or more</option></select></label>
+        <div class="attached"><p class="att-h">Looks attached · <span id="att-n">0</span></p><ul class="strip" id="strip2"></ul><p class="empty">No looks attached yet — save some from the lookbook above.</p></div>
+        <label>Anything else?<textarea name="notes" rows="3" placeholder="Skin type, venue, dress colour…"></textarea></label>
+        <button class="btn btn-plum" type="submit">Send enquiry</button>
+        <p class="fine">Demo form — nothing is sent.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><p class="foot-sig" aria-hidden="true">Anika</p><p class="foot-name" data-brand>Makeup by Anika</p></div>
+    <div><p>Bridal &amp; event makeup across Sydney</p><p><a href="tel:0491570110">0491 570 110</a> · <a href="mailto:anika@example.com">anika@example.com</a></p><p><a href="#top">Back to the top ↑</a></p></div>
+    <p class="small"><span data-brand>Makeup by Anika</span> is a fictional business in a concept demo — Anika is not a real person. Looks are illustrations and prices are samples.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  document.documentElement.classList.add("js");
+  var mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+  var reduced = function(){ return (window.DemoKit && DemoKit.reducedMotion) || !!(mq && mq.matches); };
+
+  var LOOKS = [
+    {n:"Soft glam", d:"Satin skin, a warm smoky lid and a rosewood lip that photographs beautifully from the ceremony to the last dance.", b:"Evening receptions",
+     p:[["Lid","Rose-bronze shimmer","#B98378"],["Cheek","Dusty rose","#D98E95"],["Lip","Rosewood","#A65E68"]],
+     f:{bg:"#F7D6E0", skin:"#E8B896", sd:"#C99474", hair:"#5A3A2C", brow:"#5A3A2C", hs:"waves", crease:"#8C5A56", glow:1}},
+    {n:"Natural glow", d:"Skin that still looks like skin: a sheer base, cream blush, brushed-up brows and a glossy balm.", b:"Daytime and outdoor ceremonies",
+     p:[["Lid","Champagne wash","#E3C29E"],["Cheek","Apricot","#F0A07E"],["Lip","Peach balm","#D98674"]],
+     f:{bg:"#FBD9C9", skin:"#D39E77", sd:"#B27E5B", hair:"#8E6340", brow:"#6E4A30", hs:"pony", gloss:1, glow:1}},
+    {n:"Editorial", d:"A graphic plum wing and sculpted cheekbones, for the bride who wants a real moment in her portraits.", b:"City weddings and portraits",
+     p:[["Lid","Plum liner","#6E3E73"],["Cheek","Mulberry","#B8657F"],["Lip","Berry stain","#8E3F5A"]],
+     f:{bg:"#EBDCEB", skin:"#8A5A3C", sd:"#6B432D", hair:"#241915", brow:"#241915", hs:"curls", wing:"#5B2F61", crease:"#5B2F61"}},
+    {n:"Classic bridal", d:"Soft definition, fluttery lashes and a pink-nude lip that lasts through the vows and the speeches.", b:"Garden, church and timeless",
+     p:[["Lid","Taupe satin","#CDAE9C"],["Cheek","Petal pink","#F0A9AE"],["Lip","Pink nude","#D98B8E"]],
+     f:{bg:"#F3E7D3", skin:"#F2D0BA", sd:"#D7AE95", hair:"#7A5638", brow:"#6B4B33", hs:"veil", glow:1}},
+    {n:"Bold lip", d:"Clean skin, a fine black flick and a true red that stays put — simple, confident, done.", b:"Registry weddings and cocktail receptions",
+     p:[["Lid","Soft neutral","#D5BBA7"],["Cheek","Warm flush","#E4A195"],["Lip","True red","#B01E36"]],
+     f:{bg:"#F7D6E0", skin:"#E4B08E", sd:"#C28E6E", hair:"#1E1A1D", brow:"#1E1A1D", hs:"bob", wing:"#1E1A1D"}},
+    {n:"Cultural bridal", d:"Luminous skin, deeper eye definition and a rich lip made to sit with red, gold or jewel-toned bridal wear — and every outfit change. Tell me your traditions and I’ll build the look around them.", b:"Ceremonies with more than one look",
+     p:[["Lid","Antique gold","#C9953F"],["Cheek","Terracotta","#C47455"],["Lip","Deep red","#8C1D2F"]],
+     f:{bg:"#FBD9C9", skin:"#B47A55", sd:"#93603F", hair:"#17110F", brow:"#17110F", hs:"bun", wing:"#2A1A14", crease:"#6B3B28", glow:1}}
+  ];
+
+  var HAIR = {
+    waves:{b:"M58 128C52 64 86 36 122 36c44 0 70 36 64 96-3 34 8 60 22 86-26 14-54 8-64-12H100c-10 20-38 26-64 12 14-26 25-52 22-94z", f:"M58 134C54 82 86 44 132 44c30 0 50 22 52 58-14-24-38-38-66-32-26 6-46 30-60 64z"},
+    pony:{b:"M62 122c-4-52 26-82 58-82 36 0 64 30 58 82zM166 56c24 2 34 28 22 62-4-20-14-34-28-42z", f:"M60 122c2-42 28-68 60-68s58 26 60 68c-10-30-32-50-60-50S70 92 60 122z"},
+    curls:{b:"", f:""},
+    veil:{b:"M80 58C42 108 30 178 16 240h208c-14-62-26-132-64-182z", f:"M60 122c0-42 26-70 60-70s60 28 60 70c-12-30-34-50-60-50S72 92 60 122z"},
+    bob:{b:"M54 174c-8-74 20-130 66-130s74 56 66 130c-16 6-30 2-36-10H90c-6 12-20 16-36 10z", f:"M62 114c0-38 24-62 58-62s58 24 58 62c-3-8-9-12-18-12H80c-9 0-15 4-18 12z"},
+    bun:{b:"M62 124c-4-50 26-80 58-80s62 30 58 80z", f:"M60 124c2-44 28-72 60-72s58 28 60 72c-10-34-32-56-60-56S70 90 60 124z"}
+  };
+
+  function face(L){
+    var F = L.f, lid = L.p[0][2], cheek = L.p[1][2], lip = L.p[2][2], h = HAIR[F.hs], o = [];
+    o.push('<svg viewBox="0 10 240 224" aria-hidden="true" focusable="false"><circle cx="120" cy="122" r="106" fill="' + F.bg + '"/>');
+    if (F.hs === "veil") o.push('<path d="' + h.b + '" fill="#fff" opacity=".7"/><path d="M80 58C42 108 30 178 16 240" fill="none" stroke="#fff" stroke-width="2"/>');
+    else if (F.hs === "curls"){
+      var c = [];
+      for (var i = 0; i < 11; i++){ var a = Math.PI * (1.02 + i * 0.096), x = 120 + Math.cos(a) * 70, y = 112 + Math.sin(a) * 74; c.push('<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + (26 - Math.abs(i - 5) * 1.2).toFixed(1) + '"/>'); }
+      o.push('<g fill="' + F.hair + '">' + c.join("") + '<circle cx="120" cy="70" r="44"/></g>');
+    } else o.push('<path d="' + h.b + '" fill="' + F.hair + '"/>');
+    if (F.hs === "veil") o.push('<circle cx="120" cy="44" r="24" fill="' + F.hair + '"/><g fill="#fff"><circle cx="104" cy="36" r="3.4"/><circle cx="112" cy="28" r="3.4"/><circle cx="122" cy="24" r="3.4"/><circle cx="132" cy="28" r="3.4"/></g>');
+    if (F.hs === "bun") o.push('<circle cx="178" cy="176" r="22" fill="' + F.hair + '"/>');
+    o.push('<path d="M101 192c2 18 0 30-8 48h54c-8-18-10-30-8-48z" fill="' + F.sd + '"/>');
+    o.push('<path d="M120 50c43 0 62 38 60 78-2 44-28 80-60 80s-58-36-60-80c-2-40 17-78 60-78z" fill="' + F.skin + '"/>');
+    if (F.hs === "curls"){
+      var fc = [];
+      for (var j = 0; j < 7; j++){ var aa = Math.PI * (1.1 + j * 0.13); fc.push('<circle cx="' + (120 + Math.cos(aa) * 52).toFixed(1) + '" cy="' + (104 + Math.sin(aa) * 50).toFixed(1) + '" r="13"/>'); }
+      o.push('<g fill="' + F.hair + '">' + fc.join("") + '</g>');
+    } else o.push('<path d="' + h.f + '" fill="' + F.hair + '"/>');
+    if (F.hs === "bun") o.push('<path d="M120 52v16" stroke="' + F.sd + '" stroke-width="2"/><g transform="translate(160 78)"><circle r="5" cy="-7" fill="#D4A94C"/><circle r="5" cx="7" cy="-2" fill="#D4A94C"/><circle r="5" cx="4" cy="6" fill="#D4A94C"/><circle r="5" cx="-4" cy="6" fill="#D4A94C"/><circle r="5" cx="-7" cy="-2" fill="#D4A94C"/><circle r="3.6" fill="#8C1D2F"/></g>');
+    // brows, lids, lashes
+    o.push('<g fill="none" stroke-linecap="round"><path d="M82 106q15-9 31-4M158 106q-15-9-31-4" stroke="' + F.brow + '" stroke-width="4"/></g>');
+    if (F.crease) o.push('<path d="M80 120c9-14 28-15 37-3M160 120c-9-14-28-15-37-3" fill="none" stroke="' + F.crease + '" stroke-width="3.6" stroke-linecap="round" opacity=".38"/>');
+    o.push('<path d="M82 125c6-13 26-15 35-3-10-3-24-3-35 3zM158 125c-6-13-26-15-35-3 10-3 24-3 35 3z" fill="' + lid + '"/>');
+    if (F.wing) o.push('<path d="M83 126l-12-8M157 126l12-8" stroke="' + F.wing + '" stroke-width="3.4" stroke-linecap="round"/>');
+    o.push('<g fill="none" stroke="#2C1B26" stroke-linecap="round"><path d="M82 126q17 10 35-2M158 126q-17 10-35-2" stroke-width="2.6"/><path d="M86 129l-3 5M92 131l-2 6M98 132v6M104 131l2 6M110 129l3 5M154 129l3 5M148 131l2 6M142 132v6M136 131l-2 6M130 129l-3 5" stroke-width="1.7"/></g>');
+    o.push('<ellipse cx="90" cy="152" rx="17" ry="9" fill="' + cheek + '" opacity=".55"/><ellipse cx="150" cy="152" rx="17" ry="9" fill="' + cheek + '" opacity=".55"/>');
+    if (F.glow) o.push('<g fill="#fff" opacity=".42"><ellipse cx="96" cy="142" rx="9" ry="3" transform="rotate(-18 96 142)"/><ellipse cx="144" cy="142" rx="9" ry="3" transform="rotate(18 144 142)"/><ellipse cx="121" cy="136" rx="2" ry="7"/></g>');
+    o.push('<path d="M121 133q-3 12 0 18q3 2 6 0" fill="none" stroke="' + F.sd + '" stroke-width="2.2" stroke-linecap="round"/>');
+    o.push('<path d="M104 173q8-7 16-3q8-4 16 3q-6 12-16 13q-10-1-16-13z" fill="' + lip + '"/><path d="M105 173.6q15 4 30 0" fill="none" stroke="rgba(44,27,38,.35)" stroke-width="1.5" stroke-linecap="round"/>');
+    if (F.gloss) o.push('<path d="M114 179q6 2 12 0" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>');
+    o.push("</svg>");
+    return o.join("");
+  }
+
+  /* ---------- build the deck ---------- */
+  var deck = $("#deck"), N = LOOKS.length, cur = 0, cards = [], busy = false;
+  LOOKS.forEach(function(L, i){
+    var el = document.createElement("article");
+    el.className = "card";
+    el.setAttribute("aria-roledescription", "slide");
+    el.setAttribute("aria-label", (i + 1) + " of " + N + ": " + L.n);
+    el.innerHTML = '<div class="card-art">' + face(L) + '<p class="card-no">Look ' + String(i + 1).padStart(2, "0") + ' / ' + String(N).padStart(2, "0") + '</p></div>' +
+      '<div class="card-body"><h3>' + L.n + '</h3><p class="card-desc">' + L.d + '</p><p class="best"><b>Best for</b>' + L.b + '</p>' +
+      '<ul class="pal">' + L.p.map(function(p){ return '<li><i style="--c:' + p[2] + '"></i><span>' + p[0] + ' · ' + p[1] + '</span></li>'; }).join("") + '</ul></div>';
+    deck.appendChild(el); cards.push(el);
+  });
+
+  function slot(p){
+    if (p === 0) return "translate(0,0) rotate(0deg)";
+    if (p === 1) return "translate(14px,12px) rotate(3.5deg) scale(.965)";
+    if (p === 2) return "translate(24px,22px) rotate(-2.5deg) scale(.93)";
+    return "translate(24px,22px) rotate(-2.5deg) scale(.9)";
+  }
+  function place(c, p, instant){
+    if (instant) c.style.transition = "none";
+    c.style.zIndex = String(N - p);
+    c.style.transform = slot(p);
+    c.style.opacity = p > 2 ? "0" : "1";
+    c.inert = p !== 0;
+    c.setAttribute("aria-hidden", p !== 0 ? "true" : "false");
+    if (instant){ void c.offsetWidth; c.style.transition = ""; }
+  }
+  function layout(instant){ cards.forEach(function(c, i){ place(c, (i - cur + N) % N, instant); }); }
+  var live = $("#deck-live");
+  function announce(extra){ live.textContent = "Look " + (cur + 1) + " of " + N + ": " + LOOKS[cur].n + (extra ? ". " + extra : ""); syncSave(); }
+
+  function next(){
+    if (busy) return;
+    var old = cards[cur];
+    cur = (cur + 1) % N;
+    layout();
+    if (!reduced()){
+      busy = true;
+      old.style.zIndex = String(N + 2);
+      old.style.opacity = "1";
+      old.style.transition = "transform .5s cubic-bezier(.3,.6,.3,1),opacity .5s ease";
+      old.style.transform = "translate(-125%,-6%) rotate(-18deg)";
+      old.style.opacity = "0";
+      setTimeout(function(){ place(old, N - 1, true); busy = false; }, 470);
+    } else layout(true);
+    announce();
+  }
+  function prev(){
+    if (busy) return;
+    var ni = (cur - 1 + N) % N, c = cards[ni];
+    if (!reduced()){
+      c.style.transition = "none";
+      c.style.zIndex = String(N + 2);
+      c.style.transform = "translate(-125%,-6%) rotate(-18deg)";
+      c.style.opacity = "0";
+      void c.offsetWidth;
+      c.style.transition = "";
+    }
+    cur = ni;
+    layout(reduced());
+    announce();
+  }
+  function goTo(i){ if (i === cur) return; cur = i; layout(true); announce(); }
+  layout(true);
+
+  $("#next").addEventListener("click", next);
+  $("#prev").addEventListener("click", prev);
+  function keys(e){
+    if (e.target.closest && e.target.closest("input,textarea,select")) return;
+    if (e.key === "ArrowRight"){ e.preventDefault(); next(); }
+    else if (e.key === "ArrowLeft"){ e.preventDefault(); prev(); }
+    else if (e.key === "s" || e.key === "S"){ e.preventDefault(); toggleSave(); }
+  }
+  deck.addEventListener("keydown", keys);
+  $(".ctl").addEventListener("keydown", function(e){ if (e.key === "ArrowLeft" || e.key === "ArrowRight") keys(e); });
+
+  /* drag / swipe */
+  var drag = null;
+  deck.addEventListener("pointerdown", function(e){
+    var top = cards[cur];
+    if (busy || e.button > 0 || !top.contains(e.target)) return;
+    drag = {x:e.clientX, y:e.clientY, t:performance.now(), dx:0, moved:false, id:e.pointerId};
+  });
+  deck.addEventListener("pointermove", function(e){
+    if (!drag || e.pointerId !== drag.id) return;
+    var dx = e.clientX - drag.x, dy = e.clientY - drag.y, top = cards[cur];
+    if (!drag.moved){
+      if (Math.abs(dx) < 6) return;
+      if (Math.abs(dy) > Math.abs(dx)){ drag = null; return; }
+      drag.moved = true;
+      try { deck.setPointerCapture(e.pointerId); } catch (err) {}
+      top.style.transition = "none";
+    }
+    drag.dx = dx;
+    top.style.transform = "translate(" + dx + "px," + (dy * 0.12) + "px) rotate(" + (dx * 0.05) + "deg)";
+  });
+  function endDrag(){
+    if (!drag) return;
+    var d = drag; drag = null;
+    if (!d.moved) return;
+    var top = cards[cur], v = d.dx / Math.max(1, performance.now() - d.t);
+    top.style.transition = "";
+    if (d.dx < -90 || v < -0.6) next();
+    else if (d.dx > 90 || v > 0.6){ place(top, 0); prev(); }
+    else place(top, 0);
+  }
+  deck.addEventListener("pointerup", endDrag);
+  deck.addEventListener("pointercancel", endDrag);
+
+  /* ---------- saving ---------- */
+  var saved = [];
+  try { saved = JSON.parse(localStorage.getItem("anika-looks") || "[]").filter(function(i){ return i >= 0 && i < N; }); } catch (e) { saved = []; }
+  var saveBtn = $("#save"), saveT = $("#save-t");
+  function persist(){ try { localStorage.setItem("anika-looks", JSON.stringify(saved)); } catch (e) {} }
+  function syncSave(){
+    var on = saved.indexOf(cur) !== -1;
+    saveBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    saveT.textContent = on ? "Saved to My looks" : "Save this look";
+  }
+  function chip(i, withGo){
+    var L = LOOKS[i];
+    return '<li class="chip"><span class="sw" style="background:linear-gradient(135deg,' + L.p[0][2] + ' 0 33%,' + L.p[1][2] + ' 33% 66%,' + L.p[2][2] + ' 66%)" aria-hidden="true"></span>' +
+      (withGo ? '<button type="button" class="go" data-go="' + i + '">' + L.n + '</button>' : '<span class="go" style="cursor:default">' + L.n + '</span>') +
+      '<button type="button" class="x" data-rm="' + i + '" aria-label="Remove ' + L.n + '">×</button></li>';
+  }
+  function renderStrips(){
+    $("#strip").innerHTML = saved.map(function(i){ return chip(i, true); }).join("");
+    $("#strip2").innerHTML = saved.map(function(i){ return chip(i, false); }).join("");
+    $("#mine-n").textContent = saved.length + " saved";
+    $("#att-n").textContent = saved.length;
+    syncSave();
+  }
+  function poof(){
+    if (reduced()) return;
+    var col = LOOKS[cur].p;
+    for (var k = 0; k < 14; k++){
+      var s = document.createElement("span"), a = Math.random() * Math.PI * 2, r = 40 + Math.random() * 50;
+      s.className = "poof";
+      s.style.setProperty("--c", col[k % 3][2]);
+      s.style.setProperty("--dx", (Math.cos(a) * r).toFixed(1) + "px");
+      s.style.setProperty("--dy", (Math.sin(a) * r * 0.7 - 10).toFixed(1) + "px");
+      s.addEventListener("animationend", function(){ this.remove(); });
+      saveBtn.appendChild(s);
+    }
+  }
+  function toggleSave(){
+    var at = saved.indexOf(cur), L = LOOKS[cur];
+    if (at === -1){ saved.push(cur); poof(); live.textContent = "Saved " + L.n + " to My looks — " + saved.length + " saved."; }
+    else { saved.splice(at, 1); live.textContent = "Removed " + L.n + " from My looks."; }
+    persist(); renderStrips();
+  }
+  saveBtn.addEventListener("click", toggleSave);
+  document.addEventListener("click", function(e){
+    var rm = e.target.closest("[data-rm]"), go = e.target.closest("[data-go]");
+    if (rm){ var i = +rm.getAttribute("data-rm"); saved = saved.filter(function(x){ return x !== i; }); persist(); renderStrips(); live.textContent = "Removed " + LOOKS[i].n + " from My looks."; }
+    else if (go){ goTo(+go.getAttribute("data-go")); }
+  });
+  renderStrips();
+
+  $("#enq").addEventListener("submit", function(e){
+    e.preventDefault();
+    var n = saved.length;
+    if (window.DemoKit) DemoKit.toast("Demo only — your enquiry" + (n ? " with " + n + " saved look" + (n > 1 ? "s" : "") : "") + " wasn’t sent. A real site would pass it to Anika.");
+  });
+
+  /* ---------- soft reveals ---------- */
+  var rv = $$(".rv");
+  if (reduced() || !("IntersectionObserver" in window)) rv.forEach(function(x){ x.classList.add("in"); });
+  else {
+    var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }); }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    rv.forEach(function(x){ io.observe(x); });
+    setTimeout(function(){ rv.forEach(function(x){ x.classList.add("in"); }); }, 4000);
+  }
+})();
+</script>
+</body>
+</html>

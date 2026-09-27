@@ -1,0 +1,8 @@
+{
+  "id": "086",
+  "tech": ["CSS Grid", "SVG", "Pointer Events"],
+  "features": ["story", "game"],
+  "interaction": "Moving the cursor over the hero leaves a fading trail of flat SVG garment cut-outs; clicking (or tapping on a phone) freezes the current look into a 24-cell board, with Next look / Freeze / Clear buttons for keyboard users, a live log of frozen looks, and a size-guide dialog whose measurement diagram updates for sizes 01–05.",
+  "fonts": ["Dela Gothic One", "Martian Mono"],
+  "notes": "Stockists are clearly labelled sample listings (the label's own atelier and pop-up dates, no third-party shops). The newsletter form ends in a demo toast. The cursor trail is switched off under reduced motion; click and buttons still freeze looks."
+}

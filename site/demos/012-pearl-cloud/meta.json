@@ -1,0 +1,8 @@
+{
+  "id": "012",
+  "tech": ["Canvas 2D", "Physics", "SVG", "CSS Grid", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["customiser", "ordering"],
+  "interaction": "Build a bubble tea step by step (tea base, sugar 0–100%, ice, five toppings) and watch a live canvas cup change colour, fill with bouncing pearls, beans and jelly, float ice and pour cheese foam while the sample price updates; add it to a mini cart, pick a store and a pick-up time, and finish on an honest demo message.",
+  "fonts": ["Baloo 2", "Noto Sans SC"],
+  "notes": "Desktop shows the app inside a phone frame; on phones the page is the app. Opening hours and pick-up slots use the visitor's local clock. index.html is about 80 KB (physics cup + three app views), above the 70 KB aim but under the ceiling."
+}

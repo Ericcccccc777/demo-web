@@ -1,0 +1,8 @@
+{
+  "id": "024",
+  "tech": ["Canvas 2D", "SVG", "SVG animation", "Pointer Events", "CSS Grid", "CSS Scroll Snap", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["customiser", "booking", "map"],
+  "interaction": "Drag (or arrow-key) a before/after divider across a canvas-rendered car panel — swirled, hazy paint on the left, the chosen package on the right — and switch Wash, Correction or Ceramic to change the gloss, clarity and water beading, with readouts updating alongside.",
+  "fonts": ["Michroma", "Inter"],
+  "notes": "Booking builds a live sample estimate (package, vehicle size, suburb zone, date) and ends in a demo toast; nothing is sent."
+}

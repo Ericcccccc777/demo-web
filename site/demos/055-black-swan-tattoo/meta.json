@@ -1,0 +1,8 @@
+{
+  "id": "055",
+  "tech": ["SVG", "Pointer Events", "Drag & drop", "Form logic", "CSS Grid"],
+  "features": ["customiser", "booking"],
+  "interaction": "Pick one of nine hand-drawn SVG flash designs and drag it onto a forearm, shoulder, calf or back silhouette (or tap the skin to move it); resize with a slider, rotate, nudge with buttons and change skin tone — the design is clipped to the skin, and the readout gives an approximate size in cm and an illustrative session length, which 'Add to my consult' copies into the enquiry form.",
+  "fonts": ["Pirata One", "Space Mono"],
+  "notes": "Body silhouettes are stylised and sizes are approximate (each view has its own cm scale). Session length is a rough illustrative formula. The consult form is demo-only."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "095",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "CSS Scroll Snap", "IntersectionObserver", "Form logic"],
+  "features": ["customiser", "booking"],
+  "interaction": "Configure a ring — metal, centre stone, setting and band width — and the SVG ring redraws with matching metal gradients and a live opal or facet shimmer while a sample price range updates; a circumference-to-size helper feeds your ring size into the design, which then pre-fills the appointment request (demo toast).",
+  "fonts": ["Cinzel", "Montserrat"],
+  "notes": "Fictional studio; prices are sample ranges and stones are described generically (no grading or certification). Appointment request ends in a demo toast."
+}

@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="069">
+<meta name="demo:brand" content="Harbour &amp; Hale Lawyers">
+<title>Harbour &amp; Hale Lawyers — property &amp; family law, Sydney</title>
+<meta name="description" content="A fictional Sydney firm of property and family lawyers: conveyancing, wills and estates, family law and leases, with a step-by-step guide to buying or selling in NSW.">
+<meta name="theme-color" content="#14213D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--navy:#14213D;--navy2:#1d2d52;--ivory:#F8F5EE;--paper:#fcfaf5;--gold:#B99A5B;--gold-ink:#7E6329;--gold-lt:#dcc79a;--slate:#5A6473;--ink:#1b2438;--mist:#c9cfda;--line:rgba(20,33,61,.13);--hair:rgba(185,154,91,.55);--serif:"EB Garamond",Garamond,Georgia,"Times New Roman",serif;--sans:Lato,"Helvetica Neue",Arial,sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+svg{display:block}
+a{color:inherit}
+p{margin:0}
+h2,h3,h4{margin:0;font-weight:inherit}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid var(--gold-ink);outline-offset:3px}
+.dark :focus-visible,footer :focus-visible{outline-color:var(--gold-lt)}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--navy);color:var(--ivory);padding:12px 16px;text-decoration:none}
+.skip:focus{top:12px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.cap{font:700 11px/1.35 var(--sans);letter-spacing:.26em;text-transform:uppercase}
+
+/* masthead + chapter bar */
+.mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:20px 0 16px}
+.m-side{color:var(--slate)}
+.m-side.r{text-align:right}
+.m-side a{text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px}
+.m-centre{text-align:center;min-width:0}
+.wordmark{font:500 31px/1.1 var(--serif);color:var(--navy);letter-spacing:.015em;overflow-wrap:anywhere}
+.wm-sub{margin-top:8px;color:var(--gold-ink);letter-spacing:.34em}
+.chapters{position:sticky;top:0;z-index:30;background:rgba(248,245,238,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-block:1px solid var(--line)}
+.nav-in{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:60px;gap:12px}
+.mono{justify-self:start;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);color:var(--gold-ink);font:italic 400 15px/1 var(--serif);text-decoration:none}
+.ch-list{display:flex;list-style:none;margin:0;padding:0;gap:2px}
+.ch-list a{display:flex;align-items:baseline;gap:7px;padding:10px 13px;text-decoration:none;color:var(--navy);font:400 18px/1 var(--serif);white-space:nowrap;transition:background .2s}
+.ch-list a span{font:500 13px/1 var(--serif);color:var(--gold-ink);letter-spacing:.08em}
+.ch-list a:hover{background:rgba(185,154,91,.15)}
+.enq{justify-self:end;display:inline-flex;align-items:center;min-height:42px;padding:0 18px;background:var(--navy);color:var(--ivory);text-decoration:none;transition:box-shadow .2s}
+.enq:hover{box-shadow:inset 0 0 0 1px var(--gold)}
+.ch-toggle{display:none}
+
+/* marble */
+.mb{position:absolute;inset:0;z-index:-2;background:radial-gradient(55% 60% at 16% 18%,rgba(255,255,255,.9),transparent 70%),radial-gradient(45% 55% at 88% 78%,rgba(90,100,115,.13),transparent 72%),radial-gradient(35% 30% at 72% 12%,rgba(185,154,91,.13),transparent 70%),linear-gradient(165deg,#f7f3eb,#ebe5d8 58%,#f4f0e8)}
+.veins{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(44px,6vh,64px) 20px 0;background:#f2ede3}
+.arch{position:relative;max-width:800px;margin:0 auto;padding:clamp(88px,10vw,112px) clamp(22px,6vw,76px) clamp(36px,4.4vw,52px);text-align:center;border:1px solid var(--gold);border-bottom:0;border-radius:999px 999px 0 0;background:linear-gradient(180deg,rgba(252,250,245,.84),rgba(252,250,245,.6) 70%,rgba(252,250,245,.82));animation:up .8s var(--ease) both}
+.arch::before{content:"";position:absolute;inset:11px 11px 0;border:1px solid var(--hair);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
+.key{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 5px #f2ede3,0 0 0 6px var(--gold);animation:keyIn .7s .15s var(--ease) both}
+.key span{font:italic 400 20px/1 var(--serif);color:var(--gold-lt)}
+.eyebrow{color:var(--gold-ink);margin:0 auto 20px}
+.title{font:400 clamp(46px,6.6vw,98px)/.98 var(--serif);letter-spacing:-.012em;color:var(--navy);margin:0 auto;max-width:7.4em;overflow-wrap:anywhere;animation:up .8s .1s var(--ease) both}
+.rule{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto}
+.rule::before,.rule::after{content:"";height:1px;width:min(130px,24vw);background:linear-gradient(90deg,transparent,var(--gold))}
+.rule::after{transform:scaleX(-1)}
+.rule i{width:9px;height:9px;border:1px solid var(--gold);transform:rotate(45deg)}
+.lede{font:italic 400 clamp(19px,1.9vw,24px)/1.45 var(--serif);color:var(--slate);max-width:36ch;margin:0 auto}
+.ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:30px;animation:up .8s .2s var(--ease) both}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 26px;font:700 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--navy);background:var(--navy);color:var(--ivory);cursor:pointer;transition:background .25s,box-shadow .25s,color .25s}
+.btn:hover{background:var(--navy2);box-shadow:inset 0 0 0 1px var(--gold)}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn.ghost:hover{background:rgba(20,33,61,.06)}
+.plinth{position:relative;max-width:880px;margin:0 auto;border-top:1px solid var(--gold);padding:16px 0 0;text-align:center;color:var(--navy)}
+.plinth::before{content:"";position:absolute;left:14px;right:14px;top:5px;border-top:1px solid var(--hair)}
+.plinth ul{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 20px;list-style:none;margin:8px 0 10px;padding:0}
+.plinth li{display:flex;align-items:center;gap:20px}
+.plinth li+li::before{content:"";width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
+.waves{width:100%;height:30px;opacity:.75;-webkit-mask:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent);mask:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent)}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+@keyframes keyIn{from{opacity:0;transform:translate(-50%,-50%) scale(.7)}}
+
+/* chapters */
+.chapter{position:relative;padding:clamp(76px,10vw,128px) 0}
+.ch-head{text-align:center;margin:0 auto clamp(40px,6vw,64px);max-width:760px}
+.numeral{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 20px;border-radius:50%;border:1px solid var(--gold);box-shadow:0 0 0 5px var(--ivory),0 0 0 6px var(--hair);font:500 23px/1 var(--serif);color:var(--gold-ink);letter-spacing:.04em}
+.kicker{color:var(--slate);margin-bottom:12px}
+.ch-head h2{font:400 clamp(36px,4.6vw,60px)/1.06 var(--serif);color:var(--navy);text-wrap:balance}
+.lede-s{font:italic 400 clamp(18px,1.7vw,21px)/1.5 var(--serif);color:var(--slate);margin:18px auto 0;max-width:44ch}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+
+/* I. practice */
+.areas{position:relative;display:grid;grid-template-columns:1fr 1fr;border-block:1px solid var(--gold)}
+.areas::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:13px;background:var(--ivory);border:1px solid var(--gold);transform:translate(-50%,-50%) rotate(45deg)}
+.area{padding:clamp(28px,4vw,56px)}
+.area:nth-child(odd){border-right:1px solid var(--hair)}
+.area:nth-child(-n+2){border-bottom:1px solid var(--hair)}
+.a-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.a-ix{font:italic 400 20px/1 var(--serif);color:var(--gold-ink)}
+.area svg{width:54px;height:54px;color:var(--gold-ink)}
+.area h3{font:500 clamp(28px,2.6vw,34px)/1.1 var(--serif);color:var(--navy);margin:18px 0 10px}
+.area p{color:var(--slate);max-width:46ch}
+.ticks{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:7px;font-size:15.5px}
+.ticks li{position:relative;padding-left:22px}
+.ticks li::before{content:"";position:absolute;left:0;top:.8em;width:10px;height:1px;background:var(--gold)}
+.from{margin-top:22px;color:var(--gold-ink)}
+
+/* II. approach */
+.approach{border-top:1px solid var(--line)}
+.statement{font:italic 400 clamp(27px,3.3vw,44px)/1.3 var(--serif);color:var(--navy);text-align:center;max-width:30ch;margin:0 auto;text-wrap:balance}
+.princ{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--hair)}
+.pr{padding:36px clamp(18px,3vw,40px) 0;text-align:center}
+.pr+.pr{border-left:1px solid var(--hair)}
+.pr .a-ix{display:block;margin-bottom:12px}
+.pr h3{font:500 25px/1.2 var(--serif);color:var(--navy);margin:0 0 10px}
+.pr p{color:var(--slate);font-size:16px}
+.meet{margin:52px auto 0;text-align:center;color:var(--slate);max-width:62ch;font-size:16px}
+
+/* III. timeline */
+.dark{background:var(--navy);color:var(--ivory);isolation:isolate;overflow:hidden}
+.dark .mb{background:radial-gradient(70% 60% at 12% 8%,rgba(255,255,255,.07),transparent 70%),radial-gradient(60% 50% at 92% 92%,rgba(185,154,91,.12),transparent 70%),linear-gradient(170deg,#1a294d,#101a31 60%,#14213d)}
+.dark .numeral{color:var(--gold);box-shadow:0 0 0 5px #15223f,0 0 0 6px var(--hair)}
+.dark .kicker{color:#aeb6c4}
+.dark .ch-head h2{color:var(--ivory)}
+.dark .lede-s{color:var(--mist)}
+.mode{position:relative;display:grid;grid-template-columns:1fr 1fr;width:min(440px,100%);margin:0 auto 52px;border:1px solid rgba(185,154,91,.75);border-radius:999px;padding:4px}
+.mode .pill{position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:linear-gradient(180deg,#dcc58f,#b99a5b);transition:transform .5s var(--ease)}
+.mode[data-mode=sell] .pill{transform:translateX(100%)}
+.mode button{position:relative;z-index:1;min-height:48px;border:0;border-radius:999px;background:none;color:#e4e7ee;font:700 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:color .35s}
+.mode button[aria-pressed=true]{color:var(--navy)}
+.rail{position:relative;max-width:1060px;margin:0 auto}
+.track{position:absolute;left:calc(100%/12);right:calc(100%/12);top:28px;height:2px;background:rgba(185,154,91,.28);transform-origin:left;transition:transform 1.2s var(--ease)}
+.js .rail:not(.in) .track{transform:scaleX(0)}
+.fill{position:absolute;inset:0;background:linear-gradient(90deg,#8e7442,#e8d3a0);transform-origin:left;transform:scaleX(var(--p,0));transition:transform .8s var(--ease)}
+.steps{position:relative;z-index:1;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr)}
+.step{display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;padding:0 6px;background:none;border:0;color:var(--mist);cursor:pointer}
+.step .num{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#15223f;border:1px solid rgba(185,154,91,.75);font:500 20px/1 var(--serif);color:var(--gold);transition:background .4s,color .4s,transform .4s,box-shadow .4s}
+.step.done .num{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.step[aria-selected=true] .num{background:var(--ivory);border-color:var(--ivory);color:var(--navy);transform:scale(1.08);box-shadow:0 0 0 5px rgba(185,154,91,.3),0 0 0 6px var(--gold)}
+.step .lbl{font:400 17px/1.25 var(--serif);text-align:center;max-width:12ch;transition:color .3s}
+.step[aria-selected=true] .lbl{color:var(--ivory)}
+.step:hover .num{border-color:var(--gold-lt)}
+.hint{text-align:center;color:#aeb6c4;font-size:14px;margin:26px auto 30px}
+.panel{position:relative;max-width:1060px;margin:0 auto;background:linear-gradient(180deg,#fbf9f4,#f3eee4);color:var(--ink);padding:clamp(26px,4vw,50px);border:1px solid var(--gold);box-shadow:0 40px 80px -40px rgba(0,0,0,.65)}
+.panel::before{content:"";position:absolute;inset:8px;border:1px solid rgba(185,154,91,.4);pointer-events:none}
+.p-body{animation:pIn .5s var(--ease)}
+@keyframes pIn{from{opacity:0;transform:translateY(8px)}}
+.p-head{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;padding-bottom:26px;margin-bottom:28px;border-bottom:1px solid var(--hair)}
+.p-kick{color:var(--gold-ink)}
+.p-title{font:400 clamp(32px,4vw,48px)/1.05 var(--serif);color:var(--navy);margin:10px 0 12px}
+.p-sum{font:italic 400 20px/1.45 var(--serif);color:var(--slate);max-width:48ch}
+.fig{min-width:230px;max-width:280px;text-align:center;border-left:1px solid var(--hair);padding-left:28px}
+.fig .big{font:400 70px/.9 var(--serif);color:var(--navy);font-variant-numeric:lining-nums}
+.fig .unit{margin-top:10px;color:var(--slate)}
+.fig .note{margin-top:10px;font-size:14px;line-height:1.5;color:var(--slate)}
+.nsw{display:inline-block;margin-left:6px;padding:3px 6px 2px;border:1px solid var(--gold-ink);border-radius:2px;color:var(--gold-ink);font:700 10px/1 var(--sans);letter-spacing:.14em;vertical-align:1px}
+.cols{display:grid;grid-template-columns:1fr 1fr}
+.col{padding:0 34px}
+.col:first-child{padding-left:0;border-right:1px solid rgba(185,154,91,.4)}
+.col:last-child{padding-right:0}
+.col h4{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--navy)}
+.col h4 svg{width:20px;height:20px;color:var(--gold-ink)}
+.col ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.col li{position:relative;padding-left:24px;color:#3a4356;font-size:16px;line-height:1.55}
+.col li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg)}
+.docs{margin-top:30px;padding-top:24px;border-top:1px solid rgba(185,154,91,.4)}
+.docs h4{margin-bottom:14px;color:var(--navy)}
+.doclist{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.doclist li{display:flex;align-items:center;gap:9px;padding:8px 13px 8px 11px;background:#fff;border:1px solid rgba(20,33,61,.14);font-size:14.5px;line-height:1.3}
+.doclist li::before{content:"";flex:none;width:12px;height:15px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 15'%3E%3Cpath d='M.5.5h7l4 4v10H.5z' fill='%23fbf7ee' stroke='%237E6329'/%3E%3Cpath d='M7.5.5v4h4M3 8h6M3 10.5h6' fill='none' stroke='%237E6329'/%3E%3C/svg%3E") no-repeat}
+.p-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1060px;margin:22px auto 0}
+.p-nav button{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 20px;background:transparent;border:1px solid rgba(185,154,91,.75);color:var(--ivory);font:700 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:background .2s,opacity .2s}
+.p-nav button:hover:not([aria-disabled=true]){background:rgba(185,154,91,.16)}
+.p-nav button[aria-disabled=true]{opacity:.35;cursor:default}
+.p-count{font:italic 400 19px/1 var(--serif);color:var(--mist)}
+.gi{max-width:1060px;margin:26px auto 0;padding-top:20px;border-top:1px solid rgba(185,154,91,.3);text-align:center;font-size:14px;color:var(--mist)}
+
+/* IV. fees */
+.fees{isolation:isolate;overflow:hidden;background:#f0ebe1}
+.plaque{position:relative;max-width:1060px;margin:0 auto;background:var(--paper);border:1px solid var(--gold);padding:clamp(26px,5vw,64px);box-shadow:0 30px 60px -45px rgba(20,33,61,.5)}
+.plaque::before{content:"";position:absolute;inset:9px;border:1px solid var(--hair);pointer-events:none}
+.sched{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+.sched h3{font:500 27px/1.2 var(--serif);color:var(--navy);padding-bottom:12px;border-bottom:1px solid var(--gold)}
+.fee-list{list-style:none;margin:0;padding:0}
+.fee{display:grid;grid-template-columns:minmax(0,max-content) minmax(14px,1fr) auto;align-items:baseline;column-gap:10px;padding:14px 0 13px;border-bottom:1px solid var(--line)}
+.fee .n{font:400 20px/1.3 var(--serif)}
+.fee .d{border-bottom:1px dotted rgba(90,100,115,.65)}
+.fee .p{font:500 22px/1 var(--serif);color:var(--navy);font-variant-numeric:lining-nums}
+.fee small{grid-column:1/-1;margin-top:4px;font-size:14.5px;line-height:1.5;color:var(--slate)}
+.incl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;padding-top:28px;border-top:1px solid var(--hair);text-align:center;font-size:15px;color:var(--slate)}
+.incl b{display:block;margin-bottom:4px;font:500 19px/1.3 var(--serif);color:var(--navy)}
+.sample{margin-top:28px;text-align:center;font-size:14px;color:var(--slate)}
+.sample strong{margin-right:8px;color:var(--gold-ink)}
+
+/* V. questions */
+.faq{max-width:840px;margin:0 auto;border-top:1px solid var(--gold)}
+.faq details{border-bottom:1px solid var(--hair)}
+.faq summary{display:grid;grid-template-columns:46px 1fr 30px;align-items:baseline;gap:8px;padding:22px 4px;list-style:none;cursor:pointer;font:400 23px/1.3 var(--serif);color:var(--navy)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .a-ix{font-size:18px}
+.pm{position:relative;width:16px;height:16px;align-self:center;justify-self:end}
+.pm::before,.pm::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--gold-ink);transition:transform .3s var(--ease),opacity .3s}
+.pm::after{transform:rotate(90deg)}
+details[open] .pm::after{transform:rotate(0);opacity:0}
+.faq .ans{padding:0 38px 26px 58px;color:#3a4356;max-width:70ch}
+.safety{max-width:840px;margin:30px auto 0;text-align:center;font:italic 400 19px/1.5 var(--serif);color:var(--slate)}
+
+/* VI. contact */
+.contact{border-top:1px solid var(--line)}
+.c-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,88px);align-items:start}
+.chambers dl{display:grid;grid-template-columns:auto 1fr;gap:16px 22px;margin:0}
+.chambers dt{padding-top:6px;color:var(--gold-ink)}
+.chambers dd{margin:0;font:400 20px/1.45 var(--serif);color:var(--navy)}
+.chambers dd a{text-decoration:none;border-bottom:1px solid var(--hair)}
+.plate{position:relative;margin-top:40px;padding:28px 30px;text-align:center;border-radius:3px;background:linear-gradient(135deg,#8c6f33 0%,#e9d7a6 22%,#b99a5b 45%,#f2e3bd 62%,#a88a4d 82%,#d8c08a 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(0,0,0,.2),0 16px 26px -16px rgba(20,33,61,.65)}
+.plate::before{content:"";position:absolute;inset:8px;border:1px solid rgba(60,44,12,.35);border-radius:2px}
+.plate b{display:block;font:500 27px/1.15 var(--serif);color:#2a210d;text-shadow:0 1px 0 rgba(255,255,255,.45);overflow-wrap:anywhere}
+.plate small{display:block;margin-top:9px;color:#3a2e13}
+.screw{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f7eed4,#8a6d2f 72%)}
+.screw::after{content:"";position:absolute;left:1px;right:1px;top:4.5px;height:1px;background:rgba(50,36,8,.55);transform:rotate(40deg)}
+.s1{left:14px;top:14px}.s2{right:14px;top:14px}.s3{left:14px;bottom:14px}.s4{right:14px;bottom:14px}
+.enquiry{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:clamp(22px,4vw,40px);background:var(--paper);border:1px solid var(--hair)}
+.enquiry h3{grid-column:1/-1;font:500 28px/1.2 var(--serif);color:var(--navy)}
+.field{display:grid;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label,.field legend{color:var(--slate);padding:0}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid rgba(20,33,61,.24);border-radius:0;background:#fff;color:var(--ink);font:400 16.5px/1.4 var(--sans)}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid var(--gold-ink);outline-offset:0;border-color:var(--gold-ink)}
+fieldset.field{border:0;margin:0;padding:0}
+.radios{display:flex;flex-wrap:wrap;gap:10px 22px}
+.radios label{display:flex;align-items:center;gap:9px;min-height:40px;color:var(--ink);font:400 16px/1 var(--sans);letter-spacing:0;text-transform:none;cursor:pointer}
+.radios input{width:18px;height:18px;min-height:0;accent-color:var(--navy)}
+.f-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.f-foot p{font-size:14px;color:var(--slate);max-width:40ch}
+
+/* footer */
+footer{background:var(--navy);color:var(--mist);text-align:center;padding:76px 0 calc(56px + env(safe-area-inset-bottom))}
+.f-name{font:400 clamp(30px,3.6vw,46px)/1.1 var(--serif);color:var(--ivory);overflow-wrap:anywhere}
+footer .wm-sub{color:var(--gold-lt)}
+footer p{max-width:66ch;margin:12px auto 0;font-size:14.5px}
+.f-links{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;margin-top:26px}
+.f-links a{color:var(--ivory);text-decoration:none;border-bottom:1px solid rgba(185,154,91,.6)}
+footer .urgent{color:var(--gold-lt);font:italic 400 18px/1.4 var(--serif)}
+
+@media (max-width:900px){
+ .mast{grid-template-columns:1fr;padding:16px 0 14px}
+ .m-side{display:none}
+ .nav-in{grid-template-columns:auto 1fr auto}
+ .ch-toggle{display:inline-flex;justify-self:start;align-items:center;gap:10px;min-height:42px;padding:0 16px;border:1px solid var(--hair);background:transparent;color:var(--navy);cursor:pointer}
+ .ch-toggle i{width:14px;height:7px;border-block:1px solid var(--navy)}
+ .ch-list{display:none;position:absolute;left:-20px;right:-20px;top:calc(100% + 1px);flex-direction:column;padding:6px 20px 16px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 30px -22px rgba(20,33,61,.35)}
+ .ch-list.open{display:flex}
+ .ch-list a{padding:14px 2px;font-size:22px;border-bottom:1px solid var(--line)}
+ .ch-list a span{min-width:2.2em}
+ .areas{grid-template-columns:1fr}
+ .areas::after{display:none}
+ .area{padding:34px 4px}
+ .area:nth-child(odd){border-right:0}
+ .area:not(:last-child){border-bottom:1px solid var(--hair)}
+ .princ{grid-template-columns:1fr}
+ .pr{padding:30px 6px}
+ .pr+.pr{border-left:0;border-top:1px solid var(--hair)}
+ .p-head{grid-template-columns:1fr;gap:20px}
+ .fig{display:grid;grid-template-columns:auto 1fr;gap:2px 18px;align-items:center;max-width:none;text-align:left;border-left:0;padding:20px 0 0;border-top:1px solid var(--hair)}
+ .fig .big{grid-row:span 2;font-size:58px}
+ .fig .unit,.fig .note{margin:0}
+ .cols{grid-template-columns:1fr;gap:28px}
+ .col,.col:first-child,.col:last-child{padding:0;border:0}
+ .sched{grid-template-columns:1fr}
+ .incl{grid-template-columns:1fr 1fr}
+ .c-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+ body{font-size:16px}
+ .wrap{width:calc(100% - 32px)}
+ .ch-list{left:-16px;right:-16px;padding-inline:16px}
+ .wordmark{font-size:26px}
+ .wm-sub{letter-spacing:.24em}
+ .hero{padding:48px 16px 0}
+ .arch{padding:86px 20px 34px}
+ .key{width:58px;height:58px}
+ .ctas .btn{width:100%}
+ .plinth ul{gap:4px 14px;font-size:10px}
+ .plinth li{gap:14px}
+ .mode{margin-bottom:40px}
+ .step{padding:0}
+ .step .num{width:44px;height:44px;font-size:17px}
+ .step .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .track{top:22px}
+ .hint{margin:22px auto 24px}
+ .panel{padding:26px 20px}
+ .p-sum{font-size:18.5px}
+ .doclist li{font-size:14px}
+ .p-nav button{padding:0 14px}
+ .p-count{font-size:17px}
+ .fee .n{font-size:19px}
+ .incl{grid-template-columns:1fr;gap:14px}
+ .faq summary{grid-template-columns:34px 1fr 22px;font-size:20.5px;padding:20px 2px}
+ .faq .ans{padding:0 6px 24px 44px}
+ .chambers dl{grid-template-columns:1fr;gap:4px}
+ .chambers dd{margin-bottom:12px}
+ .enquiry{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .js .rv{opacity:1;transform:none}
+ .js .rail:not(.in) .track{transform:none}
+}
+@media (max-width:360px){.enq{padding:0 12px;font-size:13px;letter-spacing:.06em}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <defs>
+  <filter id="vSlate" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+   <feTurbulence type="turbulence" baseFrequency=".0022 .0042" numOctaves="1" seed="3" result="t"/>
+   <feTurbulence type="fractalNoise" baseFrequency=".011" numOctaves="3" seed="8" result="w"/>
+   <feDisplacementMap in="t" in2="w" scale="48" xChannelSelector="R" yChannelSelector="G"/>
+   <feColorMatrix values="0 0 0 0 .36  0 0 0 0 .4  0 0 0 0 .47  0 0 0 -34 1"/>
+   <feComponentTransfer><feFuncA type="table" tableValues="0 .035 .05 .07 .11 .38"/></feComponentTransfer>
+  </filter>
+  <filter id="vGold" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+   <feTurbulence type="turbulence" baseFrequency=".0012 .0024" numOctaves="1" seed="11" result="t"/>
+   <feTurbulence type="fractalNoise" baseFrequency=".009" numOctaves="3" seed="4" result="w"/>
+   <feDisplacementMap in="t" in2="w" scale="40" xChannelSelector="R" yChannelSelector="G"/>
+   <feColorMatrix values="0 0 0 0 .72  0 0 0 0 .58  0 0 0 0 .33  0 0 0 -40 1"/>
+   <feComponentTransfer><feFuncA type="table" tableValues="0 0 .02 .045 .09 .6"/></feComponentTransfer>
+  </filter>
+  <filter id="vIvory" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+   <feTurbulence type="turbulence" baseFrequency=".0022 .0042" numOctaves="1" seed="5" result="t"/>
+   <feTurbulence type="fractalNoise" baseFrequency=".011" numOctaves="3" seed="2" result="w"/>
+   <feDisplacementMap in="t" in2="w" scale="48" xChannelSelector="R" yChannelSelector="G"/>
+   <feColorMatrix values="0 0 0 0 .96  0 0 0 0 .94  0 0 0 0 .89  0 0 0 -36 1"/>
+   <feComponentTransfer><feFuncA type="table" tableValues="0 .025 .035 .05 .07 .22"/></feComponentTransfer>
+  </filter>
+  <pattern id="wv" width="48" height="10" patternUnits="userSpaceOnUse"><path d="M0 5Q12 0 24 5T48 5" fill="none" stroke="#B99A5B" stroke-width=".9"/></pattern>
+ </defs>
+</svg>
+
+<header class="masthead" id="top">
+ <div class="wrap mast">
+  <p class="m-side cap">Balmain · Sydney NSW</p>
+  <div class="m-centre">
+   <p class="wordmark" data-brand>Harbour &amp; Hale Lawyers</p>
+   <p class="wm-sub cap">Property · Family · Estates</p>
+  </div>
+  <p class="m-side r cap"><a href="tel:+61255504127">(02) 5550 4127</a></p>
+ </div>
+</header>
+<nav class="chapters" aria-label="Chapters">
+ <div class="wrap nav-in">
+  <a class="mono" href="#top" aria-label="Back to top"><span data-brand-initials>H&amp;H</span></a>
+  <button class="ch-toggle cap" id="chToggle" type="button" aria-expanded="false" aria-controls="chList"><i aria-hidden="true"></i>Chapters</button>
+  <ol class="ch-list" id="chList">
+   <li><a href="#practice"><span aria-hidden="true">I</span>Practice</a></li>
+   <li><a href="#approach"><span aria-hidden="true">II</span>Approach</a></li>
+   <li><a href="#timeline"><span aria-hidden="true">III</span>Buying &amp; selling</a></li>
+   <li><a href="#fees"><span aria-hidden="true">IV</span>Fees</a></li>
+   <li><a href="#questions"><span aria-hidden="true">V</span>Questions</a></li>
+   <li><a href="#contact"><span aria-hidden="true">VI</span>Contact</a></li>
+  </ol>
+  <a class="enq cap" href="#contact">Enquire</a>
+ </div>
+</nav>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+ <div class="mb" aria-hidden="true"></div>
+ <svg class="veins" aria-hidden="true"><rect width="100%" height="100%" filter="url(#vSlate)"/><rect width="100%" height="100%" filter="url(#vGold)"/></svg>
+ <div class="arch">
+  <div class="key" aria-hidden="true"><span data-brand-initials>H&amp;H</span></div>
+  <p class="eyebrow cap">Property &amp; family lawyers<br>Sydney, NSW</p>
+  <h1 class="title" id="h1" data-brand>Harbour &amp; Hale Lawyers</h1>
+  <div class="rule" aria-hidden="true"><i></i></div>
+  <p class="lede">Buying, selling, separating or planning ahead — explained in plain English, at a fixed fee wherever we can.</p>
+  <div class="ctas">
+   <a class="btn" href="#timeline">Step through a purchase</a>
+   <a class="btn ghost" href="#contact">Arrange a first meeting</a>
+  </div>
+ </div>
+ <div class="plinth">
+  <ul class="cap"><li>Conveyancing</li><li>Wills &amp; estates</li><li>Family law</li><li>Leases</li></ul>
+  <svg class="waves" aria-hidden="true"><rect width="100%" height="100%" fill="url(#wv)"/></svg>
+ </div>
+</section>
+
+<section class="chapter" id="practice" aria-labelledby="t-practice">
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">I</p>
+   <p class="kicker cap">Chapter one</p>
+   <h2 id="t-practice">Four practice areas, one standard</h2>
+   <p class="lede-s">We keep to the matters that shape a household: the home, the family, the estate — and the lease on the shop downstairs.</p>
+  </header>
+  <div class="areas">
+   <article class="area rv">
+    <div class="a-top"><span class="a-ix">i.</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M6 23 24 8l18 15"/><path d="M11 19.5V41h26V19.5"/><path d="M20 41V29h8v12"/><circle cx="24" cy="33.5" r="1.3"/><path d="M24 35v2.4M4 41h40"/></svg></div>
+    <h3>Conveyancing</h3>
+    <p>Buying or selling a house, unit or vacant land anywhere in NSW, including auction and off-the-plan purchases.</p>
+    <ul class="ticks"><li>Contract review before auction or exchange</li><li>Searches, certificates and requisitions</li><li>Electronic settlement and adjustments</li><li>First-home buyer paperwork</li></ul>
+    <p class="from cap">From $1,650 · sample fixed fee</p>
+   </article>
+   <article class="area rv">
+    <div class="a-top"><span class="a-ix">ii.</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M11 6h19l7 7v29H11z"/><path d="M30 6v7h7M16 17h12M16 22h16M16 27h10"/><circle cx="30" cy="35" r="4.2"/><path d="M27.4 38.6 26 44l4-2 4 2-1.4-5.4"/></svg></div>
+    <h3>Wills &amp; estates</h3>
+    <p>Wills, enduring powers of attorney and guardianship, and steady help for executors after a death in the family.</p>
+    <ul class="ticks"><li>Simple and mirror wills</li><li>Powers of attorney and guardianship</li><li>Probate applications</li><li>Estate administration</li></ul>
+    <p class="from cap">Wills from $450 · sample</p>
+   </article>
+   <article class="area rv">
+    <div class="a-top"><span class="a-ix">iii.</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" aria-hidden="true"><circle cx="17" cy="14" r="4.5"/><circle cx="31" cy="14" r="4.5"/><circle cx="24" cy="27" r="3.5"/><path d="M7 41c0-9 4.5-15 10-15M41 41c0-9-4.5-15-10-15M17.5 42c0-5 3-8.5 6.5-8.5s6.5 3.5 6.5 8.5"/></svg></div>
+    <h3>Family law</h3>
+    <p>Separation, parenting arrangements and property settlements, with a steady preference for agreement over court where it is safe.</p>
+    <ul class="ticks"><li>Parenting plans and consent orders</li><li>Property settlement after separation</li><li>Binding financial agreements</li><li>Preparing for mediation</li></ul>
+    <p class="from cap">First meeting $330 · sample</p>
+   </article>
+   <article class="area rv">
+    <div class="a-top"><span class="a-ix">iv.</span><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 10 8h28l3 9"/><path d="M7 17c0 2.5 1.9 4 4.3 4s4.2-1.5 4.2-4c0 2.5 1.9 4 4.3 4S24 19.5 24 17c0 2.5 1.9 4 4.3 4s4.2-1.5 4.2-4c0 2.5 1.9 4 4.3 4S41 19.5 41 17"/><path d="M9 21v20h30V21M14 27h10v8H14zM29 41V27h6v14M5 41h38"/></svg></div>
+    <h3>Leases</h3>
+    <p>Retail and commercial leases for small businesses and landlords — read before you sign, not after.</p>
+    <ul class="ticks"><li>Lease review and advice letter</li><li>Rent reviews and options to renew</li><li>Assignments when you sell a business</li><li>Retail disclosure statements</li></ul>
+    <p class="from cap">Reviews from $880 · sample</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="chapter approach" id="approach" aria-labelledby="t-approach">
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">II</p>
+   <p class="kicker cap">Chapter two</p>
+   <h2 id="t-approach">Our approach</h2>
+  </header>
+  <p class="statement rv">We tell you what happens next, what it will cost and what we need from you — before you have to ask.</p>
+  <div class="princ">
+   <div class="pr rv"><span class="a-ix">i.</span><h3>Fixed fees, in writing</h3><p>Conveyancing, wills and lease reviews are quoted as a fixed fee before we start. If the job changes, we tell you first.</p></div>
+   <div class="pr rv"><span class="a-ix">ii.</span><h3>One lawyer, start to finish</h3><p>The person you meet at the first appointment is the person who settles your purchase or finalises your agreement.</p></div>
+   <div class="pr rv"><span class="a-ix">iii.</span><h3>Plain English, always</h3><p>Every letter opens with a short summary: what it means, and whether you need to do anything.</p></div>
+  </div>
+  <p class="meet rv">Meet us in Balmain, by video or on the phone — weekdays until 5.30pm, with Saturday mornings kept for contract reviews before auction.</p>
+ </div>
+</section>
+
+<section class="chapter dark" id="timeline" aria-labelledby="t-timeline">
+ <div class="mb" aria-hidden="true"></div>
+ <svg class="veins" aria-hidden="true"><rect width="100%" height="100%" filter="url(#vIvory)"/><rect width="100%" height="100%" filter="url(#vGold)" opacity=".45"/></svg>
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">III</p>
+   <p class="kicker cap">Chapter three · Conveyancing</p>
+   <h2 id="t-timeline">Buying or selling, step by step</h2>
+   <p class="lede-s">Six stages of a typical NSW residential sale — what you do, what we do, and the paperwork you'll see at each one.</p>
+  </header>
+  <div class="mode" id="mode" role="group" aria-label="Show the stages for" data-mode="buy">
+   <span class="pill" aria-hidden="true"></span>
+   <button type="button" aria-pressed="true" data-mode="buy">I'm buying</button>
+   <button type="button" aria-pressed="false" data-mode="sell">I'm selling</button>
+  </div>
+  <div class="rail" id="rail">
+   <div class="track" aria-hidden="true"><div class="fill" id="fill"></div></div>
+   <div class="steps" role="tablist" aria-label="Conveyancing stages" id="steps">
+    <button class="step" role="tab" type="button" id="tab0" aria-selected="true" aria-controls="panel"><span class="num" aria-hidden="true">I</span><span class="lbl">Contract review</span></button>
+    <button class="step" role="tab" type="button" id="tab1" aria-selected="false" aria-controls="panel" tabindex="-1"><span class="num" aria-hidden="true">II</span><span class="lbl">Exchange</span></button>
+    <button class="step" role="tab" type="button" id="tab2" aria-selected="false" aria-controls="panel" tabindex="-1"><span class="num" aria-hidden="true">III</span><span class="lbl">Cooling-off</span></button>
+    <button class="step" role="tab" type="button" id="tab3" aria-selected="false" aria-controls="panel" tabindex="-1"><span class="num" aria-hidden="true">IV</span><span class="lbl">Finance &amp; searches</span></button>
+    <button class="step" role="tab" type="button" id="tab4" aria-selected="false" aria-controls="panel" tabindex="-1"><span class="num" aria-hidden="true">V</span><span class="lbl">Pre-settlement inspection</span></button>
+    <button class="step" role="tab" type="button" id="tab5" aria-selected="false" aria-controls="panel" tabindex="-1"><span class="num" aria-hidden="true">VI</span><span class="lbl">Settlement</span></button>
+   </div>
+  </div>
+  <p class="hint">Choose a stage — or use the arrow keys, or Previous and Next.</p>
+  <article class="panel" id="panel" role="tabpanel" aria-labelledby="tab0" tabindex="0"><div class="p-body" id="pbody"></div></article>
+  <div class="p-nav"><button type="button" id="prev">← Previous</button><span class="p-count" id="count">Stage I of VI</span><button type="button" id="next">Next →</button></div>
+  <p class="sr" id="live" aria-live="polite"></p>
+  <p class="gi">General information only, not legal advice. Timeframes and figures reflect typical NSW residential practice and can differ in your contract.</p>
+ </div>
+</section>
+
+<section class="chapter fees" id="fees" aria-labelledby="t-fees">
+ <div class="mb" aria-hidden="true"></div>
+ <svg class="veins" aria-hidden="true"><rect width="100%" height="100%" filter="url(#vSlate)"/></svg>
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">IV</p>
+   <p class="kicker cap">Chapter four</p>
+   <h2 id="t-fees">A schedule of fixed fees</h2>
+   <p class="lede-s">Quoted before we begin, confirmed in writing, and held unless the job itself changes.</p>
+  </header>
+  <div class="plaque rv">
+   <div class="sched">
+    <div>
+     <h3>Property</h3>
+     <ul class="fee-list">
+      <li class="fee"><span class="n">Purchase — home or unit</span><span class="d"></span><span class="p">$1,650</span><small>Contract review, searches, requisitions, adjustments and electronic settlement.</small></li>
+      <li class="fee"><span class="n">Purchase — off the plan</span><span class="d"></span><span class="p">$1,950</span><small>Includes the long wait: sunset dates, variations and the final inspection.</small></li>
+      <li class="fee"><span class="n">Sale — home or unit</span><span class="d"></span><span class="p">$1,450</span><small>Contract preparation, exchange, discharge liaison and settlement.</small></li>
+      <li class="fee"><span class="n">Contract review only</span><span class="d"></span><span class="p">$385</span><small>A written summary and a call before auction day.</small></li>
+     </ul>
+    </div>
+    <div>
+     <h3>Private client &amp; family</h3>
+     <ul class="fee-list">
+      <li class="fee"><span class="n">Simple will</span><span class="d"></span><span class="p">$450</span><small>One meeting, drafting and a supervised signing.</small></li>
+      <li class="fee"><span class="n">Mirror wills for a couple</span><span class="d"></span><span class="p">$780</span><small>Two wills prepared and signed together.</small></li>
+      <li class="fee"><span class="n">Power of attorney &amp; guardianship</span><span class="d"></span><span class="p">$520</span><small>Both enduring appointments, witnessed at the same meeting.</small></li>
+      <li class="fee"><span class="n">Family law first meeting</span><span class="d"></span><span class="p">$330</span><small>An hour with a family lawyer and a written next-steps note.</small></li>
+      <li class="fee"><span class="n">Lease review</span><span class="d"></span><span class="p">$880</span><small>Retail or commercial: an advice letter and one round of negotiation.</small></li>
+     </ul>
+    </div>
+   </div>
+   <div class="incl">
+    <p><b>A written quote</b>before any work starts</p>
+    <p><b>Your lawyer's direct line</b>not a switchboard</p>
+    <p><b>Calls &amp; emails</b>included in the fee</p>
+    <p><b>Disbursements at cost</b>itemised in your quote</p>
+   </div>
+   <p class="sample"><strong class="cap">Sample prices</strong>For a fictional firm, in AUD including GST. Searches, registration fees and transfer duty are extra and passed on at cost.</p>
+  </div>
+ </div>
+</section>
+
+<section class="chapter" id="questions" aria-labelledby="t-q">
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">V</p>
+   <p class="kicker cap">Chapter five</p>
+   <h2 id="t-q">Questions we're asked most</h2>
+  </header>
+  <div class="faq rv">
+   <details><summary><span class="a-ix">i.</span><span>Can I pull out after exchanging contracts?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>If you're buying a home in NSW there's usually a cooling-off period of 5 business days after exchange. You can withdraw in that window, but you forfeit 0.25% of the purchase price. There's no cooling-off when you buy at auction, and sellers don't get one.</p></div></details>
+   <details><summary><span class="a-ix">ii.</span><span>What is a section 66W certificate?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>It's a certificate from your lawyer that waives the cooling-off period — sometimes requested when a seller wants certainty before auction day. We only sign one after explaining exactly what you give up.</p></div></details>
+   <details><summary><span class="a-ix">iii.</span><span>How long does settlement take?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>The standard NSW contract commonly sets settlement 42 days after exchange, but it can be shorter or longer by agreement. Off-the-plan purchases follow their own timetable.</p></div></details>
+   <details><summary><span class="a-ix">iv.</span><span>When is stamp duty paid?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Transfer duty (stamp duty) is due within 3 months of exchange in NSW, and most buyers pay it at settlement. We include an estimate in your quote and arrange the payment.</p></div></details>
+   <details><summary><span class="a-ix">v.</span><span>Do we have to go to court to separate?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Many families reach agreement without a hearing — through negotiation or mediation — and formalise it with consent orders. Strict time limits apply to property claims after a divorce or the end of a de facto relationship, so it's worth getting advice early.</p></div></details>
+   <details><summary><span class="a-ix">vi.</span><span>Can you see me outside business hours?</span><span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>Weekday appointments run until 5.30pm, video meetings can start a little later by arrangement, and Saturday mornings are kept for contract reviews before auction.</p></div></details>
+  </div>
+  <p class="safety rv">General information only, not legal advice. If you or your children are unsafe, call 000.</p>
+ </div>
+</section>
+
+<section class="chapter contact" id="contact" aria-labelledby="t-contact">
+ <div class="wrap">
+  <header class="ch-head rv">
+   <p class="numeral" aria-hidden="true">VI</p>
+   <p class="kicker cap">Chapter six</p>
+   <h2 id="t-contact">Arrange a first meeting</h2>
+   <p class="lede-s">Tell us a little about the matter and we'll suggest a time that suits — in chambers, by video or by phone.</p>
+  </header>
+  <div class="c-grid">
+   <div class="chambers rv">
+    <dl>
+     <dt class="cap">Chambers</dt><dd>Balmain, Sydney NSW<br>By appointment</dd>
+     <dt class="cap">Hours</dt><dd>Mon–Fri 8.30am–5.30pm<br>Sat 9am–12pm, contract reviews</dd>
+     <dt class="cap">Telephone</dt><dd><a href="tel:+61255504127">(02) 5550 4127</a></dd>
+     <dt class="cap">Email</dt><dd><a href="mailto:enquiries@example.com">enquiries@example.com</a></dd>
+     <dt class="cap">Meetings</dt><dd>In person, by video or by phone</dd>
+    </dl>
+    <div class="plate" aria-hidden="true"><span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span><b data-brand>Harbour &amp; Hale Lawyers</b><small class="cap">Solicitors · By appointment</small></div>
+   </div>
+   <form class="enquiry rv" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the firm's inbox.">
+    <h3>Your enquiry</h3>
+    <div class="field"><label class="cap" for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+    <div class="field"><label class="cap" for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="field"><label class="cap" for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    <div class="field"><label class="cap" for="f-matter">Matter</label><select id="f-matter" name="matter"><option>Buying a property</option><option>Selling a property</option><option>A will or power of attorney</option><option>Separation or parenting</option><option>A retail or commercial lease</option><option>Something else</option></select></div>
+    <div class="field full"><label class="cap" for="f-msg">A short outline</label><textarea id="f-msg" name="message" placeholder="For example: buying a unit in Rozelle, auction on Sat 17 Oct."></textarea></div>
+    <fieldset class="field full"><legend class="cap">Best way to reach you</legend><div class="radios"><label><input type="radio" name="via" value="email" checked> Email</label><label><input type="radio" name="via" value="phone"> Phone</label><label><input type="radio" name="via" value="video"> Video call</label></div></fieldset>
+    <div class="f-foot"><p>Please keep confidential details for the meeting itself.</p><button class="btn" type="submit">Send enquiry</button></div>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <p class="f-name" data-brand>Harbour &amp; Hale Lawyers</p>
+  <p class="wm-sub cap">Property · Family · Estates · Balmain, Sydney NSW</p>
+  <div class="rule" aria-hidden="true"><i></i></div>
+  <p>General information only, not legal advice. Figures and timeframes on this page reflect typical NSW residential practice and may not suit your circumstances.</p>
+  <p>A fictional firm created for a design showcase. Prices are samples and contact details are not real.</p>
+  <p class="urgent">If you or your children are unsafe, call 000.</p>
+  <nav class="f-links" aria-label="Footer"><a href="#practice">Practice</a><a href="#timeline">Buying &amp; selling</a><a href="#fees">Fees</a><a href="#contact">Contact</a></nav>
+ </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  var doc = document, $ = function (s) { return doc.querySelector(s); };
+  var rm = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+
+  /* chapter menu on narrow screens */
+  var tg = $("#chToggle"), list = $("#chList");
+  function setMenu(open) { tg.setAttribute("aria-expanded", String(open)); list.classList.toggle("open", open); }
+  tg.addEventListener("click", function () { setMenu(tg.getAttribute("aria-expanded") !== "true"); });
+  list.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  doc.addEventListener("click", function (e) { if (tg.getAttribute("aria-expanded") === "true" && !e.target.closest(".nav-in")) setMenu(false); });
+  doc.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && tg.getAttribute("aria-expanded") === "true") { e.preventDefault(); setMenu(false); tg.focus(); }
+  });
+
+  /* gentle reveals */
+  var rv = [].slice.call(doc.querySelectorAll(".rv")), rail = $("#rail");
+  if ("IntersectionObserver" in window && !rm.matches) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+    rv.forEach(function (el) { io.observe(el); });
+    io.observe(rail);
+  } else {
+    rv.forEach(function (el) { el.classList.add("in"); });
+    rail.classList.add("in");
+  }
+
+  /* the conveyancing timeline */
+  var D = {
+    buy: [
+      { t: "Contract review", big: "Before", unit: "you sign", nsw: true,
+        note: "Ideally before auction day — there's no cooling-off when you buy at auction in NSW.",
+        sum: "The contract decides everything that follows, so we read it before you commit to it.",
+        you: ["Send us the contract as soon as the agent sends it to you", "Get finance pre-approval and book building and pest inspections", "Tell us your plans — renovating, adding a pool, working from home"],
+        we: ["Read the contract and every attached certificate", "Check title, zoning, easements and special conditions", "Negotiate changes, such as the settlement date", "Send a plain-English summary, then call to talk it through"],
+        docs: ["Contract for sale", "Title search & plan", "Planning (zoning) certificate", "Drainage diagram", "Strata report — for units", "Building & pest report"] },
+      { t: "Exchange", big: "10%", unit: "deposit, commonly", nsw: true,
+        note: "Usually paid on exchange in NSW. A smaller deposit can be negotiated.",
+        sum: "Each side signs an identical copy and the copies are swapped. From this moment the contract is binding.",
+        you: ["Sign your copy of the contract", "Pay the deposit, or arrange a deposit bond", "Decide with us whether to keep or waive cooling-off"],
+        we: ["Exchange contracts with the seller's lawyer", "Confirm the deposit is held in trust", "Diarise every deadline and send you a timeline letter"],
+        docs: ["Signed contract", "Deposit receipt or bond", "Section 66W certificate — only if cooling-off is waived"] },
+      { t: "Cooling-off", big: "5", unit: "business days", nsw: true,
+        note: "For residential purchases in NSW, ending 5pm on the fifth business day. Withdrawing costs 0.25% of the price.",
+        sum: "A short window to change your mind — useful if finance or an inspection turns up a surprise.",
+        you: ["Finish any outstanding inspections", "Keep your lender moving towards formal approval", "Tell us straight away if you're having second thoughts"],
+        we: ["Explain exactly what withdrawing would cost", "Serve a notice of rescission in time, if you decide to withdraw", "Confirm in writing when cooling-off has ended"],
+        docs: ["Cooling-off expiry note", "Notice of rescission — only if you withdraw"] },
+      { t: "Finance & searches", big: "3", unit: "months for duty", nsw: true,
+        note: "Transfer duty is due within 3 months of exchange in NSW; most buyers pay it at settlement.",
+        sum: "The quiet middle weeks, when most of the paperwork happens behind the scenes.",
+        you: ["Meet your lender's conditions and sign the loan documents", "Arrange building insurance — we'll tell you when it should start", "Book removalists and set up utilities"],
+        we: ["Order council, water and land tax certificates", "Raise requisitions on title with the seller's lawyer", "Calculate rates and strata levy adjustments", "Prepare the transfer and arrange payment of duty"],
+        docs: ["Loan documents", "Council & water certificates", "Land tax clearance", "Transfer", "Adjustment sheet"] },
+      { t: "Pre-settlement inspection", big: "Final", unit: "days before settlement", nsw: false,
+        note: "Usually arranged through the agent in the last few days before settlement.",
+        sum: "One last look to make sure the home is as it was when you signed.",
+        you: ["Walk through with the agent", "Check the inclusions — blinds, dishwasher, light fittings", "Tell us about any damage or missing items the same day"],
+        we: ["Raise any problems with the seller's lawyer before settlement", "Confirm final figures with your lender", "Book the settlement time"],
+        docs: ["Inclusions list from the contract", "Final settlement figures"] },
+      { t: "Settlement", big: "42", unit: "days, commonly", nsw: true,
+        note: "The standard NSW contract commonly sets settlement 42 days after exchange. It can be negotiated.",
+        sum: "Money moves, the title transfers, and the keys are yours.",
+        you: ["Transfer any balance funds as instructed", "Collect the keys from the agent once we call", "Keep our final statement with your records"],
+        we: ["Settle electronically with the lenders and the seller", "Confirm funds have moved and the transfer is lodged", "Call you the moment it's done", "Send your final statement and registration details"],
+        docs: ["Settlement statement", "Registered transfer — sent after registration", "Trust account statement"] }
+    ],
+    sell: [
+      { t: "Contract preparation", big: "Before", unit: "marketing", nsw: true,
+        note: "In NSW an agent can't offer a home for sale until the contract is ready.",
+        sum: "We prepare the contract first, so your agent can start marketing with the paperwork in order.",
+        you: ["Choose your agent and tell us who they are", "Find strata, pool and renovation paperwork", "List what's staying — curtains, appliances, the garden shed"],
+        we: ["Order title, zoning and drainage documents", "Draft the contract and any special conditions", "Check pool and strata paperwork", "Send the finished contract to your agent"],
+        docs: ["Contract for sale", "Title search & plan", "Planning (zoning) certificate", "Drainage diagram", "Pool certificate — if you have a pool", "Strata documents — for units"] },
+      { t: "Exchange", big: "10%", unit: "deposit, commonly", nsw: true,
+        note: "Usually held in trust by the agent until settlement — standard NSW practice.",
+        sum: "Once an offer is agreed, both copies are signed and swapped, and the sale is binding on you.",
+        you: ["Sign your copy once we've reviewed any buyer changes", "Check the settlement date suits your move", "Keep the property insured"],
+        we: ["Review the buyer's proposed amendments", "Exchange with the buyer's lawyer", "Diarise every deadline and send you a timeline letter"],
+        docs: ["Signed contract", "Deposit receipt from the agent", "Buyer's proposed amendments"] },
+      { t: "Buyer's cooling-off", big: "5", unit: "business days", nsw: true,
+        note: "Your buyer's cooling-off in NSW — sellers don't get one. If the buyer withdraws, you keep 0.25% of the price.",
+        sum: "The buyer has a short window to withdraw. You're bound from exchange.",
+        you: ["Keep the property as it was at exchange", "Hold off on booking removalists until it ends", "Let us know about anything that breaks"],
+        we: ["Watch the deadline", "Tell you the moment the sale is unconditional", "Handle a rescission notice if one arrives"],
+        docs: ["Cooling-off expiry note", "Rescission notice — only if the buyer withdraws"] },
+      { t: "Discharge & searches", big: "Early", unit: "is better", nsw: false,
+        note: "Lenders can take weeks to process a mortgage discharge, so we ask for it straight after exchange.",
+        sum: "Your lender needs to release its mortgage, and the buyer's lawyer will have questions.",
+        you: ["Sign your lender's discharge authority", "Book removalists", "Arrange final meter readings"],
+        we: ["Lodge the discharge and follow it up until it's ready", "Reply to the buyer's requisitions", "Calculate rates and levy adjustments"],
+        docs: ["Mortgage discharge authority", "Requisitions & replies", "Adjustment sheet"] },
+      { t: "Buyer's inspection", big: "Final", unit: "days before settlement", nsw: false,
+        note: "The buyer usually inspects through the agent in the last few days before settlement.",
+        sum: "The buyer checks the home is in the same condition as at exchange.",
+        you: ["Leave every inclusion in place", "Leave the home clean and the keys with the agent", "Take everything that isn't staying"],
+        we: ["Deal with anything the buyer's lawyer raises", "Confirm final figures and payment directions"],
+        docs: ["Inclusions list from the contract", "Payment directions"] },
+      { t: "Settlement", big: "42", unit: "days, commonly", nsw: true,
+        note: "The standard NSW contract commonly sets settlement 42 days after exchange. It can be negotiated.",
+        sum: "The buyer's funds arrive, your mortgage is paid out, and the keys change hands.",
+        you: ["Hand every key to the agent", "Cancel insurance and utilities after settlement", "Keep our final statement for your tax records"],
+        we: ["Settle electronically with the buyer's lawyer and your lender", "Confirm your mortgage is paid out and the balance reaches you", "Arrange release of the deposit", "Send your final statement"],
+        docs: ["Settlement statement", "Payment directions", "Deposit release authority"] }
+    ]
+  };
+  var R = ["I", "II", "III", "IV", "V", "VI"];
+  var ICON_YOU = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="10" cy="6.5" r="3.2"/><path d="M3.5 18c.6-4 3.2-6.2 6.5-6.2s5.9 2.2 6.5 6.2"/></svg>';
+  var ICON_WE = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="10" r="5.4"/><path d="M7.6 10.2l1.6 1.6 3.3-3.4"/></svg>';
+  var mode = "buy", idx = 0, announced = false;
+  var tabs = [].slice.call(doc.querySelectorAll(".step")), fill = $("#fill"), body = $("#pbody"), panel = $("#panel");
+  var count = $("#count"), live = $("#live"), prev = $("#prev"), next = $("#next"), modeEl = $("#mode");
+  function li(a) { return a.map(function (x) { return "<li>" + x + "</li>"; }).join(""); }
+  function setFill(v) { fill.style.setProperty("--p", v); }
+
+  function render(focusTab, redraw) {
+    var steps = D[mode], s = steps[idx], who = mode === "buy" ? "Buying" : "Selling";
+    tabs.forEach(function (t, i) {
+      var on = i === idx;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      t.classList.toggle("done", i < idx);
+      t.querySelector(".lbl").textContent = steps[i].t;
+    });
+    var p = idx / (steps.length - 1);
+    if (redraw && !rm.matches && p > 0) {
+      setFill(0);
+      requestAnimationFrame(function () { requestAnimationFrame(function () { setFill(p); }); });
+    } else setFill(p);
+    panel.setAttribute("aria-labelledby", tabs[idx].id);
+    body.innerHTML =
+      '<div class="p-head"><div><p class="p-kick cap">Stage ' + R[idx] + " of VI · " + who + '</p><h3 class="p-title">' + s.t + '</h3><p class="p-sum">' + s.sum + "</p></div>" +
+      '<div class="fig"><div class="big">' + s.big + '</div><div class="unit cap">' + s.unit + (s.nsw ? '<span class="nsw" title="New South Wales">NSW</span>' : "") + '</div><p class="note">' + s.note + "</p></div></div>" +
+      '<div class="cols"><div class="col"><h4 class="cap">' + ICON_YOU + 'What you do</h4><ul>' + li(s.you) + '</ul></div><div class="col"><h4 class="cap">' + ICON_WE + "What we do</h4><ul>" + li(s.we) + "</ul></div></div>" +
+      '<div class="docs"><h4 class="cap">Typical documents</h4><ul class="doclist">' + li(s.docs) + "</ul></div>";
+    body.style.animation = "none"; void body.offsetWidth; body.style.animation = "";
+    count.textContent = "Stage " + R[idx] + " of VI";
+    prev.setAttribute("aria-disabled", String(idx === 0));
+    next.setAttribute("aria-disabled", String(idx === steps.length - 1));
+    if (announced) live.textContent = who + " — stage " + (idx + 1) + " of 6: " + s.t + ".";
+    announced = true;
+    if (focusTab) tabs[idx].focus();
+  }
+
+  tabs.forEach(function (t, i) { t.addEventListener("click", function () { idx = i; render(); }); });
+  $("#steps").addEventListener("keydown", function (e) {
+    var n = tabs.length, j;
+    if (e.key === "ArrowRight") j = (idx + 1) % n;
+    else if (e.key === "ArrowLeft") j = (idx - 1 + n) % n;
+    else if (e.key === "Home") j = 0;
+    else if (e.key === "End") j = n - 1;
+    else return;
+    e.preventDefault(); idx = j; render(true);
+  });
+  prev.addEventListener("click", function () { if (idx > 0) { idx--; render(); } });
+  next.addEventListener("click", function () { if (idx < tabs.length - 1) { idx++; render(); } });
+  modeEl.addEventListener("click", function (e) {
+    var b = e.target.closest("button");
+    if (!b || b.getAttribute("data-mode") === mode) return;
+    mode = b.getAttribute("data-mode");
+    modeEl.setAttribute("data-mode", mode);
+    [].forEach.call(modeEl.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    render(false, true);
+  });
+
+  /* light swipe between stages on touch screens */
+  var sx = null, sy = 0;
+  panel.addEventListener("touchstart", function (e) { var t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, { passive: true });
+  panel.addEventListener("touchend", function (e) {
+    if (sx === null) return;
+    var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy; sx = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.6) {
+      if (dx < 0 && idx < tabs.length - 1) idx++; else if (dx > 0 && idx > 0) idx--; else return;
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

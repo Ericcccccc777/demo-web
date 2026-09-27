@@ -1,0 +1,8 @@
+{
+  "id": "077",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Form logic"],
+  "features": ["game", "story", "map"],
+  "interaction": "A loupe follows the pointer over a 24-frame film contact sheet and magnifies it 2× (a cloned, scaled copy of the sheet inside a round lens); clicking a frame circles it with an animated red grease-pencil stroke and adds it to 'Your picks', which can be attached to the enquiry form. On touch, the first tap slides the loupe onto a frame and a second tap circles it; with a keyboard, Tab into the sheet, arrow keys move the loupe frame by frame, Enter circles and Escape leaves.",
+  "fonts": ["Cormorant SC", "DM Mono"],
+  "notes": "Frames are drawn SVG illustrations, not photographs. Picks are remembered in this browser only (localStorage, optional) and the enquiry ends in a demo message — nothing is sent."
+}

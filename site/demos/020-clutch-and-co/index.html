@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="020">
+<meta name="demo:brand" content="Clutch &amp; Co. Driving">
+<title>Clutch &amp; Co. Driving — Manual driving lessons in Adelaide</title>
+<meta name="description" content="Clutch &amp; Co. Driving is a fictional manual-transmission driving school in Adelaide, SA, presented as a car instrument cluster.">
+<meta name="theme-color" content="#111418">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--carbon:#111418;--glass:#080B0E;--amber:#FFB347;--red:#E63946;--red-t:#FF6470;--white:#E8EEF2;--dim:#9AA6B2;--line:rgba(232,238,242,.12);--green:#3DDC84;
+--f1:"Chakra Petch",ui-monospace,Menlo,monospace;--f2:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--g:min(20vw,46vh,300px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--carbon);color:var(--white);font:400 16px/1.55 var(--f2);-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dash{position:relative;height:100vh;height:100svh;min-height:640px;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;overflow:hidden;
+background:radial-gradient(90% 60% at 50% 0%,rgba(255,179,71,.07),rgba(0,0,0,0) 60%),radial-gradient(120% 70% at 50% 110%,rgba(0,0,0,.7),rgba(0,0,0,0) 60%),
+linear-gradient(27deg,#15191e 5px,transparent 5px) 0 5px,linear-gradient(207deg,#15191e 5px,transparent 5px) 10px 0,linear-gradient(27deg,#1a1f25 5px,transparent 5px) 0 10px,linear-gradient(207deg,#1a1f25 5px,transparent 5px) 10px 5px,linear-gradient(90deg,#13171b 10px,transparent 10px),linear-gradient(#171b20 25%,#121519 25%,#121519 50%,transparent 50%,transparent 75%,#191d23 75%,#191d23);
+background-size:auto,auto,20px 20px,20px 20px,20px 20px,20px 20px,20px 20px,20px 20px;background-color:var(--carbon)}
+
+/* top bar */
+.bar{display:flex;align-items:center;gap:20px;padding:12px clamp(16px,3vw,40px);padding-top:max(12px,env(safe-area-inset-top));border-bottom:1px solid var(--line);background:linear-gradient(rgba(8,11,14,.85),rgba(8,11,14,.55))}
+.logo{display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;min-width:0;flex:1 1 auto}
+.logo svg{flex:none;width:34px;height:34px}
+.wm{font:700 18px/1.15 var(--f1);letter-spacing:.06em;text-transform:uppercase;overflow-wrap:anywhere;min-width:0}
+.bar-mid{margin:0;font:500 13px/1 var(--f1);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.call{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,179,71,.5);color:var(--amber);text-decoration:none;font:500 15px/1 var(--f1);letter-spacing:.04em}
+.call:hover{background:rgba(255,179,71,.12)}
+.minis{display:none}
+
+/* cluster */
+.cluster{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,700px) minmax(0,1fr);grid-template-rows:minmax(0,1fr);align-items:center;gap:clamp(16px,2.4vw,40px);padding:clamp(12px,2.4vh,28px) clamp(16px,3vw,40px) 0;min-height:0}
+.gauge{justify-self:center;position:relative;width:var(--g);aspect-ratio:1;border-radius:50%;padding:calc(var(--g)*.03);background:conic-gradient(from 210deg,#262c33,#8f99a4 12%,#2b3139 26%,#5b646e 40%,#1d2227 55%,#a7b0ba 70%,#2b3139 84%,#262c33);box-shadow:0 30px 60px -20px rgba(0,0,0,.9),0 0 0 1px rgba(0,0,0,.6)}
+.gauge svg{display:block;width:100%;height:100%;border-radius:50%;overflow:visible}
+.face{fill:url(#face)}
+.tick{stroke:var(--white);stroke-linecap:round}
+.tick.mn{stroke:rgba(232,238,242,.45)}
+.num{fill:var(--white);font:500 15px var(--f1);text-anchor:middle;dominant-baseline:central}
+.rz{stroke:var(--red);stroke-width:7;fill:none}
+.num.r{fill:var(--red-t)}
+.lb{fill:none;stroke:var(--amber);stroke-width:3;stroke-linecap:round;opacity:.95;filter:drop-shadow(0 0 4px rgba(255,179,71,.7));transition:stroke-dashoffset .6s cubic-bezier(.3,1.3,.5,1)}
+.track{fill:none;stroke:rgba(232,238,242,.07);stroke-width:3}
+.needle{transform-box:view-box;transform-origin:150px 150px;transition:transform .6s cubic-bezier(.3,1.35,.5,1)}
+.needle path{fill:var(--amber)}
+.needle .gl{fill:var(--amber);opacity:.55;filter:url(#soft)}
+.cap{fill:#1c2127;stroke:#3a424b;stroke-width:2}
+.unit{fill:var(--dim);font:500 11px var(--f1);letter-spacing:.2em;text-anchor:middle}
+.ro{fill:var(--white);font:700 34px var(--f1);text-anchor:middle;font-variant-numeric:tabular-nums}
+.ro.amb{fill:var(--amber)}
+.gauge.fast .needle,.gauge.fast .lb{transition-duration:.35s}
+
+.display{position:relative;height:min(100%,610px);min-height:0;display:flex;flex-direction:column;border-radius:26px;padding:10px;background:linear-gradient(160deg,#2a3038,#0d1013 40%,#1f242a);box-shadow:0 40px 80px -30px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.08)}
+.glass{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;border-radius:18px;background:radial-gradient(120% 90% at 50% -10%,rgba(255,179,71,.09),rgba(0,0,0,0) 55%),var(--glass);box-shadow:inset 0 0 0 1px rgba(232,238,242,.06),inset 0 20px 40px rgba(0,0,0,.5);overflow:hidden}
+.glass::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,rgba(0,0,0,0) 1px 3px),linear-gradient(115deg,rgba(255,255,255,.05),rgba(255,255,255,0) 30%)}
+.status{flex:none;display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line)}
+.gi{display:grid;place-items:center;min-width:44px;height:44px;border-radius:10px;background:rgba(255,179,71,.12);color:var(--amber);font:700 26px/1 var(--f1);box-shadow:inset 0 0 0 1px rgba(255,179,71,.35)}
+.gi.rv{background:rgba(230,57,70,.15);color:var(--red-t);box-shadow:inset 0 0 0 1px rgba(230,57,70,.5)}
+.st-t{flex:1;min-width:0;font:500 13px/1.2 var(--f1);letter-spacing:.18em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st-t b{color:var(--white);font-weight:700}
+.lamps{display:flex;gap:10px;align-items:center}
+.lamps svg{width:22px;height:22px;opacity:.16;transition:opacity .2s}
+.lamps .on{opacity:1}
+.lamps .ind{color:var(--green)}.lamps .eng{color:var(--amber)}.lamps .belt,.lamps .hb{color:var(--red-t)}
+.clock{font:500 14px/1 var(--f1);color:var(--dim);font-variant-numeric:tabular-nums;letter-spacing:.08em}
+.screens{position:relative;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,179,71,.4) transparent}
+.scr{padding:clamp(18px,3vh,30px) clamp(20px,2.6vw,36px) 28px}
+.scr.in{animation:scanIn .5s cubic-bezier(.2,.8,.2,1) both}
+.scr.in.back{animation-name:scanBack}
+.scr.out{position:absolute;inset:0;animation:scanOut .24s ease-in both;pointer-events:none}
+@keyframes scanIn{from{clip-path:inset(0 0 100% 0);opacity:.2;transform:translateY(-6px)}to{clip-path:inset(0 0 0 0);opacity:1;transform:none}}
+@keyframes scanBack{from{clip-path:inset(100% 0 0 0);opacity:.2;transform:translateY(6px)}to{clip-path:inset(0 0 0 0);opacity:1;transform:none}}
+@keyframes scanOut{to{opacity:0;filter:blur(3px);transform:scale(.985)}}
+.beam{position:absolute;left:0;right:0;top:0;height:2px;z-index:3;pointer-events:none;background:var(--amber);box-shadow:0 0 18px 4px rgba(255,179,71,.55);opacity:0}
+.beam.go{animation:beam .5s cubic-bezier(.2,.8,.2,1)}
+.beam.go.back{animation-name:beamB}
+@keyframes beam{0%{top:0;opacity:1}100%{top:100%;opacity:0}}
+@keyframes beamB{0%{top:100%;opacity:1}100%{top:0;opacity:0}}
+
+/* screen content */
+.eyebrow{margin:0 0 12px;font:500 12.5px/1.3 var(--f1);letter-spacing:.24em;text-transform:uppercase;color:var(--amber)}
+h1,h2{margin:0;font-family:var(--f1);font-weight:700;text-transform:uppercase;letter-spacing:.01em}
+h1:focus,h2:focus{outline:none}
+h1{font-size:clamp(34px,3.9vw,56px);line-height:.98}
+h1 em{font-style:normal;color:var(--amber)}
+h2{font-size:clamp(26px,2.4vw,36px);line-height:1.05;margin-bottom:6px}
+h2 small{display:block;margin-top:8px;font:500 12.5px/1.3 var(--f1);letter-spacing:.2em;color:var(--dim)}
+h3{margin:0;font:700 17px/1.2 var(--f1);letter-spacing:.04em;text-transform:uppercase}
+.lead{margin:14px 0 20px;max-width:56ch;font-size:17px;color:#D5DDE3}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:12px;border:0;cursor:pointer;color:var(--white);font:700 15px/1 var(--f1);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .15s,background .2s}
+.btn:active{transform:translateY(1px)}
+.btn.amber{background:var(--amber);color:#1a1206;box-shadow:0 0 0 1px rgba(255,179,71,.4),0 10px 30px -10px rgba(255,179,71,.6)}
+.btn.amber:hover{background:#FFC46E}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1.5px rgba(232,238,242,.3)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--white)}
+.btn kbd{font:700 12px/1 var(--f1);padding:3px 6px;border-radius:4px;background:rgba(0,0,0,.18)}
+.facts{list-style:none;margin:22px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.facts b{display:block;font:700 18px/1.2 var(--f1);color:var(--white)}
+.facts span{font-size:13.5px;color:var(--dim)}
+.hint{margin:18px 0 0;font-size:14px;color:var(--dim)}
+.hint .tp{display:none}
+kbd{display:inline-block;min-width:22px;padding:2px 6px;border-radius:5px;border:1px solid rgba(232,238,242,.3);font:500 12px/1.3 var(--f1);text-align:center;color:var(--white)}
+.two{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;margin-top:18px;align-items:start}
+.why{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:w}
+.why li{position:relative;padding-left:40px;font-size:15px;color:#CBD4DB;counter-increment:w}
+.why li::before{content:counter(w,decimal-leading-zero);position:absolute;left:0;top:1px;font:700 14px/1.3 var(--f1);color:var(--amber)}
+.why b{display:block;color:var(--white);font:700 15.5px/1.3 var(--f1);letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.pedals{margin:0;padding:16px;border-radius:14px;background:rgba(232,238,242,.03);box-shadow:inset 0 0 0 1px var(--line)}
+.pedals svg{width:100%;height:auto;display:block}
+.pedals figcaption{margin-top:10px;font-size:13px;color:var(--dim)}
+.pk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.pk article{display:flex;flex-direction:column;gap:6px;padding:16px 16px 14px;border-radius:14px;background:linear-gradient(160deg,rgba(232,238,242,.05),rgba(232,238,242,.015));box-shadow:inset 0 0 0 1px var(--line)}
+.price{margin:0;font:700 30px/1 var(--f1);color:var(--amber);font-variant-numeric:tabular-nums}
+.price span{margin-left:6px;font:500 12.5px var(--f1);letter-spacing:.12em;color:var(--dim);text-transform:uppercase}
+.pk p{margin:0;font-size:14px;color:#C3CCD3}
+.pk button{align-self:flex-start;margin-top:auto;min-height:40px;padding:0 14px;border-radius:10px;border:0;background:rgba(255,179,71,.14);color:var(--amber);cursor:pointer;font:700 13px/1 var(--f1);letter-spacing:.12em;text-transform:uppercase}
+.pk button:hover{background:rgba(255,179,71,.24)}
+.small{margin:14px 0 0;font-size:13px;color:var(--dim)}
+.qhead{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin:8px 0 14px}
+.pips{display:flex;gap:6px}
+.pips i{width:22px;height:6px;border-radius:3px;background:rgba(232,238,242,.14)}
+.pips i.ok{background:var(--amber)}.pips i.no{background:var(--red)}.pips i.now{background:rgba(232,238,242,.5)}
+.qmeta{font:500 13px/1 var(--f1);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.q{margin:0;padding:0;border:0}
+.q legend{padding:0;font:700 clamp(19px,1.6vw,23px)/1.25 var(--f1);letter-spacing:.01em;margin-bottom:12px;max-width:38ch}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;min-height:48px;padding:8px 16px;border-radius:12px;border:0;text-align:left;cursor:pointer;background:rgba(232,238,242,.05);box-shadow:inset 0 0 0 1px var(--line);font-size:15.5px;transition:background .2s,box-shadow .2s}
+.opt:hover:not(:disabled){background:rgba(232,238,242,.1)}
+.opt b{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:rgba(232,238,242,.08);font:700 13px/1 var(--f1)}
+.opt:disabled{cursor:default}
+.opt.right{background:rgba(255,179,71,.14);box-shadow:inset 0 0 0 1.5px var(--amber)}
+.opt.right b{background:var(--amber);color:#1a1206}
+.opt.wrong{background:rgba(230,57,70,.12);box-shadow:inset 0 0 0 1.5px var(--red)}
+.opt.wrong b{background:var(--red);color:#fff}
+.fb{flex:1 1 280px;min-height:44px;margin:0;font-size:15px;color:#D5DDE3}
+.fb strong{font-family:var(--f1);letter-spacing:.08em;text-transform:uppercase}
+.fb .y{color:var(--amber)}.fb .n{color:var(--red-t)}
+.qfoot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:14px}
+.gen{margin:14px 0 0;font-size:12.5px;color:var(--dim)}
+.score{display:flex;align-items:baseline;gap:14px;margin:12px 0 6px}
+.score b{font:700 64px/1 var(--f1);color:var(--amber)}
+.score span{font:500 14px var(--f1);letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.missed{margin:12px 0 18px;padding:0;list-style:none;display:grid;gap:8px}
+.missed li{padding:10px 14px;border-radius:10px;background:rgba(232,238,242,.04);font-size:14px;color:#C3CCD3}
+.missed b{color:var(--white)}
+.team{display:grid;gap:10px;margin-top:16px}
+.team article{display:grid;grid-template-columns:58px minmax(0,1fr) auto;column-gap:16px;padding:14px 16px;border-radius:14px;background:rgba(232,238,242,.04);box-shadow:inset 0 0 0 1px var(--line)}
+.team article>h3,.team .when{grid-column:2}
+.team article>p:not(.when){grid-column:2/-1}
+.av{grid-row:1/span 3;width:58px;height:58px}
+.team .chips{grid-column:3;grid-row:1/span 2;align-self:start;justify-content:flex-end;margin-top:0}
+.team .when{margin:3px 0 6px;font:500 12px/1.4 var(--f1);letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.team p{margin:0;font-size:14px;color:#C3CCD3}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chips span{padding:4px 9px;border-radius:999px;background:rgba(232,238,242,.07);font-size:12px;color:var(--dim)}
+form{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.sendrow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;margin-top:4px}
+.full{grid-column:1/-1}
+label,.lbl{display:block;margin-bottom:6px;font:500 12px/1.2 var(--f1);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+input[type=text],input[type=tel],select{width:100%;min-height:46px;padding:0 14px;border-radius:10px;border:0;background:rgba(232,238,242,.06);box-shadow:inset 0 0 0 1px rgba(232,238,242,.18);font-size:15.5px}
+select option{background:#15191e}
+input:focus-visible,select:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--amber)}
+fieldset{margin:0;padding:0;border:0;min-width:0}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg label{margin:0;position:relative;text-transform:none;letter-spacing:0}
+.seg input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.seg span{display:grid;place-items:center;min-height:44px;min-width:58px;padding:4px 12px;border-radius:10px;background:rgba(232,238,242,.05);box-shadow:inset 0 0 0 1px rgba(232,238,242,.16);font:500 13.5px/1.2 var(--f2);color:#D5DDE3;text-align:center}
+.seg span small{display:block;font:700 11px/1.2 var(--f1);letter-spacing:.1em;color:var(--dim);text-transform:uppercase}
+.seg input:checked+span{background:rgba(255,179,71,.16);box-shadow:inset 0 0 0 1.5px var(--amber);color:var(--white)}
+.seg input:checked+span small{color:var(--amber)}
+.seg input:focus-visible+span{outline:2px solid var(--amber);outline-offset:2px}
+.check{display:flex;align-items:center;gap:10px;font:400 14.5px/1.4 var(--f2);letter-spacing:0;text-transform:none;color:#D5DDE3;margin:0}
+.check input{width:20px;height:20px;accent-color:var(--amber)}
+.done{grid-column:1/-1;margin:0;padding:14px 16px;border-radius:12px;background:rgba(255,179,71,.1);box-shadow:inset 0 0 0 1px rgba(255,179,71,.4);font-size:14.5px}
+
+/* shifter */
+.shifter{justify-self:center;position:relative;width:380px;height:186px;margin-top:clamp(2px,1vh,10px)}
+.boot{position:absolute;left:50%;top:50%;width:300px;height:116px;transform:translate(-50%,-50%);border-radius:28px;background:radial-gradient(80% 90% at 50% 40%,#23282f,#101317 70%);box-shadow:inset 0 2px 0 rgba(255,255,255,.06),inset 0 -12px 24px rgba(0,0,0,.6),0 20px 40px -18px rgba(0,0,0,.9)}
+.boot svg{position:absolute;inset:0;width:100%;height:100%}
+.slot{fill:none;stroke:#05070a;stroke-width:14;stroke-linecap:round}
+.slot2{fill:none;stroke:rgba(255,255,255,.06);stroke-width:14;stroke-linecap:round;transform:translateY(1.5px)}
+.knob{position:absolute;left:0;top:0;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;display:grid;place-items:center;pointer-events:none;background:radial-gradient(circle at 35% 30%,#5d6670,#20252b 60%,#0c0e11);box-shadow:0 10px 18px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.2);font:700 18px/1 var(--f1);color:var(--amber);z-index:2;will-change:transform}
+.gear{position:absolute;display:flex;align-items:center;gap:8px;min-height:40px;padding:0 10px;border:0;border-radius:10px;background:transparent;cursor:pointer;font:700 13px/1 var(--f1);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);transition:color .2s,background .2s}
+.gear b{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;box-shadow:inset 0 0 0 1.5px rgba(232,238,242,.3);font-size:15px;color:var(--white);letter-spacing:0}
+.gear:hover{color:var(--white);background:rgba(232,238,242,.06)}
+.gear[aria-current=page]{color:var(--amber)}
+.gear[aria-current=page] b{background:var(--amber);color:#1a1206;box-shadow:none}
+.gear.r b{box-shadow:inset 0 0 0 1.5px rgba(230,57,70,.7);color:var(--red-t)}
+.gear{transform:translateX(-50%);white-space:nowrap}
+.g1,.g2{left:85px}.g3,.g4{left:190px}.g5,.gR{left:295px}
+.g1,.g3,.g5{top:0}.g2,.g4,.gR{bottom:0}
+.fine{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;padding:10px 16px 12px;font-size:12.5px;color:var(--dim);text-align:center}
+.fine .fb2{color:var(--white);font:700 12.5px/1.3 var(--f1);letter-spacing:.1em;text-transform:uppercase;overflow-wrap:anywhere}
+.fine a{color:inherit}
+
+@media (max-height:820px) and (min-width:1000px){.shifter{zoom:.8;margin-top:0}.fine{padding-top:6px;padding-bottom:8px}.scr{padding-top:18px}}
+@media (max-width:1180px) and (min-width:1000px){:root{--g:min(17vw,40vh)}.cluster{grid-template-columns:minmax(0,1fr) minmax(0,560px) minmax(0,1fr)}.facts{grid-template-columns:1fr 1fr}}
+@media (max-width:999px){
+ .dash{height:auto;min-height:0;display:block;overflow:visible}
+ .bar{position:sticky;top:0;z-index:20;gap:12px;min-height:calc(64px + env(safe-area-inset-top));padding-top:calc(10px + env(safe-area-inset-top));padding-bottom:10px;background:rgba(10,13,16,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .bar-mid,.call{display:none}
+ .logo svg{width:30px;height:30px}
+ .wm{font-size:15px}
+ .minis{display:flex;gap:6px;align-items:center;flex:none}
+ .mg{width:66px;height:44px}
+ .mg .arc{fill:none;stroke:rgba(232,238,242,.15);stroke-width:4;stroke-linecap:round}
+ .mg .arc2{fill:none;stroke:var(--amber);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset .5s cubic-bezier(.3,1.3,.5,1)}
+ .mg .rzm{fill:none;stroke:var(--red);stroke-width:4}
+ .mg .nd{transform-box:view-box;transform-origin:33px 34px;transition:transform .5s cubic-bezier(.3,1.35,.5,1)}
+ .mg text{fill:var(--white);font:700 12px var(--f1);text-anchor:middle}
+ .mg .u{fill:var(--dim);font:500 7px var(--f1);letter-spacing:.12em}
+ .gi.mini{min-width:40px;height:40px;font-size:22px}
+ .cluster{display:block;padding:0}
+ .gauge{display:none}
+ .display{height:auto;border-radius:0;padding:0;background:none;box-shadow:none;overflow-x:clip}
+ .glass{border-radius:0;overflow:visible;background:radial-gradient(120% 60% at 50% 0%,rgba(255,179,71,.08),rgba(0,0,0,0) 55%),rgba(8,11,14,.72);min-height:calc(100svh - 64px)}
+ .status{position:sticky;top:calc(64px + env(safe-area-inset-top));z-index:5;background:rgba(8,11,14,.94);padding:10px 16px}
+ .status .gi{display:none}
+ .screens{overflow:visible}
+ .scr{padding:24px 18px 30px}
+ .scr.out{display:none}
+ .two,.pk,form{grid-template-columns:1fr}
+ .team article{grid-template-columns:52px minmax(0,1fr)}
+ .av{width:52px;height:52px}
+ .team .chips{grid-column:2/-1;grid-row:auto;justify-content:flex-start;margin-top:8px}
+ .facts{grid-template-columns:1fr 1fr 1fr;gap:10px}
+ .facts b{font-size:15px}
+ .shifter{position:fixed;z-index:30;left:10px;right:10px;justify-self:stretch;bottom:calc(10px + env(safe-area-inset-bottom));width:auto;height:auto;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:6px;border-radius:18px;background:rgba(16,19,23,.97);box-shadow:0 18px 40px -10px rgba(0,0,0,.85),inset 0 0 0 1px rgba(232,238,242,.14)}
+ html:not(.hd-in-frame) .shifter{bottom:calc(56px + env(safe-area-inset-bottom))}
+ .boot,.knob{display:none}
+ .gear{position:static;transform:none;flex-direction:column!important;justify-content:center;gap:4px;min-height:58px;padding:6px 2px;font-size:10.5px;letter-spacing:.08em}
+ .gear b{width:30px;height:28px}
+ .fine{padding:22px 16px calc(140px + env(safe-area-inset-bottom))}
+ .hint .kb,.btn kbd,.pk button kbd{display:none}
+ .hint .tp{display:inline}
+}
+@media (max-width:420px){.clock{display:none}.eyebrow{letter-spacing:.14em;font-size:12px}.facts{grid-template-columns:1fr}.facts li{display:flex;align-items:baseline;gap:10px}.st-t{letter-spacing:.12em}.lamps svg{width:18px;height:18px}.lamps{gap:6px}}
+@media (prefers-reduced-motion:reduce){
+ .needle,.lb,.mg .nd,.mg .arc2,.gear{transition:none}
+ .scr.in,.scr.out,.beam.go{animation:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<radialGradient id="face" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#1a1f25"/><stop offset=".75" stop-color="#0c0f12"/><stop offset="1" stop-color="#050709"/></radialGradient>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4"/></filter>
+<symbol id="i-ind" viewBox="0 0 24 24"><path d="M10 5 3 12l7 7v-4.5h5v-5h-5z" fill="currentColor"/></symbol>
+<symbol id="i-belt" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.4" fill="currentColor"/><path d="M7 21v-8c0-3 2-5 5-5s5 2 5 5v8M8 9l8 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-eng" viewBox="0 0 24 24"><path d="M4 9h3l2-2h5l1 2h2v2h2v-2h1v7h-1v-2h-2v3h-3l-2 2H8l-2-2H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-hb" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 6.5a10 10 0 0 0 0 11M19.5 6.5a10 10 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><text x="12" y="15.6" text-anchor="middle" font-size="9.5" font-weight="700" font-family="Chakra Petch,monospace" fill="currentColor">P</text></symbol>
+</defs></svg>
+<div class="dash" id="dash">
+ <header class="bar">
+  <a class="logo" href="#" data-go="n"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="#FFB347" stroke-width="2"/><path d="M11 10v14M17 10v14M23 10v7M11 17h12" stroke="#E8EEF2" stroke-width="2.4" stroke-linecap="round"/><circle cx="23" cy="24" r="2" fill="#E63946"/></svg><span class="wm" data-brand>Clutch &amp; Co. Driving</span></a>
+  <p class="bar-mid">Manual lessons · Adelaide, SA</p>
+  <div class="minis" aria-hidden="true">
+   <svg class="mg" id="mS" viewBox="0 0 66 44"><path class="arc" d="M7 34A26 26 0 0 1 59 34"/><path class="arc2" d="M7 34A26 26 0 0 1 59 34" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/><g class="nd"><path d="M33 32.5 55 34 33 35.5z" fill="#FFB347"/></g><circle cx="33" cy="34" r="3" fill="#2a3038"/><text x="33" y="27" id="mSv">0</text><text class="u" x="33" y="43">KM/H</text></svg>
+   <svg class="mg" id="mT" viewBox="0 0 66 44"><path class="arc" d="M7 34A26 26 0 0 1 59 34"/><path class="rzm" d="M54.6 19.6A26 26 0 0 1 59 34"/><path class="arc2" d="M7 34A26 26 0 0 1 59 34" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/><g class="nd"><path d="M33 32.5 55 34 33 35.5z" fill="#FFB347"/></g><circle cx="33" cy="34" r="3" fill="#2a3038"/><text x="33" y="27" id="mTv">0.9</text><text class="u" x="33" y="43">×1000</text></svg>
+   <span class="gi mini" id="giM">N</span>
+  </div>
+  <a class="call" href="tel:+61855501742"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z" fill="currentColor"/></svg>(08) 5550 1742</a>
+ </header>
+
+ <main class="cluster" id="main">
+  <div class="gauge" id="speedo"><svg viewBox="0 0 300 300" role="img" aria-labelledby="spL"><title id="spL">Speedometer</title><circle class="face" cx="150" cy="150" r="150"/><g id="spT"></g><path class="track" id="spTrack"/><path class="lb" id="spLb"/><text class="unit" x="150" y="96">KM/H</text><g class="needle" id="spN"><path class="gl" d="M150 144 272 150 150 156z"/><path d="M146 147.6 272 150 146 152.4z"/></g><circle class="cap" cx="150" cy="150" r="15"/><text class="ro" x="150" y="226" id="spV">0</text></svg></div>
+
+  <div class="display">
+   <div class="glass">
+    <div class="status">
+     <span class="gi" id="gi" aria-hidden="true">N</span>
+     <p class="st-t" id="stT" aria-live="polite"><b>Neutral</b> · Welcome</p>
+     <span class="lamps" aria-hidden="true"><svg class="ind" id="lL"><use href="#i-ind"/></svg><svg class="ind" id="lR" style="transform:scaleX(-1)"><use href="#i-ind"/></svg><svg class="belt on" id="lB"><use href="#i-belt"/></svg><svg class="eng" id="lE"><use href="#i-eng"/></svg><svg class="hb on" id="lH"><use href="#i-hb"/></svg></span>
+     <span class="clock" id="clock" aria-hidden="true">--:--</span>
+    </div>
+    <div class="screens" id="screens">
+     <i class="beam" id="beam" aria-hidden="true"></i>
+
+     <section class="scr on" id="s-n" data-g="n" aria-labelledby="h-n">
+      <p class="eyebrow">Manual driving lessons · Adelaide, SA</p>
+      <h1 id="h-n" tabindex="-1">Learn manual.<br><em>Drive anything.</em></h1>
+      <p class="lead">Patient, dual-control lessons across metro Adelaide — clutch control first, hill starts when you’re ready, and a test day with no surprises.</p>
+      <div class="cta"><button class="btn amber" type="button" data-go="1">Shift into 1st <kbd>1</kbd></button><button class="btn ghost" type="button" data-go="3">Road-rules quiz <kbd>3</kbd></button></div>
+      <ul class="facts"><li><b>60 / 90 min</b><span>lessons</span></li><li><b>Door to door</b><span>metro Adelaide pickups</span></li><li><b>Manual only</b><span>dual-control hatchback</span></li></ul>
+      <p class="hint" id="hint"><span class="kb">Drive the site with the gear stick below — or press <kbd>1</kbd>–<kbd>5</kbd>, and <kbd>R</kbd> to reverse.</span><span class="tp">Tap a gear in the bar below to move through the site — <b>R</b> goes back.</span></p>
+     </section>
+
+     <section class="scr" id="s-1" data-g="1" aria-labelledby="h-1" hidden>
+      <h2 id="h-1" tabindex="-1">Why learn in a manual?</h2>
+      <div class="two">
+       <ul class="why">
+        <li><b>Drive anything</b>Utes, vans, older cars, the hire car on holiday — with a clutch or without, you’re covered.</li>
+        <li><b>Check the licence rules</b>In some states, passing your practical test in an automatic can limit you to automatics for a while. Check South Australia’s current rules before you book a test.</li>
+        <li><b>Clutch control first</b>Lesson one happens in a quiet car park: friction point, smooth take-offs, stalls that don’t matter.</li>
+        <li><b>Hills when you’re ready</b>The foothills are perfect hill-start practice. We build up to them — nobody gets thrown in.</li>
+       </ul>
+       <figure class="pedals"><svg viewBox="0 0 220 170" aria-hidden="true"><g fill="none" stroke="#3a424b" stroke-width="5" stroke-linecap="round"><path d="M40 12v70M110 12v70M180 12v58"/></g><rect x="16" y="78" width="48" height="58" rx="8" fill="#1f252c" stroke="#FFB347" stroke-width="2"/><rect x="82" y="78" width="56" height="50" rx="8" fill="#1f252c" stroke="#E8EEF2" stroke-width="2"/><rect x="166" y="66" width="28" height="78" rx="7" fill="#1f252c" stroke="#E8EEF2" stroke-width="2"/><g font-family="Chakra Petch,monospace" font-weight="700" font-size="16" text-anchor="middle"><text x="40" y="113" fill="#FFB347">C</text><text x="110" y="109" fill="#E8EEF2">B</text><text x="180" y="111" fill="#E8EEF2">A</text></g><g font-family="Chakra Petch,monospace" font-size="10" fill="#9AA6B2" text-anchor="middle" letter-spacing="1"><text x="40" y="158">CLUTCH</text><text x="110" y="158">BRAKE</text><text x="180" y="158">ACCEL</text></g></svg><figcaption>Left foot works the clutch — and only the clutch. Right foot shares brake and accelerator.</figcaption></figure>
+      </div>
+     </section>
+
+     <section class="scr" id="s-2" data-g="2" aria-labelledby="h-2" hidden>
+      <h2 id="h-2" tabindex="-1">Packages <small>Sample prices · AUD · dual-control car included</small></h2>
+      <div class="pk">
+       <article><h3>Single lesson</h3><p class="price">$78<span>60 min</span></p><p>Pick up where you left off — any skill, any suburb in our area.</p><button type="button" data-pkg="Single lesson">Book this <kbd>5</kbd></button></article>
+       <article><h3>Clutch starter</h3><p class="price">$222<span>3 × 60 min</span></p><p>Car park, then quiet streets, then your first roundabouts. Built for total beginners.</p><button type="button" data-pkg="Clutch starter">Book this</button></article>
+       <article><h3>Test ready</h3><p class="price">$720<span>10 × 60 min</span></p><p>Structured lessons plus a full mock test on test-style routes, with a written debrief.</p><button type="button" data-pkg="Test ready">Book this</button></article>
+       <article><h3>Test day</h3><p class="price">$175<span>car + warm-up</span></p><p>Pickup, a 45-minute warm-up drive and the dual-control car for your test.</p><button type="button" data-pkg="Test day">Book this</button></article>
+      </div>
+      <p class="small">Sample prices for a fictional business. 90-minute lessons on request.</p>
+     </section>
+
+     <section class="scr" id="s-3" data-g="3" aria-labelledby="h-3" hidden>
+      <h2 id="h-3" tabindex="-1">Road-rules warm-up</h2>
+      <div id="quiz">
+       <div class="qhead"><span class="qmeta" id="qMeta">Question 1 of 8</span><span class="pips" id="pips" aria-hidden="true"></span><span class="qmeta" id="qScore">Score 0</span></div>
+       <fieldset class="q"><legend id="qQ"></legend><div class="opts" id="opts"></div></fieldset>
+       <div class="qfoot"><p class="fb" id="fb" aria-live="polite">Every right answer revs the tacho and nudges the speedo. Eight correct gets you to highway speed.</p><button class="btn amber" type="button" id="qNext" hidden>Next question</button></div>
+       <p class="gen">General information only — road rules change. Check your state’s official driver’s handbook.</p>
+      </div>
+      <div id="result" hidden>
+       <div class="score"><b id="rScore">0/8</b><span id="rSpeed">0 km/h</span></div>
+       <p id="rMsg" class="lead" style="margin:6px 0 4px"></p>
+       <ul class="missed" id="missed"></ul>
+       <div class="cta"><button class="btn amber" type="button" data-go="5">Book a lesson</button><button class="btn ghost" type="button" id="qAgain">Try again</button></div>
+       <p class="small">General information only — road rules change. Check your state’s official driver’s handbook before your test.</p>
+      </div>
+     </section>
+
+     <section class="scr" id="s-4" data-g="4" aria-labelledby="h-4" hidden>
+      <h2 id="h-4" tabindex="-1">Your instructors</h2>
+      <div class="team">
+       <article><svg class="av" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#1f252c" stroke="#FFB347" stroke-width="2"/><text x="29" y="36" text-anchor="middle" font-family="Chakra Petch,monospace" font-weight="700" font-size="20" fill="#FFB347">M</text></svg><h3>Mel</h3><p class="when">Weekdays · eastern suburbs</p><p>Calm first lessons. Especially good with people who stalled once and swore off manuals for good.</p><div class="chips"><span>First lessons</span><span>Nervous drivers</span></div></article>
+       <article><svg class="av" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#1f252c" stroke="#E8EEF2" stroke-width="2"/><text x="29" y="36" text-anchor="middle" font-family="Chakra Petch,monospace" font-weight="700" font-size="20" fill="#E8EEF2">D</text></svg><h3>Dev</h3><p class="when">Evenings &amp; Saturdays · west</p><p>Test prep, roundabouts and head checks. Methodical, patient, and a stickler for mirrors.</p><div class="chips"><span>Test prep</span><span>Roundabouts</span></div></article>
+       <article><svg class="av" viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="27" fill="#1f252c" stroke="#E63946" stroke-width="2"/><text x="29" y="36" text-anchor="middle" font-family="Chakra Petch,monospace" font-weight="700" font-size="20" fill="#FF6470">R</text></svg><h3>Rosa</h3><p class="when">Weekends · hills &amp; south</p><p>Hill starts, freeway merges and country roads, once you’ve got the basics sorted.</p><div class="chips"><span>Hill starts</span><span>Freeways</span></div></article>
+      </div>
+      <p class="small">Every lesson is in a dual-control manual hatchback. Pickups and drop-offs at home, school or work across metro Adelaide.</p>
+     </section>
+
+     <section class="scr" id="s-5" data-g="5" aria-labelledby="h-5" hidden>
+      <h2 id="h-5" tabindex="-1">Book a lesson</h2>
+      <form id="book" novalidate>
+       <div><label for="fPkg">Package</label><select id="fPkg"><option>Single lesson</option><option>Clutch starter</option><option>Test ready</option><option>Test day</option></select></div>
+       <div><label for="fSub">Pickup suburb</label><input type="text" id="fSub" list="subs" placeholder="e.g. Norwood" autocomplete="off"><datalist id="subs"><option value="Norwood"><option value="Unley"><option value="Prospect"><option value="Glenelg"><option value="Mawson Lakes"><option value="Marion"><option value="Burnside"><option value="Henley Beach"><option value="Modbury"><option value="Mitcham"></datalist></div>
+       <fieldset class="full"><legend class="lbl">Preferred day</legend><div class="seg" id="days"></div></fieldset>
+       <fieldset class="full"><legend class="lbl">Time of day</legend><div class="seg"><label><input type="radio" name="t" value="Morning" checked><span>Morning<small>8–12</small></span></label><label><input type="radio" name="t" value="Afternoon"><span>Afternoon<small>12–3</small></span></label><label><input type="radio" name="t" value="After school"><span>After school<small>3–6</small></span></label><label><input type="radio" name="t" value="Evening"><span>Evening<small>6–8</small></span></label></div></fieldset>
+       <div><label for="fName">Your name</label><input type="text" id="fName" autocomplete="given-name"></div>
+       <div><label for="fTel">Mobile</label><input type="tel" id="fTel" placeholder="0491 570 156" autocomplete="tel"></div>
+       <div class="full sendrow"><label class="check"><input type="checkbox" id="fL"> I hold a current learner’s permit</label><div class="cta"><button class="btn amber" type="submit">Request lesson</button><a class="btn ghost" href="mailto:lessons@example.com">Email us</a></div></div>
+       <p class="done" id="done" hidden></p>
+      </form>
+     </section>
+    </div>
+   </div>
+  </div>
+
+  <div class="gauge" id="tacho"><svg viewBox="0 0 300 300" role="img" aria-labelledby="taL"><title id="taL">Tachometer</title><circle class="face" cx="150" cy="150" r="150"/><g id="taT"></g><path class="track" id="taTrack"/><path class="lb" id="taLb"/><text class="unit" x="150" y="96">×1000 R/MIN</text><g class="needle" id="taN"><path class="gl" d="M150 144 272 150 150 156z"/><path d="M146 147.6 272 150 146 152.4z"/></g><circle class="cap" cx="150" cy="150" r="15"/><text class="ro amb" x="150" y="226" id="taV">N</text></svg></div>
+ </main>
+
+ <nav class="shifter" id="shifter" aria-label="Gears">
+  <div class="boot" aria-hidden="true"><svg viewBox="0 0 300 116"><path class="slot2" d="M45 24v68M150 24v68M255 24v68M45 58h210"/><path class="slot" d="M45 24v68M150 24v68M255 24v68M45 58h210"/></svg><div class="knob" id="knob">N</div></div>
+  <button class="gear g1" type="button" data-g="1"><b>1</b><span class="t">About</span></button>
+  <button class="gear g2" type="button" data-g="2"><b>2</b><span class="t">Prices</span></button>
+  <button class="gear g3" type="button" data-g="3"><b>3</b><span class="t">Quiz</span></button>
+  <button class="gear g4" type="button" data-g="4"><b>4</b><span class="t">Team</span></button>
+  <button class="gear g5" type="button" data-g="5"><b>5</b><span class="t">Book</span></button>
+  <button class="gear gR r" type="button" data-g="r"><b>R</b><span class="t">Back</span></button>
+ </nav>
+ <footer class="fine"><span class="fb2" data-brand>Clutch &amp; Co. Driving</span><span>Adelaide, SA · lessons@example.com · (08) 5550 1742</span><span>A fictional driving school · sample prices · general information only</span></footer>
+</div>
+<p class="sr" id="live" aria-live="polite"></p>
+
+<script>
+(function(){
+'use strict';
+const d=document,$=(s,r)=>(r||d).querySelector(s),$$=(s,r)=>[...(r||d).querySelectorAll(s)];
+const rm=()=>window.DemoKit?DemoKit.reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ns='http://www.w3.org/2000/svg';
+const rad=a=>a*Math.PI/180,pt=(r,a)=>[150+r*Math.cos(rad(a)),150+r*Math.sin(rad(a))];
+const arc=(r,a0,a1)=>{const[x0,y0]=pt(r,a0),[x1,y1]=pt(r,a1);return`M${x0.toFixed(1)} ${y0.toFixed(1)}A${r} ${r} 0 ${a1-a0>180?1:0} 1 ${x1.toFixed(1)} ${y1.toFixed(1)}`};
+
+/* ---- build dials ---- */
+function dial(g,max,step,major,label,red){
+ let s='';
+ for(let v=0;v<=max+1e-9;v+=step){
+  const a=135+270*v/max,isM=Math.abs(v/major-Math.round(v/major))<1e-6,isMid=!isM&&Math.abs((v*2)/major-Math.round((v*2)/major))<1e-6;
+  const len=isM?16:isMid?10:6,[x0,y0]=pt(132,a),[x1,y1]=pt(132-len,a);
+  s+=`<line class="tick${isM||isMid?'':' mn'}" x1="${x0.toFixed(1)}" y1="${y0.toFixed(1)}" x2="${x1.toFixed(1)}" y2="${y1.toFixed(1)}" stroke-width="${isM?3:isMid?2:1.2}"/>`;
+  if(isM){const[tx,ty]=pt(98,a);s+=`<text class="num${red!=null&&v>=red?' r':''}" x="${tx.toFixed(1)}" y="${ty.toFixed(1)}">${label(v)}</text>`}
+ }
+ if(red!=null)s=`<path class="rz" d="${arc(129,135+270*red/max,405)}"/>`+s;
+ $(g).innerHTML=s;
+}
+dial('#spT',140,5,20,v=>v);
+dial('#taT',8,.25,1,v=>v,6.5);
+const full=arc(118,135,405),L=2*Math.PI*118*.75;
+['#spTrack','#taTrack'].forEach(s=>$(s).setAttribute('d',full));
+['#spLb','#taLb'].forEach(s=>{const e=$(s);e.setAttribute('d',full);e.style.strokeDasharray=L;e.style.strokeDashoffset=L});
+
+/* ---- gauge state ---- */
+let speed=0,rpm=0;
+function set(sp,rp){
+ speed=Math.max(0,Math.min(140,sp));rpm=Math.max(0,Math.min(8,rp));
+ $('#spN').style.transform=`rotate(${135+270*speed/140}deg)`;
+ $('#taN').style.transform=`rotate(${135+270*rpm/8}deg)`;
+ $('#spLb').style.strokeDashoffset=L*(1-speed/140);
+ $('#taLb').style.strokeDashoffset=L*(1-rpm/8);
+ $('#spV').textContent=Math.round(speed);
+ $('#mSv').textContent=Math.round(speed);$('#mTv').textContent=rpm.toFixed(1);
+ $('#mS .nd').style.transform=`rotate(${180+180*speed/140}deg)`;$('#mT .nd').style.transform=`rotate(${180+180*rpm/8}deg)`;
+ $('#mS .arc2').style.strokeDashoffset=100-100*speed/140;$('#mT .arc2').style.strokeDashoffset=100-100*rpm/8;
+}
+const timers=[];const later=(fn,ms)=>timers.push(setTimeout(fn,ms));const clear=()=>{while(timers.length)clearTimeout(timers.pop())};
+function blip(sp,peak,settle){clear();if(rm()){set(sp,settle);return}set(sp*.6,peak);later(()=>set(sp,settle),260)}
+
+/* ---- gears & screens ---- */
+const NY=58,GEARS={n:[150,NY,'Neutral','Welcome',0],1:[45,24,'1st','Why manual',14],2:[45,92,'2nd','Packages',28],3:[150,24,'3rd','Road-rules quiz',42],4:[150,92,'4th','Instructors',56],5:[255,24,'5th','Book a lesson',72],r:[255,92,'Reverse','Back',6]};
+let gear='n',hist=[],knobAt=[150,NY],quizSpeed=null;
+const knob=$('#knob'),beam=$('#beam'),screens=$('#screens'),mq=matchMedia('(max-width: 999px)');
+const place=(x,y)=>`translate(${x}px,${y}px)`;
+knob.style.transform=place(150,NY);
+function moveKnob(to){
+ const[x0,y0]=knobAt,[x1,y1]=to;knobAt=to;
+ if(rm()||mq.matches){knob.style.transform=place(x1,y1);return}
+ const k=[{transform:place(x0,y0)}];
+ if(y0!==NY)k.push({transform:place(x0,NY)});
+ if(x0!==x1)k.push({transform:place(x1,NY)});
+ k.push({transform:place(x1,y1+(y1<NY?-3:y1>NY?3:0))},{transform:place(x1,y1)});
+ knob.animate(k,{duration:120*k.length,easing:'cubic-bezier(.45,0,.3,1)'});
+ knob.style.transform=place(x1,y1);
+}
+function lamps(){
+ ['#lL','#lR'].forEach(s=>{const e=$(s);e.classList.remove('on')});
+ if(rm())return;
+ let n=0;const side=gear==='r'?'#lL':'#lR';
+ const t=setInterval(()=>{$(side).classList.toggle('on');if(++n>=4){clearInterval(t);$(side).classList.remove('on')}},330);
+}
+function shift(g,opts={}){
+ if(g===gear&&!opts.force)return;
+ const back=opts.back||g==='r';
+ if(g==='r'){
+  const prev=hist.pop()||'n';
+  moveKnob([GEARS.r[0],GEARS.r[1]]);
+  $('#gi').classList.add('rv');$('#gi').textContent='R';$('#giM').textContent='R';
+  blip(6,2.6,1.1);
+  setTimeout(()=>shift(prev,{back:true,force:true,fromR:true}),rm()?0:420);
+  return;
+ }
+ if(!back&&gear!==g)hist.push(gear);
+ if(hist.length>20)hist.shift();
+ gear=g;
+ const G=GEARS[g];
+ moveKnob([G[0],G[1]]);knob.textContent=g==='n'?'N':g;
+ $('#gi').classList.remove('rv');$('#gi').textContent=g==='n'?'N':g;$('#giM').textContent=$('#gi').textContent;
+ $('#taV').textContent=g==='n'?'N':g;
+ $('#stT').innerHTML=`<b>${G[2]}</b> · ${G[3]}`;
+ $$('.gear').forEach(b=>b.dataset.g===g?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ $('#lB').classList.toggle('on',g==='n');$('#lH').classList.toggle('on',g==='n');
+ const sp=g==='3'&&quizSpeed!=null?quizSpeed:G[4];
+ if(g==='n')blip(0,1.6,.9);else blip(sp,4.2,g==='3'&&quizSpeed!=null?quizRpm():2.1);
+ lamps();
+ show(g,back);
+}
+function show(g,back){
+ const next=$('#s-'+g),cur=$('.scr.on');
+ if(cur===next)return;
+ if(cur){cur.classList.remove('on','in','back');if(!rm()&&!mq.matches){cur.classList.add('out');setTimeout(()=>{cur.hidden=true;cur.classList.remove('out')},240)}else cur.hidden=true}
+ next.hidden=false;next.classList.remove('in','back');void next.offsetWidth;next.classList.add('on');
+ if(!rm()){next.classList.add('in');next.classList.toggle('back',!!back);beam.classList.remove('go','back');void beam.offsetWidth;beam.classList.toggle('back',!!back);beam.classList.add('go')}
+ screens.scrollTop=0;
+ if(mq.matches){const y=$('.display').getBoundingClientRect().top+scrollY-64;if(scrollY>y)scrollTo({top:y,behavior:'instant'})}
+ const h=$('h1,h2',next);if(h&&shift.user)h.focus({preventScroll:true});
+ say(`${GEARS[g][2]} gear — ${GEARS[g][3]}`);
+}
+function say(t){const l=$('#live');l.textContent='';setTimeout(()=>l.textContent=t,40)}
+$('#shifter').addEventListener('click',e=>{const b=e.target.closest('.gear');if(b){shift.user=true;shift(b.dataset.g)}});
+d.addEventListener('click',e=>{
+ const b=e.target.closest('[data-go]');if(b){if(b.tagName==='A')e.preventDefault();shift.user=true;shift(b.dataset.go)}
+ const p=e.target.closest('[data-pkg]');if(p){$('#fPkg').value=p.dataset.pkg;shift.user=true;shift('5')}
+});
+d.addEventListener('keydown',e=>{
+ if(e.ctrlKey||e.metaKey||e.altKey)return;
+ const t=e.target;if(t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)))return;
+ const k=e.key.toLowerCase();
+ if(/^[1-5]$/.test(k)){e.preventDefault();shift.user=true;shift(k)}
+ else if(k==='r'){e.preventDefault();shift.user=true;shift('r')}
+ else if(k==='n'||k==='0'){e.preventDefault();shift.user=true;shift('n')}
+});
+
+/* ---- quiz ---- */
+const QZ=[
+['You reach a roundabout. Who do you give way to?',['Vehicles already on the roundabout','Vehicles approaching from your left','Whoever reaches the line first'],0,'Give way to any vehicle already on the roundabout — and signal when you leave it.'],
+['No speed sign in sight, and you’re in a built-up area. What’s the default limit?',['40 km/h','50 km/h','60 km/h'],1,'Unless a sign says otherwise, the limit in a built-up area is 50 km/h.'],
+['In South Australia, what’s the limit in a school zone when children are present?',['25 km/h','40 km/h','50 km/h'],0,'SA school zones drop to 25 km/h whenever children are present.'],
+['The light turns yellow as you approach. What should you do?',['Speed up to beat the red','Stop, if you can do so safely','Stop only if there’s a camera'],1,'Yellow means stop — unless you’re so close that stopping would be unsafe.'],
+['You’re turning left into a side street and a pedestrian is crossing it.',['You have right of way — they should wait','Give way to the pedestrian','Toot and keep rolling slowly'],1,'When turning, give way to pedestrians crossing the road you’re turning into.'],
+['Dry road, good light. What following gap should you keep?',['About one car length','About one second','At least three seconds'],2,'Pick a marker. If you pass it within three seconds of the car ahead, ease off — and add more in rain or at night.'],
+['A bus ahead has pulled over with its hazard lights on. What’s the hazard?',['The bus might reverse','People stepping out from in front of it','Nothing — buses are predictable'],1,'Expect people crossing in front of or behind a stopped bus. Cover the brake and slow down.'],
+['Manual hill start on a steep street. What stops you rolling back?',['Revving hard, then dropping the clutch','Handbrake on until the clutch reaches the friction point','Resting your foot on the clutch the whole drive'],1,'Hold the handbrake, find the friction point, add a little throttle, then release the brake.']
+];
+let qi=0,score=0,picked=false,missed=[];
+const quizRpm=()=>1.2+score*.62;
+function renderQ(){
+ const q=QZ[qi];picked=false;
+ $('#qMeta').textContent=`Question ${qi+1} of ${QZ.length}`;$('#qScore').textContent=`Score ${score}`;
+ $('#qQ').textContent=q[0];
+ $('#opts').innerHTML=q[1].map((o,i)=>`<button class="opt" type="button" data-i="${i}"><b>${'ABC'[i]}</b><span>${o}</span></button>`).join('');
+ $('#pips').innerHTML=QZ.map((_,i)=>`<i class="${i<qi?(QZ[i].ok?'ok':'no'):i===qi?'now':''}"></i>`).join('');
+ $('#qNext').hidden=true;
+}
+$('#opts').addEventListener('click',e=>{
+ const b=e.target.closest('.opt');if(!b||picked)return;picked=true;
+ const q=QZ[qi],i=+b.dataset.i,ok=i===q[2];q.ok=ok;
+ $$('.opt').forEach((o,j)=>{o.disabled=true;if(j===q[2])o.classList.add('right');else if(j===i)o.classList.add('wrong')});
+ if(ok){score++;quizSpeed=score*12.5;clear();if(rm())set(quizSpeed,quizRpm());else{$('#speedo').classList.add('fast');set(quizSpeed,6.6);later(()=>{set(quizSpeed,quizRpm());$('#speedo').classList.remove('fast')},380)}}
+ else{missed.push(qi);quizSpeed=score*12.5;$('#lE').classList.add('on');clear();if(rm())set(quizSpeed,quizRpm());else{set(quizSpeed,.4);later(()=>set(quizSpeed,quizRpm()),420)}setTimeout(()=>$('#lE').classList.remove('on'),1600)}
+ $('#fb').innerHTML=`<strong class="${ok?'y':'n'}">${ok?'Correct — revving up.':'Not quite — you stalled it.'}</strong> ${q[3]}`;
+ $('#qScore').textContent=`Score ${score}`;
+ const nx=$('#qNext');nx.textContent=qi<QZ.length-1?'Next question':'See my result';nx.hidden=false;nx.focus({preventScroll:true});
+ $('#pips').children[qi].className=ok?'ok':'no';
+});
+$('#qNext').addEventListener('click',()=>{
+ if(qi<QZ.length-1){qi++;renderQ();$('#fb').textContent='';$('#opts .opt').focus({preventScroll:true});return}
+ $('#quiz').hidden=true;const r=$('#result');r.hidden=false;
+ const sp=score*12.5;
+ $('#rScore').textContent=`${score}/${QZ.length}`;$('#rSpeed').textContent=`Speedo · ${sp} km/h`;
+ $('#rMsg').textContent=score===8?'Highway ready. Now let’s get your clutch control to match.':score>=6?'Nearly there — a couple of rules worth a second look before your test.':score>=4?'A solid start. The handbook (and a lesson or two) will fill the gaps.':'Plenty to brush up on — that’s exactly what lessons are for.';
+ $('#missed').innerHTML=missed.map(i=>`<li><b>${QZ[i][0]}</b><br>${QZ[i][1][QZ[i][2]]} — ${QZ[i][3]}</li>`).join('');
+ say(`Quiz finished. You scored ${score} out of ${QZ.length}.`);
+ const h=$('#h-3');h.focus({preventScroll:true});screens.scrollTop=0;
+});
+$('#qAgain').addEventListener('click',()=>{qi=0;score=0;missed=[];quizSpeed=0;QZ.forEach(q=>delete q.ok);$('#result').hidden=true;$('#quiz').hidden=false;$('#fb').textContent='Every right answer revs the tacho and nudges the speedo. Eight correct gets you to highway speed.';renderQ();blip(0,3,1.2);$('#h-3').focus({preventScroll:true})});
+renderQ();
+
+/* ---- booking ---- */
+(function(){
+ const days=$('#days'),now=new Date(),D=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+ let h='';for(let i=1;i<=7;i++){const t=new Date(now.getFullYear(),now.getMonth(),now.getDate()+i);const lab=`${D[t.getDay()]} ${t.getDate()} ${M[t.getMonth()]}`;h+=`<label><input type="radio" name="day" value="${lab}"${i===1?' checked':''}><span>${D[t.getDay()]}<small>${t.getDate()} ${M[t.getMonth()]}</small></span></label>`}
+ days.innerHTML=h;
+})();
+$('#book').addEventListener('submit',e=>{
+ e.preventDefault();
+ const f=e.target,sub=$('#fSub').value.trim()||'your suburb',day=(f.querySelector('[name=day]:checked')||{}).value,t=(f.querySelector('[name=t]:checked')||{}).value;
+ const done=$('#done');done.hidden=false;setTimeout(()=>done.scrollIntoView({block:'nearest',behavior:rm()?'auto':'smooth'}),30);
+ done.textContent=`Demo request drafted: ${$('#fPkg').value} · ${day} · ${t} · pickup in ${sub}${$('#fL').checked?' · learner’s permit ticked':''}. Nothing was sent — a real site would pass this to the instructor.`;
+ if(window.DemoKit)DemoKit.toast('Demo only — no lesson was booked and nothing was sent.');
+ blip(72,5.2,2.2);
+});
+
+/* ---- clock + ignition ---- */
+function tick(){const t=new Date();$('#clock').textContent=String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0')}
+tick();setInterval(tick,20000);
+mq.addEventListener&&mq.addEventListener('change',()=>{knob.style.transform=place(knobAt[0],knobAt[1])});
+set(0,0);
+if(rm())set(0,.9);
+else{
+ const ign=()=>{$('#speedo').classList.add('fast');$('#tacho').classList.add('fast');set(140,8);setTimeout(()=>{$('#speedo').classList.remove('fast');$('#tacho').classList.remove('fast');set(0,.9)},520)};
+ setTimeout(ign,250);
+}
+})();
+</script>
+</body>
+</html>

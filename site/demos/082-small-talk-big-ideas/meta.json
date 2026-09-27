@@ -1,0 +1,8 @@
+{
+  "id": "082",
+  "tech": ["SVG", "Web Audio", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Clipboard", "Date logic"],
+  "features": ["sound", "story"],
+  "interaction": "Play a clearly labelled demo episode player (no audio file): the playhead runs in real time across a seeded waveform, chapter markers and a chapter list jump through the interview, you can drag or use the range slider to scrub, switch 1× / 1.5× / 2×, watch twin VU needles and the ON AIR sign light up, and optionally switch on generated room tone; on phones a mini-player docks to the bottom.",
+  "fonts": ["Darker Grotesque", "Red Hat Mono"],
+  "notes": "There is no real audio: room tone is soft generated noise, off by default and only audible while playing. VU needles snap without spring motion under reduced motion. Episode dates roll with the calendar; hosts and guests are fictional."
+}

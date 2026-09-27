@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="036">
+<meta name="demo:brand" content="Critter Control Co.">
+<title>Critter Control Co. — pest control, Darwin NT</title>
+<meta name="description" content="Critter Control Co. is a fictional pest control crew in Darwin, NT, presented as a 1950s creature-feature poster with a bug-squishing mini-game.">
+<meta name="theme-color" content="#3D1A6E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--purple:#3D1A6E;--ink:#2A1150;--night:#1C0B36;--green:#8BE000;--orange:#FF5E1A;--rust:#C9430F;--cream:#F5E9C9;
+--disp:"Bungee",Impact,"Arial Black",sans-serif;--type:"Courier Prime","Courier New",Courier,monospace;--pad:clamp(16px,4vw,56px);--star:polygon(100% 50%,88.6% 60.4%,93.3% 75%,78.3% 78.3%,75% 93.3%,60.4% 88.6%,50% 100%,39.6% 88.6%,25% 93.3%,21.7% 78.3%,6.7% 75%,11.4% 60.4%,0 50%,11.4% 39.6%,6.7% 25%,21.7% 21.7%,25% 6.7%,39.6% 11.4%,50% 0,60.4% 11.4%,75% 6.7%,78.3% 21.7%,93.3% 25%,88.6% 39.6%);
+--paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .07 0 0 0 0 .31 0 0 0 1.4 -.62'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--purple);color:var(--cream);font:400 17px/1.6 var(--type)}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:400}
+button,input,select{font:inherit;color:inherit}
+svg{display:block}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--green);color:var(--ink);padding:12px 16px;font-weight:700}
+.skip:focus{top:12px}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.kicker{font:700 13px/1.4 var(--type);letter-spacing:.2em;margin:0 0 10px}
+.h2{font-family:var(--disp);font-size:clamp(36px,6.4vw,76px);line-height:.95;letter-spacing:.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border:3px solid var(--ink);border-radius:6px;background:var(--cream);color:var(--ink);font:700 15px/1.1 var(--type);letter-spacing:.06em;text-decoration:none;cursor:pointer;box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn.g{background:var(--green)}
+.btn.o{background:var(--orange)}
+
+.bar{position:relative;z-index:5;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap;padding:max(12px,env(safe-area-inset-top)) var(--pad) 12px;background:var(--purple);border-bottom:3px solid var(--ink)}
+.logo{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font:15px/1.1 var(--disp);color:var(--green);min-width:0}
+.logo span{overflow-wrap:anywhere}
+.logo svg{flex:none;width:34px;height:34px}
+.bar nav{flex:1;min-width:0}
+.bar ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+.bar nav a{display:inline-flex;align-items:center;min-height:42px;padding:0 10px;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:.06em;border-radius:4px}
+.bar nav a:hover{background:rgba(139,224,0,.16);color:var(--green)}
+.call-s{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.call{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:6px;background:var(--orange);color:var(--ink);font-weight:700;text-decoration:none;white-space:nowrap}
+
+.poster{position:relative;overflow:hidden;isolation:isolate;padding:30px var(--pad) 0;min-height:min(860px,calc(100svh - 70px));display:flex;flex-direction:column;background:radial-gradient(ellipse at 66% 26%,#5b2a97 0,var(--purple) 42%,var(--night) 100%)}
+.poster::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(rgba(139,224,0,.24) 1.5px,transparent 1.9px) 0 0/9px 9px,radial-gradient(var(--cream) .9px,transparent 1.3px) 13px 21px/97px 83px,radial-gradient(var(--cream) .7px,transparent 1.1px) 51px 7px/131px 71px;-webkit-mask:linear-gradient(to top,#000 0,rgba(0,0,0,.25) 45%,#000 100%);mask:linear-gradient(to top,#000 0,rgba(0,0,0,.25) 45%,#000 100%)}
+.poster::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(90deg,transparent 49.85%,rgba(255,255,255,.07) 50%,rgba(0,0,0,.18) 50.15%,transparent 50.6%),linear-gradient(transparent 49.8%,rgba(255,255,255,.06) 50%,rgba(0,0,0,.16) 50.2%,transparent 50.7%),var(--paper);background-size:auto,auto,260px 260px;opacity:.8;mix-blend-mode:screen}
+.beams{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.beams i{position:absolute;bottom:-8%;width:34%;height:125%;background:linear-gradient(to top,rgba(245,233,201,.34),rgba(245,233,201,0) 78%);clip-path:polygon(44% 100%,56% 100%,100% 0,0 0);transform-origin:50% 100%;animation:sweep 11s ease-in-out infinite alternate}
+.beams i:first-child{left:4%;transform:rotate(-18deg)}
+.beams i:last-child{right:2%;transform:rotate(16deg);animation-delay:-5s;animation-duration:13s}
+@keyframes sweep{0%{transform:rotate(-22deg)}100%{transform:rotate(20deg)}}
+.poster-copy{position:relative;z-index:2;width:min(100%,780px)}
+.presents{font:700 14px/1.4 var(--type);letter-spacing:.24em;margin:6px 0 0;overflow-wrap:anywhere}
+.presents span{color:var(--green)}
+.title{margin:calc(12px + 4.6vw) 0 30px;font-family:var(--disp);line-height:.9;color:var(--green);transform:rotate(-6deg) skewX(-5deg);transform-origin:0 100%;overflow-wrap:anywhere;text-shadow:1px 1px 0 var(--orange),2px 2px 0 var(--orange),3px 3px 0 var(--orange),4px 4px 0 var(--orange),5px 5px 0 var(--orange),6px 6px 0 var(--orange),7px 7px 0 var(--rust),8px 8px 0 var(--rust),9px 9px 0 var(--ink),13px 15px 0 rgba(0,0,0,.35)}
+.title span{display:block}
+.t1{font-size:clamp(25px,6.4vw,64px);color:var(--cream);margin-left:.1em}
+.t2{font-size:clamp(46px,12vw,118px)}
+.tagline{max-width:34ch;font-size:clamp(17px,2vw,21px);font-style:italic;margin:0 0 22px}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+.burst{position:relative;z-index:0;display:inline-grid;place-items:center;width:150px;height:150px;padding:26px;color:var(--ink);font:15px/1.05 var(--disp);text-align:center;text-decoration:none;transform:rotate(8deg)}
+.burst::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--green);clip-path:var(--star);transition:transform .3s}
+.burst::after{content:"";position:absolute;inset:0;z-index:-2;background:var(--ink);clip-path:var(--star);transform:translate(6px,6px)}
+.burst:hover::before{transform:rotate(15deg) scale(1.06)}
+.burst:focus-visible{outline:3px dashed var(--cream);outline-offset:6px;border-radius:50%}
+.scene{position:absolute;z-index:1;right:max(var(--pad),calc(50% - 720px));bottom:52px;width:min(60%,800px);height:auto}
+.credits{position:relative;z-index:3;margin:auto calc(-1 * var(--pad)) 0;padding:14px var(--pad) 16px;background:var(--ink);font:700 12px/1.6 var(--type);letter-spacing:.16em;text-align:center}
+.credits b{color:var(--green);font-weight:700}
+
+.showing{position:relative;background:var(--night);padding:clamp(56px,8vw,96px) var(--pad)}
+.marquee{position:relative;max-width:960px;margin:0 auto clamp(40px,6vw,64px);padding:22px 20px 18px;background:var(--cream);color:var(--ink);text-align:center;border:18px solid var(--orange);border-radius:14px;box-shadow:0 0 0 6px var(--ink),0 0 0 10px var(--orange),0 30px 60px -24px #000}
+.marquee::before{content:"";position:absolute;inset:-18px;border-radius:14px;padding:18px;background:radial-gradient(circle,#fffaf0 2.6px,var(--cream) 3.6px,rgba(255,94,26,.55) 5px,transparent 6.5px) 0 0/26px 26px;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);animation:chase 1.1s steps(2) infinite}
+@keyframes chase{to{background-position:13px 0}}
+.marquee h2{font-family:var(--disp);font-size:clamp(34px,7vw,72px);line-height:1}
+.marquee p{margin:8px 0 0;font-weight:700;letter-spacing:.14em;font-size:14px}
+.marquee .season{display:inline-block;margin-top:12px;padding:4px 12px;background:var(--ink);color:var(--cream);letter-spacing:.1em}
+.tickets{list-style:none;margin:0 auto;padding:0;max-width:1240px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:30px 26px}
+.tk{filter:drop-shadow(7px 7px 0 #000)}
+.ticket{display:grid;grid-template-columns:62px 1fr;height:100%;background:var(--cream);color:var(--ink);border-radius:10px;-webkit-mask:radial-gradient(circle at 62px 0,transparent 11px,#000 11.5px) top/100% 51% no-repeat,radial-gradient(circle at 62px 100%,transparent 11px,#000 11.5px) bottom/100% 51% no-repeat;mask:radial-gradient(circle at 62px 0,transparent 11px,#000 11.5px) top/100% 51% no-repeat,radial-gradient(circle at 62px 100%,transparent 11px,#000 11.5px) bottom/100% 51% no-repeat}
+.stub{display:flex;justify-content:space-between;align-items:center;padding:22px 0;background:var(--orange);border-right:3px dashed var(--ink);writing-mode:vertical-rl;transform:rotate(180deg);font:13px/1 var(--disp);letter-spacing:.12em}
+.tk-body{padding:20px 22px 22px}
+.rated{display:inline-block;margin:0 0 10px;padding:3px 8px;border:2px solid var(--ink);font-weight:700;font-size:12px;letter-spacing:.08em}
+.tk-body h3{font-family:var(--disp);font-size:26px;line-height:1.05}
+.tk-tag{font-style:italic;margin:6px 0 12px}
+.tk-body ul{margin:0 0 14px;padding-left:18px;font-size:15.5px;line-height:1.5}
+.tk-body li+li{margin-top:4px}
+.soon .stub{background:var(--green)}
+.soon .ticket{background:#fbf3dd}
+.runtime{margin:0;padding-top:10px;border-top:2px dashed var(--ink);font-weight:700;font-size:14px}
+
+.paper{background:var(--cream);color:var(--ink);position:relative;isolation:isolate}
+.paper::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--paper);background-size:260px;opacity:.55;pointer-events:none}
+.cast{padding:clamp(56px,8vw,100px) var(--pad)}
+.sec-h{max-width:1240px;margin:0 auto 34px;display:grid;grid-template-columns:1fr minmax(0,460px);gap:12px 48px;align-items:end}
+.sec-h p:last-child{margin:0;font-size:17px}
+.lineup{list-style:none;margin:0 auto;padding:0;max-width:1240px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}
+.mug{perspective:1400px}
+.mug-in{position:relative;display:grid;height:100%;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.3,1.35,.5,1)}
+.mug.flipped .mug-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;display:flex;flex-direction:column;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:3px solid var(--ink);border-radius:8px;background:#fbf3dd;box-shadow:6px 6px 0 var(--ink)}
+.face.back{transform:rotateY(180deg);background:var(--ink);color:var(--cream);padding:22px 22px 20px}
+.shot{position:relative;margin:12px 12px 0;border:3px solid var(--ink);background:repeating-linear-gradient(transparent 0 22px,rgba(42,17,80,.28) 22px 24px),#e9dcb7;aspect-ratio:1/.86;overflow:hidden}
+.shot svg{position:absolute;left:50%;bottom:0;width:78%;height:auto;transform:translateX(-50%)}
+.shot .ruler{position:absolute;left:6px;top:4px;font:700 11px/1 var(--type);letter-spacing:.06em}
+.placard{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;padding:5px 12px;background:var(--ink);color:var(--cream);font:13px/1.2 var(--disp);letter-spacing:.06em;white-space:nowrap}
+.mug-txt{padding:14px 18px 18px;display:flex;flex-direction:column;flex:1}
+.mug-txt h3{font-family:var(--disp);font-size:21px;line-height:1.1}
+.alias{margin:4px 0 14px;font-size:15px}
+.flip{margin-top:auto;align-self:flex-start;min-height:44px;padding:0 14px;border:3px solid var(--ink);border-radius:6px;background:var(--green);color:var(--ink);font-weight:700;font-size:14px;letter-spacing:.06em;cursor:pointer}
+.back .flip{background:var(--cream)}
+.rap{font:14px/1.2 var(--disp);color:var(--green);letter-spacing:.08em;margin:0 0 12px}
+.back dl{margin:0 0 16px;font-size:15.5px;line-height:1.5}
+.back dt{font-weight:700;color:var(--orange);letter-spacing:.1em;font-size:12.5px;margin-top:10px}
+.back dd{margin:2px 0 0}
+.swipe{display:none}
+.note{max-width:1240px;margin:26px auto 0;font-size:14px;font-style:italic}
+
+.squish{background:var(--night);padding:clamp(56px,8vw,96px) var(--pad);text-align:center}
+.squish .sec-h{text-align:left}
+.screen{position:relative;max-width:1080px;margin:0 auto;padding:18px clamp(20px,5vw,64px) 22px;background:var(--ink);border-radius:20px 20px 8px 8px;box-shadow:0 0 0 4px var(--orange),0 40px 80px -30px #000}
+.screen::before,.screen::after{content:"";position:absolute;top:0;bottom:0;width:clamp(14px,4vw,52px);border-radius:20px 0 0 8px;background:repeating-linear-gradient(90deg,var(--rust) 0 6px,var(--orange) 6px 14px,#ff8a52 14px 17px,var(--orange) 17px 24px);pointer-events:none}
+.screen::before{left:0}
+.screen::after{right:0;transform:scaleX(-1)}
+.hud{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 18px;margin:0 0 12px;font-weight:700;letter-spacing:.08em;font-size:14px}
+.hud b{font:18px/1 var(--disp);color:var(--green);margin-left:6px;letter-spacing:0}
+.hud .mode{display:flex;gap:6px}
+.pill{min-height:40px;padding:0 12px;border:2px solid var(--cream);border-radius:999px;background:transparent;font-weight:700;font-size:13px;letter-spacing:.06em;cursor:pointer}
+.pill[aria-pressed=true]{background:var(--cream);color:var(--ink)}
+.pill:disabled{opacity:.45;cursor:default}
+.stage{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:radial-gradient(circle at 50% 42%,transparent 26%,rgba(28,11,54,.62) 100%),conic-gradient(#f3e5bf 25%,#e3cf9b 0 50%,#f3e5bf 0 75%,#e3cf9b 0) 0 0/64px 64px;touch-action:manipulation;user-select:none;-webkit-user-select:none;cursor:crosshair}
+.stage::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 10px #d9c48e,inset 0 0 40px rgba(28,11,54,.5)}
+.bug{position:absolute;left:0;top:0;padding:0;border:0;background:none;cursor:pointer;border-radius:50%;will-change:transform}
+.bug svg{width:100%;height:100%;overflow:visible;pointer-events:none}
+.bug:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.bug .legs{animation:scuttle .14s steps(2) infinite;transform-origin:0 0}
+.bug.dead{pointer-events:none;animation:flat .22s forwards}
+.stage.paused .bug .legs,.bug:focus .legs{animation-play-state:paused}
+@keyframes scuttle{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+@keyframes flat{to{opacity:0;scale:1.3 .2}}
+.splat{position:absolute;width:74px;height:74px;margin:-37px 0 0 -37px;pointer-events:none;animation:goo 2.4s ease-out forwards}
+.splat b{position:absolute;left:50%;top:-18px;transform:translateX(-50%) rotate(-8deg);font:18px/1 var(--disp);color:var(--orange);text-shadow:2px 2px 0 var(--ink);white-space:nowrap;animation:pop .5s cubic-bezier(.2,1.8,.5,1)}
+@keyframes goo{0%{opacity:1;transform:scale(.4)}12%{transform:scale(1)}70%{opacity:.8}100%{opacity:0}}
+@keyframes pop{from{transform:translateX(-50%) rotate(-8deg) scale(.2)}}
+.overlay{position:absolute;inset:0;z-index:5;display:grid;place-content:center;justify-items:center;gap:10px;padding:18px;background:rgba(28,11,54,.86);color:var(--cream)}
+.overlay[hidden]{display:none}
+.ov-t{font:clamp(42px,9vw,96px)/.9 var(--disp);color:var(--green);margin:0;text-shadow:4px 4px 0 var(--orange),8px 8px 0 var(--ink)}
+.overlay p{max-width:46ch;margin:0}
+.overlay .row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:8px}
+.small{font-size:14px;opacity:.9}
+.still{position:absolute;inset:0}
+.stage.still-on{aspect-ratio:auto;cursor:default}
+.stage.still-on .still{position:relative}
+.kit{position:relative;aspect-ratio:16/9}
+.kit svg{position:absolute;inset:0;width:100%;height:100%}
+.still-mode .hud>span:not(.mode){display:none}
+.hid{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;padding:0;border:0;border-radius:50%;background:none;cursor:pointer}
+.hid svg{width:26px;height:26px;margin:auto;overflow:visible}
+.hid.found{box-shadow:0 0 0 4px var(--green),0 0 0 7px var(--ink)}
+.hid.flash{box-shadow:0 0 0 4px var(--orange),0 0 0 10px rgba(255,94,26,.35)}
+.still-bar{position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;background:var(--ink);font-weight:700;font-size:14px}
+.hint{margin:16px auto 0;max-width:720px;font-size:14.5px;opacity:.92}
+
+.guide{padding:clamp(56px,8vw,100px) var(--pad)}
+.pamph{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,380px) 1fr;gap:clamp(28px,5vw,64px);align-items:start}
+.pamph-cover{position:sticky;top:24px;padding:26px 24px 28px;border:4px solid var(--ink);background:var(--orange);box-shadow:8px 8px 0 var(--ink);transform:rotate(-1.5deg)}
+.pamph-cover .h2{font-size:clamp(34px,4.4vw,54px)}
+.pamph-cover p{margin:14px 0 0;font-weight:700}
+.tips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:3px solid var(--ink)}
+.tips li{padding:20px 20px 22px 0;border-bottom:3px solid var(--ink)}
+.tips li:nth-child(odd){border-right:3px solid var(--ink)}
+.tips li:nth-child(even){padding-left:22px}
+.tips h3{display:flex;gap:12px;align-items:baseline;font:19px/1.15 var(--disp);margin-bottom:8px}
+.tips h3 span{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--green);font-size:15px}
+.tips p{margin:0;font-size:15.5px;line-height:1.55}
+.gi{margin:22px 0 0;font-size:14px;font-style:italic}
+
+.box{background:var(--orange);color:var(--ink);padding:clamp(56px,8vw,96px) var(--pad);position:relative}
+.box-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr minmax(0,560px);gap:clamp(28px,5vw,64px);align-items:center}
+.box .h2{text-shadow:4px 4px 0 var(--cream)}
+.box-in>div>p{font-size:17px;max-width:40ch;margin-top:18px}
+.price{margin:0;background:var(--cream);border:4px solid var(--ink);border-radius:12px;box-shadow:10px 10px 0 var(--ink);padding:10px 26px 20px;position:relative}
+.price::before{content:"Admit one · sample prices";display:block;margin:0 -26px 10px;padding:8px 26px;border-bottom:3px dashed var(--ink);font:13px/1.2 var(--disp);letter-spacing:.14em}
+.price table{width:100%;border-collapse:collapse}
+.price th,.price td{padding:11px 0;border-bottom:2px dotted var(--ink);text-align:left;vertical-align:baseline}
+.price th{font-weight:700;font-size:16px}
+.price th small{display:block;font-weight:400;font-size:14px}
+.price td{text-align:right;font:18px/1 var(--disp);white-space:nowrap;padding-left:12px}
+.price p{margin:14px 0 0;font-size:14px}
+
+.crew{padding:clamp(56px,8vw,96px) var(--pad);background:var(--purple)}
+.lobby{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border:4px solid var(--green);border-radius:10px;overflow:hidden;box-shadow:0 0 0 8px var(--ink),0 0 0 11px var(--green)}
+.lobby-l{padding:clamp(24px,4vw,44px);background:var(--ink)}
+.lobby-l .h2{color:var(--green);text-shadow:4px 4px 0 var(--orange)}
+.big-tel{display:block;margin:18px 0 4px;font:clamp(26px,3.6vw,40px)/1.1 var(--disp);color:var(--cream);text-decoration:none;overflow-wrap:anywhere}
+.big-tel:hover{color:var(--green)}
+.lobby-l dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:18px 0 0;font-size:15.5px}
+.lobby-l dt{font-weight:700;color:var(--green);letter-spacing:.08em;font-size:13px;padding-top:2px}
+.lobby-l dd{margin:0}
+.areas{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:18px 0 0}
+.areas li{padding:3px 10px;border:2px solid var(--cream);border-radius:999px;font-size:13.5px;font-weight:700}
+.lobby-r{padding:clamp(24px,4vw,44px);background:var(--cream);color:var(--ink)}
+.lobby-r h3{font:24px/1.1 var(--disp);margin-bottom:6px}
+.field{display:grid;gap:4px;margin-top:12px}
+.field label{font-weight:700;font-size:13px;letter-spacing:.1em}
+.field input,.field select{width:100%;min-height:46px;padding:0 12px;border:3px solid var(--ink);border-radius:6px;background:#fffaf0;font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lobby-r .btn{margin-top:18px;width:100%}
+
+.end-roll{background:var(--night);text-align:center;padding:56px var(--pad) calc(80px + env(safe-area-inset-bottom))}
+.end-roll .the-end{max-width:none;position:relative;display:inline-block;font:clamp(48px,10vw,120px)/1 var(--disp);color:var(--green);text-shadow:5px 5px 0 var(--orange),10px 10px 0 var(--ink);margin:0 0 18px}
+.crawl{position:absolute;right:-8px;bottom:-4px;width:34px;height:34px;animation:crawl 7s linear infinite}
+@keyframes crawl{0%{transform:translateX(0)}50%{transform:translateX(-340%)}50.01%{transform:translateX(-340%) scaleX(-1)}100%{transform:translateX(0) scaleX(-1)}}
+.end-roll p{max-width:60ch;margin:0 auto 8px;font-size:14.5px}
+.end-roll .credit{font-weight:700;letter-spacing:.14em;font-size:13px;color:var(--green)}
+
+.paused-anim .beams i,.paused-anim .marquee::before,.paused-anim .crawl{animation-play-state:paused}
+.kicker,.h2,.btn,.logo,.bar nav a,.presents,.title,.burst,.credits,.marquee h2,.marquee p,.stub,.rated,.tk-body h3,.placard,.mug-txt h3,.flip,.rap,.back dt,.hud,.pill,.ov-t,.tips h3,.price::before,.lobby-l dt,.lobby-r h3,.field label,.end-roll .credit{text-transform:uppercase}
+@media (max-width:1060px){
+.lineup{grid-template-columns:repeat(2,1fr)}
+.pamph{grid-template-columns:1fr}
+.pamph-cover{position:relative;top:0}
+}
+@media (max-width:899px){
+.poster{min-height:0}
+.poster-copy{display:contents}
+.presents{order:1}.title{order:2}.scene{order:3;position:relative;right:auto;bottom:auto;width:min(100%,560px);margin:0 auto 20px}.tagline{order:4}.cta{order:5;margin-bottom:34px}.credits{order:6}
+.sec-h,.box-in,.lobby{grid-template-columns:1fr}
+.stage{aspect-ratio:4/5}
+}
+@media (max-width:640px){
+.bar{gap:6px 12px}
+.bar nav{order:3;flex-basis:100%}
+.bar ul{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--pad));padding:0 var(--pad);-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent)}
+.bar ul::-webkit-scrollbar{display:none}
+.bar nav a{white-space:nowrap;padding:0 8px;font-size:13px}
+.call{margin-left:auto;padding:0 14px;font-size:15px}
+.call-n{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.call-s{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+.logo{flex:1}
+.presents{font-size:12px;letter-spacing:.18em}
+.lineup{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1 * var(--pad));padding:6px var(--pad) 18px;scroll-padding:0 var(--pad);gap:18px}
+.mug{scroll-snap-align:start}
+.swipe{display:block;margin:0 0 6px;font-weight:700;font-size:14px}
+.tips{grid-template-columns:1fr}
+.tips li:nth-child(odd){border-right:0}
+.tips li:nth-child(even){padding-left:0}
+.two{grid-template-columns:1fr}
+.screen{padding:14px 12px 16px}
+.screen::before,.screen::after{display:none}
+.hud{font-size:12.5px;gap:6px 12px}
+.hud b{font-size:16px}
+.tk-body h3{font-size:23px}
+.stage{aspect-ratio:3/4}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true"><defs>
+<pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3" cy="3" r="1.3" fill="#2A1150"/></pattern>
+<pattern id="ht2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3" cy="3" r="2.1" fill="#2A1150"/></pattern>
+<g id="i-bug"><path d="M20 12c4-6 10-7 12-10M20 12c-4-6-10-7-12-10" stroke="#8BE000" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M8 18l-6-3M8 24H1M8 30l-6 3M32 18l6-3M32 24h7M32 30l6 3" stroke="#8BE000" stroke-width="3" stroke-linecap="round"/><ellipse cx="20" cy="25" rx="11" ry="13" fill="#8BE000"/><path d="M20 13v25" stroke="#3D1A6E" stroke-width="2.5"/><circle cx="20" cy="12" r="5" fill="#8BE000"/></g>
+</defs></svg>
+<a class="skip" href="#main">Skip to the feature</a>
+
+<header class="bar">
+<a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><use href="#i-bug"/></svg><span data-brand>Critter Control Co.</span></a>
+<nav aria-label="Sections"><ul>
+<li><a href="#showing">Now showing</a></li><li><a href="#cast">The cast</a></li><li><a href="#squish">Squish!</a></li><li><a href="#guide">Survival guide</a></li><li><a href="#prices">Box office</a></li><li><a href="#crew">Call the crew</a></li>
+</ul></nav>
+<a class="call" href="tel:+61855503614"><span class="call-s">Call </span><span class="call-n">(08) 5550 3614</span></a>
+</header>
+
+<main id="main">
+<section class="poster" id="top" aria-labelledby="t-title">
+<div class="beams" aria-hidden="true"><i></i><i></i></div>
+<div class="poster-copy">
+<p class="presents"><span data-brand>Critter Control Co.</span> presents</p>
+<h1 class="title" id="t-title"><span class="t1">Attack of the</span><span class="t2">Termites!</span></h1>
+<p class="tagline">They came from under the floorboards… and they’re hungry for your stumps. Pest control for Darwin, Palmerston and the rural area.</p>
+<div class="cta"><a class="burst" href="#crew">Book an inspection!</a><a class="btn g" href="#squish">Play: squish the bugs</a></div>
+</div>
+<svg class="scene" viewBox="0 0 640 540" aria-hidden="true">
+<circle cx="362" cy="176" r="140" fill="#F5E9C9"/>
+<circle cx="362" cy="176" r="140" fill="url(#ht)" opacity=".22"/>
+<g fill="#2A1150" opacity=".14"><circle cx="300" cy="110" r="18"/><circle cx="440" cy="232" r="24"/><circle cx="452" cy="120" r="10"/><circle cx="262" cy="236" r="12"/></g>
+<path d="M322 104C300 80 290 50 302 14M402 104c22-24 32-54 42-88" fill="none" stroke="#2A1150" stroke-width="5" stroke-linecap="round"/><g fill="#2A1150"><circle cx="318" cy="96" r="6"/><circle cx="306" cy="80" r="5.6"/><circle cx="298" cy="63" r="5.2"/><circle cx="294" cy="46" r="4.8"/><circle cx="296" cy="30" r="4.4"/><circle cx="303" cy="16" r="4"/><circle cx="404" cy="96" r="6"/><circle cx="418" cy="80" r="5.6"/><circle cx="430" cy="64" r="5.2"/><circle cx="440" cy="48" r="4.8"/><circle cx="446" cy="32" r="4.4"/><circle cx="446" cy="17" r="4"/></g>
+<path d="M300 262q60-26 120 0l14 50H286z" fill="#F5E9C9" stroke="#2A1150" stroke-width="6"/>
+<path d="M296 282q64-18 128 0" fill="none" stroke="#2A1150" stroke-width="5"/>
+<rect x="284" y="96" width="156" height="176" rx="72" fill="#FF5E1A" stroke="#2A1150" stroke-width="7"/>
+<path d="M290 150c10 60 40 110 72 118l-8 4c-44-2-70-40-70-100z" fill="url(#ht2)" opacity=".5"/>
+<path d="M392 110c16 10 28 26 34 46" fill="none" stroke="#F5E9C9" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+<path d="M304 160l40 14M420 160l-40 14" stroke="#2A1150" stroke-width="11" stroke-linecap="round"/>
+<ellipse cx="334" cy="190" rx="18" ry="13" fill="#8BE000" stroke="#2A1150" stroke-width="5"/><ellipse cx="390" cy="190" rx="18" ry="13" fill="#8BE000" stroke="#2A1150" stroke-width="5"/>
+<circle cx="338" cy="192" r="4" fill="#2A1150"/><circle cx="386" cy="192" r="4" fill="#2A1150"/>
+<path d="M330 258c-34 18-46 56-26 92 2-30 14-54 40-72z" fill="#2A1150" stroke="#F5E9C9" stroke-width="3"/><path d="M394 258c34 18 46 56 26 92-2-30-14-54-40-72z" fill="#2A1150" stroke="#F5E9C9" stroke-width="3"/>
+<g fill="none" stroke="#2A1150" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M292 240L226 262 198 336"/><path d="M432 240L498 262 526 336"/></g>
+<g fill="none" stroke="#2A1150" stroke-width="4" stroke-linecap="round"><path d="M186 340l12-6 12 6M514 340l12-6 12 6"/></g>
+<g fill="#2A1150"><path d="M76 520C66 440 84 336 118 262l12 4C98 340 84 440 92 520z"/><path d="M586 520c8-80-4-170-40-236l-12 6c32 64 42 150 36 230z"/>
+<path d="M124 262c-30-22-72-22-104 2 34-6 68-2 104-2zM124 262c-10-34-40-58-78-62 30 16 52 38 78 62zM124 262c16-32 50-50 86-48-32 10-60 26-86 48zM124 262c30-14 68-4 90 22-30-12-60-18-90-22zM124 262c-24 4-50 22-60 50 20-22 40-38 60-50z"/>
+<path d="M540 286c26-24 68-28 100-6-34-4-66 0-100 6zM540 286c6-36 32-62 70-70-28 18-48 42-70 70zM540 286c-20-30-56-44-92-36 32 6 62 18 92 36zM540 286c-30-10-66 4-84 32 28-16 56-26 84-32z"/></g>
+<path d="M168 388L288 334H436L556 388z" fill="#F5E9C9" stroke="#2A1150" stroke-width="6" stroke-linejoin="round"/>
+<g stroke="#2A1150" stroke-width="2.4" opacity=".6"><path d="M214 368v18M242 356v30M270 344v42M298 338v48M326 338v48M354 338v48M382 338v48M410 338v48M438 340v46M466 352v34M494 364v22M522 376v10"/></g>
+<rect x="194" y="388" width="336" height="62" fill="#F5E9C9" stroke="#2A1150" stroke-width="6"/>
+<g fill="#FF5E1A" stroke="#2A1150" stroke-width="4"><rect x="214" y="400" width="66" height="38"/><rect x="330" y="400" width="66" height="38"/><rect x="446" y="400" width="66" height="38"/></g>
+<g stroke="#2A1150" stroke-width="3"><path d="M214 410h66M214 420h66M214 430h66M330 410h66M330 420h66M330 430h66M446 410h66M446 420h66M446 430h66"/></g>
+<rect x="184" y="448" width="356" height="12" fill="#F5E9C9" stroke="#2A1150" stroke-width="4"/>
+<g fill="#F5E9C9" stroke="#2A1150" stroke-width="3.5"><rect x="200" y="460" width="11" height="60"/><rect x="262" y="460" width="11" height="60"/><rect x="324" y="460" width="11" height="60"/><rect x="386" y="460" width="11" height="60"/><rect x="448" y="460" width="11" height="60"/><rect x="510" y="460" width="11" height="60"/></g>
+<path d="M273 474q26 30 51 0" fill="none" stroke="#FF5E1A" stroke-width="6" stroke-linecap="round"/><path d="M273 474l-6-10M324 474l6-10" stroke="#F5E9C9" stroke-width="2"/>
+<path d="M538 452l62 66M556 452l62 66" stroke="#F5E9C9" stroke-width="5"/><path d="M550 465h16M562 478h16M574 491h16M586 504h16" stroke="#F5E9C9" stroke-width="4"/>
+<path d="M0 518h640v22H0z" fill="#8BE000"/><path d="M0 518h640v22H0z" fill="url(#ht2)" opacity=".55"/>
+<g fill="#8BE000"><path d="M40 518l6-16 4 16 6-12 2 12zM156 518l5-14 4 14 5-10 2 10zM452 518l6-16 4 16 6-12 2 12zM612 518l5-14 4 14 5-10 2 10z"/></g>
+</svg>
+<p class="credits">Starring <b>the giant northern termite</b> · with cockroaches, huntsmen, redbacks, roof rats &amp; mosquitoes · a crew of three · filmed on location in Darwin, Palmerston &amp; the rural area</p>
+</section>
+
+<section class="showing" id="showing" aria-labelledby="t-showing">
+<div class="marquee"><h2 id="t-showing">Now showing</h2><p>Five features · every season · across the Top End</p><p class="season" id="season">Season: the Dry</p></div>
+<ul class="tickets">
+<li class="tk"><article class="ticket"><div class="stub" aria-hidden="true"><span>Admit one</span><span>Nº 01</span></div><div class="tk-body"><p class="rated">Rated M · mature timber themes</p><h3>Termite inspections</h3><p class="tk-tag">“It came from the stumps.”</p><ul><li>Sub-floor, stumps, roof void, walls, fences and garden</li><li>Moisture meter and thermal camera</li><li>Written report with photos the same week</li></ul><p class="runtime">Runtime: 90–120 min</p></div></article></li>
+<li class="tk"><article class="ticket"><div class="stub" aria-hidden="true"><span>Admit one</span><span>Nº 02</span></div><div class="tk-body"><p class="rated">Rated R18+ · graphic kitchen scenes</p><h3>Cockroaches</h3><p class="tk-tag">“Night of the six-legged.”</p><ul><li>Gel baiting in kitchens, bathrooms and laundry</li><li>Cracks, crevices and outdoor perimeter</li><li>Follow-up visit in four weeks if they’re still around</li></ul><p class="runtime">Runtime: about 60 min</p></div></article></li>
+<li class="tk"><article class="ticket"><div class="stub" aria-hidden="true"><span>Admit one</span><span>Nº 03</span></div><div class="tk-body"><p class="rated">Rated PG · mostly harmless huntsmen</p><h3>Spiders</h3><p class="tk-tag">“The web of doom.”</p><ul><li>Eaves, window frames, outdoor furniture, sheds and letterbox</li><li>Web removal while we’re up the ladder</li><li>Huntsmen relocated outside where we can</li></ul><p class="runtime">Runtime: about 45 min</p></div></article></li>
+<li class="tk"><article class="ticket"><div class="stub" aria-hidden="true"><span>Admit one</span><span>Nº 04</span></div><div class="tk-body"><p class="rated">Rated M · scratching, late at night</p><h3>Rodents</h3><p class="tk-tag">“Rats in the roof.”</p><ul><li>Roof-void inspection and entry points found</li><li>Gaps sealed; lockable bait stations or traps</li><li>Three visits to check and clear</li></ul><p class="runtime">Runtime: three visits over three weeks</p></div></article></li>
+<li class="tk"><article class="ticket"><div class="stub" aria-hidden="true"><span>Admit one</span><span>Nº 05</span></div><div class="tk-body"><p class="rated">Rated MA15+ · the wet season</p><h3>Mosquitoes</h3><p class="tk-tag">“Swarm of the Wet.”</p><ul><li>Breeding-site walk-around: saucers, gutters, drains</li><li>Barrier treatment on shady foliage</li><li>A checklist to keep the yard dry between visits</li></ul><p class="runtime">Runtime: about 40 min</p></div></article></li>
+<li class="tk soon"><article class="ticket"><div class="stub" aria-hidden="true"><span>Coming soon</span><span>Nº 06</span></div><div class="tk-body"><p class="rated">Rated PG · two-part epic</p><h3>The Wet-season double feature</h3><p class="tk-tag">“Before the rain… and after.”</p><ul><li>Visit one before the first storms: termites, gutters, perimeter</li><li>Visit two mid-Wet: mozzies, roaches, anything that moved in</li><li>Reminder texts so you don’t have to remember</li></ul><p class="runtime">Bookings open in October</p></div></article></li>
+</ul>
+</section>
+
+<section class="cast paper" id="cast" aria-labelledby="t-cast">
+<div class="sec-h"><div><p class="kicker">Meet the cast</p><h2 class="h2" id="t-cast">The usual suspects</h2></div><p>Six Top End troublemakers. Flip a mugshot for the rap sheet: what it’s known for, the signs to look for, and our move.</p></div>
+<p class="swipe" aria-hidden="true">Swipe the line-up →</p>
+<ol class="lineup">
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 12 mm</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: soldier termite, huge orange head, crossed black jaws"><g fill="#2A1150"><circle cx="63" cy="50" r="5"/><circle cx="55" cy="48" r="4.8"/><circle cx="48" cy="44" r="4.6"/><circle cx="42" cy="38" r="4.3"/><circle cx="36" cy="31" r="4"/><circle cx="32" cy="21" r="3.6"/><circle cx="137" cy="50" r="5"/><circle cx="145" cy="48" r="4.8"/><circle cx="152" cy="44" r="4.6"/><circle cx="158" cy="38" r="4.3"/><circle cx="164" cy="31" r="4"/><circle cx="168" cy="21" r="3.6"/></g><path d="M62 160q38-16 76 0l10 42H52z" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><path d="M58 180q42-12 84 0" fill="none" stroke="#2A1150" stroke-width="4"/><rect x="58" y="40" width="84" height="118" rx="40" fill="#FF5E1A" stroke="#2A1150" stroke-width="5"/><path d="M62 90c4 36 20 60 38 66h-8c-24-4-34-30-30-66z" fill="url(#ht2)" opacity=".45"/><path d="M68 86l22 8M132 86l-22 8" stroke="#2A1150" stroke-width="7" stroke-linecap="round"/><ellipse cx="82" cy="104" rx="10" ry="7" fill="#8BE000" stroke="#2A1150" stroke-width="3"/><ellipse cx="118" cy="104" rx="10" ry="7" fill="#8BE000" stroke="#2A1150" stroke-width="3"/><path d="M88 150c-18 18-14 40 12 44-12-12-10-28 2-42zM112 150c18 18 14 40-12 44 12-12 10-28-2-42z" fill="#2A1150"/></svg>
+<p class="placard">Nº 01 · Termite</p></div>
+<div class="mug-txt"><h3>The giant northern termite</h3><p class="alias">aka <i>Mastotermes darwiniensis</i>, the Top End’s heavyweight</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 01</p><dl><dt>Known for</dt><dd>Eating timber from the inside out: stumps, frames, fences, even living trees.</dd><dt>Signs</dt><dd>Mud tubes on stumps and piers, hollow-sounding timber, blistered paint, mud packed into cracks.</dd><dt>Our move</dt><dd>Inspection first. Don’t spray or break open the workings; it only sends them somewhere else in the house.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 13 mm</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: German cockroach, long antennae, two stripes behind the head"><path d="M90 76C62 38 40 22 12 10M110 76c28-38 50-54 78-66" fill="none" stroke="#2A1150" stroke-width="3.5" stroke-linecap="round"/><path d="M64 124L26 112 12 134M62 150L24 160 16 190M136 124l38-12 14 22M138 150l38 10 8 30" fill="none" stroke="#2A1150" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="100" cy="146" rx="46" ry="56" fill="#FF5E1A" stroke="#2A1150" stroke-width="5"/><path d="M60 140c4 30 20 50 40 56-30 0-44-26-40-56z" fill="url(#ht2)" opacity=".5"/><path d="M100 104v96" stroke="#2A1150" stroke-width="4"/><ellipse cx="100" cy="98" rx="40" ry="24" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><path d="M88 82v30M112 82v30" stroke="#2A1150" stroke-width="7" stroke-linecap="round"/><ellipse cx="100" cy="72" rx="16" ry="13" fill="#2A1150"/><circle cx="93" cy="70" r="4" fill="#8BE000"/><circle cx="107" cy="70" r="4" fill="#8BE000"/></svg>
+<p class="placard">Nº 02 · Cockroach</p></div>
+<div class="mug-txt"><h3>The German cockroach</h3><p class="alias">aka the one behind your fridge</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 02</p><dl><dt>Known for</dt><dd>Breeding fast in warm, damp kitchens and hitching rides in boxes and appliances.</dd><dt>Signs</dt><dd>Pepper-like droppings, a musty smell, egg cases tucked behind fridges and under sinks.</dd><dt>Our move</dt><dd>Targeted gel baits where they hide, not a cloud of spray, plus a follow-up.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 150 mm leg span</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: huntsman spider face on, eight eyes, long bent legs"><g fill="none" stroke="#2A1150" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M84 110L40 70 18 96M80 122L30 112 8 142M82 136L36 156 24 190M88 146L60 176 58 200M116 110l44-40 22 26M120 122l50-10 22 30M118 136l46 20 12 34M112 146l28 30 2 24"/></g><ellipse cx="100" cy="80" rx="30" ry="32" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><path d="M76 84c4 18 14 26 24 26-16 2-28-10-24-26z" fill="url(#ht2)" opacity=".5"/><ellipse cx="100" cy="128" rx="30" ry="27" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><g fill="#2A1150"><circle cx="86" cy="118" r="4"/><circle cx="96" cy="115" r="4.6"/><circle cx="104" cy="115" r="4.6"/><circle cx="114" cy="118" r="4"/><circle cx="90" cy="128" r="3.4"/><circle cx="98" cy="126" r="3.2"/><circle cx="102" cy="126" r="3.2"/><circle cx="110" cy="128" r="3.4"/></g><g fill="#8BE000"><circle cx="97" cy="114" r="1.6"/><circle cx="105" cy="114" r="1.6"/></g><path d="M90 146q-4 14 4 20-1-8 4-15zM110 146q4 14-4 20 1-8-4-15z" fill="#FF5E1A" stroke="#2A1150" stroke-width="3" stroke-linejoin="round"/></svg>
+<p class="placard">Nº 03 · Huntsman</p></div>
+<div class="mug-txt"><h3>The huntsman</h3><p class="alias">aka the dashboard surprise</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 03</p><dl><dt>Known for</dt><dd>Being large, fast and flat enough to live behind picture frames and sun visors.</dd><dt>Signs</dt><dd>You, screaming. They’re shy hunters that eat other insects and rarely bother people.</dd><dt>Our move</dt><dd>Relocate outside where we can; treat eaves and frames if there are lots.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 10 mm</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: redback spider, glossy black with an orange-red stripe"><g fill="none" stroke="#2A1150" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M86 160L44 136 30 170M84 168L40 178 34 200M86 176L60 198M114 160l42-24 14 34M116 168l44 10 6 22M114 176l26 22M92 154L62 116 40 124M108 154l30-38 22 8"/></g><circle cx="100" cy="94" r="58" fill="#2A1150"/><path d="M100 40c14 22 14 84 0 110-14-26-14-88 0-110z" fill="#FF5E1A"/><path d="M100 40c6 12 8 30 8 46" fill="none" stroke="#F5E9C9" stroke-width="2" opacity=".5"/><ellipse cx="74" cy="66" rx="14" ry="7" fill="#F5E9C9" opacity=".8" transform="rotate(-32 74 66)"/><ellipse cx="100" cy="166" rx="20" ry="15" fill="#2A1150"/><circle cx="94" cy="170" r="2.6" fill="#8BE000"/><circle cx="106" cy="170" r="2.6" fill="#8BE000"/></svg>
+<p class="placard">Nº 04 · Redback</p></div>
+<div class="mug-txt"><h3>The redback</h3><p class="alias">aka the one in the letterbox</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 04</p><dl><dt>Known for</dt><dd>Messy, tangled webs in dry, sheltered spots: under outdoor chairs, in sheds and letterboxes.</dd><dt>Signs</dt><dd>Untidy webs low to the ground with small round egg sacs. The bite is venomous: get medical advice promptly.</dd><dt>Our move</dt><dd>Treat hiding spots around the house; gloves on for yard work.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 180 mm + tail</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: roof rat, big round ears, beady eyes, two front teeth"><circle cx="54" cy="66" r="30" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><circle cx="54" cy="66" r="16" fill="#FF5E1A"/><circle cx="146" cy="66" r="30" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><circle cx="146" cy="66" r="16" fill="#FF5E1A"/><path d="M100 62c48 0 62 50 32 92l-32 34-32-34c-30-42-16-92 32-92z" fill="#F5E9C9" stroke="#2A1150" stroke-width="5" stroke-linejoin="round"/><path d="M70 90c-8 30 4 52 30 70-28-4-44-36-30-70z" fill="url(#ht2)" opacity=".45"/><ellipse cx="80" cy="110" rx="8" ry="10" fill="#2A1150"/><ellipse cx="120" cy="110" rx="8" ry="10" fill="#2A1150"/><circle cx="82" cy="106" r="3" fill="#8BE000"/><circle cx="122" cy="106" r="3" fill="#8BE000"/><path d="M86 168L40 158M86 174l-44 10M114 168l46-10M114 174l44 10" stroke="#2A1150" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="100" cy="172" rx="10" ry="7" fill="#FF5E1A" stroke="#2A1150" stroke-width="3"/><rect x="93" y="184" width="14" height="13" rx="2" fill="#F5E9C9" stroke="#2A1150" stroke-width="3"/><path d="M100 184v13" stroke="#2A1150" stroke-width="2"/></svg>
+<p class="placard">Nº 05 · Roof rat</p></div>
+<div class="mug-txt"><h3>The roof rat</h3><p class="alias">aka the 2am ceiling tap-dancer</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 05</p><dl><dt>Known for</dt><dd>Climbing palms and power lines into roof voids, then chewing whatever is up there.</dd><dt>Signs</dt><dd>Scratching at night, droppings in the roof, gnawed cables, greasy rub marks along beams.</dd><dt>Our move</dt><dd>Find and seal the way in, then stations or traps over three visits.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+<li class="mug"><div class="mug-in">
+<div class="face front"><div class="shot"><span class="ruler" aria-hidden="true">— 5 mm</span>
+<svg viewBox="0 0 200 200" role="img" aria-label="Mugshot: striped mosquito, big green eyes, needle nose"><ellipse cx="124" cy="66" rx="50" ry="17" transform="rotate(-26 124 66)" fill="#F5E9C9" fill-opacity=".85" stroke="#2A1150" stroke-width="3"/><ellipse cx="136" cy="90" rx="46" ry="14" transform="rotate(-8 136 90)" fill="#F5E9C9" fill-opacity=".85" stroke="#2A1150" stroke-width="3"/><g fill="none" stroke="#2A1150" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M86 116L60 150 58 196M96 118l-6 42 14 38M106 116l30 34 20 44"/></g><g fill="none" stroke="#F5E9C9" stroke-width="3" stroke-dasharray="4 7"><path d="M60 150l-2 46M90 160l14 38M136 150l20 44"/></g><path d="M100 112c24 10 52 38 72 70" fill="none" stroke="#2A1150" stroke-width="18" stroke-linecap="round"/><path d="M100 112c24 10 52 38 72 70" fill="none" stroke="#F5E9C9" stroke-width="18" stroke-dasharray="5 11"/><ellipse cx="94" cy="106" rx="20" ry="16" fill="#2A1150"/><circle cx="66" cy="94" r="15" fill="#2A1150"/><circle cx="61" cy="90" r="8" fill="#8BE000"/><path d="M54 102L10 134" stroke="#2A1150" stroke-width="3.5" stroke-linecap="round"/><path d="M62 82c-6-10-16-14-26-14M68 80c-2-12-10-20-20-22" stroke="#2A1150" stroke-width="2.5" fill="none"/></svg>
+<p class="placard">Nº 06 · Mosquito</p></div>
+<div class="mug-txt"><h3>The mozzie</h3><p class="alias">aka the wet-season whine</p><button class="flip" type="button" aria-expanded="false">Read the rap sheet</button></div></div>
+<div class="face back" inert><p class="rap">Rap sheet · Nº 06</p><dl><dt>Known for</dt><dd>Breeding in any still water after rain, from pot-plant saucers to blocked gutters.</dd><dt>Signs</dt><dd>Wrigglers in standing water; bites at dusk and dawn. Some mosquitoes carry disease, so cover up.</dd><dt>Our move</dt><dd>Remove breeding sites first, then a barrier treatment on shady foliage.</dd></dl><button class="flip" type="button" aria-expanded="true">Back to the mugshot</button></div>
+</div></li>
+</ol>
+<p class="note">General information only — for bites, stings or health worries, talk to a doctor or pharmacist.</p>
+</section>
+
+<section class="squish" id="squish" aria-labelledby="t-squish">
+<div class="sec-h"><div><p class="kicker">Feature presentation</p><h2 class="h2" id="t-squish">Squish!</h2></div><p>A 30-second creature feature on a Darwin kitchen floor. Tap the critters before they make it to the skirting boards.</p></div>
+<div class="screen">
+<div class="hud"><span>Score<b id="sc">0</b></span><span>Time<b id="tm">0:30</b></span><span>Squished<b id="sq">0</b></span><span>Got away<b id="ga">0</b></span><span class="mode" role="group" aria-label="Game version"><button class="pill" type="button" data-mode="move" aria-pressed="true">Moving</button><button class="pill" type="button" data-mode="still" aria-pressed="false">Still</button><button class="pill" type="button" id="pause" aria-pressed="false" disabled>Pause</button></span></div>
+<div class="stage" id="stage">
+<div id="bugs"></div>
+<div class="still" id="still" hidden><div class="kit" id="kit">
+<svg class="kitchen" viewBox="0 0 800 450" aria-hidden="true"><rect width="800" height="450" fill="#F5E9C9"/><rect width="800" height="330" fill="url(#ht)" opacity=".12"/><path d="M0 330h800v120H0z" fill="#e3cf9b"/><path d="M0 330h800" stroke="#2A1150" stroke-width="5"/><g fill="#F5E9C9" stroke="#2A1150" stroke-width="4"><rect x="30" y="50" width="270" height="100" rx="4"/><rect x="30" y="250" width="400" height="80"/></g><path d="M165 50v100M130 250v80M230 250v80M330 250v80" stroke="#2A1150" stroke-width="4"/><g fill="#2A1150"><circle cx="152" cy="130" r="4"/><circle cx="178" cy="130" r="4"/><circle cx="118" cy="266" r="4"/><circle cx="218" cy="266" r="4"/><circle cx="318" cy="266" r="4"/><circle cx="418" cy="266" r="4"/></g><rect x="20" y="236" width="420" height="16" fill="#FF5E1A" stroke="#2A1150" stroke-width="4"/><rect x="320" y="46" width="160" height="120" fill="#3D1A6E" stroke="#2A1150" stroke-width="6"/><circle cx="440" cy="84" r="18" fill="#F5E9C9"/><path d="M400 46v120M320 106h160" stroke="#F5E9C9" stroke-width="4"/><g><rect x="80" y="196" width="46" height="40" fill="#FF5E1A" stroke="#2A1150" stroke-width="4"/><path d="M103 196c-20-30-30-40-40-44 18 2 30 16 40 34 6-22 18-36 34-40-14 12-24 28-28 50" fill="#8BE000" stroke="#2A1150" stroke-width="3"/></g><rect x="250" y="208" width="54" height="28" rx="6" fill="#F5E9C9" stroke="#2A1150" stroke-width="4"/><rect x="560" y="80" width="130" height="250" rx="8" fill="#F5E9C9" stroke="#2A1150" stroke-width="5"/><path d="M560 170h130M576 106v40M576 190v60" stroke="#2A1150" stroke-width="5" stroke-linecap="round"/><g fill="#8BE000" stroke="#2A1150" stroke-width="2"><rect x="620" y="110" width="22" height="16"/><circle cx="660" cy="220" r="9"/></g><path d="M722 268h56l-6 62h-44z" fill="#8BE000" stroke="#2A1150" stroke-width="4"/><path d="M716 262h68" stroke="#2A1150" stroke-width="6" stroke-linecap="round"/><g stroke="#2A1150" stroke-width="2" opacity=".35"><path d="M0 370h800M0 410h800M100 330v120M200 330v120M300 330v120M400 330v120M500 330v120M600 330v120M700 330v120"/></g></svg></div>
+<div class="still-bar"><span id="found" aria-live="polite">Found 0 of 8</span><span><button class="pill" type="button" id="hintbtn">Show me one</button> <button class="pill" type="button" id="resetstill">Reset</button></span></div>
+</div>
+<div class="overlay" id="start-card"><p class="kicker">Feature presentation</p><p class="ov-t">Squish!</p><p>30 seconds. Tap the critters before they reach the skirting boards. Mozzies score most; termites travel in threes.</p><div class="row"><button class="btn g" type="button" id="start">Start the round</button></div><p class="small">Keyboard: Tab to a bug (it freezes in the torchlight), Enter to squish, Esc to pause.</p></div>
+<div class="overlay" id="end-card" hidden><p class="ov-t">The end?</p><p id="end-stats">You squished 0 critters.</p><p>Can’t catch them all? <strong>Call us.</strong> The rest of the colony is still under the house.</p><div class="row"><a class="btn g" href="#crew">Call the crew</a><button class="btn" type="button" id="again">Play again</button></div><p class="small" id="best"></p></div>
+<div class="overlay" id="pause-card" hidden><p class="ov-t">Paused</p><div class="row"><button class="btn g" type="button" id="resume">Resume</button></div></div>
+</div>
+<p class="sr-only" id="live" aria-live="polite"></p>
+</div>
+<p class="hint">Prefer something that sits still? Switch to <b>Still</b> and find the eight bugs hiding in the kitchen.</p>
+</section>
+
+<section class="guide paper" id="guide" aria-labelledby="t-guide">
+<div class="pamph">
+<div class="pamph-cover"><p class="kicker">Free pamphlet</p><h2 class="h2" id="t-guide">The Top End survival guide</h2><p>Eight things you can do this week so the critters have less to come for.</p></div>
+<div><ol class="tips">
+<li><h3><span>1</span>Starve them of water</h3><p>Fix dripping taps and air-con drains. Cockroaches can go longer without food than without water.</p></li>
+<li><h3><span>2</span>Don’t feed the monsters</h3><p>Seal food, wipe benches at night, and take the bin out before it gets lively.</p></li>
+<li><h3><span>3</span>Mind the gap</h3><p>Keep mulch, soil and timber off the slab and clear of weep holes, so termite activity stays visible.</p></li>
+<li><h3><span>4</span>Tip it out</h3><p>In the Wet, empty pot-plant saucers, buckets and tarps weekly. Wrigglers need only a splash.</p></li>
+<li><h3><span>5</span>Look up</h3><p>Scratching in the ceiling at night? Trim palms and branches back from the roofline.</p></li>
+<li><h3><span>6</span>Gloves in the shed</h3><p>Redbacks love dry, sheltered corners. Gloves for the shed, the letterbox and under outdoor chairs.</p></li>
+<li><h3><span>7</span>Leave the workings alone</h3><p>Found termites? Don’t spray or break open the mud. Call for an inspection and leave them be until then.</p></li>
+<li><h3><span>8</span>Book the yearly check</h3><p>In the Top End, most homes are worth a termite inspection at least once a year.</p></li>
+</ol><p class="gi">General information only. Every home is different; we’ll tell you what matters for yours.</p></div>
+</div>
+</section>
+
+<section class="box" id="prices" aria-labelledby="t-prices">
+<div class="box-in">
+<div><p class="kicker">Box office</p><h2 class="h2" id="t-prices">What it costs</h2><p>Every job is quoted on site, because size, access and how settled the critters are all change the price. As a rough guide:</p></div>
+<div class="price"><table><caption class="sr-only">Sample starting prices, including GST</caption><tbody>
+<tr><th scope="row">Termite inspection<small>House up to 200 m², written report</small></th><td>from $290</td></tr>
+<tr><th scope="row">General pest treatment<small>Inside and out: roaches, spiders, ants</small></th><td>from $240</td></tr>
+<tr><th scope="row">Rodent program<small>Three visits over three weeks</small></th><td>from $320</td></tr>
+<tr><th scope="row">Mosquito barrier<small>Yard foliage and breeding-site check</small></th><td>from $190</td></tr>
+<tr><th scope="row">Wet-season double feature<small>Two visits: before and during the Wet</small></th><td>from $420</td></tr>
+</tbody></table><p><b>Sample prices</b> for this demo, including GST. No call-out fee inside our service area.</p></div>
+</div>
+</section>
+
+<section class="crew" id="crew" aria-labelledby="t-crew">
+<div class="lobby">
+<div class="lobby-l"><p class="kicker">Lobby card</p><h2 class="h2" id="t-crew">Call the crew</h2>
+<a class="big-tel" href="tel:+61855503614">(08) 5550 3614</a>
+<dl><dt>Mobile</dt><dd><a href="tel:+61491570157">0491 570 157</a></dd><dt>Email</dt><dd><a href="mailto:crew@example.com">crew@example.com</a></dd><dt>Hours</dt><dd>Mon–Fri 7am–5pm · Sat 8am–12pm</dd><dt>Office</dt><dd><span data-brand>Critter Control Co.</span> · Winnellie, NT</dd></dl>
+<ul class="areas" aria-label="Service area"><li>Darwin</li><li>Palmerston</li><li>Casuarina</li><li>Nightcliff</li><li>Parap</li><li>Fannie Bay</li><li>Howard Springs</li><li>Humpty Doo</li><li>Coolalinga</li></ul>
+</div>
+<form class="lobby-r" data-demo-message="Demo only — nothing was sent. On a real site this sighting would reach the crew.">
+<h3>Report a sighting</h3><p>Tell us what you saw and we’ll call back with a time.</p>
+<div class="field"><label for="r-name">Your name</label><input id="r-name" name="name" autocomplete="name" required></div>
+<div class="two"><div class="field"><label for="r-sub">Suburb</label><select id="r-sub" name="suburb"><option>Darwin</option><option>Palmerston</option><option>Casuarina</option><option>Nightcliff</option><option>Parap</option><option>Fannie Bay</option><option>Howard Springs</option><option>Humpty Doo</option><option>Coolalinga</option><option>Somewhere else</option></select></div>
+<div class="field"><label for="r-what">What did you see?</label><select id="r-what" name="what"><option>Termites or mud tubes</option><option>Cockroaches</option><option>Spiders</option><option>Rats or mice</option><option>Mosquitoes</option><option>Something with too many legs</option></select></div></div>
+<div class="field"><label for="r-tel">Phone</label><input id="r-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel"></div>
+<button class="btn g" type="submit">Send the report</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="end-roll">
+<p class="the-end">The end?<svg class="crawl" viewBox="-24 -24 48 48" aria-hidden="true"><g transform="rotate(180)"><path d="M6-5l4-9M6 5l4 9M-1-6l-2-11M-1 6l-2 11M-8-5l-8-9M-8 5l-8 9" stroke="#F5E9C9" stroke-width="2.4" stroke-linecap="round"/><ellipse rx="13" ry="7.5" fill="#FF5E1A" stroke="#F5E9C9" stroke-width="2"/><circle cx="15" r="3.5" fill="#F5E9C9"/></g></svg></p>
+<p class="credit">A <span data-brand>Critter Control Co.</span> production · Darwin, NT</p>
+<p>Concept demo for a fictional business. Sample prices. General information only; no treatment advice for your home without an inspection.</p>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var d=document;function $(id){return d.getElementById(id)}
+var RM=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
+function reduced(){return !!((window.DemoKit&&DemoKit.reducedMotion)||RM.matches)}
+var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+var m=new Date().getMonth();
+$("season").textContent="Season: "+(m>=9&&m<=11?"the Build-up · alates swarm after rain":m<=3?"the Wet · mozzies on the move":"the Dry · roof rats and roaches move indoors");
+
+if("IntersectionObserver" in window){
+var deco=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle("paused-anim",!e.isIntersecting)})});
+d.querySelectorAll(".poster,.showing,.end-roll").forEach(function(el){deco.observe(el)});
+}
+
+d.querySelectorAll(".mug").forEach(function(mug){
+var front=mug.querySelector(".front"),back=mug.querySelector(".back");
+mug.querySelectorAll(".flip").forEach(function(b){b.addEventListener("click",function(){
+var on=!mug.classList.contains("flipped");
+mug.classList.toggle("flipped",on);
+front.inert=on;back.inert=!on;
+(on?back:front).querySelector(".flip").focus({preventScroll:true});
+})});
+});
+
+var SPR={
+roach:'<svg viewBox="-24 -24 48 48"><g class="legs" fill="none" stroke="#2A1150" stroke-width="2.4" stroke-linecap="round"><path d="M6-5l4-10M6 5l4 10M-1-6l-2-12M-1 6l-2 12M-8-5l-9-9M-8 5l-9 9"/></g><path d="M15-2c7-4 11-9 13-15M15 2c7 4 11 9 13 15" stroke="#2A1150" stroke-width="1.5" fill="none"/><ellipse rx="13" ry="7.5" fill="#FF5E1A" stroke="#2A1150" stroke-width="2.2"/><path d="M-12 0H6" stroke="#2A1150" stroke-width="1.6"/><ellipse cx="8" rx="5" ry="6.4" fill="#F5E9C9" stroke="#2A1150" stroke-width="2"/><path d="M7-3.5v7M10-3.5v7" stroke="#2A1150" stroke-width="1.6"/><circle cx="15" r="3.2" fill="#2A1150"/></svg>',
+spider:'<svg viewBox="-24 -24 48 48"><g class="legs" fill="none" stroke="#2A1150" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6-3L14-14 22-12M4-4L6-17 13-22M-2-4l-5-12-8-5M-5-3l-12-8-8 1M6 3l8 11 8-2M4 4l2 13 7 5M-2 4l-5 12-8 5M-5 3l-12 8-8-1"/></g><ellipse cx="-7" rx="9" ry="7" fill="#F5E9C9" stroke="#2A1150" stroke-width="2.2"/><circle cx="5" r="6.5" fill="#F5E9C9" stroke="#2A1150" stroke-width="2.2"/><circle cx="9" cy="-2" r="1.3" fill="#2A1150"/><circle cx="9" cy="2" r="1.3" fill="#2A1150"/></svg>',
+termite:'<svg viewBox="-24 -24 48 48"><g class="legs" fill="none" stroke="#2A1150" stroke-width="1.8" stroke-linecap="round"><path d="M3-3l3-7M3 3l3 7M-2-3l-2-8M-2 3l-2 8M-7-3l-5-6M-7 3l-5 6"/></g><ellipse cx="-7" rx="8" ry="5" fill="#F5E9C9" stroke="#2A1150" stroke-width="2"/><ellipse cx="1" rx="4" ry="4" fill="#F5E9C9" stroke="#2A1150" stroke-width="2"/><ellipse cx="9" rx="6" ry="4.6" fill="#FF5E1A" stroke="#2A1150" stroke-width="2"/><path d="M14-2l5-3M14 2l5 3" stroke="#2A1150" stroke-width="2" stroke-linecap="round"/></svg>',
+mozzie:'<svg viewBox="-24 -24 48 48"><g class="legs" fill="none" stroke="#2A1150" stroke-width="1.4" stroke-linecap="round"><path d="M2-2l6-14M2 2l6 14M-1-2l-4-15M-1 2l-4 15M-4-2l-12-9M-4 2l-12 9"/></g><ellipse cx="-2" cy="-7" rx="10" ry="4" fill="#F5E9C9" fill-opacity=".85" stroke="#2A1150" stroke-width="1.5"/><ellipse cx="-2" cy="7" rx="10" ry="4" fill="#F5E9C9" fill-opacity=".85" stroke="#2A1150" stroke-width="1.5"/><path d="M-16 0H2" stroke="#2A1150" stroke-width="5" stroke-linecap="round"/><path d="M-15 0H0" stroke="#F5E9C9" stroke-width="5" stroke-dasharray="2 3"/><circle cx="5" r="3.6" fill="#2A1150"/><circle cx="6" cy="-1" r="1.6" fill="#8BE000"/><path d="M8 0h12" stroke="#2A1150" stroke-width="1.6"/></svg>'};
+var TYPES={roach:{pts:10,v:[140,200],s:62,label:"Cockroach"},spider:{pts:15,v:[150,200],s:70,label:"Huntsman spider",burst:1},termite:{pts:5,v:[60,85],s:46,label:"Termite"},mozzie:{pts:20,v:[100,140],s:58,label:"Mosquito",erratic:1}};
+var WORDS=["SPLAT!","SQUISH!","CRUNCH!","GOTCHA!","SPLOT!"];
+var GOO='<svg viewBox="-40 -40 80 80" aria-hidden="true"><path d="M-6-24c10-6 14 6 22 4s18 2 12 12 10 14 0 20-6 16-16 12-14 8-20 0-18-2-14-12-10-16 0-20 8-14 16-16z" fill="#8BE000" stroke="#2A1150" stroke-width="3"/><circle cx="28" cy="-22" r="4" fill="#8BE000"/><circle cx="-30" cy="18" r="3" fill="#8BE000"/><circle cx="20" cy="28" r="3.5" fill="#8BE000"/></svg>';
+var stage=$("stage"),bugsEl=$("bugs"),live=$("live");
+var W=0,H=0,bugs=[],state="idle",raf=0,last=0,elapsed=0,spawnIn=0,score=0,squished=0,escaped=0,combo=0,lastHit=0,mode="move";
+var LEN=30;
+function measure(){var r=stage.getBoundingClientRect();W=r.width;H=r.height}
+function rnd(a,b){return a+Math.random()*(b-a)}
+function sz(T){return Math.round(T.s*(W<600?.8:1))}
+function hud(){$("sc").textContent=score;$("sq").textContent=squished;$("ga").textContent=escaped;var left=Math.max(0,Math.ceil(LEN-elapsed));$("tm").textContent="0:"+(left<10?"0":"")+left}
+function spawn(type,side,y,delay){
+var T=TYPES[type],dir=side||(Math.random()<.5?1:-1);
+var b={type:type,dir:dir,x:dir>0?-sz(T):W+sz(T),y:y||rnd(sz(T),H-sz(T)),a:dir>0?rnd(-.5,.5):Math.PI+rnd(-.5,.5),v:rnd(T.v[0],T.v[1])*(W<600?.8:1),t:rnd(0,6),wait:delay||0,dead:false,frozen:false,inside:false};
+var el=d.createElement("button");
+el.type="button";el.className="bug";el.style.width=el.style.height=sz(T)+"px";
+el.setAttribute("aria-label",T.label+", squish it");
+el.innerHTML=SPR[type];
+el.style.transform="translate(-200px,-200px)";
+el.addEventListener("pointerdown",function(e){e.preventDefault();hit(b,e.clientX,e.clientY)});
+el.addEventListener("click",function(e){if(e.detail===0)hit(b)});
+el.addEventListener("focus",function(){b.frozen=true});
+el.addEventListener("blur",function(){b.frozen=false});
+b.el=el;bugsEl.appendChild(el);bugs.push(b);
+}
+function spawnWave(){
+var r=Math.random();
+if(r<.2){var side=Math.random()<.5?1:-1,y=rnd(60,H-60);for(var i=0;i<3;i++)spawn("termite",side,y+rnd(-14,14),i*.45)}
+else spawn(r<.55?"roach":r<.78?"spider":"mozzie");
+}
+function hit(b,cx,cy){
+if(b.dead||state!=="play")return;
+b.dead=true;
+var now=performance.now();combo=(now-lastHit<900)?Math.min(combo+1,5):1;lastHit=now;
+var pts=TYPES[b.type].pts*combo;score+=pts;squished++;
+var had=d.activeElement===b.el;
+b.el.classList.add("dead");b.el.tabIndex=-1;
+var sp=d.createElement("div");sp.className="splat";sp.style.left=b.x+"px";sp.style.top=b.y+"px";
+sp.innerHTML=GOO+"<b>"+WORDS[squished%WORDS.length]+(combo>1?" ×"+combo:"")+"</b>";
+bugsEl.insertBefore(sp,bugsEl.firstChild);
+setTimeout(function(){sp.remove()},2400);
+setTimeout(function(){b.el.remove()},240);
+if(had){var next=bugs.filter(function(o){return !o.dead&&o.inside})[0];if(next)next.el.focus({preventScroll:true});else stage.focus({preventScroll:true})}
+hud();
+}
+function frame(now){
+if(state!=="play")return;
+var dt=Math.min(.05,(now-last)/1000);last=now;elapsed+=dt;
+spawnIn-=dt;
+var live=bugs.filter(function(b){return !b.dead}).length;
+if(spawnIn<=0&&live<9){spawnWave();var p=elapsed/LEN;spawnIn=rnd(.25,.5)+(.95-.55*p)}
+for(var i=0;i<bugs.length;i++){
+var b=bugs[i],T=TYPES[b.type];
+if(b.dead)continue;
+if(b.wait>0){b.wait-=dt;continue}
+if(!b.frozen){
+b.t+=dt;
+var want=b.dir>0?0:Math.PI,diff=Math.atan2(Math.sin(want-b.a),Math.cos(want-b.a));
+b.a+=diff*dt*.9+(Math.random()-.5)*dt*(T.erratic?9:2.4);
+if(T.erratic)b.a+=Math.sin(b.t*11)*dt*3;
+var sp=b.v*(T.burst?(Math.sin(b.t*4.2)>0?1.7:.12):1);
+b.x+=Math.cos(b.a)*sp*dt;b.y+=Math.sin(b.a)*sp*dt;
+var S=sz(T),m2=S*.5;
+if(b.y<m2){b.y=m2;b.a=-b.a}if(b.y>H-m2){b.y=H-m2;b.a=-b.a}
+if(!b.inside&&b.x>0&&b.x<W)b.inside=true;
+if(b.inside&&(b.x<-S||b.x>W+S)){b.dead=true;escaped++;b.el.remove();hud();continue}
+}
+var S2=sz(T)/2;b.el.style.transform="translate("+(b.x-S2).toFixed(1)+"px,"+(b.y-S2).toFixed(1)+"px) rotate("+b.a.toFixed(3)+"rad)";
+}
+if(bugs.length>40)bugs=bugs.filter(function(b){return !b.dead});
+hud();
+if(elapsed>=LEN){end();return}
+raf=requestAnimationFrame(frame);
+}
+function clearBugs(){bugs=[];bugsEl.innerHTML=""}
+function show(id){["start-card","end-card","pause-card"].forEach(function(k){$(k).hidden=k!==id})}
+function start(){
+measure();clearBugs();score=squished=escaped=0;elapsed=0;spawnIn=.3;combo=0;
+state="play";show(null);stage.classList.remove("paused");
+var p=$("pause");p.disabled=false;p.setAttribute("aria-pressed","false");p.textContent="Pause";
+live.textContent="Round started. 30 seconds.";hud();
+last=performance.now();raf=requestAnimationFrame(frame);
+spawnWave();
+}
+function pause(on){
+if(state!=="play"&&state!=="paused")return;
+if(on&&state==="play"){state="paused";cancelAnimationFrame(raf);stage.classList.add("paused");show("pause-card");live.textContent="Paused.";$("resume").focus({preventScroll:true})}
+else if(!on&&state==="paused"){state="play";stage.classList.remove("paused");show(null);last=performance.now();raf=requestAnimationFrame(frame);live.textContent="Resumed."}
+var p=$("pause");p.setAttribute("aria-pressed",String(state==="paused"));p.textContent=state==="paused"?"Resume":"Pause";
+}
+function end(){
+state="over";cancelAnimationFrame(raf);
+bugs.forEach(function(b){if(!b.dead)b.el.remove()});bugs=[];
+var best=Math.max(score,+(store.get("critter-best")||0));store.set("critter-best",best);
+$("end-stats").textContent="You squished "+squished+" critter"+(squished===1?"":"s")+" for "+score+" points. "+escaped+" got away.";
+$("best").textContent="Your best on this device: "+best+" points.";
+show("end-card");$("pause").disabled=true;
+live.textContent="Round over. You squished "+squished+" critters for "+score+" points. Can't catch them all? Call us.";
+$("again").focus({preventScroll:true});
+}
+$("start").addEventListener("click",start);
+$("again").addEventListener("click",start);
+$("resume").addEventListener("click",function(){pause(false)});
+$("pause").addEventListener("click",function(){pause(state==="play")});
+stage.tabIndex=-1;
+stage.addEventListener("pointerdown",function(e){if(state!=="play"||e.target.closest(".bug"))return;combo=0});
+d.addEventListener("keydown",function(e){if(e.key==="Escape"&&(state==="play"||state==="paused")&&$("squish").contains(d.activeElement)){e.preventDefault();pause(state==="play")}});
+d.addEventListener("visibilitychange",function(){if(d.hidden)pause(true)});
+if("IntersectionObserver" in window)new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)pause(true)})},{threshold:.35}).observe(stage);
+window.addEventListener("resize",function(){var ow=W,oh=H;measure();if(ow&&oh)bugs.forEach(function(b){b.x*=W/ow;b.y*=H/oh})});
+
+var HID=[["roach",72,19,160],["spider",18.5,35,20],["termite",11.5,45,-60],["mozzie",47,14,200],["roach",94,66,-110],["termite",31.5,62,90],["spider",58,82,40],["mozzie",97,5,130]];
+var still=$("still"),kit=$("kit"),foundN=0;
+HID.forEach(function(h,i){
+var b=d.createElement("button");b.type="button";b.className="hid";b.style.left=h[1]+"%";b.style.top=h[2]+"%";
+b.setAttribute("aria-label","Hidden "+TYPES[h[0]].label.toLowerCase()+" "+(i+1));b.setAttribute("aria-pressed","false");
+b.innerHTML=SPR[h[0]].replace("<svg",'<svg style="transform:rotate('+h[3]+'deg)"');
+b.addEventListener("click",function(){if(b.classList.contains("found"))return;b.classList.add("found");b.classList.remove("flash");b.setAttribute("aria-pressed","true");foundN++;updFound()});
+kit.appendChild(b);
+});
+function updFound(){$("found").textContent=foundN===8?"All 8 found. Now imagine the ones you can’t see. Call the crew!":"Found "+foundN+" of 8"}
+$("hintbtn").addEventListener("click",function(){var left=[].filter.call(still.querySelectorAll(".hid"),function(b){return !b.classList.contains("found")});if(!left.length)return;var b=left[Math.floor(Math.random()*left.length)];b.classList.add("flash");setTimeout(function(){b.classList.remove("flash")},2600)});
+$("resetstill").addEventListener("click",function(){still.querySelectorAll(".hid").forEach(function(b){b.classList.remove("found","flash");b.setAttribute("aria-pressed","false")});foundN=0;updFound()});
+function setMode(mo){
+mode=mo;
+d.querySelectorAll("[data-mode]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-mode")===mo))});
+stage.classList.toggle("still-on",mo==="still");d.querySelector(".screen").classList.toggle("still-mode",mo==="still");
+if(mo==="still"){if(state==="play"||state==="paused"){state="idle";cancelAnimationFrame(raf)}clearBugs();show("__none");still.hidden=false;$("pause").disabled=true}
+else{still.hidden=true;state="idle";show("start-card")}
+}
+d.querySelectorAll("[data-mode]").forEach(function(b){b.addEventListener("click",function(){setMode(b.getAttribute("data-mode"))})});
+if(reduced())setMode("still");
+measure();hud();
+})();
+</script>
+</body>
+</html>

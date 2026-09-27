@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="055">
+<meta name="demo:brand" content="Black Swan Tattoo">
+<meta name="demo:badge" content="bottom-right">
+<title>Black Swan Tattoo — traditional tattooing, Fremantle</title>
+<meta name="description" content="Black Swan Tattoo is a fictional traditional tattoo studio in Fremantle, WA — flash wall, artists, deposits, aftercare and a placement preview. A concept demo.">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --k:#0B0B0B; --bone:#EDE6D6; --red:#B3261E; --mus:#D4A24C; --teal:#1F6F78; --k2:#1A1917; --bone-2:#E2D8C3; --mute:#5E574B;
+  --disp:"Pirata One","UnifrakturCook","Old English Text MT",Georgia,serif;
+  --mono:"Space Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pop:cubic-bezier(.3,1.6,.5,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:70px}
+body{margin:0;background:var(--k);color:var(--bone);font:400 15px/1.65 var(--mono);-webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0 2px,transparent 2px 160px)}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{list-style:none;padding:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--mus);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+.paper{color:var(--k);background-color:var(--bone);
+  background-image:radial-gradient(circle at 18% 12%,rgba(255,255,255,.45),transparent 42%),radial-gradient(circle at 85% 88%,rgba(140,100,40,.16),transparent 48%),repeating-radial-gradient(circle at 30% 40%,rgba(0,0,0,.03) 0 1px,transparent 1px 5px)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+svg.art{display:block;width:100%;height:100%;overflow:visible}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;background:var(--k);border-bottom:3px solid var(--bone)}
+.top .wrap{display:flex;align-items:center;gap:18px;min-height:62px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:1 1 200px;min-width:0}
+.brand svg{flex:none;width:34px;height:34px}
+.wm{font:400 30px/1 var(--disp);letter-spacing:.01em;overflow-wrap:anywhere}
+.top nav{display:flex;gap:4px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:9px 11px}
+.top nav a:hover{color:var(--mus)}
+.pill{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border:3px solid var(--bone);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;background:var(--red);color:var(--bone);box-shadow:4px 4px 0 var(--bone);transition:transform .15s,box-shadow .15s}
+.pill:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--bone)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center;padding-top:60px;padding-bottom:90px}
+.kick{font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mus)}
+.hero h1{margin-top:12px;font:400 clamp(64px,8.2vw,124px)/.86 var(--disp);color:var(--bone);text-shadow:5px 5px 0 var(--red);overflow-wrap:anywhere}
+.intro{margin-top:24px;font-size:16px;max-width:30em;color:#D8D0BE}
+.ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+.cta{display:inline-flex;align-items:center;min-height:52px;padding:0 22px;border:3px solid var(--bone);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;transition:transform .15s,box-shadow .15s;cursor:pointer}
+.cta.solid{background:var(--bone);color:var(--k);box-shadow:5px 5px 0 var(--red)}
+.cta.line{color:var(--bone);box-shadow:5px 5px 0 var(--teal)}
+.cta:hover{transform:translate(-2px,-2px)}
+.paper .cta.solid{background:var(--k);color:var(--bone);border-color:var(--k)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:13px;color:#CFC6B2}
+.facts li{display:flex;align-items:center;gap:8px}
+.facts li::before{content:"✦";color:var(--mus)}
+.sheet{position:relative;padding:22px 22px 18px;border:4px solid var(--k);box-shadow:0 0 0 3px var(--bone),14px 14px 0 rgba(179,38,30,.85);transform:rotate(-1.2deg)}
+.sheet-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:3px solid var(--k);padding-bottom:8px;margin-bottom:12px}
+.sheet-h b{font:400 34px/1 var(--disp)}
+.sheet-h span{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.tack{position:absolute;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff8b80,var(--red) 60%,#6d140f);box-shadow:2px 3px 0 rgba(0,0,0,.35);z-index:2}
+.flash{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.fl{appearance:none;border:3px solid var(--k);background:rgba(255,255,255,.28);padding:10px 8px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:transform .2s var(--pop),background .2s;position:relative}
+.fl:hover{transform:rotate(-2deg) scale(1.04);background:rgba(255,255,255,.55)}
+.fl .no{position:absolute;left:6px;top:4px;font-size:11px;font-weight:700}
+.fl svg{width:78%;aspect-ratio:1;height:auto}
+.fl b{font:400 20px/1 var(--disp)}
+.fl small{font-size:11px;color:var(--mute)}
+.sheet-f{margin-top:10px;font-size:11px;text-align:right;color:var(--mute)}
+
+/* section heads */
+.sec{padding:100px 0}
+.banner{display:inline-block;font:400 clamp(40px,4.6vw,66px)/1 var(--disp);padding:10px 42px 12px;background:var(--red);color:var(--bone);clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+.paper .banner{background:var(--k)}
+.lead{margin-top:18px;max-width:40em;font-size:16px}
+
+/* placement */
+.try{border-top:4px solid var(--bone);border-bottom:4px solid var(--bone)}
+.tgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;margin-top:40px;align-items:start}
+.mirror{border:4px solid var(--k);background:#F6F1E6;box-shadow:10px 10px 0 var(--k);padding:14px}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-bottom:10px}
+.tabs,.tones{display:flex;gap:6px;flex-wrap:wrap}
+.tab{appearance:none;border:3px solid var(--k);background:var(--bone);min-height:40px;padding:0 12px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--k);color:var(--bone)}
+.tone{appearance:none;width:34px;height:34px;border-radius:50%;border:3px solid var(--k);cursor:pointer;padding:0}
+.tone[aria-pressed="true"]{box-shadow:0 0 0 3px #F6F1E6,0 0 0 6px var(--k)}
+.stagewrap{position:relative;aspect-ratio:1.08;border:3px solid var(--k);background:repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 26px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 26px),#FBF8F1}
+#stage{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;overflow:visible}
+#tatT{cursor:grab}
+#stage.dragging #tatT{cursor:grabbing}
+.stamp{animation:stamp .35s var(--pop)}
+@keyframes stamp{from{opacity:.3;transform:scale(1.25)}}
+.readout{margin-top:12px;padding:12px 14px;background:var(--k);color:var(--bone);font-size:14px;line-height:1.5;min-height:3.4em}
+.readout b{color:var(--mus)}
+.shint{position:absolute;left:10px;bottom:8px;font-size:11px;font-weight:700;color:var(--mute);pointer-events:none}
+.picks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.pick{appearance:none;border:3px solid var(--k);background:var(--bone);padding:8px 6px 6px;cursor:grab;display:flex;flex-direction:column;align-items:center;gap:2px;touch-action:pan-x;transition:transform .2s var(--pop)}
+.pick svg{width:64px;height:64px;pointer-events:none}
+.pick span{font-size:12px;font-weight:700}
+.pick[aria-pressed="true"]{background:var(--mus);transform:rotate(-2deg);box-shadow:4px 4px 0 var(--k)}
+.ctrl{margin-top:18px;display:grid;gap:14px}
+.row{display:grid;grid-template-columns:78px minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.row input[type=range]{width:100%;accent-color:var(--red);min-height:32px}
+.row output{min-width:6ch;text-align:right;font-variant-numeric:tabular-nums}
+.mini{display:flex;gap:6px;flex-wrap:wrap}
+.sq{appearance:none;width:42px;height:42px;border:3px solid var(--k);background:var(--bone);font-weight:700;font-size:17px;cursor:pointer;display:grid;place-items:center;line-height:1}
+.sq:active{background:var(--mus)}
+.ghost{position:fixed;left:0;top:0;width:86px;height:86px;pointer-events:none;z-index:60;filter:drop-shadow(4px 6px 0 rgba(0,0,0,.35));transform:translate(-50%,-50%) rotate(-6deg)}
+.use-btn{margin-top:4px}
+.fine{font-size:12px;color:var(--mute);margin-top:6px}
+
+/* artists */
+.artists{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:44px}
+.card{border:4px solid var(--bone);padding:24px;position:relative;background:var(--k2)}
+.card:nth-child(1){box-shadow:8px 8px 0 var(--red)}
+.card:nth-child(2){box-shadow:8px 8px 0 var(--teal)}
+.card:nth-child(3){box-shadow:8px 8px 0 var(--mus)}
+.card .em{width:92px;height:92px;margin-bottom:14px}
+.card h3{font:400 40px/1 var(--disp)}
+.card .sty{margin-top:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--mus)}
+.card p{margin-top:12px;font-size:14px;color:#D2CAB7}
+.card .days{margin-top:14px;font-size:12px;border-top:1px dashed #5c564b;padding-top:10px;color:#B9B1A0}
+
+/* process */
+.proc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;margin-top:44px}
+.steps{display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px}
+.steps li::before{counter-increment:s;content:counter(s);font:400 54px/1 var(--disp);color:var(--red);text-align:center;border:3px solid var(--k);height:64px;line-height:64px}
+.steps h3{font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.05em}
+.steps p{font-size:14px;margin-top:4px}
+.policy{border:4px solid var(--k);padding:22px;background:rgba(255,255,255,.35)}
+.policy h3{font:400 34px/1 var(--disp)}
+.policy dl{margin-top:14px;display:grid;gap:10px}
+.policy dt{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+.policy dd{font-size:14px}
+.dashed{border:2px dashed var(--k);padding:12px 14px;margin-top:16px;font-size:13px}
+
+/* aftercare */
+.after{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:40px}
+.after li{border-top:4px solid var(--bone);padding-top:14px}
+.after b{display:block;font:400 30px/1 var(--disp);color:var(--mus)}
+.after p{margin-top:8px;font-size:14px;color:#D2CAB7}
+.gi{margin-top:24px;font-size:13px;color:#B9B1A0;border-left:4px solid var(--red);padding-left:12px;max-width:52em}
+
+/* booking */
+.book{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;margin-top:44px;align-items:start}
+.contact{display:grid;gap:12px;font-size:14px}
+.contact a{font-weight:700}
+form.consult{display:grid;grid-template-columns:1fr 1fr;gap:14px;border:4px solid var(--k);padding:22px;box-shadow:10px 10px 0 var(--red);background:#F6F1E6}
+form.consult label{display:grid;gap:5px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+form.consult .full{grid-column:1/-1}
+form.consult input,form.consult select,form.consult textarea{width:100%;min-height:46px;border:3px solid var(--k);background:#fff;padding:8px 10px;font-size:15px;text-transform:none;letter-spacing:0;font-weight:400;border-radius:0}
+form.consult textarea{min-height:90px;resize:vertical}
+fieldset.days{border:3px solid var(--k);margin:0;padding:8px 12px 12px;display:flex;flex-wrap:wrap;gap:6px 16px}
+fieldset.days legend{font-size:12px;font-weight:700;text-transform:uppercase;padding:0 6px}
+fieldset.days label{display:flex;align-items:center;gap:6px;font-size:14px;min-height:36px}
+fieldset.days input{width:20px;height:20px;min-height:0;accent-color:var(--red)}
+form.consult button{justify-self:start}
+footer{border-top:4px solid var(--bone);padding:48px 0 60px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:28px}
+footer .f-name{font:400 48px/1 var(--disp);overflow-wrap:anywhere;color:var(--bone);margin-top:0}
+footer p{font-size:13px;color:#B9B1A0;margin-top:8px}
+footer h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mus)}
+
+@media (max-width:1100px){
+  .top nav{display:none}
+  .hero{grid-template-columns:minmax(0,1fr);gap:40px}
+  .sheet{max-width:640px}
+  .tgrid,.proc,.book{grid-template-columns:minmax(0,1fr)}
+  .artists{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .after{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .top .wrap{min-height:56px;gap:10px}
+  .wm{font-size:26px}
+  .pill{min-height:40px;padding:0 12px;font-size:13px;box-shadow:3px 3px 0 var(--bone)}
+  .hero{padding-top:28px;padding-bottom:64px}
+  .pill .lg{display:none}
+  .hero h1{font-size:68px;text-shadow:4px 4px 0 var(--red)}
+  .sheet{padding:14px 12px 12px;transform:rotate(-.8deg)}
+  .sheet-h b{font-size:28px}
+  .flash{gap:8px}
+  .fl{padding:8px 4px 6px}
+  .fl b{font-size:16px}
+  .fl small{display:none}
+  .sec{padding:70px 0}
+  .banner{padding:8px 30px 10px}
+  .tgrid{gap:14px;margin-top:28px}
+  .mirror{padding:10px;box-shadow:6px 6px 0 var(--k)}
+  .stagewrap{aspect-ratio:1}
+  .tab{min-height:40px;padding:0 9px;font-size:12px}
+  .tabs{gap:5px}
+  .picks{display:flex;overflow-x:auto;gap:8px;padding:4px 2px 12px;scroll-snap-type:x mandatory;margin:0 -16px;padding-left:16px;padding-right:16px}
+  .pick{flex:none;width:92px;scroll-snap-align:start}
+  .artists,.after{grid-template-columns:minmax(0,1fr)}
+  form.consult{grid-template-columns:minmax(0,1fr);padding:16px;box-shadow:6px 6px 0 var(--red)}
+  footer .wrap{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .sheet,.fl:hover,.pick[aria-pressed="true"]{transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="d-swallow" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M36 44C46 24 66 12 94 8C84 18 76 28 70 40C62 44 50 46 36 44Z" fill="#1F6F78"/><path d="M50 40L68 22M58 41L78 24M44 42L58 24" fill="none" stroke-width="2"/>
+      <path d="M40 56C50 66 58 80 66 96C52 90 42 78 34 62Z" fill="#1F6F78"/><path d="M46 66L56 86M40 62L48 80" fill="none" stroke-width="2"/>
+      <path d="M58 52L96 58L80 64L94 78L60 62Z" fill="#1F6F78"/>
+      <path d="M18 40C24 30 38 30 46 38C56 46 62 52 62 56C50 62 34 60 24 54C18 50 16 45 18 40Z" fill="#1F6F78"/>
+      <path d="M22 50C30 58 46 60 60 57C48 54 36 50 28 46Z" fill="#EDE6D6"/><path d="M18 44C16 50 20 54 26 54C26 50 24 46 18 44Z" fill="#B3261E"/>
+      <path d="M18 40L6 43L18 46Z" fill="#0B0B0B"/><circle cx="26" cy="39" r="3.4" fill="#EDE6D6" stroke-width="2"/><circle cx="26.5" cy="39" r="1.4" fill="#0B0B0B" stroke="none"/>
+    </g></symbol>
+    <symbol id="d-dagger" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M43 40H57L54 84L50 94L46 84Z" fill="#EDE6D6"/><path d="M57 40L54 84L50 94V40Z" fill="#0B0B0B" stroke="none" opacity=".25"/><path d="M50 42V90" fill="none" stroke-width="1.6"/>
+      <path d="M28 34H72C75 34 75 42 72 42H28C25 42 25 34 28 34Z" fill="#D4A24C"/><circle cx="25" cy="38" r="4.5" fill="#D4A24C"/><circle cx="75" cy="38" r="4.5" fill="#D4A24C"/>
+      <path d="M45 16H55V34H45Z" fill="#B3261E"/><path d="M45 22L55 20M45 27L55 25M45 32L55 30" fill="none" stroke-width="2"/>
+      <path d="M50 3C56 3 58 7 58 10C58 13 55 16 50 16C45 16 42 13 42 10C42 7 44 3 50 3Z" fill="#D4A24C"/>
+      <path d="M50 96C47 100 53 100 50 96Z" fill="#B3261E" stroke-width="2"/><path d="M38 56C34 62 34 66 38 68C42 66 42 62 38 56Z" fill="#B3261E" stroke-width="2"/>
+    </g></symbol>
+    <symbol id="d-rose" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M34 66C20 62 8 70 6 84C20 88 32 82 38 72Z" fill="#1F6F78"/><path d="M66 66C80 62 92 70 94 84C80 88 68 82 62 72Z" fill="#1F6F78"/><path d="M9 83L34 70M91 83L66 70" fill="none" stroke-width="2"/>
+      <path d="M50 16C70 14 86 28 84 48C84 66 68 80 50 80C32 80 16 66 16 48C14 28 30 14 50 16Z" fill="#B3261E"/>
+      <path d="M24 50C30 64 40 72 50 72C60 72 70 64 76 50C66 58 58 60 50 58C42 60 34 58 24 50Z" fill="#0B0B0B" opacity=".28" stroke="none"/>
+      <path d="M22 46C30 60 40 66 50 66C60 66 70 60 78 46" fill="none"/>
+      <path d="M30 38C34 26 44 22 52 24C62 24 70 30 70 40C64 36 56 36 50 42C44 36 36 34 30 38Z" fill="#B3261E"/>
+      <path d="M40 44C42 36 50 32 56 36C60 38 60 44 56 46C52 48 48 46 48 42" fill="none"/><path d="M34 54C40 50 44 48 50 50C56 48 62 50 68 54" fill="none" stroke-width="2.4"/>
+      <path d="M24 30C26 26 30 22 36 20" fill="none" stroke="#EDE6D6" stroke-width="2.6"/><path d="M70 26C74 30 76 34 77 40" fill="none" stroke="#EDE6D6" stroke-width="2.2"/>
+    </g></symbol>
+    <symbol id="d-anchor" viewBox="0 0 100 100"><g stroke-linejoin="round" stroke-linecap="round" fill="none">
+      <path d="M16 60C18 78 32 90 50 90C68 90 82 78 84 60" stroke="#0B0B0B" stroke-width="12"/><path d="M16 60C18 78 32 90 50 90C68 90 82 78 84 60" stroke="#1F6F78" stroke-width="6"/>
+      <path d="M50 24V88" stroke="#0B0B0B" stroke-width="13"/><path d="M50 24V88" stroke="#1F6F78" stroke-width="7"/>
+      <circle cx="50" cy="13" r="8" stroke="#0B0B0B" stroke-width="8"/><circle cx="50" cy="13" r="8" stroke="#1F6F78" stroke-width="2.6"/>
+      <g stroke="#0B0B0B" stroke-width="3"><path d="M8 66L14 50L26 62Z" fill="#1F6F78"/><path d="M92 66L86 50L74 62Z" fill="#1F6F78"/><rect x="28" y="24" width="44" height="9" rx="4.5" fill="#1F6F78"/></g>
+      <path d="M50 36C68 40 68 52 50 54C32 56 32 68 50 70C64 72 70 78 66 88" stroke="#0B0B0B" stroke-width="8"/><path d="M50 36C68 40 68 52 50 54C32 56 32 68 50 70C64 72 70 78 66 88" stroke="#D4A24C" stroke-width="3.6"/>
+    </g></symbol>
+    <symbol id="d-swan" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M6 86C16 82 24 90 34 86C44 82 52 90 62 86C72 82 80 90 94 86" fill="none" stroke="#1F6F78" stroke-width="3.2"/><path d="M14 94C24 90 32 96 42 93C52 90 60 96 70 93C78 90 86 94 92 93" fill="none" stroke="#1F6F78" stroke-width="2.4"/>
+      <path d="M22 72C26 58 42 52 58 54C66 44 82 40 94 46C86 50 82 56 82 62C84 74 70 82 52 82C36 82 24 80 22 72Z" fill="#0B0B0B"/>
+      <path d="M60 56C68 50 78 48 88 48M58 62C66 58 76 56 84 58M54 68C62 66 70 66 78 68" fill="none" stroke="#EDE6D6" stroke-width="2"/>
+      <path d="M36 70C26 56 24 42 30 30C36 20 46 18 50 24" fill="none" stroke-width="10"/>
+      <path d="M44 16C52 14 58 20 56 26C54 30 48 30 44 28C40 26 40 18 44 16Z" fill="#0B0B0B"/><path d="M55 21L70 28L56 29Z" fill="#B3261E"/><path d="M63 25L64 29" stroke="#EDE6D6" stroke-width="2.4"/>
+      <circle cx="49" cy="21" r="2.2" fill="#B3261E" stroke="none"/><path d="M31 60C29 50 29 42 33 34" fill="none" stroke="#EDE6D6" stroke-width="1.6"/>
+    </g></symbol>
+    <symbol id="d-snake" viewBox="0 0 100 100"><g stroke-linejoin="round" stroke-linecap="round" fill="none">
+      <path d="M84 92C98 80 92 60 72 60C54 60 46 74 30 70C14 66 12 46 26 40C38 34 50 40 50 30" stroke="#0B0B0B" stroke-width="16"/>
+      <path d="M84 92C98 80 92 60 72 60C54 60 46 74 30 70C14 66 12 46 26 40C38 34 50 40 50 30" stroke="#1F6F78" stroke-width="10"/>
+      <path d="M84 92C98 80 92 60 72 60C54 60 46 74 30 70C14 66 12 46 26 40C38 34 50 40 50 30" stroke="#D4A24C" stroke-width="3.4" stroke-dasharray="1 7"/>
+      <g stroke="#0B0B0B" stroke-width="3"><path d="M42 32C40 22 46 12 58 12C68 12 74 18 72 24L62 27L72 30C70 36 62 40 52 38C46 37 43 35 42 32Z" fill="#1F6F78"/><path d="M62 27L72 24L72 30Z" fill="#B3261E"/>
+      <path d="M72 27L85 26M81 23L85 26L81 29" stroke="#B3261E" stroke-width="2.4"/><circle cx="56" cy="20" r="3.2" fill="#D4A24C" stroke-width="2"/><path d="M56 18V22" stroke-width="1.6"/></g>
+    </g></symbol>
+    <symbol id="d-eye" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <g fill="#D4A24C"><path d="M50 4L55 22H45Z"/><path d="M50 96L45 78H55Z"/><path d="M4 50L22 45V55Z"/><path d="M96 50L78 55V45Z"/><path d="M16 16L30 26L26 30Z"/><path d="M84 16L74 30L70 26Z"/><path d="M84 84L70 74L74 70Z"/></g>
+      <path d="M14 50C28 30 72 30 86 50C72 70 28 70 14 50Z" fill="#EDE6D6"/><circle cx="50" cy="50" r="14" fill="#1F6F78"/><circle cx="50" cy="50" r="6" fill="#0B0B0B"/><circle cx="45" cy="45" r="2.6" fill="#EDE6D6" stroke="none"/>
+      <path d="M14 50C28 30 72 30 86 50" fill="none" stroke-width="5"/><path d="M24 40L20 34M34 35L32 28M46 33L46 26M58 33L60 26M70 36L74 30" fill="none" stroke-width="2.4"/>
+      <path d="M28 64C24 70 24 76 28 78C32 76 32 70 28 64Z" fill="#1F6F78" stroke-width="2.4"/>
+    </g></symbol>
+    <symbol id="d-heart" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M50 90C30 76 10 62 10 40C10 24 22 14 34 14C42 14 47 19 50 26C53 19 58 14 66 14C78 14 90 24 90 40C90 62 70 76 50 90Z" fill="#B3261E"/>
+      <path d="M20 34C20 26 26 21 32 20" fill="none" stroke="#EDE6D6" stroke-width="3"/>
+      <path d="M3 46H18V66H3L9 56Z" fill="#D4A24C"/><path d="M97 46H82V66H97L91 56Z" fill="#D4A24C"/><path d="M13 42H87V62H13Z" fill="#EDE6D6"/><path d="M13 62L18 66V62ZM87 62L82 66V62Z" fill="#0B0B0B"/>
+      <text x="50" y="58.5" text-anchor="middle" font-family="'Pirata One',Georgia,serif" font-size="18" fill="#0B0B0B" stroke="none">Mum</text>
+    </g></symbol>
+    <symbol id="d-moth" viewBox="0 0 100 100"><g stroke="#0B0B0B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M47 38C38 20 20 12 8 20C2 32 10 48 26 52C36 54 44 50 47 44Z" fill="#D4A24C"/><path d="M53 38C62 20 80 12 92 20C98 32 90 48 74 52C64 54 56 50 53 44Z" fill="#D4A24C"/>
+      <path d="M47 52C38 56 24 64 22 78C24 90 36 92 44 82C48 74 48 62 47 54Z" fill="#1F6F78"/><path d="M53 52C62 56 76 64 78 78C76 90 64 92 56 82C52 74 52 62 53 54Z" fill="#1F6F78"/>
+      <circle cx="24" cy="32" r="7" fill="#B3261E"/><circle cx="76" cy="32" r="7" fill="#B3261E"/><circle cx="24" cy="32" r="2.6" fill="#0B0B0B" stroke="none"/><circle cx="76" cy="32" r="2.6" fill="#0B0B0B" stroke="none"/>
+      <path d="M45 44L14 40M55 44L86 40" fill="none" stroke-width="1.8"/><circle cx="34" cy="74" r="4" fill="#EDE6D6" stroke-width="2"/><circle cx="66" cy="74" r="4" fill="#EDE6D6" stroke-width="2"/>
+      <path d="M50 30C54 30 55 36 55 50C55 66 53 78 50 80C47 78 45 66 45 50C45 36 46 30 50 30Z" fill="#0B0B0B"/><path d="M46 50H54M46 58H54M47 66H53" stroke="#EDE6D6" stroke-width="1.6"/>
+      <circle cx="50" cy="26" r="5" fill="#0B0B0B"/><path d="M48 22C44 12 36 8 30 12C28 14 30 17 32 16M52 22C56 12 64 8 70 12C72 14 70 17 68 16" fill="none" stroke-width="2.2"/>
+    </g></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#d-swan"/></svg><span class="wm" data-brand>Black Swan Tattoo</span></a>
+    <nav aria-label="Sections"><a href="#flash">Flash</a><a href="#try">Try it on</a><a href="#artists">Artists</a><a href="#process">Deposits</a><a href="#aftercare">Aftercare</a></nav>
+    <a class="pill" href="#book">Book<span class="lg">&nbsp;a consult</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero" id="flash" aria-labelledby="h1">
+    <div>
+      <p class="kick">Traditional tattooing · Fremantle, WA</p>
+      <h1 id="h1" data-brand>Black Swan Tattoo</h1>
+      <p class="intro">Bold lines, bright colour and designs that will still read clearly in forty years. Pick something off the wall, or bring us your idea and we'll draw it up.</p>
+      <div class="ctas"><a class="cta solid" href="#try">Try flash on the body</a><a class="cta line" href="#book">Book a consult</a></div>
+      <ul class="facts"><li>Walk-ins Thu–Sat from noon</li><li>18+ with photo ID</li><li>Flash from $180 (sample)</li></ul>
+    </div>
+    <div class="sheet paper">
+      <span class="tack" style="left:-8px;top:-8px" aria-hidden="true"></span><span class="tack" style="right:-8px;top:-8px" aria-hidden="true"></span>
+      <span class="tack" style="left:-8px;bottom:-8px" aria-hidden="true"></span><span class="tack" style="right:-8px;bottom:-8px" aria-hidden="true"></span>
+      <div class="sheet-h"><b>The flash wall</b><span>Tap one to try it on</span></div>
+      <div class="flash" id="flashGrid"></div>
+      <p class="sheet-f">Sample prices from · final price at your consult</p>
+    </div>
+  </section>
+
+  <section class="sec try paper" id="try" aria-labelledby="tryT">
+    <div class="wrap">
+      <h2 class="banner" id="tryT">Try it on the body</h2>
+      <p class="lead">Pick a design, drag it onto the skin, then size and turn it. You'll see a rough size in centimetres and an illustrative session length — your artist fits the real stencil on the day.</p>
+      <div class="tgrid">
+        <div class="mirror">
+          <div class="bar">
+            <div class="tabs" role="group" aria-label="Body placement" id="tabs">
+              <button class="tab" type="button" data-v="forearm" aria-pressed="true">Forearm</button>
+              <button class="tab" type="button" data-v="shoulder" aria-pressed="false">Shoulder</button>
+              <button class="tab" type="button" data-v="calf" aria-pressed="false">Calf</button>
+              <button class="tab" type="button" data-v="back" aria-pressed="false">Back</button>
+            </div>
+            <div class="tones" role="group" aria-label="Skin tone" id="tones">
+              <button class="tone" type="button" data-t="#F1D3B6" style="background:#F1D3B6" aria-label="Light skin" aria-pressed="false"></button>
+              <button class="tone" type="button" data-t="#DDAE83" style="background:#DDAE83" aria-label="Medium skin" aria-pressed="true"></button>
+              <button class="tone" type="button" data-t="#A9714B" style="background:#A9714B" aria-label="Tan skin" aria-pressed="false"></button>
+              <button class="tone" type="button" data-t="#6A432F" style="background:#6A432F" aria-label="Deep skin" aria-pressed="false"></button>
+            </div>
+          </div>
+          <div class="stagewrap">
+            <svg id="stage" viewBox="0 0 640 540" role="img" aria-labelledby="readout">
+              <g id="bodyG">
+                <defs><clipPath id="skin"><path id="clipP"/></clipPath></defs>
+                <path id="sil" fill="#DDAE83" stroke="#0B0B0B" stroke-width="5" stroke-linejoin="round"/>
+                <g id="lines" fill="none" stroke="#0B0B0B" stroke-width="2.4" stroke-linecap="round" opacity=".35"></g>
+                <g clip-path="url(#skin)" style="mix-blend-mode:multiply"><g id="tatT"><use id="tatUse" href="#d-swan" x="-50" y="-50" width="100" height="100"/></g></g>
+                <rect id="box" fill="none" stroke="#B3261E" stroke-width="2" stroke-dasharray="6 5" visibility="hidden"/>
+              </g>
+            </svg>
+            <p class="shint">Drag the design · tap the skin to move it</p>
+          </div>
+          <p class="readout" id="readout" aria-live="polite"></p>
+        </div>
+        <div>
+          <h3 class="vh" id="pickT">Designs</h3>
+          <div class="picks" id="picks" role="group" aria-labelledby="pickT"></div>
+          <p class="fine">Tap to choose, or drag a design onto the skin. On phones, swipe the strip sideways to see more.</p>
+          <div class="ctrl">
+            <div class="row"><label for="size">Size</label><input type="range" id="size" min="3" max="16" step="0.5" value="9"><output id="sizeOut" for="size">9 cm</output></div>
+            <div class="row"><label for="rot">Rotate</label><input type="range" id="rot" min="-180" max="180" step="5" value="0"><output id="rotOut" for="rot">0°</output></div>
+            <div class="row"><span>Move</span>
+              <div class="mini" role="group" aria-label="Move the design">
+                <button class="sq" type="button" data-m="-1,0" aria-label="Move left">←</button><button class="sq" type="button" data-m="0,-1" aria-label="Move up">↑</button>
+                <button class="sq" type="button" data-m="0,1" aria-label="Move down">↓</button><button class="sq" type="button" data-m="1,0" aria-label="Move right">→</button>
+                <button class="sq" type="button" id="rotL" aria-label="Rotate 15 degrees anticlockwise">⟲</button><button class="sq" type="button" id="rotR" aria-label="Rotate 15 degrees clockwise">⟳</button>
+              </div><span></span></div>
+          </div>
+          <div class="ctas"><button class="cta solid use-btn" type="button" id="useBtn">Add to my consult</button><button class="cta line use-btn" type="button" id="resetBtn" style="color:#0B0B0B;border-color:#0B0B0B">Reset</button></div>
+          <p class="fine">Session length is illustrative only — it depends on detail, colour, placement and your skin. Your artist confirms time and price at the consult.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="artists" aria-labelledby="arT">
+    <div class="wrap">
+      <h2 class="banner" id="arT">Three artists, three hands</h2>
+      <div class="artists">
+        <article class="card"><svg class="em" viewBox="0 0 100 100" aria-hidden="true"><use href="#d-swallow"/></svg><h3>Mae</h3><p class="sty">Traditional</p><p>Heavy outlines, a tight palette and flash that looks right from across the room. Most of the wall is hers.</p><p class="days">In the studio Tue–Sat</p></article>
+        <article class="card"><svg class="em" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#EDE6D6" stroke-width="1.6" stroke-linecap="round"><path d="M50 92C50 70 48 44 52 12"/><path d="M50 72C38 70 30 62 28 50C40 52 48 60 50 72ZM51 58C62 56 70 48 72 36C60 38 52 46 51 58ZM51 40C42 36 38 28 38 18C46 22 50 30 51 40ZM52 26C58 22 62 16 62 8C56 10 52 16 52 26Z"/><circle cx="34" cy="86" r="2"/><circle cx="68" cy="80" r="1.6"/></g></svg><h3>Jonah</h3><p class="sty">Fine line</p><p>Delicate script, botanicals and small symbols with single-needle detail. Great for first tattoos.</p><p class="days">In the studio Wed–Sun</p></article>
+        <article class="card"><svg class="em" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" fill="#EDE6D6"/><circle cx="50" cy="50" r="36" fill="#0B0B0B"/><path d="M50 18L58 42L82 50L58 58L50 82L42 58L18 50L42 42Z" fill="#EDE6D6"/><circle cx="50" cy="50" r="10" fill="#0B0B0B"/><g fill="#EDE6D6"><circle cx="50" cy="10" r="2.4"/><circle cx="90" cy="50" r="2.4"/><circle cx="50" cy="90" r="2.4"/><circle cx="10" cy="50" r="2.4"/></g></svg><h3>Rin</h3><p class="sty">Blackwork</p><p>Solid black, ornamental patterns and dotwork that sits beautifully with older tattoos.</p><p class="days">In the studio Thu–Sat</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper" id="process" aria-labelledby="prT">
+    <div class="wrap">
+      <h2 class="banner" id="prT">Process &amp; deposits</h2>
+      <div class="proc">
+        <ol class="steps">
+          <li><div><h3>Enquire</h3><p>Send your idea, placement and rough size. Flash off the wall is first in, first served.</p></div></li>
+          <li><div><h3>Consult</h3><p>Fifteen minutes in the studio or on a video call — we sketch, size it on you and quote.</p></div></li>
+          <li><div><h3>Deposit</h3><p>A deposit holds your date and comes off the final price.</p></div></li>
+          <li><div><h3>Tattoo day</h3><p>Eat beforehand, bring photo ID and wear clothes that give easy access to the spot.</p></div></li>
+        </ol>
+        <div class="policy">
+          <h3>The fine print</h3>
+          <dl>
+            <div><dt>Deposit</dt><dd>$100, taken when you book and taken off the final price.</dd></div>
+            <div><dt>Changing your date</dt><dd>Free once with 48 hours' notice. Later than that, the deposit is kept.</dd></div>
+            <div><dt>Age</dt><dd>18 and over only, with photo ID — no exceptions.</dd></div>
+            <div><dt>Pricing</dt><dd>Flash from $180 · custom work $200 per hour · $120 minimum.</dd></div>
+          </dl>
+          <p class="dashed">Sample policy and prices for a fictional studio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="aftercare" aria-labelledby="afT">
+    <div class="wrap">
+      <h2 class="banner" id="afT">Aftercare</h2>
+      <ol class="after">
+        <li><b>Hours 0–4</b><p>Leave the wrap on for two to four hours, then wash gently with lukewarm water and fragrance-free soap.</p></li>
+        <li><b>Days 1–14</b><p>Pat dry with clean paper towel and apply a thin layer of unscented balm two or three times a day.</p></li>
+        <li><b>Hands off</b><p>No swimming, baths or sunbaking for two weeks. Let flakes fall on their own — don't pick.</p></li>
+        <li><b>Check in</b><p>Some redness and tenderness is normal for a few days. If it gets worse or you feel unwell, see a GP.</p></li>
+      </ol>
+      <p class="gi">General information only, not medical advice. Your artist will give you written aftercare that suits your tattoo.</p>
+    </div>
+  </section>
+
+  <section class="sec paper" id="book" aria-labelledby="bkT">
+    <div class="wrap">
+      <h2 class="banner" id="bkT">Book a consult</h2>
+      <div class="book">
+        <div class="contact">
+          <p class="lead" style="margin-top:0">Tell us what you're after and we'll come back with a time. Walk-ins are welcome Thursday to Saturday from noon for flash.</p>
+          <p><strong>Studio</strong><br>Fremantle, WA<br>Tue–Sun, 11am–7pm</p>
+          <p><strong>Call</strong><br><a href="tel:+61855502941">(08) 5550 2941</a></p>
+          <p><strong>Email</strong><br><a href="mailto:ink@example.com">ink@example.com</a></p>
+        </div>
+        <form class="consult" id="consult" data-demo-message="Demo only — no consult was booked. A real site would send this to the studio.">
+          <label>Name<input name="name" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label class="full">Design<input name="design" id="fDesign" placeholder="e.g. No. 5 Black swan, or your own idea"></label>
+          <label>Placement<select name="place" id="fPlace"><option>Forearm</option><option>Shoulder</option><option>Calf</option><option>Back</option><option>Somewhere else</option></select></label>
+          <label>Approx. size<input name="size" id="fSize" placeholder="e.g. 9 × 7 cm"></label>
+          <label class="full">Artist<select name="artist"><option>No preference</option><option>Mae — traditional</option><option>Jonah — fine line</option><option>Rin — blackwork</option></select></label>
+          <fieldset class="days full"><legend>Days that suit</legend><label><input type="checkbox" name="d" value="Thu">Thu</label><label><input type="checkbox" name="d" value="Fri">Fri</label><label><input type="checkbox" name="d" value="Sat">Sat</label><label><input type="checkbox" name="d" value="Sun">Sun</label></fieldset>
+          <label class="full">Anything else<textarea name="msg" placeholder="Colour or black and grey? First tattoo?"></textarea></label>
+          <button class="cta solid" type="submit" style="box-shadow:5px 5px 0 #B3261E">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><p class="f-name" data-brand>Black Swan Tattoo</p><p>Traditional tattooing in Fremantle, WA. A concept demo for a fictional studio — sample prices, fictional contact details.</p></div>
+    <div><h3>Hours</h3><p>Tue–Sun, 11am–7pm<br>Walk-ins Thu–Sat from noon</p></div>
+    <div><h3>Contact</h3><p><a href="tel:+61855502941">(08) 5550 2941</a><br><a href="mailto:ink@example.com">ink@example.com</a></p></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var D = [
+    { id: "swallow", name: "Swallow", price: 180, w: .9, h: .88, c: 1.0 },
+    { id: "dagger", name: "Dagger", price: 200, w: .5, h: .96, c: .9 },
+    { id: "rose", name: "Rose", price: 220, w: .88, h: .74, c: 1.2 },
+    { id: "anchor", name: "Anchor", price: 180, w: .84, h: .9, c: .9 },
+    { id: "swan", name: "Black swan", price: 240, w: .88, h: .8, c: 1.1 },
+    { id: "snake", name: "Snake", price: 260, w: .9, h: .86, c: 1.3 },
+    { id: "eye", name: "Eye", price: 200, w: .92, h: .92, c: 1.0 },
+    { id: "heart", name: "Heart & banner", price: 180, w: .94, h: .76, c: .9 },
+    { id: "moth", name: "Moth", price: 220, w: .88, h: .86, c: 1.2 }
+  ];
+  var V = {
+    forearm: { vb: "0 0 640 540", tf: "translate(320 272) rotate(-26) translate(-322 -150)", box: [640, 300], upc: 13.6, pos: [250, 150], size: 9, max: 16, label: "forearm",
+      d: "M34 92C150 80 300 94 418 116C440 118 458 112 478 108C520 98 572 98 606 112C630 122 632 146 612 152C580 158 548 158 520 160C540 176 548 196 528 204C506 210 486 192 470 180C452 184 438 188 420 186C300 204 150 218 34 210C14 190 12 112 34 92Z",
+      lines: "M424 124C432 144 432 166 424 182M522 130C556 126 588 128 610 136M522 146C556 144 588 146 612 146M478 170C494 176 506 184 516 196M58 118C52 140 52 170 60 190" },
+    shoulder: { vb: "-74 0 520 520", box: [420, 520], upc: 15, pos: [300, 250], size: 10, max: 16, label: "shoulder",
+      d: "M-90 -10H62C64 40 66 60 74 76C144 100 244 118 304 140C346 156 370 196 372 244C374 330 370 430 366 532H224C226 440 228 360 232 300C222 340 208 430 198 532H-90Z",
+      lines: "M84 104C150 122 214 132 262 142M20 300C80 330 150 332 200 300M272 152C314 190 326 238 318 294M60 20C62 50 70 70 90 84" },
+    calf: { vb: "-150 0 600 600", box: [300, 600], upc: 12, pos: [140, 250], size: 11, max: 18, label: "calf",
+      d: "M68 -10H201C204 60 214 120 206 200C198 300 186 400 180 470C182 500 196 520 240 540C270 550 292 560 292 574C292 590 260 592 200 590C150 590 120 588 110 576C100 560 108 520 112 480C116 420 100 360 80 300C50 220 50 120 70 0Z",
+      lines: "M84 110C108 170 118 236 110 300M196 60C200 150 196 250 186 350M164 500a8 8 0 1 0 16 0a8 8 0 1 0 -16 0" },
+    back: { vb: "0 0 560 560", box: [560, 560], upc: 12.5, pos: [280, 230], size: 18, max: 34, label: "back",
+      d: "M236 -10H324C326 40 330 60 344 72C400 92 460 100 500 120C536 138 552 170 556 220L550 330H490C488 300 486 270 482 250C470 330 450 440 434 572H126C110 440 90 330 78 250C74 270 72 300 70 330H10L4 220C8 170 24 138 60 120C100 100 160 92 216 72C230 60 234 40 236 0Z",
+      lines: "M280 96V540M150 172C190 150 232 196 222 282M410 172C370 150 328 196 338 282" }
+  };
+  var st = { v: "forearm", d: "swan", x: 250, y: 150, cm: 9, rot: 0 };
+  var stage = $("stage"), tat = $("tatT"), use = $("tatUse"), box = $("box");
+
+  /* flash wall + pickers */
+  $("flashGrid").innerHTML = D.map(function (d, i) {
+    return '<button class="fl" type="button" data-d="' + d.id + '"><span class="no">No. ' + (i + 1) + '</span><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#d-' + d.id + '"/></svg><b>' + d.name + '</b><small>from $' + d.price + '</small></button>';
+  }).join("");
+  $("picks").innerHTML = D.map(function (d, i) {
+    return '<button class="pick" type="button" data-d="' + d.id + '" aria-pressed="false" aria-label="No. ' + (i + 1) + ' ' + d.name + '"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#d-' + d.id + '"/></svg><span>' + d.name + '</span></button>';
+  }).join("");
+
+  function design() { for (var i = 0; i < D.length; i++) if (D[i].id === st.d) return { d: D[i], n: i + 1 }; return { d: D[0], n: 1 }; }
+  function scale() { var d = design().d; return st.cm * V[st.v].upc / (100 * d.w); }
+  function fmt(n) { return (Math.round(n * 2) / 2).toString(); }
+  function render(stampIt) {
+    var s = scale();
+    tat.setAttribute("transform", "translate(" + st.x.toFixed(1) + " " + st.y.toFixed(1) + ") rotate(" + st.rot + ") scale(" + s.toFixed(4) + ")");
+    use.setAttribute("href", "#d-" + st.d);
+    if (stampIt && !reduced) { tat.classList.remove("stamp"); void tat.getBBox(); tat.classList.add("stamp"); }
+    var inf = design(), d = inf.d, w = st.cm, h = st.cm * d.h / d.w;
+    var hrs = .5 + w * h * .011 * d.c, lo = Math.max(1, Math.round(hrs * 2) / 2), hi = lo + (lo >= 4 ? 1 : .5);
+    var on = true;
+    try { var p = stage.createSVGPoint(); p.x = st.x; p.y = st.y; on = $("sil").isPointInFill(p); } catch (e) { on = true; }
+    $("readout").innerHTML = "<b>No. " + inf.n + " " + d.name + "</b> on the " + V[st.v].label + " · about " + fmt(w) + " × " + fmt(h) + " cm · illustrative session " + fmt(lo) + "–" + fmt(hi) + " hours" + (hi > 5 ? ", usually split over a few sittings" : "") + (on ? "." : ". <b>Drag it back onto the skin.</b>");
+    $("sizeOut").textContent = fmt(st.cm) + " cm"; $("size").value = st.cm;
+    $("rotOut").textContent = st.rot + "°"; $("rot").value = st.rot;
+    document.querySelectorAll(".pick").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-d") === st.d)); });
+  }
+  function setView(v) {
+    var o = V[v]; st.v = v;
+    stage.setAttribute("viewBox", o.vb);
+    $("bodyG").setAttribute("transform", o.tf || "");
+    $("sil").setAttribute("d", o.d); $("clipP").setAttribute("d", o.d);
+    var g = $("lines"); g.innerHTML = '<path d="' + o.lines + '"/>';
+    st.x = o.pos[0]; st.y = o.pos[1]; st.cm = Math.min(o.max, Math.max(3, o.size)); st.rot = st.rot || 0;
+    $("size").max = o.max;
+    document.querySelectorAll(".tab").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-v") === v)); });
+    render(true);
+  }
+  function choose(id, x, y) {
+    st.d = id;
+    if (x != null) { st.x = x; st.y = y; }
+    render(true);
+  }
+  function clampPos() { var o = V[st.v]; st.x = Math.max(0, Math.min(o.box[0], st.x)); st.y = Math.max(0, Math.min(o.box[1], st.y)); }
+
+  /* stage dragging */
+  function toSvg(cx, cy) { var p = stage.createSVGPoint(); p.x = cx; p.y = cy; var m = $("bodyG").getScreenCTM(); return m ? p.matrixTransform(m.inverse()) : p; }
+  var drag = null;
+  stage.addEventListener("pointerdown", function (e) {
+    e.preventDefault();
+    var p = toSvg(e.clientX, e.clientY), onTat = tat.contains(e.target);
+    if (!onTat) { st.x = p.x; st.y = p.y; clampPos(); render(true); }
+    drag = { dx: st.x - p.x, dy: st.y - p.y };
+    try { stage.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    stage.classList.add("dragging");
+    showBox(true);
+  });
+  stage.addEventListener("pointermove", function (e) {
+    if (!drag) return;
+    var p = toSvg(e.clientX, e.clientY);
+    st.x = p.x + drag.dx; st.y = p.y + drag.dy; clampPos(); render(false); showBox(true);
+  });
+  function end() { if (!drag) return; drag = null; stage.classList.remove("dragging"); showBox(false); }
+  stage.addEventListener("pointerup", end); stage.addEventListener("pointercancel", end);
+  function showBox(on) {
+    if (!on) { box.setAttribute("visibility", "hidden"); return; }
+    var inf = design().d, s = scale(), w = 100 * inf.w * s, h = 100 * inf.h * s;
+    box.setAttribute("x", -w / 2 - 6); box.setAttribute("y", -h / 2 - 6); box.setAttribute("width", w + 12); box.setAttribute("height", h + 12);
+    box.setAttribute("transform", "translate(" + st.x + " " + st.y + ") rotate(" + st.rot + ")");
+    box.setAttribute("visibility", "visible");
+  }
+
+  /* picking: tap to choose, or drag a design onto the skin */
+  var ghost = null, pk = null;
+  $("picks").addEventListener("pointerdown", function (e) {
+    var b = e.target.closest(".pick"); if (!b) return;
+    pk = { b: b, x: e.clientX, y: e.clientY, id: b.getAttribute("data-d"), moved: false, pid: e.pointerId };
+  });
+  window.addEventListener("pointermove", function (e) {
+    if (!pk || e.pointerId !== pk.pid) return;
+    var dx = e.clientX - pk.x, dy = e.clientY - pk.y;
+    if (!pk.moved && Math.sqrt(dx * dx + dy * dy) > 8) {
+      pk.moved = true;
+      ghost = document.createElement("div"); ghost.className = "ghost";
+      ghost.innerHTML = '<svg viewBox="0 0 100 100" class="art"><use href="#d-' + pk.id + '"/></svg>';
+      document.body.appendChild(ghost);
+      try { pk.b.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    }
+    if (ghost) { e.preventDefault(); ghost.style.left = e.clientX + "px"; ghost.style.top = e.clientY + "px"; }
+  }, { passive: false });
+  window.addEventListener("pointerup", function (e) {
+    if (!pk || e.pointerId !== pk.pid) return;
+    var id = pk.id;
+    if (pk.moved) {
+      var r = stage.getBoundingClientRect();
+      if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) { var p = toSvg(e.clientX, e.clientY); choose(id, p.x, p.y); }
+      pk.b.dataset.skipClick = "1";
+    }
+    if (ghost) { ghost.remove(); ghost = null; }
+    pk = null;
+  });
+  window.addEventListener("pointercancel", function () { if (ghost) { ghost.remove(); ghost = null; } pk = null; });
+  $("picks").addEventListener("click", function (e) {
+    var b = e.target.closest(".pick"); if (!b) return;
+    if (b.dataset.skipClick) { delete b.dataset.skipClick; return; }
+    choose(b.getAttribute("data-d"));
+  });
+  $("flashGrid").addEventListener("click", function (e) {
+    var b = e.target.closest(".fl"); if (!b) return;
+    choose(b.getAttribute("data-d"));
+    $("try").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+  });
+
+  /* controls */
+  $("tabs").addEventListener("click", function (e) { var b = e.target.closest(".tab"); if (b) setView(b.getAttribute("data-v")); });
+  $("tones").addEventListener("click", function (e) {
+    var b = e.target.closest(".tone"); if (!b) return;
+    $("sil").setAttribute("fill", b.getAttribute("data-t"));
+    document.querySelectorAll(".tone").forEach(function (t) { t.setAttribute("aria-pressed", String(t === b)); });
+  });
+  $("size").addEventListener("input", function () { st.cm = parseFloat(this.value); render(false); });
+  $("rot").addEventListener("input", function () { st.rot = parseInt(this.value, 10); render(false); });
+  document.querySelectorAll("[data-m]").forEach(function (b) {
+    b.addEventListener("click", function () { var m = b.getAttribute("data-m").split(","), step = V[st.v].upc; st.x += +m[0] * step; st.y += +m[1] * step; clampPos(); render(false); });
+  });
+  $("rotL").addEventListener("click", function () { st.rot = Math.max(-180, st.rot - 15); render(false); });
+  $("rotR").addEventListener("click", function () { st.rot = Math.min(180, st.rot + 15); render(false); });
+  $("resetBtn").addEventListener("click", function () { st.rot = 0; setView(st.v); });
+  $("useBtn").addEventListener("click", function () {
+    var inf = design(), d = inf.d;
+    $("fDesign").value = "No. " + inf.n + " " + d.name + " (flash)";
+    $("fPlace").value = st.v.charAt(0).toUpperCase() + st.v.slice(1);
+    $("fSize").value = "about " + fmt(st.cm) + " × " + fmt(st.cm * d.h / d.w) + " cm";
+    $("book").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    setTimeout(function () { $("consult").querySelector("input").focus({ preventScroll: true }); }, reduced ? 0 : 600);
+    if (window.DemoKit) DemoKit.toast("Added to your consult form below — nothing has been sent.");
+  });
+
+  setView("forearm");
+  window.BS = { place: function (id, v, x, y, cm, r) { if (v) setView(v); st.d = id; if (x != null) { st.x = x; st.y = y; } if (cm) st.cm = cm; if (r != null) st.rot = r; render(false); return $("readout").textContent; } };
+})();
+</script>
+</body>
+</html>

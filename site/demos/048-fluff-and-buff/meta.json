@@ -1,0 +1,8 @@
+{
+  "id": "048",
+  "tech": ["SVG", "Canvas 2D", "Pointer Events", "CSS Grid", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["quote", "customiser", "booking"],
+  "interaction": "Pop iridescent soap bubbles over the bathtub hero (tap, click or the Pop button), then build a groom: pick a size and coat and the SVG dog springs to its new proportions and fur (smooth, fluffy, curly or long) with a shoulder-height marker, while add-on chips update a sample price and time estimate in the 'Your groom' card; breed badges load presets, and the booking form ends on an honest demo message.",
+  "fonts": ["Chewy", "Poppins"],
+  "notes": "Prices and times are sample figures. Reduced motion shows static bubbles and an instant dog change."
+}

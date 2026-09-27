@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="026">
+<meta name="demo:brand" content="Arrivals Chauffeur Co.">
+<title>Arrivals Chauffeur Co. — airport &amp; corporate transfers, Melbourne</title>
+<meta name="description" content="A fictional Melbourne chauffeur service for airport, corporate and wedding transfers, with an illustrative route-drawing fare estimator.">
+<meta name="theme-color" content="#0E1B2C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+/* Arrivals Chauffeur Co. — a travel wallet: every section is an ivory boarding pass (body, perforation, stub)
+   on a navy night desk. Precise, calm motion: route draws, car glides, digits flip, passes issue upward. */
+:root{--navy:#0E1B2C;--navy2:#132338;--navy3:#1C3049;--ivory:#F7F4EE;--paper:#EEE8DC;--brass:#B08D57;--brass-d:#7A5C2B;--sky:#D8E3EE;--slate:#4A5566;--line:rgba(14,27,44,.14);
+--serif:"Cormorant","Cormorant Garamond",Garamond,"Times New Roman",serif;--sans:"Jost","Futura","Avenir Next","Century Gothic",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--navy) radial-gradient(rgba(216,227,238,.075) 1px,transparent 1.5px) 0 0/24px 24px;color:var(--ivory);font:400 16.5px/1.6 var(--sans)}
+h1,h2,h3,p,dl,dd,ol,ul,figure{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:inherit}
+svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.lab{font:500 11.5px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border:0;border-radius:999px;background:var(--navy);color:var(--ivory);font:500 14px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.btn:hover{background:var(--brass);color:var(--navy)}
+.btn:active{transform:translateY(1px)}
+.lnk{display:inline-flex;align-items:center;min-height:44px;font:500 14px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-underline-offset:6px;text-decoration-color:var(--brass)}
+
+/* header */
+.hd{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;padding:12px clamp(16px,4vw,40px);padding-top:max(12px,env(safe-area-inset-top));background:rgba(14,27,44,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(216,227,238,.1)}
+.logo{display:flex;align-items:center;gap:12px;min-width:0;margin-right:auto;text-decoration:none}
+.mono{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--brass);font:500 13px/1 var(--sans);letter-spacing:.1em;color:var(--brass)}
+.wm{font:600 23px/1.05 var(--serif);letter-spacing:.01em;overflow-wrap:anywhere;min-width:0}
+.hd nav{display:none}
+.hbtn{flex:none;min-height:44px;padding:0 18px;background:var(--brass);color:var(--navy);font-size:13px}
+.hbtn:hover{background:var(--ivory)}
+@media (min-width:940px){.hd nav{display:flex;gap:28px}.hd nav a{font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--sky);padding:14px 0}.hd nav a:hover{color:var(--brass)}}
+
+/* passes */
+.stage{position:relative;padding:clamp(26px,4.5vw,60px) clamp(12px,4vw,40px)}
+.stage[id]{scroll-margin-top:64px}
+.stack{position:relative;max-width:1160px;margin:0 auto;filter:drop-shadow(0 22px 30px rgba(2,7,14,.5))}
+.stack::before{content:"";position:absolute;inset:18px 14px -11px 14px;border-radius:18px;background:linear-gradient(#E2DACB,#D6CDBB);transform:rotate(-.55deg)}
+.stack.rise{transform:translateY(30px) scale(.985);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.stack.rise.in{transform:none}
+.pass{--stub:280px;--m:radial-gradient(circle 13px at calc(100% - var(--stub)) 0,#0000 12px,#000 12.6px) top/100% 51% no-repeat,radial-gradient(circle 13px at calc(100% - var(--stub)) 100%,#0000 12px,#000 12.6px) bottom/100% 51% no-repeat;
+  position:relative;display:grid;grid-template-columns:minmax(0,1fr) var(--stub);background:var(--ivory);color:var(--navy);border-radius:18px;-webkit-mask:var(--m);mask:var(--m)}
+.body{min-width:0;padding:clamp(22px,3.2vw,42px)}
+.stub{position:relative;min-width:0;padding:clamp(22px,3vw,36px) 26px;border-radius:0 18px 18px 0;background:radial-gradient(circle,rgba(14,27,44,.32) 1.3px,transparent 1.9px) -2px 0/5px 12px repeat-y,var(--paper);display:flex;flex-direction:column;gap:14px}
+.ph{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:12px;margin-bottom:clamp(18px,2.4vw,26px);border-bottom:1px dashed rgba(14,27,44,.25)}
+.ph .gate{font:600 12px/1 var(--sans);letter-spacing:.14em;color:var(--brass-d);border:1px solid rgba(122,92,43,.5);border-radius:999px;padding:6px 10px;white-space:nowrap}
+.h2{font:500 clamp(34px,4.4vw,56px)/1 var(--serif);letter-spacing:-.01em;margin-bottom:12px}
+.h2 em{font-style:italic;color:var(--brass-d)}
+.intro{color:var(--slate);max-width:60ch}
+.bc{width:100%;height:46px;color:var(--navy)}
+.stub .bc{margin-top:auto}
+.keep{font:500 10.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--slate);text-align:center}
+@media (max-width:760px){
+  .pass{--m:radial-gradient(circle 13px at 0 calc(100% - var(--sh,150px)),#0000 12px,#000 12.6px) left/51% 100% no-repeat,radial-gradient(circle 13px at 100% calc(100% - var(--sh,150px)),#0000 12px,#000 12.6px) right/51% 100% no-repeat;grid-template-columns:1fr}
+  .stub{border-radius:0 0 18px 18px;background:radial-gradient(circle,rgba(14,27,44,.32) 1.3px,transparent 1.9px) 0 -2px/12px 5px repeat-x,var(--paper)}
+  .stack::before{inset:16px 8px -8px 8px;transform:rotate(-.8deg)}
+}
+
+/* hero */
+.hero .body{padding-top:0}
+.band{display:flex;justify-content:space-between;gap:16px;margin:0 calc(-1 * clamp(22px,3.2vw,42px)) clamp(22px,3vw,36px);padding:12px clamp(22px,3.2vw,42px);background:var(--navy);color:var(--brass);font:500 11.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;border-radius:18px 0 0 0}
+.od{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:18px;margin-bottom:clamp(22px,3vw,34px)}
+.od>span{display:grid;gap:6px;min-width:0}
+.od .city{font:500 clamp(40px,5.6vw,78px)/.95 var(--serif);letter-spacing:-.015em;overflow-wrap:anywhere;text-wrap:balance}
+.od .to .city{font-style:italic;color:var(--brass-d)}
+.od .arr{width:clamp(70px,9vw,130px);height:auto;aspect-ratio:130/24;color:var(--brass);margin-bottom:22px}
+.fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 22px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:22px}
+.fields dd{font:500 16px/1.35 var(--sans);margin-top:4px}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;margin-top:24px}
+.seat{font:500 64px/.9 var(--serif);color:var(--navy)}
+.mini{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14px}
+.mini dd{font-weight:500}
+@media (max-width:760px){
+  .band span+span{display:none}
+  .od{grid-template-columns:1fr;gap:4px}
+  .od .arr{transform:rotate(90deg);width:44px;margin:18px 0 20px -8px}
+  .fields{grid-template-columns:1fr 1fr}
+  .hero .stub{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:10px 20px}
+  .hero .stub .bc,.hero .stub .keep{grid-column:1/-1}
+}
+
+/* departures board */
+.board{max-width:1160px;margin:clamp(34px,5vw,56px) auto 0;padding:clamp(18px,2.6vw,28px);background:var(--navy2);border:1px solid rgba(216,227,238,.12);border-radius:14px}
+.b-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;padding-bottom:14px;border-bottom:1px solid rgba(216,227,238,.12)}
+.b-top h2{font:500 13px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--brass)}
+.b-top p{font-size:13px;color:#9AA6B6}
+.clock{font:600 13px/1 var(--sans);letter-spacing:.16em;color:var(--sky)}
+.runs{display:grid}
+.run{display:grid;grid-template-columns:auto minmax(0,1fr) auto 24px;align-items:center;gap:6px 18px;width:100%;padding:12px 4px;border:0;border-bottom:1px solid rgba(216,227,238,.08);background:none;color:var(--ivory);font:inherit;text-align:left;cursor:pointer;transition:background .2s}
+.run:hover{background:rgba(216,227,238,.05)}
+.run:focus-visible{outline-offset:-2px}
+.codes{display:flex;align-items:center;gap:8px}
+.tiles{display:flex;gap:2px}
+.tiles i{display:inline-block;width:1.25em;padding:.28em 0 .22em;text-align:center;font:600 15px/1 var(--sans);font-style:normal;color:var(--ivory);background:linear-gradient(#0A1422 50%,#0F1D30 50%);border-radius:3px;box-shadow:inset 0 0 0 1px rgba(216,227,238,.06)}
+.price .tiles i{color:#E3C48E}
+.codes b{color:var(--brass);font-weight:500}
+.rname{font-size:15px;color:var(--sky);min-width:0}
+.go{color:var(--brass);font-size:20px;line-height:1}
+@media (max-width:640px){.run{grid-template-columns:auto 1fr 20px}.rname{grid-column:1/3;grid-row:2;font-size:14px}.price{grid-column:2;grid-row:1;justify-self:end}.go{grid-row:1/span 2;grid-column:3}.tiles i{font-size:13px}}
+
+/* fleet */
+.cars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cars li{display:grid;align-content:start;gap:6px;padding:16px 16px 18px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(#FBF9F4,var(--ivory))}
+.cars svg{width:100%;height:auto;aspect-ratio:240/96;margin-bottom:8px}
+.cars h3{font:500 26px/1.05 var(--serif)}
+.cap{font:500 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--brass-d)}
+.cars p{font-size:15px;color:var(--slate)}
+.rate{margin-top:6px;padding-top:10px;border-top:1px dashed rgba(14,27,44,.2);font-weight:500;color:var(--navy)!important}
+.perks{display:grid;gap:12px;font-size:14.5px}
+.perks li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start}
+.perks li::before{content:"";width:8px;height:8px;margin-top:7px;border-radius:50%;border:1.5px solid var(--brass-d)}
+@media (max-width:900px){.cars{grid-template-columns:1fr}.cars li{grid-template-columns:132px 1fr;column-gap:16px;align-items:center}.cars svg{grid-row:1/span 4;margin:0}}
+@media (max-width:420px){.cars li{grid-template-columns:1fr}.cars svg{grid-row:auto;max-width:220px}}
+
+/* services legs */
+.legs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.legs li{padding:22px 22px 6px 0;display:grid;align-content:start;gap:8px}
+.legs li+li{padding-left:22px;border-left:1px dashed rgba(14,27,44,.25)}
+.code3{font:600 30px/1 var(--serif);letter-spacing:.04em;color:var(--brass-d)}
+.legs h3{font:500 25px/1.1 var(--serif)}
+.legs p{font-size:15px;color:var(--slate)}
+.legs .meta{font:500 12px/1.5 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+@media (max-width:860px){.legs{grid-template-columns:1fr}.legs li,.legs li+li{padding:20px 0;border-left:0;border-bottom:1px dashed rgba(14,27,44,.25)}}
+
+/* itinerary */
+.itin{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 22px;position:relative;margin-top:8px}
+.itin::before{content:"";position:absolute;left:8px;right:8px;top:9px;border-top:2px dashed rgba(176,141,87,.7)}
+.itin li{position:relative;padding-top:34px;display:grid;gap:6px;align-content:start}
+.itin li::before{content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--ivory);border:2px solid var(--navy);box-shadow:inset 0 0 0 4px var(--ivory),inset 0 0 0 10px var(--brass)}
+.itin .t{font:500 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-d)}
+.itin h3{font:500 24px/1.1 var(--serif)}
+.itin p{font-size:15px;color:var(--slate)}
+@media (max-width:860px){.itin{grid-template-columns:1fr;gap:22px}.itin::before{left:9px;right:auto;top:8px;bottom:8px;border-top:0;border-left:2px dashed rgba(176,141,87,.7)}.itin li{padding:0 0 0 38px}}
+
+/* estimator */
+.est .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.22fr);grid-template-areas:"head head" "route route" "det map";gap:0 34px;align-items:start}
+.est .headwrap{grid-area:head}
+.e-route{grid-area:route;display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);align-items:end;gap:10px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.e-map{grid-area:map;position:relative;padding-top:18px}
+.e-det{grid-area:det;display:grid;gap:18px;padding-top:18px}
+.fld{display:grid;gap:5px;min-width:0}
+.fld select,.fld input{width:100%;min-height:46px;padding:10px 12px;border:1px solid rgba(14,27,44,.28);border-radius:10px;background:#FFFDF8;color:var(--navy);font:500 16px/1.2 var(--sans);-webkit-appearance:none;appearance:none}
+.fld select{padding-right:34px;background:#FFFDF8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230E1B2C' stroke-width='1.6'/%3E%3C/svg%3E") right 12px center no-repeat}
+.fld input::placeholder{color:#7C8594}
+.fld [aria-invalid=true]{border-color:#B3261E;box-shadow:0 0 0 1px #B3261E}
+.fld small{font-size:13px;color:var(--slate)}
+.fld .err{color:#9E2A1F;font-weight:500}
+.ecode{font:500 clamp(38px,4vw,50px)/1 var(--serif);letter-spacing:.02em}
+.e-route .to .ecode{font-style:italic;color:var(--brass-d)}
+.swap{width:44px;height:44px;margin-bottom:1px;border-radius:50%;border:1px solid var(--brass);background:var(--ivory);color:var(--brass-d);cursor:pointer;display:grid;place-items:center;transition:transform .45s cubic-bezier(.3,.7,.3,1),background .2s}
+.swap:hover{background:var(--paper)}
+.swap.spin{transform:rotate(180deg)}
+.map{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);background:#EFE9DD;touch-action:manipulation}
+.map .road{stroke:var(--brass);stroke-opacity:.5;stroke-width:1.6;fill:none}
+.map .coast{fill:none;stroke:var(--navy);stroke-opacity:.3;stroke-width:1}
+.map .wl{font:italic 500 21px var(--serif);fill:#6F8499}
+.map .pin{cursor:pointer}
+.map .pin circle{fill:var(--ivory);stroke:var(--navy);stroke-width:2;transition:r .3s,fill .3s}
+.map .pin text{font:500 16px var(--sans);fill:var(--navy);paint-order:stroke;stroke:#EFE9DD;stroke-width:4px;stroke-linejoin:round}
+.map .pin.from circle{fill:var(--brass);r:8.5}
+.map .pin.to circle{fill:var(--navy);stroke:var(--brass);stroke-width:3;r:8.5}
+.map .pin.from text,.map .pin.to text{font-weight:600}
+.map .pin:hover circle{stroke:var(--brass)}
+#rCase{fill:none;stroke:#FFFDF8;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+#rLine{fill:none;stroke:var(--navy);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round}
+.chip{position:absolute;left:12px;top:30px;display:flex;gap:10px;align-items:center;padding:7px 12px;border-radius:999px;background:var(--navy);color:var(--ivory);font:500 13px/1 var(--sans);letter-spacing:.06em;box-shadow:0 6px 16px rgba(14,27,44,.25)}
+.chip b{color:var(--brass);font-weight:600}
+.e-map figcaption{margin-top:10px;font-size:14px;color:var(--slate)}
+.veh{border:0;margin:0;padding:0;min-width:0}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:6px}
+.vc{position:relative;display:grid;justify-items:center;gap:2px;padding:10px 6px 9px;border:1px solid rgba(14,27,44,.22);border-radius:10px;background:#FFFDF8;cursor:pointer;text-align:center;transition:border-color .2s,background .2s,opacity .2s}
+.vc input{position:absolute;opacity:0;pointer-events:none}
+.vc svg{width:100%;max-width:92px;height:auto;aspect-ratio:240/96}
+.vc b{font:500 14px/1.2 var(--sans)}
+.vc small{font-size:12px;color:var(--slate)}
+.vc:has(input:checked){border-color:var(--navy);background:var(--sky);box-shadow:inset 0 0 0 1px var(--navy)}
+.vc:has(input:focus-visible){outline:2px solid var(--brass);outline-offset:2px}
+.vc:has(input:disabled){opacity:.45;cursor:not-allowed}
+.vnote{min-height:1.4em;font-size:13.5px;color:var(--brass-d);margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stp{display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(14,27,44,.28);border-radius:10px;background:#FFFDF8;min-height:46px}
+.stp button{width:44px;height:44px;border:0;background:none;font:500 22px/1 var(--sans);color:var(--navy);cursor:pointer;border-radius:10px}
+.stp button:hover{background:var(--paper)}
+.stp button:disabled{opacity:.3;cursor:default}
+.stp output{font:500 18px/1 var(--sans)}
+.fare-stub .fare{display:flex;font:500 clamp(52px,6vw,68px)/1 var(--serif);perspective:300px;color:var(--navy);letter-spacing:-.01em}
+.fare .ch{display:inline-block;transform-origin:50% 55%}
+.fare.flip .ch{animation:flip .55s cubic-bezier(.3,.7,.3,1) both}
+@keyframes flip{from{transform:rotateX(-88deg);opacity:.2}}
+.range{font-size:14px;color:var(--slate);margin-top:-6px}
+.bk{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:14px;padding:12px 0;border-top:1px dashed rgba(14,27,44,.25);border-bottom:1px dashed rgba(14,27,44,.25)}
+.bk dd{font-weight:500;text-align:right}
+.fare-stub .btn{width:100%}
+.fine{font-size:13px;color:var(--slate)}
+@media (max-width:960px){.est .body{grid-template-columns:1fr;grid-template-areas:"head" "route" "map" "det"}}
+@media (max-width:560px){.e-route{grid-template-columns:minmax(0,1fr) 44px;row-gap:14px}.e-route .from{grid-row:1}.e-route .to{grid-row:2;grid-column:1}.swap{grid-column:2;grid-row:1/span 2;align-self:center;transform:rotate(90deg)}.swap.spin{transform:rotate(270deg)}.ecode{font-size:34px}}
+@media (max-width:760px){.map .pin text{font-size:21px;stroke-width:5px}.map .pin circle{r:8}.map .pin.from circle,.map .pin.to circle{r:10}.map .wl{font-size:25px}}
+.fs-top{display:flex;flex-direction:column;gap:14px}
+@media (min-width:761px){.fs-top{position:sticky;top:96px}}
+
+/* e-ticket */
+#slot:empty{display:none}
+#slot{margin-top:clamp(28px,4vw,44px)}
+.tkt .band{background:var(--brass);color:var(--navy)}
+.tkt .od:focus{outline:none}
+.tkt .od .city{font-size:clamp(40px,5vw,64px)}
+.tkt .nm{font-size:14px;color:var(--slate)}
+.tkt .fields{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tkt .stub{justify-content:space-between}
+.nb{font:500 30px/1.05 var(--serif);overflow-wrap:anywhere}
+.stamp{align-self:flex-start;padding:6px 10px;border:2px solid #9E2A1F;border-radius:6px;color:#9E2A1F;font:600 13px/1 var(--sans);letter-spacing:.2em;transform:rotate(-8deg)}
+.printing{animation:print 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes print{from{clip-path:inset(0 0 100% 0);transform:translateY(-18px)}to{clip-path:inset(0 0 -40px 0)}}
+@media (max-width:760px){.tkt .fields{grid-template-columns:1fr 1fr}}
+
+/* fine print */
+.faq{display:grid;gap:0;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:12px 0;font:500 clamp(20px,2vw,24px)/1.2 var(--serif);cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:1.6px solid var(--brass-d);border-bottom:1.6px solid var(--brass-d);transform:rotate(45deg) translateY(-3px);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq p{padding:0 0 18px;color:var(--slate);max-width:68ch}
+
+/* luggage-tag footer */
+.foot{padding:clamp(40px,6vw,80px) clamp(12px,4vw,40px) calc(80px + env(safe-area-inset-bottom))}
+.tag{position:relative;max-width:760px;margin:0 auto;padding:clamp(26px,4vw,40px) clamp(22px,4vw,44px) clamp(26px,4vw,40px) clamp(64px,9vw,96px);background:var(--brass);color:var(--navy);border-radius:14px 44px 44px 14px}
+.tag::before{content:"";position:absolute;left:clamp(22px,3.4vw,34px);top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 4px #8C6E40}
+.tag .fb{font:600 clamp(30px,4.4vw,46px)/1 var(--serif);overflow-wrap:anywhere;margin-bottom:10px}
+.tag p{font-size:15px}
+.tag .row{display:flex;flex-wrap:wrap;gap:6px 28px;margin:16px 0;padding:14px 0;border-top:1px solid rgba(14,27,44,.3);border-bottom:1px solid rgba(14,27,44,.3)}
+.tag a{font-weight:500;text-decoration-color:rgba(14,27,44,.5);text-underline-offset:4px;display:inline-block;padding:6px 0}
+.tag .note{font-size:13.5px}
+.string{position:absolute;right:100%;top:50%;width:min(160px,12vw);height:2px;background:linear-gradient(90deg,transparent,var(--brass));transform:rotate(-8deg);transform-origin:100% 50%}
+@media (max-width:760px){.string{display:none}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<svg class="sr" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="car-s" viewBox="0 0 240 96"><ellipse cx="120" cy="88" rx="106" ry="5" fill="#0E1B2C" opacity=".13"/><path fill="#0E1B2C" d="M12 72L10 60Q10 51 19 50L46 46Q62 30 84 27L138 26Q152 27 172 44L214 49Q228 51 230 60V72H201A19 19 0 0 0 163 72H77A19 19 0 0 0 39 72Z"/><path fill="#D8E3EE" d="M52 46Q66 33 85 31H118V46ZM123 31H137Q149 32 162 45H123Z"/><path d="M16 58H226" stroke="#B08D57" stroke-width="1.6"/><path d="M221 53h7M13 55h4" stroke="#F7F4EE" stroke-width="3" stroke-linecap="round"/><path d="M60 28Q98 22 140 27" stroke="#F7F4EE" stroke-opacity=".25" fill="none"/><g><circle cx="58" cy="72" r="15" fill="#0E1B2C"/><circle cx="58" cy="72" r="9" fill="#B08D57"/><circle cx="58" cy="72" r="3" fill="#0E1B2C"/><circle cx="182" cy="72" r="15" fill="#0E1B2C"/><circle cx="182" cy="72" r="9" fill="#B08D57"/><circle cx="182" cy="72" r="3" fill="#0E1B2C"/></g></symbol>
+    <symbol id="car-u" viewBox="0 0 240 96"><ellipse cx="120" cy="89" rx="108" ry="5" fill="#0E1B2C" opacity=".13"/><path fill="#0E1B2C" d="M12 72L10 56Q10 46 20 44L32 42L42 24Q45 19 52 19H150Q159 19 166 27L184 43L220 47Q231 49 231 60V72H203A20 20 0 0 0 163 72H79A20 20 0 0 0 39 72Z"/><path fill="#D8E3EE" d="M49 40L56 25H97V40ZM101 25H140V40H101ZM145 25H153Q157 25 161 30L170 40H145Z"/><path d="M56 14H148M64 14v5M140 14v5" stroke="#B08D57" stroke-width="2.4" stroke-linecap="round"/><path d="M16 56H226" stroke="#B08D57" stroke-width="1.6"/><path d="M222 52h7M13 53h4" stroke="#F7F4EE" stroke-width="3" stroke-linecap="round"/><g><circle cx="59" cy="72" r="16" fill="#0E1B2C"/><circle cx="59" cy="72" r="9.5" fill="#B08D57"/><circle cx="59" cy="72" r="3" fill="#0E1B2C"/><circle cx="183" cy="72" r="16" fill="#0E1B2C"/><circle cx="183" cy="72" r="9.5" fill="#B08D57"/><circle cx="183" cy="72" r="3" fill="#0E1B2C"/></g></symbol>
+    <symbol id="car-v" viewBox="0 0 240 96"><ellipse cx="120" cy="89" rx="110" ry="5" fill="#0E1B2C" opacity=".13"/><path fill="#0E1B2C" d="M10 72V30Q10 15 25 15H162Q172 15 180 23L202 44L223 50Q233 53 233 62V72H207A20 20 0 0 0 167 72H77A20 20 0 0 0 37 72Z"/><path fill="#D8E3EE" d="M18 25H54V42H18ZM58 25H100V42H58ZM104 25H150V42H104ZM155 25H167Q172 25 176 29L188 42H155Z"/><path d="M102 47V64M60 47H150" stroke="#F7F4EE" stroke-opacity=".3"/><path d="M14 55H228" stroke="#B08D57" stroke-width="1.6"/><path d="M224 56h7" stroke="#F7F4EE" stroke-width="3" stroke-linecap="round"/><g><circle cx="57" cy="72" r="16" fill="#0E1B2C"/><circle cx="57" cy="72" r="9.5" fill="#B08D57"/><circle cx="57" cy="72" r="3" fill="#0E1B2C"/><circle cx="187" cy="72" r="16" fill="#0E1B2C"/><circle cx="187" cy="72" r="9.5" fill="#B08D57"/><circle cx="187" cy="72" r="3" fill="#0E1B2C"/></g></symbol>
+    <symbol id="arr" viewBox="0 0 130 24"><path d="M2 12H118" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/><path d="M110 4l14 8-14 8" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="12" r="3.5" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<header class="hd">
+  <a class="logo" href="#top"><span class="mono" data-brand-initials aria-hidden="true">AC</span><span class="wm" data-brand>Arrivals Chauffeur Co.</span></a>
+  <nav aria-label="Sections"><a href="#fleet">Fleet</a><a href="#services">Services</a><a href="#how">How it works</a><a href="#faq">Fine print</a></nav>
+  <a class="btn hbtn" href="#fare">Get a fare</a>
+</header>
+
+<main>
+  <section class="stage" id="top" aria-label="Welcome">
+    <div class="stack">
+      <article class="pass hero" style="--stub:300px">
+        <div class="body">
+          <p class="band"><span>Boarding pass · private transfer</span><span>Melbourne · 24/7 by booking</span></p>
+          <h1 class="od">
+            <span class="from"><span class="lab">From</span><span class="city" data-brand>Arrivals Chauffeur Co.</span></span>
+            <svg class="arr" viewBox="0 0 130 24" aria-hidden="true"><use href="#arr"/></svg>
+            <span class="to"><span class="lab">To</span><span class="city">your destination</span></span>
+          </h1>
+          <dl class="fields">
+            <div><dt class="lab">Passenger</dt><dd>You, plus the bags</dd></div>
+            <div><dt class="lab">Class</dt><dd>Chauffeured, door to door</dd></div>
+            <div><dt class="lab">Gate</dt><dd>Arrivals hall, name board up</dd></div>
+            <div><dt class="lab">Boards</dt><dd>When you land — not before</dd></div>
+          </dl>
+          <p class="intro">Airport and corporate transfers across Melbourne, Geelong and the Mornington Peninsula. We track your flight, meet you inside arrivals and take the bags from there.</p>
+          <div class="ctas"><a class="btn" href="#fare">Estimate a fare</a><a class="lnk" href="#fleet">See the fleet</a></div>
+        </div>
+        <div class="stub">
+          <div><p class="lab">Seat</p><p class="seat">1A</p><p class="fine">Rear left, by tradition</p></div>
+          <dl class="mini"><dt class="lab">Wait</dt><dd>45 min free</dd><dt class="lab">Flight</dt><dd>Tracked live</dd><dt class="lab">Water</dt><dd>Chilled, on board</dd></dl>
+          <svg class="bc" data-code="ARRIVALS-0001" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <p class="keep">Keep this stub</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="board" aria-labelledby="board-h">
+      <div class="b-top"><h2 id="board-h">Popular runs</h2><p>Sedan, one way — sample prices, illustrative only. Tap a run to estimate it.</p><span class="clock" aria-label="Current time in Melbourne">MELBOURNE <span id="clock">--:--</span></span></div>
+      <div class="runs" id="runs">
+        <button class="run" type="button" data-run="MEL CBD"><span class="codes"><span class="fl">MEL</span><b aria-hidden="true">→</b><span class="fl">CBD</span></span><span class="rname">Melbourne Airport to the CBD</span><span class="price fl">$126</span><span class="go" aria-hidden="true">›</span></button>
+        <button class="run" type="button" data-run="MEL STK"><span class="codes"><span class="fl">MEL</span><b aria-hidden="true">→</b><span class="fl">STK</span></span><span class="rname">Melbourne Airport to St Kilda</span><span class="price fl">$145</span><span class="go" aria-hidden="true">›</span></button>
+        <button class="run" type="button" data-run="AVV GLG"><span class="codes"><span class="fl">AVV</span><b aria-hidden="true">→</b><span class="fl">GLG</span></span><span class="rname">Avalon Airport to Geelong</span><span class="price fl">$150</span><span class="go" aria-hidden="true">›</span></button>
+        <button class="run" type="button" data-run="AVV CBD"><span class="codes"><span class="fl">AVV</span><b aria-hidden="true">→</b><span class="fl">CBD</span></span><span class="rname">Avalon Airport to the CBD</span><span class="price fl">$217</span><span class="go" aria-hidden="true">›</span></button>
+        <button class="run" type="button" data-run="CBD BXH"><span class="codes"><span class="fl">CBD</span><b aria-hidden="true">→</b><span class="fl">BXH</span></span><span class="rname">CBD to Box Hill</span><span class="price fl">$97</span><span class="go" aria-hidden="true">›</span></button>
+        <button class="run" type="button" data-run="MEL FKN"><span class="codes"><span class="fl">MEL</span><b aria-hidden="true">→</b><span class="fl">FKN</span></span><span class="rname">Melbourne Airport to Frankston</span><span class="price fl">$244</span><span class="go" aria-hidden="true">›</span></button>
+      </div>
+    </section>
+  </section>
+
+  <section class="stage" id="fleet" aria-labelledby="fleet-h">
+    <div class="stack">
+      <article class="pass" style="--stub:250px">
+        <div class="body">
+          <div class="ph"><span class="lab">Cabin selection</span><span class="gate">Gate B</span></div>
+          <h2 class="h2" id="fleet-h">Choose your <em>cabin</em></h2>
+          <p class="intro" style="margin-bottom:26px">Three late-model vehicles, all leather, all non-smoking. Pick by headcount and luggage — the estimator does the maths for you.</p>
+          <ul class="cars">
+            <li><svg aria-hidden="true"><use href="#car-s"/></svg><h3>Executive sedan</h3><p class="cap">3 passengers · 3 bags</p><p>Solo travellers and couples. A quiet cabin, phone chargers and still water.</p><p class="rate">From $80 · then $2.60/km</p></li>
+            <li><svg aria-hidden="true"><use href="#car-u"/></svg><h3>Luxury SUV</h3><p class="cap">4 passengers · 5 bags</p><p>Room for golf clubs, ski bags or a family's worth of luggage after a long flight.</p><p class="rate">From $95 · then $3.00/km</p></li>
+            <li><svg aria-hidden="true"><use href="#car-v"/></svg><h3>People mover</h3><p class="cap">7 passengers · 8 bags</p><p>Teams heading to a conference, wedding parties and families travelling together.</p><p class="rate">From $120 · then $3.40/km</p></li>
+          </ul>
+        </div>
+        <div class="stub">
+          <p class="lab">Every cabin</p>
+          <ul class="perks"><li>Child seats and boosters at no extra cost</li><li>Chargers for most phones</li><li>Umbrella in the boot for Melbourne weather</li><li>Chauffeur in a suit, happy to talk or not</li></ul>
+          <p class="fine">Sample prices in AUD.</p>
+          <svg class="bc" data-code="FLEET-B" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="stage" id="services" aria-labelledby="svc-h">
+    <div class="stack">
+      <article class="pass" style="--stub:240px">
+        <div class="body">
+          <div class="ph"><span class="lab">Routes</span><span class="gate">Gate C</span></div>
+          <h2 class="h2" id="svc-h">Three ways <em>we travel</em></h2>
+          <ol class="legs" style="margin-top:22px">
+            <li><span class="code3">AIR</span><h3>Airport transfers</h3><p>Melbourne and Avalon, both directions, any hour. We watch your flight and wait inside arrivals with your name on a board.</p><p class="meta">Flight tracked · 45 min free wait</p></li>
+            <li><span class="code3">BIZ</span><h3>Corporate accounts</h3><p>Monthly invoicing, roadshows and hourly hire between meetings in the CBD, Docklands and Southbank.</p><p class="meta">Invoiced monthly · hourly hire</p></li>
+            <li><span class="code3">WED</span><h3>Wedding cars</h3><p>Ivory ribbons, a chauffeur who knows when to wait, and a second car for the bridal party or family.</p><p class="meta">Ribbons included · two-car bookings</p></li>
+          </ol>
+        </div>
+        <div class="stub">
+          <p class="lab">Hourly hire</p>
+          <p class="seat" style="font-size:48px">$95<span style="font-size:22px">/hr</span></p>
+          <p class="fine">Sedan, minimum two hours. Sample price.</p>
+          <p class="lab" style="margin-top:6px">Service area</p>
+          <p style="font-size:14.5px">Greater Melbourne, Geelong, the Bellarine and Mornington peninsulas.</p>
+          <svg class="bc" data-code="GATE-C" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="stage" id="how" aria-labelledby="how-h">
+    <div class="stack">
+      <article class="pass" style="--stub:220px">
+        <div class="body">
+          <div class="ph"><span class="lab">Itinerary</span><span class="gate">Gate D</span></div>
+          <h2 class="h2" id="how-h">Your journey, <em>leg by leg</em></h2>
+          <ol class="itin" style="margin-top:28px">
+            <li><span class="t">T minus 24 h</span><h3>Book</h3><p>Pickup, drop-off and flight number. The real site would confirm by email.</p></li>
+            <li><span class="t">Wheels down</span><h3>We track the flight</h3><p>Land early or late and we adjust. No need to call.</p></li>
+            <li><span class="t">Plus 10 min</span><h3>Meet at arrivals</h3><p>Your chauffeur waits inside with a name board and takes the bags.</p></li>
+            <li><span class="t">Arrive</span><h3>Door to door</h3><p>Water, charger, quiet cabin. Pay by card or on account.</p></li>
+          </ol>
+        </div>
+        <div class="stub">
+          <p class="lab">Average meet time</p>
+          <p class="seat" style="font-size:48px">10<span style="font-size:22px"> min</span></p>
+          <p class="fine">From the aircraft door to your chauffeur, for a flight with carry-on bags. Illustrative.</p>
+          <svg class="bc" data-code="GATE-D" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="stage" id="fare" aria-labelledby="fare-h">
+    <div class="stack">
+      <article class="pass est" style="--stub:290px">
+        <form class="body" id="est" novalidate>
+          <div class="headwrap">
+            <div class="ph"><span class="lab">Fare estimator</span><span class="gate">Gate E</span></div>
+            <h2 class="h2" id="fare-h">Where are we <em>taking you?</em></h2>
+            <p class="intro" style="margin-bottom:22px">Choose a pickup and drop-off and the route draws itself around the bay. Tap a pin on the map to change the drop-off.</p>
+          </div>
+          <div class="e-route">
+            <div class="fld from"><span class="ecode" id="fromC" aria-hidden="true">MEL</span><label class="lab" for="from">Pickup</label><select id="from"></select></div>
+            <button class="swap" id="swap" type="button" aria-label="Swap pickup and drop-off"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7h13l-4-4M17 13H4l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="fld to"><span class="ecode" id="toC" aria-hidden="true">CBD</span><label class="lab" for="to">Drop-off</label><select id="to"></select></div>
+          </div>
+          <figure class="e-map">
+            <svg class="map" id="map" viewBox="30 28 550 572" role="img" aria-labelledby="mapT">
+              <title id="mapT">Map of Port Phillip Bay with your route</title>
+              <path fill="#D8E3EE" d="M0 566C12 562 46 548 70 540C94 532 119 519 144 516C169 513 202 525 219 523C236 521 238 513 246 504C254 495 264 482 270 470C276 458 281 442 282 432C283 422 283 416 276 409C269 402 250 388 240 387C230 386 222 396 214 402C206 408 203 420 192 421C181 422 165 414 150 410C135 406 114 394 102 394C90 394 86 407 80 410C74 413 69 416 66 413C63 410 59 400 60 392C61 384 65 367 72 364C79 361 90 370 100 372C110 374 121 374 132 375C143 376 163 383 168 379C173 375 163 360 160 352C157 344 143 341 150 333C157 325 180 313 200 305C220 297 252 294 270 284C288 274 293 256 306 243C319 230 337 212 348 205C359 198 365 202 372 202C379 202 385 204 390 202C395 200 397 193 400 190C403 187 404 185 408 186C412 187 418 191 422 194C426 197 431 196 435 203C439 210 441 228 444 239C447 250 448 258 453 267C458 276 466 289 474 296C482 303 494 301 501 307C508 313 512 321 515 330C518 339 521 347 522 360C523 373 526 392 522 409C518 426 510 444 500 460C490 476 474 492 462 508C450 524 441 546 429 557C417 568 404 570 390 574C376 578 358 586 342 584C326 582 307 568 294 561C281 554 270 545 262 540C254 535 242 527 243 531C244 535 261 558 270 566C279 574 284 571 296 578C308 585 329 596 342 606C355 616 367 634 372 640L0 640Z" id="water"/>
+              <use href="#water" class="coast"/>
+              <path d="M398 188C401 186 409 179 414 176C419 173 423 171 428 168C433 165 439 162 446 160C453 158 462 160 470 158C478 156 487 152 496 150C505 148 511 148 522 146C533 144 554 139 560 138" fill="none" stroke="#A9BFD3" stroke-width="2.4"/>
+              <text class="wl" x="318" y="452">Port Phillip</text><text class="wl" x="54" y="590">Bass Strait</text>
+              <g id="roads"></g>
+              <path id="rCase" d=""/><path id="rLine" d=""/>
+              <g id="pins"></g>
+              <g id="car" opacity="0"><rect x="-10" y="-5.5" width="20" height="11" rx="4" fill="#B08D57" stroke="#0E1B2C" stroke-width="1.6"/><rect x="2.5" y="-3.8" width="4.5" height="7.6" rx="1.2" fill="#0E1B2C"/></g>
+              <g transform="translate(560 58)" aria-hidden="true"><path d="M0-18L6 2 0-3-6 2Z" fill="#B08D57"/><text y="18" text-anchor="middle" font-size="13" font-weight="600" fill="#0E1B2C">N</text></g>
+              <g transform="translate(496 584)" aria-hidden="true"><path d="M0 0H68M0-4V4M68-4V4" stroke="#0E1B2C" stroke-width="1.5"/><text x="34" y="-8" text-anchor="middle" font-size="12" fill="#0E1B2C">10 km</text></g>
+            </svg>
+            <p class="chip" aria-hidden="true"><span id="chipKm">22 km</span><b>·</b><span id="chipMin">~31 min</span><b>·</b><span id="chipFare">$126</span></p>
+            <figcaption id="via">Via Tullamarine Fwy. Drawn on a simplified road map.</figcaption>
+          </figure>
+          <div class="e-det">
+            <fieldset class="veh"><legend class="lab">Vehicle</legend>
+              <div class="vgrid">
+                <label class="vc"><input type="radio" name="veh" value="sedan" checked><svg aria-hidden="true"><use href="#car-s"/></svg><b>Sedan</b><small>3 pax · 3 bags</small></label>
+                <label class="vc"><input type="radio" name="veh" value="suv"><svg aria-hidden="true"><use href="#car-u"/></svg><b>SUV</b><small>4 pax · 5 bags</small></label>
+                <label class="vc"><input type="radio" name="veh" value="van"><svg aria-hidden="true"><use href="#car-v"/></svg><b>People mover</b><small>7 pax · 8 bags</small></label>
+              </div>
+              <p class="vnote" id="vnote" aria-live="polite"></p>
+            </fieldset>
+            <div class="two">
+              <div class="fld"><span class="lab" id="paxL">Passengers</span><div class="stp"><button type="button" data-t="pax" data-d="-1" aria-label="Fewer passengers">−</button><output id="pax" aria-labelledby="paxL">2</output><button type="button" data-t="pax" data-d="1" aria-label="More passengers">+</button></div></div>
+              <div class="fld"><span class="lab" id="bagL">Bags</span><div class="stp"><button type="button" data-t="bags" data-d="-1" aria-label="Fewer bags">−</button><output id="bags" aria-labelledby="bagL">2</output><button type="button" data-t="bags" data-d="1" aria-label="More bags">+</button></div></div>
+            </div>
+            <div class="two">
+              <div class="fld"><label class="lab" for="day">Date</label><select id="day"></select></div>
+              <div class="fld"><label class="lab" for="time">Pickup (24 h)</label><select id="time"></select></div>
+            </div>
+            <div class="fld"><label class="lab" for="flt">Flight number · optional</label><input id="flt" autocomplete="off" autocapitalize="characters" placeholder="e.g. XY123" aria-describedby="fltH"><small id="fltH">Two letters, then two to four numbers. We'd track it and wait if you land late.</small></div>
+            <div class="fld"><label class="lab" for="pname">Name for the arrivals board</label><input id="pname" autocomplete="name" aria-describedby="pnH"><small id="pnH">Needed to print your e-ticket.</small></div>
+          </div>
+        </form>
+        <div class="stub fare-stub">
+          <div class="fs-top">
+          <p class="lab flab">Illustrative estimate</p>
+          <p class="fare" id="fareV" aria-hidden="true">$126</p>
+          <p class="range" id="range">Likely range $115–$140</p>
+          <dl class="bk"><dt>Base &amp; distance</dt><dd id="bkBase">$111</dd><dt>Airport meet &amp; greet</dt><dd id="bkMeet">$15</dd><dt>Vehicle</dt><dd id="bkVeh">Sedan</dd></dl>
+          <button class="btn" type="submit" form="est">Print my e-ticket</button>
+          <p class="fine">Not a quote. Tolls, waiting time and late-night rates are confirmed when you book.</p>
+          <p class="sr" id="sum" aria-live="polite"></p>
+          <svg class="bc" id="fareBc" data-code="MELCBD" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true" style="margin-top:8px"></svg>
+          <p class="keep" id="stubCodes">MEL → CBD</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div id="slot"></div>
+  </section>
+
+  <section class="stage" id="faq" aria-labelledby="faq-h">
+    <div class="stack">
+      <article class="pass" style="--stub:230px">
+        <div class="body">
+          <div class="ph"><span class="lab">Conditions of carriage</span><span class="gate">Gate F</span></div>
+          <h2 class="h2" id="faq-h">The fine print, <em>the friendly kind</em></h2>
+          <div class="faq" style="margin-top:18px">
+            <details><summary>How long will my chauffeur wait?</summary><p>Airport pickups include 45 minutes from the moment you land; other pickups include 10 minutes. After that, waiting is charged in 15-minute blocks and we'll text before it starts.</p></details>
+            <details><summary>Do you have child seats?</summary><p>Yes — baby capsules, child seats and boosters, fitted before we arrive, at no extra cost. Tell us the children's ages when you book.</p></details>
+            <details><summary>Can I change or cancel?</summary><p>Changes are free up to three hours before pickup. Cancellations inside three hours may be charged the minimum fare, because your chauffeur is already on the way.</p></details>
+            <details><summary>Is the estimate what I'll pay?</summary><p>No. It's an illustrative figure based on distance and vehicle. Tolls, waiting time, extra stops and late-night rates are confirmed when you book.</p></details>
+          </div>
+        </div>
+        <div class="stub">
+          <p class="lab">Still unsure?</p>
+          <p style="font:500 26px/1.1 var(--serif)">Talk to a person</p>
+          <p style="font-size:15px"><a href="tel:+61355504419">(03) 5550 4419</a><br><a href="mailto:bookings@example.com">bookings@example.com</a></p>
+          <svg class="bc" data-code="GATE-F" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="tag">
+    <span class="string" aria-hidden="true"></span>
+    <p class="fb" data-brand>Arrivals Chauffeur Co.</p>
+    <p>Private transfers from Melbourne, VIC — airports, city and regional. Bookings 24/7.</p>
+    <div class="row"><a href="tel:+61355504419">(03) 5550 4419</a><a href="mailto:bookings@example.com">bookings@example.com</a><span style="padding:6px 0">Melbourne &amp; Avalon airports</span></div>
+    <p class="note">A fictional company made as a design concept. Sample prices; every fare shown is an illustrative estimate, not a quote.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function rm() { return window.DemoKit ? DemoKit.reducedMotion : mq.matches; }
+  function toast(m) { if (window.DemoKit) DemoKit.toast(m); }
+  var NS = 'http://www.w3.org/2000/svg';
+  function S(tag, a, parent) { var n = document.createElementNS(NS, tag); for (var k in a) n.setAttribute(k, a[k]); if (parent) parent.appendChild(n); return n; }
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MONS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function fmt(d) { return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONS[d.getMonth()]; }
+
+  /* perforation position for stacked (phone) passes */
+  var ro = 'ResizeObserver' in window ? new ResizeObserver(measure) : null;
+  function measure() { $$('.pass').forEach(function (p) { var s = $('.stub', p); if (s) p.style.setProperty('--sh', s.offsetHeight + 'px'); }); }
+  function watch(root) { $$('.stub', root).forEach(function (s) { if (ro) ro.observe(s); }); measure(); }
+  watch(document); if (!ro) window.addEventListener('resize', measure);
+
+  /* passes issue upward as they arrive */
+  var io = null;
+  if ('IntersectionObserver' in window && !rm()) {
+    io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -5% 0px' });
+    $$('.stack').forEach(function (s, i) { if (i) { s.classList.add('rise'); io.observe(s); } });
+  }
+
+  /* barcodes */
+  function barcode(svg, code) {
+    var seed = 7; for (var i = 0; i < code.length; i++) seed = (seed * 31 + code.charCodeAt(i)) >>> 0;
+    function rnd() { seed = (seed * 1103515245 + 12345) >>> 0; return (seed >>> 16) / 65536; }
+    var d = '', x = 0;
+    while (x < 118) { var w = 1 + Math.floor(rnd() * 3); d += 'M' + x + ' 0h' + w + 'v40h-' + w + 'z'; x += w + 1 + Math.floor(rnd() * 2.6); }
+    svg.innerHTML = ''; S('path', { d: d, fill: 'currentColor' }, svg);
+  }
+  $$('.bc').forEach(function (b) { barcode(b, b.getAttribute('data-code') || 'X'); });
+
+  /* Melbourne clock */
+  function clock() { try { $('#clock').textContent = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Melbourne', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()); } catch (e) { /* ignore */ } }
+  clock(); setInterval(clock, 30000);
+
+  /* ---------- places, roads, fares ---------- */
+  var P = { MEL: ['Melbourne Airport', 355, 52, 'start', 13, 5, 'Melbourne Airport'], AVV: ['Avalon Airport', 131, 333, 'start', 10, 22, 'Avalon Airport'], CBD: ['Melbourne CBD', 428, 162, 'start', 11, -9, 'CBD'], DKL: ['Docklands', 412, 166, 'end', -10, 18, 'Docklands'], STK: ['St Kilda', 439, 203, 'start', 13, 10, 'St Kilda'], BXH: ['Box Hill', 525, 166, 'middle', 0, -15, 'Box Hill'], FKN: ['Frankston', 526, 412, 'end', -13, 5, 'Frankston'], GLG: ['Geelong', 62, 424, 'start', 10, 22, 'Geelong'] };
+  var J = { T1: [388, 112], WG: [392, 182], LAV: [330, 208], WER: [282, 248], LARA: [150, 318], COR: [56, 366], CHL: [524, 334], MOR: [478, 262], EF: [478, 160], ELK: [548, 270], RING: [348, 120], MNS: [468, 208] };
+  var ROADS = { 'Tullamarine Fwy': 'MEL-T1 T1-CBD T1-DKL', 'West Gate Fwy': 'DKL-WG WG-LAV DKL-CBD', 'Princes Fwy': 'LAV-WER WER-LARA LARA-AVV LARA-COR COR-GLG', 'Western Ring Rd': 'MEL-RING RING-LAV RING-T1', 'St Kilda Rd': 'CBD-STK', 'Nepean Hwy': 'STK-MOR MOR-CHL CHL-FKN', 'Eastern Fwy': 'CBD-EF EF-BXH', 'Springvale Rd': 'BXH-ELK ELK-FKN', 'Monash Fwy': 'CBD-MNS MNS-MOR' };
+  function xy(id) { return P[id] ? [P[id][1], P[id][2]] : J[id]; }
+  var G = {}, NAME = {};
+  Object.keys(ROADS).forEach(function (road) {
+    ROADS[road].split(' ').forEach(function (e) {
+      var ab = e.split('-'), a = ab[0], b = ab[1], pa = xy(a), pb = xy(b), d = Math.hypot(pa[0] - pb[0], pa[1] - pb[1]);
+      (G[a] = G[a] || []).push([b, d]); (G[b] = G[b] || []).push([a, d]);
+      NAME[a + b] = NAME[b + a] = road;
+    });
+  });
+  function route(a, b) {
+    var dist = {}, prev = {}, done = {}; dist[a] = 0;
+    for (;;) {
+      var u = null; for (var k in dist) if (!done[k] && (u === null || dist[k] < dist[u])) u = k;
+      if (u === null || u === b) break; done[u] = 1;
+      G[u].forEach(function (e) { var nd = dist[u] + e[1]; if (dist[e[0]] === undefined || nd < dist[e[0]]) { dist[e[0]] = nd; prev[e[0]] = u; } });
+    }
+    var p = [b]; while (p[0] !== a) p.unshift(prev[p[0]]);
+    return { p: p, d: dist[b] };
+  }
+  var V = { sedan: { n: 'Sedan', b: 55, k: 2.6, m: 80, p: 3, g: 3 }, suv: { n: 'SUV', b: 70, k: 3, m: 95, p: 4, g: 5 }, van: { n: 'People mover', b: 90, k: 3.4, m: 120, p: 7, g: 8 } };
+  function quote(a, b, v) {
+    var r = route(a, b), km = r.d * 0.1464 * 1.12, c = V[v];
+    var base = Math.round(Math.max(c.m, c.b + c.k * km)), meet = (a === 'MEL' || a === 'AVV') ? 15 : 0;
+    return { p: r.p, km: Math.round(km), base: base, meet: meet, total: base + meet, mins: Math.round(km / (km > 40 ? 72 : 50) * 60 + 5) };
+  }
+
+  /* departure board: split-flap tiles + load a run */
+  var CH = 'ABCDEFGHKLMNPRSTVX0123456789';
+  function flapIn(el, k) {
+    var txt = el.textContent, box = document.createElement('span'), sr = document.createElement('span');
+    box.className = 'tiles'; box.setAttribute('aria-hidden', 'true'); sr.className = 'sr'; sr.textContent = txt;
+    el.textContent = ''; el.appendChild(box); el.appendChild(sr);
+    txt.split('').forEach(function (c, i) {
+      var t = document.createElement('i'); t.textContent = c; box.appendChild(t);
+      if (rm() || c === '$') return;
+      var n = 0, max = 3 + (k + i) % 4; t.textContent = CH[(k * 5 + i * 7) % CH.length];
+      var iv = setInterval(function () { n++; t.textContent = n >= max ? c : CH[(n * 7 + i + k) % CH.length]; if (n >= max) clearInterval(iv); }, 120 + i * 10);
+    });
+  }
+  $$('.run').forEach(function (btn) {
+    var ab = btn.getAttribute('data-run').split(' ');
+    $('.price', btn).textContent = '$' + quote(ab[0], ab[1], 'sedan').total;
+    btn.addEventListener('click', function () {
+      fromS.value = ab[0]; toS.value = ab[1]; lockOptions(); update(true);
+      $('#fare').scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+  var flapped = false;
+  function flapAll() { if (flapped) return; flapped = true; $$('.run .fl').forEach(flapIn); }
+  if ('IntersectionObserver' in window) {
+    var bio = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { flapAll(); bio.disconnect(); } }); bio.observe($('#runs'));
+  } else flapAll();
+
+  /* ---------- estimator ---------- */
+  var fromS = $('#from'), toS = $('#to'), form = $('#est');
+  Object.keys(P).forEach(function (id) {
+    fromS.insertAdjacentHTML('beforeend', '<option value="' + id + '">' + P[id][0] + '</option>');
+    toS.insertAdjacentHTML('beforeend', '<option value="' + id + '">' + P[id][0] + '</option>');
+  });
+  fromS.value = 'MEL'; toS.value = 'CBD';
+  function lockOptions() {
+    $$('option', toS).forEach(function (o) { o.disabled = o.value === fromS.value; });
+    $$('option', fromS).forEach(function (o) { o.disabled = o.value === toS.value; });
+  }
+  var map = $('#map'), roadsG = $('#roads'), pinsG = $('#pins');
+  var drawn = {};
+  Object.keys(G).forEach(function (a) { G[a].forEach(function (e) { var k = [a, e[0]].sort().join(); if (drawn[k]) return; drawn[k] = 1; var p = xy(a), q = xy(e[0]); S('path', { d: 'M' + p + 'L' + q, 'class': 'road' }, roadsG); }); });
+  Object.keys(P).forEach(function (id) {
+    var p = P[id], g = S('g', { 'class': 'pin', 'data-id': id, transform: 'translate(' + p[1] + ' ' + p[2] + ')' }, pinsG);
+    S('circle', { r: 6.5 }, g);
+    var t = S('text', { x: p[4], y: p[5], 'text-anchor': p[3] }, g); t.textContent = p[6];
+    S('title', {}, g).textContent = 'Set drop-off: ' + p[0];
+    g.addEventListener('click', function () { if (id === fromS.value) return; toS.value = id; lockOptions(); update(true); });
+  });
+  var day = $('#day'), time = $('#time'), now = new Date();
+  for (var i = 0; i < 21; i++) { var d = new Date(now); d.setDate(now.getDate() + i); day.insertAdjacentHTML('beforeend', '<option>' + fmt(d) + '</option>'); }
+  day.selectedIndex = 1;
+  for (var h = 0; h < 24; h++) for (var m = 0; m < 60; m += 30) { var v = (h < 10 ? '0' : '') + h + ':' + (m ? '30' : '00'); time.insertAdjacentHTML('beforeend', '<option' + (v === '09:00' ? ' selected' : '') + '>' + v + '</option>'); }
+  var pax = 2, bags = 2;
+  function veh() { var r = $('input[name=veh]:checked', form); return r ? r.value : 'sedan'; }
+  function fitVehicles() {
+    var note = '';
+    $$('input[name=veh]', form).forEach(function (r) { var c = V[r.value]; r.disabled = pax > c.p || bags > c.g; });
+    var cur = $('input[name=veh]:checked', form);
+    if (!cur || cur.disabled) {
+      var ok = $$('input[name=veh]', form).filter(function (r) { return !r.disabled; })[0];
+      if (ok) { ok.checked = true; note = 'Moved up to the ' + (ok.value === 'suv' ? 'SUV' : V[ok.value].n.toLowerCase()) + ' to fit ' + pax + ' passenger' + (pax > 1 ? 's' : '') + ' and ' + bags + ' bag' + (bags === 1 ? '' : 's') + '.'; }
+    }
+    $('#vnote').textContent = note;
+    $$('.stp button').forEach(function (b) {
+      var t = b.getAttribute('data-t'), dd = +b.getAttribute('data-d'), val = t === 'pax' ? pax : bags;
+      b.disabled = dd < 0 ? val <= (t === 'pax' ? 1 : 0) : val >= (t === 'pax' ? 7 : 8);
+    });
+  }
+  $$('.stp button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-t'), dd = +b.getAttribute('data-d');
+      if (t === 'pax') pax = Math.min(7, Math.max(1, pax + dd)); else bags = Math.min(8, Math.max(0, bags + dd));
+      $('#pax').textContent = pax; $('#bags').textContent = bags; fitVehicles(); update(false);
+    });
+  });
+  $$('input[name=veh]', form).forEach(function (r) { r.addEventListener('change', function () { $('#vnote').textContent = ''; update(false); }); });
+  fromS.addEventListener('change', function () { lockOptions(); update(true); });
+  toS.addEventListener('change', function () { lockOptions(); update(true); });
+  $('#swap').addEventListener('click', function () {
+    var a = fromS.value; fromS.value = toS.value; toS.value = a; lockOptions();
+    var s = $('#swap'); s.classList.toggle('spin'); update(true);
+  });
+
+  var rCase = $('#rCase'), rLine = $('#rLine'), car = $('#car'), raf = 0, last = '';
+  function setFare(n) {
+    var el = $('#fareV'), txt = '$' + n;
+    if (el.getAttribute('data-v') === txt) return;
+    el.setAttribute('data-v', txt);
+    el.innerHTML = txt.split('').map(function (c, i) { return '<span class="ch" style="animation-delay:' + i * 60 + 'ms">' + c + '</span>'; }).join('');
+    el.classList.remove('flip'); void el.offsetWidth; if (!rm()) el.classList.add('flip');
+  }
+  function drawRoute(pts, animate) {
+    var d = 'M' + pts.map(function (id) { return xy(id).join(' '); }).join('L');
+    rCase.setAttribute('d', d); rLine.setAttribute('d', d);
+    var len = rLine.getTotalLength();
+    cancelAnimationFrame(raf);
+    function place(t) {
+      var at = Math.max(0.01, len * t), p = rLine.getPointAtLength(at), q = rLine.getPointAtLength(Math.max(0, at - 2));
+      var ang = Math.atan2(p.y - q.y, p.x - q.x) * 180 / Math.PI;
+      car.setAttribute('transform', 'translate(' + p.x.toFixed(1) + ' ' + p.y.toFixed(1) + ') rotate(' + ang.toFixed(1) + ')');
+      [rCase, rLine].forEach(function (r) { r.style.strokeDasharray = len + ' ' + len; r.style.strokeDashoffset = (len * (1 - t)).toFixed(1); });
+    }
+    car.setAttribute('opacity', '1');
+    if (!animate || rm() || document.hidden) { place(1); return; }
+    var dur = Math.min(2200, 700 + len * 3.2), t0 = performance.now();
+    (function step(now) { var t = Math.min(1, (now - t0) / dur), e = t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; place(e); if (t < 1) raf = requestAnimationFrame(step); })(t0);
+  }
+  function update(animate) {
+    var a = fromS.value, b = toS.value, v = veh();
+    if (a === b) return;
+    var q = quote(a, b, v);
+    $('#fromC').textContent = a; $('#toC').textContent = b;
+    $$('.pin', pinsG).forEach(function (g) { var id = g.getAttribute('data-id'); g.classList.toggle('from', id === a); g.classList.toggle('to', id === b); if (id === b || id === a) pinsG.appendChild(g); });
+    var key = a + b;
+    if (key !== last) { drawRoute(q.p, animate); last = key; }
+    var roads = []; for (var i = 1; i < q.p.length; i++) { var n = NAME[q.p[i - 1] + q.p[i]]; if (roads.indexOf(n) < 0) roads.push(n); }
+    $('#via').textContent = 'Via ' + roads.slice(0, 3).join(', ') + '. Drawn on a simplified road map, not a navigation route.';
+    $('#chipKm').textContent = q.km + ' km'; $('#chipMin').textContent = '~' + q.mins + ' min'; $('#chipFare').textContent = '$' + q.total;
+    setFare(q.total);
+    $('#range').textContent = 'Likely range $' + Math.floor(q.total * .92 / 5) * 5 + '–$' + Math.ceil(q.total * 1.08 / 5) * 5;
+    $('#stubCodes').textContent = a + ' → ' + b; barcode($('#fareBc'), a + b + v);
+    $('#bkBase').textContent = '$' + q.base; $('#bkMeet').textContent = q.meet ? '$' + q.meet : '—'; $('#bkVeh').textContent = V[v].n;
+    $('#sum').textContent = P[a][0] + ' to ' + P[b][0] + ' by ' + (v === 'suv' ? 'SUV' : V[v].n.toLowerCase()) + ': about ' + q.km + ' kilometres and ' + q.mins + ' minutes. Illustrative estimate $' + q.total + '.';
+    return q;
+  }
+  lockOptions(); fitVehicles(); update(false);
+
+  /* ---------- e-ticket (demo) ---------- */
+  var flt = $('#flt'), pname = $('#pname');
+  function fieldMsg(input, msg) {
+    var small = input.parentNode.querySelector('small');
+    if (!small.getAttribute('data-hint')) small.setAttribute('data-hint', small.textContent);
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    small.textContent = msg || small.getAttribute('data-hint'); small.classList.toggle('err', !!msg);
+  }
+  flt.addEventListener('input', function () { flt.value = flt.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6); if (flt.getAttribute('aria-invalid') === 'true') fieldMsg(flt, ''); });
+  pname.addEventListener('input', function () { if (pname.value.trim()) fieldMsg(pname, ''); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = null, f = flt.value.trim(), n = pname.value.trim();
+    if (f && !/^[A-Z]{2}[0-9]{2,4}$/.test(f)) { fieldMsg(flt, 'That doesn’t look like a flight number — try two letters then 2–4 numbers, e.g. XY123.'); bad = flt; } else fieldMsg(flt, '');
+    if (!n) { fieldMsg(pname, 'Add a name so your chauffeur can hold up the right board.'); bad = bad || pname; } else fieldMsg(pname, '');
+    if (bad) { bad.focus(); return; }
+    var a = fromS.value, b = toS.value, v = veh(), q = update(false);
+    var rows = [['Passenger', n], ['Date', day.value], ['Pickup', time.value], ['Vehicle', V[v].n], ['Passengers', String(pax)], ['Bags', String(bags)], ['Flight', f || 'Not given'], ['Est. fare', '$' + q.total + ' (illustrative)']];
+    var slot = $('#slot');
+    slot.innerHTML = '<div class="stack printing"><article class="pass tkt" style="--stub:230px"><div class="body"><p class="band"><span>E-ticket · private transfer</span><span>Demo — not a booking</span></p>' +
+      '<h3 class="od" id="tkH" tabindex="-1"><span class="from"><span class="lab">From</span><span class="city"></span><span class="nm"></span></span><svg class="arr" viewBox="0 0 130 24" aria-hidden="true"><use href="#arr"/></svg><span class="to"><span class="lab">To</span><span class="city"></span><span class="nm"></span></span></h3>' +
+      '<dl class="fields"></dl><p class="fine">Nothing was booked and nobody was emailed — this ticket is part of a design demo. A real booking would be confirmed by the company.</p></div>' +
+      '<div class="stub"><p class="stamp">DEMO</p><div><p class="lab">Name board</p><p class="nb"></p></div><svg class="bc" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"></svg><p class="keep">Show this to nobody</p></div></article></div>';
+    var cities = $$('.tkt .city', slot), nms = $$('.tkt .nm', slot);
+    cities[0].textContent = a; cities[1].textContent = b; nms[0].textContent = P[a][0]; nms[1].textContent = P[b][0];
+    $('.nb', slot).textContent = n.toUpperCase();
+    var dl = $('.fields', slot);
+    rows.forEach(function (r) { var w = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd'); dt.className = 'lab'; dt.textContent = r[0]; dd.textContent = r[1]; w.appendChild(dt); w.appendChild(dd); dl.appendChild(w); });
+    barcode($('.bc', slot), a + b + n + f);
+    watch(slot);
+    var h = $('#tkH'); h.focus({ preventScroll: true });
+    $('.tkt', slot).scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'center' });
+    toast('Demo only — no car was booked. A real site would confirm by email.');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "050",
+  "tech": ["Web Audio", "Canvas 2D", "SVG", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["sound", "booking"],
+  "interaction": "Mix a live-synthesised soundscape (rain, ocean waves, birdsong, wind chimes) with per-sound switches, volume sliders, presets and a master play/stop, and slide a massage-pressure scale from feather to deep to re-order the recommended treatments.",
+  "fonts": ["Italiana", "Mulish"],
+  "notes": ""
+}

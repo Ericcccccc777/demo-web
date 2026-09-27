@@ -1,0 +1,8 @@
+{
+  "id": "020",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "Keyboard shortcuts", "Form logic", "Date logic"],
+  "features": ["game", "booking"],
+  "interaction": "Drive the site with an H-pattern gear stick (or keys 1–5 and R): the knob travels through neutral, the needles sweep and the centre display refreshes to a new screen; the 8-question road-rules quiz revs the tachometer and lifts the speedo with every correct answer, then shows a score with a 'general information' note, and the booking form ends in a demo toast.",
+  "fonts": ["Chakra Petch", "Inter"],
+  "notes": "Quiz questions are general Australian/SA road-rule reminders, not an official test."
+}

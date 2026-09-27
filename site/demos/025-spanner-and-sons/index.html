@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="025">
+<meta name="demo:brand" content="Spanner &amp; Sons Auto">
+<title>Spanner &amp; Sons Auto — family mechanic in Toowoomba</title>
+<meta name="description" content="Spanner &amp; Sons Auto is a fictional family mechanic in Toowoomba, presented as a spiral-bound workshop service manual with a noise diagnostic guide.">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --page:#EFE6D2;--page-2:#E5D9BF;--page-3:#DACBAA;--ink:#1A1A1A;--grey:#5A5040;--red:#C62828;--red-ink:#B71C1C;--bench:#1A1A1A;
+  --mono:"Courier Prime","Courier New",Courier,monospace;--nar:"Archivo Narrow","Arial Narrow","Roboto Condensed",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bench);color:var(--ink);font:400 16px/1.6 var(--mono)}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--page);color:var(--ink);padding:10px 14px;font-weight:700}
+.skip:focus{top:10px}
+.bench{position:relative;min-height:100vh;padding:40px 16px 0;overflow-x:clip;background:radial-gradient(circle at 12px 12px,#0B0B0B 2.6px,transparent 3.4px) 0 0/24px 24px,linear-gradient(#1F1F1D,#1A1A1A)}
+.board{position:absolute;top:60px;width:150px;height:620px;display:none}
+.board.l{left:calc(50% - 740px)}.board.r{right:calc(50% - 740px)}
+.board path,.board rect,.board circle{fill:none;stroke:#3C3A36;stroke-width:3;stroke-dasharray:1 0}
+.board .pg{fill:#2A2926;stroke:none}
+
+/* ---------- the book ---------- */
+.book{position:relative;max-width:1120px;margin:0 auto;display:grid;grid-template-columns:52px minmax(0,1fr) 62px;grid-template-rows:auto 1fr auto}
+.coil{grid-column:1;grid-row:1/3;position:relative;z-index:3;margin-right:-18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='28'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2f2f0'/%3E%3Cstop offset='.5' stop-color='%23a9a9a6'/%3E%3Cstop offset='1' stop-color='%23555553'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cellipse cx='58' cy='14' rx='5.5' ry='4.5' fill='%230d0d0d'/%3E%3Cpath d='M58 11.5C44 1 14 3 12 12.5c-2 9 30 11 44 5.5' fill='none' stroke='url(%23m)' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") 0 18px/70px 28px repeat-y}
+.tb,.pages{grid-column:2;background:var(--page)}
+.tb{grid-row:1;position:relative;border-bottom:3px double var(--ink);padding:26px 30px 0 44px}
+.pages{grid-row:2;position:relative;min-height:600px;background:radial-gradient(ellipse 340px 220px at 92% 97%,rgba(60,45,20,.12),transparent) no-repeat,var(--page)}
+.tabs{grid-column:3;grid-row:1/3;align-self:start;position:sticky;top:18px;z-index:4;display:flex;flex-direction:column;padding-top:120px}
+.back{grid-column:1/-1;grid-row:3}
+
+/* title block */
+.tb-grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr) minmax(0,1fr);border:1.5px solid var(--ink)}
+.tb-grid>*{border:0 solid var(--ink);padding:10px 14px}
+.tb-main{grid-row:span 2;border-right-width:1.5px;padding:18px 20px 20px;display:flex;gap:18px;align-items:flex-start}
+.tb-cell{border-bottom-width:1.5px}
+.tb-cell:nth-child(3),.tb-cell:nth-child(5){border-left-width:1.5px}
+.tb-cell:nth-child(4),.tb-cell:nth-child(5){border-bottom-width:0}
+.tb-cell:nth-child(2),.tb-cell:nth-child(4){border-left-width:0}
+.k{display:block;font:600 11.5px/1.2 var(--nar);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-bottom:4px}
+.tb-cell b{font:700 16px/1.35 var(--mono)}
+.tb-cell a{text-decoration-thickness:1px;text-underline-offset:3px}
+.kicker{margin:0 0 6px;font:600 13px/1.2 var(--nar);letter-spacing:.16em;text-transform:uppercase;color:var(--red-ink)}
+h1,h2,h3{font-family:var(--nar);font-weight:700;text-transform:uppercase;margin:0;line-height:1}
+h1{font-size:clamp(38px,4.4vw,62px);letter-spacing:-.005em;overflow-wrap:anywhere}
+.tb-sub{margin:10px 0 0;font-size:16px}
+.mark{flex:none;width:64px;height:64px}
+.tb-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;padding:16px 0 18px}
+.tb-cta p{margin:0;font-style:italic;color:var(--red-ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:10px 18px;border:2px solid var(--ink);background:transparent;font:700 15px/1.1 var(--nar);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;box-shadow:3px 3px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-red{background:var(--red-ink);border-color:var(--ink);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* tabs */
+.tab{position:relative;display:flex;flex-direction:row;align-items:center;gap:10px;margin:0 0 -3px -2px;padding:16px 8px 14px;min-height:118px;width:58px;border:1.5px solid var(--ink);border-left:0;border-radius:0 12px 12px 0;background:var(--tb,#E2D5B8);cursor:pointer;writing-mode:vertical-rl;font:600 14px/1 var(--nar);letter-spacing:.1em;text-transform:uppercase;transition:transform .18s ease,background .18s;box-shadow:inset 6px 0 8px -6px rgba(0,0,0,.25)}
+.tab .n{font:700 15px/1 var(--mono);color:var(--red-ink);writing-mode:horizontal-tb}
+.tab:hover{transform:translateX(5px)}
+.tab[aria-selected="true"]{background:var(--page);transform:translateX(0);z-index:2;box-shadow:none;margin-left:-3px;width:61px}
+.tab:nth-child(1){--tb:#E4D8BD}.tab:nth-child(2){--tb:#DDD0B2}.tab:nth-child(3){--tb:#E4D8BD}.tab:nth-child(4){--tb:#D6C7A7}.tab:nth-child(5){--tb:#E4D8BD}.tab:nth-child(6){--tb:#DDD0B2}
+
+/* pages */
+.page{position:relative;padding:28px 36px 40px 50px}
+.page[hidden]{display:none}
+.run{display:flex;justify-content:space-between;gap:16px;margin:0 0 26px;padding-bottom:8px;border-bottom:1.5px solid var(--ink);font:600 12px/1.3 var(--nar);letter-spacing:.14em;text-transform:uppercase}
+.secno{margin:0 0 4px;font:700 18px/1 var(--mono);color:var(--red-ink)}
+h2{font-size:clamp(34px,4vw,50px);letter-spacing:.005em}
+h3{font-size:20px;letter-spacing:.04em}
+.lead{font-size:17.5px;line-height:1.6;max-width:36em;margin:14px 0 0}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:start}
+.fig{margin:0;position:relative}
+.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{margin-top:8px;font-size:14px;border-top:1px solid var(--ink);padding-top:6px}
+.fig figcaption b{font-family:var(--nar);letter-spacing:.08em;text-transform:uppercase;margin-right:6px}
+.ln{fill:none;stroke:var(--ink);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.thin{stroke-width:1.2}
+.co circle{fill:var(--page);stroke:var(--red);stroke-width:2}
+.co text{font:700 14px var(--nar);fill:var(--red-ink);text-anchor:middle}
+.co path{stroke:var(--red);stroke-width:1.5;fill:none}
+.hand{font:italic 400 15px var(--mono);fill:var(--red-ink)}
+.legend{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:6px;font-size:15px}
+.legend li{display:flex;gap:10px;align-items:baseline}
+.legend b{display:inline-grid;place-items:center;flex:none;width:24px;height:24px;border:1.5px solid var(--red);border-radius:50%;font:700 13px/1 var(--nar);color:var(--red-ink)}
+table.spec{width:100%;border-collapse:collapse;margin:28px 0 0;font-size:15px}
+.spec caption{text-align:left;font:600 13px/1.3 var(--nar);letter-spacing:.12em;text-transform:uppercase;padding-bottom:8px}
+.spec th{font:700 13px/1.2 var(--nar);letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:8px 10px;border-top:2px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+.spec td{padding:9px 10px;border-bottom:1px solid rgba(26,26,26,.28);vertical-align:top}
+.spec td:first-child{font-weight:700}
+.spec td:last-child,.spec th:last-child{text-align:right;white-space:nowrap}
+.note,.caution{display:flex;gap:14px;align-items:flex-start;margin:22px 0 0;padding:12px 14px;border:1.5px solid var(--ink);font-size:14.5px;max-width:52em}
+.note b,.caution b{flex:none;padding:3px 7px;background:var(--ink);color:var(--page);font:700 12px/1.3 var(--nar);letter-spacing:.14em;text-transform:uppercase}
+.caution{border-color:var(--red)}
+.caution b{background:var(--red-ink);color:#fff}
+.anno{position:absolute;margin:0;font:italic 400 15px/1.35 var(--mono);color:var(--red-ink);transform:rotate(-3deg);max-width:15em}
+.folio{display:flex;justify-content:space-between;margin:34px 0 0;padding-top:8px;border-top:1px solid var(--ink);font:600 12px/1.3 var(--nar);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.smudge{position:absolute;pointer-events:none;border-radius:50%;transform:rotate(-22deg) scaleY(.62);background:radial-gradient(closest-side,rgba(52,40,22,.085),rgba(52,40,22,.03) 58%,transparent)}
+.thumb{position:absolute;width:74px;height:92px;pointer-events:none;opacity:.13}
+@media (max-width:820px){.thumb{display:none}}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:26px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps3 li{border-top:2px solid var(--ink);padding-top:10px;font-size:15px;counter-increment:s}
+.steps3 li::before{content:"Step " counter(s);display:block;font:700 13px/1.2 var(--nar);letter-spacing:.14em;text-transform:uppercase;color:var(--red-ink);margin-bottom:4px}
+.card{border:1.5px solid var(--ink);background:#F5EEDE;padding:16px 18px;box-shadow:4px 4px 0 rgba(26,26,26,.85)}
+.card h3{display:flex;justify-content:space-between;gap:10px;font-size:16px;border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:10px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15px}
+.checks li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center}
+.checks li::before{content:"";grid-area:1/1;width:16px;height:16px;border:1.5px solid var(--ink)}
+.checks em{grid-area:1/3}
+.checks li.y::after{content:"";grid-area:1/1;width:18px;height:12px;margin:-6px 0 0 3px;border:solid var(--red);border-width:0 0 3px 3px;transform:rotate(-48deg)}
+.checks em{font-style:italic;color:var(--grey);font-size:13.5px}
+.warn{margin:16px 0 0;padding:0 0 0 20px}
+.warn li{margin:4px 0}
+.cols2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;margin-top:26px}
+
+/* diagnostics */
+.diag{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.6fr);gap:26px 30px;margin-top:26px}
+.sym{border:0;margin:0;padding:0;grid-row:span 2}
+.tipbox{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--red);background:rgba(255,255,255,.35);font-size:14px;line-height:1.55}
+.tipbox b{font-family:var(--nar);letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.sym legend{font:700 13px/1.2 var(--nar);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;padding:0}
+.opt{position:relative;display:block;margin:0 0 8px}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt span{display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 12px;border:1.5px solid var(--ink);background:#F5EEDE;font:600 15px/1.2 var(--nar);letter-spacing:.06em;text-transform:uppercase;transition:transform .12s,box-shadow .12s,background .12s}
+.opt svg{flex:none;width:30px;height:30px}
+.opt input:checked+span{background:var(--ink);color:var(--page);box-shadow:4px 4px 0 var(--red)}
+.opt input:checked+span svg .ln{stroke:var(--page)}
+.opt input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.opt:hover span{transform:translateX(3px)}
+.scope{margin:0}
+.screen{position:relative;border:2px solid var(--ink);background:#F7F1E3}
+.screen svg{display:block;width:100%;height:auto}
+.screen .tag{position:absolute;left:10px;top:8px;font:700 12px/1 var(--nar);letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.scope figcaption{font-size:14.5px;margin-top:8px}
+.scope figcaption b{font-family:var(--nar);letter-spacing:.08em;text-transform:uppercase}
+.play{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:12px}
+.play .fine{font-size:13.5px;color:var(--grey);max-width:30em}
+.verdict{display:grid;grid-template-columns:170px minmax(0,1fr);gap:8px 24px;align-items:start;border-top:2px solid var(--ink);padding-top:16px}
+.gauge svg{display:block;width:170px;height:auto}
+.lvl{margin:4px 0 0;font-size:14.5px}
+.lvl b{font:700 18px/1 var(--nar);letter-spacing:.1em;text-transform:uppercase;color:var(--red-ink)}
+.needle{transform-origin:100px 100px;transition:transform .7s cubic-bezier(.3,1.5,.5,1)}
+.suspects{margin:8px 0 14px;padding-left:22px}
+.suspects li{margin:0 0 10px}
+.suspects b{font-family:var(--nar);font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+.suspects li::marker{font:700 16px var(--nar);color:var(--red-ink)}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:32px;margin-top:26px;align-items:start}
+.jobcard{border:2px solid var(--ink);background:#F7F1E3;padding:0 0 20px;box-shadow:5px 5px 0 var(--ink)}
+.jc-head{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;background:var(--ink);color:var(--page);font:700 14px/1.2 var(--nar);letter-spacing:.14em;text-transform:uppercase}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;padding:18px 16px 4px}
+.fields label,.fields fieldset{display:grid;gap:4px;font:600 13px/1.3 var(--nar);letter-spacing:.1em;text-transform:uppercase}
+.fields .wide{grid-column:1/-1}
+.fields input:not([type=radio]):not([type=checkbox]),.fields select,.fields textarea{width:100%;min-height:44px;padding:8px 10px;border:0;border-bottom:1.5px solid var(--ink);background:transparent;font:400 16px/1.4 var(--mono);text-transform:none;letter-spacing:0;border-radius:0}
+.fields textarea{border:1.5px solid var(--ink);min-height:92px;resize:vertical}
+.fields select{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231A1A1A' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 8px center}
+.fields input:focus,.fields select:focus,.fields textarea:focus{outline:none;background-color:rgba(198,40,40,.06);border-color:var(--red)}
+.fields fieldset{border:0;margin:0;padding:0}
+.fields legend{padding:0;margin-bottom:6px}
+.radios{display:flex;flex-wrap:wrap;gap:8px}
+.radios label{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1.5px solid var(--ink);font:400 15px var(--mono);letter-spacing:0;text-transform:none;cursor:pointer}
+.radios input,.check input{accent-color:var(--red);width:18px;height:18px}
+.check{display:flex!important;grid-template-columns:none;align-items:center;gap:10px;font:400 15px/1.3 var(--mono)!important;letter-spacing:0!important;text-transform:none!important;min-height:44px}
+.opt-t{font-weight:400;color:var(--grey);letter-spacing:0;text-transform:none;font-family:var(--mono)}
+.jobcard .sendrow{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;padding:10px 16px 0}
+.jobcard .fine{font-size:13.5px;color:var(--grey);margin:0}
+.carbon{position:relative;margin-top:22px;padding:16px 18px;border:1.5px dashed var(--ink);background:#EDE3CC;font-size:14.5px}
+.carbon h3{font-size:16px;margin-bottom:8px}
+.carbon dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0}
+.carbon dt{font:700 12px/1.6 var(--nar);letter-spacing:.12em;text-transform:uppercase}
+.carbon dd{margin:0;overflow-wrap:anywhere}
+.stamp{display:inline-block;margin:0 0 10px;padding:4px 10px;border:3px solid var(--red);color:var(--red-ink);font:700 16px/1.1 var(--nar);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-8deg);background:rgba(239,230,210,.7)}
+.contact{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:15px}
+.contact .k{margin:0}
+
+/* back cover */
+.back{background:#111;color:#E9DFC9;padding:34px 30px 40px 60px;border-top:6px solid #000;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 40px;align-items:end}
+.back .fn{margin:0;font:700 clamp(28px,4vw,44px)/1 var(--nar);text-transform:uppercase;overflow-wrap:anywhere}
+.back p{margin:6px 0 0;font-size:14px;color:#CFC5AE}
+.back a{color:#fff}
+
+/* page-turn leaf */
+.leaf{position:absolute;left:0;top:0;width:100%;max-height:calc(100vh + 160px);overflow:hidden;background:var(--page);z-index:6;pointer-events:none;transform-origin:0 35%;box-shadow:0 0 0 1px rgba(0,0,0,.08),-6px 0 18px rgba(0,0,0,.2)}
+.leaf .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,.05));opacity:0}
+
+@media (min-width:1360px){.board{display:block}}
+@media (max-width:1060px){
+  .diag{grid-template-columns:1fr}.sym{grid-row:auto}
+  .sym .opts{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+}
+@media (max-width:820px){
+  .bench{padding:0}
+  .book{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto auto}
+  .coil{grid-column:1;grid-row:1;height:42px;margin:0 0 -16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='56'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23f2f2f0'/%3E%3Cstop offset='.5' stop-color='%23a9a9a6'/%3E%3Cstop offset='1' stop-color='%23555553'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cellipse cx='14' cy='46' rx='4.5' ry='5' fill='%230d0d0d'/%3E%3Cpath d='M11.5 46C1 32 3 6 12.5 5c9-1 11 26 5.5 39' fill='none' stroke='url(%23m)' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E") 8px 0/28px 56px repeat-x}
+  .tb{grid-column:1;grid-row:2;padding:28px 16px 0}
+  .tabs{grid-column:1;grid-row:3;position:sticky;top:0;flex-direction:row;overflow-x:auto;padding:10px 12px 0;gap:4px;background:var(--bench);scrollbar-width:none;border-bottom:1.5px solid var(--ink)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{writing-mode:horizontal-tb;flex:none;flex-direction:row;width:auto;min-height:46px;margin:0;padding:0 14px;border:1.5px solid var(--ink);border-bottom:0;border-radius:10px 10px 0 0;box-shadow:none}
+  .tab:hover{transform:none}
+  .tab[aria-selected="true"]{width:auto;margin:0;transform:translateY(1.5px)}
+  .pages{grid-column:1;grid-row:4}
+  .back{grid-row:5;grid-template-columns:1fr;padding:30px 18px 44px}
+  .page{padding:22px 16px 32px}
+  .tb-grid{grid-template-columns:1fr 1fr}
+  .tb-main{grid-column:1/-1;grid-row:auto;border-right-width:0;border-bottom-width:1.5px;padding:16px 14px}
+  .tb-cell:nth-child(2),.tb-cell:nth-child(4){border-left-width:0}
+  .tb-cell:nth-child(3),.tb-cell:nth-child(5){border-left-width:1.5px}
+  .tb-cell:nth-child(4){border-bottom-width:0}
+  .mark{width:44px;height:44px}
+  .split,.cols2,.book-grid{grid-template-columns:1fr;gap:24px}
+  .steps3{grid-template-columns:1fr;gap:12px}
+  .verdict{grid-template-columns:1fr}
+  .gauge{display:flex;align-items:center;gap:16px}
+  .gauge svg{width:132px;flex:none}
+  .fields{grid-template-columns:1fr}
+  .anno{position:static;transform:rotate(-2deg);margin:14px 0 0}
+  table.spec thead{display:none}
+  table.spec,table.spec tbody,table.spec caption{display:block}
+  table.spec tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;padding:10px 0;border-bottom:1px solid rgba(26,26,26,.28)}
+  table.spec td{display:block;grid-column:1/-1;padding:0;border:0;text-align:left!important;white-space:normal!important;font-size:14.5px}
+  table.spec td:first-child{grid-column:1;grid-row:1;font-size:15.5px}
+  table.spec td:last-child{grid-column:2;grid-row:1;font:700 17px/1.3 var(--mono);color:var(--red-ink)}
+  table.spec td:last-child::before{content:none}
+  table.spec td[data-l]::before{content:attr(data-l) ": ";font:700 12px var(--nar);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+  .leaf{transform-origin:50% 0}
+}
+@media (max-width:480px){
+  .sym .opts{grid-template-columns:1fr}
+  .run span:first-child{display:none}
+  .tb-cell b{font-size:14.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#pages">Skip to the manual</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="ute">
+      <path class="ln" d="M24 158v-30q2-14 20-18l84-10 40-40q6-6 16-6h72q10 0 13 9l12 37h232v58h-58a36 36 0 0 0-72 0H134a36 36 0 0 0-72 0z"/>
+      <path class="ln thin" d="M168 68h82l9 28H138zM215 68v28M150 100v50M280 100v50M252 112h14M292 110h213M28 112h14v8H28zM24 142h26M154 84l-10-2v8zM505 162h14"/>
+      <circle class="ln" cx="419" cy="164" r="29"/><circle class="ln thin" cx="419" cy="164" r="16"/><circle class="ln thin" cx="419" cy="164" r="4"/>
+      <circle class="ln" cx="98" cy="164" r="29"/><circle class="ln thin" cx="98" cy="164" r="16"/><circle class="ln thin" cx="98" cy="164" r="4"/>
+    </g>
+    <path id="tp" d="M-4 1.4c-6 2-11 4-11 9 0 3 2 5 4 6M-2 5c-5 1-8 3-8 6 0 2 1 3 2 4M1 8c-3 1-4 2-4 4m9-16c8-1 14 3 15 10M4 1c6 0 10 3 10 8m-7-2c3 0 5 2 5 5M-8-4c3-4 9-6 15-5M-12-1c3-6 12-10 20-8"/>
+  </defs>
+</svg>
+
+<div class="bench">
+  <svg class="board l" viewBox="0 0 150 620" aria-hidden="true">
+    <circle class="pg" cx="75" cy="30" r="5"/><path d="M60 40l30 0-3 26 8 8v190l-10 14H65l-10-14V74l8-8z"/>
+    <circle class="pg" cx="75" cy="330" r="5"/><rect x="62" y="342" width="26" height="92" rx="6"/><path d="M75 434v150l-4 12h8l-4-12"/>
+  </svg>
+  <svg class="board r" viewBox="0 0 150 620" aria-hidden="true">
+    <circle class="pg" cx="75" cy="40" r="5"/><path d="M40 52h70v38H40zM67 90v180h16V90"/>
+    <circle class="pg" cx="75" cy="340" r="5"/><path d="M62 352c-8 40-10 90-4 130l10 90h14l10-90c6-40 4-90-4-130z"/>
+  </svg>
+
+  <div class="book">
+    <div class="coil" aria-hidden="true"></div>
+
+    <header class="tb">
+      <div class="tb-grid">
+        <div class="tb-main">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="1.5" y="1.5" width="61" height="61" fill="none" stroke="#1A1A1A" stroke-width="3"/><path d="M18 46l16-16m4-4 6-6" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round"/><path d="M42 12a9 9 0 1 0 10 10l-6 1-5-5z" fill="#B71C1C"/><circle cx="17" cy="47" r="6.5" fill="none" stroke="#1A1A1A" stroke-width="4"/></svg>
+          <div>
+            <p class="kicker">Workshop manual · Vol. 1</p>
+            <h1 data-brand>Spanner &amp; Sons Auto</h1>
+            <p class="tb-sub">Family mechanic · Harristown, Toowoomba QLD</p>
+          </div>
+        </div>
+        <div class="tb-cell"><span class="k">Doc. no.</span><b>SSA-TWB-01</b></div>
+        <div class="tb-cell"><span class="k">Revision</span><b>09 / 2026</b></div>
+        <div class="tb-cell"><span class="k">Phone</span><b><a href="tel:+61755504417">(07) 5550 4417</a></b></div>
+        <div class="tb-cell"><span class="k">Workshop</span><b>Mon–Fri 7:30–5:30<br>Sat 8–12</b></div>
+      </div>
+      <div class="tb-cta">
+        <button class="btn btn-red" type="button" data-turn="book">Book a service</button>
+        <button class="btn" type="button" data-turn="diag">What's that noise? <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h13m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+        <p>Ask for Dave, Josh or Liam — we'll explain it in plain English.</p>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Manual sections" id="tabs">
+      <button class="tab" role="tab" id="t-services" aria-controls="p-services" aria-selected="true" tabindex="0" type="button"><span class="n">1</span>Services</button>
+      <button class="tab" role="tab" id="t-logbook" aria-controls="p-logbook" aria-selected="false" tabindex="-1" type="button"><span class="n">2</span>Logbook</button>
+      <button class="tab" role="tab" id="t-tyres" aria-controls="p-tyres" aria-selected="false" tabindex="-1" type="button"><span class="n">3</span>Tyres &amp; brakes</button>
+      <button class="tab" role="tab" id="t-diag" aria-controls="p-diag" aria-selected="false" tabindex="-1" type="button"><span class="n">4</span>Diagnostics</button>
+      <button class="tab" role="tab" id="t-fleet" aria-controls="p-fleet" aria-selected="false" tabindex="-1" type="button"><span class="n">5</span>Fleet</button>
+      <button class="tab" role="tab" id="t-book" aria-controls="p-book" aria-selected="false" tabindex="-1" type="button"><span class="n">6</span>Book</button>
+    </nav>
+
+    <main class="pages" id="pages">
+
+      <!-- 1 SERVICES -->
+      <section class="page" id="p-services" role="tabpanel" aria-labelledby="t-services" tabindex="-1">
+        <p class="run"><span>Service manual</span><span>Section 1 — Services</span></p>
+        <div class="split">
+          <div>
+            <p class="secno">§ 1</p>
+            <h2>Services</h2>
+            <p class="lead">Everything a family car or a work ute needs — done by people who explain it plainly and ring you before doing anything you didn't approve.</p>
+            <ol class="legend">
+              <li><b>1</b>Engine bay, belts &amp; fluids</li>
+              <li><b>2</b>Brakes &amp; tyres</li>
+              <li><b>3</b>Suspension &amp; steering</li>
+              <li><b>4</b>Exhaust &amp; underbody</li>
+              <li><b>5</b>Lights, wipers &amp; battery</li>
+            </ol>
+          </div>
+          <figure class="fig">
+            <svg viewBox="0 0 540 236" role="img" aria-labelledby="f11t">
+              <title id="f11t">Line drawing of a single-cab ute with numbered call-outs: 1 engine bay, 2 brakes and tyres, 3 suspension and steering, 4 exhaust and underbody, 5 lights and battery.</title>
+              <path class="ln thin" d="M0 194h540" stroke-dasharray="10 4 2 4"/>
+              <use href="#ute"/>
+              <g class="co">
+                <path d="M80 104L70 76"/><circle cx="66" cy="64" r="12"/><text x="66" y="69">1</text>
+                <path d="M98 194l-18 18"/><circle cx="72" cy="220" r="12"/><text x="72" y="225">2</text>
+                <path d="M122 152l30 58"/><circle cx="156" cy="220" r="12"/><text x="156" y="225">3</text>
+                <path d="M512 164l-6 44"/><circle cx="504" cy="220" r="12"/><text x="504" y="225">4</text>
+                <path d="M34 114L22 88"/><circle cx="20" cy="76" r="12"/><text x="20" y="81">5</text>
+              </g>
+              <text class="hand" x="300" y="40">every service: 30-pt check</text>
+              <path d="M298 46c-20 10-30 24-34 40" stroke="#C62828" stroke-width="1.5" fill="none"/><path d="M262 78l2 10 7-7" stroke="#C62828" stroke-width="1.5" fill="none"/>
+            </svg>
+            <figcaption><b>Fig. 1-1</b> Where we look on every service.</figcaption>
+          </figure>
+        </div>
+        <table class="spec">
+          <caption>Table 1-A · Common jobs — sample prices inc. GST</caption>
+          <thead><tr><th scope="col">Job</th><th scope="col">What's included</th><th scope="col">Allow</th><th scope="col">From</th></tr></thead>
+          <tbody>
+            <tr><td>Basic service</td><td data-l="Includes">Oil &amp; filter, fluid top-ups, 30-point safety check, tyre rotation</td><td data-l="Allow">1.5 h</td><td data-l="From">$189</td></tr>
+            <tr><td>Logbook service</td><td data-l="Includes">Your manufacturer's schedule, parts to spec, logbook stamped</td><td data-l="Allow">2–3 h</td><td data-l="From">$299</td></tr>
+            <tr><td>Brake pads (per axle)</td><td data-l="Includes">Pads, rotor check or machining, fluid top-up, road test</td><td data-l="Allow">2 h</td><td data-l="From">$240</td></tr>
+            <tr><td>Wheel alignment</td><td data-l="Includes">Four-wheel alignment plus tyre pressure and condition report</td><td data-l="Allow">1 h</td><td data-l="From">$95</td></tr>
+            <tr><td>Diagnostic check</td><td data-l="Includes">Warning lights or noises: scan tool, inspection, road test</td><td data-l="Allow">1 h</td><td data-l="From">$129</td></tr>
+            <tr><td>Pre-purchase inspection</td><td data-l="Includes">Top-to-bottom check, road test and a written report</td><td data-l="Allow">1.5 h</td><td data-l="From">$199</td></tr>
+            <tr><td>Battery</td><td data-l="Includes">Test, supply and fit for most cars</td><td data-l="Allow">30 min</td><td data-l="From">$219</td></tr>
+            <tr><td>Cooling system</td><td data-l="Includes">Pressure test, hoses, coolant flush — worth it before towing up the range</td><td data-l="Allow">1.5 h</td><td data-l="From">Quote</td></tr>
+          </tbody>
+        </table>
+        <p class="note"><b>Note</b>Sample prices for this demo. Every car is different — we quote first and call before any extra work.</p>
+        <p class="folio"><span>Page 1-1</span><span>Rev. 09/2026</span></p>
+        <span class="smudge" style="width:180px;height:120px;right:40px;top:70px" aria-hidden="true"></span>
+        <svg class="thumb" viewBox="-20 -20 40 44" style="left:14px;bottom:60px" aria-hidden="true"><use href="#tp" fill="none" stroke="#2c2416" stroke-width="1.4"/></svg>
+      </section>
+
+      <!-- 2 LOGBOOK -->
+      <section class="page" id="p-logbook" role="tabpanel" aria-labelledby="t-logbook" tabindex="-1" hidden>
+        <p class="run"><span>Service manual</span><span>Section 2 — Logbook servicing</span></p>
+        <div class="split">
+          <div>
+            <p class="secno">§ 2</p>
+            <h2>Logbook servicing</h2>
+            <p class="lead">Your logbook sets the schedule — usually every 10,000–15,000 km or 6–12 months, whichever comes first. We follow it line by line, fit parts that meet the maker's spec, and stamp the book so the history stays complete.</p>
+            <p class="note" style="margin-top:20px"><b>Tip</b>Under new-car warranty? Bring the logbook along. Your warranty booklet explains its own conditions — we follow the manufacturer's schedule and specs.</p>
+          </div>
+          <div class="card" aria-labelledby="card2">
+            <h3 id="card2"><span>Service record · interval B</span><span>Fig. 2-1</span></h3>
+            <ul class="checks">
+              <li class="y">Engine oil &amp; filter<em>every</em></li>
+              <li class="y">Fluid levels &amp; leaks<em>every</em></li>
+              <li class="y">Brakes, pads &amp; lines<em>every</em></li>
+              <li class="y">Tyres rotated &amp; pressures<em>every</em></li>
+              <li class="y">Air &amp; cabin filters<em>2nd</em></li>
+              <li>Brake fluid replaced<em>2 yearly</em></li>
+              <li>Spark plugs<em>per book</em></li>
+              <li class="y">Lights, wipers, horn<em>every</em></li>
+              <li class="y">Road test &amp; logbook stamp<em>every</em></li>
+            </ul>
+          </div>
+        </div>
+        <ol class="steps3">
+          <li>Book online or call. Tell us the kilometres so we can check what's due.</li>
+          <li>Drop off before 8:30. We text if we find anything and wait for your OK.</li>
+          <li>Pick up by 5:30 — book stamped, invoice itemised, old parts kept if you ask.</li>
+        </ol>
+        <p class="caution"><b>General info</b>Service intervals vary by make, model and how you drive. Your logbook and a mechanic's inspection have the final word.</p>
+        <p class="folio"><span>Page 2-1</span><span>Rev. 09/2026</span></p>
+        <span class="smudge" style="width:150px;height:110px;left:30%;bottom:90px" aria-hidden="true"></span>
+      </section>
+
+      <!-- 3 TYRES & BRAKES -->
+      <section class="page" id="p-tyres" role="tabpanel" aria-labelledby="t-tyres" tabindex="-1" hidden>
+        <p class="run"><span>Service manual</span><span>Section 3 — Tyres &amp; brakes</span></p>
+        <p class="secno">§ 3</p>
+        <h2>Tyres &amp; brakes</h2>
+        <p class="lead">The two things between you and the road. Here's what we measure, and the signs that mean it's time to book.</p>
+        <div class="cols2">
+          <figure class="fig">
+            <svg viewBox="0 0 380 250" role="img" aria-labelledby="f31t">
+              <title id="f31t">Exploded view of a disc brake: A rotor, B brake pads, C caliper, D slide pins, with a note that pads under 3 millimetres need replacing.</title>
+              <path class="ln thin" d="M24 222L364 36" stroke-dasharray="14 5 3 5"/>
+              <g transform="rotate(-28 96 176)">
+                <ellipse class="ln" cx="104" cy="176" rx="24" ry="66"/><ellipse class="ln" cx="92" cy="176" rx="24" ry="66" fill="#EFE6D2"/>
+                <ellipse class="ln thin" cx="92" cy="176" rx="11" ry="30"/><circle class="ln thin" cx="88" cy="160" r="2.5"/><circle class="ln thin" cx="96" cy="176" r="2.5"/><circle class="ln thin" cx="88" cy="192" r="2.5"/>
+              </g>
+              <g transform="rotate(-28 190 128)"><rect class="ln" x="180" y="96" width="16" height="64" rx="7" fill="#EFE6D2"/><path class="ln thin" d="M186 104v48"/></g>
+              <g transform="rotate(-28 218 112)"><rect class="ln" x="208" y="80" width="16" height="64" rx="7" fill="#EFE6D2"/><path class="ln thin" d="M218 88v48"/></g>
+              <g transform="rotate(-28 284 78)"><path class="ln" d="M256 36h56v84h-56v-20h34V56h-34z" fill="#EFE6D2"/><circle class="ln thin" cx="300" cy="50" r="5"/><circle class="ln thin" cx="300" cy="106" r="5"/></g>
+              <path class="ln" d="M330 30l22-12m-16 20 22-12"/>
+              <g class="co">
+                <path d="M58 118l-10-26"/><circle cx="44" cy="80" r="12"/><text x="44" y="85">A</text>
+                <path d="M206 156l8 30"/><circle cx="216" cy="198" r="12"/><text x="216" y="203">B</text>
+                <path d="M300 128l14 30"/><circle cx="318" cy="170" r="12"/><text x="318" y="175">C</text>
+                <path d="M346 38l14 24"/><circle cx="364" cy="74" r="12"/><text x="364" y="79">D</text>
+              </g>
+              <text class="hand" x="96" y="30">pads under 3 mm → replace</text>
+              <path d="M170 38c10 18 20 32 26 48" stroke="#C62828" stroke-width="1.5" fill="none"/><path d="M190 80l6 8 2-10" stroke="#C62828" stroke-width="1.5" fill="none"/>
+            </svg>
+            <figcaption><b>Fig. 3-1</b> Disc brake, exploded. A rotor · B pads · C caliper · D slide pins.</figcaption>
+          </figure>
+          <figure class="fig">
+            <svg viewBox="0 0 320 250" role="img" aria-labelledby="f32t">
+              <title id="f32t">Cross-section of tyre tread showing the tread wear bar at 1.5 millimetres, highlighted in red, and a depth gauge in a groove.</title>
+              <path class="ln" d="M14 70h52v44h16V70h52v44h16V70h52v44h16V70h52v44h16V70h20" fill="none"/>
+              <path class="ln" d="M14 150c80 16 212 16 292 0M14 170c80 16 212 16 292 0" />
+              <path class="ln thin" d="M14 70v140M306 70v140"/>
+              <path class="ln thin" d="M14 132c80 14 212 14 292 0" stroke-dasharray="6 5"/>
+              <rect x="134" y="104" width="16" height="10" fill="#C62828"/>
+              <path d="M142 117v9h14" stroke="#C62828" stroke-width="1.5" fill="none"/>
+              <text class="hand" x="160" y="130" style="font-size:14px">1.5 mm wear bar</text>
+              <path class="ln" d="M278 30v80M264 30h28"/><path class="ln thin" d="M284 44h8M284 54h8M284 64h8"/>
+              <text x="296" y="26" text-anchor="end" style="font:600 11px var(--nar);letter-spacing:.1em;fill:#5A5040">GAUGE</text>
+              <text class="hand" x="18" y="40" style="font-size:14px">tread level with the bar?</text><text class="hand" x="18" y="58" style="font-size:14px">→ time for new tyres</text>
+              <text x="160" y="236" text-anchor="middle" style="font:600 12px var(--nar);letter-spacing:.12em;fill:#5A5040">TREAD · CROSS-SECTION (NOT TO SCALE)</text>
+            </svg>
+            <figcaption><b>Fig. 3-2</b> Tread wear indicators sit at 1.5 mm in the grooves.</figcaption>
+          </figure>
+        </div>
+        <div class="cols2">
+          <div>
+            <h3>Book a brake check if…</h3>
+            <ul class="warn">
+              <li>you hear a squeal or a grind when braking</li>
+              <li>the pedal feels soft, or sinks further than it used to</li>
+              <li>the car pulls to one side as you stop</li>
+              <li>you feel shudder through the pedal or the wheel</li>
+              <li>the brake warning light comes on</li>
+            </ul>
+          </div>
+          <table class="spec" style="margin-top:0">
+            <caption>Table 3-A · Tyre &amp; brake work — sample prices</caption>
+            <thead><tr><th scope="col">Job</th><th scope="col">From</th></tr></thead>
+            <tbody>
+              <tr><td>Fit &amp; balance (per tyre)</td><td data-l="From">$30</td></tr>
+              <tr><td>Puncture repair</td><td data-l="From">$35</td></tr>
+              <tr><td>Tyre rotation</td><td data-l="From">$40</td></tr>
+              <tr><td>Rotor machining (pair)</td><td data-l="From">$90</td></tr>
+              <tr><td>Brake fluid flush</td><td data-l="From">$110</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note"><b>Local</b>Heading down the range with a load on? Brakes work hardest on the descent — worth a check before the trip.</p>
+        <p class="folio"><span>Page 3-1</span><span>Rev. 09/2026</span></p>
+        <span class="smudge" style="width:200px;height:130px;right:18%;top:40%" aria-hidden="true"></span>
+        <svg class="thumb" viewBox="-20 -20 40 44" style="right:24px;bottom:70px;transform:rotate(24deg)" aria-hidden="true"><use href="#tp" fill="none" stroke="#2c2416" stroke-width="1.4"/></svg>
+      </section>
+
+      <!-- 4 DIAGNOSTICS -->
+      <section class="page" id="p-diag" role="tabpanel" aria-labelledby="t-diag" tabindex="-1" hidden>
+        <p class="run"><span>Service manual</span><span>Section 4 — Diagnostics</span></p>
+        <p class="secno">§ 4</p>
+        <h2>What's that noise?</h2>
+        <p class="lead">Pick the sound that's closest to yours. You'll see its rough shape, can hear a synthesised sample if you like, and get the usual suspects in plain English.</p>
+        <div class="diag">
+          <fieldset class="sym">
+            <legend>Step 1 · Choose a symptom</legend>
+            <div class="opts" id="opts"></div>
+            <p class="tipbox"><b>When you call, tell us:</b> when it happens (braking, turning, bumps or a certain speed), which corner it seems to come from, and whether it's getting worse.</p>
+          </fieldset>
+          <figure class="scope">
+            <div class="screen">
+              <span class="tag" aria-hidden="true">Scope · CH 1</span>
+              <svg viewBox="0 0 600 210" aria-hidden="true">
+                <defs>
+                  <pattern id="g1" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" fill="none" stroke="#1A1A1A" stroke-opacity=".1"/></pattern>
+                  <pattern id="g5" width="100" height="70" patternUnits="userSpaceOnUse"><path d="M100 0H0v70" fill="none" stroke="#1A1A1A" stroke-opacity=".28"/></pattern>
+                </defs>
+                <rect width="600" height="210" fill="url(#g1)"/><rect width="600" height="210" fill="url(#g5)"/>
+                <path d="M0 105h600" stroke="#1A1A1A" stroke-opacity=".45" stroke-dasharray="4 4"/>
+                <path id="trace" d="M0 105h600" fill="none" stroke="#C62828" stroke-width="2.6" stroke-linejoin="round"/>
+                <text x="592" y="200" text-anchor="end" style="font:600 12px var(--nar);letter-spacing:.12em;fill:#5A5040">TIME →</text>
+              </svg>
+            </div>
+            <figcaption><b>Fig. 4-1</b> Sound shape: <span id="shapeName">Squeal when braking</span> — <span id="shapeDesc"></span></figcaption>
+            <div class="play">
+              <button class="btn" id="playBtn" type="button" aria-pressed="false"><svg viewBox="0 0 18 18" aria-hidden="true"><path id="playIco" d="M4 2l12 7-12 7z" fill="currentColor"/></svg><span id="playTxt">Play a rough sample</span></button>
+              <span class="fine">Sound stays off until you press play. It's synthesised in your browser — a rough guide, not a recording.</span>
+            </div>
+          </figure>
+          <div class="verdict" id="verdict" aria-live="polite">
+            <div class="gauge">
+              <svg viewBox="0 0 200 120" aria-hidden="true">
+                <path d="M20 100A80 80 0 0 1 60 30.7" fill="none" stroke="#A89A7C" stroke-width="16"/>
+                <path d="M61.5 29.9A80 80 0 0 1 138.5 29.9" fill="none" stroke="#1A1A1A" stroke-width="16"/>
+                <path d="M140 30.7A80 80 0 0 1 180 100" fill="none" stroke="#C62828" stroke-width="16"/>
+                <text x="26" y="116" style="font:700 12px var(--nar);letter-spacing:.1em">LOW</text>
+                <text x="100" y="14" text-anchor="middle" style="font:700 12px var(--nar);letter-spacing:.1em">SOON</text>
+                <text x="176" y="116" text-anchor="end" style="font:700 12px var(--nar);letter-spacing:.1em;fill:#B71C1C">NOW</text>
+                <g class="needle" id="needle"><path d="M100 100L100 34" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="100" r="8" fill="#1A1A1A"/><circle cx="100" cy="100" r="3" fill="#EFE6D2"/></g>
+              </svg>
+              <p class="lvl" id="lvl"></p>
+            </div>
+            <div>
+              <h3>Likely suspects</h3>
+              <ol class="suspects" id="suspects"></ol>
+              <button class="btn btn-red" id="bookCheck" type="button">Book a check for this noise</button>
+            </div>
+          </div>
+        </div>
+        <p class="caution"><b>General info</b>A mechanic has to inspect the car to diagnose it — this guide can't. If a noise comes with a warning light, a soft pedal or the car pulling, stop driving and call us.</p>
+        <p class="folio"><span>Page 4-1</span><span>Rev. 09/2026</span></p>
+        <span class="smudge" style="width:170px;height:110px;left:12px;top:48%" aria-hidden="true"></span>
+      </section>
+
+      <!-- 5 FLEET -->
+      <section class="page" id="p-fleet" role="tabpanel" aria-labelledby="t-fleet" tabindex="-1" hidden>
+        <p class="run"><span>Service manual</span><span>Section 5 — Fleet</span></p>
+        <div class="split">
+          <div>
+            <p class="secno">§ 5</p>
+            <h2>Fleet &amp; tradie utes</h2>
+            <p class="lead">Keep the work vehicles earning. We look after small fleets — two utes or twenty — around Toowoomba and the Downs.</p>
+          </div>
+          <figure class="fig">
+            <svg viewBox="0 0 540 170" role="img" aria-labelledby="f51t">
+              <title id="f51t">Three utes in a row labelled 01, 02 and 03, with hand-written notes: service due Mon 5 Oct, tyres done, brakes next.</title>
+              <g transform="translate(0 40) scale(.33)"><use href="#ute"/></g>
+              <g transform="translate(180 40) scale(.33)"><use href="#ute"/></g>
+              <g transform="translate(360 40) scale(.33)"><use href="#ute"/></g>
+              <path class="ln thin" d="M0 106h540"/>
+              <g style="font:700 15px var(--nar);letter-spacing:.14em">
+                <text x="86" y="132" text-anchor="middle">UTE 01</text><text x="266" y="132" text-anchor="middle">UTE 02</text><text x="446" y="132" text-anchor="middle">UTE 03</text>
+              </g>
+              <text class="hand" x="36" y="28" style="font-size:14px">due Mon 5 Oct</text>
+              <text class="hand" x="226" y="28" style="font-size:14px">tyres ✓</text>
+              <text class="hand" x="396" y="28" style="font-size:14px">brakes next</text>
+            </svg>
+            <figcaption><b>Fig. 5-1</b> One sheet per vehicle, one invoice per month.</figcaption>
+          </figure>
+        </div>
+        <div class="cols2">
+          <ul class="checks" style="gap:10px">
+            <li class="y">Priority bookings, usually same week</li>
+            <li class="y">One monthly invoice for every vehicle</li>
+            <li class="y">Service reminders by text</li>
+            <li class="y">Pick-up and drop-off within Toowoomba</li>
+            <li class="y">Pre-trip checks before long hauls</li>
+            <li class="y">Tyre &amp; brake report per vehicle</li>
+          </ul>
+          <div class="card">
+            <h3><span>Fleet terms (sample)</span><span>Table 5-A</span></h3>
+            <p style="margin:0 0 10px;font-size:15px">Monthly accounts for local businesses. Rates depend on vehicle type and how many you run — tell us about your fleet and we'll put it in writing.</p>
+            <button class="btn" type="button" data-turn="book" data-service="Fleet enquiry">Talk to us about your fleet</button>
+          </div>
+        </div>
+        <p class="folio"><span>Page 5-1</span><span>Rev. 09/2026</span></p>
+        <span class="smudge" style="width:160px;height:100px;right:26px;bottom:110px" aria-hidden="true"></span>
+      </section>
+
+      <!-- 6 BOOK -->
+      <section class="page" id="p-book" role="tabpanel" aria-labelledby="t-book" tabindex="-1" hidden>
+        <p class="run"><span>Service manual</span><span>Section 6 — Book</span></p>
+        <p class="secno">§ 6</p>
+        <h2>Book a service</h2>
+        <p class="lead">Fill in the job card and we'll call to confirm a time and a rough price. Nothing is booked until we've spoken.</p>
+        <div class="book-grid">
+          <div>
+            <form class="jobcard" id="jobForm" aria-labelledby="jcT">
+              <div class="jc-head"><span id="jcT">Job card</span><span>Workshop copy</span></div>
+              <div class="fields">
+                <label>Your name<input name="name" required autocomplete="name"></label>
+                <label>Phone<input name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+                <label><span>Email <span class="opt-t">(optional)</span></span><input name="email" type="email" autocomplete="email"></label>
+                <label><span>Rego <span class="opt-t">(optional)</span></span><input name="rego" autocomplete="off"></label>
+                <label class="wide">Make &amp; model<input name="car" required placeholder="e.g. 2017 dual-cab ute"></label>
+                <label class="wide">Job
+                  <select name="service" id="svc" required>
+                    <option>Basic service</option><option>Logbook service</option><option>Brakes</option><option>Tyres &amp; alignment</option><option>Diagnostic check (noise)</option><option>Diagnostic check (warning light)</option><option>Pre-purchase inspection</option><option>Fleet enquiry</option><option>Something else</option>
+                  </select>
+                </label>
+                <label>Preferred day<select name="day" id="day" required></select></label>
+                <fieldset class="wide"><legend>Drop-off time</legend>
+                  <div class="radios">
+                    <label><input type="radio" name="drop" value="7:30 am" checked>7:30 am</label>
+                    <label><input type="radio" name="drop" value="8:00 am">8:00 am</label>
+                    <label><input type="radio" name="drop" value="8:30 am">8:30 am</label>
+                  </div>
+                </fieldset>
+                <label class="wide">What's going on?<textarea name="notes" id="notes" rows="4" placeholder="Noises, warning lights, anything you've noticed"></textarea></label>
+                <label class="check wide"><input type="checkbox" name="lift"> I'd like a lift into town after drop-off</label>
+              </div>
+              <div class="sendrow">
+                <button class="btn btn-red" type="submit">Send booking request</button>
+                <p class="fine">Demo form — nothing is sent.</p>
+              </div>
+            </form>
+            <div class="carbon" id="carbon" hidden tabindex="-1">
+              <span class="stamp">Demo · not booked</span>
+              <h3>Carbon copy — what the workshop would receive</h3>
+              <dl id="carbonDl"></dl>
+            </div>
+          </div>
+          <ul class="contact">
+            <li><span class="k">Workshop</span>Harristown, Toowoomba QLD</li>
+            <li><span class="k">Hours</span>Mon–Fri 7:30 am – 5:30 pm<br>Sat 8 am – 12 pm (by booking)<br>Sun &amp; public holidays closed</li>
+            <li><span class="k">Call</span><a href="tel:+61755504417">(07) 5550 4417</a></li>
+            <li><span class="k">Email</span><a href="mailto:workshop@example.com">workshop@example.com</a></li>
+            <li><span class="k">After hours</span>Key drop slot by the roller door — pop the job card in with the keys.</li>
+          </ul>
+        </div>
+        <p class="folio"><span>Page 6-1</span><span>Rev. 09/2026</span></p>
+      </section>
+    </main>
+
+    <footer class="back">
+      <div>
+        <p class="fn" data-brand>Spanner &amp; Sons Auto</p>
+        <p>Harristown, Toowoomba QLD · (07) 5550 4417 · workshop@example.com</p>
+        <p>A fictional family mechanic, made as a concept demo. Prices are samples; the noise guide is general information only.</p>
+      </div>
+      <p>End of manual · Rev. 09/2026</p>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var phoneMq = window.matchMedia("(max-width: 820px)");
+
+  /* ---------------- tabs + page turning ---------------- */
+  var ORDER = ["services", "logbook", "tyres", "diag", "fleet", "book"];
+  var tabs = ORDER.map(function(id){ return $("#t-" + id); });
+  var pages = ORDER.map(function(id){ return $("#p-" + id); });
+  var pagesEl = $("#pages"), tablist = $("#tabs");
+  var cur = 0, turning = null;
+
+  function setTabs(i){
+    tabs.forEach(function(t, k){ t.setAttribute("aria-selected", k === i ? "true" : "false"); t.tabIndex = k === i ? 0 : -1; });
+    if (phoneMq.matches) {
+      var t = tabs[i], box = tablist;
+      var left = t.offsetLeft - (box.clientWidth - t.offsetWidth) / 2;
+      box.scrollTo({ left: left, behavior: reduced ? "auto" : "smooth" });
+    }
+  }
+  function bringIntoView(){
+    var offset = phoneMq.matches ? tablist.offsetHeight + 4 : 12;
+    var top = pagesEl.getBoundingClientRect().top + window.scrollY - offset;
+    if (window.scrollY > top + 2 || pagesEl.getBoundingClientRect().top > window.innerHeight * 0.7) window.scrollTo(0, Math.max(0, top));
+  }
+  function finishTurn(){ if (turning) { turning.finish(); } }
+  function turn(i, after){
+    if (i === cur) { setTabs(i); if (after) after(); return; }
+    finishTurn();
+    var from = pages[cur], to = pages[i], fwd = i > cur;
+    setTabs(i);
+    bringIntoView();
+    if (reduced || !pagesEl.animate) {
+      from.hidden = true; to.hidden = false; cur = i; onShown(i); if (after) after(); return;
+    }
+    var src = fwd ? from : to;
+    var leaf = document.createElement("div");
+    leaf.className = "leaf"; leaf.setAttribute("aria-hidden", "true"); leaf.inert = true;
+    var clone = src.cloneNode(true);
+    clone.hidden = false; clone.removeAttribute("id"); clone.removeAttribute("role"); clone.removeAttribute("aria-labelledby");
+    $$("[id]", clone).forEach(function(e){ e.removeAttribute("id"); });
+    $$("[data-brand]", clone).forEach(function(e){ e.removeAttribute("data-brand"); });
+    leaf.appendChild(clone);
+    var shade = document.createElement("i"); shade.className = "shade"; leaf.appendChild(shade);
+    if (fwd) { from.hidden = true; to.hidden = false; }
+    pagesEl.appendChild(leaf);
+    var phone = phoneMq.matches;
+    var kf = phone
+      ? [{ transform: "perspective(1800px) rotateX(0deg)", opacity: 1 }, { transform: "perspective(1800px) rotateX(-62deg)", opacity: 1, offset: 0.6 }, { transform: "perspective(1800px) rotateX(-92deg)", opacity: 0 }]
+      : [{ transform: "perspective(2600px) rotateY(0deg)", opacity: 1 }, { transform: "perspective(2600px) rotateY(-66deg)", opacity: 1, offset: 0.62 }, { transform: "perspective(2600px) rotateY(-100deg)", opacity: 0 }];
+    var opts = { duration: phone ? 560 : 760, easing: "cubic-bezier(.42,.05,.4,1)", direction: fwd ? "normal" : "reverse", fill: "both" };
+    var a = leaf.animate(kf, opts);
+    shade.animate([{ opacity: 0 }, { opacity: 0.55 }], opts);
+    turning = a;
+    a.onfinish = function(){
+      if (!fwd) { from.hidden = true; to.hidden = false; }
+      leaf.remove(); turning = null; cur = i; onShown(i); if (after) after();
+    };
+  }
+  tabs.forEach(function(t, i){ t.addEventListener("click", function(){ turn(i); }); });
+  tablist.addEventListener("keydown", function(e){
+    var i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    var n = null;
+    if (e.key === "ArrowDown" || e.key === "ArrowRight") n = (i + 1) % tabs.length;
+    else if (e.key === "ArrowUp" || e.key === "ArrowLeft") n = (i + tabs.length - 1) % tabs.length;
+    else if (e.key === "Home") n = 0; else if (e.key === "End") n = tabs.length - 1;
+    if (n === null) return;
+    e.preventDefault();
+    tabs.forEach(function(t, k){ t.tabIndex = k === n ? 0 : -1; });
+    tabs[n].focus();
+  });
+  function scrollToPages(){
+    var offset = phoneMq.matches ? tablist.offsetHeight + 4 : 12;
+    window.scrollTo({ top: Math.max(0, pagesEl.getBoundingClientRect().top + window.scrollY - offset), behavior: reduced ? "auto" : "smooth" });
+  }
+  document.addEventListener("click", function(e){
+    var b = e.target.closest("[data-turn]"); if (!b) return;
+    var i = ORDER.indexOf(b.getAttribute("data-turn")); if (i < 0) return;
+    var svc = b.getAttribute("data-service");
+    scrollToPages();
+    turn(i, function(){
+      if (svc) $("#svc").value = svc;
+      var h = pages[i].querySelector("h2"); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); }
+    });
+  });
+
+  /* ---------------- diagnostics: shapes, sounds, suspects ---------------- */
+  var SYM = {
+    squeal: { name: "Squeal when braking", desc: "one high, thin note that holds while you brake.", lvl: 1,
+      say: "Book a check within the next week or two.",
+      sus: [["Pad wear indicators", "A small metal tab that squeals on purpose when the pads are nearly worn through."], ["Glazed pads or rotors", "Hard, shiny surfaces after heavy braking — they squeal and grip less."], ["Missing shims or brake dust", "Anti-squeal shims or grease left out after a cheap pad job."]] },
+    grind: { name: "Grinding", desc: "rough and scratchy, with jagged peaks — metal on metal.", lvl: 2,
+      say: "Don't put it off — if it's getting worse, park it and call us.",
+      sus: [["Pads worn to the backing plate", "Steel on the rotor. It damages rotors fast and stopping distances grow."], ["A stone caught at the rotor", "Sounds terrible, often a quick fix — still needs a look."], ["A failing wheel bearing", "Grinding or rumble that changes with speed rather than braking."]] },
+    clunk: { name: "Clunk over bumps", desc: "one heavy knock, then quiet, each time a wheel hits a bump.", lvl: 1,
+      say: "Book a check soon — suspension parts affect steering.",
+      sus: [["Sway bar links or bushes", "The most common clunk. Cheap parts, quick job."], ["Tired shock absorber mounts", "Rubber mounts wear out and let the shock knock."], ["Ball joints or control-arm bushes", "These hold the wheel in place — don't leave them."]] },
+    click: { name: "Clicking when turning", desc: "a fast tick-tick-tick that speeds up with the wheels on a full turn.", lvl: 1,
+      say: "Book a check soon — a worn CV joint can let go.",
+      sus: [["Outer CV joint wearing", "The classic click on tight turns, like in a car park."], ["Torn CV boot", "Grease escapes, grit gets in, and the joint wears quickly."], ["Loose hub nut or wheel trim", "Less common, but easy to rule out."]] },
+    whine: { name: "Whine that rises with speed", desc: "a smooth tone whose pitch climbs as the car speeds up.", lvl: 0,
+      say: "Mention it at your next service — sooner if it gets louder.",
+      sus: [["Wheel bearing", "A hum or roar that changes as you weave gently side to side."], ["Differential", "A whine that changes when you accelerate or lift off."], ["Uneven tyre wear", "Feathered or cupped tyres can sing at highway speed."]] }
+  };
+  var LV = ["Low", "Soon", "Now"], ANG = [-60, 0, 60];
+  var ICON = {
+    squeal: '<circle class="ln" cx="11" cy="15" r="7"/><circle class="ln thin" cx="11" cy="15" r="2.5"/><path class="ln" d="M21 8c2 2 2 5 0 7M24 5c4 4 4 10 0 14"/>',
+    grind: '<path class="ln" d="M2 20l4-8 3 5 3-9 3 7 3-6 3 8 4-5"/><path class="ln thin" d="M3 26h24"/>',
+    clunk: '<path class="ln" d="M15 3v4l-6 3 12 4-12 4 12 4-6 3v4"/><path class="ln thin" d="M4 29h22"/>',
+    click: '<circle class="ln" cx="15" cy="15" r="11"/><circle class="ln thin" cx="15" cy="15" r="3"/><path class="ln thin" d="M4 15h8M18 15h8M15 18v8"/>',
+    whine: '<path class="ln" d="M4 21a11 11 0 1 1 22 0"/><path class="ln" d="M15 21l7-8"/><path class="ln thin" d="M7 13l2 2M15 9v3M23 13l-2 2"/>'
+  };
+  var opts = $("#opts"), keys = Object.keys(SYM);
+  opts.innerHTML = keys.map(function(k, i){
+    return '<label class="opt"><input type="radio" name="sym" value="' + k + '"' + (i === 0 ? " checked" : "") + '><span><svg viewBox="0 0 30 30" aria-hidden="true">' + ICON[k] + '</svg>' + SYM[k].name + '</span></label>';
+  }).join("");
+  var sym = "squeal", symT0 = 0;
+  function render(){
+    var s = SYM[sym];
+    $("#shapeName").textContent = s.name;
+    $("#shapeDesc").textContent = s.desc;
+    $("#lvl").innerHTML = "<b>" + LV[s.lvl] + "</b> — " + s.say;
+    $("#needle").style.transform = "rotate(" + ANG[s.lvl] + "deg)";
+    $("#suspects").innerHTML = s.sus.map(function(x){ return "<li><b>" + x[0] + ".</b> " + x[1] + "</li>"; }).join("");
+    symT0 = performance.now();
+    if (!running) draw(0);
+  }
+  opts.addEventListener("change", function(e){ if (e.target.name === "sym") { sym = e.target.value; stopSound(); render(); } });
+
+  // value noise for the rough shapes
+  var NZ = []; for (var i = 0; i < 256; i++) NZ.push(Math.sin(i * 12.9898 + 78.233) * 43758.5453 % 1);
+  function noise(x){ var i = Math.floor(x), f = x - i, a = NZ[(i % 256 + 256) % 256], b = NZ[((i + 1) % 256 + 256) % 256]; f = f * f * (3 - 2 * f); return a + (b - a) * f; }
+  var SHAPE = {
+    squeal: function(x, t){ var env = Math.sin(Math.PI * x / 600); return 62 * env * Math.sin(x * 0.62 - t * 11) * (0.86 + 0.14 * Math.sin(x * 0.02 + t)); },
+    grind: function(x, t){ return 72 * (noise(x * 0.11 + t * 7) * 0.9 + noise(x * 0.47 + t * 13) * 0.55 - 0.18) * (0.72 + 0.28 * Math.sin(x * 0.031 - t * 3)); },
+    clunk: function(x, t){ var P = 200, ph = ((x + t * 55) % P + P) % P; return 84 * Math.exp(-ph / 26) * Math.sin(ph * 0.2); },
+    click: function(x, t){ var u = x / 600, sp = 62 - 30 * u, ph = ((x * (1 + u * 0.4) + t * 90) % sp + sp) % sp; return ph < 3 ? -66 : ph < 6 ? 52 : 3 * Math.sin(x * 0.9 + t * 20); },
+    whine: function(x, t){ var u = x / 600; return 50 * (0.55 + 0.45 * u) * Math.sin(x * 0.05 + x * x * 0.00042 - t * 9); }
+  };
+  var trace = $("#trace"), running = false, raf = 0, visible = false;
+  function draw(t){
+    var k = Math.min(1, (performance.now() - symT0) / 380), f = SHAPE[sym], d = "M0 " + (105 - f(0, t) * k).toFixed(1);
+    for (var x = 3; x <= 600; x += 3) d += "L" + x + " " + (105 - f(x, t) * k).toFixed(1);
+    trace.setAttribute("d", d);
+  }
+  function loop(ts){ raf = 0; if (!running) return; draw(ts / 1000); raf = requestAnimationFrame(loop); }
+  function updateLoop(){
+    var should = !reduced && visible && ORDER[cur] === "diag" && !document.hidden;
+    if (should && !running) { running = true; raf = requestAnimationFrame(loop); }
+    if (!should && running) { running = false; if (raf) cancelAnimationFrame(raf); raf = 0; draw(1.3); }
+  }
+  if ("IntersectionObserver" in window) new IntersectionObserver(function(es){ visible = es[0].isIntersecting; updateLoop(); }).observe($(".screen"));
+  else visible = true;
+  document.addEventListener("visibilitychange", function(){ updateLoop(); if (document.hidden) stopSound(); });
+
+  /* Web Audio: synthesised samples, only after a click */
+  var ac = null, master = null, voice = null, endTimer = 0;
+  function ctx(){
+    if (!ac) {
+      var AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
+      ac = new AC(); master = ac.createGain(); master.gain.value = 0.8;
+      var comp = ac.createDynamicsCompressor(); master.connect(comp); comp.connect(ac.destination);
+    }
+    if (ac.state === "suspended") ac.resume();
+    return ac;
+  }
+  var noiseBuf = null;
+  function noiseSrc(a){
+    if (!noiseBuf) { noiseBuf = a.createBuffer(1, a.sampleRate * 2, a.sampleRate); var ch = noiseBuf.getChannelData(0); for (var i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1; }
+    var s = a.createBufferSource(); s.buffer = noiseBuf; s.loop = true; return s;
+  }
+  function env(a, g, t, peak, atk, hold, rel){ g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(peak, t + atk); g.gain.setValueAtTime(peak, t + atk + hold); g.gain.exponentialRampToValueAtTime(0.0001, t + atk + hold + rel); }
+  var SOUND = {
+    squeal: function(a, out, t, n){
+      var o = a.createOscillator(); o.frequency.value = 3150;
+      var l = a.createOscillator(); l.frequency.value = 6.5; var lg = a.createGain(); lg.gain.value = 40; l.connect(lg); lg.connect(o.frequency);
+      var g = a.createGain(); env(a, g, t, 0.07, 0.25, 0.9, 0.35); o.connect(g); g.connect(out);
+      [o, l].forEach(function(x){ x.start(t); x.stop(t + 1.6); n.push(x); }); return 1.6;
+    },
+    grind: function(a, out, t, n){
+      var s = noiseSrc(a), bp = a.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 900; bp.Q.value = 0.9;
+      var g = a.createGain(); env(a, g, t, 0.55, 0.08, 1.2, 0.3);
+      var am = a.createGain(); am.gain.value = 0.5; var lfo = a.createOscillator(); lfo.type = "square"; lfo.frequency.value = 17; var lfoG = a.createGain(); lfoG.gain.value = 0.5; lfo.connect(lfoG); lfoG.connect(am.gain);
+      s.connect(bp); bp.connect(am); am.connect(g); g.connect(out);
+      var saw = a.createOscillator(); saw.type = "sawtooth"; saw.frequency.value = 62; var lp = a.createBiquadFilter(); lp.frequency.value = 320; var sg = a.createGain(); env(a, sg, t, 0.12, 0.08, 1.2, 0.3); saw.connect(lp); lp.connect(sg); sg.connect(out);
+      [s, lfo, saw].forEach(function(x){ x.start(t); x.stop(t + 1.7); n.push(x); }); return 1.7;
+    },
+    clunk: function(a, out, t, n){
+      [0, 0.62, 1.2].forEach(function(dt){
+        var o = a.createOscillator(); o.frequency.setValueAtTime(120, t + dt); o.frequency.exponentialRampToValueAtTime(42, t + dt + 0.16);
+        var g = a.createGain(); g.gain.setValueAtTime(0.0001, t + dt); g.gain.linearRampToValueAtTime(0.9, t + dt + 0.008); g.gain.exponentialRampToValueAtTime(0.0001, t + dt + 0.32);
+        o.connect(g); g.connect(out); o.start(t + dt); o.stop(t + dt + 0.35); n.push(o);
+        var s = noiseSrc(a), hp = a.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 900; var ng = a.createGain(); ng.gain.setValueAtTime(0.25, t + dt); ng.gain.exponentialRampToValueAtTime(0.0001, t + dt + 0.05);
+        s.connect(hp); hp.connect(ng); ng.connect(out); s.start(t + dt); s.stop(t + dt + 0.06); n.push(s);
+      }); return 1.6;
+    },
+    click: function(a, out, t, n){
+      var at = 0, gap = 0.17;
+      for (var i = 0; i < 16; i++) {
+        var s = noiseSrc(a), bp = a.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 2600; bp.Q.value = 3;
+        var g = a.createGain(); g.gain.setValueAtTime(0.9, t + at); g.gain.exponentialRampToValueAtTime(0.0001, t + at + 0.03);
+        s.connect(bp); bp.connect(g); g.connect(out); s.start(t + at); s.stop(t + at + 0.04); n.push(s);
+        at += gap; gap = Math.max(0.075, gap * 0.94);
+      } return at + 0.1;
+    },
+    whine: function(a, out, t, n){
+      var o = a.createOscillator(); o.type = "sawtooth"; o.frequency.setValueAtTime(360, t); o.frequency.exponentialRampToValueAtTime(1100, t + 1.8);
+      var lp = a.createBiquadFilter(); lp.frequency.value = 1700; var g = a.createGain(); env(a, g, t, 0.045, 0.3, 1.3, 0.3);
+      var o2 = a.createOscillator(); o2.frequency.setValueAtTime(180, t); o2.frequency.exponentialRampToValueAtTime(550, t + 1.8); var g2 = a.createGain(); env(a, g2, t, 0.05, 0.3, 1.3, 0.3);
+      o.connect(lp); lp.connect(g); g.connect(out); o2.connect(g2); g2.connect(out);
+      [o, o2].forEach(function(x){ x.start(t); x.stop(t + 2); n.push(x); }); return 2;
+    }
+  };
+  var playBtn = $("#playBtn");
+  function setPlayUI(on){
+    playBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    $("#playTxt").textContent = on ? "Stop sample" : "Play a rough sample";
+    $("#playIco").setAttribute("d", on ? "M4 3h10v12H4z" : "M4 2l12 7-12 7z");
+  }
+  function stopSound(){
+    clearTimeout(endTimer);
+    if (voice && ac) {
+      var now = ac.currentTime;
+      try { voice.g.gain.cancelScheduledValues(now); voice.g.gain.setTargetAtTime(0, now, 0.02); } catch (e) {}
+      voice.n.forEach(function(x){ try { x.stop(now + 0.1); } catch (e) {} });
+    }
+    voice = null; setPlayUI(false);
+  }
+  playBtn.addEventListener("click", function(){
+    if (voice) { stopSound(); return; }
+    var a = ctx(); if (!a) { if (window.DemoKit) DemoKit.toast("This browser can't play synthesised audio."); return; }
+    var g = a.createGain(); g.connect(master);
+    var n = [], dur = SOUND[sym](a, g, a.currentTime + 0.03, n);
+    voice = { g: g, n: n }; setPlayUI(true);
+    endTimer = setTimeout(function(){ voice = null; setPlayUI(false); }, (dur + 0.15) * 1000);
+  });
+
+  /* ---------------- booking ---------------- */
+  var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  (function fillDays(){
+    var ymd;
+    try { ymd = new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Brisbane", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-").map(Number); }
+    catch (e) { var d0 = new Date(); ymd = [d0.getFullYear(), d0.getMonth() + 1, d0.getDate()]; }
+    var base = Date.UTC(ymd[0], ymd[1] - 1, ymd[2]), out = [], k = 1;
+    while (out.length < 10 && k < 20) {
+      var d = new Date(base + k * 864e5), wd = d.getUTCDay();
+      if (wd !== 0) out.push(DAYS[wd] + " " + d.getUTCDate() + " " + MON[d.getUTCMonth()] + (wd === 6 ? " (morning)" : ""));
+      k++;
+    }
+    $("#day").innerHTML = out.map(function(s){ return "<option>" + s + "</option>"; }).join("");
+  })();
+  $("#bookCheck").addEventListener("click", function(){
+    var s = SYM[sym];
+    stopSound();
+    turn(ORDER.indexOf("book"), function(){
+      $("#svc").value = "Diagnostic check (noise)";
+      $("#notes").value = "Noise: " + s.name.toLowerCase() + ". From your guide, likely suspects: " + s.sus.map(function(x){ return x[0]; }).join("; ") + ". It happens when: ";
+      var f = $("#jobForm"), first = $$("input[required]", f).filter(function(x){ return !x.value; })[0] || $("#notes");
+      first.focus();
+      if (window.DemoKit) DemoKit.toast("Job card pre-filled with your noise — add your details.");
+    });
+  });
+  $("#jobForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = e.target, fd = new FormData(f);
+    var rows = [["Name", fd.get("name")], ["Phone", fd.get("phone")], ["Car", fd.get("car") + (fd.get("rego") ? " · " + fd.get("rego") : "")], ["Job", fd.get("service")], ["Day", fd.get("day") + ", drop-off " + fd.get("drop")], ["Lift", fd.get("lift") ? "Yes, into town" : "No"], ["Notes", fd.get("notes") || "—"]];
+    var dl = $("#carbonDl"); dl.innerHTML = "";
+    rows.forEach(function(r){ var dt = document.createElement("dt"), dd = document.createElement("dd"); dt.textContent = r[0]; dd.textContent = r[1]; dl.appendChild(dt); dl.appendChild(dd); });
+    var c = $("#carbon"); c.hidden = false; c.focus();
+    if (window.DemoKit) DemoKit.toast("Demo only — no booking was made. A real workshop would call you to confirm.");
+  });
+
+  function onShown(i){ updateLoop(); }
+  phoneMq.addEventListener && phoneMq.addEventListener("change", function(){ setTabs(cur); });
+  render(); updateLoop();
+})();
+</script>
+</body>
+</html>

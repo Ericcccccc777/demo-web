@@ -1,0 +1,18 @@
+{
+  "_readme": "Single source of truth for studio facts. null = not provided yet: the site hides that item or shows an honest 'not connected yet' state. Edit, then run: python3 tools/build.py",
+  "name": "Hundred Drawers",
+  "name_is_placeholder": true,
+  "name_zh": "百屉",
+  "tagline": {
+    "en": "Websites for small businesses across Australia",
+    "zh": "为澳洲小生意做网站"
+  },
+  "email": null,
+  "phone": null,
+  "whatsapp": null,
+  "wechat": null,
+  "instagram": null,
+  "abn": null,
+  "city": null,
+  "site_url": null
+}

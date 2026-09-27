@@ -1,0 +1,8 @@
+{
+  "id": "043",
+  "tech": ["CSS Grid", "CSS Scroll Snap", "SVG", "SVG animation", "Date logic", "IntersectionObserver", "Keyboard shortcuts"],
+  "features": ["booking", "accessibility"],
+  "interaction": "Pick a day from the sliding day strip, filter by level and time of day, tap Book on a class and choose a free reformer on a 12-reformer studio floor plan in a bottom sheet, then hold it (demo toast, nothing is booked).",
+  "fonts": ["Bricolage Grotesque", "Cormorant"],
+  "notes": "Sample seven-day timetable generated from today's date in Sydney time; capacity and taken reformers are seeded samples."
+}

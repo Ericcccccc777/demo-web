@@ -1,0 +1,8 @@
+{
+  "id": "051",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "Form logic"],
+  "features": ["accessibility"],
+  "interaction": "An accessibility panel that really works: text size 100–175%, high-contrast mode, dyslexia-friendly spacing, reduce motion and an Easy Read mode that swaps paragraphs for short sentences with pictures — changes apply instantly, are announced to screen readers and are remembered in the browser.",
+  "fonts": ["Atkinson Hyperlegible"],
+  "notes": "Settings are stored in localStorage when available (otherwise they last for the visit). Team members are illustrated, not photographed."
+}

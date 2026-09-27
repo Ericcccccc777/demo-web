@@ -1,0 +1,8 @@
+{
+  "id": "084",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "Drag & drop", "Keyboard shortcuts"],
+  "features": ["game", "map"],
+  "interaction": "Seven die-cut stickers (van, palm, sun, wave, 'hi!', camera, kangaroo road sign) can be dragged anywhere on the page with mouse or touch, or focused and nudged with the arrow keys (Shift for bigger steps); the big link buttons wobble on hover; 'Where's the van?' is an SVG east-coast map where previous/next steps through 13 stops and 'Follow the van' animates the van along the route from Melbourne to its current stop near Byron Bay; the tip jar drops a coin and shows a demo toast.",
+  "fonts": ["Luckiest Guy", "Inter"],
+  "notes": "Sticker positions are not saved between visits. Every outgoing link, the newsletter form and the tip jar end in a demo toast; the route, dates and prices are illustrative."
+}

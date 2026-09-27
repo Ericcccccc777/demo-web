@@ -1,0 +1,8 @@
+{
+  "id": "080",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "CSS Grid"],
+  "features": ["game", "accessibility"],
+  "interaction": "Pick a crayon from the tray (or keys 1–7) and click, tap or Tab + Enter any of 80+ line-art shapes across four drawings to paint-bucket it with a radial fill from the point you touched; 'Surprise me' floods the drawing in view with random colours in a wave, Undo (or Z) steps back, and your coloured studio page appears live in a framed print mock-up.",
+  "fonts": ["Patrick Hand", "Outfit"],
+  "notes": "Colours are kept for the current visit only; the print shop and commission form end in demo-state toasts."
+}

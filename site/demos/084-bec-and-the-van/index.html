@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="084">
+<meta name="demo:brand" content="Bec &amp; The Van">
+<title>Bec &amp; The Van — van-life links, route map &amp; stickers</title>
+<meta name="description" content="Concept link-in-bio page for a fictional van-life creator travelling the east coast of Australia: big links, a live-ish route map and stickers you can drag anywhere.">
+<meta name="theme-color" content="#4ECDC4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Luckiest+Guy&amp;display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --o:#FF7B54;--s:#4ECDC4;--s2:#2FB3AA;--y:#FFD166;--g:#7B2CBF;--ink:#24123A;--mute:#5b4d6e;
+  --disp:"Luckiest Guy","Arial Black",Impact,system-ui,sans-serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--s) radial-gradient(rgba(36,18,58,.12) 1.3px,transparent 1.7px) 0 0/18px 18px;color:var(--ink);font:400 15.5px/1.55 var(--sans)}
+h1,h2,h3,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.stage{position:relative;overflow:clip;min-height:100vh}
+
+/* desktop collage */
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0;display:none}
+.d-sun{position:absolute;left:-150px;top:-150px;width:560px;height:560px}
+.d-strip{position:absolute;right:-90px;top:700px;width:560px;height:96px;background:var(--o);transform:rotate(-11deg);clip-path:polygon(0 8%,4% 0,9% 10%,15% 2%,21% 9%,28% 0,35% 8%,42% 1%,50% 9%,57% 0,64% 8%,72% 1%,79% 9%,86% 0,93% 8%,100% 2%,100% 92%,95% 100%,88% 91%,80% 99%,72% 90%,64% 100%,56% 92%,48% 100%,40% 91%,32% 99%,24% 90%,16% 100%,8% 92%,0 100%);display:flex;align-items:center;justify-content:center;font:400 40px/1 var(--disp);letter-spacing:.06em;color:#fff}
+.d-squig{position:absolute;right:120px;top:70px;width:300px;transform:rotate(-8deg)}
+.d-word{position:absolute;right:26px;top:150px;writing-mode:vertical-rl;font:400 118px/1 var(--disp);color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.75);letter-spacing:.04em;white-space:nowrap}
+.d-wave{position:absolute;left:-40px;top:1180px;width:420px;transform:rotate(6deg)}
+.d-dots{position:absolute;left:8%;top:980px;width:220px;height:220px;border-radius:50%;background:radial-gradient(var(--g) 2.2px,transparent 2.6px) 0 0/14px 14px;opacity:.35}
+@media(min-width:980px){.deco{display:block}}
+
+/* column */
+.col{position:relative;z-index:1;width:min(100% - 28px,440px);margin:0 auto;padding:26px 0 36px}
+.prof{text-align:center}
+.av{width:128px;height:128px;margin:0 auto;border-radius:50%;background:#fff;padding:6px;box-shadow:0 6px 0 rgba(36,18,58,.2),0 16px 26px rgba(36,18,58,.24);transform:rotate(-5deg)}
+.av svg{display:block;width:100%;height:100%;border-radius:50%}
+.name{margin:20px 0 8px;font:400 clamp(44px,13vw,62px)/.94 var(--disp);color:var(--g);letter-spacing:.01em;overflow-wrap:anywhere;transform:rotate(-2deg);filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 6px 0 var(--o))}
+.handle{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:4px 8px;margin-top:6px;padding:6px 14px;background:#fff;border-radius:999px;font-size:13.5px;font-weight:600;box-shadow:0 3px 0 rgba(36,18,58,.2)}
+.handle i{font-style:normal;color:var(--mute);font-weight:500}
+.pin{width:14px;height:14px;fill:var(--o);stroke:var(--ink);stroke-width:2}
+.bio{margin:14px auto 0;max-width:27em;font-size:15.5px}
+.soc{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.soc a{width:48px;height:48px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 0 rgba(36,18,58,.22);transition:transform .2s}
+.soc a:hover{transform:translateY(-3px) rotate(-8deg)}
+.ico{width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* links */
+.links{margin-top:28px}
+.links ul{display:grid;gap:16px}
+.lk{--r:-1deg;--bg:#fff;--fg:var(--ink);position:relative;display:grid;grid-template-columns:52px minmax(0,1fr) 34px;align-items:center;gap:14px;min-height:80px;padding:12px 14px 12px 12px;border:4px solid #fff;border-radius:22px;background:var(--bg);color:var(--fg);text-decoration:none;box-shadow:0 5px 0 rgba(36,18,58,.22),0 12px 22px rgba(36,18,58,.16);transform:rotate(var(--r))}
+.lk:hover,.lk:focus-visible{animation:wob .55s ease-in-out;box-shadow:0 8px 0 rgba(36,18,58,.24),0 18px 28px rgba(36,18,58,.2)}
+@keyframes wob{0%,100%{transform:rotate(var(--r))}20%{transform:rotate(calc(var(--r) - 2.6deg)) scale(1.02)}45%{transform:rotate(calc(var(--r) + 2.2deg)) scale(1.035)}72%{transform:rotate(calc(var(--r) - 1deg)) scale(1.01)}}
+.lk .ic{width:52px;height:52px;border-radius:16px;background:#fff;border:3px solid var(--ink);display:grid;place-items:center}
+.lk .ic .ico{width:26px;height:26px}
+.lk b{display:block;font:400 21px/1.05 var(--disp);letter-spacing:.025em;padding-top:3px}
+.lk small{display:block;margin-top:3px;font-size:13.5px;font-weight:500;line-height:1.35}
+.go{width:34px;height:34px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.go .ico{width:18px;height:18px;stroke:#fff;stroke-width:2.6}
+.new{position:absolute;top:-14px;right:16px;padding:6px 9px 4px;background:var(--g);color:#fff;font:400 13px/1 var(--disp);letter-spacing:.06em;border:3px solid #fff;border-radius:9px;transform:rotate(7deg)}
+.links li:nth-child(1) .lk{--bg:var(--o);--r:-1.3deg}
+.links li:nth-child(2) .lk{--bg:var(--y);--r:.9deg}
+.links li:nth-child(3) .lk{--r:-.6deg}
+.links li:nth-child(4) .lk{--bg:var(--g);--fg:#fff;--r:1.1deg}
+.links li:nth-child(5) .lk{--r:-.9deg}
+.links li:nth-child(6) .lk{--bg:var(--y);--r:.7deg}
+.tip{display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:14px;width:100%;margin-top:20px;padding:12px 14px 12px 12px;min-height:78px;border:4px dashed #fff;border-radius:22px;background:rgba(255,255,255,.3);color:var(--ink);text-align:left;cursor:pointer;transition:background .2s}
+.tip:hover{background:rgba(255,255,255,.5)}
+.tip b{display:block;font:400 21px/1.05 var(--disp);letter-spacing:.025em;padding-top:3px}
+.tip small{display:block;margin-top:3px;font-size:13.5px;font-weight:500}
+.jar{position:relative;width:52px;height:52px}
+.jar svg{width:52px;height:52px;display:block}
+.coin{position:absolute;left:50%;top:0;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--y);border:2.5px solid var(--ink);animation:coin .8s cubic-bezier(.5,0,.8,.5) forwards}
+@keyframes coin{from{transform:translateY(-34px) rotate(0)}70%{opacity:1}to{transform:translateY(18px) rotate(300deg);opacity:0}}
+.tipn{font:400 15px/1 var(--disp);background:#fff;border-radius:999px;padding:7px 10px 5px;white-space:nowrap}
+
+/* cards */
+.card{position:relative;margin-top:34px;padding:22px 18px 18px;background:#fff;border-radius:26px;box-shadow:0 6px 0 rgba(36,18,58,.18),0 16px 30px rgba(36,18,58,.16)}
+.card h2{font:400 29px/1 var(--disp);color:var(--g);letter-spacing:.02em;padding-top:4px}
+.card p{font-size:14.5px}
+.card .lead{margin-top:6px;color:var(--mute)}
+.tape{position:absolute;top:-13px;left:50%;width:100px;height:26px;margin-left:-50px;background:rgba(255,209,102,.9);transform:rotate(-4deg);box-shadow:0 1px 3px rgba(36,18,58,.15)}
+.tape.b{background:rgba(255,123,84,.85);transform:rotate(3deg)}
+.ch{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.live{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:#fff;border-radius:999px;padding:6px 10px;white-space:nowrap}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--o)}
+.mapw{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:14px;margin-top:14px;align-items:start}
+.mapbox{overflow:hidden;border:3px solid var(--ink);border-radius:18px;padding:4px;background:#d3f3ef url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M0 10q7-6 14 0t14 0' fill='none' stroke='%2385d9d1' stroke-width='1.4'/%3E%3C/svg%3E") 0 0/28px 14px}
+.mapbox svg{display:block;width:100%;height:auto;overflow:hidden}
+.border{fill:none;stroke:var(--ink);stroke-width:.6;stroke-dasharray:1.6 1.6;opacity:.5}
+.stl{font:400 8px var(--disp);fill:rgba(123,44,191,.5);letter-spacing:.06em}
+.sea{font:italic 600 5.2px var(--sans);fill:#1f7c75;letter-spacing:.08em}
+.plan{fill:none;stroke:var(--g);stroke-width:1.5;stroke-dasharray:2.4 2.4;stroke-linecap:round;stroke-linejoin:round}
+.done{fill:none;stroke:var(--o);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1;stroke-dashoffset:0}
+.casing{fill:none;stroke:#fff;stroke-width:4.6;stroke-linecap:round;stroke-linejoin:round}
+.dot{stroke:var(--ink);stroke-width:1.1;fill:#fff}
+.dot.plan-d{stroke:var(--g);stroke-dasharray:1.2 1}
+.dot.now{fill:var(--o);stroke-width:1.3}
+.pulse{fill:none;stroke:var(--o);stroke-width:1.4;transform-box:fill-box;transform-origin:center;animation:pulse 1.9s ease-out infinite}
+@keyframes pulse{from{transform:scale(.7);opacity:1}to{transform:scale(2.8);opacity:0}}
+.selr{fill:none;stroke:var(--g);stroke-width:1.5}
+.selt{font:700 6px var(--sans);fill:var(--ink);paint-order:stroke;stroke:#fff;stroke-width:2px;stroke-linejoin:round}
+.stop .k{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.pill{font:400 12px/1 var(--disp);letter-spacing:.06em;padding:5px 8px 3px;border-radius:8px;border:2px solid var(--ink);background:#fff;color:var(--ink)}
+.pill.now{background:var(--o)}
+.pill.plan{background:var(--g);color:#fff;border-color:var(--g)}
+.stop h3{margin-top:10px;font:400 25px/1.02 var(--disp);letter-spacing:.02em;overflow-wrap:anywhere}
+.stop .d{margin-top:6px;font-weight:700;font-size:14px}
+.stop .t{margin-top:8px;font-size:14.5px}
+.ctl{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:8px;margin-top:16px}
+.ctl button{min-height:48px;border:3px solid var(--ink);border-radius:15px;background:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 3px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.ctl button:active{transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
+.ctl button:disabled{opacity:.4;cursor:default}
+.ctl .fol{display:flex;gap:8px;background:var(--o);font:400 18px/1 var(--disp);letter-spacing:.03em;padding:4px 10px 0}
+.ctl .fol svg{width:30px;height:20px;margin-top:-4px}
+.fine{margin-top:12px;font-size:12.5px;color:var(--mute)}
+.backing{position:relative;height:262px;margin-top:14px;border:3px dashed rgba(36,18,58,.3);border-radius:18px;background:#f6f1ff;background-image:linear-gradient(rgba(36,18,58,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(36,18,58,.05) 1px,transparent 1px);background-size:22px 22px}
+.backing::after{content:"Backing paper";position:absolute;right:12px;bottom:8px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(36,18,58,.4)}
+.sbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sbtn{min-height:44px;padding:10px 14px;border:3px solid var(--ink);border-radius:14px;background:var(--y);font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 3px 0 var(--ink)}
+.sbtn.w{background:#fff}
+.wide-only{display:none}
+@media(min-width:980px){.backing{display:none}.wide-only{display:block}.narrow-only{display:none}}
+.facts dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.facts div{border:3px solid var(--ink);border-radius:15px;padding:10px 12px;background:var(--y)}
+.facts div:nth-child(2n){background:#fff}
+.facts div:nth-child(3),.facts div:nth-child(6){background:var(--s)}
+.facts dt{font:400 15px/1 var(--disp);letter-spacing:.05em;color:var(--g);padding-top:2px}
+.facts div:nth-child(3) dt,.facts div:nth-child(6) dt{color:var(--ink)}
+.facts dd{margin-top:5px;font-size:13.5px;font-weight:600;line-height:1.35}
+.post form{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.post input{flex:1 1 190px;min-width:0;min-height:50px;border:3px solid var(--ink);border-radius:15px;padding:10px 14px;font-size:16px;background:#fff}
+.post button{min-height:50px;padding:8px 18px 4px;border:3px solid var(--ink);border-radius:15px;background:var(--g);color:#fff;font:400 18px/1 var(--disp);letter-spacing:.03em;cursor:pointer;box-shadow:0 3px 0 var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips li{padding:6px 12px;border:2.5px solid var(--ink);border-radius:999px;background:var(--s);font-size:13.5px;font-weight:600}
+.chips li:nth-child(2n){background:var(--y)}
+.mail{display:inline-block;margin-top:14px;font-weight:700;text-underline-offset:3px}
+.foot{padding:40px 0 34px;text-align:center}
+.foot-name{font:400 38px/1 var(--disp);color:var(--g);overflow-wrap:anywhere;filter:drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)}
+.foot p{margin-top:10px;font-size:13px}
+.foot .small{max-width:30em;margin-inline:auto;color:#1d3f3c}
+
+/* stickers */
+.layer{position:absolute;inset:0;pointer-events:none;z-index:30}
+.stk{position:absolute;left:0;top:0;width:var(--w);padding:0;border:0;background:none;cursor:grab;pointer-events:auto;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;filter:drop-shadow(0 5px 4px rgba(36,18,58,.32));transition:filter .15s,scale .15s}
+.stk svg{display:block;width:100%;height:auto;overflow:visible}
+.stk.up{cursor:grabbing;scale:1.08;filter:drop-shadow(0 18px 14px rgba(36,18,58,.32))}
+.stk:focus-visible{outline:3px dashed var(--g);outline-offset:8px;border-radius:14px}
+.stk.slap{animation:slap .34s cubic-bezier(.3,1.6,.5,1)}
+@keyframes slap{0%{scale:1.12}45%{scale:.92}100%{scale:1}}
+.stk.in{animation:inn .4s cubic-bezier(.3,1.5,.5,1) both;animation-delay:calc(var(--d) * 55ms)}
+@keyframes inn{from{scale:1.7;opacity:0}}
+.stk[data-k=van]{--w:132px}.stk[data-k=palm]{--w:88px}.stk[data-k=sun]{--w:92px}.stk[data-k=wave]{--w:104px}
+.stk[data-k=hi]{--w:92px}.stk[data-k=cam]{--w:96px}.stk[data-k=roo]{--w:92px}
+@media(min-width:980px){
+  .stk[data-k=van]{--w:176px}.stk[data-k=palm]{--w:118px}.stk[data-k=sun]{--w:124px}.stk[data-k=wave]{--w:136px}
+  .stk[data-k=hi]{--w:112px}.stk[data-k=cam]{--w:122px}.stk[data-k=roo]{--w:118px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .lk:hover,.lk:focus-visible{animation:none}
+  .pulse,.stk.in,.stk.slap,.coin{animation:none}
+  .soc a,.stk,.ctl button{transition:none}
+}
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true" focusable="false"><defs>
+<filter id="die" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/><feComponentTransfer in="b" result="m"><feFuncA type="linear" slope="14" intercept="-.7"/></feComponentTransfer><feFlood flood-color="#fff"/><feComposite in2="m" operator="in" result="w"/><feMerge><feMergeNode in="w"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs></svg>
+
+<div class="stage" id="stage">
+  <div class="deco" aria-hidden="true">
+    <svg class="d-sun" viewBox="0 0 200 200"><g fill="#FFD166"><path id="bigRays"/></g><circle cx="100" cy="100" r="62" fill="#FFD166"/><circle cx="100" cy="100" r="62" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="3 7"/></svg>
+    <svg class="d-squig" viewBox="0 0 300 60"><path d="M8 30q17-26 34 0t34 0 34 0 34 0 34 0 34 0 34 0 34 0" fill="none" stroke="#7B2CBF" stroke-width="10" stroke-linecap="round"/></svg>
+    <p class="d-word">East coast · 2026 lap</p>
+    <div class="d-strip">Byron Bay-ish</div>
+    <div class="d-dots"></div>
+    <svg class="d-wave" viewBox="0 0 400 80"><path d="M0 50q25-40 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0V80H0z" fill="#FFD166"/><path d="M0 50q25-40 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" fill="none" stroke="#fff" stroke-width="5"/></svg>
+  </div>
+
+  <div class="col" id="col">
+    <header class="prof">
+      <div class="av"><svg viewBox="0 0 120 120" role="img" aria-label="Illustrated avatar of Bec in a bucket hat and sunnies">
+        <circle cx="60" cy="60" r="60" fill="#FFD166"/>
+        <g stroke="#FF7B54" stroke-width="5" opacity=".45" stroke-linecap="round"><path d="M60 4v10M60 106v10M4 60h10M106 60h10M20 20l7 7M93 93l7 7M100 20l-7 7M27 93l-7 7"/></g>
+        <path d="M30 72c-8-26 2-48 30-50 28 1 40 24 32 50-3 9-9 14-14 12l-4-18H48l-4 18c-5 2-11-3-14-12z" fill="#6B3B1F" stroke="#24123A" stroke-width="3"/>
+        <path d="M16 120c4-24 22-36 44-36s40 12 44 36z" fill="#4ECDC4" stroke="#24123A" stroke-width="3"/>
+        <path d="M46 88c4 6 24 6 28 0" fill="none" stroke="#24123A" stroke-width="3"/>
+        <rect x="52" y="74" width="16" height="13" fill="#F2B48C" stroke="#24123A" stroke-width="3"/>
+        <ellipse cx="60" cy="61" rx="21" ry="23" fill="#F6BD94" stroke="#24123A" stroke-width="3"/>
+        <path d="M35 47c2-15 12-23 25-23s23 8 25 23z" fill="#7B2CBF" stroke="#24123A" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M23 51c9-6 24-8 37-8s28 2 37 8c-7 5-21 7-37 7s-30-2-37-7z" fill="#9B5DE5" stroke="#24123A" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="51" cy="63" r="7.5" fill="#24123A"/><circle cx="69" cy="63" r="7.5" fill="#24123A"/><path d="M58 62h4" stroke="#24123A" stroke-width="3"/>
+        <path d="M47 60l4-2.5M65 60l4-2.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M52 74c4 5 12 5 16 0" fill="none" stroke="#24123A" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="43" cy="72" r="3.2" fill="#FF7B54" opacity=".55"/><circle cx="77" cy="72" r="3.2" fill="#FF7B54" opacity=".55"/>
+      </svg></div>
+      <h1 class="name" data-brand>Bec &amp; The Van</h1>
+      <p class="handle"><span>becandthevan</span><i>·</i><svg class="pin" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15s5-5 5-9A5 5 0 0 0 3 6c0 4 5 9 5 9z"/></svg><span>Byron Bay, NSW (for now)</span></p>
+      <p class="bio">Slow van-life up the east coast in Mango, a 1998 high-roof van with a leaky roof vent and a very good kettle. Cheap eats, free camps and honest gear reviews.</p>
+      <ul class="soc" aria-label="Elsewhere">
+        <li><a href="https://example.com/videos" aria-label="Videos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="2"/><path d="M3 9l1.6-4.6 15.6 0L21 9M8.5 4.4 7 9M13.5 4.4 12 9M18.5 4.4 17 9"/></svg></a></li>
+        <li><a href="https://example.com/photos" aria-label="Photos"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="9.5" r="1.8"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg></a></li>
+        <li><a href="https://example.com/podcast" aria-label="Podcast"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></a></li>
+        <li><a href="#postcards" aria-label="Newsletter sign-up"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></a></li>
+      </ul>
+    </header>
+
+    <main id="main">
+      <section class="links" aria-labelledby="lk-h">
+        <h2 class="sr" id="lk-h">Links</h2>
+        <ul>
+          <li><a class="lk" href="https://example.com/latest-video"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z" fill="#24123A"/></svg></span><span><b>Latest video</b><small>"We fixed the fridge (again)" · 14 min</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span><span class="new">New</span></a></li>
+          <li><a class="lk" href="https://example.com/van-tour"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M3 16V9a3 3 0 0 1 3-3h9l4 4 2 2v4z"/><path d="M6 9h4M13 6v4h6"/><circle cx="7" cy="17" r="2" fill="#fff"/><circle cx="17" cy="17" r="2" fill="#fff"/></svg></span><span><b>Van tour</b><small>Every drawer, every hack · 22 min</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+          <li><a class="lk" href="https://example.com/gear-list"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M10 6h10M10 12h10M10 18h10M3.5 6l1.5 1.5 2.5-3M3.5 12l1.5 1.5 2.5-3M3.5 18l1.5 1.5 2.5-3"/></svg></span><span><b>Gear list</b><small>What's actually in the van — and what I'd skip</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+          <li><a class="lk" href="https://example.com/route-map"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6.5l6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><span><b>The route map</b><small>All 13 stops of the 2026 lap</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+          <li><a class="lk" href="https://example.com/media-kit"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M3 11l18-8-6 18-4-7z"/><path d="M11 14l10-11"/></svg></span><span><b>Collabs &amp; media kit</b><small>For small brands, caravan parks and tourism folk</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+          <li><a class="lk" href="https://example.com/presets"><span class="ic" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h9M19 7h1M4 17h3M13 17h7"/><circle cx="16" cy="7" r="2.5"/><circle cx="10" cy="17" r="2.5"/></svg></span><span><b>Presets shop</b><small>"Salt &amp; Sunburn" photo presets · $24 sample price</small></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+        </ul>
+        <button class="tip" id="tip" type="button"><span class="jar" id="jar" aria-hidden="true"><svg viewBox="0 0 52 52"><path d="M14 10h24v6c5 3 7 8 7 14v12c0 4-3 7-7 7H14c-4 0-7-3-7-7V30c0-6 2-11 7-14z" fill="#fff" stroke="#24123A" stroke-width="3" stroke-linejoin="round"/><path d="M12 6h28v6H12z" fill="#7B2CBF" stroke="#24123A" stroke-width="3" stroke-linejoin="round"/><path d="M21 9h10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="40" r="4.5" fill="#FFD166" stroke="#24123A" stroke-width="2"/><circle cx="31" cy="42" r="4.5" fill="#FFD166" stroke="#24123A" stroke-width="2"/><circle cx="26" cy="34" r="4.5" fill="#FFD166" stroke="#24123A" stroke-width="2"/></svg></span><span><b>Tip jar</b><small>Shout Bec a coffee for the road</small></span><span class="tipn" id="tipN" aria-live="polite">0 coins</span></button>
+      </section>
+
+      <section class="card map" id="where" aria-labelledby="w-h">
+        <span class="tape" aria-hidden="true"></span>
+        <div class="ch"><h2 id="w-h">Where's the van?</h2><span class="live">Stop 9 of 13</span></div>
+        <div class="mapw">
+          <div class="mapbox">
+            <svg id="map" viewBox="0 0 114 252" role="img" aria-labelledby="mapT">
+              <title id="mapT">Map of Australia's east coast. The 2026 route runs from Melbourne to Cairns; the van is currently near Byron Bay.</title>
+              <path id="land" filter="url(#die)" fill="#FFD166" stroke="#24123A" stroke-width="1.2" stroke-linejoin="round"/>
+              <path id="b1" class="border"/><path id="b2" class="border"/>
+              <text class="stl" x="24" y="86">QLD</text><text class="stl" x="36" y="170">NSW</text><text class="stl" x="14" y="222">VIC</text>
+              <text class="sea" x="70" y="30">CORAL SEA</text>
+              <text class="sea" transform="translate(110 205) rotate(-90)">TASMAN SEA</text>
+              <path id="cas" class="casing"/>
+              <path id="plan" class="plan"/>
+              <path id="done" class="done" pathLength="1"/>
+              <g id="dots"></g>
+              <circle id="pulse" class="pulse" r="3.4"/>
+              <g id="sel"><circle class="selr" r="5.4"/><text class="selt" id="selT" x="-8" y="2"></text></g>
+              <g id="vanMk"><circle r="7.2" fill="#fff" stroke="#24123A" stroke-width="1.5"/><path d="M-5 2.6V-1a2 2 0 0 1 2-2h5.4c.8 0 1.4.4 1.9 1l1.7 2.4v2.2z" fill="#FF7B54" stroke="#24123A" stroke-width="1"/><circle cx="-2.4" cy="3" r="1.4" fill="#24123A"/><circle cx="2.8" cy="3" r="1.4" fill="#24123A"/></g>
+            </svg>
+          </div>
+          <div class="stop" id="stopCard" aria-live="polite">
+            <p class="k"><span id="stopNo">Stop 9 of 13</span><span class="pill now" id="stopTag">Now</span></p>
+            <h3 id="stopName">Byron Bay, NSW</h3>
+            <p class="d" id="stopDate">Here since Sat 19 Sep</p>
+            <p class="t" id="stopText">Parked up in the hinterland for spring while the fridge video gets edited.</p>
+          </div>
+        </div>
+        <div class="ctl">
+          <button type="button" id="prev" aria-label="Previous stop"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="fol" id="follow"><svg viewBox="0 0 30 20" aria-hidden="true"><path d="M2 15V7a3 3 0 0 1 3-3h14l4 4 4 3v4z" fill="#fff" stroke="#24123A" stroke-width="2.2" stroke-linejoin="round"/><circle cx="8" cy="16" r="2.6" fill="#24123A"/><circle cx="21" cy="16" r="2.6" fill="#24123A"/></svg><span id="folT">Follow the van</span></button>
+          <button type="button" id="next" aria-label="Next stop"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+        <p class="fine">Stops are posted a few days late and never down to the campsite. Dates are for this concept page.</p>
+      </section>
+
+      <section class="card" id="stickers" aria-labelledby="s-h">
+        <span class="tape b" aria-hidden="true"></span>
+        <h2 id="s-h">Sticker sheet</h2>
+        <p class="lead narrow-only">Peel them off the backing and stick them anywhere on the page — over the links, under the map, wherever.</p>
+        <p class="lead wide-only">They're already slapped all over this page. Grab one and move it anywhere — over the links, under the map, wherever.</p>
+        <p class="lead" style="margin-top:4px">Keyboard: focus a sticker, then use the arrow keys (hold Shift to go faster).</p>
+        <div class="backing" id="backing" aria-hidden="true"></div>
+        <div class="sbtns"><button type="button" class="sbtn" id="grab">Grab a sticker</button><button type="button" class="sbtn w" id="reset">Put them all back</button></div>
+      </section>
+
+      <section class="card facts" aria-labelledby="f-h">
+        <span class="tape" aria-hidden="true" style="transform:rotate(5deg)"></span>
+        <h2 id="f-h">Meet Mango</h2>
+        <p class="lead">The van, by the numbers.</p>
+        <dl>
+          <div><dt>Year</dt><dd>1998 high-roof, 2.7 L petrol</dd></div>
+          <div><dt>Solar</dt><dd>2 × 200 W on the roof</dd></div>
+          <div><dt>Water</dt><dd>80 L tank + a 10 L jerry can</dd></div>
+          <div><dt>Bed</dt><dd>190 cm long (Bec is 168 cm)</dd></div>
+          <div><dt>Fridge</dt><dd>Fixed three times this year</dd></div>
+          <div><dt>Kettle</dt><dd>Priceless</dd></div>
+        </dl>
+      </section>
+
+      <section class="card post" id="postcards" aria-labelledby="p-h">
+        <span class="tape b" aria-hidden="true" style="transform:rotate(-2deg)"></span>
+        <h2 id="p-h">Postcards from the van</h2>
+        <p class="lead">One email a fortnight: where we went, what it cost, and one good camp-stove recipe. No spam, easy to leave.</p>
+        <form data-demo-message="Demo only — you haven't been subscribed to anything. A real page would send a confirmation email.">
+          <label class="sr" for="em">Email address</label>
+          <input id="em" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <button type="submit">Send me postcards</button>
+        </form>
+      </section>
+
+      <section class="card" aria-labelledby="c-h">
+        <span class="tape" aria-hidden="true" style="transform:rotate(-6deg)"></span>
+        <h2 id="c-h">Work with Bec</h2>
+        <p class="lead">Small Aussie brands, caravan parks and tourism folk — only things I'd actually use in the van. Rates and audience notes are in the media kit.</p>
+        <ul class="chips"><li>Dedicated videos</li><li>Van-tour features</li><li>Photo sets</li><li>Honest gear reviews</li><li>Destination guides</li></ul>
+        <a class="mail" href="mailto:collabs@example.com">collabs@example.com</a> <span aria-hidden="true">·</span> <a class="mail" href="tel:+61491570159">0491 570 159</a>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-name" data-brand>Bec &amp; The Van</p>
+      <p>Made on a laptop balanced on a camp chair, somewhere near Byron Bay.</p>
+      <p class="small">Bec is a fictional creator — this is a concept demo. Prices are samples, stops and dates are illustrative, and no links leave this page.</p>
+    </footer>
+  </div>
+
+  <div class="layer" id="layer">
+    <button type="button" class="stk" data-k="hi" aria-label="Hi sticker"><svg viewBox="0 0 120 100" aria-hidden="true"><g filter="url(#die)"><path d="M16 12h88c7 0 12 5 12 12v40c0 7-5 12-12 12H56L32 94l5-18H16C9 76 4 71 4 64V24c0-7 5-12 12-12z" fill="#fff" stroke="#24123A" stroke-width="3.5" stroke-linejoin="round"/><text x="60" y="61" text-anchor="middle" font-family="Luckiest Guy,Arial Black,sans-serif" font-size="40" fill="#7B2CBF">hi!</text></g></svg></button>
+    <button type="button" class="stk" data-k="sun" aria-label="Sun sticker"><svg viewBox="0 0 120 120" aria-hidden="true"><g filter="url(#die)" stroke="#24123A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path id="rays" fill="#FF7B54"/><circle cx="60" cy="60" r="34" fill="#FFD166"/><path d="M40 53h40"/><path d="M40 52h16v6c0 5-3 8-8 8s-8-3-8-8zM64 52h16v6c0 5-3 8-8 8s-8-3-8-8z" fill="#24123A"/><path d="M46 76c8 7 20 7 28 0" fill="none"/><path d="M44 57l4-3" stroke="#fff" stroke-width="2"/></g></svg></button>
+    <button type="button" class="stk" data-k="van" aria-label="Van sticker"><svg viewBox="0 0 170 120" aria-hidden="true"><g filter="url(#die)" stroke="#24123A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="22" y="8" width="112" height="10" rx="5" fill="#FFD166"/><path d="M58 13h40" stroke-width="2"/><path d="M26 44v-8c0-8 6-14 14-14h76c8 0 12 6 12 14v8z" fill="#fff"/><path d="M14 58c0-8 6-14 14-14h104c10 0 16 8 20 18l6 16c1 4 2 8 2 12v6c0 4-3 6-6 6H18c-3 0-4-2-4-5z" fill="#FF7B54"/><path d="M17 82h141" stroke="#4ECDC4" stroke-width="7" stroke-linecap="butt"/><path d="M130 50h10c6 0 10 4 12 10l3 8h-25z" fill="#24123A"/><rect x="28" y="52" width="36" height="20" rx="5" fill="#24123A"/><rect x="72" y="52" width="46" height="20" rx="5" fill="#24123A"/><path d="M76 56c6 4 10 4 16 0s10-4 16 0v12H76z" fill="#FFD166" stroke="none"/><path d="M124 50v44" stroke-width="2.5"/><circle cx="44" cy="98" r="13" fill="#24123A"/><circle cx="44" cy="98" r="5" fill="#ece4f7" stroke-width="2"/><circle cx="136" cy="98" r="13" fill="#24123A"/><circle cx="136" cy="98" r="5" fill="#ece4f7" stroke-width="2"/><circle cx="158" cy="75" r="4" fill="#FFD166" stroke-width="2"/><path d="M34 57l8-3M134 55l6-2" stroke="#fff" stroke-width="2.5"/></g></svg></button>
+    <button type="button" class="stk" data-k="palm" aria-label="Palm tree sticker"><svg viewBox="0 0 120 140" aria-hidden="true"><g filter="url(#die)" stroke="#24123A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><ellipse cx="60" cy="128" rx="42" ry="8" fill="#FFD166"/><path d="M54 128c2-26 0-52 8-80h8c-6 28-4 54-6 80z" fill="#E0874F"/><path d="M58 110h8M58 94h8M59 78h8M61 62h8" stroke-width="2.2"/><path d="M66 46C52 30 28 28 12 40c16-2 30 2 42 12z" fill="#4ECDC4"/><path d="M66 46C60 26 44 14 26 14c12 6 22 16 30 34z" fill="#2FB3AA"/><path d="M66 46c8-18 26-28 44-24-14 4-26 12-34 26z" fill="#4ECDC4"/><path d="M66 46c16-8 34-4 44 10-14-6-28-6-40 0z" fill="#2FB3AA"/><path d="M66 46c-2 14-12 26-26 32 8-10 14-22 18-34z" fill="#4ECDC4"/><circle cx="62" cy="52" r="5" fill="#7A4A2A"/><circle cx="71" cy="53" r="5" fill="#7A4A2A"/></g></svg></button>
+    <button type="button" class="stk" data-k="cam" aria-label="Camera sticker"><svg viewBox="0 0 130 104" aria-hidden="true"><g filter="url(#die)" stroke="#24123A" stroke-width="3" stroke-linejoin="round"><path d="M40 24l6-10h28l6 10z" fill="#FFD166"/><rect x="18" y="16" width="14" height="8" rx="2" fill="#FF7B54"/><rect x="8" y="24" width="114" height="68" rx="13" fill="#7B2CBF"/><path d="M8 42h114v14H8z" fill="#9B5DE5"/><circle cx="66" cy="58" r="27" fill="#24123A"/><circle cx="66" cy="58" r="17" fill="#4ECDC4"/><circle cx="66" cy="58" r="7" fill="#24123A" stroke="none"/><path d="M57 50l6-4" stroke="#fff" stroke-width="3" stroke-linecap="round"/><rect x="96" y="30" width="18" height="10" rx="2" fill="#fff"/></g></svg></button>
+    <button type="button" class="stk" data-k="roo" aria-label="Kangaroo road sign sticker"><svg viewBox="0 0 120 120" aria-hidden="true"><g filter="url(#die)"><rect x="22" y="22" width="76" height="76" rx="11" transform="rotate(45 60 60)" fill="#FFD166" stroke="#24123A" stroke-width="5"/><rect x="29" y="29" width="62" height="62" rx="7" transform="rotate(45 60 60)" fill="none" stroke="#24123A" stroke-width="1.8"/><path transform="translate(31.5 32) scale(.62)" fill="#24123A" d="M86 22C84 18 80 15 76 15L73 4L71 13L68 3L67 15C64 20 62 26 58 32C52 40 42 46 38 56C34 64 24 76 4 90C22 86 32 80 40 76C42 82 43 88 46 90L84 90C86 90 86 86 84 86L60 84C62 80 64 76 64 70C64 64 62 60 64 56C66 52 68 50 70 48L78 52L79 50L72 44C74 40 76 36 80 32C82 30 86 28 88 26Z"/></g></svg></button>
+    <button type="button" class="stk" data-k="wave" aria-label="Wave sticker"><svg viewBox="0 0 140 110" aria-hidden="true"><g filter="url(#die)" stroke="#24123A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M6 98C16 58 44 24 86 18c26-4 46 12 46 34 0 18-14 26-28 26-12 0-18-10-14-20 4-8 14-8 16 0-8-12-26-14-38-2C54 70 46 86 44 98z" fill="#4ECDC4"/><path d="M2 96h134c0 6-4 10-10 10H12C6 106 2 102 2 96z" fill="#2FB3AA"/><path d="M84 25c18-2 34 6 40 22" fill="none" stroke="#fff" stroke-width="5"/><path d="M26 84c6-16 16-28 30-36" fill="none" stroke="#fff" stroke-width="4"/></g></svg></button>
+  </div>
+</div>
+<p class="sr" id="say" aria-live="polite"></p>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+  var NS = "http://www.w3.org/2000/svg";
+  var mqR = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var mqWide = window.matchMedia("(min-width: 980px)");
+  function reduced() { return window.DemoKit ? DemoKit.reducedMotion : mqR.matches; }
+  function f1(v) { return (+v).toFixed(1); }
+  function mk(tag, at, p) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); if (p) p.appendChild(e); return e; }
+  function say(t) { var l = $("#say"); l.textContent = ""; setTimeout(function () { l.textContent = t; }, 30); }
+  function toast(t) { if (window.DemoKit) DemoKit.toast(t); }
+
+  /* ---------- sun rays ---------- */
+  function rays(cx, r0, r1, n, w) {
+    var d = "";
+    for (var k = 0; k < n; k++) {
+      var a = k * Math.PI * 2 / n;
+      d += "M" + f1(cx + Math.cos(a - w) * r0) + " " + f1(cx + Math.sin(a - w) * r0) + "L" + f1(cx + Math.cos(a) * r1) + " " + f1(cx + Math.sin(a) * r1) + "L" + f1(cx + Math.cos(a + w) * r0) + " " + f1(cx + Math.sin(a + w) * r0) + "Z";
+    }
+    return d;
+  }
+  $("#rays").setAttribute("d", rays(60, 37, 57, 12, 0.14));
+  $("#bigRays").setAttribute("d", rays(100, 60, 98, 16, 0.09));
+
+  /* ---------- the map ---------- */
+  function P(ll) { return [(ll[1] - 141.5) * 8.8, (-ll[0] - 14.5) * 10]; }
+  function line(pts) { return pts.map(function (p, i) { return (i ? "L" : "M") + f1(p[0]) + " " + f1(p[1]); }).join(""); }
+  var COAST = [[-14.6, 144.9], [-15.5, 145.25], [-16.3, 145.45], [-16.92, 145.78], [-17.6, 146.1], [-18.3, 146.05], [-18.9, 146.35], [-19.26, 146.82], [-19.6, 147.4], [-20.0, 148.25], [-20.3, 148.75], [-20.9, 149.1], [-21.3, 149.3], [-22.0, 149.7], [-22.4, 150.5], [-23.1, 150.8], [-23.85, 151.3], [-24.2, 151.9], [-24.9, 152.45], [-25.4, 152.95], [-26.0, 153.1], [-26.4, 153.1], [-27.1, 153.2], [-27.6, 153.45], [-28.1, 153.5], [-28.64, 153.64], [-29.4, 153.37], [-30.3, 153.15], [-31.0, 153.0], [-31.43, 152.92], [-32.2, 152.55], [-32.93, 151.8], [-33.5, 151.4], [-33.87, 151.28], [-34.42, 150.9], [-35.05, 150.75], [-35.7, 150.2], [-36.4, 150.08], [-37.07, 149.92], [-37.5, 149.97], [-37.8, 149.3], [-37.8, 148.5], [-37.88, 147.98], [-38.3, 147.2], [-38.7, 146.6], [-39.13, 146.4], [-38.7, 145.9], [-38.5, 145.3], [-38.35, 144.95], [-37.95, 145.05], [-37.85, 144.9], [-38.15, 144.4], [-38.5, 143.9], [-38.8, 143.5], [-38.75, 142.8], [-38.4, 142.0], [-38.3, 141.3]];
+  var land = [[-10, -10], [P(COAST[0])[0], -10]].concat(COAST.map(P), [[-10, P(COAST[COAST.length - 1])[1]]]);
+  $("#land").setAttribute("d", line(land) + "Z");
+  $("#b1").setAttribute("d", line([[-28.16, 153.55], [-28.6, 152.1], [-29.0, 151.2], [-29.0, 141.3]].map(P)));
+  $("#b2").setAttribute("d", line([[-37.5, 149.97], [-36.8, 148.2], [-36.1, 147.0], [-35.95, 144.9], [-35.1, 143.4], [-34.1, 141.3]].map(P)));
+
+  var STOPS = [
+    { n: "Melbourne", s: "VIC", ll: [-37.81, 144.96], d: "Sat 4 Jul", t: "Start line. New tyres, a very overdue service and a farewell dumpling feed." },
+    { n: "Wilsons Prom", s: "VIC", ll: [-39.0, 146.32], d: "Tue 7 Jul", t: "Cold, clear and full of wombats. The booked campsite was worth every cent.", via: [[-38.25, 145.6], [-38.6, 146.0]] },
+    { n: "Lakes Entrance", s: "VIC", ll: [-37.88, 147.98], d: "Sun 12 Jul", t: "Fish and chips on the foreshore, three nights, one flat battery.", via: [[-38.55, 146.6], [-38.15, 147.1]] },
+    { n: "Eden", s: "NSW", ll: [-37.07, 149.9], d: "Fri 17 Jul", t: "Whale season. Watched from the wharf with a thermos and no zoom lens.", via: [[-37.7, 148.5], [-37.55, 149.5]] },
+    { n: "Jervis Bay", s: "NSW", ll: [-35.05, 150.68], d: "Sat 25 Jul", t: "Whitest sand of the trip so far. Paddled every single morning.", via: [[-36.4, 150.0], [-35.7, 150.12]] },
+    { n: "Sydney", s: "NSW", ll: [-33.87, 151.2], d: "Mon 3 Aug", t: "A week parked at a mate's place: editing, laundry and one very good laksa.", via: [[-34.42, 150.84]] },
+    { n: "Port Macquarie", s: "NSW", ll: [-31.43, 152.86], d: "Sat 15 Aug", t: "Coastal walk to Lighthouse Beach — twice. Legs still sore.", via: [[-32.9, 151.68], [-32.2, 152.45]] },
+    { n: "Yamba", s: "NSW", ll: [-29.44, 153.3], d: "Sat 29 Aug", t: "Prawn rolls, small clean waves, and the fridge died (again).", via: [[-30.3, 153.08]] },
+    { n: "Byron Bay", s: "NSW", ll: [-28.64, 153.56], d: "Sat 19 Sep", t: "Parked up in the hinterland for spring while the fridge video gets edited." },
+    { n: "Noosa", s: "QLD", ll: [-26.39, 153.05], d: "Sat 10 Oct", t: "Planned: a sunrise coastal walk, then a week of not driving anywhere.", via: [[-27.95, 153.35], [-27.47, 153.0]] },
+    { n: "Agnes Water", s: "QLD", ll: [-24.21, 151.85], d: "Sat 24 Oct", t: "Planned: first surf in Queensland. Fingers crossed for small waves.", via: [[-25.3, 152.75], [-24.9, 152.3]] },
+    { n: "Airlie Beach", s: "QLD", ll: [-20.27, 148.68], d: "Sat 7 Nov", t: "Planned: a day on the water and a very long shower.", via: [[-23.4, 150.45], [-21.15, 149.12]] },
+    { n: "Cairns", s: "QLD", ll: [-16.92, 145.74], d: "Sat 5 Dec", t: "Planned finish line. Mango gets a rest; Bec gets a mango.", via: [[-19.3, 146.75], [-18.25, 145.98], [-17.6, 145.98]] }
+  ];
+  var NOW = 8, route = [], at = [], cum = [0];
+  STOPS.forEach(function (s) { (s.via || []).forEach(function (v) { route.push(P(v)); }); at.push(route.length); route.push(P(s.ll)); });
+  for (var i = 1; i < route.length; i++) cum.push(cum[i - 1] + Math.hypot(route[i][0] - route[i - 1][0], route[i][1] - route[i - 1][1]));
+  var doneLen = cum[at[NOW]];
+  $("#done").setAttribute("d", line(route.slice(0, at[NOW] + 1)));
+  $("#plan").setAttribute("d", line(route.slice(at[NOW])));
+  $("#cas").setAttribute("d", line(route.slice(0, at[NOW] + 1)));
+  var dots = $("#dots");
+  STOPS.forEach(function (s, k) { var p = P(s.ll); mk("circle", { cx: f1(p[0]), cy: f1(p[1]), r: k === NOW ? 3.4 : 2.5, "class": "dot" + (k === NOW ? " now" : k > NOW ? " plan-d" : "") }, dots); });
+  var pNow = P(STOPS[NOW].ll);
+  $("#pulse").setAttribute("cx", f1(pNow[0])); $("#pulse").setAttribute("cy", f1(pNow[1]));
+  var van = $("#vanMk"), done = $("#done");
+  function pointAt(L) {
+    for (var j = 1; j < cum.length; j++) if (cum[j] >= L) { var t = (L - cum[j - 1]) / ((cum[j] - cum[j - 1]) || 1), a = route[j - 1], b = route[j]; return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t]; }
+    return route[route.length - 1];
+  }
+  function setVan(L) { var p = pointAt(L); van.setAttribute("transform", "translate(" + f1(p[0]) + " " + f1(p[1]) + ")"); }
+
+  var sel = NOW;
+  function select(k) {
+    sel = k;
+    var s = STOPS[k], p = P(s.ll), right = p[0] < 60;
+    $("#sel").setAttribute("transform", "translate(" + f1(p[0]) + " " + f1(p[1]) + ")");
+    var tx = $("#selT"); tx.textContent = s.n; tx.setAttribute("x", right ? 8 : -8); tx.setAttribute("text-anchor", right ? "start" : "end");
+    $("#stopNo").textContent = "Stop " + (k + 1) + " of " + STOPS.length;
+    var tag = $("#stopTag");
+    tag.textContent = k === NOW ? "Now" : k < NOW ? "Been" : "Planned";
+    tag.className = "pill" + (k === NOW ? " now" : k > NOW ? " plan" : "");
+    $("#stopName").textContent = s.n + ", " + s.s;
+    $("#stopDate").textContent = (k === NOW ? "Here since " : k < NOW ? "Arrived " : "Planned for ") + s.d;
+    $("#stopText").textContent = s.t;
+    $("#prev").disabled = k === 0; $("#next").disabled = k === STOPS.length - 1;
+  }
+  var playing = false, raf = 0;
+  function stopPlay() { playing = false; cancelAnimationFrame(raf); done.style.strokeDashoffset = "0"; setVan(doneLen); $("#folT").textContent = "Follow the van"; }
+  $("#follow").addEventListener("click", function () {
+    if (playing) { stopPlay(); select(NOW); return; }
+    if (reduced()) { select(NOW); setVan(doneLen); say("The van is at stop 9, Byron Bay."); return; }
+    playing = true; $("#folT").textContent = "Stop";
+    var t0 = performance.now(), dur = 6000, last = -1;
+    (function step(ts) {
+      if (!playing) return;
+      var p = Math.min(1, (ts - t0) / dur), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2, L = e * doneLen, k = 0;
+      setVan(L); done.style.strokeDashoffset = f1(1 - L / doneLen);
+      for (var j = 0; j <= NOW; j++) if (cum[at[j]] <= L + 0.01) k = j;
+      if (k !== last) { last = k; select(k); }
+      if (p < 1) raf = requestAnimationFrame(step); else { playing = false; $("#folT").textContent = "Follow the van"; }
+    })(t0);
+  });
+  $("#prev").addEventListener("click", function () { if (playing) stopPlay(); if (sel > 0) select(sel - 1); });
+  $("#next").addEventListener("click", function () { if (playing) stopPlay(); if (sel < STOPS.length - 1) select(sel + 1); });
+
+  /* ---------- tip jar ---------- */
+  var coins = 0;
+  $("#tip").addEventListener("click", function () {
+    coins++;
+    $("#tipN").textContent = coins + (coins === 1 ? " coin" : " coins");
+    if (!reduced()) { var c = document.createElement("span"); c.className = "coin"; $("#jar").appendChild(c); setTimeout(function () { c.remove(); }, 900); }
+    toast("Demo only — no money moves here. Bec says ta anyway!");
+  });
+
+  /* ---------- stickers: drag anywhere, pointer or keyboard ---------- */
+  var stage = $("#stage"), layer = $("#layer"), col = $("#col"), backing = $("#backing"), z = 10;
+  var ST = $$(".stk").map(function (el, n) { return { el: el, k: el.getAttribute("data-k"), x: 0, y: 0, r: 0, fx: 0, moved: false, n: n }; });
+  var LABEL = { hi: "Hi", sun: "Sun", van: "Van", palm: "Palm tree", cam: "Camera", roo: "Kangaroo sign", wave: "Wave" };
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+  function put(s, x, y) {
+    var W = layer.clientWidth, H = layer.clientHeight;
+    s.x = clamp(x, 0, Math.max(0, W - s.el.offsetWidth)); s.y = clamp(y, 0, Math.max(0, H - s.el.offsetHeight)); s.fx = W ? s.x / W : 0;
+    s.el.style.translate = f1(s.x) + "px " + f1(s.y) + "px";
+    s.el.style.rotate = s.r + "deg";
+  }
+  function homes() {
+    var sr = stage.getBoundingClientRect(), cr = col.getBoundingClientRect(), W = layer.clientWidth;
+    var L = cr.left - sr.left, Rt = cr.right - sr.left, G2 = W - Rt, H = {};
+    if (mqWide.matches) {
+      H = { van: [L * 0.36, 190, -8], hi: [L * 0.72, 64, 9], cam: [L * 0.2, 470, 7], palm: [L * 0.62, 640, -6],
+        sun: [Rt + G2 * 0.12, 64, 10], roo: [Rt + G2 * 0.46, 340, -9], wave: [Rt + G2 * 0.16, 560, 6] };
+    } else {
+      var br = backing.getBoundingClientRect(), bx = br.left - sr.left, by = br.top - sr.top, bw = br.width, av = $(".av").getBoundingClientRect(), ax = av.left - sr.left, ay = av.top - sr.top;
+      H = { hi: [ax - 104, ay + 6, -10], sun: [ax + av.width + 6, ay - 12, 8],
+        van: [bx + 12, by + 14, -6], palm: [bx + bw - 102, by + 8, 5], cam: [bx + 16, by + 142, 6], roo: [bx + bw * 0.5 - 44, by + 132, -8], wave: [bx + bw - 112, by + 146, 4] };
+    }
+    return H;
+  }
+  function home(all) {
+    var H = homes();
+    ST.forEach(function (s) { if (all || !s.moved) { var h = H[s.k]; s.r = h[2]; s.moved = false; put(s, h[0], h[1]); } else put(s, s.fx * layer.clientWidth, s.y); });
+  }
+  function slap(s) { if (reduced()) return; s.el.classList.remove("slap", "in"); void s.el.offsetWidth; s.el.classList.add("slap"); }
+  var drag = null;
+  ST.forEach(function (s) {
+    var el = s.el;
+    el.setAttribute("aria-describedby", "s-h");
+    el.addEventListener("pointerdown", function (e) {
+      if (e.button > 0) return;
+      e.preventDefault();
+      try { el.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      drag = { s: s, id: e.pointerId, px: e.clientX, py: e.clientY, x: s.x, y: s.y, far: false };
+      el.style.zIndex = ++z; el.classList.remove("in", "slap"); el.classList.add("up");
+    });
+    el.addEventListener("pointermove", function (e) {
+      if (!drag || drag.s !== s || e.pointerId !== drag.id) return;
+      var dx = e.clientX - drag.px, dy = e.clientY - drag.py;
+      if (Math.abs(dx) + Math.abs(dy) > 3) drag.far = true;
+      put(s, drag.x + dx, drag.y + dy);
+    });
+    function end(e) {
+      if (!drag || drag.s !== s || e.pointerId !== drag.id) return;
+      el.classList.remove("up");
+      if (drag.far) { s.moved = true; say(LABEL[s.k] + " sticker stuck down."); }
+      drag = null; slap(s);
+    }
+    el.addEventListener("pointerup", end);
+    el.addEventListener("pointercancel", end);
+    el.addEventListener("keydown", function (e) {
+      var d = e.shiftKey ? 40 : 10, dx = 0, dy = 0;
+      if (e.key === "ArrowLeft") dx = -d; else if (e.key === "ArrowRight") dx = d; else if (e.key === "ArrowUp") dy = -d; else if (e.key === "ArrowDown") dy = d;
+      else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.style.zIndex = ++z; slap(s); say(LABEL[s.k] + " sticker pressed down."); return; }
+      else return;
+      e.preventDefault();
+      el.style.zIndex = ++z; s.moved = true; put(s, s.x + dx, s.y + dy);
+      var r = el.getBoundingClientRect();
+      if (r.bottom > innerHeight - 16) scrollBy(0, r.bottom - innerHeight + 40); else if (r.top < 16) scrollBy(0, r.top - 40);
+      clearTimeout(s.t); s.t = setTimeout(function () { say(LABEL[s.k] + " sticker moved."); }, 500);
+    });
+  });
+  $("#reset").addEventListener("click", function () { home(true); ST.forEach(slap); say("All stickers are back where they started."); });
+  $("#grab").addEventListener("click", function () { var s = ST[2]; s.el.focus({ preventScroll: true }); s.el.scrollIntoView({ block: "center", behavior: reduced() ? "auto" : "smooth" }); say("Van sticker selected. Use the arrow keys to move it."); });
+
+  function init() {
+    select(NOW); setVan(doneLen);
+    home(true);
+    if (!reduced()) ST.forEach(function (s, n) { s.el.style.setProperty("--d", n); s.el.classList.add("in"); });
+    var rt;
+    function relayout() { clearTimeout(rt); rt = setTimeout(function () { home(false); }, 60); }
+    window.addEventListener("resize", relayout);
+    if ("ResizeObserver" in window) new ResizeObserver(relayout).observe(col);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { home(false); });
+    window.addEventListener("hd:brandchange", relayout);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>
+</body>
+</html>

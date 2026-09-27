@@ -1,0 +1,8 @@
+{
+  "id": "037",
+  "tech": ["CSS 3D", "SVG", "Pointer Events", "Keyboard shortcuts", "CSS Grid"],
+  "features": ["game"],
+  "interaction": "Drag the vault's combination dial (or focus it and use the arrow keys), lock in each number with the brass centre, the button or Enter, and dial R 12 · L 34 · R 7 — the bolts retract, the door swings open in CSS 3D and the six services are revealed; a visible 'Skip the puzzle' link opens it instantly.",
+  "fonts": ["Big Shoulders Display", "IBM Plex Mono"],
+  "notes": "Direction and number are checked per step; wrong entries explain what went wrong without resetting. Reduced motion opens the door instantly. The contact form is demo-only."
+}

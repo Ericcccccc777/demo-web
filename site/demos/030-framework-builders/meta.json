@@ -1,0 +1,8 @@
+{
+  "id": "030",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["story", "customiser"],
+  "interaction": "A rear elevation of a cottage-plus-extension draws itself line by line as it scrolls into view (with a redraw button); on the floor-plan sheet, visitors tap rooms (kitchen, bathroom, living, laundry, deck) to read renovation options, considerations and sample prices, and flip Before/After to watch the kitchen wall get demolished and a deck drawn in.",
+  "fonts": ["IBM Plex Sans Condensed", "Architects Daughter"],
+  "notes": "Six blueprint sheets (A-01 to A-06) with title blocks; projects are labelled as illustrative drawings, not real client homes. The request-a-visit form uses the kit's honest demo toast."
+}

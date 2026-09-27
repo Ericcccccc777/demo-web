@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="048">
+<meta name="demo:brand" content="Fluff &amp; Buff Dog Grooming">
+<title>Fluff &amp; Buff Dog Grooming — dog groomer, Brisbane</title>
+<meta name="description" content="Fluff &amp; Buff is a fictional dog grooming salon in Wilston, Brisbane. Build a groom, see sample prices and plan a visit (concept demo).">
+<meta name="theme-color" content="#2D66EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--pk:#FF7AB6;--bl:#3D7BFF;--bl2:#2D66EE;--ye:#FFD93D;--ink:#1D1A3A;--cr:#FFF7EC;--d:'Chewy','Comic Sans MS',cursive;--b:'Poppins',system-ui,sans-serif;--sh:5px 5px 0 var(--ink);--ol:3px solid var(--ink)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 16px/1.6 var(--b);color:var(--ink);background:#fff;overflow-x:hidden}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 7px var(--ye)}
+[hidden]{display:none!important}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.pop{font-family:var(--d);font-weight:400;color:#fff;letter-spacing:.01em;text-shadow:-2px -2px 0 var(--ink),2px -2px 0 var(--ink),-2px 2px 0 var(--ink),2px 2px 0 var(--ink),0 3px 0 var(--ink),5px 6px 0 var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border:var(--ol);border-radius:999px;background:var(--pk);color:var(--ink);font:700 16.5px var(--b);text-decoration:none;box-shadow:var(--sh);cursor:pointer;transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translate(-2px,-2px) rotate(-1.5deg);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px) scale(.97,.93);box-shadow:1px 1px 0 var(--ink)}
+.btn.ye{background:var(--ye)}.btn.wh{background:#fff}.btn.sm{min-height:44px;padding:0 18px;font-size:15px;box-shadow:3px 3px 0 var(--ink)}
+/* header */
+.hd{position:sticky;top:0;z-index:40;padding:12px 0;background:var(--bl2)}
+.hd .wrap{display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;margin-right:auto}
+.logo svg{flex:none;width:46px;height:46px}
+.logo span{font:400 24px/1.05 var(--d);color:#fff;text-shadow:2px 2px 0 var(--ink);overflow-wrap:anywhere}
+.nav{position:relative}
+.nav ul{list-style:none;padding:0;display:flex;gap:4px}
+.nav a{display:block;padding:8px 12px;border-radius:999px;color:#fff;font-weight:600;font-size:15px;text-decoration:none}
+.nav a:hover{background:rgba(255,255,255,.18)}
+.menu{display:none}
+/* scalloped section edges */
+.sec{position:relative;background:var(--bg,#fff);padding:clamp(60px,7vw,100px) 0}
+.sec::before{content:"";position:absolute;left:0;right:0;top:-24px;height:25px;background:radial-gradient(circle at 24px 25px,var(--bg,#fff) 20px,var(--ink) 20.5px 23px,transparent 23.5px) -12px 0/48px 25px repeat-x;z-index:3;pointer-events:none}
+.sec h2{font-size:clamp(40px,5.4vw,68px);line-height:1;margin-bottom:14px}
+.intro{font-size:17.5px;max-width:58ch}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 12% 88%,rgba(255,255,255,.14) 0 70px,transparent 71px),radial-gradient(circle at 46% 12%,rgba(255,255,255,.1) 0 44px,transparent 45px),radial-gradient(circle at 92% 20%,rgba(255,255,255,.12) 0 90px,transparent 91px),var(--bl2);color:#fff;padding:clamp(28px,5vw,64px) 0 clamp(70px,8vw,110px)}
+#bub{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero-g{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(20px,4vw,56px);align-items:center}
+.tag{display:inline-block;padding:6px 16px;border:var(--ol);border-radius:999px;background:var(--ye);color:var(--ink);font-weight:700;font-size:15px;box-shadow:3px 3px 0 var(--ink);transform:rotate(-2deg);overflow-wrap:anywhere}
+.hero h1{font-size:clamp(54px,7.4vw,108px);line-height:.92;margin:22px 0 20px}
+.lede{font-size:clamp(17px,1.45vw,20px);max-width:34ch}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.perks{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.perks li{padding:5px 13px;border:2px solid rgba(255,255,255,.7);border-radius:999px;font-size:14px;font-weight:600}
+.hero-art{position:relative}
+.hero-art svg{display:block;width:100%;height:auto;overflow:visible}
+.popbtn{position:absolute;left:4%;bottom:6%;z-index:3;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:var(--ol);border-radius:999px;background:#fff;color:var(--ink);font-weight:700;font-size:14.5px;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.popbtn i{width:18px;height:18px;border-radius:50%;border:2px solid var(--ink);background:radial-gradient(circle at 35% 35%,#fff 0 20%,#BFE3FF 21%,#FFC4E1 80%)}
+.popbtn:active{transform:scale(.94)}
+/* groom menu */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:40px}
+.card{position:relative;border:var(--ol);border-radius:30px;background:#fff;box-shadow:var(--sh);padding:22px 20px 20px;display:flex;flex-direction:column}
+.card:nth-child(odd){transform:rotate(-1.2deg)}.card:nth-child(even){transform:rotate(1.1deg)}
+.card .ic{width:72px;height:72px;border:var(--ol);border-radius:50%;display:grid;place-items:center;background:var(--c);margin:-54px 0 12px;box-shadow:3px 3px 0 var(--ink)}
+.card .ic svg{width:44px;height:44px}
+.card h3{font:400 30px/1 var(--d)}
+.card p{font-size:15px;margin-top:6px}
+.card ul{padding-left:18px;font-size:14.5px;margin:10px 0 14px}
+.tiers{margin-top:auto;display:grid;grid-template-columns:repeat(5,1fr);border:2px solid var(--ink);border-radius:14px;overflow:hidden;text-align:center;font-size:12px}
+.tiers span{padding:5px 2px;line-height:1.25}.tiers span+span{border-left:2px solid var(--ink)}
+.tiers b{display:block;font-size:14.5px}
+.flat{margin-top:auto;padding:8px 12px;border:2px solid var(--ink);border-radius:14px;font-weight:700;text-align:center}
+.small{font-size:13.5px;margin-top:22px}
+/* builder */
+#build{--bg:var(--ye)}
+.bgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(20px,4vw,52px);align-items:start;margin-top:34px}
+.stage{position:sticky;top:96px;border:var(--ol);border-radius:34px;background:radial-gradient(circle at 60% 45%,#fff 0 38%,#DDEBFF 39% 64%,#C7DCFF 65%);box-shadow:var(--sh);overflow:hidden}
+.stage svg{display:block;width:100%;height:auto}
+.chip{position:absolute;left:14px;bottom:14px;display:flex;gap:10px;align-items:baseline;padding:8px 14px;border:var(--ol);border-radius:18px;background:#fff;box-shadow:3px 3px 0 var(--ink);line-height:1.1}
+.chip b{font:400 30px var(--d)}
+.chip span{font-size:13px;font-weight:600}
+.stage .hintb{position:absolute;right:14px;top:14px;max-width:46%;padding:6px 12px;border:2px solid var(--ink);border-radius:16px 16px 4px 16px;background:var(--pk);font-size:13px;font-weight:600;line-height:1.3}
+.anim .wag{animation:wag .42s ease-in-out infinite alternate}
+@keyframes wag{from{transform:rotate(-12deg)}to{transform:rotate(16deg)}}
+.anim .eye{transform-box:fill-box;transform-origin:center;animation:blink 4.2s infinite}
+@keyframes blink{0%,93%,100%{transform:none}96%{transform:scaleY(.1)}}
+.rise circle{animation:rise 7s linear infinite;transform-box:fill-box}
+@keyframes rise{from{transform:translateY(40px);opacity:0}15%{opacity:.9}to{transform:translateY(-240px);opacity:0}}
+fieldset{border:0;margin:0 0 20px;padding:0;min-width:0}
+legend{font:400 26px var(--d);padding:0;margin-bottom:10px}
+.opt{position:relative;display:block;cursor:pointer}
+.opt input{position:absolute;inset:0;opacity:0;margin:0;width:100%;height:100%;cursor:pointer}
+.opt .f{display:flex;flex-direction:column;align-items:center;justify-content:center;border:var(--ol);border-radius:22px;background:#fff;box-shadow:3px 3px 0 var(--ink);transition:transform .2s cubic-bezier(.3,1.7,.5,1),background .2s}
+.opt input:checked+.f{background:var(--pk);transform:translate(-1px,-3px) rotate(-2deg);box-shadow:4px 6px 0 var(--ink)}
+.opt input:focus-visible+.f{outline:4px solid var(--ink);outline-offset:3px}
+.sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.sizes .f{min-height:70px;padding:6px 2px;text-align:center;line-height:1.15}
+.sizes b{font-size:15px}.sizes small{font-size:11.5px;font-weight:600;opacity:.85}
+.coats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.coats .f{flex-direction:row;justify-content:flex-start;gap:10px;min-height:62px;padding:8px 12px;text-align:left;line-height:1.2}
+.coats svg{flex:none;width:40px;height:40px}
+.coats b{display:block;font-size:15.5px}.coats small{font-size:12.5px}
+.adds{display:flex;flex-wrap:wrap;gap:8px}
+.adds .f{flex-direction:row;gap:6px;min-height:44px;padding:0 14px;border-radius:999px;font-weight:600;font-size:14.5px}
+.adds input:checked+.f{background:var(--bl);color:#fff;transform:none}
+.adds input:checked+.f::before{content:"✓"}
+.result{border:var(--ol);border-radius:30px;background:#fff;box-shadow:var(--sh);padding:22px}
+.result h3{font:400 34px/1 var(--d)}
+.result .sum{font-weight:600;margin-top:6px}
+.result ol{padding-left:20px;margin:12px 0;font-size:15px}
+.tot{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:baseline;padding-top:12px;border-top:3px dashed var(--ink)}
+.tot b{font:400 40px/1 var(--d)}
+.tot span{font-weight:600}
+.result .btn{margin-top:16px}
+/* add-ons */
+#addons{--bg:var(--pk)}
+.bubs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:40px}
+.bb{text-align:center}
+.bb .ball{width:min(170px,100%);aspect-ratio:1;margin:0 auto 14px;border:var(--ol);border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0 9%,transparent 10%),radial-gradient(circle at 50% 50%,#fff 0 55%,#FFE3F1 56% 80%,#FFC7E2 81%);box-shadow:var(--sh);display:grid;place-items:center}
+.bb .ball svg{width:58%;height:58%}
+.bb h3{font:400 28px/1.05 var(--d)}
+.bb p{font-size:15px;margin-top:4px}
+.bb .pr{display:inline-block;margin-top:8px;padding:3px 12px;border:2px solid var(--ink);border-radius:999px;background:#fff;font-weight:700;font-size:14px}
+/* before */
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:36px;counter-reset:n}
+.steps li{position:relative;padding:58px 16px 18px;border:var(--ol);border-radius:26px;background:var(--cr);box-shadow:4px 4px 0 var(--ink)}
+.steps li::before{counter-increment:n;content:counter(n);position:absolute;top:-22px;left:16px;width:58px;height:58px;border:var(--ol);border-radius:50%;background:var(--ye);display:grid;place-items:center;font:400 30px var(--d)}
+.steps b{display:block;font-size:16.5px;line-height:1.3}
+.steps span{display:block;font-size:14.5px;margin-top:6px}
+.note{margin-top:26px;padding:12px 18px;border:2px dashed var(--ink);border-radius:18px;font-size:14.5px;max-width:74ch}
+/* breeds */
+#breeds{--bg:var(--bl2);color:#fff}
+.breeds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:36px}
+.breed{display:flex;flex-direction:column;align-items:center;gap:4px;padding:14px 10px 18px;border:var(--ol);border-radius:30px;background:#fff;color:var(--ink);box-shadow:var(--sh);cursor:pointer;transition:transform .2s cubic-bezier(.3,1.7,.5,1)}
+.breed:hover{transform:rotate(-2deg) scale(1.03)}
+.breed svg{width:100%;max-width:190px;height:auto}
+.breed b{font:400 26px/1 var(--d)}
+.breed small{font-size:13px;font-weight:600}
+.breed em{font-style:normal;font-size:12.5px;margin-top:4px;padding:2px 10px;border-radius:999px;background:var(--ye);border:2px solid var(--ink)}
+/* book */
+.bk{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:start;margin-top:34px}
+form{border:var(--ol);border-radius:32px;background:var(--cr);box-shadow:var(--sh);padding:clamp(18px,3vw,30px);display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+form .full{grid-column:1/-1}
+form label,.lab{display:block;font-weight:700;font-size:14px;margin-bottom:5px}
+form input:not([type=checkbox]):not([type=radio]),form select,form textarea{width:100%;min-height:48px;padding:10px 14px;border:var(--ol);border-radius:16px;background:#fff;font-size:16px}
+form textarea{min-height:92px;resize:vertical}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills .f{flex-direction:row;min-height:42px;padding:0 14px;border-radius:999px;font-weight:600;font-size:14.5px;box-shadow:2px 2px 0 var(--ink)}
+.demo{border:var(--ol);border-radius:22px;background:var(--ye);padding:14px 18px;font-weight:600}
+.info{border:var(--ol);border-radius:32px;background:#fff;box-shadow:var(--sh);padding:22px}
+.info h3{font:400 30px var(--d);margin-bottom:6px}
+.info table{width:100%;border-collapse:collapse;font-size:15px}
+.info td,.info th{padding:6px 0;border-bottom:2px dotted rgba(29,26,58,.35);text-align:left}
+.info td{text-align:right}
+.info p{margin-top:12px;font-size:15px}
+footer{background:var(--ink);color:#fff;padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between;align-items:baseline;font-size:14.5px}
+footer b{font:400 30px/1.1 var(--d);overflow-wrap:anywhere}
+footer p{opacity:.9}
+@media (max-width:1100px){.cards,.bubs{grid-template-columns:1fr 1fr;row-gap:48px}.steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}.nav ul a{padding:8px 8px;font-size:14px}}
+@media (max-width:900px){
+.hd{position:relative}
+.menu{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:var(--ol);border-radius:999px;background:#fff;font-weight:700;font-size:14.5px;box-shadow:3px 3px 0 var(--ink);cursor:pointer}
+.nav ul{display:none;position:absolute;right:0;top:calc(100% + 12px);flex-direction:column;min-width:220px;padding:8px;border:var(--ol);border-radius:22px;background:#fff;box-shadow:var(--sh);z-index:50}
+.nav ul.open{display:flex}
+.nav a{color:var(--ink);padding:10px 14px}
+.nav a:hover{background:var(--cr)}
+.hero-g,.bgrid,.bk{grid-template-columns:1fr}
+.hero-art{max-width:560px;margin:0 auto;width:100%}
+.stage{top:8px;z-index:5}
+.breeds{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+.hd .btn.sm{padding:0 14px}
+.logo svg{width:40px;height:40px}.logo span{font-size:20px}
+.hero h1{font-size:clamp(46px,14vw,60px)}
+.btns .btn{flex:1 1 auto}
+.popbtn{left:0;bottom:0}
+.cards,.bubs,.steps{grid-template-columns:1fr}
+.card{transform:none!important}
+.bubs{gap:34px}
+.bb{display:grid;grid-template-columns:110px 1fr;gap:4px 16px;text-align:left;align-items:center}
+.bb .ball{grid-row:span 3;width:110px;margin:0}
+.stage{border-radius:26px;margin:0 -4px}
+.stage svg{max-height:34vh;width:100%}
+.chip{left:8px;bottom:8px;padding:5px 10px}.chip b{font-size:24px}
+.stage .hintb{display:none}
+.sizes{gap:5px}.sizes .f{min-height:62px;border-radius:18px}.sizes b{font-size:13.5px}.sizes small{font-size:10.5px}
+.coats{grid-template-columns:1fr 1fr;gap:8px}.coats .f{padding:8px;gap:6px}.coats svg{width:30px;height:30px}.coats small{display:none}
+form{grid-template-columns:1fr}
+.breeds{gap:14px}.breed b{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="mk" viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="#FFD93D" stroke="#1D1A3A" stroke-width="3"/><path d="M13 17c-4 0-6 8-3 12 3 3 5-2 5-7M35 17c4 0 6 8 3 12-3 3-5-2-5-7" fill="#F2A65A" stroke="#1D1A3A" stroke-width="2.5" stroke-linejoin="round"/><ellipse cx="24" cy="26" rx="10" ry="9" fill="#FFF3E2" stroke="#1D1A3A" stroke-width="2.5"/><ellipse cx="24" cy="25" rx="3" ry="2.2" fill="#1D1A3A"/><path d="M19 21q2-2 4 0M25 21q2-2 4 0" fill="none" stroke="#1D1A3A" stroke-width="2" stroke-linecap="round"/><path d="M22 29q2 3 4 0" fill="#FF7AB6" stroke="#1D1A3A" stroke-width="1.8"/><circle cx="36" cy="9" r="5" fill="#fff" stroke="#1D1A3A" stroke-width="2"/><circle cx="42" cy="17" r="3" fill="#fff" stroke="#1D1A3A" stroke-width="2"/></symbol></svg>
+
+<header class="hd"><div class="wrap">
+<a class="logo" href="#top"><svg aria-hidden="true"><use href="#mk"/></svg><span data-brand>Fluff &amp; Buff Dog Grooming</span></a>
+<nav class="nav" aria-label="Sections"><button class="menu" type="button" aria-expanded="false" aria-controls="navl">Menu <span aria-hidden="true">▾</span></button>
+<ul id="navl"><li><a href="#menu">Groom menu</a></li><li><a href="#build">Build my groom</a></li><li><a href="#addons">Add-ons</a></li><li><a href="#before">Before you come</a></li><li><a href="#breeds">Breeds</a></li></ul></nav>
+<a class="btn sm" href="#book">Book</a>
+</div></header>
+
+<main>
+<section class="hero" id="top">
+<canvas id="bub" aria-hidden="true"></canvas>
+<div class="wrap hero-g">
+<div>
+<p class="tag" data-brand>Fluff &amp; Buff Dog Grooming</p>
+<h1 class="pop">Suds, snips &amp; happy zoomies.</h1>
+<p class="lede">Dog grooming in Wilston, Brisbane. Warm hydrobaths, patient hands and a blueberry facial that smells like dessert.</p>
+<div class="btns"><a class="btn ye" href="#build">Build my groom</a><a class="btn wh" href="#menu">See prices</a></div>
+<ul class="perks"><li>Open Mon–Sat</li><li>Cage-free drying</li><li>One dog on the table at a time</li></ul>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 520 420" role="img" aria-label="A fluffy dog grinning in a pink clawfoot bathtub full of bubbles, with a rubber duck on the rim.">
+<g stroke="#1D1A3A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+<ellipse cx="260" cy="396" rx="200" ry="15" fill="#1D1A3A" opacity=".2" stroke="none"/>
+<path d="M112 348l-16 42h42l-4-38zM408 348l16 42h-42l4-38z" fill="#FFD93D"/>
+<path d="M44 222C44 318 110 364 196 368H324C410 364 476 318 476 222Z" fill="#FF7AB6"/>
+<path d="M86 256C96 304 132 330 188 338" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="9"/>
+<ellipse cx="260" cy="146" rx="86" ry="78" fill="#FFF3E2"/>
+<path d="M190 96C150 96 132 176 160 206C182 226 204 176 204 124ZM330 96C370 96 388 176 360 206C338 226 316 176 316 124Z" fill="#F2A65A"/>
+<path d="M222 140q14-14 28 0M270 140q14-14 28 0" fill="none" stroke-width="7"/>
+<ellipse cx="260" cy="182" rx="42" ry="30" fill="#fff"/>
+<ellipse cx="260" cy="166" rx="17" ry="12" fill="#1D1A3A"/>
+<path d="M240 186q20 16 40 0" fill="none"/><path d="M250 192q10 34 20 0z" fill="#FF7AB6" stroke-width="5"/>
+<g fill="#FF7AB6" opacity=".55" stroke="none"><ellipse cx="206" cy="176" rx="13" ry="8"/><ellipse cx="314" cy="176" rx="13" ry="8"/></g>
+<ellipse cx="253" cy="162" rx="5" ry="3" fill="#fff" stroke="none"/>
+<g fill="#fff"><circle cx="226" cy="82" r="22"/><circle cx="292" cy="80" r="22"/><circle cx="258" cy="66" r="28"/><circle cx="204" cy="102" r="13"/><circle cx="316" cy="102" r="13"/><circle cx="274" cy="34" r="8"/>
+<circle cx="70" cy="206" r="22"/><circle cx="108" cy="196" r="30"/><circle cx="150" cy="204" r="24"/><circle cx="194" cy="212" r="18"/><circle cx="326" cy="212" r="18"/><circle cx="366" cy="204" r="24"/><circle cx="402" cy="210" r="16"/></g>
+<rect x="30" y="212" width="460" height="22" rx="11" fill="#fff"/>
+<g fill="#FFF3E2"><ellipse cx="178" cy="222" rx="30" ry="18"/><ellipse cx="342" cy="222" rx="30" ry="18"/></g>
+<path d="M166 216v12M178 214v14M190 216v12M330 216v12M342 214v14M354 216v12" fill="none" stroke-width="3.5"/>
+<ellipse cx="446" cy="192" rx="34" ry="22" fill="#FFD93D"/><circle cx="462" cy="160" r="18" fill="#FFD93D"/><path d="M476 158l20 5-20 7z" fill="#FF8A3D"/><circle cx="467" cy="155" r="2.5" fill="#1D1A3A" stroke="none"/><path d="M426 190q14 12 30 0" fill="none" stroke-width="4"/>
+<path d="M58 120q10 14 0 22q-10-8 0-22zM470 92q8 12 0 18q-8-6 0-18zM96 70q7 10 0 15q-7-5 0-15z" fill="#8FC1FF" stroke-width="3.5"/>
+<path d="M372 40l5 12 12 5-12 5-5 12-5-12-12-5 12-5zM150 30l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#FFD93D" stroke-width="3"/>
+</g>
+</svg>
+<button class="popbtn" id="popBtn" type="button"><i aria-hidden="true"></i><span id="popTxt">Pop a bubble</span></button>
+</div>
+</div>
+</section>
+
+<section class="sec" id="menu">
+<div class="wrap">
+<h2 class="pop" style="color:var(--pk)">The groom menu</h2>
+<p class="intro">Every visit starts with a sniff-and-hello and ends with a spritz. Prices depend on size and coat; we'll confirm yours at drop-off.</p>
+<div class="cards">
+<article class="card" style="--c:var(--bl)"><div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M5 20h34v4c0 8-6 13-14 13h-6C11 37 5 32 5 24z" fill="#fff" stroke="#1D1A3A" stroke-width="2.6"/><circle cx="14" cy="15" r="4" fill="#fff" stroke="#1D1A3A" stroke-width="2.2"/><circle cx="22" cy="11" r="5" fill="#fff" stroke="#1D1A3A" stroke-width="2.2"/><circle cx="30" cy="15" r="4" fill="#fff" stroke="#1D1A3A" stroke-width="2.2"/></svg></div>
+<h3>Bath &amp; Brush</h3><p>For in-between visits and short coats.</p><ul><li>Warm hydrobath, two shampoos</li><li>Low-heat blow-dry + brush-out</li><li>Ears cleaned, nails clipped</li></ul>
+<div class="tiers" aria-label="Sample prices by size"><span>Toy<b>$55</b></span><span>Sm<b>$65</b></span><span>Med<b>$80</b></span><span>Lge<b>$95</b></span><span>Giant<b>$110</b></span></div></article>
+<article class="card" style="--c:var(--pk)"><div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="12" cy="32" r="6" fill="#fff" stroke="#1D1A3A" stroke-width="2.6"/><circle cx="28" cy="34" r="6" fill="#fff" stroke="#1D1A3A" stroke-width="2.6"/><path d="M16 27L34 6M24 29L14 8" fill="none" stroke="#1D1A3A" stroke-width="3" stroke-linecap="round"/></svg></div>
+<h3>Full Groom</h3><p>The works, styled to suit your dog.</p><ul><li>Everything in Bath &amp; Brush</li><li>Clip or hand-scissor finish</li><li>Face, feet and hygiene tidy</li></ul>
+<div class="tiers" aria-label="Sample prices by size"><span>Toy<b>$75</b></span><span>Sm<b>$90</b></span><span>Med<b>$110</b></span><span>Lge<b>$135</b></span><span>Giant<b>$165</b></span></div></article>
+<article class="card" style="--c:var(--ye)"><div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><ellipse cx="22" cy="28" rx="10" ry="8" fill="#fff" stroke="#1D1A3A" stroke-width="2.6"/><g fill="#fff" stroke="#1D1A3A" stroke-width="2.4"><ellipse cx="10" cy="17" rx="4" ry="5"/><ellipse cx="18" cy="11" rx="4" ry="5"/><ellipse cx="27" cy="11" rx="4" ry="5"/><ellipse cx="35" cy="17" rx="4" ry="5"/></g></svg></div>
+<h3>Puppy Intro</h3><p>A gentle first visit for pups under six months.</p><ul><li>Short bath, quiet dryer</li><li>Nail clip and paw handling</li><li>Lots of praise and patience</li></ul>
+<p class="flat">$45 flat · about 45 min</p></article>
+<article class="card" style="--c:#fff"><div class="ic"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="8" width="28" height="10" rx="4" fill="#FF7AB6" stroke="#1D1A3A" stroke-width="2.6"/><path d="M12 18v14M17 18v16M22 18v14M27 18v16M32 18v14" stroke="#1D1A3A" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+<h3>De-shed Deluxe</h3><p>For double coats that leave fur on everything.</p><ul><li>Undercoat rake + de-shed treatment</li><li>High-velocity dry, full brush-out</li><li>Less fur on your couch for weeks</li></ul>
+<div class="tiers" aria-label="Sample prices by size"><span>Toy<b>$70</b></span><span>Sm<b>$85</b></span><span>Med<b>$105</b></span><span>Lge<b>$125</b></span><span>Giant<b>$150</b></span></div></article>
+</div>
+<p class="small">Sample prices in AUD including GST, for this concept demo. Heavily matted coats may need extra time.</p>
+</div>
+</section>
+
+<section class="sec" id="build">
+<div class="wrap">
+<h2 class="pop" style="color:var(--bl)">Build my groom</h2>
+<p class="intro">Pick a size and a coat — watch the pup change — then add the extras. You'll get a sample price and how long we'll need.</p>
+<div class="bgrid">
+<div class="stage" id="stage">
+<svg id="stg" viewBox="0 0 420 330" aria-hidden="true">
+<g class="rise" fill="rgba(255,255,255,.75)" stroke="#1D1A3A" stroke-width="2"><circle cx="330" cy="250" r="9"/><circle cx="360" cy="280" r="6" style="animation-delay:-2s"/><circle cx="96" cy="270" r="7" style="animation-delay:-4s"/><circle cx="300" cy="300" r="5" style="animation-delay:-5.5s"/></g>
+<g stroke="#1D1A3A" stroke-width="3" fill="none"><path d="M36 290V58"/><path id="ticks"/></g>
+<rect x="90" y="290" width="300" height="16" rx="8" fill="#FF7AB6" stroke="#1D1A3A" stroke-width="4"/><path d="M122 306v18M358 306v18" stroke="#1D1A3A" stroke-width="7" stroke-linecap="round"/>
+<g id="dog" class="anim" transform="translate(236 290)"></g>
+<g id="mark"><path id="mline" d="M36 180H200" stroke="#1D1A3A" stroke-width="2.5" stroke-dasharray="6 6"/><rect id="mbox" x="14" y="166" width="72" height="28" rx="14" fill="#FFD93D" stroke="#1D1A3A" stroke-width="3"/><text id="mtxt" x="50" y="185" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700" font-size="14" fill="#1D1A3A">~48 cm</text></g>
+</svg>
+<p class="chip" aria-hidden="true"><b id="chipP">$135</b><span id="chipT">about 2 hr 45 min</span></p>
+<p class="hintb">Tap sizes and coats — I'll change!</p>
+</div>
+<div>
+<fieldset><legend>1. Size</legend><div class="sizes" id="o-size"></div></fieldset>
+<fieldset><legend>2. Coat</legend><div class="coats" id="o-coat"></div></fieldset>
+<fieldset><legend>3. Extras</legend><div class="adds" id="o-add"></div></fieldset>
+<article class="result" aria-live="polite"><h3>Your groom</h3><p class="sum" id="rSum"></p><ol id="rSteps"></ol><div class="tot"><b id="rP">$135</b><span id="rT">about 2 hr 45 min</span></div><a class="btn" href="#book" id="bookThis">Book this groom</a><p class="small" style="margin-top:12px">Sample prices and times. The final price depends on your dog's coat on the day.</p></article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="addons">
+<div class="wrap">
+<h2 class="pop" style="color:var(--ye)">Add-ons</h2>
+<p class="intro">Little extras that make a big difference. Add them to any groom, or pop in for just these between visits.</p>
+<div class="bubs">
+<div class="bb"><div class="ball"><svg viewBox="0 0 60 60" aria-hidden="true"><rect x="8" y="30" width="44" height="8" rx="4" transform="rotate(-30 30 34)" fill="#3D7BFF" stroke="#1D1A3A" stroke-width="3"/><path d="M40 18l6-4M43 22l6-4M37 14l6-4" stroke="#1D1A3A" stroke-width="3" stroke-linecap="round"/></svg></div><h3>Teeth brushing</h3><p>Enzyme paste, soft brush, fresher kisses.</p><span class="pr">$15 · 10 min</span></div>
+<div class="bb"><div class="ball"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 44l18-24M24 46l14-26" stroke="#1D1A3A" stroke-width="4" stroke-linecap="round"/><path d="M32 20c4-8 14-10 18-4-6 0-10 4-12 10zM38 20c4-6 12-6 14 0" fill="#FF7AB6" stroke="#1D1A3A" stroke-width="3" stroke-linejoin="round"/></svg></div><h3>Nail file &amp; grind</h3><p>Smooth edges after the clip, kinder on floors.</p><span class="pr">$15 · 10 min</span></div>
+<div class="bb"><div class="ball"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="24" cy="34" r="13" fill="#5B5FD6" stroke="#1D1A3A" stroke-width="3"/><circle cx="40" cy="28" r="11" fill="#6E72E8" stroke="#1D1A3A" stroke-width="3"/><path d="M22 23l2 4 2-4M38 18l2 4 2-4" fill="none" stroke="#1D1A3A" stroke-width="2.4"/><path d="M36 12c2-6 8-7 10-4-4 0-6 2-7 5z" fill="#7BD389" stroke="#1D1A3A" stroke-width="2.4"/></svg></div><h3>Blueberry facial</h3><p>A gentle face wash that smells like dessert.</p><span class="pr">$12 · 5 min</span></div>
+<div class="bb"><div class="ball"><svg viewBox="0 0 60 60" aria-hidden="true"><rect x="12" y="24" width="36" height="22" rx="8" fill="#FFD93D" stroke="#1D1A3A" stroke-width="3"/><rect x="10" y="16" width="40" height="10" rx="5" fill="#fff" stroke="#1D1A3A" stroke-width="3"/><path d="M26 36a4 4 0 1 0 8 0M24 31h.1M30 29h.1M36 31h.1" stroke="#1D1A3A" stroke-width="3" stroke-linecap="round" fill="none"/></svg></div><h3>Paw balm</h3><p>For pads cracked by hot summer footpaths.</p><span class="pr">$8 · 5 min</span></div>
+</div>
+<p class="small">Every groom goes home with a bandana if your dog is happy to wear one — no charge.</p>
+</div>
+</section>
+
+<section class="sec" id="before">
+<div class="wrap">
+<h2 class="pop" style="color:var(--pk)">Before your appointment</h2>
+<p class="intro">A few small things make bath day calmer for everyone.</p>
+<ol class="steps">
+<li><b>Walk first</b><span>A quick loo stop and a sniffy walk helps your dog settle on the table.</span></li>
+<li><b>Tell us the tricky bits</b><span>Matting, itchy skin, sore hips or worries — mention them when you book.</span></li>
+<li><b>Vaccinations up to date</b><span>We ask every dog to be current, for their safety and their friends'.</span></li>
+<li><b>Light breakfast</b><span>A smaller meal on the day is kinder before a warm bath.</span></li>
+<li><b>We'll text you</b><span>About 15 minutes before your dog is ready to be picked up.</span></li>
+</ol>
+<p class="note">General information only — we're groomers, not vets. If you notice skin, ear or eye problems, please see your vet before booking.</p>
+</div>
+</section>
+
+<section class="sec" id="breeds">
+<div class="wrap">
+<h2 class="pop" style="color:var(--ye)">Breeds we love</h2>
+<p class="intro">Honestly? All of them. Here are a few regulars on Brisbane tables — tap one to load it into the builder.</p>
+<div class="breeds" id="breedList"></div>
+</div>
+</section>
+
+<section class="sec" id="book" style="--bg:#fff">
+<div class="wrap">
+<h2 class="pop" style="color:var(--bl)">Book a groom</h2>
+<p class="intro">Choose a day and a drop-off time. We'll confirm by text — in this demo, nothing is sent.</p>
+<div class="bk">
+<form id="bform" novalidate>
+<div><label for="b-dog">Dog's name</label><input id="b-dog" name="dog" required autocomplete="off" placeholder="e.g. Biscuit"></div>
+<div><label for="b-groom">Groom</label><select id="b-groom" name="groom"><option>Full Groom</option><option>Bath &amp; Brush</option><option>De-shed Deluxe</option><option>Puppy Intro</option></select></div>
+<div><label for="b-size">Size</label><select id="b-size" name="size"></select></div>
+<div><label for="b-coat">Coat</label><select id="b-coat" name="coat"></select></div>
+<div class="full"><span class="lab" id="b-addL">Extras</span><div class="pills" role="group" aria-labelledby="b-addL" id="b-add"></div></div>
+<div><label for="b-day">Day</label><select id="b-day" name="day"></select></div>
+<div><span class="lab" id="b-timeL">Drop-off</span><div class="pills" role="radiogroup" aria-labelledby="b-timeL" id="b-time"></div></div>
+<div><label for="b-name">Your name</label><input id="b-name" name="name" autocomplete="name" required></div>
+<div><label for="b-ph">Mobile</label><input id="b-ph" name="phone" type="tel" autocomplete="tel" placeholder="04xx xxx xxx"></div>
+<div class="full"><label for="b-note">Anything we should know?</label><textarea id="b-note" name="note" placeholder="Matting, sensitive skin, nervous around dryers…"></textarea></div>
+<div class="full"><button class="btn ye" type="submit">Request this booking</button></div>
+<div class="full demo" id="bdone" hidden tabindex="-1"></div>
+</form>
+<aside class="info" aria-label="Salon details">
+<h3>Salon hours</h3>
+<table><tbody><tr><th scope="row">Mon – Fri</th><td>7:30am – 5pm</td></tr><tr><th scope="row">Saturday</th><td>8am – 2pm</td></tr><tr><th scope="row">Sunday</th><td>Closed (nap day)</td></tr></tbody></table>
+<p><b>Wilston, Brisbane QLD</b><br>Street parking out front, water bowl by the door.</p>
+<p><a href="tel:0755502718">(07) 5550 2718</a><br><a href="mailto:woof@example.com">woof@example.com</a></p>
+</aside>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap"><b data-brand>Fluff &amp; Buff Dog Grooming</b><p>Wilston, Brisbane QLD · Mon–Sat</p><p>A fictional business in a concept demo. Sample prices.</p></div></footer>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = matchMedia("(prefers-reduced-motion: reduce)"), rm = () => RM.matches;
+const INK = "#1D1A3A", f = n => Math.round(n * 10) / 10;
+
+/* ---------- nav ---------- */
+const mb = $(".menu"), nl = $("#navl");
+const nav = o => { mb.setAttribute("aria-expanded", o); nl.classList.toggle("open", o); };
+mb.addEventListener("click", () => nav(mb.getAttribute("aria-expanded") !== "true"));
+$$("#navl a").forEach(a => a.addEventListener("click", () => nav(false)));
+document.addEventListener("keydown", e => { if (e.key === "Escape" && mb.getAttribute("aria-expanded") === "true") { e.preventDefault(); nav(false); mb.focus(); } });
+document.addEventListener("click", e => { if (!e.target.closest(".nav")) nav(false); });
+
+/* ---------- data (sample prices) ---------- */
+const SIZES = {
+  toy: { l: "Toy", w: "under 5 kg", cm: 25, p: 75, t: 90, g: { s: .52, bl: .8, ll: .72, hr: 1.3 } },
+  small: { l: "Small", w: "5–10 kg", cm: 35, p: 90, t: 105, g: { s: .64, bl: .88, ll: .82, hr: 1.15 } },
+  medium: { l: "Medium", w: "10–25 kg", cm: 48, p: 110, t: 120, g: { s: .78, bl: 1, ll: 1, hr: 1 } },
+  large: { l: "Large", w: "25–40 kg", cm: 60, p: 135, t: 150, g: { s: .9, bl: 1.05, ll: 1.08, hr: .95 } },
+  giant: { l: "Giant", w: "40 kg +", cm: 72, p: 165, t: 180, g: { s: 1, bl: 1.1, ll: 1.15, hr: .92 } }
+};
+const COATS = {
+  short: { l: "Short", e: "smooth, like a Staffy", dp: -15, dt: -30, k: {}, st: ["Oatmeal hydrobath and rubber-curry massage", "Towel and low-heat dry, quick tidy"] },
+  double: { l: "Double", e: "fluffy undercoat, like a Samoyed", dp: 20, dt: 30, k: { fl: 1 }, st: ["Undercoat rake before the bath", "High-velocity dry and full brush-out"] },
+  curly: { l: "Curly", e: "non-shedding, like a Cavoodle", dp: 25, dt: 45, k: { cu: 1 }, st: ["Brush-out to the skin, knots teased out", "Clip and hand-scissored teddy finish"] },
+  long: { l: "Long", e: "silky, like a Maltese", dp: 20, dt: 30, k: { lo: 1 }, st: ["Conditioning bath and detangle", "Blow-dry straight, ends trimmed neatly"] }
+};
+const ADDS = { teeth: ["Teeth brushing", 15, 10], nails: ["Nail file & grind", 15, 10], facial: ["Blueberry facial", 12, 5], balm: ["Paw balm", 8, 5], bandana: ["Bandana", 0, 0] };
+const BREEDS = [
+  ["Cavoodle", "small", "curly", "#E9A66B", "#C77A3E", "4–6 wks"], ["Groodle", "large", "curly", "#F3DDB8", "#D6AC72", "4–6 wks"],
+  ["Staffy", "medium", "short", "#A8958E", "#7A6A64", "8–12 wks"], ["Golden Retriever", "large", "long", "#E8B35A", "#C98B32", "6–8 wks"],
+  ["Samoyed", "large", "double", "#FFFFFF", "#EDE4DA", "6–8 wks"], ["Maltese", "toy", "long", "#FFFFFF", "#F1E9E0", "4–6 wks"],
+  ["Border Collie", "medium", "double", "#3B3748", "#27243A", "6–8 wks"], ["French Bulldog", "small", "short", "#E8C9A0", "#C9A273", "8–12 wks"]
+];
+const hm = m => { const h = Math.floor(m / 60), r = m % 60; return "about " + (h ? h + " hr" : "") + (h && r ? " " : "") + (r ? r + " min" : ""); };
+
+/* ---------- the dog (parametric SVG) ---------- */
+const shade = (hex, k) => "#" + [1, 3, 5].map(i => Math.max(0, Math.min(255, Math.round(parseInt(hex.substr(i, 2), 16) * (1 + k))))).map(v => v.toString(16).padStart(2, "0")).join("");
+function cloud(cx, cy, rx, ry, k, amp, rot = 0) {
+  const c = Math.cos(rot), s = Math.sin(rot), P = (a, r) => { const x = (rx + r) * Math.cos(a), y = (ry + r) * Math.sin(a); return f(cx + x * c - y * s) + " " + f(cy + x * s + y * c); };
+  let d = "M" + P(0, 0);
+  for (let i = 0; i < k; i++) { const a0 = i / k * 6.2832, a1 = (i + 1) / k * 6.2832; d += "Q" + P((a0 + a1) / 2, amp * 2) + " " + P(a1, 0); }
+  return d + "Z";
+}
+function dog(p) {
+  const { s, bl, ll, hr, fl, cu, lo, fur, ear } = p;
+  const legH = 70 * ll, ry = 42, rx = 78 * bl, cy = -(legH + ry * .7), hR = 34 * hr, hx = rx * .9, hy = cy - ry * 1.05, lw = 17 + 4 * bl;
+  const sh = Math.max(0, 1 - fl - cu - lo), dk = shade(fur, -.13), st = `stroke="${INK}" stroke-width="4" stroke-linejoin="round"`;
+  const C = (x, y, r, col = fur) => r > .6 ? `<circle cx="${f(x)}" cy="${f(y)}" r="${f(r)}" fill="${col}" ${st}/>` : "";
+  let o = "";
+  /* tail */
+  const W = sh + fl + cu + lo || 1, mx = (a, b, c, d) => (a * sh + b * fl + c * cu + d * lo) / W;
+  const tx = mx(-28, -34, 26, -50), ty = mx(-44, -56, -30, -38), td = `M0 0C${f(mx(-14, -22, -10, -24))} ${f(mx(-6, -4, -32, 0))} ${f(mx(-26, -40, 16, -44))} ${f(mx(-24, -30, -52, -18))} ${f(tx)} ${f(ty)}`, tw = 9 + 3 * fl;
+  let t = `<path d="${td}" fill="none" stroke="${INK}" stroke-width="${f(tw + 8)}" stroke-linecap="round"/><path d="${td}" fill="none" stroke="${fur}" stroke-width="${f(tw)}" stroke-linecap="round"/>`;
+  const ang = Math.atan2(ty, tx);
+  if (fl > .05) t += `<path d="${cloud(tx * .55, ty * .55, 26 * fl, 11 * fl, 10, 3.5 * fl, ang)}" fill="${fur}" ${st}/>`;
+  if (lo > .05) t += `<path d="${cloud(tx * .5, ty * .5 + 8 * lo, 24 * lo, 9 * lo, 10, 2.5 * lo, ang)}" fill="${fur}" ${st}/>`;
+  t += C(tx, ty, 12 * cu);
+  o += `<g transform="translate(${f(-rx * .92)} ${f(cy - ry * .35)})"><g class="wag">${t}</g></g>`;
+  /* legs */
+  const leg = (x, col) => { const a = x - lw / 2, b = x + lw / 2, tp = cy + ry * .3; return `<path d="M${f(a)} ${f(tp)}V-7Q${f(a)} 0 ${f(a + 7)} 0H${f(b + 4)}Q${f(b + 8)} 0 ${f(b + 8)}-5Q${f(b + 8)}-11 ${f(b)}-12V${f(tp)}Z" fill="${col}" ${st}/>` + C(x + 2, -15, 11 * cu, col); };
+  o += leg(rx * .3, dk) + leg(-rx * .74, dk) + leg(rx * .56, fur) + leg(-rx * .5, fur);
+  /* long skirt */
+  if (lo > .02) {
+    const bot = Math.min(-5, cy + ry * .55 + 58 * lo), x0 = rx * .84, x1 = -rx * .92;
+    let d = `M${f(x0)} ${f(cy)}L${f(x0 + 5)} ${f(bot)}`;
+    for (let x = x0; x > x1; x -= 12) d += `Q${f(x - 6)} ${f(bot + 7)} ${f(x - 12)} ${f(bot)}`;
+    o += `<path d="${d}L${f(x1)} ${f(cy)}Z" fill="${fur}" ${st}/>`;
+    let sd = ""; for (let x = x0 - 14; x > x1 + 8; x -= 17) sd += `M${f(x)} ${f(cy + ry * .8)}q-4 ${f((bot - cy - ry * .8) * .5)} 2 ${f(bot - cy - ry * .8 - 6)}`;
+    o += `<path d="${sd}" fill="none" stroke="${INK}" stroke-width="2.4" opacity=".4" stroke-linecap="round"/>`;
+  }
+  /* neck, body, ruff, curls */
+  o += `<path d="M${f(rx * .4)} ${f(cy - ry * .8)}L${f(hx - hR * .6)} ${f(hy)}L${f(hx + hR * .3)} ${f(hy + hR * .9)}L${f(rx * .95)} ${f(cy + ry * .15)}Z" fill="${fur}" ${st}/>`;
+  o += `<path d="${cloud(0, cy, rx, ry, 24, 7 * fl)}" fill="${fur}" ${st}/>`;
+  if (fl > .05) o += `<path d="${cloud(rx * .8, cy - ry * .1, 20 + 12 * fl, 24 + 12 * fl, 12, 5 * fl)}" fill="${fur}" ${st}/>`;
+  if (cu > .03) {
+    for (let i = 0; i <= 10; i++) { const a = Math.PI * (1.02 + i * .096); o += C(Math.cos(a) * rx * .92, cy + Math.sin(a) * ry * .86, (11 + i % 3 * 2) * cu); }
+    for (let i = 0; i < 5; i++) { const a = Math.PI * (.2 + i * .15); o += C(Math.cos(a) * rx * .85, cy + Math.sin(a) * ry * .84, (10 + i % 2 * 2) * cu); }
+    [[-.45, -.1], [0, .05], [.4, -.05], [-.2, .38], [.22, .32]].forEach(([u, v], i) => o += C(u * rx, cy + v * ry, (11 + i % 2 * 3) * cu));
+  }
+  /* head */
+  o += `<path d="${cloud(hx, hy, hR, hR * .92, 16, 4 * fl)}" fill="${fur}" ${st}/>`;
+  if (cu > .03) [[-.35, -.82, .34], [0, -.98, .38], [.36, -.8, .3], [-.62, -.52, .28], [-.08, -.66, .3]].forEach(([u, v, r]) => o += C(hx + u * hR, hy + v * hR, r * hR * cu));
+  o += `<ellipse cx="${f(hx + hR * .78)}" cy="${f(hy + hR * .3)}" rx="${f(hR * .52)}" ry="${f(hR * .38)}" fill="#FFF8EE" ${st}/>`;
+  o += `<ellipse cx="${f(hx + hR * 1.22)}" cy="${f(hy + hR * .14)}" rx="${f(hR * .15)}" ry="${f(hR * .11)}" fill="${INK}"/>`;
+  o += `<path d="M${f(hx + hR * .95)} ${f(hy + hR * .42)}q${f(-hR * .16)} ${f(hR * .22)} ${f(-hR * .38)} ${f(hR * .08)}" fill="none" stroke="${INK}" stroke-width="3.5" stroke-linecap="round"/><path d="M${f(hx + hR * .64)} ${f(hy + hR * .5)}q${f(hR * .05)} ${f(hR * .44)} ${f(hR * .24)} ${f(hR * .04)}z" fill="#FF7AB6" stroke="${INK}" stroke-width="3"/>`;
+  o += `<g class="eye"><ellipse cx="${f(hx + hR * .4)}" cy="${f(hy - hR * .12)}" rx="${f(hR * .11)}" ry="${f(hR * .14)}" fill="${INK}"/><circle cx="${f(hx + hR * .44)}" cy="${f(hy - hR * .18)}" r="${f(hR * .04)}" fill="#fff"/></g>`;
+  o += `<ellipse cx="${f(hx + hR * .36)}" cy="${f(hy + hR * .3)}" rx="${f(hR * .15)}" ry="${f(hR * .09)}" fill="#FF7AB6" opacity=".55"/>`;
+  const eL = hR * (.62 + .8 * lo), ex = hx - hR * .2, ey = hy - hR * .72;
+  o += `<path d="M${f(ex + hR * .1)} ${f(ey)}C${f(ex - hR * .55)} ${f(ey - hR * .05)} ${f(ex - hR * .7)} ${f(ey + eL * .8)} ${f(ex - hR * .35)} ${f(ey + eL + hR * .3)}C${f(ex - hR * .05)} ${f(ey + eL + hR * .35)} ${f(ex + hR * .22)} ${f(ey + hR * .6)} ${f(ex + hR * .1)} ${f(ey)}Z" fill="${ear}" ${st}/>`;
+  if (cu > .03) [.35, .65, .95].forEach(k => o += C(ex - hR * .32, ey + (eL + hR * .3) * k, hR * .2 * cu, ear));
+  return `<g transform="scale(${f(s)})">${o}</g>`;
+}
+
+/* ---------- builder ---------- */
+const radio = (type, name, v, face, cls = "") => `<label class="opt ${cls}"><input type="${type}" name="${name}" value="${v}"><span class="f">${face}</span></label>`;
+const coatIcon = { short: '<circle cx="20" cy="20" r="14" fill="#FFE9CC" stroke="#1D1A3A" stroke-width="3"/>', double: `<path d="${cloud(20, 20, 11, 11, 9, 2.4)}" fill="#fff" stroke="#1D1A3A" stroke-width="3"/>`, curly: '<g fill="#E9A66B" stroke="#1D1A3A" stroke-width="2.5"><circle cx="13" cy="14" r="7"/><circle cx="26" cy="13" r="7"/><circle cx="12" cy="27" r="7"/><circle cx="27" cy="27" r="7"/><circle cx="20" cy="20" r="7"/></g>', long: '<path d="M8 8q4 12 0 26M16 6q4 14 0 30M24 6q-4 14 0 30M32 8q-4 12 0 26" fill="none" stroke="#1D1A3A" stroke-width="3.2" stroke-linecap="round"/>' };
+$("#o-size").innerHTML = Object.entries(SIZES).map(([k, v]) => radio("radio", "size", k, `<b>${v.l}</b><small>${v.w}</small>`)).join("");
+$("#o-coat").innerHTML = Object.entries(COATS).map(([k, v]) => radio("radio", "coat", k, `<svg viewBox="0 0 40 40" aria-hidden="true">${coatIcon[k]}</svg><span><b>${v.l}</b><small>${v.e}</small></span>`)).join("");
+$("#o-add").innerHTML = Object.entries(ADDS).map(([k, v]) => radio("checkbox", "add", k, `${v[0]}${v[1] ? " +$" + v[1] : " · free"}`)).join("");
+const S = { size: "medium", coat: "curly", adds: ["facial"], fur: "#FFE9CC", ear: "#F2A65A" };
+const target = () => ({ ...SIZES[S.size].g, fl: 0, cu: 0, lo: 0, ...COATS[S.coat].k });
+const P = { ...target() }, V = {}, KEYS = ["s", "bl", "ll", "hr", "fl", "cu", "lo"];
+let col = [S.fur, S.ear], raf = 0, last = 0;
+const dogG = $("#dog");
+function draw() {
+  dogG.innerHTML = dog({ ...P, fur: col[0], ear: col[1] });
+  const g = SIZES[S.size].g, legH = 70 * P.ll, cy = -(legH + 29.4), y = 290 + (cy - 42 * .55) * P.s;
+  $("#mline").setAttribute("d", `M36 ${f(y)}H${f(236 + 40 * P.s)}`); $("#mbox").setAttribute("y", f(y - 14)); $("#mtxt").setAttribute("y", f(y + 5));
+}
+function tick(now) {
+  raf = 0;
+  const dt = Math.min(.033, (now - last) / 1000 || .016); last = now;
+  const T = target(); let moving = false;
+  KEYS.forEach(k => { V[k] = (V[k] || 0) + ((T[k] - P[k]) * 170 - (V[k] || 0) * 15) * dt; P[k] += V[k] * dt; if (Math.abs(T[k] - P[k]) > .002 || Math.abs(V[k]) > .002) moving = true; else { P[k] = T[k]; V[k] = 0; } });
+  ["fl", "cu", "lo"].forEach(k => P[k] = Math.max(0, P[k]));
+  draw();
+  if (moving) raf = requestAnimationFrame(tick); else dogG.classList.add("anim");
+}
+function morph() {
+  if (rm()) { Object.assign(P, target()); draw(); return; }
+  dogG.classList.remove("anim");
+  if (!raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
+}
+function price() {
+  const z = SIZES[S.size], c = COATS[S.coat];
+  let p = z.p + c.dp, t = z.t + c.dt; S.adds.forEach(a => { p += ADDS[a][1]; t += ADDS[a][2]; });
+  return [p, t];
+}
+function render() {
+  const [p, t] = price(), z = SIZES[S.size], c = COATS[S.coat];
+  $("#chipP").textContent = $("#rP").textContent = "$" + p;
+  $("#chipT").textContent = $("#rT").textContent = hm(t);
+  $("#mtxt").textContent = "~" + z.cm + " cm";
+  $("#rSum").textContent = `${z.l} (${z.w}) · ${c.l} coat · Full Groom`;
+  const steps = ["Sniff-and-hello, then a warm hydrobath", ...c.st, "Ears cleaned, nails clipped, face and feet tidied", ...S.adds.map(a => ADDS[a][0] + (a === "bandana" ? " to finish" : ""))];
+  $("#rSteps").innerHTML = steps.map(x => `<li>${x}</li>`).join("");
+}
+function sync() {
+  $$("input[name=size]").forEach(i => i.checked = i.value === S.size);
+  $$("input[name=coat]").forEach(i => i.checked = i.value === S.coat);
+  $$("input[name=add]").forEach(i => i.checked = S.adds.includes(i.value));
+}
+$$("#o-size input,#o-coat input").forEach(i => i.addEventListener("change", () => { S[i.name] = i.value; render(); morph(); }));
+$$("#o-add input").forEach(i => i.addEventListener("change", () => { S.adds = $$("#o-add input:checked").map(x => x.value); render(); }));
+/* ruler ticks */
+let tk = ""; for (let y = 280; y > 60; y -= 20) tk += `M36 ${y}h${(290 - y) % 40 === 10 ? 14 : 8}`; $("#ticks").setAttribute("d", tk);
+sync(); render(); draw(); dogG.classList.add("anim");
+
+/* breeds -> builder */
+$("#breedList").innerHTML = BREEDS.map(([n, sz, ct, fu, ea, ev], i) => `<button class="breed" type="button" data-i="${i}"><svg viewBox="-140 -215 290 225" aria-hidden="true">${dog({ ...SIZES[sz].g, s: 1, fl: 0, cu: 0, lo: 0, ...COATS[ct].k, fur: fu, ear: ea })}</svg><b>${n}</b><small>${COATS[ct].l} coat · ${SIZES[sz].l}</small><em>groom every ${ev}</em><span class="vh">Load ${n} into the builder</span></button>`).join("");
+$$(".breed").forEach(b => b.addEventListener("click", () => {
+  const [n, sz, ct, fu, ea] = BREEDS[+b.dataset.i];
+  S.size = sz; S.coat = ct; col = [fu, ea]; sync(); render(); morph();
+  $("#build").scrollIntoView({ behavior: rm() ? "auto" : "smooth" });
+  window.DemoKit && DemoKit.toast(`${n} loaded into the builder — sample price ${$("#rP").textContent}.`);
+}));
+
+/* ---------- booking (honest demo) ---------- */
+$("#b-size").innerHTML = Object.entries(SIZES).map(([k, v]) => `<option value="${k}">${v.l} (${v.w})</option>`).join("");
+$("#b-coat").innerHTML = Object.entries(COATS).map(([k, v]) => `<option value="${k}">${v.l}</option>`).join("");
+$("#b-add").innerHTML = Object.entries(ADDS).map(([k, v]) => radio("checkbox", "badd", k, v[0])).join("");
+$("#b-time").innerHTML = ["7:30am", "9am", "10:30am", "12:30pm"].map((t, i) => radio("radio", "btime", t, t)).join("");
+$("#b-time").classList.add("pills"); $("#b-add").classList.add("pills");
+const DN = "Sun Mon Tue Wed Thu Fri Sat".split(" "), MN = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ");
+const days = []; for (let d = new Date(), i = 1; days.length < 12 && i < 20; i++) { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate() + i); if (x.getDay()) days.push(`${DN[x.getDay()]} ${x.getDate()} ${MN[x.getMonth()]}`); }
+$("#b-day").innerHTML = days.map(d => `<option>${d}${d.startsWith("Sat") ? " (until 2pm)" : ""}</option>`).join("");
+$("input[name=btime]").checked = true;
+function prefill() {
+  $("#b-size").value = S.size; $("#b-coat").value = S.coat; $("#b-groom").value = "Full Groom";
+  $$("input[name=badd]").forEach(i => i.checked = S.adds.includes(i.value));
+}
+prefill();
+$("#bookThis").addEventListener("click", prefill);
+$("#bform").addEventListener("submit", e => {
+  e.preventDefault();
+  const fm = e.target, dogN = fm.dog.value.trim(), who = fm.name.value.trim(), done = $("#bdone");
+  if (!dogN || !who) { (dogN ? fm.name : fm.dog).focus(); done.hidden = false; done.textContent = "Please add your dog's name and your name so we know who's coming."; return; }
+  const esc = s => s.replace(/[&<>"']/g, c => "&#" + c.charCodeAt(0) + ";");
+  done.innerHTML = `Demo only — nothing was booked. On a real site, ${esc(dogN)}'s ${esc(fm.groom.value)} on ${esc(fm.day.value.replace(/ \(.*\)/, ""))} at ${esc((fm.btime.value || ""))} would be sent to the salon, and they'd text you to confirm.`;
+  done.hidden = false; done.focus();
+  window.DemoKit && DemoKit.toast("Demo only — no booking was made.");
+});
+
+/* ---------- hero bubbles you can pop (Canvas 2D) ---------- */
+const cv = $("#bub"), X = cv.getContext("2d"), hero = $(".hero"), art = $(".hero-art");
+let W = 0, H = 0, DPR = 1, bubs = [], fx = [], vis = false, braf = 0, blast = 0, popped = 0;
+const conic = !!X.createConicGradient;
+function size() { const r = hero.getBoundingClientRect(); W = r.width; H = r.height; DPR = Math.min(devicePixelRatio || 1, 2); cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); }
+function nb(init) {
+  const a = art.getBoundingClientRect(), h = hero.getBoundingClientRect(), x0 = a.left - h.left, y0 = a.top - h.top;
+  return { x: x0 + a.width * (.12 + Math.random() * .8), y: init ? Math.random() * H : y0 + a.height * (.45 + Math.random() * .2), r: 9 + Math.random() * 26, vy: 16 + Math.random() * 26, ph: Math.random() * 6, sw: 8 + Math.random() * 16, t: 0 };
+}
+function fill() { bubs = []; const n = W < 700 ? 11 : 17; for (let i = 0; i < n; i++) bubs.push(nb(true)); }
+function bubble(b) {
+  const x = b.x + Math.sin(b.ph + b.t * 1.3) * b.sw * (rm() ? 0 : 1), y = b.y, r = b.r;
+  b.dx = x;
+  const g = X.createRadialGradient(x - r * .35, y - r * .35, r * .1, x, y, r);
+  g.addColorStop(0, "rgba(255,255,255,.18)"); g.addColorStop(.7, "rgba(255,255,255,.06)"); g.addColorStop(1, "rgba(255,255,255,.45)");
+  X.fillStyle = g; X.beginPath(); X.arc(x, y, r, 0, 7); X.fill();
+  if (conic) { const c = X.createConicGradient(b.ph + b.t * .6, x, y); ["rgba(255,122,182,.95)", "rgba(255,217,61,.95)", "rgba(143,210,255,.95)", "rgba(190,150,255,.9)", "rgba(255,122,182,.95)"].forEach((s, i) => c.addColorStop(i / 4, s)); X.strokeStyle = c; } else X.strokeStyle = "rgba(255,255,255,.9)";
+  X.lineWidth = Math.max(2, r * .09); X.stroke();
+  X.strokeStyle = "rgba(255,255,255,.95)"; X.lineWidth = Math.max(2, r * .1); X.lineCap = "round"; X.beginPath(); X.arc(x, y, r * .68, 3.6, 4.4); X.stroke();
+}
+function frame(now) {
+  braf = 0;
+  const dt = Math.min(.05, (now - blast) / 1000 || .016); blast = now;
+  X.setTransform(DPR, 0, 0, DPR, 0, 0); X.clearRect(0, 0, W, H);
+  bubs.forEach((b, i) => { b.t += dt; b.y -= b.vy * dt; if (b.y < -b.r - 10) bubs[i] = nb(false); });
+  bubs.forEach(bubble);
+  fx = fx.filter(p => (p.l -= dt * 1.8) > 0);
+  fx.forEach(p => {
+    X.globalAlpha = Math.max(0, p.l);
+    if (p.ring) { X.strokeStyle = "#fff"; X.lineWidth = 3; X.beginPath(); X.arc(p.x, p.y, p.r * (1.6 - p.l * .6), 0, 7); X.stroke(); X.fillStyle = "#1D1A3A"; X.font = "400 22px Chewy, cursive"; X.textAlign = "center"; X.fillText("pop!", p.x, p.y - p.r - 10 - (1 - p.l) * 16); }
+    else { p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 300 * dt; X.fillStyle = "#fff"; X.beginPath(); X.arc(p.x, p.y, 3, 0, 7); X.fill(); }
+  });
+  X.globalAlpha = 1;
+  if (vis && !document.hidden && !rm()) braf = requestAnimationFrame(frame);
+}
+function still() { X.setTransform(DPR, 0, 0, DPR, 0, 0); X.clearRect(0, 0, W, H); bubs.forEach(bubble); }
+function go() { if (rm()) return still(); if (!braf && vis && !document.hidden) { blast = performance.now(); braf = requestAnimationFrame(frame); } }
+function pop(b) {
+  bubs.splice(bubs.indexOf(b), 1); popped++;
+  if (!rm()) { fx.push({ ring: 1, x: b.dx, y: b.y, r: b.r, l: 1 }); for (let i = 0; i < 8; i++) { const a = i / 8 * 6.28; fx.push({ x: b.dx, y: b.y, vx: Math.cos(a) * 140, vy: Math.sin(a) * 140 - 40, l: .8 }); } setTimeout(() => bubs.push(nb(false)), 900); }
+  else { still(); setTimeout(() => { bubs.push(nb(true)); still(); }, 1500); }
+  $("#popTxt").textContent = `Pop a bubble · ${popped} popped`;
+}
+hero.addEventListener("pointerdown", e => {
+  if (e.target.closest("a,button")) return;
+  const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  for (let i = bubs.length - 1; i >= 0; i--) { const b = bubs[i]; if (Math.hypot(x - (b.dx ?? b.x), y - b.y) < b.r + 8) return pop(b); }
+});
+$("#popBtn").addEventListener("click", () => {
+  const vis2 = bubs.filter(b => b.y > 0 && b.y < H); const b = vis2[Math.floor(Math.random() * vis2.length)] || bubs[0];
+  if (b) { b.dx = b.dx ?? b.x; pop(b); }
+});
+size(); fill(); still();
+new IntersectionObserver(es => { vis = es[0].isIntersecting; go(); }).observe(hero);
+new ResizeObserver(() => { const w = W; size(); if (Math.abs(w - W) > 40) fill(); rm() ? still() : go(); }).observe(hero);
+document.addEventListener("visibilitychange", go);
+})();
+</script>
+</body>
+</html>

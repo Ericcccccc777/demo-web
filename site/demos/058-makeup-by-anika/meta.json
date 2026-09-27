@@ -1,0 +1,8 @@
+{
+  "id": "058",
+  "tech": ["CSS Grid", "SVG", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Form logic"],
+  "features": ["story", "booking"],
+  "interaction": "Drag or swipe the stack of illustrated face cards (or use the arrow buttons and ← → keys) to browse six looks, save favourites with the Save button or S key into a 'My looks' strip, and see those saved looks attached to the enquiry form.",
+  "fonts": ["Epilogue", "Parisienne"],
+  "notes": "Saved looks are remembered in this browser only (localStorage, optional)."
+}

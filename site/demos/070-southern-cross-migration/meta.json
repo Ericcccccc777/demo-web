@@ -1,0 +1,8 @@
+{
+  "id": "070",
+  "tech": ["CSS 3D", "SVG", "Generative art", "Pointer Events", "Keyboard shortcuts", "Form logic", "Date logic"],
+  "features": ["story", "booking"],
+  "interaction": "Turn the pages of a CSS-3D passport (click, swipe or ←/→; single pages on phones, plus a 'view as a normal page' fallback) from a guilloché cover to a data page and inked visa-page stamps for each service; then answer two questions in the 'Where do I start?' finder to get general pathway categories, a document checklist and questions to bring, ending in a consultation request.",
+  "fonts": ["Crimson Pro", "Overpass Mono"],
+  "notes": "General information only — the finder does not assess eligibility or name visa subclasses. Consultation request ends in a demo toast."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "054",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "Canvas 2D", "Pointer Events", "Date logic", "Form logic"],
+  "features": ["customiser", "booking"],
+  "interaction": "Design a set on a porcelain SVG hand: pick a nail (or all five), then a colour (12 swatches or a custom picker), finish (gloss, matte, chrome, cat-eye shimmer that follows the pointer) and art (French tip, dots, stripes, stars) with a polish-stroke repaint; switch almond / square / coffin shapes and 'Save my set' to create design cards that can prefill a booking request.",
+  "fonts": ["Tilt Warp", "Figtree"],
+  "notes": "Saved sets are kept only in this browser (up to six). The booking request ends in a demo toast; time slots marked 'taken' are illustrative. Prices are samples."
+}

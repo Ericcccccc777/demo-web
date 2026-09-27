@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="045">
+<meta name="demo:brand" content="Quiet Harbour Counselling">
+<title>Quiet Harbour Counselling — counselling in North Hobart</title>
+<meta name="description" content="A fictional counselling practice in North Hobart, Tasmania, offering in-person and online sessions for adults.">
+<meta name="theme-color" content="#FBF8F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+@property --paper{syntax:"<color>";inherits:true;initial-value:#FBF8F3}
+@property --w1{syntax:"<color>";inherits:true;initial-value:#BFD8D2}
+@property --w2{syntax:"<color>";inherits:true;initial-value:#F0D5CC}
+@property --w3{syntax:"<color>";inherits:true;initial-value:#DDE3E8}
+:root{--paper:#FBF8F3;--w1:#BFD8D2;--w2:#F0D5CC;--w3:#DDE3E8;--ink:#2F3A40;--ink-2:#4B575D;--deep:#2E5D55;--line:rgba(47,58,64,.16);--line-2:rgba(47,58,64,.34);--serif:"Literata",Georgia,"Times New Roman",serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;transition:--paper 1.8s ease,--w1 2.4s ease,--w2 2.4s ease,--w3 2.4s ease}
+[data-mood=tired]{--paper:#F5F6F5;--w1:#D5DEE3;--w2:#E6E1DE;--w3:#CBD7DD}
+[data-mood=anxious]{--paper:#F4F8F6;--w1:#B6D6CE;--w2:#D5E7E1;--w3:#D9E3E6}
+[data-mood=overwhelmed]{--paper:#F8F7F5;--w1:#E2E7E9;--w2:#EEE5E0;--w3:#DDE3E8}
+[data-mood=hopeful]{--paper:#FCF6F1;--w1:#C9E0D9;--w2:#F2D2C6;--w3:#F4E2D9}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:110px;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 19px/1.75 var(--serif);font-variation-settings:"opsz" 16}
+a{color:var(--deep);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{font-weight:400;text-wrap:balance}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;padding:10px 14px;background:var(--ink);color:#fff;border-radius:8px;font:600 15px var(--sans);text-decoration:none}
+.skip:focus{top:12px}
+.sans{font-family:var(--sans)}
+.kicker{font:600 13px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+.washes{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.wash{position:absolute;border-radius:43% 57% 52% 48%/55% 44% 56% 45%;filter:blur(14px);animation:drift 46s ease-in-out infinite alternate}
+.wash.a{width:70vmax;height:52vmax;left:-26vmax;top:-18vmax;background:radial-gradient(closest-side,color-mix(in srgb,var(--w1) 62%,transparent),color-mix(in srgb,var(--w1) 40%,transparent) 64%,color-mix(in srgb,var(--w1) 78%,transparent) 86%,transparent)}
+.wash.b{width:58vmax;height:46vmax;right:-24vmax;top:26vh;background:radial-gradient(closest-side,color-mix(in srgb,var(--w2) 58%,transparent),color-mix(in srgb,var(--w2) 36%,transparent) 62%,color-mix(in srgb,var(--w2) 74%,transparent) 85%,transparent);animation-duration:58s;animation-delay:-20s}
+.wash.c{width:64vmax;height:40vmax;left:-18vmax;bottom:-22vmax;background:radial-gradient(closest-side,color-mix(in srgb,var(--w3) 70%,transparent),color-mix(in srgb,var(--w3) 44%,transparent) 64%,color-mix(in srgb,var(--w3) 82%,transparent) 86%,transparent);animation-duration:64s;animation-delay:-8s}
+.wash.d{width:30vmax;height:24vmax;right:4vmax;top:-8vmax;background:radial-gradient(closest-side,color-mix(in srgb,var(--w1) 45%,transparent),color-mix(in srgb,var(--w1) 25%,transparent) 66%,color-mix(in srgb,var(--w1) 55%,transparent) 86%,transparent);animation-duration:40s;animation-delay:-30s}
+@keyframes drift{0%{transform:translate(0,0) rotate(0) scale(1)}50%{transform:translate(3vmax,2vmax) rotate(8deg) scale(1.05)}100%{transform:translate(-2vmax,4vmax) rotate(-6deg) scale(.97)}}
+.washes::after{content:"";position:absolute;inset:0;opacity:.5;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .18 0 0 0 0 .22 0 0 0 0 .25 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;max-width:1240px;margin:0 auto;padding:8px 18px}
+.brand{display:flex;align-items:center;gap:10px;flex:1;min-width:0;min-height:44px;color:var(--ink);text-decoration:none}
+.brand svg{flex:none;width:30px;height:30px}
+.brand-name{font:italic 400 18px/1.2 var(--serif);overflow-wrap:anywhere}
+.support{order:3;flex-basis:100%;margin:0 0 4px;font:400 14px/1.4 var(--sans);color:var(--ink-2)}
+.support a{font-weight:600;color:var(--ink);white-space:nowrap}
+.exit{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:#fff;font:600 15px/1 var(--sans);cursor:pointer}
+.exit:hover{background:#1c2429}
+.exit svg{width:14px;height:14px}
+
+.layout{position:relative}
+.toc{display:none}
+.col{width:min(640px,calc(100% - 44px));margin:0 auto}
+.intro{padding:52px 0 18px}
+h1{font:400 clamp(38px,5.4vw,58px)/1.12 var(--serif);letter-spacing:-.012em;margin:16px 0 22px;font-variation-settings:"opsz" 72}
+h1 em{font-style:italic;color:var(--deep)}
+.lede{font-size:clamp(19px,1.5vw,21px);color:var(--ink-2)}
+.harbour{display:block;width:100%;height:auto;margin:34px 0 8px}
+.harbour .f{fill:var(--w3)}.harbour .s{fill:var(--w1)}.harbour .b{fill:var(--w2)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:600 16px/1 var(--sans);text-decoration:none;cursor:pointer;transition:background-color .3s,color .3s}
+.btn:hover{background:#1c2429}
+.btn.soft{background:transparent;color:var(--ink)}
+.btn.soft:hover{background:color-mix(in srgb,var(--ink) 7%,transparent)}
+
+section.s{padding:44px 0}
+.s h2{font:400 clamp(29px,3.4vw,37px)/1.2 var(--serif);letter-spacing:-.01em;margin:10px 0 18px;font-variation-settings:"opsz" 48}
+.s p+p{margin-top:1em}
+.s ul.soft{list-style:none;margin:18px 0 0;padding:0}
+.soft li{position:relative;padding:14px 0 14px 30px;border-top:1px solid var(--line)}
+.soft li::before{content:"";position:absolute;left:4px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--w1);box-shadow:0 0 0 4px color-mix(in srgb,var(--w1) 40%,transparent)}
+.soft li b{font-weight:500}
+.wash-card{position:relative;margin:28px 0;padding:26px 26px 22px;isolation:isolate}
+.wash-card::before{content:"";position:absolute;inset:-6px -10px;z-index:-1;border-radius:46% 54% 44% 56%/58% 46% 54% 42%;background:radial-gradient(closest-side,color-mix(in srgb,var(--w2) 55%,transparent),color-mix(in srgb,var(--w2) 38%,transparent) 70%,color-mix(in srgb,var(--w2) 70%,transparent) 90%,transparent);filter:blur(6px)}
+.wash-card ul{margin:10px 0 0;padding:0 0 0 1.1em;font:400 18px/1.6 var(--sans)}
+.wash-card li{margin:4px 0}
+
+.checkin{margin:26px 0 8px;padding:28px 22px 26px;border-radius:28px;background:color-mix(in srgb,#fff 58%,transparent);box-shadow:0 1px 0 rgba(47,58,64,.05),0 34px 60px -34px rgba(47,58,64,.3)}
+.checkin h2{margin-top:6px}
+.words{display:flex;flex-wrap:wrap;gap:10px;border:0;padding:0;margin:6px 0 0;min-width:0}
+.words legend{padding:0;margin-bottom:12px;font:400 17px/1.5 var(--sans);color:var(--ink-2)}
+.word{position:relative}
+.word input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.word span{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line-2);background:color-mix(in srgb,#fff 70%,transparent);font:500 17px/1 var(--sans);transition:background-color .5s,color .5s,border-color .5s}
+.word span i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.word:hover span{border-color:var(--ink)}
+.word input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.word input:focus-visible+span{outline:3px solid var(--deep);outline-offset:3px}
+.reply{margin-top:22px;font:italic 400 clamp(20px,1.9vw,23px)/1.55 var(--serif);min-height:3.1em;transition:opacity .6s ease}
+.reply.fade{opacity:0}
+.safe{margin-top:12px;padding:12px 16px;border-radius:14px;background:color-mix(in srgb,var(--w2) 45%,transparent);font:400 16px/1.5 var(--sans)}
+.ground{margin-top:24px;padding-top:22px;border-top:1px solid var(--line)}
+.g-top{display:flex;align-items:center;gap:22px}
+.breath{position:relative;flex:none;width:88px;height:88px;display:grid;place-items:center}
+.breath::before{content:"";position:absolute;inset:0;border-radius:47% 53% 50% 50%/52% 48% 52% 48%;background:radial-gradient(closest-side,color-mix(in srgb,var(--w1) 80%,transparent),color-mix(in srgb,var(--w1) 50%,transparent) 70%,color-mix(in srgb,var(--w1) 95%,transparent) 88%,transparent);animation:breathe 10s ease-in-out infinite}
+.breath span{position:relative;font:600 13px/1.2 var(--sans);letter-spacing:.06em;text-align:center;color:var(--ink)}
+.breath .in,.breath .out{position:absolute;inset:0;display:grid;place-items:center;animation:bin 10s linear infinite}
+.breath .out{animation-name:bout}
+@keyframes breathe{0%,100%{transform:scale(.62)}40%{transform:scale(1)}}
+@keyframes bin{0%,38%{opacity:1}42%,96%{opacity:0}100%{opacity:1}}
+@keyframes bout{0%,38%{opacity:0}42%,96%{opacity:1}100%{opacity:0}}
+.breath .still{display:none}
+.g-count{font:600 13px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.g-title{font:400 19px/1.35 var(--serif);margin-top:4px}
+.g-top{gap:16px}
+.g-steps{list-style:none;margin:20px 0 0;padding:0}
+.g{display:none;grid-template-columns:52px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.g.on,.g.done{display:grid}
+.g b{font:400 44px/1 var(--serif);font-variation-settings:"opsz" 72;color:var(--deep)}
+.g h3{font:500 20px/1.35 var(--serif)}
+.g p{font-size:17px;line-height:1.65;color:var(--ink-2);margin-top:4px}
+.g.done{opacity:.5}
+.g.done p{display:none}
+.g.done b{font-size:22px;padding-top:2px}
+.g.on{animation:rise .9s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.g-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.g-end{margin-top:16px;font:italic 400 20px/1.55 var(--serif)}
+
+.fees{width:100%;border-collapse:collapse;margin:14px 0 16px;font-family:var(--sans)}
+.fees th,.fees td{padding:14px 0;border-top:1px solid var(--line);text-align:left;vertical-align:top;font-size:17.5px;line-height:1.45}
+.fees th{font-weight:400;padding-right:16px}
+.fees th small{display:block;color:var(--ink-2);font-size:15px}
+.fees td{text-align:right;font-weight:600;white-space:nowrap}
+.fees tr:last-child th,.fees tr:last-child td{border-bottom:1px solid var(--line)}
+.note{font:400 15.5px/1.6 var(--sans);color:var(--ink-2)}
+.parts{list-style:none;margin:16px 0 0;padding:0;counter-reset:p}
+.parts li{display:grid;grid-template-columns:1fr;gap:2px;padding:16px 0;border-top:1px solid var(--line)}
+.parts .when{font:600 13px/1.9 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:60px;padding:12px 0;cursor:pointer;list-style:none;font:500 19px/1.4 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:10px;height:10px;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg) translate(-3px,-3px);transition:transform .4s ease}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details p{padding:0 0 18px;font-size:18px;color:var(--ink-2)}
+.contact-card{display:grid;gap:4px;margin:16px 0 26px;font-family:var(--sans);font-size:17px}
+.contact-card b{font-weight:600}
+form.msg{display:grid;gap:16px;padding:24px 22px;border-radius:24px;background:color-mix(in srgb,#fff 55%,transparent);box-shadow:0 30px 60px -36px rgba(47,58,64,.3)}
+.fld label{display:block;font:600 15px/1.4 var(--sans);margin-bottom:6px}
+.fld small{font-weight:400;color:var(--ink-2)}
+.fld input,.fld textarea,.fld select{width:100%;min-height:50px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line-2);background:rgba(255,255,255,.8);font:400 17px/1.4 var(--sans)}
+.fld textarea{min-height:110px;resize:vertical}
+.chk{display:flex;gap:10px;align-items:flex-start;font:400 16px/1.45 var(--sans)}
+.chk input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--ink)}
+.foot{margin-top:40px;padding:40px 0 54px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--paper) 70%,transparent)}
+.foot .foot-name{margin:0;color:var(--ink);font:italic 400 clamp(26px,3vw,32px)/1.2 var(--serif);overflow-wrap:anywhere}
+.foot p{margin-top:12px;font:400 15.5px/1.6 var(--sans);color:var(--ink-2)}
+.foot .crisis{margin-top:18px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--w1) 45%,transparent);color:var(--ink)}
+.neutral{display:none;min-height:100vh;background:#fff;color:#222;font:400 17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.neutral .n-in{max-width:620px;margin:0 auto;padding:40px 22px}
+.neutral h2{font:700 30px/1.2 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:8px 0 6px}
+.neutral ol{padding-left:1.2em}
+.neutral li{margin:8px 0}
+.neutral .n-demo{margin-top:40px;padding:14px;border:1px dashed #999;font-size:15px;color:#444}
+.neutral button{margin-top:10px;min-height:44px;padding:0 16px;border:1px solid #444;border-radius:8px;background:#fff;cursor:pointer}
+body.exited .bar,body.exited .layout,body.exited .foot,body.exited .washes{display:none}
+body.exited .neutral{display:block}
+
+@media (min-width:760px){
+  .bar-in{flex-wrap:nowrap;padding:10px 28px}
+  .support{order:0;flex-basis:auto;margin:0;text-align:right}
+  .checkin{padding:36px 38px 34px;margin-left:-38px;margin-right:-38px}
+  form.msg{padding:30px 32px}
+  .intro{padding-top:80px}
+  .parts li{grid-template-columns:86px 1fr;gap:14px}
+  .breath{width:112px;height:112px}
+  .g-title{font-size:22px}
+  .g-top{gap:22px}
+  section.s{padding:56px 0}
+}
+@media (min-width:1200px){
+  .toc{display:block;position:absolute;inset:0 auto 0 0;width:calc((100% - 640px) / 2)}
+  .toc ol{position:sticky;top:140px;list-style:none;margin:120px 64px 0 auto;padding:0;width:180px;font:400 15px/1.4 var(--sans)}
+  .toc a{display:block;padding:7px 0 7px 16px;border-left:1.5px solid var(--line);color:var(--ink-2);text-decoration:none;transition:border-color .4s,color .4s}
+  .toc a[aria-current]{border-left-color:var(--ink);color:var(--ink)}
+  .toc a:hover{color:var(--ink)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  :root{transition:none}
+  .wash,.breath::before,.breath .in,.breath .out,.g.on{animation:none}
+  .breath::before{transform:scale(.9)}
+  .breath .in,.breath .out{display:none}
+  .breath .still{display:block}
+  .reply,.word span,.btn,.toc a,.faq summary::after{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="washes" aria-hidden="true"><i class="wash a"></i><i class="wash b"></i><i class="wash c"></i><i class="wash d"></i></div>
+
+<header class="bar">
+<div class="bar-in">
+<a class="brand" href="#main"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#BFD8D2"/><path d="M5 17c3-2.4 5.5-2.4 8.5 0s5.5 2.4 8.5 0 3.7-1.6 3.7-1.6" fill="none" stroke="#2F3A40" stroke-width="1.6" stroke-linecap="round"/><path d="M8 21.5c2.3-1.6 4.4-1.6 6.7 0s4.4 1.6 6.7 0" fill="none" stroke="#2F3A40" stroke-width="1.3" stroke-linecap="round" opacity=".6"/></svg><span class="brand-name" data-brand>Quiet Harbour Counselling</span></a>
+<p class="support">Need to talk now? <a href="tel:131114" data-kit-ignore>Lifeline 13 11 14</a> · <a href="tel:000" data-kit-ignore>000</a> in an emergency</p>
+<button class="exit" id="exit" type="button" aria-describedby="exit-d"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Quick exit</button>
+<span id="exit-d" hidden>Leaves this page straight away and shows something neutral instead</span>
+</div>
+</header>
+
+<div class="layout">
+<nav class="toc" aria-label="On this page"><ol>
+<li><a href="#checkin">Arriving today</a></li><li><a href="#help">How I can help</a></li><li><a href="#sessions">What sessions are like</a></li><li><a href="#fees">Fees</a></li><li><a href="#first">Your first session</a></li><li><a href="#questions">Questions</a></li><li><a href="#contact">Get in touch</a></li>
+</ol></nav>
+<main id="main">
+<div class="col">
+<section class="intro" aria-labelledby="h1">
+<p class="kicker">Counselling for adults · North Hobart &amp; online</p>
+<h1 id="h1">A quiet place to put things down <em>for a while.</em></h1>
+<p class="lede">I'm Ruth. I offer unhurried, confidential counselling for people who are carrying a lot — grief, worry, burnout, big changes, or the feeling of not quite being yourself.</p>
+<svg class="harbour" viewBox="0 0 640 150" aria-hidden="true">
+<defs><radialGradient id="vg" cx=".5" cy=".4" r=".72"><stop offset=".56" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient><mask id="vm"><rect width="640" height="150" fill="url(#vg)"/></mask><filter id="wc" x="-5%" y="-30%" width="110%" height="160%"><feTurbulence type="fractalNoise" baseFrequency=".011 .08" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="15" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation=".7"/></filter></defs>
+<g mask="url(#vm)"><g filter="url(#wc)" opacity=".92">
+<ellipse class="b" cx="470" cy="46" rx="54" ry="30" opacity=".75"/>
+<path class="f" d="M-10 72C120 60 260 80 400 66s200-6 250 0V150H-10Z"/>
+<path class="s" d="M-10 94C140 86 300 102 460 90s160 2 190 4V150H-10Z" opacity=".95"/>
+<path class="b" d="M-10 120C160 112 330 128 500 116s120 2 150 4V150H-10Z" opacity=".8"/>
+</g></g>
+<g fill="none" stroke="#2F3A40" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity=".72">
+<path d="M186 86h46l-7 8h-33z"/><path d="M209 86V58l15 25"/><path d="M146 104q8-3 16 0M300 108q10-3 20 0M420 99q7-2 14 0M548 110q8-3 16 0"/>
+</g>
+</svg>
+<div class="btns"><a class="btn" href="#contact">Ask about a first session</a><a class="btn soft" href="#checkin">Start with a check-in</a></div>
+</section>
+
+<section class="checkin" id="checkin" aria-labelledby="ci-h">
+<p class="kicker">Before anything else</p>
+<h2 id="ci-h" style="font:400 clamp(28px,3.2vw,34px)/1.25 var(--serif)">How are you arriving today?</h2>
+<fieldset class="words"><legend>Choose the word that fits best. There's no wrong answer, and nothing is saved.</legend>
+<label class="word"><input type="radio" name="mood" value="tired"><span><i style="--c:#C8D3D9"></i>Tired</span></label>
+<label class="word"><input type="radio" name="mood" value="anxious"><span><i style="--c:#9CC7BC"></i>Anxious</span></label>
+<label class="word"><input type="radio" name="mood" value="overwhelmed"><span><i style="--c:#D9DDE0"></i>Overwhelmed</span></label>
+<label class="word"><input type="radio" name="mood" value="okay"><span><i style="--c:#BFD8D2"></i>Okay</span></label>
+<label class="word"><input type="radio" name="mood" value="hopeful"><span><i style="--c:#EDC3B4"></i>Hopeful</span></label>
+</fieldset>
+<p class="reply" id="reply" aria-live="polite">Whatever you choose, the page will soften a little, and there's a one-minute grounding exercise if you'd like it.</p>
+<p class="safe" id="safe" hidden>If you're feeling unsafe right now, please call <a href="tel:131114" data-kit-ignore>Lifeline on 13 11 14</a> — any time, day or night — or <a href="tel:000" data-kit-ignore>000</a> in an emergency.</p>
+<div class="ground" id="ground" hidden>
+<div class="g-top">
+<div class="breath" aria-hidden="true"><span class="in">Breathe<br>in</span><span class="out">Breathe<br>out</span><span class="still">In for 4,<br>out for 6</span></div>
+<div><p class="g-count" id="g-count">Grounding · step 1 of 5</p><p class="g-title">Five, four, three, two, one. Take each step at your own pace.</p></div>
+</div>
+<ol class="g-steps" id="g-steps">
+<li class="g on"><b>5</b><div><h3>Five things you can see</h3><p>Let your eyes move slowly around you. A corner of the window, a colour, the texture of a wall.</p></div></li>
+<li class="g"><b>4</b><div><h3>Four things you can feel</h3><p>Your feet on the floor, the weight of your hands, the air on your skin, the chair behind your back.</p></div></li>
+<li class="g"><b>3</b><div><h3>Three things you can hear</h3><p>Near sounds and far ones — traffic, a fridge humming, your own breathing.</p></div></li>
+<li class="g"><b>2</b><div><h3>Two things you can smell</h3><p>If nothing comes, remember a smell you like: rain on the footpath, toast, the sea.</p></div></li>
+<li class="g"><b>1</b><div><h3>One thing you can taste</h3><p>Or take one slow sip of water. Then let your breath settle for a moment.</p></div></li>
+</ol>
+<p class="g-end" id="g-end" hidden>That's all five. Notice how you're sitting now — nothing needs to be different. You can come back to this whenever you like.</p>
+<div class="g-nav"><button class="btn" id="g-next" type="button">Next step</button><button class="btn soft" id="g-again" type="button">Start again</button></div>
+</div>
+</section>
+
+<section class="s" id="help" aria-labelledby="help-h">
+<p class="kicker">How I can help</p>
+<h2 id="help-h">You don't need to have the right words yet.</h2>
+<p>Most people arrive with something that's been building for a while. We can start wherever you are. I often work with:</p>
+<ul class="soft">
+<li><b>Anxiety and worry</b> — the racing mind at 3am, or a low hum that never quite switches off.</li>
+<li><b>Grief and loss</b> — of people, pets, health, work, or the life you'd planned.</li>
+<li><b>Stress and burnout</b> — especially for carers, health workers and teachers.</li>
+<li><b>Big changes</b> — moving to Tasmania, separating, retiring, becoming a parent.</li>
+<li><b>Relationships</b> — with partners, family, or yourself.</li>
+<li><b>Low mood</b> — when things have lost their colour and you're not sure why.</li>
+</ul>
+<p class="note" style="margin-top:18px">I work with adults, one to one. I'm not a crisis service — if you need help urgently, please call Lifeline on 13 11 14 or 000.</p>
+</section>
+
+<section class="s" id="sessions" aria-labelledby="ses-h">
+<p class="kicker">What sessions are like</p>
+<h2 id="ses-h">Fifty minutes that are entirely yours.</h2>
+<p>We talk, and you set the pace. Some weeks we'll look closely at one thing; other weeks we'll sit with how things are. I might suggest small practices to try between sessions, but there's no homework you can fail.</p>
+<p>Sessions are in a quiet upstairs room with a window onto a garden, or by video or phone if that's easier. Most people come weekly or fortnightly to begin with.</p>
+<div class="wash-card"><p class="kicker">In the room</p><ul><li>Tea, water and tissues within reach — no need to ask</li><li>A few quiet minutes to arrive before we start talking</li><li>Time at the end to wind down before you head back out</li></ul></div>
+<p>What you say stays between us, within the limits of the law — I'll explain exactly what that means in our first session.</p>
+</section>
+
+<section class="s" id="fees" aria-labelledby="fees-h">
+<p class="kicker">Fees</p>
+<h2 id="fees-h">Clear fees, and a few reduced places.</h2>
+<table class="fees">
+<caption class="kicker" style="text-align:left;padding-bottom:6px;caption-side:top">Sample fees</caption>
+<tr><th scope="row">First session<small>60 minutes, in person or online</small></th><td>$150</td></tr>
+<tr><th scope="row">Ongoing sessions<small>50 minutes</small></th><td>$140</td></tr>
+<tr><th scope="row">Reduced-fee places<small>For students, pensioners and people on low incomes — just ask</small></th><td>$90</td></tr>
+<tr><th scope="row">Evening sessions<small>Tuesdays and Thursdays until 8pm</small></th><td>$140</td></tr>
+</table>
+<p class="note">Sample prices. Counselling isn't usually covered by Medicare, but rebates may apply in some cases depending on the practitioner, the service and whether you have a referral. Some private health funds cover counselling as an extra. It's worth checking with Medicare or your fund before you book — this is general information only.</p>
+</section>
+
+<section class="s" id="first" aria-labelledby="first-h">
+<p class="kicker">Your first session</p>
+<h2 id="first-h">A chance to see if we're a good fit.</h2>
+<ol class="parts">
+<li><span class="when">Before</span><p>You'll get a short email with directions, parking and a one-page form. Fill in only what you're comfortable with.</p></li>
+<li><span class="when">During</span><p>We'll talk about what brings you here and what you'd like to be different. You can ask me anything about how I work. You don't have to tell me everything.</p></li>
+<li><span class="when">After</span><p>We decide together whether to keep going. There's no obligation, and if someone else would suit you better I'll help you find them.</p></li>
+</ol>
+</section>
+
+<section class="s faq" id="questions" aria-labelledby="q-h">
+<p class="kicker">Questions</p>
+<h2 id="q-h">Things people often wonder.</h2>
+<details><summary>Do I need a referral?</summary><p>No. You can contact me directly. If you do have a referral from your GP, bring it along and we can talk about whether any rebate might apply.</p></details>
+<details><summary>What if I cry, or don't know what to say?</summary><p>Both are completely okay. There are tissues, water and silence in the room, and none of them need explaining.</p></details>
+<details><summary>Can we meet online?</summary><p>Yes — by video or phone, anywhere in Tasmania. It helps to find a private spot where you won't be overheard.</p></details>
+<details><summary>How many sessions will I need?</summary><p>It varies a lot. Some people come for a handful of sessions; others prefer longer. We'll check in regularly about how it's going.</p></details>
+<details><summary>What if I need to cancel?</summary><p>Please give 48 hours' notice if you can. Life happens — if it's short notice, just let me know and we'll work it out.</p></details>
+</section>
+
+<section class="s" id="contact" aria-labelledby="c-h">
+<p class="kicker">Get in touch</p>
+<h2 id="c-h">Send a short note, whenever you're ready.</h2>
+<p>You don't need to explain much. A name and the best way to reach you is enough, and I usually reply within two working days.</p>
+<div class="contact-card"><span><b>Phone</b> · <a href="tel:0355502716">(03) 5550 2716</a> — I can't answer during sessions</span><span><b>Email</b> · <a href="mailto:ruth@example.com">ruth@example.com</a></span><span><b>Where</b> · North Hobart, TAS · online across Tasmania</span><span><b>Hours</b> · Mon–Fri 9am–6pm, Tue &amp; Thu until 8pm</span></div>
+<form class="msg" data-demo-message="Demo only — nothing was sent. On a real site this note would reach the practice privately.">
+<div class="fld"><label for="c-name">Your name <small>(or what you'd like to be called)</small></label><input id="c-name" name="name" autocomplete="name" required></div>
+<div class="fld"><label for="c-how">Best way to reach you</label><input id="c-how" name="contact" required placeholder="Email or mobile"></div>
+<div class="fld"><label for="c-when">When suits you <small>(optional)</small></label><select id="c-when" name="when"><option>Any time</option><option>Weekday mornings</option><option>Weekday afternoons</option><option>Tuesday or Thursday evenings</option><option>Online only</option></select></div>
+<div class="fld"><label for="c-note">Anything you'd like me to know <small>(optional)</small></label><textarea id="c-note" name="note"></textarea></div>
+<label class="chk"><input type="checkbox" name="voicemail">It's okay to leave a voicemail or send a text</label>
+<div><button class="btn" type="submit">Send note</button></div>
+</form>
+</section>
+</div>
+</main>
+</div>
+
+<footer class="foot">
+<div class="col">
+<p class="foot-name" data-brand>Quiet Harbour Counselling</p>
+<p>North Hobart, TAS · <a href="tel:0355502716">(03) 5550 2716</a> · <a href="mailto:ruth@example.com">ruth@example.com</a></p>
+<p class="crisis">If you're in crisis or feeling unsafe, call <a href="tel:131114" data-kit-ignore>Lifeline on 13 11 14</a> (24 hours) or <a href="tel:000" data-kit-ignore>000</a> in an emergency.</p>
+<p>General information only — nothing on this page is a substitute for personal advice. Sample fees. This is a fictional practice made for a design showcase.</p>
+</div>
+</footer>
+
+<div class="neutral" id="neutral"><div class="n-in">
+<p style="color:#666;font-size:14px">Weeknight recipes</p>
+<h2>Simple pumpkin soup</h2>
+<p style="color:#666">Serves 4 · 40 minutes</p>
+<ol><li>Soften a chopped onion in a little oil for five minutes.</li><li>Add 1 kg of peeled, cubed pumpkin and a litre of stock.</li><li>Simmer for 25 minutes, until the pumpkin is soft.</li><li>Blend until smooth and season with salt, pepper and nutmeg.</li></ol>
+<div class="n-demo">Quick exit (demo): a real counselling site would send you to an unrelated website and remove itself from view. <br><button type="button" id="back">Return to the demo</button></div>
+</div></div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var root=document.documentElement;
+var REPLY={
+ tired:"Tired is a reasonable way to arrive. You don't have to do anything with it right now — let's just slow down together.",
+ anxious:"Anxiety often shows up in the body first. Let's give your attention somewhere steady to rest for a minute.",
+ overwhelmed:"When everything feels like too much, one small thing at a time is enough. Start with what's right in front of you.",
+ okay:"Okay is a good place to start from. Look around at your own pace — or take a minute to settle anyway.",
+ hopeful:"It's lovely to arrive hopeful. Let's notice what that feels like, so it's a little easier to find again."
+};
+var reply=$("#reply"),ground=$("#ground"),safe=$("#safe"),steps=$$(".g"),gc=$("#g-count"),gnext=$("#g-next"),gend=$("#g-end"),step=0,t=0;
+function mq(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;}
+function setStep(n){
+  step=n;
+  steps.forEach(function(li,i){li.classList.toggle("on",i===n);li.classList.toggle("done",i<n);});
+  var fin=n>=steps.length;
+  gend.hidden=!fin;gnext.hidden=fin;
+  gc.textContent=fin?"Grounding · finished":"Grounding · step "+(n+1)+" of 5";
+}
+$$("input[name=mood]").forEach(function(r){r.addEventListener("change",function(){
+  var v=r.value;root.setAttribute("data-mood",v);
+  safe.hidden=v!=="overwhelmed"&&v!=="anxious";
+  clearTimeout(t);
+  if(mq()){reply.textContent=REPLY[v];}else{reply.classList.add("fade");t=setTimeout(function(){reply.textContent=REPLY[v];reply.classList.remove("fade");},450);}
+  if(ground.hidden){ground.hidden=false;setStep(0);}
+});});
+gnext.addEventListener("click",function(){setStep(step+1);if(step>=steps.length)$("#g-again").focus();});
+$("#g-again").addEventListener("click",function(){setStep(0);gnext.focus();});
+
+/* quick exit */
+var title=document.title,y=0;
+$("#exit").addEventListener("click",function(){
+  y=window.scrollY;title=document.title;document.body.classList.add("exited");
+  document.title="Simple pumpkin soup";
+  root.removeAttribute("data-mood");$$("input[name=mood]").forEach(function(r){r.checked=false;});
+  try{history.replaceState(null,"","#recipe");}catch(e){}
+  window.scrollTo(0,0);$("#back").focus({preventScroll:true});
+});
+$("#back").addEventListener("click",function(){
+  document.body.classList.remove("exited");document.title=title;
+  try{history.replaceState(null,"","#main");}catch(e){}
+  window.scrollTo(0,y);$("#exit").focus({preventScroll:true});
+});
+
+/* margin contents */
+var links=$$(".toc a");
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;links.forEach(function(a){if(a.getAttribute("href")==="#"+e.target.id)a.setAttribute("aria-current","true");else a.removeAttribute("aria-current");});});},{rootMargin:"-40% 0px -55% 0px"});
+  links.forEach(function(a){var s=$(a.getAttribute("href"));if(s)io.observe(s);});
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="076">
+<meta name="demo:brand" content="Right Fit Recruitment">
+<title>Right Fit Recruitment — local recruitment, Perth</title>
+<meta name="description" content="A fictional Perth recruitment agency whose whole website is a kanban board: filter sample roles and drag the ones you like into your pipeline.">
+<meta name="theme-color" content="#F7F7F5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Rethink+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --bg:#F7F7F5;--lane:#ECECE8;--lane-2:#E4E4DF;--line:#DADAD4;--ink:#262626;--ink-2:#474744;--ink-3:#5E5E5A;
+  --yellow:#FFE58F;--blue:#A3D5FF;--pink:#FFB3C7;--green:#B7EB8F;
+  --sans:"Rethink Sans",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"Inconsolata",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --pad:clamp(16px,2vw,24px)
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;background-image:radial-gradient(rgba(38,38,38,.13) 1px,transparent 1.2px);background-size:22px 22px;background-position:-11px -11px}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+h1,h2,h3,h4,p{margin:0}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.mono{font-family:var(--mono)}
+kbd{font:600 12px/1 var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:3px 6px;background:#fff;color:var(--ink-2)}
+
+/* top bar */
+.top{display:flex;align-items:center;gap:18px;padding:12px var(--pad);padding-top:calc(12px + env(safe-area-inset-top));border-bottom:1px solid var(--line);background:rgba(247,247,245,.94)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.badge{flex:none;display:grid;place-items:center;width:36px;height:36px;background:var(--yellow);font:600 15px/1 var(--mono);letter-spacing:.02em;transform:rotate(-5deg);box-shadow:0 6px 8px -6px rgba(0,0,0,.4);background-image:linear-gradient(rgba(0,0,0,.06),transparent 10px)}
+.logo-name{font:700 18px/1.15 var(--sans);letter-spacing:-.01em;overflow-wrap:anywhere}
+.crumb{font:400 14px/1 var(--mono);color:var(--ink-3);white-space:nowrap}
+.crumb b{color:var(--ink);font-weight:600}
+.top-nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+.top-nav a{font:500 14px/1 var(--sans);text-decoration:none;padding:11px 12px;border-radius:8px}
+.top-nav a:hover{background:var(--lane)}
+.top-nav .cta{background:var(--ink);color:var(--bg);padding:11px 14px;white-space:nowrap}
+.top-nav .cta:hover{background:#000}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:10px 48px;align-items:end;padding:26px var(--pad) 18px}
+.eyebrow{font:400 13.5px/1.4 var(--mono);color:var(--ink-3);margin-bottom:8px}
+.eyebrow b{font-weight:600;color:var(--ink)}
+h1{font:700 clamp(30px,3.1vw,46px)/1.02 var(--sans);letter-spacing:-.035em;max-width:21ch;text-wrap:balance}
+h1 span{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .06em}
+.intro-sub{font-size:16px;line-height:1.55;color:var(--ink-2);max-width:40em}
+.intro-sub b{color:var(--ink);font-weight:600}
+.stats{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font:400 13.5px/1.3 var(--mono);color:var(--ink-3)}
+.stats span::before{content:"▪";margin-right:6px;color:var(--ink)}
+
+/* toolbar */
+.toolbar{display:flex;align-items:center;gap:10px 14px;padding:10px var(--pad) 14px;flex-wrap:wrap}
+.search{position:relative;display:flex;align-items:center;flex:0 1 280px;min-width:180px}
+.search svg{position:absolute;left:12px;width:16px;height:16px;pointer-events:none}
+.search input{width:100%;height:42px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 40px 0 36px;font-size:15px}
+.search input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(38,38,38,.12)}
+.search kbd{position:absolute;right:9px;pointer-events:none}
+.tbtn.ftoggle{display:none}
+.nw{white-space:nowrap}
+.filters{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;min-width:0}
+.seg{display:flex;gap:4px;padding:4px;background:var(--lane);border-radius:12px;min-width:0}
+.seg button{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 12px;border:0;border-radius:8px;background:none;cursor:pointer;font:500 14px/1 var(--sans);color:var(--ink-2);white-space:nowrap}
+.seg button:hover{color:var(--ink);background:rgba(255,255,255,.55)}
+.seg button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg i{width:10px;height:10px;border-radius:2px;border:1px solid rgba(0,0,0,.2)}
+.area{display:flex;align-items:center;gap:8px;font:400 13.5px/1 var(--mono);color:var(--ink-3)}
+.area select{max-width:240px;height:42px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 34px 0 12px;font:500 14px var(--sans);color:var(--ink);-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23262626' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;cursor:pointer}
+.tb-end{margin-left:auto;display:flex;align-items:center;gap:8px}
+.tip-line{font:400 13.5px/1.3 var(--mono);color:var(--ink-3)}
+.tbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;min-width:42px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;font:500 14px/1 var(--sans);white-space:nowrap}
+.tbtn:hover{border-color:var(--ink)}
+.colnav{display:none;gap:6px}
+
+/* phone tabs */
+.tabs{display:none}
+
+/* board */
+.board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;padding:0 var(--pad) 36px;align-items:stretch}
+.col{position:relative;background:var(--lane);border-radius:14px;display:flex;flex-direction:column;min-width:0;border:1px solid rgba(0,0,0,.04)}
+.col-head{position:sticky;top:0;z-index:3;display:flex;align-items:center;gap:9px;padding:13px 13px 9px;background:var(--lane);border-radius:14px 14px 0 0}
+.col-head h2{font:600 15px/1.2 var(--sans);letter-spacing:-.005em;min-width:0}
+.cdot{flex:none;width:12px;height:12px;border-radius:3px;background:var(--c);border:1px solid rgba(0,0,0,.18)}
+.cdot.multi{background:linear-gradient(90deg,var(--green) 33%,var(--pink) 33% 66%,var(--blue) 66%)}
+.cdot.ring{background:transparent;border:1.5px dashed var(--ink)}
+.count{margin-left:auto;font:600 13px/1 var(--mono);background:rgba(255,255,255,.7);border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:4px 8px;color:var(--ink)}
+.count.bump{animation:bump .5s ease}
+@keyframes bump{40%{transform:scale(1.35);background:var(--yellow)}}
+.col-note{padding:0 13px 10px;font:400 13px/1.35 var(--mono);color:var(--ink-3)}
+.col-body{display:flex;flex-direction:column;gap:10px;padding:2px 10px 14px;flex:1;min-height:140px}
+
+/* sticky-note cards */
+.card{position:relative;background-color:var(--c,#fff);background-image:linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,0) 20px);border-radius:2px 2px 3px 2px;padding:11px 12px 10px;box-shadow:0 1px 1px rgba(0,0,0,.07),0 12px 14px -12px rgba(0,0,0,.42);transform:rotate(var(--r,0deg));transition:transform .18s ease,box-shadow .18s ease}
+.col-body>.card:nth-child(3n+1){--r:-.7deg}.col-body>.card:nth-child(3n+2){--r:.55deg}.col-body>.card:nth-child(3n){--r:-.25deg}
+.card::after{content:"";position:absolute;right:0;bottom:0;width:14px;height:14px;background:linear-gradient(315deg,var(--lane) 50%,rgba(0,0,0,.14) 50%,rgba(255,255,255,.3));pointer-events:none}
+.card:hover,.card:focus-within{transform:rotate(0) translateY(-1px);box-shadow:0 1px 1px rgba(0,0,0,.07),0 18px 18px -12px rgba(0,0,0,.45)}
+.card.menu-open{z-index:8}
+.n-y{--c:var(--yellow)}.n-b{--c:var(--blue)}.n-g{--c:var(--green)}.n-p{--c:var(--pink)}
+.t-ft{--c:var(--green)}.t-ca{--c:var(--pink)}.t-co{--c:var(--blue)}
+.c-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:18px}
+.c-id{font:600 12px/1 var(--mono);letter-spacing:.03em;color:var(--ink-2);text-transform:uppercase}
+.c-id em{font-style:normal;font-weight:400}
+.grip{display:grid;place-items:center;width:30px;height:24px;margin:-4px -6px -4px 0;border-radius:6px;cursor:grab;touch-action:none;color:rgba(38,38,38,.55)}
+.grip:hover{background:rgba(0,0,0,.07);color:var(--ink)}
+.grip svg{width:10px;height:16px}
+.c-toggle{display:grid;grid-template-columns:minmax(0,1fr) 24px;gap:2px 8px;width:100%;margin:6px 0 0;padding:0;border:0;background:none;text-align:left;cursor:pointer;border-radius:4px}
+.c-title{font:600 16.5px/1.22 var(--sans);letter-spacing:-.012em;overflow-wrap:anywhere}
+.c-meta{grid-column:1;font-size:13.5px;line-height:1.35;color:var(--ink-2)}
+.c-plus{grid-column:2;grid-row:1/3;align-self:start;width:24px;height:24px;border-radius:50%;border:1px solid rgba(38,38,38,.3);position:relative}
+.c-plus::before,.c-plus::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.c-plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .2s ease}
+.c-toggle[aria-expanded=true] .c-plus::after{transform:translate(-50%,-50%) rotate(0)}
+.c-toggle:hover .c-title{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+.c-pay{margin-top:8px;font:600 14px/1.3 var(--mono);letter-spacing:-.01em}
+.c-more{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(38,38,38,.3);font-size:13.5px;line-height:1.5;color:var(--ink);animation:open .25s ease}
+@keyframes open{from{opacity:0;transform:translateY(-4px)}}
+.c-more p+p,.c-more p+ul,.c-more ul+h4,.c-more p+h4{margin-top:8px}
+.c-more h4{font:600 11.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);margin-bottom:4px}
+.c-more ul{margin:0;padding-left:16px}
+.c-more li{margin-bottom:2px}
+.c-more a{font-weight:600}
+.c-more small{display:block;margin-top:8px;font:400 12.5px/1.4 var(--mono);color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:5px;list-style:none;padding:0!important}
+.tags li{font:500 12.5px/1 var(--sans);background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.12);border-radius:999px;padding:5px 8px}
+.c-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px}
+.move{position:relative}
+.move-btn{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:0 11px;border:1px solid rgba(38,38,38,.3);border-radius:999px;background:rgba(255,255,255,.55);cursor:pointer;font:600 13px/1 var(--sans)}
+.move-btn:hover,.move-btn[aria-expanded=true]{background:#fff;border-color:var(--ink)}
+.move-btn svg{width:12px;height:12px}
+.menu{position:absolute;left:0;top:calc(100% + 6px);z-index:20;min-width:212px;background:var(--ink);color:#F7F7F5;border-radius:12px;padding:6px;box-shadow:0 18px 32px -12px rgba(0,0,0,.5);transform:none}
+.menu.up{top:auto;bottom:calc(100% + 6px)}
+.menu p{font:400 12px/1 var(--mono);color:#BDBDB6;padding:8px 10px 6px}
+.menu button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:40px;padding:0 10px;border:0;border-radius:8px;background:none;color:inherit;cursor:pointer;font:500 14px/1.2 var(--sans);text-align:left}
+.menu button span{font:400 12px/1 var(--mono);color:#BDBDB6}
+.menu button:hover,.menu button:focus{background:rgba(255,255,255,.14);outline:none}
+.menu button:focus-visible{box-shadow:inset 0 0 0 2px var(--yellow)}
+.c-state{font:600 12px/1 var(--mono);color:var(--ink-2)}
+.role{-webkit-user-select:none;user-select:none}
+@media (hover:hover) and (pointer:fine){.role{cursor:grab}.role .c-toggle{cursor:pointer}}
+.role.applied .c-state::before{content:"✓ quick-applied (demo)"}
+.landed{animation:land .5s ease}
+@keyframes land{0%{transform:rotate(var(--r,0deg)) scale(1.05)}55%{transform:rotate(calc(var(--r,0deg) - 1.6deg)) scale(.985)}100%{transform:rotate(var(--r,0deg))}}
+
+/* drag */
+.ghost{position:fixed!important;left:0;top:0;z-index:1000;margin:0;pointer-events:none;transition:none;box-shadow:0 30px 40px -18px rgba(0,0,0,.5),0 2px 5px rgba(0,0,0,.1)!important}
+.card.placeholder{background:rgba(255,255,255,.35)!important;box-shadow:none!important;outline:2px dashed rgba(38,38,38,.4);outline-offset:-2px;transform:none!important;animation:none}
+.card.placeholder>*{visibility:hidden}
+.card.placeholder::after{display:none}
+html.dragging,html.dragging *{cursor:grabbing!important}
+html.dragging .col:not(.accepts){opacity:.45;transition:opacity .2s}
+.col.over{background:var(--lane-2);box-shadow:inset 0 0 0 2px var(--ink)}
+.col.over .col-head{background:var(--lane-2)}
+
+/* interested column */
+.dropzone{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;min-height:170px;padding:18px 12px;border:2px dashed rgba(38,38,38,.3);border-radius:10px;color:var(--ink-2);transition:background .2s,min-height .3s}
+.dropzone svg{width:74px;height:48px}
+.dropzone b{font:600 15px/1.25 var(--sans);color:var(--ink)}
+.dropzone span{font:400 12.5px/1.35 var(--mono)}
+.has-cards .dropzone{min-height:64px;flex-direction:row;gap:10px}
+.has-cards .dropzone svg,.has-cards .dropzone span{display:none}
+.has-cards .dropzone b{font-size:13.5px;font-weight:500}
+.col-int.over .dropzone{background:var(--yellow);border-color:var(--ink)}
+.qa-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.qa-wrap.open{grid-template-rows:1fr}
+.qa{min-height:0;overflow:hidden;margin:0 -4px;padding:0 4px}
+.qa-in{position:relative;margin:10px 0 4px;background:#fff;border-radius:10px;padding:16px 13px 14px;box-shadow:0 1px 1px rgba(0,0,0,.08),0 14px 22px -14px rgba(0,0,0,.4);opacity:0;transform:translateY(-10px);transition:opacity .3s ease .12s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.qa-wrap.open .qa-in{opacity:1;transform:none}
+.pin{position:absolute;top:-9px;left:50%;width:18px;height:18px;margin-left:-9px}
+.qa-file{font:600 12px/1 var(--mono);color:var(--ink-3);display:flex;justify-content:space-between;gap:8px}
+.qa-file span{background:var(--ink);color:#F7F7F5;border-radius:4px;padding:3px 5px}
+.qa h3{font:700 18px/1.2 var(--sans);letter-spacing:-.02em;margin:10px 0 8px}
+.qa-roles{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.qa-roles li{font:600 12px/1 var(--mono);background:var(--c,var(--lane));border-radius:4px;padding:5px 6px}
+.qf{display:flex;flex-direction:column;gap:4px;margin-top:9px}
+.qf>span{font:600 11.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.qf em{font-style:normal;font-weight:400;text-transform:none}
+.qf input,.qf select,.mini textarea{width:100%;min-height:40px;border:1px solid var(--line);border-radius:8px;background:#FAFAF8;padding:8px 10px;font-size:14.5px}
+.qf select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23262626' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px}
+.qf input:focus,.qf select:focus,.mini textarea:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 3px rgba(38,38,38,.12)}
+.send{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin-top:13px;border:0;border-radius:10px;background:var(--ink);color:#F7F7F5;cursor:pointer;font:600 15px/1 var(--sans)}
+.send:hover{background:#000}
+.qa-note{margin-top:8px;font:400 12.5px/1.4 var(--mono);color:var(--ink-3);text-align:center}
+.status{margin-top:10px;padding:9px 10px;border-radius:8px;background:var(--green);font-size:13.5px;line-height:1.45}
+.empty{padding:18px 12px;border:2px dashed rgba(38,38,38,.25);border-radius:10px;text-align:center;color:var(--ink-2);font-size:14px}
+.empty button{margin-top:10px}
+.mini .qf:first-child{margin-top:4px}
+.mini textarea{min-height:76px;resize:vertical;font-family:var(--sans)}
+.mini .send{min-height:42px;font-size:14px}
+
+/* footer */
+.foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 32px;margin:8px var(--pad) 0;padding:22px 0 calc(72px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.f-name{display:block;font:700 22px/1.15 var(--sans);letter-spacing:-.02em;overflow-wrap:anywhere}
+.f-l p{font:400 13.5px/1.5 var(--mono);color:var(--ink-3);margin-top:4px}
+.f-fine{max-width:46em;font-size:13.5px;line-height:1.55;color:var(--ink-2)}
+
+/* medium: horizontal board */
+@media (max-width:1339px){
+  .board{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scroll-padding-inline:var(--pad);gap:12px;align-items:stretch;padding-bottom:20px;scrollbar-width:thin}
+  .col{flex:0 0 300px;scroll-snap-align:start}
+  .colnav{display:flex}
+  .col-head{position:relative}
+}
+@media (max-width:1100px){.crumb{display:none}}
+/* phone: swipeable tabs */
+@media (max-width:760px){
+  .top{gap:10px}
+  .top-nav a:not(.cta){display:none}
+  .logo-name{font-size:17px}
+  .intro{grid-template-columns:1fr;padding-top:20px;padding-bottom:12px}
+  h1{font-size:33px;max-width:none}
+  .intro-sub{font-size:15.5px}
+  .toolbar{padding-bottom:10px}
+  .search{flex:1 1 200px}
+  .search kbd{display:none}
+  .search input{height:44px}
+  .tbtn.ftoggle{display:inline-flex;height:44px}
+  .ftoggle b{font:600 12px/1 var(--mono);background:var(--ink);color:#F7F7F5;border-radius:999px;padding:3px 6px}
+  .filters{display:none;width:100%}
+  .filters.open{display:flex;flex-direction:column;align-items:stretch}
+  .seg{overflow-x:auto;scrollbar-width:none}
+  .seg::-webkit-scrollbar{display:none}
+  .seg button{height:40px;flex:1 0 auto;justify-content:center}
+  .area select{flex:1;height:44px;max-width:none}
+  .tb-end{display:none}
+  .tabs{display:flex;position:sticky;top:0;z-index:20;gap:6px;overflow-x:auto;padding:8px var(--pad) 10px;padding-top:calc(8px + env(safe-area-inset-top));background:rgba(247,247,245,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none;display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;font:600 14px/1 var(--sans);white-space:nowrap}
+  .tab i{width:9px;height:9px;border-radius:2px;background:var(--c);border:1px solid rgba(0,0,0,.2)}
+  .tab .tc{font:600 12px/1 var(--mono);color:var(--ink-3)}
+  .tab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#F7F7F5}
+  .tab[aria-selected=true] .tc{color:#CFCFC8}
+  .board{position:relative;align-items:flex-start;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);gap:10px;padding:10px var(--pad) 0;margin-bottom:24px;scrollbar-width:none;transition:height .25s ease}
+  .board::-webkit-scrollbar{display:none}
+  .col{flex:0 0 calc(100% - 34px)}
+  .col-body{min-height:120px}
+  .grip{display:none}
+  .move-btn{min-height:40px;padding:0 14px}
+  .c-plus{width:28px;height:28px}
+  .foot{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  .card,.c-plus::after,.qa-wrap,.qa-in,.dropzone,.board{transition:none!important}
+  .landed,.count.bump,.c-more{animation:none!important}
+  html.dragging .col:not(.accepts){transition:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#board" aria-label="Right Fit Recruitment — jump to the board">
+    <span class="badge" data-brand-initials aria-hidden="true">RF</span>
+    <span class="logo-name" data-brand>Right Fit Recruitment</span>
+  </a>
+  <span class="crumb" aria-hidden="true">~/perth/<b>hiring-board</b></span>
+  <nav class="top-nav" aria-label="Jump to column">
+    <a href="#col-employers" data-col="0">For employers</a>
+    <a href="#col-candidates" data-col="1">For candidates</a>
+    <a class="cta" href="#col-contact" data-col="5">Talk to us</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="intro" aria-labelledby="h1">
+    <div>
+      <p class="eyebrow">recruitment · <b>perth wa</b> · hospitality / trades / logistics / office</p>
+      <h1 id="h1">Perth jobs, <span>pinned up</span> where you can see them.</h1>
+    </div>
+    <div>
+      <p class="intro-sub"><b data-brand>Right Fit Recruitment</b> is a small, local agency in Leederville. This board is the whole website: read the notes, filter the sample roles, and drag any you like into “I’m interested” to quick-apply.</p>
+      <p class="stats"><span>9 sample roles</span><span>5 areas</span><span>free for candidates</span></p>
+    </div>
+  </section>
+
+  <div class="toolbar" role="group" aria-label="Filter sample roles">
+    <label class="search"><span class="sr-only">Search sample roles</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5.2" fill="none" stroke="#262626" stroke-width="1.6"/><path d="M11 11l3.6 3.6" stroke="#262626" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Search roles, suburbs…" autocomplete="off" enterkeyhint="search"><kbd aria-hidden="true">/</kbd>
+    </label>
+    <button class="tbtn ftoggle" type="button" id="ftoggle" aria-expanded="false" aria-controls="filters">Filters <b id="fcount" hidden>0</b></button>
+    <div class="filters" id="filters">
+      <div class="seg" role="group" aria-label="Job type">
+        <button type="button" data-type="all" aria-pressed="true">All types</button>
+        <button type="button" data-type="full-time" aria-pressed="false"><i style="background:var(--green)"></i>Full-time</button>
+        <button type="button" data-type="casual" aria-pressed="false"><i style="background:var(--pink)"></i>Casual</button>
+        <button type="button" data-type="contract" aria-pressed="false"><i style="background:var(--blue)"></i>Contract</button>
+      </div>
+      <label class="area"><span>area</span>
+        <select id="area">
+          <option value="all">All areas</option>
+          <option value="north">North — Joondalup, Scarborough</option>
+          <option value="central">Central — CBD, Subiaco, Leederville</option>
+          <option value="east">East — Midland, Kewdale</option>
+          <option value="south">South — Fremantle</option>
+          <option value="fifo">FIFO &amp; regional</option>
+        </select>
+      </label>
+    </div>
+    <div class="tb-end">
+      <span class="tip-line">drag a card — or use <b>Move to…</b></span>
+      <div class="colnav"><button class="tbtn" type="button" id="prevCol" aria-label="Scroll the board left">←</button><button class="tbtn" type="button" id="nextCol" aria-label="Scroll the board right">→</button></div>
+      <button class="tbtn" type="button" id="resetBoard">Reset board</button>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Board columns" id="tabs">
+    <button class="tab" role="tab" id="tab-0" aria-controls="col-employers" aria-selected="false" tabindex="-1"><i style="--c:var(--yellow)"></i>Employers <span class="tc">4</span></button>
+    <button class="tab" role="tab" id="tab-1" aria-controls="col-candidates" aria-selected="false" tabindex="-1"><i style="--c:var(--blue)"></i>Candidates <span class="tc">4</span></button>
+    <button class="tab" role="tab" id="tab-2" aria-controls="col-roles" aria-selected="true"><i style="--c:var(--green)"></i>Open roles <span class="tc" id="tc-roles">9</span></button>
+    <button class="tab" role="tab" id="tab-3" aria-controls="col-interested" aria-selected="false" tabindex="-1"><i style="--c:#fff"></i>Interested <span class="tc" id="tc-interested">0</span></button>
+    <button class="tab" role="tab" id="tab-4" aria-controls="col-how" aria-selected="false" tabindex="-1"><i style="--c:var(--green)"></i>How we work <span class="tc">4</span></button>
+    <button class="tab" role="tab" id="tab-5" aria-controls="col-contact" aria-selected="false" tabindex="-1"><i style="--c:var(--pink)"></i>Contact <span class="tc">4</span></button>
+  </div>
+
+  <div class="board" id="board">
+    <section class="col" id="col-employers" aria-labelledby="h-employers">
+      <header class="col-head"><span class="cdot" style="--c:var(--yellow)"></span><h2 id="h-employers">For employers</h2><span class="count">4</span></header>
+      <div class="col-body">
+        <article class="card n-y"><div class="c-top"><span class="c-id">emp-01</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-e1"><span class="c-title">Brief us in 20 minutes</span><span class="c-meta">Phone, video or on site</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-e1" hidden><p>Tell us about the role, the team and the non-negotiables. We’ll write the ad with you and agree a timeline before we start searching.</p></div></article>
+        <article class="card n-y"><div class="c-top"><span class="c-id">emp-02</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-e2"><span class="c-title">Shortlists, not CV piles</span><span class="c-meta">We aim for 3–5 people in 5 business days</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-e2" hidden><p>Everyone on a shortlist has been phone-screened and reference-checked before you meet them, with a short note on why we think they fit — and what might not.</p></div></article>
+        <article class="card n-y"><div class="c-top"><span class="c-id">emp-03</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-e3"><span class="c-title">Sample fees</span><span class="c-meta">A fixed percentage, agreed up front</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-e3" hidden><ul><li>Permanent roles: 12% of first-year base salary</li><li>Casual and contract: an hourly margin, quoted before you commit</li><li>If a permanent hire leaves in the first 90 days, we search again at no charge</li></ul><small>Sample fees for a fictional agency.</small></div></article>
+        <article class="card n-y"><div class="c-top"><span class="c-id">emp-04</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-e4"><span class="c-title">Industries we know</span><span class="c-meta">Five, and we know them well</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-e4" hidden><ul class="tags"><li>Hospitality</li><li>Trades &amp; apprentices</li><li>Warehousing &amp; logistics</li><li>Office &amp; accounts</li><li>FIFO support</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="col" id="col-candidates" aria-labelledby="h-candidates">
+      <header class="col-head"><span class="cdot" style="--c:var(--blue)"></span><h2 id="h-candidates">For candidates</h2><span class="count">4</span></header>
+      <div class="col-body">
+        <article class="card n-b"><div class="c-top"><span class="c-id">can-01</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-c1"><span class="c-title">Free for candidates, always</span><span class="c-meta">Employers pay our fee</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-c1" hidden><p>You’ll never pay us to find you work. If any agency asks you to, walk away.</p></div></article>
+        <article class="card n-b"><div class="c-top"><span class="c-id">can-02</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-c2"><span class="c-title">Your CV, your call</span><span class="c-meta">Nothing goes out without a yes</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-c2" hidden><p>We never send your details to an employer without asking you first — role by role, every time.</p></div></article>
+        <article class="card n-b"><div class="c-top"><span class="c-id">can-03</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-c3"><span class="c-title">Résumé tune-up</span><span class="c-meta">A free 15-minute call</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-c3" hidden><p>We’ll help you tighten your résumé for Perth employers — even if you don’t end up applying through us.</p></div></article>
+        <article class="card n-b"><div class="c-top"><span class="c-id">can-04</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-c4"><span class="c-title">After you apply</span><span class="c-meta">A phone call, not a black hole</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-c4" hidden><p>We aim to call within two business days. If a role isn’t right, we’ll tell you, and keep you in mind for the next one.</p></div></article>
+      </div>
+    </section>
+
+    <section class="col col-roles accepts" id="col-roles" aria-labelledby="h-roles">
+      <header class="col-head"><span class="cdot multi"></span><h2 id="h-roles">Open roles</h2><span class="count" id="n-roles">9</span></header>
+      <p class="col-note">Sample roles — not real vacancies.</p>
+      <div class="col-body" id="b-roles" data-drop="roles">
+        <div class="empty" id="rolesEmpty" hidden><p>No sample roles match those filters.</p><button class="tbtn" type="button" id="clearFilters">Clear filters</button></div>
+      </div>
+    </section>
+
+    <section class="col col-int accepts" id="col-interested" aria-labelledby="h-interested">
+      <header class="col-head"><span class="cdot ring"></span><h2 id="h-interested">I’m interested</h2><span class="count" id="n-interested">0</span></header>
+      <p class="col-note">Your pipeline · saved on this device only</p>
+      <div class="col-body" id="b-interested" data-drop="interested">
+        <div class="dropzone" aria-hidden="true">
+          <svg viewBox="0 0 74 48"><path d="M4 30C14 10 38 4 58 18" fill="none" stroke="#262626" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="1 5"/><path d="M50 12l9 7-10 4" fill="none" stroke="#262626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="50" y="26" width="20" height="18" rx="1.5" fill="#FFE58F" stroke="#262626" stroke-width="1.2" transform="rotate(-6 60 35)"/></svg>
+          <b>Drop a role here</b>
+          <span>or choose “Move to…” on any role card</span>
+        </div>
+        <div class="qa-wrap" id="qaWrap">
+          <form class="qa" id="qa" inert aria-labelledby="qa-h">
+            <div class="qa-in">
+              <svg class="pin" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="8" r="6.5" fill="#FFB3C7" stroke="#262626" stroke-width="1.2"/><circle cx="7" cy="6" r="1.8" fill="#fff" opacity=".8"/></svg>
+              <p class="qa-file">quick-apply.form <span>demo</span></p>
+              <h3 id="qa-h">Quick-apply for <span id="qaN">1 role</span></h3>
+              <ul class="qa-roles" id="qaRoles"></ul>
+              <label class="qf"><span>Name</span><input name="name" autocomplete="name" required></label>
+              <label class="qf"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+              <label class="qf"><span>Mobile <em>(optional)</em></span><input name="mobile" type="tel" autocomplete="tel" placeholder="0491 570 156"></label>
+              <label class="qf"><span>Available</span><select name="start"><option>Straight away</option><option>In 2 weeks</option><option>In a month or more</option><option>Just looking</option></select></label>
+              <label class="qf"><span>Work rights</span><select name="rights"><option>Australian citizen or PR</option><option>Visa with full work rights</option><option>Visa with limited hours</option><option>Not sure yet</option></select></label>
+              <button class="send" type="submit">Send quick-apply <span aria-hidden="true">→</span></button>
+              <p class="qa-note">Demo — nothing is sent. No CV needed to start.</p>
+              <p class="status" id="qaStatus" role="status" hidden></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="col" id="col-how" aria-labelledby="h-how">
+      <header class="col-head"><span class="cdot" style="--c:var(--green)"></span><h2 id="h-how">How we work</h2><span class="count">4</span></header>
+      <div class="col-body">
+        <article class="card n-g"><div class="c-top"><span class="c-id">step 01</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-h1"><span class="c-title">Listen</span><span class="c-meta">The job, not the ad</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-h1" hidden><p>We start with what the day-to-day really looks like, who you’d work with, and what good looks like after three months.</p></div></article>
+        <article class="card n-g"><div class="c-top"><span class="c-id">step 02</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-h2"><span class="c-title">Shortlist</span><span class="c-meta">Screened before anyone meets</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-h2" hidden><p>A phone screen, a skills check where it matters, and references before interviews — not after.</p></div></article>
+        <article class="card n-g"><div class="c-top"><span class="c-id">step 03</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-h3"><span class="c-title">Meet</span><span class="c-meta">Straight feedback, both ways</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-h3" hidden><p>We set up interviews and pass on honest feedback within a day, whichever side of the table you’re on.</p></div></article>
+        <article class="card n-g"><div class="c-top"><span class="c-id">step 04</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-h4"><span class="c-title">Check in</span><span class="c-meta">At 30 and 90 days</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-h4" hidden><p>We call both sides after a month and again after three, so small niggles don’t turn into resignations.</p></div></article>
+      </div>
+    </section>
+
+    <section class="col" id="col-contact" aria-labelledby="h-contact">
+      <header class="col-head"><span class="cdot" style="--c:var(--pink)"></span><h2 id="h-contact">Contact</h2><span class="count">4</span></header>
+      <div class="col-body">
+        <article class="card n-p"><div class="c-top"><span class="c-id">con-01</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-o1"><span class="c-title">Visit the office</span><span class="c-meta">Leederville, Perth WA</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-o1" hidden><p>Mon–Fri 8am–5:30pm AWST. A short walk from the train, with visitor parking out the back.</p></div></article>
+        <article class="card n-p"><div class="c-top"><span class="c-id">con-02</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-o2"><span class="c-title">Call or text</span><span class="c-meta">(08) 5550 3321</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-o2" hidden><p>Office: <a href="tel:+61855503321">(08) 5550 3321</a></p><p>Mobile / text: <a href="sms:+61491570157">0491 570 157</a></p></div></article>
+        <article class="card n-p"><div class="c-top"><span class="c-id">con-03</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-o3"><span class="c-title">Email</span><span class="c-meta">hello@example.com</span><span class="c-plus" aria-hidden="true"></span></button><div class="c-more" id="m-o3" hidden><p>Anything at all: <a href="mailto:hello@example.com">hello@example.com</a></p><p>Hiring? <a href="mailto:roles@example.com">roles@example.com</a></p></div></article>
+        <article class="card n-p"><div class="c-top"><span class="c-id">con-04</span></div><button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-o4"><span class="c-title">Leave us a note</span><span class="c-meta">We’d reply within a business day</span><span class="c-plus" aria-hidden="true"></span></button>
+          <div class="c-more" id="m-o4" hidden>
+            <form class="mini" data-demo-message="Demo only — your note wasn’t sent. On a real site it would reach the Leederville team.">
+              <label class="qf"><span>Name</span><input name="name" autocomplete="name" required></label>
+              <label class="qf"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+              <label class="qf"><span>I’m…</span><select name="who"><option>Looking for work</option><option>Hiring</option><option>Just curious</option></select></label>
+              <label class="qf"><span>Note</span><textarea name="note" rows="3"></textarea></label>
+              <button class="send" type="submit">Send note</button>
+            </form>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+  <p class="sr-only" id="live" aria-live="polite"></p>
+</main>
+
+<footer class="foot">
+  <div class="f-l"><span class="f-name" data-brand>Right Fit Recruitment</span><p>Leederville, Perth WA · Mon–Fri 8am–5:30pm AWST</p></div>
+  <p class="f-fine">Sample roles and pay ranges — not real vacancies. A fictional agency made for a design showcase; quick-apply and notes are demos and nothing is sent.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var d = document, root = d.documentElement;
+  root.classList.add("js");
+  function $(s, r) { return (r || d).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); }
+  var mq = window.matchMedia("(prefers-reduced-motion: reduce)"), phoneMQ = window.matchMedia("(max-width: 760px)");
+  function rm() { return window.DemoKit ? window.DemoKit.reducedMotion : mq.matches; }
+  function isPhone() { return phoneMQ.matches; }
+  function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  var TYPE = { "full-time": ["Full-time", "t-ft"], casual: ["Casual", "t-ca"], contract: ["Contract", "t-co"] };
+  var ROLES = [
+    { id: "RF-201", t: "Café Manager", type: "full-time", area: "north", sub: "Scarborough", pay: "$72–78k + super", who: "Independent specialty café, about 90 seats, a block from the beach.", doo: ["Run the floor for breakfast and lunch", "Rosters, ordering and a team of 12", "Keep the coffee standard high on a flat-out Saturday"], need: ["2+ years managing in hospitality", "RSA; food safety supervisor, or happy to get it"], roster: "Mon–Fri 6:30am–3pm, plus one weekend day a fortnight" },
+    { id: "RF-202", t: "Apprentice Electrician (1st year)", type: "full-time", area: "east", sub: "Midland", pay: "Award apprentice rates + tools", who: "Domestic and light-commercial crew of eight.", doo: ["Learn on new homes and small shop fit-outs", "Four-year apprenticeship with block release for trade school", "Travel between sites across the eastern suburbs"], need: ["Driver’s licence, or getting one soon", "Year 10 maths, a steady hand and early starts"], roster: "Mon–Fri 6:30am–3pm" },
+    { id: "RF-203", t: "Bookkeeper", type: "contract", area: "central", sub: "Subiaco", pay: "$46–52/hr", who: "Architecture practice, about 20 people.", doo: ["Payables, receivables and bank reconciliations", "Monthly BAS prep for the external accountant", "Tidy up two years of coding"], need: ["3+ years bookkeeping in cloud accounting software", "Calm in front of a messy chart of accounts"], roster: "6-month contract · 3 days a week, flexible hours" },
+    { id: "RF-204", t: "Warehouse Lead", type: "full-time", area: "east", sub: "Kewdale", pay: "$82–88k + super", who: "Third-party logistics site, 40 people.", doo: ["Lead a day-shift team of 10 pickers", "Keep dispatch on time and the floor safe", "Run the morning stand-up and the stocktake plan"], need: ["Forklift licence (LF)", "2+ years leading a warehouse team"], roster: "Mon–Fri 6am–2:30pm" },
+    { id: "RF-205", t: "Receptionist", type: "casual", area: "north", sub: "Joondalup", pay: "$34–36/hr incl. casual loading", who: "Busy allied health clinic.", doo: ["Greet patients and look after the appointment book", "Answer phones and take payments", "Keep the waiting room calm on a Monday morning"], need: ["Friendly, organised and hard to fluster", "Saturday mornings"], roster: "2–4 shifts a week, including Saturday mornings" },
+    { id: "RF-206", t: "Chef de Partie", type: "full-time", area: "south", sub: "Fremantle", pay: "$70–76k + super", who: "Seafood restaurant with an open kitchen.", doo: ["Run the larder or grill section", "Prep for 120 covers on a Friday night", "Help train two apprentices"], need: ["Cert III in Commercial Cookery", "Evening and weekend availability"], roster: "Wed–Sun, split shifts" },
+    { id: "RF-207", t: "Barista", type: "casual", area: "central", sub: "Leederville", pay: "$32–34/hr incl. casual loading", who: "Neighbourhood café with a big weekend rush.", doo: ["Pull 300-odd coffees on a Saturday morning", "Keep the grinders dialled in", "Help on the floor when it’s quiet"], need: ["12 months on a commercial machine", "Weekend mornings"], roster: "Sat & Sun 6:30am–1pm, plus fill-in shifts" },
+    { id: "RF-208", t: "Payroll Officer", type: "contract", area: "central", sub: "Perth CBD", pay: "$48–55/hr", who: "Head office of a mining services company.", doo: ["Fortnightly pays for about 400 staff, including FIFO rosters", "Leave, allowances and super reconciliations", "Answer pay questions from site crews"], need: ["Payroll experience with shift and roster allowances", "A sharp eye at pay-run time"], roster: "4-month contract · full-time, hybrid" },
+    { id: "RF-209", t: "Site Administrator (FIFO)", type: "contract", area: "fifo", sub: "Pilbara, flying from Perth", pay: "$58–62/hr", who: "Remote construction project with camp accommodation.", doo: ["Run the site office: inductions, timesheets, flights", "Keep crew lists and camp bookings up to date", "Be the calm voice on the radio at 5am"], need: ["Pre-employment medical and drug & alcohol test", "Comfortable with remote camp life"], roster: "2 weeks on / 1 week off, 12-hour days" }
+  ];
+  var ORDER = {};
+  ROLES.forEach(function (r, i) { ORDER[r.id] = i; });
+
+  var ARROW = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 6h9M6.5 2.5L10 6l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function roleCard(r) {
+    var ty = TYPE[r.type], id = r.id;
+    return '<article class="card role ' + ty[1] + '" id="card-' + id + '" data-id="' + id + '" data-type="' + r.type + '" data-area="' + r.area + '" data-kw="' + esc((r.t + " " + r.sub + " " + ty[0] + " " + r.who + " " + r.area).toLowerCase()) + '">' +
+      '<div class="c-top"><span class="c-id">' + id + ' <em>· sample</em></span><span class="grip" title="Drag to move" aria-hidden="true"><svg viewBox="0 0 10 16"><g fill="currentColor"><circle cx="2" cy="2" r="1.5"/><circle cx="8" cy="2" r="1.5"/><circle cx="2" cy="8" r="1.5"/><circle cx="8" cy="8" r="1.5"/><circle cx="2" cy="14" r="1.5"/><circle cx="8" cy="14" r="1.5"/></g></svg></span></div>' +
+      '<button class="c-toggle" type="button" aria-expanded="false" aria-controls="m-' + id + '"><span class="c-title" id="t-' + id + '">' + esc(r.t) + '</span><span class="c-meta">' + esc(r.sub) + ' · <span class="nw">' + ty[0] + '</span></span><span class="c-plus" aria-hidden="true"></span></button>' +
+      '<p class="c-pay">' + esc(r.pay) + "</p>" +
+      '<div class="c-more" id="m-' + id + '" hidden><p>' + esc(r.who) + "</p><h4>You’ll</h4><ul>" + r.doo.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul><h4>You’ll need</h4><ul>" + r.need.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul><h4>Roster</h4><p>" + esc(r.roster) + "</p></div>" +
+      '<div class="c-foot"><div class="move"><button class="move-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="menu-' + id + '">Move to… ' + ARROW + "</button>" +
+      '<div class="menu" id="menu-' + id + '" role="menu" aria-label="Move ' + esc(r.t) + ' to" hidden><p aria-hidden="true">move card</p>' +
+      '<button type="button" role="menuitem" data-to="interested">I’m interested <span>→ col 4</span></button>' +
+      '<button type="button" role="menuitem" data-to="roles">Back to open roles <span>→ col 3</span></button>' +
+      '<button type="button" role="menuitem" data-to="top">Top of this column <span>↑</span></button></div></div>' +
+      '<span class="c-state" aria-hidden="true"></span></div></article>';
+  }
+
+  var board, bRoles, bInt, qaWrap, qa, cols, tabs, live, active = 2;
+  var F = { type: "all", area: "all", q: "" };
+
+  function colKey(card) { return card.parentNode === bInt ? "interested" : "roles"; }
+  function title(card) { var t = $(".c-title", card); return t ? t.textContent : "Role"; }
+  function say(msg) { live.textContent = ""; setTimeout(function () { live.textContent = msg; }, 30); }
+
+  function syncMenus() {
+    $$(".role").forEach(function (c) {
+      var k = colKey(c);
+      $$("[role=menuitem]", c).forEach(function (b) { b.hidden = (b.dataset.to === k); });
+    });
+  }
+  function refresh() {
+    var cards = $$(".role", bRoles), shown = 0;
+    cards.forEach(function (c) {
+      var ok = (F.type === "all" || c.dataset.type === F.type) && (F.area === "all" || c.dataset.area === F.area) && (!F.q || c.dataset.kw.indexOf(F.q) > -1);
+      c.hidden = !ok; if (ok) shown++;
+    });
+    $("#rolesEmpty").hidden = shown > 0;
+    $("#n-roles").textContent = shown === cards.length ? String(cards.length) : shown + "/" + cards.length;
+    $("#tc-roles").textContent = shown === cards.length ? String(cards.length) : shown + "/" + cards.length;
+    var ints = $$(".role", bInt);
+    $("#n-interested").textContent = ints.length; $("#tc-interested").textContent = ints.length;
+    bInt.parentNode.classList.toggle("has-cards", ints.length > 0);
+    $("#qaN").textContent = ints.length + (ints.length === 1 ? " role" : " roles");
+    $("#qaRoles").innerHTML = ints.map(function (c) { return '<li class="' + TYPE[c.dataset.type][1] + '">' + c.dataset.id + "</li>"; }).join("");
+    if (!ints.length) closeQA();
+    var n = (F.type !== "all" ? 1 : 0) + (F.area !== "all" ? 1 : 0);
+    $("#fcount").hidden = !n; $("#fcount").textContent = n;
+    syncMenus();
+  }
+  function openQA() { qaWrap.classList.add("open"); qa.inert = false; }
+  function closeQA() { qaWrap.classList.remove("open"); qa.inert = true; }
+  function bump(id) { var el = $(id); if (!el || rm()) return; el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump"); }
+  function land(card) { if (rm()) return; card.classList.remove("landed"); void card.offsetWidth; card.classList.add("landed"); setTimeout(function () { card.classList.remove("landed"); }, 550); }
+  function save() { try { localStorage.setItem("rf076-pipeline", JSON.stringify($$(".role", bInt).map(function (c) { return c.dataset.id; }))); } catch (e) { /* optional */ } }
+
+  function insertRole(card) {
+    var before = $("#rolesEmpty"), idx = ORDER[card.dataset.id];
+    $$(".role", bRoles).some(function (c) { if (c !== card && ORDER[c.dataset.id] > idx) { before = c; return true; } return false; });
+    bRoles.insertBefore(card, before);
+  }
+  function after(card, from, to, via) {
+    refresh();
+    if (to === "interested" && from !== "interested") {
+      card.classList.remove("applied"); openQA(); bump("#n-interested"); bump("#tc-interested");
+      say(title(card) + " added to I’m interested. The quick-apply form is open in that column.");
+    } else if (from === "interested" && to !== "interested") {
+      card.classList.remove("applied"); say(title(card) + " moved back to open roles.");
+    } else say(title(card) + " moved.");
+    save();
+  }
+  function moveCard(card, to, via) {
+    var from = colKey(card);
+    if (to === "top") { card.parentNode.insertBefore(card, card.parentNode.firstElementChild); }
+    else if (to === "interested") bInt.insertBefore(card, $(".dropzone", bInt));
+    else insertRole(card);
+    var dest = to === "top" ? from : to;
+    after(card, from, dest, via);
+    land(card);
+    if (via === "menu") {
+      var focusBtn = function () { var b = $(".move-btn", card); if (b) { try { b.focus({ preventScroll: isPhone() }); } catch (e) { b.focus(); } } };
+      if (isPhone()) { setActive(dest === "interested" ? 3 : 2, { scroll: true }); setTimeout(focusBtn, rm() ? 0 : 380); }
+      else { focusBtn(); card.scrollIntoView({ block: "nearest", behavior: rm() ? "auto" : "smooth" }); }
+    }
+  }
+
+  /* ---------- Move to… menus ---------- */
+  function closeMenus(except) {
+    $$(".menu").forEach(function (m) {
+      if (m === except || m.hidden) return;
+      m.hidden = true;
+      var card = m.closest(".card"), btn = $(".move-btn", card);
+      btn.setAttribute("aria-expanded", "false"); card.classList.remove("menu-open");
+    });
+  }
+  function openMenu(btn, focusFirst) {
+    var card = btn.closest(".card"), menu = $(".menu", card);
+    closeMenus(menu);
+    menu.hidden = false; menu.classList.remove("up");
+    btn.setAttribute("aria-expanded", "true"); card.classList.add("menu-open");
+    var mr = menu.getBoundingClientRect(), cr = card.closest(".col").getBoundingClientRect();
+    if (mr.bottom > Math.min(cr.bottom - 6, innerHeight - 8) && mr.height + 60 < card.getBoundingClientRect().top - cr.top + 40) menu.classList.add("up");
+    if (focusFirst !== false) { var first = $$("[role=menuitem]", menu).filter(function (b) { return !b.hidden; })[0]; if (first) first.focus(); }
+  }
+
+  /* ---------- drag (mouse anywhere on a role card; touch/pen via the grip) ---------- */
+  var drag = null, justDragged = false;
+  function onDown(e) {
+    if (e.button !== 0 || isPhone() || drag) return;
+    var card = e.target.closest(".role"); if (!card) return;
+    if (e.target.closest(".move, a, input, select, textarea")) return;
+    var grip = e.target.closest(".grip");
+    if (e.pointerType !== "mouse" && !grip) return;
+    drag = { card: card, pid: e.pointerId, x0: e.clientX, y0: e.clientY, x: e.clientX, y: e.clientY, on: false, from: card.parentNode, next: card.nextElementSibling, fromKey: colKey(card), ok: true };
+    if (grip) e.preventDefault();
+  }
+  function begin() {
+    var c = drag.card, r = c.getBoundingClientRect();
+    drag.on = true; drag.ox = drag.x0 - r.left; drag.oy = drag.y0 - r.top;
+    closeMenus();
+    var g = c.cloneNode(true);
+    g.removeAttribute("id"); $$("[id]", g).forEach(function (el) { el.removeAttribute("id"); });
+    g.classList.add("ghost"); g.setAttribute("aria-hidden", "true"); g.style.width = r.width + "px";
+    d.body.appendChild(g); drag.ghost = g;
+    c.classList.add("placeholder");
+    root.classList.add("dragging");
+    follow(); tickDrag();
+  }
+  function follow() { drag.ghost.style.transform = "translate(" + (drag.x - drag.ox) + "px," + (drag.y - drag.oy) + "px) rotate(2.5deg) scale(1.03)"; }
+  function place() {
+    var el = d.elementFromPoint(drag.x, drag.y), col = el && el.closest ? el.closest(".col") : null;
+    $$(".col.over").forEach(function (c) { if (c !== col) c.classList.remove("over"); });
+    if (!col || !col.classList.contains("accepts")) { drag.ok = false; return; }
+    drag.ok = true; col.classList.add("over");
+    var body = $("[data-drop]", col), before = null;
+    var list = $$(".role", body).filter(function (c) { return c !== drag.card && !c.hidden; });
+    for (var i = 0; i < list.length; i++) { var r = list[i].getBoundingClientRect(); if (drag.y < r.top + r.height / 2) { before = list[i]; break; } }
+    if (!before) before = body === bInt ? $(".dropzone", bInt) : $("#rolesEmpty");
+    if (drag.card.parentNode !== body || drag.card.nextElementSibling !== before) body.insertBefore(drag.card, before);
+  }
+  function tickDrag() {
+    if (!drag || !drag.on) return;
+    var y = drag.y, x = drag.x, moved = false;
+    if (y < 70) { window.scrollBy(0, -Math.ceil((70 - y) / 5)); moved = true; }
+    else if (y > innerHeight - 70) { window.scrollBy(0, Math.ceil((y - innerHeight + 70) / 5)); moved = true; }
+    if (board.scrollWidth > board.clientWidth + 2) {
+      var br = board.getBoundingClientRect();
+      if (x < br.left + 56) { board.scrollLeft -= 12; moved = true; } else if (x > br.right - 56) { board.scrollLeft += 12; moved = true; }
+    }
+    if (moved) place();
+    drag.raf = requestAnimationFrame(tickDrag);
+  }
+  function onMove(e) {
+    if (!drag || e.pointerId !== drag.pid) return;
+    drag.x = e.clientX; drag.y = e.clientY;
+    if (!drag.on) { if (Math.abs(drag.x - drag.x0) + Math.abs(drag.y - drag.y0) < 7) return; begin(); }
+    if (e.cancelable) e.preventDefault();
+    follow(); place();
+  }
+  function finish(cancel) {
+    var dr = drag; drag = null;
+    if (!dr || !dr.on) return;
+    cancelAnimationFrame(dr.raf);
+    root.classList.remove("dragging");
+    $$(".col.over").forEach(function (c) { c.classList.remove("over"); });
+    var c = dr.card, g = dr.ghost;
+    if (cancel || !dr.ok) dr.from.insertBefore(c, dr.next && dr.next.parentNode === dr.from ? dr.next : null);
+    var toKey = colKey(c);
+    justDragged = true; setTimeout(function () { justDragged = false; }, 0);
+    var done = function () { if (g.parentNode) g.parentNode.removeChild(g); c.classList.remove("placeholder"); if (toKey !== dr.fromKey) land(c); };
+    if (rm()) done();
+    else {
+      var r = c.getBoundingClientRect();
+      g.style.transition = "transform .22s cubic-bezier(.2,.8,.2,1)";
+      g.style.transform = "translate(" + r.left + "px," + r.top + "px) rotate(0deg) scale(1)";
+      setTimeout(done, 230);
+    }
+    if (toKey !== dr.fromKey || c.nextElementSibling !== dr.next) after(c, dr.fromKey, toKey, "drag");
+  }
+
+  /* ---------- phone tabs ---------- */
+  function stride() { return cols[1].offsetLeft - cols[0].offsetLeft; }
+  function fitHeight() { if (!isPhone()) { board.style.height = ""; return; } board.style.height = cols[active].offsetHeight + 10 + "px"; }
+  function setActive(i, o) {
+    o = o || {};
+    active = clamp(i, 0, cols.length - 1);
+    tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === active ? "true" : "false"); t.tabIndex = j === active ? 0 : -1; });
+    if (!isPhone()) return;
+    fitHeight();
+    if (o.scroll) board.scrollTo({ left: cols[active].offsetLeft - cols[0].offsetLeft, behavior: o.instant || rm() ? "auto" : "smooth" });
+    if (o.scroll && !o.instant) { var bt = board.getBoundingClientRect().top, th = $("#tabs").offsetHeight; if (bt < th) window.scrollBy({ top: bt - th - 4, behavior: rm() ? "auto" : "smooth" }); }
+    var strip = $("#tabs"), t = tabs[active];
+    strip.scrollTo({ left: Math.max(0, t.offsetLeft - 16), behavior: o.instant || rm() ? "auto" : "smooth" });
+  }
+  function mode() {
+    var ph = isPhone();
+    cols.forEach(function (c, j) {
+      if (ph) { c.setAttribute("role", "tabpanel"); c.setAttribute("aria-labelledby", "tab-" + j); }
+      else { c.removeAttribute("role"); c.setAttribute("aria-labelledby", $("h2", c).id); }
+    });
+    if (ph) setActive(active, { scroll: true, instant: true }); else board.style.height = "";
+  }
+
+  function init() {
+    board = $("#board"); bRoles = $("#b-roles"); bInt = $("#b-interested"); qaWrap = $("#qaWrap"); qa = $("#qa"); live = $("#live");
+    cols = $$(".col", board); tabs = $$(".tab");
+    var html = ROLES.map(roleCard).join("");
+    $("#rolesEmpty").insertAdjacentHTML("beforebegin", html);
+    try {
+      var saved = JSON.parse(localStorage.getItem("rf076-pipeline") || "[]");
+      if (Array.isArray(saved)) saved.forEach(function (id) { var c = d.getElementById("card-" + id); if (c) bInt.insertBefore(c, $(".dropzone", bInt)); });
+    } catch (e) { /* optional */ }
+    refresh();
+    if ($$(".role", bInt).length) { if (rm()) openQA(); else { qaWrap.style.transition = "none"; openQA(); void qaWrap.offsetWidth; qaWrap.style.transition = ""; } }
+
+    board.addEventListener("click", function (e) {
+      if (justDragged) { e.preventDefault(); e.stopPropagation(); justDragged = false; }
+    }, true);
+    board.addEventListener("click", function (e) {
+      var mb = e.target.closest(".move-btn");
+      if (mb) { if (mb.getAttribute("aria-expanded") === "true") closeMenus(); else openMenu(mb, e.detail === 0); return; }
+      var mi = e.target.closest("[role=menuitem]");
+      if (mi) { var card = mi.closest(".card"); closeMenus(); moveCard(card, mi.dataset.to, "menu"); return; }
+      var tg = e.target.closest(".c-toggle");
+      if (tg) {
+        var open = tg.getAttribute("aria-expanded") !== "true", region = d.getElementById(tg.getAttribute("aria-controls"));
+        tg.setAttribute("aria-expanded", String(open)); if (region) region.hidden = !open;
+        if (isPhone()) fitHeight();
+      }
+    });
+    board.addEventListener("keydown", function (e) {
+      var menu = e.target.closest(".menu");
+      if (menu) {
+        var items = $$("[role=menuitem]", menu).filter(function (b) { return !b.hidden; }), i = items.indexOf(d.activeElement);
+        if (e.key === "ArrowDown") { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+        else if (e.key === "Home") { e.preventDefault(); items[0].focus(); }
+        else if (e.key === "End") { e.preventDefault(); items[items.length - 1].focus(); }
+        else if (e.key === "Escape") { e.preventDefault(); var btn = $(".move-btn", menu.closest(".card")); closeMenus(); btn.focus(); }
+        else if (e.key === "Tab") closeMenus();
+        return;
+      }
+      if (e.target.classList.contains("move-btn") && (e.key === "ArrowDown" || e.key === "ArrowUp")) { e.preventDefault(); openMenu(e.target, true); }
+    });
+    d.addEventListener("pointerdown", function (e) { if (!e.target.closest(".move")) closeMenus(); });
+    board.addEventListener("pointerdown", onDown);
+    window.addEventListener("pointermove", onMove, { passive: false });
+    window.addEventListener("pointerup", function (e) { if (drag && e.pointerId === drag.pid) finish(false); });
+    window.addEventListener("pointercancel", function (e) { if (drag && e.pointerId === drag.pid) finish(true); });
+    d.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drag && drag.on) { e.preventDefault(); finish(true); return; }
+      if (e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        var t = e.target; if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+        e.preventDefault(); $("#q").focus();
+      }
+    });
+
+    /* filters */
+    $$(".seg button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        F.type = b.dataset.type;
+        $$(".seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+        refresh(); say(($("#n-roles").textContent) + " sample roles shown.");
+      });
+    });
+    $("#area").addEventListener("change", function (e) { F.area = e.target.value; refresh(); say(($("#n-roles").textContent) + " sample roles shown."); });
+    var q = $("#q");
+    q.addEventListener("input", function () { F.q = q.value.trim().toLowerCase(); refresh(); });
+    q.addEventListener("keydown", function (e) { if (e.key === "Escape" && q.value) { e.preventDefault(); q.value = ""; F.q = ""; refresh(); } });
+    function clearFilters() {
+      F.type = "all"; F.area = "all"; F.q = ""; q.value = ""; $("#area").value = "all";
+      $$(".seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x.dataset.type === "all")); });
+      refresh();
+    }
+    $("#clearFilters").addEventListener("click", clearFilters);
+    $("#ftoggle").addEventListener("click", function () {
+      var f = $("#filters"), open = !f.classList.contains("open");
+      f.classList.toggle("open", open); this.setAttribute("aria-expanded", String(open));
+    });
+    $("#resetBoard").addEventListener("click", function () {
+      closeMenus();
+      $$(".role").forEach(function (c) { c.classList.remove("applied"); insertRole(c); });
+      $$(".c-toggle[aria-expanded=true]").forEach(function (t) { t.setAttribute("aria-expanded", "false"); var r = d.getElementById(t.getAttribute("aria-controls")); if (r) r.hidden = true; });
+      clearFilters(); qa.reset(); $("#qaStatus").hidden = true; save();
+      say("Board reset. All sample roles are back in open roles.");
+    });
+    $("#prevCol").addEventListener("click", function () { board.scrollBy({ left: -312, behavior: rm() ? "auto" : "smooth" }); });
+    $("#nextCol").addEventListener("click", function () { board.scrollBy({ left: 312, behavior: rm() ? "auto" : "smooth" }); });
+
+    qa.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var ints = $$(".role", bInt), ids = ints.map(function (c) { return c.dataset.id; });
+      ints.forEach(function (c) { c.classList.add("applied"); });
+      var st = $("#qaStatus"); st.hidden = false;
+      st.textContent = "Demo only — nothing was sent. On a real site, the team would call you about " + ids.join(", ") + ".";
+      if (window.DemoKit) window.DemoKit.toast("Demo only — your quick-apply wasn’t sent anywhere.");
+      if (isPhone()) fitHeight();
+    });
+
+    /* tabs */
+    tabs.forEach(function (t, j) { t.addEventListener("click", function () { setActive(j, { scroll: true }); }); });
+    $("#tabs").addEventListener("keydown", function (e) {
+      var k = e.key, j = active;
+      if (k === "ArrowRight") j++; else if (k === "ArrowLeft") j--; else if (k === "Home") j = 0; else if (k === "End") j = cols.length - 1; else return;
+      e.preventDefault(); j = (j + cols.length) % cols.length; setActive(j, { scroll: true }); tabs[j].focus();
+    });
+    var st = 0;
+    board.addEventListener("scroll", function () {
+      if (!isPhone()) return;
+      clearTimeout(st);
+      st = setTimeout(function () { var i = clamp(Math.round(board.scrollLeft / stride()), 0, cols.length - 1); if (i !== active) setActive(i); }, 90);
+    }, { passive: true });
+    if (window.ResizeObserver) { var ro = new ResizeObserver(function () { if (isPhone()) fitHeight(); }); cols.forEach(function (c) { ro.observe(c); }); }
+    window.addEventListener("resize", function () { if (isPhone()) fitHeight(); });
+    if (phoneMQ.addEventListener) phoneMQ.addEventListener("change", mode); else if (phoneMQ.addListener) phoneMQ.addListener(mode);
+    $$("a[data-col]").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        if (!isPhone()) return;
+        e.preventDefault(); setActive(+a.dataset.col, { scroll: true });
+        $("#tabs").scrollIntoView({ behavior: rm() ? "auto" : "smooth", block: "start" });
+      });
+    });
+    mode();
+    if (d.fonts && d.fonts.ready) d.fonts.ready.then(function () { if (isPhone()) setActive(active, { scroll: true, instant: true }); });
+  }
+  if (d.readyState === "loading") d.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>
+</body>
+</html>

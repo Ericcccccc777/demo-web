@@ -1,0 +1,8 @@
+{
+  "id": "023",
+  "tech": ["SVG", "Pointer Events", "Drag & drop", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["quote", "customiser"],
+  "interaction": "Drag furniture (or tap + / −) into an SVG truck whose 12×4 cargo grid snaps items into free, supported cells — heavy items stay on the floor, and items can be dragged back out to unload. A fill bar and readout recommend a 4.5 t, 6 t or 10 t truck, the number of movers, hours and a price range at sample rates (all illustrative). Presets load typical homes, the truck physically lengthens as it upsizes, and 'Request this quote' ends in a demo toast. Also: a saved moving-day checklist and a quote form that can attach the estimate.",
+  "fonts": ["Archivo", "Permanent Marker"],
+  "notes": "On phones the truck is filled with steppers only (no drag), with a docked fill bar while the list is on screen. Estimates use a simple packing model and sample hourly rates."
+}

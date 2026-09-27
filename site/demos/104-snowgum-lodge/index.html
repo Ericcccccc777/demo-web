@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="104">
+<meta name="demo:brand" content="Snowgum Lodge">
+<title>Snowgum Lodge — ski-in bunk lodge, Falls Creek</title>
+<meta name="description" content="Snowgum Lodge is a fictional ski-in bunk lodge at Falls Creek, Victoria: rooms and bunks, lodge life, sample season dates and a split-flap lifts board.">
+<meta name="theme-color" content="#1F4E79">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&family=Fjalla+One&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--blue:#1F4E79;--blue2:#2B6598;--blue3:#8DB2D4;--ice:#DCE9F5;--ink:#0E2439;--night:#0A1826;--snow:#F7FBFF;--cherry:#D7263D;--cherry2:#B51F34;--pine:#2E5E4E;--pine2:#347A5E;--butter:#F2D492;--cream:#FBF4E4;--text:#14304D;--muted:#4A6178;
+--fd:"Fjalla One","Oswald","Arial Narrow","Helvetica Neue",Impact,sans-serif;--fb:"Cabin","Trebuchet MS","Segoe UI",system-ui,sans-serif;--g:clamp(16px,4.5vw,56px);--max:1180px;--focus:#0E2439;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--snow);color:var(--text);font:400 17px/1.6 var(--fb);overflow-x:clip}
+svg,canvas{display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fd);font-weight:400;text-transform:uppercase;line-height:1;margin:0;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.sr,.txt{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--butter);color:var(--ink);padding:10px 14px;font-weight:700;border-radius:4px}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--g)}
+section[id]{scroll-margin-top:64px}
+.eyebrow{font:700 13px/1.3 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--cherry2);margin:0 0 12px}
+.h2{font-size:clamp(42px,6.4vw,80px);line-height:.94;color:var(--blue);margin:0 0 18px}
+.intro{max-width:36em;color:var(--muted);font-size:18px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border-radius:3px;border:2px solid transparent;font:400 18px/1 var(--fd);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;background:none;color:inherit}
+.btn.red{background:var(--cherry);color:var(--snow);box-shadow:4px 4px 0 var(--ink)}
+.btn.red:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ink)}
+.btn.red:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.line{border-color:rgba(247,251,255,.75);color:var(--snow)}
+.btn.line:hover{background:rgba(247,251,255,.12)}
+.btn.sm{min-height:42px;padding:9px 16px;font-size:16px;box-shadow:3px 3px 0 var(--ink)}
+.btn svg{width:18px;height:18px}
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--blue);color:var(--snow);border-bottom:3px solid var(--cherry);--focus:var(--butter)}
+.top .in{max-width:var(--max);margin:auto;padding:8px var(--g);display:flex;align-items:center;gap:16px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font:400 19px/1.05 var(--fd);letter-spacing:.08em;text-transform:uppercase;overflow-wrap:anywhere}
+.nav{display:flex;gap:2px}
+.nav a{text-decoration:none;font:600 14px/1 var(--fb);letter-spacing:.05em;padding:13px 11px;border-radius:3px;white-space:nowrap}
+.nav a:hover{background:rgba(247,251,255,.12)}
+.top .btn.red{box-shadow:3px 3px 0 var(--night);flex:none}
+@media (max-width:980px){.nav{display:none}}
+/* hero */
+.hero{position:relative;background:var(--blue);color:var(--snow);overflow:hidden;isolation:isolate;--focus:var(--butter)}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(rgba(247,251,255,.09) 1.1px,transparent 1.7px) 0 0/10px 10px;-webkit-mask-image:linear-gradient(#000,transparent 62%);mask-image:linear-gradient(#000,transparent 62%);z-index:-1}
+.hero::after{content:"";position:absolute;inset:10px 10px 0;border:2px solid rgba(247,251,255,.28);border-bottom:0;pointer-events:none;z-index:4}
+.hero .snow{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.clouds{position:absolute;top:70px;left:0;width:100%;height:220px;z-index:-1;pointer-events:none}
+.copy{position:relative;z-index:5;max-width:var(--max);margin:auto;padding:clamp(40px,6.5vh,76px) var(--g) clamp(18px,3vh,34px);text-align:center}
+.kicker{display:flex;align-items:center;justify-content:center;gap:14px;font:700 13px/1.3 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--butter);margin:0 0 16px}
+.kicker::before,.kicker::after{content:"";height:2px;width:clamp(26px,6vw,84px);background:currentColor}
+.title{font-size:clamp(60px,10vw,148px);line-height:.86;letter-spacing:.012em;text-shadow:.045em .045em 0 var(--cherry);overflow-wrap:anywhere;text-wrap:balance}
+.tagline{font:400 clamp(20px,2.3vw,30px)/1.2 var(--fd);letter-spacing:.16em;text-transform:uppercase;color:var(--butter);margin:20px 0 10px}
+.lede{max-width:35em;margin:0 auto 26px;font-size:clamp(16px,1.25vw,18.5px);color:#E3ECF6}
+.cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 16px}
+.roundel{position:absolute;right:max(var(--g),calc(50% - 560px));top:250px;width:128px;transform:rotate(-12deg)}
+@media (max-width:1100px){.roundel{display:none}}
+.scene{position:relative;height:clamp(250px,40vh,420px);margin-top:-6px}
+.scene svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.scene::after,.tk::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.1;pointer-events:none;mix-blend-mode:multiply}
+.strip{position:relative;z-index:5;margin:0;background:var(--cherry);color:var(--snow);font:700 13px/1.4 var(--fb);letter-spacing:.16em;text-transform:uppercase;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px;padding:12px var(--g)}
+.strip span+span::before{content:"✦";margin-right:26px;opacity:.7}
+@media (max-width:640px){.kicker::before,.kicker::after{display:none}.kicker{font-size:12px;letter-spacing:.2em}.lede{margin-bottom:20px}.cta .btn{padding:12px 16px;font-size:17px}.scene{height:clamp(230px,36vh,300px)}.strip{letter-spacing:.1em;gap:2px 14px;font-size:12px}.strip span+span::before{margin-right:14px}}
+/* board section */
+.board-sec{position:relative;background:linear-gradient(180deg,#0E2439,#0A1826 70%);color:var(--snow);padding:clamp(64px,8vw,108px) 0;overflow:hidden;--focus:var(--butter)}
+.board-sec>canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.board-sec .wrap{position:relative;z-index:1}
+.bhead{display:grid;grid-template-columns:1fr 1fr;gap:10px 56px;align-items:end;margin-bottom:30px}
+.bhead .eyebrow{color:var(--butter)}
+.bhead .h2{color:var(--snow);margin:0}
+.bhead p.d{color:#C9D6E3;margin:0;max-width:34em}
+@media (max-width:860px){.bhead{grid-template-columns:1fr}}
+@media (max-width:560px){.housing{margin:0 calc(10px - var(--g));padding:12px 10px 14px;border-radius:6px}.housing::before{inset:4px}}
+.housing{position:relative;background:#101B28;border:1px solid #2A3D53;border-radius:10px;padding:16px 22px 20px;box-shadow:inset 0 0 0 5px #0B1520,0 34px 60px -24px rgba(0,0,0,.7)}
+.housing::before{content:"";position:absolute;inset:9px;pointer-events:none;background:radial-gradient(circle at 4px 4px,#3A4E66 2.5px,transparent 3px),radial-gradient(circle at calc(100% - 4px) 4px,#3A4E66 2.5px,transparent 3px),radial-gradient(circle at 4px calc(100% - 4px),#3A4E66 2.5px,transparent 3px),radial-gradient(circle at calc(100% - 4px) calc(100% - 4px),#3A4E66 2.5px,transparent 3px)}
+.hw{container-type:inline-size}
+.plate{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;font:700 11px/1.3 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:#93A8BE;margin:0 0 14px;padding:0 6px}
+.plate b{font-weight:700;background:var(--butter);color:var(--ink);padding:2px 7px;border-radius:2px}
+.lbl{display:block;font:700 11px/1 var(--fb);letter-spacing:.18em;text-transform:uppercase;color:var(--butter);margin:0 0 7px}
+.btop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 20px;margin-bottom:16px;--cw:min(26px,calc(100cqw / 11 - 3px))}
+.conds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 16px;--cw:min(26px,calc((50cqw - 36px) / 5 - 2px))}
+.cond{background:#0C1520;border:1px solid #223449;border-radius:6px;padding:10px 11px 12px;margin:0}
+.cond dt{display:block;font:700 11px/1.2 var(--fb);letter-spacing:.16em;text-transform:uppercase;color:var(--butter);margin:0 0 8px}
+.cond dd{margin:0}
+.flaps{display:inline-flex;gap:var(--cg,2px);vertical-align:top}
+.fl{position:relative;flex:none;width:var(--cw);height:calc(var(--cw) * 1.42);perspective:calc(var(--cw) * 7);font:400 calc(var(--cw) * 1.06)/1 var(--fd);color:var(--snow)}
+.fl .h{position:absolute;left:0;right:0;height:50%;overflow:hidden;backface-visibility:hidden}
+.fl .t,.fl .ft{top:0;border-radius:3px 3px 0 0;background:linear-gradient(#24344A,#1C2A3B)}
+.fl .b,.fl .fb{bottom:0;border-radius:0 0 3px 3px;background:linear-gradient(#192636,#142030)}
+.fl i{position:absolute;left:0;right:0;height:200%;display:flex;align-items:center;justify-content:center;font-style:normal}
+.fl .t i,.fl .ft i{top:0}
+.fl .b i,.fl .fb i{bottom:0}
+.fl .ft{transform-origin:50% 100%;z-index:2}
+.fl .fb{transform-origin:50% 0;z-index:2;transform:rotateX(90deg)}
+.fl::after{content:"";position:absolute;left:0;right:0;top:calc(50% - .5px);height:1px;background:#050A10;z-index:3}
+.fl .h.g{background:var(--pine2)}
+.fl .h.y{background:var(--butter);color:var(--ink)}
+.fl .h.r{background:var(--cherry)}
+.lifts{width:100%;border-collapse:collapse;--cw:min(20px,calc((100cqw - 68px) / 18))}
+.lifts th,.lifts td{padding:6px 0;text-align:left;white-space:nowrap;vertical-align:middle;border-bottom:1px solid rgba(247,251,255,.07);font-weight:400}
+.lifts thead th{font:700 11px/1 var(--fb);letter-spacing:.18em;text-transform:uppercase;color:var(--butter);padding:0 0 8px}
+.lifts .c-st{padding-left:10px}
+.nm{display:flex;align-items:center;gap:6px}
+.ico{flex:none;width:16px;height:16px;display:grid;place-items:center;color:#C9D6E3}
+.ico svg{width:100%;height:100%}
+.sub{display:block;font:600 11.5px/1.2 var(--fb);letter-spacing:.06em;color:#A9BBCD;margin:4px 0 0 22px}
+.lifts .c-note{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);padding:0;border:0}
+.bmsg{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(247,251,255,.1);--cw:min(21px,calc(100cqw / 16 - 3px))}
+@container (min-width:640px){
+ .btop{--cw:min(30px,calc((100cqw - 150px) / 17 - 3px));--cg:3px}
+ .conds{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;--cw:min(34px,calc((25cqw - 44px) / 5 - 3px));--cg:3px}
+ .lifts{--cw:min(26px,calc((100cqw - 144px) / 29));--cg:3px}
+ .lifts th,.lifts td{padding:7px 0}
+ .lifts .c-note{position:static;width:auto;height:auto;overflow:visible;clip:auto;clip-path:none;padding:7px 0 7px 16px;border-bottom:1px solid rgba(247,251,255,.07)}
+ .lifts thead .c-note{padding:0 0 8px 16px}
+ .lifts td.c-note{width:100%}
+ .plain th .txt{white-space:nowrap}
+ .sub{display:none}
+ .ico{width:22px;height:22px}
+ .nm{gap:10px}
+ .bmsg{--cw:min(24px,calc((100cqw - 20px) / 32 - 3px));--cg:3px}
+}
+/* plain table mode (also reduced motion) */
+.plain .flaps{display:none}
+.plain .txt{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto;clip-path:none;white-space:normal;font:400 18px/1.25 var(--fd);letter-spacing:.06em;text-transform:uppercase;color:var(--snow)}
+.plain .cond .txt{font-size:clamp(22px,3vw,30px)}
+.plain .btop .txt{font-size:22px}
+.plain .c-st .txt{display:inline-block;padding:4px 9px;border-radius:3px;background:var(--pine2);font-size:16px}
+.plain [data-s=h] .txt{background:var(--butter);color:var(--ink)}
+.plain [data-s=c] .txt{background:var(--cherry)}
+.plain th .txt{display:inline}
+.plain .nm{display:inline-flex;vertical-align:middle}
+.plain .bmsg .txt{color:var(--butter)}
+.bctrl{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:26px}
+.btn.dk{border-color:#3A5068;color:var(--snow);font-size:16px;min-height:46px;padding:10px 16px}
+.btn.dk:hover{background:rgba(247,251,255,.08)}
+.btn.dk[aria-pressed=true]{background:var(--snow);color:var(--ink);border-color:var(--snow)}
+.btn[aria-busy=true] svg{animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blive{flex:1 1 260px;margin:0;color:#C9D6E3;font-size:15px}
+.blive b{color:var(--butter);font-weight:700}
+.bnote{margin:18px 0 0;font-size:13.5px;color:#93A8BE;max-width:60em}
+.bnote strong{color:var(--butter)}
+/* rooms tickets */
+.rooms{padding:clamp(70px,9vw,120px) 0}
+.rhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:36px}
+.tickets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.tk{--stock:var(--butter);--inkc:var(--blue);position:relative;display:grid;grid-template-columns:78px minmax(0,1fr);background:var(--stock);color:var(--inkc);border-radius:6px;min-height:228px;box-shadow:0 18px 30px -22px rgba(14,36,57,.55)}
+.tk .stub{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:18px 0;border-right:2px dashed currentColor;font:400 15px/1 var(--fd);letter-spacing:.22em;text-transform:uppercase}
+.tk .stub span{writing-mode:vertical-rl;transform:rotate(180deg)}
+.tk .stub b{font:400 30px/1 var(--fd);letter-spacing:0}
+.tk::before{content:"";position:absolute;left:70px;top:-9px;width:18px;height:18px;border-radius:50%;background:var(--snow);}
+.tk .notch{position:absolute;left:70px;bottom:-9px;width:18px;height:18px;border-radius:50%;background:var(--snow)}
+.tk .main{position:relative;padding:22px 24px 22px}
+.tk h3{font-size:clamp(28px,2.6vw,36px);letter-spacing:.02em;margin:0 96px 4px 0}
+.tk .ts{font:700 12.5px/1.3 var(--fb);letter-spacing:.14em;text-transform:uppercase;margin:0 96px 14px 0;opacity:.92}
+.tk ul{margin:0 0 16px;padding:0;list-style:none;font-size:15.5px;line-height:1.45}
+.tk li{padding-left:18px;position:relative;margin:3px 0}
+.tk li::before{content:"";position:absolute;left:2px;top:.55em;width:7px;height:7px;background:currentColor;transform:rotate(45deg)}
+.tk .price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:0;font:400 40px/1 var(--fd)}
+.tk .price small{font:600 14px/1.2 var(--fb);letter-spacing:.02em}
+.tk .price em{font:700 12px/1 var(--fb);font-style:normal;letter-spacing:.16em;text-transform:uppercase}
+.tk .art{position:absolute;right:20px;top:20px;width:84px;height:64px}
+.tk.ice{--stock:var(--ice)}
+.tk.red{--stock:var(--cherry);--inkc:var(--snow)}
+.tk.pine{--stock:var(--pine);--inkc:var(--snow)}
+.rnote{margin:22px 0 0;font-size:14px;color:var(--muted)}
+@media (max-width:860px){.tickets{grid-template-columns:1fr}}
+@media (max-width:520px){
+ .tk{grid-template-columns:1fr;grid-template-rows:auto 1fr;min-height:0}
+ .tk .stub{flex-direction:row;padding:12px 20px;border-right:0;border-bottom:2px dashed currentColor}
+ .tk .stub span{writing-mode:horizontal-tb;transform:none}
+ .tk .stub b{font-size:22px}
+ .tk::before{left:-9px;top:37px;box-shadow:none}
+ .tk .notch{left:auto;right:-9px;top:37px;bottom:auto}
+ .tk .art{top:66px;right:14px;width:70px;height:54px}
+ .tk h3{margin-right:78px}
+ .tk .ts{margin-right:78px}
+}
+/* lodge life */
+.life{background:var(--pine);color:var(--snow);padding:clamp(70px,9vw,120px) 0;--focus:var(--butter)}
+.life .eyebrow{color:var(--butter)}
+.life .h2{color:var(--snow)}
+.life .intro{color:#DCE8E2}
+.lgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(26px,4vw,56px);align-items:start;margin-top:34px}
+.tt{position:relative;background:var(--cream);color:var(--text);border-radius:4px;padding:26px clamp(18px,3vw,32px) 18px;box-shadow:0 26px 40px -26px rgba(0,0,0,.6)}
+.tt h3{font-size:24px;letter-spacing:.08em;color:var(--blue);border-bottom:4px double var(--blue);padding-bottom:12px;margin-bottom:6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.tt h3 small{font:700 12px/2 var(--fb);letter-spacing:.16em;color:var(--cherry2)}
+.tt ol{list-style:none;margin:0;padding:0}
+.tt li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px dashed rgba(31,78,121,.3)}
+.tt li:last-child{border-bottom:0}
+.tt time{font:400 21px/1.15 var(--fd);color:var(--cherry2)}
+.tt b{display:block;font:400 19px/1.2 var(--fd);letter-spacing:.05em;text-transform:uppercase;color:var(--blue)}
+.tt span{font-size:15px;line-height:1.45;color:var(--muted)}
+.vig{display:grid;gap:22px}
+.vcard{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:20px;align-items:center}
+.vcard svg{width:100%;height:auto;border-radius:6px}
+.vcard h3{font-size:28px;color:var(--butter);margin:0 0 8px}
+.vcard p{margin:0;color:#E4EEE9;font-size:16px}
+@media (max-width:900px){.lgrid{grid-template-columns:1fr}}
+@media (max-width:520px){.vcard{grid-template-columns:1fr}.vcard svg{max-width:360px}}
+/* season */
+.season{padding:clamp(70px,9vw,120px) 0;background:var(--snow)}
+.track{position:relative;margin:48px 0 8px}
+.bar{position:relative;height:58px;background:var(--ice);border-radius:3px;overflow:hidden}
+.blk{position:absolute;top:0;bottom:0;left:calc(var(--a) / 132 * 100%);width:calc(var(--n) / 132 * 100%);background:var(--c)}
+.pins{position:absolute;left:0;right:0;top:-30px;height:26px}
+.pins span{position:absolute;left:calc((var(--a) + var(--n) / 2) / 132 * 100%);transform:translateX(-50%);display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--snow);font:400 13px/1 var(--fd)}
+.months{display:grid;grid-template-columns:30fr 31fr 31fr 30fr 10fr;margin-top:8px;font:400 15px/1 var(--fd);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.months span{border-left:2px solid var(--blue3);padding:6px 0 0 8px}
+.periods{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;list-style:none;margin:34px 0 0;padding:0}
+.periods li{border-top:6px solid var(--c);padding-top:12px}
+.periods .n{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--snow);font:400 13px/1 var(--fd);margin-right:8px;vertical-align:2px}
+.periods b{font:400 20px/1.15 var(--fd);letter-spacing:.04em;text-transform:uppercase;color:var(--blue)}
+.periods p{margin:6px 0 4px;font-size:15px}
+.periods em{font:700 12px/1 var(--fb);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--cherry2)}
+.tiers{display:flex;flex-wrap:wrap;gap:10px 22px;margin:30px 0 0;padding:16px 18px;background:var(--cream);border-radius:4px;font-size:15px}
+.tiers span{display:inline-flex;align-items:center;gap:8px}
+.tiers i{width:14px;height:14px;border-radius:2px;background:var(--c)}
+.green{margin:18px 0 0;font-size:15px;color:var(--muted)}
+@media (max-width:900px){.periods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.periods{grid-template-columns:1fr;gap:12px}.periods li{display:grid;grid-template-columns:auto 1fr;column-gap:10px;border-top:0;border-left:6px solid var(--c);padding:4px 0 4px 12px}.periods .n{grid-row:span 3;margin:2px 0 0}.bar{height:46px}.months{font-size:12px;letter-spacing:.06em}.months span{padding-left:4px}}
+/* getting here */
+.here{background:var(--blue);color:var(--snow);padding:clamp(70px,9vw,120px) 0;--focus:var(--butter)}
+.here .eyebrow{color:var(--butter)}
+.here .h2{color:var(--snow)}
+.here .intro{color:#D5E2EF}
+.hgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,4vw,56px);align-items:start;margin-top:34px}
+.map{background:var(--snow);border-radius:8px;padding:10px;box-shadow:8px 8px 0 var(--ink)}
+.map svg{width:100%;height:auto}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0;padding:0;list-style:none}
+.facts li{border-top:3px solid var(--butter);padding-top:12px}
+.facts b{display:block;font:400 22px/1.1 var(--fd);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.facts p{margin:0;font-size:15.5px;color:#D5E2EF}
+.gnote{margin:22px 0 0;font-size:14px;color:#BFD0E2}
+@media (max-width:900px){.hgrid{grid-template-columns:1fr}}
+@media (max-width:520px){.facts{grid-template-columns:1fr}}
+/* book */
+.book{background:var(--cream);padding:clamp(70px,9vw,120px) 0}
+.bgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(26px,4vw,56px);align-items:start;margin-top:30px}
+form.bk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.w2{grid-column:span 2}.fld.w3{grid-column:1/-1}
+.fld label,.fld legend{font:700 12.5px/1.2 var(--fb);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.fld input,.fld select{width:100%;min-height:48px;padding:10px 12px;border:2px solid var(--blue);border-radius:3px;background:var(--snow);color:var(--text);font:400 16px/1.2 var(--fb)}
+fieldset.fld{border:0;margin:0;padding:0}
+.rooms-pick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:6px}
+.rooms-pick label{position:relative;display:block;cursor:pointer}
+.rooms-pick input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.rooms-pick span{display:block;height:100%;padding:10px 10px 12px;border:2px solid var(--blue);border-radius:3px;background:var(--snow);font:400 16px/1.1 var(--fd);letter-spacing:.05em;text-transform:uppercase;color:var(--blue)}
+.rooms-pick small{display:block;margin-top:5px;font:600 12.5px/1.3 var(--fb);letter-spacing:.02em;text-transform:none;color:var(--muted)}
+.rooms-pick input:checked+span{background:var(--blue);color:var(--snow)}
+.rooms-pick input:checked+span small{color:#D5E2EF}
+.rooms-pick input:focus-visible+span{outline:3px solid var(--focus);outline-offset:3px}
+.bk .btn{grid-column:1/-1;justify-self:start}
+.pass{position:relative;background:var(--snow);border-radius:8px;border:2px solid var(--blue);box-shadow:8px 8px 0 var(--blue);overflow:hidden}
+.pass .ph{background:var(--blue);color:var(--snow);padding:16px 20px 14px;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.pass .ph span{font:400 22px/1.05 var(--fd);letter-spacing:.08em;text-transform:uppercase;overflow-wrap:anywhere;min-width:0}
+.pass .ph em{font:700 11px/1 var(--fb);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--butter)}
+.pass dl{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin:0;padding:18px 20px}
+.pass dt{font:700 11px/1 var(--fb);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.pass dd{margin:0;font:400 19px/1.2 var(--fd);letter-spacing:.03em;text-transform:uppercase;color:var(--text)}
+.pass .tot{grid-column:1/-1;border-top:2px dashed var(--blue3);padding-top:14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.pass .tot dd{font-size:40px;color:var(--cherry2)}
+.pass .pn{margin:0;padding:0 20px 18px;font-size:14px;color:var(--muted)}
+.pass .warn{color:var(--cherry2);font-weight:700}
+.stamp{position:absolute;right:16px;top:86px;transform:rotate(-14deg) scale(1.6);opacity:0;border:3px solid var(--cherry);color:var(--cherry);border-radius:6px;padding:6px 10px;font:400 18px/1.05 var(--fd);letter-spacing:.1em;text-transform:uppercase;text-align:center;background:rgba(247,251,255,.85);transition:transform .25s cubic-bezier(.3,1.6,.5,1),opacity .2s;pointer-events:none}
+.stamp.on{opacity:1;transform:rotate(-14deg) scale(1)}
+.faq{margin-top:40px;max-width:760px}
+.faq h3{font-size:26px;color:var(--blue);margin-bottom:10px}
+.faq details{border-top:1px solid rgba(31,78,121,.25)}
+.faq details:last-child{border-bottom:1px solid rgba(31,78,121,.25)}
+.faq summary{cursor:pointer;list-style:none;padding:14px 34px 14px 0;position:relative;font:700 16.5px/1.35 var(--fb);color:var(--blue)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:8px;font:400 26px/1 var(--fd);color:var(--cherry2)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 14px;color:var(--muted)}
+@media (max-width:900px){.bgrid{grid-template-columns:1fr}}
+@media (max-width:620px){form.bk{grid-template-columns:1fr 1fr}.fld.w2{grid-column:1/-1}.fld.ci{grid-column:1/-1}.rooms-pick{grid-template-columns:1fr 1fr}}
+/* footer */
+.foot{background:var(--night);color:#C9D6E3;padding:clamp(56px,7vw,90px) 0 calc(40px + env(safe-area-inset-bottom));--focus:var(--butter)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,1fr));gap:30px 40px}
+.fbrand{font:400 clamp(40px,5.4vw,72px)/.9 var(--fd);text-transform:uppercase;color:var(--snow);margin:0 0 14px;overflow-wrap:anywhere;text-shadow:.04em .04em 0 var(--cherry)}
+.foot h3{font-size:18px;letter-spacing:.14em;color:var(--butter);margin:0 0 12px}
+.foot ul{list-style:none;margin:0;padding:0;line-height:2}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(201,214,227,.35)}
+.foot a:hover{color:var(--snow)}
+.small{margin-top:40px;padding-top:18px;border-top:1px solid rgba(201,214,227,.18);font-size:13px;color:#93A8BE}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}}
+@media (max-width:460px){.fgrid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.stamp{transition:none}.btn[aria-busy=true] svg{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+ <div class="in">
+  <a class="logo" href="#top">
+   <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#F7FBFF"/><circle cx="28.5" cy="12.5" r="4.2" fill="#D7263D"/><path d="M3.5 28 13 15.5l5 6.5 6-8 12.5 14A19 19 0 0 1 3.5 28Z" fill="#1F4E79"/><path d="m13 15.5 3.4 4.4-1.6-.9-1.8 1.5-1.4-1.9Zm11-1.5 3.6 4-1.7-.7-1.9 1.4-1.5-1.8Z" fill="#F7FBFF"/><path d="M4.4 30.5h31.2A19 19 0 0 1 4.4 30.5Z" fill="#2E5E4E"/></svg>
+   <span data-brand>Snowgum Lodge</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+   <a href="#board">Lifts board</a><a href="#rooms">Rooms &amp; bunks</a><a href="#life">Lodge life</a><a href="#season">Season</a><a href="#getting-here">Getting here</a>
+  </nav>
+  <a class="btn red sm" href="#book">Book</a>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+ <canvas class="snow" id="snowHero" aria-hidden="true"></canvas>
+ <svg class="clouds" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><g fill="#F7FBFF" opacity=".08"><rect x="40" y="40" width="230" height="26" rx="13"/><rect x="100" y="16" width="130" height="26" rx="13"/><rect x="1150" y="120" width="250" height="26" rx="13"/><rect x="1210" y="96" width="120" height="26" rx="13"/><rect x="-40" y="150" width="180" height="22" rx="11"/></g></svg>
+ <svg class="roundel" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="rp" d="M60 60m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0"/></defs><circle cx="60" cy="60" r="58" fill="#D7263D"/><circle cx="60" cy="60" r="51" fill="none" stroke="#F7FBFF" stroke-width="1.5" stroke-dasharray="3 4"/><text fill="#F7FBFF" font-family="Fjalla One, Arial Narrow, sans-serif" font-size="12.5" letter-spacing="2.1"><textPath href="#rp">SKI IN · SKI OUT · FALLS CREEK ·</textPath></text><g stroke="#F2D492" stroke-width="3" stroke-linecap="round"><path d="M60 45v30M47 52.5l26 15M47 67.5l26-15"/></g></svg>
+ <div class="copy">
+  <p class="kicker"><span>Falls Creek · Victoria</span></p>
+  <h1 id="h1" class="title" data-brand>Snowgum Lodge</h1>
+  <p class="tagline">Bunks · big fires · first chair</p>
+  <p class="lede">A 34-bunk lodge on the high plains, ski-in from the Butter Bowl run. Boots go in the drying room, soup's on at 12:30, and twice a week the fondue pots come out.</p>
+  <div class="cta"><a class="btn red" href="#book">Book a stay</a><a class="btn line" href="#board">Today's board</a></div>
+ </div>
+ <div class="scene" aria-hidden="true">
+  <svg viewBox="0 0 1600 420" preserveAspectRatio="xMidYMax slice">
+   <defs>
+    <symbol id="gum" viewBox="0 0 170 200">
+     <path d="M70 200c2-30-10-50-4-80 4-20 22-28 18-50h12c4 26-14 34-16 54-4 26 10 48 12 76Z" fill="#F1E6CF"/>
+     <path d="M82 110c18-10 34-14 46-30l6 6c-12 18-30 24-48 34ZM70 132c-14-12-26-18-38-30l-4 6c12 12 24 22 40 36Z" fill="#F1E6CF"/>
+     <path d="M78 196c0-26-8-46-4-68M86 188c-2-22-6-38-2-56" stroke="#D7263D" stroke-width="3" fill="none" stroke-linecap="round"/>
+     <path d="M76 118c4-18 12-26 12-42" stroke="#2E5E4E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+     <path d="M72 170c-2-10 0-18 2-24" stroke="#E4B75E" stroke-width="3" fill="none" stroke-linecap="round"/>
+     <g fill="#2E5E4E"><circle cx="40" cy="96" r="26"/><circle cx="70" cy="62" r="34"/><circle cx="110" cy="58" r="30"/><circle cx="138" cy="78" r="24"/><circle cx="98" cy="90" r="24"/></g>
+     <g fill="#244B3E"><circle cx="46" cy="106" r="16"/><circle cx="104" cy="100" r="15"/><circle cx="142" cy="90" r="12"/></g>
+     <path d="M38 50q32-34 66-4-16-8-33-6-17 0-33 10ZM84 42q26-26 52-2-14-6-26-5-14 0-26 7ZM16 90q20-24 44-6-12-4-22-3-12 2-22 9ZM118 70q16-18 38-4-10-2-19-1-10 1-19 5Z" fill="#F7FBFF"/>
+    </symbol>
+    <symbol id="skier" viewBox="0 0 240 200">
+     <path d="M70 176C44 170 24 152 14 124c16 18 34 30 60 40ZM58 184c-22 2-40-4-52-16 16 6 32 8 52 6Z" fill="#BFD5EA"/>
+     <g fill="#BFD5EA"><circle cx="16" cy="110" r="5"/><circle cx="28" cy="98" r="3.5"/><circle cx="6" cy="138" r="3"/><circle cx="40" cy="118" r="3"/></g>
+     <ellipse cx="128" cy="190" rx="78" ry="5" fill="#C9DBEC"/>
+     <g stroke="#0E2439" stroke-linecap="round" fill="none"><path d="M36 176 196 190" stroke-width="6"/><path d="M196 190q12 1 14-7" stroke-width="5"/><path d="M52 166 212 180" stroke-width="6"/><path d="M212 180q12 1 14-7" stroke-width="5"/></g>
+     <g stroke="#0E2439" stroke-width="3" stroke-linecap="round"><path d="M174 100 190 172M184 170h12"/><path d="M88 96 58 152M52 147l12 8"/></g>
+     <g stroke="#0E2439" stroke-width="17" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M110 112 140 140 118 170"/><path d="M122 108 156 132 136 162"/></g>
+     <path d="M108 164h22l6 12h-30ZM126 156h22l6 12h-30Z" fill="#0E2439"/>
+     <path d="M128 62C110 58 96 48 80 50l2 9c16 0 30 8 46 11Z" fill="#F2D492"/>
+     <g stroke="#D7263D" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M117 106 133 68" stroke-width="32"/><path d="M140 72 160 88 174 100" stroke-width="11"/><path d="M126 72 106 88 88 96" stroke-width="11"/></g>
+     <path d="M110 82 142 94" stroke="#F7FBFF" stroke-width="5"/><path d="M110 82 142 94" stroke="#0E2439" stroke-width="2" stroke-dasharray="3 4"/>
+     <g fill="#0E2439"><circle cx="174" cy="100" r="6.5"/><circle cx="88" cy="96" r="6.5"/></g>
+     <circle cx="141" cy="42" r="13" fill="#EDC39A"/>
+     <path d="M127.5 40a13.5 13.5 0 0 1 27 0Z" fill="#F2D492"/><path d="M126 40h30" stroke="#D7263D" stroke-width="4"/><circle cx="141" cy="25" r="5.5" fill="#D7263D"/>
+     <rect x="142" y="42" width="14" height="6" rx="3" fill="#0E2439"/>
+    </symbol>
+    <symbol id="chair" viewBox="0 0 40 50"><path d="M20 0v24M8 24h24v8H8ZM8 24v-8" stroke="#0E2439" stroke-width="3" fill="none"/><circle cx="14" cy="13" r="4" fill="#0E2439"/><circle cx="27" cy="13" r="4" fill="#0E2439"/><path d="M10 18h8v8h-8ZM23 18h8v8h-8Z" fill="#D7263D"/><path d="M23 18h8v8h-8Z" fill="#F2D492"/></symbol>
+   </defs>
+   <radialGradient id="rayG" gradientUnits="userSpaceOnUse" cx="700" cy="112" r="255"><stop offset=".3" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient><mask id="rayM" maskUnits="userSpaceOnUse" x="380" y="-180" width="640" height="420"><rect x="380" y="-180" width="640" height="420" fill="url(#rayG)"/></mask>
+   <g mask="url(#rayM)" opacity=".24" stroke="#F2D492" stroke-width="16" stroke-linecap="round"><path d="M700 112 951 45M700 112 913 -37M700 112 849 -101M700 112 767 -139M700 112 677 -147M700 112 590 -124M700 112 516 -72M700 112 464 2M700 112 441 89"/></g>
+   <circle cx="700" cy="112" r="82" fill="#F2D492"/>
+   <path d="M0 250 90 205l80 30 130-95 90 60 80-32 90 58 130-106 80 60 80-30 110 76 130-108 90 78 80-36 90 54 110-86 80 54 60-22v260H0Z" fill="#8DB2D4"/>
+   <g fill="#7FA6CB"><path d="M300 140 390 200l-30 90h-60ZM690 120 770 180l-20 110h-60ZM1090 118l90 78-30 90h-60ZM1460 128l80 54-40 100h-40Z"/></g>
+   <g fill="#F7FBFF"><path d="M300 140 360 180l-20 6-18-10-16 12-14-14-16 12-14-14-17 8Z"/><path d="M690 120 750 165l-17 7-17-12-16 14-16-12-16 13-16-12-17 2Z"/><path d="M1090 118l52 45-16 7-16-12-16 14-16-12-16 11-14-10-12 2Z"/><path d="M1460 128l59 40-17 6-16-11-16 13-18-12-16 12-14-11-13 3Z"/></g>
+   <path d="M0 300 110 238l90 34 130-76 120 84 110-48 80 30 120-76 120 84 120-48 80 28 140-74 120 86 110-40 150 48v150H0Z" fill="#2B6598"/>
+   <g fill="#255C8D"><path d="M330 196 450 280l-40 60h-80ZM760 186l120 84-40 60h-80ZM1220 176l120 86-40 60h-80Z"/></g>
+   <g fill="#F7FBFF"><path d="M330 196 376 228l-14 5-14-9-14 12-16-11-16 9-14-10-13 4Z"/><path d="M760 186 809 220l-15 6-14-11-16 13-16-12-16 11-14-10-12 3Z"/><path d="M1220 176l50 36-15 6-15-11-16 13-16-12-18 11-18-10-20 3Z"/></g>
+   <path id="forest" d="M0 420V330q200-40 400-12 400 26 800-10 200-14 400-12v124Z" fill="#2E5E4E"/>
+   <g stroke="#0E2439" stroke-width="2.5" fill="none" opacity=".85"><path d="M1040 336 1600 66"/></g>
+   <g fill="#0E2439" opacity=".9"><rect x="1146" y="284" width="6" height="70"/><rect x="1134" y="282" width="30" height="5"/><rect x="1327" y="197" width="6" height="90"/><rect x="1315" y="195" width="30" height="5"/><rect x="1507" y="110" width="6" height="110"/><rect x="1495" y="108" width="30" height="5"/></g>
+   <use href="#chair" x="1080" y="304" width="40" height="50"/><use href="#chair" x="1230" y="232" width="40" height="50"/><use href="#chair" x="1410" y="146" width="40" height="50"/><use href="#chair" x="1552" y="80" width="40" height="50"/>
+   <path d="M0 350c220-32 420-20 620-4 200 16 380-16 580-30 180-12 300-16 400-24v128H0Z" fill="#F7FBFF"/>
+   <path d="M0 392c260-22 520 0 800 8s540-20 800-38v58H0Z" fill="#DCE9F5"/>
+   <g stroke="#C4D8EB" stroke-width="3" fill="none" stroke-linecap="round"><path d="M858 404c-60-10-100 8-160 0s-100-14-160 2"/><path d="M866 412c-60-8-100 10-160 2s-100-14-160 2"/></g>
+   <use href="#gum" x="40" y="186" width="160" height="188"/>
+   <use href="#gum" x="200" y="236" width="112" height="132"/>
+   <use href="#gum" x="552" y="208" width="140" height="165"/>
+   <use href="#gum" x="1400" y="222" width="120" height="141" transform="translate(2920 0) scale(-1 1)"/>
+   <use href="#skier" x="330" y="312" width="60" height="50"/>
+   <use href="#skier" x="846" y="252" width="200" height="166"/>
+  </svg>
+ </div>
+ <p class="strip"><span>Winter 2027 opens Sat 12 Jun (sample dates)</span><span>Breakfast &amp; dinner included</span><span>Fondue Wed &amp; Sat</span></p>
+</section>
+
+<section class="board-sec" id="board" aria-labelledby="bh">
+ <canvas id="snowBoard" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <div class="bhead">
+   <div><p class="eyebrow">Lobby board · sample data</p><h2 class="h2" id="bh">Lifts &amp; runs today</h2></div>
+   <p class="d">Every morning the lobby board clatters over with the day's lifts, runs and weather. This one runs on <strong>sample data</strong>, not a live feed — press <em>Update board</em> to flip in a different kind of mountain morning.</p>
+  </div>
+  <div class="housing" id="housing">
+   <div class="hw">
+    <p class="plate"><span>Lobby board · flips at 7:45</span><b>Sample data</b></p>
+    <div class="btop">
+     <div><span class="lbl">Today</span><span class="flaps" id="fScen" aria-hidden="true"></span><span class="txt" id="tScen"></span></div>
+     <div><span class="lbl">Updated</span><span class="flaps" id="fTime" aria-hidden="true"></span><span class="txt" id="tTime"></span></div>
+    </div>
+    <dl class="conds">
+     <div class="cond"><dt>Snow depth</dt><dd><span class="flaps" aria-hidden="true"></span><span class="txt"></span></dd></div>
+     <div class="cond"><dt>New snow 24 h</dt><dd><span class="flaps" aria-hidden="true"></span><span class="txt"></span></dd></div>
+     <div class="cond"><dt>Temperature</dt><dd><span class="flaps" aria-hidden="true"></span><span class="txt"></span></dd></div>
+     <div class="cond"><dt>Wind km/h</dt><dd><span class="flaps" aria-hidden="true"></span><span class="txt"></span></dd></div>
+    </dl>
+    <table class="lifts">
+     <caption class="sr">Lifts and runs today — sample data for a demo, not a live report</caption>
+     <thead><tr><th scope="col">Lift / run</th><th scope="col" class="c-st">Status</th><th scope="col" class="c-note">Note</th></tr></thead>
+     <tbody id="rows"></tbody>
+    </table>
+    <div class="bmsg"><span class="flaps" aria-hidden="true"></span><span class="flaps" aria-hidden="true"></span><span class="txt" id="tMsg"></span></div>
+   </div>
+  </div>
+  <div class="bctrl">
+   <button class="btn red" type="button" id="upd"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5"/></svg>Update board</button>
+   <button class="btn dk" type="button" id="plainBtn" aria-pressed="false">Plain table</button>
+   <button class="btn dk" type="button" id="sndBtn" aria-pressed="false">Sound: off</button>
+   <p class="blive" id="blive" aria-live="polite"></p>
+  </div>
+  <p class="bnote"><strong>Sample data for a design demo.</strong> Lift and run names are invented. Before you head up, check the resort's official snow report and the road conditions.</p>
+ </div>
+</section>
+
+<section class="rooms" id="rooms" aria-labelledby="rh">
+ <div class="wrap">
+  <div class="rhead">
+   <div><p class="eyebrow">Pick your ticket</p><h2 class="h2" id="rh">Rooms &amp; bunks</h2></div>
+   <p class="intro">Every stay includes a cooked breakfast, a three-course dinner, a heated boot locker and a seat by the fire. Bunks for the crew, private rooms for the ones who snore.</p>
+  </div>
+  <div class="tickets">
+   <article class="tk">
+    <div class="stub" aria-hidden="true"><b>01</b><span>Admit four</span></div><i class="notch"></i>
+    <div class="main">
+     <svg class="art" viewBox="0 0 80 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M8 4v52M58 4v52M8 26h50M8 50h50M68 12v44M58 22h10M58 34h10M58 46h10"/><rect x="11" y="18" width="44" height="8" rx="2" fill="currentColor" opacity=".3" stroke="none"/><rect x="11" y="42" width="44" height="8" rx="2" fill="currentColor" opacity=".3" stroke="none"/></svg>
+     <h3>The Bunkhouse</h3>
+     <p class="ts">Four-bunk rooms · shared bathrooms</p>
+     <ul><li>Book a bed, or the whole room for your crew</li><li>Heated boot locker for every bunk</li><li>Linen hire $20, or bring a sleeping bag</li></ul>
+     <p class="price"><em>from</em>$98<small>per person, per night</small></p>
+    </div>
+   </article>
+   <article class="tk ice">
+    <div class="stub" aria-hidden="true"><b>02</b><span>Admit two</span></div><i class="notch"></i>
+    <div class="main">
+     <svg class="art" viewBox="0 0 80 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="29" y="4" width="22" height="18" rx="2"/><path d="m32 20 6-8 4 5 3-3 4 6"/><path d="M4 56V38h22v18M4 48h22M54 56V38h22v18M54 48h22"/><rect x="7" y="32" width="10" height="6" rx="2" fill="currentColor" opacity=".35" stroke="none"/><rect x="57" y="32" width="10" height="6" rx="2" fill="currentColor" opacity=".35" stroke="none"/></svg>
+     <h3>Twin Gums</h3>
+     <p class="ts">Private room · ensuite</p>
+     <ul><li>Twin singles or one queen</li><li>Window onto the snowgums</li><li>Linen, towels and a hot-water bottle</li></ul>
+     <p class="price"><em>from</em>$265<small>per room, per night</small></p>
+    </div>
+   </article>
+   <article class="tk red">
+    <div class="stub" aria-hidden="true"><b>03</b><span>Admit four</span></div><i class="notch"></i>
+    <div class="main">
+     <svg class="art" viewBox="0 0 80 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 56V34h40v22M4 46h40M52 8v48M76 8v48M52 26h24M52 46h24"/><rect x="8" y="28" width="12" height="6" rx="2" fill="currentColor" opacity=".35" stroke="none"/><rect x="26" y="28" width="12" height="6" rx="2" fill="currentColor" opacity=".35" stroke="none"/><circle cx="64" cy="18" r="4" fill="currentColor" stroke="none"/></svg>
+     <h3>The Family Den</h3>
+     <p class="ts">Queen + bunks · ensuite</p>
+     <ul><li>Sleeps four — two grown-ups, two kids</li><li>Cot and high chair on request</li><li>Right by the games shelf</li></ul>
+     <p class="price"><em>from</em>$420<small>per room, per night</small></p>
+    </div>
+   </article>
+   <article class="tk pine">
+    <div class="stub" aria-hidden="true"><b>04</b><span>Admit two</span></div><i class="notch"></i>
+    <div class="main">
+     <svg class="art" viewBox="0 0 80 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M8 56 40 6l32 50Z"/><path d="m22 56 10-14 6 6 8-11 12 19"/><circle cx="46" cy="28" r="3.5" fill="currentColor" stroke="none"/></svg>
+     <h3>The Loft</h3>
+     <p class="ts">Top-floor suite · window seat</p>
+     <ul><li>Queen bed, sleeps two</li><li>Deep tub and a ridge-line view</li><li>The quietest room in the house</li></ul>
+     <p class="price"><em>from</em>$480<small>per room, per night</small></p>
+    </div>
+   </article>
+  </div>
+  <p class="rnote">Sample prices in AUD for the value season, breakfast and dinner included. Regular and peak rates are listed under <a href="#season">season dates</a>.</p>
+ </div>
+</section>
+
+<section class="life" id="life" aria-labelledby="lh">
+ <div class="wrap">
+  <p class="eyebrow">Lodge life</p>
+  <h2 class="h2" id="lh">A day at the lodge</h2>
+  <p class="intro">The lodge runs on a timetable, loosely. Ski as much or as little as you like — there's always soup, a dry pair of gloves and someone to lose at cards to.</p>
+  <div class="lgrid">
+   <div class="tt">
+    <h3>Daily timetable <small>In season</small></h3>
+    <ol>
+     <li><time>07:00</time><div><b>Porridge &amp; the board</b><span>Hot breakfast, and the lobby board flips over at 7:45.</span></div></li>
+     <li><time>08:15</time><div><b>Boot room opens</b><span>Warm boots off the rack, a long bench for the whole family.</span></div></li>
+     <li><time>08:30</time><div><b>First chair</b><span>Ski out the back door and down the Butter Bowl.</span></div></li>
+     <li><time>12:30</time><div><b>Soup at the lodge</b><span>Soup and bread by the fire, or a packed lunch on request.</span></div></li>
+     <li><time>16:00</time><div><b>Drying room on</b><span>Gloves, boots and beanies bone-dry by morning.</span></div></li>
+     <li><time>16:30</time><div><b>Après</b><span>Hot chocolate, scones and the board-game shelf.</span></div></li>
+     <li><time>18:30</time><div><b>Dinner</b><span>Three courses at long tables. Fondue on Wednesdays and Saturdays.</span></div></li>
+     <li><time>22:00</time><div><b>Quiet hours</b><span>The building creaks, the snow keeps falling.</span></div></li>
+    </ol>
+   </div>
+   <div class="vig">
+    <div class="vcard">
+     <svg viewBox="0 0 240 170" aria-hidden="true"><rect width="240" height="170" rx="8" fill="#23493D"/><circle cx="120" cy="92" r="72" fill="#F2D492"/><path d="M36 40h168M36 98h168M44 40v124M196 40v124" stroke="#0E2439" stroke-width="6" stroke-linecap="round"/><path d="M60 44h18v24a9 9 0 0 1-18 0Z" fill="#D7263D"/><path d="M60 56c-8 0-10 10-2 12" stroke="#D7263D" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M86 44h18v24a9 9 0 0 1-18 0Z" fill="#D7263D"/><path d="M104 56c8 0 10 10 2 12" stroke="#D7263D" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M120 44h32v10a16 16 0 0 1-32 0Z" fill="#1F4E79"/><rect x="120" y="46" width="32" height="5" fill="#F7FBFF"/><circle cx="136" cy="72" r="5.5" fill="#D7263D"/><path d="M166 44h16v50l-4 6-4-6-4 6-4-6Z" fill="#F7FBFF"/><path d="M166 58h16M166 72h16M166 86h16" stroke="#D7263D" stroke-width="4"/><path d="M58 164v-42a6 6 0 0 1 6-6h18v26l16 8v14ZM104 164v-42a6 6 0 0 1 6-6h18v26l16 8v14Z" fill="#1F4E79"/><path d="M64 130h16M64 142h16M110 130h16M110 142h16" stroke="#F2D492" stroke-width="3"/><path d="M160 162c-6-8 6-14 0-22s6-14 0-22M178 162c-6-8 6-14 0-22s6-14 0-22" stroke="#D7263D" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/></svg>
+     <div><h3>The drying room</h3><p>Boots on the warm rack, gloves on the pegs, beanies bone-dry by breakfast. It runs from 4pm to 8am, every day of the season.</p></div>
+    </div>
+    <div class="vcard">
+     <svg viewBox="0 0 240 170" aria-hidden="true"><rect width="240" height="170" rx="8" fill="#23493D"/><circle cx="120" cy="92" r="72" fill="#F2D492"/><path d="M50 26l58 48M192 28l-58 46" stroke="#0E2439" stroke-width="4" stroke-linecap="round"/><rect x="96" y="60" width="15" height="15" rx="2" transform="rotate(40 103 67)" fill="#FBF4E4" stroke="#0E2439" stroke-width="2"/><rect x="129" y="60" width="15" height="15" rx="2" transform="rotate(-40 136 67)" fill="#FBF4E4" stroke="#0E2439" stroke-width="2"/><path d="M66 86h108c0 30-24 44-54 44s-54-14-54-44Z" fill="#D7263D"/><rect x="60" y="78" width="120" height="11" rx="5.5" fill="#B51F34"/><ellipse cx="120" cy="81" rx="52" ry="4.5" fill="#F8E2A8"/><path d="M178 92h28" stroke="#0E2439" stroke-width="7" stroke-linecap="round"/><path d="M86 124l-10 30M154 124l10 30M68 154h104" stroke="#0E2439" stroke-width="5" stroke-linecap="round"/><path d="M120 150c-9-6-7-15 0-22 2 7 9 9 7 16-1 4-4 6-7 6Z" fill="#D7263D"/><path d="M120 150c-4-3-3-8 0-11 1 4 4 5 3 8Z" fill="#F7FBFF"/><path d="M100 60c-6-8 6-12 0-20M142 58c-6-8 6-12 0-20" stroke="#FBF4E4" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+     <div><h3>Fondue night</h3><p>Wednesdays and Saturdays: a pot of melted cheese on every table, bread cubes, pickles and one house rule — drop your bread, you lead the singalong.</p></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="season" id="season" aria-labelledby="sh">
+ <div class="wrap">
+  <p class="eyebrow">Winter 2027 · sample dates</p>
+  <h2 class="h2" id="sh">Season dates</h2>
+  <p class="intro">Snow decides the real dates, so treat these as a sketch. Rates move with the calendar — the booking pass below works them out for you.</p>
+  <div class="track" aria-hidden="true">
+   <div class="pins"><span style="--a:11;--n:3">1</span><span style="--a:14;--n:11">2</span><span style="--a:25;--n:16">3</span><span style="--a:41;--n:68">4</span><span style="--a:109;--n:16">5</span></div>
+   <div class="bar"><i class="blk" style="--a:11;--n:3;--c:var(--cherry)"></i><i class="blk" style="--a:14;--n:11;--c:var(--butter)"></i><i class="blk" style="--a:25;--n:16;--c:var(--cherry)"></i><i class="blk" style="--a:41;--n:68;--c:var(--blue)"></i><i class="blk" style="--a:109;--n:16;--c:var(--butter)"></i></div>
+   <div class="months"><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+  </div>
+  <ol class="periods">
+   <li style="--c:var(--cherry)"><span class="n">1</span><b>Opening long weekend</b><p>Sat 12 – Mon 14 Jun</p><em>Peak</em></li>
+   <li style="--c:var(--butter)"><span class="n">2</span><b>Early season</b><p>Tue 15 – Fri 25 Jun</p><em>Value</em></li>
+   <li style="--c:var(--cherry)"><span class="n">3</span><b>July school holidays</b><p>Sat 26 Jun – Sun 11 Jul</p><em>Peak</em></li>
+   <li style="--c:var(--blue)"><span class="n">4</span><b>Mid-season</b><p>Mon 12 Jul – Fri 17 Sep</p><em>Regular</em></li>
+   <li style="--c:var(--butter)"><span class="n">5</span><b>Spring skiing</b><p>Sat 18 Sep – Sun 3 Oct, closing party Sat 2 Oct</p><em>Value</em></li>
+  </ol>
+  <p class="tiers"><span><i style="--c:var(--butter)"></i>Value — bunk from $98</span><span><i style="--c:var(--blue)"></i>Regular — bunk from $108</span><span><i style="--c:var(--cherry)"></i>Peak — bunk from $124</span><span>Per person, per night · sample prices</span></p>
+  <p class="green">Summer on the high plains: we open on weekends from December to March for bushwalkers and riders (sample dates).</p>
+ </div>
+</section>
+
+<section class="here" id="getting-here" aria-labelledby="gh">
+ <div class="wrap">
+  <p class="eyebrow">By car, coach and over-snow</p>
+  <h2 class="h2" id="gh">Getting here</h2>
+  <p class="intro">Falls Creek sits on the edge of the Bogong High Plains in Victoria's north-east. The last stretch from Mount Beauty climbs about 30 km of bends — take it slow and enjoy the view.</p>
+  <div class="hgrid">
+   <div class="map">
+    <svg viewBox="0 0 400 320" role="img" aria-labelledby="mapT"><title id="mapT">Route diagram: roads from Melbourne (about 4 hours) and Albury–Wodonga (about 1 hour 10 minutes) meet at Mount Beauty, then about 40 minutes of mountain bends climb to Falls Creek. Carry chains when required.</title>
+     <rect width="400" height="320" rx="6" fill="#F7FBFF"/>
+     <path d="M232 320c30-60 90-84 168-96M280 320c24-40 70-60 120-66M0 170c60-10 110 0 150 30" stroke="#DCE9F5" stroke-width="10" fill="none"/>
+     <g fill="none" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"><path d="M30 60h140l80 150" stroke="#2E5E4E"/><path d="M30 280h160l60-70" stroke="#D7263D"/><path d="m250 210 50-14-28-24 58-12-30-26 52-14-26-24 34-32" stroke="#1F4E79"/></g>
+     <g fill="#F7FBFF" stroke="#0E2439" stroke-width="4"><circle cx="30" cy="60" r="9"/><circle cx="30" cy="280" r="9"/><circle cx="250" cy="210" r="10"/><circle cx="364" cy="64" r="11"/></g>
+          <g font-family="Fjalla One, Arial Narrow, sans-serif" font-size="17" fill="#0E2439" letter-spacing="1"><text x="46" y="52">ALBURY–WODONGA</text><text x="46" y="272">MELBOURNE</text><text x="266" y="238">MOUNT BEAUTY</text><text x="346" y="40" text-anchor="end">FALLS CREEK</text></g>
+     <g font-family="Cabin, sans-serif" font-size="13.5" fill="#4A6178"><text x="46" y="84">≈ 1 hr 10 min</text><text x="46" y="304">≈ 4 hrs</text><text x="266" y="256">≈ 40 min up</text></g>
+     <g transform="translate(110 150)"><g stroke="#1F4E79" stroke-width="2.5" stroke-linecap="round"><path d="M0-11V11M-9.5-5.5l19 11M-9.5 5.5l19-11"/></g><text x="18" y="-2" font-family="Cabin, sans-serif" font-weight="700" font-size="13.5" fill="#1F4E79">Carry chains</text><text x="18" y="14" font-family="Cabin, sans-serif" font-weight="700" font-size="13.5" fill="#1F4E79">when required</text></g>
+     <g transform="translate(100 272)"><rect x="0" y="-12" width="30" height="11" rx="4" fill="#D7263D"/><path d="M5-12l5-7h11l5 7Z" fill="#D7263D"/><circle cx="7" cy="0" r="3.5" fill="#0E2439"/><circle cx="23" cy="0" r="3.5" fill="#0E2439"/></g>
+    </svg>
+   </div>
+   <div>
+    <ul class="facts">
+     <li><b>Chains when required</b><p>Carry snow chains in winter and fit them in the marked bays when the signs say so. Hire places in the valley can show you how.</p></li>
+     <li><b>Over-snow to the door</b><p>In winter the lodge is reached over snow. Park in the village car park and book the over-snow taxi — it drops you at our boot room.</p></li>
+     <li><b>Resort entry</b><p>Alpine resort entry fees apply to vehicles in the snow season. Sort yours out before you drive up.</p></li>
+     <li><b>Coaches &amp; shuttles</b><p>Seasonal coaches run from Melbourne and Albury. We're a short walk from the village drop-off.</p></li>
+    </ul>
+    <p class="gnote">General information only — conditions change quickly in the mountains. Check the official alpine road and weather reports before you leave.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="book" id="book" aria-labelledby="bkh">
+ <div class="wrap">
+  <p class="eyebrow">Check dates</p>
+  <h2 class="h2" id="bkh">Book a stay</h2>
+  <p class="intro">Pick a night, a room and a crew size. The stay pass does the sums with sample rates; a real lodge would confirm availability by email.</p>
+  <div class="bgrid">
+   <form class="bk" id="bk" novalidate>
+    <div class="fld ci"><label for="ci">Check-in</label><input type="date" id="ci" name="ci" value="2027-07-16" min="2027-06-12" max="2027-10-02"></div>
+    <div class="fld"><label for="nt">Nights</label><select id="nt" name="nt"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
+    <div class="fld"><label for="ad">Adults</label><select id="ad" name="ad"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+    <div class="fld"><label for="kd">Kids</label><select id="kd" name="kd"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+    <fieldset class="fld w3"><legend>Room</legend>
+     <div class="rooms-pick">
+      <label><input type="radio" name="room" value="bunk" checked><span>Bunkhouse<small>per person</small></span></label>
+      <label><input type="radio" name="room" value="twin"><span>Twin Gums<small>sleeps 2</small></span></label>
+      <label><input type="radio" name="room" value="family"><span>Family Den<small>sleeps 4</small></span></label>
+      <label><input type="radio" name="room" value="loft"><span>The Loft<small>sleeps 2</small></span></label>
+     </div>
+    </fieldset>
+    <div class="fld w2"><label for="nm">Your name</label><input id="nm" name="nm" autocomplete="name" placeholder="e.g. Sam Nguyen"></div>
+    <div class="fld"><label for="em">Email</label><input id="em" name="em" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    <button class="btn red" type="submit">Request these dates</button>
+   </form>
+   <aside class="pass" aria-labelledby="passT">
+    <div class="ph"><span data-brand>Snowgum Lodge</span><em id="passT">Stay pass</em></div>
+    <dl>
+     <div><dt>Check-in</dt><dd id="pIn">Fri 16 Jul</dd></div>
+     <div><dt>Check-out</dt><dd id="pOut">Sun 18 Jul</dd></div>
+     <div><dt>Room</dt><dd id="pRoom">Bunkhouse</dd></div>
+     <div><dt>Guests</dt><dd id="pG">2 adults</dd></div>
+     <div><dt>Nights</dt><dd id="pN">2</dd></div>
+     <div><dt>Rate</dt><dd id="pT">Regular</dd></div>
+     <div class="tot"><dt>Estimated total</dt><dd id="pTot" aria-live="polite">$432</dd></div>
+    </dl>
+    <p class="pn" id="pNote">Sample prices in AUD · breakfast &amp; dinner included.</p>
+    <div class="stamp" id="stamp" aria-hidden="true">Demo only<br>not booked</div>
+   </aside>
+  </div>
+  <div class="faq">
+   <h3>Good to know</h3>
+   <details><summary>Do I need to bring linen?</summary><p>Private rooms come made up. In the Bunkhouse, hire linen for $20 a stay or bring a sleeping bag and pillowcase.</p></details>
+   <details><summary>Can you cater for allergies?</summary><p>Tell us when you book. Fondue night has a dairy-free pot and gluten-free bread on request.</p></details>
+   <details><summary>Is there ski hire at the lodge?</summary><p>No hire on site, but the village hire shops are a short walk (or slide) away, and your gear sleeps in our heated lockers.</p></details>
+   <details><summary>What if the lifts are on hold?</summary><p>Mountains are mountains. The fire's lit, the board games are out and the soup's on at 12:30.</p></details>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div class="wrap">
+  <div class="fgrid">
+   <div><p class="fbrand" data-brand>Snowgum Lodge</p><p>Ski-in bunk lodge · Falls Creek, VIC<br>Front desk 7:30am–9pm, June to early October.</p></div>
+   <div><h3>Say g'day</h3><ul><li><a href="tel:+61355502817">(03) 5550 2817</a></li><li><a href="tel:+61491570157">0491 570 157</a> (after hours)</li><li><a href="mailto:bunks@example.com">bunks@example.com</a></li></ul></div>
+   <div><h3>On this page</h3><ul><li><a href="#board">Lifts board</a></li><li><a href="#rooms">Rooms &amp; bunks</a></li><li><a href="#season">Season dates</a></li><li><a href="#book">Book a stay</a></li></ul></div>
+  </div>
+  <p class="small">A fictional lodge made for a design showcase. Board data, season dates and prices are samples; lift and run names are invented. Nothing on this page books, charges or reports real conditions.</p>
+ </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var doc=document,RM=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
+function $(s,r){return (r||doc).querySelector(s);}
+function $$(s,r){return [].slice.call((r||doc).querySelectorAll(s));}
+function toast(m){if(window.DemoKit)DemoKit.toast(m);}
+
+/* ---------- forest canopy (seeded bumps) ---------- */
+(function(){var p=$("#forest");if(!p)return;var s=7,x=0,d="M0 420V332";function r(){s=(s*9301+49297)%233280;return s/233280;}
+ while(x<1600){var nx=Math.min(1600,x+16+r()*16),y=322+9*Math.sin(nx/140)+r()*5;d+="Q"+((x+nx)/2).toFixed(0)+" "+(y-12-r()*14).toFixed(0)+" "+nx.toFixed(0)+" "+y.toFixed(0);x=nx;}
+ p.setAttribute("d",d+"V420Z");})();
+
+/* ---------- snowfall ---------- */
+function Snow(cv,dens,wind){
+ var c=cv.getContext("2d"),W=0,H=0,fl=[],vis=false,raf=0,last=0,d=dens,w=wind;
+ function count(){var n=Math.min(380,Math.round(W*H/6500*d));while(fl.length<n)fl.push({x:Math.random()*W,y:Math.random()*H,r:.7+Math.random()*2.3,s:14+Math.random()*32,a:Math.random()*6.3,o:.35+Math.random()*.55});fl.length=n;}
+ function size(){var b=cv.getBoundingClientRect(),p=Math.min(window.devicePixelRatio||1,2);W=b.width;H=b.height;cv.width=Math.max(1,Math.round(W*p));cv.height=Math.max(1,Math.round(H*p));c.setTransform(p,0,0,p,0,0);count();}
+ function frame(t){raf=0;if(!vis||doc.hidden||RM.matches){c.clearRect(0,0,W,H);return;}
+  var dt=last?Math.min(.05,(t-last)/1000):.016;last=t;c.clearRect(0,0,W,H);c.fillStyle="#F7FBFF";
+  for(var i=0;i<fl.length;i++){var f=fl[i];f.a+=dt;f.y+=f.s*dt*(.7+f.r*.22)*(1+w*.3);f.x+=(Math.sin(f.a)*10+w*24*(.5+f.r*.3))*dt;
+   if(f.y>H+5){f.y=-5;f.x=Math.random()*W;}if(f.x>W+6)f.x=-6;else if(f.x<-6)f.x=W+6;
+   c.globalAlpha=f.o;c.beginPath();c.arc(f.x,f.y,f.r,0,6.2832);c.fill();}
+  c.globalAlpha=1;raf=requestAnimationFrame(frame);}
+ function go(){if(!raf&&vis&&!doc.hidden&&!RM.matches){last=0;raf=requestAnimationFrame(frame);}}
+ this.mood=function(nd,nw){d=nd;w=nw;count();};
+ if("IntersectionObserver" in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;go();}).observe(cv);else vis=true;
+ doc.addEventListener("visibilitychange",go);
+ window.addEventListener("resize",size);
+ if(RM.addEventListener)RM.addEventListener("change",go);
+ size();go();
+}
+window.addEventListener("hd:brandchange",function(e){var r=$(".roundel");if(r)r.style.display=e.detail&&e.detail.name!==e.detail.original?"none":"";});
+var heroSnow=new Snow($("#snowHero"),1,.15),boardSnow=new Snow($("#snowBoard"),.3,.1);
+
+/* ---------- split-flap board ---------- */
+var CH=" ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-:.°/!&'",NCH=CH.length,FLIP=72,act=[],raf=0;
+var ICON={l:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6 22 2M12 4v8M6 12h12v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3Z"/></svg>',
+ g:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" fill="#3FA66B"/></svg>',
+ b:'<svg viewBox="0 0 24 24"><rect x="4.5" y="4.5" width="15" height="15" fill="#4B8FD6"/></svg>',
+ k:'<svg viewBox="0 0 24 24"><path d="m12 2.5 9.5 9.5-9.5 9.5L2.5 12Z" fill="#05090E" stroke="#F7FBFF" stroke-width="1.6"/></svg>'};
+var ROWS=[["SUMMIT QUAD","l","Summit Quad chairlift"],["HIGH PLAINS","l","High Plains chairlift"],["RIDGE T-BAR","l","Ridge T-bar"],["WOMBAT TOW","l","Wombat Tow, beginners"],["GULLY CHAIR","l","Gully Chair"],["BUTTER BOWL","g","Butter Bowl, easy run"],["POSSUM RUN","b","Possum Run, intermediate run"],["THE CHIMNEY","k","The Chimney, advanced run"]];
+var ST={o:["OPEN","Open","g"],h:["ON HOLD","On hold","y"],c:["CLOSED","Closed","r"]};
+var SC=[
+ {k:"BLUEBIRD",t:"Bluebird morning",tm:"07:45",v:["148CM","0CM","-3°C","10 NW"],s:["148 cm","0 cm","-3 °C","10 km/h NW"],r:"o NO QUEUE|o 5 MIN WAIT|o FIRM SNOW|o BEGINNERS|o NO QUEUE|o CORDUROY|o GROOMED|o ICY EARLY",m:["HOT SOUP AT THE","LODGE FROM 12:30"],sn:[.22,.1]},
+ {k:"POWDER DAY",t:"Powder day",tm:"07:20",v:["171CM","23CM","-6°C","20 SW"],s:["171 cm","23 cm","-6 °C","20 km/h SW"],r:"h CLEARING|o 15 MIN WAIT|h FROM 10:00|o BEGINNERS|o 10 MIN WAIT|o POWDER|o POWDER|c OPENS LATE",m:["23CM OVERNIGHT!","PORRIDGE AT 6:30"],sn:[1.3,.3]},
+ {k:"WIND HOLD",t:"Wind hold up top",tm:"08:10",v:["152CM","4CM","-1°C","65 NW"],s:["152 cm","4 cm","-1 °C","65 km/h NW"],r:"h WIND HOLD|h WIND HOLD|c TOO WINDY|o SHELTERED|o SHELTERED|o GROOMED|o WINDBLOWN|c TOO WINDY",m:["WIND UP TOP:","COSY BY THE FIRE"],sn:[.6,2.4]},
+ {k:"SPRING SNOW",t:"Spring snow",tm:"09:00",v:["64CM","0CM","7°C","15 N"],s:["64 cm","0 cm","7 °C","15 km/h N"],r:"o UNTIL 15:30|o NO QUEUE|c THIN COVER|o BEGINNERS|c THIN COVER|o SOFT BY 11|o SLUSHY LATE|c ROCKY",m:["SPRING SNOW:","SUNNIES & WAX ON"],sn:[.04,0]},
+ {k:"BLIZZARD",t:"Blizzard",tm:"08:30",v:["190CM","38CM","-9°C","80 SW"],s:["190 cm","38 cm","-9 °C","80 km/h SW"],r:"c BLIZZARD|c LOW VIS|c TOO WINDY|h FROM 11:00|h LOW VIS|c LOW VIS|c LOW VIS|c NOT TODAY",m:["STAY IN TODAY:","FONDUE AT 18:30"],sn:[2.4,1.7]}];
+function mk(el,n){var a=[];el.textContent="";for(var i=0;i<n;i++){var c=doc.createElement("span");c.className="fl";c.innerHTML='<span class="h t"><i> </i></span><span class="h b"><i> </i></span><span class="h ft"><i> </i></span><span class="h fb"><i> </i></span>';el.appendChild(c);var h=c.children;a.push({t:h[0],b:h[1],ft:h[2],fb:h[3],cur:" ",tone:"",q:[],qt:"",at:0,s:-1,on:0});}return a;}
+function put(h,cls,ch,tone){h.className=cls+(tone?" "+tone:"");h.firstChild.textContent=ch;}
+function setAll(o,ch,tn){o.cur=ch;o.tone=tn;o.s=-1;o.q=[];put(o.t,"h t",ch,tn);put(o.b,"h b",ch,tn);put(o.ft,"h ft",ch,tn);put(o.fb,"h fb",ch,tn);o.ft.style.transform="";o.fb.style.transform="";}
+function flip(arr,text,tone,delay,step,instant){
+ text=String(text).toUpperCase();var now=performance.now(),tl=text.replace(/\s+$/,"").length;
+ for(var i=0;i<arr.length;i++){var o=arr[i],ch=text.charAt(i)||" ";if(CH.indexOf(ch)<0)ch=" ";var tn=i<tl?tone:"";
+  if(instant){setAll(o,ch,tn);continue;}
+  var from=o.s>=0?o.nx:o.cur,ft=o.s>=0?o.nt:o.tone;
+  if(ch===from&&tn===ft){o.q=[];continue;}
+  var fi=CH.indexOf(from),ti=CH.indexOf(ch),dist=(ti-fi+NCH)%NCH,k=Math.min(dist||1,4+(Math.random()*6|0));
+  o.q=[];for(var j=k-1;j>=0;j--)o.q.push(CH[(ti-j+NCH)%NCH]);
+  o.qt=tn;o.at=now+delay+i*step;if(!o.on){o.on=1;act.push(o);}}
+ if(!raf&&act.length){raf=requestAnimationFrame(tick);busy(true);}
+}
+function tick(now){
+ raf=0;
+ for(var i=act.length-1;i>=0;i--){var o=act[i];
+  if(o.s<0){
+   if(!o.q.length){o.on=0;act.splice(i,1);continue;}
+   if(now<o.at)continue;
+   o.nx=o.q.shift();o.nt=o.q.length?"":o.qt;o.s=now;
+   put(o.t,"h t",o.nx,o.nt);put(o.fb,"h fb",o.nx,o.nt);put(o.ft,"h ft",o.cur,o.tone);
+   o.ft.style.transform="rotateX(0deg)";o.fb.style.transform="rotateX(90deg)";clack();}
+  var p=(now-o.s)/FLIP;
+  if(p<.5)o.ft.style.transform="rotateX("+(-180*p).toFixed(1)+"deg)";
+  else if(p<1){o.ft.style.transform="rotateX(-90deg)";o.fb.style.transform="rotateX("+(90-180*(p-.5)).toFixed(1)+"deg)";}
+  else{o.cur=o.nx;o.tone=o.nt;put(o.b,"h b",o.cur,o.tone);put(o.ft,"h ft",o.cur,o.tone);o.ft.style.transform="";o.fb.style.transform="";o.s=-1;o.at=now+6;}}
+ if(act.length)raf=requestAnimationFrame(tick);else busy(false);
+}
+var upd=$("#upd"),housing=$("#housing"),live=$("#blive");
+function busy(b){upd.setAttribute("aria-busy",b?"true":"false");}
+function sentence(s){s=s.toLowerCase();return s.charAt(0).toUpperCase()+s.slice(1);}
+var scenF=mk($("#fScen"),11),timeF=mk($("#fTime"),5);
+var condEls=$$(".cond dd"),condF=condEls.map(function(dd){return mk($(".flaps",dd),5);});
+var msgEls=$$(".bmsg .flaps"),msgF=[mk(msgEls[0],16),mk(msgEls[1],16)];
+var tb=$("#rows"),rows=ROWS.map(function(r){
+ var tr=doc.createElement("tr");
+ tr.innerHTML='<th scope="row"><div class="nm"><span class="ico" aria-hidden="true">'+ICON[r[1]]+'</span><span class="flaps" aria-hidden="true"></span><span class="txt">'+r[2]+'</span></div><span class="sub" aria-hidden="true"></span></th><td class="c-st"><span class="flaps" aria-hidden="true"></span><span class="txt"></span></td><td class="c-note"><span class="flaps" aria-hidden="true"></span><span class="txt"></span></td>';
+ tb.appendChild(tr);var f=$$(".flaps",tr);
+ return {name:r[0],nf:mk(f[0],11),sf:mk(f[1],7),qf:mk(f[2],11),st:tr.children[1],stT:$(".txt",tr.children[1]),qT:$(".txt",tr.children[2]),sub:$(".sub",tr)};});
+var idx=0,shown=false;
+function apply(i,mode){/* mode 0 animate, 1 instant, 2 text only */
+ var s=SC[i],cnt={o:0,h:0,c:0},inst=mode===1,flaps=mode!==2;
+ $("#tScen").textContent=s.t;$("#tTime").textContent=s.tm;
+ if(flaps){flip(scenF,s.k,"",0,30,inst);flip(timeF,s.tm,"",160,34,inst);}
+ condF.forEach(function(cf,j){$(".txt",condEls[j]).textContent=s.s[j];if(flaps)flip(cf,("     "+s.v[j]).slice(-5),"",260+j*120,34,inst);});
+ s.r.split("|").forEach(function(x,j){var code=x.charAt(0),note=x.slice(2),row=rows[j],d=620+j*95;cnt[code]++;
+  row.st.setAttribute("data-s",code);row.stT.textContent=ST[code][1];row.qT.textContent=sentence(note);row.sub.textContent=sentence(note);
+  if(flaps){flip(row.nf,row.name,"",d,26,inst);flip(row.sf,ST[code][0],ST[code][2],d+200,26,inst);flip(row.qf,note,"",d+340,24,inst);}});
+ $("#tMsg").textContent=sentence(s.m.join(" "));
+ if(flaps){flip(msgF[0],s.m[0],"",1450,24,inst);flip(msgF[1],s.m[1],"",1640,24,inst);}
+ live.innerHTML="Showing <b>"+s.t+"</b> — "+cnt.o+" open, "+cnt.h+" on hold, "+cnt.c+" closed. Sample data.";
+ boardSnow.mood(s.sn[0],s.sn[1]);
+}
+apply(0,2);
+function reveal(){if(shown)return;shown=true;apply(idx,RM.matches?1:0);}
+if("IntersectionObserver" in window){var bio=new IntersectionObserver(function(e){if(e[0].isIntersecting){reveal();bio.disconnect();}},{threshold:.2});bio.observe(housing);}else reveal();
+upd.addEventListener("click",function(){if(!shown){shown=true;}idx=(idx+1)%SC.length;apply(idx,RM.matches?1:0);});
+var plainBtn=$("#plainBtn");
+function setPlain(on){housing.classList.toggle("plain",on);plainBtn.setAttribute("aria-pressed",on?"true":"false");}
+plainBtn.addEventListener("click",function(){setPlain(plainBtn.getAttribute("aria-pressed")!=="true");});
+if(RM.matches)setPlain(true);
+if(RM.addEventListener)RM.addEventListener("change",function(){if(RM.matches){setPlain(true);apply(idx,1);}});
+
+/* optional clatter (WebAudio, off by default) */
+var ac=null,noise=null,snd=false,lastC=0,sndBtn=$("#sndBtn");
+function clack(){if(!snd||!ac)return;var t=ac.currentTime;if(t-lastC<.028)return;lastC=t;
+ var src=ac.createBufferSource(),bp=ac.createBiquadFilter(),g=ac.createGain();src.buffer=noise;bp.type="bandpass";bp.frequency.value=1600+Math.random()*1800;bp.Q.value=1.4;
+ g.gain.setValueAtTime(.16,t);g.gain.exponentialRampToValueAtTime(.001,t+.035);src.connect(bp);bp.connect(g);g.connect(ac.destination);src.start(t);src.stop(t+.05);}
+sndBtn.addEventListener("click",function(){
+ if(!ac){var AC=window.AudioContext||window.webkitAudioContext;if(!AC){toast("Sound isn't available in this browser.");return;}
+  ac=new AC();noise=ac.createBuffer(1,Math.round(ac.sampleRate*.04),ac.sampleRate);var dd=noise.getChannelData(0);for(var i=0;i<dd.length;i++)dd[i]=(Math.random()*2-1)*Math.pow(1-i/dd.length,3);}
+ snd=!snd;if(snd&&ac.state==="suspended")ac.resume();
+ sndBtn.setAttribute("aria-pressed",snd?"true":"false");sndBtn.textContent=snd?"Sound: on":"Sound: off";});
+
+/* ---------- booking pass ---------- */
+var RATES={bunk:[98,108,124],twin:[265,289,329],family:[420,455,520],loft:[480,520,590]},CAP={bunk:8,twin:2,family:4,loft:2},RN={bunk:"Bunkhouse",twin:"Twin Gums",family:"Family Den",loft:"The Loft"};
+var TIERS=[[11,13,2],[14,24,0],[25,40,2],[41,108,1],[109,123,0]],TN=["Value","Regular","Peak"],J1=Date.UTC(2027,5,1),DAY=864e5;
+var WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(ms){var d=new Date(ms);return WD[d.getUTCDay()]+" "+d.getUTCDate()+" "+MO[d.getUTCMonth()];}
+function tierOf(ms){var o=Math.round((ms-J1)/DAY);for(var i=0;i<TIERS.length;i++)if(o>=TIERS[i][0]&&o<=TIERS[i][1])return TIERS[i][2];return -1;}
+var form=$("#bk"),stamp=$("#stamp");
+function calc(){
+ var v=($("#ci").value||"").split("-"),start=v.length===3?Date.UTC(+v[0],+v[1]-1,+v[2]):NaN,n=+$("#nt").value,ad=+$("#ad").value,kd=+$("#kd").value,g=ad+kd,room=(form.querySelector("input[name=room]:checked")||{}).value||"bunk";
+ stamp.classList.remove("on");
+ var notes=[];
+ if(isNaN(start)){$("#pIn").textContent="—";$("#pOut").textContent="—";$("#pTot").textContent="—";$("#pNote").textContent="Pick a check-in date to see sample rates.";return;}
+ var units=room==="bunk"?g:Math.ceil(g/CAP[room]),total=0,seen={},out=0;
+ for(var k=0;k<n;k++){var t=tierOf(start+k*DAY);if(t<0){out++;t=1;}seen[TN[t]]=1;total+=RATES[room][t]*units;}
+ $("#pIn").textContent=fmt(start);$("#pOut").textContent=fmt(start+n*DAY);$("#pN").textContent=n;
+ $("#pG").textContent=ad+(ad===1?" adult":" adults")+(kd?", "+kd+(kd===1?" kid":" kids"):"");
+ $("#pRoom").textContent=RN[room]+(room!=="bunk"&&units>1?" ×"+units:"");
+ $("#pT").textContent=Object.keys(seen).join(" + ");
+ $("#pTot").textContent="$"+total.toLocaleString("en-AU");
+ if(room==="bunk")notes.push("Bunks are priced per person.");
+ else if(units>1)notes.push(RN[room]+" sleeps "+CAP[room]+", so this is priced as "+units+" rooms.");
+ if(room==="bunk"&&g>8)notes.push("Groups over eight — we'll call to sort the rooms.");
+ if(out)notes.push('<span class="warn">Some nights fall outside the sample season (12 Jun – 3 Oct 2027); regular rates shown.</span>');
+ $("#pNote").innerHTML=notes.join(" ")+" Sample prices in AUD · breakfast &amp; dinner included.";
+}
+form.addEventListener("input",calc);form.addEventListener("change",calc);
+form.addEventListener("submit",function(e){e.preventDefault();calc();stamp.classList.add("on");toast("Demo only — no booking was made. A real lodge would email you to confirm your dates.");});
+calc();
+})();
+</script>
+</body>
+</html>

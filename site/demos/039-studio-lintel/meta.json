@@ -1,0 +1,8 @@
+{
+  "id": "039",
+  "tech": ["CSS Grid", "SVG", "Pointer Events", "Keyboard shortcuts", "Generative art"],
+  "features": ["story"],
+  "interaction": "Hover or focus a row of the text-only project index and an abstract black/white/grey architectural study (planes, stairs, light shafts, batten screens) follows the cursor; select a row to open a grid-aligned detail panel with a larger study and a 100–120 word project story (arrow keys step through projects); on phones rows expand inline. A 'Show grid' toggle (or the G key) overlays the page's real 12-column grid in red.",
+  "fonts": ["Schibsted Grotesk", "IBM Plex Mono"],
+  "notes": ""
+}

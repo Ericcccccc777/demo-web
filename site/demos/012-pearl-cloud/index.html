@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="012">
+<meta name="demo:brand" content="Pearl Cloud">
+<title>Pearl Cloud — bubble tea you build, Box Hill</title>
+<meta name="description" content="Pearl Cloud is a fictional bubble tea shop in Box Hill, Victoria: build a drink in an app-style menu and plan a pick-up (concept demo, sample prices).">
+<meta name="theme-color" content="#C9B6FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;800&family=Noto+Sans+SC:wght@500&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--lilac:#C9B6FF;--lilac2:#E4DAFF;--lilac3:#F6F1FF;--pink:#FFB3D9;--grape:#6A4C93;--ink:#35205A;--ink2:#5B4384;--violet:#7B3FE4;--hot:#FF6FB5;
+--font:'Baloo 2',ui-rounded,'Arial Rounded MT Bold','Segoe UI',system-ui,sans-serif;--zh:'Noto Sans SC','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+--gloss:inset 0 2px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(106,76,147,.16);--ring:0 0 0 1.5px rgba(106,76,147,.16);--line:0 0 0 1px rgba(106,76,147,.11);
+--gg:linear-gradient(180deg,#8B6BC4,#6A4C93);--hi:inset 0 2px 0 rgba(255,255,255,.42);--lift:0px;--tabH:66px}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:500 16px/1.45 var(--font);color:var(--ink);background:var(--lilac3);min-height:100vh;-webkit-font-smoothing:antialiased}
+.zh{font-family:var(--zh);font-weight:500;letter-spacing:.02em}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+h1,h2,h3,p{margin:0}
+h2,h3{text-wrap:balance}
+.chrome{background:linear-gradient(180deg,#8E72CF 0%,#4A2C7C 44%,#F7F2FF 50%,#B79DF2 62%,#6A4C93 86%,#3C2266 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1.5px 0 #fff) drop-shadow(0 4px 8px rgba(74,44,124,.28))}
+.chrome-s{background:linear-gradient(180deg,#8A69C9,#5A3A8E 48%,#3A2263);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1.5px 0 #fff)}
+/* desktop sky */
+.dream,.side{display:none}
+.dream{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.cl{position:absolute;filter:drop-shadow(0 18px 24px rgba(140,110,210,.18));animation:drift 38s ease-in-out infinite alternate}
+.cl use{fill:url(#cloudG)}
+@keyframes drift{to{transform:translateX(70px)}}
+.spk{position:absolute;width:22px;height:22px;fill:#fff;animation:tw 4.6s ease-in-out infinite}
+.spk.p{fill:var(--pink)}.spk.l{fill:#B9A1FF}
+@keyframes tw{0%,100%{transform:scale(.55);opacity:.55}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.stk{position:absolute;filter:drop-shadow(0 8px 10px rgba(90,60,150,.22));animation:bob 7s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-10px) rotate(var(--r2,4deg))}}
+/* the app (phone = default) */
+.device{position:relative;min-height:100vh;min-height:100svh;background:linear-gradient(180deg,#F8F4FF,#FFF5FB 55%,#F4EEFF)}
+.screen{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
+.appbar{position:sticky;top:0;z-index:15;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;background:rgba(250,246,255,.84);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(106,76,147,.1)}
+.mark{flex:none;width:40px;height:40px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#fff,#E6DAFF 60%,#FFC9E5);box-shadow:var(--gloss),0 4px 10px -4px rgba(106,76,147,.5)}
+.mark svg{width:30px;height:30px}
+.brandbox{flex:1;min-width:0;line-height:1}
+.appbar h1{font-weight:800;font-size:25px;line-height:1.02;letter-spacing:-.01em;overflow-wrap:anywhere}
+.brandbox .zh{display:block;font-size:11.5px;color:var(--ink2);margin-top:3px;letter-spacing:.12em}
+.cartbtn{flex:none;display:flex;align-items:center;gap:6px;height:44px;padding:0 14px 0 12px;border:0;border-radius:999px;background:linear-gradient(180deg,#fff,#F1E9FF);font-weight:600;box-shadow:var(--gloss),0 6px 14px -6px rgba(106,76,147,.55)}
+.cartbtn svg{width:22px;height:22px}
+.cartbtn .n{min-width:22px;height:22px;padding:0 6px;border-radius:99px;background:var(--grape);color:#fff;font-size:13px;line-height:22px;text-align:center}
+.pop{animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{30%{transform:scale(1.18)}}
+main{flex:1 0 auto;display:flex;flex-direction:column;padding-bottom:calc(var(--tabH) + 26px + var(--lift) + env(safe-area-inset-bottom))}
+.screen:not([data-view="build"]) main{padding-bottom:0}
+.view{flex:1 0 auto}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:26px 16px 12px}
+.sec-h h2{font-size:24px;font-weight:800;line-height:1.1}
+.sec-h .zh{font-size:12px;color:var(--ink2)}
+.hero{position:relative;margin:14px 14px 0;padding:10px 18px 20px;border-radius:34px;overflow:hidden;background:radial-gradient(110% 80% at 100% 0%,#FFD0E9,rgba(255,208,233,0) 60%),radial-gradient(90% 70% at 0% 100%,#FFE4F2,rgba(255,228,242,0) 60%),linear-gradient(165deg,#EDE5FF,#D4C2FF 50%,#E9C8FF);box-shadow:inset 0 2px 0 rgba(255,255,255,.95),inset 0 -6px 18px rgba(106,76,147,.12),0 18px 34px -18px rgba(106,76,147,.6)}
+.hero::before{content:"";position:absolute;left:18px;top:10px;width:52%;height:34px;border-radius:50%;background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,0));pointer-events:none}
+.hero-art{display:block;width:min(100%,300px);height:auto;margin:0 auto -6px}
+.hero h2{font-size:31px;line-height:1.02;font-weight:800;letter-spacing:-.015em}
+.hero h2 em{font-style:normal;color:var(--grape)}
+.hero p{margin-top:8px;color:var(--ink2);font-size:15.5px;max-width:34ch}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border:0;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.btn:active{transform:scale(.96)}
+.btn-main{color:#fff;background:linear-gradient(180deg,#8B6BC4,#6A4C93 55%,#583B80);box-shadow:var(--hi),inset 0 -3px 0 rgba(0,0,0,.18),0 10px 18px -8px rgba(74,44,124,.75)}
+.btn-soft{background:linear-gradient(180deg,#fff,#FFE3F1);box-shadow:var(--gloss),0 8px 16px -10px rgba(106,76,147,.6)}
+.btn svg{width:18px;height:18px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 6px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 16px;border:0;border-radius:999px;background:#fff;box-shadow:var(--ring);font-weight:600;font-size:14.5px}
+.chip[aria-pressed="true"],.sugar input:checked+.face,.seg input:checked+.face,.tabs [aria-selected="true"]{background:var(--gg);color:#fff;box-shadow:var(--hi),0 6px 12px -7px rgba(74,44,124,.9)}
+.status{display:flex;gap:8px;flex-wrap:wrap;margin:14px 16px 0}
+.pill{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 12px;border-radius:999px;background:#fff;font-size:13.5px;font-weight:600;color:var(--ink2);box-shadow:var(--line)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2FB37A;box-shadow:0 0 0 3px rgba(47,179,122,.2)}
+.dot.off{background:#C2528B;box-shadow:0 0 0 3px rgba(194,82,139,.18)}
+.drinks{list-style:none;margin:6px 0 0;padding:0 14px;display:grid;gap:12px}
+.drink{display:grid;grid-template-columns:66px 1fr auto;align-items:center;gap:12px;padding:12px 12px 12px 10px;border-radius:26px;background:linear-gradient(#fff,#FBF8FF);box-shadow:var(--line),0 10px 20px -16px rgba(106,76,147,.7)}
+.cupw{width:66px;height:78px;border-radius:22px;display:grid;place-items:center;background:radial-gradient(circle at 50% 60%,var(--bg),rgba(255,255,255,0) 70%)}
+.cupw svg{width:54px;height:72px}
+.drink h3{font-size:17.5px;line-height:1.1;font-weight:800}
+.drink h3 .zh{display:table;margin-top:3px;font-size:11.5px;line-height:1.5;color:var(--grape);background:var(--lilac3);padding:0 7px;border-radius:8px}
+.drink p{font-size:14px;line-height:1.35;color:var(--ink2);margin-top:3px}
+.pr{display:block;margin-top:4px;font-weight:800;font-size:15px}
+.build-it{min-width:44px;height:44px;padding:0 14px;border:0;border-radius:999px;background:linear-gradient(180deg,#FFE0F0,#FFB3D9);font-weight:600;font-size:14px;box-shadow:var(--gloss),0 6px 12px -8px rgba(255,111,181,.9)}
+.note{margin:12px 16px 0;font-size:13px;color:var(--ink2)}
+.how{list-style:none;margin:0;padding:0 14px;display:grid;gap:10px;counter-reset:s}
+.how li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;padding:12px 14px;border-radius:22px;background:rgba(255,255,255,.7);box-shadow:var(--line)}
+.how li::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:16px;display:grid;place-items:center;font-weight:800;font-size:20px;color:var(--grape);background:linear-gradient(145deg,#fff,var(--lilac2));box-shadow:var(--gloss)}
+.how b{display:block;line-height:1.2}
+.how span{font-size:14px;color:var(--ink2);line-height:1.35}
+/* build */
+.build{display:flex;flex-direction:column}
+.bhead{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px 0}
+.bhead h2{font-size:23px;font-weight:800;line-height:1.1}
+.bhead h2 .zh,.opt .zh{font-size:11px;color:var(--ink2)}
+.bhead h2 .zh{margin-left:6px;vertical-align:3px;color:var(--grape)}
+.ghost{min-height:40px;padding:0 14px;border:0;border-radius:999px;background:rgba(255,255,255,.7);box-shadow:var(--ring);font-weight:600;font-size:14px}
+.stage{position:relative;flex:1 1 280px;min-height:230px;max-height:420px;margin:8px 14px 0;border-radius:34px;overflow:hidden;background:radial-gradient(60% 55% at 50% 58%,rgba(255,255,255,.95),rgba(255,255,255,0) 72%),radial-gradient(120% 90% at 0% 0%,#FFD9EE,rgba(255,217,238,0) 55%),linear-gradient(170deg,#E7DDFF,#D9C9FF 55%,#F7D3F0);box-shadow:inset 0 2px 0 rgba(255,255,255,.95),inset 0 -8px 22px rgba(106,76,147,.14)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%}
+.price{position:absolute;right:14px;top:14px;display:grid;place-items:center;width:78px;height:78px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#FFE2F1 45%,#FFB3D9);box-shadow:inset 0 -4px 8px rgba(255,111,181,.35),0 10px 18px -10px rgba(255,80,160,.8);text-align:center;line-height:1}
+.price b{font-size:21px;font-weight:800}
+.price small{display:block;font-size:10.5px;font-weight:600;color:var(--ink2);margin-top:2px}
+.tip{position:absolute;left:12px;top:14px;max-width:36%;padding:7px 11px;border-radius:16px 16px 16px 4px;background:rgba(255,255,255,.9);font-size:12.5px;line-height:1.3;color:var(--ink2);box-shadow:0 6px 14px -10px rgba(106,76,147,.8);transition:opacity .4s}
+.summary{margin:8px 16px 0;min-height:42px;font-size:14px;line-height:1.35;color:var(--ink2);text-align:center}
+.summary b{color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:8px 14px 0;padding:4px;border-radius:999px;background:rgba(106,76,147,.08)}
+.steps button{min-height:40px;border:0;border-radius:999px;background:none;font-weight:600;font-size:14px;line-height:1;color:var(--ink2);display:flex;align-items:center;justify-content:center;gap:5px;padding:0 4px}
+.steps b{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:rgba(106,76,147,.14);font-size:11px}
+.steps [aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:var(--gloss),0 4px 10px -6px rgba(106,76,147,.6)}
+.steps [aria-selected="true"] b{background:var(--grape);color:#fff}
+.steps .done b{background:#2FB37A;color:#fff}
+.panel{margin:10px 14px 0;min-height:158px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.opt{position:relative;display:block}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt input:focus-visible+.face{outline:3px solid var(--violet);outline-offset:2px}
+.teas{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.tea .face{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px 8px;border-radius:20px;text-align:center}
+.sw{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.95) 0 12%,rgba(255,255,255,0) 13%),radial-gradient(var(--c) 55%,color-mix(in srgb,var(--c),#3a2a50 22%));box-shadow:inset 0 -4px 6px rgba(0,0,0,.08),0 0 0 3px #fff,0 6px 12px -6px rgba(60,30,90,.6);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.tea .t{font-size:13px;font-weight:600;line-height:1.1}
+.tea input:checked+.face{background:#fff;box-shadow:var(--gloss),0 6px 14px -8px rgba(106,76,147,.7)}
+.tea input:checked+.face .sw{transform:scale(1.1);box-shadow:inset 0 -4px 6px rgba(0,0,0,.08),0 0 0 3px var(--grape),0 6px 12px -6px rgba(60,30,90,.6)}
+.sugar{display:grid;grid-template-columns:repeat(5,1fr);border-radius:999px;background:linear-gradient(90deg,#fff,#FFE6F3 50%,#FFB3D9);box-shadow:var(--ring)}
+.sugar .face{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:58px;border-radius:999px}
+.sugar b{font-size:17px;font-weight:800;line-height:1}
+.sugar .zh{margin-top:3px}
+.sugar input:checked+.face .zh{color:#F3ECFF}
+.hint{margin-top:10px;font-size:13.5px;color:var(--ink2);text-align:center}
+.ices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ice .face{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:22px;background:rgba(255,255,255,.65);box-shadow:var(--ring)}
+.ice svg{width:52px;height:30px}
+.ice b{font-size:15px;line-height:1.1}
+.ice input:checked+.face{background:#fff;box-shadow:0 0 0 3px var(--grape),0 8px 16px -10px rgba(106,76,147,.8)}
+.tops{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.top .face{display:grid;grid-template-columns:26px 1fr;column-gap:8px;align-items:center;min-height:46px;padding:6px 10px;border-radius:18px;background:rgba(255,255,255,.7);box-shadow:var(--ring);line-height:1.1}
+.ic{grid-row:span 2;width:26px;height:26px;border-radius:50%;background:var(--c);box-shadow:inset -3px -4px 0 rgba(0,0,0,.12),inset 3px 3px 0 rgba(255,255,255,.5)}
+.top b{font-size:14px}
+.top small{font-size:12px;color:var(--ink2)}
+.top small .zh{margin-right:4px}
+.top input:checked+.face{background:linear-gradient(#fff,#FFEAF5);box-shadow:0 0 0 2.5px var(--hot),0 8px 16px -10px rgba(255,80,160,.8)}
+.top input:checked+.face b::after{content:" ✓";color:#D6337F}
+.top:last-child{grid-column:1/-1}
+.addbar{display:flex;gap:8px;margin:12px 14px 0}
+.addbar .btn{flex:1;padding:0 14px;font-size:15.5px}
+.addbar .btn-soft{flex:0 0 auto}
+/* stores */
+.store{margin:0 14px 14px;border-radius:30px;overflow:hidden;background:#fff;box-shadow:var(--line),0 16px 30px -22px rgba(106,76,147,.8)}
+.map{display:block;width:100%;height:auto}
+.store .body{padding:14px 16px 16px}
+.store h3{font-size:21px;font-weight:800;line-height:1.1}
+.where{font-size:14px;color:var(--ink2);margin-top:2px}
+.hours{width:100%;margin-top:10px;border-collapse:collapse;font-size:14.5px}
+.hours th{text-align:left;font-weight:600;color:var(--ink2);padding:5px 0}
+.hours td{text-align:right;padding:5px 0;font-variant-numeric:tabular-nums}
+.hours tr+tr{border-top:1px dashed rgba(106,76,147,.2)}
+.hours .today *{color:var(--ink);font-weight:800}
+.store .btnrow{margin-top:12px}
+.store .btn{min-height:44px;padding:0 16px;font-size:15px}
+.faq{margin:0 14px;display:grid;gap:8px}
+.faq details{border-radius:22px;background:rgba(255,255,255,.75);box-shadow:var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:52px;padding:10px 16px;font-weight:700;font-size:15.5px;line-height:1.25}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--lilac2);color:var(--grape);font-size:18px;transition:transform .3s}
+.faq [open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 16px 14px;font-size:14.5px;color:var(--ink2)}
+.appfoot{padding:24px 18px calc(var(--tabH) + 30px + var(--lift) + env(safe-area-inset-bottom));text-align:center;font-size:13px;color:var(--ink2);background:linear-gradient(rgba(228,218,255,0),rgba(228,218,255,.7))}
+.fname{display:block;font-size:22px;font-weight:800;color:var(--ink);line-height:1.1;overflow-wrap:anywhere}
+.appfoot p+p{margin-top:6px}
+.screen[data-view="build"] .appfoot{display:none}
+/* tab bar + sheet */
+.fade{position:fixed;left:0;right:0;bottom:0;height:calc(var(--tabH) + 40px + var(--lift) + env(safe-area-inset-bottom));z-index:19;pointer-events:none;background:linear-gradient(rgba(246,241,255,0),rgba(246,241,255,.92) 60%)}
+.screen[data-view="build"] .fade{opacity:.6}
+.tabbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(max(12px,env(safe-area-inset-bottom)) + var(--lift));z-index:20;width:min(calc(100% - 28px),360px);height:var(--tabH);padding:6px;border-radius:999px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);box-shadow:inset 0 1.5px 0 #fff,var(--line),0 16px 30px -12px rgba(74,44,124,.5)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;height:100%}
+.tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;border:0;border-radius:999px;background:none;color:var(--ink2);font-weight:600;font-size:13px;line-height:1}
+.tabs svg{width:24px;height:24px}
+.sheetwrap{position:fixed;inset:0;z-index:40}
+.scrim{position:absolute;inset:0;background:rgba(53,32,90,.34);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);animation:fade .25s}
+.sheet{position:absolute;left:0;right:0;bottom:0;max-height:88%;overflow-y:auto;padding:10px 18px calc(22px + var(--lift) + env(safe-area-inset-bottom));border-radius:32px 32px 0 0;background:linear-gradient(#fff,#FAF6FF);box-shadow:0 -20px 40px -20px rgba(53,32,90,.5);animation:up .38s cubic-bezier(.2,1.2,.4,1)}
+@keyframes up{from{transform:translateY(100%)}}
+@keyframes fade{from{opacity:0}}
+.grab{width:44px;height:5px;border-radius:9px;background:rgba(106,76,147,.25);margin:0 auto 10px}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.sheet-h h2{font-size:24px;font-weight:800}
+.x{width:44px;height:44px;border:0;border-radius:50%;background:var(--lilac3);font-size:22px;line-height:1}
+.items{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.item{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:10px;border-radius:20px;background:#fff;box-shadow:var(--ring)}
+.item svg{width:40px;height:52px}
+.item b{display:block;font-size:15.5px;line-height:1.15}
+.item small{display:block;font-size:12.5px;color:var(--ink2);line-height:1.3}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:40px;height:40px;border:0;border-radius:50%;background:var(--lilac3);font-weight:800;font-size:18px}
+.qty span{min-width:18px;text-align:center;font-weight:800}
+.empty{padding:24px 8px;text-align:center;color:var(--ink2)}
+.sheet h3{font-size:15px;font-weight:700;margin:16px 0 8px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg .face{display:flex;align-items:center;min-height:42px;padding:0 14px;border-radius:999px;background:#fff;font-weight:600;font-size:14.5px;box-shadow:var(--ring)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:12px;border-top:2px dashed rgba(106,76,147,.2);font-size:15px}
+.total b{font-size:24px;font-weight:800}
+.sheet .btn{width:100%;margin-top:12px}
+.fine{font-size:12.5px;color:var(--ink2);margin-top:8px;text-align:center}
+.done{margin-top:14px;padding:16px;border-radius:22px;background:linear-gradient(160deg,#F1EAFF,#FFE8F4);box-shadow:inset 0 0 0 1.5px rgba(106,76,147,.2)}
+.done b{display:block;font-size:17px;margin-bottom:4px}
+.done p{font-size:14.5px;color:var(--ink2)}
+.flyer{position:fixed;z-index:60;width:44px;height:58px;pointer-events:none}
+.flyer svg{width:100%;height:100%}
+/* desktop: the app sits in a phone on a dreamy sky */
+@media (max-width:759px){html:not(.hd-in-frame){--lift:44px}}
+@media (min-width:760px){
+body{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;justify-items:center;column-gap:clamp(24px,4vw,64px);padding:24px clamp(20px,3vw,56px);height:100vh;overflow:hidden;background:radial-gradient(40% 50% at 12% 18%,#FFE1F1,rgba(255,225,241,0) 70%),radial-gradient(40% 50% at 88% 22%,#E3D6FF,rgba(227,214,255,0) 70%),radial-gradient(50% 45% at 50% 100%,#FFD5EA,rgba(255,213,234,0) 70%),linear-gradient(160deg,#E9DFFF,#F7ECFF 45%,#FFE3F1)}
+.dream{display:block}
+.device{grid-column:2;z-index:2;width:414px;height:min(866px,calc(100vh - 40px));min-height:0;padding:11px;border-radius:60px;background:linear-gradient(150deg,#fff,#E8DEFF 22%,#B7A2EC 48%,#fff 58%,#D6C8FF 80%,#F4EEFF);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9),0 50px 80px -34px rgba(74,44,124,.55),0 18px 30px -18px rgba(74,44,124,.4);transform:translateZ(0)}
+.screen{height:100%;min-height:0;border-radius:50px;overflow-y:auto;overflow-x:hidden;background:linear-gradient(180deg,#F8F4FF,#FFF5FB 55%,#F4EEFF);scrollbar-width:none;overscroll-behavior:contain}
+.screen::-webkit-scrollbar{display:none}
+.appbar{padding-top:16px;border-radius:50px 50px 0 0}
+.tabbar{bottom:22px}
+.fade{left:11px;right:11px;bottom:11px;border-radius:0 0 50px 50px}
+.sheetwrap{border-radius:50px;overflow:hidden;inset:11px}
+}
+@media (min-width:1100px){.side{display:block;position:relative;z-index:1;width:100%;max-width:380px}.side-l{justify-self:end}.side-r{justify-self:start}}
+.side-k{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.75);font-weight:600;font-size:14px;color:var(--ink2);box-shadow:var(--line)}
+.side-k .zh{color:var(--grape)}
+.side-mark{margin-top:14px;font-size:clamp(64px,6.4vw,104px);line-height:.86;font-weight:800;letter-spacing:-.03em;overflow-wrap:anywhere;padding-bottom:.08em}
+.side-lede{margin-top:16px;font-size:19px;color:var(--ink2);max-width:30ch}
+.side .btnrow{margin-top:22px}
+.side-hint{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;color:var(--ink2)}
+.side-hint svg{flex:none;width:56px;height:30px}
+.notes{display:grid;gap:16px;justify-items:start}
+.snote{max-width:250px;padding:14px 18px 15px;border-radius:24px;background:#fff;box-shadow:0 0 0 5px #fff,0 0 0 6px rgba(106,76,147,.12),0 16px 26px -14px rgba(74,44,124,.5);transform:rotate(var(--r,0deg));line-height:1.3}
+.snote b{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grape)}
+.snote span{display:block;font-size:19px;font-weight:800}
+.snote small{display:block;font-size:13.5px;color:var(--ink2);margin-top:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="cloudG" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#fff"/><stop offset="1" stop-color="#EDE4FF"/></linearGradient>
+<symbol id="cloud" viewBox="0 0 200 100"><path d="M30 92A26 26 0 0 1 28 42A36 36 0 0 1 92 22A30 30 0 0 1 146 36A30 30 0 0 1 176 92Z"/></symbol>
+<symbol id="star" viewBox="0 0 20 20"><path d="M10 0Q11.3 8.7 20 10Q11.3 11.3 10 20Q8.7 11.3 0 10Q8.7 8.7 10 0Z"/></symbol>
+<symbol id="mc" viewBox="0 0 64 84">
+<path d="M41 3L35 40" stroke="#FF8CC6" stroke-width="7" stroke-linecap="round"/>
+<path d="M9 24H55L50 74Q49 80 43 80H21Q15 80 14 74Z" style="fill:var(--tea,#D8AE85)"/>
+<path d="M9.5 24H54.5L53.4 35Q32 39 10.6 35Z" style="fill:#FFF6E3;opacity:var(--foam,0)"/>
+<path d="M15.5 64Q32 60 48.5 64L50 74Q49 80 43 80H21Q15 80 14 74Z" style="fill:#F2C24F;opacity:var(--pud,0)"/>
+<g style="fill:#2E1A26;opacity:var(--pearl,0)"><circle cx="22" cy="73" r="3.6"/><circle cx="30" cy="74" r="3.6"/><circle cx="38" cy="73.5" r="3.6"/><circle cx="45" cy="72" r="3.4"/><circle cx="26" cy="67" r="3.6"/><circle cx="34" cy="67.5" r="3.6"/><circle cx="41.5" cy="66" r="3.4"/></g>
+<g style="fill:#8E2F3A;opacity:var(--bean,0)"><ellipse cx="24" cy="70" rx="2.6" ry="2"/><ellipse cx="31" cy="72" rx="2.6" ry="2"/><ellipse cx="38" cy="70" rx="2.6" ry="2"/><ellipse cx="44" cy="73" rx="2.6" ry="2"/><ellipse cx="28" cy="76" rx="2.6" ry="2"/></g>
+<g style="fill:#fff;opacity:var(--jelly,0)"><rect x="19" y="48" width="7" height="7" rx="2"/><rect x="33" y="54" width="7" height="7" rx="2"/><rect x="40" y="44" width="7" height="7" rx="2"/></g>
+<path d="M9 24H55L50 74Q49 80 43 80H21Q15 80 14 74Z" fill="none" stroke="#fff" stroke-width="2.6"/>
+<path d="M15 31L18.5 70" stroke="#fff" stroke-opacity=".75" stroke-width="3.4" stroke-linecap="round"/>
+<ellipse cx="32" cy="24" rx="23" ry="4.2" fill="rgba(255,255,255,.35)" stroke="#fff" stroke-width="2.6"/>
+<circle cx="27" cy="50" r="1.8" fill="#35205A"/><circle cx="37" cy="50" r="1.8" fill="#35205A"/><path d="M29.5 54Q32 56.4 34.5 54" stroke="#35205A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</symbol>
+<symbol id="pin" viewBox="-20 -20 40 56"><path d="M0 36C-14 20-20 12-20 2a20 20 0 0 1 40 0C20 12 14 20 0 36Z"/><circle cy="1" r="11" fill="#fff"/><circle cx="-4" r="1.8" fill="#35205A"/><circle cx="4" r="1.8" fill="#35205A"/><path d="M-2.4 3.8q2.4 2 4.8 0" stroke="#35205A" stroke-width="1.4" fill="none" stroke-linecap="round"/></symbol>
+</defs>
+</svg>
+
+<div class="dream" aria-hidden="true">
+<svg class="cl" style="width:360px;left:-60px;top:6%" viewBox="0 0 200 100"><use href="#cloud"/></svg>
+<svg class="cl" style="width:260px;right:4%;top:8%;animation-duration:46s;animation-delay:-12s" viewBox="0 0 200 100"><use href="#cloud"/></svg>
+<svg class="cl" style="width:420px;left:24%;bottom:-70px;animation-duration:52s" viewBox="0 0 200 100"><use href="#cloud"/></svg>
+<svg class="cl" style="width:300px;right:-80px;bottom:10%;animation-delay:-20s" viewBox="0 0 200 100"><use href="#cloud"/></svg>
+<svg class="cl" style="width:180px;left:38%;top:-40px;opacity:.8;animation-duration:30s" viewBox="0 0 200 100"><use href="#cloud"/></svg>
+<svg class="spk" style="left:9%;top:62%"><use href="#star"/></svg>
+<svg class="spk p" style="left:30%;top:12%;animation-delay:-1.2s;width:30px;height:30px"><use href="#star"/></svg>
+<svg class="spk l" style="left:22%;bottom:12%;animation-delay:-2.4s"><use href="#star"/></svg>
+<svg class="spk" style="right:24%;top:30%;animation-delay:-3.1s;width:28px;height:28px"><use href="#star"/></svg>
+<svg class="spk p" style="right:7%;top:58%;animation-delay:-.6s"><use href="#star"/></svg>
+<svg class="spk l" style="right:31%;bottom:7%;animation-delay:-1.9s;width:34px;height:34px"><use href="#star"/></svg>
+<svg class="stk" style="left:5%;bottom:8%;width:120px;--r2:-6deg" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="#fff"/><circle cx="60" cy="60" r="46" fill="#FFB3D9"/><text x="60" y="72" text-anchor="middle" font-family="Noto Sans SC,PingFang SC,sans-serif" font-size="34" font-weight="500" fill="#35205A">云珠</text></svg>
+<svg class="stk" style="right:5%;top:10%;width:92px;animation-delay:-3s" viewBox="0 0 100 92"><path d="M50 88C20 66 4 50 4 30C4 14 16 4 30 4C40 4 46 10 50 17C54 10 60 4 70 4C84 4 96 14 96 30C96 50 80 66 50 88Z" fill="#fff"/><path d="M50 78C26 60 13 47 13 31C13 20 21 13 31 13C39 13 45 19 50 27C55 19 61 13 69 13C79 13 87 20 87 31C87 47 74 60 50 78Z" fill="#C9B6FF"/><ellipse cx="33" cy="28" rx="9" ry="5" fill="#fff" opacity=".7" transform="rotate(-25 33 28)"/></svg>
+<svg class="stk" style="left:23%;top:7%;width:74px;--r2:8deg;animation-delay:-5s" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="#fff"/><g fill="#3A2230"><circle cx="28" cy="46" r="13"/><circle cx="50" cy="48" r="13"/><circle cx="39" cy="28" r="13"/></g><g fill="#fff" opacity=".6"><circle cx="24" cy="42" r="3.5"/><circle cx="46" cy="44" r="3.5"/><circle cx="35" cy="24" r="3.5"/></g></svg>
+<svg class="stk" style="right:30%;bottom:6%;width:84px;animation-delay:-1s" viewBox="0 0 84 84"><path d="M42 2L52 30L82 32L58 50L66 80L42 63L18 80L26 50L2 32L32 30Z" fill="#fff" stroke="#fff" stroke-width="6" stroke-linejoin="round"/><path d="M42 12L50 34L73 35L55 49L61 72L42 59L23 72L29 49L11 35L34 34Z" fill="#FFE27A"/></svg>
+</div>
+
+<aside class="side side-l" aria-label="About Pearl Cloud">
+<p class="side-k"><span class="zh" lang="zh-Hans">云珠</span> Bubble tea · Box Hill, VIC</p>
+<p class="side-mark chrome" data-brand>Pearl Cloud</p>
+<p class="side-lede">Bubble tea built one cup at a time. Pick the tea, sweetness, ice and toppings in the app, then collect it cold from the counter.</p>
+<div class="btnrow"><button class="btn btn-main" type="button" data-go="build">Build a drink</button><button class="btn btn-soft" type="button" data-go="stores">Find a store</button></div>
+<p class="side-hint"><svg viewBox="0 0 56 30" aria-hidden="true"><path d="M3 20C16 4 34 4 50 16" fill="none" stroke="#6A4C93" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/><path d="M42 10L51 17L41 21" fill="none" stroke="#6A4C93" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>The app is live — add pearls and watch them drop.</p>
+</aside>
+
+<div class="device" id="device">
+<div class="screen" id="screen" data-view="menu">
+<header class="appbar">
+<span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 29a7 7 0 0 1-.6-14 9.5 9.5 0 0 1 17.8-3.4A7.6 7.6 0 0 1 33 20a4.6 4.6 0 0 1-1.4 9Z" fill="#fff" stroke="#6A4C93" stroke-width="2.2" stroke-linejoin="round"/><circle cx="16" cy="22" r="1.7" fill="#35205A"/><circle cx="24" cy="22" r="1.7" fill="#35205A"/><path d="M18.4 25.2q1.6 1.4 3.2 0" stroke="#35205A" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="13" cy="25" r="1.8" fill="#FFB3D9"/><circle cx="27" cy="25" r="1.8" fill="#FFB3D9"/></svg></span>
+<div class="brandbox"><h1 class="chrome-s" data-brand>Pearl Cloud</h1><span class="zh" lang="zh-Hans">云珠 · Box Hill</span></div>
+<button class="cartbtn" id="cartBtn" type="button" aria-haspopup="dialog" aria-controls="cartWrap" aria-label="Your order: 0 drinks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.3 11.2a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8Z" fill="#FFD6EB" stroke="#35205A" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="#35205A" stroke-width="1.8" stroke-linecap="round"/></svg><span class="n" id="cartN">0</span></button>
+</header>
+
+<main id="main">
+<section class="view" id="v-menu" role="tabpanel" aria-labelledby="t-menu">
+<div class="hero">
+<svg class="hero-art" viewBox="0 0 300 206" aria-hidden="true">
+<defs><linearGradient id="hTaro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E2D2FA"/><stop offset="1" stop-color="#B38DE6"/></linearGradient><linearGradient id="hGlass" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".22" stop-color="#fff" stop-opacity="0"/><stop offset=".85" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".5"/></linearGradient><radialGradient id="hPearl" cx=".34" cy=".3" r=".75"><stop offset="0" stop-color="#9A7488"/><stop offset=".4" stop-color="#3C2331"/><stop offset="1" stop-color="#1D0F18"/></radialGradient><clipPath id="hCup"><path d="M104 60H196L184 176Q183 184 175 184H125Q117 184 116 176Z"/></clipPath></defs>
+<use href="#star" x="36" y="34" width="22" height="22" fill="#fff"/><use href="#star" x="246" y="56" width="28" height="28" fill="#FFB3D9"/><use href="#star" x="66" y="104" width="14" height="14" fill="#fff"/><use href="#star" x="224" y="20" width="14" height="14" fill="#fff"/>
+<path d="M232 112c-6-4-10-8-10-13 0-3 2-6 5-6 2 0 4 1 5 3 1-2 3-3 5-3 3 0 5 3 5 6 0 5-4 9-10 13Z" fill="#FF8CC6"/>
+<g transform="rotate(11 160 70)"><rect x="152" y="-4" width="16" height="150" rx="8" fill="#FF9ACB"/><rect x="156" width="4" height="140" rx="2" fill="#fff" opacity=".55"/></g>
+<g clip-path="url(#hCup)"><path d="M100 72Q126 64 150 72T200 72V190H100Z" fill="url(#hTaro)" opacity=".94"/><rect x="112" y="76" width="22" height="22" rx="6" transform="rotate(-14 123 87)" fill="#fff" opacity=".55" stroke="#fff"/><rect x="160" y="74" width="20" height="20" rx="6" transform="rotate(12 170 84)" fill="#fff" opacity=".5" stroke="#fff"/><g fill="url(#hPearl)"><circle cx="128" cy="176" r="8"/><circle cx="145" cy="177" r="8"/><circle cx="162" cy="176" r="8"/><circle cx="177" cy="173" r="7"/><circle cx="136" cy="162" r="8"/><circle cx="153" cy="163" r="8"/><circle cx="170" cy="160" r="7.5"/><circle cx="121" cy="162" r="7"/><circle cx="145" cy="148" r="7.5"/></g></g>
+<path d="M104 60H196L184 176Q183 184 175 184H125Q117 184 116 176Z" fill="url(#hGlass)" stroke="#fff" stroke-width="3"/>
+<ellipse cx="150" cy="60" rx="46" ry="7" fill="rgba(255,255,255,.4)" stroke="#fff" stroke-width="3"/>
+<path d="M127 108a9 9 0 0 1 3-17 12 12 0 0 1 22-4 10 10 0 0 1 18 7 8 8 0 0 1-1 14Z" fill="#fff"/>
+<g fill="#35205A"><ellipse cx="140" cy="99" rx="2.6" ry="3.4"/><ellipse cx="158" cy="99" rx="2.6" ry="3.4"/></g><circle cx="141" cy="97.6" r=".9" fill="#fff"/><circle cx="159" cy="97.6" r=".9" fill="#fff"/>
+<g fill="#FFB3D9"><ellipse cx="134" cy="104" rx="4" ry="2.4"/><ellipse cx="164" cy="104" rx="4" ry="2.4"/></g>
+<path d="M146 103.5q3 3 6 0" stroke="#35205A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<path d="M40 204c-18 0-22-24-4-28-2-18 22-26 34-14 6-16 32-18 40-2 10-12 32-10 38 4 4-2 8-2 12-1 8-14 32-14 38 2 14-10 36-2 34 16 18 2 20 24 2 24Z" fill="#fff"/>
+<path d="M52 204c30-10 170-10 196 0Z" fill="#E7DCFF"/>
+</svg>
+<h2>Bubble tea, <em>built by you.</em></h2>
+<p>Choose the tea, sweetness, ice and toppings. Watch your cup fill up, then pick it up in Box Hill or Glen Waverley.</p>
+<div class="btnrow"><button class="btn btn-main" type="button" data-go="build">Start building <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="btn btn-soft" type="button" data-go="stores">Stores &amp; hours</button></div>
+</div>
+<div class="status"><span class="pill"><i class="dot" id="nowDot"></i><span id="nowTxt">Box Hill · open today</span></span><span class="pill">Pick-up only</span></div>
+<div class="sec-h"><h2 id="menuH">Signature cups</h2><span class="zh" lang="zh-Hans">招牌</span></div>
+<div class="chips" role="group" aria-label="Filter drinks"><button class="chip" type="button" aria-pressed="true" data-f="all">All</button><button class="chip" type="button" aria-pressed="false" data-f="milk">Milk tea</button><button class="chip" type="button" aria-pressed="false" data-f="sig">Signatures</button><button class="chip" type="button" aria-pressed="false" data-f="fresh">Light &amp; fresh</button></div>
+<ul class="drinks" id="drinks" aria-labelledby="menuH"></ul>
+<p class="note">Sample prices in AUD for this concept demo. Regular size, 500 ml.</p>
+<div class="sec-h"><h2>How pick-up works</h2><span class="zh" lang="zh-Hans">自取</span></div>
+<ol class="how">
+<li><div><b>Build it in the app</b><span>Every cup is made to your sugar and ice levels.</span></div></li>
+<li><div><b>Choose a pick-up time</b><span>Pick a store and a 15-minute window that suits you.</span></div></li>
+<li><div><b>Say your name at the counter</b><span>Pay in store. Your cup is sealed and waiting, still cold.</span></div></li>
+</ol>
+</section>
+
+<section class="view build" id="v-build" role="tabpanel" aria-labelledby="t-build" hidden>
+<div class="bhead"><h2 tabindex="-1">Build your drink<span class="zh" lang="zh-Hans">定制</span></h2><button class="ghost" id="resetBtn" type="button">Start over</button></div>
+<div class="stage" id="stage">
+<canvas id="cup" aria-hidden="true"></canvas>
+<svg class="spk" style="left:9%;top:14%" aria-hidden="true"><use href="#star"/></svg>
+<svg class="spk p" style="left:18%;top:52%;width:16px;height:16px;animation-delay:-1.4s" aria-hidden="true"><use href="#star"/></svg>
+<svg class="spk" style="right:16%;bottom:24%;animation-delay:-2.2s;width:18px;height:18px" aria-hidden="true"><use href="#star"/></svg>
+<div class="price" id="priceBubble" aria-hidden="true"><div><b id="priceBig">$7.50</b><small>sample</small></div></div>
+<p class="tip" id="tip">Tap any option below — the cup changes as you go.</p>
+</div>
+<p class="summary" id="summary" aria-live="polite"></p>
+<div class="steps" role="tablist" aria-label="Drink options">
+<button type="button" role="tab" id="st-tea" aria-controls="sp-tea" aria-selected="true"><b>1</b>Tea</button>
+<button type="button" role="tab" id="st-sugar" aria-controls="sp-sugar" aria-selected="false" tabindex="-1"><b>2</b>Sugar</button>
+<button type="button" role="tab" id="st-ice" aria-controls="sp-ice" aria-selected="false" tabindex="-1"><b>3</b>Ice</button>
+<button type="button" role="tab" id="st-tops" aria-controls="sp-tops" aria-selected="false" tabindex="-1"><b>4</b>Extras</button>
+</div>
+<div class="panel">
+<div role="tabpanel" id="sp-tea" aria-labelledby="st-tea"><fieldset><legend class="vh">Tea base</legend><div class="teas" id="o-tea"></div></fieldset><p class="hint">Milk tea, taro and brown sugar use fresh milk; jasmine and oolong are served clear.</p></div>
+<div role="tabpanel" id="sp-sugar" aria-labelledby="st-sugar" hidden><fieldset><legend class="vh">Sugar level</legend><div class="sugar" id="o-sugar"></div></fieldset><p class="hint" id="sugarHint"></p></div>
+<div role="tabpanel" id="sp-ice" aria-labelledby="st-ice" hidden><fieldset><legend class="vh">Ice</legend><div class="ices" id="o-ice"></div></fieldset><p class="hint">Less ice means more tea in the same cup.</p></div>
+<div role="tabpanel" id="sp-tops" aria-labelledby="st-tops" hidden><fieldset><legend class="vh">Toppings — add as many as you like</legend><div class="tops" id="o-top"></div></fieldset></div>
+</div>
+<div class="addbar"><button class="btn btn-soft" id="nextBtn" type="button">Next: Sugar</button><button class="btn btn-main" id="addBtn" type="button">Add · <span id="addPrice">$7.50</span></button></div>
+</section>
+
+<section class="view" id="v-stores" role="tabpanel" aria-labelledby="t-stores" hidden>
+<div class="sec-h"><h2 tabindex="-1">Two stores, one cloud</h2><span class="zh" lang="zh-Hans">门店</span></div>
+<article class="store" id="s-bh">
+<svg class="map" viewBox="0 0 360 132" aria-hidden="true"><rect width="360" height="132" fill="#EFE8FF"/><g stroke="#fff" fill="none"><path d="M-10 92C80 70 160 118 370 64" stroke-width="16"/><path d="M96-10L132 142M250-10L226 142" stroke-width="11"/><path d="M0 30H360" stroke-width="6"/></g><rect x="18" y="44" width="58" height="30" rx="10" fill="#E2F2D8"/><rect x="270" y="86" width="70" height="34" rx="12" fill="#E2F2D8"/><use href="#pin" x="158" y="20" width="40" height="56" fill="#6A4C93"/><text x="300" y="22" font-family="Baloo 2,sans-serif" font-size="12" font-weight="600" fill="#5B4384" text-anchor="middle">to the station</text></svg>
+<div class="body"><h3>Box Hill</h3><p class="where">Box Hill, VIC · a short walk from the station · <span id="bhNow"></span></p>
+<table class="hours" aria-label="Box Hill opening hours"><tbody><tr data-days="1,2,3,4"><th scope="row">Mon – Thu</th><td>11am – 9:30pm</td></tr><tr data-days="5,6"><th scope="row">Fri – Sat</th><td>11am – 11pm</td></tr><tr data-days="0"><th scope="row">Sun</th><td>11am – 9pm</td></tr></tbody></table>
+<div class="btnrow"><button class="btn btn-main" type="button" data-pick="bh">Pick up here</button><a class="btn btn-soft" href="tel:0355500128">(03) 5550 0128</a></div></div>
+</article>
+<article class="store" id="s-gw">
+<svg class="map" viewBox="0 0 360 132" aria-hidden="true"><rect width="360" height="132" fill="#FFE9F4"/><g stroke="#fff" fill="none"><path d="M-10 50H370" stroke-width="15"/><path d="M60-10C90 60 70 100 110 142M280-10L300 142" stroke-width="10"/></g><circle cx="210" cy="104" r="22" fill="#D9EEFF"/><rect x="300" y="68" width="48" height="40" rx="14" fill="#E2F2D8"/><rect x="130" y="70" width="40" height="14" rx="7" fill="#FFD1E8"/><use href="#pin" x="176" y="-2" width="40" height="56" fill="#FF6FB5"/><text x="210" y="108" font-family="Baloo 2,sans-serif" font-size="11" font-weight="600" fill="#5B4384" text-anchor="middle">lake</text></svg>
+<div class="body"><h3>Glen Waverley</h3><p class="where">Glen Waverley, VIC · late nights on Fri &amp; Sat · <span id="gwNow"></span></p>
+<table class="hours" aria-label="Glen Waverley opening hours"><tbody><tr data-days="1,2,3,4"><th scope="row">Mon – Thu</th><td>11:30am – 9pm</td></tr><tr data-days="5,6"><th scope="row">Fri – Sat</th><td>11:30am – 10:30pm</td></tr><tr data-days="0"><th scope="row">Sun</th><td>11:30am – 9pm</td></tr></tbody></table>
+<div class="btnrow"><button class="btn btn-main" type="button" data-pick="gw">Pick up here</button><a class="btn btn-soft" href="tel:0355500391">(03) 5550 0391</a></div></div>
+</article>
+<div class="sec-h"><h2>Good to know</h2><span class="zh" lang="zh-Hans">常见问题</span></div>
+<div class="faq">
+<details><summary>How sweet is 50%?</summary><p>Half of our standard syrup. Most regulars land on 25–50%. Brown sugar drinks carry their own syrup, so 0% still tastes sweet.</p></details>
+<details><summary>Can I swap to oat milk?</summary><p>Yes, for +$0.80 (sample price). Ask at the counter when you pick up; this demo builder uses our standard fresh milk.</p></details>
+<details><summary>What are the pearls made of?</summary><p>Tapioca starch, water and brown sugar, cooked in small batches through the day so they stay soft and chewy.</p></details>
+<details><summary>Allergens?</summary><p>Our drinks can contain milk, soy, egg (pudding) and gluten, and everything is made on shared equipment. Please ask staff before ordering if you have an allergy.</p></details>
+<details><summary>Group or party orders?</summary><p>For 10+ cups, email <a href="mailto:hello@example.com">hello@example.com</a> a day ahead and we’ll have them sealed and boxed.</p></details>
+</div>
+</section>
+</main>
+
+<footer class="appfoot"><span class="fname" data-brand>Pearl Cloud</span><p><span class="zh" lang="zh-Hans">云珠</span> · Bubble tea in Box Hill &amp; Glen Waverley, VIC</p><p>A fictional business in a concept demo. Sample prices; nothing here can be ordered.</p></footer>
+
+<div class="fade" aria-hidden="true"></div>
+<nav class="tabbar" aria-label="App sections"><div class="tabs" role="tablist" aria-label="App sections">
+<button type="button" role="tab" id="t-menu" aria-controls="v-menu" aria-selected="true" data-view="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1.4 12a1.6 1.6 0 0 1-1.6 1.4H9a1.6 1.6 0 0 1-1.6-1.4Z" fill="currentColor" opacity=".25"/><path d="M6 8h12l-1.4 12a1.6 1.6 0 0 1-1.6 1.4H9a1.6 1.6 0 0 1-1.6-1.4ZM5 8h14M13 8l2-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="17" r="1.3" fill="currentColor"/><circle cx="13.5" cy="18" r="1.3" fill="currentColor"/></svg>Menu</button>
+<button type="button" role="tab" id="t-build" aria-controls="v-build" aria-selected="false" data-view="build" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5q1 6.5 7.5 7.5-6.5 1-7.5 7.5-1-6.5-7.5-7.5 6.5-1 7.5-7.5Z" fill="currentColor" fill-opacity=".25" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M19 15.5q.4 2.6 3 3-2.6.4-3 3-.4-2.6-3-3 2.6-.4 3-3Z" fill="currentColor"/></svg>Build</button>
+<button type="button" role="tab" id="t-stores" aria-controls="v-stores" aria-selected="false" data-view="stores" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c-4.6-4.9-7-8.6-7-11.8a7 7 0 0 1 14 0C19 13.4 16.6 17.1 12 22Z" fill="currentColor" fill-opacity=".25" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>Stores</button>
+</div></nav>
+
+<div class="sheetwrap" id="cartWrap" hidden>
+<div class="scrim" data-close></div>
+<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cartH">
+<div class="grab" aria-hidden="true"></div>
+<div class="sheet-h"><h2 id="cartH" tabindex="-1">Your order</h2><button class="x" type="button" data-close aria-label="Close order">×</button></div>
+<ul class="items" id="items"></ul>
+<div id="checkout">
+<h3 id="storeL">Pick up from</h3>
+<div class="seg" role="radiogroup" aria-labelledby="storeL"><label class="opt"><input type="radio" name="store" value="bh" checked><span class="face">Box Hill</span></label><label class="opt"><input type="radio" name="store" value="gw"><span class="face">Glen Waverley</span></label></div>
+<h3 id="timeL">Pick up at</h3>
+<div class="seg" id="times" role="radiogroup" aria-labelledby="timeL"></div>
+<div class="total"><span>Total (pay in store)</span><b id="total">$0.00</b></div>
+<button class="btn btn-main" id="sendBtn" type="button">Send order to the store</button>
+<p class="fine">Demo only — no order is placed and nothing is charged.</p>
+</div>
+<div class="done" id="done" hidden tabindex="-1"></div>
+</div>
+</div>
+</div>
+</div>
+
+<aside class="side side-r" aria-label="Good to know">
+<div class="notes">
+<p class="snote" style="--r:-4deg"><b>Open today</b><span id="sideHours">11am – 9:30pm</span><small>Box Hill hours · Glen Waverley opens 30 min later</small></p>
+<p class="snote" style="--r:3deg;margin-left:40px;background:linear-gradient(160deg,#FFF0F8,#FFD6EB)"><b>Sweet your way</b><span>0 · 25 · 50 · 75 · 100%</span><small>Every cup made to your sugar and ice.</small></p>
+<p class="snote" style="--r:-2deg;margin-left:12px;background:linear-gradient(160deg,#F6F1FF,#E4DAFF)"><b>Toppings</b><span>Pearls, jelly, pudding, red bean, cheese foam</span></p>
+<p class="snote" style="--r:4deg;margin-left:56px"><b>Please note</b><small>Fictional shop, sample prices — a concept demo.</small></p>
+</div>
+</aside>
+<p class="vh" id="sr" aria-live="polite"></p>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = matchMedia("(prefers-reduced-motion: reduce)"), reduced = () => RM.matches;
+const ZH = t => `<span class="zh" lang="zh-Hans">${t}</span>`;
+const money = n => "$" + n.toFixed(2);
+const TEAS = {
+jasmine: { n: "Jasmine green tea", s: "Jasmine", zh: "茉莉绿茶", p: 6.2, c: [220, 230, 164] },
+oolong: { n: "Oolong", s: "Oolong", zh: "乌龙", p: 6.4, c: [211, 154, 85] },
+milk: { n: "Black milk tea", s: "Milk tea", zh: "奶茶", p: 6.6, c: [216, 174, 133] },
+taro: { n: "Taro", s: "Taro", zh: "芋头", p: 7.2, c: [201, 168, 236] },
+brown: { n: "Brown sugar milk", s: "Brown sugar", zh: "黑糖", p: 7.4, c: [240, 228, 208], sw: "#A8622E", tiger: 1 }
+};
+const TOPS = {
+pearls: { n: "pearls", l: "Pearls", zh: "珍珠", p: .9, c: "#3C2331", v: "--pearl" },
+jelly: { n: "coconut jelly", l: "Coconut jelly", zh: "椰果", p: .9, c: "#F4F1E4", v: "--jelly" },
+pudding: { n: "pudding", l: "Pudding", zh: "布丁", p: 1.2, c: "#F2C24F", v: "--pud" },
+bean: { n: "red bean", l: "Red bean", zh: "红豆", p: 1, c: "#8E2F3A", v: "--bean" },
+foam: { n: "cheese foam", l: "Cheese foam", zh: "芝士奶盖", p: 1.5, c: "#FFF3D6", v: "--foam", x: " · lightly salted cream cap" }
+};
+const SUGAR = { 0: ["无糖", "Just the tea. Brown sugar drinks stay a little sweet."], 25: ["微糖", "Barely sweet — lets the tea lead."], 50: ["半糖", "Half sweet — our most-picked level. Watch the cup’s smile."], 75: ["少糖", "Sweet, but not all the way."], 100: ["全糖", "The full classic. The cup approves."] };
+const ICE = { none: ["No ice", "去冰", 0], less: ["Less ice", "少冰", 3], regular: ["Regular ice", "正常冰", 6] };
+const PRESETS = [
+["Cloud Nine Milk Tea", "珍珠奶茶", "House black tea, fresh milk and slow-cooked pearls. Start here.", "milk", "#F4E6D8", "milk", 50, "regular", ["pearls"]],
+["Taro Daydream", "芋头布丁", "Real taro, silky egg pudding and pearls. Thick and nutty.", "sig", "#EEE2FF", "taro", 50, "less", ["pudding", "pearls"]],
+["Brown Sugar Tiger", "黑糖珍珠", "Warm brown-sugar syrup streaked down fresh milk, pearls and cheese foam.", "sig", "#F4E9DC", "brown", 50, "less", ["pearls", "foam"]],
+["Jasmine Coconut Cloud", "茉莉椰果", "Fragrant jasmine green tea over coconut jelly. Lightly sweet.", "fresh", "#EEF4DA", "jasmine", 25, "regular", ["jelly"]],
+["Oolong Cheese Cloud", "芝士乌龙", "Roasty oolong under a salted cheese-foam cap. Sip it unstirred.", "fresh", "#F6E4CF", "oolong", 25, "less", ["foam"]],
+["Red Bean Milk Tea", "红豆奶茶", "Milk tea with sweet simmered red beans. A cosy classic.", "milk", "#F6E1E1", "milk", 50, "regular", ["bean"]]
+].map(a => ({ name: a[0], zh: a[1], d: a[2], cat: a[3], bg: a[4], tea: a[5], sugar: a[6], ice: a[7], tops: a[8] }));
+let state = { tea: "milk", sugar: 50, ice: "regular", tops: ["pearls"] };
+const cart = [];
+const priceOf = s => s.tops.reduce((a, t) => a + TOPS[t].p, TEAS[s.tea].p);
+const rgbS = c => `rgb(${c.map(Math.round)})`;
+const presetName = s => (PRESETS.find(p => p.tea === s.tea && p.tops.length === s.tops.length && p.tops.every(t => s.tops.includes(t))) || { name: "Your " + TEAS[s.tea].s + " cup" }).name;
+const cupSvg = s => `<svg viewBox="0 0 64 84" style="--tea:${rgbS(TEAS[s.tea].c)};${s.tops.map(t => TOPS[t].v + ":1").join(";")}" aria-hidden="true"><use href="#mc"/></svg>`;
+const say = m => { const el = $("#sr"); el.textContent = ""; setTimeout(() => el.textContent = m, 30); };
+const topsTxt = s => s.tops.length ? s.tops.map(k => TOPS[k].n).join(", ") : "no toppings";
+/* build the menu + option inputs from data */
+$("#drinks").innerHTML = PRESETS.map((p, i) => `<li class="drink" data-cat="${p.cat}"><span class="cupw" style="--bg:${p.bg}">${cupSvg(p)}</span><div><h3>${p.name}${ZH(p.zh)}</h3><p>${p.d}</p><span class="pr">${money(priceOf(p))}</span></div><button class="build-it" type="button" data-preset="${i}" aria-label="Build ${p.name}">Build</button></li>`).join("");
+const radio = (name, v, face, cls = "") => `<label class="opt ${cls}"><input type="${name === "top" ? "checkbox" : "radio"}" name="${name}" value="${v}"><span class="face">${face}</span></label>`;
+const cubes = n => `<svg viewBox="0 0 52 30" aria-hidden="true">${n ? [[4, 9, -12], [19, 4, 8], [33, 11, -6]].slice(0, n).map(([x, y, r]) => `<rect x="${x + (n === 2 ? 7 : 0)}" y="${y}" width="15" height="15" rx="4" transform="rotate(${r} ${x + 7} ${y + 7})" fill="#E9F6FF" stroke="#8FA8E8" stroke-width="2"/>`).join("") : '<path d="M8 26h36" stroke="#B9A1FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>'}</svg>`;
+$("#o-tea").innerHTML = Object.entries(TEAS).map(([k, t]) => radio("tea", k, `<span class="sw" style="--c:${t.sw || rgbS(t.c)}"></span><span class="t">${t.s}</span>${ZH(t.zh)}`, "tea")).join("");
+$("#o-sugar").innerHTML = [0, 25, 50, 75, 100].map(v => radio("sugar", v, `<b>${v}%</b>${ZH(SUGAR[v][0])}`)).join("");
+$("#o-ice").innerHTML = Object.entries(ICE).map(([k, v], i) => radio("ice", k, `${cubes(i ? i + 1 : 0)}<b>${v[0]}</b>${ZH(v[1])}`, "ice")).join("");
+$("#o-top").innerHTML = Object.entries(TOPS).map(([k, t]) => radio("top", k, `<span class="ic" style="--c:${t.c}"></span><b>${t.l}</b><small>${ZH(t.zh)}+${money(t.p)}${t.x || ""}</small>`, "top")).join("");
+/* views */
+const screen = $("#screen"), tabBtns = $$(".tabs [role=tab]");
+function showView(name, focus) {
+tabBtns.forEach(b => { const on = b.dataset.view === name; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; });
+$$("main .view").forEach(v => v.hidden = v.id !== "v-" + name);
+screen.dataset.view = name; screen.scrollTop = 0; scrollTo(0, 0);
+if (name === "build") Cup.wake();
+if (focus) { const h = $(`#v-${name} h2`); h && h.focus({ preventScroll: true }); }
+}
+function tabKeys(list, act) {
+list.forEach((b, i) => b.addEventListener("keydown", e => {
+const n = list.length, j = { ArrowRight: i + 1, ArrowDown: i + 1, ArrowLeft: i - 1 + n, ArrowUp: i - 1 + n, Home: 0, End: n - 1 }[e.key];
+if (j === undefined) return;
+e.preventDefault(); const t = list[j % n]; t.focus(); act(t);
+}));
+}
+tabBtns.forEach(b => b.addEventListener("click", () => showView(b.dataset.view)));
+tabKeys(tabBtns, b => showView(b.dataset.view));
+$$("[data-go]").forEach(b => b.addEventListener("click", () => showView(b.dataset.go, true)));
+$$(".chip").forEach(c => c.addEventListener("click", () => {
+$$(".chip").forEach(x => x.setAttribute("aria-pressed", x === c));
+$$("#drinks .drink").forEach(d => d.hidden = c.dataset.f !== "all" && d.dataset.cat !== c.dataset.f);
+}));
+$$("[data-preset]").forEach(b => b.addEventListener("click", () => {
+const p = PRESETS[+b.dataset.preset];
+setState({ tea: p.tea, sugar: p.sugar, ice: p.ice, tops: p.tops.slice() }, true);
+showView("build", true); say(p.name + " loaded into the builder.");
+}));
+/* builder */
+const stepBtns = $$(".steps [role=tab]"), ORDER = ["tea", "sugar", "ice", "tops"], NAMES = { tea: "Tea", sugar: "Sugar", ice: "Ice", tops: "Extras" };
+let cur = "tea";
+function showStep(k) {
+cur = k;
+stepBtns.forEach(b => { const on = b.id === "st-" + k; b.setAttribute("aria-selected", on); b.tabIndex = on ? 0 : -1; });
+ORDER.forEach(s => $("#sp-" + s).hidden = s !== k);
+const i = ORDER.indexOf(k);
+$("#nextBtn").textContent = i < 3 ? "Next: " + NAMES[ORDER[i + 1]] : "Back to tea";
+}
+stepBtns.forEach(b => b.addEventListener("click", () => showStep(b.id.slice(3))));
+tabKeys(stepBtns, b => showStep(b.id.slice(3)));
+$("#nextBtn").addEventListener("click", () => { const i = ORDER.indexOf(cur); $("#st-" + cur).classList.add("done"); showStep(ORDER[(i + 1) % 4]); });
+const val = n => ($(`input[name=${n}]:checked`) || {}).value;
+const readInputs = () => ({ tea: val("tea") || "milk", sugar: +(val("sugar") || 50), ice: val("ice") || "regular", tops: $$("input[name=top]:checked").map(i => i.value) });
+function writeInputs(s) {
+$$(".panel input").forEach(i => i.checked = i.name === "top" ? s.tops.includes(i.value) : String(s[i.name]) === i.value);
+}
+let lastPrice = 0;
+function renderUI() {
+const t = TEAS[state.tea], p = priceOf(state);
+$("#priceBig").textContent = $("#addPrice").textContent = money(p);
+if (lastPrice && p !== lastPrice) { const pb = $("#priceBubble"); pb.classList.remove("pop"); void pb.offsetWidth; pb.classList.add("pop"); }
+lastPrice = p;
+$("#summary").innerHTML = `<b>${t.n}</b> ${ZH(t.zh)} · ${state.sugar}% sugar · ${ICE[state.ice][0].toLowerCase()} · ${topsTxt(state)}`;
+$("#sugarHint").textContent = SUGAR[state.sugar][1];
+}
+function setState(next, write) {
+const prev = state; state = next;
+if (write) writeInputs(next);
+renderUI(); Cup.sync(prev, next);
+$("#tip").style.opacity = "0";
+}
+writeInputs(state);
+$$(".panel input").forEach(i => i.addEventListener("change", () => setState(readInputs())));
+$("#resetBtn").addEventListener("click", () => {
+setState({ tea: "milk", sugar: 50, ice: "regular", tops: [] }, true); showStep("tea");
+stepBtns.forEach(b => b.classList.remove("done")); say("Builder reset: milk tea, half sweet, regular ice, no toppings.");
+});
+/* cart */
+const count = () => cart.reduce((a, i) => a + i.qty, 0);
+function renderCart() {
+const n = count();
+$("#cartN").textContent = n;
+$("#cartBtn").setAttribute("aria-label", `Your order: ${n} ${n === 1 ? "drink" : "drinks"}`);
+$("#checkout").hidden = !cart.length;
+if (!cart.length) { $("#items").innerHTML = '<li class="empty">No drinks yet. Build one and tap <b>Add</b>.</li>'; return; }
+$("#items").innerHTML = cart.map((it, i) => `<li class="item">${cupSvg(it)}<div><b>${it.name}</b><small>${TEAS[it.tea].s} · ${it.sugar}% sugar · ${ICE[it.ice][0].toLowerCase()} · ${topsTxt(it)}</small><small><b>${money(it.price * it.qty)}</b></small></div><div class="qty"><button type="button" data-q="-1" data-i="${i}" aria-label="One less ${it.name}">−</button><span>${it.qty}</span><button type="button" data-q="1" data-i="${i}" aria-label="One more ${it.name}">+</button></div></li>`).join("");
+$("#total").textContent = money(cart.reduce((a, i) => a + i.price * i.qty, 0));
+renderTimes();
+}
+$("#items").addEventListener("click", e => {
+const b = e.target.closest("button[data-q]"); if (!b) return;
+const i = +b.dataset.i, it = cart[i]; it.qty += +b.dataset.q;
+if (it.qty <= 0) { cart.splice(i, 1); say(it.name + " removed."); }
+renderCart();
+const again = $(`#items button[data-i="${i}"][data-q="${b.dataset.q}"]`); (again || $("#cartH")).focus();
+});
+$("#addBtn").addEventListener("click", () => {
+const s = { tea: state.tea, sugar: state.sugar, ice: state.ice, tops: state.tops.slice() }, key = JSON.stringify(s);
+const f = cart.find(it => it.key === key);
+if (f) f.qty++; else cart.push({ key, name: presetName(s), ...s, price: priceOf(s), qty: 1 });
+renderCart(); Cup.seal(); fly(s);
+say(`${presetName(s)} added. ${count()} in your order.`);
+});
+function fly(s) {
+const btn = $("#cartBtn"), bump = () => { btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop"); };
+if (reduced() || !Element.prototype.animate) return bump();
+const a = $("#stage").getBoundingClientRect(), b = btn.getBoundingClientRect(), w = document.createElement("div");
+w.className = "flyer"; w.innerHTML = cupSvg(s);
+const x0 = a.left + a.width / 2 - 22, y0 = a.top + a.height / 2 - 29, dx = b.left + b.width / 2 - 22 - x0, dy = b.top + b.height / 2 - 29 - y0;
+w.style.left = x0 + "px"; w.style.top = y0 + "px"; document.body.appendChild(w);
+w.animate([{ transform: "scale(1.6)" }, { transform: `translate(${dx * .45}px,${dy * .45 - 90}px) scale(1.2) rotate(-12deg)`, offset: .5 }, { transform: `translate(${dx}px,${dy}px) scale(.4) rotate(8deg)`, opacity: .2 }], { duration: 720, easing: "cubic-bezier(.45,0,.3,1)" }).onfinish = () => { w.remove(); bump(); };
+}
+const wrap = $("#cartWrap");
+let lastFocus = null;
+function openCart() { lastFocus = document.activeElement; $("#done").hidden = true; renderCart(); wrap.hidden = false; $("#cartH").focus(); }
+function closeCart() { wrap.hidden = true; lastFocus && lastFocus.focus && lastFocus.focus(); }
+$("#cartBtn").addEventListener("click", openCart);
+$$("[data-close]", wrap).forEach(b => b.addEventListener("click", closeCart));
+wrap.addEventListener("keydown", e => {
+if (e.key === "Escape") { e.preventDefault(); return closeCart(); }
+if (e.key !== "Tab") return;
+const f = $$("button,input:checked,a[href]", wrap).filter(x => x.offsetParent), first = f[0], last = f[f.length - 1];
+if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
+$$("[data-pick]").forEach(b => b.addEventListener("click", () => {
+$$("input[name=store]").forEach(i => i.checked = i.value === b.dataset.pick);
+if (cart.length) return openCart();
+showView("build", true); say(`Store set to ${STORES[b.dataset.pick].name}. Build a drink, then open your order.`);
+}));
+$$("input[name=store]").forEach(i => i.addEventListener("change", renderTimes));
+/* hours + pick-up slots (visitor's local time) */
+const wk = (a, b, c) => ({ 0: c, 1: a, 2: a, 3: a, 4: a, 5: b, 6: b });
+const STORES = { bh: { name: "Box Hill", h: wk([660, 1290], [660, 1380], [660, 1260]) }, gw: { name: "Glen Waverley", h: wk([690, 1260], [690, 1350], [690, 1260]) } };
+const fmt = m => { const h = Math.floor(m / 60) % 24, mm = m % 60; return (h % 12 || 12) + (mm ? ":" + String(mm).padStart(2, "0") : "") + (h >= 12 ? "pm" : "am"); };
+const nowMin = () => { const d = new Date(); return [d.getDay(), d.getHours() * 60 + d.getMinutes()]; };
+function openState(id) {
+const [day, now] = nowMin(), h = STORES[id].h[day];
+if (now >= h[0] && now < h[1]) return [1, "open now until " + fmt(h[1])];
+return [0, now < h[0] ? "closed · opens " + fmt(h[0]) : `closed · opens ${fmt(STORES[id].h[(day + 1) % 7][0])} tomorrow`];
+}
+function renderHours() {
+const [day] = nowMin();
+["bh", "gw"].forEach(id => {
+const t = openState(id)[1]; $(`#${id}Now`).textContent = t[0].toUpperCase() + t.slice(1);
+$$(`#s-${id} tr`).forEach(tr => tr.classList.toggle("today", tr.dataset.days.split(",").includes(String(day))));
+});
+const b = openState("bh"), h = STORES.bh.h[day];
+$("#nowTxt").textContent = "Box Hill · " + b[1]; $("#nowDot").classList.toggle("off", !b[0]);
+$("#sideHours").textContent = fmt(h[0]) + " – " + fmt(h[1]);
+}
+function renderTimes() {
+const id = val("store") || "bh", [day, now] = nowMin(), h = STORES[id].h[day], out = [];
+for (let t = Math.ceil(Math.max(now + 15, h[0] + 15) / 15) * 15; t <= h[1] - 15 && out.length < 4; t += 15) out.push((out.length ? "" : "Today ") + fmt(t));
+if (!out.length) for (let t = STORES[id].h[(day + 1) % 7][0] + 15; out.length < 4; t += 15) out.push((out.length ? "" : "Tomorrow ") + fmt(t));
+$("#times").innerHTML = out.map((l, i) => `<label class="opt"><input type="radio" name="time" value="${i}"${i ? "" : " checked"}><span class="face">${l}</span></label>`).join("");
+}
+const esc = s => String(s).replace(/[&<>"']/g, c => "&#" + c.charCodeAt(0) + ";");
+$("#sendBtn").addEventListener("click", () => {
+const store = STORES[val("store") || "bh"].name, day = /^Tomorrow/.test($("#times .face").textContent) ? "tomorrow" : "today";
+const t = (($("input[name=time]:checked") || {}).parentNode || { textContent: "" }).textContent.replace(/^\D+ /, "");
+const n = count(), d = $("#done");
+d.innerHTML = `<b>Demo only — nothing was ordered.</b><p>On a real ${esc(window.DemoKit ? DemoKit.brand : "Pearl Cloud")} app, ${n} ${n === 1 ? "drink" : "drinks"} would now go to the ${store} store for pick-up ${day} at ${t}, and you’d pay at the counter.</p>`;
+d.hidden = false; d.focus();
+window.DemoKit && DemoKit.toast("Demo only — no order was placed and nothing was charged.");
+});
+/* the cup: Canvas 2D + a small physics sim */
+const Cup = (() => {
+const cv = $("#cup"), X = cv.getContext("2d");
+let W = 0, H = 0, DPR = 1, G = null, raf = 0, last = 0, T = 0, visible = false, started = false, bodies = [], parts = [];
+let col = TEAS.milk.c.slice(), tiger = 0, pud = 0, pudV = 0, foam = 0, foamV = 0, wave = 0, seal = 0, sealT = 0, blinkAt = 2, happy = 0;
+const SP = {}, K = {
+pearls: { n: 19, r: 9, sink: .55, drag: 2.3, rest: .5, m: 1, gap: .045 },
+bean: { n: 16, r: 5.4, sink: .6, drag: 2.6, rest: .35, m: .45, gap: .035 },
+jelly: { n: 9, r: 8.5, sink: .22, drag: 3.2, rest: .25, m: .7, gap: .06 },
+ice: { r: 15, rest: .2, m: .6, drag: 3 }
+};
+const lerp = (a, b, t) => a + (b - a) * t, has = k => state.tops.includes(k);
+const circ = (x, y, r) => { X.beginPath(); X.arc(x, y, r, 0, 7); X.fill(); };
+function rr(x, a, b, w, h, r) { x.beginPath(); x.moveTo(a + r, b); x.arcTo(a + w, b, a + w, b + h, r); x.arcTo(a + w, b + h, a, b + h, r); x.arcTo(a, b + h, a, b, r); x.arcTo(a, b, a + w, b, r); x.closePath(); }
+function sprite(r, draw) {
+const c = document.createElement("canvas"), d = Math.ceil(r * 2.4 * DPR), x = c.getContext("2d");
+c.width = c.height = d; x.scale(d / 2.4 / r, d / 2.4 / r); x.translate(1.2 * r, 1.2 * r); draw(x, r); return c;
+}
+function makeSprites() {
+const s = G.s, rg = (x, r, stops, fx = -.35, fy = -.4) => { const g = x.createRadialGradient(r * fx, r * fy, r * .1, 0, 0, r); stops.forEach((c, i) => g.addColorStop(i / (stops.length - 1), c)); return g; };
+SP.pearls = sprite(K.pearls.r * s, (x, r) => { x.fillStyle = rg(x, r, ["#A57F92", "#4A2B3C", "#1C0E16"]); x.beginPath(); x.arc(0, 0, r, 0, 7); x.fill(); x.fillStyle = "rgba(255,255,255,.75)"; x.beginPath(); x.ellipse(-r * .38, -r * .42, r * .22, r * .14, -.6, 0, 7); x.fill(); });
+SP.bean = sprite(K.bean.r * s, (x, r) => { x.fillStyle = rg(x, r, ["#C0566A", "#5E1622"], -.3, -.3); x.beginPath(); x.ellipse(0, 0, r, r * .78, 0, 0, 7); x.fill(); x.strokeStyle = "rgba(255,255,255,.55)"; x.lineWidth = r * .18; x.beginPath(); x.moveTo(-r * .45, -r * .1); x.lineTo(r * .1, -r * .35); x.stroke(); });
+SP.jelly = sprite(K.jelly.r * s, (x, r) => { x.fillStyle = "rgba(255,252,238,.78)"; x.strokeStyle = "#fff"; x.lineWidth = r * .14; rr(x, -r * .8, -r * .8, r * 1.6, r * 1.6, r * .4); x.fill(); x.stroke(); x.fillStyle = "#fff"; x.fillRect(-r * .45, -r * .5, r * .5, r * .18); });
+SP.ice = sprite(K.ice.r * s, (x, r) => { const g = x.createLinearGradient(-r, -r, r, r); g.addColorStop(0, "rgba(255,255,255,.75)"); g.addColorStop(.5, "rgba(235,245,255,.35)"); g.addColorStop(1, "rgba(210,225,255,.55)"); x.fillStyle = g; x.strokeStyle = "#fff"; x.lineWidth = r * .1; rr(x, -r * .85, -r * .85, r * 1.7, r * 1.7, r * .38); x.fill(); x.stroke(); x.lineWidth = r * .14; x.lineCap = "round"; x.beginPath(); x.moveTo(-r * .5, -r * .55); x.lineTo(r * .1, -r * .55); x.stroke(); });
+}
+function geo() {
+const ch = Math.min(H * .76, W), s = ch / 300, cx = W / 2, top = H * .53 - ch * .32, bot = top + ch * .8;
+G = { s, ch, cx, top, bot, tw: ch * .58, bw: ch * .42, ry: ch * .045, surf: top + ch * .045 };
+G.sx0 = cx + G.tw * .16; G.sy0 = bot - ch * .06; G.sx1 = cx + G.tw * .34; G.sy1 = top - ch * .25;
+const L = Math.hypot(G.sx1 - G.sx0, G.sy1 - G.sy0); G.dx = (G.sx1 - G.sx0) / L; G.dy = (G.sy1 - G.sy0) / L;
+makeSprites();
+}
+const wallX = (y, side) => G.cx + side * lerp(G.tw, G.bw, Math.max(0, Math.min(1, (y - G.top) / (G.bot - G.top)))) / 2;
+function resize() {
+const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return false;
+W = r.width; H = r.height; DPR = Math.min(devicePixelRatio || 1, 2);
+cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+const o = G; geo();
+if (o) { const k = G.ch / o.ch; bodies.forEach(b => { b.x = G.cx + (b.x - o.cx) * k; b.y = G.top + (b.y - o.top) * k; b.r *= k; }); }
+return true;
+}
+function spawn(kind, n, at) {
+const k = K[kind];
+for (let i = 0; i < n; i++) bodies.push({ kind, r: k.r * G.s * (.9 + Math.random() * .2), x: G.cx + (Math.random() - .5) * G.tw * .62, y: G.top - 30 * G.s - Math.random() * 70 * G.s, vx: (Math.random() - .5) * 50 * G.s, vy: 60 * G.s, t0: at + i * (k.gap || .08) + Math.random() * .03, rot: Math.random() * 6.28, spin: (Math.random() - .5) * 3, sq: 0, wet: false, leave: 0 });
+}
+function burst(n) { if (!reduced()) for (let i = 0; i < n; i++) parts.push({ x: G.cx + (Math.random() - .5) * G.tw * .7, y: G.top - Math.random() * 10, vx: (Math.random() - .5) * 80, vy: -60 - Math.random() * 90, life: 1, sz: (5 + Math.random() * 7) * G.s, c: Math.random() < .5 ? "#fff" : "#FFB3D9" }); }
+function sync(prev, next) {
+if (!G || !started) return;
+if (prev.tea !== next.tea) wave = Math.max(wave, 4 * G.s);
+["pearls", "bean", "jelly"].forEach(k => {
+const had = prev.tops.includes(k), hs = next.tops.includes(k), alive = bodies.some(b => b.kind === k && !b.leave);
+if (hs && (!had || !alive)) { spawn(k, K[k].n, T); burst(8); }
+if (!hs) { let c = 0; bodies.forEach(b => { if (b.kind === k && !b.leave) { if (b.t0 > T) b.leave = 3; else { b.leave = 1; b.lt = T + c++ * .035; } } }); }
+});
+const want = ICE[next.ice][2], have = bodies.filter(b => b.kind === "ice" && !b.leave).length;
+if (want > have) spawn("ice", want - have, T);
+else { let c = have - want; bodies.forEach(b => { if (c > 0 && b.kind === "ice" && !b.leave) { b.leave = 2; c--; } }); }
+if (next.tops.includes("foam") && !prev.tops.includes("foam")) burst(6);
+sealT = 0;
+reduced() ? settle() : wake();
+}
+function step(dt) {
+const g = 1900 * G.s, surf = G.surf;
+for (const b of bodies) {
+if (b.t0 > T) continue;
+if (b.leave === 1) {
+if (T < b.lt) continue;
+if (!b.up) { const q = Math.min(1, dt * 8); b.x += (G.sx0 - b.x) * q; b.y += (G.sy0 - b.y) * q; if (Math.abs(G.sx0 - b.x) + Math.abs(G.sy0 - b.y) < 8 * G.s) b.up = 1; }
+else { b.x += G.dx * 760 * G.s * dt; b.y += G.dy * 760 * G.s * dt; b.r = Math.max(b.r * .98, 5 * G.s); }
+continue;
+}
+if (b.leave === 2) { b.r -= 22 * G.s * dt; continue; }
+const inL = b.y > surf, k = K[b.kind];
+b.vy += (b.kind === "ice" ? (inL ? -.45 : 1) : (inL ? k.sink : 1)) * g * dt;
+if (inL) {
+const d = Math.exp(-k.drag * dt); b.vx *= d; b.vy *= d;
+if (!b.wet) { b.wet = true; wave = Math.min(wave + .5 * G.s, 6 * G.s); if (b.kind !== "ice" && Math.random() < .5) parts.push({ x: b.x, y: surf, vx: (Math.random() - .5) * 70, vy: -110 - Math.random() * 70, life: .7, sz: 3.2 * G.s, c: "tea" }); }
+}
+b.x += b.vx * dt; b.y += b.vy * dt; b.rot += b.spin * dt * (inL ? .4 : 1);
+if (b.sq > 0) b.sq = Math.max(0, b.sq - dt * 2.4);
+}
+for (let it = 0; it < 2; it++) {
+for (let i = 0; i < bodies.length; i++) {
+const a = bodies[i]; if (a.t0 > T || a.leave) continue;
+for (let j = i + 1; j < bodies.length; j++) {
+const b = bodies[j]; if (b.t0 > T || b.leave || (a.kind === "ice") !== (b.kind === "ice")) continue;
+const dx = b.x - a.x, dy = b.y - a.y, R = a.r + b.r, d2 = dx * dx + dy * dy;
+if (d2 < R * R && d2 > 1e-6) {
+const d = Math.sqrt(d2), nx = dx / d, ny = dy / d, pen = R - d, ma = K[a.kind].m, mb = K[b.kind].m, tm = ma + mb;
+a.x -= nx * pen * mb / tm; a.y -= ny * pen * mb / tm; b.x += nx * pen * ma / tm; b.y += ny * pen * ma / tm;
+const rv = (b.vx - a.vx) * nx + (b.vy - a.vy) * ny;
+if (rv < 0) { const J = -1.3 * rv / (1 / ma + 1 / mb); a.vx -= J * nx / ma; a.vy -= J * ny / ma; b.vx += J * nx / mb; b.vy += J * ny / mb; }
+}
+}
+}
+for (const b of bodies) {
+if (b.t0 > T || b.leave) continue;
+const r = b.r, fl = G.bot - pud, k = K[b.kind];
+if (b.kind === "ice") { const ceil = G.surf + foam + r * .8; if (b.y < ceil && b.y > G.top - 4) { b.y = ceil; if (b.vy < 0) b.vy *= -.2; } }
+if (b.y + r > fl) { const v = b.vy; b.y = fl - r; if (v > 0) { b.vy = -v * k.rest; b.vx *= .92; if (v > 160 * G.s) { b.sq = Math.min(.3, v / (2200 * G.s)); if (v > 380 * G.s) happy = Math.max(happy, .8); } } }
+if (b.y > G.top - r) {
+const xl = wallX(b.y, -1), xr = wallX(b.y, 1);
+if (b.x - r < xl) { b.x = xl + r; if (b.vx < 0) b.vx = -b.vx * k.rest; }
+if (b.x + r > xr) { b.x = xr - r; if (b.vx > 0) b.vx = -b.vx * k.rest; }
+}
+}
+}
+bodies = bodies.filter(b => b.leave !== 3 && !(b.leave === 2 && b.r <= 1) && !(b.leave === 1 && b.y < G.top - G.ch * .05));
+}
+const spring = (v, vel, t, dt, k, d) => { vel += ((t - v) * k - vel * d) * dt; return [v + vel * dt, vel]; };
+function update(dt) {
+T += dt;
+const tg = TEAS[state.tea].c, kc = 1 - Math.exp(-dt * 5);
+for (let i = 0; i < 3; i++) col[i] += (tg[i] - col[i]) * kc;
+tiger += ((TEAS[state.tea].tiger ? 1 : 0) - tiger) * kc;
+[pud, pudV] = spring(pud, pudV, has("pudding") ? G.ch * .1 : 0, dt, 90, 9);
+[foam, foamV] = spring(foam, foamV, has("foam") ? G.ch * .13 : 0, dt, 70, 8); foam = Math.max(0, foam);
+wave *= Math.exp(-dt * 1.4); happy = Math.max(0, happy - dt);
+seal += ((sealT > T ? 1 : 0) - seal) * (1 - Math.exp(-dt * 9));
+for (let i = 0; i < 3; i++) step(dt / 3);
+parts = parts.filter(p => { p.life -= dt * (p.c === "tea" ? 1.6 : .9); p.vy += 260 * dt; p.x += p.vx * dt; p.y += p.vy * dt; return p.life > 0; });
+if (T > blinkAt + .14) blinkAt = T + 2.4 + Math.random() * 2.6;
+}
+function settle() {
+bodies = bodies.filter(b => !b.leave);
+col = TEAS[state.tea].c.slice(); tiger = TEAS[state.tea].tiger ? 1 : 0;
+pud = has("pudding") ? G.ch * .1 : 0; foam = has("foam") ? G.ch * .13 : 0; pudV = foamV = wave = 0; parts = [];
+bodies.forEach(b => { b.t0 = 0; b.wet = true; if (b.y < G.top) { b.y = b.kind === "ice" ? G.surf + foam + b.r : G.bot - b.r - Math.random() * G.ch * .2; b.vx = b.vy = 0; } });
+const t0 = T; for (let i = 0; i < 420; i++) { T += 1 / 140; step(1 / 140); }
+T = t0; seal = sealT > T ? 1 : 0; draw();
+}
+const rgb = (c, k = 1) => `rgb(${Math.round(c[0] * k)},${Math.round(c[1] * k)},${Math.round(c[2] * k)})`;
+function cupPath() {
+const { s, top: t, bot: b, ry, cx } = G, tl = cx - G.tw / 2, tr = cx + G.tw / 2, bl = cx - G.bw / 2, br = cx + G.bw / 2;
+X.beginPath(); X.moveTo(tl, t); X.lineTo(bl, b - 8 * s); X.quadraticCurveTo(bl + 2 * s, b + ry * .9, cx, b + ry * .9); X.quadraticCurveTo(br - 2 * s, b + ry * .9, br, b - 8 * s); X.lineTo(tr, t); X.closePath();
+}
+function drawBody(b) {
+const sp = SP[b.kind], d = b.r * 2.4, sx = 1 + b.sq, sy = 1 - b.sq;
+X.save(); X.translate(b.x, b.y + b.r * b.sq * .8);
+if (b.kind === "jelly" || b.kind === "ice") X.rotate(b.rot);
+X.drawImage(sp, -d / 2 * sx, -d / 2 * sy, d * sx, d * sy); X.restore();
+}
+function star(x, y, r, c, a) { X.save(); X.globalAlpha = a; X.fillStyle = c; X.beginPath(); X.moveTo(x, y - r); X.quadraticCurveTo(x + r * .14, y - r * .14, x + r, y); X.quadraticCurveTo(x + r * .14, y + r * .14, x, y + r); X.quadraticCurveTo(x - r * .14, y + r * .14, x - r, y); X.quadraticCurveTo(x - r * .14, y - r * .14, x, y - r); X.fill(); X.restore(); }
+function wavy(y0, from, to, fn, close) { X.beginPath(); X.moveTo(G.cx - G.tw, close); for (let x = from; x <= to; x += 5 * G.s) X.lineTo(G.cx + x, y0 + fn(x)); X.lineTo(G.cx + G.tw, close); X.closePath(); }
+function straw(a) {
+X.save(); X.globalAlpha = a; X.lineCap = "round"; const w = 17 * G.s;
+X.strokeStyle = "#FF9ACB"; X.lineWidth = w; X.beginPath(); X.moveTo(G.sx0, G.sy0); X.lineTo(G.sx1, G.sy1); X.stroke();
+X.strokeStyle = "rgba(255,255,255,.6)"; X.lineWidth = w * .22; X.beginPath(); X.moveTo(G.sx0 - w * .2, G.sy0); X.lineTo(G.sx1 - w * .2, G.sy1 + w * .4); X.stroke(); X.restore();
+}
+function draw() {
+if (!G) return;
+const { s, cx, top, bot, tw, bw, ry, ch, surf } = G, amp = wave + (reduced() ? 0 : .7 * s);
+X.setTransform(DPR, 0, 0, DPR, 0, 0); X.clearRect(0, 0, W, H);
+X.fillStyle = "rgba(106,76,147,.16)"; X.beginPath(); X.ellipse(cx, bot + ry * 1.6, bw * .66, ry * 1.2, 0, 0, 7); X.fill();
+X.save(); cupPath(); X.fillStyle = "rgba(255,255,255,.35)"; X.fill(); X.clip();
+const lg = X.createLinearGradient(0, surf, 0, bot); lg.addColorStop(0, rgb(col.map(v => lerp(v, 255, .22)))); lg.addColorStop(1, rgb(col, .9));
+X.fillStyle = lg; wavy(surf, -tw / 2 - 4, tw / 2 + 4, x => Math.sin(x * .05 / s + T * 3.2) * amp + Math.sin(x * .11 / s - T * 2.1) * amp * .4, bot + 40 * s); X.fill();
+if (tiger > .02) {
+X.save(); X.globalAlpha = tiger * .85; X.lineCap = "round";
+for (let i = 0; i < 7; i++) {
+const sd = i % 2 ? 1 : -1, yx = surf + (i * 23 % 40) * s, x0 = cx + sd * tw * (.5 - (.16 + (i % 4) * .1) * .6), gg = X.createLinearGradient(0, surf, 0, bot);
+gg.addColorStop(0, "#5A2A0E"); gg.addColorStop(1, "rgba(122,62,23,0)");
+X.strokeStyle = gg; X.lineWidth = (7 + (i % 3) * 4) * s; X.beginPath(); X.moveTo(x0, yx);
+X.bezierCurveTo(x0 + sd * 14 * s, yx + ch * .2, x0 - sd * 18 * s, yx + ch * .35, x0 + sd * 6 * s, bot - ch * (.1 + (i % 3) * .05)); X.stroke();
+}
+X.restore();
+}
+if (pud > .5) {
+const pg = X.createLinearGradient(0, bot - pud, 0, bot); pg.addColorStop(0, "#F9DC86"); pg.addColorStop(1, "#E9B94E"); X.fillStyle = pg;
+wavy(bot - pud, -tw / 2, tw / 2, x => Math.sin(x * .09 / s + T * 5) * Math.min(3 * s, Math.abs(pudV) * .02) - Math.cos(x / tw * 3.1) * 3 * s, bot + 30 * s); X.fill();
+X.strokeStyle = "rgba(201,138,46,.8)"; X.lineWidth = 2.4 * s; X.stroke();
+}
+X.restore();
+bodies.forEach(b => { if (b.t0 <= T && b.kind !== "ice" && !(b.leave === 1 && b.up)) drawBody(b); });
+X.save(); cupPath(); X.clip();
+bodies.forEach(b => { if (b.t0 <= T && b.kind === "ice") drawBody(b); });
+if (foam > .5) {
+const fg = X.createLinearGradient(0, surf, 0, surf + foam); fg.addColorStop(0, "#FFFDF6"); fg.addColorStop(1, "#FFEFC8"); X.fillStyle = fg;
+wavy(surf + foam, -tw / 2 - 4, tw / 2 + 4, x => Math.sin(x * .12 / s + 1) * 2.6 * s + Math.sin(x * .05 / s + T) * 1.4 * s, top - 10 * s); X.fill();
+X.fillStyle = "rgba(210,180,120,.45)"; for (let i = 0; i < 14; i++) circ(cx + ((i * 37) % 100 - 50) / 100 * tw * .8, surf + 3 * s + ((i * 13) % 10) / 10 * foam * .7, 1.1 * s);
+}
+X.restore();
+straw(.62);
+bodies.forEach(b => { if (b.leave === 1 && b.up) drawBody(b); });
+X.save(); cupPath();
+const gl = X.createLinearGradient(cx - tw / 2, 0, cx + tw / 2, 0); [[0, .7], [.18, .08], [.8, 0], [1, .45]].forEach(([o, a]) => gl.addColorStop(o, `rgba(255,255,255,${a})`));
+X.fillStyle = gl; X.fill(); X.lineWidth = 3 * s; X.strokeStyle = "rgba(255,255,255,.95)"; X.stroke(); X.lineWidth = 1.2 * s; X.strokeStyle = "rgba(106,76,147,.35)"; X.stroke();
+X.strokeStyle = "rgba(255,255,255,.85)"; X.lineWidth = 5 * s; X.lineCap = "round"; X.beginPath(); X.moveTo(cx - tw * .4, top + ch * .08); X.lineTo(cx - bw * .36, bot - ch * .1); X.stroke();
+X.lineWidth = 2.4 * s; X.globalAlpha = .7; X.beginPath(); X.moveTo(cx + tw * .4, top + ch * .1); X.lineTo(cx + tw * .37, top + ch * .22); X.stroke(); X.restore();
+X.beginPath(); X.ellipse(cx, top, tw / 2, ry, 0, 0, 7); X.fillStyle = "rgba(255,255,255,.3)"; X.fill(); X.lineWidth = 3.4 * s; X.strokeStyle = "#fff"; X.stroke();
+if (seal > .02) {
+X.save(); X.globalAlpha = seal; X.beginPath(); X.ellipse(cx, top, tw / 2 + 2 * s, ry + s, 0, 0, 7);
+const sg = X.createLinearGradient(cx - tw / 2, 0, cx + tw / 2, 0); sg.addColorStop(0, "#FFD6EB"); sg.addColorStop(.5, "#fff"); sg.addColorStop(1, "#E4DAFF");
+X.fillStyle = sg; X.fill(); X.strokeStyle = "#FF9ACB"; X.lineWidth = 2 * s; X.stroke(); X.restore();
+}
+X.save(); X.beginPath(); X.rect(0, 0, W, top + ry * .2); X.clip(); straw(1); X.restore();
+/* kawaii label: its smile follows the sugar level */
+const u = s, fy = top + ch * .38;
+X.save(); X.translate(cx, fy); X.fillStyle = "rgba(255,255,255,.94)";
+X.shadowColor = "rgba(106,76,147,.25)"; X.shadowBlur = 6 * u; X.shadowOffsetY = 2 * u;
+const blobs = [[-22, 7, 13], [-5, -5, 17], [15, -1, 15], [27, 9, 10], [3, 9, 14]];
+blobs.forEach(c => circ(c[0] * u, c[1] * u, c[2] * u)); X.shadowColor = "transparent"; blobs.forEach(c => circ(c[0] * u, c[1] * u, c[2] * u));
+const blink = T > blinkAt && T < blinkAt + .14 && !reduced(), hp = happy > .05 || state.sugar === 100;
+X.fillStyle = X.strokeStyle = "#35205A"; X.lineCap = "round"; X.lineWidth = 2.4 * u;
+[-11, 11].forEach(ex => {
+if (hp) { X.beginPath(); X.moveTo((ex - 4) * u, u); X.quadraticCurveTo(ex * u, -5 * u, (ex + 4) * u, u); X.stroke(); return; }
+X.beginPath(); X.ellipse(ex * u, 0, 3.4 * u, (blink ? .5 : 4.4) * u, 0, 0, 7); X.fill();
+if (!blink) { X.fillStyle = "#fff"; circ((ex + 1.2) * u, -1.6 * u, 1.2 * u); X.fillStyle = "#35205A"; }
+});
+X.fillStyle = "rgba(255,150,196,.75)"; X.beginPath(); X.ellipse(-19 * u, 7 * u, 5 * u, 3 * u, 0, 0, 7); X.ellipse(19 * u, 7 * u, 5 * u, 3 * u, 0, 0, 7); X.fill();
+const sg2 = state.sugar / 100, mw = (3 + sg2 * 5) * u; X.lineWidth = 2 * u;
+if (!state.sugar) { X.beginPath(); X.moveTo(-3 * u, 8 * u); X.lineTo(3 * u, 8 * u); X.stroke(); }
+else if (state.sugar === 100) { X.fillStyle = "#35205A"; X.beginPath(); X.moveTo(-6 * u, 6 * u); X.quadraticCurveTo(0, 17 * u, 6 * u, 6 * u); X.closePath(); X.fill(); X.fillStyle = "#FF8CC6"; circ(0, 11 * u, 2.6 * u); }
+else { X.beginPath(); X.moveTo(-mw, 6.5 * u); X.quadraticCurveTo(0, (9.5 + sg2 * 5) * u, mw, 6.5 * u); X.stroke(); }
+X.restore();
+if (state.sugar === 100 && !reduced()) { star(cx + 36 * u, fy - 18 * u, 6 * u, "#FF8CC6", .6 + .4 * Math.sin(T * 3)); star(cx - 38 * u, fy - 20 * u, 4.5 * u, "#fff", .6 + .4 * Math.cos(T * 2.4)); }
+parts.forEach(p => { if (p.c === "tea") { X.globalAlpha = Math.max(0, p.life); X.fillStyle = rgb(col, .92); circ(p.x, p.y, p.sz); X.globalAlpha = 1; } else star(p.x, p.y, p.sz * (.5 + p.life * .5), p.c, Math.max(0, p.life)); });
+}
+function frame(t) {
+raf = 0; const dt = Math.min(.034, Math.max(.001, (t - last) / 1000)); last = t;
+update(dt); draw();
+if (visible && !document.hidden && !reduced()) raf = requestAnimationFrame(frame);
+}
+function wake() {
+if (!G && !resize()) return;
+if (!started) { started = true; state.tops.forEach(k => K[k] && spawn(k, K[k].n, T + .35)); spawn("ice", ICE[state.ice][2], T + .1); }
+if (reduced()) return settle();
+if (!raf && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); }
+}
+new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) wake(); }, { threshold: .05 }).observe(cv);
+new ResizeObserver(() => { if (started && resize()) reduced() ? settle() : draw(); }).observe(cv);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) wake(); });
+RM.addEventListener && RM.addEventListener("change", wake);
+return { sync, wake, seal() { sealT = T + 1e9; if (G) { burst(12); happy = 1.2; } reduced() ? (seal = 1, draw()) : wake(); } };
+})();
+renderUI(); renderCart(); renderHours(); setInterval(renderHours, 60000);
+})();
+</script>
+</body>
+</html>

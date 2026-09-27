@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="028">
+<meta name="demo:brand" content="Flowright Plumbing">
+<title>Flowright Plumbing — 24/7 emergency plumber, Newcastle</title>
+<meta name="description" content="Flowright Plumbing is a fictional 24/7 emergency plumber for Newcastle, Lake Macquarie and Maitland, with a problem-finder that gives honest first steps.">
+<meta name="theme-color" content="#0B2545">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,700..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --navy:#0B2545;--navy-2:#13315C;--navy-3:#1C3F70;--orange:#FF6B00;--orange-d:#C24E00;--white:#fff;--steel:#E6EBF0;--steel-2:#CBD4DE;
+  --ink:#0B2545;--ink-2:#3E4A63;--on-navy:#B8C4D6;
+  --wide:"Archivo","Arial Black",system-ui,sans-serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(18px,4vw,56px);--r:4px;
+  --hz:repeating-linear-gradient(-45deg,var(--orange) 0 14px,var(--navy) 14px 28px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--wide);font-stretch:125%;font-weight:900;margin:0;line-height:1;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:min(1280px,100% - 2*var(--gut));margin-inline:auto}
+.code{font:800 12px/1.2 var(--wide);font-stretch:125%;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-d);display:flex;align-items:center;gap:10px}
+.code::before{content:"";width:22px;height:10px;background:var(--hz);background-size:40px 40px;border-radius:1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:6px;border:2px solid var(--navy);background:var(--navy);color:#fff;font:800 16px/1.1 var(--wide);font-stretch:112%;text-decoration:none;cursor:pointer;transition:transform .12s,background .12s,box-shadow .12s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 4px 0 var(--orange)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.btn.or{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.btn.or:hover{box-shadow:0 4px 0 var(--navy)}
+.btn.line{background:transparent;color:var(--navy)}
+.btn svg{width:20px;height:20px;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.bar{position:sticky;top:0;z-index:30;background:#fff;border-bottom:2px solid var(--navy)}
+.bar .wrap{display:flex;align-items:center;gap:18px;min-height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{font:900 18px/1.05 var(--wide);font-stretch:125%;text-transform:uppercase;letter-spacing:-.01em;overflow-wrap:anywhere;min-width:0}
+.nav{display:flex;gap:2px}
+.nav a{font-weight:600;font-size:15px;text-decoration:none;padding:10px 12px;border-radius:var(--r)}
+.nav a:hover{background:var(--steel)}
+.bar-call{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:6px;background:var(--orange);color:var(--navy);font:900 16px/1 var(--wide);font-stretch:112%;text-decoration:none;white-space:nowrap}
+.bar-call i{width:8px;height:8px;border-radius:50%;background:var(--navy);box-shadow:0 0 0 3px rgba(11,37,69,.25)}
+.bar-247{display:none;align-items:center;gap:6px;font:800 12px/1 var(--wide);font-stretch:125%;letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;border:2px solid var(--navy);border-radius:var(--r);flex:none}
+.bar-247 i{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+@media (max-width:1060px){.nav{display:none}}
+@media (max-width:760px){.bar .wrap{min-height:60px}.logo span{font-size:15px}.logo svg{width:32px;height:32px}.bar-call{display:none}.bar-247{display:inline-flex}}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"intro slab" "intro side";gap:0 48px;padding:clamp(34px,6vw,76px) 0 clamp(40px,6vw,72px);align-items:start}
+.h-intro{grid-area:intro}.slab{grid-area:slab}.h-cta{grid-area:cta}.hero-grid .h-cta{display:none}.h-side{grid-area:side}
+.live{display:inline-flex;align-items:center;gap:10px;font:800 12.5px/1.3 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy)}
+.live i{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:none}
+@media (prefers-reduced-motion:no-preference){.live i{animation:pulse 2s ease-out infinite}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,0,.7)}80%,100%{box-shadow:0 0 0 12px rgba(255,107,0,0)}}
+.hero h1{font-size:clamp(34px,4.6vw,72px);line-height:.98;margin-top:22px}
+.hero h1 span{display:block}
+.hero h1 .o{color:var(--orange)}
+.hero-p{margin-top:24px;font-size:19px;line-height:1.5;color:#DCE3EC;max-width:40ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.btn.ghost:hover{box-shadow:0 4px 0 var(--orange)}
+.slab{display:grid;gap:10px;padding:26px 26px 22px;background:var(--orange);color:var(--navy);text-decoration:none;border-radius:6px;position:relative;box-shadow:10px 10px 0 rgba(0,0,0,.28);transition:transform .15s}
+.slab:hover{transform:translate(-2px,-2px)}
+.slab-k{font:900 13px/1 var(--wide);font-stretch:125%;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px}
+.slab-n{font:900 clamp(34px,4.3vw,60px)/1 var(--wide);font-stretch:112%;letter-spacing:-.02em;white-space:nowrap}
+.slab-s{font-size:16px;line-height:1.45;font-weight:500;max-width:34ch}
+.slab-go{display:flex;align-items:center;justify-content:space-between;margin-top:8px;padding-top:14px;border-top:2px solid var(--navy);font:900 15px/1 var(--wide);font-stretch:112%}
+.facts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:#DCE3EC}
+.facts li::before{content:"";width:14px;height:14px;margin-top:4px;flex:none;border:2px solid var(--orange);transform:rotate(45deg)}
+.hazard{height:14px;background:var(--hz)}
+.first{margin-top:22px;padding:18px 20px;background:var(--navy-2);border-left:6px solid var(--orange);border-radius:4px}
+.first-k{font:900 15px/1.2 var(--wide);font-stretch:112%;color:#fff}
+.first ol{margin:12px 0 0;padding:0;list-style:none;counter-reset:f;display:grid;gap:8px}
+.first li{counter-increment:f;display:flex;gap:10px;align-items:baseline;font-size:15.5px;color:#DCE3EC}
+.first li::before{content:counter(f);font:900 15px/1 var(--wide);color:var(--orange);min-width:14px}
+.first a{display:inline-flex;min-height:40px;align-items:center;margin-top:6px;font-weight:700;color:#fff;text-underline-offset:3px}
+@media (max-width:860px){.hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "slab" "cta" "side";gap:0}.hero-grid .h-cta{display:flex}.hero-grid .cta-d{display:none}.slab{margin-top:24px}.hero h1{margin-top:16px}.hero-p{font-size:17px}.h-cta .btn{width:100%}}
+@media (max-width:760px){.lv2{display:none}}
+@media (max-width:760px){.slab{padding:20px 18px 16px;box-shadow:6px 6px 0 rgba(0,0,0,.28)}.slab-n{font-size:clamp(30px,9.6vw,44px)}}
+
+/* section frame */
+.sec{padding:clamp(56px,8vw,112px) 0}
+.sec-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 48px;align-items:end;margin-bottom:clamp(26px,4vw,44px)}
+.sec-top h2{font-size:clamp(30px,4.2vw,58px);margin-top:14px}
+.sec-top p:not(.code){color:var(--ink-2);max-width:48ch}
+@media (max-width:860px){.sec-top{grid-template-columns:minmax(0,1fr)}}
+.steel{background:var(--steel)}
+
+/* triage */
+.panel{background:#fff;border:2px solid var(--navy);border-radius:6px;display:grid;grid-template-columns:260px minmax(0,1fr);overflow:hidden}
+.panel-head{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;background:var(--navy);color:#fff;font:800 13px/1.2 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase}
+.segs{display:flex;gap:6px}
+.segs i{width:40px;height:8px;background:var(--navy-3);border-radius:1px;transition:background .16s}
+.segs i.on{background:var(--orange)}
+.rail{list-style:none;margin:0;padding:18px;border-right:2px solid var(--navy);background:var(--steel);display:grid;gap:8px;align-content:start;counter-reset:r}
+.rail button{width:100%;text-align:left;display:grid;grid-template-columns:30px 1fr;gap:2px 10px;padding:10px;border:2px solid transparent;border-radius:var(--r);background:none;cursor:pointer}
+.rail button:disabled{cursor:default;opacity:.55}
+.rail button.cur{border-color:var(--navy);background:#fff;opacity:1}
+.rail b{grid-row:span 2;width:30px;height:30px;display:grid;place-items:center;border:2px solid var(--navy);border-radius:50%;font:900 13px/1 var(--wide)}
+.rail button.done b{background:var(--navy);color:#fff}
+.rail .rl{font:800 13px/1.2 var(--wide);font-stretch:112%;text-transform:uppercase;letter-spacing:.04em}
+.rail .ra{font-size:13.5px;color:var(--ink-2);line-height:1.3}
+.stage{padding:clamp(18px,3vw,34px);min-height:420px}
+.stage h3{font-size:clamp(24px,2.6vw,34px);line-height:1.1}
+.stage h3:focus{outline:none}
+.stage .sub{margin-top:8px;color:var(--ink-2)}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:22px}
+.opt{display:flex;align-items:center;gap:14px;min-height:74px;padding:14px 16px;text-align:left;border:2px solid var(--navy);border-radius:6px;background:#fff;cursor:pointer;font-weight:600;font-size:16.5px;line-height:1.25;transition:background .12s,transform .12s,box-shadow .12s}
+.opt:hover{background:var(--steel);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--navy)}
+.opt[aria-pressed=true]{background:var(--navy);color:#fff}
+.opt svg{width:30px;height:30px;flex:none}
+.stage-nav{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14.5px;color:var(--ink-2)}
+.linkbtn{border:0;background:none;padding:10px 0;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer;color:var(--navy)}
+.enter{animation:slide .18s ease-out}
+@keyframes slide{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.enter{animation:none}}
+.res-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:var(--r);font:800 12px/1 var(--wide);font-stretch:125%;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--navy)}
+.pill.hot{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.res-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:18px}
+.diag{border:2px solid var(--navy);border-radius:6px;overflow:hidden;background:var(--steel)}
+.diag svg{display:block;width:100%;height:auto}
+.diag figcaption{padding:10px 12px;font-size:13.5px;color:var(--ink-2);border-top:2px solid var(--navy);background:#fff}
+.do{margin:0;padding:0;list-style:none;counter-reset:d;display:grid;gap:12px}
+.do li{counter-increment:d;display:grid;grid-template-columns:34px 1fr;gap:12px;font-size:15.5px}
+.do li::before{content:counter(d);width:34px;height:34px;display:grid;place-items:center;background:var(--navy);color:#fff;font:900 14px/1 var(--wide);border-radius:var(--r)}
+.safety{margin-top:16px;padding:12px 14px;border-left:6px solid var(--orange);background:var(--steel);font-size:14.5px}
+.enq{margin-top:24px;padding-top:22px;border-top:2px dashed var(--steel-2);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.enq h4{grid-column:1/-1;margin:0;font:900 19px/1.2 var(--wide);font-stretch:112%}
+.enq .full{grid-column:1/-1}
+.fld{display:grid;gap:6px;font-size:13px;font-weight:700;letter-spacing:.02em}
+.fld input,.fld textarea{width:100%;min-height:48px;border:2px solid var(--navy);border-radius:var(--r);padding:10px 12px;font-size:16px;font-weight:400;background:#fff}
+.fld textarea{min-height:120px;resize:vertical;line-height:1.45}
+.enq-act{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@media (max-width:980px){.panel{grid-template-columns:minmax(0,1fr)}.rail{border-right:0;border-bottom:2px solid var(--navy);grid-template-columns:repeat(5,minmax(0,1fr));padding:10px 8px;gap:4px}.rail button{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;padding:8px 4px}.rail b{grid-row:auto}.rail .ra{display:none}.rail .rl{font-size:10px;font-stretch:100%;letter-spacing:.02em}.res-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){.segs i{width:22px}.stage{min-height:0}.opts{grid-template-columns:minmax(0,1fr);gap:10px}.opt{min-height:62px}.enq{grid-template-columns:minmax(0,1fr)}}
+
+/* services */
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--navy);border-left:2px solid var(--navy)}
+.svc li{padding:24px 22px 22px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);display:grid;gap:10px;align-content:start;position:relative;background:#fff;transition:background .12s}
+.svc li:hover{background:var(--steel)}
+.svc .sc{font:800 12px/1 var(--wide);font-stretch:125%;letter-spacing:.14em;color:var(--orange-d)}
+.svc h3{font-size:22px;line-height:1.1}
+.svc p{font-size:15.5px;color:var(--ink-2)}
+.svc .tf{font-size:13.5px;font-weight:600;color:var(--navy);padding-top:8px;border-top:1px solid var(--steel-2)}
+.svc svg{position:absolute;right:18px;top:18px;width:34px;height:34px}
+@media (max-width:980px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.svc{grid-template-columns:minmax(0,1fr)}}
+
+/* leak game */
+.leak{background:var(--navy);color:#fff;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+.leak .sec-top p:not(.code){color:var(--on-navy)}
+.leak .code{color:#FF8A3D}
+.leak-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:center}
+.rig{border:2px solid #fff;border-radius:6px;background:var(--navy-2);position:relative}
+.rig svg{display:block;width:100%;height:auto;touch-action:pan-y;cursor:grab;border-radius:4px}
+.rig svg:active{cursor:grabbing}
+.rig svg:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+.rig .hint{position:absolute;left:12px;top:10px;font:800 11.5px/1.2 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy);pointer-events:none}
+.gauges{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:#fff;border:2px solid #fff;border-radius:6px;overflow:hidden}
+.gauges>div{background:var(--navy-2);padding:14px 14px 12px;display:grid;gap:4px}
+.g-k{font:800 11px/1.2 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy)}
+.g-v{font:900 clamp(20px,1.8vw,26px)/1.05 var(--wide);font-stretch:100%;white-space:nowrap;font-variant-numeric:tabular-nums}
+.meter{height:8px;background:var(--navy-3);border-radius:1px;overflow:hidden;margin-top:4px}
+.meter i{display:block;height:100%;width:0;background:var(--orange);transition:width .16s}
+.status{margin-top:16px;font:800 20px/1.25 var(--wide);font-stretch:112%;min-height:2.5em}
+.status.ok{color:var(--orange)}
+.leak-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.leak-btns .btn{min-height:52px;background:transparent;border-color:#fff;color:#fff}
+.leak-btns .btn.or{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.leak .fine{margin-top:16px;font-size:13.5px;color:var(--on-navy)}
+@media (max-width:980px){.leak-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.gauges{grid-template-columns:1fr 1fr}.gauges>div:first-child{grid-column:1/-1}}
+
+/* areas */
+.areas{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:900px){.areas{grid-template-columns:minmax(0,1fr)}}
+.map{border:2px solid var(--navy);border-radius:6px;background:var(--steel);overflow:hidden}
+.map svg{display:block;width:100%;height:auto}
+.map figcaption{padding:10px 12px;border-top:2px solid var(--navy);font-size:13.5px;color:var(--ink-2);background:#fff}
+.check{display:grid;gap:10px;padding:20px;border:2px solid var(--navy);border-radius:6px;background:#fff}
+.check label{font:900 18px/1.2 var(--wide);font-stretch:112%}
+.check .row{display:flex;gap:10px}
+.check input{flex:1 1 0;width:0;min-width:0;min-height:52px;border:2px solid var(--navy);border-radius:var(--r);padding:0 14px;font-size:17px}
+.check .res{min-height:3em;font-size:15.5px}
+.check .res b{display:block;font:900 17px/1.3 var(--wide);font-stretch:112%}
+.zones{display:grid;gap:14px;margin-top:18px}
+.zone h3{font-size:17px;display:flex;align-items:center;gap:10px}
+.zone h3 i{width:14px;height:14px;border-radius:50%;border:3px solid var(--navy);background:var(--zc)}
+.zone p{font-size:14.5px;color:var(--ink-2);margin-top:6px}
+
+/* pricing */
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;counter-reset:s;border:2px solid var(--navy);border-radius:6px;overflow:hidden;background:#fff}
+.steps3>div{padding:24px 22px;border-right:2px solid var(--navy);position:relative}
+.steps3>div:last-child{border-right:0}
+.steps3 .n{font:900 64px/1 var(--wide);font-stretch:125%;color:var(--orange)}
+.steps3 h3{font-size:22px;margin-top:10px;line-height:1.1}
+.steps3 p{font-size:15.5px;color:var(--ink-2);margin-top:10px}
+.rates{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rate{background:var(--navy);color:#fff;border-radius:6px;padding:16px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.rate span{font-size:14.5px;color:var(--on-navy)}
+.rate b{font:900 30px/1 var(--wide);font-stretch:112%}
+.note{margin-top:14px;font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.steps3,.rates{grid-template-columns:minmax(0,1fr)}.steps3>div{border-right:0;border-bottom:2px solid var(--navy)}.steps3>div:last-child{border-bottom:0}.steps3 .n{font-size:44px}}
+
+/* hot water */
+.hw{width:100%;border-collapse:collapse;font-size:15.5px;border:2px solid var(--navy)}
+.hw th,.hw td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:2px solid var(--steel-2)}
+.hw thead th{background:var(--navy);color:#fff;font:800 12px/1.2 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase;border-bottom:0}
+.hw tbody th{font:900 17px/1.2 var(--wide);font-stretch:112%;width:22%}
+.hw tbody tr:nth-child(even){background:var(--steel)}
+.signs{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;align-items:center}
+.signs b{font:900 15px/1.2 var(--wide);font-stretch:112%;margin-right:4px}
+.signs span{padding:8px 12px;border:2px solid var(--navy);border-radius:var(--r);font-size:14.5px;font-weight:600}
+@media (max-width:760px){.hw thead{display:none}.hw,.hw tbody,.hw tr,.hw th,.hw td{display:block;width:100%}.hw tr{border-bottom:2px solid var(--navy);padding:6px 0}.hw th,.hw td{border:0;padding:6px 14px}.hw td::before{content:attr(data-l);display:block;font:800 11px/1.3 var(--wide);font-stretch:125%;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}}
+
+/* checklist */
+.cl{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:start}
+.cl-meter{background:var(--navy);color:#fff;border-radius:6px;padding:24px}
+.cl-meter .big{font:900 clamp(56px,7vw,96px)/1 var(--wide);font-stretch:125%;color:var(--orange);font-variant-numeric:tabular-nums}
+.cl-meter .big small{font-size:.4em;color:#fff}
+.cl-bar{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:16px 0}
+.cl-bar i{height:12px;background:var(--navy-3);border-radius:1px;transition:background .16s}
+.cl-bar i.on{background:var(--orange)}
+.cl-msg{font-size:16px;color:#DCE3EC;min-height:3em}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.items label{display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:center;padding:14px 16px;min-height:64px;border:2px solid var(--navy);border-radius:6px;cursor:pointer;background:#fff;font-weight:600;font-size:16px;line-height:1.35}
+.items label:hover{background:var(--steel)}
+.items input{appearance:none;-webkit-appearance:none;width:32px;height:32px;margin:0;border:2px solid var(--navy);border-radius:var(--r);display:grid;place-items:center;cursor:pointer;background:#fff}
+.items input::after{content:"";width:14px;height:8px;border:solid var(--navy);border-width:0 0 3px 3px;transform:rotate(-45deg) translate(1px,-2px) scale(0);transition:transform .12s}
+.items input:checked{background:var(--orange);border-color:var(--orange)}
+.items input:checked::after{transform:rotate(-45deg) translate(1px,-2px) scale(1)}
+.items small{display:block;font-weight:400;font-size:14px;color:var(--ink-2)}
+@media (max-width:860px){.cl{grid-template-columns:minmax(0,1fr)}}
+
+/* footer */
+.foot{background:var(--navy);color:#fff;padding:0 0 40px}
+.foot .hazard{margin-bottom:48px}
+.foot-name{font:900 clamp(36px,6.4vw,92px)/.95 var(--wide);font-stretch:125%;text-transform:uppercase;overflow-wrap:anywhere;letter-spacing:-.02em}
+.foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:34px;font-size:15px;color:#DCE3EC}
+.foot-grid b{display:block;font:800 11.5px/1.3 var(--wide);font-stretch:125%;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy);margin-bottom:8px}
+.foot-grid a{color:#fff;font-weight:600}
+.foot small{display:block;margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:13.5px;color:var(--on-navy);line-height:1.6}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* phone call bar */
+.callbar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  html:not(.hd-in-frame) body{padding-bottom:calc(136px + env(safe-area-inset-bottom))}
+  .callbar{display:grid;grid-template-columns:1fr auto;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--navy);border-top:4px solid var(--orange)}
+  html:not(.hd-in-frame) .callbar{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+  .callbar a{min-height:56px;display:flex;align-items:center;justify-content:center;gap:10px;border-radius:6px;text-decoration:none;font:900 17px/1 var(--wide);font-stretch:112%}
+  .callbar .cb-call{background:var(--orange);color:var(--navy)}
+  .callbar .cb-tri{border:2px solid #fff;color:#fff;padding:0 14px;font-size:14px}
+  .callbar svg{width:20px;height:20px}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Flowright Plumbing — back to top">
+      <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="4" fill="#0B2545"/><path d="M8 15h13a6 6 0 0 1 6 6v3" fill="none" stroke="#fff" stroke-width="4"/><path d="M27 28c-2.4 3-2.4 4.6 0 5.6 2.4-1 2.4-2.6 0-5.6z" fill="#FF6B00"/><rect x="5" y="11" width="5" height="8" fill="#FF6B00"/></svg>
+      <span data-brand>Flowright Plumbing</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#triage">Problem finder</a><a href="#services">Services</a><a href="#areas">Areas</a><a href="#pricing">Pricing</a><a href="#hotwater">Hot water</a><a href="#checklist">Checklist</a>
+    </nav>
+    <span class="bar-247"><i aria-hidden="true"></i>24/7</span>
+    <a class="bar-call" href="tel:0491570156"><i aria-hidden="true"></i>0491 570 156</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <div class="h-intro">
+        <p class="live"><i aria-hidden="true"></i><span>24/7 emergency plumber<span class="lv2"> · Newcastle, Lake Macquarie &amp; Maitland</span></span></p>
+        <h1 id="h1"><span>Burst pipe?</span> <span>Blocked drain?</span> <span class="o">No hot water?</span></h1>
+        <p class="hero-p">Call and a plumber answers — nights, weekends and public holidays. Not sure how bad it is? We’ll help you work that out first.</p>
+        <div class="hero-cta cta-d"><a class="btn ghost start-tri" href="#triage">Help me work out what’s wrong<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <a class="slab" href="tel:0491570156">
+        <span class="slab-k"><span>Call now</span><span>24/7</span></span>
+        <span class="slab-n">0491 570 156</span>
+        <span class="slab-s">A real person answers, day or night — and we’ll give you an honest arrival window on the call.</span>
+        <span class="slab-go"><span>Tap to call</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <div class="h-cta hero-cta"><a class="btn ghost start-tri" href="#triage">Help me work out what’s wrong<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></div>
+      <div class="h-side">
+        <ul class="facts">
+          <li>A fixed price before any work starts — you say yes first.</li>
+          <li>Stocked vans across Newcastle, Lake Macquarie and Maitland.</li>
+          <li>Photos of the fix and an itemised invoice, every job.</li>
+        </ul>
+        <div class="first">
+          <p class="first-k">Water everywhere? Your first 60 seconds:</p>
+          <ol><li>Turn the water off at the meter.</li><li>Stay clear of wet power points and the switchboard.</li><li>Lift rugs, cords and valuables off the floor.</li></ol>
+          <a href="#triage">Where’s my meter? Use the problem finder →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hazard" aria-hidden="true"></div>
+  </section>
+
+  <section class="sec steel" id="triage" aria-labelledby="tri-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">01 / Problem finder</p><h2 id="tri-h">Work out what’s wrong in four taps</h2></div>
+        <p>Answer four quick questions and we’ll give you honest first steps — like where your water meter usually is — plus a message you can send us.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><span id="stepLabel">Step 1 of 4</span><span class="segs" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+        <ol class="rail" id="rail" aria-label="Your answers"></ol>
+        <div class="stage" id="stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">02 / Services</p><h2 id="svc-h">What we fix</h2></div>
+        <p>Emergency or not, it’s the same crew and the same fixed-price-first rule. Most jobs are finished on the first visit.</p>
+      </div>
+      <ul class="svc">
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><path d="M2 13h11l3 3 3-3h13v8H19l-3-3-3 3H2z"/><path d="M16 4v5M11 6l2 3M21 6l-2 3" stroke="#FF6B00"/></svg><span class="sc">S-01</span><h3>Burst &amp; leaking pipes</h3><p>Find it, isolate it, fix it — copper, PEX and old galvanised lines, in walls, ceilings and under the house.</p><span class="tf">Typical fix: same visit</span></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><circle cx="17" cy="17" r="13"/><path d="M10 12h14M8 17h18M10 22h14" stroke="#FF6B00"/></svg><span class="sc">S-02</span><h3>Blocked drains</h3><p>A camera inspection to see what’s actually down there, then high-pressure jetting to clear roots, wipes and fat.</p><span class="tf">Typical fix: 1–2 hours</span></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><rect x="9" y="3" width="16" height="24" rx="5"/><path d="M13 31v-4M21 31v-4"/><path d="M17 10c-2.5 3 2.5 4.5 0 8" stroke="#FF6B00"/></svg><span class="sc">S-03</span><h3>Hot water</h3><p>Repairs and replacements for gas, electric, heat pump and solar systems — with an honest repair-or-replace call.</p><span class="tf">Typical fix: same or next day</span></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><path d="M4 11h14a5 5 0 0 1 5 5v3"/><path d="M9 6h6M12 6v5"/><path d="M23 24v1M23 29v1" stroke="#FF6B00"/></svg><span class="sc">S-04</span><h3>Taps, toilets &amp; cisterns</h3><p>Dripping taps, running toilets, leaking cisterns and tired mixers — small jobs done properly.</p><span class="tf">Typical fix: under an hour</span></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><circle cx="14" cy="14" r="9"/><path d="M21 21l9 9"/><path d="M14 9c-2.5 3.2-2.5 5 0 7 2.5-2 2.5-3.8 0-7z" stroke="#FF6B00"/></svg><span class="sc">S-05</span><h3>Leak detection</h3><p>Water bill suddenly doubled? Acoustic and thermal leak-finding before anything gets dug up.</p><span class="tf">Typical fix: find first, then quote</span></li>
+        <li><svg viewBox="0 0 34 34" fill="none" stroke="#0B2545" stroke-width="2.4" aria-hidden="true"><path d="M3 12l14-8 14 8"/><path d="M7 12v6h20v-6"/><path d="M27 18v12M11 24l2 3M17 24l2 3" stroke="#FF6B00"/></svg><span class="sc">S-06</span><h3>Stormwater &amp; roof drainage</h3><p>Overflowing gutters, blocked downpipes and stormwater lines after a big Hunter storm.</p><span class="tf">Typical fix: same visit</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec leak" id="leak" aria-labelledby="leak-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">03 / Fix the leak</p><h2 id="leak-h">Go on — tighten it</h2></div>
+        <p>A weeping compression nut is one of the most common call-outs we get. Drag the spanner sideways to turn the nut, or use the buttons or arrow keys.</p>
+      </div>
+      <div class="leak-grid">
+        <div class="rig">
+          <span class="hint" aria-hidden="true">Drag the spanner →</span>
+          <svg id="rig" viewBox="0 0 600 400" role="slider" tabindex="0" aria-label="Spanner on a leaking pipe joint. Drag sideways or use the arrow keys to tighten." aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0% tight, dripping">
+            <defs>
+              <linearGradient id="cu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9C4F22"/><stop offset=".35" stop-color="#F0AE78"/><stop offset=".6" stop-color="#D0783F"/><stop offset="1" stop-color="#8A431B"/></linearGradient>
+              <linearGradient id="st" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9EEF3"/><stop offset=".5" stop-color="#AEB9C6"/><stop offset="1" stop-color="#7D8A9A"/></linearGradient>
+              <linearGradient id="wr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9D2DC"/><stop offset=".5" stop-color="#F4F7FA"/><stop offset="1" stop-color="#A6B1BE"/></linearGradient>
+              <clipPath id="bk"><path d="M250,334 L350,334 L341,392 L259,392Z"/></clipPath>
+            </defs>
+            <g stroke="#0B2545" stroke-width="2">
+              <rect x="-4" y="236" width="252" height="40" fill="url(#cu)"/>
+              <rect x="352" y="236" width="252" height="40" fill="url(#cu)"/>
+              <rect x="222" y="230" width="30" height="52" rx="3" fill="url(#st)"/>
+              <rect x="348" y="230" width="30" height="52" rx="3" fill="url(#st)"/>
+            </g>
+            <g id="nut" style="transform-origin:300px 256px"><path d="M300,208 L341.6,232 L341.6,280 L300,304 L258.4,280 L258.4,232Z" fill="url(#st)" stroke="#0B2545" stroke-width="2.5"/><path d="M300,222 L329.4,239 L329.4,273 L300,290 L270.6,273 L270.6,239Z" fill="none" stroke="#0B2545" stroke-width="1.2" opacity=".45"/><circle cx="300" cy="256" r="6" fill="#0B2545" opacity=".25"/></g>
+            <path id="drop" d="M300,300 C306,312 309,317 309,322 A9,9 0 0 1 291,322 C291,317 294,312 300,300Z" fill="#7FC8F8" stroke="#0B2545" stroke-width="1.5"/>
+            <g id="drips"></g>
+            <path d="M246,334 L354,334 L344,396 L256,396Z" fill="#CBD4DE" stroke="#0B2545" stroke-width="2.5"/>
+            <g clip-path="url(#bk)"><rect id="water" x="240" y="392" width="120" height="80" fill="#7FC8F8" opacity=".85"/></g>
+            <path d="M246,334 L354,334" stroke="#0B2545" stroke-width="4"/>
+            <g id="spanner" style="transform-origin:300px 256px">
+              <path d="M300,256 m-58,-14 L286,184 L286,64 Q286,50 300,50 Q314,50 314,64 L314,184 L358,242" fill="none" stroke="none"/>
+              <path d="M288,196 L288,70 Q288,54 300,54 Q312,54 312,70 L312,196Z" fill="url(#wr)" stroke="#0B2545" stroke-width="2.5"/>
+              <path d="M300,190 C336,190 356,206 360,228 L342,232 C338,218 324,208 300,208 C276,208 262,218 258,232 L240,228 C244,206 264,190 300,190Z" fill="url(#wr)" stroke="#0B2545" stroke-width="2.5"/>
+              <rect x="291" y="80" width="18" height="84" rx="9" fill="#FF6B00" stroke="#0B2545" stroke-width="2"/>
+              <path d="M288,196 L288,70 Q288,54 300,54 Q312,54 312,70 L312,196" fill="none" stroke="transparent" stroke-width="60"/>
+            </g>
+            <text id="sealed" x="300" y="140" text-anchor="middle" font-family="Archivo,Arial Black,sans-serif" font-weight="900" font-size="30" fill="#FF6B00" opacity="0">SEALED</text>
+          </svg>
+        </div>
+        <div>
+          <div class="gauges">
+            <div><span class="g-k">Tightness</span><span class="g-v" id="tV">0%</span><span class="meter"><i id="tBar"></i></span></div>
+            <div><span class="g-k">Leak rate</span><span class="g-v" id="rV">17.3 L/day</span></div>
+            <div><span class="g-k">Saved a year</span><span class="g-v" id="sV">0 L</span></div>
+          </div>
+          <p class="status" id="leakStatus" aria-live="polite">Loose — dripping about four times a second.</p>
+          <div class="leak-btns">
+            <button class="btn" type="button" id="loosen" aria-label="Loosen the nut">↺ Loosen</button>
+            <button class="btn or" type="button" id="tighten" aria-label="Tighten the nut">Tighten ↻</button>
+            <button class="btn" type="button" id="leakReset">Reset</button>
+          </div>
+          <p class="fine">Playful estimate: one drip ≈ 0.05 mL. A real weeping joint usually needs a new olive or fitting — overtightening can crack it — so call us rather than reaching for the shifter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="areas" aria-labelledby="areas-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">04 / Service area</p><h2 id="areas-h">Newcastle, Lake Macquarie &amp; Maitland</h2></div>
+        <p>Our vans are spread across three zones so someone is usually close. Check your suburb — if it’s not listed, call anyway and we’ll tell you honestly if we can get there.</p>
+      </div>
+      <div class="areas">
+        <figure class="map" style="margin:0">
+          <svg viewBox="0 0 560 400" role="img" aria-label="Schematic map of three service zones: Maitland to the north-west, Newcastle on the coast at the mouth of the Hunter River, and Lake Macquarie to the south around the lake.">
+            <rect width="560" height="400" fill="#E6EBF0"/>
+            <path d="M470,0 C455,60 482,110 460,170 C440,230 470,300 452,400 L560,400 L560,0Z" fill="#B8C9DC"/>
+            <g stroke="#FFFFFF" stroke-width="2" opacity=".6"><path d="M500,60 h30M492,140 h40M490,240 h40M484,330 h40"/></g>
+            <path d="M40,120 C120,140 180,96 250,120 C320,142 360,110 420,128 C440,134 456,140 468,150" fill="none" stroke="#8FB0D0" stroke-width="10" stroke-linecap="round"/>
+            <path d="M300,250 C330,232 380,236 396,262 C410,286 404,330 380,350 C356,370 318,364 302,340 C286,316 276,272 300,250Z" fill="#8FB0D0"/>
+            <g fill="none" stroke="#0B2545" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"><path d="M160,112 L330,170"/><path d="M400,160 L350,250"/><path d="M160,112 L300,260"/></g>
+            <g stroke="#0B2545" stroke-width="3">
+              <circle cx="150" cy="106" r="60" fill="#FFB27A" fill-opacity=".85"/>
+              <circle cx="398" cy="160" r="60" fill="#FF6B00" fill-opacity=".85"/>
+              <circle cx="330" cy="302" r="64" fill="#FFFFFF" fill-opacity=".7"/>
+            </g>
+            <g font-family="Archivo,Arial Black,sans-serif" font-weight="900" fill="#0B2545" text-anchor="middle">
+              <text x="150" y="111" font-size="15">MAITLAND</text>
+              <text x="398" y="165" font-size="15">NEWCASTLE</text>
+              <text x="330" y="298" font-size="14">LAKE</text><text x="330" y="316" font-size="14">MACQUARIE</text>
+            </g>
+            <g font-family="Inter,system-ui,sans-serif" font-size="13" fill="#3E4A63">
+              <text x="60" y="186">Hunter River</text><text x="506" y="200" text-anchor="middle" transform="rotate(-90 506 200)">Pacific Ocean</text>
+            </g>
+          </svg>
+          <figcaption>Schematic only — not to scale. Zone colours match the list.</figcaption>
+        </figure>
+        <div>
+          <div class="check">
+            <label for="sub">Do you come to my suburb?</label>
+            <div class="row"><input id="sub" list="subs" placeholder="e.g. Charlestown" autocomplete="off"><button class="btn" type="button" id="subGo">Check</button></div>
+            <datalist id="subs"></datalist>
+            <p class="res" id="subRes" aria-live="polite">Type a suburb to check it against our three zones.</p>
+          </div>
+          <div class="zones">
+            <div class="zone" style="--zc:#FF6B00"><h3><i aria-hidden="true"></i>Newcastle</h3><p>Hamilton, Merewether, Mayfield, Lambton, Wallsend, Adamstown, Kotara, Stockton and surrounds.</p></div>
+            <div class="zone" style="--zc:#FFFFFF"><h3><i aria-hidden="true"></i>Lake Macquarie</h3><p>Charlestown, Belmont, Warners Bay, Cardiff, Toronto, Swansea, Morisset and around the lake.</p></div>
+            <div class="zone" style="--zc:#FFB27A"><h3><i aria-hidden="true"></i>Maitland</h3><p>East Maitland, Rutherford, Thornton, Lorn, Tenambit, Metford, Chisholm and Morpeth.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec steel" id="pricing" aria-labelledby="pr-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">05 / How pricing works</p><h2 id="pr-h">No surprises on the invoice</h2></div>
+        <p>You pay a call-out fee to get a plumber and a stocked van to your door. After that, nothing happens until you’ve said yes to a fixed price.</p>
+      </div>
+      <div class="steps3">
+        <div><span class="n">1</span><h3>Call-out fee</h3><p>Covers travel and the first 30 minutes on site finding the problem. It costs more at night, on weekends and on public holidays.</p></div>
+        <div><span class="n">2</span><h3>Fixed price, then work</h3><p>Once we know what’s wrong you get one fixed price for the job. Say yes, or just pay the call-out — no pressure, no hard sell.</p></div>
+        <div><span class="n">3</span><h3>Itemised invoice</h3><p>Parts at our listed price, labour as quoted, and photos of the finished work so you know what you paid for.</p></div>
+      </div>
+      <div class="rates">
+        <div class="rate"><span>Weekdays 7am–5pm</span><b>$99</b></div>
+        <div class="rate"><span>After hours &amp; weekends</span><b>$169</b></div>
+        <div class="rate"><span>Public holidays</span><b>$219</b></div>
+      </div>
+      <p class="note"><b>Sample prices</b> — call-out fees including GST, shown for this concept demo only.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="hotwater" aria-labelledby="hw-h">
+    <div class="wrap">
+      <div class="sec-top">
+        <div><p class="code">06 / Hot water systems</p><h2 id="hw-h">Repair it or replace it?</h2></div>
+        <p>We service every common type. If it’s worth repairing we’ll say so; if it isn’t, we’ll explain the options side by side.</p>
+      </div>
+      <table class="hw">
+        <thead><tr><th scope="col">System</th><th scope="col">How it heats</th><th scope="col">Suits</th><th scope="col">Worth knowing</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Gas storage</th><td data-l="How it heats">A gas burner heats a stored tank</td><td data-l="Suits">Bigger households on mains gas</td><td data-l="Worth knowing">Pilot light and flue need to stay clear</td></tr>
+          <tr><th scope="row">Gas continuous flow</th><td data-l="How it heats">Heats water as it flows</td><td data-l="Suits">Back-to-back showers, tight spaces</td><td data-l="Worth knowing">Needs enough gas supply to the unit</td></tr>
+          <tr><th scope="row">Electric storage</th><td data-l="How it heats">An element heats a tank, often off-peak</td><td data-l="Suits">Simple swaps, homes without gas</td><td data-l="Worth knowing">Off-peak tanks can run short by evening</td></tr>
+          <tr><th scope="row">Heat pump</th><td data-l="How it heats">Pulls heat from the air, like a fridge in reverse</td><td data-l="Suits">Lower running costs</td><td data-l="Worth knowing">A quiet hum outside; needs airflow</td></tr>
+          <tr><th scope="row">Solar</th><td data-l="How it heats">Roof collectors pre-heat the tank</td><td data-l="Suits">Sunny, north-facing roofs</td><td data-l="Worth knowing">Boosts with gas or electric on grey days</td></tr>
+        </tbody>
+      </table>
+      <div class="signs"><b>Signs it’s on the way out:</b><span>Rusty water</span><span>A puddle at the base</span><span>Rumbling or popping</span><span>Running out sooner</span></div>
+      <p class="note">General information only — we’ll give advice for your home once we’ve seen the system.</p>
+    </div>
+  </section>
+
+  <section class="sec steel" id="checklist" aria-labelledby="cl-h">
+    <div class="wrap cl">
+      <div>
+        <p class="code">07 / Before you call</p>
+        <h2 id="cl-h" style="font-size:clamp(30px,4.2vw,58px);margin:14px 0 22px">Five minutes now saves an hour later</h2>
+        <div class="cl-meter">
+          <p class="big"><span id="clN">0</span><small> / 6 ready</small></p>
+          <div class="cl-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <p class="cl-msg" id="clMsg" aria-live="polite">Tick things off as you go — nothing is saved or sent.</p>
+        </div>
+      </div>
+      <ul class="items" id="clItems">
+        <li><label><input type="checkbox"><span>I know where the water meter is<small>Usually at the front boundary, in a box or under a small lid.</small></span></label></li>
+        <li><label><input type="checkbox"><span>I’ve found the isolation valves<small>Small taps or slotted screws under sinks and behind toilets.</small></span></label></li>
+        <li><label><input type="checkbox"><span>I’ve taken photos or a short video<small>They help us bring the right parts the first time.</small></span></label></li>
+        <li><label><input type="checkbox"><span>I can say when it started<small>And whether it’s getting worse, better or staying the same.</small></span></label></li>
+        <li><label><input type="checkbox"><span>Pets are secured and the path is clear<small>From the front door to the problem, and to the meter.</small></span></label></li>
+        <li><label><input type="checkbox"><span>Someone over 18 will be home<small>So we can agree the fixed price before we start.</small></span></label></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="hazard" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="foot-name" data-brand>Flowright Plumbing</p>
+    <div class="foot-grid">
+      <p><b>Emergency line · 24/7</b><a href="tel:0491570156">0491 570 156</a></p>
+      <p><b>Office · Mon–Fri 7am–5pm</b><a href="tel:0255504821">(02) 5550 4821</a><br><a href="mailto:jobs@example.com">jobs@example.com</a></p>
+      <p><b>Based in</b>Newcastle, NSW<br>Vans across Lake Macquarie &amp; Maitland</p>
+      <p><b>Good to know</b>Sample prices. Safety tips on this page are general guidance only.</p>
+    </div>
+    <small>A concept demo for a fictional plumbing business. Nothing on this page dials, books or sends anything. If water is near electrics, stay clear; if anyone is in danger, call Triple Zero (000).</small>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Quick call">
+  <a class="cb-call" href="tel:0491570156"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 0491 570 156</a>
+  <a class="cb-tri" href="#triage">What’s wrong?</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+  var d=document;
+  var mq=matchMedia("(prefers-reduced-motion: reduce)");
+  function reduced(){return window.DemoKit?DemoKit.reducedMotion:mq.matches}
+  function $(s,c){return (c||d).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  /* ================= triage ================= */
+  var IC={
+    pipe:'<path d="M2 11h9l3 3 3-3h11v8H17l-3-3-3 3H2z"/><path d="M14 3v4M10 4l2 3M18 4l-2 3" stroke="#FF6B00"/>',
+    drain:'<circle cx="15" cy="15" r="12"/><path d="M9 10h12M7 15h16M9 20h12" stroke="#FF6B00"/>',
+    hot:'<rect x="8" y="2" width="14" height="22" rx="5"/><path d="M12 28v-4M18 28v-4"/><path d="M15 8c-2.2 2.8 2.2 4 0 7.4" stroke="#FF6B00"/>',
+    tap:'<path d="M3 10h13a5 5 0 0 1 5 5v3"/><path d="M8 5h6M11 5v5"/><path d="M21 22v1M21 27v1" stroke="#FF6B00"/>',
+    q:'<circle cx="15" cy="15" r="12"/><path d="M11 12a4 4 0 1 1 5.5 3.7c-1 .4-1.5 1.2-1.5 2.3v.5M15 23h.01" stroke="#FF6B00"/>'
+  };
+  function icon(k){return '<svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">'+IC[k]+'</svg>'}
+  var STEPS=[
+    {k:"prob",rl:"Problem",q:function(){return "What’s going on?"},sub:"Pick the closest match — you can change it later.",o:[["burst","Burst or leaking pipe","pipe"],["drain","Blocked drain or toilet","drain"],["hot","No hot water","hot"],["tap","Dripping tap or running toilet","tap"],["other","Something else","q"]]},
+    {k:"flow",rl:"Water",q:function(a){return a.prob==="drain"?"Is anything overflowing right now?":a.prob==="hot"?"Is water leaking from the unit?":"Is water running or leaking right now?"},sub:"Be honest — it changes what you should do first.",o:function(a){return a.prob==="drain"?[["yes","Yes, it’s overflowing"],["slow","It’s slow, not overflowing"],["no","No, it’s stopped"]]:a.prob==="hot"?[["yes","Yes, it’s leaking"],["no","No leak — just no hot water"]]:[["yes","Yes — it’s flowing"],["drip","It’s dripping"],["no","No, it’s stopped"]]}},
+    {k:"where",rl:"Where",q:function(){return "Where is it?"},sub:"Roughly is fine.",o:[["kitchen","Kitchen or laundry"],["bath","Bathroom or toilet"],["out","Outside or in the yard"],["wall","In a wall, ceiling or under the floor"],["hws","At the hot water system"]]},
+    {k:"urg",rl:"Urgency",q:function(){return "How urgent does it feel?"},sub:"There’s no wrong answer.",o:[["now","Right now — it’s getting worse"],["today","Today, if possible"],["week","This week is fine"]]}
+  ];
+  var ans={}, lab={}, cur=0, stage=$("#stage"), rail=$("#rail");
+  function opts(i){var o=STEPS[i].o;return typeof o==="function"?o(ans):o}
+  function renderRail(){
+    rail.innerHTML=STEPS.map(function(s,i){
+      var done=ans[s.k]!=null, isCur=i===cur;
+      return '<li><button type="button" data-go="'+i+'" class="'+(done?"done ":"")+(isCur?"cur":"")+'"'+(done||isCur?"":" disabled")+(isCur?' aria-current="step"':"")+'><b>'+(i+1)+'</b><span class="rl">'+s.rl+'</span><span class="ra">'+(done?esc(lab[s.k]):"—")+'</span></button></li>';
+    }).join("")+'<li><button type="button" data-go="4" class="'+(cur===4?"cur":"")+'"'+(cur===4?' aria-current="step"':" disabled")+'><b>✓</b><span class="rl">Advice</span><span class="ra">'+(cur===4?"Ready":"—")+'</span></button></li>';
+    $$(".segs i").forEach(function(el,i){el.classList.toggle("on",i<Math.min(cur,4))});
+    $("#stepLabel").textContent=cur<4?"Step "+(cur+1)+" of 4":"Your first steps";
+  }
+  function renderStep(focus){
+    renderRail();
+    if(cur===4){renderResult(focus);return}
+    var s=STEPS[cur];
+    stage.innerHTML='<div class="enter" role="group" aria-labelledby="sq"><h3 id="sq" tabindex="-1">'+s.q(ans)+'</h3><p class="sub">'+s.sub+'</p><div class="opts">'+opts(cur).map(function(o){return '<button type="button" class="opt" data-v="'+o[0]+'" aria-pressed="'+(ans[s.k]===o[0])+'">'+(o[2]?icon(o[2]):"")+'<span>'+o[1]+'</span></button>'}).join("")+'</div><div class="stage-nav">'+(cur>0?'<button type="button" class="linkbtn" data-back>← Back</button>':"<span>Takes about 20 seconds. Nothing is sent.</span>")+'</div></div>';
+    if(focus) $("#sq").focus({preventScroll:true});
+  }
+  stage.addEventListener("click",function(e){
+    var b=e.target.closest(".opt");
+    if(b){
+      var s=STEPS[cur]; ans[s.k]=b.dataset.v; lab[s.k]=b.textContent;
+      if(cur===0){delete ans.flow;}
+      $$(".opt",stage).forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+      setTimeout(function(){cur=Math.min(4,cur+1);renderStep(true)},reduced()?0:160);
+      return;
+    }
+    if(e.target.closest("[data-back]")){cur=Math.max(0,cur-1);renderStep(true);return}
+    if(e.target.closest("[data-restart]")){ans={};lab={};cur=0;renderStep(true);return}
+  });
+  rail.addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b||b.disabled)return;cur=+b.dataset.go;renderStep(true)});
+
+  var DIAG={
+    meter:'<svg viewBox="0 0 340 190" aria-hidden="true" font-family="Inter,system-ui,sans-serif"><rect width="340" height="190" fill="#E6EBF0"/><path d="M0,132 H340" stroke="#0B2545" stroke-width="2"/><path d="M16,132 V80 L60,50 L104,80 V132Z" fill="#fff" stroke="#0B2545" stroke-width="2"/><rect x="50" y="102" width="20" height="30" fill="#0B2545"/><path d="M122,132 V108 M134,132 V108 M146,132 V108 M118,114 H150" stroke="#0B2545" stroke-width="2"/><rect x="156" y="132" width="66" height="8" fill="#CBD4DE"/><text x="189" y="156" font-size="11" text-anchor="middle" fill="#3E4A63">footpath</text><path d="M126,138 H78 V132" stroke="#0B2545" stroke-width="2" stroke-dasharray="4 3" fill="none"/><rect x="126" y="122" width="26" height="12" fill="#FF6B00" stroke="#0B2545" stroke-width="2"/><path d="M152,122 L220,86" stroke="#0B2545" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="270" cy="78" r="56" fill="#fff" stroke="#0B2545" stroke-width="2.5"/><rect x="216" y="82" width="108" height="14" fill="#AEB9C6" stroke="#0B2545" stroke-width="1.5"/><circle cx="246" cy="76" r="16" fill="#fff" stroke="#0B2545" stroke-width="2.5"/><path d="M246,76 L255,69" stroke="#0B2545" stroke-width="2"/><rect x="286" y="62" width="8" height="22" fill="#0B2545"/><rect x="274" y="52" width="32" height="10" rx="3" fill="#FF6B00" stroke="#0B2545" stroke-width="2"/><path d="M272,40 A26,26 0 0 1 312,46" fill="none" stroke="#FF6B00" stroke-width="3"/><path d="M312,46 L302,44 M312,46 L309,36" stroke="#FF6B00" stroke-width="3" stroke-linecap="round"/><text x="139" y="176" font-size="11.5" text-anchor="middle" fill="#0B2545" font-weight="700">meter box at the boundary</text><text x="270" y="118" font-size="11" text-anchor="middle" fill="#0B2545" font-weight="700">turn clockwise</text></svg>',
+    org:'<svg viewBox="0 0 340 190" aria-hidden="true" font-family="Inter,system-ui,sans-serif"><rect width="340" height="190" fill="#E6EBF0"/><rect x="0" y="74" width="340" height="116" fill="#D8CBB8"/><path d="M0,74 H340" stroke="#0B2545" stroke-width="2"/><path d="M14,62 H132 V74 H14Z" fill="#fff" stroke="#0B2545" stroke-width="2"/><path d="M14,62 V20 H132 V62" fill="none" stroke="#0B2545" stroke-width="2"/><rect x="58" y="58" width="18" height="5" fill="#0B2545"/><text x="67" y="46" font-size="11" text-anchor="middle" fill="#0B2545">floor waste</text><path d="M67,64 V118 L330,156" fill="none" stroke="#0B2545" stroke-width="7" stroke-linejoin="round"/><path d="M67,64 V118 L330,156" fill="none" stroke="#AEB9C6" stroke-width="3" stroke-linejoin="round"/><path d="M204,138 V78" stroke="#0B2545" stroke-width="7"/><path d="M204,138 V78" stroke="#AEB9C6" stroke-width="3"/><rect x="190" y="68" width="28" height="8" fill="#FF6B00" stroke="#0B2545" stroke-width="2"/><g stroke="#FF6B00" stroke-width="3" fill="none" stroke-linecap="round"><path d="M196,62 C192,52 198,46 194,38"/><path d="M212,62 C216,52 210,46 214,38"/></g><text x="236" y="26" font-size="12" fill="#0B2545" font-weight="700">overflow gully</text><text x="236" y="42" font-size="11" fill="#3E4A63">grate sits lower</text><text x="236" y="55" font-size="11" fill="#3E4A63">than the house floor</text><text x="300" y="178" font-size="11" text-anchor="end" fill="#0B2545">to sewer →</text></svg>',
+    hws:'<svg viewBox="0 0 340 190" aria-hidden="true" font-family="Inter,system-ui,sans-serif"><rect width="340" height="190" fill="#E6EBF0"/><path d="M0,172 H340" stroke="#0B2545" stroke-width="2"/><rect x="120" y="24" width="84" height="148" rx="14" fill="#fff" stroke="#0B2545" stroke-width="2.5"/><text x="162" y="100" font-size="11" text-anchor="middle" fill="#3E4A63">hot water</text><text x="162" y="114" font-size="11" text-anchor="middle" fill="#3E4A63">unit</text><path d="M162,24 V10 H300" fill="none" stroke="#0B2545" stroke-width="6"/><text x="300" y="30" font-size="11" text-anchor="end" fill="#3E4A63">hot out</text><path d="M120,146 H20" fill="none" stroke="#0B2545" stroke-width="6"/><circle cx="72" cy="146" r="11" fill="#FF6B00" stroke="#0B2545" stroke-width="2.5"/><path d="M72,135 V122 M64,122 H80" stroke="#0B2545" stroke-width="3"/><path d="M52,112 A22,22 0 0 1 92,114" fill="none" stroke="#FF6B00" stroke-width="3"/><text x="72" y="178" font-size="11" text-anchor="middle" fill="#0B2545" font-weight="700" dy="-12">cold valve</text><rect x="236" y="60" width="72" height="90" rx="4" fill="#fff" stroke="#0B2545" stroke-width="2"/><g fill="#CBD4DE" stroke="#0B2545" stroke-width="1.5"><rect x="246" y="72" width="12" height="22"/><rect x="264" y="72" width="12" height="22"/><rect x="246" y="106" width="12" height="22"/></g><rect x="282" y="72" width="14" height="22" fill="#FF6B00" stroke="#0B2545" stroke-width="2"/><text x="272" y="144" font-size="10" text-anchor="middle" fill="#0B2545" font-weight="700">HOT WATER</text></svg>',
+    iso:'<svg viewBox="0 0 340 190" aria-hidden="true" font-family="Inter,system-ui,sans-serif"><rect width="340" height="190" fill="#E6EBF0"/><rect x="40" y="70" width="260" height="120" fill="#fff" stroke="#0B2545" stroke-width="2.5"/><path d="M30,70 H310" stroke="#0B2545" stroke-width="5"/><path d="M110,70 Q110,98 170,98 Q230,98 230,70" fill="#CBD4DE" stroke="#0B2545" stroke-width="2"/><path d="M170,70 V40 H200 V52" fill="none" stroke="#0B2545" stroke-width="5"/><path d="M170,98 V130 H300" fill="none" stroke="#0B2545" stroke-width="4"/><path d="M120,190 V150 C120,136 140,136 140,122 C140,110 150,104 158,98" fill="none" stroke="#3E4A63" stroke-width="3" stroke-dasharray="5 3"/><path d="M220,190 V150 C220,136 200,136 200,122 C200,110 190,104 182,98" fill="none" stroke="#3E4A63" stroke-width="3" stroke-dasharray="5 3"/><circle cx="120" cy="160" r="9" fill="#FF6B00" stroke="#0B2545" stroke-width="2.5"/><path d="M114,160 H126" stroke="#0B2545" stroke-width="2.5"/><circle cx="220" cy="160" r="9" fill="#FF6B00" stroke="#0B2545" stroke-width="2.5"/><path d="M214,160 H226" stroke="#0B2545" stroke-width="2.5"/><path d="M96,142 A24,24 0 0 1 132,138" fill="none" stroke="#FF6B00" stroke-width="3"/><text x="170" y="178" font-size="11.5" text-anchor="middle" fill="#0B2545" font-weight="700">isolation valves</text><text x="170" y="30" font-size="11" text-anchor="middle" fill="#3E4A63" dx="60">tap</text></svg>'
+  };
+  var CAP={meter:"Most meters sit at the front boundary near the footpath, in a small box or under a lid. Turn the tap clockwise, or turn a lever so it sits across the pipe.",org:"The overflow relief gully is a grated outlet outside, lower than your floor wastes, so a sewer blockage spills outside — not inside.",hws:"Close the cold-water valve on the pipe going into the unit, then switch the unit off: gas control to OFF, or the hot-water switch at the board.",iso:"Look under the sink or behind the toilet for a small tap or a slotted screw on each pipe. Clockwise closes it."};
+  function advice(a){
+    var p=a.prob,f=a.flow,r={};
+    if(p==="burst"||p==="other"&&f!=="no"){
+      r.h=f==="no"?"Keep the water off and take photos":"Turn off the water at the meter — now";r.dg="meter";
+      r.s=["Find the meter: usually at the front boundary near the footpath, in a box or under a small lid.","Turn the tap clockwise, or turn a lever so it sits across the pipe. Every tap in the house should stop.","If water is near power points or the switchboard, stay clear. Only switch off at the board if you’re standing somewhere dry.","Catch what you can with buckets and towels, and photograph the damage for insurance."];
+    }else if(p==="drain"){
+      r.h=f==="yes"?"Stop using water — and check the overflow gully":"Stop using that drain for now";r.dg="org";
+      r.s=["Every flush, shower and load of washing adds to the backup — hold off until we’ve cleared it.","Outside, find the overflow relief gully: a round grate near the house. If soil, mulch or pavers cover it, clear them.","Skip the chemical drain cleaners — they rarely shift a sewer blockage and can burn skin (and us).","Keep kids and pets away from any overflow; it’s sewage."];
+    }else if(p==="hot"){
+      r.h=f==="yes"?"Turn off the cold supply to the unit":"Check the simple things first";r.dg="hws";
+      r.s=f==="yes"?["Close the cold-water valve on the pipe going into the unit (clockwise).","Gas unit: turn the gas control to OFF. Electric: switch off the hot-water circuit at the board.","Don’t open the unit or try to drain it — the water inside can scald."]:["Electric: check the switchboard for a tripped hot-water switch, and whether you’re on off-peak.","Gas: check the other gas appliances work. Relight a pilot only if the label on the unit says you can.","Don’t remove covers or panels — that part is our job."];
+    }else if(p==="tap"){
+      r.h="Turn off the isolation valve";r.dg="iso";
+      r.s=["Under the sink or behind the toilet, find a small tap or a slotted screw on the pipe.","Turn it clockwise — a flat screwdriver or a coin works on slotted ones. The drip should stop.","If there’s no valve or it won’t budge, don’t force it: turn off at the meter instead."];
+    }else{
+      r.h="Call and describe it — we’ll talk you through it";r.dg="meter";
+      r.s=["Know where your meter is in case you need to turn the water off.","Take a photo or short video so we can bring the right parts.","If you notice water near electrics, stay clear of it."];
+    }
+    r.hot=a.urg==="now"||f==="yes"&&(p==="burst"||p==="drain");
+    return r;
+  }
+  function renderResult(focus){
+    var r=advice(ans);
+    var msg="Problem: "+lab.prob+"\nWater: "+lab.flow+"\nWhere: "+lab.where+"\nUrgency: "+lab.urg+"\nWhat I’ve done so far: ";
+    stage.innerHTML='<div class="enter"><div class="res-top">'+(r.hot?'<span class="pill hot">Sounds urgent</span>':'<span class="pill">Book a visit</span>')+'<span class="pill">General guidance</span></div>'+
+      '<h3 id="sq" tabindex="-1" style="margin-top:14px">'+r.h+'</h3>'+
+      '<div class="res-grid"><figure class="diag" style="margin:0">'+DIAG[r.dg]+'<figcaption>'+CAP[r.dg]+'</figcaption></figure><div><ol class="do">'+r.s.map(function(x){return "<li><span>"+x+"</span></li>"}).join("")+'</ol><p class="safety">General guidance only. If water is near electrics, stay clear; if anyone is in danger, call Triple Zero (000).</p></div></div>'+
+      '<form class="enq" data-demo-message="Demo only — nothing was sent. On a real site this enquiry would reach the on-call plumber." novalidate><h4>'+(r.hot?"Call us now — or send this and we’ll call you":"Send us this and we’ll call you back")+'</h4>'+
+      '<label class="fld full">Your message (pre-filled — edit anything)<textarea name="msg">'+esc(msg)+'</textarea></label>'+
+      '<label class="fld">Name<input name="name" autocomplete="name"></label><label class="fld">Mobile<input name="tel" type="tel" autocomplete="tel" placeholder="0491 570 157"></label><label class="fld">Suburb<input name="suburb" list="subs" autocomplete="address-level2"></label>'+
+      '<div class="enq-act"><a class="btn or" href="tel:0491570156">Call 0491 570 156</a><button class="btn line" type="submit">Send enquiry</button><button type="button" class="linkbtn" data-restart>Start again</button></div></form></div>';
+    if(focus) $("#sq").focus({preventScroll:true});
+  }
+  $$(".start-tri").forEach(function(a){a.addEventListener("click",function(){setTimeout(function(){var h=$("#sq");if(h)h.focus({preventScroll:true})},reduced()?0:500)})});
+  renderStep(false);
+
+  /* ================= leak game ================= */
+  var rig=$("#rig"), nut=$("#nut"), sp=$("#spanner"), drop=$("#drop"), drips=$("#drips"), water=$("#water"), sealedT=$("#sealed");
+  var turn=0, swing=0, MAXT=270, dragging=false, lastA=0, last=0, acc=0, pool=[], lvl=0, onScreen=true, raf=0, shown=-1;
+  var tV=$("#tV"), tBar=$("#tBar"), rV=$("#rV"), sV=$("#sV"), st=$("#leakStatus");
+  function dps(){var t=turn/MAXT;return t>=1?0:4*Math.pow(1-t,1.4)}
+  function fmtL(n){return n<0.05?"0":n>=1000?Math.round(n).toLocaleString("en-AU"):n<10?n.toFixed(1):String(Math.round(n))}
+  function paint(){
+    var t=Math.min(1,turn/MAXT), pct=Math.round(t*100), rate=dps()*4.32, saved=(4-dps())*4.32*365;
+    nut.style.transform="rotate("+turn+"deg)"; sp.style.transform="rotate("+swing+"deg)";
+    tV.textContent=pct+"%"; tBar.style.width=pct+"%"; rV.textContent=fmtL(rate)+" L/day"; sV.textContent=fmtL(saved)+" L";
+    drop.style.opacity=t>=1?0:1; sealedT.style.opacity=t>=1?1:0;
+    var bucket=Math.round(t*4);
+    if(bucket!==shown){
+      shown=bucket;
+      st.textContent=["Loose — dripping about four times a second.","Snugging up — still dripping steadily.","Getting there — the drips are slowing.","Almost — just the odd drip now.","Sealed. No more drips — nice work."][bucket];
+      st.classList.toggle("ok",t>=1);
+    }
+    rig.setAttribute("aria-valuenow",pct); rig.setAttribute("aria-valuetext",pct+"% tight, "+(t>=1?"sealed":"dripping"));
+    if(t<1) loop();
+  }
+  function applyTurn(delta){
+    var before=turn; turn=Math.max(0,Math.min(MAXT,turn+delta)); var used=turn-before;
+    swing+=used; if(swing>45) swing=-45+(swing-45); if(swing<-45) swing=45+(swing+45);
+    paint();
+  }
+  function ang(e){var r=rig.getBoundingClientRect(), cx=r.left+r.width*.5, cy=r.top+r.height*(256/400);return Math.atan2(e.clientY-cy,e.clientX-cx)*180/Math.PI}
+  rig.addEventListener("pointerdown",function(e){dragging=true;lastA=ang(e);try{rig.setPointerCapture(e.pointerId)}catch(x){}});
+  rig.addEventListener("pointermove",function(e){if(!dragging)return;var a=ang(e),dd=a-lastA;if(dd>180)dd-=360;if(dd<-180)dd+=360;lastA=a;applyTurn(dd*.9)});
+  ["pointerup","pointercancel","lostpointercapture"].forEach(function(t){rig.addEventListener(t,function(){dragging=false})});
+  rig.addEventListener("keydown",function(e){
+    var k=e.key, dlt=(k==="ArrowRight"||k==="ArrowDown")?15:(k==="ArrowLeft"||k==="ArrowUp")?-15:k==="End"?MAXT:k==="Home"?-MAXT:0;
+    if(dlt){e.preventDefault();applyTurn(dlt)}
+  });
+  $("#tighten").addEventListener("click",function(){applyTurn(30)});
+  $("#loosen").addEventListener("click",function(){applyTurn(-30)});
+  $("#leakReset").addEventListener("click",function(){turn=0;swing=0;lvl=0;water.setAttribute("y",392);shown=-1;paint()});
+
+  function loop(){
+    if(raf||reduced()||!onScreen||d.hidden||turn>=MAXT) return;
+    last=performance.now(); raf=requestAnimationFrame(tick);
+  }
+  function tick(now){
+    raf=0; var dt=Math.min(.05,(now-last)/1000); last=now;
+    var rate=dps(); acc+=rate*dt;
+    if(acc>=1){acc-=1;var c=pool.pop()||d.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("r","6");c.setAttribute("cx","300");c.setAttribute("fill","#7FC8F8");c._y=322;c._v=0;drips.appendChild(c)}
+    Array.prototype.slice.call(drips.childNodes).forEach(function(c){
+      c._v+=1500*dt; c._y+=c._v*dt;
+      if(c._y>=388-lvl){drips.removeChild(c);pool.push(c);lvl=Math.min(48,lvl+.5);water.setAttribute("y",(392-lvl).toFixed(1));}
+      else c.setAttribute("cy",c._y.toFixed(1));
+    });
+    if(turn<MAXT||drips.childNodes.length){ last=now; raf=requestAnimationFrame(tick); }
+  }
+  if("IntersectionObserver" in window){new IntersectionObserver(function(es){onScreen=es[0].isIntersecting;if(onScreen)loop();else if(raf){cancelAnimationFrame(raf);raf=0}}).observe(rig)}
+  d.addEventListener("visibilitychange",function(){if(!d.hidden)loop()});
+  paint();
+
+  /* ================= suburbs ================= */
+  var Z={
+    "Newcastle":"Newcastle,Newcastle East,Newcastle West,Cooks Hill,The Hill,Bar Beach,Hamilton,Hamilton South,Merewether,Adamstown,Adamstown Heights,Lambton,New Lambton,Mayfield,Waratah,Wallsend,Jesmond,Kotara,Broadmeadow,Georgetown,Stockton,Islington,Tighes Hill,Carrington,Wickham,Maryville,Shortland,Elermore Vale,Rankin Park,Beresfield,Birmingham Gardens",
+    "Lake Macquarie":"Charlestown,Belmont,Warners Bay,Toronto,Swansea,Morisset,Cardiff,Glendale,Speers Point,Boolaroo,Valentine,Eleebana,Redhead,Dudley,Whitebridge,Kahibah,Gateshead,Windale,Jewells,Bennetts Green,Mount Hutton,Teralba,Booragul,Edgeworth,Cameron Park,West Wallsend,Caves Beach,Blacksmiths,Marks Point,Dora Creek",
+    "Maitland":"Maitland,East Maitland,Rutherford,Thornton,Lorn,Tenambit,Telarah,Metford,Chisholm,Aberglasslyn,Gillieston Heights,Bolwarra,Largs,Morpeth,Ashtonfield,Rathluba,Horseshoe Bend,Woodberry,Raworth"
+  };
+  var all=[]; Object.keys(Z).forEach(function(z){Z[z].split(",").forEach(function(s){all.push([s,z])})});
+  $("#subs").innerHTML=all.map(function(x){return '<option value="'+x[0]+'">'}).join("");
+  var subIn=$("#sub"), subRes=$("#subRes");
+  function check(){
+    var v=subIn.value.trim().toLowerCase(); if(!v){subRes.textContent="Type a suburb to check it against our three zones.";return}
+    var hit=all.filter(function(x){return x[0].toLowerCase()===v})[0];
+    subRes.innerHTML=hit?'<b>Yes — '+esc(hit[0])+' is in our '+hit[1]+' zone.</b>Standard call-out fees apply, day or night.':'<b>'+esc(subIn.value.trim())+' isn’t on our list.</b>Call anyway — if we can’t get there quickly, we’ll say so and suggest someone closer.';
+  }
+  $("#subGo").addEventListener("click",check);
+  subIn.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();check()}});
+  subIn.addEventListener("change",check);
+
+  /* ================= checklist ================= */
+  var boxes=$$("#clItems input"), bars=$$(".cl-bar i");
+  function cl(){var n=boxes.filter(function(b){return b.checked}).length;$("#clN").textContent=n;bars.forEach(function(b,i){b.classList.toggle("on",i<n)});
+    $("#clMsg").textContent=n===6?"You’re ready. Call us — this is exactly what the plumber on the phone will ask about.":n?(6-n)+" to go. Every one of these shortens the call and the visit.":"Tick things off as you go — nothing is saved or sent."}
+  boxes.forEach(function(b){b.addEventListener("change",cl)});
+})();
+</script>
+</body>
+</html>

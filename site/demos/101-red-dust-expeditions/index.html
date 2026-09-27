@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="101">
+<meta name="demo:brand" content="Red Dust Expeditions">
+<title>Red Dust Expeditions — small-group 4WD tours from Alice Springs</title>
+<meta name="description" content="Red Dust Expeditions is a fictional small-group 4WD tour company running 1, 3 and 5-day trips through the Red Centre from Alice Springs.">
+<meta name="theme-color" content="#2C2236">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@600;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ochre:#B7472A;--ochre-d:#963519;--sand:#E9C79A;--sand-l:#F1DCBC;--dusk:#4B3B5C;--dusk-d:#2C2236;--dusk-dd:#1F1828;--spin:#9CA36A;--spin-d:#56612A;--paper:#F6EDE1;--ink:#2A1E22;--muted:#5E4B4A;--line:rgba(75,59,92,.22);
+--disp:"Alumni Sans","Arial Narrow",Impact,sans-serif;--body:"Open Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--gut:clamp(16px,4vw,56px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.62 var(--body);overflow-x:clip}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.16;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .27 0 0 0 0 .14 0 0 0 .5 -.12'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img,svg,canvas{display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.9}
+p{margin:0 0 1em}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:3px;border-radius:4px}
+.top :focus-visible,.night :focus-visible,.foot :focus-visible,.odo :focus-visible{outline-color:var(--sand)}
+section[id]{scroll-margin-top:64px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--ochre);color:#fff;font:700 14px/1 var(--body);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .18s,transform .18s,box-shadow .18s}
+.btn:hover{background:#A03C22;box-shadow:0 8px 20px rgba(150,53,25,.25)}
+.btn:active{transform:translateY(1px)}
+.btn.line{background:transparent;color:var(--dusk);box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.line:hover{background:rgba(75,59,92,.08)}
+.btn svg{width:16px;height:16px;flex:none}
+.eyebrow{font:700 12px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ochre-d);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;border-top:2px dotted currentColor}
+.h2{font-size:clamp(46px,6.4vw,92px)}
+.sec{padding:clamp(64px,9vw,124px) var(--gut)}
+.wrap{max-width:1240px;margin:0 auto}
+.lede{font-size:clamp(16px,1.3vw,18px);color:var(--muted);max-width:56ch}
+/* header */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:18px;min-height:60px;padding:8px var(--gut);background:var(--dusk-d);color:var(--paper)}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.logo svg{flex:none;width:34px;height:34px}
+.wordmark{font:800 26px/.95 var(--disp);letter-spacing:.08em;text-transform:uppercase;overflow-wrap:anywhere;padding-top:3px}
+.nav{margin-left:auto;display:flex;gap:2px}
+.nav a{color:#E6D8C6;text-decoration:none;font:600 12.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:12px 12px;border-radius:6px}
+.nav a:hover{background:rgba(246,237,225,.09);color:#fff}
+.top .btn{min-height:40px;padding:0 18px;font-size:13px;flex:none}
+/* hero: map-led */
+.hero{display:grid;grid-template-columns:minmax(390px,34vw) 1fr;grid-template-areas:"copy map" "days map" "stop map";grid-template-rows:auto auto 1fr;min-height:calc(100svh - 60px)}
+.hero-copy{grid-area:copy;padding:clamp(28px,4.2vh,48px) clamp(18px,3vw,48px) 0}
+.hero h1{font-size:clamp(54px,5.4vw,90px);line-height:.86;margin:0 0 18px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--ochre)}
+.hero .lede{font-size:16px;margin:0}
+.days{grid-area:days;padding:22px clamp(18px,3vw,48px) 0}
+.days-row{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.day{position:relative;min-height:60px;border:1.5px solid rgba(75,59,92,.55);background:rgba(246,237,225,.6);color:var(--dusk);border-radius:10px;cursor:pointer;display:grid;place-content:center;gap:3px;padding:6px 2px;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.day small{font:700 10px/1 var(--body);letter-spacing:.16em;text-transform:uppercase}
+.day b{font:800 30px/.8 var(--disp)}
+.day:hover{border-color:var(--ochre);color:var(--ochre-d)}
+.day.done{border-color:var(--ochre);color:var(--ochre-d)}
+.day[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:#fff;transform:translateY(-2px);box-shadow:0 8px 18px rgba(150,53,25,.28)}
+.days-foot{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+.days-foot .btn{min-height:42px;padding:0 16px;font-size:12.5px}
+.hint{font-size:13px;color:var(--muted);margin:0}
+.stop{grid-area:stop;padding:20px clamp(18px,3vw,48px) 30px;display:flex;flex-direction:column}
+.stop-in{border-top:3px solid var(--ochre);padding-top:16px}
+.stop-k{font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--ochre-d);margin:0 0 8px}
+.stop-h{text-wrap:balance;font-size:clamp(34px,2.9vw,46px);color:var(--dusk);margin:0 0 12px;overflow-wrap:anywhere}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:4px 26px;margin:0 0 12px}
+.stats div{display:flex;flex-direction:column}
+.stats dt{font:600 10.5px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);order:2}
+.stats dd{margin:0;font:800 28px/1 var(--disp);color:var(--ink)}
+.camp{font-size:14.5px;margin:0 0 10px;color:var(--ink)}
+.camp b{color:var(--dusk)}
+.hl{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.hl li{display:inline-flex;align-items:center;gap:6px;font:600 13px/1 var(--body);padding:7px 11px 7px 8px;border-radius:999px;background:var(--sand-l);color:var(--dusk)}
+.hl svg{width:16px;height:16px;color:var(--ochre-d)}
+.profile{margin-top:auto}
+.profile p{font:600 10.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;display:flex;justify-content:space-between;gap:10px}
+.profile svg{width:100%;height:58px}
+.map{grid-area:map;position:relative;overflow:hidden;background:#E7C597;min-height:600px;isolation:isolate}
+.map canvas,.map .ov{position:absolute;inset:0;width:100%;height:100%}
+.frame{position:absolute;inset:14px;border:1px solid rgba(44,34,54,.5);pointer-events:none;z-index:2}
+.frame::before{content:"";position:absolute;inset:5px;border:1px dashed rgba(44,34,54,.25)}
+.tick{position:absolute;font:600 10px/1 var(--body);letter-spacing:.08em;color:rgba(44,34,54,.72);background:#EDD3AC;padding:2px 4px}
+.sheet{position:absolute;left:30px;top:30px;z-index:3;background:rgba(246,237,225,.92);border:1px solid rgba(44,34,54,.35);padding:10px 14px 9px;max-width:250px;backdrop-filter:blur(2px)}
+.sheet b{display:block;font:800 22px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--dusk)}
+.sheet span{display:block;font:600 10.5px/1.45 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.odo{position:absolute;right:30px;top:30px;z-index:3;background:var(--dusk-dd);color:var(--paper);border-radius:12px;padding:9px 11px 10px;box-shadow:0 14px 30px rgba(31,24,40,.35)}
+.odo-l{display:flex;justify-content:space-between;font:700 10px/1 var(--body);letter-spacing:.2em;color:#CFC0DA;margin:0 0 7px;gap:14px}
+.odo-win{display:flex;align-items:center;gap:3px;background:#0E0A12;padding:4px;border-radius:6px}
+.wheel{width:26px;height:40px;overflow:hidden;position:relative;border-radius:3px;background:linear-gradient(#0f0b13,#2C2236 40%,#2C2236 60%,#0f0b13)}
+.wheel i{position:absolute;left:0;right:0;top:0;display:flex;flex-direction:column;font:800 34px/40px var(--disp);font-style:normal;text-align:center;will-change:transform}
+.wheel:nth-child(5) i{color:var(--sand)}
+.odo-win em{font:700 12px/1 var(--body);font-style:normal;color:#CFC0DA;padding:0 4px 0 5px;letter-spacing:.06em}
+.odo-leg{font:600 11px/1 var(--body);letter-spacing:.08em;color:#E6D8C6;margin:8px 0 0}
+.legend{position:absolute;left:30px;bottom:30px;z-index:3;display:flex;flex-wrap:wrap;gap:6px 14px;max-width:calc(100% - 200px);background:rgba(246,237,225,.92);border:1px solid rgba(44,34,54,.35);padding:9px 12px;font:600 11px/1.2 var(--body);color:var(--dusk)}
+.legend span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.legend svg{width:26px;height:10px}
+.scale{position:absolute;right:30px;bottom:30px;z-index:3;text-align:right;font:600 10.5px/1.3 var(--body);letter-spacing:.06em;color:var(--dusk);background:rgba(246,237,225,.92);border:1px solid rgba(44,34,54,.35);padding:8px 10px}
+.scale svg{width:120px;height:12px;margin:0 0 4px auto}
+.ov text{font-family:var(--disp);text-transform:uppercase}
+.lbl{font-size:19px;font-weight:800;letter-spacing:.06em;fill:var(--dusk-d);paint-order:stroke;stroke:#F3DDBA;stroke-width:5px;stroke-linejoin:round}
+.lbl-sm{font-size:13px;font-weight:600;letter-spacing:.3em;fill:rgba(44,34,54,.62)}
+.pin circle.o{fill:var(--paper);stroke:var(--dusk-d);stroke-width:2.5}
+.pin circle.i{fill:var(--dusk-d);transition:r .3s,fill .3s}
+.pin.on circle.i{fill:var(--ochre)}
+.pin.on .ring{opacity:1;animation:ring 1.8s ease-out infinite}
+.ring{fill:none;stroke:var(--ochre);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center}
+@keyframes ring{from{transform:scale(.6);opacity:.9}to{transform:scale(2.2);opacity:0}}
+#car .body{transition:transform .25s}
+/* itinerary */
+.itin{background:var(--paper);border-top:1px solid var(--line)}
+.itin-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.legs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+.legs::before{content:"";position:absolute;left:24px;right:24px;top:24px;border-top:3px dotted var(--dusk);opacity:.5}
+.leg{position:relative;display:flex;flex-direction:column}
+.leg-n{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:2.5px solid var(--dusk);font:800 26px/1 var(--disp);color:var(--dusk);margin-bottom:18px;position:relative;z-index:1;transition:background .25s,color .25s,border-color .25s}
+.leg.on .leg-n{background:var(--ochre);border-color:var(--ochre);color:#fff}
+.leg h3{font-size:28px;color:var(--ink);margin-bottom:8px;overflow-wrap:anywhere}
+.leg .km{font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ochre-d);margin:0 0 10px}
+.leg p{font-size:14.5px;color:var(--muted);margin:0 0 14px}
+.leg button{margin-top:auto;align-self:flex-start;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--dusk);background:transparent;color:var(--dusk);font:700 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.leg button:hover{background:var(--dusk);color:var(--paper)}
+/* tours as strata */
+.tours{background:var(--sand-l);padding-bottom:0}
+.tours .lede{margin-bottom:0}
+.strata{list-style:none;margin:56px calc(var(--gut)*-1) 0;padding:0}
+.stratum{position:relative;display:grid;grid-template-columns:200px 1fr 250px;gap:clamp(20px,4vw,60px);align-items:start;padding:clamp(40px,5vw,60px) var(--gut) clamp(46px,5.5vw,70px)}
+.stratum::before{content:"";position:absolute;left:0;right:0;top:-22px;height:23px;background:var(--c);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 14C90 4 170 20 260 13S430 2 520 10 700 22 790 12 960 3 1050 11 1160 18 1200 9V24H0Z'/%3E%3C/svg%3E") 0 0/100% 100%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath d='M0 14C90 4 170 20 260 13S430 2 520 10 700 22 790 12 960 3 1050 11 1160 18 1200 9V24H0Z'/%3E%3C/svg%3E") 0 0/100% 100%}
+.stratum{background:var(--c)}
+.s1{--c:#E9C79A}.s2{--c:#D98E62}.s3{--c:var(--ochre);color:#fff}
+.st-days{font:800 clamp(110px,11vw,168px)/.72 var(--disp);color:var(--dusk);display:flex;align-items:flex-start;gap:8px}
+.st-days span{font-size:clamp(22px,2vw,28px);line-height:1;letter-spacing:.12em;padding-top:6px}
+.s3 .st-days{color:#fff}
+.stratum h3{font-size:clamp(38px,3.6vw,54px);margin:4px 0 12px}
+.stratum p{max-width:60ch;margin-bottom:14px}
+.st-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.st-list li{font:600 13px/1 var(--body);padding:8px 12px;border-radius:999px;background:rgba(44,34,54,.1)}
+.s3 .st-list li{background:rgba(255,255,255,.16)}
+.st-price{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.st-price small{font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.st-price b{font:800 64px/.9 var(--disp)}
+.st-price .btn{margin-top:12px}
+.s2 .st-price .btn{background:var(--dusk-d)}
+.s3 .st-price .btn{background:var(--paper);color:var(--ochre-d)}
+.s3 .st-price .btn:hover{background:#fff}
+.note{font-size:12.5px;color:var(--muted);margin:0}
+.s3 .note{color:#FBE9DD}
+/* included & bring */
+.pack .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px)}
+.inc{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0}
+.inc li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:15px 0;border-top:1px dashed rgba(75,59,92,.35)}
+.inc svg{width:40px;height:40px;color:var(--ochre-d)}
+.inc b{display:block;font:700 16px/1.3 var(--body);color:var(--ink)}
+.inc span{font-size:14.5px;color:var(--muted)}
+.bring{background:#FBF6EE;border:1.5px solid var(--dusk);border-radius:4px;padding:26px clamp(18px,3vw,34px) 20px;margin-top:28px;box-shadow:8px 8px 0 var(--sand)}
+.bring-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+.bring-top h3{font-size:34px;color:var(--dusk)}
+.count{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-d)}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(75,59,92,.14);cursor:pointer;font-size:15px}
+.chk input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;margin:0;border:2px solid var(--dusk);border-radius:6px;display:grid;place-items:center;cursor:pointer;background:#fff}
+.chk input::after{content:"";width:12px;height:7px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) scale(0);margin-top:-3px;transition:transform .15s}
+.chk input:checked{background:var(--spin-d);border-color:var(--spin-d)}
+.chk input:checked::after{transform:rotate(-45deg) scale(1)}
+.chk input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(94,75,74,.5)}
+.chk small{display:block;color:var(--muted);font-size:13px}
+</style>
+<style>
+/* night */
+.night{position:relative;background:linear-gradient(180deg,var(--dusk-dd) 0%,#2A2035 60%,#3A2D48 100%);color:#EFE4F3;overflow:hidden;padding-bottom:clamp(140px,16vw,210px)}
+.stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.stars circle{fill:#FFF8EC}
+.tw{animation:tw 4.8s ease-in-out infinite alternate}
+.paused .tw,.paused .ring{animation-play-state:paused!important}
+@keyframes tw{from{opacity:.2}to{opacity:1}}
+.dunes{position:absolute;left:0;bottom:-1px;width:100%;height:clamp(110px,14vw,190px);pointer-events:none}
+.night .wrap{position:relative;z-index:1}
+.night .eyebrow{color:var(--sand)}
+.night h2{color:var(--paper)}
+.night .lede{color:#D8CBE0}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(233,199,154,.28);border:1px solid rgba(233,199,154,.28);margin:44px 0 56px}
+.fact{background:#271E31;padding:20px 20px 22px}
+.fact dt{font:700 11px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sand)}
+.fact dd{margin:10px 0 0;font:800 40px/.9 var(--disp);color:#fff;text-transform:uppercase}
+.fact dd small{display:block;font:400 14px/1.5 var(--body);text-transform:none;color:#D8CBE0;margin-top:10px}
+.night-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(30px,5vw,80px);align-items:start}
+.night-grid h3{font-size:40px;color:var(--sand);margin-bottom:14px}
+.faq details{border-top:1px solid rgba(233,199,154,.3)}
+.faq details:last-child{border-bottom:1px solid rgba(233,199,154,.3)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 0;font:700 16px/1.35 var(--body);color:#fff;min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:800 30px/1 var(--disp);color:var(--sand);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:#D8CBE0;font-size:15px;margin:0 0 18px;max-width:60ch}
+.country{margin:44px 0 0;padding:18px 0 0;border-top:1px dotted rgba(233,199,154,.55);font-size:15px;color:#EFE4F3;max-width:74ch}
+/* book */
+.book{position:relative;overflow:hidden;background:var(--paper)}
+.book-bg{position:absolute;right:-6%;top:-10%;width:70%;height:120%;pointer-events:none;opacity:.55}
+.book .wrap{position:relative;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(30px,5vw,80px);align-items:start}
+.form{background:#FBF6EE;border:1.5px solid var(--dusk);border-radius:6px;padding:clamp(20px,3vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:18px 18px;box-shadow:10px 10px 0 var(--dusk)}
+.f{display:flex;flex-direction:column;gap:7px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label,.f .lab{font:700 12px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--dusk)}
+.f input,.f select,.f textarea{font:400 16px/1.4 var(--body);color:var(--ink);background:#fff;border:1.5px solid rgba(75,59,92,.45);border-radius:6px;padding:10px 12px;min-height:48px;width:100%}
+.f textarea{min-height:88px;resize:vertical}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:3px solid var(--ochre);outline-offset:1px;border-color:var(--ochre)}
+.step{display:flex;align-items:center;border:1.5px solid rgba(75,59,92,.45);border-radius:6px;background:#fff;min-height:48px;width:max-content}
+.step button{width:48px;height:46px;border:0;background:transparent;font:800 28px/1 var(--disp);color:var(--dusk);cursor:pointer;border-radius:5px}
+.step button:hover{background:var(--sand-l)}
+.step output{min-width:44px;text-align:center;font:800 28px/1 var(--disp)}
+.total{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:10px 16px;flex-wrap:wrap;border-top:1px dashed rgba(75,59,92,.45);padding-top:18px}
+.total b{display:block;font:800 52px/.9 var(--disp);color:var(--ochre-d)}
+.total small{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}
+.summary{grid-column:1/-1;background:var(--sand-l);border-left:4px solid var(--spin-d);padding:12px 14px;font-size:14.5px;margin:0}
+.summary[hidden]{display:none}
+.book-copy ul{list-style:none;padding:0;margin:26px 0 0}
+.book-copy li{padding:12px 0 12px 30px;border-top:1px dashed rgba(75,59,92,.35);position:relative;font-size:15px}
+.book-copy li::before{content:"";position:absolute;left:4px;top:19px;width:12px;height:12px;border-radius:50%;border:3px solid var(--ochre)}
+/* footer */
+.foot{background:var(--dusk-dd);color:#E6D8C6;padding:60px var(--gut) calc(40px + env(safe-area-inset-bottom))}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;max-width:1240px;margin:0 auto}
+.foot-name{font:800 50px/.88 var(--disp);text-transform:uppercase;color:var(--paper);letter-spacing:.04em;overflow-wrap:anywhere;margin:0 0 12px}
+.foot h3{font:700 12px/1 var(--body);letter-spacing:.16em;color:var(--sand);margin:0 0 14px}
+.foot a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(233,199,154,.45)}
+.foot a:hover{border-bottom-color:var(--sand)}
+.foot p{font-size:14.5px;margin:0 0 7px}
+.fine{max-width:1240px;margin:44px auto 0;padding-top:18px;border-top:1px solid rgba(233,199,154,.2);font-size:12.5px;color:#CFC0DA;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+/* responsive */
+@media (max-width:1180px){
+ .legs{grid-template-columns:1fr;gap:0}
+ .legs::before{left:24px;right:auto;top:24px;bottom:24px;border-top:0;border-left:3px dotted var(--dusk)}
+ .leg{display:grid;grid-template-columns:50px 1fr;column-gap:20px;padding-bottom:28px}
+ .leg-n{grid-row:1/span 4;margin:0}
+ .leg button{grid-column:2}
+ .facts{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:980px){
+ .nav{display:none}
+ .top .btn{margin-left:auto}
+ .hero{grid-template-columns:1fr;grid-template-areas:"copy" "map" "days" "stop";grid-template-rows:auto;min-height:0}
+ .hero-copy{padding:26px var(--gut) 22px}
+ .hero h1{font-size:clamp(50px,13.6vw,84px)}
+ .map{min-height:0;height:clamp(420px,112vw,660px);border-block:1px solid rgba(44,34,54,.4)}
+ .days{padding:16px var(--gut) 0}
+ .stop{padding:20px var(--gut) 36px}
+ .stratum{grid-template-columns:auto 1fr;row-gap:18px}
+ .st-price{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:12px}
+ .st-price .btn{margin:0 0 0 auto}
+ .pack .wrap,.night-grid,.book .wrap{grid-template-columns:1fr}
+ .foot-grid{grid-template-columns:1fr 1fr}
+ .foot-grid>:first-child{grid-column:1/-1}
+}
+@media (max-width:560px){
+ .top{min-height:56px;gap:12px}
+ .wordmark{font-size:22px}
+ .logo svg{width:30px;height:30px}
+ .top .btn{min-height:40px;padding:0 14px}
+ .sheet,.scale{display:none}
+ .frame{inset:9px}
+ .tick{display:none}
+ .odo{right:18px;top:18px;padding:7px 8px 8px}
+ .wheel{width:21px;height:32px}
+ .wheel i{font-size:28px;line-height:32px}
+ .legend{left:18px;bottom:18px;right:18px;max-width:none;gap:4px 12px;padding:7px 10px;font-size:10.5px}
+ .lbl{font-size:25px;stroke-width:6px}
+ .lbl-sm{font-size:16px;letter-spacing:.24em}
+ .stats{gap:4px 18px}
+ .stats dd{font-size:26px}
+ .st-days{font-size:104px}
+ .st-price b{font-size:54px}
+ .st-price .btn{margin:6px 0 0;width:100%}
+ .form{grid-template-columns:1fr;box-shadow:6px 6px 0 var(--dusk)}
+ .facts{grid-template-columns:1fr}
+ .fact{padding:16px 18px}
+ .foot-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="i-gorge" viewBox="0 0 24 24"><path d="M2 21V9l3-3 2 3 2-1v13M22 21V6l-3-3-2 3-2 1v14M9 21h6M11 16h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11zM9 15a3 3 0 0 0 3 3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6l-5.4 2.9 1.2-6-4.5-4.2 6.1-.7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-4wd" viewBox="0 0 24 24"><path d="M2 16v-4l3-1 3-5h9l3 5h2v5h-2M2 16h2M10 16h4M4 4h13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="16.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="16.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+<symbol id="i-dune" viewBox="0 0 24 24"><path d="M2 19c3-6 7-9 11-9s7 4 9 9M2 19h20M5 13c2-2 4-3.5 7-4M17 5a2 2 0 1 0 .1 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+<symbol id="i-pot" viewBox="0 0 24 24"><path d="M5 10h14v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zM3 10h18M9 7c0-1.2 1-1.8 1-3M14 7c0-1.2 1-1.8 1-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+<symbol id="i-salt" viewBox="0 0 24 24"><path d="M2 15c4-4 16-4 20 0-4 4-16 4-20 0zM7 15h2M11 15h2M15 15h2M6 7l2 2M12 5v3M18 7l-2 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+<symbol id="i-range" viewBox="0 0 24 24"><path d="M1.5 19l6-9 4 5 3-4 8 8zM6 12.2l1.5 1.3 1.2-1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-swag" viewBox="0 0 24 24"><path d="M3 15a4 4 0 0 1 4-4h14v8H7a4 4 0 0 1-4-4zM7 11v8M11 11v8M3 15h4" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+<symbol id="i-kit" viewBox="0 0 24 24"><path d="M3 8h18v12H3zM9 8V5h6v3M12 11v6M9 14h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 7h18v3.5a2 2 0 0 0 0 4V18H3v-3.5a2 2 0 0 0 0-4zM9 7v11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-dasharray="none" stroke-linejoin="round"/></symbol>
+<symbol id="i-scope" viewBox="0 0 24 24"><path d="M3 13l11-5.5 2.2 4.3L5.2 17.3zM16.5 7l3-1.4 1.8 3.6-3 1.5M9.5 15.8L7 21M11.5 14.8l3 6.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5l13 7.5-13 7.5z" fill="currentColor"/></symbol>
+</defs>
+</svg>
+<header class="top">
+ <a class="logo" href="#route"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#B7472A"/><path d="M5 20c3-5 7-3 10-6s6-6 11-3 4 8 1 11-9 5-14 3-9-2-8-5z" fill="none" stroke="#F6EDE1" stroke-width="1.5"/><path d="M11 19c2-3 4-2 6-4s4-3 6-1 1 5-2 6-5 2-8 1-3-1-2-2z" fill="none" stroke="#F6EDE1" stroke-width="1.5"/><circle cx="18" cy="17" r="1.8" fill="#F6EDE1"/></svg><span class="wordmark" data-brand>Red Dust Expeditions</span></a>
+ <nav class="nav" aria-label="Sections"><a href="#itinerary">Itinerary</a><a href="#tours">Tours</a><a href="#pack">What's included</a><a href="#night">Before you go</a></nav>
+ <a class="btn" href="#book">Book a seat</a>
+</header>
+<main>
+<section class="hero" id="route" aria-labelledby="h1">
+ <div class="hero-copy">
+  <p class="eyebrow">4WD tours from Alice Springs, NT</p>
+  <h1 id="h1">Red earth, big sky, <em>one day at a time.</em></h1>
+  <p class="lede">Gorge walks, dune sunsets and nights under more stars than you’ve ever seen — in groups of eight or fewer. Drive our five-day Big Loop on the map: 1,054 km of ranges, sand country and salt pans.</p>
+ </div>
+ <figure class="map" id="map" aria-labelledby="mapcap" style="margin:0">
+  <canvas id="terrain" aria-hidden="true"></canvas>
+  <svg class="ov" id="ov" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+   <defs><pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 4h8" stroke="#9C8A7E" stroke-width="1" opacity=".55"/></pattern></defs>
+   <g id="dunelines" fill="none" stroke="#B7472A" stroke-width="1.4" stroke-linecap="round" opacity=".5"></g>
+   <path d="M430 610c14-22 60-34 104-30s78 8 96 26-10 42-60 46-92 2-118-10-30-18-22-32z" fill="#F4E8D6" stroke="#8E7B70" stroke-width="1.5"/>
+   <path d="M430 610c14-22 60-34 104-30s78 8 96 26-10 42-60 46-92 2-118-10-30-18-22-32z" fill="url(#hatch)"/>
+   <g fill="none" stroke="#4B3B5C" stroke-width="1.6" stroke-dasharray="7 5" opacity=".55" stroke-linecap="round">
+    <path d="M560 180c-20 40-10 80-40 110s-24 70-60 100-30 70-70 90"/><path d="M820 200c-10 50 20 90-10 140s-30 90-60 120"/><path d="M250 300c30 30 20 60 50 80s10 50 40 70"/>
+   </g>
+   <path d="M712 -10C708 80 704 180 700 270S712 520 736 710" fill="none" stroke="#2C2236" stroke-width="6.5" opacity=".75"/>
+   <path d="M712 -10C708 80 704 180 700 270S712 520 736 710" fill="none" stroke="#F6EDE1" stroke-width="3.2"/>
+   <text class="lbl-sm" x="236" y="160" transform="rotate(-3 236 160)">Western ranges</text>
+   <text class="lbl-sm" x="238" y="642" transform="rotate(-62 238 642)">Dune country</text>
+   
+   
+   <text class="lbl-sm" x="520" y="380">Sandstone gorge</text>
+   <text class="lbl-sm" x="724" y="120" transform="rotate(90 724 120)">Sealed road</text>
+   <path id="trail" fill="none" stroke="#2C2236" stroke-width="4.2" stroke-linecap="round" stroke-dasharray="0 11" opacity=".72"/>
+   <path id="done" fill="none" stroke="#B7472A" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+   <g id="pins"></g>
+   <g id="puffs" fill="#C98D63"></g>
+   <g id="car" transform="translate(700 270)"><circle r="21" fill="#F6EDE1" stroke="#2C2236" stroke-width="2.5"/><g class="body"><path d="M-7 -13H9M-4 -13v3M6 -13v3" stroke="#2C2236" stroke-width="1.8" fill="none"/><path d="M-15 4v-7q0-2 2-2h4l3.5-5h13q2 0 3 2l2.4 4.2 2.1.5q1.2.3 1.2 1.6V4z" fill="#B7472A" stroke="#2C2236" stroke-width="1.8" stroke-linejoin="round"/><path d="M-4.5 -8.3h4v3.3h-6.3zM1.5 -8.3h6l1.9 3.3H1.5z" fill="#F6EDE1"/><path d="M-17 -3.5h2.5v6H-17z" fill="#2C2236"/><circle cx="-7.5" cy="4.5" r="4.2" fill="#2C2236"/><circle cx="-7.5" cy="4.5" r="1.6" fill="#E9C79A"/><circle cx="9.5" cy="4.5" r="4.2" fill="#2C2236"/><circle cx="9.5" cy="4.5" r="1.6" fill="#E9C79A"/></g></g>
+  </svg>
+  <div class="frame" aria-hidden="true"><span class="tick" style="left:24%;top:-7px">133°15′E</span><span class="tick" style="left:52%;top:-7px">133°45′E</span><span class="tick" style="left:80%;top:-7px">134°15′E</span><span class="tick" style="left:-6px;top:36%;writing-mode:vertical-rl">23°45′S</span><span class="tick" style="left:-6px;top:70%;writing-mode:vertical-rl">24°15′S</span></div>
+  <div class="sheet" aria-hidden="true"><b>The Big Loop</b><span>Sheet 5 of 5 · illustrative map, not for navigation</span></div>
+  <div class="odo" aria-hidden="true"><p class="odo-l"><span>ODOMETER</span><span id="odo-day">START</span></p><div class="odo-win" id="odo-win"><em>km</em></div><p class="odo-leg" id="odo-leg">Pickup 6.30 am · town</p></div>
+  <div class="legend" aria-hidden="true"><span><svg viewBox="0 0 26 10"><path d="M2 5h22" stroke="#2C2236" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="0 7"/></svg>4WD route</span><span><svg viewBox="0 0 26 10"><path d="M2 5h22" stroke="#B7472A" stroke-width="3.5" stroke-linecap="round"/></svg>Driven</span><span><svg viewBox="0 0 26 10"><path d="M2 5h22" stroke="#4B3B5C" stroke-width="1.6" stroke-dasharray="5 4"/></svg>Dry creek</span><span><svg viewBox="0 0 26 10"><circle cx="13" cy="5" r="4" fill="#F6EDE1" stroke="#2C2236" stroke-width="2"/></svg>Camp</span></div>
+  <div class="scale" aria-hidden="true"><svg viewBox="0 0 120 12"><path d="M1 2v9h118V2M60 6v5M30 8v3M90 8v3" fill="none" stroke="#2C2236" stroke-width="1.5"/><path d="M1 8h59" stroke="#2C2236" stroke-width="3"/></svg>0 — 50 — 100 km (approx.)</div>
+  <figcaption id="mapcap" class="sr">Illustrative topographic map of the five-day Big Loop from Alice Springs: west along the ranges to Range Camp, south-west into dune country, south to a salt lake, east to a station camp near a sandstone gorge, then north back to town — 1,054 km in total.</figcaption>
+ </figure>
+ <div class="days">
+  <div class="days-row" role="group" aria-label="Drive the Big Loop by day">
+   <button class="day" type="button" data-day="1" aria-pressed="false"><small>Day</small><b>1</b></button>
+   <button class="day" type="button" data-day="2" aria-pressed="false"><small>Day</small><b>2</b></button>
+   <button class="day" type="button" data-day="3" aria-pressed="false"><small>Day</small><b>3</b></button>
+   <button class="day" type="button" data-day="4" aria-pressed="false"><small>Day</small><b>4</b></button>
+   <button class="day" type="button" data-day="5" aria-pressed="false"><small>Day</small><b>5</b></button>
+  </div>
+  <div class="days-foot"><button class="btn line" id="play" type="button"><svg aria-hidden="true"><use href="#i-play"/></svg>Drive the whole loop</button><p class="hint">Pick a day — the 4WD drives there and the odometer keeps count.</p></div>
+ </div>
+ <div class="stop" id="stop"><div class="stop-in" id="stop-in" aria-live="polite">
+  <p class="stop-k">Day 0 · Before we roll</p>
+  <h2 class="stop-h">Pickup in Alice Springs</h2>
+  <dl class="stats"><div><dt>Loop</dt><dd>1,054 km</dd></div><div><dt>Nights</dt><dd>4 camps</dd></div><div><dt>Group</dt><dd>Max 8</dd></div></dl>
+  <p class="camp">We collect you from your accommodation at 6.30 am. Five days, four camps, one guide who does all the driving — you just watch the country change.</p>
+ </div></div>
+</section>
+<section class="sec itin" id="itinerary" aria-labelledby="itin-h">
+ <div class="wrap">
+  <div class="itin-head">
+   <div><p class="eyebrow">The Big Loop · 5 days · 1,054 km</p><h2 class="h2" id="itin-h">Day by day</h2></div>
+   <p class="lede" style="margin:0">Every day has one long drive, one good walk and one camp we’d happily come back to. Times are approximate — the country, the weather and the wildlife set the pace.</p>
+  </div>
+  <ol class="legs" id="legs"></ol>
+ </div>
+</section>
+<section class="sec tours" id="tours" aria-labelledby="tours-h">
+ <div class="wrap">
+  <p class="eyebrow">Three ways in</p>
+  <h2 class="h2" id="tours-h">Pick your depth</h2>
+  <p class="lede">Every tour runs in a single air-conditioned 4WD with one guide and no more than eight guests. The longer you stay, the deeper into the layers you go.</p>
+ </div>
+ <ol class="strata">
+  <li class="stratum s1">
+   <div class="st-days" aria-hidden="true">1<span>day</span></div>
+   <div><h3>Gorge Day</h3><p>A long day out along the western ranges: two short gorge walks, a waterhole stop and lunch in the shade of river red gums. Back in town in time for dinner.</p>
+    <ul class="st-list"><li>12 hours</li><li>6.30 am pickup</li><li>Lunch &amp; snacks</li><li>Walks 2–4 km</li><li>Ages 8+</li></ul></div>
+   <div class="st-price"><small>Sample price · per adult</small><b>$249</b><button class="btn" type="button" data-tour="day">Choose Gorge Day</button></div>
+  </li>
+  <li class="stratum s2">
+   <div class="st-days" aria-hidden="true">3<span>days</span></div>
+   <div><h3>Dunes &amp; Stars</h3><p>Ranges first, then sand country: a sunset from the crest of a dune, two nights in swags and a telescope session at our darkest camp.</p>
+    <ul class="st-list"><li>2 nights camping</li><li>All meals</li><li>≈ 620 km</li><li>Walks up to 5 km</li><li>Ages 12+</li></ul></div>
+   <div class="st-price"><small>Sample price · per adult</small><b>$1,190</b><button class="btn" type="button" data-tour="three">Choose Dunes &amp; Stars</button></div>
+  </li>
+  <li class="stratum s3">
+   <div class="st-days" aria-hidden="true">5<span>days</span></div>
+   <div><h3>The Big Loop</h3><p>The whole map: gorges, dunes, a salt lake, a working cattle station and four nights of stars. Our favourite way to feel how big this country really is.</p>
+    <ul class="st-list"><li>4 nights camping</li><li>All meals</li><li>1,054 km</li><li>Walks up to 6 km</li><li>Ages 12+</li></ul>
+    <p class="note" style="margin-top:22px">Sample prices in AUD per adult, twin-share swag. Private-group rates on request.</p></div>
+   <div class="st-price"><small>Sample price · per adult</small><b>$2,150</b><button class="btn" type="button" data-tour="five">Choose the Big Loop</button></div>
+  </li>
+ </ol>
+</section>
+<section class="sec pack" id="pack" aria-labelledby="pack-h">
+ <div class="wrap">
+  <div>
+   <p class="eyebrow">What’s included</p>
+   <h2 class="h2" id="pack-h">We carry the heavy stuff</h2>
+   <ul class="inc">
+    <li><svg aria-hidden="true"><use href="#i-4wd"/></svg><div><b>An 8-seat 4WD</b><span>Air-conditioned, with a fridge, recovery gear and a dust-sealed luggage pod.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-swag"/></svg><div><b>Swag &amp; bedding</b><span>Canvas swag with a thick foam mattress, fresh sheets and a winter-rated sleeping bag.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-pot"/></svg><div><b>Every meal from Day 1 lunch</b><span>Cooked breakfasts, camp-oven dinners, vegetarian and other diets with notice.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-ticket"/></svg><div><b>Park and camping fees</b><span>Paid by us, so you never need a wallet out bush.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-kit"/></svg><div><b>A guide trained in remote first aid</b><span>Plus a satellite phone and an emergency beacon on every trip.</span></div></li>
+    <li><svg aria-hidden="true"><use href="#i-scope"/></svg><div><b>Telescope &amp; star charts</b><span>Binoculars, a red-light torch and a southern-sky chart for each guest.</span></div></li>
+   </ul>
+  </div>
+  <div>
+   <p class="eyebrow">What to bring</p>
+   <h2 class="h2" style="font-size:clamp(40px,4.6vw,64px)">Pack light, pack smart</h2>
+   <div class="bring">
+    <div class="bring-top"><h3>Your list</h3><span class="count" id="count" aria-live="polite">0 of 9 packed</span></div>
+    <div id="bring">
+     <label class="chk"><input type="checkbox"><span>Refillable water bottle, 1.5 L+<small>We carry 20 L per guest per day.</small></span></label>
+     <label class="chk"><input type="checkbox"><span>Broad-brim hat &amp; SPF 50+ sunscreen</span></label>
+     <label class="chk"><input type="checkbox"><span>Fly net<small>You’ll thank us by 10 am.</small></span></label>
+     <label class="chk"><input type="checkbox"><span>Closed walking shoes, already worn in</span></label>
+     <label class="chk"><input type="checkbox"><span>Warm layers &amp; a beanie<small>Winter nights can dip below 0 °C.</small></span></label>
+     <label class="chk"><input type="checkbox"><span>Head torch with a red-light mode</span></label>
+     <label class="chk"><input type="checkbox"><span>Swimmers &amp; a quick-dry towel</span></label>
+     <label class="chk"><input type="checkbox"><span>One soft bag, 10 kg max</span></label>
+     <label class="chk"><input type="checkbox"><span>Personal medication &amp; favourite snacks</span></label>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="sec night" id="night" aria-labelledby="night-h">
+ <svg class="stars" id="stars" aria-hidden="true"></svg>
+ <div class="wrap">
+  <p class="eyebrow">Before you go</p>
+  <h2 class="h2" id="night-h">After dark, it gets better</h2>
+  <p class="lede">Out here the Milky Way throws shadows. Every camp is chosen for a low horizon and no lights for kilometres, so star-gazing is part of every night — telescope, red torches and a guide who knows the southern sky.</p>
+  <dl class="facts">
+   <div class="fact"><dt>Season</dt><dd>Apr – Oct<small>Summer trips by request, with 5 am starts and long lunch breaks.</small></dd></div>
+   <div class="fact"><dt>Group size</dt><dd>Max 8<small>Plus one guide. Solo travellers are very welcome.</small></dd></div>
+   <div class="fact"><dt>Walking</dt><dd>2–6 km<small>Rocky, uneven ground. A moderate level of fitness is plenty.</small></dd></div>
+   <div class="fact"><dt>Nights</dt><dd>0–12 °C<small>June to August can dip below zero; days sit around 20–30 °C.</small></dd></div>
+  </dl>
+  <div class="night-grid">
+   <div><h3>Questions we get</h3><p style="color:#D8CBE0;max-width:46ch">If yours isn’t here, call the office or send us a note from the booking form — a real person answers.</p></div>
+   <div class="faq">
+    <details><summary>Do I need 4WD experience?</summary><p>No. Your guide does all the driving. You ride, spot wildlife, and maybe help boil the billy.</p></details>
+    <details><summary>Is there phone reception?</summary><p>Only close to town. Every vehicle carries a satellite phone and an emergency beacon, and we check in with the office each evening.</p></details>
+    <details><summary>What are the toilets like?</summary><p>Mostly bush toilets and a portable loo with a very good view. Station Camp on Day 4 has hot showers.</p></details>
+    <details><summary>Can you cater for dietary needs?</summary><p>Yes — vegetarian, vegan, gluten-free and most allergies, as long as you tell us when you book.</p></details>
+    <details><summary>What if it rains or a track closes?</summary><p>It’s rare, but it happens. We re-route on open, safe tracks. If a tour can’t run, you choose a new date or a refund (sample policy).</p></details>
+   </div>
+  </div>
+  <p class="country">Our tours travel on the lands of the Traditional Owners of Central Australia. We follow park rules and signage, keep to open tracks, and respect areas that are closed to visitors.</p>
+ </div>
+ <svg class="dunes" viewBox="0 0 1440 190" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120C160 70 300 60 440 96S700 150 860 104 1180 40 1440 88V190H0Z" fill="#6B3A3A" opacity=".55"/><path d="M0 150C200 108 360 118 520 138S840 170 1010 132 1300 100 1440 124V190H0Z" fill="#8E4430"/><path d="M0 172C260 150 520 160 760 172S1200 180 1440 164V190H0Z" fill="#F6EDE1"/></svg>
+</section>
+<section class="sec book" id="book" aria-labelledby="book-h">
+ <svg class="book-bg" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#B7472A" stroke-width="1.3" opacity=".5"><path d="M300 90c110-6 210 70 206 190s-80 220-210 214S88 410 94 290 190 96 300 90z"/><path d="M302 136c86-4 160 54 158 146s-64 170-164 166-160-78-156-168 76-140 162-144z"/><path d="M304 182c62-2 112 40 110 104s-46 118-116 114-110-54-108-118 52-98 114-100z"/><path d="M306 230c36 0 64 24 62 60s-26 66-66 64-62-30-60-66 28-58 64-58z"/><path d="M308 272c14 0 24 10 23 24s-11 26-26 25-23-12-22-26 11-23 25-23z"/></g></svg>
+ <div class="wrap">
+  <div class="book-copy">
+   <p class="eyebrow">Book a seat</p>
+   <h2 class="h2" id="book-h">Save your swag</h2>
+   <p class="lede">Choose a tour and a departure and we’ll hold your seats while we confirm the details with you by email.</p>
+   <ul><li>Big Loop leaves Saturdays; Dunes &amp; Stars leaves Tuesdays and Saturdays; Gorge Day runs Monday to Saturday.</li><li>Pickup from any Alice Springs accommodation or the airport.</li><li>Pay a 20% deposit once we confirm (sample terms).</li></ul>
+  </div>
+  <form class="form" id="form" novalidate aria-describedby="form-note">
+   <div class="f"><label for="f-tour">Tour</label><select id="f-tour" name="tour"><option value="day">Gorge Day · 1 day</option><option value="three">Dunes &amp; Stars · 3 days</option><option value="five" selected>The Big Loop · 5 days</option></select></div>
+   <div class="f"><label for="f-date">Departure</label><select id="f-date" name="date"></select></div>
+   <div class="f"><span class="lab" id="g-lab">Guests</span><div class="step" role="group" aria-labelledby="g-lab"><button type="button" id="g-minus" aria-label="Fewer guests">−</button><output id="g-out" aria-live="polite">2</output><button type="button" id="g-plus" aria-label="More guests">+</button></div></div>
+   <div class="f"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required placeholder="e.g. Sam Taylor"></div>
+   <div class="f full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+   <div class="f full"><label for="f-notes">Dietary needs or questions</label><textarea id="f-notes" name="notes" placeholder="Vegetarian, first time camping, travelling with a teenager…"></textarea></div>
+   <div class="total"><div><small>Sample total · AUD</small><b id="total">$4,300</b><small id="total-note">2 × $2,150, twin-share swag</small></div><button class="btn" type="submit">Request seats</button></div>
+   <p class="summary" id="summary" role="status" hidden></p>
+   <p class="note f full" id="form-note">Demo form — nothing is sent and no booking is made.</p>
+  </form>
+ </div>
+</section>
+</main>
+<footer class="foot">
+ <div class="foot-grid">
+  <div><p class="foot-name" data-brand>Red Dust Expeditions</p><p>Small-group 4WD tours of the Red Centre, from Alice Springs, NT.</p></div>
+  <div><h3>Office</h3><p><a href="tel:0855504172">(08) 5550 4172</a></p><p><a href="mailto:bookings@example.com">bookings@example.com</a></p><p>Alice Springs, NT</p></div>
+  <div><h3>Hours</h3><p>Mon–Sat 7 am – 5 pm</p><p>Sun closed (we’re out bush)</p></div>
+  <div><h3>On country</h3><p>We travel on the lands of Traditional Owners and follow park rules.</p></div>
+ </div>
+ <div class="fine"><span>Concept demo for a fictional business. Sample prices, itinerary and map — not for navigation.</span><span>Photos? None. Every line here is drawn.</span></div>
+</footer>
+<p class="sr" id="live" aria-live="polite"></p>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+var NS="http://www.w3.org/2000/svg";
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function reduced(){return (window.DemoKit&&DemoKit.reducedMotion)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)}
+function fmtKm(n){return Math.round(n).toLocaleString("en-AU")}
+
+/* ---------- data ---------- */
+var STOPS=[["Alice Springs",700,270,0,-34,"middle"],["Range Camp",430,238,0,-30,"middle"],["Dune Camp",318,462,-14,40,"middle"],["Salt Lake Camp",478,588,-30,14,"end"],["Station Camp",668,512,-24,36,"end"]];
+var LEGS=["M700 270C660 262 640 236 600 244S540 262 505 250S455 232 430 238","M430 238C400 260 392 300 370 330S330 380 342 410S326 450 318 462","M318 462C350 470 380 500 400 530S450 566 478 588","M478 588C520 606 580 610 620 590S662 548 668 512","M668 512C700 480 690 440 712 410S730 330 718 300S706 282 700 270"];
+var DAYS=[
+ {km:138,drive:"2 h 40",walk:"4 km",camp:"Range Camp — a bush camp on a river flat below the ranges. Swags, campfire, drop toilet.",hl:[["gorge","Morning gorge walk"],["water","Waterhole stop (swim where permitted)"],["star","First night in a swag"]],t:"West along the ranges on sealed road, then onto our first 4WD track. Short gorge walk before lunch."},
+ {km:214,drive:"4 h 30",walk:"3 km",camp:"Dune Camp — swags on a sheltered sand ridge. No facilities, just a very big quiet.",hl:[["4wd","Gibber-plain tracks"],["dune","Dune sunset walk"],["pot","Camp-oven dinner"]],t:"South-west across stony gibber plains into sand country. Sunset from the top of a dune."},
+ {km:176,drive:"3 h 45",walk:"5 km",camp:"Salt Lake Camp — a low-light camp by the lake’s edge, made for the telescope.",hl:[["dune","Dawn on the dune crest"],["salt","Salt-pan edge walk"],["star","Guided star-gazing"]],t:"Up early for the dunes at first light, then south to the shimmering edge of a salt lake."},
+ {km:232,drive:"4 h 50",walk:"6 km",camp:"Station Camp — on a working cattle station, by arrangement. Hot showers!",hl:[["gorge","Sandstone gorge rim walk"],["4wd","Station tracks"],["pot","Damper by the fire"]],t:"East on station tracks to a sandstone gorge. Our longest walk: 6 km around the rim."},
+ {km:294,drive:"5 h 20",walk:"2 km",camp:"Back in town — drop-off at your accommodation around 5.30 pm.",hl:[["range","Ranges lookout"],["water","Dry-river lunch stop"],["4wd","Back on the bitumen"]],t:"North across the plain and back through a gap in the ranges. Farewell lunch in a dry riverbed."}
+];
+var KMC=[0];DAYS.forEach(function(d,i){KMC.push(KMC[i]+d.km)});
+
+/* ---------- terrain (height field → hillshade + contours on canvas) ---------- */
+function hash(i,j){var n=(Math.imul(i|0,374761393)+Math.imul(j|0,668265263))|0;n=Math.imul(n^(n>>>13),1274126177);n^=n>>>16;return (n>>>0)/4294967296}
+function vn(x,y){var i=Math.floor(x),j=Math.floor(y),fx=x-i,fy=y-j,u=fx*fx*(3-2*fx),v=fy*fy*(3-2*fy),a=hash(i,j),b=hash(i+1,j),c=hash(i,j+1),d=hash(i+1,j+1);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+function fbm(x,y){var s=0,a=.5;for(var k=0;k<4;k++){s+=a*vn(x,y);x*=2.02;y*=2.02;a*=.5}return s}
+function Hf(x,y){
+ var h=fbm(x/230+11.3,y/230+4.1)*.5;
+ var gap=1-.8*Math.exp(-Math.pow((x-700)/40,2));
+ var r1=190+20*Math.sin(x/95)+10*Math.sin(x/37+1),d1=(y-r1)/34;
+ h+=.8*Math.exp(-d1*d1)*gap*(.55+.6*fbm(x/55+3,y/55));
+ var r2=300+16*Math.sin(x/120+1.3),d2=(y-r2)/24;
+ h+=.42*Math.exp(-d2*d2)*gap*(.4+.7*fbm(x/60+9,y/60+2));
+ var mx=(x-590)/74,my=(y-430)/44,m=mx*mx+my*my;h+=.5*Math.exp(-m*m);
+ h-=.3*Math.exp(-Math.pow((y-430-.35*(x-590))/7,2))*Math.exp(-m*m*.5);
+ var lx=(x-540)/105,ly=(y-615)/42;h*=1-.75*Math.exp(-Math.pow(lx*lx+ly*ly,2));
+ h-=.12*Math.max(0,Math.min(1,(y-380)/120))*Math.max(0,Math.min(1,(430-x)/120));
+ return h;
+}
+var G=4,NX=251,NY=176,HG=new Float32Array(NX*NY);
+for(var j=0;j<NY;j++)for(var i=0;i<NX;i++)HG[j*NX+i]=Hf(i*G,j*G);
+function hAt(x,y){var i=Math.max(0,Math.min(NX-1,Math.round(x/G))),j=Math.max(0,Math.min(NY-1,Math.round(y/G)));return HG[j*NX+i]}
+var shade=document.createElement("canvas");shade.width=NX;shade.height=NY;
+(function(){var sx=shade.getContext("2d"),img=sx.createImageData(NX,NY),D=img.data,R=[[0,236,208,162],[.35,231,184,133],[.7,215,142,99],[1.1,188,102,72]];
+ for(var j=0;j<NY;j++)for(var i=0;i<NX;i++){var k=j*NX+i,h=HG[k],gx=(HG[j*NX+Math.min(NX-1,i+1)]-HG[j*NX+Math.max(0,i-1)])/(2*G),gy=(HG[Math.min(NY-1,j+1)*NX+i]-HG[Math.max(0,j-1)*NX+i])/(2*G);
+  var il=Math.max(.62,Math.min(1.2,1+(gx+gy)*6.5)),s=0;while(s<R.length-2&&h>R[s+1][0])s++;var t=Math.max(0,Math.min(1,(h-R[s][0])/(R[s+1][0]-R[s][0])));
+  for(var c=0;c<3;c++){var v=(R[s][c+1]+(R[s+1][c+1]-R[s][c+1])*t)*il;if(il<1)v=v+([75,59,92][c]-v)*(1-il)*.55;D[k*4+c]=v}D[k*4+3]=255}
+ sx.putImageData(img,0,0)})();
+var SEG={1:[3,2],2:[2,1],3:[3,1],4:[0,1],5:[0,1,3,2],6:[0,2],7:[0,3],8:[0,3],9:[0,2],10:[0,3,2,1],11:[0,1],12:[3,1],13:[2,1],14:[3,2]};
+var LEVELS=[];
+for(var L=.1,n=0;L<1.4;L+=.05,n++){var p=new Path2D();
+ for(var j=0;j<NY-1;j++)for(var i=0;i<NX-1;i++){var a=HG[j*NX+i],b=HG[j*NX+i+1],c=HG[(j+1)*NX+i+1],d=HG[(j+1)*NX+i];
+  var id=(a>L?8:0)|(b>L?4:0)|(c>L?2:0)|(d>L?1:0);if(!id||id===15)continue;var x=i*G,y=j*G,sg=SEG[id];
+  for(var q=0;q<sg.length;q+=2){for(var e=0;e<2;e++){var E=sg[q+e],px,py;
+   if(E===0){px=x+G*(L-a)/(b-a);py=y}else if(E===1){px=x+G;py=y+G*(L-b)/(c-b)}else if(E===2){px=x+G*(L-d)/(c-d);py=y+G}else{px=x;py=y+G*(L-a)/(d-a)}
+   if(e)p.lineTo(px,py);else p.moveTo(px,py)}}}
+ LEVELS.push([p,n%5===4])}
+var TUFT=new Path2D();
+for(var k=0;k<1500;k++){var tx=hash(k,1)*1000,ty=hash(k,2)*700,th=hAt(tx,ty);if(th>.3||hAt(tx+8,ty)-th>.02||Math.abs((tx-540)/105)+Math.abs((ty-615)/42)<1.3)continue;
+ for(var m=0;m<4;m++){var r=1.1+hash(k,m+5)*1.1,ux=tx+(hash(k,m+9)-.5)*12,uy=ty+(hash(k,m+13)-.5)*9;TUFT.moveTo(ux+r,uy);TUFT.arc(ux,uy,r,0,6.2832)}}
+var map=$("#map"),cv=$("#terrain"),ctx=cv.getContext("2d");
+function draw(){var W=map.clientWidth,H=map.clientHeight;if(!W||!H)return;var dpr=Math.min(window.devicePixelRatio||1,2);
+ cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);var s=Math.max(W/1000,H/700),ox=(W-1000*s)/2,oy=(H-700*s)/2;
+ ctx.setTransform(s*dpr,0,0,s*dpr,ox*dpr,oy*dpr);ctx.imageSmoothingEnabled=true;ctx.drawImage(shade,-G/2,-G/2,1000+G,700+G);
+ ctx.fillStyle="rgba(118,128,58,.62)";ctx.fill(TUFT);
+ LEVELS.forEach(function(l){ctx.lineWidth=(l[1]?1.7:.9)/s;ctx.strokeStyle=l[1]?"rgba(122,42,20,.62)":"rgba(150,53,25,.36)";ctx.stroke(l[0])})}
+var raf=0;function redraw(){cancelAnimationFrame(raf);raf=requestAnimationFrame(draw)}
+if(window.ResizeObserver)new ResizeObserver(redraw).observe(map);else addEventListener("resize",redraw);
+draw();
+
+/* ---------- overlay: dunes, route, pins ---------- */
+var dl=$("#dunelines");
+for(var k=0;k<12;k++){var x0=150+k*24,dd="M"+(x0+70)+" 372";for(var s=1;s<=12;s++){var yy=372+s*27,xx=x0+70-s*8.6+Math.sin(s*1.3+k)*6;dd+="L"+xx.toFixed(1)+" "+yy}el("path",{d:dd},dl)}
+var ov=$("#ov"),hid=el("g",{style:"display:none"},ov),legEls=LEGS.map(function(d){return el("path",{d:d},hid)});
+var full=LEGS.map(function(d,i){return i?d.replace(/^M[^C]+/,""):d}).join("");
+$("#trail").setAttribute("d",full);var done=$("#done");done.setAttribute("d",full);
+var LEN=legEls.map(function(p){return p.getTotalLength()}),CUM=[0];LEN.forEach(function(l,i){CUM.push(CUM[i]+l)});var TOTAL=CUM[5];
+done.style.strokeDasharray=TOTAL+" "+TOTAL;
+var pins=$("#pins"),pinEls=STOPS.map(function(st,i){var g=el("g",{"class":"pin",transform:"translate("+st[1]+" "+st[2]+")"},pins);
+ el("circle",{"class":"ring",r:11},g);el("circle",{"class":"o",r:11},g);el("circle",{"class":"i",r:5.5},g);
+ var t=el("text",{"class":"lbl",x:st[3],y:st[4],"text-anchor":st[5]},g);t.textContent=st[0];return g});
+
+/* ---------- odometer ---------- */
+var win=$("#odo-win"),strips=[];
+for(var w=0;w<5;w++){var sp=document.createElement("span");sp.className="wheel";var ii=document.createElement("i");ii.innerHTML="0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>0";sp.appendChild(ii);win.insertBefore(sp,win.lastElementChild);strips.push(ii)}
+function setOdo(km){for(var w=0;w<5;w++){var p=Math.pow(10,4-w),v=km/p,dg=Math.floor(v)%10,carry=0;
+ if(w<4){var rem=km%p;carry=Math.max(0,rem-(p-1))}else carry=v-Math.floor(v);strips[w].style.transform="translateY("+(-(dg+carry)*100/11)+"%)"}}
+setOdo(0);
+
+/* ---------- car + dust ---------- */
+var car=$("#car"),body=car.querySelector(".body"),puffG=$("#puffs"),puffs=[];
+for(var z=0;z<8;z++)puffs.push({e:el("circle",{r:0,opacity:0},puffG),t:-1,x:0,y:0});
+var pos=0,anim=null,lastPuff=0,face=-1;
+function legOf(s){for(var i=0;i<5;i++)if(s<=CUM[i+1]+.01)return i;return 4}
+function ptAt(s){var i=legOf(s);return legEls[i].getPointAtLength(Math.max(0,s-CUM[i]))}
+function kmAt(s){var i=legOf(s);return KMC[i]+(s-CUM[i])/LEN[i]*DAYS[i].km}
+function place(s,now){var p=ptAt(s),q=ptAt(Math.min(TOTAL,s+4)),dx=q.x-p.x;
+ if(Math.abs(dx)>.4){var f=dx<0?-1:1;if(f!==face){face=f;body.setAttribute("transform","scale("+f+" 1)")}}
+ car.setAttribute("transform","translate("+p.x.toFixed(1)+" "+p.y.toFixed(1)+")");
+ done.style.strokeDashoffset=(TOTAL-s).toFixed(1);setOdo(kmAt(s));
+ if(now&&now-lastPuff>70){lastPuff=now;var pf=puffs.shift();pf.t=now;pf.x=p.x-face*14+(Math.random()-.5)*6;pf.y=p.y+8;puffs.push(pf)}
+ if(now)puffs.forEach(function(pf){if(pf.t<0)return;var a=(now-pf.t)/650;if(a>=1){pf.e.setAttribute("opacity",0);pf.t=-1;return}
+  pf.e.setAttribute("cx",pf.x.toFixed(1));pf.e.setAttribute("cy",(pf.y-a*6).toFixed(1));pf.e.setAttribute("r",(3+a*9).toFixed(1));pf.e.setAttribute("opacity",(.55*(1-a)).toFixed(2))})}
+function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+function driveTo(target,dur,cb){if(anim)cancelAnimationFrame(anim.id);var from=pos;
+ if(reduced()||from===target){pos=target;place(pos);clearPuffs();cb&&cb();return}
+ var t0=performance.now();anim={id:0};
+ (function step(now){var t=Math.min(1,(now-t0)/dur);pos=from+(target-from)*ease(t);place(pos,now);$("#odo-leg").textContent="Driving… "+fmtKm(kmAt(pos))+" km";
+  if(t<1)anim.id=requestAnimationFrame(step);else{anim=null;clearPuffs();cb&&cb()}})(t0)}
+function clearPuffs(){puffs.forEach(function(pf){pf.t=-1;pf.e.setAttribute("opacity",0)})}
+
+/* ---------- stop card + day controls ---------- */
+var live=$("#live"),stopIn=$("#stop-in");stopIn.removeAttribute("aria-live");
+function icon(n){return '<svg aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
+function profile(i){var n=60,pts=[],mn=1e9,mx=-1e9;for(var k=0;k<=n;k++){var p=legEls[i].getPointAtLength(LEN[i]*k/n),m=520+hAt(p.x,p.y)*560;pts.push(m);mn=Math.min(mn,m);mx=Math.max(mx,m)}
+ var lo=mn-40,hi=mx+40,d="M0 58";pts.forEach(function(m,k){d+="L"+(k*300/n).toFixed(1)+" "+(58-(m-lo)/(hi-lo)*54).toFixed(1)});
+ return '<div class="profile"><p><span>Elevation along the way</span><span>'+Math.round(mn/10)*10+'–'+Math.round(mx/10)*10+' m · illustrative</span></p><svg viewBox="0 0 300 58" preserveAspectRatio="none" aria-hidden="true"><path d="'+d+'L300 58Z" fill="#E9C79A"/><path d="'+d.replace("M0 58L","M")+'" fill="none" stroke="#963519" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></div>'}
+function render(n){var d=DAYS[n-1],from=STOPS[n-1][0],to=STOPS[n%5][0];
+ stopIn.innerHTML='<p class="stop-k">Day '+n+' of 5 · odometer '+fmtKm(KMC[n])+' km</p><h2 class="stop-h">'+from+' → '+to+'</h2><dl class="stats"><div><dt>Distance</dt><dd>'+d.km+' km</dd></div><div><dt>Driving</dt><dd>≈ '+d.drive+'</dd></div><div><dt>Walking</dt><dd>'+d.walk+'</dd></div></dl><p class="camp"><b>Camp · </b>'+d.camp+'</p><ul class="hl">'+d.hl.map(function(h){return '<li>'+icon(h[0])+h[1]+'</li>'}).join("")+'</ul>'+profile(n-1);
+ live.textContent="Day "+n+": "+from+" to "+to+", "+d.km+" kilometres. Odometer "+fmtKm(KMC[n])+" kilometres."}
+var dayBtns=$$(".day"),playBtn=$("#play"),playTok=0;
+function select(n,cb){dayBtns.forEach(function(b){var k=+b.getAttribute("data-day");b.setAttribute("aria-pressed",k===n?"true":"false");b.classList.toggle("done",k<n)});
+ $$(".leg").forEach(function(l,i){l.classList.toggle("on",i===n-1)});pinEls.forEach(function(p,i){p.classList.toggle("on",i===n%5)});
+ render(n);$("#odo-day").textContent="DAY "+n;
+ var target=CUM[n],dur;
+ if(target<=pos+.5){pos=CUM[n-1];place(pos);dur=Math.max(1100,Math.min(2600,DAYS[n-1].km*8))}
+ else{var dist=KMC[n]-kmAt(pos);dur=dist>300?Math.min(3200,dist*4.5):Math.max(1100,dist*8)}
+ driveTo(target,dur,function(){$("#odo-leg").textContent="Day "+n+" · "+DAYS[n-1].km+" km today";cb&&cb()})}
+function setPlay(on){playBtn.lastChild.textContent=on?"Stop the drive":"Drive the whole loop";playBtn.setAttribute("aria-pressed",on?"true":"false")}
+function cancelPlay(){playTok++;setPlay(false)}
+playBtn.addEventListener("click",function(){if(playBtn.getAttribute("aria-pressed")==="true"){cancelPlay();return}
+ var tok=++playTok;setPlay(true);pos=0;place(0);
+ (function next(n){if(tok!==playTok)return;select(n,function(){if(tok!==playTok)return;if(n<5)setTimeout(function(){next(n+1)},reduced()?1400:700);else setPlay(false)})})(1)});
+dayBtns.forEach(function(b,i){b.addEventListener("click",function(){cancelPlay();select(+b.getAttribute("data-day"))});
+ b.addEventListener("keydown",function(e){var k=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!k)return;e.preventDefault();var nb=dayBtns[(i+k+5)%5];nb.focus();nb.click()})});
+place(0);pinEls[0].classList.add("on");
+
+/* ---------- itinerary ---------- */
+var legsOl=$("#legs");
+DAYS.forEach(function(d,i){var li=document.createElement("li");li.className="leg";li.innerHTML='<span class="leg-n" aria-hidden="true">'+(i+1)+'</span><h3>'+STOPS[i][0]+' → '+STOPS[(i+1)%5][0]+'</h3><p class="km">Day '+(i+1)+' · '+d.km+' km · ≈ '+d.drive+' driving</p><p>'+d.t+'</p><button type="button" data-go="'+(i+1)+'">Drive it on the map</button>';legsOl.appendChild(li)});
+legsOl.addEventListener("click",function(e){var b=e.target.closest("[data-go]");if(!b)return;cancelPlay();map.scrollIntoView({behavior:reduced()?"auto":"smooth",block:"center"});setTimeout(function(){select(+b.getAttribute("data-go"))},reduced()?0:500)});
+
+/* ---------- night sky ---------- */
+var sky=$("#stars");sky.setAttribute("viewBox","0 0 1440 900");sky.setAttribute("preserveAspectRatio","xMidYMid slice");
+var rg=el("radialGradient",{id:"mw"},el("defs",{},sky));el("stop",{offset:"0","stop-color":"#CDB9E6","stop-opacity":".26"},rg);el("stop",{offset:"1","stop-color":"#CDB9E6","stop-opacity":"0"},rg);
+el("ellipse",{cx:760,cy:330,rx:820,ry:120,fill:"url(#mw)",transform:"rotate(-16 760 330)"},sky);
+for(var k=0;k<260;k++){var sx=hash(k,31)*1440,sy=k<170?hash(k,37)*780:330-(sx-760)*.287+(hash(k,59)+hash(k,61)-1)*110;
+ var c=el("circle",{cx:sx.toFixed(0),cy:sy.toFixed(0),r:(.5+Math.pow(hash(k,41),3)*1.7).toFixed(2),opacity:(.3+hash(k,43)*.7).toFixed(2)},sky);
+ if(hash(k,47)<.2){c.setAttribute("class","tw");c.style.animationDelay=(-hash(k,53)*5).toFixed(2)+"s"}}
+if(window.IntersectionObserver){var io=new IntersectionObserver(function(es){es.forEach(function(en){en.target.classList.toggle("paused",!en.isIntersecting)})});io.observe($("#night"));io.observe(map)}
+
+/* ---------- packing list ---------- */
+var boxes=$$("#bring input"),KEY="rde-pack-101";
+try{var saved=JSON.parse(localStorage.getItem(KEY)||"[]");boxes.forEach(function(b,i){b.checked=saved.indexOf(i)>-1})}catch(e){}
+function count(save){var n=boxes.filter(function(b){return b.checked}).length;$("#count").textContent=n+" of "+boxes.length+" packed"+(n===boxes.length?" — ready!":"");
+ if(save)try{localStorage.setItem(KEY,JSON.stringify(boxes.map(function(b,i){return b.checked?i:-1}).filter(function(i){return i>-1})))}catch(e){}}
+boxes.forEach(function(b){b.addEventListener("change",function(){count(true)})});count(false);
+
+/* ---------- booking ---------- */
+var PRICE={day:249,three:1190,five:2150},NAME={day:"Gorge Day",three:"Dunes & Stars",five:"The Big Loop"},DOW={day:[1,2,3,4,5,6],three:[2,6],five:[6]};
+var WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var fT=$("#f-tour"),fD=$("#f-date"),guests=2;
+function money(n){return "$"+n.toLocaleString("en-AU")}
+function fillDates(){var t=fT.value,d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+(t==="day"?2:5));fD.innerHTML="";var c=0,guard=0;
+ while(c<6&&guard++<400){var mo=d.getMonth();if(DOW[t].indexOf(d.getDay())>-1&&(t==="day"||(mo>2&&mo<10))){var o=document.createElement("option");o.textContent=WD[d.getDay()]+" "+d.getDate()+" "+MO[mo];fD.appendChild(o);c++}d.setDate(d.getDate()+1)}}
+function total(){var p=PRICE[fT.value];$("#g-out").textContent=guests;$("#total").textContent=money(p*guests);$("#total-note").textContent=guests+" × "+money(p)+(fT.value==="day"?" per adult":", twin-share swag");$("#g-minus").disabled=guests<=1;$("#g-plus").disabled=guests>=8}
+fT.addEventListener("change",function(){fillDates();total()});
+$("#g-minus").addEventListener("click",function(){if(guests>1){guests--;total()}});
+$("#g-plus").addEventListener("click",function(){if(guests<8){guests++;total()}});
+fillDates();total();
+$$("[data-tour]").forEach(function(b){b.addEventListener("click",function(){fT.value=b.getAttribute("data-tour");fillDates();total();$("#book").scrollIntoView({behavior:reduced()?"auto":"smooth"});setTimeout(function(){fT.focus({preventScroll:true})},reduced()?0:700)})});
+$("#form").addEventListener("submit",function(e){e.preventDefault();var nm=$("#f-name"),em=$("#f-email"),sum=$("#summary");sum.hidden=false;
+ if(!nm.value.trim()){sum.textContent="Add your name so we know who’s coming.";nm.focus();return}
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){sum.textContent="Add an email address we could reply to.";em.focus();return}
+ sum.textContent="Request ready for "+nm.value.trim()+": "+NAME[fT.value]+", departing "+fD.value+", "+guests+" guest"+(guests>1?"s":"")+", sample total "+money(PRICE[fT.value]*guests)+". Demo only — nothing was sent and no seats are held.";
+ if(window.DemoKit)DemoKit.toast("Demo only — no booking was made. A real site would confirm your seats by email.")});
+})();
+</script>
+</body>
+</html>

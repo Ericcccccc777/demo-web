@@ -1,0 +1,8 @@
+{
+  "id": "098",
+  "tech": ["SVG", "CSS Grid", "Pointer Events", "Drag & drop", "IntersectionObserver", "Form logic"],
+  "features": ["customiser", "ordering"],
+  "interaction": "Drag six glossy SVG chocolates into a nine-slot box (or tap Add, or tap a chocolate then a slot); hovering, focusing or tapping one takes a bite that reveals its filling, the sample price updates live, and after choosing a ribbon and gift tag 'Wrap it' drops the lid, ties the ribbon and ends in a demo toast.",
+  "fonts": ["Yeseva One", "Mulish"],
+  "notes": "Fictional shop; prices, workshop dates and allergen notes are samples. Add to bag, Reserve, Request a quote and Wrap it end in demo toasts — nothing is ordered."
+}

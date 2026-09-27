@@ -1,0 +1,8 @@
+{
+  "id": "088",
+  "tech": ["SVG", "SVG animation", "Generative art", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["customiser", "ordering", "map"],
+  "interaction": "Tap eight pressed-style native blooms (waratah, banksia, kangaroo paw, eucalyptus, wattle, garden rose, lisianthus, gum nuts) to add or remove stems — each stem grows out of the tie point and the bouquet re-settles radially in SVG; choose kraft, linen or white wrap and Petite/Classic/Grand size (auto-sizes to fit), write a card with a live handwritten-style preview, pick a delivery zone and day, and see an itemised sample price before a demo-only order toast.",
+  "fonts": ["Abhaya Libre", "Work Sans"],
+  "notes": "Prices and delivery fees are samples; the zone map is a stylised sketch, not to scale. The card preview uses the device's built-in script face (no third web font), so it varies slightly by device. Ordering is demo-only."
+}

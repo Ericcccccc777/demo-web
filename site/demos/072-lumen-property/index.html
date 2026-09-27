@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="072">
+<meta name="demo:brand" content="Lumen Property Co.">
+<title>Lumen Property Co. — Boutique real estate, Toorak VIC</title>
+<meta name="description" content="Lumen Property Co. is a fictional boutique real estate agency in Toorak, Victoria, with a map-first listings search. Every listing is a demo listing.">
+<meta name="theme-color" content="#EFE6DA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--sand:#EFE6DA;--sand2:#E6DACA;--sand3:#F7F2EA;--terra:#C4643D;--terra-d:#A34C2B;--olive:#6F7355;--olive-d:#565A41;--char:#2B2B2B;--mute:#665E54;--line:rgba(43,43,43,.12);--r:20px;--hdr:64px;
+  --serif:"Gilda Display","Iowan Old Style","Palatino Linotype",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--sand);color:var(--char);font:400 16px/1.6 var(--sans)}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--terra-d);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1240px,calc(100% - 48px));margin-inline:auto}
+.eyebrow{font:600 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--olive-d);margin:0 0 12px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+h2{font-size:clamp(34px,4vw,54px);line-height:1.05;letter-spacing:-.01em}
+em.t{font-style:normal;color:var(--terra)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--char);color:#fff;font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer;transition:background-color .2s,transform .2s}
+.btn:hover{background:#000;transform:translateY(-1px)}
+.btn.terra{background:var(--terra-d)}
+.btn.terra:hover{background:#8C3F22}
+.btn.line{background:transparent;color:var(--char);box-shadow:inset 0 0 0 1.5px var(--char)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+/* header */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(239,230,218,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:28px;min-height:var(--hdr);padding:8px 24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;flex:1 1 auto}
+.mono{flex:none;width:36px;height:36px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font:15px/1 var(--serif);letter-spacing:.04em;position:relative;overflow:hidden}
+.mono::after{content:"";position:absolute;left:-6px;right:-6px;bottom:-20px;height:28px;border-radius:50%;background:rgba(255,255,255,.18)}
+.word{font:22px/1.1 var(--serif);letter-spacing:.01em;overflow-wrap:anywhere;min-width:0}
+.nav{display:flex;gap:4px}
+.nav a{text-decoration:none;font-weight:500;font-size:14.5px;padding:8px 12px;border-radius:999px}
+.nav a:hover{background:rgba(43,43,43,.06)}
+.menu{display:none;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--char);background:none;font-weight:600;font-size:14px;cursor:pointer}
+.menu i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
+/* explore */
+.explore{display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr);grid-template-areas:"intro intro" "filters filters" "map list";column-gap:22px;height:calc(100svh - var(--hdr));min-height:700px;max-height:1080px;padding:0 24px 24px}
+.intro{grid-area:intro;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);align-items:end;gap:34px;padding:28px 4px 20px}
+h1{font-size:clamp(36px,3.9vw,58px);line-height:1.02;letter-spacing:-.015em}
+.dek{margin:0;color:var(--mute);font-size:15px}
+.dek b{font-weight:600;color:var(--char)}
+.filters{grid-area:filters;display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin:0 0 16px;padding:10px 12px 10px 10px;background:#fff;border-radius:var(--r);box-shadow:0 1px 0 rgba(43,43,43,.04)}
+.fpanel{display:contents}
+.fgroup{display:flex;align-items:center;gap:10px}
+.flabel{font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.seg{display:inline-flex;background:var(--sand3);border-radius:999px;padding:3px;gap:2px}
+.seg label{position:relative;display:flex}
+.seg input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.seg span{display:inline-flex;align-items:center;justify-content:center;min-height:36px;min-width:42px;padding:0 12px;border-radius:999px;font-weight:500;font-size:14px;transition:background-color .2s,color .2s}
+.seg input:checked+span{background:var(--char);color:#fff}
+.seg input:focus-visible+span{outline:2px solid var(--terra-d);outline-offset:2px}
+.seg.mode span{min-width:64px;font-weight:600}
+.range{position:relative;width:200px;height:36px}
+.track{position:absolute;left:11px;right:11px;top:50%;height:4px;margin-top:-2px;border-radius:2px;background:var(--sand2)}
+.fill{position:absolute;top:0;bottom:0;background:var(--terra);border-radius:2px}
+.range input{position:absolute;inset:0;width:100%;height:100%;margin:0;background:none;pointer-events:none;-webkit-appearance:none;appearance:none}
+.range input::-webkit-slider-runnable-track{height:36px;background:none}
+.range input::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:22px;height:22px;margin-top:7px;border-radius:50%;background:#fff;border:2px solid var(--terra-d);box-shadow:0 2px 6px rgba(43,43,43,.25);cursor:grab}
+.range input::-moz-range-track{background:none}
+.range input::-moz-range-thumb{pointer-events:auto;width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid var(--terra-d);cursor:grab}
+.range input:focus-visible{outline:none}
+.range input:focus-visible::-webkit-slider-thumb{outline:3px solid var(--terra-d);outline-offset:2px}
+.pout{min-width:124px;font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+.reset{border:0;background:none;font-weight:600;font-size:14px;color:var(--terra-d);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:40px;padding:0 6px}
+.ftoggle,.viewbar{display:none}
+.vbtn{display:flex;border:0;background:none;padding:0;border-radius:999px;cursor:pointer}
+.vbtn[aria-pressed=true] span{background:var(--char);color:#fff}
+.vbtn:focus-visible{outline:2px solid var(--terra-d);outline-offset:2px}
+.mapcol{grid-area:map;position:relative;min-height:0}
+.map{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;background:#EFE6DA;box-shadow:inset 0 0 0 1px var(--line)}
+.mapsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rdl{font:600 12.5px/1 var(--sans);letter-spacing:1.6px;fill:#A09382}
+.sub{position:absolute;transform:translate(-50%,-50%);font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--olive-d);white-space:nowrap;pointer-events:none;text-shadow:0 0 3px #EFE6DA,0 0 3px #EFE6DA}
+.pin{--pb:var(--terra-d);position:absolute;z-index:2;transform:translate(-50%,calc(-100% - 7px));display:block;padding:6px 10px;border:0;border-radius:999px;background:var(--pb);color:#fff;font:600 12.5px/1 var(--sans);white-space:nowrap;cursor:pointer;box-shadow:0 5px 14px -4px rgba(43,43,43,.45);transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .3s,background-color .2s}
+.pin::after{content:"";position:absolute;left:50%;top:100%;margin-left:-6px;border:6px solid transparent;border-top-color:var(--pb);border-bottom:0}
+.pin .tip{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,4px);background:#fff;color:var(--char);font:500 12.5px/1.3 var(--sans);padding:8px 11px;border-radius:12px;box-shadow:0 10px 24px -10px rgba(43,43,43,.5);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.pin.hot,.pin.sel{--pb:var(--char);z-index:6;transform:translate(-50%,calc(-100% - 7px)) scale(1.12)}
+.pin.hot .tip{opacity:1;transform:translate(-50%,0)}
+.pin.hot::before{content:"";position:absolute;left:50%;top:calc(100% + 1px);width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--terra);opacity:.5;animation:pulse 1.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(.6);opacity:.6}to{transform:scale(2.6);opacity:0}}
+.pin.off{--pb:var(--olive);color:transparent;opacity:.6;transform:translate(-50%,calc(-100% - 7px)) scale(.3);pointer-events:none;box-shadow:0 0 0 3px rgba(239,230,218,.9)}
+.pin.off .tip{display:none}
+.pin.gone{display:none}
+.pin.drop{animation:drop .5s cubic-bezier(.2,.9,.3,1.2) backwards}
+@keyframes drop{from{opacity:0;transform:translate(-50%,calc(-100% - 30px))}}
+.maptag{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.92);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:500;color:var(--char)}
+.maptag.tl{top:14px;left:14px}
+.maptag.tr{top:14px;right:14px;color:var(--mute)}
+.maptag .mp{background:var(--terra-d);color:#fff;border-radius:999px;padding:3px 7px;font-weight:600;font-size:11px}
+.maptag .md{width:8px;height:8px;border-radius:50%;background:var(--olive);opacity:.6}
+.listcol{grid-area:list;position:relative;min-height:0;overflow-y:auto;padding:0 8px 24px 2px;scrollbar-width:thin;scrollbar-color:#CDBFAE transparent}
+.listhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:4px 0 14px}
+.count{margin:0;font-size:14px;font-weight:500}
+.count small{display:block;font-size:12px;color:var(--mute);font-weight:400}
+.sort{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mute)}
+.sort select{min-height:38px;border:1px solid var(--line);border-radius:999px;background:#fff;padding:0 30px 0 14px;font-size:14px;appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%232B2B2B' stroke-width='1.5'/%3E%3C/svg%3E") right 12px center/10px 6px no-repeat;color:var(--char)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;background:#fff;border-radius:var(--r);overflow:hidden;outline:2px solid transparent;outline-offset:2px;transition:box-shadow .25s,transform .25s,outline-color .2s}
+.card[hidden]{display:none}
+.card.hot{box-shadow:0 20px 36px -22px rgba(70,40,15,.55);transform:translateY(-2px);outline-color:var(--terra)}
+.card.flash{animation:flash 1.3s ease}
+@keyframes flash{0%,60%{outline-color:var(--terra);box-shadow:0 0 0 8px rgba(196,100,61,.18)}}
+.card:focus{outline-color:var(--terra-d)}
+.art{position:relative;aspect-ratio:16/10;background:var(--sand2);overflow:hidden}
+.art svg{display:block;width:100%;height:100%}
+.tag{position:absolute;top:12px;left:12px;display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--char);font:600 10.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--terra)}
+.cbody{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
+.csub{margin:0;font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--olive-d)}
+.ctitle{font:400 21px/1.18 var(--serif);margin:0}
+.cprice{margin:2px 0 0;font:400 25px/1.1 var(--serif);color:var(--terra-d)}
+.cprice small{display:block;margin-top:5px;font:500 11px/1 var(--sans);color:var(--mute);letter-spacing:.12em;text-transform:uppercase}
+.facts{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0;padding:0;list-style:none;font-size:13px;color:var(--mute)}
+.facts li{display:flex;align-items:center;gap:5px}
+.facts svg{width:17px;height:17px;color:var(--olive)}
+.cdesc{margin:2px 0 0;font-size:14px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cacts{display:flex;gap:8px;margin-top:auto;padding-top:10px}
+.cacts .btn{flex:1;min-height:42px;font-size:14px;padding:0 14px}
+.cacts .ghost{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:42px;min-height:42px;padding:0 12px;border-radius:999px;border:1px solid var(--line);background:none;font-weight:500;font-size:14px;cursor:pointer}
+.ghost svg{width:18px;height:18px;color:var(--terra-d)}
+.ghost .gt{display:none}
+.cacts .ghost:hover{border-color:var(--char)}
+.empty{margin:10px 0;padding:28px;border-radius:var(--r);background:rgba(255,255,255,.6);text-align:center}
+.empty p{margin:0 0 12px}
+.peek{display:none}
+.samplenote{margin:14px 0 0;font-size:12.5px;color:var(--mute)}
+/* sections */
+.sec{padding:110px 0 0}
+.sell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:64px;align-items:start}
+.sell .lede{font-size:18px;color:var(--mute);margin:20px 0 34px;max-width:36em}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:"0" counter(s);font:34px/1 var(--serif);color:var(--terra)}
+.steps h3{font-size:22px;margin-bottom:4px}
+.steps p{margin:0;color:var(--mute);font-size:15px}
+.panel{background:#fff;border-radius:24px;padding:30px}
+.panel h3{font-size:28px;margin-bottom:6px}
+.panel .hint{margin:0 0 20px;color:var(--mute);font-size:14px}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld>span,.fld legend{font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding:0}
+fieldset.fld{border:0;margin:0;padding:0}
+.fld input,.fld select{width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;background:var(--sand3);padding:0 14px;font-size:15px;color:var(--char)}
+.fld select{appearance:none;-webkit-appearance:none;background:var(--sand3) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%232B2B2B' stroke-width='1.5'/%3E%3C/svg%3E") right 14px center/10px 6px no-repeat}
+.fld input:focus-visible,.fld select:focus-visible{outline:2px solid var(--terra-d);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;display:flex}
+.chips input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.chips span{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--line);font-size:14px;font-weight:500;background:#fff}
+.chips input:checked+span{background:var(--char);color:#fff;border-color:var(--char)}
+.chips input:focus-visible+span{outline:2px solid var(--terra-d);outline-offset:2px}
+.panel .btn{width:100%;margin-top:20px}
+.fine{margin:12px 0 0;font-size:12.5px;color:var(--mute)}
+.manage{margin-top:110px;background:var(--olive);color:#fff;padding:96px 0}
+.manage-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:64px}
+.manage .eyebrow{color:#E9E3D2}
+.manage h2{color:var(--sand)}
+.manage .lede{margin:20px 0 28px;font-size:17px;max-width:32em}
+.feebox{border:1px solid rgba(255,255,255,.35);border-radius:var(--r);padding:20px 22px;max-width:420px}
+.feebox p{margin:0 0 6px;font-size:15px}
+.feebox .big{font:30px/1.1 var(--serif);color:var(--sand)}
+.feebox small{display:block;margin-top:8px;font-size:12.5px;opacity:.9}
+.incl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px}
+.incl li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;padding:20px 0;border-top:1px solid rgba(255,255,255,.28)}
+.incl svg{width:32px;height:32px;color:var(--sand)}
+.incl h3{font-size:21px;margin-bottom:4px;color:#fff}
+.incl p{margin:0;font-size:14.5px;opacity:.92}
+.sold-h{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.demo-chip{display:inline-flex;align-items:center;gap:8px;border:1.5px dashed var(--terra-d);color:var(--terra-d);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600}
+.sold{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.sc{background:#fff;border-radius:var(--r);overflow:hidden}
+.sc .art{aspect-ratio:4/3}
+.stamp{position:absolute;right:12px;bottom:12px;width:62px;height:62px;border-radius:50%;border:2px solid #fff;color:#fff;background:rgba(163,76,43,.9);display:grid;place-items:center;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;transform:rotate(-10deg)}
+.sc .cbody{padding:14px 16px 18px;gap:4px}
+.sc .ctitle{font-size:19px}
+.sc p{margin:0;font-size:13.5px;color:var(--mute)}
+.agents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px}
+.agent .ph{aspect-ratio:5/6;border-radius:999px 999px var(--r) var(--r);overflow:hidden}
+.agent .ph svg{display:block;width:100%;height:100%}
+.agent h3{font-size:26px;margin:18px 0 2px}
+.agent .role{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--olive-d)}
+.agent p{margin:0 0 12px;color:var(--mute);font-size:15px}
+.agent .ct{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;font-weight:600}
+.agent .ct a{text-decoration:none;border-bottom:1px solid var(--terra);padding:4px 0}
+.contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start;background:#fff;border-radius:28px;padding:48px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px 26px;font-size:16px}
+.contact dt{font:600 11px/1.9 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.contact dd{margin:0;overflow-wrap:anywhere}
+.contact dd a{font:24px/1.2 var(--serif);text-decoration:none;border-bottom:1px solid var(--terra)}
+.contact .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ftr{margin-top:110px;background:var(--char);color:var(--sand);padding:64px 0 80px}
+.ftr-in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px}
+.fbrand{font:34px/1.1 var(--serif);margin:0 0 14px;overflow-wrap:anywhere}
+.ftr p{margin:0 0 8px;font-size:14px;color:#D8CFC3;max-width:52ch}
+.ftr nav{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:8px 40px;align-content:start}
+.ftr nav a{text-decoration:none;padding:4px 0;font-size:15px}
+.ftr nav a:hover{text-decoration:underline}
+.rv{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(22px)}
+/* booking dialog */
+dialog{border:0;padding:0;border-radius:26px;width:min(540px,calc(100% - 32px));max-height:calc(100svh - 32px);background:#fff;color:var(--char);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog[open]{animation:rise .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+dialog::backdrop{background:rgba(43,43,43,.5)}
+.dlg{padding:28px 28px 26px}
+.dlg-h{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+.dlg-h .art{flex:none;width:112px;border-radius:14px}
+.dlg-h h2{font-size:26px;line-height:1.12;margin:2px 0 4px}
+.dlg-h p{margin:0;font-size:13px;color:var(--mute)}
+.x{margin-left:auto;flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:22px;line-height:1;cursor:pointer}
+.slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;border:0;margin:0 0 16px;padding:0}
+.slots legend{font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:10px;padding:0}
+.slot{position:relative;display:flex}
+.slot input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.slot span{flex:1;display:grid;gap:2px;padding:11px 14px;border:1px solid var(--line);border-radius:14px;background:var(--sand3);font-size:13px;color:var(--mute);transition:background-color .2s,border-color .2s}
+.slot b{font-weight:600;font-size:14.5px;color:var(--char)}
+.slot input:checked+span{background:var(--char);border-color:var(--char);color:#E6DDD2}
+.slot input:checked+span b{color:#fff}
+.slot input:focus-visible+span{outline:2px solid var(--terra-d);outline-offset:2px}
+.slot.wide{grid-column:1/-1}
+.dlg .fgrid{margin-bottom:6px}
+/* responsive */
+@media (max-width:1180px){.nav a{padding:8px 9px}.intro{grid-template-columns:minmax(0,1fr)}.dek{max-width:600px}.hdr-cta{display:none}}
+@media (max-width:1040px){.range{width:150px}.pout{min-width:108px}.sold{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:899px){
+  :root{--hdr:58px}
+  .hdr-in{padding:8px 16px;gap:12px}
+  .word{font-size:20px}
+  .menu{display:inline-flex}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--sand);border-bottom:1px solid var(--line);padding:8px 16px 16px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25)}
+  .hdr.open .nav{display:flex}
+  .nav a{padding:13px 4px;font-size:17px;border-radius:0;border-bottom:1px solid var(--line)}
+  .explore{display:block;height:auto;min-height:0;max-height:none;padding:0 16px}
+  .intro{padding:22px 0 18px;gap:12px}
+  h1{font-size:clamp(34px,9.6vw,44px)}
+  .dek{font-size:14.5px}
+  .filters{padding:8px;gap:8px;margin-bottom:10px;border-radius:18px}
+  .seg.mode{flex:1}
+  .seg.mode label{flex:1}
+  .seg.mode span{flex:1}
+  .ftoggle{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:14px;cursor:pointer}
+  .ftoggle b{min-width:20px;height:20px;border-radius:999px;background:var(--terra-d);color:#fff;font-size:11px;display:grid;place-items:center;padding:0 5px}
+  .ftoggle b:empty{display:none}
+  .fpanel{display:none;width:100%;grid-template-columns:minmax(0,1fr);gap:14px;padding:10px 4px 6px;border-top:1px solid var(--line)}
+  .filters.open .fpanel{display:grid}
+  .fgroup{justify-content:space-between;flex-wrap:wrap}
+  .fgroup.price{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px}
+  .fgroup.price .range{grid-column:1/-1;width:100%;height:44px}
+  .range input::-webkit-slider-runnable-track{height:44px}
+  .range input::-webkit-slider-thumb{width:28px;height:28px;margin-top:8px}
+  .track{left:14px;right:14px}
+  .pout{text-align:right}
+  .reset{justify-self:start}
+  .viewbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}
+  .viewbar .seg span{min-width:74px;font-weight:600}
+  .vcount{font-size:13px;color:var(--mute);font-weight:500;text-align:right}
+  .explore[data-view=map] .listcol,.explore[data-view=list] .mapcol{display:none}
+  .mapcol{min-height:0}
+  .map{position:relative;inset:auto;aspect-ratio:1000/900;border-radius:18px}
+  .rdl{display:none}
+  .sub{font-size:9.5px;letter-spacing:.14em}
+  .pin{padding:5px 8px;font-size:11.5px}
+  .pin .tip{display:none}
+  .maptag{font-size:11px;padding:5px 9px}
+  .maptag.tl{display:none}
+  .peek{display:block;margin-top:12px;min-height:128px}
+  .pk{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;background:#fff;border-radius:18px;padding:10px;align-items:center}
+  .pk .art{border-radius:12px;aspect-ratio:1/1}
+  .pk .ctitle{font-size:18px}
+  .pk .cprice{font-size:20px}
+  .pk .cacts{padding-top:6px}
+  .pk .btn{min-height:40px;font-size:13.5px}
+  .listcol{overflow:visible;padding:0}
+  .listhead{padding-top:0}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .ghost .gt{display:inline}
+  .cacts .ghost{padding:0 14px}
+  .sec{padding-top:80px}
+  .wrap{width:calc(100% - 32px)}
+  .sell,.manage-in,.contact,.ftr-in{grid-template-columns:minmax(0,1fr);gap:36px}
+  .panel{padding:22px 18px}
+  .manage{padding:72px 0;margin-top:80px}
+  .incl{grid-template-columns:minmax(0,1fr)}
+  .sold{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none}
+  .sold::-webkit-scrollbar{display:none}
+  .sc{flex:0 0 76%;scroll-snap-align:start}
+  .agents{grid-template-columns:minmax(0,1fr);gap:40px}
+  .agent{display:grid;grid-template-columns:120px minmax(0,1fr);gap:0 18px;align-items:start}
+  .agent .ph{grid-row:span 4}
+  .agent h3{margin-top:0}
+  .contact{padding:28px 20px;border-radius:24px}
+  .contact dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .contact dd{margin-bottom:12px}
+  .ftr{margin-top:80px;padding-bottom:96px}
+  .ftr nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  dialog{width:100%;max-width:100%;margin:auto 0 0;border-radius:24px 24px 0 0;max-height:92svh}
+  .dlg{padding:22px 18px calc(22px + env(safe-area-inset-bottom))}
+  .dlg-h .art{width:84px}
+  .dlg-h h2{font-size:22px}
+  .fgrid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:360px){.viewbar .seg span{min-width:60px}.slots{grid-template-columns:minmax(0,1fr)}.pk{grid-template-columns:92px minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv:not(.in){opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="blk" width="46" height="34" patternUnits="userSpaceOnUse"><rect x="3" y="3" width="40" height="28" rx="6" fill="#E8DDCD"/></pattern>
+    <pattern id="brick" width="16" height="8" patternUnits="userSpaceOnUse"><path d="M0 .5H16M0 4.5H16M.5 0V4.5M8.5 4.5V8" stroke="#000" stroke-opacity=".13" fill="none"/></pattern>
+    <pattern id="lace" width="8" height="10" patternUnits="userSpaceOnUse"><circle cx="4" cy="5" r="2.6" fill="none" stroke="#2B2B2B" stroke-opacity=".75"/></pattern>
+    <pattern id="rail" width="5" height="10" patternUnits="userSpaceOnUse"><rect width="1.3" height="10" fill="#2B2B2B" fill-opacity=".8"/></pattern>
+    <pattern id="batten" width="5" height="10" patternUnits="userSpaceOnUse"><rect width="5" height="10" fill="#B98B63"/><rect width="1.4" height="10" fill="#7E5B3E" fill-opacity=".6"/></pattern>
+    <pattern id="breeze" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#EDE4D6"/><circle cx="7" cy="7" r="4.3" fill="#B8A88F"/></pattern>
+    <pattern id="steel" width="12" height="10" patternUnits="userSpaceOnUse"><rect width="12" height="10" fill="#46524F"/><path d="M0 .6H12M.6 0V10" stroke="#1F2524" stroke-width="1.2"/></pattern>
+    <pattern id="roller" width="10" height="5" patternUnits="userSpaceOnUse"><rect width="10" height="5" fill="#8E8F85"/><rect width="10" height="1.2" fill="#6E6F66"/></pattern>
+    <pattern id="weather" width="10" height="7" patternUnits="userSpaceOnUse"><rect width="10" height="7" fill="#E6D9C3"/><rect y="6" width="10" height="1" fill="#000" fill-opacity=".12"/></pattern>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5A6663"/><stop offset="1" stop-color="#2F3937"/></linearGradient>
+    <symbol id="i-bed" viewBox="0 0 20 20"><path d="M2 15V5M2 11h16v4M18 15v-2.5A3.5 3.5 0 0 0 14.5 9H9v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.5" cy="8.8" r="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 20 20"><path d="M2 10h16v2a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4zM5 10V5a2 2 0 0 1 3.7-1M6 16l-1 2M14 16l1 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-car" viewBox="0 0 20 20"><path d="M3 13V10l2-4h10l2 4v3zM3 13v2h2.5v-2M14.5 13v2H17v-2M3 10h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="11.6" r=".9" fill="currentColor"/><circle cx="13.5" cy="11.6" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 20 20"><path d="M10 18s6-5.2 6-10A6 6 0 0 0 4 8c0 4.8 6 10 6 10z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="10" cy="8" r="2.2" fill="currentColor"/></symbol>
+    <g id="roads"><path d="M110 -800V1700M300 92V1700M470 128V682M760 92V1700M-800 250H1800M1800 390H470C420 390 385 336 300 336H-800M-800 540H1800M-800 560L1800 800"/></g>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#top"><span class="mono" data-brand-initials aria-hidden="true">LP</span><span class="word" data-brand>Lumen Property Co.</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#homes" data-mode="buy">Buy</a>
+      <a href="#homes" data-mode="rent">Rent</a>
+      <a href="#sell">Sell</a>
+      <a href="#manage">Manage</a>
+      <a href="#agents">Agents</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn hdr-cta" href="#sell">Book an appraisal</a>
+    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i>Menu</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="explore" id="homes" data-view="map" aria-labelledby="h1">
+  <div class="intro">
+    <div>
+      <p class="eyebrow">Boutique real estate · Toorak, VIC</p>
+      <h1 id="h1">Homes of the inner east, <em class="t">mapped.</em></h1>
+    </div>
+    <p class="dek">Six suburbs between the Yarra and Dandenong Road. Filter by what matters and the map and list move together. <b>Every listing here is a demo listing</b> with sample prices.</p>
+  </div>
+
+  <form class="filters" id="filters" data-kit-ignore onsubmit="return false">
+    <div class="seg mode" role="radiogroup" aria-label="Buy or rent">
+      <label><input type="radio" name="mode" value="buy" checked><span>Buy</span></label>
+      <label><input type="radio" name="mode" value="rent"><span>Rent</span></label>
+    </div>
+    <button class="ftoggle" id="ftoggle" type="button" aria-expanded="false" aria-controls="fpanel">Filters <b id="fcount"></b></button>
+    <div class="fpanel" id="fpanel">
+      <div class="fgroup" role="radiogroup" aria-labelledby="lb-beds"><span class="flabel" id="lb-beds">Beds</span>
+        <div class="seg"><label><input type="radio" name="beds" value="0" checked><span>Any</span></label><label><input type="radio" name="beds" value="1"><span>1+</span></label><label><input type="radio" name="beds" value="2"><span>2+</span></label><label><input type="radio" name="beds" value="3"><span>3+</span></label><label><input type="radio" name="beds" value="4"><span>4+</span></label></div>
+      </div>
+      <div class="fgroup" role="radiogroup" aria-labelledby="lb-baths"><span class="flabel" id="lb-baths">Baths</span>
+        <div class="seg"><label><input type="radio" name="baths" value="0" checked><span>Any</span></label><label><input type="radio" name="baths" value="1"><span>1+</span></label><label><input type="radio" name="baths" value="2"><span>2+</span></label><label><input type="radio" name="baths" value="3"><span>3+</span></label></div>
+      </div>
+      <div class="fgroup price"><span class="flabel" id="lb-price">Price</span>
+        <div class="range"><div class="track"><div class="fill" id="fill"></div></div>
+          <input type="range" id="pmin" aria-label="Minimum price">
+          <input type="range" id="pmax" aria-label="Maximum price">
+        </div>
+        <output class="pout" id="pout" for="pmin pmax" aria-live="polite">Any price</output>
+      </div>
+      <button class="reset" id="reset" type="button">Reset</button>
+    </div>
+  </form>
+
+  <div class="viewbar">
+    <div class="seg" role="group" aria-label="Show map or list">
+      <button type="button" class="vbtn" data-view="map" aria-pressed="true"><span>Map</span></button>
+      <button type="button" class="vbtn" data-view="list" aria-pressed="false"><span>List</span></button>
+    </div>
+    <p class="vcount" id="vcount" aria-live="polite"></p>
+  </div>
+
+  <div class="mapcol">
+    <div class="map" id="map" role="region" aria-label="Stylised map of demo listings in inner-east Melbourne">
+      <svg class="mapsvg" viewBox="0 0 1000 820" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+        <rect x="-900" y="-900" width="2800" height="2620" fill="#EFE6DA"/>
+        <rect x="-900" y="-900" width="2800" height="2620" fill="url(#blk)"/>
+        <g fill="#DAD8C1"><rect x="330" y="110" width="92" height="54" rx="16"/><rect x="518" y="282" width="72" height="62" rx="16"/><rect x="800" y="146" width="94" height="64" rx="18"/><rect x="352" y="590" width="74" height="50" rx="14"/><rect x="806" y="408" width="66" height="46" rx="14"/><rect x="-260" y="360" width="300" height="170" rx="24"/><rect x="1010" y="440" width="220" height="120" rx="24"/></g>
+        <g fill="#C8C9AB"><circle cx="352" cy="130" r="7"/><circle cx="372" cy="146" r="8"/><circle cx="400" cy="128" r="6"/><circle cx="540" cy="300" r="7"/><circle cx="566" cy="322" r="8"/><circle cx="826" cy="170" r="8"/><circle cx="858" cy="186" r="7"/><circle cx="872" cy="162" r="6"/><circle cx="376" cy="612" r="7"/><circle cx="402" cy="620" r="6"/><circle cx="830" cy="428" r="7"/><circle cx="850" cy="440" r="6"/></g>
+        <path d="M-900 30C-420 0-200 150 60 110S260 30 380 78 560 150 660 104 820 36 930 82 1150 140 1900 50" fill="none" stroke="#B7C1B6" stroke-width="44" stroke-linecap="round"/>
+        <path d="M-900 30C-420 0-200 150 60 110S260 30 380 78 560 150 660 104 820 36 930 82 1150 140 1900 50" fill="none" stroke="#C9D3CA" stroke-width="32" stroke-linecap="round"/>
+        <path d="M-900 30C-420 0-200 150 60 110S260 30 380 78 560 150 660 104 820 36 930 82 1150 140 1900 50" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="14 22"/>
+        <use href="#roads" fill="none" stroke="#DCCDBA" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+        <use href="#roads" fill="none" stroke="#FFFCF7" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="none" stroke="#2B2B2B" stroke-opacity=".35" stroke-width="3" stroke-dasharray="10 7"><path d="M-900 150H200L480 335 690 510 930 612 1500 860"/><path d="M200 160 230 400 250 640 264 1700"/></g>
+        <g fill="#FFFCF7" stroke="#2B2B2B" stroke-opacity=".5" stroke-width="2.5"><circle cx="200" cy="155" r="6.5"/><circle cx="480" cy="335" r="6"/><circle cx="690" cy="510" r="6"/><circle cx="930" cy="612" r="6"/><circle cx="230" cy="400" r="6"/><circle cx="250" cy="640" r="6"/></g>
+        <text class="rdl" x="590" y="254.5" text-anchor="middle">TOORAK RD</text>
+        <text class="rdl" x="640" y="394.5" text-anchor="middle">MALVERN RD</text>
+        <text class="rdl" x="420" y="544.5" text-anchor="middle">HIGH ST</text>
+        <text class="rdl" text-anchor="middle" transform="translate(478 682) rotate(5.3)">DANDENONG RD</text>
+        <text class="rdl" text-anchor="middle" transform="translate(304.5 600) rotate(-90)">CHAPEL ST</text>
+        <text class="rdl" text-anchor="middle" transform="translate(114.5 480) rotate(-90)">PUNT RD</text>
+        <text class="rdl" text-anchor="middle" transform="translate(474.5 190) rotate(-90)">WILLIAMS RD</text>
+        <text class="rdl" text-anchor="middle" transform="translate(764.5 520) rotate(-90)">KOOYONG RD</text>
+        <text class="rdl" text-anchor="middle" transform="translate(527 130.5) rotate(8.4)" style="fill:#7F8C82">YARRA RIVER</text>
+        <g transform="translate(956 770)"><circle r="20" fill="#fff" fill-opacity=".8"/><path d="M0-13 6 6 0 2-6 6Z" fill="#2B2B2B"/><text y="-22" text-anchor="middle" class="rdl" style="fill:#2B2B2B">N</text></g>
+      </svg>
+      <div id="subs" aria-hidden="true"></div>
+      <div id="pins" role="group" aria-label="Listing pins"></div>
+      <p class="maptag tl" aria-hidden="true"><span class="mp">$1.2m</span> price guide <span class="md"></span> filtered out</p>
+      <p class="maptag tr">Stylised map · not to scale</p>
+    </div>
+    <div class="peek" id="peek" aria-live="polite"></div>
+  </div>
+
+  <div class="listcol" id="listcol">
+    <div class="listhead">
+      <p class="count" id="count" aria-live="polite"></p>
+      <label class="sort">Sort <select id="sort"><option value="rec">Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
+    </div>
+    <div class="cards" id="cards"></div>
+    <div class="empty" id="empty" hidden><p>No homes match those filters. Try a wider price range or fewer bedrooms.</p><button class="btn line" type="button" data-reset>Reset filters</button></div>
+    <p class="samplenote">All listings, prices and inspection times are fictional demo content. Sample prices.</p>
+  </div>
+</section>
+
+<section class="sec" id="sell" aria-labelledby="sell-h">
+  <div class="wrap sell">
+    <div class="rv">
+      <p class="eyebrow">Selling</p>
+      <h2 id="sell-h">Selling? Start with a <em class="t">quiet</em> conversation.</h2>
+      <p class="lede">No brochure on the first visit. We walk the house with you, ask what you need from the sale, and come back with a written price guide and a plan you can say no to.</p>
+      <ol class="steps">
+        <li><div><h3>Walk-through</h3><p>About forty-five minutes at the property, including the parts you are worried about.</p></div></li>
+        <li><div><h3>Price guide and plan</h3><p>A written guide with the recent comparable sales we used, plus a campaign plan and costs in plain numbers.</p></div></li>
+        <li><div><h3>Campaign</h3><p>Photography, floor plan, styling advice and open-for-inspection times that suit your week.</p></div></li>
+        <li><div><h3>Auction or private sale</h3><p>We talk through both honestly; the method is your call.</p></div></li>
+      </ol>
+    </div>
+    <form class="panel rv" data-demo-message="Demo only — no appraisal request was sent. On a real site this would reach the agency.">
+      <h3>Request an appraisal</h3>
+      <p class="hint">Takes about a minute. Demo form — nothing is sent.</p>
+      <div class="fgrid">
+        <label class="fld"><span>Suburb</span><select name="suburb"><option>Toorak</option><option>South Yarra</option><option>Armadale</option><option>Malvern</option><option>Prahran</option><option>Windsor</option></select></label>
+        <label class="fld"><span>Property type</span><select name="type"><option>House</option><option>Townhouse</option><option>Apartment</option><option>Terrace</option></select></label>
+        <fieldset class="fld full"><legend>Timing</legend>
+          <div class="chips"><label><input type="radio" name="timing" value="curious" checked><span>Just curious</span></label><label><input type="radio" name="timing" value="3"><span>Within 3 months</span></label><label><input type="radio" name="timing" value="6"><span>3–6 months</span></label><label><input type="radio" name="timing" value="later"><span>Later</span></label></div>
+        </fieldset>
+        <label class="fld"><span>Your name</span><input name="name" autocomplete="off" required></label>
+        <label class="fld"><span>Email</span><input name="email" type="email" autocomplete="off" placeholder="you@example.com" required></label>
+      </div>
+      <button class="btn terra" type="submit">Request an appraisal</button>
+      <p class="fine">General information only. A real appraisal is an estimate, not a valuation or a promise of a sale price.</p>
+    </form>
+  </div>
+</section>
+
+<section class="manage" id="manage" aria-labelledby="manage-h">
+  <div class="wrap manage-in">
+    <div class="rv">
+      <p class="eyebrow">Property management</p>
+      <h2 id="manage-h">Leasing and management, kept calm.</h2>
+      <p class="lede">One property manager who knows your place, answers the phone, and sends a monthly statement you can read in a minute.</p>
+      <div class="feebox">
+        <p>Management fee</p>
+        <p class="big">From 5.5% + GST</p>
+        <p>of rent collected · leasing fee one week’s rent + GST</p>
+        <small>Sample prices for a fictional agency.</small>
+      </div>
+    </div>
+    <ul class="incl rv">
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V13l11-8 11 8v14zM12 27v-8h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><div><h3>Routine inspections</h3><p>Twice a year, with a short photo report.</p></div></li>
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 24l7-7 5 5 9-10M20 12h7v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><h3>Rent reviews</h3><p>Checked against the local market before each renewal.</p></div></li>
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M20 5a6 6 0 0 0-5.6 8.2L5 22.6 9.4 27l9.4-9.4A6 6 0 0 0 27 12l-4 1-3-3 1-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><div><h3>Maintenance</h3><p>Handled through trades we have used before, with quotes over an agreed limit sent to you first.</p></div></li>
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l6 6v18H8zM20 4v6h6M12 16h10M12 21h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><div><h3>Monthly statements</h3><p>Rent, costs and what changed, on one page.</p></div></li>
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4l10 4v8c0 6-4.5 10-10 12-5.5-2-10-6-10-12V8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M11.5 16l3 3 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><h3>Leases and bonds</h3><p>Paperwork, bond lodgement and renewals, done on time.</p></div></li>
+      <li><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="11" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 16h12M24 16v5M20 16v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><div><h3>Handover</h3><p>Entry and exit condition reports, keys and meter readings.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="sold-sec" aria-labelledby="sold-h">
+  <div class="wrap">
+    <div class="sold-h rv">
+      <div><p class="eyebrow">Recent sales</p><h2 id="sold-h">Recently sold</h2></div>
+      <p class="demo-chip">Demo examples — made up for layout, not real sales</p>
+    </div>
+    <div class="sold" id="sold"></div>
+  </div>
+</section>
+
+<section class="sec" id="agents" aria-labelledby="agents-h">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">The team</p>
+      <h2 id="agents-h">Three people, six suburbs.</h2>
+    </div>
+    <div class="agents" id="agentList"></div>
+    <p class="samplenote">Agents are fictional. Phone numbers and emails are demo details.</p>
+  </div>
+</section>
+
+<section class="sec" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact rv">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-h">Come by the office, or we’ll come to you.</h2>
+        <div class="acts"><a class="btn terra" href="#sell">Book an appraisal</a><a class="btn line" href="#homes">Browse homes</a></div>
+      </div>
+      <dl>
+        <dt>Office</dt><dd>Toorak, VIC 3142 — a few doors from the village</dd>
+        <dt>Hours</dt><dd>Mon–Fri 9:00 am – 5:30 pm · Sat 9:00 am – 3:00 pm for inspections</dd>
+        <dt>Phone</dt><dd><a href="tel:+61355504812">(03) 5550 4812</a></dd>
+        <dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr-in">
+    <div>
+      <p class="fbrand" data-brand>Lumen Property Co.</p>
+      <p>Sales, leasing and property management across Toorak, South Yarra, Armadale, Malvern, Prahran and Windsor.</p>
+      <p>A fictional agency made for a design showcase. Every listing is a demo listing, prices are samples, and the map is stylised — not to scale.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="#homes" data-mode="buy">Buy</a><a href="#homes" data-mode="rent">Rent</a><a href="#sell">Sell</a><a href="#manage">Manage</a><a href="#agents">Agents</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<dialog id="book" aria-labelledby="bookTitle">
+  <form class="dlg" id="bookForm" data-kit-ignore>
+    <div class="dlg-h">
+      <div class="art" id="bookArt" aria-hidden="true"></div>
+      <div><p class="eyebrow" style="margin:0">Book an inspection</p><h2 id="bookTitle">Listing</h2><p id="bookSub"></p></div>
+      <button class="x" type="button" id="bookX" aria-label="Close">×</button>
+    </div>
+    <fieldset class="slots" id="slots"><legend>Choose a time</legend></fieldset>
+    <div class="fgrid">
+      <label class="fld"><span>Your name</span><input name="name" autocomplete="off"></label>
+      <label class="fld"><span>Email</span><input name="email" type="email" autocomplete="off" placeholder="you@example.com"></label>
+    </div>
+    <button class="btn terra" id="bookGo" type="submit" disabled style="width:100%;margin-top:16px">Pick a time first</button>
+    <p class="fine">Demo booking — nothing is sent and no time is held.</p>
+  </form>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  root.classList.add("js");
+  var RM = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  var PHONE = window.matchMedia ? matchMedia("(max-width: 899px)") : { matches: false };
+  function $(s) { return document.querySelector(s); }
+  function $$(s) { return [].slice.call(document.querySelectorAll(s)); }
+  function toast(m) { if (window.DemoKit) DemoKit.toast(m); }
+
+  /* ---------- data (all fictional) ---------- */
+  var L = [
+    { id: "b1", m: "buy", t: "Deco apartment with a curved balcony", s: "South Yarra", k: "Apartment", f: "deco", bd: 2, ba: 1, car: 1, p: 1150000, x: 240, y: 170, d: "Top floor of a 1930s block: north light through steel-framed windows and the original terrazzo in the entry hall." },
+    { id: "b4", m: "buy", t: "Georgian-revival family home", s: "Toorak", k: "House", f: "georgian", bd: 5, ba: 3, car: 2, p: 5600000, x: 610, y: 190, d: "Symmetrical facade, formal dining and a pool courtyard behind clipped hedges." },
+    { id: "b2", m: "buy", t: "Victorian terrace with a studio out back", s: "Prahran", k: "Terrace", f: "terrace", bd: 3, ba: 2, car: 0, p: 1850000, x: 215, y: 450, d: "Iron-lace verandah, three bedrooms upstairs and a detached studio off the rear lane." },
+    { id: "b5", m: "buy", t: "Edwardian with a north garden", s: "Armadale", k: "House", f: "edwardian", bd: 4, ba: 2, car: 1, p: 2950000, x: 690, y: 640, d: "Red brick, a leadlight bay window and a rear kitchen that opens to a long north-facing lawn." },
+    { id: "b7", m: "buy", t: "Townhouse with a roof terrace", s: "South Yarra", k: "Townhouse", f: "townhouse", bd: 3, ba: 2, car: 2, p: 2100000, x: 410, y: 300, d: "Three levels behind a timber-battened facade, with city glimpses from the roof terrace." },
+    { id: "b3", m: "buy", t: "Mid-century house on a wide block", s: "Malvern", k: "House", f: "midcentury", bd: 4, ba: 2, car: 2, p: 3400000, x: 905, y: 560, d: "Flat roof, breeze-block screen and a sunken lounge nobody has renovated away. Twenty-metre frontage." },
+    { id: "b6", m: "buy", t: "Warehouse loft off a laneway", s: "Windsor", k: "Apartment", f: "warehouse", bd: 2, ba: 2, car: 1, p: 1350000, x: 290, y: 705, d: "Sawtooth roof, polished concrete, a mezzanine study and one car space behind the roller door." },
+    { id: "b9", m: "buy", t: "Californian bungalow near the village", s: "Armadale", k: "House", f: "bungalow", bd: 3, ba: 1, car: 1, p: 2250000, x: 560, y: 470, d: "Deep front porch, tapered columns, original fireplaces and room to extend (STCA)." },
+    { id: "b8", m: "buy", t: "Ground-floor garden flat", s: "Toorak", k: "Apartment", f: "walkup", bd: 1, ba: 1, car: 1, p: 760000, x: 860, y: 300, d: "Quiet 1960s block with a private courtyard, a short walk to the village shops and the tram." },
+    { id: "r1", m: "rent", t: "Studio near the station", s: "South Yarra", k: "Apartment", f: "tower", bd: 1, ba: 1, car: 0, p: 520, x: 170, y: 300, d: "Fourth-floor studio with a Juliet balcony, a laundry nook and secure bike storage." },
+    { id: "r6", m: "rent", t: "Period residence with a pool", s: "Toorak", k: "House", f: "georgian", bd: 5, ba: 3, car: 2, p: 2400, x: 740, y: 200, d: "Formal rooms, a heated pool and garden care included in the lease." },
+    { id: "r3", m: "rent", t: "Terrace with a courtyard", s: "Prahran", k: "Terrace", f: "terrace", bd: 2, ba: 1, car: 0, p: 850, x: 390, y: 470, d: "Polished boards, a gas cooktop and a paved courtyard with room for a table for six." },
+    { id: "r5", m: "rent", t: "Family home near the schools", s: "Malvern", k: "House", f: "edwardian", bd: 4, ba: 2, car: 2, p: 1450, x: 860, y: 700, d: "Four bedrooms, a study nook, a big back garden and off-street parking for two." },
+    { id: "r4", m: "rent", t: "Garden flat on a quiet street", s: "Armadale", k: "Apartment", f: "walkup", bd: 2, ba: 1, car: 1, p: 720, x: 560, y: 640, d: "Ground floor of a small block with a shared garden, a short walk to the station and shops." },
+    { id: "r2", m: "rent", t: "Two-bedroom apartment with a balcony", s: "Windsor", k: "Apartment", f: "deco", bd: 2, ba: 1, car: 1, p: 690, x: 170, y: 700, d: "Updated kitchen, a sunny balcony over the street and a car space off the rear lane." }
+  ];
+  var SUBS = [["South Yarra", 320, 200], ["Toorak", 700, 290], ["Prahran", 300, 530], ["Armadale", 600, 500], ["Malvern", 900, 455], ["Windsor", 330, 780]];
+  var CFG = { buy: { min: 500000, max: 6000000, step: 50000 }, rent: { min: 400, max: 2500, step: 50 } };
+  var byId = {};
+  L.forEach(function (l, i) { l.i = i; byId[l.id] = l; });
+
+  function short(n) { return n >= 1e6 ? "$" + (n / 1e6).toFixed(2).replace(/0$/, "").replace(/\.0$/, "") + "m" : "$" + Math.round(n / 1000) + "k"; }
+  function money(n, mode) { return mode === "rent" ? "$" + n.toLocaleString("en-AU") + "/wk" : short(n); }
+  function pinLabel(l) { return l.m === "rent" ? "$" + l.p.toLocaleString("en-AU") + "/wk" : short(l.p); }
+  function guide(l) {
+    if (l.m === "rent") return "$" + l.p.toLocaleString("en-AU") + "<small>per week</small>";
+    var hi = Math.floor(l.p * 1.1 / 50000) * 50000;
+    return short(l.p) + " – " + short(hi) + "<small>price guide</small>";
+  }
+
+  /* ---------- facade illustrations (SVG, drawn from parameters) ---------- */
+  function r(x, y, w, h, f, o) { return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="' + f + '"' + (o || "") + "/>"; }
+  function p(d, f, o) { return '<path d="' + d + '" fill="' + f + '"' + (o || "") + "/>"; }
+  function win(x, y, w, h, fr) {
+    return r(x - 2, y - 2, w + 4, h + 4, fr || "#F7F2EA") + r(x, y, w, h, "url(#glass)") +
+      '<path d="M' + (x + w * 0.25).toFixed(1) + " " + (y + h) + "L" + (x + w * 0.7).toFixed(1) + " " + y + '" stroke="#fff" stroke-opacity=".13" stroke-width="' + Math.max(2, w * 0.16).toFixed(1) + '"/>';
+  }
+  function tree(x, i) {
+    var h = [0, 6, -4][i % 3];
+    return r(x - 2, 128 + h, 4, 44, "#5A5E43") + '<circle cx="' + x + '" cy="' + (114 + h) + '" r="22" fill="#6F7355"/><circle cx="' + (x - 13) + '" cy="' + (128 + h) + '" r="15" fill="#7D8262"/><circle cx="' + (x + 12) + '" cy="' + (126 + h) + '" r="16" fill="#62664A"/>';
+  }
+  var B = {
+    terrace: function (i) {
+      var wall = ["#E9D6BF", "#DCC7AE", "#EFE2CF"][i % 3], tr = "#F7F2EA", s = "";
+      s += r(0, 58, 62, 114, "#D9C9B3") + r(258, 58, 62, 114, "#E3D5C1") + r(0, 50, 62, 10, "#CDBBA3") + r(258, 50, 62, 10, "#D6C7B2");
+      s += r(222, 24, 13, 24, "#A87F66") + r(62, 56, 196, 116, wall) + r(58, 44, 204, 14, tr) + p("M134 44Q160 20 186 44Z", tr);
+      s += win(94, 64, 32, 38) + win(194, 64, 32, 38);
+      s += r(62, 100, 196, 3, "#2B2B2B") + r(62, 103, 196, 10, "url(#lace)") + r(62, 113, 196, 3, "#2B2B2B");
+      s += r(58, 118, 204, 6, "#6F7355") + r(62, 124, 196, 8, "url(#lace)") + r(66, 124, 4, 48, "#2B2B2B") + r(250, 124, 4, 48, "#2B2B2B");
+      s += win(96, 136, 50, 28) + r(190, 128, 30, 5, "url(#glass)") + r(192, 134, 26, 38, "#C4643D") + r(186, 168, 38, 4, "#CDBBA3");
+      return s;
+    },
+    deco: function (i) {
+      var wall = ["#EFE3CF", "#F2E8DA", "#E8D9C2"][i % 3], s = "";
+      s += r(138, 24, 44, 28, wall) + r(126, 38, 68, 14, wall) + '<circle cx="160" cy="34" r="5" fill="url(#glass)"/>';
+      s += p("M56 50H218A42 42 0 0 1 260 92V172H56Z", wall) + r(56, 90, 204, 3, "#D8C3A5") + r(56, 130, 204, 3, "#D8C3A5");
+      s += r(154, 56, 12, 74, "#D3DAD6");
+      for (var k = 0; k < 6; k++) s += r(154, 60 + k * 12, 12, 1, "#B9C2BE");
+      [60, 100, 140].forEach(function (y, j) {
+        s += win(72, y, 40, 22) + win(122, y, 22, 22) + win(176, y, 28, 22) + (j ? win(214, y, 34, 22) : win(212, y, 26, 22));
+      });
+      s += r(196, 124, 64, 3, "#2B2B2B") + r(196, 127, 64, 7, "url(#rail)");
+      s += r(138, 138, 44, 4, "#2B2B2B") + r(150, 144, 20, 28, "#6F7355");
+      return s;
+    },
+    midcentury: function () {
+      var s = r(44, 98, 232, 74, "#F4EEE4") + r(52, 106, 70, 66, "url(#breeze)") + win(134, 108, 94, 48, "#2B2B2B");
+      s += r(164, 108, 2, 48, "#2B2B2B") + r(196, 108, 2, 48, "#2B2B2B") + r(128, 160, 106, 12, "#CDB89D");
+      s += '<circle cx="146" cy="158" r="8" fill="#7D8262"/><circle cx="214" cy="157" r="9" fill="#6F7355"/>';
+      s += r(240, 114, 22, 58, "#C4643D") + r(18, 86, 284, 12, "#2B2B2B") + r(24, 98, 272, 3, "#000", ' fill-opacity=".14"') + r(26, 98, 4, 74, "#2B2B2B");
+      return s;
+    },
+    georgian: function (i) {
+      var sh = ["#6F7355", "#2B2B2B", "#565A41"][i % 3], s = "";
+      s += r(88, 12, 13, 22, "#CDBBA3") + r(219, 12, 13, 22, "#CDBBA3") + p("M46 60L80 26H240L274 60Z", "#4A4744");
+      s += r(54, 58, 212, 114, "#F7F2EA") + r(50, 58, 220, 5, "#E3D9CB");
+      [82, 124, 196, 238].forEach(function (x) { s += win(x - 9, 72, 18, 28, "#fff") + r(x - 17, 71, 6, 30, sh) + r(x + 11, 71, 6, 30, sh); });
+      s += win(154, 74, 12, 24, "#fff");
+      [82, 124, 196, 238].forEach(function (x) { s += win(x - 9, 114, 18, 28, "#fff") + r(x - 17, 113, 6, 30, sh) + r(x + 11, 113, 6, 30, sh); });
+      s += p("M136 108L160 92L184 108Z", "#fff") + r(136, 108, 48, 4, "#E3D9CB") + r(142, 112, 6, 50, "#fff") + r(172, 112, 6, 50, "#fff");
+      s += r(151, 124, 18, 40, "#2B2B2B") + p("M151 124A9 9 0 0 1 169 124Z", "url(#glass)") + r(138, 164, 44, 8, "#E3D9CB");
+      s += r(18, 150, 116, 22, "#565A41", ' rx="10"') + r(186, 150, 116, 22, "#565A41", ' rx="10"') + '<circle cx="130" cy="156" r="10" fill="#62664A"/><circle cx="190" cy="156" r="10" fill="#62664A"/>';
+      return s;
+    },
+    edwardian: function (i) {
+      var br = ["#B5654A", "#A95B43", "#BE7255"][i % 3], roof = "#8E4A33", tr = "#F7F2EA", s = "";
+      s += r(214, 26, 14, 28, br) + r(211, 22, 20, 5, "#7E4430") + p("M48 86L96 44H262L284 86Z", roof);
+      s += r(56, 84, 214, 88, br) + r(56, 84, 214, 88, "url(#brick)");
+      s += p("M48 94L112 32L176 94Z", roof) + p("M64 94L112 48L160 94Z", tr) + '<path d="M112 50V94M86 94L112 68L138 94" stroke="#7A5440" stroke-width="2.5" fill="none"/>';
+      s += r(64, 94, 96, 78, br) + r(64, 94, 96, 78, "url(#brick)") + p("M74 108H150L143 152H81Z", tr);
+      s += win(84, 116, 16, 30) + win(104, 116, 16, 30) + win(124, 116, 15, 30) + r(84, 110, 55, 3, "#C9A26B");
+      s += r(166, 104, 108, 6, "#6F7355") + r(170, 110, 100, 8, "url(#lace)") + r(172, 110, 4, 62, tr) + r(218, 110, 4, 62, tr) + r(264, 110, 4, 62, tr);
+      s += r(194, 124, 22, 48, "#6F7355") + r(184, 124, 7, 32, "url(#glass)") + win(236, 124, 20, 30) + r(188, 168, 34, 4, "#CDBBA3");
+      return s;
+    },
+    warehouse: function (i) {
+      var br = ["#9C5A43", "#8E503C", "#A4634A"][i % 3], d = "M36 66", s = "";
+      for (var k = 0; k < 6; k++) { var x0 = 36 + k * 41.3; d += "L" + (x0 + 41.3).toFixed(1) + " 40V66"; }
+      s += p(d + "Z", "#3A3836");
+      for (k = 1; k <= 6; k++) s += r((36 + k * 41.3 - 5).toFixed(1), 42, 4, 23, "url(#glass)");
+      s += r(36, 66, 248, 106, br) + r(36, 66, 248, 106, "url(#brick)");
+      s += r(50, 76, 100, 50, "#2B2B2B") + r(52, 78, 96, 46, "url(#steel)") + r(170, 76, 100, 50, "#2B2B2B") + r(172, 78, 96, 46, "url(#steel)");
+      s += r(158, 66, 3, 106, "#5E6147") + r(172, 128, 92, 4, "#2B2B2B") + r(176, 132, 84, 40, "url(#roller)");
+      s += r(58, 128, 32, 4, "#2B2B2B") + r(62, 132, 24, 40, "#C4643D") + r(98, 138, 44, 14, "#000", ' fill-opacity=".08"');
+      return s;
+    },
+    townhouse: function () {
+      var s = r(18, 72, 72, 100, "#E6DACA") + r(230, 64, 72, 108, "#DDD0BE") + r(236, 80, 22, 26, "#CFC1AD") + r(266, 80, 22, 26, "#CFC1AD");
+      s += r(100, 24, 120, 8, "#8E8F77") + '<circle cx="110" cy="23" r="8" fill="#7D8262"/><circle cx="130" cy="21" r="6" fill="#6F7355"/><circle cx="208" cy="22" r="9" fill="#6F7355"/>';
+      s += r(96, 18, 128, 14, "#fff", ' fill-opacity=".35"') + r(88, 32, 144, 52, "url(#batten)") + win(116, 46, 88, 22, "#2B2B2B");
+      s += r(96, 84, 128, 88, "#E9E1D6") + r(96, 84, 128, 46, "#C4643D") + r(96, 84, 128, 46, "url(#brick)") + win(110, 94, 100, 26, "#2B2B2B");
+      s += r(104, 138, 68, 34, "#3A3836") + r(182, 134, 26, 38, "#B98B63") + r(88, 82, 144, 3, "#2B2B2B");
+      return s;
+    },
+    walkup: function (i) {
+      var wall = ["#E4D3B4", "#DCC8A6", "#E9DBC0"][i % 3], s = "";
+      s += r(44, 46, 232, 8, "#CDBBA3") + r(50, 54, 220, 118, wall) + r(50, 54, 220, 118, "url(#brick)") + r(150, 54, 20, 118, "#D9CDB6");
+      for (var k = 0; k < 5; k++) s += r(154, 60 + k * 18, 12, 12, "#C7D0CC");
+      [58, 94, 130].forEach(function (y) {
+        s += win(62, y + 6, 34, 22) + win(106, y + 6, 34, 22) + win(180, y + 6, 34, 22) + win(224, y + 6, 34, 22);
+        s += r(58, y + 25, 86, 3, "#2B2B2B") + r(58, y + 28, 86, 8, "url(#rail)") + r(176, y + 25, 86, 3, "#2B2B2B") + r(176, y + 28, 86, 8, "url(#rail)");
+      });
+      s += r(152, 150, 16, 22, "#6F7355");
+      return s;
+    },
+    bungalow: function () {
+      var s = r(236, 58, 14, 30, "#A95B43") + r(52, 100, 216, 72, "url(#weather)") + p("M32 104L160 44L288 104Z", "#A9553A") + p("M68 100L160 57L252 100Z", "#EFE3CF");
+      var d = "";
+      for (var x = 82; x <= 238; x += 12) { var top = 57 + Math.abs(x - 160) * (43 / 92) + 3; d += "M" + x + " 100V" + top.toFixed(1); }
+      s += '<path d="' + d + '" stroke="#D5C4A8" stroke-width="2"/>' + r(52, 100, 216, 6, "#000", ' fill-opacity=".12"');
+      s += r(60, 140, 24, 32, "#A95B43") + r(60, 140, 24, 32, "url(#brick)") + r(236, 140, 24, 32, "#A95B43") + r(236, 140, 24, 32, "url(#brick)");
+      s += p("M64 106H80L77 140H67Z", "#F7F2EA") + p("M240 106H256L253 140H243Z", "#F7F2EA");
+      s += win(100, 116, 22, 30) + win(126, 116, 22, 30) + win(152, 116, 22, 30) + r(194, 116, 24, 56, "#6F7355") + r(198, 122, 16, 10, "url(#glass)") + r(188, 168, 36, 4, "#CDBBA3");
+      return s;
+    },
+    tower: function () {
+      var s = r(18, 98, 78, 74, "#E3D5C1") + r(224, 110, 80, 62, "#D9C9B3") + r(100, 16, 120, 156, "#DED2C2");
+      for (var row = 0; row < 6; row++) {
+        for (var c = 0; c < 3; c++) s += win(112 + c * 36, 24 + row * 21, 24, 13);
+        s += r(104, 40 + row * 21, 112, 2, "#2B2B2B", ' fill-opacity=".45"');
+      }
+      s += r(96, 150, 128, 6, "#C4643D") + r(104, 156, 112, 16, "url(#glass)") + r(30, 112, 20, 18, "#CFC1AD") + r(62, 112, 20, 18, "#CFC1AD");
+      return s;
+    }
+  };
+  var BGS = ["#EADDCB", "#E4D5C2", "#EEE4D7", "#E7D9C5"];
+  function facade(f, i) {
+    var sx = [72, 252, 108, 226][i % 4], sy = [46, 40, 52, 34][i % 4];
+    return '<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">' +
+      r(0, 0, 320, 200, BGS[i % 4]) + '<circle cx="' + sx + '" cy="' + sy + '" r="30" fill="#E2A07E" fill-opacity=".42"/>' +
+      r(0, 172, 320, 28, "#D6C5AE") + r(0, 172, 320, 3, "#C8B59C") + B[f](i) + tree(i % 2 ? 292 : 28, i) + "</svg>";
+  }
+
+  /* ---------- cards + pins ---------- */
+  function ic(n) { return '<svg aria-hidden="true"><use href="#i-' + n + '"/></svg>'; }
+  function facts(l) {
+    return '<ul class="facts"><li>' + ic("bed") + l.bd + " bed</li><li>" + ic("bath") + l.ba + " bath</li>" + (l.car ? "<li>" + ic("car") + l.car + " car</li>" : "") + "</ul>";
+  }
+  var cardsEl = $("#cards"), pinsEl = $("#pins"), subsEl = $("#subs"), mapEl = $("#map"), listcol = $("#listcol");
+  cardsEl.innerHTML = L.map(function (l) {
+    return '<article class="card" data-id="' + l.id + '" tabindex="-1" aria-labelledby="t-' + l.id + '">' +
+      '<div class="art">' + facade(l.f, l.i) + '<span class="tag">Demo listing</span></div>' +
+      '<div class="cbody"><p class="csub">' + l.s + " · " + l.k + '</p><h3 class="ctitle" id="t-' + l.id + '">' + l.t + "</h3>" +
+      '<p class="cprice">' + guide(l) + "</p>" + facts(l) + '<p class="cdesc">' + l.d + "</p>" +
+      '<div class="cacts"><button class="btn" type="button" data-book="' + l.id + '">Book an inspection</button><button class="ghost" type="button" data-show="' + l.id + '" aria-label="Show on map" title="Show on map"><svg aria-hidden="true"><use href="#i-pin"/></svg><span class="gt" aria-hidden="true">Show on map</span></button></div></div></article>';
+  }).join("");
+  pinsEl.innerHTML = L.map(function (l) {
+    return '<button class="pin" type="button" data-id="' + l.id + '">' + pinLabel(l) + '<span class="vh">, </span><span class="tip">' + l.bd + " bed " + l.k.toLowerCase() + " · " + l.s + "</span></button>";
+  }).join("");
+  subsEl.innerHTML = SUBS.map(function (s) { return '<span class="sub">' + s[0] + "</span>"; }).join("");
+  var cards = {}, pins = {};
+  $$(".card").forEach(function (c) { cards[c.getAttribute("data-id")] = c; });
+  $$(".pin").forEach(function (b) { pins[b.getAttribute("data-id")] = b; });
+  var subEls = $$(".sub");
+
+  function layout() {
+    var w = mapEl.clientWidth, h = mapEl.clientHeight;
+    if (!w || !h) return;
+    var s = Math.min(w / 1000, h / 820), ox = (w - 1000 * s) / 2, oy = (h - 820 * s) / 2;
+    L.forEach(function (l) { var b = pins[l.id]; b.style.left = (ox + l.x * s).toFixed(1) + "px"; b.style.top = (oy + l.y * s).toFixed(1) + "px"; });
+    SUBS.forEach(function (d, i) { subEls[i].style.left = (ox + d[1] * s).toFixed(1) + "px"; subEls[i].style.top = (oy + d[2] * s).toFixed(1) + "px"; });
+  }
+  if ("ResizeObserver" in window) new ResizeObserver(layout).observe(mapEl); else window.addEventListener("resize", layout);
+  layout();
+
+  /* ---------- filters ---------- */
+  var st = { mode: "buy", beds: 0, baths: 0, lo: CFG.buy.min, hi: CFG.buy.max, sort: "rec", sel: null };
+  var pmin = $("#pmin"), pmax = $("#pmax"), fill = $("#fill"), pout = $("#pout"), filters = $("#filters");
+  function setRange(mode) {
+    var c = CFG[mode];
+    [pmin, pmax].forEach(function (inp) { inp.min = c.min; inp.max = c.max; inp.step = c.step; });
+    pmin.value = st.lo = c.min; pmax.value = st.hi = c.max;
+    paintRange();
+  }
+  function paintRange() {
+    var c = CFG[st.mode], a = (st.lo - c.min) / (c.max - c.min), b = (st.hi - c.min) / (c.max - c.min);
+    fill.style.left = (a * 100).toFixed(2) + "%";
+    fill.style.right = ((1 - b) * 100).toFixed(2) + "%";
+    var full = st.lo <= c.min && st.hi >= c.max;
+    pout.textContent = full ? "Any price" : money(st.lo, st.mode) + " – " + money(st.hi, st.mode) + (st.hi >= c.max ? "+" : "");
+    pmin.setAttribute("aria-valuetext", money(st.lo, st.mode));
+    pmax.setAttribute("aria-valuetext", money(st.hi, st.mode) + (st.hi >= c.max ? " or more" : ""));
+    pmin.style.zIndex = a > 0.9 ? 3 : 1;
+  }
+  function match(l) {
+    return l.m === st.mode && l.bd >= st.beds && l.ba >= st.baths && l.p >= st.lo && (st.hi >= CFG[st.mode].max || l.p <= st.hi);
+  }
+  function activeCount() { return (st.beds ? 1 : 0) + (st.baths ? 1 : 0) + (st.lo > CFG[st.mode].min || st.hi < CFG[st.mode].max ? 1 : 0); }
+  function apply(animate) {
+    var first = {};
+    var doAnim = animate && !RM && cardsEl.offsetParent !== null;
+    if (doAnim) L.forEach(function (l) { var c = cards[l.id]; if (!c.hidden) first[l.id] = c.getBoundingClientRect(); });
+    var inMode = L.filter(function (l) { return l.m === st.mode; }), shown = inMode.filter(match);
+    var order = L.slice();
+    if (st.sort !== "rec") order.sort(function (a, b) { return st.sort === "lo" ? a.p - b.p : b.p - a.p; });
+    order.forEach(function (l) { cardsEl.appendChild(cards[l.id]); });
+    L.forEach(function (l) {
+      var ok = match(l), here = l.m === st.mode, b = pins[l.id];
+      cards[l.id].hidden = !ok;
+      b.classList.toggle("gone", !here);
+      b.classList.toggle("off", here && !ok);
+      b.tabIndex = ok ? 0 : -1;
+      if (ok) b.removeAttribute("aria-hidden"); else b.setAttribute("aria-hidden", "true");
+    });
+    var what = st.mode === "buy" ? "for sale" : "for rent";
+    $("#count").innerHTML = "Showing " + shown.length + " of " + inMode.length + " demo listings " + what + "<small>" + (PHONE.matches ? "Tap “Show on map” to find a home’s pin" : "Hover a card to light up its pin — or a pin to find its card") + "</small>";
+    $("#vcount").textContent = shown.length + " of " + inMode.length + " homes " + what;
+    $("#empty").hidden = shown.length > 0;
+    var n = activeCount();
+    $("#fcount").textContent = n ? String(n) : "";
+    if (doAnim) {
+      L.forEach(function (l) {
+        var c = cards[l.id];
+        if (c.hidden) return;
+        var f = first[l.id], nr = c.getBoundingClientRect();
+        if (f) {
+          var dx = f.left - nr.left, dy = f.top - nr.top;
+          if (Math.abs(dx) > 1 || Math.abs(dy) > 1) c.animate([{ transform: "translate(" + dx + "px," + dy + "px)" }, { transform: "none" }], { duration: 420, easing: "cubic-bezier(.2,.7,.2,1)" });
+        } else {
+          c.animate([{ opacity: 0, transform: "scale(.96)" }, { opacity: 1, transform: "none" }], { duration: 340, easing: "ease-out" });
+        }
+      });
+    }
+    if (!st.sel || !match(byId[st.sel])) st.sel = shown.length ? shown[0].id : null;
+    renderPeek();
+  }
+  function dropPins() {
+    if (RM) return;
+    L.forEach(function (l, i) {
+      if (l.m !== st.mode) return;
+      var b = pins[l.id];
+      b.classList.remove("drop"); void b.offsetWidth;
+      b.style.animationDelay = (i % 9) * 45 + "ms";
+      b.classList.add("drop");
+    });
+  }
+  filters.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t.name === "mode") { st.mode = t.value; setRange(st.mode); apply(true); dropPins(); }
+    else if (t.name === "beds") { st.beds = +t.value; apply(true); }
+    else if (t.name === "baths") { st.baths = +t.value; apply(true); }
+  });
+  function onRange(e) {
+    var c = CFG[st.mode], lo = +pmin.value, hi = +pmax.value;
+    if (lo > hi - c.step) { if (e.target === pmin) { lo = hi - c.step; pmin.value = lo; } else { hi = lo + c.step; pmax.value = hi; } }
+    st.lo = lo; st.hi = hi;
+    paintRange();
+    apply(true);
+  }
+  pmin.addEventListener("input", onRange);
+  pmax.addEventListener("input", onRange);
+  $("#sort").addEventListener("change", function (e) { st.sort = e.target.value; apply(true); });
+  function resetAll() {
+    st.beds = 0; st.baths = 0;
+    filters.querySelector('input[name=beds][value="0"]').checked = true;
+    filters.querySelector('input[name=baths][value="0"]').checked = true;
+    setRange(st.mode);
+    apply(true);
+  }
+  $("#reset").addEventListener("click", resetAll);
+  document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("[data-reset]")) resetAll(); });
+  $("#ftoggle").addEventListener("click", function () {
+    var open = !filters.classList.contains("open");
+    filters.classList.toggle("open", open);
+    this.setAttribute("aria-expanded", String(open));
+  });
+
+  /* ---------- map ⇄ list linking ---------- */
+  function hot(id, on) {
+    if (cards[id]) cards[id].classList.toggle("hot", on);
+    if (pins[id]) pins[id].classList.toggle("hot", on);
+  }
+  L.forEach(function (l) {
+    var c = cards[l.id], b = pins[l.id];
+    c.addEventListener("mouseenter", function () { hot(l.id, true); });
+    c.addEventListener("mouseleave", function () { hot(l.id, false); });
+    c.addEventListener("focusin", function () { hot(l.id, true); });
+    c.addEventListener("focusout", function (e) { if (!c.contains(e.relatedTarget)) hot(l.id, false); });
+    b.addEventListener("mouseenter", function () { hot(l.id, true); });
+    b.addEventListener("mouseleave", function () { hot(l.id, false); });
+    b.addEventListener("focus", function () { hot(l.id, true); });
+    b.addEventListener("blur", function () { hot(l.id, false); });
+    b.addEventListener("click", function (e) { select(l.id, e.detail === 0); });
+  });
+  function select(id, viaKeys) {
+    st.sel = id;
+    renderPeek();
+    if (PHONE.matches) return;
+    var c = cards[id];
+    listcol.scrollTo({ top: Math.max(0, c.offsetTop - 12), behavior: RM ? "auto" : "smooth" });
+    c.classList.remove("flash"); void c.offsetWidth; c.classList.add("flash");
+    if (viaKeys) c.focus({ preventScroll: true });
+  }
+  function setView(v) {
+    $("#homes").setAttribute("data-view", v);
+    $$(".vbtn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-view") === v)); });
+  }
+  $$(".vbtn").forEach(function (b) { b.addEventListener("click", function () { setView(b.getAttribute("data-view")); }); });
+  cardsEl.addEventListener("click", function (e) {
+    var sb = e.target.closest("[data-show]");
+    if (!sb) return;
+    var id = sb.getAttribute("data-show");
+    if (PHONE.matches) { setView("map"); st.sel = id; renderPeek(); mapEl.scrollIntoView({ block: "center", behavior: RM ? "auto" : "smooth" }); pins[id].focus({ preventScroll: true }); }
+    else { hot(id, true); setTimeout(function () { hot(id, false); }, 1800); }
+  });
+  function renderPeek() {
+    $$(".pin.sel").forEach(function (b) { b.classList.remove("sel"); });
+    var peek = $("#peek"), l = st.sel && byId[st.sel];
+    if (!l) { peek.innerHTML = '<div class="empty"><p>No homes match — try a wider price range.</p><button class="btn line" type="button" data-reset>Reset filters</button></div>'; return; }
+    if (PHONE.matches) pins[l.id].classList.add("sel");
+    peek.innerHTML = '<article class="pk"><div class="art">' + facade(l.f, l.i) + '<span class="tag">Demo</span></div><div class="cbody" style="padding:4px 4px 4px 0"><p class="csub">' + l.s + " · " + l.bd + " bed · " + l.ba + ' bath</p><p class="ctitle">' + l.t + '</p><p class="cprice">' + pinLabel(l) + '</p><div class="cacts"><button class="btn" type="button" data-book="' + l.id + '">Book an inspection</button></div></div></article>';
+  }
+  if (PHONE.addEventListener) PHONE.addEventListener("change", function () { renderPeek(); layout(); });
+
+  /* ---------- nav: buy/rent shortcuts + phone menu ---------- */
+  var hdr = $("#hdr"), menuBtn = $("#menuBtn");
+  function menu(open) { hdr.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", String(open)); }
+  menuBtn.addEventListener("click", function () { menu(!hdr.classList.contains("open")); });
+  $$("[data-mode]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var m = a.getAttribute("data-mode"), inp = filters.querySelector('input[name=mode][value="' + m + '"]');
+      if (!inp.checked) { inp.checked = true; st.mode = m; setRange(m); apply(false); dropPins(); }
+    });
+  });
+  $("#nav").addEventListener("click", function (e) { if (e.target.closest("a")) menu(false); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && hdr.classList.contains("open")) { e.preventDefault(); menu(false); menuBtn.focus(); }
+  });
+
+  /* ---------- inspection booking (demo) ---------- */
+  var DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function nextDow(dow, from) { var d = new Date(from || Date.now()); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() + 1); while (d.getDay() !== dow) d.setDate(d.getDate() + 1); return d; }
+  function fmtD(d) { return DOW[d.getDay()] + " " + d.getDate() + " " + MON[d.getMonth()]; }
+  function slots(l) {
+    var sat = nextDow(6), sat2 = new Date(sat), mid = nextDow(l.m === "buy" ? 3 : 4);
+    sat2.setDate(sat.getDate() + 7);
+    var t = l.m === "buy"
+      ? [[sat, l.i % 2 ? "9:30–10:00 am" : "10:00–10:30 am"], [sat, l.i % 2 ? "12:15–12:45 pm" : "11:15–11:45 am"], [mid, "5:30–6:00 pm"], [sat2, "10:00–10:30 am"]]
+      : [[mid, l.i % 2 ? "5:15–5:30 pm" : "5:45–6:00 pm"], [sat, "10:15–10:30 am"], [sat, "12:00–12:15 pm"], [sat2, "11:30–11:45 am"]];
+    return t.map(function (x) { return { d: fmtD(x[0]), t: x[1] }; });
+  }
+  var dlg = $("#book"), bForm = $("#bookForm"), bGo = $("#bookGo"), lastFocus = null, current = null;
+  function openBook(id) {
+    var l = byId[id];
+    current = l;
+    $("#bookTitle").textContent = l.t;
+    $("#bookSub").textContent = l.s + " · " + (l.m === "buy" ? "For sale" : "For rent") + " · Demo listing";
+    $("#bookArt").innerHTML = facade(l.f, l.i);
+    $("#slots").innerHTML = "<legend>Choose a time</legend>" + slots(l).map(function (s, i) {
+      return '<label class="slot"><input type="radio" name="slot" value="' + i + '" data-label="' + s.d + ", " + s.t + '"><span><b>' + s.d + "</b>" + s.t + "</span></label>";
+    }).join("") + '<label class="slot wide"><input type="radio" name="slot" value="private" data-label="a private inspection"><span><b>Private inspection</b>The agent calls you to find a time</span></label>';
+    bGo.disabled = true;
+    bGo.textContent = "Pick a time first";
+    lastFocus = document.activeElement;
+    menu(false);
+    if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+  }
+  function closeBook() {
+    if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-book]");
+    if (b) openBook(b.getAttribute("data-book"));
+  });
+  $("#slots").addEventListener("change", function () { bGo.disabled = false; bGo.textContent = "Request this time"; });
+  bForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var c = bForm.querySelector("input[name=slot]:checked");
+    if (!c) return;
+    closeBook();
+    toast("Demo only — no inspection was booked for " + c.getAttribute("data-label") + ". On a real site this request would go to the agent.");
+  });
+  $("#bookX").addEventListener("click", closeBook);
+  dlg.addEventListener("keydown", function (e) { if (e.key === "Escape") { e.preventDefault(); closeBook(); } });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) closeBook(); });
+
+  /* ---------- recent sales (demo) + agents ---------- */
+  function prevDow(dow, weeksBack) { var d = new Date(); d.setHours(12, 0, 0, 0); d.setDate(d.getDate() - 1); while (d.getDay() !== dow) d.setDate(d.getDate() - 1); d.setDate(d.getDate() - 7 * weeksBack); return d; }
+  var SOLD = [
+    ["terrace", "Victorian terrace", "Prahran", "Sold at auction", prevDow(6, 0), 4],
+    ["bungalow", "Californian bungalow", "Malvern", "Sold before auction", prevDow(4, 1), 7],
+    ["deco", "Deco apartment", "South Yarra", "Sold by private sale", prevDow(2, 2), 9],
+    ["georgian", "Georgian-revival house", "Toorak", "Sold at auction", prevDow(6, 3), 10]
+  ];
+  $("#sold").innerHTML = SOLD.map(function (s) {
+    return '<article class="sc rv"><div class="art">' + facade(s[0], s[5]) + '<span class="tag">Demo listing</span><span class="stamp">Sold</span></div><div class="cbody"><p class="csub">' + s[2] + '</p><h3 class="ctitle">' + s[1] + "</h3><p>" + s[3] + " · " + fmtD(s[4]) + "</p><p>Price withheld</p></div></article>";
+  }).join("");
+  function person(o) {
+    return '<svg viewBox="0 0 200 240" aria-hidden="true" focusable="false"><rect width="200" height="240" fill="' + o.bg + '"/><circle cx="100" cy="98" r="78" fill="#fff" fill-opacity=".2"/>' +
+      (o.back ? p(o.back, o.hair) : "") + p("M34 240C38 188 66 168 100 168S162 188 166 240Z", o.top) + r(88, 136, 24, 36, o.skin) +
+      '<ellipse cx="100" cy="106" rx="31" ry="37" fill="' + o.skin + '"/>' + p(o.front, o.hair) +
+      p("M72 240C80 206 90 190 100 188S120 206 128 240Z", "#fff", ' fill-opacity=".14"') + "</svg>";
+  }
+  var AG = [
+    { n: "Claire Whitlock", role: "Director · Sales & auctions", area: "Toorak and Armadale", bio: "Measures every room herself and writes price guides in plain English.", ph: "0491 570 156", em: "claire@example.com",
+      v: { bg: "#EAD2C3", top: "#C4643D", skin: "#E7BFA0", hair: "#3A302A", back: "M66 104C62 62 86 58 100 58S140 64 136 104L141 146C126 156 74 156 59 146Z", front: "M69 98C72 70 90 64 104 64S133 74 132 96C116 86 94 82 69 98Z" } },
+    { n: "Tom Nguyen", role: "Sales", area: "South Yarra, Prahran and Windsor", bio: "Knows which apartments get afternoon sun and which laneways are quiet at night.", ph: "0491 570 157", em: "tom@example.com",
+      v: { bg: "#DCD9C4", top: "#6F7355", skin: "#C98E69", hair: "#1F1B18", back: "", front: "M69 98C66 66 88 60 102 60S135 68 132 96C124 80 110 76 100 76S76 82 69 98Z" } },
+    { n: "Priya Raman", role: "Property management", area: "All six suburbs", bio: "Keeps a list of every tradesperson who turns up when they say they will.", ph: "0491 570 158", em: "priya@example.com",
+      v: { bg: "#E9DCCB", top: "#2B2B2B", skin: "#A8704F", hair: "#2A211C", back: "M68 104C64 70 84 62 100 62S136 70 132 104L128 132C118 138 82 138 72 132ZM84 50A16 16 0 1 0 116 50A16 16 0 1 0 84 50Z", front: "M70 100C72 76 90 66 100 66S130 76 130 100C118 84 100 80 70 100Z" } }
+  ];
+  $("#agentList").innerHTML = AG.map(function (a) {
+    return '<article class="agent rv"><div class="ph">' + person(a.v) + "</div><h3>" + a.n + '</h3><p class="role">' + a.role + "</p><p>" + a.bio + " Focus: " + a.area + '.</p><p class="ct"><a href="tel:' + a.ph.replace(/\s/g, "") + '">' + a.ph + '</a><a href="mailto:' + a.em + '">' + a.em + "</a></p></article>";
+  }).join("");
+
+  /* ---------- reveal on scroll ---------- */
+  if ("IntersectionObserver" in window && !RM) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    $$(".rv").forEach(function (el) { io.observe(el); });
+  } else {
+    $$(".rv").forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ---------- start ---------- */
+  setRange("buy");
+  apply(false);
+  dropPins();
+})();
+</script>
+</body>
+</html>

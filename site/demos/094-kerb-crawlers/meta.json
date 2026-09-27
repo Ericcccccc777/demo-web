@@ -1,0 +1,8 @@
+{
+  "id": "094",
+  "tech": ["CSS 3D", "SVG", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Form logic", "CSS Grid"],
+  "features": ["customiser", "map", "booking"],
+  "interaction": "Design a skateboard in a CSS 3D deck lab — pick popsicle, cruiser or old-school shape (with kicked nose and tail), one of six SVG stencil graphics, deck colour, grip tape style and wheel colour or deck-only — then drag to spin it, use arrow keys to rotate and tilt, or hit 'Flip it' to see grip versus graphic side while an itemised sample price updates live; shop decks on the wall load into the lab, a stylised spot map picks local skate spots, and a lesson request form ends in a demo-only state.",
+  "fonts": ["Rock Salt", "Barlow"],
+  "notes": "Prices are samples; spots are described generally and the map is stylised, not to scale. The deck's nose and tail kicks are flat angled planes and the wheels are built from a few planes, so it is a stylised 3D model. Ordering and lesson requests are demo-only."
+}

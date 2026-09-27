@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="085">
+<meta name="demo:brand" content="Rise with Tara">
+<title>Rise with Tara — life coach &amp; speaker, Perth</title>
+<meta name="description" content="A fictional Perth life coach and speaker: 1:1 coaching, group circles, workshops and talks, told as a sunrise.">
+<meta name="theme-color" content="#1B1F3B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Recursive:slnt,wght,CASL,CRSV@-15..0,300..1000,0..1,0..1&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--navy:#1B1F3B;--magenta:#D1495B;--orange:#F79256;--cream:#FFF4E0;--ink:#1B1F3B;--ink2:#3A3E5C;
+--rec:"Recursive","Iowan Old Style",Georgia,serif;--ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--gut:clamp(18px,5vw,72px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--navy);color:var(--cream);font:400 18px/1.6 var(--ui);overflow-x:hidden}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gut)}
+.rec{font-family:var(--rec);font-variation-settings:"CASL" 0,"CRSV" 0}
+.label{font:600 12.5px/1.2 var(--ui);letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px;opacity:.85}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;border:2px solid currentColor;background:transparent;font:600 16px/1 var(--ui);text-decoration:none;cursor:pointer;transition:background .25s,color .25s,transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.solid{background:var(--cream);color:var(--navy);border-color:var(--cream)}
+.btn.solid:hover{background:var(--orange);border-color:var(--orange)}
+.btn.dark{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.btn.dark:hover{background:var(--magenta);border-color:var(--magenta)}
+
+/* sun + stars (decorative) */
+.sky{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.sun{position:absolute;left:50%;top:100%;width:min(78vmin,720px);aspect-ratio:1;margin-left:calc(min(78vmin,720px)/-2);border-radius:50%;
+background:radial-gradient(circle,rgba(255,232,190,.95) 0 34%,rgba(247,146,86,.55) 35%,rgba(247,146,86,.18) 56%,rgba(247,146,86,0) 70%);transform:translateY(calc(var(--rise,0)*-100%));opacity:var(--sunop,1);will-change:transform}
+.stars{position:absolute;inset:0;opacity:var(--starop,1)}
+.stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#FFF4E0;opacity:.7}
+.wrap{position:relative;z-index:2}
+
+/* header */
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:84px}
+.wm{font:700 22px/1.1 var(--rec);font-variation-settings:"CASL" 1,"CRSV" 1,"slnt" -8;text-decoration:none;overflow-wrap:anywhere;max-width:60%}
+.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:16px}
+.top nav a:hover{background:rgba(255,244,224,.1)}
+.top .btn{white-space:nowrap;flex:none}
+
+/* manifesto */
+.dawn{background:linear-gradient(180deg,#1B1F3B 0%,#221F45 45%,#3A2656 100%)}
+.hero{min-height:calc(100vh - 84px);display:flex;flex-direction:column;justify-content:center;padding:4vh var(--gut) 14vh}
+.hero h1{margin:0;font-weight:400}
+.kl{display:block;font-family:var(--rec);font-size:clamp(40px,7.4vw,112px);line-height:1.02;letter-spacing:-.02em;
+font-variation-settings:"wght" var(--w,780),"slnt" var(--s,0),"CASL" var(--c,0),"CRSV" 0;transform:scale(var(--sc,1));transform-origin:0 50%;opacity:var(--op,1);will-change:transform}
+.hero .kl{--w:760}
+.intro-p{max-width:46ch;margin:36px 0 0;font-size:clamp(17px,1.4vw,20px);color:#E9DFD0}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.scrollcue{display:flex;align-items:center;gap:12px;margin-top:8vh;font-size:14px;color:#CFC6D8}
+.scrollcue i{width:1px;height:44px;background:linear-gradient(#FFF4E0,transparent)}
+.manifesto{background:linear-gradient(180deg,#3A2656 0%,#5A2A5E 40%,#8E3560 100%);padding:10vh 0 16vh}
+.manifesto .kl{padding:9vh 0;font-size:clamp(36px,6.6vw,100px)}
+.manifesto .kl.kr{text-align:right;transform-origin:100% 50%}
+.m-note{max-width:40ch;margin:4vh 0 0 auto;font-size:17px;color:#F2E5E6}
+
+/* coaching */
+.coach{background:linear-gradient(180deg,#8E3560 0%,#B8405C 55%,#D9535A 100%);padding:clamp(64px,9vw,130px) 0}
+.sec-h{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:end;margin-bottom:44px}
+.sec-h h2{margin:0;font:400 clamp(42px,5.6vw,84px)/1 var(--rec);font-variation-settings:"wght" 900,"CASL" .6,"slnt" -4,"CRSV" 0;letter-spacing:-.02em}
+.sec-h p{margin:0;max-width:44ch;font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:rgba(255,244,224,.96);color:var(--ink);border-radius:28px;padding:28px 26px;display:flex;flex-direction:column;gap:12px;box-shadow:0 24px 50px -30px rgba(27,31,59,.6)}
+.card .kind{font:600 12px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:#8E3560}
+.card h3{margin:0;font:400 32px/1.05 var(--rec);font-variation-settings:"wght" 850,"CASL" .4,"CRSV" 0}
+.card p{margin:0;color:var(--ink2);font-size:16.5px}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;font-size:15.5px}
+.card li{display:flex;gap:10px}
+.card li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--magenta)}
+.card .price{margin-top:auto;padding-top:14px;border-top:1px dashed rgba(27,31,59,.25);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.card .price b{font:400 30px/1 var(--rec);font-variation-settings:"wght" 900,"CASL" 0,"CRSV" 0}
+.card .price span{font-size:14px;color:var(--ink2)}
+.fine{font-size:14.5px;margin:18px 0 0}
+
+/* speaking */
+.speak{background:linear-gradient(180deg,#D9535A 0%,#E8705A 45%,#F79256 100%);color:var(--ink);padding:clamp(64px,9vw,130px) 0}
+.topics{list-style:none;margin:0;padding:0;counter-reset:t}
+.topics li{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,.8fr);gap:24px;align-items:baseline;padding:28px 0;border-top:2px solid rgba(27,31,59,.8);counter-increment:t}
+.topics li:last-child{border-bottom:2px solid rgba(27,31,59,.8)}
+.topics li::before{content:"0" counter(t);font:400 20px/1 var(--rec);font-variation-settings:"wght" 700,"MONO" 1}
+.topics h3{margin:0;font:400 clamp(28px,3.4vw,50px)/1.02 var(--rec);font-variation-settings:"wght" 850,"CASL" .8,"slnt" -6,"CRSV" 0;letter-spacing:-.015em;transition:font-variation-settings .5s}
+.topics li:hover h3{font-variation-settings:"wght" 1000,"CASL" 0,"slnt" 0,"CRSV" 0}
+.topics p{margin:0;font-size:17px;color:#23274A}
+.topics small{display:block;margin-top:8px;font-size:14px;font-weight:600;letter-spacing:.04em}
+
+/* how it works */
+.how{background:linear-gradient(180deg,#F79256 0%,#FBB47A 60%,#FDCB95 100%);color:var(--ink);padding:clamp(64px,9vw,130px) 0}
+.arc{position:relative;margin-top:30px}
+.arc svg{width:100%;height:auto;display:block}
+.steps{list-style:none;margin:-10px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.steps li b{display:block;font:400 26px/1.1 var(--rec);font-variation-settings:"wght" 850,"CASL" .5,"CRSV" 0;margin:6px 0 6px}
+.steps li span{font:600 13px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase}
+.steps li p{margin:0;font-size:16.5px;color:#23274A}
+
+/* values (flip) */
+.values{background:linear-gradient(180deg,#FDCB95 0%,#FFE2BD 100%);color:var(--ink);padding:clamp(64px,9vw,130px) 0}
+.flips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.flip{position:relative;height:300px;perspective:1100px;border:0;padding:0;background:none;cursor:pointer;text-align:left;border-radius:26px}
+.flip .in{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,1.3,.5,1)}
+.flip[aria-pressed=true] .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;border-radius:26px;padding:24px;display:flex;flex-direction:column;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip .f{background:var(--navy);color:var(--cream);justify-content:space-between}
+.flip .b{background:var(--cream);color:var(--ink);transform:rotateY(180deg);box-shadow:inset 0 0 0 2px var(--navy);justify-content:center}
+.flip .va{width:100%;height:auto;max-width:210px;color:#FFE2BD;margin:6px 0}
+.flip .f{--bgc:#1B1F3B}.flip:nth-child(2) .f{--bgc:#8E3560}.flip:nth-child(3) .f{--bgc:#B8405C}.flip:nth-child(4) .f{--bgc:#3A2656}
+.flip .f strong{font:400 34px/1.02 var(--rec);font-variation-settings:"wght" 900,"CASL" 1,"slnt" -10,"CRSV" 1}
+.flip .f small{display:flex;justify-content:space-between;align-items:center;font:500 14px/1 var(--ui);color:#DCD4E6}
+.flip .f small i{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,244,224,.5);display:grid;place-items:center;font-style:normal}
+.flip .b p{margin:0;font-size:17px;line-height:1.55}
+.flip .b span{font:600 12px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;color:#8E3560}
+.flip:nth-child(2) .f{background:#8E3560}.flip:nth-child(3) .f{background:#B8405C}.flip:nth-child(4) .f{background:#3A2656}
+.hint{font-size:15px;margin:0 0 20px;color:var(--ink2)}
+
+/* resources */
+.res{background:linear-gradient(180deg,#FFE2BD 0%,#FFF4E0 100%);color:var(--ink);padding:clamp(64px,9vw,120px) 0}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.r{border:2px solid var(--navy);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px;background:rgba(255,255,255,.35)}
+.r .t{font:600 12px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:#8E3560}
+.r h3{margin:0;font:400 26px/1.1 var(--rec);font-variation-settings:"wght" 800,"CASL" .7,"slnt" -5,"CRSV" 0}
+.r p{margin:0;font-size:16px;color:var(--ink2)}
+.r .btn{margin-top:auto;align-self:flex-start;min-height:46px;padding:0 18px;font-size:15px}
+.r svg{width:44px;height:44px}
+
+/* book */
+.book{background:var(--cream);color:var(--ink);padding:clamp(64px,9vw,120px) 0}
+.b-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.book h2{margin:0;font:400 clamp(44px,6vw,92px)/.98 var(--rec);font-variation-settings:"wght" 1000,"CASL" 1,"slnt" -8,"CRSV" 1;letter-spacing:-.02em}
+.book form{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:#fff;border-radius:28px;padding:clamp(22px,3vw,38px);box-shadow:0 30px 60px -40px rgba(27,31,59,.45)}
+.book label,.book legend{display:block;font-weight:600;font-size:14.5px;margin-bottom:6px}
+.book input:not([type=radio]),.book select,.book textarea{width:100%;min-height:50px;border-radius:14px;border:1.5px solid #C9C2B5;background:#FFFCF6;padding:10px 14px;font-size:16px;color:var(--ink)}
+.book textarea{min-height:100px;resize:vertical}
+.book .full{grid-column:1/-1}
+.book fieldset{border:0;margin:0;padding:0;min-width:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills label{position:relative;margin:0}
+.pills input{position:absolute;opacity:0;width:1px;height:1px}
+.pills span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #C9C2B5;font-weight:500;font-size:15px;cursor:pointer}
+.pills input:checked+span{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+.pills input:focus-visible+span{outline:3px solid var(--magenta);outline-offset:2px}
+.care{margin:22px 0 0;padding:16px 18px;border-radius:16px;background:#FBE7D2;font-size:15.5px;color:var(--ink2)}
+.care b{color:var(--ink)}
+.c-list{list-style:none;margin:26px 0 0;padding:0}
+.c-list li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:11px 0;border-top:1px solid #E5D8C2}
+.c-list b{font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+footer{background:var(--cream);color:var(--ink);padding:0 0 calc(40px + env(safe-area-inset-bottom))}
+.f-name{margin:0;padding-top:40px;border-top:2px solid var(--navy);font:400 clamp(48px,10vw,150px)/.92 var(--rec);font-variation-settings:"wght" 1000,"CASL" 1,"slnt" -10,"CRSV" 1;letter-spacing:-.03em;overflow-wrap:anywhere}
+.f-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;font-size:14.5px;color:var(--ink2)}
+
+@media (prefers-reduced-motion:no-preference){
+.hero .kl{animation:wake 1.6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*.18s + .2s)}
+@keyframes wake{from{opacity:0;transform:translateY(24px);font-variation-settings:"wght" 300,"slnt" -15,"CASL" 1,"CRSV" 0}to{opacity:1;transform:none;font-variation-settings:"wght" 760,"slnt" 0,"CASL" 0,"CRSV" 0}}
+}
+@media (prefers-reduced-motion:reduce){
+.sky{display:none}.flip .in{transition:none}.btn{transition:none}
+.manifesto .kl{padding:5vh 0}
+}
+@media (max-width:980px){
+.cards,.rgrid{grid-template-columns:1fr}
+.flips{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr 1fr}
+.b-grid{grid-template-columns:1fr}
+.sec-h{grid-template-columns:1fr}
+.topics li{grid-template-columns:56px minmax(0,1fr)}
+.topics li p{grid-column:2}
+}
+@media (max-width:640px){
+body{font-size:17px}
+.top nav{display:none}
+.top .wrap{min-height:68px}
+.hero{min-height:auto;padding:6vh var(--gut) 10vh}
+.kl{font-size:clamp(34px,10.4vw,52px)}
+.manifesto .kl{font-size:clamp(32px,9.6vw,48px);padding:7vh 0}
+.flips{grid-template-columns:1fr}
+.flip{height:220px}
+.steps{grid-template-columns:1fr;margin-top:8px}
+.book form{grid-template-columns:1fr}
+.c-list li{grid-template-columns:90px 1fr}
+.card{padding:24px 20px;border-radius:24px}
+}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><div class="stars" id="stars"></div><div class="sun"></div></div>
+
+<header class="top" style="background:#1B1F3B">
+<div class="wrap">
+<a class="wm" href="#top" data-brand>Rise with Tara</a>
+<nav aria-label="Main"><ul><li><a href="#coaching">Coaching</a></li><li><a href="#speaking">Speaking</a></li><li><a href="#resources">Free resources</a></li><li><a href="#book">Book a call</a></li></ul></nav>
+<a class="btn solid" href="#book">Book a call</a>
+</div>
+</header>
+
+<main id="top">
+<section class="dawn" aria-labelledby="h1">
+<div class="wrap hero">
+<p class="label">Life coaching &amp; speaking · Perth, WA</p>
+<h1 id="h1"><span class="kl" style="--i:0">Every morning is</span><span class="kl" style="--i:1">a small rehearsal</span><span class="kl" style="--i:2">for the life you want.</span></h1>
+<p class="intro-p">I’m Tara. I help people who feel stuck take the first, second and hundredth small step — in one-to-one coaching, small groups and talks that get whole rooms moving.</p>
+<div class="ctas"><a class="btn solid" href="#book">Book a free discovery call</a><a class="btn" href="#coaching">How coaching works</a></div>
+<p class="scrollcue" aria-hidden="true"><i></i>Scroll into the morning</p>
+</div>
+</section>
+
+<section class="manifesto" aria-label="Manifesto">
+<div class="wrap">
+<p class="kl" data-k>You don’t need a new you.</p>
+<p class="kl kr" data-k>You need a first step,</p>
+<p class="kl" data-k>a little more light,</p>
+<p class="kl kr" data-k>and someone in your corner.</p>
+<p class="kl" data-k>That’s where I come in.</p>
+<p class="m-note">Coaching is about what happens next — your goals, your pace, your call. It isn’t therapy or counselling, and I’ll always tell you if something is better suited to someone else.</p>
+</div>
+</section>
+
+<section class="coach" id="coaching" aria-labelledby="coH">
+<div class="wrap">
+<div class="sec-h"><div><p class="label">Coaching</p><h2 id="coH">Three ways to work together</h2></div><p>Start with a free 20-minute call. We’ll work out what you want to change and which of these fits — or whether none of them does.</p></div>
+<div class="cards">
+<article class="card"><span class="kind">One to one</span><h3>Morning Light</h3><p>Six sessions over twelve weeks, for when you’re ready to make one real change and keep it.</p><ul><li>6 × 60-minute sessions, online or in Perth</li><li>A written plan after session one</li><li>Voice-note check-ins between sessions</li></ul><div class="price"><b>$1,200</b><span>12 weeks</span></div></article>
+<article class="card"><span class="kind">Small group</span><h3>Sunrise Circle</h3><p>Six people, six Tuesday evenings. Momentum is easier when you’re not doing it alone.</p><ul><li>6 × 90-minute evenings, max 6 people</li><li>Shared goals, private check-ins</li><li>Workbook and weekly prompts</li></ul><div class="price"><b>$390</b><span>per person</span></div></article>
+<article class="card"><span class="kind">Workshops</span><h3>First Five Minutes</h3><p>Half-day workshops for teams who want better mornings, clearer weeks and fewer “quick meetings”.</p><ul><li>3 hours, on site or online</li><li>Up to 30 people</li><li>Take-home team toolkit</li></ul><div class="price"><b>$2,400</b><span>per workshop</span></div></article>
+</div>
+<p class="fine">Sample prices in AUD, including GST. Payment plans available for one-to-one coaching.</p>
+</div>
+</section>
+
+<section class="speak" id="speaking" aria-labelledby="spH">
+<div class="wrap">
+<div class="sec-h"><div><p class="label">Speaking</p><h2 id="spH">Talks that get a room moving</h2></div><p>Keynotes (30–45 minutes) and interactive sessions (up to 2 hours) for conferences, schools, teams and community groups.</p></div>
+<ol class="topics">
+<li><h3>The First Five Minutes</h3><p>Morning routines that survive real life — kids, commutes and all.<small>Keynote · workshop</small></p></li>
+<li><h3>Start Before You’re Ready</h3><p>Why waiting for confidence keeps us stuck, and what to do instead.<small>Keynote</small></p></li>
+<li><h3>Rest Is a Strategy</h3><p>Planning recovery into busy seasons, before burnout plans it for you.<small>Keynote · panel</small></p></li>
+<li><h3>Leading Through the Messy Middle</h3><p>For managers steering teams through change without all the answers.<small>Workshop</small></p></li>
+</ol>
+<p style="margin-top:28px"><a class="btn dark" href="#book">Ask about speaking</a></p>
+</div>
+</section>
+
+<section class="how" aria-labelledby="hwH">
+<div class="wrap">
+<div class="sec-h"><div><p class="label">How it works</p><h2 id="hwH">From first light to full morning</h2></div><p>No long contracts and no pressure. Every step is a choice you make.</p></div>
+<div class="arc" aria-hidden="true"><svg viewBox="0 0 1200 170"><path d="M20 160C300 150 400 30 600 20S900 150 1180 160" fill="none" stroke="#1B1F3B" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/><path d="M0 160H1200" stroke="#1B1F3B" stroke-width="2"/><g fill="#1B1F3B"><circle cx="150" cy="150" r="10"/><circle cx="450" cy="58" r="14"/><circle cx="750" cy="46" r="18" fill="#D1495B"/><circle cx="1050" cy="150" r="22" fill="#FFF4E0" stroke="#1B1F3B" stroke-width="3"/></g></svg></div>
+<ol class="steps">
+<li><span>Step 1</span><b>Discovery call</b><p>20 minutes, free, no obligation. You talk, I listen, we see if we click.</p></li>
+<li><span>Step 2</span><b>Map the morning</b><p>Where you are, where you want to be, and the smallest useful first step.</p></li>
+<li><span>Step 3</span><b>Sessions</b><p>Weekly or fortnightly, online or in person, with check-ins in between.</p></li>
+<li><span>Step 4</span><b>Look back</b><p>After 90 days we review honestly: keep going, adjust, or finish well.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="values" aria-labelledby="vH">
+<div class="wrap">
+<div class="sec-h"><div><p class="label">What I stand for</p><h2 id="vH">Four values, both sides</h2></div><p class="hint">Tap or click a card to turn it over.</p></div>
+<div class="flips">
+<button class="flip" type="button" aria-pressed="false"><span class="in"><span class="f"><strong>Honesty over hype</strong><svg class="va" viewBox="0 0 160 90" aria-hidden="true"><path d="M8 70H152" stroke="currentColor" stroke-width="2" opacity=".55"/><circle cx="80" cy="78" r="18" fill="currentColor" opacity=".9"/><path d="M8 70H152V90H8Z" fill="var(--bgc)"/><path d="M34 80h92M52 86h56" stroke="currentColor" stroke-width="2" opacity=".35" stroke-linecap="round"/></svg><small>Value 1<i aria-hidden="true">↻</i></small></span><span class="b"><span>Honesty over hype</span><p>No promises that your life will transform in six weeks. Real change is quieter than that — and it lasts longer.</p></span></span></button>
+<button class="flip" type="button" aria-pressed="false"><span class="in"><span class="f"><strong>Small beats dramatic</strong><svg class="va" viewBox="0 0 160 90" aria-hidden="true"><path d="M8 70H152" stroke="currentColor" stroke-width="2" opacity=".55"/><circle cx="80" cy="58" r="18" fill="currentColor" opacity=".9"/><path d="M8 70H152V90H8Z" fill="var(--bgc)"/><path d="M34 80h92M52 86h56" stroke="currentColor" stroke-width="2" opacity=".35" stroke-linecap="round"/></svg><small>Value 2<i aria-hidden="true">↻</i></small></span><span class="b"><span>Small beats dramatic</span><p>A five-minute habit you keep is worth more than a grand plan you abandon by Thursday.</p></span></span></button>
+<button class="flip" type="button" aria-pressed="false"><span class="in"><span class="f"><strong>Rest counts</strong><svg class="va" viewBox="0 0 160 90" aria-hidden="true"><path d="M8 70H152" stroke="currentColor" stroke-width="2" opacity=".55"/><circle cx="80" cy="40" r="18" fill="currentColor" opacity=".9"/><path d="M8 70H152V90H8Z" fill="var(--bgc)"/><path d="M34 80h92M52 86h56" stroke="currentColor" stroke-width="2" opacity=".35" stroke-linecap="round"/></svg><small>Value 3<i aria-hidden="true">↻</i></small></span><span class="b"><span>Rest counts</span><p>Sleep, slow weekends and saying no are part of the work, not a reward for finishing it.</p></span></span></button>
+<button class="flip" type="button" aria-pressed="false"><span class="in"><span class="f"><strong>You lead</strong><svg class="va" viewBox="0 0 160 90" aria-hidden="true"><path d="M8 70H152" stroke="currentColor" stroke-width="2" opacity=".55"/><circle cx="80" cy="22" r="18" fill="currentColor" opacity=".9"/><path d="M8 70H152V90H8Z" fill="var(--bgc)"/><path d="M34 80h92M52 86h56" stroke="currentColor" stroke-width="2" opacity=".35" stroke-linecap="round"/></svg><small>Value 4<i aria-hidden="true">↻</i></small></span><span class="b"><span>You lead</span><p>You set the goals and the pace. I ask good questions, hold you to your word and cheer loudly.</p></span></span></button>
+</div>
+</div>
+</section>
+
+<section class="res" id="resources" aria-labelledby="rH">
+<div class="wrap">
+<div class="sec-h"><div><p class="label">Free resources</p><h2 id="rH">Something for tomorrow morning</h2></div><p>Three small tools I use with clients. In this demo the buttons don’t download anything.</p></div>
+<div class="rgrid">
+<article class="r"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="5" width="28" height="34" rx="4" fill="none" stroke="#1B1F3B" stroke-width="2"/><path d="M14 14h16M14 20h16M14 26h10" stroke="#D1495B" stroke-width="2" stroke-linecap="round"/></svg><span class="t">Printable · 2 pages</span><h3>Morning pages template</h3><p>Three prompts, ten minutes, one clearer head. Print it or copy it into a notebook.</p><button class="btn dark" type="button" data-res="the morning pages template">Get the template</button></article>
+<article class="r"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="16" fill="none" stroke="#1B1F3B" stroke-width="2"/><path d="M18 15v14l11-7Z" fill="#D1495B"/></svg><span class="t">Audio · 5 minutes</span><h3>The five-minute reset</h3><p>A guided pause for the middle of a busy day. Breathe, notice, pick one next step.</p><button class="btn dark" type="button" data-res="the five-minute reset audio">Listen to the reset</button></article>
+<article class="r"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 34 22 8l14 26Z" fill="none" stroke="#1B1F3B" stroke-width="2" stroke-linejoin="round"/><circle cx="22" cy="26" r="4" fill="#D1495B"/></svg><span class="t">Worksheet · 20 minutes</span><h3>Values in practice</h3><p>Find the three values you actually live by, and one way to use each this week.</p><button class="btn dark" type="button" data-res="the values worksheet">Get the worksheet</button></article>
+</div>
+</div>
+</section>
+
+<section class="book" id="book" aria-labelledby="bH">
+<div class="wrap b-grid">
+<div>
+<p class="label">Book a discovery call</p>
+<h2 id="bH">Let’s talk about tomorrow morning.</h2>
+<p style="max-width:40ch;margin:22px 0 0">Twenty minutes, free, on video or the phone. You’ll leave with one small step, whether or not we work together.</p>
+<ul class="c-list">
+<li><b>Phone</b><span><a href="tel:+61491570158">0491 570 158</a></span></li>
+<li><b>Email</b><span><a href="mailto:hello@example.com">hello@example.com</a></span></li>
+<li><b>Where</b><span>Perth, WA · online across Australia</span></li>
+<li><b>Hours</b><span>Tue–Sat, 6.30am–2pm (yes, early)</span></li>
+</ul>
+</div>
+<form data-demo-message="Demo only — no call was booked. A real coach would email you a time.">
+<div><label for="bn">Your name</label><input id="bn" name="name" autocomplete="name" required></div>
+<div><label for="be">Email</label><input id="be" name="email" type="email" autocomplete="email" required></div>
+<div class="full"><label for="bw">I’m most interested in</label><select id="bw" name="what"><option>One-to-one coaching</option><option>Sunrise Circle (group)</option><option>A workshop for my team</option><option>A talk at my event</option><option>Not sure yet</option></select></div>
+<fieldset class="full"><legend>Best time for a call</legend><div class="pills"><label><input type="radio" name="t" checked><span>Early (6.30–8am)</span></label><label><input type="radio" name="t"><span>Morning</span></label><label><input type="radio" name="t"><span>Midday</span></label></div></fieldset>
+<div class="full"><label for="bm">What would you like to change?</label><textarea id="bm" name="msg" placeholder="A sentence is plenty."></textarea></div>
+<button class="btn dark full" type="submit">Request a call</button>
+</form>
+</div>
+<div class="wrap"><p class="care"><b>Coaching isn’t crisis support.</b> If you’re struggling right now, please call Lifeline on <a href="tel:131114">13 11 14</a> (24/7). General information only — nothing on this site is medical, psychological or financial advice.</p></div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p class="f-name" data-brand>Rise with Tara</p>
+<div class="f-row"><span>Perth, WA · 0491 570 158 · hello@example.com</span><span>A concept demo for a fictional coach. Sample prices; no outcomes promised.</span></div>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var root=document.documentElement;
+/* stars */
+var st=document.getElementById("stars"),h="",s=17;function r(){s=(s*9301+49297)%233280;return s/233280;}
+for(var i=0;i<46;i++)h+='<i style="left:'+(r()*100).toFixed(2)+'%;top:'+(r()*55).toFixed(2)+'%;opacity:'+(.25+r()*.6).toFixed(2)+';transform:scale('+(.5+r()).toFixed(2)+')"></i>';
+st.innerHTML=h;
+/* flip cards */
+[].forEach.call(document.querySelectorAll(".flip"),function(b){b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true");});});
+/* resources */
+[].forEach.call(document.querySelectorAll("[data-res]"),function(b){b.addEventListener("click",function(){if(window.DemoKit)DemoKit.toast("Demo only — nothing downloaded. A real site would email you "+b.dataset.res+".");});});
+if(reduce)return;
+/* kinetic lines + sunrise */
+var spk=document.getElementById("speaking"),how=document.querySelector(".how"),lines=[].slice.call(document.querySelectorAll("[data-k]")),visible=new Set(),ticking=false,sky=document.querySelector(".sky");
+function frame(){ticking=false;var vh=window.innerHeight,mid=vh*.5;
+visible.forEach(function(el){var b=el.getBoundingClientRect(),c=(b.top+b.height/2-mid)/vh,k=Math.max(0,1-Math.abs(c)*1.9),e=k*k*(3-2*k);
+el.style.setProperty("--w",Math.round(320+680*e));el.style.setProperty("--s",(-14*(1-e)).toFixed(2));el.style.setProperty("--c",(1-e).toFixed(3));el.style.setProperty("--sc",(.9+.12*e).toFixed(4));el.style.setProperty("--op",(.28+.72*e).toFixed(3));});
+var max=document.documentElement.scrollHeight-vh,p=max>0?window.scrollY/max:0;
+var sp=spk.getBoundingClientRect().top,hw=how.getBoundingClientRect().top,base=Math.min(.28,p*1.3),t=(vh-sp)/(vh*1.4),rs=t<=0?base:Math.min(1.3,base+t*(1.3-base)),so=hw>vh*.2?1:Math.max(0,1-(vh*.2-hw)/(vh*.8));sky.style.setProperty("--rise",rs.toFixed(4));sky.style.setProperty("--sunop",so.toFixed(3));sky.style.setProperty("--starop",Math.max(0,1-p*7).toFixed(3));}
+function req(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting)visible.add(en.target);else{visible.delete(en.target);}});req();},{rootMargin:"20% 0px"});lines.forEach(function(l){io.observe(l);});}
+else lines.forEach(function(l){visible.add(l);});
+lines.forEach(function(l){l.style.setProperty("--op",".28");l.style.setProperty("--w","320");l.style.setProperty("--s","-14");l.style.setProperty("--c","1");l.style.setProperty("--sc",".9");});
+window.addEventListener("scroll",req,{passive:true});window.addEventListener("resize",req);req();
+})();
+</script>
+</body>
+</html>

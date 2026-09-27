@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="088">
+<meta name="demo:brand" content="Wildflower &amp; Wattle">
+<title>Wildflower &amp; Wattle — native florist in Fremantle</title>
+<meta name="description" content="Wildflower & Wattle is a fictional Fremantle florist working with Australian natives: weekly bouquets, weddings, native arrangements, sympathy flowers and a build-your-own bouquet.">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;800&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--cream:#FAF6EE;--paper:#F3ECDD;--card:#FFFDF8;--euc:#8FA89B;--euc-d:#55705F;--wattle:#E9B824;--red:#C22A36;--banksia:#D98032;--pink:#E8B4B8;--ink:#2B2622;--ink2:#5E554C;--line:rgba(43,38,34,.16);
+--serif:"Abhaya Libre","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:"Work Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+--hand:"Bradley Hand","Segoe Script","Snell Roundhand","Apple Chancery","URW Chancery L",cursive}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font:400 16px/1.65 var(--sans);background:var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+svg{display:block}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;background:var(--ink);color:var(--cream);padding:10px 16px;border-radius:999px}
+.skip:focus{top:12px}
+.kick{font:500 12.5px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--euc-d);margin-bottom:14px}
+h2{font:800 clamp(36px,4.2vw,60px)/1.02 var(--serif);letter-spacing:-.015em}
+.lat{font-style:italic;color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:500 15px/1.2 var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--cream)}
+.btn.red:hover{background:#A8222D;border-color:#A8222D}
+.btn.ghost:hover{background:rgba(143,168,155,.2)}
+.btn:active{transform:scale(.98)}
+
+/* masthead */
+.mast{padding:0 28px;border-bottom:1px solid var(--line)}
+.strip{max-width:1260px;margin:0 auto;display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font:500 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--euc-d)}
+.strip a{text-decoration:none}
+.wordmark{display:block;width:max-content;max-width:100%;margin:20px auto 4px;font:800 clamp(34px,4.4vw,58px)/1 var(--serif);letter-spacing:-.01em;text-align:center;text-decoration:none;overflow-wrap:anywhere}
+.nav{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 26px;padding:8px 0 12px}
+.nav a{font:500 14.5px/1 var(--sans);text-decoration:none;padding:11px 1px;border-bottom:1.5px solid transparent}
+.nav a:hover{border-color:var(--red)}
+.nav .cta{color:var(--red)}
+
+/* hero */
+.hero{max-width:1320px;margin:0 auto;padding:26px 32px 48px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,540px) minmax(0,.78fr);gap:30px;align-items:center}
+h1{font:800 clamp(46px,5.5vw,86px)/.93 var(--serif);letter-spacing:-.02em}
+h1 span{display:block;color:var(--red)}
+.lede{margin-top:22px;max-width:30em;font-size:17px;line-height:1.7;color:var(--ink2)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-fig{margin:0;position:relative}
+.hero-fig::before{content:"";position:absolute;left:8%;right:8%;top:6%;bottom:4%;border-radius:999px 999px 30px 30px;background:radial-gradient(closest-side,rgba(232,180,184,.32),rgba(232,180,184,0));z-index:-1}
+.hero-fig svg{width:100%;height:auto}
+.plate{border-left:1px solid var(--line);padding-left:26px}
+.plate h2{font:800 25px/1.15 var(--serif);letter-spacing:0}
+.legend{list-style:none;margin:14px 0 0;padding:0}
+.legend li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;padding:9px 0;border-top:1px solid var(--line);font:500 15px/1.35 var(--sans)}
+.legend b{display:grid;place-items:center;width:26px;height:26px;border:1.2px solid var(--ink);border-radius:50%;font:800 15px/1 var(--serif);background:var(--card)}
+.legend .lat{display:block;font-weight:400;font-size:13.5px}
+.plate .note{margin-top:14px;font-size:13.5px;color:var(--ink2)}
+
+/* bouquet drawing */
+.pp{mix-blend-mode:multiply}
+.stem{fill:none;stroke:#6C8A5B;stroke-width:2.6;stroke-linecap:round}
+.tail{fill:none;stroke:#5E7B4F;stroke-width:3;stroke-linecap:round}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 5.5s ease-in-out infinite alternate}
+.paused .sway,.still .sway{animation-play-state:paused}
+@keyframes sway{from{transform:rotate(-1.8deg)}to{transform:rotate(1.8deg)}}
+.marks circle{fill:var(--card);stroke:var(--ink);stroke-width:1.2}
+.marks text{font:800 16px var(--serif);fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+.marks path{stroke:var(--ink);stroke-width:.8;fill:none;stroke-dasharray:2 3}
+
+/* builder */
+.build{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:76px 32px 88px}
+.build-in{max-width:1240px;margin:0 auto}
+.sec-head{max-width:760px;margin:0 auto 44px;text-align:center}
+.sec-head .hint{margin:14px auto 0;max-width:36em;color:var(--ink2)}
+.build-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:52px;align-items:start}
+.stage-col{position:sticky;top:18px}
+.stage{position:relative;width:min(100%,calc((100vh - 60px) * .909));aspect-ratio:600/660;margin:0 auto;border-radius:999px 999px 26px 26px;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line),0 30px 60px -40px rgba(43,38,34,.5)}
+.stage>svg{position:absolute;inset:0;width:100%;height:100%}
+.fig{position:absolute;left:0;right:0;top:9%;text-align:center;font:500 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--euc-d)}
+.empty{position:absolute;left:12%;right:12%;top:38%;text-align:center;font:500 24px/1.25 var(--serif);color:var(--ink2)}
+.tally{position:absolute;left:14px;bottom:14px;padding:8px 14px;border-radius:999px;background:var(--ink);color:var(--cream);font:500 14px/1.2 var(--sans)}
+.card{position:absolute;right:-14px;bottom:52px;width:min(44%,236px);min-height:110px;padding:24px 16px 16px;border-radius:3px;background:var(--card);box-shadow:0 12px 26px -12px rgba(43,38,34,.45),0 0 0 1px rgba(43,38,34,.06);transform:rotate(-5deg)}
+.card::before{content:"";position:absolute;left:12px;top:10px;width:9px;height:9px;border-radius:50%;box-shadow:inset 0 0 0 2px #CDBFA8}
+.card::after{content:"seed-paper card";position:absolute;right:12px;top:8px;font:500 9.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8C8378}
+.hand{font:21px/1.28 var(--hand);color:#2E3A5C;overflow-wrap:anywhere}
+.hand.ph{color:#A49C90}
+.hand.long{font-size:17px}
+.hand .w{display:inline-block;white-space:nowrap}
+.hand .w span{display:inline-block}
+.controls{min-width:0}
+.presets{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:26px}
+.presets>span{font:500 12.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--euc-d);margin-right:4px}
+.pill{min-height:40px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--cream);color:var(--ink);font:500 14px/1 var(--sans);cursor:pointer}
+.pill:hover{border-color:var(--ink)}
+.step{border:0;margin:0 0 28px;padding:0;min-width:0}
+.step legend,.step>.lb{display:flex;align-items:center;gap:10px;margin:0 0 12px;padding:0;font:800 25px/1.1 var(--serif)}
+.step legend b,.step>.lb b{display:grid;place-items:center;flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--cream);font:600 13px/1 var(--sans)}
+.flowers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fl{display:flex;min-width:0}
+.add{position:relative;flex:1;min-width:0;display:grid;grid-template-columns:50px minmax(0,1fr);column-gap:10px;align-items:center;min-height:70px;padding:8px 10px 8px 8px;border:1px solid var(--line);border-right:0;border-radius:16px 0 0 16px;background:var(--cream);color:var(--ink);text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.add svg{grid-row:1/3;width:50px;height:50px}
+.fn{font:600 15px/1.2 var(--sans);align-self:end}
+.fp{font:400 13px/1.35 var(--sans);color:var(--ink2);align-self:start}
+.add:hover{background:var(--card);border-color:var(--ink)}
+.add[aria-disabled="true"]{cursor:not-allowed;opacity:.55}
+.cnt{position:absolute;left:4px;top:4px;min-width:24px;height:24px;padding:0 6px;border-radius:12px;background:var(--red);color:var(--cream);font:600 12.5px/24px var(--sans);text-align:center;transform:scale(0);transition:transform .2s}
+.fl.has .cnt{transform:scale(1)}
+.fl.has .add{background:var(--card);border-color:var(--ink)}
+.rem{flex:none;width:44px;border:1px solid var(--line);border-radius:0 16px 16px 0;background:var(--cream);color:var(--ink);font:500 22px/1 var(--sans);cursor:pointer}
+.fl.has .rem{border-color:var(--ink);background:var(--card)}
+.rem:disabled{color:#B5ADA2;cursor:default}
+.bump{animation:bump .3s}
+@keyframes bump{40%{transform:scale(1.35)}}
+.opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.opt{position:relative;display:block}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.opt span{display:grid;gap:3px;min-height:66px;height:100%;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--cream);font:600 15px/1.2 var(--sans)}
+.opt small{font:400 13px/1.3 var(--sans);color:var(--ink2)}
+.opt input:checked+span{background:var(--card);border-color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.opt input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.opt input:disabled{cursor:not-allowed}
+.opt input:disabled+span{opacity:.45}
+.sw{display:block;height:14px;border-radius:4px;margin-bottom:5px}
+.sw.kraft{background:#C9A176 radial-gradient(#9C7650 1px,transparent 1.6px) 0 0/7px 7px}
+.sw.linen{background:#E9E1CF repeating-linear-gradient(45deg,transparent 0 3px,#D2C6AC 3px 4px)}
+.sw.white{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.fx{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font:400 16px/1.5 var(--sans)}
+select.fx{-webkit-appearance:none;appearance:none;min-height:48px;padding-right:36px;background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%232B2622' stroke-width='1.6'/%3E%3C/svg%3E") right 14px center/12px 8px no-repeat}
+textarea.fx{resize:vertical;min-height:92px}
+.fx:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px rgba(194,42,54,.25)}
+.cc{margin-top:6px;font-size:13px;color:var(--ink2)}
+.two{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:10px}
+.two label{display:grid;gap:4px;font:500 13px/1.3 var(--sans);color:var(--ink2)}
+.sum{padding:16px 18px;border:1px solid var(--line);border-radius:18px;background:var(--cream)}
+.sum div{display:flex;justify-content:space-between;gap:14px;padding:4px 0;font-size:15px}
+.sum div span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.sum .tot{margin-top:8px;padding-top:10px;border-top:1px solid var(--ink);font:800 27px/1.2 var(--serif)}
+.sum .tot small{font:400 13px var(--sans);color:var(--ink2)}
+.status{min-height:1.6em;margin:12px 0;font-size:14px;color:var(--euc-d)}
+.order{width:100%;min-height:56px;font-size:16px}
+.fine{margin-top:10px;font-size:13px;line-height:1.55;color:var(--ink2)}
+
+/* editorial sections */
+.sec{max-width:1240px;margin:0 auto;padding:92px 32px}
+.sec-lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:44px}
+.sec-lead p{color:var(--ink2);max-width:34em}
+.weekly{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.sheet{position:relative;padding:20px 22px 24px;background:var(--card);box-shadow:0 1px 0 rgba(43,38,34,.06),0 22px 40px -28px rgba(43,38,34,.55)}
+.sheet:nth-child(2){transform:translateY(22px)}
+.sheet::before,.sheet::after{content:"";position:absolute;top:-10px;width:74px;height:22px;background:rgba(233,184,36,.42)}
+.sheet::before{left:16px;transform:rotate(-6deg)}
+.sheet::after{right:16px;transform:rotate(5deg);background:rgba(143,168,155,.45)}
+.mini{width:100%;height:auto;aspect-ratio:300/190}
+.sheet .no{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--euc-d);margin-top:10px}
+.sheet h3{font:800 30px/1.1 var(--serif);margin:6px 0 6px}
+.sheet p{font-size:15px;color:var(--ink2)}
+.sheet .pr{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:12px;border-top:1px dashed rgba(43,38,34,.3);font:600 15px/1.3 var(--sans);color:var(--ink)}
+.sheet .pr b{font:800 26px/1 var(--serif);color:var(--red)}
+.sheet .lat{display:block;margin-top:8px;font-size:13.5px}
+.below{margin-top:44px;font-size:14px;color:var(--ink2);text-align:center}
+.wed{background:var(--ink);color:var(--cream)}
+.wed .kick{color:#C9D6CE}
+.wed-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:60px;align-items:start}
+.statement{margin-top:22px;font:500 clamp(22px,2.2vw,30px)/1.35 var(--serif);color:#EFE7D8}
+.incl{list-style:none;margin:0;padding:0}
+.incl li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(250,246,238,.18);font-size:16.5px}
+.incl li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--wattle);transform:translateY(-2px)}
+.wed .price{margin-top:18px;font-size:14.5px;color:#D9CFBF}
+.wed .price b{font:800 24px var(--serif);color:var(--wattle)}
+.garland{width:100%;height:auto;margin:48px 0 40px}
+.wed .pp{mix-blend-mode:normal}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.steps li{padding-top:14px;border-top:2px solid var(--wattle)}
+.steps b{display:block;font:800 22px/1.2 var(--serif);margin-bottom:6px}
+.steps p{font-size:15px;color:#D9CFBF}
+.vessels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.vessels figure{margin:0;text-align:center}
+.vessels svg{width:100%;height:auto;aspect-ratio:240/250}
+.vessels figcaption{margin-top:12px}
+.vessels b{display:block;font:800 23px/1.2 var(--serif)}
+.vessels span{font-size:14.5px;color:var(--ink2)}
+.symp{background:linear-gradient(180deg,rgba(232,180,184,.3),rgba(232,180,184,.08));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.symp-in{max-width:760px;margin:0 auto;padding:88px 28px;text-align:center}
+.symp svg{width:170px;height:auto;margin:0 auto 18px}
+.symp p.body{margin:18px auto 0;max-width:34em;font:500 21px/1.5 var(--serif);color:var(--ink)}
+.symp ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:26px 0 28px;padding:0;font-size:15px;color:var(--ink2)}
+.symp ul b{color:var(--ink);font-weight:600}
+.zones{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:52px;align-items:center}
+.map{width:100%;height:auto;border-radius:22px;box-shadow:inset 0 0 0 1px var(--line)}
+.ring{stroke:rgba(43,38,34,.25);stroke-width:1;transition:fill-opacity .3s,stroke .3s}
+.rc{fill:var(--euc);fill-opacity:.2}.rb{fill:var(--banksia);fill-opacity:.16}.ra{fill:var(--wattle);fill-opacity:.3}
+.map[data-z="a"] .ra,.map[data-z="b"] .rb,.map[data-z="c"] .rc{fill-opacity:.55;stroke:var(--ink);stroke-width:2;stroke-dasharray:6 5}
+.map text{font:500 12.5px var(--sans);fill:var(--ink2)}
+.map .big{font:800 19px var(--serif);fill:var(--ink)}
+.map .zl{font:800 22px var(--serif);fill:var(--ink)}
+.map .sea{font:italic 400 13px var(--sans);fill:#5F7A6C;letter-spacing:.12em}
+.zchips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 16px}
+.zc{min-height:44px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:500 14.5px/1 var(--sans);cursor:pointer}
+.zc[aria-pressed="true"]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.zinfo{min-height:7em;font-size:15.5px;color:var(--ink2)}
+.zinfo b{color:var(--ink)}
+.zfine{margin-top:10px;font-size:13.5px;color:var(--ink2)}
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.1fr);gap:44px;align-items:start}
+.visit dl{margin:0}
+.visit dt{font:500 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--euc-d);margin-top:14px}
+.visit dt:first-child{margin-top:0}
+.visit dd{margin:2px 0 0;font-size:16px}
+.visit dd a{text-underline-offset:4px;text-decoration-color:var(--red)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{position:relative;cursor:pointer;list-style:none;padding:14px 34px 14px 0;font:800 20px/1.25 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:12px;font:400 24px/1 var(--sans);color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;font-size:15px;color:var(--ink2)}
+.foot{background:var(--ink);color:var(--cream);padding:64px 32px 76px;text-align:center}
+.foot-name{font:800 clamp(40px,7vw,104px)/1 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere}
+.foot p.meta{margin-top:14px;font:500 12.5px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#C9D6CE}
+.foot p.fine{max-width:44em;margin:22px auto 0;color:#D9CFBF}
+
+@media (max-width:1100px){
+ .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .plate{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:22px 0 0}
+ .legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px}
+ .visit{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .visit>div:last-child{grid-column:1/-1}
+}
+@media (max-width:820px){
+ .mast{padding:0 18px}
+ .strip span:first-child{display:none}
+ .strip{justify-content:center}
+ .nav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 -18px;padding:6px 18px 14px;gap:8px}
+ .nav::-webkit-scrollbar{display:none}
+ .nav a{flex:none;padding:11px 15px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+ .nav .cta{background:var(--red);border-color:var(--red);color:var(--cream)}
+ .hero{padding:18px 18px 40px;text-align:center}
+ .hero-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+ .hero-fig{order:2;max-width:430px;width:100%;margin:0 auto}
+ .hero-copy{display:contents}
+ .hero-copy .top{order:1}
+ .hero-copy .rest{order:3}
+ .plate{order:4;text-align:left}
+ .lede{margin:14px auto 0}
+ .ctas{justify-content:center}
+ .legend{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .build{padding:56px 18px 64px}
+ .build-grid{display:block}
+ .stage-col{top:0;z-index:5;margin:0 -18px 22px;padding:10px 18px 12px;background:var(--paper);box-shadow:0 14px 18px -16px rgba(43,38,34,.45)}
+ .stage{width:min(100%,calc(38vh * .909),330px)}
+ .card{width:46%;right:-8px;bottom:36px;min-height:0;padding:18px 10px 10px}
+ .card::after{display:none}
+ .hand{font-size:14.5px}
+ .hand.long{font-size:12.5px}
+ .empty{font-size:18px}
+ .tally{left:6px;bottom:6px;font-size:13px;padding:6px 11px}
+ .fig{display:none}
+ .sec{padding:64px 18px}
+ .sec-lead{grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:32px}
+ .weekly,.vessels,.steps{grid-template-columns:minmax(0,1fr)}
+ .sheet:nth-child(2){transform:none}
+ .weekly{gap:36px}
+ .wed-grid,.zones,.visit{grid-template-columns:minmax(0,1fr);gap:34px}
+ .vessels svg{max-width:280px;margin:0 auto}
+ .map .sm{display:none}
+ .symp-in{padding:64px 20px}
+ .foot{padding:52px 18px 84px}
+}
+@media (max-width:420px){
+ .add{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;row-gap:2px;padding:10px 4px 8px}
+ .add svg{grid-row:auto;width:44px;height:44px}
+ .fn{font-size:14px}
+ .fp{font-size:12.5px}
+ .rem{width:40px}
+ .opts{grid-template-columns:minmax(0,1fr)}
+ .opt span{min-height:52px}
+ .two{grid-template-columns:minmax(0,1fr)}
+ .legend{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .sway{animation:none}
+ *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important;animation-iteration-count:1!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+ <div class="strip"><span>Native florist · Fremantle, WA</span><span>Deliveries Tue–Sat · <a href="tel:+61855502741">(08) 5550 2741</a></span></div>
+ <a class="wordmark" href="#main" data-brand>Wildflower &amp; Wattle</a>
+ <nav class="nav" aria-label="Sections"><a class="cta" href="#build">Build a bouquet</a><a href="#weekly">The Weekly</a><a href="#weddings">Weddings &amp; events</a><a href="#natives">Natives</a><a href="#sympathy">Sympathy</a><a href="#delivery">Delivery</a></nav>
+</header>
+
+<main id="main">
+ <section class="hero" aria-labelledby="h1">
+  <div class="hero-grid">
+   <div class="hero-copy">
+    <div class="top"><p class="kick">Spring edition · Sep – Nov</p><h1 id="h1">Native blooms, <span>wrapped in Freo.</span></h1></div>
+    <div class="rest">
+     <p class="lede">We’re a small Fremantle florist working almost entirely with Australian natives — waratah, banksia, kangaroo paw, wattle and gum — sourced from growers around WA and wrapped by hand at our bench, Tuesday to Saturday.</p>
+     <div class="ctas"><a class="btn red" href="#build">Build a bouquet</a><a class="btn ghost" href="#weekly">The Weekly</a></div>
+    </div>
+   </div>
+   <figure class="hero-fig" id="heroFig">
+    <svg id="heroSvg" viewBox="0 30 600 632" role="img" aria-labelledby="heroCap"></svg>
+    <figcaption class="sr" id="heroCap">Illustrated hand-tied bouquet of waratah, banksia, kangaroo paw, golden wattle, eucalyptus and gum nuts, wrapped in kraft paper and tied with twine. Letters A to F label each flower.</figcaption>
+   </figure>
+   <aside class="plate" aria-labelledby="plateH">
+    <p class="kick">Plate I</p>
+    <h2 id="plateH">This week’s bouquet</h2>
+    <ol class="legend">
+     <li><b aria-hidden="true">A</b><span>Waratah <span class="lat">Telopea speciosissima</span></span></li>
+     <li><b aria-hidden="true">B</b><span>Banksia <span class="lat">Banksia ashbyi</span></span></li>
+     <li><b aria-hidden="true">C</b><span>Kangaroo paw <span class="lat">Anigozanthos manglesii · WA’s floral emblem</span></span></li>
+     <li><b aria-hidden="true">D</b><span>Golden wattle <span class="lat">Acacia pycnantha</span></span></li>
+     <li><b aria-hidden="true">E</b><span>Eucalyptus <span class="lat">Eucalyptus cinerea</span></span></li>
+     <li><b aria-hidden="true">F</b><span>Gum nuts <span class="lat">Corymbia ficifolia</span></span></li>
+    </ol>
+    <p class="note">Drawn in the pressed style. Every bouquet is a little different, depending on what’s best at market.</p>
+   </aside>
+  </div>
+ </section>
+
+ <section class="build" id="build" aria-labelledby="b-h">
+  <div class="build-in">
+   <div class="sec-head">
+    <p class="kick">Order online</p>
+    <h2 id="b-h">Build a bouquet of native blooms</h2>
+    <p class="hint">Tap a flower to add a stem — they gather into your bouquet as you go. Pick a wrap and size, write the card, and watch the price update. Sample prices.</p>
+   </div>
+   <div class="build-grid">
+    <div class="stage-col">
+     <div class="stage" id="stage">
+      <p class="fig" aria-hidden="true">Fig. 2 — your bouquet</p>
+      <svg id="bq" viewBox="0 0 600 660" role="img" aria-label="Preview of your bouquet"></svg>
+      <p class="empty" id="empty" hidden>Your bouquet starts here — tap a flower.</p>
+      <div class="card" aria-hidden="true"><p class="hand ph" id="hand"></p></div>
+      <p class="tally" id="tally">0 stems</p>
+     </div>
+    </div>
+    <div class="controls">
+     <div class="presets" role="group" aria-label="Start from a sample bouquet"><span>Start from</span><button class="pill" type="button" data-preset="freo">Freo sunset</button><button class="pill" type="button" data-preset="wattle">Wattle Day</button><button class="pill" type="button" data-preset="soft">Soft &amp; quiet</button><button class="pill" type="button" data-preset="clear">Clear</button></div>
+     <fieldset class="step"><legend><b>1</b>Stems</legend><ul class="flowers" id="flowers"></ul></fieldset>
+     <fieldset class="step"><legend><b>2</b>Wrap</legend><div class="opts">
+      <label class="opt"><input type="radio" name="wrap" value="kraft" checked><span><i class="sw kraft"></i>Kraft<small>Included</small></span></label>
+      <label class="opt"><input type="radio" name="wrap" value="linen"><span><i class="sw linen"></i>Linen<small>+$8, reusable</small></span></label>
+      <label class="opt"><input type="radio" name="wrap" value="white"><span><i class="sw white"></i>White tissue<small>+$5, satin ribbon</small></span></label>
+     </div></fieldset>
+     <fieldset class="step"><legend><b>3</b>Size</legend><div class="opts">
+      <label class="opt"><input type="radio" name="size" value="petite"><span>Petite<small>Up to 9 stems · $18 arranging</small></span></label>
+      <label class="opt"><input type="radio" name="size" value="classic" checked><span>Classic<small>Up to 16 stems · $26 arranging</small></span></label>
+      <label class="opt"><input type="radio" name="size" value="grand"><span>Grand<small>Up to 24 stems · $34 arranging</small></span></label>
+     </div></fieldset>
+     <div class="step"><label class="lb" for="msg"><b>4</b>Card message</label><textarea class="fx" id="msg" maxlength="140" rows="3" placeholder="Happy birthday, Nan — love from all of us in Freo."></textarea><p class="cc"><span id="cc">0</span>/140 · we write it by hand on a seed-paper card</p></div>
+     <div class="step"><p class="lb"><b>5</b>Delivery</p><div class="two">
+      <label>Where<select class="fx" id="zone"><option value="pickup">Studio pick-up (free)</option><option value="a" selected>Zone A — Fremantle &amp; nearby, $12</option><option value="b">Zone B — Cottesloe to Coogee, $18</option><option value="c">Zone C — Perth metro, $25</option></select></label>
+      <label>When<select class="fx" id="day"></select></label>
+     </div></div>
+     <div class="sum">
+      <div><span id="sStems">0 stems</span><span id="sStemsP">$0</span></div>
+      <div><span id="sWrap">Classic arranging, kraft wrap</span><span id="sWrapP">$26</span></div>
+      <div><span id="sDel">Zone A delivery</span><span id="sDelP">$12</span></div>
+      <div class="tot"><span>Total <small>sample price</small></span><span id="sTot">$38</span></div>
+     </div>
+     <p class="status" id="status" role="status" aria-live="polite"></p>
+     <button class="btn red order" type="button" id="order">Order this bouquet</button>
+     <p class="fine">Sample prices in AUD. This is a concept demo — no order is placed and nothing is charged.</p>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="sec" id="weekly" aria-labelledby="w-h">
+  <div class="sec-lead"><div><p class="kick">Subscriptions</p><h2 id="w-h">The Weekly</h2></div><p>A standing order of whatever’s best at market, delivered on Tuesdays across Zones A and B. Pause, skip or change size by text message — no lock-in contract.</p></div>
+  <div class="weekly">
+   <article class="sheet"><svg class="mini" viewBox="0 0 300 190" data-mix="gum,wattle,nuts,gum,wattle" aria-hidden="true"></svg><p class="no">No. 1</p><h3>Bench bunch</h3><p>A loose, market-fresh handful for the kitchen bench — foliage, a filler and one small hero.</p><span class="lat">Eucalyptus · wattle · gum nuts</span><p class="pr"><span>per delivery</span><b>$45</b></p></article>
+   <article class="sheet"><svg class="mini" viewBox="0 0 300 190" data-mix="gum,lisi,waratah,wattle,lisi,gum" aria-hidden="true"></svg><p class="no">No. 2</p><h3>Table posy</h3><p>Hand-tied and vase-ready, built around two or three seasonal hero stems.</p><span class="lat">Waratah · lisianthus · wattle · eucalyptus</span><p class="pr"><span>per delivery</span><b>$70</b></p></article>
+   <article class="sheet"><svg class="mini" viewBox="0 0 300 190" data-mix="gum,paw,banksia,waratah,banksia,paw,gum" aria-hidden="true"></svg><p class="no">No. 3</p><h3>Statement</h3><p>Tall, generous and a little wild — for reception desks, long tables and big rooms.</p><span class="lat">Banksia · kangaroo paw · waratah · gum</span><p class="pr"><span>per delivery</span><b>$110</b></p></article>
+  </div>
+  <p class="below">Fortnightly deliveries cost the same per delivery. Sample prices.</p>
+ </section>
+
+ <section class="wed" id="weddings" aria-labelledby="wd-h">
+  <div class="sec">
+   <div class="wed-grid">
+    <div><p class="kick">Weddings &amp; events</p><h2 id="wd-h">Long tables, loud wattle and no foam blocks</h2><p class="statement">We design wedding flowers the way we build a bouquet: native first, seasonal always, and arranged so they still look right at 11pm.</p><p class="price">Small weddings from <b>$1,400</b> · events quoted per brief · sample prices</p></div>
+    <ul class="incl"><li>Bridal bouquet and party posies</li><li>Buttonholes with gum nuts and wattle</li><li>Ceremony arbour and long-table garlands</li><li>Set-up, pack-down and green-waste composting</li><li>A pressed keepsake from your bouquet</li></ul>
+   </div>
+   <svg class="garland" id="garland" viewBox="0 0 1180 150" aria-hidden="true"></svg>
+   <ol class="steps"><li><b>1. Coffee and a chat</b><p>Bring photos, colours and a rough guest count. We’ll talk seasons, not just styles.</p></li><li><b>2. A sample posy</b><p>We make one up so you can see, hold and smell it before anything is locked in.</p></li><li><b>3. Delivered and styled</b><p>We set up on the day, then come back for pack-down so nobody’s stuck with buckets.</p></li></ol>
+  </div>
+ </section>
+
+ <section class="sec" id="natives" aria-labelledby="n-h">
+  <div class="sec-lead"><div><p class="kick">Native arrangements</p><h2 id="n-h">For cafés, offices &amp; front desks</h2></div><p>Long-lasting natives and dried arrangements in vessels we swap every fortnight, so the counter always looks cared for — and nobody has to remember to change the water.</p></div>
+  <div class="vessels">
+   <figure><svg viewBox="0 0 240 250" data-vessel="vase" aria-hidden="true"></svg><figcaption><b>Reception vessel</b><span>From $85 a fortnight</span></figcaption></figure>
+   <figure><svg viewBox="0 0 240 250" data-vessel="jar" aria-hidden="true"></svg><figcaption><b>Café counter jar</b><span>From $45 a fortnight</span></figcaption></figure>
+   <figure><svg viewBox="0 0 240 250" data-vessel="wreath" aria-hidden="true"></svg><figcaption><b>Dried native wreath</b><span>$95, lasts for months</span></figcaption></figure>
+  </div>
+  <p class="below">Sample prices, including a vessel swap each fortnight within Zones A and B.</p>
+ </section>
+
+ <section class="symp" id="sympathy" aria-labelledby="s-h">
+  <div class="symp-in">
+   <svg id="sympSvg" viewBox="0 0 200 200" aria-hidden="true"></svg>
+   <p class="kick">Sympathy flowers</p>
+   <h2 id="s-h">When words are hard</h2>
+   <p class="body">Flowers can carry some of what’s difficult to say. Call us and we’ll help with colours, the wording on the card and delivery to homes, chapels and funeral homes around Perth.</p>
+   <ul><li><b>Sympathy posy</b> from $75</li><li><b>Standing tribute</b> please call</li><li><b>Dried keepsake</b> from $60</li></ul>
+   <a class="btn" href="tel:+61855502741">Call the studio · (08) 5550 2741</a>
+  </div>
+ </section>
+
+ <section class="sec" id="delivery" aria-labelledby="d-h">
+  <div class="zones">
+   <svg class="map" id="map" data-z="a" viewBox="0 0 560 440" role="img" aria-labelledby="mapT">
+    <title id="mapT">Stylised map of delivery zones spreading out from Fremantle: Zone A close by, Zone B out to Cottesloe and Coogee, Zone C to Perth CBD and Cockburn Central. Not to scale.</title>
+    <defs><clipPath id="land"><path d="M160 0H560V440H138C140 400 150 360 146 320 142 290 156 262 166 250 160 230 150 200 152 160 154 110 160 60 160 0Z"/></clipPath></defs>
+    <rect width="560" height="440" fill="#E3EBE5"/>
+    <path d="M24 70q10-7 20 0t20 0M54 150q10-7 20 0t20 0M20 330q10-7 20 0t20 0M70 395q10-7 20 0t20 0M36 250q10-7 20 0" fill="none" stroke="#B4C8BC" stroke-width="1.5"/>
+    <text class="sea" x="22" y="205">INDIAN OCEAN</text>
+    <g clip-path="url(#land)">
+     <rect width="560" height="440" fill="#FBF8F1"/>
+     <circle class="ring rc" cx="166" cy="250" r="272"/><circle class="ring rb" cx="166" cy="250" r="150"/><circle class="ring ra" cx="166" cy="250" r="74"/>
+     <path d="M166 247c24-9 40-24 70-22s48-22 64-40c22-22 46-36 64-62 12-18 26-30 40-44" fill="none" stroke="#9DB5A8" stroke-width="9" stroke-linecap="round" opacity=".75"/>
+    </g>
+    <path d="M160 0C160 60 154 110 152 160 150 200 160 230 166 250 156 262 142 290 146 320 150 360 140 400 138 440" fill="none" stroke="#8FA89B" stroke-width="2"/>
+    <text class="zl" x="214" y="306">A</text><text class="zl" x="268" y="372">B</text><text class="zl" x="420" y="330">C</text>
+    <text class="sm" x="330" y="150" font-style="italic">Swan River</text>
+    <circle cx="164" cy="146" r="3.5" fill="#2B2622"/><text class="sm" x="172" y="150">Cottesloe</text>
+    <circle cx="250" cy="222" r="3.5" fill="#2B2622"/><text class="sm" x="258" y="219">Melville</text>
+    <circle cx="200" cy="236" r="3.5" fill="#2B2622"/><text class="sm" x="194" y="214">East Fremantle</text>
+    <circle cx="160" cy="356" r="3.5" fill="#2B2622"/><text class="sm" x="168" y="360">Coogee</text>
+    <circle cx="350" cy="72" r="3.5" fill="#2B2622"/><text class="sm" x="358" y="76">Perth CBD</text>
+    <circle cx="318" cy="282" r="3.5" fill="#2B2622"/><text class="sm" x="326" y="286">Murdoch</text>
+    <circle cx="300" cy="402" r="3.5" fill="#2B2622"/><text class="sm" x="308" y="406">Cockburn Central</text>
+    <circle cx="166" cy="250" r="7" fill="#C22A36" stroke="#FBF8F1" stroke-width="2"/><text class="big" x="178" y="268">Fremantle</text>
+   </svg>
+   <div>
+    <p class="kick">Delivery zones</p>
+    <h2 id="d-h">Tuesday to Saturday, from our bench</h2>
+    <div class="zchips" role="group" aria-label="Show a delivery zone"><button class="zc" type="button" data-z="a" aria-pressed="true">Zone A · $12</button><button class="zc" type="button" data-z="b" aria-pressed="false">Zone B · $18</button><button class="zc" type="button" data-z="c" aria-pressed="false">Zone C · $25</button></div>
+    <p class="zinfo" id="zinfo" aria-live="polite"></p>
+    <p class="zfine">Studio pick-up is free. Sample delivery fees; the map is a sketch, not to scale.</p>
+   </div>
+  </div>
+ </section>
+
+ <section class="sec" id="visit" aria-labelledby="v-h">
+  <div class="visit">
+   <div><p class="kick">Visit &amp; contact</p><h2 id="v-h">Come by the bench</h2></div>
+   <dl>
+    <dt>Studio</dt><dd>Fremantle, WA — pick-ups by arrangement</dd>
+    <dt>Hours</dt><dd>Tue–Fri 8am–5pm · Sat 8am–1pm<br>Closed Sunday and Monday</dd>
+    <dt>Phone</dt><dd><a href="tel:+61855502741">(08) 5550 2741</a></dd>
+    <dt>Email</dt><dd><a href="mailto:orders@example.com">orders@example.com</a></dd>
+   </dl>
+   <div>
+    <details><summary>How long do natives last?</summary><p>Most give you one to two weeks in a clean vase with fresh water every couple of days — and banksia, gum nuts and wattle dry beautifully afterwards.</p></details>
+    <details><summary>Can I have natives only?</summary><p>Of course. Garden roses and lisianthus are the only non-natives we stock — leave them out and it’s natives all the way.</p></details>
+    <details><summary>Do you deliver on Sundays?</summary><p>Not at the moment. We deliver Tuesday to Saturday; order by 11am for same-day delivery in Zone A.</p></details>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer class="foot">
+ <p class="foot-name" data-brand>Wildflower &amp; Wattle</p>
+ <p class="meta">Native florist · Fremantle, WA · (08) 5550 2741 · orders@example.com</p>
+ <p class="fine">Sample prices throughout. A fictional business made for a studio showcase — every flower on this page is drawn in code, and phone numbers come from the fictional ACMA range.</p>
+</footer>
+<script>
+(function(){
+"use strict";
+var d=document,NS="http://www.w3.org/2000/svg";
+function $(s,r){return (r||d).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||d).querySelectorAll(s))}
+var mq=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):null;
+function reduced(){return !!((window.DemoKit&&DemoKit.reducedMotion)||(mq&&mq.matches))}
+function r1(n){return Math.round(n*10)/10}
+function mk(tag,a){var e=d.createElementNS(NS,tag);for(var k in a)e.setAttribute(k,a[k]);return e}
+
+/* ---------- data (sample prices, AUD) ---------- */
+var F={waratah:{n:"Waratah",p:9,role:3},banksia:{n:"Banksia",p:8,role:3},paw:{n:"Kangaroo paw",p:5,role:2},gum:{n:"Eucalyptus",p:3,role:0},wattle:{n:"Wattle",p:4,role:1},rose:{n:"Garden rose",p:6,role:3},lisi:{n:"Lisianthus",p:5,role:2},nuts:{n:"Gum nuts",p:4,role:1}};
+var KEYS=["waratah","banksia","paw","gum","wattle","rose","lisi","nuts"];
+var SIZES={petite:{n:"Petite",cap:9,fee:18,k:.9},classic:{n:"Classic",cap:16,fee:26,k:1},grand:{n:"Grand",cap:24,fee:34,k:1.1}};
+var WRAPS={kraft:{n:"kraft",fee:0,back:"#AE875C",front:"#C9A176",fold:"#DDBD96",pat:"k"},linen:{n:"linen",fee:8,back:"#D3C8B0",front:"#E9E1CF",fold:"#F4EFE4",pat:"l"},white:{n:"white tissue",fee:5,back:"#E6E0D4",front:"#FFFFFF",fold:"#F3EFE7",pat:""}};
+var ZONES={pickup:{n:"Studio pick-up",fee:0},a:{n:"Zone A delivery",fee:12},b:{n:"Zone B delivery",fee:18},c:{n:"Zone C delivery",fee:25}};
+var LET={waratah:"A",banksia:"B",paw:"C",wattle:"D",gum:"E",nuts:"F"};
+
+/* ---------- pressed-flower heads, drawn around 0,0 (stem joins just below) ---------- */
+function leaf(a){return '<path class="pp" d="M0 0L3-6 7-9 6-15 10-19 8-26 11-31 6-36 4-44 0-50-3-43-6-36-9-30-7-24-10-18-7-12-8-6Z" fill="#6E8B7C" transform="translate(0 6) rotate('+a+')"/>'}
+var DRAW={
+ waratah:function(){var s="",i,r,k;
+  for(i=0;i<11;i++)s+='<path class="pp" d="M0 0C5-9 6-24 0-37C-6-24-5-9 0 0Z" fill="#C22A36" transform="translate(0 6) rotate('+(-125+i*25)+')"/>';
+  s+='<ellipse cx="0" cy="-8" rx="16" ry="21" fill="#D6404A"/>';
+  for(r=0;r<6;r++){var yy=-24+r*7,hw=16*Math.sqrt(Math.max(0,1-Math.pow((yy+8)/21,2)))-3;
+   for(k=-3;k<=3;k++){var xx=k*5.2+(r%2?2.6:0);if(Math.abs(xx)<=hw)s+='<circle cx="'+r1(xx)+'" cy="'+yy+'" r="2.1" fill="#9E1B28"/>'}}
+  return s},
+ banksia:function(){var s=leaf(-42)+leaf(40)+'<rect class="pp" x="-13" y="-44" width="26" height="56" rx="13" fill="#D98032"/>',r,k;
+  for(r=0;r<9;r++){var yy=-37+r*6;for(k=-2;k<=2;k++){var xx=k*5+(r%2?2.5:0);if(Math.abs(xx)<10)s+='<path d="M'+xx+" "+yy+'v3.6" stroke="#A4561A" stroke-width="1.6" stroke-linecap="round"/>'}}
+  return s+'<ellipse cx="-4" cy="-31" rx="3.5" ry="7" fill="#F4B26C" opacity=".55"/>'},
+ paw:function(){var s='<path d="M0 12C0 0-1-10-6-18M0-2C3-9 8-14 12-20M-1-8C-3-16-1-26 2-32" stroke="#B3303A" stroke-width="3" fill="none" stroke-linecap="round"/>';
+  [[-6,-18,-17,-36],[12,-20,23,-35],[2,-32,1,-50],[-6,-18,-7,-42],[12,-20,11,-43]].forEach(function(t){
+   var mx=r1(t[0]+(t[2]-t[0])*.45),my=r1(t[1]+(t[3]-t[1])*.45),a=Math.atan2(t[3]-t[1],t[2]-t[0]);
+   s+='<path d="M'+t[0]+" "+t[1]+"L"+mx+" "+my+'" stroke="#C22A36" stroke-width="7" stroke-linecap="round"/><path class="pp" d="M'+mx+" "+my+"L"+t[2]+" "+t[3]+'" stroke="#6F9A5C" stroke-width="6" stroke-linecap="round"/>';
+   [-.7,0,.7].forEach(function(o){s+='<path d="M'+t[2]+" "+t[3]+"l"+r1(Math.cos(a+o)*5)+" "+r1(Math.sin(a+o)*5)+'" stroke="#5B8549" stroke-width="2" stroke-linecap="round"/>'})});
+  return s},
+ gum:function(){var s='<path d="M0 12C2-2-2-22 1-48" stroke="#6F8578" stroke-width="2" fill="none"/>';
+  [[-10,0,10],[10,-9,10],[-10,-19,9],[9,-28,8.5],[-8,-37,7.5],[6,-45,6.5]].forEach(function(l,i){s+='<circle class="pp" cx="'+l[0]+'" cy="'+l[1]+'" r="'+l[2]+'" fill="'+(i%2?"#8FA89B":"#A2B8AC")+'"/><path d="M'+(l[0]>0?l[0]-l[2]+2:l[0]+l[2]-2)+" "+l[1]+"H"+l[0]+'" stroke="#6F8A7E" stroke-width="1"/>'});
+  return s},
+ wattle:function(){var s='<path class="pp" d="M1 8C-9 3-19 5-29-1C-19-4-9-3 1 8Z" fill="#8FA89B"/><path class="pp" d="M0 2C10-2 19 0 28-6C19-9 9-8 0 2Z" fill="#9DB3A6"/><path d="M0 12C0 0 1-14-2-30M0-4C6-10 12-14 18-24M-1-14C-8-20-14-24-20-34M-2-30C0-38 4-42 6-48" stroke="#8A7A3E" stroke-width="1.6" fill="none"/>';
+  [[18,-26,6],[23,-18,5],[12,-31,5],[-20,-36,6],[-25,-28,5],[-13,-39,5],[6,-50,6],[-3,-51,5],[-5,-41,5],[5,-39,4.5],[15,-41,4.5],[-12,-27,4.5],[26,-29,4]].forEach(function(b){
+   s+='<circle cx="'+b[0]+'" cy="'+b[1]+'" r="'+b[2]+'" fill="#E9B824"/><circle cx="'+b[0]+'" cy="'+b[1]+'" r="'+(b[2]+1.2)+'" fill="none" stroke="#F3CB45" stroke-width="2.2" stroke-dasharray="1 1.5"/>'});
+  return s},
+ rose:function(){var s='<g transform="translate(0 -16)">',i;
+  for(i=0;i<6;i++)s+='<ellipse class="pp" cx="0" cy="-15" rx="13" ry="16" fill="#E8B4B8" transform="rotate('+i*60+')"/>';
+  for(i=0;i<5;i++)s+='<ellipse class="pp" cx="0" cy="-9" rx="9" ry="10" fill="#DC98A0" transform="rotate('+(i*72+30)+')"/>';
+  return s+'<circle r="7.5" fill="#CF8591"/><path d="M-4 1C-4-4 3-5 4 0 5 4-1 6-3 3-5 0-1-2 1-1" stroke="#A95E6B" stroke-width="1.4" fill="none"/></g>'},
+ lisi:function(){var p=[],i;for(i=0;i<=54;i++){var a=i/54*Math.PI*2,r=23+3*Math.sin(a*9);p.push(r1(r*Math.cos(a))+" "+r1(r*Math.sin(a)))}
+  var s='<g transform="translate(0 -16)"><path class="pp" d="M'+p.join("L")+'Z" fill="#F8EFF1" stroke="#D99AA4" stroke-width="2.6"/><circle r="12" fill="#F1D9DF"/>';
+  for(i=0;i<5;i++)s+='<path d="M0 0V-20" stroke="#E6C2C9" stroke-width="1" transform="rotate('+i*72+')"/>';
+  return s+'<circle r="3.5" fill="#B7BD6E"/><circle cx="-4" cy="3" r="1.6" fill="#C9B14A"/><circle cx="4" cy="2" r="1.6" fill="#C9B14A"/></g>'},
+ nuts:function(){var s='<path class="pp" d="M0 0C12-4 24-2 34-10 22-12 10-10 0 0Z" fill="#8FA89B" transform="translate(2 6) rotate(8)"/><path d="M0 12C0 4-1-6 0-12M0-12C-6-16-12-18-16-24M0-12C5-18 10-20 14-28M0-12C0-22 1-30 0-36" stroke="#7A5A3E" stroke-width="2" fill="none"/>';
+  [[-16,-24],[14,-28],[0,-36]].forEach(function(u){s+='<g transform="translate('+u[0]+" "+u[1]+')"><path d="M-8-9C-9-1-6 7 0 8 6 7 9-1 8-9Z" fill="#9A7350"/><ellipse cx="0" cy="-9" rx="8" ry="3" fill="#5E4230"/><path d="M-3-9h6M0-11v4" stroke="#C49A6C" stroke-width="1"/></g>'});
+  return s}
+};
+function head(f,x,y,r,s){return '<g transform="translate('+r1(x)+" "+r1(y)+") rotate("+r1(r)+") scale("+s+')">'+DRAW[f]()+"</g>"}
+function stemL(x1,y1,x2,y2,b){return '<path class="stem" d="M'+r1(x1)+" "+r1(y1)+"Q"+r1((x1+x2)/2+b)+" "+r1((y1+y2)/2)+" "+r1(x2)+" "+r1(y2)+'"/>'}
+function tieSvg(w){
+ if(w==="kraft")return '<g fill="none" stroke="#7A5A3E" stroke-width="2" stroke-linecap="round"><path d="M278 466l44 3M278 473l44 3M278 480l44 2"/><path d="M300 475c-14-13-31-7-23 4 6 7 16 2 23-4zm0 0c14-13 31-7 23 4-6 7-16 2-23-4z"/><path d="M299 477l-9 26M301 477l11 24"/></g>';
+ var c=w==="linen"?"#7E998C":"#E8B4B8";
+ return '<g fill="'+c+'" stroke="rgba(43,38,34,.28)" stroke-width="1"><rect x="277" y="465" width="46" height="14" rx="3"/><path d="M300 472c-20-18-44-8-32 6 9 10 22 2 32-6zm0 0c20-18 44-8 32 6-9 10-22 2-32-6z"/><path d="M297 475l-15 40 8-3 5 8 6-44zM303 475l15 40-8-3-5 8-6-44z"/><circle cx="300" cy="472" r="5.5"/></g>'}
+
+/* ---------- bouquet renderer: stems converge on the tie, heads settle radially ---------- */
+var B={x:300,y:474},DUR=720;
+function Bouquet(svg,o){
+ var id=o.id,S={stems:[],size:"classic",wrap:"kraft"},nodes={},wCur=0,wFrom=0,wTo=0,t0=0,raf=0,g={};
+ svg.innerHTML='<defs><pattern id="pk'+id+'" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".9" fill="#8C6844" opacity=".45"/><circle cx="7" cy="7" r=".7" fill="#8C6844" opacity=".35"/></pattern><pattern id="pl'+id+'" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 6L6 0" stroke="#CDBF9F" stroke-width=".8"/><path d="M0 0L6 6" stroke="#DDD3BD" stroke-width=".6"/></pattern></defs>';
+ ["back","stems","tails","heads","front","tie","marks"].forEach(function(k){g[k]=mk("g",{"class":k});svg.appendChild(g[k])});
+ g.marks.style.transition="opacity .4s";
+ var back=mk("path",{stroke:"rgba(43,38,34,.15)"}),backT=mk("path",{}),front=mk("path",{stroke:"rgba(43,38,34,.18)"}),frontT=mk("path",{}),fold=mk("path",{opacity:".75"});
+ g.back.appendChild(back);g.back.appendChild(backT);g.front.appendChild(front);g.front.appendChild(frontT);g.front.appendChild(fold);
+ function layout(){var st=S.stems,n=st.length,k=SIZES[S.size].k,pos={};
+  var R=Math.min(211,(50+34*Math.sqrt(Math.max(n,1)))*k),cy=388-R*.72-14;
+  st.slice().sort(function(a,b){return F[b.f].role-F[a.f].role||a.id-b.id}).forEach(function(s,i){
+   var r=R*Math.sqrt((i+.5)/n),a=i*2.39996+.5,x=300+r*Math.cos(a),y=cy+r*Math.sin(a)*.72,j=(s.id*.618)%1;
+   if(s.f==="paw"||s.f==="gum")y-=10;
+   pos[s.id]={x:x,y:y,r:Math.atan2(x-B.x,B.y-y)*57.3*.6+(j-.5)*14,s:(1.22+.5*(k-1))*(.9+.18*j),z:F[s.f].role*1000+y}});
+  return {pos:pos,W:Math.max(92,R*.8),cy:cy}}
+ function wrapD(W){var c=300,t=B.y;
+  return {back:"M"+r1(c-W*1.1)+" 346Q"+r1(c-W*.72)+" 300 "+r1(c-W*.24)+" 318Q"+r1(c+W*.22)+" 290 "+r1(c+W*.62)+" 322Q"+r1(c+W*.96)+" 324 "+r1(c+W*1.1)+" 350L"+(c+19)+" "+t+"L"+(c-19)+" "+t+"Z",
+   front:"M"+r1(c-W)+" 392Q"+c+" 424 "+r1(c+W)+" 398L"+(c+21)+" "+t+"L"+(c+46)+" 640Q"+c+" 652 "+(c-46)+" 640L"+(c-21)+" "+t+"Z",
+   fold:"M"+r1(c-W*.36)+" 406L"+(c+3)+" "+t+"L"+(c+12)+" 645L"+(c-30)+" 642L"+(c-19)+" "+t+"Z"}}
+ function applyWrap(){var w=wrapD(wCur);back.setAttribute("d",w.back);backT.setAttribute("d",w.back);front.setAttribute("d",w.front);frontT.setAttribute("d",w.front);fold.setAttribute("d",w.fold)}
+ function paint(){var w=WRAPS[S.wrap],p=w.pat?"url(#p"+w.pat+id+")":"none";back.setAttribute("fill",w.back);front.setAttribute("fill",w.front);fold.setAttribute("fill",w.fold);backT.setAttribute("fill",p);frontT.setAttribute("fill",p);g.tie.innerHTML=tieSvg(S.wrap)}
+ function node(s){var n=nodes[s.id];if(n)return n;
+  n=nodes[s.id]={id:s.id,cur:{x:B.x,y:B.y-6,r:0,s:0},stem:mk("path",{"class":"stem"}),tail:mk("path",{"class":"tail"}),head:mk("g",{})};
+  n.head.innerHTML=o.sway?'<g class="sway" style="animation-delay:-'+((s.id*1.37)%5.5).toFixed(2)+'s">'+DRAW[s.f]()+"</g>":DRAW[s.f]();
+  g.stems.appendChild(n.stem);g.tails.appendChild(n.tail);g.heads.appendChild(n.head);return n}
+ function apply(n){var c=n.cur,hx=c.x,hy=c.y+8*c.s,v=c.s>.03?"1":"0";
+  n.head.setAttribute("transform","translate("+r1(c.x)+" "+r1(c.y)+") rotate("+r1(c.r)+") scale("+c.s.toFixed(3)+")");
+  n.stem.setAttribute("d","M"+B.x+" "+B.y+"Q"+r1(B.x+(hx-B.x)*.28)+" "+r1(B.y-(B.y-hy)*.56)+" "+r1(hx)+" "+r1(hy));
+  n.tail.setAttribute("d","M"+B.x+" "+B.y+"L"+r1(B.x-(hx-B.x)*.15)+" "+(B.y+170+(n.id*7)%12));
+  n.stem.style.opacity=v;n.tail.style.opacity=v}
+ function marks(pos,cy){if(!o.labels)return;var best={},s="";
+  S.stems.forEach(function(st){var p=pos[st.id],dd=Math.hypot(p.x-300,p.y-cy);if(LET[st.f]&&(!best[st.f]||dd>best[st.f].dd))best[st.f]={p:p,dd:dd}});
+  Object.keys(best).forEach(function(k){var p=best[k].p,dx=p.x-300,dy=p.y-cy-20,l=Math.hypot(dx,dy)||1,lx=Math.max(22,Math.min(578,p.x+dx/l*54)),ly=Math.max(22,Math.min(600,p.y-18+dy/l*40));
+   s+='<path d="M'+r1(lx)+" "+r1(ly)+"L"+r1(p.x)+" "+r1(p.y-14)+'"/><circle cx="'+r1(lx)+'" cy="'+r1(ly)+'" r="14"/><text x="'+r1(lx)+'" y="'+r1(ly)+'">'+LET[k]+"</text>"});
+  g.marks.innerHTML=s}
+ function ease(p){return 1-Math.pow(1-p,3)}
+ function step(t){var busy=false;
+  Object.keys(nodes).forEach(function(k){var n=nodes[k],p=Math.max(0,Math.min(1,(t-t0-n.delay)/DUR)),e=ease(p),f=n.from,to=n.to;
+   if(p<1)busy=true;
+   n.cur={x:f.x+(to.x-f.x)*e,y:f.y+(to.y-f.y)*e,r:f.r+(to.r-f.r)*e,s:f.s+(to.s-f.s)*e};apply(n);
+   if(p>=1&&n.dead){n.stem.remove();n.tail.remove();n.head.remove();delete nodes[k]}});
+  var pw=Math.min(1,(t-t0)/DUR);wCur=wFrom+(wTo-wFrom)*ease(pw);applyWrap();if(pw<1)busy=true;
+  g.marks.style.opacity=busy?"0":"1";
+  raf=busy?requestAnimationFrame(step):0}
+ function sync(stagger,instant){var L=layout(),ids={},i=0;
+  S.stems.slice().sort(function(a,b){return L.pos[a.id].z-L.pos[b.id].z}).forEach(function(s){ids[s.id]=1;var n=node(s);
+   n.from={x:n.cur.x,y:n.cur.y,r:n.cur.r,s:n.cur.s};n.to=L.pos[s.id];n.dead=false;n.delay=stagger&&n.cur.s===0?(i++)*55:0;g.heads.appendChild(n.head)});
+  Object.keys(nodes).forEach(function(k){if(!ids[k]){var n=nodes[k];n.from={x:n.cur.x,y:n.cur.y,r:n.cur.r,s:n.cur.s};n.to={x:B.x,y:B.y-6,r:0,s:0};n.dead=true;n.delay=0}});
+  wFrom=wCur||L.W;wTo=L.W;paint();marks(L.pos,L.cy);
+  t0=performance.now();
+  if(reduced()||instant){if(raf)cancelAnimationFrame(raf);raf=0;step(t0+1e6)}else if(!raf)raf=requestAnimationFrame(step)}
+ function regrow(){Object.keys(nodes).forEach(function(k){var n=nodes[k];n.cur={x:B.x,y:B.y-6,r:0,s:0};apply(n)});sync(true)}
+ return {S:S,sync:sync,regrow:regrow}}
+
+/* ---------- hero: Plate I, with lettered specimens and a gentle breeze ---------- */
+var hb=Bouquet($("#heroSvg"),{id:"h",labels:true,sway:true});
+["gum","gum","gum","gum","paw","paw","paw","wattle","wattle","banksia","banksia","waratah","waratah","waratah","nuts"].forEach(function(f,i){hb.S.stems.push({id:900+i,f:f})});
+hb.sync(true);
+var heroFig=$("#heroFig");
+if("IntersectionObserver" in window){new IntersectionObserver(function(es){heroFig.classList.toggle("paused",!es[0].isIntersecting)}).observe(heroFig)}
+d.addEventListener("visibilitychange",function(){heroFig.classList.toggle("still",d.hidden)});
+
+/* ---------- bouquet builder ---------- */
+var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var bq=Bouquet($("#bq"),{id:"b"}),S=bq.S,nid=1,seen=false,list=$("#flowers"),zoneSel=$("#zone"),daySel=$("#day");
+KEYS.forEach(function(k){var f=F[k],li=d.createElement("li"),nm=f.n.toLowerCase();li.className="fl";li.setAttribute("data-f",k);
+ li.innerHTML='<button class="add" type="button" aria-label="Add a stem of '+nm+', $'+f.p+'"><svg viewBox="-42 -56 84 84" aria-hidden="true">'+DRAW[k]()+'</svg><span class="fn">'+f.n+'</span><span class="fp">$'+f.p+' a stem</span><span class="cnt" aria-hidden="true">0</span></button><button class="rem" type="button" aria-label="Remove a stem of '+nm+'" disabled>−</button>';
+ list.appendChild(li)});
+function n(){return S.stems.length}
+function capFor(c){return c<=9?"petite":c<=16?"classic":"grand"}
+function setRadio(name,v){var r=$('input[name="'+name+'"][value="'+v+'"]');if(r)r.checked=true}
+function say(t){$("#status").textContent=t}
+function refresh(msg,stagger){var c=n(),per={},stemsP=0;
+ S.stems.forEach(function(s){per[s.f]=(per[s.f]||0)+1;stemsP+=F[s.f].p});
+ $$(".fl",list).forEach(function(li){var k=li.getAttribute("data-f"),q=per[k]||0;li.classList.toggle("has",q>0);li.querySelector(".cnt").textContent=q;li.querySelector(".rem").disabled=!q;li.querySelector(".add").setAttribute("aria-disabled",c>=24?"true":"false")});
+ $$('input[name="size"]').forEach(function(r){r.disabled=SIZES[r.value].cap<c});
+ var sz=SIZES[S.size],w=WRAPS[S.wrap],z=ZONES[zoneSel.value],tot=stemsP+sz.fee+w.fee+z.fee;
+ $("#sStems").textContent=c+(c===1?" stem":" stems");$("#sStemsP").textContent="$"+stemsP;
+ $("#sWrap").textContent=sz.n+" arranging, "+w.n+" wrap";$("#sWrapP").textContent="$"+(sz.fee+w.fee);
+ $("#sDel").textContent=z.n;$("#sDelP").textContent=z.fee?"$"+z.fee:"Free";
+ $("#sTot").textContent="$"+tot;
+ $("#tally").textContent=c?c+(c===1?" stem · $":" stems · $")+tot:"No stems yet";
+ $("#empty").hidden=c>0;
+ if(msg)say(msg+" — "+c+(c===1?" stem, $":" stems, $")+tot+" all up (sample).");
+ if(seen)bq.sync(stagger)}
+function add(k,btn){var c=n(),msg="Added a stem of "+F[k].n.toLowerCase();
+ if(c>=24){say("Grand holds up to 24 stems — that’s a generous armful already.");return}
+ if(c+1>SIZES[S.size].cap){S.size=capFor(c+1);setRadio("size",S.size);msg+=", moved up to "+SIZES[S.size].n+" to fit"}
+ S.stems.push({id:nid++,f:k});refresh(msg);
+ var ct=btn&&btn.querySelector(".cnt");if(ct&&!reduced()){ct.classList.remove("bump");void ct.offsetWidth;ct.classList.add("bump")}}
+function removeOne(k){for(var i=S.stems.length-1;i>=0;i--)if(S.stems[i].f===k){S.stems.splice(i,1);refresh("Took out a stem of "+F[k].n.toLowerCase());return}}
+list.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var k=b.closest(".fl").getAttribute("data-f");if(b.classList.contains("add"))add(k,b);else removeOne(k)});
+var PRE={freo:{waratah:2,banksia:2,paw:3,gum:3,nuts:1},wattle:{wattle:5,gum:3,lisi:2,nuts:2},soft:{rose:3,lisi:4,gum:4}};
+$$("[data-preset]").forEach(function(b){b.addEventListener("click",function(){var p=b.getAttribute("data-preset");S.stems.length=0;
+ if(p!=="clear"){var P=PRE[p];Object.keys(P).forEach(function(k){for(var i=0;i<P[k];i++)S.stems.push({id:nid++,f:k})});S.size=capFor(n());setRadio("size",S.size)}
+ refresh(p==="clear"?"Cleared — start with any flower":"Started from “"+b.textContent+"”",true)})});
+$$('input[name="wrap"]').forEach(function(r){r.addEventListener("change",function(){S.wrap=r.value;refresh("Wrapped in "+WRAPS[r.value].n)})});
+$$('input[name="size"]').forEach(function(r){r.addEventListener("change",function(){S.size=r.value;refresh(SIZES[r.value].n+" size")})});
+function fillDays(){var cur=daySel.value,z=zoneSel.value,t=new Date(),i=1,c=0;daySel.innerHTML="";
+ while(c<8&&i<30){var x=new Date(t.getFullYear(),t.getMonth(),t.getDate()+i),w=x.getDay();
+  if(w>=2&&w<=6&&!(z==="c"&&w===2)){var op=d.createElement("option");op.value=x.getFullYear()+"-"+(x.getMonth()+1)+"-"+x.getDate();op.textContent=DN[w]+" "+x.getDate()+" "+MN[x.getMonth()];daySel.appendChild(op);c++}i++}
+ daySel.value=cur;if(daySel.selectedIndex<0)daySel.selectedIndex=0}
+zoneSel.addEventListener("change",function(){fillDays();refresh(ZONES[zoneSel.value].n)});
+daySel.addEventListener("change",function(){say((zoneSel.value==="pickup"?"Pick-up on ":"Delivery on ")+daySel.options[daySel.selectedIndex].text+".")});
+var msg=$("#msg"),hand=$("#hand");
+function jit(i){return ((i*9301+49297)%233280)/233280}
+function renderCard(){var t=msg.value.trim(),ph=!t,ci=0;hand.classList.toggle("ph",ph);hand.classList.toggle("long",t.length>70);
+ if(ph)t=msg.getAttribute("placeholder");hand.textContent="";
+ t.split(/\s+/).forEach(function(w,wi){if(wi)hand.appendChild(d.createTextNode(" "));
+  (w.match(/[\s\S]{1,14}/g)||[]).forEach(function(pt){var ws=d.createElement("span");ws.className="w";
+   Array.from(pt).forEach(function(ch){var s=d.createElement("span"),j=jit(ci++);s.textContent=ch;s.style.transform="translateY("+((j-.5)*2.6).toFixed(1)+"px) rotate("+((j-.5)*7).toFixed(1)+"deg)";ws.appendChild(s)});
+   hand.appendChild(ws)})});
+ $("#cc").textContent=msg.value.length}
+msg.addEventListener("input",renderCard);
+$("#order").addEventListener("click",function(){var c=n(),tot=$("#sTot").textContent;
+ if(!c){say("Add at least one stem first — tap a flower above.");if(window.DemoKit)DemoKit.toast("Add a stem or two first — then you can order.");return}
+ var sum=c+" stems, "+SIZES[S.size].n+", "+WRAPS[S.wrap].n+" wrap, "+(zoneSel.value==="pickup"?"pick-up ":"delivery ")+daySel.options[daySel.selectedIndex].text+", "+tot;
+ say("Demo order summary: "+sum+" (sample). Nothing was sent.");
+ if(window.DemoKit)DemoKit.toast("Demo only — no order was placed and nothing was charged. ("+sum+")",4800)});
+[["waratah"],["banksia"],["gum"],["gum"],["wattle"],["lisi"],["nuts"]].forEach(function(a){S.stems.push({id:nid++,f:a[0]})});
+fillDays();renderCard();refresh();seen=true;bq.sync(false,true);
+if(!reduced()&&"IntersectionObserver" in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();bq.regrow()}},{threshold:0});io.observe($("#stage"))}
+
+/* ---------- pressed compositions for the editorial sections ---------- */
+$$(".mini").forEach(function(svg){var fs=svg.getAttribute("data-mix").split(","),c=fs.length,s="",h="";
+ fs.forEach(function(f,i){var a=(-62+124*(c>1?i/(c-1):.5))*Math.PI/180,L=i%2?110:128,x=150+Math.sin(a)*L,y=184-Math.cos(a)*L*.95;
+  s+=stemL(150,184,x,y+8,i%2?-6:6);h+=head(f,x,y,a*57.3*.7,.78)});
+ svg.innerHTML=s+h+'<path d="M141 174l18 2M141 179l18 2" stroke="#C22A36" stroke-width="2.4" stroke-linecap="round"/>'});
+$$("[data-vessel]").forEach(function(svg){var t=svg.getAttribute("data-vessel"),s="",h="";
+ if(t==="vase"){[["gum",62,96,-32],["gum",178,100,32],["paw",90,54,-14],["banksia",152,64,16],["waratah",118,80,0]].forEach(function(v){s+=stemL(120,130,v[1],v[2]+8,v[3]>0?-6:6);h+=head(v[0],v[1],v[2],v[3],.74)});
+  svg.innerHTML=s+h+'<path d="M92 250C80 200 84 160 100 138L104 122C104 115 136 115 136 122L140 138C156 160 160 200 148 250Z" fill="#E8B4B8"/><path d="M104 152C96 172 94 202 100 236" stroke="#F6DADC" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="120" cy="121" rx="16" ry="4" fill="#D69CA2"/>'}
+ else if(t==="jar"){[["wattle",90,100,-22],["gum",152,94,22],["nuts",121,78,0],["wattle",156,122,30],["gum",82,124,-36]].forEach(function(v){s+=stemL(120,240,v[1],v[2]+8,v[3]>0?-8:8);h+=head(v[0],v[1],v[2],v[3],.7)});
+  svg.innerHTML='<rect x="80" y="196" width="80" height="53" fill="#DCE6E0"/>'+s+h+'<path d="M78 250V152C78 142 86 138 94 138H146C154 138 162 142 162 152V250Z" fill="rgba(143,168,155,.16)" stroke="#8FA89B" stroke-width="2.5"/><path d="M90 160V232" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/>'}
+ else{s='<path d="M120 20V62" stroke="#8FA89B" stroke-width="3"/><path d="M120 22c-10-14-26-6-18 4 5 6 12 2 18-4zm0 0c10-14 26-6 18 4-5 6-12 2-18-4z" fill="none" stroke="#8FA89B" stroke-width="3"/><circle cx="120" cy="140" r="74" fill="none" stroke="#9C7B57" stroke-width="3"/><circle cx="120" cy="140" r="68" fill="none" stroke="#B8966E" stroke-width="5" stroke-dasharray="10 6"/>';
+  var ty=["gum","wattle","nuts","banksia","gum","wattle","gum","nuts","banksia","wattle","gum","nuts"];
+  ty.forEach(function(f,i){var a=i/ty.length*Math.PI*2-1.2,x=120+Math.cos(a)*72,y=140+Math.sin(a)*72;h+=head(f,x,y,a*57.3+150+(i%2?14:-8),.46)});
+  svg.innerHTML=s+h}});
+var gl=$("#garland");if(gl){var gp=[],gx,gs="",gt=["gum","wattle","waratah","gum","nuts","lisi","gum","banksia","wattle","paw","gum","rose","wattle","nuts","gum","waratah","wattle","gum"];
+ for(gx=0;gx<=1180;gx+=12)gp.push(gx+" "+r1(84+Math.sin((gx-34)/66*.9)*22));
+ gs='<path d="M'+gp.join("L")+'" fill="none" stroke="#8FA89B" stroke-width="3"/>';
+ gt.forEach(function(f,i){var x=34+i*66,y=84+Math.sin(i*.9)*22;gs+=head(f,x,y,(i%2?64:-64)+(i%3)*8,.62)});gl.innerHTML=gs}
+var sy=$("#sympSvg");if(sy)sy.innerHTML=stemL(100,192,64,104,6)+stemL(100,192,138,102,-6)+stemL(100,192,100,84,0)+stemL(100,192,76,74,4)+stemL(100,192,126,70,-4)+head("gum",64,98,-34,.8)+head("gum",138,96,34,.8)+head("rose",76,72,-12,.7)+head("rose",126,68,14,.7)+head("lisi",100,84,0,.9)+'<path d="M91 168l18 2M91 174l18 2" stroke="#D99AA4" stroke-width="3" stroke-linecap="round"/>';
+
+/* ---------- delivery zones ---------- */
+var ZI={a:["Zone A · $12","Same-day when you order by 11am, Tue–Sat.","Fremantle, North, South and East Fremantle, Beaconsfield, White Gum Valley, Hilton and O’Connor."],
+ b:["Zone B · $18","Next delivery run, Tue–Sat.","Cottesloe, Mosman Park, Bicton, Palmyra, Melville, Hamilton Hill, Spearwood and Coogee."],
+ c:["Zone C · $25","Next-day delivery, Wed–Sat.","Perth CBD, Subiaco, Claremont, Nedlands, Applecross, Murdoch and Cockburn Central."]};
+function showZone(z){$("#map").setAttribute("data-z",z);$$(".zc").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-z")===z?"true":"false")});
+ var info=$("#zinfo"),x=ZI[z],b=d.createElement("b");info.textContent="";b.textContent=x[0];info.appendChild(b);info.appendChild(d.createTextNode(" — "+x[1]+" "+x[2]))}
+$$(".zc").forEach(function(b){b.addEventListener("click",function(){showZone(b.getAttribute("data-z"))})});
+showZone("a");
+})();
+</script>
+</body>
+</html>

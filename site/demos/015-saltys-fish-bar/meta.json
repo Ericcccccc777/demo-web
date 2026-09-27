@@ -1,0 +1,8 @@
+{
+  "id": "015",
+  "tech": ["CSS Grid", "CSS 3D", "SVG", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["ordering"],
+  "interaction": "Tick dishes in the newspaper classifieds, pick a 10-minute pickup slot (busy ones are struck out) and print a paper ticket that feeds out of a docket printer; confirming shows a demo notice. Catch-of-the-day cards flip over to reveal species facts.",
+  "fonts": ["Old Standard TT", "Oswald"],
+  "notes": "Tide and weather figures are fixed sample values, not live data."
+}

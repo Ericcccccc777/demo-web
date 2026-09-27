@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="105">
+<meta name="demo:brand" content="Salt &amp; Sail Boat Hire">
+<title>Salt &amp; Sail Boat Hire — self-drive boats on Pittwater</title>
+<meta name="description" content="Salt & Sail Boat Hire is a fictional self-drive boat hire on Pittwater, NSW: a runabout, a pontoon party boat, a small sailing yacht and sea kayaks by the half or full day.">
+<meta name="theme-color" content="#0A2342">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Staatliches&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--navy:#0A2342;--deep:#071A33;--paper:#F6F0E3;--paper2:#ECE3CF;--red:#D62828;--redink:#B81F1F;--yellow:#FCBF49;--sky:#2A9DF4;--skyl:#DCEFFD;--muted:#44546D;--mutedd:#B9C7DA;--ink2:#26375A;
+--rope:repeating-linear-gradient(-58deg,#EEE1BE 0 4px,#C9AB72 4px 6px,#DEC797 6px 10px,#A9874F 10px 11.5px);
+--disp:"Staatliches","Arial Narrow",Impact,sans-serif;--body:"Hind",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--wrap:min(1200px,100% - 32px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--navy);font:400 17px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
+svg{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:.95;margin:0;letter-spacing:.01em}
+p{margin:0 0 1em}
+a{color:inherit}
+button{font:inherit;color:inherit;touch-action:manipulation}
+.wrap{width:var(--wrap);margin-inline:auto}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--yellow);color:var(--navy);padding:10px 14px;font-weight:600;border-radius:8px}
+.skip:focus{top:12px}
+.kicker{font:400 18px/1 var(--disp);letter-spacing:.14em;color:var(--redink);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";flex:none;width:22px;height:14px;background:currentColor;clip-path:polygon(0 0,100% 50%,0 100%)}
+.k-y{color:var(--yellow)}
+.rope{height:12px;background:var(--rope);box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(0,0,0,.2)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 22px 8px;border:2px solid var(--navy);border-radius:10px;font:400 20px/1 var(--disp);letter-spacing:.06em;text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--navy);transition:transform .15s,box-shadow .15s;text-align:center}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--navy)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--navy)}
+.btn-n{background:var(--navy);color:#fff;box-shadow:4px 4px 0 var(--red)}
+.btn-n:hover{box-shadow:5px 5px 0 var(--red)}
+.btn-y{background:var(--yellow);color:var(--navy)}
+.btn-r{background:var(--red);color:#fff}
+.btn-o{background:#fff;color:var(--navy)}
+/* header */
+.top{background:var(--navy);color:#fff;position:relative;z-index:30}
+.bar{display:flex;align-items:center;gap:18px;min-height:68px;padding-block:8px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 26px/1 var(--disp);letter-spacing:.05em;min-width:0;margin-right:auto;padding:6px 0}
+.logo span{overflow-wrap:anywhere}
+.burgee{width:38px;height:32px;flex:none}
+.top nav{display:flex;gap:2px}
+.top nav a{font-weight:500;font-size:16px;text-decoration:none;padding:10px 13px;border-radius:8px;white-space:nowrap}
+.top nav a:hover{background:rgba(255,255,255,.1)}
+.top .btn{gap:.28em;box-shadow:3px 3px 0 var(--red);border-color:var(--yellow);min-height:44px;padding:9px 18px 7px}
+.top :focus-visible,.fleet :focus-visible,.book .bintro :focus-visible,.foot :focus-visible{outline-color:var(--yellow)}
+@media(min-width:900px){.top{position:sticky;top:0}}
+/* hero */
+.hero{position:relative;overflow:hidden;padding-bottom:clamp(40px,6vw,72px);background:linear-gradient(rgba(10,35,66,.045) 1px,transparent 1px) 0 0/56px 56px,linear-gradient(90deg,rgba(10,35,66,.045) 1px,transparent 1px) 0 0/56px 56px,var(--paper)}
+.rose{position:absolute;width:560px;left:-170px;bottom:-190px;opacity:.07;pointer-events:none}
+.bunting{position:relative;height:clamp(66px,8vw,114px)}
+.bunting svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bunting ul{list-style:none;margin:0;padding:0 clamp(14px,3vw,44px);display:flex;justify-content:space-around;position:relative;height:100%}
+.bunting li{flex:0 1 clamp(19px,3.5vw,52px);min-width:0;position:relative;transform:translateY(var(--y,10px)) rotate(var(--a,0deg));transform-origin:50% 0;padding-top:3px}
+.bunting li::before{content:"";position:absolute;left:50%;top:-3px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#8F7143}
+.bunting li.bgap{flex-basis:clamp(6px,1.4vw,22px)}
+.bunting li.bgap::before{display:none}
+.bf{display:block;transform-origin:50% 0;animation:sway 4.2s ease-in-out infinite;animation-delay:calc(var(--i) * -.37s)}
+.bf svg{width:100%;height:auto;filter:drop-shadow(0 2px 0 rgba(10,35,66,.14))}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:center;position:relative}
+.hero h1{font-size:clamp(52px,8vw,124px);line-height:.86;overflow-wrap:anywhere;text-wrap:balance;margin:0 0 22px}
+.lede{font-size:clamp(18px,1.45vw,21px);max-width:33em;color:var(--ink2)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px 18px;margin:26px 0 20px}
+.flaghint{font-size:15px;color:var(--muted);display:flex;gap:10px;align-items:center;margin:0}
+.flaghint svg{flex:none;width:34px;height:28px}
+.flaghint a{font-weight:600;color:var(--navy);text-underline-offset:3px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin:24px 0 0;border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+.facts div{padding:12px 14px 10px;border-left:1px dashed rgba(10,35,66,.4)}
+.facts div:first-child{border-left:0;padding-left:0}
+.facts dt{font:400 15px/1 var(--disp);letter-spacing:.12em;color:var(--redink)}
+.facts dd{margin:5px 0 0;font-weight:600;font-size:15.5px;line-height:1.3}
+.scene{margin:0;position:relative;width:100%;max-width:520px;justify-self:end}
+.scene>svg{width:100%;height:auto}
+.plaque{position:absolute;left:50%;bottom:3.6%;transform:translateX(-50%);width:max-content;max-width:86%;background:var(--yellow);font:400 16px/1.1 var(--disp);letter-spacing:.1em;padding:9px 14px 7px;border:2px solid var(--navy);border-radius:6px;box-shadow:3px 3px 0 var(--navy);text-align:center}
+.yacht{animation:bob 5.6s ease-in-out infinite;transform-origin:230px 470px}
+.kayak{animation:bob2 4.4s ease-in-out infinite;transform-origin:110px 528px}
+.cloud{animation:drift 16s ease-in-out infinite alternate}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(5px) rotate(1.2deg)}}
+@keyframes bob2{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(4px) rotate(-1.5deg)}}
+@keyframes drift{from{transform:translateX(-10px)}to{transform:translateX(14px)}}
+/* fleet */
+.fleet{position:relative;background:var(--navy);color:#fff;padding:clamp(64px,8vw,112px) 0 clamp(56px,7vw,96px)}
+.fleet::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 100%,transparent 9px,rgba(42,157,244,.13) 10px 12px,transparent 13px) 0 0/38px 19px}
+.fleet>.wrap{position:relative}
+.shead{max-width:780px;margin-bottom:44px}
+.shead h2,.brief h2,.book h2{font-size:clamp(42px,5.4vw,78px);margin-bottom:18px}
+.shead p{color:var(--mutedd);font-size:18px;margin:0}
+.marina{position:relative;padding-top:34px}
+.marina::before{content:"";position:absolute;left:-16px;right:-16px;top:0;height:22px;border-radius:4px;background:repeating-linear-gradient(90deg,#EAE0C9 0 26px,#C8B894 26px 28px);box-shadow:0 5px 0 rgba(0,0,0,.28)}
+.berths{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.berth{position:relative}
+.berth::before{content:"";position:absolute;left:-21px;top:-14px;width:14px;height:58%;border-radius:0 0 5px 5px;background:repeating-linear-gradient(0deg,#EAE0C9 0 18px,#C8B894 18px 20px);box-shadow:0 4px 0 rgba(0,0,0,.28)}
+.berth article{height:100%;display:flex;flex-direction:column;background:#fff;color:var(--navy);border-radius:16px;overflow:hidden;box-shadow:0 16px 0 -8px rgba(0,0,0,.28)}
+.bimg{position:relative;background:var(--skyl);padding:34px 8px 0}
+.bimg svg{width:100%;height:auto}
+.plate{position:absolute;top:10px;left:10px;background:var(--yellow);font:400 14px/1 var(--disp);letter-spacing:.14em;padding:6px 8px 4px;border:1.5px solid var(--navy);border-radius:4px}
+.bbody{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+.bbody h3{font-size:34px}
+.btype{color:var(--muted);font-size:15px;margin:6px 0 12px;line-height:1.35}
+.specs{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:7px;font-size:15px}
+.specs li{display:flex;gap:9px;align-items:center;line-height:1.3}
+.ic{width:20px;height:20px;flex:none;fill:none;stroke:var(--navy);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.good{font-size:15px;color:var(--ink2);border-left:3px solid var(--sky);padding-left:10px;margin-bottom:16px;line-height:1.45}
+.price{display:grid;grid-template-columns:1fr 1fr;margin:auto 0 14px;border-top:2px solid var(--navy)}
+.price div{padding-top:10px}
+.price dt{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.price dd{margin:0;font:400 34px/1 var(--disp)}
+.price dd small{font:500 13px var(--body);color:var(--muted);letter-spacing:0}
+.pick{width:100%}
+.incl{margin-top:60px;display:grid;grid-template-columns:250px 1fr;gap:20px 40px;padding-top:34px;border-top:1px solid rgba(255,255,255,.2)}
+.incl h3{font-size:34px}
+.incl ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px 28px}
+.incl li{display:flex;gap:11px;align-items:flex-start;color:#E4EBF5;font-size:16px;line-height:1.4}
+.incl li svg{width:28px;height:auto;flex:none;margin-top:1px}
+.incl .note{grid-column:2;font-size:14px;color:var(--mutedd);margin:0}
+/* signal */
+.signal{position:relative;overflow:hidden;padding:clamp(76px,9vw,124px) 0 clamp(64px,8vw,104px);background:linear-gradient(180deg,#BCE1FB,#E1F2FE 55%,#F3FAFF)}
+.signal::before{content:"";position:absolute;left:0;right:0;top:0;height:20px;background:radial-gradient(circle at 20px -6px,var(--navy) 21px,transparent 22px) 0 0/40px 20px repeat-x}
+.sky-deco{position:absolute;inset:0;pointer-events:none}
+.sky-deco svg{position:absolute;fill:#fff;opacity:.75}
+.signal>.wrap{position:relative}
+.sighead{display:grid;grid-template-columns:1fr 1fr;gap:18px 56px;align-items:end;margin-bottom:30px}
+.signal h2{font-size:clamp(44px,6vw,88px)}
+.sighead p{margin:0;font-size:18px;color:var(--ink2)}
+.sigform{background:#fff;border:2px solid var(--navy);border-radius:16px;padding:18px 20px 16px;box-shadow:6px 6px 0 var(--navy);display:grid;gap:10px}
+.sigform>label{font:400 17px/1 var(--disp);letter-spacing:.12em}
+.sigrow{display:flex;gap:14px;align-items:flex-end}
+#sigIn{flex:1;min-width:0;font:400 clamp(28px,3.2vw,40px)/1.1 var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--navy);border:0;border-bottom:3px solid var(--navy);padding:6px 2px 4px;background:transparent;border-radius:0}
+#sigIn:focus{outline:none;border-bottom-color:var(--red);box-shadow:0 3px 0 var(--red)}
+.hint{font-size:14.5px;color:var(--muted);margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chips>span{font:400 16px/1 var(--disp);letter-spacing:.1em;margin-right:2px}
+.chip{min-height:40px;padding:8px 14px 6px;border-radius:999px;border:1.5px solid var(--navy);background:var(--skyl);font-weight:500;font-size:15px;line-height:1.2;cursor:pointer;max-width:100%;text-align:left}
+.chip span{overflow-wrap:anywhere}
+.chip:hover{background:#fff}
+.stagebar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 10px;flex-wrap:wrap}
+.stagebar p{margin:0;font-size:15px;color:var(--muted)}
+.breeze{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px;border:1.5px solid var(--navy);border-radius:999px;background:#fff;font-weight:600;font-size:14.5px;cursor:pointer}
+.breeze::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 3px rgba(42,157,244,.25)}
+.breeze[aria-pressed="true"]{background:var(--navy);color:#fff}
+.breeze[aria-pressed="true"]::before{background:var(--mutedd);box-shadow:none}
+.stage{--fw:80px;--kw:48px;position:relative;min-height:190px;padding:22px clamp(10px,3vw,36px) 6px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.2));border:2px solid rgba(10,35,66,.14)}
+.row{list-style:none;margin:0 0 16px;padding:0;display:flex;justify-content:center;position:relative}
+.row::before{content:"";position:absolute;left:-8px;right:-8px;top:7px;height:7px;border-radius:4px;background:var(--rope);box-shadow:0 1px 0 rgba(10,35,66,.3)}
+.cell{width:var(--fw);flex:none;position:relative}
+.cell.knot{width:var(--kw)}
+.knotart{position:absolute;left:50%;top:0;width:34px;margin-left:-17px}
+.flag{display:flex;flex-direction:column;align-items:center;width:100%;padding:17px 3px 4px;border:0;background:none;cursor:pointer;border-radius:8px}
+.hz{display:block;width:100%;position:relative}
+.hz::before,.hz::after{content:"";position:absolute;top:-10px;width:2px;height:11px;background:#8F7143}
+.hz::before{left:2px}.hz::after{right:2px}
+.cloth{display:block;position:relative;transform-origin:50% 0;animation:flut 3.4s ease-in-out infinite;animation-delay:calc(var(--i) * -.31s)}
+.cloth svg{width:100%;height:auto;filter:drop-shadow(0 3px 0 rgba(10,35,66,.16))}
+.cloth::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,transparent 15%,rgba(255,255,255,.3) 32%,transparent 48%,rgba(10,35,66,.16) 66%,transparent 84%);background-size:260% 100%;animation:sheen 3.4s linear infinite;animation-delay:calc(var(--i) * -.31s)}
+.cloth.sw::after{clip-path:polygon(0 0,100% 0,75% 50%,100% 100%,0 100%)}
+@keyframes flut{0%,100%{transform:rotate(-2deg) skewY(.8deg)}50%{transform:rotate(2deg) skewY(-.8deg)}}
+@keyframes sheen{from{background-position:100% 0}to{background-position:-160% 0}}
+.flag.up .hz{animation:hoist .55s cubic-bezier(.2,.9,.3,1.2) both;animation-delay:calc(var(--d,0) * 45ms)}
+@keyframes hoist{from{transform:translateY(44px) scaleY(.3);opacity:0}to{transform:none;opacity:1}}
+.lab{display:block;margin-top:8px;text-align:center;line-height:1}
+.lab b{display:inline-block;font:400 22px/1 var(--disp);font-weight:400;padding:3px 6px 1px;border-radius:4px}
+.lab small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;white-space:nowrap}
+.tight .lab small{display:none}
+.flag:hover .lab b{color:var(--redink)}
+.flag[aria-pressed="true"] .lab b{background:var(--navy);color:#fff}
+.flag[aria-pressed="true"] .hz{outline:2px dashed var(--red);outline-offset:5px}
+.empty{text-align:center;color:var(--muted);margin:24px 0 30px}
+.sigout{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:18px;align-items:stretch}
+.readout{margin:0;background:rgba(255,255,255,.75);border:1.5px solid rgba(10,35,66,.14);border-radius:16px;padding:16px 18px;font-size:16.5px;line-height:1.55}
+.readout strong{font:400 24px/1.1 var(--disp);letter-spacing:.07em;overflow-wrap:anywhere}
+.readout .sep{color:var(--redink);font-weight:600}
+.readout .skipn{display:block;margin-top:6px;font-size:14.5px;color:var(--muted)}
+.flagcard{display:flex;gap:18px;align-items:center;background:var(--navy);color:#fff;border-radius:16px;padding:18px 20px}
+.flagcard[hidden]{display:none}
+.fc-flag{width:104px;flex:none;filter:drop-shadow(3px 3px 0 rgba(0,0,0,.35))}
+.fc-name{font:400 30px/1 var(--disp);letter-spacing:.04em;margin:0 0 4px}
+.fc-name b{color:var(--yellow);font-weight:400;margin-right:6px}
+.fc-pat{color:var(--mutedd);font-size:15px;margin:0 0 8px;line-height:1.35}
+.fc-mean{margin:0;font-size:16px;line-height:1.45}
+.fc-mean span{display:block;font:400 14px/1.2 var(--disp);letter-spacing:.12em;color:var(--yellow);margin-bottom:2px}
+.fine{font-size:14px;color:var(--muted);margin:18px 0 0;max-width:70ch}
+/* briefing */
+.brief{padding:clamp(64px,8vw,112px) 0;background:var(--paper)}
+.brief h2{max-width:16ch;margin-bottom:36px}
+.bgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:24px;align-items:start}
+.card{background:#fff;border:2px solid var(--navy);border-radius:18px;padding:24px;box-shadow:6px 6px 0 var(--navy)}
+.card h3{font-size:28px;margin-bottom:16px}
+.steps ol{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:13px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;font-size:16px;line-height:1.45}
+.steps li::before{content:counter(s);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font:400 20px/1 var(--disp);padding-top:2px;background:#fff;border:3px dashed #A9874F;box-shadow:inset 0 0 0 3px #E6D3A6}
+.gauge{width:100%;max-width:250px;margin:0 auto 12px}
+.gauge text{font-family:var(--disp);fill:var(--navy)}
+.card p{font-size:16px;line-height:1.55}
+.tiny{font-size:13.5px;color:var(--muted);margin:0}
+.gen{font-size:14.5px;background:var(--skyl);border-radius:10px;padding:10px 12px;margin:14px 0 0}
+.lic-flags{display:flex;gap:6px;margin-bottom:14px}
+.lic-flags svg{width:44px}
+/* faq */
+.faq{padding:clamp(56px,7vw,100px) 0;background:var(--paper2)}
+.faqgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px 60px}
+.faq h2{font-size:clamp(42px,5vw,72px);margin-bottom:14px}
+.faq .intro p{color:var(--ink2)}
+.faq .intro a{font-weight:600;display:inline-block;padding:6px 0;text-underline-offset:3px}
+.qs details{border-top:2px solid var(--navy)}
+.qs details:last-child{border-bottom:2px solid var(--navy)}
+.qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 0;min-height:56px;font-weight:600;font-size:18px;line-height:1.3}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary::after{content:"+";flex:none;font:400 32px/1 var(--disp);color:var(--redink);transition:transform .2s}
+.qs details[open] summary::after{transform:rotate(45deg)}
+.qs details p{margin:0 0 18px;max-width:62ch;color:var(--ink2)}
+/* booking */
+.book{background:var(--navy);color:#fff;padding:clamp(64px,8vw,112px) 0}
+.bookgrid{display:grid;grid-template-columns:.78fr 1.4fr;gap:32px 60px;align-items:start}
+.bintro>p{color:var(--mutedd);font-size:18px}
+.how{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;counter-reset:h}
+.how li{counter-increment:h;display:flex;gap:12px;align-items:center;font-weight:500}
+.how li::before{content:counter(h);flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--navy);font:400 19px/1 var(--disp);padding-top:2px}
+.bform{background:var(--paper);color:var(--navy);border-radius:20px;padding:clamp(18px,3vw,32px);display:grid;gap:20px;box-shadow:8px 8px 0 var(--red)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.flab,.field>label{display:block;font:400 17px/1 var(--disp);letter-spacing:.12em;margin:0 0 9px;padding:0}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.tile{position:relative;cursor:pointer;display:block}
+.tile input,.chipr input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.tile span{display:flex;flex-direction:column;gap:4px;height:100%;min-height:66px;padding:11px 10px 9px;border:2px solid var(--navy);border-radius:10px;background:#fff;line-height:1.15}
+.tile b{font:400 19px/1 var(--disp);letter-spacing:.04em;font-weight:400}
+.tile small{font-size:13px;color:var(--muted)}
+.tile input:checked+span{background:var(--navy);color:#fff;box-shadow:3px 3px 0 var(--red)}
+.tile input:checked+span small{color:var(--mutedd)}
+.tile input:focus-visible+span,.chipr input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field input{width:100%;min-height:48px;border:2px solid var(--navy);border-radius:10px;padding:10px 12px 8px;font:500 17px/1.2 var(--body);color:var(--navy);background:#fff}
+.field input[aria-invalid="true"]{border-color:var(--red);box-shadow:0 0 0 3px rgba(214,40,40,.2)}
+.f-sess .opts{display:flex;flex-wrap:wrap;gap:8px}
+.chipr{position:relative;cursor:pointer}
+.chipr span{display:inline-flex;align-items:center;min-height:42px;padding:8px 13px 6px;border:2px solid var(--navy);border-radius:999px;background:#fff;font-size:15px;font-weight:500;line-height:1.2}
+.chipr input:checked+span{background:var(--yellow)}
+.stepper{display:inline-flex;align-items:center;border:2px solid var(--navy);border-radius:10px;overflow:hidden;background:#fff}
+.stepper button{width:48px;height:46px;border:0;background:#fff;font:400 28px/1 var(--disp);cursor:pointer}
+.stepper button:hover{background:var(--skyl)}
+.stepper output{min-width:46px;text-align:center;font:400 28px/1 var(--disp);padding-top:3px}
+.note{display:block;font-size:14px;color:var(--muted);margin-top:8px;line-height:1.4}
+.radios{display:flex;flex-wrap:wrap;gap:4px 16px}
+.radios label,.chk{display:flex;gap:9px;align-items:center;min-height:40px;cursor:pointer;font-size:15.5px}
+.radios input,.chk input{width:20px;height:20px;accent-color:var(--navy);margin:0;flex:none}
+.chk{align-items:flex-start;padding-top:8px;min-height:40px}
+.chk small{color:var(--muted);font-size:14px}
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 18px}
+.sum{background:#fff;border:2px dashed var(--navy);border-radius:14px;padding:16px 18px;display:grid;gap:10px}
+.sumk{font:400 16px/1 var(--disp);letter-spacing:.12em;color:var(--redink);margin:0}
+#sumLine{font-weight:600;margin:0;line-height:1.4}
+.welcome{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:14.5px;color:var(--muted)}
+.welcome[hidden]{display:none}
+.mini{display:flex;flex-wrap:wrap;gap:3px}
+.mini svg{width:24px;height:auto}
+.welcome b{font:400 17px/1 var(--disp);letter-spacing:.08em;color:var(--navy);overflow-wrap:anywhere}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:0;border-top:2px solid var(--navy);padding-top:10px}
+.total span{font:400 17px/1 var(--disp);letter-spacing:.12em}
+.total strong{font:400 42px/1 var(--disp);font-weight:400}
+.sum .btn{width:100%;margin-top:4px}
+.status{margin:0;font-weight:600;font-size:15.5px;line-height:1.45}
+.status.err{color:var(--redink)}
+.status.ok{color:var(--navy);background:var(--skyl);border-radius:10px;padding:10px 12px}
+/* footer */
+.foot{background:var(--deep);color:#DCE5F0}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px 48px;padding:56px 0 34px}
+.fname{font:400 clamp(40px,5vw,68px)/.9 var(--disp);color:#fff;margin:0 0 12px;overflow-wrap:anywhere}
+.foot h3{font-size:22px;letter-spacing:.12em;color:var(--yellow);margin-bottom:12px}
+.foot p{font-size:16px}
+.foot a{color:#fff;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:3px}
+.cl a{display:inline-flex;align-items:center;min-height:40px}
+.uw{display:flex;gap:10px;align-items:center;margin-top:20px}
+.uw svg{width:54px;flex:none}
+.uw p{margin:0 0 0 6px;font-size:15px;line-height:1.4}
+.fsmall{border-top:1px solid rgba(255,255,255,.15);padding:18px 0 30px;font-size:14px;color:var(--mutedd)}
+.fsmall p{margin:0}
+/* paused / calm */
+.off .bf,.off .cloth,.off .cloth::after,.off .yacht,.off .kayak,.off .cloud,.calm .bf,.calm .cloth,.calm .cloth::after,.calm .yacht,.calm .kayak,.calm .cloud{animation-play-state:paused}
+/* responsive */
+@media(max-width:1099px){
+.berths{grid-template-columns:1fr 1fr}
+.berth:nth-child(odd)::before{display:none}
+.bgrid{grid-template-columns:1fr 1fr}.steps{grid-column:1/-1}
+.incl{grid-template-columns:1fr}.incl .note{grid-column:auto}.incl ul{grid-template-columns:1fr 1fr}
+.tiles{grid-template-columns:repeat(3,1fr)}
+.extras{grid-template-columns:1fr}
+}
+@media(min-width:1100px){.berth:first-child::before{display:none}}
+@media(max-width:899px){
+.bar{flex-wrap:wrap;gap:6px 12px;min-height:0;padding-block:8px 0}
+.logo{font-size:22px;flex:1 1 0}
+.top nav{order:3;width:100%;justify-content:space-between;border-top:1px solid rgba(255,255,255,.15)}
+.top nav a{flex:1;text-align:center;padding:11px 4px;font-size:15px}
+.hgrid{grid-template-columns:1fr}
+.scene{justify-self:center;max-width:430px}
+.sighead,.sigout,.faqgrid,.bookgrid{grid-template-columns:1fr}
+.fgrid{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}
+}
+@media(max-width:599px){
+body{font-size:16px}
+.lg{display:none}
+.top .btn{padding:8px 14px 6px;font-size:18px;min-height:42px}
+.hero h1{font-size:clamp(46px,15.5vw,68px);margin-bottom:18px}
+.lede{font-size:17.5px}
+.kicker{font-size:16px;letter-spacing:.11em}
+.ctas{margin:22px 0 18px}
+.ctas .btn{flex:1 1 100%}
+.facts{grid-template-columns:1fr 1fr}
+.facts div:nth-child(odd){border-left:0;padding-left:0}
+.facts div:nth-child(n+3){border-top:1px dashed rgba(10,35,66,.4)}
+.scene{max-width:360px;margin-top:6px}
+.marina{padding:0 0 0 30px}
+.marina::before{left:0;right:auto;top:-10px;bottom:-10px;width:18px;height:auto;background:repeating-linear-gradient(0deg,#EAE0C9 0 22px,#C8B894 22px 24px)}
+.berths{grid-template-columns:1fr;gap:24px}
+.berth::before,.berth:nth-child(odd)::before{display:block;left:-14px;top:52px;width:14px;height:18px;border-radius:0 4px 4px 0;background:repeating-linear-gradient(90deg,#EAE0C9 0 9px,#C8B894 9px 11px)}
+.incl ul{grid-template-columns:1fr}
+.sigform{padding:16px 14px 14px;box-shadow:4px 4px 0 var(--navy)}
+.sigrow{gap:10px}
+.sigrow .btn{padding-inline:16px}
+.stage{padding-inline:8px;border-radius:16px}
+.flagcard{padding:16px;gap:14px}
+.fc-flag{width:78px}
+.bgrid{grid-template-columns:1fr}
+.card{padding:20px 18px;box-shadow:4px 4px 0 var(--navy)}
+.tiles{grid-template-columns:1fr 1fr}
+.frow{grid-template-columns:1fr}
+.bform{box-shadow:5px 5px 0 var(--red)}
+.fgrid{grid-template-columns:1fr;padding-top:44px}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.breeze{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<path id="olr" d="M.5.5h59v49H.5z" fill="none" stroke="#0A2342" stroke-opacity=".32"/>
+<path id="ols" d="M.5.5h58.6L44.4 25l14.7 24.5H.5z" fill="none" stroke="#0A2342" stroke-opacity=".32"/>
+<path id="water" d="M0 92h240v28H0z" fill="#A9D8F9"/>
+<symbol id="f-A" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h30v50H0z"/><path fill="#1B4FB0" d="M30 0h30L45 25l15 25H30z"/><use href="#ols"/></symbol>
+<symbol id="f-B" viewBox="0 0 60 50"><path fill="#D62828" d="M0 0h60L45 25l15 25H0z"/><use href="#ols"/></symbol>
+<symbol id="f-C" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path fill="#fff" d="M0 10h60v30H0z"/><path fill="#D62828" d="M0 20h60v10H0z"/><use href="#olr"/></symbol>
+<symbol id="f-D" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><path fill="#1B4FB0" d="M0 12.5h60v25H0z"/><use href="#olr"/></symbol>
+<symbol id="f-E" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v25H0z"/><path fill="#D62828" d="M0 25h60v25H0z"/><use href="#olr"/></symbol>
+<symbol id="f-F" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h60v50H0z"/><path fill="#D62828" d="M30 0l30 25-30 25L0 25z"/><use href="#olr"/></symbol>
+<symbol id="f-G" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><path fill="#1B4FB0" d="M10 0h10v50H10zM30 0h10v50H30zM50 0h10v50H50z"/><use href="#olr"/></symbol>
+<symbol id="f-H" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h30v50H0z"/><path fill="#D62828" d="M30 0h30v50H30z"/><use href="#olr"/></symbol>
+<symbol id="f-I" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><circle cx="30" cy="25" r="12.5" fill="#151515"/><use href="#olr"/></symbol>
+<symbol id="f-J" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path fill="#fff" d="M0 16.67h60v16.66H0z"/><use href="#olr"/></symbol>
+<symbol id="f-K" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h30v50H0z"/><path fill="#1B4FB0" d="M30 0h30v50H30z"/><use href="#olr"/></symbol>
+<symbol id="f-L" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><path fill="#151515" d="M30 0h30v25H30zM0 25h30v25H0z"/><use href="#olr"/></symbol>
+<symbol id="f-M" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path stroke="#fff" stroke-width="10" d="M0 0l60 50M60 0L0 50"/><use href="#olr"/></symbol>
+<symbol id="f-N" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path fill="#fff" d="M15 0h15v12.5H15zM45 0h15v12.5H45zM0 12.5h15V25H0zM30 12.5h15V25H30zM15 25h15v12.5H15zM45 25h15v12.5H45zM0 37.5h15V50H0zM30 37.5h15V50H30z"/><use href="#olr"/></symbol>
+<symbol id="f-O" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0v50h60z"/><path fill="#D62828" d="M0 0h60v50z"/><use href="#olr"/></symbol>
+<symbol id="f-P" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path fill="#fff" d="M20 16.67h20v16.66H20z"/><use href="#olr"/></symbol>
+<symbol id="f-Q" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><use href="#olr"/></symbol>
+<symbol id="f-R" viewBox="0 0 60 50"><path fill="#D62828" d="M0 0h60v50H0z"/><path fill="#FFC634" d="M25 0h10v50H25zM0 20h60v10H0z"/><use href="#olr"/></symbol>
+<symbol id="f-S" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h60v50H0z"/><path fill="#1B4FB0" d="M20 16.67h20v16.66H20z"/><use href="#olr"/></symbol>
+<symbol id="f-T" viewBox="0 0 60 50"><path fill="#D62828" d="M0 0h20v50H0z"/><path fill="#fff" d="M20 0h20v50H20z"/><path fill="#1B4FB0" d="M40 0h20v50H40z"/><use href="#olr"/></symbol>
+<symbol id="f-U" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h60v50H0z"/><path fill="#D62828" d="M0 0h30v25H0zM30 25h30v25H30z"/><use href="#olr"/></symbol>
+<symbol id="f-V" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h60v50H0z"/><path stroke="#D62828" stroke-width="10" d="M0 0l60 50M60 0L0 50"/><use href="#olr"/></symbol>
+<symbol id="f-W" viewBox="0 0 60 50"><path fill="#1B4FB0" d="M0 0h60v50H0z"/><path fill="#fff" d="M10 8.33h40v33.34H10z"/><path fill="#D62828" d="M20 16.67h20v16.66H20z"/><use href="#olr"/></symbol>
+<symbol id="f-X" viewBox="0 0 60 50"><path fill="#fff" d="M0 0h60v50H0z"/><path fill="#1B4FB0" d="M25 0h10v50H25zM0 20h60v10H0z"/><use href="#olr"/></symbol>
+<symbol id="f-Y" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60v50H0z"/><path stroke="#D62828" stroke-width="7.07" d="M25-10l-70 70M45-10l-70 70M65-10L-5 60M85-10L15 60M105-10L35 60"/><use href="#olr"/></symbol>
+<symbol id="f-Z" viewBox="0 0 60 50"><path fill="#FFC634" d="M0 0h60L30 25z"/><path fill="#1B4FB0" d="M60 0v50L30 25z"/><path fill="#D62828" d="M0 50h60L30 25z"/><path fill="#151515" d="M0 0v50l30-25z"/><use href="#olr"/></symbol>
+<symbol id="i-ppl" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.6-3.6 2.6-5.5 5.5-5.5s4.9 1.9 5.5 5.5"/><circle cx="16.8" cy="9" r="2.5"/><path d="M15.8 13.7c2.5-.2 4.2 1.4 4.8 4.4"/></symbol>
+<symbol id="i-fuel" viewBox="0 0 24 24"><path d="M5 7.5h9l4 4V21H5z"/><path d="M8 4h5l1 3.5"/><path d="M8.5 12.5l6 6M14.5 12.5l-6 6"/></symbol>
+<symbol id="i-lic" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><circle cx="8.5" cy="10.5" r="2"/><path d="M5.8 15.5c.6-1.3 1.6-2 2.7-2s2.1.7 2.7 2M14 10h4M14 13.5h4"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3M3 13h15a3 3 0 1 1-3 3M3 17h6"/></symbol>
+<symbol id="i-pad" viewBox="0 0 24 24"><path d="M5 19L19 5"/><ellipse cx="18.3" cy="5.7" rx="2.2" ry="4.2" transform="rotate(45 18.3 5.7)"/><ellipse cx="5.7" cy="18.3" rx="2.2" ry="4.2" transform="rotate(45 5.7 18.3)"/></symbol>
+</defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#main">
+      <svg class="burgee" viewBox="0 0 38 32" aria-hidden="true"><path d="M4 2v28" stroke="#FCBF49" stroke-width="3" stroke-linecap="round"/><path d="M6 3l30 9.5L6 22z" fill="#D62828"/><path d="M6 12.5h30L6 22z" fill="#fff"/><circle cx="13.5" cy="12.5" r="3" fill="#0A2342"/></svg>
+      <span data-brand>Salt &amp; Sail Boat Hire</span>
+    </a>
+    <nav aria-label="Sections"><a href="#fleet">Fleet</a><a href="#flags">Flags</a><a href="#briefing">Briefing</a><a href="#faq">FAQ</a></nav>
+    <a class="btn btn-y" href="#book">Book<span class="lg">a boat</span></a>
+  </div>
+  <div class="rope" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <svg class="rose" viewBox="0 0 200 200" aria-hidden="true"><g fill="#0A2342"><circle cx="100" cy="100" r="96" fill="none" stroke="#0A2342" stroke-width="2"/><circle cx="100" cy="100" r="82" fill="none" stroke="#0A2342" stroke-width="1.5" stroke-dasharray="2 5"/><path d="M100 8l9 83 83 9-83 9-9 83-9-83-83-9 83-9z"/><path d="M100 36l6 58 58 6-58 6-6 58-6-58-58-6 58-6z" transform="rotate(45 100 100)" opacity=".55"/></g></svg>
+  <div class="bunting" id="bunting" aria-hidden="true">
+    <svg><path class="r1" fill="none" stroke="#9C7C49" stroke-width="5" stroke-linecap="round"/><path class="r2" fill="none" stroke="#E6D2A4" stroke-width="3" stroke-dasharray="3 4" stroke-linecap="round"/></svg>
+    <ul></ul>
+  </div>
+  <div class="wrap hgrid">
+    <div class="hcopy">
+      <p class="kicker">Boat hire · Pittwater, NSW</p>
+      <h1 id="h1" data-brand>Salt &amp; Sail Boat Hire</h1>
+      <p class="lede">Runabouts, a pontoon party boat, one small yacht and a rack of sea kayaks — by the half or full day on the sheltered side of Pittwater. We brief you on the jetty; you find the cove.</p>
+      <div class="ctas"><a class="btn btn-n" href="#fleet">See the fleet</a><a class="btn btn-o" href="#flags">Spell your name in flags</a></div>
+      <p class="flaghint"><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-K"/></svg><span>The flags up top spell our name in the International Code of Signals. <a href="#flags">Try yours</a></span></p>
+      <dl class="facts">
+        <div><dt>Half day</dt><dd>4 hours</dd></div>
+        <div><dt>Full day</dt><dd>8 hours</dd></div>
+        <div><dt>Lifejackets</dt><dd>Every size, kids too</dd></div>
+        <div><dt>Briefing</dt><dd>15 min, included</dd></div>
+      </dl>
+    </div>
+    <figure class="scene">
+      <svg viewBox="0 0 500 600" role="img" aria-labelledby="artT">
+        <title id="artT">Illustration: a small yacht with a red jib and a kayaker on calm water, a lighthouse on the headland and a striped setting sun.</title>
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="600" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2A9DF4"/><stop offset=".6" stop-color="#9FD4FA"/><stop offset=".67" stop-color="#D2ECFD"/></linearGradient>
+          <linearGradient id="seaG" x1="0" y1="396" x2="0" y2="600" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1D5592"/><stop offset="1" stop-color="#0A2342"/></linearGradient>
+          <clipPath id="archC"><path d="M22 588V252a228 228 0 0 1 456 0v336z"/></clipPath>
+          <clipPath id="hullY"><path d="M118 452L342 446Q332 474 302 486L152 488Q130 484 118 452Z"/></clipPath>
+        </defs>
+        <g clip-path="url(#archC)">
+          <rect width="500" height="600" fill="url(#skyG)"/>
+          <circle cx="336" cy="372" r="92" fill="#FCBF49"/>
+          <g fill="url(#skyG)"><rect x="236" y="328" width="210" height="4"/><rect x="236" y="344" width="210" height="6"/><rect x="236" y="362" width="210" height="8"/><rect x="236" y="382" width="210" height="10"/></g>
+          <g class="cloud" fill="#fff"><circle cx="118" cy="170" r="22"/><circle cx="146" cy="157" r="30"/><circle cx="178" cy="171" r="19"/><rect x="92" y="170" width="106" height="22" rx="11"/></g>
+          <g class="cloud" fill="#fff" opacity=".85" style="animation-delay:-7s"><circle cx="370" cy="120" r="15"/><circle cx="391" cy="111" r="20"/><circle cx="413" cy="121" r="13"/><rect x="352" y="119" width="76" height="16" rx="8"/></g>
+          <g fill="none" stroke="#0A2342" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M250 222q7-8 14 0q7-8 14 0"/><path d="M292 196q5-6 10 0q5-6 10 0"/></g>
+          <path d="M236 398Q300 372 370 376Q430 380 500 364V398Z" fill="#5B97CF"/>
+          <path d="M0 398V320Q30 297 72 295Q118 293 150 318Q188 346 250 360Q288 368 302 398Z" fill="#3E77B2"/>
+          <path d="M81 254L150 236V270Z" fill="#FFF6D8" opacity=".5"/>
+          <path d="M66 297L70 258H80L84 297Z" fill="#fff"/>
+          <path d="M68.3 271H81.7L82.5 281H67.5Z" fill="#D62828"/>
+          <rect x="69" y="248" width="12" height="10" fill="#0A2342"/>
+          <path d="M67 248L75 240L83 248Z" fill="#D62828"/>
+          <path d="M338 398Q384 352 440 346Q480 343 500 352V398Z" fill="#2A5E98"/>
+          <rect y="396" width="500" height="204" fill="url(#seaG)"/>
+          <g fill="#FCBF49"><rect x="296" y="408" width="80" height="4" rx="2"/><rect x="306" y="420" width="60" height="4" rx="2" opacity=".85"/><rect x="316" y="432" width="40" height="3" rx="1.5" opacity=".7"/><rect x="323" y="443" width="26" height="3" rx="1.5" opacity=".55"/></g>
+          <g fill="none" stroke="#2A9DF4" stroke-width="3" stroke-linecap="round" opacity=".6"><path d="M40 430q9-6 18 0t18 0"/><path d="M392 470q9-6 18 0t18 0t18 0"/><path d="M60 566q9-6 18 0t18 0t18 0"/><path d="M322 560q9-6 18 0t18 0"/><path d="M212 530q9-6 18 0t18 0"/></g>
+          <g><circle cx="424" cy="514" r="11" fill="#D62828"/><path d="M413 514h22" stroke="#fff" stroke-width="3"/><path d="M424 503v-9" stroke="#FCBF49" stroke-width="3" stroke-linecap="round"/></g>
+          <g class="yacht">
+            <path d="M228 154L120 452M228 154L340 447" stroke="#0A2342" stroke-width="1.6"/>
+            <path d="M222 164V424H142Q160 280 222 164Z" fill="#fff"/>
+            <path d="M196 240H221M176 300H221M160 360H221" stroke="#0A2342" stroke-width="1.5" opacity=".3"/>
+            <path d="M236 176L330 438L240 428Q248 300 236 176Z" fill="#D62828"/>
+            <path d="M228 152V450" stroke="#0A2342" stroke-width="5" stroke-linecap="round"/>
+            <path d="M138 427H226" stroke="#0A2342" stroke-width="5" stroke-linecap="round"/>
+            <path d="M228 150l22 6-22 6z" fill="#FCBF49"/>
+            <g clip-path="url(#hullY)"><rect x="100" y="430" width="260" height="70" fill="#fff"/><rect x="100" y="471" width="260" height="30" fill="#D62828"/><rect x="100" y="465" width="260" height="6" fill="#0A2342"/></g>
+            <path d="M118 452L342 446Q332 474 302 486L152 488Q130 484 118 452Z" fill="none" stroke="#0A2342" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M172 450L184 434H254L266 450Z" fill="#fff" stroke="#0A2342" stroke-width="3" stroke-linejoin="round"/>
+            <g fill="#0A2342"><circle cx="202" cy="442" r="3.4"/><circle cx="219" cy="442" r="3.4"/><circle cx="236" cy="442" r="3.4"/></g>
+          </g>
+          <path d="M150 496h160M176 506h108" stroke="#2A9DF4" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+          <g transform="translate(-16 -24)"><g class="kayak">
+            <path d="M44 530Q104 516 176 528Q108 543 44 530Z" fill="#FCBF49" stroke="#0A2342" stroke-width="2.5"/>
+            <path d="M100 527q2-22 11-22t11 22z" fill="#F6F0E3"/>
+            <circle cx="111" cy="497" r="7.5" fill="#F6F0E3"/>
+            <path d="M101 494q10-11 20 0z" fill="#D62828"/>
+            <path d="M76 484L148 522" stroke="#F6F0E3" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="74" cy="483" rx="9" ry="3.8" transform="rotate(28 74 483)" fill="#D62828"/>
+            <ellipse cx="150" cy="523" rx="9" ry="3.8" transform="rotate(28 150 523)" fill="#D62828"/>
+          </g></g>
+        </g>
+        <path d="M22 588V252a228 228 0 0 1 456 0v336z" fill="none" stroke="#8F7143" stroke-width="16" stroke-linejoin="round"/>
+        <path d="M22 588V252a228 228 0 0 1 456 0v336z" fill="none" stroke="#DCC593" stroke-width="11" stroke-linejoin="round"/>
+        <path d="M22 588V252a228 228 0 0 1 456 0v336z" fill="none" stroke="#A9874F" stroke-width="11" stroke-dasharray="2.5 5" stroke-linejoin="round"/>
+      </svg>
+      <figcaption class="plaque">Calm water · inside Pittwater</figcaption>
+    </figure>
+  </div>
+</section>
+<div class="rope" aria-hidden="true"></div>
+
+<section class="fleet" id="fleet" aria-labelledby="fleetH">
+  <div class="wrap">
+    <div class="shead">
+      <p class="kicker k-y">The marina</p>
+      <h2 id="fleetH">Four berths, four ways onto the water</h2>
+      <p>Every boat is washed down, fuelled and checked the morning you take it. Hire by the half day (4 hours) or the full day (8 hours).</p>
+    </div>
+    <div class="marina">
+      <ul class="berths">
+        <li class="berth"><article>
+          <div class="bimg"><span class="plate">Berth 01</span>
+            <svg viewBox="0 0 240 120" role="img" aria-label="Side view of Bluebottle, a blue and white runabout with an outboard motor">
+              <defs><clipPath id="hc1"><path d="M36 64H198L228 56Q222 84 192 96H54Q40 94 36 80Z"/></clipPath></defs>
+              <use href="#water"/>
+              <rect x="20" y="50" width="18" height="20" rx="6" fill="#0A2342"/><rect x="25.5" y="68" width="7" height="28" fill="#0A2342"/><path d="M22 96h14l-2 5H24z" fill="#0A2342"/>
+              <g clip-path="url(#hc1)"><rect width="240" height="120" fill="#fff"/><rect y="80" width="240" height="40" fill="#2A9DF4"/><rect y="75" width="240" height="5" fill="#0A2342"/></g>
+              <path d="M36 64H198L228 56Q222 84 192 96H54Q40 94 36 80Z" fill="none" stroke="#0A2342" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="66" y="54" width="30" height="10" rx="3" fill="#FCBF49" stroke="#0A2342" stroke-width="2"/>
+              <path d="M112 64V51q0-4 4-4h24l10 17z" fill="#0A2342"/>
+              <path d="M141 47l15-12 5 8-10 19z" fill="#A9D8F9" stroke="#0A2342" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M160 59l56-6" stroke="#0A2342" stroke-width="2" stroke-linecap="round"/>
+              <path d="M0 95h240v25H0z" fill="#A9D8F9" opacity=".55"/><path d="M0 92q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="bbody">
+            <h3>Bluebottle</h3>
+            <p class="btype">5.3 m runabout · 60 hp outboard</p>
+            <ul class="specs">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-ppl"/></svg>Up to 5 people</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg>Leaves full · pay for what you use</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-lic"/></svg>Licence? We'll check with you</li>
+            </ul>
+            <p class="good">Cove-hopping, a morning fish and the kiosk run for hot chips.</p>
+            <dl class="price"><div><dt>Half day</dt><dd>$260</dd></div><div><dt>Full day</dt><dd>$390</dd></div></dl>
+            <button class="btn btn-n pick" type="button" data-boat="bluebottle">Book Bluebottle</button>
+          </div>
+        </article></li>
+        <li class="berth"><article>
+          <div class="bimg"><span class="plate">Berth 02</span>
+            <svg viewBox="0 0 240 120" role="img" aria-label="Side view of Long Lunch, a pontoon boat with a red canopy and railings">
+              <use href="#water"/>
+              <rect x="10" y="56" width="16" height="18" rx="5" fill="#0A2342"/><rect x="15" y="72" width="6" height="24" fill="#0A2342"/>
+              <rect x="30" y="80" width="180" height="16" rx="8" fill="#E8EDF3" stroke="#0A2342" stroke-width="2.5"/>
+              <path d="M204 80h12q14 0 14 8t-14 8h-12z" fill="#E8EDF3" stroke="#0A2342" stroke-width="2.5"/>
+              <rect x="24" y="70" width="196" height="10" rx="2" fill="#0A2342"/>
+              <path d="M52 50V24M168 50V24" stroke="#0A2342" stroke-width="2.5"/>
+              <rect x="34" y="48" width="150" height="22" fill="#fff" stroke="#0A2342" stroke-width="2.5"/>
+              <path d="M34 57h150" stroke="#D62828" stroke-width="4"/>
+              <path d="M58 48v22M82 48v22M106 48v22M130 48v22M154 48v22" stroke="#0A2342" stroke-width="1.2" opacity=".35"/>
+              <path d="M188 58h22l6 12h-28z" fill="#FCBF49" stroke="#0A2342" stroke-width="2"/>
+              <path d="M40 22Q110 7 180 22v6H40z" fill="#D62828"/>
+              <path d="M40 28q7 7 14 0t14 0t14 0t14 0t14 0t14 0t14 0t14 0t14 0t14 0" fill="#D62828"/>
+              <path d="M40 27.5h140" stroke="#fff" stroke-width="2"/>
+              <path d="M0 95h240v25H0z" fill="#A9D8F9" opacity=".55"/><path d="M0 92q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="bbody">
+            <h3>Long Lunch</h3>
+            <p class="btype">7.2 m pontoon party boat · 50 hp</p>
+            <ul class="specs">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-ppl"/></svg>Up to 10 people</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-fuel"/></svg>Leaves full · pay for what you use</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-lic"/></svg>Licence? We'll check with you</li>
+            </ul>
+            <p class="good">Birthdays and family lunches: bimini shade, a BBQ plate, swim ladder and two eskies.</p>
+            <dl class="price"><div><dt>Half day</dt><dd>$440</dd></div><div><dt>Full day</dt><dd>$690</dd></div></dl>
+            <button class="btn btn-n pick" type="button" data-boat="longlunch">Book Long Lunch</button>
+          </div>
+        </article></li>
+        <li class="berth"><article>
+          <div class="bimg"><span class="plate">Berth 03</span>
+            <svg viewBox="0 0 240 120" role="img" aria-label="Side view of Shearwater, a small sailing yacht with a white mainsail and yellow jib">
+              <defs><clipPath id="hc3"><path d="M40 76H206L224 70Q214 90 184 96H64Q46 92 40 76Z"/></clipPath></defs>
+              <use href="#water"/>
+              <path d="M120 94h18l-4 20h-10z" fill="#0A2342" opacity=".35"/>
+              <path d="M132 8L222 72" stroke="#0A2342" stroke-width="1.2"/>
+              <path d="M129 13V64H70Q96 40 129 13Z" fill="#fff" stroke="#0A2342" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M137 15L210 67L142 68Q150 40 137 15Z" fill="#FCBF49" stroke="#0A2342" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M132 76V8" stroke="#0A2342" stroke-width="3" stroke-linecap="round"/>
+              <path d="M68 66h64" stroke="#0A2342" stroke-width="3" stroke-linecap="round"/>
+              <path d="M132 8l15 4-15 4z" fill="#D62828"/>
+              <g clip-path="url(#hc3)"><rect width="240" height="120" fill="#0A2342"/><rect y="86" width="240" height="4" fill="#fff"/><rect y="90" width="240" height="30" fill="#D62828"/></g>
+              <path d="M84 76l8-10h48l8 10z" fill="#fff" stroke="#0A2342" stroke-width="2.5" stroke-linejoin="round"/>
+              <g fill="#0A2342"><circle cx="104" cy="71" r="2.4"/><circle cx="116" cy="71" r="2.4"/><circle cx="128" cy="71" r="2.4"/></g>
+              <path d="M0 95h240v25H0z" fill="#A9D8F9" opacity=".55"/><path d="M0 92q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="bbody">
+            <h3>Shearwater</h3>
+            <p class="btype">6 m sailing yacht · 5 hp auxiliary</p>
+            <ul class="specs">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-ppl"/></svg>Up to 4 people</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-wind"/></svg>Wind first, a splash of petrol</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-lic"/></svg>Some sailing experience, or add a skipper</li>
+            </ul>
+            <p class="good">Learning the ropes, a sunset sail, quiet bays with the motor off.</p>
+            <dl class="price"><div><dt>Half day</dt><dd>$290</dd></div><div><dt>Full day</dt><dd>$460</dd></div></dl>
+            <button class="btn btn-n pick" type="button" data-boat="shearwater">Book Shearwater</button>
+          </div>
+        </article></li>
+        <li class="berth"><article>
+          <div class="bimg"><span class="plate">Berth 04</span>
+            <svg viewBox="0 0 240 120" role="img" aria-label="Two paddlers in a yellow and a red sea kayak">
+              <use href="#water"/>
+              <path d="M30 80Q110 64 206 78Q116 92 30 80Z" fill="#FCBF49" stroke="#0A2342" stroke-width="2.5"/>
+              <path d="M102 77q2-20 10-20t10 20z" fill="#0A2342"/><circle cx="112" cy="51" r="6.5" fill="#fff" stroke="#0A2342" stroke-width="2"/>
+              <path d="M84 42L144 70" stroke="#0A2342" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="82" cy="41" rx="8" ry="3.4" transform="rotate(25 82 41)" fill="#2A9DF4" stroke="#0A2342" stroke-width="2"/>
+              <ellipse cx="146" cy="71" rx="8" ry="3.4" transform="rotate(25 146 71)" fill="#2A9DF4" stroke="#0A2342" stroke-width="2"/>
+              <path d="M46 94Q130 78 228 92Q134 106 46 94Z" fill="#D62828" stroke="#0A2342" stroke-width="2.5"/>
+              <path d="M132 91q2-20 10-20t10 20z" fill="#0A2342"/><circle cx="142" cy="65" r="6.5" fill="#fff" stroke="#0A2342" stroke-width="2"/>
+              <path d="M114 82L174 54" stroke="#0A2342" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="112" cy="83" rx="8" ry="3.4" transform="rotate(-25 112 83)" fill="#FCBF49" stroke="#0A2342" stroke-width="2"/>
+              <ellipse cx="176" cy="53" rx="8" ry="3.4" transform="rotate(-25 176 53)" fill="#FCBF49" stroke="#0A2342" stroke-width="2"/>
+              <path d="M0 97h240v23H0z" fill="#A9D8F9" opacity=".55"/><path d="M0 92q10-4 20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0t20 0" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="bbody">
+            <h3>The kayak rack</h3>
+            <p class="btype">Sit-on-top sea kayaks · single or double</p>
+            <ul class="specs">
+              <li><svg class="ic" aria-hidden="true"><use href="#i-ppl"/></svg>1 or 2 per kayak</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-pad"/></svg>No fuel — your own steam</li>
+              <li><svg class="ic" aria-hidden="true"><use href="#i-lic"/></svg>Dry bag and a whistle each</li>
+            </ul>
+            <p class="good">Mangrove creeks, glassy early water and a swim off a quiet beach.</p>
+            <dl class="price"><div><dt>Half day</dt><dd>$45 <small>single</small></dd></div><div><dt>Full day</dt><dd>$70 <small>single</small></dd></div></dl>
+            <p class="tiny" style="margin:-6px 0 14px">Double kayak $70 half day · $105 full day</p>
+            <button class="btn btn-n pick" type="button" data-boat="kayak2">Book a kayak</button>
+          </div>
+        </article></li>
+      </ul>
+    </div>
+    <div class="incl">
+      <h3>Every hire comes with</h3>
+      <ul>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>Lifejackets for everyone — kids' sizes from 12 kg</li>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>A 15-minute jetty briefing and a practice loop</li>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>A waterproof map: coves, 4-knot zones and the shallows</li>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>Anchor, bailer, torch and a first-aid kit on board</li>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>An esky and a bag of ice (Long Lunch gets two)</li>
+        <li><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-C"/></svg>Our jetty number on the dash — we'll come out if you need us</li>
+      </ul>
+      <p class="note">Each bullet is the Charlie flag — “yes” in the Code of Signals. Sample prices in AUD, GST included.</p>
+    </div>
+  </div>
+</section>
+
+<section class="signal" id="flags" aria-labelledby="sigH">
+  <div class="sky-deco" aria-hidden="true">
+    <svg viewBox="0 0 120 40" style="width:170px;right:6%;top:64px"><circle cx="34" cy="26" r="14"/><circle cx="58" cy="18" r="18"/><circle cx="84" cy="27" r="12"/><rect x="18" y="26" width="84" height="14" rx="7"/></svg>
+    <svg viewBox="0 0 120 40" style="width:120px;left:3%;top:44%"><circle cx="34" cy="26" r="14"/><circle cx="58" cy="18" r="18"/><circle cx="84" cy="27" r="12"/><rect x="18" y="26" width="84" height="14" rx="7"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="sighead">
+      <div>
+        <p class="kicker">The flag locker</p>
+        <h2 id="sigH">Run your name up the halyard</h2>
+      </div>
+      <p>Every letter from A to Z has its own flag in the International Code of Signals. Type a name — yours, the birthday crew's, or the boat you'd love to own — and we'll hoist it. Tap any flag to see what it says flown on its own.</p>
+    </div>
+    <form class="sigform" id="sigForm" autocomplete="off">
+      <label for="sigIn">Name or boat name</label>
+      <div class="sigrow">
+        <input id="sigIn" name="signal" maxlength="32" value="Salt &amp; Sail" spellcheck="false" autocapitalize="characters" aria-describedby="sigHint">
+        <button class="btn btn-r" type="submit">Hoist</button>
+      </div>
+      <p class="hint" id="sigHint">Letters A–Z become flags. A space ties a knot in the line; numbers and symbols are skipped.</p>
+      <div class="chips" role="group" aria-label="Try one of these"><span>Try</span>
+        <button type="button" class="chip"><span data-brand>Salt &amp; Sail Boat Hire</span></button>
+        <button type="button" class="chip">Pittwater</button>
+        <button type="button" class="chip">Gone fishing</button>
+        <button type="button" class="chip">Birthday crew</button>
+      </div>
+    </form>
+    <div class="stagebar">
+      <p>Tap or tab to a flag to read its meaning.</p>
+      <button class="breeze" id="breeze" type="button" aria-pressed="false">Pause the breeze</button>
+    </div>
+    <div class="stage" id="stage" role="group" aria-label="Your hoist"></div>
+    <div class="sigout">
+      <p class="readout" id="readout" aria-live="polite"></p>
+      <div class="flagcard" id="flagcard" aria-live="polite">
+        <svg class="fc-flag" viewBox="0 0 60 50" aria-hidden="true"><use id="fcUse" href="#f-S"/></svg>
+        <div>
+          <p class="fc-name"><b id="fcL">S</b><span id="fcW">Sierra</span></p>
+          <p class="fc-pat" id="fcP">White with a blue centre square</p>
+          <p class="fc-mean"><span>Flown on its own</span><q id="fcM">I am operating astern propulsion.</q></p>
+        </div>
+      </div>
+    </div>
+    <p class="fine">Flags follow the International Code of Signals patterns, drawn in our own palette. The Code gives numbers their own pennants, so digits and symbols are left out here.</p>
+  </div>
+</section>
+<div class="rope" aria-hidden="true"></div>
+
+<section class="brief" id="briefing" aria-labelledby="briefH">
+  <div class="wrap">
+    <p class="kicker">Before you cast off</p>
+    <h2 id="briefH">Briefing, weather &amp; licences</h2>
+    <div class="bgrid">
+      <article class="card steps">
+        <h3>On the jetty · 15 minutes, every hire</h3>
+        <ol>
+          <li>Lifejackets on and fitted — we size the kids first.</li>
+          <li>Start, steer, stop: a practice loop past the moorings with us aboard.</li>
+          <li>The map: 4-knot zones, swimming spots and where it gets shallow at low tide.</li>
+          <li>How to anchor, and how to pick up a public mooring.</li>
+          <li>The sky and the fuel gauge — what to watch, and when to head home.</li>
+          <li>Something feels off? Our number is on the dash. Call and we'll come out.</li>
+        </ol>
+      </article>
+      <article class="card weather">
+        <h3>The weather call</h3>
+        <svg class="gauge" viewBox="0 -12 200 136" role="img" aria-labelledby="gT">
+          <title id="gT">Example wind dial: 14 knots forecast, inside the go zone. Above 20 knots is the no-go zone.</title>
+          <path d="M20 100A80 80 0 0 1 75.28 23.92" fill="none" stroke="#2A9DF4" stroke-width="16"/>
+          <path d="M75.28 23.92A80 80 0 0 1 140 30.72" fill="none" stroke="#FCBF49" stroke-width="16"/>
+          <path d="M140 30.72A80 80 0 0 1 180 100" fill="none" stroke="#D62828" stroke-width="16"/>
+          <path d="M100 100L93.2 36" stroke="#0A2342" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="8" fill="#0A2342"/>
+          <text x="20" y="122" font-size="14" text-anchor="middle">0</text><text x="46" y="10" font-size="14" text-anchor="middle">10</text><text x="154" y="10" font-size="14" text-anchor="middle">20</text><text x="180" y="122" font-size="14" text-anchor="middle">30 kn</text>
+        </svg>
+        <p>We read the marine forecast for Pittwater at 6 am. Winds over 20 knots or a storm warning, and we call it: pick a new date or take a full refund. If it turns while you're out, we'll ring you in and refund the unused hours.</p>
+        <p class="tiny">Sample policy for a fictional business. The dial shows an example day.</p>
+      </article>
+      <article class="card licence">
+        <h3>Do I need a boat licence?</h3>
+        <div class="lic-flags" aria-hidden="true"><svg viewBox="0 0 60 50"><use href="#f-K"/></svg><svg viewBox="0 0 60 50"><use href="#f-C"/></svg></div>
+        <p>It depends on the boat, how fast it goes and how you'll use it. Requirements vary — we'll check with you when you book, before anyone pays.</p>
+        <p>Hold a boat licence? Bring it on the day. Don't have one? Tell us — some of the fleet may still suit, or add a skipper to any engine-powered boat.</p>
+        <p class="gen">General information only — not legal advice.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faqH">
+  <div class="wrap faqgrid">
+    <div class="intro">
+      <p class="kicker">Questions from the jetty</p>
+      <h2 id="faqH">Good to know</h2>
+      <p>Still wondering? Ring the jetty on <a href="tel:0255507391">(02) 5550 7391</a> — we pick up between hires.</p>
+    </div>
+    <div class="qs">
+      <details><summary>Can we bring the dog?</summary><p>On Bluebottle and Long Lunch, yes. Bring a towel and a water bowl — we lend dog lifejackets for pups up to 15 kg.</p></details>
+      <details><summary>Are little kids okay on board?</summary><p>Absolutely. We fit lifejackets from 12 kg up, and little ones wear theirs the whole time. House rule.</p></details>
+      <details><summary>Can we bring food and drinks?</summary><p>BYO is welcome and Long Lunch has a BBQ plate. Whoever's driving stays sober — same as on the road.</p></details>
+      <details><summary>What if we're back late?</summary><p>Give the jetty a ring. Late returns are charged in 30-minute blocks at the sample rate, and we'd rather you came in slow than rushed.</p></details>
+      <details><summary>We've never driven a boat. Is that okay?</summary><p>That's most of our guests. The practice loop is part of every briefing, and the kayaks and Long Lunch are the gentlest start.</p></details>
+      <details><summary>Where do we meet you?</summary><p>At our jetty in Bayview, NSW. Directions and parking notes come with your confirmation.</p></details>
+    </div>
+  </div>
+</section>
+<div class="rope" aria-hidden="true"></div>
+
+<section class="book" id="book" aria-labelledby="bookH">
+  <div class="wrap bookgrid">
+    <div class="bintro">
+      <p class="kicker k-y">Book a boat</p>
+      <h2 id="bookH">Pick a boat, a day and a session</h2>
+      <p>Nothing is charged now. We check the weather and the licence question first, then send payment details.</p>
+      <ol class="how"><li>Send your request</li><li>We ring to check numbers and licences</li><li>Meet us on the jetty 15 minutes early</li></ol>
+    </div>
+    <form class="bform" id="bookForm" novalidate>
+      <fieldset>
+        <legend>Boat</legend>
+        <div class="tiles">
+          <label class="tile"><input type="radio" name="boat" value="bluebottle" checked><span><b>Bluebottle</b><small>Runabout · up to 5</small></span></label>
+          <label class="tile"><input type="radio" name="boat" value="longlunch"><span><b>Long Lunch</b><small>Pontoon · up to 10</small></span></label>
+          <label class="tile"><input type="radio" name="boat" value="shearwater"><span><b>Shearwater</b><small>Yacht · up to 4</small></span></label>
+          <label class="tile"><input type="radio" name="boat" value="kayak1"><span><b>Single kayak</b><small>1 paddler</small></span></label>
+          <label class="tile"><input type="radio" name="boat" value="kayak2"><span><b>Double kayak</b><small>Up to 2</small></span></label>
+        </div>
+      </fieldset>
+      <div class="frow">
+        <div class="field"><label for="bDate">Date</label><input type="date" id="bDate" name="date" required></div>
+        <div class="field"><span class="flab" id="pplL">People</span>
+          <div class="stepper" role="group" aria-labelledby="pplL"><button type="button" id="pMinus" aria-label="One fewer person">−</button><output id="ppl" aria-live="polite">2</output><button type="button" id="pPlus" aria-label="One more person">+</button></div>
+          <span class="note" id="capNote" aria-live="polite"></span>
+        </div>
+      </div>
+      <fieldset class="f-sess">
+        <legend>Session</legend>
+        <div class="opts">
+          <label class="chipr"><input type="radio" name="sess" value="am" checked><span>Half day · 8 am – 12 pm</span></label>
+          <label class="chipr"><input type="radio" name="sess" value="pm"><span>Half day · 1 pm – 5 pm</span></label>
+          <label class="chipr"><input type="radio" name="sess" value="full"><span>Full day · 8:30 am – 4:30 pm</span></label>
+        </div>
+      </fieldset>
+      <fieldset id="licBox">
+        <legend>Boat licence</legend>
+        <div class="radios">
+          <label><input type="radio" name="lic" value="yes">I hold one</label>
+          <label><input type="radio" name="lic" value="no">I don't</label>
+          <label><input type="radio" name="lic" value="unsure" checked>Not sure</label>
+        </div>
+        <span class="note">Requirements vary — we'll check with you before anything is confirmed.</span>
+      </fieldset>
+      <fieldset>
+        <legend>Extras</legend>
+        <div class="extras">
+          <label class="chk"><input type="checkbox" id="xSkip"><span>Add a skipper<br><small>+$160 half · +$280 full</small></span></label>
+          <label class="chk"><input type="checkbox" id="xFish"><span>Fishing kit<br><small>Rods, tackle, bait board · +$30</small></span></label>
+          <label class="chk"><input type="checkbox" id="xFly" checked><span>Fly our name at the jetty<br><small>Free · a welcome hoist when you arrive</small></span></label>
+        </div>
+      </fieldset>
+      <div class="frow">
+        <div class="field"><label for="bName">Your name</label><input id="bName" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="bContact">Mobile or email</label><input id="bContact" name="contact" autocomplete="email" required placeholder="0491 570 156 or you@example.com"></div>
+      </div>
+      <div class="sum">
+        <p class="sumk">Your request</p>
+        <p id="sumLine">Bluebottle</p>
+        <div class="welcome" id="welcome"><span>Welcome hoist:</span><span class="mini" id="mini" aria-hidden="true"></span><b id="miniTxt"></b></div>
+        <p class="total"><span>Sample total</span><strong id="sumTotal">$260</strong></p>
+        <p class="tiny">Sample prices in AUD. Powered boats: fuel is charged for what you use.</p>
+        <button class="btn btn-y" type="submit">Request this booking</button>
+        <p class="status" id="bStatus" role="status"></p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="rope" aria-hidden="true"></div>
+  <div class="wrap fgrid">
+    <div class="fbrand">
+      <p class="fname" data-brand>Salt &amp; Sail Boat Hire</p>
+      <p>Self-drive boats on the sheltered side of Pittwater, NSW.</p>
+      <div class="uw"><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-U"/></svg><svg viewBox="0 0 60 50" aria-hidden="true"><use href="#f-W"/></svg><p><b>U + W</b> — “I wish you a pleasant voyage.” The sailor's sign-off, in flags.</p></div>
+    </div>
+    <div>
+      <h3>The jetty</h3>
+      <p>Bayview, NSW<br>Open daily · 7:30 am – 5:30 pm (Sep–Apr)<br>8 am – 4:30 pm (May–Aug)</p>
+    </div>
+    <div class="cl">
+      <h3>Get in touch</h3>
+      <p><a href="tel:0255507391">(02) 5550 7391</a><br><a href="tel:0491570156">0491 570 156</a> · on the water<br><a href="mailto:ahoy@example.com">ahoy@example.com</a></p>
+    </div>
+  </div>
+  <div class="wrap fsmall"><p>Sample prices in AUD. <span data-brand>Salt &amp; Sail Boat Hire</span> is a fictional business in a concept demo — no bookings are taken.</p></div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement;
+  function $(s, r) { return (r || doc).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || doc).querySelectorAll(s)); }
+  var mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+  function rm() { return !!(mq && mq.matches); }
+  var ORIGINAL = "Salt & Sail Boat Hire", DEFAULT_SIG = "Salt & Sail";
+  var F = {
+    A: ["Alfa", "White at the hoist, blue swallow-tail at the fly", "I have a diver down; keep well clear at slow speed."],
+    B: ["Bravo", "Solid red, swallow-tailed", "I am taking in, discharging or carrying dangerous goods."],
+    C: ["Charlie", "Blue, white, red, white and blue bands", "Yes — affirmative."],
+    D: ["Delta", "Yellow, blue and yellow bands", "Keep clear of me; I am manoeuvring with difficulty."],
+    E: ["Echo", "Blue over red", "I am altering my course to starboard."],
+    F: ["Foxtrot", "White with a red diamond", "I am disabled; communicate with me."],
+    G: ["Golf", "Six yellow and blue vertical stripes", "I require a pilot."],
+    H: ["Hotel", "White at the hoist, red at the fly", "I have a pilot on board."],
+    I: ["India", "Yellow with a black circle", "I am altering my course to port."],
+    J: ["Juliett", "Blue, white and blue bands", "I am on fire and have dangerous cargo on board: keep well clear of me."],
+    K: ["Kilo", "Yellow at the hoist, blue at the fly", "I wish to communicate with you."],
+    L: ["Lima", "Yellow and black quarters", "You should stop your vessel instantly."],
+    M: ["Mike", "Blue with a white diagonal cross", "My vessel is stopped and making no way through the water."],
+    N: ["November", "Blue and white chequers", "No — negative."],
+    O: ["Oscar", "Red and yellow, split on the diagonal", "Man overboard."],
+    P: ["Papa", "Blue with a white centre square", "In harbour: all persons should report on board as the vessel is about to put to sea."],
+    Q: ["Quebec", "Plain yellow", "My vessel is healthy and I request free pratique."],
+    R: ["Romeo", "Red with a yellow cross", "No meaning on its own in today's Code — it works in combinations."],
+    S: ["Sierra", "White with a blue centre square", "I am operating astern propulsion."],
+    T: ["Tango", "Red, white and blue vertical bands", "Keep clear of me; I am engaged in pair trawling."],
+    U: ["Uniform", "Red and white quarters", "You are running into danger."],
+    V: ["Victor", "White with a red diagonal cross", "I require assistance."],
+    W: ["Whiskey", "Blue border, white band, red centre", "I require medical assistance."],
+    X: ["X-ray", "White with a blue cross", "Stop carrying out your intentions and watch for my signals."],
+    Y: ["Yankee", "Yellow with red diagonal stripes", "I am dragging my anchor."],
+    Z: ["Zulu", "Yellow, blue, red and black triangles", "I require a tug."]
+  };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function parse(s) {
+    var words = [], skipped = [];
+    String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().split(/\s+/).forEach(function (w) {
+      var ls = [];
+      Array.from(w).forEach(function (ch) { if (ch >= "A" && ch <= "Z") ls.push(ch); else if (skipped.indexOf(ch) < 0) skipped.push(ch); });
+      if (ls.length) words.push(ls);
+    });
+    return { words: words, skipped: skipped };
+  }
+  function flagSvg(l) { return '<svg viewBox="0 0 60 50" aria-hidden="true" focusable="false"><use href="#f-' + l + '"/></svg>'; }
+
+  /* ---- hero bunting: the brand name in flags on a sagging line ---- */
+  var bunt = $("#bunting"), bList = $("ul", bunt), bSvg = $("svg", bunt), ropes = $$("path", bSvg);
+  function buildBunting(name) {
+    var p = parse(name), html = "", i = 0;
+    p.words.forEach(function (w, wi) {
+      if (wi) html += '<li class="bgap"></li>';
+      w.forEach(function (l) { html += '<li style="--i:' + (i++) + '"><span class="bf">' + flagSvg(l) + "</span></li>"; });
+    });
+    bList.innerHTML = html;
+    layoutBunting();
+  }
+  function layoutBunting() {
+    var W = bunt.clientWidth, H = bunt.clientHeight;
+    if (!W) return;
+    var sag = Math.min(34, W * 0.03), y0 = 9, left = bunt.getBoundingClientRect().left;
+    bSvg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    ropes.forEach(function (p) { p.setAttribute("d", "M-4 " + y0 + " Q" + W / 2 + " " + (y0 + 2 * sag) + " " + (W + 4) + " " + y0); });
+    $$("li", bList).forEach(function (li) {
+      var r = li.getBoundingClientRect(), t = (r.left + r.width / 2 - left) / W;
+      li.style.setProperty("--y", (y0 + 4 * sag * t * (1 - t)).toFixed(1) + "px");
+      li.style.setProperty("--a", (Math.atan(4 * sag * (1 - 2 * t) / W) * 180 / Math.PI).toFixed(2) + "deg");
+    });
+  }
+
+  /* ---- signal flag translator ---- */
+  var stage = $("#stage"), inp = $("#sigIn"), readout = $("#readout"), card = $("#flagcard");
+  var prev = [], current = [], sel = 0, touched = false, lastW = 0, rdT = 0, seen = false;
+  var KNOT = '<svg class="knotart" viewBox="0 0 40 24" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M0 10h9c6 0 7 10 13 10 5 0 7-5 4-8s-10 0-10 6 6 3 9-1c3-4 5-7 15-7" stroke="#8F7143" stroke-width="5.5"/><path d="M0 10h9c6 0 7 10 13 10 5 0 7-5 4-8s-10 0-10 6 6 3 9-1c3-4 5-7 15-7" stroke="#E6D2A4" stroke-width="2.4" stroke-dasharray="3 3"/></g></svg>';
+  function layRows(words, fw, kw, W) {
+    var rows = [[]], rw = 0;
+    words.forEach(function (w) {
+      if (rw && rw + kw + w.length * fw > W) { rows.push([]); rw = 0; }
+      if (rw) { rows[rows.length - 1].push(null); rw += kw; }
+      w.forEach(function (l) {
+        if (rw && rw + fw > W) { rows.push([]); rw = 0; }
+        rows[rows.length - 1].push(l); rw += fw;
+      });
+    });
+    return rows;
+  }
+  function renderSignal(fresh, quiet) {
+    var p = parse(inp.value), cs = getComputedStyle(stage);
+    var W = stage.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 4;
+    lastW = stage.clientWidth;
+    var n = 0; p.words.forEach(function (w) { n += w.length; });
+    var knots = Math.max(0, p.words.length - 1), KR = 0.6;
+    var small = W < 520, minW = small ? 40 : 56, maxW = small ? 68 : 104;
+    var single = W / Math.max(1, n + knots * KR), fw = minW;
+    if (single >= minW) fw = Math.min(maxW, Math.floor(single));
+    else {
+      var R = layRows(p.words, minW, Math.round(minW * KR), W).length;
+      for (var f = maxW; f > minW; f -= 2) { if (layRows(p.words, f, Math.round(f * KR), W).length <= R) { fw = f; break; } }
+    }
+    var kw = Math.round(fw * KR), rows = layRows(p.words, fw, kw, W);
+    stage.style.setProperty("--fw", fw + "px");
+    stage.style.setProperty("--kw", kw + "px");
+    stage.classList.toggle("tight", fw < 62);
+    if (fresh) prev = [];
+    if (sel >= n) sel = 0;
+    var html = "", k = 0, d = 0, letters = [], anim = !rm() && !quiet;
+    if (!n) html = '<ul class="row"></ul><p class="empty">The halyard’s waiting — type a name above.</p>';
+    else rows.forEach(function (r) {
+      html += '<ul class="row">';
+      r.forEach(function (l) {
+        if (!l) { html += '<li class="cell knot" aria-hidden="true">' + KNOT + "</li>"; return; }
+        var isNew = prev[k] !== l;
+        html += '<li class="cell" style="--i:' + k + (isNew ? ";--d:" + (d++) : "") + '"><button class="flag' + (isNew && anim ? " up" : "") + '" type="button" data-k="' + k + '" aria-pressed="' + (k === sel) + '" aria-label="' + l + ", " + F[l][0] + ' flag. Show its meaning"><span class="hz"><span class="cloth' + (l === "A" || l === "B" ? " sw" : "") + '">' + flagSvg(l) + '</span></span><span class="lab"><b>' + l + "</b><small>" + F[l][0] + "</small></span></button></li>";
+        letters.push(l); k++;
+      });
+      html += "</ul>";
+    });
+    stage.innerHTML = html;
+    prev = letters; current = letters;
+    showCard();
+    clearTimeout(rdT);
+    rdT = setTimeout(function () { writeReadout(p, letters); }, fresh ? 0 : 450);
+  }
+  function writeReadout(p, letters) {
+    if (!letters.length) { readout.innerHTML = "Nothing to hoist yet — only the letters A to Z have flags."; return; }
+    var s = "<strong>" + p.words.map(function (w) { return w.join(""); }).join(" ") + "</strong><br>" + letters.length + (letters.length > 1 ? " flags, read left to right: " : " flag: ") +
+      p.words.map(function (w) { return w.map(function (l) { return F[l][0]; }).join(" · "); }).join(' <span class="sep">/</span> ') + ".";
+    if (p.skipped.length) s += '<span class="skipn">Skipped ' + esc(p.skipped.join(" ")) + " — only A–Z have letter flags.</span>";
+    readout.innerHTML = s;
+  }
+  function showCard() {
+    var l = current[sel];
+    if (!l) { card.hidden = true; return; }
+    card.hidden = false;
+    $("#fcUse").setAttribute("href", "#f-" + l);
+    $("#fcL").textContent = l; $("#fcW").textContent = F[l][0];
+    $("#fcP").textContent = F[l][1]; $("#fcM").textContent = F[l][2];
+  }
+  stage.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest(".flag") : null;
+    if (!b) return;
+    sel = +b.getAttribute("data-k");
+    $$(".flag", stage).forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+    showCard();
+  });
+  inp.addEventListener("input", function () { touched = true; renderSignal(false); updateMini(); });
+  $("#sigForm").addEventListener("submit", function (e) { e.preventDefault(); touched = true; sel = 0; renderSignal(true); });
+  $$(".chip").forEach(function (c) {
+    c.addEventListener("click", function () { inp.value = c.textContent.trim().slice(0, 32); touched = true; sel = 0; renderSignal(true); updateMini(); });
+  });
+  var bz = $("#breeze");
+  bz.addEventListener("click", function () {
+    var on = bz.getAttribute("aria-pressed") !== "true";
+    bz.setAttribute("aria-pressed", String(on));
+    root.classList.toggle("calm", on);
+  });
+
+  /* ---- booking ---- */
+  var BOATS = {
+    bluebottle: { n: "Bluebottle", cap: 5, h: 260, f: 390, pw: 1 },
+    longlunch: { n: "Long Lunch", cap: 10, h: 440, f: 690, pw: 1 },
+    shearwater: { n: "Shearwater", cap: 4, h: 290, f: 460, pw: 1 },
+    kayak1: { n: "Single kayak", cap: 1, h: 45, f: 70, pw: 0 },
+    kayak2: { n: "Double kayak", cap: 2, h: 70, f: 105, pw: 0 }
+  };
+  var SESS = { am: "half day, 8 am – 12 pm", pm: "half day, 1 pm – 5 pm", full: "full day, 8:30 am – 4:30 pm" };
+  var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var form = $("#bookForm"), bDate = $("#bDate"), ppl = 2, capMsg = "";
+  function pad(x) { return (x < 10 ? "0" : "") + x; }
+  function ymd(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function parseDate(v) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || ""); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; }
+  function fmt(d) { return DAYS[d.getDay()] + " " + d.getDate() + " " + MON[d.getMonth()]; }
+  function val(n) { var r = form.querySelector('input[name="' + n + '"]:checked'); return r ? r.value : ""; }
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var sat = new Date(today); sat.setDate(today.getDate() + ((6 - today.getDay() + 7) % 7 || 7));
+  bDate.min = ymd(today);
+  bDate.max = ymd(new Date(today.getFullYear(), today.getMonth() + 6, today.getDate()));
+  bDate.value = ymd(sat);
+  function update() {
+    var b = BOATS[val("boat")] || BOATS.bluebottle, s = val("sess") || "am", half = s !== "full";
+    if (ppl > b.cap) ppl = b.cap;
+    $("#ppl").textContent = ppl;
+    $("#capNote").textContent = capMsg || (b.n + " takes up to " + b.cap + (b.cap > 1 ? " people." : " paddler."));
+    capMsg = "";
+    var sk = $("#xSkip");
+    sk.disabled = !b.pw; if (!b.pw) sk.checked = false;
+    $("#licBox").hidden = !b.pw;
+    var skip = sk.checked ? (half ? 160 : 280) : 0, fish = $("#xFish").checked ? 30 : 0;
+    var d = parseDate(bDate.value), ex = [];
+    if (skip) ex.push("skipper"); if (fish) ex.push("fishing kit");
+    $("#sumLine").textContent = b.n + " · " + (d ? fmt(d) : "pick a date") + " · " + SESS[s] + " · " + ppl + (ppl === 1 ? " person" : " people") + (ex.length ? " · with " + ex.join(" and ") : "");
+    $("#sumTotal").textContent = "$" + ((half ? b.h : b.f) + skip + fish);
+    updateMini();
+  }
+  function updateMini() {
+    var on = $("#xFly").checked, box = $("#welcome");
+    box.hidden = !on;
+    if (!on) return;
+    var src = $("#bName").value.trim() || inp.value, ls = [];
+    parse(src).words.forEach(function (w) { ls = ls.concat(w); });
+    ls = ls.slice(0, 14);
+    $("#mini").innerHTML = ls.map(flagSvg).join("");
+    $("#miniTxt").textContent = ls.length ? ls.join("") : "type your name";
+  }
+  form.addEventListener("change", update);
+  form.addEventListener("input", function (e) { if (e.target.id === "bName") updateMini(); if (e.target.getAttribute("aria-invalid")) e.target.removeAttribute("aria-invalid"); });
+  $("#pMinus").addEventListener("click", function () { if (ppl > 1) ppl--; update(); });
+  $("#pPlus").addEventListener("click", function () {
+    var b = BOATS[val("boat")];
+    if (ppl < b.cap) ppl++;
+    else capMsg = "That's the most " + b.n + " takes" + (b.cap < 10 ? " — Long Lunch fits 10." : ".");
+    update();
+  });
+  $$(".pick").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var r = form.querySelector('input[name="boat"][value="' + btn.getAttribute("data-boat") + '"]');
+      if (r) { r.checked = true; update(); }
+      $("#book").scrollIntoView({ behavior: rm() ? "auto" : "smooth", block: "start" });
+      setTimeout(function () { if (r) r.focus({ preventScroll: true }); }, rm() ? 0 : 650);
+    });
+  });
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var st = $("#bStatus"), nm = $("#bName"), ct = $("#bContact"), d = parseDate(bDate.value), errs = [];
+    [nm, ct, bDate].forEach(function (x) { x.removeAttribute("aria-invalid"); });
+    if (!d || d < today) errs.push([bDate, "Pick a date from today on."]);
+    if (!nm.value.trim()) errs.push([nm, "Add your name."]);
+    var c = ct.value.trim();
+    if (!(/@/.test(c) || c.replace(/\D/g, "").length >= 8)) errs.push([ct, "Add a mobile number or email so we can confirm."]);
+    if (errs.length) {
+      errs.forEach(function (x) { x[0].setAttribute("aria-invalid", "true"); });
+      st.className = "status err";
+      st.textContent = errs.map(function (x) { return x[1]; }).join(" ");
+      errs[0][0].focus();
+      return;
+    }
+    var b = BOATS[val("boat")], line = b.n + ", " + fmt(d) + ", " + SESS[val("sess")];
+    st.className = "status ok";
+    st.textContent = "Demo only — nothing was sent and no booking was made. On a real site we'd ring you to confirm " + line + ".";
+    if (window.DemoKit) window.DemoKit.toast("Demo only — no booking was made. " + line + ".");
+  });
+
+  /* ---- brand, resize, visibility ---- */
+  window.addEventListener("hd:brandchange", function (e) {
+    var name = (e.detail && e.detail.name) || ORIGINAL;
+    buildBunting(name);
+    if (!touched) { inp.value = name === ORIGINAL ? DEFAULT_SIG : name.slice(0, 32); sel = 0; renderSignal(true, true); }
+    updateMini();
+  });
+  var rT = 0;
+  window.addEventListener("resize", function () {
+    cancelAnimationFrame(rT);
+    rT = requestAnimationFrame(function () { layoutBunting(); if (stage.clientWidth !== lastW) renderSignal(false, true); });
+  });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        en.target.classList.toggle("off", !en.isIntersecting);
+        if (en.target.id === "flags" && en.isIntersecting && !seen) { seen = true; if (!touched && !rm()) renderSignal(true); }
+      });
+    }, { threshold: 0.12 });
+    $$(".hero,.signal").forEach(function (s) { io.observe(s); });
+  }
+  buildBunting(ORIGINAL);
+  renderSignal(false, true);
+  update();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "041",
+  "tech": ["SVG", "SVG animation", "CSS 3D", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["booking", "accessibility"],
+  "interaction": "Tap or Tab to one of eight regions on a single-line SVG body figure (front/back toggle with a quick 3D turn), or choose from the numbered list that mirrors them: the region glows coral with a slow pulse and a panel lists common issues, what a physio may assess and a suggested appointment; on wide screens a coral leader line joins the hotspot to the panel, and 'Book this appointment' pre-fills the booking request form.",
+  "fonts": ["Albert Sans", "Newsreader"],
+  "notes": "General information only, not a diagnosis. The booking request ends in a demo message; the preferred-day chips are generated from today's date (Sundays skipped)."
+}

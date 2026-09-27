@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="083">
+<meta name="demo:brand" content="Sam Nguyen">
+<meta name="demo:badge" content="bottom-right">
+<title>Sam Nguyen — software engineer, Sydney</title>
+<meta name="description" content="The CV of Sam Nguyen, a fictional Sydney software engineer, built as a working code editor: open files, jump with a command palette and run contact.sh.">
+<meta name="theme-color" content="#11111B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ed:#1E1E2E;--side:#181825;--crust:#11111B;--surf:#313244;--surf2:#45475A;--tx:#CDD6F4;--sub:#BAC2DE;--dim:#9399B2;--ln:#6C7086;
+--pink:#F38BA8;--green:#A6E3A1;--blue:#89B4FA;--yellow:#F9E2AF;--mauve:#CBA6F7;--peach:#FAB387;--teal:#94E2D5;
+--hi:rgba(137,180,250,.075);--sel:rgba(137,180,250,.17);--shadow:0 28px 70px rgba(0,0,0,.5);--on:#11111B;
+--mono:"Source Code Pro",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color-scheme:dark}
+html[data-theme=light]{--ed:#EFF1F5;--side:#E6E9EF;--crust:#DCE0E8;--surf:#CCD0DA;--surf2:#BCC0CC;--tx:#4C4F69;--sub:#5C5F77;--dim:#5F6278;--ln:#8C8FA1;
+--pink:#C0144A;--green:#2A7419;--blue:#1A5FD6;--yellow:#8A5A00;--mauve:#7A2FD8;--peach:#B4470A;--teal:#11707A;
+--hi:rgba(26,95,214,.065);--sel:rgba(26,95,214,.13);--shadow:0 28px 70px rgba(76,79,105,.3);--on:#FFFFFF;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--crust);color:var(--tx);font:400 14px/1.5 var(--sans);-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow:hidden;transition:background-color .25s}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+kbd{display:inline-block;min-width:18px;text-align:center;font:500 11px/1 var(--mono);padding:3px 5px;border-radius:5px;background:var(--surf);color:var(--sub);box-shadow:inset 0 -1px 0 var(--surf2)}
+.ic{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ic.fill{fill:currentColor;stroke:none}
+/* ---------- shell ---------- */
+.app{height:100vh;height:100dvh;display:grid;grid-template-columns:48px 248px minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"top top top" "acts side main" "sb sb sb"}
+.app.no-side{grid-template-columns:48px 0 minmax(0,1fr)}
+.app.no-side .side{display:none}
+.top{grid-area:top;display:flex;align-items:center;gap:16px;min-height:46px;padding:7px 12px 7px 10px;background:var(--crust);border-bottom:1px solid var(--surf)}
+.who-wrap{flex:1 1 0;display:flex;align-items:center;gap:10px;min-width:0}
+.mono{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--pink);color:var(--on);font:600 12px/1 var(--mono);letter-spacing:-.03em}
+h1.who{margin:0;font:600 14px/1.25 var(--sans);letter-spacing:-.005em;min-width:0;overflow-wrap:anywhere}
+.who .role{font-weight:400;color:var(--dim)}
+.cmdk{flex:0 1 440px;display:flex;align-items:center;gap:10px;height:32px;padding:0 6px 0 12px;border-radius:8px;background:var(--side);border:1px solid var(--surf);color:var(--dim);font-size:13px;min-width:0}
+.cmdk>span{flex:1;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmdk:hover{border-color:var(--surf2);color:var(--sub)}
+.top-r{flex:1 1 0;display:flex;justify-content:flex-end;align-items:center;gap:6px}
+.run{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 13px 0 11px;border-radius:8px;background:var(--green);color:var(--on);font:600 13px/1 var(--sans);white-space:nowrap}
+.run .ic{width:12px;height:12px}
+.run:hover{filter:brightness(1.07)}
+.run[aria-busy=true]{animation:pulse .9s ease-in-out infinite alternate}
+@keyframes pulse{to{opacity:.6}}
+.ibtn{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;color:var(--sub)}
+.ibtn:hover{background:var(--surf);color:var(--tx)}
+html[data-theme=light] .i-sun,html:not([data-theme=light]) .i-moon{display:none}
+/* activity bar */
+.acts{grid-area:acts;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 0;background:var(--crust);border-right:1px solid var(--surf)}
+.acts button{position:relative;width:40px;height:40px;display:grid;place-items:center;border-radius:8px;color:var(--ln)}
+.acts button .ic{width:20px;height:20px;stroke-width:1.7}
+.acts button:hover,.acts button[aria-pressed=true]{color:var(--tx)}
+.acts button[aria-pressed=true]::before{content:"";position:absolute;left:-4px;top:9px;bottom:9px;width:2px;border-radius:2px;background:var(--pink)}
+/* explorer */
+.side{grid-area:side;background:var(--side);border-right:1px solid var(--surf);overflow:auto;padding-bottom:70px;min-width:0;scrollbar-width:thin;scrollbar-color:var(--surf2) transparent}
+.side-h{display:flex;align-items:center;justify-content:space-between;padding:13px 14px 8px 18px;font:600 11px/1 var(--sans);letter-spacing:.11em;text-transform:uppercase;color:var(--dim)}
+.tree,.tree ul,.outline ol{list-style:none;margin:0;padding:0}
+.tree button,.outline button{display:flex;align-items:center;gap:8px;width:100%;min-height:29px;padding:3px 12px 3px calc(12px + var(--d,0) * 16px);font:400 13.5px/1.3 var(--mono);color:var(--sub);text-align:left}
+.tree button:hover,.outline button:hover{background:var(--hi);color:var(--tx)}
+.tree button[aria-current=true]{background:var(--sel);color:var(--tx)}
+.tree .dir .chev{transition:transform .16s}
+.tree .dir[aria-expanded=false] .chev{transform:rotate(-90deg)}
+.tree .dir[aria-expanded=false]+ul{display:none}
+.chev{width:14px;height:14px}
+.fi{flex:none;width:20px;font:600 9.5px/1 var(--mono);text-align:center;letter-spacing:-.02em}
+.fi.md{color:var(--blue)}.fi.ts{color:var(--blue)}.fi.json{color:var(--yellow)}.fi.sh{color:var(--green)}.fi.rs{color:var(--peach)}.fi.dir{color:var(--mauve)}
+.outline{margin-top:16px;border-top:1px solid var(--surf)}
+.outline button{font:400 13px/1.3 var(--sans);min-height:28px}
+.outline .ok-k{flex:none;width:20px;text-align:center;font:600 10px/1 var(--mono);color:var(--mauve)}
+.outline .lbl{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.side-foot{margin:22px 16px 0;padding:12px 13px;border:1px dashed var(--surf2);border-radius:10px;font-size:12px;line-height:1.55;color:var(--dim)}
+.side-foot b{color:var(--sub);font-weight:600}
+/* ---------- editor ---------- */
+main.main{grid-area:main;display:flex;flex-direction:column;min-width:0;min-height:0;background:var(--ed);position:relative}
+.tabs{flex:none;display:flex;min-height:38px;background:var(--side);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{position:relative;flex:none;display:flex;align-items:center;border-right:1px solid var(--crust);color:var(--dim)}
+.tab.on{background:var(--ed);color:var(--tx)}
+.tab.on::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--pink)}
+.tab-b{display:flex;align-items:center;gap:7px;height:38px;padding:0 4px 0 13px;font:400 13px/1 var(--mono);white-space:nowrap}
+.tab-x{display:grid;place-items:center;width:24px;height:24px;margin-right:7px;border-radius:6px;color:var(--dim);opacity:0}
+.tab-x .ic{width:13px;height:13px}
+.tab.on .tab-x,.tab:hover .tab-x,.tab-x:focus-visible{opacity:1}
+.tab-x:hover{background:var(--surf);color:var(--tx)}
+@media (hover:none){.tab-x{opacity:1}}
+.crumbs{flex:none;display:flex;align-items:center;gap:10px;min-height:34px;padding:0 10px 0 16px;border-bottom:1px solid var(--surf);font:400 12.5px/1.3 var(--mono);color:var(--dim)}
+.path{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.path b{font-weight:500;color:var(--sub)}
+.filebtn{display:none}
+.ed-act{display:flex;align-items:center;gap:6px}
+.pvbtn{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px;border-radius:6px;border:1px solid var(--surf);color:var(--sub);font:500 12px/1 var(--sans)}
+.pvbtn[aria-pressed=true]{background:var(--sel);border-color:transparent;color:var(--tx)}
+.pvbtn[hidden],.run[hidden]{display:none}
+.run.sm{height:26px;padding:0 10px 0 9px;border-radius:6px;font-size:12px}
+.hint{flex:none;display:flex;align-items:center;gap:10px;padding:6px 8px 6px 16px;background:color-mix(in srgb,var(--blue) 9%,var(--ed));border-bottom:1px solid var(--surf);font-size:13px;color:var(--sub)}
+.hint>.ic{color:var(--blue)}
+.hint b{font-weight:600;color:var(--tx)}
+.hint .msg{flex:1;min-width:0}
+.hint .ibtn{width:28px;height:28px}
+.h-ph{display:none}
+.panes{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 70px;position:relative}
+.panes.pv{grid-template-columns:minmax(0,1fr) 70px minmax(330px,45%)}
+.code{position:relative;overflow:auto;overscroll-behavior:contain;padding:14px 0 56px;font:400 14px/1.72 var(--mono);scrollbar-width:thin;scrollbar-color:var(--surf2) transparent;cursor:text}
+.l{display:grid;grid-template-columns:58px minmax(0,1fr)}
+.l:hover{background:color-mix(in srgb,var(--tx) 3%,transparent)}
+.l.on{background:var(--hi)}
+.n{padding-right:22px;text-align:right;color:var(--ln);user-select:none;-webkit-user-select:none;font-variant-numeric:tabular-nums}
+.l.on .n{color:var(--sub)}
+.t{white-space:pre-wrap;overflow-wrap:anywhere;padding:0 28px 0 var(--ind,0ch);text-indent:calc(var(--ind,0ch) * -1);min-height:1.72em}
+.t-k{color:var(--pink)}.t-s{color:var(--green)}.t-p,.t-f{color:var(--blue)}.t-t{color:var(--yellow)}.t-n{color:var(--peach)}
+.t-c{color:var(--dim);font-style:italic}.t-o{color:var(--dim)}.t-v{color:var(--mauve)}
+.t-h{color:var(--pink);font-weight:600}.t-q{color:var(--green);font-style:italic}.t-y{color:var(--yellow)}.t-b{color:var(--peach);font-weight:600}
+.t-l{color:var(--blue);text-decoration:underline;text-underline-offset:3px}.t-u{color:var(--dim)}
+.mini{position:relative;border-left:1px solid color-mix(in srgb,var(--surf) 55%,transparent);cursor:pointer;touch-action:none;overflow:hidden}
+.mini canvas{position:absolute;left:0;top:0;display:block}
+.mini-v{position:absolute;left:0;right:0;top:0;height:0;background:color-mix(in srgb,var(--tx) 8%,transparent);border-block:1px solid color-mix(in srgb,var(--tx) 13%,transparent);pointer-events:none}
+.mini:hover .mini-v{background:color-mix(in srgb,var(--tx) 13%,transparent)}
+/* preview */
+.preview{display:none;overflow:auto;border-left:1px solid var(--surf);padding:34px clamp(22px,3vw,48px) 64px;scrollbar-width:thin;scrollbar-color:var(--surf2) transparent}
+.panes.pv .preview{display:block}
+.pv-in{max-width:560px;margin:0 auto}
+.stripe{display:flex;gap:5px;margin-bottom:14px}
+.stripe i{height:4px;border-radius:2px;background:var(--pink)}
+.stripe i:nth-child(1){width:34px}.stripe i:nth-child(2){width:14px;background:var(--yellow)}.stripe i:nth-child(3){width:48px;background:var(--blue)}.stripe i:nth-child(4){width:22px;background:var(--green)}
+.pv-kick{margin:0 0 22px;font:500 11.5px/1 var(--mono);letter-spacing:.04em;color:var(--dim)}
+.pv-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;margin-bottom:22px}
+.pv-av{display:grid;place-items:center;width:66px;height:66px;border-radius:20px;background:linear-gradient(140deg,var(--pink),var(--mauve) 55%,var(--blue));color:var(--on);font:600 22px/1 var(--mono);letter-spacing:-.04em}
+.pv-name{margin:0;font:600 clamp(30px,3.2vw,46px)/1.03 var(--sans);letter-spacing:-.032em;overflow-wrap:anywhere}
+.pv-role{margin:7px 0 0;font-size:15px;color:var(--sub)}
+.pv-open{display:inline-flex;align-items:center;gap:9px;margin:0 0 24px;padding:7px 13px;border-radius:999px;background:color-mix(in srgb,var(--green) 13%,transparent);color:var(--green);font:500 13px/1.2 var(--sans)}
+.pv-open i{width:7px;height:7px;border-radius:50%;background:currentColor;animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 55%,transparent)}70%,100%{box-shadow:0 0 0 8px transparent}}
+.md h2{margin:0 0 14px;font:600 30px/1.1 var(--sans);letter-spacing:-.025em}
+.md h3{margin:30px 0 10px;font:600 11.5px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:var(--pink)}
+.md p{margin:0 0 12px;font-size:15px;line-height:1.66}
+.md blockquote{margin:0 0 6px;font:500 19px/1.5 var(--sans);letter-spacing:-.012em}
+.md blockquote p{font:inherit;margin:0}
+.md ul{margin:0;padding:0;list-style:none}
+.md li{position:relative;padding:6px 0 6px 22px;font-size:15px;line-height:1.55;border-bottom:1px solid color-mix(in srgb,var(--surf) 65%,transparent)}
+.md li::before{content:"›";position:absolute;left:5px;top:5px;font:600 15px/1.55 var(--mono);color:var(--pink)}
+.md strong{font-weight:600;color:var(--peach)}
+.md a{color:var(--blue);text-underline-offset:3px}
+.md hr{border:0;border-top:1px dashed var(--surf2);margin:28px 0 16px}
+.md code{font:500 .88em var(--mono);padding:1px 5px;border-radius:5px;background:var(--surf)}
+.md pre{margin:6px 0 16px;padding:16px 18px;border-radius:12px;background:#0B0B12;color:#F9E2AF;font:500 13px/1.85 var(--mono);white-space:pre;overflow-x:auto;box-shadow:inset 0 0 0 1px #2A2A3C,0 12px 30px rgba(0,0,0,.25);text-shadow:0 0 12px rgba(249,226,175,.35)}
+.pv-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn2{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 14px;border-radius:8px;border:1px solid var(--surf2);color:var(--tx);font:500 13px/1 var(--sans)}
+.btn2:hover{background:var(--surf)}
+.pv-cta .run{height:36px}
+/* empty editor */
+.empty{display:none;flex:1;place-items:center;padding:40px 20px;text-align:center}
+.main.is-empty .empty{display:grid}
+.main.is-empty .panes,.main.is-empty .ed-act{display:none}
+.empty-mark{font:600 56px/1 var(--mono);letter-spacing:-.05em;color:var(--surf2)}
+.empty p{margin:14px 0 0;color:var(--dim)}
+.empty ul{list-style:none;margin:20px auto 0;padding:0;display:grid;gap:6px;width:min(360px,100%)}
+.empty li button{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;min-height:40px;padding:0 12px;border-radius:8px;color:var(--sub);font-size:13.5px}
+.empty li button:hover{background:var(--surf);color:var(--tx)}
+/* terminal */
+.term{flex:none;display:flex;flex-direction:column;border-top:1px solid var(--surf);background:var(--crust)}
+.term.is-open{height:clamp(150px,25vh,270px)}
+.term-h{flex:none;display:flex;align-items:center;gap:14px;height:34px;padding:0 6px 0 16px;font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.term-h .tt{padding:11px 0 10px;color:var(--tx);box-shadow:inset 0 -1px 0 var(--pink)}
+.term-h .sub{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 12px/1 var(--mono);letter-spacing:0;text-transform:none;color:var(--ln)}
+.term-h .ibtn{width:30px;height:30px}
+.term:not(.is-open) .tog .ic{transform:rotate(180deg)}
+.term-body{flex:1;min-height:0;overflow:auto;padding:4px 16px 16px;font:400 13px/1.68 var(--mono);overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--surf2) transparent}
+.term:not(.is-open) .term-body{display:none}
+.tl{white-space:pre-wrap;overflow-wrap:anywhere;min-height:1.68em}
+.pr{color:var(--green)}.pd{color:var(--blue)}.pc{color:var(--dim)}.cm{color:var(--dim);font-style:italic}
+.cur{display:inline-block;width:.62em;height:1.2em;vertical-align:-.25em;margin-left:2px;background:var(--tx);animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.kk{color:var(--dim)}.tl a{color:var(--blue);text-underline-offset:3px}
+.ok{color:var(--green)}.err{color:var(--pink)}.yl{color:var(--yellow)}
+.choices{display:inline-flex;flex-wrap:wrap;gap:8px;margin:4px 0 2px 4px;vertical-align:middle}
+.tbtn{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:0 11px;border-radius:6px;border:1px solid var(--surf2);background:var(--surf);color:var(--tx);font:500 12.5px/1 var(--mono);white-space:nowrap}
+.tbtn:hover{background:var(--surf2)}
+.tbtn.pri{background:var(--green);border-color:transparent;color:var(--on)}
+.tform{display:grid;gap:9px;max-width:640px;margin:8px 0 6px;padding:12px 14px;border:1px dashed var(--surf2);border-radius:10px}
+.tform[hidden]{display:none}
+.q{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:baseline;gap:4px 10px}
+.q>label,.q>.ql{color:var(--blue);white-space:nowrap}
+.q .qm{color:var(--green)}
+.q input,.q textarea{width:100%;padding:3px 0;border:0;border-bottom:1px dashed var(--surf2);border-radius:0;background:transparent;color:var(--tx);font:400 13px/1.6 var(--mono);resize:vertical}
+.q input:focus,.q textarea:focus{outline:none;border-bottom:1px solid var(--pink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:6px;border:1px solid var(--surf2);color:var(--sub);font:400 12.5px/1 var(--mono)}
+.chip input:checked+span{border-color:var(--blue);background:var(--sel);color:var(--tx)}
+.chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.qa{display:flex;flex-wrap:wrap;gap:8px;padding-top:4px}
+/* status bar */
+.sb{grid-area:sb;display:flex;align-items:stretch;min-height:26px;background:var(--crust);border-top:1px solid var(--surf);font:400 12px/1 var(--sans);color:var(--dim);padding-bottom:env(safe-area-inset-bottom)}
+.sb>*{display:flex;align-items:center;gap:6px;padding:0 10px;white-space:nowrap}
+.sb .br{background:var(--pink);color:var(--on);font-weight:600}
+.sb .ic{width:13px;height:13px}
+.sb .grow{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;display:block;line-height:26px}
+.sb button:hover{background:var(--surf);color:var(--tx)}
+/* command palette */
+dialog.pal{padding:0;border:1px solid var(--surf2);border-radius:14px;background:var(--side);color:var(--tx);width:min(640px,calc(100vw - 24px));max-height:min(72vh,560px);margin:11vh auto auto;box-shadow:var(--shadow);overflow:hidden}
+dialog.pal[open]{display:flex;flex-direction:column;animation:drop .16s ease-out}
+@keyframes drop{from{opacity:0;transform:translateY(-8px) scale(.985)}}
+dialog.pal::backdrop{background:rgba(17,17,27,.55);backdrop-filter:blur(2px)}
+.pal-in{flex:none;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid var(--surf);color:var(--dim)}
+.pal-in input{flex:1;min-width:0;height:54px;border:0;background:transparent;font:400 16px/1 var(--sans);color:var(--tx);outline:none}
+.pal-list{flex:1;list-style:none;margin:0;padding:6px;overflow:auto}
+.pal-list .sec{padding:10px 10px 5px;font:600 10.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ln)}
+.pal-list [role=option]{display:flex;align-items:center;gap:12px;min-height:42px;padding:6px 10px;border-radius:8px;cursor:pointer;font:400 13.5px/1.3 var(--mono);color:var(--sub)}
+.pal-list [role=option][aria-selected=true]{background:var(--sel);color:var(--tx);box-shadow:inset 2px 0 0 var(--pink)}
+.pal-list b{font-weight:600;color:var(--blue)}
+.pal-list .pth{margin-left:auto;font:400 12px/1 var(--sans);color:var(--ln);white-space:nowrap}
+.pal-list .none{padding:16px 10px;color:var(--dim)}
+.pal-foot{flex:none;display:flex;flex-wrap:wrap;gap:6px 16px;padding:10px 14px;border-top:1px solid var(--surf);font-size:12px;color:var(--dim)}
+[hidden]{display:none!important}
+.ph-only{display:none}
+#runBar{display:none}
+main[data-file="contact.sh"] #runBar{display:inline-flex}
+.pal-list{position:relative}
+.ferr{align-self:center;font:500 12.5px/1.3 var(--mono);color:var(--pink)}
+@media (min-width:761px){.term.is-open.tall{height:clamp(260px,44vh,440px)}}
+/* ---------- tablet ---------- */
+@media (max-width:1100px){.app{grid-template-columns:48px 216px minmax(0,1fr)}.who .role{display:none}}
+/* ---------- phone ---------- */
+@media (max-width:760px){
+.ph-only{display:grid}
+#runBar{display:inline-flex}
+.app{grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "main" "sb"}
+.acts,.cmdk,.top-r .run,.sb .hp{display:none}
+.top{gap:10px;padding:calc(7px + env(safe-area-inset-top)) 10px 7px 12px}
+.top-r{flex:none;gap:2px}
+.ibtn{width:40px;height:40px}
+.side{position:fixed;z-index:40;left:10px;right:10px;top:var(--dd,120px);max-height:min(62vh,520px);display:none;padding-bottom:10px;border:1px solid var(--surf2);border-radius:14px;box-shadow:var(--shadow)}
+.side.open{display:block}
+.tree button{min-height:44px;font-size:14.5px}
+.outline button{min-height:40px}
+.crumbs{order:-1;min-height:56px;padding:7px 10px;gap:8px}
+.path{display:none}
+.filebtn{display:flex;align-items:center;gap:8px;flex:1;min-width:0;height:42px;padding:0 10px 0 12px;border-radius:10px;border:1px solid var(--surf);background:var(--side);color:var(--tx);font:500 14px/1 var(--mono)}
+.filebtn .nm{flex:1;min-width:0;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.filebtn[aria-expanded=true] .chev{transform:rotate(180deg)}
+.pvbtn{width:42px;height:42px;padding:0;justify-content:center}
+.pvbtn .lbl{display:none}
+.run.sm{height:42px;padding:0 14px 0 12px;border-radius:10px;font-size:13.5px}
+.tabs{min-height:42px}
+.tab-b{height:42px;padding-left:12px}
+.tab-x{width:32px;height:32px;margin-right:4px;opacity:1}
+.hint{padding-left:12px;font-size:12.5px;line-height:1.4}
+.h-desk{display:none}.h-ph{display:inline}
+.panes,.panes.pv{grid-template-columns:minmax(0,1fr)}
+.mini,.panes.pv .code{display:none}
+.preview{border-left:0;padding:24px 18px 56px}
+.code{font-size:13px;line-height:1.64;padding-top:10px}
+.l{grid-template-columns:36px minmax(0,1fr)}
+.n{padding-right:11px}
+.t{padding-right:14px;min-height:1.64em}
+.term,.term.is-open{position:fixed;z-index:35;left:0;right:0;bottom:0;height:min(68vh,560px);border:1px solid var(--surf2);border-bottom:0;border-radius:18px 18px 0 0;box-shadow:var(--shadow);padding-bottom:env(safe-area-inset-bottom);transform:translateY(105%);visibility:hidden;transition:transform .34s cubic-bezier(.2,.8,.2,1),visibility 0s .34s}
+.term.is-open{transform:none;visibility:visible;transition:transform .34s cubic-bezier(.2,.8,.2,1)}
+.term:not(.is-open) .term-body{display:block}
+.term-h{height:50px;padding-left:18px}
+.term-h .ibtn{width:40px;height:40px}
+.term-body{font-size:12.5px;padding:4px 14px 18px}
+.tbtn{min-height:40px}
+.chip span{min-height:40px}
+.q{grid-template-columns:minmax(0,1fr)}
+.sb{min-height:30px}
+.sb>*{padding:0 9px}
+.sb .grow{line-height:30px}
+dialog.pal{margin-top:calc(10px + env(safe-area-inset-top));max-height:74vh}
+.pal-list [role=option]{min-height:46px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.6v14.8a1 1 0 0 0 1.52.85l12-7.4a1 1 0 0 0 0-1.7l-12-7.4A1 1 0 0 0 7 4.6Z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+<symbol id="i-files" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+<symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.2"/><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="7" r="2.2"/><path d="M6 7.2v9.6M18 9.2c0 4.8-7.5 3.4-11.2 7.6"/></symbol>
+<symbol id="i-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7 9 3 3-3 3M13 15h4"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.8"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13"/></symbol>
+</svg>
+<div class="app" id="app">
+  <header class="top">
+    <div class="who-wrap">
+      <span class="mono" data-brand-initials aria-hidden="true">SN</span>
+      <h1 class="who"><span data-brand>Sam Nguyen</span><span class="role"> · software engineer, Sydney</span></h1>
+    </div>
+    <button class="cmdk" id="palBtn" type="button" aria-haspopup="dialog" aria-keyshortcuts="Meta+K Control+K">
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><span>Go to a file or run a command</span><kbd class="modk">⌘</kbd><kbd>K</kbd>
+    </button>
+    <div class="top-r">
+      <button class="run" type="button" data-run><svg class="ic fill" aria-hidden="true"><use href="#i-play"/></svg>Run contact.sh</button>
+      <button class="ibtn ph-only" type="button" id="palBtn2" aria-label="Go to a file or command" aria-haspopup="dialog"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <button class="ibtn" type="button" data-theme-btn aria-pressed="false" aria-label="Light theme"><svg class="ic i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="ic i-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+    </div>
+  </header>
+
+  <nav class="acts" aria-label="Editor tools">
+    <button type="button" id="actFiles" aria-pressed="true" aria-label="Show explorer" title="Explorer"><svg class="ic" aria-hidden="true"><use href="#i-files"/></svg></button>
+    <button type="button" data-pal aria-label="Go to a file or command (⌘K)" title="Go to file (⌘K)"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></button>
+    <button type="button" data-run aria-label="Run contact.sh" title="Run contact.sh"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></button>
+    <button type="button" data-term aria-label="Toggle terminal" title="Terminal (Ctrl+`)"><svg class="ic" aria-hidden="true"><use href="#i-term"/></svg></button>
+  </nav>
+
+  <aside class="side" id="side" aria-label="Explorer">
+    <div class="side-h"><span>Explorer</span><span class="pc">sam-nguyen</span></div>
+    <ul class="tree" id="tree">
+      <li><button type="button" data-file="about.md"><span class="fi md">M↓</span>about.md</button></li>
+      <li><button type="button" data-file="experience.ts"><span class="fi ts">TS</span>experience.ts</button></li>
+      <li><button type="button" class="dir" aria-expanded="true"><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg>projects/</button>
+        <ul>
+          <li><button type="button" style="--d:1" data-file="projects/ferry-board.md"><span class="fi md">M↓</span>ferry-board.md</button></li>
+          <li><button type="button" style="--d:1" data-file="projects/roster-fair.ts"><span class="fi ts">TS</span>roster-fair.ts</button></li>
+          <li><button type="button" style="--d:1" data-file="projects/bin-night.rs"><span class="fi rs">RS</span>bin-night.rs</button></li>
+        </ul>
+      </li>
+      <li><button type="button" data-file="skills.json"><span class="fi json">{}</span>skills.json</button></li>
+      <li><button type="button" data-file="contact.sh"><span class="fi sh">$_</span>contact.sh</button></li>
+    </ul>
+    <section class="outline" aria-labelledby="olH">
+      <div class="side-h" id="olH">Outline</div>
+      <ol id="outline"></ol>
+    </section>
+    <p class="side-foot"><b>Concept CV.</b> Sam is a fictional person and every organisation in these files is made up. Contact details are demo placeholders.</p>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="tabs" id="tabs" aria-label="Open files"></div>
+    <div class="crumbs">
+      <button type="button" class="filebtn" id="fileBtn" aria-expanded="false" aria-controls="side"><span class="fi md" id="fileIco">M↓</span><span class="nm" id="fileNm">about.md</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg><span class="sr">— switch file</span></button>
+      <span class="path" id="path">sam-nguyen › <b>about.md</b></span>
+      <div class="ed-act">
+        <button type="button" class="pvbtn" id="pvBtn" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg><span class="lbl">Preview</span><span class="sr"> Markdown preview</span></button>
+        <button type="button" class="run sm" id="runBar" data-run><svg class="ic fill" aria-hidden="true"><use href="#i-play"/></svg>Run</button>
+      </div>
+    </div>
+    <div class="hint" id="hint">
+      <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+      <span class="msg"><span class="h-desk">Press <kbd class="modk">⌘</kbd> <kbd>K</kbd> to jump to any file, or hit <b>Run ▶</b> to execute contact.sh and get in touch.</span><span class="h-ph">Tap the file name to browse the CV. <b>▶ Run</b> executes contact.sh.</span></span>
+      <button type="button" class="ibtn" id="hintX" aria-label="Dismiss tip"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="panes" id="panes">
+      <section class="code" id="code" tabindex="0" aria-label="about.md source"><div id="lines"></div></section>
+      <div class="mini" id="mini" aria-hidden="true"><canvas id="miniCv"></canvas><div class="mini-v" id="miniV"></div></div>
+      <article class="preview" id="preview" aria-label="Markdown preview">
+        <div class="pv-in">
+          <div id="pvAbout">
+            <div class="stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="pv-kick">about.md — preview</p>
+            <div class="pv-head">
+              <span class="pv-av" data-brand-initials aria-hidden="true">SN</span>
+              <div><p class="pv-name" data-brand>Sam Nguyen</p><p class="pv-role">Software engineer · Marrickville, Sydney NSW</p></div>
+            </div>
+            <p class="pv-open"><i aria-hidden="true"></i>Open to new roles from Mon 2 Nov 2026</p>
+          </div>
+          <p class="pv-kick" id="pvKick" hidden></p>
+          <div class="md" id="pvBody"></div>
+          <div class="pv-cta" id="pvCta">
+            <button type="button" class="btn2" data-open="experience.ts"><span class="fi ts">TS</span>Read experience.ts</button>
+            <button type="button" class="run" data-run><svg class="ic fill" aria-hidden="true"><use href="#i-play"/></svg>Run contact.sh</button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="empty" id="empty">
+      <div>
+        <div class="empty-mark" aria-hidden="true">{ }</div>
+        <p>All files are closed. Pick something to read:</p>
+        <ul>
+          <li><button type="button" data-pal><span>Go to file…</span><span><kbd class="modk">⌘</kbd> <kbd>K</kbd></span></button></li>
+          <li><button type="button" data-open="about.md"><span>Open about.md</span><span class="fi md">M↓</span></button></li>
+          <li><button type="button" data-run><span>Run contact.sh</span><span class="fi sh">▶</span></button></li>
+        </ul>
+      </div>
+    </div>
+    <section class="term" id="term" aria-label="Terminal">
+      <div class="term-h">
+        <span class="tt">Terminal</span><span class="sub">bash — ~/sam-nguyen</span>
+        <button type="button" class="ibtn" id="termClear" aria-label="Clear terminal" title="Clear"><svg class="ic" aria-hidden="true"><use href="#i-trash"/></svg></button>
+        <button type="button" class="ibtn tog" data-term aria-expanded="true" aria-controls="termBody" aria-label="Hide terminal"><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></button>
+      </div>
+      <div class="term-body" id="termBody" tabindex="0" aria-label="Terminal output">
+        <div id="termOut"></div>
+        <form class="tform" id="msgForm" hidden novalidate>
+          <div class="q"><label for="mName"><span class="qm">?</span> your name ›</label><input id="mName" name="name" autocomplete="name" required></div>
+          <div class="q"><label for="mEmail"><span class="qm">?</span> your email ›</label><input id="mEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+          <div class="q"><span class="ql" id="mTopicL"><span class="qm">?</span> it's about ›</span>
+            <div class="chips" role="radiogroup" aria-labelledby="mTopicL">
+              <label class="chip"><input type="radio" name="topic" value="a permanent role" checked><span>a permanent role</span></label>
+              <label class="chip"><input type="radio" name="topic" value="a contract"><span>a contract</span></label>
+              <label class="chip"><input type="radio" name="topic" value="a coffee chat"><span>a coffee chat</span></label>
+            </div></div>
+          <div class="q"><label for="mMsg"><span class="qm">?</span> message ›</label><textarea id="mMsg" name="msg" rows="3" required></textarea></div>
+          <div class="qa"><button type="submit" class="tbtn pri">send ⏎</button><button type="button" class="tbtn" id="mCancel">cancel</button><span class="ferr" id="mErr" role="status"></span></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sb" aria-label="Status bar">
+    <span class="br"><svg class="ic" aria-hidden="true"><use href="#i-branch"/></svg>main</span>
+    <span class="hp"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>0 problems</span>
+    <button type="button" data-term aria-label="Toggle terminal"><svg class="ic" aria-hidden="true"><use href="#i-term"/></svg>Terminal</button>
+    <span class="grow" id="sbMsg" aria-live="polite">Open to new roles from Mon 2 Nov</span>
+    <span id="sbPos">Ln 1, Col 1</span>
+    <span class="hp">Spaces: 2</span>
+    <span class="hp">UTF-8</span>
+    <span id="sbLang">Markdown</span>
+    <span class="hp" id="sbTime" title="Sam's local time">Sydney</span>
+  </footer>
+</div>
+
+<dialog class="pal" id="pal" aria-label="Go to a file or command">
+  <div class="pal-in"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+    <label class="sr" for="palIn">Search files and commands</label>
+    <input id="palIn" type="text" role="combobox" aria-expanded="true" aria-controls="palList" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Search files… (type &gt; for commands)">
+    <kbd>esc</kbd></div>
+  <ul class="pal-list" id="palList" role="listbox" aria-label="Results"></ul>
+  <div class="pal-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>⏎</kbd> open</span><span><kbd>&gt;</kbd> commands</span><span><kbd>esc</kbd> close</span></div>
+</dialog>
+<p class="sr" id="live" aria-live="polite"></p>
+<script>
+"use strict";
+/* ---------- the CV, as files ---------- */
+const FILES = [
+{ path: "about.md", lang: "md", mode: "Markdown", src: String.raw`# Sam Nguyen
+
+> Software engineer in Sydney. I build calm, fast, accessible web apps,
+> mostly for people using them on a phone, in a hurry, on one bar of 4G.
+
+## Right now
+- Senior engineer at **Harbourline Freight** (fictional), on driver and dispatch tools
+- Open to new roles from **Mon 2 Nov 2026**, permanent or contract
+- Based in Marrickville; happy in an office two or three days a week
+
+## What I'm good at
+- Turning messy paper workflows into forms people actually finish
+- Making things quick on cheap Android phones and patchy connections
+- Accessibility that ships: keyboard, screen readers, reduced motion
+- Walking juniors through their first on-call week
+
+## How I like to work
+Small pull requests, written decisions and a demo on Friday arvo.
+I'd rather delete a feature than ship one nobody asked for.
+
+## Outside work
+Weekend ferry nerd. Volunteer mechanic at a community bike workshop in Tempe.
+Still learning to make bánh xèo as crispy as Mum's.
+
+---
+Concept demo: Sam is fictional and every organisation here is made up.
+Next: read [experience.ts](experience.ts), or run [contact.sh](contact.sh) to get in touch.` },
+
+{ path: "experience.ts", lang: "ts", mode: "TypeScript", src: String.raw`// experience.ts — where I've worked, newest first.
+// Every organisation below is fictional; this CV is a concept demo.
+
+type Role = {
+  org: string;
+  title: string;
+  where: string;
+  from: string; // YYYY-MM
+  to: string | "now";
+  shipped: string[];
+  stack: string[];
+};
+
+export const experience: Role[] = [
+  {
+    org: "Harbourline Freight",
+    title: "Senior Software Engineer",
+    where: "Alexandria, Sydney · hybrid",
+    from: "2023-03",
+    to: "now",
+    shipped: [
+      "Offline-first run-sheet app for 140 drivers; syncs when signal returns",
+      "Dispatch board load time down from 6.1s to 1.4s on mid-range Android",
+      "Accessibility pass to WCAG 2.2 AA, tested with two screen-reader users",
+    ],
+    stack: ["TypeScript", "Node.js", "PostgreSQL", "Service Workers"],
+  },
+  {
+    org: "Wattle Street Digital",
+    title: "Software Engineer",
+    where: "Surry Hills, Sydney",
+    from: "2020-07",
+    to: "2023-02",
+    shipped: [
+      "Booking flows for eleven community health and sport clients",
+      "A shared form library that cut project set-up from days to hours",
+      "Ran the fortnightly accessibility clinic for designers and devs",
+    ],
+    stack: ["TypeScript", "Web Components", "Python", "SQLite"],
+  },
+  {
+    org: "Paddock Road Co-op",
+    title: "Junior Developer",
+    where: "Parramatta, Sydney",
+    from: "2018-02",
+    to: "2020-06",
+    shipped: [
+      "Member portal and rostering for a food co-op of about 600 households",
+      "Replaced nightly spreadsheet exports with a small, tested data pipeline",
+    ],
+    stack: ["JavaScript", "PHP", "SQL"],
+  },
+];
+
+export const education = {
+  degree: "BSc (Computer Science)",
+  finished: 2017,
+  capstone: "A transit timetable app for vision-impaired riders",
+};` },
+
+{ path: "projects/ferry-board.md", lang: "md", mode: "Markdown", src: String.raw`# Ferry Board
+
+A glanceable departures board for inner-harbour wharves, built on public
+timetable feeds (GTFS and realtime). It runs on an old tablet by our front door.
+
+## Why
+We kept missing the 7:42 by one minute. Now the hallway tells us to leave.
+
+## What it does
+- Next three departures per wharf, with walking time from home baked in
+- Big type and high contrast, readable from across the room
+- Falls back to the last known timetable when the feed drops out
+
+## Sample output
+~~~
+WHARF 2 · BALMAIN EAST        07:31
+07:42  Circular Quay          on time
+07:58  Barangaroo             +2 min
+08:12  Circular Quay          on time
+~~~
+
+Stack: TypeScript, one Service Worker, one canvas. The board above is sample data.
+Status: side project, not published.` },
+
+{ path: "projects/roster-fair.ts", lang: "ts", mode: "TypeScript", src: String.raw`// roster-fair.ts — volunteer roster for a community bike workshop (fictional).
+// Goal: fair shifts, and nobody doing spreadsheet maths on a Sunday night.
+
+type Volunteer = { name: string; canOpen: boolean; shiftsThisMonth: number };
+type Shift = { day: "Sat" | "Sun"; start: string; needsKeyholder: boolean };
+
+export function assign(shifts: Shift[], people: Volunteer[]): Map<Shift, Volunteer> {
+  const roster = new Map<Shift, Volunteer>();
+  for (const shift of shifts) {
+    const pool = people
+      .filter((p) => !shift.needsKeyholder || p.canOpen)
+      .sort((a, b) => a.shiftsThisMonth - b.shiftsThisMonth);
+    const pick = pool[0];
+    if (!pick) continue; // shown in the app as "needs a keyholder"
+    pick.shiftsThisMonth += 1;
+    roster.set(shift, pick);
+  }
+  return roster;
+}
+
+// In use: 30 volunteers, 8 shifts a month, nobody rostered more than twice.` },
+
+{ path: "projects/bin-night.rs", lang: "rs", mode: "Rust", src: String.raw`// bin-night — a tiny CLI that answers "which bin goes out tonight?"
+// Red lid every week; yellow (recycling) and green (garden) alternate.
+
+use std::env;
+
+#[derive(Debug)]
+enum Bin { Red, Yellow, Green }
+
+fn tonight(week: u32) -> Vec<Bin> {
+    let mut out = vec![Bin::Red];
+    out.push(if week % 2 == 0 { Bin::Yellow } else { Bin::Green });
+    out
+}
+
+fn main() {
+    let week: u32 = env::args().nth(1).and_then(|w| w.parse().ok()).unwrap_or(1);
+    println!("Tonight: {:?}. Lids closed, handles to the kerb.", tonight(week));
+}` },
+
+{ path: "skills.json", lang: "json", mode: "JSON", src: String.raw`{
+  "daily": ["TypeScript", "HTML & CSS", "Node.js", "PostgreSQL", "Accessibility (WCAG 2.2)"],
+  "comfortable": ["Rust", "Python", "Service Workers", "Transit data (GTFS)", "CI pipelines"],
+  "learning": ["WebGPU", "Rust on microcontrollers", "Reading Vietnamese"],
+  "practices": {
+    "testing": "property-based tests for logic, screenshots for UI",
+    "reviews": "small PRs, reviewed the same day",
+    "docs": "decision records in the repo, not in someone's head",
+    "onCall": true
+  },
+  "spoken": { "English": "native", "Vietnamese": "conversational" },
+  "availability": {
+    "from": "2026-11-02",
+    "type": ["permanent", "contract"],
+    "where": "Sydney (hybrid) or remote within Australia",
+    "noticeWeeks": 4
+  }
+}` },
+
+{ path: "contact.sh", lang: "sh", mode: "Shell Script", src: String.raw`#!/usr/bin/env bash
+# contact.sh — how to reach me. Press Run ▶ (or ⌘K → "Run contact.sh").
+# Demo note: Sam is fictional, and so is this number (an ACMA number for fiction).
+set -euo pipefail
+
+NAME="Sam Nguyen"
+ROLE="Software engineer — full-stack, accessibility"
+BASE="Marrickville, Sydney NSW"
+EMAIL="sam.nguyen@example.com"
+PHONE="0491 570 156"
+FROM="Mon 2 Nov 2026"
+
+echo "$NAME · $ROLE"
+printf '  %-8s %s\n' based "$BASE" email "$EMAIL" phone "$PHONE"
+printf '  %-8s %s\n' status "open to roles from $FROM"
+printf '  %-8s %s\n' replies "usually within two business days"
+
+read -rp "Write Sam a message? [y/N] " reply
+[[ "$reply" == [yY] ]] && ./message.sh` }
+];
+(() => {
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const byPath = Object.fromEntries(FILES.map(f => [f.path, f]));
+const ORIGINAL = "Sam Nguyen", ICON = { md: "M↓", ts: "TS", json: "{}", sh: "$_", rs: "RS" };
+const root = document.documentElement, app = $("#app"), main = $("#main"), side = $("#side"), tabsEl = $("#tabs"),
+  linesEl = $("#lines"), code = $("#code"), panes = $("#panes"), preview = $("#preview"), mini = $("#mini"), cv = $("#miniCv"),
+  miniV = $("#miniV"), term = $("#term"), termBody = $("#termBody"), out = $("#termOut"), form = $("#msgForm"), pal = $("#pal"),
+  palIn = $("#palIn"), palList = $("#palList"), fileBtn = $("#fileBtn"), pvBtn = $("#pvBtn");
+const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+const RM = () => (window.DemoKit ? DemoKit.reducedMotion : matchMedia("(prefers-reduced-motion: reduce)").matches);
+const phone = () => matchMedia("(max-width: 760px)").matches;
+const sleep = ms => new Promise(r => setTimeout(r, RM() ? 0 : ms));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const brandNow = () => (window.DemoKit && DemoKit.brand) || ORIGINAL;
+const brandSpan = () => `<span data-brand data-brand-original="${ORIGINAL}">${esc(brandNow())}</span>`;
+const brandify = html => html.split(ORIGINAL).join(brandSpan());
+const live = $("#live");
+const say = t => { live.textContent = ""; setTimeout(() => (live.textContent = t), 40); };
+const sbMsg = t => ($("#sbMsg").textContent = t);
+
+/* ---------- hand-built syntax highlighting ---------- */
+const KW = { ts: "import|export|from|const|let|type|return|function|for|of|if|continue|new|as", rs: "use|fn|let|mut|enum|if|else|match|pub|struct|impl|return" };
+const TY = { ts: "string|number|boolean|true|false|null", rs: "u32|Vec|String|Self|Some|None|Ok" };
+const cRules = l => [
+  [/\/\/.*/y, "c"], [/"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/y, "s"], [/#\[[^\]]*\]/y, "t"],
+  [/[A-Za-z_$][\w$]*(?=\??:(?!:))/y, "p"], [new RegExp("\\b(?:" + KW[l] + ")\\b", "y"), "k"],
+  [new RegExp("\\b(?:" + TY[l] + ")\\b", "y"), "t"], [/[A-Z][A-Za-z0-9_]*/y, "t"], [/\d[\d_.]*/y, "n"],
+  [/[A-Za-z_$][\w$]*!?(?=\()/y, "f"], [/=>|->|::|[{}()[\];,.<>=|?+\-*\/!&%]/y, "o"]];
+const RULES = {
+  ts: cRules("ts"), rs: cRules("rs"),
+  json: [[/"(?:[^"\\]|\\.)*"(?=\s*:)/y, "p"], [/"(?:[^"\\]|\\.)*"/y, "s"], [/\b(?:true|false|null)\b/y, "k"], [/-?\d+(?:\.\d+)?/y, "n"], [/[{}[\],:]/y, "o"]],
+  sh: [[/#.*/y, "c"], [/"(?:[^"\\]|\\.)*"|'[^']*'/y, "s"], [/\$\{?\w+\}?/y, "v"], [/^[A-Z_]+(?==)/y, "p"],
+    [/\b(?:set|echo|printf|read|if|then|fi)\b/y, "k"], [/\[\[|\]\]|&&|==|=/y, "o"], [/\.\/[\w.-]+/y, "f"], [/-[a-z]+/y, "t"]]
+};
+const WORD = /[\w$]+|[\s\S]/y;
+function hl(line, lang) {
+  const rules = RULES[lang]; let i = 0, html = "", plain = "";
+  while (i < line.length) {
+    let hit = null, cls = "";
+    for (const [re, c] of rules) { re.lastIndex = i; const r = re.exec(line); if (r && r[0].length) { hit = r[0]; cls = c; break; } }
+    if (hit) {
+      if (plain) { html += esc(plain); plain = ""; }
+      let inner = esc(hit);
+      if (lang === "sh" && cls === "s" && hit[0] === '"') inner = inner.replace(/\$\w+/g, v => `<span class="t-v">${v}</span>`);
+      html += `<span class="t-${cls}">${inner}</span>`; i += hit.length;
+    } else { WORD.lastIndex = i; const w = WORD.exec(line)[0]; plain += w; i += w.length; }
+  }
+  return html + esc(plain);
+}
+const mdInline = s => esc(s)
+  .replace(/\*\*(.+?)\*\*/g, '<span class="t-b">**$1**</span>')
+  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<span class="t-o">[</span><span class="t-l">$1</span><span class="t-o">](</span><span class="t-u">$2</span><span class="t-o">)</span>');
+function mdLine(line, st) {
+  if (/^~~~/.test(line)) { st.fence = !st.fence; return `<span class="t-c">${esc(line)}</span>`; }
+  if (st.fence) return `<span class="t-s">${esc(line)}</span>`;
+  let m;
+  if ((m = /^(#{1,6})(\s.*)$/.exec(line))) return `<span class="t-k">${m[1]}</span><span class="t-h">${mdInline(m[2])}</span>`;
+  if (/^>/.test(line)) return `<span class="t-q">${mdInline(line)}</span>`;
+  if (/^-{3,}\s*$/.test(line)) return `<span class="t-c">${line}</span>`;
+  if ((m = /^(\s*(?:[-*]|\d+\.))(\s.*)$/.exec(line))) return `<span class="t-y">${esc(m[1])}</span>${mdInline(m[2])}`;
+  return mdInline(line);
+}
+function mdToHtml(src, skipH1) {
+  const o = []; let list = null, para = [], quote = null, fence = null;
+  const inl = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m0, t, h) => `<a href="#${h}" data-open="${h}">${t}</a>`);
+  const flush = () => {
+    if (para.length) { o.push(`<p>${inl(para.join(" "))}</p>`); para = []; }
+    if (list) { o.push(`<ul>${list.map(x => `<li>${inl(x)}</li>`).join("")}</ul>`); list = null; }
+    if (quote) { o.push(`<blockquote><p>${inl(quote.join(" "))}</p></blockquote>`); quote = null; }
+  };
+  for (const line of src.split("\n")) {
+    let m;
+    if (fence) { if (/^~~~/.test(line)) { o.push(`<pre>${esc(fence.join("\n"))}</pre>`); fence = null; } else fence.push(line); continue; }
+    if (/^~~~/.test(line)) { flush(); fence = []; }
+    else if ((m = /^(#{1,3})\s+(.*)$/.exec(line))) { flush(); if (!(skipH1 && m[1].length === 1)) o.push(`<h${m[1].length + 1}>${inl(m[2])}</h${m[1].length + 1}>`); }
+    else if ((m = /^>\s?(.*)$/.exec(line))) { if (!quote) { flush(); quote = []; } quote.push(m[1]); }
+    else if ((m = /^\s*[-*]\s+(.*)$/.exec(line))) { if (!list) { flush(); list = []; } list.push(m[1]); }
+    else if (/^-{3,}\s*$/.test(line)) { flush(); o.push("<hr>"); }
+    else if (!line.trim()) flush();
+    else { if (list || quote) flush(); para.push(line); }
+  }
+  flush(); return brandify(o.join(""));
+}
+
+/* ---------- editor state ---------- */
+let open = ["about.md", "experience.ts"], active = null, pv = matchMedia("(min-width: 1180px)").matches, termOpen = !phone();
+const scrollMem = {};
+function renderCode(f) {
+  const st = { fence: false };
+  linesEl.innerHTML = f.src.split("\n").map((ln, i) => {
+    let ind = ln.match(/^ */)[0].length;
+    if (f.lang === "md") { const b = /^(\s*(?:[-*>]|\d+\.)\s)/.exec(ln); if (b) ind = b[1].length; }
+    const html = f.lang === "md" ? mdLine(ln, st) : hl(ln, f.lang);
+    return `<div class="l" data-i="${i + 1}"${ind ? ` style="--ind:${ind}ch"` : ""}><span class="n" aria-hidden="true">${i + 1}</span><span class="t">${brandify(html)}</span></div>`;
+  }).join("");
+}
+function outlineOf(f) {
+  const items = [];
+  f.src.split("\n").forEach((ln, i) => {
+    let m, lv = 0, k = "", label = "";
+    if (f.lang === "md" && (m = /^(#{1,3})\s+(.+)/.exec(ln))) { lv = m[1].length - 1; k = "#"; label = m[2]; }
+    else if (f.lang === "ts" && (m = /^\s*(?:export\s+)?(?:const|function|type)\s+(\w+)/.exec(ln))) { k = "ƒ"; label = m[1]; }
+    else if (f.lang === "ts" && (m = /^\s*org:\s*"([^"]+)"/.exec(ln))) { lv = 1; k = "◆"; label = m[1]; }
+    else if (f.lang === "rs" && (m = /^\s*(fn|enum|use)\s+([\w:]+)/.exec(ln))) { k = m[1] === "fn" ? "ƒ" : m[1] === "enum" ? "E" : "u"; label = m[2]; }
+    else if (f.lang === "json" && (m = /^  "(\w+)"\s*:/.exec(ln))) { k = "{}"; label = m[1]; }
+    else if (f.lang === "sh" && (m = /^([A-Z]+)=/.exec(ln))) { k = "$"; label = m[1]; }
+    if (label) items.push({ i: i + 1, lv, k, label });
+  });
+  return items;
+}
+function renderOutline(f) {
+  $("#outline").innerHTML = f ? outlineOf(f).map(o => `<li><button type="button" style="--d:${o.lv}" data-line="${o.i}"><span class="ok-k" aria-hidden="true">${o.k}</span><span class="lbl">${brandify(esc(o.label))}</span><span class="sr">, line ${o.i}</span></button></li>`).join("") : "";
+}
+function renderPreview(f) {
+  const about = f.path === "about.md";
+  $("#pvAbout").hidden = !about; $("#pvCta").hidden = !about;
+  const k = $("#pvKick"); k.hidden = about; k.textContent = f.path + " — preview";
+  $("#pvBody").innerHTML = mdToHtml(f.src, about);
+  preview.scrollTop = 0;
+}
+function renderTabs() {
+  const hadFocus = tabsEl.contains(document.activeElement);
+  tabsEl.innerHTML = open.map(p => {
+    const f = byPath[p], name = p.split("/").pop(), on = p === active;
+    return `<div class="tab${on ? " on" : ""}" data-path="${p}"><button type="button" class="tab-b" data-tab="${p}"${on ? ' aria-current="true"' : ""} title="${p}"><span class="fi ${f.lang}" aria-hidden="true">${ICON[f.lang]}</span>${esc(name)}</button><button type="button" class="tab-x" data-close="${p}" aria-label="Close ${esc(name)}"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>`;
+  }).join("");
+  const on = tabsEl.querySelector(".tab.on");
+  if (on) { const l = on.offsetLeft, r = l + on.offsetWidth; if (l < tabsEl.scrollLeft) tabsEl.scrollLeft = l; else if (r > tabsEl.scrollLeft + tabsEl.clientWidth) tabsEl.scrollLeft = r - tabsEl.clientWidth; }
+  if (hadFocus) { const b = tabsEl.querySelector(".tab.on .tab-b") || $("#empty button"); if (b) b.focus({ preventScroll: true }); }
+}
+function renderFile() {
+  const f = byPath[active];
+  main.classList.toggle("is-empty", !f); main.dataset.file = active || "";
+  $$("#tree [data-file]").forEach(b => b.setAttribute("aria-current", String(b.dataset.file === active)));
+  renderOutline(f);
+  if (!f) { $("#path").textContent = "sam-nguyen"; $("#fileNm").textContent = "No file open"; $("#fileIco").textContent = ""; $("#sbLang").textContent = "—"; $("#sbPos").textContent = "Ln –, Col –"; return; }
+  renderCode(f);
+  code.setAttribute("aria-label", f.path + " source");
+  const parts = f.path.split("/");
+  $("#path").innerHTML = "sam-nguyen › " + parts.slice(0, -1).map(p => esc(p) + " › ").join("") + "<b>" + esc(parts[parts.length - 1]) + "</b>";
+  $("#fileNm").textContent = f.path;
+  const ico = $("#fileIco"); ico.className = "fi " + f.lang; ico.textContent = ICON[f.lang];
+  $("#sbLang").textContent = f.mode;
+  const md = f.lang === "md";
+  pvBtn.hidden = !md;
+  panes.classList.toggle("pv", md && pv);
+  pvBtn.setAttribute("aria-pressed", String(md && pv));
+  if (md && pv) renderPreview(f);
+  setPos(1, 1);
+  code.scrollTop = scrollMem[f.path] || 0;
+  requestAnimationFrame(drawMini);
+}
+function openFile(p, focusCode) {
+  if (!byPath[p]) return;
+  if (!open.includes(p)) open.push(p);
+  if (active && active !== p) scrollMem[active] = code.scrollTop;
+  active = p;
+  renderTabs(); renderFile();
+  if (side.classList.contains("open")) toggleTree(false);
+  if (focusCode) code.focus({ preventScroll: true });
+}
+function closeTab(p) {
+  const i = open.indexOf(p); if (i < 0) return;
+  if (p === active) scrollMem[p] = code.scrollTop;
+  open.splice(i, 1);
+  if (active === p) active = open[i] || open[i - 1] || null;
+  renderTabs(); renderFile();
+}
+function setPos(ln, col) {
+  const prev = linesEl.querySelector(".l.on"); if (prev) prev.classList.remove("on");
+  const row = linesEl.children[ln - 1]; if (row) row.classList.add("on");
+  $("#sbPos").textContent = `Ln ${ln}, Col ${col}`;
+}
+function goLine(n) {
+  const row = linesEl.children[n - 1]; if (!row) return;
+  if (side.classList.contains("open")) toggleTree(false);
+  code.scrollTo({ top: Math.max(0, row.offsetTop - code.clientHeight / 3), behavior: RM() ? "auto" : "smooth" });
+  setPos(n, 1);
+}
+function setPv(on) {
+  const f = byPath[active];
+  pv = on;
+  if (!f || f.lang !== "md") { if (on) openFile("about.md"); return; }
+  panes.classList.toggle("pv", pv); pvBtn.setAttribute("aria-pressed", String(pv));
+  if (pv) renderPreview(f);
+  requestAnimationFrame(drawMini);
+}
+function toggleTree(force) {
+  const on = typeof force === "boolean" ? force : !side.classList.contains("open");
+  if (on) side.style.setProperty("--dd", Math.round(fileBtn.getBoundingClientRect().bottom + 6) + "px");
+  side.classList.toggle("open", on); fileBtn.setAttribute("aria-expanded", String(on));
+  if (on) { const cur = side.querySelector('[aria-current="true"]') || side.querySelector("button"); if (cur) cur.focus({ preventScroll: true }); }
+}
+function setTheme(t) {
+  root.dataset.theme = t;
+  $$("[data-theme-btn]").forEach(b => b.setAttribute("aria-pressed", String(t === "light")));
+  $('meta[name="theme-color"]').setAttribute("content", t === "light" ? "#DCE0E8" : "#11111B");
+  try { localStorage.setItem("sn-theme", t); } catch (e) { /* private mode */ }
+  requestAnimationFrame(drawMini);
+}
+function setTerm(on) {
+  termOpen = on; term.classList.toggle("is-open", on); if (!on) term.classList.remove("tall");
+  const tog = term.querySelector(".tog"); tog.setAttribute("aria-expanded", String(on)); tog.setAttribute("aria-label", on ? "Hide terminal" : "Show terminal");
+  requestAnimationFrame(() => { termBody.scrollTop = termBody.scrollHeight; });
+}
+
+/* ---------- minimap ---------- */
+const ctx = cv.getContext("2d"); let mapH = 0;
+function drawMini() {
+  if (!active || !mini.offsetParent) return;
+  const w = mini.clientWidth, h = mini.clientHeight; if (!w || !h) return;
+  const d = Math.min(window.devicePixelRatio || 1, 2);
+  cv.width = Math.round(w * d); cv.height = Math.round(h * d); cv.style.width = w + "px"; cv.style.height = h + "px";
+  ctx.setTransform(d, 0, 0, d, 0, 0); ctx.clearRect(0, 0, w, h);
+  const rows = linesEl.children, lh = Math.max(1.4, Math.min(3.4, (h - 16) / Math.max(rows.length, 1))), cw = 1.15;
+  mapH = rows.length * lh + 16;
+  const cache = new Map(); ctx.globalAlpha = 0.75;
+  for (let i = 0; i < rows.length; i++) {
+    const walker = document.createTreeWalker(rows[i].lastElementChild, NodeFilter.SHOW_TEXT); let col = 0, node;
+    while ((node = walker.nextNode())) {
+      const el = node.parentElement, key = el.className || el.parentElement.className;
+      let c = cache.get(key); if (!c) { c = getComputedStyle(el).color; cache.set(key, c); }
+      ctx.fillStyle = c;
+      const s = node.nodeValue; let st = -1;
+      for (let k = 0; k <= s.length; k++) {
+        const sp = k === s.length || s[k] === " ";
+        if (!sp && st < 0) st = k;
+        else if (sp && st >= 0) { ctx.fillRect(8 + (col + st) * cw, 8 + i * lh, (k - st) * cw, Math.max(1, lh * 0.62)); st = -1; }
+      }
+      col += s.length;
+    }
+  }
+  ctx.globalAlpha = 1; syncMini();
+}
+function syncMini() {
+  if (!mapH) return;
+  const sh = code.scrollHeight, ch = code.clientHeight;
+  miniV.style.transform = `translateY(${(code.scrollTop / sh) * mapH}px)`;
+  miniV.style.height = Math.max(14, (ch / sh) * mapH) + "px";
+}
+let dragging = false;
+const miniJump = e => { const r = mini.getBoundingClientRect(); const f = Math.min(1, Math.max(0, (e.clientY - r.top) / mapH)); code.scrollTop = f * code.scrollHeight - code.clientHeight / 2; };
+mini.addEventListener("pointerdown", e => { dragging = true; try { mini.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ } miniJump(e); });
+mini.addEventListener("pointermove", e => { if (dragging) miniJump(e); });
+["pointerup", "pointercancel"].forEach(t => mini.addEventListener(t, () => (dragging = false)));
+code.addEventListener("scroll", syncMini, { passive: true });
+if (window.ResizeObserver) new ResizeObserver(() => requestAnimationFrame(drawMini)).observe(mini);
+
+/* ---------- terminal ---------- */
+const PROMPT = `<span class="pr">sam@cv</span><span class="pc">:</span><span class="pd">~/sam-nguyen</span><span class="pc">$</span> `;
+function tline(html) { const d = document.createElement("div"); d.className = "tl"; d.innerHTML = html; out.appendChild(d); termBody.scrollTop = termBody.scrollHeight; return d; }
+const dropCursor = () => $$(".cur", out).forEach(c => c.remove());
+function promptLine(cmd) { dropCursor(); const d = tline(PROMPT + `<span class="cmd">${cmd || ""}</span><span class="cur" aria-hidden="true"></span>`); return d; }
+async function typeCmd(line, text) {
+  const c = line.querySelector(".cmd");
+  if (RM()) { c.textContent = text; return; }
+  for (const ch of text) { c.textContent += ch; await sleep(30 + Math.random() * 45); }
+}
+function today() {
+  try {
+    const p = new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Sydney", weekday: "short", day: "numeric", month: "short" }).formatToParts(new Date());
+    const g = t => (p.find(x => x.type === t) || {}).value || "";
+    return `${g("weekday")} ${g("day")} ${g("month")}`;
+  } catch (e) { return "today"; }
+}
+function clock() {
+  try {
+    const p = new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Sydney", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZoneName: "short" }).formatToParts(new Date());
+    const g = t => (p.find(x => x.type === t) || {}).value || "";
+    $("#sbTime").textContent = `Sydney ${g("hour")}:${g("minute")} ${g("timeZoneName")}`;
+  } catch (e) { /* no Intl time zones */ }
+}
+function bootTerm() {
+  out.innerHTML = ""; form.hidden = true;
+  tline(`<span class="kk">Last login: ${esc(today())} on ttys002</span>`);
+  promptLine(`<span class="cm"># ${isMac ? "⌘K" : "Ctrl+K"} jumps to any file.</span>`);
+  promptLine(`<span class="cm"># To get in touch: Run ▶ contact.sh</span>`);
+  promptLine();
+}
+const kv = (k, v) => `  <span class="kk">${k.padEnd(8)}</span> ${v}`;
+let running = false;
+async function runContact(withMsg) {
+  if (running) return;
+  running = true;
+  if (active !== "contact.sh") openFile("contact.sh");
+  setTerm(true);
+  term.classList.add("tall");
+  $$("[data-run]").forEach(b => b.setAttribute("aria-busy", "true"));
+  sbMsg("Running contact.sh…");
+  form.hidden = true;
+  const ln = promptLine();
+  await sleep(220);
+  await typeCmd(ln, "./contact.sh");
+  dropCursor();
+  await sleep(320);
+  const rows = [
+    `<span class="t-p">${brandSpan()}</span> <span class="kk">·</span> Software engineer — full-stack, accessibility`,
+    kv("based", "Marrickville, Sydney NSW"),
+    kv("email", `<a href="mailto:sam.nguyen@example.com">sam.nguyen@example.com</a>`),
+    kv("phone", `<a href="tel:+61491570156">0491 570 156</a>`),
+    kv("status", `open to roles from <span class="yl">Mon 2 Nov 2026</span>`),
+    kv("replies", "usually within two business days")];
+  for (const r of rows) { tline(r); await sleep(95); }
+  await sleep(180);
+  const ask = tline(`Write Sam a message? [y/N]<span class="choices"><button type="button" class="tbtn pri" data-t="y">y — write a message</button><button type="button" class="tbtn" data-t="copy">copy email</button><button type="button" class="tbtn" data-t="n">N — not now</button></span>`);
+  $$("[data-run]").forEach(b => b.removeAttribute("aria-busy"));
+  sbMsg("✓ contact.sh exited 0");
+  say("contact.sh finished: email sam.nguyen@example.com, phone 0491 570 156. Both are fictional demo details. Write Sam a message?");
+  running = false;
+  if (withMsg) answer(ask, "y"); else ask.querySelector("button").focus({ preventScroll: true });
+}
+async function answer(ask, t) {
+  if (t === "copy") {
+    let ok = false;
+    try { await navigator.clipboard.writeText("sam.nguyen@example.com"); ok = true; } catch (e) { ok = false; }
+    tline(ok ? `<span class="ok">✔ copied sam.nguyen@example.com to your clipboard</span>` : `<span class="err">✖ the clipboard isn't available here. Select the address above instead.</span>`);
+    return;
+  }
+  const ch = ask && ask.querySelector(".choices");
+  if (ch) ch.outerHTML = ` <span class="yl">${t === "y" ? "y" : "N"}</span>`;
+  if (t === "y") {
+    tline(`<span class="kk">./message.sh · answer the prompts, then send ⏎</span>`);
+    form.hidden = false; $("#mErr").textContent = "";
+    termBody.scrollTop = termBody.scrollHeight;
+    $("#mName").focus({ preventScroll: true });
+  } else { tline("No worries. The details above aren't going anywhere."); promptLine(); }
+}
+out.addEventListener("click", e => { const b = e.target.closest("[data-t]"); if (b) answer(b.closest(".tl"), b.dataset.t); });
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const nm = $("#mName"), em = $("#mEmail"), msg = $("#mMsg");
+  const bad = [nm, em, msg].find(el => !el.value.trim() || !el.checkValidity());
+  if (bad) { $("#mErr").textContent = bad === em ? "✖ that email doesn't look right" : bad === nm ? "✖ your name, please" : "✖ the message is empty"; bad.focus(); return; }
+  const topic = form.querySelector("input[name=topic]:checked").value, text = msg.value.trim();
+  form.hidden = true;
+  tline(PROMPT + `./message.sh --to sam --about "${esc(topic)}"`);
+  tline(kv("from", `${esc(nm.value.trim())} &lt;${esc(em.value.trim())}&gt;`));
+  tline(kv("message", esc(text.slice(0, 140)) + (text.length > 140 ? "…" : "")));
+  tline(`<span class="err">✖ demo mode: nothing was sent.</span> <span class="kk">On Sam's real site this would land in his inbox.</span>`);
+  form.reset(); promptLine();
+  if (window.DemoKit) DemoKit.toast("Demo only — your message wasn't sent anywhere.");
+  sbMsg("Demo only · message not sent");
+  termBody.focus({ preventScroll: true });
+});
+$("#mCancel").addEventListener("click", () => { form.hidden = true; tline(`<span class="kk">^C</span>`); promptLine(); termBody.focus({ preventScroll: true }); });
+function clearTerm() { form.hidden = true; out.innerHTML = ""; promptLine(); }
+$("#termClear").addEventListener("click", clearTerm);
+
+/* ---------- command palette ---------- */
+const CMDS = [
+  { label: "Run contact.sh", hint: "▶ run", act: () => runContact() },
+  { label: "Write Sam a message", hint: "terminal", act: () => runContact(true) },
+  { label: "Toggle light / dark theme", hint: "theme", act: () => setTheme(root.dataset.theme === "light" ? "dark" : "light") },
+  { label: "Toggle Markdown preview", hint: "view", act: () => setPv(!pv) },
+  { label: "Toggle terminal", hint: "Ctrl + `", act: () => setTerm(!termOpen) },
+  { label: "Clear terminal", hint: "terminal", act: () => { setTerm(true); clearTerm(); } }];
+let palItems = [], palSel = 0, palOpener = null;
+function fuzzy(q, s) {
+  if (!q) return { score: 0, idx: [] };
+  const t = s.toLowerCase(), idx = []; let qi = 0, score = 0, last = -2;
+  for (let j = 0; j < t.length && qi < q.length; j++) {
+    if (t[j] === q[qi]) { idx.push(j); score += (j === last + 1 ? 3 : 1) + (j === 0 || /[\/._\- ]/.test(t[j - 1]) ? 2 : 0); last = j; qi++; }
+  }
+  return qi === q.length ? { score: score - t.length * 0.02, idx } : null;
+}
+const markUp = (s, idx) => [...s].map((c, i) => (idx.includes(i) ? `<b>${esc(c)}</b>` : esc(c))).join("");
+function renderPal() {
+  const raw = palIn.value.trim(), cmdMode = raw.startsWith(">"), q = (cmdMode ? raw.slice(1) : raw).trim().toLowerCase();
+  const files = cmdMode ? [] : FILES.map(f => ({ f, m: fuzzy(q, f.path) })).filter(x => x.m);
+  const cmds = CMDS.map(c => ({ c, m: fuzzy(q, c.label) })).filter(x => x.m);
+  if (q) { files.sort((a, b) => b.m.score - a.m.score); cmds.sort((a, b) => b.m.score - a.m.score); }
+  palItems = [...files, ...cmds]; palSel = Math.min(palSel, Math.max(0, palItems.length - 1));
+  let n = 0;
+  const row = x => {
+    const i = n++, where = x.f ? (x.f.path === active ? "open now" : open.includes(x.f.path) ? "in a tab" : "file") : x.c.hint;
+    const ico = x.f ? `<span class="fi ${x.f.lang}" aria-hidden="true">${ICON[x.f.lang]}</span>` : `<span class="fi sh" aria-hidden="true">›</span>`;
+    return `<li role="option" id="po${i}" data-i="${i}" aria-selected="${i === palSel}">${ico}<span>${markUp(x.f ? x.f.path : x.c.label, x.m.idx)}</span><span class="pth">${esc(where)}</span></li>`;
+  };
+  let html = "";
+  if (files.length) html += `<li class="sec" role="presentation">Files</li>` + files.map(row).join("");
+  if (cmds.length) html += `<li class="sec" role="presentation">Commands</li>` + cmds.map(row).join("");
+  palList.innerHTML = html || `<li class="none" role="presentation">Nothing matches “${esc(raw)}”. Try “exp”, “json” or “&gt;run”.</li>`;
+  syncPal();
+}
+function syncPal() {
+  $$("[role=option]", palList).forEach((li, i) => li.setAttribute("aria-selected", String(i === palSel)));
+  const cur = $("#po" + palSel);
+  if (!cur) { palIn.removeAttribute("aria-activedescendant"); return; }
+  palIn.setAttribute("aria-activedescendant", cur.id);
+  const top = cur.offsetTop, bot = top + cur.offsetHeight;
+  if (top < palList.scrollTop + 26) palList.scrollTop = Math.max(0, top - 30);
+  else if (bot > palList.scrollTop + palList.clientHeight) palList.scrollTop = bot - palList.clientHeight + 6;
+}
+function openPal() {
+  if (pal.open) return;
+  palOpener = document.activeElement; palIn.value = ""; palSel = 0; renderPal();
+  try { pal.showModal(); } catch (e) { pal.setAttribute("open", ""); }
+  palIn.focus();
+}
+function closePal(keepFocus) {
+  if (!pal.open) return;
+  pal.close();
+  if (!keepFocus && palOpener && palOpener.focus) palOpener.focus({ preventScroll: true });
+}
+function pick(i) {
+  const x = palItems[i]; if (!x) return;
+  closePal(true);
+  if (x.f) openFile(x.f.path, true); else x.c.act();
+}
+palIn.addEventListener("input", () => { palSel = 0; renderPal(); });
+palIn.addEventListener("keydown", e => {
+  if (!palItems.length && e.key !== "Escape") return;
+  if (e.key === "ArrowDown") { e.preventDefault(); palSel = (palSel + 1) % palItems.length; syncPal(); }
+  else if (e.key === "ArrowUp") { e.preventDefault(); palSel = (palSel - 1 + palItems.length) % palItems.length; syncPal(); }
+  else if (e.key === "Enter") { e.preventDefault(); pick(palSel); }
+});
+pal.addEventListener("keydown", e => { if (e.key === "Escape") { e.preventDefault(); closePal(); } });
+pal.addEventListener("cancel", e => { e.preventDefault(); closePal(); });
+pal.addEventListener("click", e => {
+  if (e.target === pal) { closePal(); return; }
+  const li = e.target.closest("[role=option]"); if (li) pick(+li.dataset.i);
+});
+palList.addEventListener("pointermove", e => { const li = e.target.closest("[role=option]"); if (li && +li.dataset.i !== palSel) { palSel = +li.dataset.i; syncPal(); } });
+
+/* ---------- wiring ---------- */
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-open],[data-run],[data-pal],[data-term],[data-file],[data-line],[data-theme-btn],#palBtn,#palBtn2");
+  if (!t || pal.contains(t)) return;
+  if (t.dataset.open) { e.preventDefault(); openFile(t.dataset.open, true); }
+  else if (t.hasAttribute("data-run")) runContact();
+  else if (t.hasAttribute("data-pal") || t.id === "palBtn" || t.id === "palBtn2") openPal();
+  else if (t.hasAttribute("data-term")) setTerm(!termOpen);
+  else if (t.dataset.file) openFile(t.dataset.file, !phone());
+  else if (t.dataset.line) goLine(+t.dataset.line);
+  else if (t.hasAttribute("data-theme-btn")) setTheme(root.dataset.theme === "light" ? "dark" : "light");
+});
+tabsEl.addEventListener("click", e => {
+  const x = e.target.closest("[data-close]"); if (x) { closeTab(x.dataset.close); return; }
+  const b = e.target.closest("[data-tab]"); if (b) openFile(b.dataset.tab);
+});
+tabsEl.addEventListener("auxclick", e => { const t = e.target.closest(".tab"); if (e.button === 1 && t) { e.preventDefault(); closeTab(t.dataset.path); } });
+$(".tree .dir").addEventListener("click", e => { const b = e.currentTarget; b.setAttribute("aria-expanded", String(b.getAttribute("aria-expanded") !== "true")); });
+$("#actFiles").addEventListener("click", e => { const hide = !app.classList.contains("no-side"); app.classList.toggle("no-side", hide); e.currentTarget.setAttribute("aria-pressed", String(!hide)); });
+fileBtn.addEventListener("click", () => toggleTree());
+document.addEventListener("pointerdown", e => { if (side.classList.contains("open") && !side.contains(e.target) && !fileBtn.contains(e.target)) toggleTree(false); });
+pvBtn.addEventListener("click", () => setPv(!pv));
+$("#hintX").addEventListener("click", () => { $("#hint").remove(); code.focus({ preventScroll: true }); });
+linesEl.addEventListener("click", e => {
+  const row = e.target.closest(".l"); if (!row) return;
+  let col = 1;
+  try {
+    const t = row.lastElementChild, r = document.caretRangeFromPoint ? document.caretRangeFromPoint(e.clientX, e.clientY) : null;
+    if (r && t.contains(r.startContainer)) { const pre = document.createRange(); pre.selectNodeContents(t); pre.setEnd(r.startContainer, r.startOffset); col = pre.toString().length + 1; }
+  } catch (err) { col = 1; }
+  setPos(+row.dataset.i, col);
+});
+document.addEventListener("keydown", e => {
+  if (e.defaultPrevented) return;
+  const k = e.key;
+  if ((e.metaKey || e.ctrlKey) && !e.altKey && (k === "k" || k === "K")) { e.preventDefault(); if (pal.open) closePal(); else openPal(); return; }
+  if (e.ctrlKey && (k === "`" || e.code === "Backquote")) { e.preventDefault(); setTerm(!termOpen); return; }
+  if (k === "Escape") {
+    if (side.classList.contains("open")) { e.preventDefault(); toggleTree(false); fileBtn.focus(); }
+    else if (phone() && termOpen) { e.preventDefault(); setTerm(false); }
+  }
+});
+addEventListener("resize", () => { if (!phone() && side.classList.contains("open")) toggleTree(false); });
+addEventListener("hd:brandchange", () => requestAnimationFrame(drawMini));
+
+/* ---------- start ---------- */
+let theme = "dark";
+try { theme = localStorage.getItem("sn-theme") || "dark"; } catch (e) { theme = "dark"; }
+setTheme(theme === "light" ? "light" : "dark");
+$$(".modk").forEach(k => (k.textContent = isMac ? "⌘" : "Ctrl"));
+const h = decodeURIComponent(location.hash.slice(1));
+openFile(byPath[h] ? h : "about.md");
+setTerm(termOpen);
+bootTerm(); clock(); setInterval(clock, 30000);
+})();
+</script>
+</body>
+</html>

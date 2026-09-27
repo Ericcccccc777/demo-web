@@ -1,0 +1,8 @@
+{
+  "id": "013",
+  "tech": ["SVG", "CSS Grid", "Pointer Events", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["menu", "ordering"],
+  "interaction": "Switch between beef, lamb and pork charts, hover, tap or Tab to any primal cut to see what it's sold as, how to cook it and a sample price per kg, then set a weight and add it (or a BBQ pack) to a butcher-paper pickup slip that ends in an honest demo toast.",
+  "fonts": ["Alfa Slab One", "IM Fell English"],
+  "notes": ""
+}

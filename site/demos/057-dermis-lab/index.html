@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="057">
+<meta name="demo:brand" content="Dermis Lab Skin Clinic">
+<title>Dermis Lab Skin Clinic — science-led skin care, Subiaco</title>
+<meta name="description" content="Dermis Lab Skin Clinic is a fictional skin clinic in Subiaco, Western Australia, offering skin consultations, peels, LED and microneedling.">
+<meta name="theme-color" content="#FAFCFD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --lab:#FAFCFD;--blue:#E3EEF6;--cobalt:#1D4ED8;--pink:#F4B6C2;--ink:#0F1B33;--muted:#43506A;--rose:#B0405C;--line:#C9D8E6;
+  --sans:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:clamp(18px,4.4vw,64px);--hh:64px;
+  --ticks:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 8px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--lab);color:var(--ink);font:400 1.0625rem/1.55 var(--sans);overflow-x:clip}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{list-style:none;padding:0}
+a{color:inherit}
+svg{display:block}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.mono{font-family:var(--mono);font-size:.78rem;line-height:1.5;letter-spacing:.02em}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--cobalt);background:var(--cobalt);color:#fff;
+  font:500 .98rem/1 var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.btn:hover{background:#1A43BD;box-shadow:0 8px 24px -10px rgba(29,78,216,.6)}
+.btn.ghost{background:transparent;color:var(--cobalt)}
+.btn.ghost:hover{background:var(--blue)}
+.rule{height:10px;background:var(--ticks);border-top:1px solid var(--line)}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;height:var(--hh);display:flex;align-items:center;gap:22px;padding:0 max(var(--pad),env(safe-area-inset-right)) 0 max(var(--pad),env(safe-area-inset-left));
+  background:rgba(250,252,253,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.lens{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--cobalt);position:relative;font:500 .78rem/1 var(--mono);color:var(--cobalt);
+  background:radial-gradient(circle at 50% 50%,#fff 0 55%,var(--blue) 56%)}
+.lens::after{content:"";position:absolute;inset:3px;border-radius:50%;border:1px dashed rgba(29,78,216,.35)}
+.name{font-weight:600;font-size:1.02rem;line-height:1.15;overflow-wrap:anywhere;min-width:0}
+.hdr nav{margin-left:auto;display:flex;gap:26px}
+.hdr nav a{text-decoration:none;font-size:.95rem;color:var(--muted);padding:10px 0}
+.hdr nav a:hover{color:var(--cobalt)}
+.hdr .btn{min-height:40px;padding:0 16px;font-size:.9rem;flex:none}
+
+/* phone depth bar */
+.depthbar{position:fixed;left:0;right:0;top:var(--hh);z-index:45;display:none;align-items:center;gap:12px;padding:8px var(--pad) 9px;background:rgba(250,252,253,.94);border-bottom:1px solid var(--line);
+  transform:translateY(-110%);transition:transform .3s}
+.depthbar.on{transform:none}
+.depthbar b{font:500 .8rem/1 var(--mono);color:var(--cobalt);white-space:nowrap;min-width:9.5em}
+.segs{flex:1;display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:3px}
+.segs i{height:6px;border-radius:3px;background:var(--blue);position:relative;overflow:hidden}
+.segs i::after{content:"";position:absolute;inset:0;background:var(--cobalt);transform-origin:left;transform:scaleX(var(--f,0))}
+
+/* desktop gauge */
+.gauge{position:fixed;right:max(18px,env(safe-area-inset-right));top:calc(var(--hh) + 40px);bottom:40px;z-index:40;width:92px;display:flex;flex-direction:column;align-items:flex-end;opacity:0;transition:opacity .4s;pointer-events:none}
+.gauge.on{opacity:1}
+.g-read{font:500 .78rem/1.3 var(--mono);text-align:right;color:var(--cobalt);margin-bottom:10px;min-height:2.6em}
+.g-read span{display:block;color:var(--muted);font-weight:400}
+.g-ruler{position:relative;flex:1;width:38px;border-right:1.5px solid var(--ink)}
+.g-ruler .t{position:absolute;right:0;height:1px;background:var(--ink);width:8px}
+.g-ruler .t.major{width:16px}
+.g-ruler .t span{position:absolute;right:22px;top:-7px;font:400 .66rem/1 var(--mono);white-space:nowrap;color:var(--muted)}
+.g-ruler .band{position:absolute;right:-7px;width:5px;border-radius:3px}
+.g-mark{position:absolute;right:-2px;left:-20px;height:0;border-top:1.5px solid var(--cobalt);transition:top .12s linear}
+.g-mark::after{content:"";position:absolute;right:-9px;top:-6px;border:6px solid transparent;border-right:8px solid var(--cobalt)}
+
+/* hero */
+main{padding-top:var(--hh)}
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px;align-items:center;padding:clamp(40px,6vw,88px) var(--pad) clamp(48px,6vw,80px)}
+.hero-copy{grid-column:1/span 6;display:grid;gap:22px}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--cobalt)}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--cobalt)}
+h1{font-weight:500;font-size:clamp(2.6rem,5vw,4.8rem);line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--cobalt)}
+.lede{font-size:clamp(1.1rem,1.4vw,1.25rem);color:var(--muted);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.scope{grid-column:8/span 5;justify-self:center;width:min(100%,520px);position:relative}
+.scope svg{width:100%;height:auto;overflow:visible}
+.scope figcaption{margin-top:14px;text-align:center;color:var(--muted)}
+.drift{animation:drift 26s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-26px,14px)}}
+
+/* journey */
+.journey-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:16px;padding:clamp(56px,7vw,96px) var(--pad) 28px;border-top:1px solid var(--line)}
+.journey-head>*{grid-column:1/span 7}
+.journey-head h2,.sec-t{font-weight:500;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.05;letter-spacing:-.025em}
+.journey-head p:last-child{grid-column:9/span 4;grid-row:1/span 2;align-self:end;color:var(--muted)}
+.journey{display:grid;grid-template-columns:5fr 7fr;column-gap:clamp(24px,4vw,64px);padding:0 calc(var(--pad) + 110px) 0 var(--pad)}
+.spec-col{position:sticky;top:var(--hh);height:calc(100vh - var(--hh));align-self:start;overflow:hidden;border-left:1px solid var(--line);border-right:1px solid var(--line);
+  background:linear-gradient(var(--lab),var(--lab))}
+.spec-col::before,.spec-col::after{content:"";position:absolute;left:0;right:0;z-index:2;pointer-events:none}
+.spec-col::before{top:0;height:70px;background:linear-gradient(var(--lab),rgba(250,252,253,0))}
+.spec-col::after{bottom:0;height:70px;background:linear-gradient(rgba(250,252,253,0),var(--lab))}
+.spec-move{position:absolute;left:0;right:0;top:0;will-change:transform}
+.spec-move svg{width:100%;height:auto}
+.reticle{position:absolute;left:0;right:0;top:50%;z-index:3;border-top:1px solid var(--cobalt);pointer-events:none}
+.reticle span{position:absolute;right:8px;top:6px;background:var(--lab);color:var(--cobalt);padding:2px 6px;border-radius:4px}
+.reticle::before{content:"";position:absolute;left:50%;top:-10px;height:20px;border-left:1px solid var(--cobalt)}
+.layers{display:grid}
+.layer{min-height:112vh;padding:clamp(40px,10vh,120px) 0;display:grid;gap:22px;align-content:start}
+.depth{display:inline-flex;align-self:start;justify-self:start;gap:10px;align-items:center;padding:6px 12px;border-radius:999px;background:var(--blue);color:var(--cobalt)}
+.layer h2{font-weight:500;font-size:clamp(2.2rem,4vw,3.6rem);line-height:1;letter-spacing:-.03em}
+.layer>p{font-size:1.15rem;color:var(--muted);max-width:36em}
+.slice{display:none;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.slice svg{width:100%;height:auto}
+.legend{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
+.legend li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;font-size:.98rem}
+.legend b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--cobalt);font:500 .74rem/1 var(--mono);color:var(--cobalt);background:#fff}
+.legend span b{display:inline;border:0;width:auto;height:auto;font:600 .98rem var(--sans);color:var(--ink);background:none}
+.tx{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.card{position:relative;display:grid;gap:10px;align-content:start;padding:22px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 40px -32px rgba(15,27,51,.35)}
+.card h3{font-weight:600;font-size:1.2rem;line-height:1.2}
+.card p{font-size:.98rem;color:var(--muted)}
+.card .meta{display:flex;justify-content:space-between;gap:12px;border-top:1px dashed var(--line);padding-top:10px;color:var(--ink)}
+.card a{color:var(--cobalt);font-weight:500;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.card .where{color:var(--rose)}
+.card.scopeout{grid-column:1/-1;background:var(--blue);border-color:#c5d8ec}
+.js .focus{opacity:0;filter:blur(6px);transform:translateY(12px);transition:opacity .8s ease,filter .8s ease,transform .8s ease}
+.js .focus.in{opacity:1;filter:none;transform:none}
+
+/* routine builder */
+.routine{padding:clamp(64px,8vw,112px) var(--pad);background:linear-gradient(var(--blue),#eef4fa);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.r-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:28px;align-items:start}
+.r-intro{grid-column:1/span 4;display:grid;gap:18px;position:sticky;top:calc(var(--hh) + 24px)}
+.r-intro p{color:var(--muted)}
+.slide{grid-column:6/span 7;position:relative;display:grid;grid-template-columns:120px 1fr;border-radius:18px;background:#fff;border:1px solid #c5d8ec;box-shadow:0 30px 60px -40px rgba(15,27,51,.45);overflow:hidden;min-height:420px}
+.slide-label{background:repeating-linear-gradient(45deg,#f1f5fa 0 6px,#e8eff7 6px 12px);border-right:1px solid #c5d8ec;padding:18px 14px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.slide-label .mono b{display:block;font-weight:500;color:var(--cobalt);font-size:.95rem;white-space:nowrap}
+.slide-label p{white-space:nowrap}
+.steps{display:flex;flex-direction:column;gap:8px}
+.steps i{display:block;height:5px;border-radius:3px;background:#d3e0ec}
+.steps i.done{background:var(--cobalt)}
+.slide-body{padding:26px clamp(18px,3vw,36px) 26px;display:grid;align-content:start;gap:18px;min-width:0}
+.q{display:none;border:0;padding:0;margin:0;min-width:0}
+.q.on{display:grid;gap:16px;animation:qin .45s cubic-bezier(.2,.8,.2,1)}
+@keyframes qin{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.q legend{padding:0;font-weight:500;font-size:clamp(1.4rem,2.2vw,1.8rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:6px;float:left;width:100%}
+.q legend+*{clear:both}
+.q .help{color:var(--muted);font-size:.95rem}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.opt span{display:grid;gap:2px;min-height:58px;padding:12px 16px 12px 44px;border-radius:14px;border:1px solid var(--line);background:var(--lab);position:relative;transition:border-color .2s,background .2s}
+.opt span::before{content:"";position:absolute;left:14px;top:16px;width:18px;height:18px;border-radius:50%;border:1.5px solid #9fb3c8;background:#fff}
+.opt span small{color:var(--muted);font-size:.84rem;line-height:1.3}
+.opt input:checked+span{border-color:var(--cobalt);background:#EEF3FD}
+.opt input:checked+span::before{border-color:var(--cobalt);background:radial-gradient(circle,var(--cobalt) 0 4px,#fff 5px)}
+.opt input:focus-visible+span{outline:2px solid var(--cobalt);outline-offset:2px}
+.nav-q{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:4px}
+.nav-q .mono{color:var(--muted)}
+.result{display:none;gap:18px}
+.result.on{display:grid;animation:qin .5s cubic-bezier(.2,.8,.2,1)}
+.result:focus{outline:none}
+.result h3{font-weight:500;font-size:1.6rem;letter-spacing:-.02em;line-height:1.1}
+.why{color:var(--muted)}
+.proto{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.col{border-radius:16px;border:1px solid var(--line);padding:16px;background:var(--lab)}
+.col h4{margin:0 0 12px;display:flex;justify-content:space-between;align-items:center;font:600 1rem/1 var(--sans)}
+.col h4 .mono{color:var(--cobalt)}
+.col ol{display:grid;gap:12px;counter-reset:s}
+.col li{display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:.95rem;line-height:1.35}
+.col li::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:1.5px dashed var(--cobalt);font:500 .72rem/1 var(--mono);color:var(--cobalt)}
+.col li b{display:block;font-weight:600;color:var(--ink)}
+.col li span{color:var(--muted)}
+.notes{display:grid;gap:8px;padding:14px 16px;border-radius:14px;background:#FDF1F4;border:1px solid #F4CBD5}
+.notes p{font-size:.92rem}
+.notes b{color:var(--rose)}
+
+/* menu + faq */
+.menu{padding:clamp(64px,8vw,112px) var(--pad);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:28px}
+.menu-h{grid-column:1/span 5;display:grid;gap:14px;align-content:start}
+.menu-h p{color:var(--muted)}
+.price{grid-column:7/span 6;border-top:1.5px solid var(--ink)}
+.price div{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.price dt{font-weight:500}
+.price dt small{display:block;font-weight:400;color:var(--muted);font-size:.9rem}
+.price dd{font-family:var(--mono);font-size:.85rem}
+.price dd:last-child{font-size:1rem;font-weight:500;min-width:4.2em;text-align:right}
+.price-note{grid-column:7/span 6;color:var(--muted)}
+.faq{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:28px}
+.faq h3{grid-column:1/span 5;font-weight:500;font-size:1.6rem;letter-spacing:-.02em}
+.faq div{grid-column:7/span 6}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font-weight:500;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 1.4rem/1 var(--mono);color:var(--cobalt);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 16px;color:var(--muted);max-width:40em}
+
+/* visit */
+.visit{padding:clamp(64px,8vw,112px) var(--pad);background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:28px}
+.v-info{grid-column:1/span 5;display:grid;gap:22px;align-content:start}
+.hours{display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.hours dd{font-family:var(--mono);font-size:.85rem}
+.v-info a{color:var(--cobalt);font-weight:500;text-decoration:none;font-size:1.15rem}
+.book{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:26px;border-radius:22px;background:var(--lab);border:1px solid var(--line)}
+.book h3{grid-column:1/-1;font-weight:500;font-size:1.5rem;letter-spacing:-.02em}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font:500 .74rem/1 var(--mono);letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+.f input,.f select,.f textarea{width:100%;min-height:46px;padding:10px 14px;border-radius:12px;border:1px solid #b9cadb;background:#fff;font:400 1rem/1.3 var(--sans);color:var(--ink)}
+.f textarea{min-height:90px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--cobalt);outline-offset:1px;border-color:var(--cobalt)}
+.book .btn{grid-column:1/-1;justify-self:start}
+.book p.mono{grid-column:1/-1;color:var(--muted)}
+.foot{padding:36px var(--pad) calc(36px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:14px;background:var(--lab)}
+.foot .fname{font-weight:500;font-size:clamp(1.6rem,3.6vw,2.6rem);letter-spacing:-.02em;overflow-wrap:anywhere}
+.foot p{color:var(--muted);max-width:62em;font-size:.95rem}
+.gen{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:#FDF1F4;border:1px solid #F4CBD5;font-size:.92rem;color:var(--ink)}
+.gen::before{content:"i";flex:none;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--rose);color:#fff;font:600 .75rem/1 var(--mono)}
+
+@media (max-width:1100px){
+  .hdr nav{display:none}
+  .hero-copy{grid-column:1/span 7}.scope{grid-column:8/span 5}
+  .journey{padding-right:calc(var(--pad) + 96px)}
+  .tx{grid-template-columns:1fr}
+  .r-intro{grid-column:1/-1;position:static}.slide{grid-column:1/-1}
+  .menu-h,.price,.price-note,.faq h3,.faq div{grid-column:1/-1}
+  .v-info,.book{grid-column:1/-1}
+}
+@media (max-width:760px){
+  :root{--hh:58px}
+  .hero{row-gap:28px}
+  .hero-copy,.scope{grid-column:1/-1}
+  .scope{width:min(100%,380px)}
+  .journey-head>*,.journey-head p:last-child{grid-column:1/-1;grid-row:auto}
+  .journey{display:block;padding:0 var(--pad)}
+  .spec-col,.gauge{display:none}
+  .depthbar{display:flex}
+  .layer{min-height:0;padding:40px 0 48px;border-top:1px solid var(--line)}
+  .slice{display:block}
+  .slide{grid-template-columns:1fr;min-height:0}
+  .slide-label{flex-direction:row;align-items:center;border-right:0;border-bottom:1px solid #c5d8ec;padding:12px 16px}
+  .steps{flex-direction:row;width:120px}.steps i{flex:1}
+  .opts{grid-template-columns:1fr}
+  .proto{grid-template-columns:1fr}
+  .book{grid-template-columns:1fr;padding:20px}
+  .price div{grid-template-columns:1fr auto;row-gap:2px}
+  .price dd:nth-of-type(1){grid-row:2;grid-column:1}
+  .foot{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .js .focus{opacity:1;filter:none;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a class="logo" href="#top"><span class="lens" aria-hidden="true"><span data-brand-initials>DL</span></span><span class="name" data-brand>Dermis Lab Skin Clinic</span></a>
+  <nav aria-label="Primary"><a href="#layers">Layers</a><a href="#routine">Routine</a><a href="#treatments">Treatments</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="#visit">Book a consult</a>
+</header>
+<div class="depthbar" id="depthbar" aria-hidden="true"><b id="db-read">Surface · 0 µm</b><div class="segs"><i id="sg0"></i><i id="sg1"></i><i id="sg2"></i></div></div>
+<aside class="gauge" id="gauge" aria-hidden="true"><p class="g-read" id="g-read">0 µm<span>Surface</span></p><div class="g-ruler" id="g-ruler"><i class="g-mark" id="g-mark"></i></div></aside>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero-copy">
+      <p class="eyebrow mono">Skin clinic · Subiaco, WA</p>
+      <h1 id="h1">Skin care that starts with a <em>closer look</em>.</h1>
+      <p class="lede">We look first, explain what we see, and only then suggest a treatment. Scroll down through the layers of your skin to see where each one works.</p>
+      <div class="cta"><a class="btn" href="#routine">Build your routine</a><a class="btn ghost" href="#layers">Go deeper ↓</a></div>
+      <ul class="chips mono"><li>Magnified skin analysis</li><li>No products sold on commission</li><li>General information only</li></ul>
+    </div>
+    <figure class="scope">
+      <svg id="scope" viewBox="-20 -20 440 440" role="img" aria-labelledby="scope-t"><title id="scope-t">Illustration: the skin surface seen through a microscope — flat, overlapping surface cells with a hair and a sweat pore, inside a circular field of view with a 50 micrometre scale bar.</title></svg>
+      <figcaption class="mono">Fig. 1 — skin surface, top view · illustrative</figcaption>
+    </figure>
+  </section>
+
+  <section id="layers" aria-labelledby="lay-t">
+    <div class="journey-head">
+      <p class="eyebrow mono">Fig. 2 — cross-section</p>
+      <h2 id="lay-t">From the surface down, and what works at each depth.</h2>
+      <p>Illustration, not to scale — the epidermis is drawn enlarged so you can see it. Depths are typical for facial skin and vary from person to person.</p>
+    </div>
+    <div class="journey" id="journey">
+      <div class="spec-col" id="spec-col" aria-hidden="true">
+        <div class="spec-move" id="spec-move"><svg viewBox="0 -120 600 2640" id="spec-big"><use href="#spec"/></svg></div>
+        <div class="reticle"><span class="mono" id="ret-read">0 µm</span></div>
+      </div>
+      <div class="layers">
+        <article class="layer" id="epidermis" data-y0="0" data-y1="420" aria-labelledby="l1">
+          <p class="depth mono">0 – 100 µm</p>
+          <h2 id="l1">Epidermis</h2>
+          <div class="slice" aria-hidden="true"><svg viewBox="0 -20 600 440"><use href="#spec"/></svg></div>
+          <p>The surface you see and touch — on your face, about as thin as a sheet of paper. New cells form at the base and take around four weeks to rise, flatten and shed.</p>
+          <ul class="legend">
+            <li><b>1</b><span><b>Stratum corneum.</b> Flattened, dead surface cells that form the barrier.</span></li>
+            <li><b>2</b><span><b>Keratinocytes.</b> The working cells of the epidermis, maturing as they move up.</span></li>
+            <li><b>3</b><span><b>Melanocyte.</b> Makes melanin, the pigment behind tanning and dark spots.</span></li>
+          </ul>
+          <div class="tx">
+            <div class="card focus"><p class="where mono">Works at the surface</p><h3>Skin consultation</h3><p>A 45-minute look at your skin under magnification, a review of your current routine and a written plan. We’ll tell you if you don’t need a treatment.</p><p class="meta mono"><span>45 min</span><span>$95*</span></p><a href="#visit" data-book="Skin consultation">Book this →</a></div>
+            <div class="card focus"><p class="where mono">Works in the epidermis</p><h3>Superficial peel</h3><p>A mild acid solution such as lactic or mandelic acid, applied for a few minutes to loosen dead surface cells. Tingling and some flaking for a few days are common.</p><p class="meta mono"><span>30 min</span><span>$140*</span></p><a href="#visit" data-book="Superficial peel">Book this →</a></div>
+          </div>
+        </article>
+        <article class="layer" id="dermis" data-y0="420" data-y1="1640" aria-labelledby="l2">
+          <p class="depth mono">100 – 2,000 µm</p>
+          <h2 id="l2">Dermis</h2>
+          <div class="slice" aria-hidden="true"><svg viewBox="0 400 600 520"><use href="#spec"/></svg></div>
+          <p>The living scaffold underneath: collagen and elastin fibres, blood vessels, nerves, hair follicles and glands. It gives skin its strength and spring.</p>
+          <ul class="legend">
+            <li><b>4</b><span><b>Capillary loops.</b> Tiny vessels that feed the epidermis above.</span></li>
+            <li><b>5</b><span><b>Collagen and elastin.</b> Bundles of fibres made by fibroblast cells.</span></li>
+            <li><b>6</b><span><b>Hair follicle.</b> With its oil-producing sebaceous gland (7).</span></li>
+            <li><b>8</b><span><b>Sweat gland.</b> A coiled tube with a duct that spirals up to a pore.</span></li>
+          </ul>
+          <div class="tx">
+            <div class="card focus"><p class="where mono">Light reaches the dermis</p><h3>LED light therapy</h3><p>Twenty minutes under red and near-infrared light panels, eyes protected. No downtime; often booked as a course.</p><p class="meta mono"><span>20 min</span><span>$65* · 6 for $330*</span></p><a href="#visit" data-book="LED light therapy">Book this →</a></div>
+            <div class="card focus"><p class="where mono">Works into the upper dermis</p><h3>Microneedling</h3><p>Fine needles create tiny channels in the skin to prompt its own repair response. Numbing cream first; redness for one to three days is common.</p><p class="meta mono"><span>60 min</span><span>$290*</span></p><a href="#visit" data-book="Microneedling">Book this →</a></div>
+          </div>
+        </article>
+        <article class="layer" id="subcut" data-y0="1640" data-y1="2480" aria-labelledby="l3">
+          <p class="depth mono">2,000 µm and deeper</p>
+          <h2 id="l3">Subcutaneous layer</h2>
+          <div class="slice" aria-hidden="true"><svg viewBox="0 1600 600 520"><use href="#spec"/></svg></div>
+          <p>Soft lobules of fat cells divided by fibrous walls, with the larger vessels that supply the skin above. It cushions, insulates and stores energy.</p>
+          <ul class="legend">
+            <li><b>9</b><span><b>Adipocytes.</b> Fat cells, each mostly one large droplet.</span></li>
+            <li><b>10</b><span><b>Larger blood vessels.</b> Feeding the networks in the dermis.</span></li>
+          </ul>
+          <div class="tx"><div class="card scopeout focus"><p class="where mono">Beyond our scope</p><h3>This is where a skin clinic stops.</h3><p>Anything this deep — or anything that needs injections, prescriptions or a diagnosis — belongs with your GP or a dermatologist. We’re glad to refer you.</p></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="routine" id="routine" aria-labelledby="rt-t">
+    <div class="r-grid">
+      <div class="r-intro">
+        <p class="eyebrow mono">Protocol builder</p>
+        <h2 class="sec-t" id="rt-t">Build a simple morning and night routine.</h2>
+        <p>Four questions. You’ll get product <em>types</em>, not brands — cleanser, serum, moisturiser, SPF 50+ — in the order to use them.</p>
+        <p class="gen">General information only, not medical advice. See your GP or a dermatologist about any persistent, painful or changing skin concern.</p>
+      </div>
+      <form class="slide" id="quiz" data-kit-ignore novalidate aria-labelledby="rt-t">
+        <div class="slide-label"><p class="mono">Sample<b id="sample-id">DL-0427</b></p><div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i></div><p class="mono" id="qcount">Step 1 of 4</p></div>
+        <div class="slide-body">
+          <fieldset class="q on" data-q="type"><legend>What is your skin like by mid-afternoon?</legend><p class="help">Pick the closest — there’s no wrong answer.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="type" value="oily"><span>Oily<small>Shiny all over</small></span></label>
+              <label class="opt"><input type="radio" name="type" value="combination"><span>Combination<small>Shiny T-zone, normal cheeks</small></span></label>
+              <label class="opt"><input type="radio" name="type" value="dry"><span>Dry<small>Tight or flaky</small></span></label>
+              <label class="opt"><input type="radio" name="type" value="normal"><span>Balanced<small>Comfortable, not shiny</small></span></label>
+            </div></fieldset>
+          <fieldset class="q" data-q="concern"><legend>What would you most like to work on?</legend><p class="help">Choose one for now.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="concern" value="breakouts"><span>Breakouts<small>Blemishes, congestion</small></span></label>
+              <label class="opt"><input type="radio" name="concern" value="dullness"><span>Dullness<small>Rough or tired-looking</small></span></label>
+              <label class="opt"><input type="radio" name="concern" value="redness"><span>Redness<small>Flushing, warmth</small></span></label>
+              <label class="opt"><input type="radio" name="concern" value="lines"><span>Fine lines<small>Texture and firmness</small></span></label>
+              <label class="opt"><input type="radio" name="concern" value="spots"><span>Dark spots<small>Uneven tone</small></span></label>
+            </div></fieldset>
+          <fieldset class="q" data-q="sens"><legend>How does your skin react to new products?</legend><p class="help">Think of the last new product you tried.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="sens" value="low"><span>Rarely reacts</span></label>
+              <label class="opt"><input type="radio" name="sens" value="some"><span>Sometimes stings</span></label>
+              <label class="opt"><input type="radio" name="sens" value="high"><span>Reacts easily<small>Redness, itch or burning</small></span></label>
+            </div></fieldset>
+          <fieldset class="q" data-q="spf"><legend>How often do you wear sunscreen?</legend><p class="help">Be honest — this is the step that matters most in Perth.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="spf" value="daily"><span>Every day</span></label>
+              <label class="opt"><input type="radio" name="spf" value="most"><span>Most days</span></label>
+              <label class="opt"><input type="radio" name="spf" value="summer"><span>Only in summer</span></label>
+              <label class="opt"><input type="radio" name="spf" value="rarely"><span>Rarely</span></label>
+            </div></fieldset>
+          <div class="result" id="result" tabindex="-1" aria-live="polite">
+            <h3>Your routine</h3>
+            <p class="why" id="why"></p>
+            <div class="proto">
+              <div class="col"><h4>Morning <span class="mono">AM</span></h4><ol id="am"></ol></div>
+              <div class="col"><h4>Night <span class="mono">PM</span></h4><ol id="pm"></ol></div>
+            </div>
+            <div class="notes" id="notes"></div>
+            <div class="nav-q"><button class="btn ghost" type="button" id="restart">Change answers</button><a class="btn" href="#visit" data-book="Skin consultation">Check it at a consult</a></div>
+          </div>
+          <div class="nav-q" id="qnav"><button class="btn ghost" type="button" id="back" disabled>Back</button><span class="mono" id="qerr" aria-live="polite"></span><button class="btn" type="submit" id="next">Next</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="menu" id="treatments" aria-labelledby="tr-t">
+    <div class="menu-h">
+      <p class="eyebrow mono">Treatment menu</p>
+      <h2 class="sec-t" id="tr-t">Four treatments, chosen for what they actually do.</h2>
+      <p>Every treatment starts with a consultation, which is credited to your first treatment if you go ahead within a month.</p>
+    </div>
+    <dl class="price">
+      <div><dt>Skin consultation<small>Magnified analysis and written plan</small></dt><dd>45 min</dd><dd>$95</dd></div>
+      <div><dt>Superficial peel<small>Lactic or mandelic acid</small></dt><dd>30 min</dd><dd>$140</dd></div>
+      <div><dt>LED light therapy<small>Red and near-infrared</small></dt><dd>20 min</dd><dd>$65</dd></div>
+      <div><dt>LED course of six<small>Use within 12 weeks</small></dt><dd>6 × 20 min</dd><dd>$330</dd></div>
+      <div><dt>Microneedling<small>Includes numbing and aftercare kit</small></dt><dd>60 min</dd><dd>$290</dd></div>
+    </dl>
+    <p class="price-note mono">* Sample prices in AUD. Treatments may not suit everyone — we check your skin, history and medications first.</p>
+    <div class="faq">
+      <h3>Questions we hear a lot</h3>
+      <div>
+        <details><summary>Do I need a consultation first?</summary><p>For peels and microneedling, yes. It’s where we check your skin, medications and history — and it’s credited to your first treatment.</p></details>
+        <details><summary>Does microneedling hurt?</summary><p>We apply numbing cream first. Most people describe pressure and a scratchy feeling. You can ask us to pause at any time.</p></details>
+        <details><summary>Can I have treatments while pregnant or breastfeeding?</summary><p>Some treatments aren’t suitable. Tell us at your consultation and we’ll suggest what is.</p></details>
+        <details><summary>I use prescription acne medication. Is that a problem?</summary><p>Some acne medications make skin more fragile. Tell us before any peel or microneedling — we may need to wait, or suggest you check with your GP.</p></details>
+        <details><summary>When should I see a doctor instead?</summary><p>A changing mole, a sore that doesn’t heal, a sudden rash or signs of infection — please see your GP. We’re a skin clinic, not a medical practice.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="vs-t">
+    <div class="v-info">
+      <p class="eyebrow mono">Visit</p>
+      <h2 class="sec-t" id="vs-t">Subiaco, a short walk from the station.</h2>
+      <dl class="hours mono">
+        <div><dt>Tuesday – Wednesday</dt><dd>9 am – 6 pm</dd></div>
+        <div><dt>Thursday</dt><dd>9 am – 8 pm</dd></div>
+        <div><dt>Friday</dt><dd>9 am – 6 pm</dd></div>
+        <div><dt>Saturday</dt><dd>9 am – 2 pm</dd></div>
+        <div><dt>Sunday – Monday</dt><dd>Closed</dd></div>
+      </dl>
+      <p><a href="tel:+61855502874">(08) 5550 2874</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p class="mono">Subiaco, Perth WA · street parking and bike racks out front</p>
+    </div>
+    <form class="book" id="book" data-demo-message="Demo only — no appointment was booked. On a real site this request would reach the clinic.">
+      <h3>Request an appointment</h3>
+      <div class="f"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name"></div>
+      <div class="f"><label for="b-mail">Email</label><input id="b-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <div class="f"><label for="b-tr">Treatment</label><select id="b-tr" name="treatment"><option>Skin consultation</option><option>Superficial peel</option><option>LED light therapy</option><option>Microneedling</option></select></div>
+      <div class="f"><label for="b-day">Preferred day</label><select id="b-day" name="day"><option>Tuesday</option><option>Wednesday</option><option>Thursday (late)</option><option>Friday</option><option>Saturday</option></select></div>
+      <div class="f full"><label for="b-msg">Anything we should know?</label><textarea id="b-msg" name="msg" placeholder="Skin concerns, medications, allergies"></textarea></div>
+      <button class="btn" type="submit">Request appointment</button>
+      <p class="mono">Demo form — nothing is sent.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="fname" data-brand>Dermis Lab Skin Clinic</p>
+  <p>A fictional skin clinic — concept demo. General information only, not medical advice; treatments don’t suit everyone and results vary. Sample prices. Illustrations are diagrammatic and not to scale.</p>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="spec"></g></defs></svg>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var RM=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+  function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return ((t^t>>>14)>>>0)/4294967296}}
+  function n(v){return Math.round(v*10)/10}
+  function blob(R,cx,cy,rx,ry,k,j,rot){
+    var pts=[],i,a,r;for(i=0;i<k;i++){a=(i/k)*Math.PI*2+(rot||0)+R()*.25;r=1-j/2+R()*j;pts.push(n(cx+Math.cos(a)*rx*r)+','+n(cy+Math.sin(a)*ry*r))}return pts.join(' ');
+  }
+
+  /* ---------------- the cross-section specimen (viewBox 0 0 600 2400) ---------------- */
+  (function(){
+    var R=rng(57),o=[],x,y,i,k,row,w,h,dej=function(x){return 400+20*Math.sin(x/34)+9*Math.sin(x/15+1.3)};
+    o.push('<rect x="0" y="0" width="600" height="420" fill="#FCEFF2"/>');
+    /* stratum corneum flakes */
+    for(row=0;row<6;row++){y=10+row*12;for(x=-40;x<620;x+=w+6){w=60+R()*70;o.push('<rect x="'+n(x)+'" y="'+n(y+R()*3)+'" width="'+n(w)+'" height="'+n(4+R()*2.5)+'" rx="3" fill="#F4B6C2" opacity="'+n(.5+R()*.35)+'"'+(row===0?' transform="rotate('+n(-4+R()*8)+' '+n(x+w/2)+' '+y+')"':'')+'/>')}}
+    /* keratinocytes: flat near the top, rounder with depth */
+    for(y=96;y<440;y+=h){
+      var t=(y-96)/300;h=16+14*t;w=46-16*t;
+      for(x=-20+(R()*w);x<620;x+=w){
+        var fill=t<.25?'#F9D2DB':t<.6?'#F7C5D0':'#F4B6C2';
+        o.push('<polygon points="'+blob(R,x,y+h/2,w/2-2,h/2-1.5,7,.22)+'" fill="'+fill+'" stroke="#EDA3B4" stroke-width=".8"/>');
+        if(t<.2&&R()<.8){for(k=0;k<3;k++)o.push('<circle cx="'+n(x-8+R()*16)+'" cy="'+n(y+h/2-3+R()*6)+'" r="1.3" fill="#8E3D57" opacity=".55"/>')}
+        o.push('<ellipse cx="'+n(x+R()*3)+'" cy="'+n(y+h/2)+'" rx="'+n(3+3*t)+'" ry="'+n(2.2+2.6*t)+'" fill="#1D4ED8" opacity="'+n(.35+.3*t)+'"/>');
+      }
+    }
+    /* dermis ground, cut along the rete ridges */
+    var d='M0 '+n(dej(0));for(x=6;x<=600;x+=6)d+='L'+x+' '+n(dej(x));
+    o.push('<path d="'+d+'L600 1640L0 1640Z" fill="#F9E4EA"/>');
+    /* basal cells + melanocytes */
+    for(x=4;x<600;x+=13){y=dej(x);o.push('<ellipse cx="'+x+'" cy="'+n(y-9)+'" rx="6" ry="9" fill="#F2A9B9" stroke="#E596A9" stroke-width=".6"/><ellipse cx="'+x+'" cy="'+n(y-9)+'" rx="3.4" ry="4.8" fill="#1D4ED8" opacity=".62"/>')}
+    [120,330,520].forEach(function(mx){var my=dej(mx)-12;o.push('<path d="M'+mx+' '+n(my)+'q-14 -26 -30 -44M'+mx+' '+n(my)+'q6 -30 22 -48M'+mx+' '+n(my)+'q-2 -20 -4 -40" stroke="#5B2A3E" stroke-width="1.6" fill="none" opacity=".75"/><circle cx="'+mx+'" cy="'+n(my)+'" r="8" fill="#6B3048"/>')});
+    /* papillary fibres + capillary loops */
+    for(i=0;i<90;i++){x=R()*600;y=dej(x)+14+R()*190;o.push('<path d="M'+n(x)+' '+n(y)+'q'+n(8+R()*10)+' '+n(-6+R()*12)+' '+n(18+R()*16)+' '+n(-4+R()*8)+'" stroke="#EAA2B4" stroke-width="1" fill="none" opacity=".55"/>')}
+    for(x=10;x<600;x+=10){if(dej(x)<dej(x-5)&&dej(x)<dej(x+5)){y=dej(x);o.push('<path d="M'+(x-6)+' 500V'+n(y+18)+'a6 6 0 0 1 12 0V500" stroke="#D9667F" stroke-width="3" fill="none" opacity=".7"/>')}}
+    o.push('<path d="M-10 505C80 490 160 520 250 502S420 488 610 508" stroke="#E48AA0" stroke-width="9" fill="none" opacity=".55"/><path d="M-10 505C80 490 160 520 250 502S420 488 610 508" stroke="#FBE1E8" stroke-width="3" fill="none"/>');
+    /* reticular collagen bundles, elastin and fibroblasts */
+    for(i=0;i<46;i++){x=-60+R()*520;y=640+R()*900;w=180+R()*260;var dy=-30+R()*60;
+      o.push('<path d="M'+n(x)+' '+n(y)+'c'+n(w*.3)+' '+n(-26+R()*52)+' '+n(w*.6)+' '+n(dy+(-26+R()*52))+' '+n(w)+' '+n(dy)+'" stroke="'+(R()<.5?'#EFAFBF':'#F5C6D1')+'" stroke-width="'+n(9+R()*9)+'" stroke-linecap="round" fill="none" opacity=".62"/>');
+      if(R()<.7)o.push('<ellipse cx="'+n(x+w*.5)+'" cy="'+n(y+dy*.5+R()*6)+'" rx="7" ry="2.2" fill="#1D4ED8" opacity=".55" transform="rotate('+n(dy/w*57)+' '+n(x+w*.5)+' '+n(y+dy*.5)+')"/>');}
+    for(i=0;i<26;i++){x=R()*600;y=660+R()*880;o.push('<path d="M'+n(x)+' '+n(y)+'q'+n(20+R()*30)+' '+n(-10+R()*20)+' '+n(60+R()*50)+' '+n(-8+R()*16)+'" stroke="#1D4ED8" stroke-width=".9" fill="none" opacity=".3"/>')}
+    /* hair follicle, shaft, bulb, sebaceous gland, arrector pili */
+    o.push('<path d="M420 0C424 300 418 700 428 1400M470 0C474 300 470 700 478 1400" stroke="#E596A9" stroke-width="3" fill="none"/><path d="M424 0C428 300 422 700 432 1400L474 1400C466 700 470 300 466 0Z" fill="#F7C9D3" opacity=".75"/>');
+    o.push('<path d="M437 -110C441 200 440 800 447 1392L455 1392C460 800 452 200 451 -110Z" fill="#3A2536"/>');
+    o.push('<ellipse cx="452" cy="1410" rx="34" ry="30" fill="#F2A9B9" stroke="#D9667F" stroke-width="2"/><ellipse cx="452" cy="1420" rx="14" ry="12" fill="#1D4ED8" opacity=".5"/>');
+    [[500,560,24],[522,600,20],[498,612,22],[520,648,17],[494,660,16]].forEach(function(g){o.push('<circle cx="'+g[0]+'" cy="'+g[1]+'" r="'+g[2]+'" fill="#FBE1E8" stroke="#E596A9" stroke-width="2"/><circle cx="'+g[0]+'" cy="'+g[1]+'" r="3.4" fill="#1D4ED8" opacity=".5"/>')});
+    o.push('<path d="M476 820C520 700 548 560 572 452" stroke="#D9667F" stroke-width="7" stroke-linecap="round" fill="none" opacity=".45"/>');
+    /* sweat gland coil + duct */
+    d='';for(k=0;k<=260;k++){var a=k/260*Math.PI*6;x=140+44*Math.cos(a)+12*Math.cos(5*a);y=1452+24*Math.sin(a)+11*Math.sin(4*a);d+=(k?'L':'M')+n(x)+' '+n(y)}
+    o.push('<path d="'+d+'" stroke="#1D4ED8" stroke-width="5" fill="none" opacity=".45" stroke-linejoin="round"/><path d="'+d+'" stroke="#fff" stroke-width="1.4" fill="none" opacity=".8"/>');
+    d='M142 1424';for(y=1400;y>=0;y-=20){x=150+(y<dej(150)?10*Math.sin(y/9):6*Math.sin(y/60));d+='L'+n(x)+' '+y}
+    o.push('<path d="'+d+'" stroke="#1D4ED8" stroke-width="3" fill="none" opacity=".4"/>');
+    /* deep plexus + subcutaneous boundary */
+    d='M0 1640';for(x=0;x<=600;x+=10)d+='L'+x+' '+n(1640+16*Math.sin(x/45)+6*Math.sin(x/13));
+    o.push('<path d="'+d+'L600 2520L0 2520Z" fill="#FFFBFC"/>');
+    o.push('<path d="M-10 1602C120 1588 260 1624 380 1598S520 1590 610 1608" stroke="#E48AA0" stroke-width="13" fill="none" opacity=".55"/><path d="M-10 1602C120 1588 260 1624 380 1598S520 1590 610 1608" stroke="#FBE1E8" stroke-width="4" fill="none"/>');
+    /* adipocytes */
+    for(row=0;row<11;row++){y=1700+row*72;for(x=(row%2)*40-20;x<640;x+=80){
+      o.push('<polygon points="'+blob(R,x+R()*10,y+R()*10,37,34,9,.18,R())+'" fill="#FFFEFE" stroke="#E7A1B2" stroke-width="2.2"/>');
+      if(R()<.5)o.push('<ellipse cx="'+n(x+22)+'" cy="'+n(y-18)+'" rx="4.5" ry="2.4" fill="#1D4ED8" opacity=".55"/>');}}
+    [[0,1880,600,1980],[120,1700,300,2400],[430,1690,520,2400]].forEach(function(s){o.push('<path d="M'+s[0]+' '+s[1]+'Q'+n((s[0]+s[2])/2+40)+' '+n((s[1]+s[3])/2)+' '+s[2]+' '+s[3]+'" stroke="#EFB0BF" stroke-width="8" fill="none" opacity=".8"/>')});
+    o.push('<circle cx="330" cy="2130" r="46" fill="#F9D5DE" stroke="#D9667F" stroke-width="7"/><circle cx="330" cy="2130" r="24" fill="#FFFBFC" stroke="#E48AA0" stroke-width="3"/>');
+    o.push('<ellipse cx="200" cy="2280" rx="34" ry="22" fill="#FBE1E8" stroke="#1D4ED8" stroke-width="2.4" opacity=".7"/>');
+    /* numbered markers */
+    [[1,60,34,90,60],[2,250,250,230,250],[3,332,330,360,300],[4,0,0,0,0],[5,250,1020,290,1060],[6,500,960,456,960],[7,560,560,520,590],[8,238,1450,190,1452],[9,286,1830,300,1790],[10,420,2130,378,2130]].forEach(function(m){
+      if(m[0]===4){for(x=10;x<600;x+=10){if(dej(x)<dej(x-5)&&dej(x)<dej(x+5)&&x>200){m[1]=x+40;m[2]=dej(x)+54;m[3]=x+6;m[4]=dej(x)+30;break}}}
+      o.push('<path d="M'+n(m[1])+' '+n(m[2])+'L'+n(m[3])+' '+n(m[4])+'" stroke="#1D4ED8" stroke-width="1.5"/><circle cx="'+n(m[1])+'" cy="'+n(m[2])+'" r="14" fill="#fff" stroke="#1D4ED8" stroke-width="2"/><text x="'+n(m[1])+'" y="'+n(m[2]+5)+'" text-anchor="middle" font-family="DM Mono,monospace" font-size="14" font-weight="500" fill="#1D4ED8">'+m[0]+'</text>');
+    });
+    document.getElementById('spec').innerHTML=o.join('');
+  })();
+
+  /* ---------------- microscope field (hero) ---------------- */
+  (function(){
+    var R=rng(7),o=[],x,y,r;
+    o.push('<defs><clipPath id="fov"><circle cx="200" cy="200" r="182"/></clipPath><radialGradient id="vig" cx=".5" cy=".5" r=".5"><stop offset=".72" stop-color="#FAFCFD" stop-opacity="0"/><stop offset="1" stop-color="#C9D8E6" stop-opacity=".9"/></radialGradient></defs>');
+    o.push('<circle cx="200" cy="200" r="198" fill="#fff" stroke="#0F1B33" stroke-width="3"/>');
+    var cells='';
+    for(y=-40;y<460;y+=34){for(x=-40+((y/34)%2)*22;x<460;x+=44){r=R();
+      cells+='<polygon points="'+blob(R,x+R()*8,y+R()*6,23,17,6,.28,R()*.6)+'" fill="'+(r<.33?'#F9D2DB':r<.66?'#F7C5D0':'#FBE3E9')+'" stroke="#EDA3B4" stroke-width="1"/>';
+      if(R()<.14)cells+='<ellipse cx="'+n(x)+'" cy="'+n(y)+'" rx="4" ry="2.4" fill="#1D4ED8" opacity=".35"/>';}}
+    cells+='<circle cx="268" cy="150" r="16" fill="#F2A9B9" stroke="#D9667F" stroke-width="2"/><path d="M268 150C300 110 330 96 380 70" stroke="#3A2536" stroke-width="7" stroke-linecap="round" fill="none"/>';
+    cells+='<circle cx="120" cy="270" r="7" fill="#fff" stroke="#1D4ED8" stroke-width="2.5"/><circle cx="120" cy="270" r="13" fill="none" stroke="#1D4ED8" stroke-width="1" stroke-dasharray="2 3"/>';
+    o.push('<g clip-path="url(#fov)"><g class="drift">'+cells+'</g><circle cx="200" cy="200" r="182" fill="url(#vig)"/></g>');
+    o.push('<circle cx="200" cy="200" r="182" fill="none" stroke="#1D4ED8" stroke-width="1.5"/>');
+    for(var i=0;i<72;i++){var a=i/72*Math.PI*2,l=i%6===0?12:6;o.push('<line x1="'+n(200+Math.cos(a)*186)+'" y1="'+n(200+Math.sin(a)*186)+'" x2="'+n(200+Math.cos(a)*(186+l))+'" y2="'+n(200+Math.sin(a)*(186+l))+'" stroke="#0F1B33" stroke-width="1"/>')}
+    o.push('<path d="M200 30V60M200 340V370M30 200H60M340 200H370" stroke="#1D4ED8" stroke-width="1.2"/><circle cx="200" cy="200" r="5" fill="none" stroke="#1D4ED8"/>');
+    o.push('<path d="M110 336H190M110 331V341M190 331V341" stroke="#0F1B33" stroke-width="2"/><rect x="104" y="345" width="92" height="20" rx="4" fill="#fff"/><text x="150" y="359" text-anchor="middle" font-family="DM Mono,monospace" font-size="13" fill="#0F1B33">50 µm</text>');
+    o.push('<g font-family="DM Mono,monospace" font-size="15" fill="#1D4ED8"><path d="M268 150L326 204" stroke="#1D4ED8" stroke-width="1.4"/><rect x="326" y="192" width="80" height="28" rx="14" fill="#fff" stroke="#1D4ED8" stroke-width="1.4"/><text x="366" y="211" text-anchor="middle">hair</text><path d="M120 270L66 316" stroke="#1D4ED8" stroke-width="1.4"/><rect x="-14" y="316" width="118" height="28" rx="14" fill="#fff" stroke="#1D4ED8" stroke-width="1.4"/><text x="45" y="335" text-anchor="middle">sweat pore</text></g>');
+    document.getElementById('scope').insertAdjacentHTML('beforeend',o.join(''));
+  })();
+
+  /* ---------------- depth: scroll → specimen, gauge and phone bar ---------------- */
+  var journey=$('#journey'),layers=$$('.layer'),move=$('#spec-move'),col=$('#spec-col'),gauge=$('#gauge'),bar=$('#depthbar'),ruler=$('#g-ruler'),mark=$('#g-mark');
+  var YM=[[0,0],[70,15],[420,100],[1640,2000],[2480,4000]],NAMES=['Epidermis','Dermis','Subcutaneous'];
+  function um(y){for(var i=1;i<YM.length;i++)if(y<=YM[i][0])return YM[i-1][1]+(YM[i][1]-YM[i-1][1])*(y-YM[i-1][0])/(YM[i][0]-YM[i-1][0]);return 4000}
+  function fmt(v){return Math.round(v).toLocaleString('en-AU')+' µm'}
+  var rulerY=function(v){ /* µm → 0..1 on the ruler, same breakpoints as the drawing */
+    for(var i=1;i<YM.length;i++)if(v<=YM[i][1])return (YM[i-1][0]+(YM[i][0]-YM[i-1][0])*(v-YM[i-1][1])/(YM[i][1]-YM[i-1][1]))/2480;return 1};
+  [[0,'0',1],[15,'',0],[50,'',0],[100,'100',1],[500,'',0],[1000,'1,000',1],[1500,'',0],[2000,'2,000',1],[3000,'3,000',1],[4000,'4,000 µm',1]].forEach(function(t){
+    var e=document.createElement('i');e.className='t'+(t[2]?' major':'');e.style.top=(rulerY(t[0])*100)+'%';if(t[1])e.innerHTML='<span>'+t[1]+'</span>';ruler.appendChild(e);
+  });
+  [[0,100,'#F4B6C2'],[100,2000,'#E48AA0'],[2000,4000,'#C9D8E6']].forEach(function(b){var e=document.createElement('i');e.className='band';e.style.top=(rulerY(b[0])*100)+'%';e.style.height=((rulerY(b[1])-rulerY(b[0]))*100)+'%';e.style.background=b[2];ruler.appendChild(e)});
+  var ticking=false,lastLayer=-1;
+  function depthNow(){
+    var mid=innerHeight/2+(innerWidth<=760?40:0),y=0,li=-1;
+    for(var i=0;i<layers.length;i++){var r=layers[i].getBoundingClientRect(),y0=+layers[i].getAttribute('data-y0'),y1=+layers[i].getAttribute('data-y1');
+      if(mid>=r.top&&mid<r.bottom){y=y0+(y1-y0)*(mid-r.top)/r.height;li=i;break}
+      if(mid>=r.bottom)y=y1;}
+    return {y:y,li:li};
+  }
+  function update(){
+    ticking=false;var jr=journey.getBoundingClientRect(),inside=jr.top<innerHeight*.5&&jr.bottom>innerHeight*.5,d=depthNow(),v=um(d.y),ln=d.li<0?(d.y>=2480?2:0):d.li;
+    if(innerWidth>760){
+      var colH=col.clientHeight,scale=col.clientWidth/600;
+      move.style.transform='translateY('+n(colH/2-(d.y+120)*scale)+'px)';
+      $('#ret-read').textContent=fmt(v);
+      gauge.classList.toggle('on',inside);
+      mark.style.top=(rulerY(v)*100)+'%';
+      $('#g-read').innerHTML=fmt(v)+'<span>'+(d.y<=0&&d.li<=0&&v<1?'Surface':NAMES[ln])+'</span>';
+    }else{
+      bar.classList.toggle('on',inside);
+      $('#db-read').textContent=(v<1?'Surface':NAMES[ln])+' · '+fmt(v);
+      [[0,100],[100,2000],[2000,4000]].forEach(function(s,i){$('#sg'+i).style.setProperty('--f',Math.max(0,Math.min(1,(v-s[0])/(s[1]-s[0]))).toFixed(3))});
+    }
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  addEventListener('scroll',req,{passive:true});addEventListener('resize',req);update();
+
+  /* focus-pull reveals */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
+    $$('.focus').forEach(function(el){io.observe(el)});
+  }else $$('.focus').forEach(function(el){el.classList.add('in')});
+
+  /* booking shortcuts */
+  $$('[data-book]').forEach(function(a){a.addEventListener('click',function(){var s=$('#b-tr');s.value=a.getAttribute('data-book')})});
+
+  /* ---------------- routine builder ---------------- */
+  var quiz=$('#quiz'),qs=$$('.q',quiz),step=0,ans={};
+  var steps=$$('.steps i',quiz);
+  function show(i){
+    step=i;qs.forEach(function(q,j){q.classList.toggle('on',j===i)});
+    steps.forEach(function(s,j){s.classList.toggle('done',j<i||(i>=4))});
+    $('#qcount').textContent=i<4?'Step '+(i+1)+' of 4':'Protocol ready';
+    $('#back').disabled=i===0;$('#qnav').style.display=i<4?'':'none';$('#result').classList.toggle('on',i>=4);
+    $('#next').textContent=i===3?'Build my routine':'Next';$('#qerr').textContent='';
+  }
+  function val(name){var c=$('input[name='+name+']:checked',quiz);return c?c.value:null}
+  function build(){
+    var t=val('type'),c=val('concern'),s=val('sens'),f=val('spf'),hi=s==='high',am=[],pm=[],notes=[];
+    var cleanse={oily:'Gel cleanser',combination:'Gentle gel cleanser',dry:'Cream or milk cleanser',normal:'Gentle gel or cream cleanser'}[t];
+    if(hi)cleanse='Fragrance-free '+cleanse.charAt(0).toLowerCase()+cleanse.slice(1);
+    var moist={oily:'Light gel moisturiser',combination:'Light lotion moisturiser',dry:'Richer cream moisturiser',normal:'Lotion moisturiser'}[t];
+    var serum={breakouts:['Niacinamide serum','Helps with oil and the look of congestion.'],dullness:['Vitamin C (antioxidant) serum','Start with a low strength.'],redness:['Calming serum','Look for niacinamide or panthenol; skip fragrance.'],lines:['Antioxidant serum','Vitamin C or similar, under your SPF.'],spots:['Vitamin C serum','Pairs with daily SPF — the part that matters most.']}[c];
+    if(hi&&(c==='dullness'||c==='spots'||c==='lines'))serum=['Gentle antioxidant serum','Every second morning at first.'];
+    am.push([cleanse,t==='dry'?'Or just rinse with water in the morning.':'Thirty seconds, lukewarm water.']);
+    am.push(serum);am.push([moist,'A thin layer on damp skin.']);
+    am.push(['Broad-spectrum SPF 50+','A generous amount, last step every morning — reapply when outdoors.']);
+    pm.push(['Oil or balm cleanser, then '+cleanse.toLowerCase(),'The first cleanse lifts sunscreen; the second cleans skin.']);
+    var act={breakouts:['Salicylic acid (BHA) product','2–3 nights a week to start.'],dullness:['Lactic acid (AHA) product','1–2 nights a week.'],redness:['No active this month','Keep it simple; ask us about azelaic acid.'],lines:['Retinoid','2 nights a week, building slowly.'],spots:['Retinoid or azelaic acid','Alternate nights once your skin is used to it.']}[c];
+    if(hi&&c!=='redness')act=[act[0],'Once a week only, after a patch test — or skip it for now.'];
+    if(s==='some'&&c!=='redness')act=[act[0],'Start once or twice a week and watch for stinging.'];
+    pm.push(act);pm.push([t==='oily'?'Light gel moisturiser':'Moisturiser — '+moist.toLowerCase().replace(' moisturiser',''),'Seal everything in.']);
+    var spfTip={daily:'You already do the most important thing: daily SPF. Keep it up in winter too.',most:'Make SPF every day, not most days — keep it next to your toothbrush.',summer:'UV in Perth is high enough to matter all year, not just in summer. Wear SPF 50+ daily.',rarely:'The single biggest change you can make: SPF 50+ every morning, cloudy days included.'}[f];
+    notes.push('<p><b>Sunscreen:</b> '+spfTip+'</p>');
+    notes.push('<p><b>New products:</b> patch test on your jaw or inner arm for 24–48 hours, and introduce one product at a time, two weeks apart.</p>');
+    if(hi)notes.push('<p><b>Reactive skin:</b> fewer products is better. Stop anything that burns, and talk to your GP if a reaction doesn’t settle.</p>');
+    notes.push('<p><b>General information only</b> — not a diagnosis or medical advice.</p>');
+    var L={oily:'oily',combination:'combination',dry:'dry',normal:'balanced'}[t],CN={breakouts:'breakouts',dullness:'dullness',redness:'redness',lines:'fine lines',spots:'dark spots'}[c],SN={low:'rarely reacts',some:'sometimes stings',high:'reacts easily'}[s];
+    $('#why').textContent='For '+L+' skin that '+SN+', focusing on '+CN+'. Generic product types only — choose any brand you like and can afford.';
+    function li(x){return '<li><span><b>'+x[0]+'</b><span>'+x[1]+'</span></span></li>'}
+    $('#am').innerHTML=am.map(li).join('');$('#pm').innerHTML=pm.map(li).join('');$('#notes').innerHTML=notes.join('');
+  }
+  quiz.addEventListener('submit',function(e){
+    e.preventDefault();var q=qs[step];if(!q)return;var name=q.getAttribute('data-q');
+    if(!val(name)){$('#qerr').textContent='Pick one to continue';var f=$('input',q);if(f)f.focus();return}
+    if(step<3){show(step+1);var nx=$('input:checked',qs[step])||$('input',qs[step]);if(nx)nx.focus({preventScroll:true})}
+    else{build();show(4);$('#result').focus({preventScroll:true})}
+  });
+  quiz.addEventListener('change',function(e){if(e.target.name){ans[e.target.name]=e.target.value;$('#qerr').textContent=''}});
+  $('#back').addEventListener('click',function(){if(step>0)show(step-1)});
+  $('#restart').addEventListener('click',function(){show(0);var f=$('input:checked',qs[0])||$('input',qs[0]);if(f)f.focus()});
+  $('#sample-id').textContent='DL-'+String(1000+Math.floor(Math.random()*8999));
+})();
+</script>
+</body>
+</html>

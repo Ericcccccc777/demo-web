@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en-AU" data-grade="teal">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="089">
+<meta name="demo:brand" content="Long Take Films">
+<title>Long Take Films — wedding &amp; brand videographer, Gold Coast</title>
+<meta name="description" content="Long Take Films is a fictional wedding and brand videographer on the Gold Coast, QLD. The site plays like a film: scenes, timecodes and colour grades you can try.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Teko:wght@400;500&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#0e1a1f;--or:#e8a15b;--tl:#2bb3b1;--wh:#f2f2f2;--mut:rgba(242,242,242,.72);--line:rgba(242,242,242,.16);--t:'Teko','Arial Narrow',Impact,sans-serif;--m:'Azeret Mono',ui-monospace,Menlo,Consolas,monospace;--topH:57px;--botH:112px;--sep:0;--sat:1.32;--con:1.16;--bri:1;--hue:0deg;--gray:0}
+html[data-grade="log"]{--sep:0;--sat:.5;--con:.72;--bri:1.12;--hue:0deg;--gray:0}
+html[data-grade="warm"]{--sep:.32;--sat:1.2;--con:1.06;--bri:1.05;--hue:-8deg;--gray:0}
+html[data-grade="bw"]{--sep:0;--sat:1;--con:1.34;--bri:1.05;--hue:0deg;--gray:1}
+html[data-grade="faded"]{--sep:.14;--sat:.74;--con:.8;--bri:1.1;--hue:4deg;--gray:0}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{background:#000;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:#000;color:var(--wh);font:400 14px/1.7 var(--m);-webkit-font-smoothing:antialiased;padding:var(--topH) 0 var(--botH)}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cap{font:500 10px/1.5 var(--m);letter-spacing:.2em;text-transform:uppercase}
+.wrap{width:min(calc(100% - 32px),1360px);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid var(--or);border-radius:2px;background:transparent;color:var(--wh);font:500 11px/1 var(--m);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+.btn:hover{background:var(--or);color:#000}
+.btn.solid{background:var(--or);color:#000}
+.btn.solid:hover{background:var(--wh)}
+
+/* grading: one filter recipe, values swapped per grade so it can transition */
+.graded{filter:sepia(var(--sep)) saturate(var(--sat)) contrast(var(--con)) brightness(var(--bri)) hue-rotate(var(--hue)) grayscale(var(--gray));transition:filter .8s ease}
+.tint{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .8s ease}
+html[data-grade="teal"] .tint{opacity:1;background:linear-gradient(180deg,rgba(43,179,177,.36),rgba(43,179,177,.06) 45%,rgba(232,161,91,.24) 72%,rgba(14,26,31,.3));mix-blend-mode:soft-light}
+html[data-grade="warm"] .tint{opacity:1;background:radial-gradient(120% 90% at 60% 60%,rgba(232,161,91,.5),rgba(120,60,20,.28));mix-blend-mode:soft-light}
+html[data-grade="faded"] .tint{opacity:.55;background:#3b474b;mix-blend-mode:lighten}
+
+/* letterbox bars */
+.bar{position:fixed;left:0;right:0;z-index:40;background:#000;display:flex;align-items:center;gap:18px;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.bar-top{top:0;min-height:57px;padding-top:env(safe-area-inset-top);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;min-width:0;text-decoration:none}
+.logo i{flex:none;width:9px;height:9px;border-radius:50%;background:var(--or);animation:pulse 2.4s ease-in-out infinite}
+.brand{font:500 27px/.95 var(--t);letter-spacing:.06em;text-transform:uppercase;padding-top:5px;overflow-wrap:anywhere;min-width:0}
+.scene-now{flex:1;min-width:0;text-align:center;font:500 10.5px/1.3 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tc{margin-left:auto;flex:none;font:500 15px/1 var(--m);letter-spacing:.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tc small{font-size:9.5px;letter-spacing:.2em;color:var(--or);margin-right:8px}
+.bar-bot{bottom:0;display:grid;grid-template-columns:200px minmax(0,1fr) 120px;gap:0 22px;padding-top:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+html:not(.hd-in-frame) .bar-bot{padding-bottom:calc(52px + env(safe-area-inset-bottom))}
+.tl-meta{display:grid;gap:2px;align-self:center;min-width:0}
+.tl-meta b{font:500 20px/1 var(--t);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-top:3px}
+.tl-end{align-self:center;text-align:right;font:500 12px/1.3 var(--m);color:var(--mut);font-variant-numeric:tabular-nums}
+.track{position:relative;height:60px;min-width:0}
+.rail{position:absolute;left:0;right:0;bottom:9px;height:6px;background:repeating-linear-gradient(90deg,rgba(242,242,242,.3) 0 1px,transparent 1px 9px),rgba(242,242,242,.08)}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--tl)}
+#scrub{-webkit-appearance:none;appearance:none;position:absolute;left:0;right:0;bottom:0;width:100%;height:24px;margin:0;background:transparent;cursor:ew-resize}
+#scrub::-webkit-slider-runnable-track{height:24px;background:transparent}
+#scrub::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:24px;border:0;border-radius:2px;background:var(--or);box-shadow:0 0 0 2px #000}
+#scrub::-moz-range-track{height:24px;background:transparent}
+#scrub::-moz-range-thumb{width:12px;height:24px;border:0;border-radius:2px;background:var(--or)}
+.mk{position:absolute;top:0;z-index:2;width:40px;height:34px;margin-left:-20px;padding:0;border:0;background:transparent;color:var(--mut);font:500 11px/1 var(--m);letter-spacing:.06em;display:flex;flex-direction:column;align-items:center;gap:5px}
+.mk::after{content:"";width:1px;height:12px;background:currentColor}
+.mk:hover,.mk[aria-current]{color:var(--or)}
+.strip{position:absolute;right:max(16px,env(safe-area-inset-right));bottom:calc(20px + env(safe-area-inset-bottom));font:500 10px/1 var(--m);letter-spacing:.18em;text-transform:uppercase;color:rgba(242,242,242,.55)}
+.hd-in-frame .strip{display:none}
+.grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.07;background-image:var(--grain,none);background-size:160px 160px;animation:grain .8s steps(6) infinite}
+@keyframes grain{0%{background-position:0 0}20%{background-position:-41px 23px}40%{background-position:57px -31px}60%{background-position:-19px -67px}80%{background-position:73px 11px}100%{background-position:5px 49px}}
+@keyframes pulse{50%{opacity:.35}}
+
+/* hero player */
+.hero{display:grid;justify-items:center;align-content:center;min-height:calc(100vh - var(--topH) - var(--botH));padding:14px 0 6px;scroll-margin-top:var(--topH)}
+.player{width:max(min(calc(100% - 32px),calc((100vh - var(--topH) - var(--botH) - 176px) * 2.39)),min(calc(100% - 32px),560px))}
+.frame{position:relative;width:100%;aspect-ratio:2.39/1;overflow:hidden;background:var(--ink)}
+.footage,.footage canvas,.vig,.scrim{position:absolute;inset:0;width:100%;height:100%}
+.footage canvas{display:block}
+.vig{background:radial-gradient(125% 110% at 55% 50%,transparent 55%,rgba(0,0,0,.55));pointer-events:none}
+.scrim{background:linear-gradient(90deg,rgba(3,9,11,.74),rgba(3,9,11,.3) 40%,transparent 62%);pointer-events:none}
+.flare{position:absolute;left:0;right:0;top:var(--sy,57%);height:0;pointer-events:none;mix-blend-mode:screen}
+.flare i{position:absolute;left:calc(var(--sx,63%) - 45%);width:90%;top:-1px;height:2px;background:linear-gradient(90deg,transparent,rgba(43,179,177,0) 10%,rgba(110,220,228,.55) 43%,rgba(236,252,255,.95) 50%,rgba(110,220,228,.55) 57%,rgba(43,179,177,0) 90%,transparent)}
+.flare i+i{top:-9px;height:18px;opacity:.3;filter:blur(7px)}
+.ghost{position:absolute;left:calc(100% - var(--sx,63%));top:calc(100% - var(--sy,57%) - 30%);width:36px;height:36px;margin:-18px;border-radius:50%;background:radial-gradient(circle,rgba(43,179,177,0) 45%,rgba(43,179,177,.4) 60%,rgba(43,179,177,0) 72%);mix-blend-mode:screen;pointer-events:none}
+.guides i{position:absolute;pointer-events:none}
+.guides .act{inset:3.5%;border:1px solid rgba(242,242,242,.2)}
+.guides .ttl{inset:9% 10%;opacity:.55;--c:linear-gradient(var(--wh),var(--wh));background:var(--c) left top/18px 1px no-repeat,var(--c) left top/1px 18px no-repeat,var(--c) right top/18px 1px no-repeat,var(--c) right top/1px 18px no-repeat,var(--c) left bottom/18px 1px no-repeat,var(--c) left bottom/1px 18px no-repeat,var(--c) right bottom/18px 1px no-repeat,var(--c) right bottom/1px 18px no-repeat}
+.guides .cross{left:50%;top:50%;width:24px;height:24px;margin:-12px;opacity:.45;background:linear-gradient(var(--wh),var(--wh)) center/100% 1px no-repeat,linear-gradient(var(--wh),var(--wh)) center/1px 100% no-repeat}
+.noguides .guides{display:none}
+.hud{position:absolute;left:3.5%;right:3.5%;top:5%;display:flex;justify-content:space-between;gap:12px;font:500 10.5px/1 var(--m);letter-spacing:.12em;text-transform:uppercase;color:rgba(242,242,242,.88);text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.hud .st::before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--or);vertical-align:0;animation:pulse 2.4s ease-in-out infinite}
+.paused .hud .st::before{animation:none;opacity:.45}
+.title{position:absolute;left:10%;top:45%;transform:translateY(-50%);width:min(52%,720px);display:grid;gap:12px}
+.presents{font:500 11px/1.5 var(--m);letter-spacing:.24em;text-transform:uppercase}
+.presents span{color:var(--or)}
+.title h1{font:500 clamp(40px,5.4vw,92px)/.86 var(--t);letter-spacing:.01em;text-transform:uppercase;text-wrap:balance;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.title .sub{font-size:13px;line-height:1.55;max-width:42ch;color:rgba(242,242,242,.9)}
+.subtitle{position:absolute;left:50%;bottom:6.5%;transform:translateX(-50%);max-width:80%;padding:4px 10px;background:rgba(0,0,0,.6);font-size:13px;line-height:1.4;text-align:center;white-space:nowrap}
+.grader{display:grid;grid-template-columns:minmax(170px,240px) minmax(0,1fr) auto;gap:12px 20px;align-items:center;padding:14px 0 4px}
+.g-lab p+p{font-size:11.5px;line-height:1.45;color:var(--mut)}
+.g-lab .cap{color:var(--or)}
+.g-btns{display:flex;flex-wrap:wrap;gap:6px}
+.gbtn,.cbtn{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:0 13px;border:1px solid rgba(242,242,242,.3);border-radius:2px;background:transparent;font:500 11px/1.15 var(--m);letter-spacing:.08em;text-transform:uppercase;transition:border-color .2s,background .2s}
+.gbtn i{flex:none;width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--a) 50%,var(--b) 50%);box-shadow:0 0 0 1px rgba(242,242,242,.25)}
+.gbtn:hover,.cbtn:hover{border-color:rgba(242,242,242,.7)}
+.gbtn[aria-pressed="true"]{border-color:var(--or);background:rgba(232,161,91,.14);box-shadow:inset 0 -2px 0 var(--or)}
+.g-ctl{display:flex;gap:6px}
+.cbtn svg{width:14px;height:14px;fill:currentColor}
+.cbtn[aria-pressed="false"]{color:var(--mut);border-style:dashed}
+.g-read{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;line-height:1.6;color:var(--mut);min-height:3.4em}
+.g-read b{color:var(--or);font-weight:500}
+.g-read code{font:inherit;color:var(--tl);white-space:nowrap}
+
+/* scenes */
+.scene{position:relative;scroll-margin-top:var(--topH);padding-top:clamp(28px,4vw,56px)}
+.slate{position:relative;width:min(calc(100% - 32px),1360px);margin:0 auto;aspect-ratio:2.39/1;overflow:hidden;background:var(--ink)}
+.still{position:absolute;inset:0}
+.still svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.slate::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.74),transparent 58%);pointer-events:none}
+.burn{position:absolute;z-index:1;left:3.5%;right:3.5%;top:5.5%;display:flex;justify-content:space-between;gap:12px;font:500 11px/1 var(--m);letter-spacing:.16em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.slate h2{position:absolute;z-index:1;left:3.5%;right:3.5%;bottom:7%;font:500 clamp(52px,8.4vw,136px)/.8 var(--t);letter-spacing:.01em;text-transform:uppercase}
+.slate h2 small{display:block;margin-bottom:12px;font:500 11px/1.4 var(--m);letter-spacing:.24em;color:var(--or)}
+.sbody{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4.5vw,72px);padding:clamp(32px,4.5vw,64px) 0 clamp(24px,3vw,40px)}
+.lead{font:400 clamp(30px,3.1vw,46px)/1.02 var(--t);letter-spacing:.005em}
+.lead em{font-style:normal;color:var(--or)}
+.col{display:grid;gap:18px;align-content:start}
+.col p{color:var(--mut)}
+.del{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.del li{padding:6px 10px;border:1px solid var(--line);font-size:11.5px;letter-spacing:.04em}
+.shots{list-style:none;padding:0;border-top:1px solid var(--line)}
+.shots li{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:4px 18px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}
+.shots b{color:var(--tl);font-weight:500}
+.shots em{font-style:normal;color:var(--mut);font-size:11.5px;white-space:nowrap}
+
+/* wedding one-take bar */
+.take{display:grid;gap:14px}
+.tbar{position:relative;height:46px;border:1px solid var(--line);background:repeating-linear-gradient(90deg,rgba(242,242,242,.14) 0 1px,transparent 1px 4.545%),linear-gradient(90deg,rgba(43,179,177,.4),rgba(232,161,91,.42))}
+.tbar b{position:absolute;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;display:grid;place-items:center;border:1.5px solid var(--or);border-radius:50%;background:#000;font:500 10px/1 var(--m)}
+.tlist{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 20px;font-size:12.5px}
+.tlist li{display:flex;gap:10px}
+.tlist b{color:var(--or);font-weight:500;font-variant-numeric:tabular-nums}
+.places{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--mut)}
+.places span::before{content:"◦ ";color:var(--tl)}
+
+/* packages */
+.clapper{position:relative;width:min(calc(100% - 32px),1360px);margin:0 auto;background:var(--ink);border:1px solid var(--line)}
+.sticks{height:34px;background:repeating-linear-gradient(-58deg,var(--wh) 0 22px,#000 22px 44px);border-bottom:2px solid #000}
+.cl-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.cl-grid div{padding:12px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cl-grid div:nth-child(4n){border-right:0}
+.cl-grid dt{font:500 9.5px/1 var(--m);letter-spacing:.2em;color:rgba(242,242,242,.62);text-transform:uppercase}
+.cl-grid dd{font:500 26px/1.05 var(--t);padding-top:6px;letter-spacing:.03em}
+.clapper h2{padding:18px 16px 16px;font:500 clamp(52px,8.4vw,136px)/.8 var(--t);text-transform:uppercase}
+.clapper h2 small{display:block;margin-bottom:12px;font:500 11px/1.4 var(--m);letter-spacing:.24em;color:var(--or)}
+.pkgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:clamp(28px,4vw,48px) 0 18px}
+.pkg{display:flex;flex-direction:column;gap:14px;padding:0 22px 22px;background:var(--ink);border:1px solid var(--line)}
+.pkg .sticks{height:18px;margin:0 -22px;background:repeating-linear-gradient(-58deg,rgba(242,242,242,.85) 0 12px,#000 12px 24px)}
+.pkg.hl{border-color:var(--or)}
+.pkg.hl .sticks{background:repeating-linear-gradient(-58deg,var(--or) 0 12px,#000 12px 24px)}
+.pkg .for{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--tl)}
+.pkg h3{font:500 46px/.85 var(--t);text-transform:uppercase;letter-spacing:.02em}
+.price{font:500 36px/1 var(--t);color:var(--or)}
+.price small{font:400 11px/1 var(--m);color:var(--mut);letter-spacing:.04em}
+.pkg ul{list-style:none;padding:0;display:grid;gap:8px;font-size:12.5px;flex:1}
+.pkg li{position:relative;padding-left:20px}
+.pkg li::before{content:"";position:absolute;left:0;top:.8em;width:11px;height:1px;background:var(--tl)}
+.fine{font-size:11.5px;color:var(--mut);padding-bottom:clamp(24px,3vw,40px)}
+
+/* behind the scenes */
+.nle{position:relative;display:grid;gap:4px;padding:12px;background:#05090b;border:1px solid var(--line)}
+.trk{display:grid;grid-template-columns:32px minmax(0,1fr);gap:8px;align-items:center}
+.trk>b{font:500 10px/1 var(--m);color:var(--mut)}
+.lane{position:relative;height:30px;background:rgba(242,242,242,.04)}
+.clip{position:absolute;top:2px;bottom:2px;overflow:hidden;padding:0 6px;border-radius:2px;font:500 9.5px/26px var(--m);letter-spacing:.06em;white-space:nowrap;font-style:normal;color:#001417}
+.clip.v{background:var(--tl)}
+.clip.t{background:var(--wh)}
+.clip.a{background:repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 1px,transparent 1px 3px),var(--or)}
+.clip.m{background:repeating-linear-gradient(90deg,rgba(0,0,0,.2) 0 1px,transparent 1px 4px),#7fb3ae}
+.ph{position:absolute;top:4px;bottom:4px;left:calc(44px + (100% - 56px) * .41);width:2px;background:var(--or);box-shadow:0 0 8px rgba(232,161,91,.7)}
+.ph::before{content:"";position:absolute;top:-4px;left:-5px;border:6px solid transparent;border-top-color:var(--or)}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+.steps li{display:grid;gap:4px;padding:14px 14px 14px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--mut)}
+.steps b{font:500 24px/1 var(--t);letter-spacing:.03em;color:var(--wh)}
+.steps span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--or)}
+
+/* contact */
+.credits-band{width:min(calc(100% - 32px),1360px);margin:0 auto;padding:clamp(40px,6vw,90px) 0 clamp(20px,3vw,40px);text-align:center;border-top:1px solid var(--line)}
+.credits-band h2{font:500 clamp(52px,8.4vw,136px)/.8 var(--t);text-transform:uppercase}
+.credits-band h2 small{display:block;margin-bottom:14px;font:500 11px/1.4 var(--m);letter-spacing:.24em;color:var(--or)}
+.credits{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 22px;align-items:baseline}
+.credits dt{text-align:right;font:500 10px/1.5 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.credits dd{font:400 22px/1.15 var(--t);letter-spacing:.02em;overflow-wrap:anywhere}
+.credits a{text-decoration:none;border-bottom:1px solid rgba(242,242,242,.35)}
+.cform{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;align-content:start}
+.cform label{display:grid;gap:4px;font:500 10px/1.4 var(--m);letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.cform input,.cform select,.cform textarea{width:100%;min-height:44px;padding:8px 0;border:0;border-bottom:1px solid rgba(242,242,242,.42);border-radius:0;background:transparent;color:var(--wh);font:400 15px/1.4 var(--m);letter-spacing:0;text-transform:none;color-scheme:dark}
+.cform select option{background:#0e1a1f;color:var(--wh)}
+.cform textarea{min-height:92px;resize:vertical}
+.cform :focus-visible{outline:none;border-bottom-color:var(--or);box-shadow:0 2px 0 var(--or)}
+.cform .full{grid-column:1/-1}
+.cform .note{grid-column:1/-1;font-size:11.5px;color:var(--tl);min-height:1.2em}
+.foot{padding:clamp(48px,7vw,100px) 16px clamp(32px,4vw,56px);text-align:center;border-top:1px solid var(--line)}
+.fade{font:500 clamp(58px,10vw,168px)/.8 var(--t);text-transform:uppercase;letter-spacing:.02em;background:linear-gradient(180deg,var(--wh),rgba(242,242,242,.12));-webkit-background-clip:text;background-clip:text;color:transparent}
+.fbrand{margin-top:18px;font:500 28px/1 var(--t);letter-spacing:.08em;text-transform:uppercase;color:var(--or);overflow-wrap:anywhere}
+.foot p.cap{margin-top:14px;color:var(--mut);letter-spacing:.14em;line-height:1.8}
+
+/* phone */
+@media (max-width:760px){
+  .bar{gap:12px}
+  .brand{font-size:22px;letter-spacing:.04em}
+  .scene-now{display:none}
+  .tc{font-size:13px}
+  .tc small{display:none}
+  .bar-bot{grid-template-columns:minmax(0,1fr);padding-top:4px}
+  .tl-meta,.tl-end{display:none}
+  .track{height:64px}
+  .mk{height:40px}
+  .hero{padding-top:0;min-height:0;align-content:start}
+  .player{width:100%}
+  .frame{aspect-ratio:4/5}
+  .scrim{background:linear-gradient(180deg,rgba(3,9,11,.72),rgba(3,9,11,.25) 50%,transparent 64%)}
+  .title{left:6%;right:6%;top:13%;width:auto;transform:none;gap:10px}
+  .title h1{font-size:clamp(38px,11.4vw,56px)}
+  .title .sub{font-size:12px}
+  .subtitle{display:none}
+  .grader{grid-template-columns:minmax(0,1fr);padding:12px 16px 4px;gap:10px}
+  .g-lab{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .g-lab p+p{text-align:right}
+  .g-lab .cap{white-space:nowrap}
+  .guides .cross,.ghost{display:none}
+  .g-btns{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+  .gbtn{flex-direction:column;justify-content:center;gap:6px;min-height:62px;padding:6px 2px;font-size:9.5px;letter-spacing:.02em;text-align:center}
+  .g-ctl{display:grid;grid-template-columns:1fr 1fr}
+  .cbtn{justify-content:center}
+  .scene{padding-top:24px}
+  .slate{aspect-ratio:4/3}
+  .burn{font-size:9.5px;letter-spacing:.1em}
+  .sbody{grid-template-columns:minmax(0,1fr);padding:26px 0 18px;gap:24px}
+  .shots li{grid-template-columns:40px minmax(0,1fr);font-size:12.5px}
+  .shots em{grid-column:2;white-space:normal}
+  .tlist{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cl-grid div:nth-child(2n){border-right:0}
+  .pkgs{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .credits dd{font-size:19px}
+  .cform{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="bar bar-top" id="barTop">
+  <a class="logo" href="#s0" aria-label="Back to the opening titles"><i aria-hidden="true"></i><span class="brand" data-brand>Long Take Films</span></a>
+  <p class="scene-now" id="sceneNow" aria-hidden="true">Opening titles</p>
+  <p class="tc" aria-label="Sequence timecode"><small>SEQ</small><span id="tc">00:00:00:00</span></p>
+</header>
+
+<main>
+<section class="hero" id="s0" data-tc="00:00:00:00" data-name="Opening titles" aria-labelledby="h1">
+  <div class="player">
+    <div class="frame" id="frame">
+      <div class="footage graded" role="img" aria-label="Generative footage: sunrise over the sea at Currumbin, headlands on the left and a couple standing on a dune.">
+        <canvas id="cv"></canvas><div class="tint"></div>
+      </div>
+      <div class="flare" aria-hidden="true"><i></i><i></i></div>
+      <i class="ghost" aria-hidden="true"></i>
+      <div class="vig" aria-hidden="true"></div>
+      <div class="scrim" aria-hidden="true"></div>
+      <div class="guides" aria-hidden="true"><i class="act"></i><i class="ttl"></i><i class="cross"></i></div>
+      <div class="hud" aria-hidden="true"><span class="st" id="st">Play</span><span id="clipTc">Clip 00:00:00:00</span><span id="fmt">2.39:1 scope</span></div>
+      <div class="title">
+        <p class="presents"><span data-brand>Long Take Films</span> presents</p>
+        <h1 id="h1">Wedding &amp; brand films that let the moment run</h1>
+        <p class="sub">Gold Coast, QLD. Unhurried, unscripted, and wherever we can, one unbroken take.</p>
+      </div>
+      <p class="subtitle" aria-hidden="true">[ waves ] Currumbin, 5:52 am. Nobody called action.</p>
+    </div>
+    <div class="grader" role="group" aria-label="Colour grade and playback">
+      <div class="g-lab"><p class="cap">Colour grade</p><p>Pick a grade — it re-colours every frame on this page.</p></div>
+      <div class="g-btns">
+        <button class="gbtn" type="button" data-grade="log" aria-pressed="false"><i style="--a:#6a7a7c;--b:#b9a993"></i>Ungraded</button>
+        <button class="gbtn" type="button" data-grade="warm" aria-pressed="false"><i style="--a:#6b3f1f;--b:#f0c27a"></i>Warm film</button>
+        <button class="gbtn" type="button" data-grade="teal" aria-pressed="true"><i style="--a:#1b6f6e;--b:#e8a15b"></i>Teal &amp; orange</button>
+        <button class="gbtn" type="button" data-grade="bw" aria-pressed="false"><i style="--a:#151515;--b:#e6e6e6"></i>Black &amp; white</button>
+        <button class="gbtn" type="button" data-grade="faded" aria-pressed="false"><i style="--a:#5a686c;--b:#dccab0"></i>Faded</button>
+      </div>
+      <div class="g-ctl">
+        <button class="cbtn" type="button" id="play"><svg viewBox="0 0 16 16" aria-hidden="true"><path id="pp" d="M4 3h3v10H4zM9 3h3v10H9z"/></svg><span>Pause</span></button>
+        <button class="cbtn" type="button" id="guides" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 1h5v1.5H2.5V6H1zM10 1h5v5h-1.5V2.5H10zM1 10h1.5v3.5H6V15H1zM13.5 10H15v5h-5v-1.5h3.5z"/></svg><span>Safe guides</span></button>
+      </div>
+      <p class="g-read" id="gRead" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s1" data-tc="00:00:12:05" data-name="Brand stories" aria-labelledby="s1h">
+  <div class="slate">
+    <div class="still graded">
+      <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="a1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17282d"/><stop offset="1" stop-color="#0a1316"/></linearGradient>
+          <linearGradient id="a2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c48a" stop-opacity=".6"/><stop offset="1" stop-color="#e8a15b" stop-opacity="0"/></linearGradient>
+          <radialGradient id="a3"><stop offset="0" stop-color="#e8a15b" stop-opacity=".45"/><stop offset="1" stop-color="#e8a15b" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="240" height="100" fill="url(#a1)"/>
+        <rect x="166" y="20" width="66" height="60" fill="#2a5d62"/>
+        <path d="M166 26H232M166 32H232M166 38H232M166 44H232M166 50H232M166 56H232M166 62H232M166 68H232M166 74H232" stroke="#1d454a" stroke-width="1.2"/>
+        <path d="M0 80H240V100H0Z" fill="#081013"/>
+        <path d="M108 8L74 82H156L122 8Z" fill="url(#a2)"/>
+        <path d="M115 0V4" stroke="#e8a15b" stroke-width=".6"/>
+        <path d="M110 4H120L124 10H106Z" fill="#e8a15b"/>
+        <ellipse cx="115" cy="82" rx="50" ry="5" fill="url(#a3)"/>
+        <ellipse cx="115" cy="58" rx="55" ry="6.5" fill="#efe2cc"/>
+        <ellipse cx="115" cy="60" rx="53" ry="3.6" fill="#c7b392"/>
+        <path d="M80 64V81M75 81H85M150 64V81M145 81H155" stroke="#050b0d" stroke-width="2.4"/>
+        <g fill="#050b0d"><circle cx="186" cy="37" r="5"/><path d="M180 44Q186 41 192 44L196 63L194 81H189L187 67L184 81H179L178 63Z"/></g>
+        <path d="M182 49L160 55" stroke="#050b0d" stroke-width="3" stroke-linecap="round"/>
+        <rect x="153" y="52" width="9" height="4" rx="1" fill="#050b0d"/>
+        <g fill="#ffe0b0" opacity=".7"><circle cx="100" cy="30" r=".6"/><circle cx="126" cy="24" r=".5"/><circle cx="112" cy="40" r=".7"/><circle cx="131" cy="44" r=".5"/><circle cx="96" cy="48" r=".5"/></g>
+      </svg>
+      <div class="tint"></div>
+    </div>
+    <p class="burn" aria-hidden="true"><span>SC 01 · Take 1</span><span>00:00:12:05</span></p>
+    <h2 id="s1h"><small>Scene 01</small>Brand stories</h2>
+  </div>
+  <div class="wrap sbody">
+    <div class="col">
+      <p class="lead">A day inside your business, cut into films people <em>watch to the end</em>.</p>
+      <p>We spend a day with the people who make the thing — the shaper, the roaster, the florist — and let the camera run until it stops feeling like a shoot.</p>
+      <ul class="del" aria-label="What you get"><li>60–90 s hero film</li><li>3 × 15 s verticals</li><li>20 graded stills</li><li>Captions burned in</li></ul>
+    </div>
+    <div class="col">
+      <p class="cap">Sample shot list · brand day</p>
+      <ol class="shots">
+        <li><b>1A</b><span>Hands at work before the doors open</span><em>50 mm · available light</em></li>
+        <li><b>2C</b><span>The first customer, one unbroken walk-through</span><em>24 mm · gimbal, no cuts</em></li>
+        <li><b>4B</b><span>The owner, talking to someone they trust — not to camera</span><em>85 mm · lav + boom</em></li>
+        <li><b>6A</b><span>Closing up: lights off, one at a time</span><em>35 mm · locked off</em></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s2" data-tc="00:01:48:17" data-name="Weddings" aria-labelledby="s2h">
+  <div class="slate">
+    <div class="still graded">
+      <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><linearGradient id="b1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b3c46"/><stop offset=".55" stop-color="#9c6a4a"/><stop offset=".82" stop-color="#eaa96b"/></linearGradient></defs>
+        <rect width="240" height="100" fill="url(#b1)"/>
+        <circle cx="190" cy="71" r="7" fill="#ffd9a8" opacity=".9"/>
+        <path d="M0 74Q40 64 80 70T160 68T240 72V100H0Z" fill="#23363b"/>
+        <path d="M0 84Q120 78 240 86V100H0Z" fill="#0a1316"/>
+        <g fill="#0a1316"><ellipse cx="70" cy="30" rx="58" ry="20"/><ellipse cx="38" cy="38" rx="30" ry="14"/><ellipse cx="104" cy="36" rx="34" ry="14"/><ellipse cx="72" cy="17" rx="36" ry="12"/><path d="M62 44Q60 64 52 84H92Q82 64 80 44Z"/><path d="M52 84Q44 82 36 87H102Q94 82 90 84Z"/></g>
+        <path d="M40 46V60M47 48V66M100 46V58M108 44V55M30 44V52" stroke="#0a1316" stroke-width=".8"/>
+        <path d="M18 44Q60 62 100 50T176 48" fill="none" stroke="#0a1316" stroke-width=".5"/>
+        <g fill="#ffdca0" opacity=".35"><circle cx="34.7" cy="50" r="3"/><circle cx="51.3" cy="53.6" r="3"/><circle cx="67.7" cy="54.8" r="3"/><circle cx="83.9" cy="53.6" r="3"/><circle cx="100" cy="50" r="3"/><circle cx="119.8" cy="45.4" r="3"/><circle cx="139" cy="43.5" r="3"/><circle cx="157.8" cy="44.4" r="3"/></g>
+        <g fill="#ffe6b8"><circle cx="34.7" cy="50" r="1.1"/><circle cx="51.3" cy="53.6" r="1.1"/><circle cx="67.7" cy="54.8" r="1.1"/><circle cx="83.9" cy="53.6" r="1.1"/><circle cx="100" cy="50" r="1.1"/><circle cx="119.8" cy="45.4" r="1.1"/><circle cx="139" cy="43.5" r="1.1"/><circle cx="157.8" cy="44.4" r="1.1"/></g>
+        <g fill="#0a1316"><circle cx="118" cy="64" r="2.3"/><path d="M115 67H121L120.5 76L120 83H118.6L118 77L117.4 83H116L115.5 76Z"/><circle cx="125" cy="65" r="2.2"/><path d="M123.4 67.5H126.6L127 71L131 83H119.5L123 71Z"/><path d="M126 64Q134 68 136 80Q131 74 126.5 67Z" opacity=".6"/></g>
+        <path d="M120.5 70L123.5 71" stroke="#0a1316" stroke-width="1"/>
+      </svg>
+      <div class="tint"></div>
+    </div>
+    <p class="burn" aria-hidden="true"><span>SC 02 · Take 1</span><span>00:01:48:17</span></p>
+    <h2 id="s2h"><small>Scene 02</small>Weddings</h2>
+  </div>
+  <div class="wrap sbody">
+    <div class="col">
+      <p class="lead">We film your ceremony as <em>one unbroken take</em> — no cuts, no staged kiss, no “can you do that again?”</p>
+      <p>A second camera catches the faces; the long take keeps the whole ceremony exactly as it happened, pauses and laughter included. Then we cut a short film from the rest of the day.</p>
+      <p class="cap">Where we often film</p>
+      <p class="places"><span>Currumbin</span><span>Tamborine Mountain</span><span>Coolangatta</span><span>Mudgeeraba</span><span>Tweed Heads NSW</span></p>
+    </div>
+    <div class="col take">
+      <p class="cap">Sample ceremony · 22 min · 1 take · 0 cuts</p>
+      <div class="tbar" aria-hidden="true"><b style="left:0%">1</b><b style="left:9.8%">2</b><b style="left:43.9%">3</b><b style="left:63.8%">4</b><b style="left:81.4%">5</b><b style="left:97.7%">6</b></div>
+      <ol class="tlist">
+        <li><b>00:00</b>1 · Guests settle</li><li><b>02:10</b>2 · Walk in</li><li><b>09:40</b>3 · Vows</li>
+        <li><b>14:02</b>4 · Rings</li><li><b>17:55</b>5 · First kiss</li><li><b>21:30</b>6 · Signing</li>
+      </ol>
+      <p>Every package includes the full ceremony as its own file, audio from the celebrant's microphone, and your film on a private link you can share.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s3" data-tc="00:03:02:09" data-name="Packages" aria-labelledby="s3h">
+  <div class="clapper">
+    <div class="sticks" aria-hidden="true"></div>
+    <dl class="cl-grid">
+      <div><dt>Roll</dt><dd>A014</dd></div><div><dt>Scene</dt><dd>03</dd></div><div><dt>Take</dt><dd>1</dd></div><div><dt>Date</dt><dd>Sat 14 Nov</dd></div>
+    </dl>
+    <h2 id="s3h"><small>Scene 03 · 00:03:02:09</small>Packages</h2>
+  </div>
+  <div class="wrap">
+    <div class="pkgs">
+      <article class="pkg">
+        <div class="sticks" aria-hidden="true"></div>
+        <p class="for">Weddings</p><h3>Short Take</h3>
+        <p class="price">$2,900 <small>sample price</small></p>
+        <ul><li>5 hours of coverage</li><li>4–5 minute film</li><li>Full ceremony in one take</li><li>One shooter, two cameras</li></ul>
+        <a class="btn" href="#s5" data-pkg="Wedding — Short Take">Enquire about this</a>
+      </article>
+      <article class="pkg hl">
+        <div class="sticks" aria-hidden="true"></div>
+        <p class="for">Weddings · the full day</p><h3>Long Take</h3>
+        <p class="price">$4,400 <small>sample price</small></p>
+        <ul><li>8 hours, prep to first dance</li><li>8–10 minute film</li><li>Ceremony and speeches in full</li><li>Two shooters, recorders on celebrant &amp; speeches</li></ul>
+        <a class="btn solid" href="#s5" data-pkg="Wedding — Long Take">Enquire about this</a>
+      </article>
+      <article class="pkg">
+        <div class="sticks" aria-hidden="true"></div>
+        <p class="for">Businesses</p><h3>Brand Day</h3>
+        <p class="price">$3,200 <small>sample price</small></p>
+        <ul><li>One shoot day, up to 8 hours</li><li>60–90 s hero film</li><li>Three 15 s verticals</li><li>Two rounds of changes</li></ul>
+        <a class="btn" href="#s5" data-pkg="Brand Day">Enquire about this</a>
+      </article>
+    </div>
+    <p class="fine">Sample prices in AUD, including GST. Travel beyond the Gold Coast, Tweed and Scenic Rim is quoted separately. Delivery times are typical, not promised.</p>
+  </div>
+</section>
+
+<section class="scene" id="s4" data-tc="00:04:26:21" data-name="Behind the scenes" aria-labelledby="s4h">
+  <div class="slate">
+    <div class="still graded">
+      <svg viewBox="0 0 240 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="c1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b5f66"/><stop offset=".62" stop-color="#94b5ad"/><stop offset="1" stop-color="#f0c996"/></linearGradient>
+          <linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6c70"/><stop offset="1" stop-color="#153338"/></linearGradient>
+        </defs>
+        <rect width="240" height="62" fill="url(#c1)"/>
+        <rect y="60" width="240" height="18" fill="url(#c2)"/>
+        <path d="M0 69Q30 66 60 69T120 69T180 69T240 69M0 74Q40 72 80 74T160 74T240 74" stroke="#d9efe9" stroke-width=".7" fill="none" opacity=".7"/>
+        <path d="M0 76Q120 71 240 78V100H0Z" fill="#c9a476"/>
+        <path d="M0 91Q120 84 240 93V100H0Z" fill="#a9855a"/>
+        <path d="M34 20h26M40 24h30M150 14h34M160 18h22" stroke="#e7f0ea" stroke-width="1.4" opacity=".35" stroke-linecap="round"/>
+        <path d="M190 30q4-3 8 0q4-3 8 0M168 38q3-2 6 0q3-2 6 0" stroke="#1b2a2c" stroke-width=".8" fill="none"/>
+        <g fill="#111"><rect x="40" y="62" width="120" height="3"/><rect x="92" y="59.5" width="16" height="3"/><rect x="88" y="47" width="22" height="13" rx="1.5"/><rect x="110" y="50" width="12" height="8"/><rect x="121" y="49" width="3" height="10" fill="#222"/><rect x="79" y="43" width="9" height="7"/></g>
+        <rect x="80" y="44" width="7" height="5" fill="#2bb3b1" opacity=".85"/>
+        <path d="M92 47V43H106V47" stroke="#111" stroke-width="1.6" fill="none"/>
+        <path d="M46 65L38 92M46 65L53 92M154 65L147 92M154 65L162 92" stroke="#111" stroke-width="1.6"/>
+        <rect x="180" y="84" width="22" height="9" rx="2" fill="#20282a"/>
+        <g fill="#b08d62"><ellipse cx="200" cy="80" rx="1.4" ry=".6"/><ellipse cx="206" cy="82" rx="1.4" ry=".6"/><ellipse cx="212" cy="80.5" rx="1.4" ry=".6"/><ellipse cx="218" cy="82.5" rx="1.4" ry=".6"/></g>
+      </svg>
+      <div class="tint"></div>
+    </div>
+    <p class="burn" aria-hidden="true"><span>SC 04 · B-cam</span><span>00:04:26:21</span></p>
+    <h2 id="s4h"><small>Scene 04</small>Behind the scenes</h2>
+  </div>
+  <div class="wrap sbody">
+    <div class="col">
+      <p class="lead">Small crew, quiet kit, <em>no lights in anyone's face</em>.</p>
+      <p>Two full-frame cinema cameras, spherical and anamorphic primes, a gimbal, a slider, wireless lavs on whoever is speaking, a field recorder and two small LED panels for the reception. That's it.</p>
+      <ol class="steps">
+        <li><span>Week 0</span><b>Call</b>30 minutes, no pitch.</li>
+        <li><span>Week 1</span><b>Recce</b>Walk the venue at the same hour.</li>
+        <li><span>Day</span><b>Shoot</b>We arrive early, leave late.</li>
+        <li><span>+3 weeks</span><b>First cut</b>You watch; we listen.</li>
+        <li><span>+4 weeks</span><b>Grade &amp; mix</b>Your grade, your music.</li>
+        <li><span>+5 weeks</span><b>Delivery</b>4K master, socials, stills.</li>
+      </ol>
+    </div>
+    <div class="col">
+      <p class="cap">The edit · sample wedding film, 9 min</p>
+      <div class="nle" role="img" aria-label="Sample edit timeline with four tracks: titles, picture including the one-take ceremony, vows and speech audio, and music across the whole film.">
+        <div class="trk"><b>V2</b><div class="lane"><i class="clip t" style="left:1%;width:13%">TITLE</i><i class="clip t" style="left:84%;width:15%">END CARD</i></div></div>
+        <div class="trk"><b>V1</b><div class="lane"><i class="clip v" style="left:0;width:17%">A012_C004</i><i class="clip v" style="left:17.4%;width:34%">CEREMONY · ONE TAKE</i><i class="clip v" style="left:51.8%;width:15%">B007_C011</i><i class="clip v" style="left:67.2%;width:32.8%">A019_C002</i></div></div>
+        <div class="trk"><b>A1</b><div class="lane"><i class="clip a" style="left:17.4%;width:34%">VOWS_LAV</i><i class="clip a" style="left:60%;width:22%">SPEECH_02</i></div></div>
+        <div class="trk"><b>A2</b><div class="lane"><i class="clip m" style="left:0;width:100%">SCORE_V3 · LICENSED TRACK</i></div></div>
+        <i class="ph" aria-hidden="true"></i>
+      </div>
+      <p>The ceremony sits on the timeline untouched. Everything around it is shaped in the edit, then graded — the same looks you can try at the top of this page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene" id="s5" data-tc="00:05:40:00" data-name="Contact" aria-labelledby="s5h">
+  <div class="credits-band"><h2 id="s5h"><small>Scene 05 · 00:05:40:00 · End credits</small>Contact</h2></div>
+  <div class="wrap sbody">
+    <dl class="credits">
+      <dt>Directors</dt><dd>Kai &amp; Noor</dd>
+      <dt>Mobile</dt><dd><a href="tel:+61491570158">0491 570 158</a></dd>
+      <dt>Studio</dt><dd><a href="tel:+61755501842">(07) 5550 1842</a></dd>
+      <dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+      <dt>Based in</dt><dd>Burleigh Heads, Gold Coast QLD</dd>
+      <dt>Travels to</dt><dd>Gold Coast · Tweed · Scenic Rim · Brisbane</dd>
+      <dt>Office hours</dt><dd>Mon–Fri 9am–5pm. Weekends, we're filming.</dd>
+    </dl>
+    <form class="cform" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the studio.">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Date<input name="date" type="date"></label>
+      <label>What are we filming?
+        <select name="what" id="what">
+          <option>Wedding — Short Take</option><option selected>Wedding — Long Take</option><option>Brand Day</option><option>Something else</option>
+        </select>
+      </label>
+      <p class="note" id="pkgNote" aria-live="polite"></p>
+      <label class="full">Venue, story, anything<textarea name="msg" placeholder="Ceremony at Currumbin, about 80 guests…"></textarea></label>
+      <div class="full"><button class="btn solid" type="submit">Send enquiry</button></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="fade" aria-hidden="true">Fade to black</p>
+  <p class="fbrand" data-brand>Long Take Films</p>
+  <p class="cap">A fictional videographer — concept demo. The footage is generative, drawn in code. Sample prices in AUD.</p>
+</footer>
+
+<nav class="bar bar-bot" id="barBot" aria-label="Scene timeline">
+  <div class="tl-meta"><span class="cap">Now showing</span><b id="bScene">Opening titles</b></div>
+  <div class="track">
+    <div class="rail" aria-hidden="true"><i class="fill" id="fill"></i></div>
+    <input type="range" id="scrub" min="0" max="9300" step="25" value="0" aria-label="Scrub through the scenes">
+    <button class="mk" type="button" data-go="1" aria-label="Scene 1: Brand stories, 00:00:12:05">01</button>
+    <button class="mk" type="button" data-go="2" aria-label="Scene 2: Weddings, 00:01:48:17">02</button>
+    <button class="mk" type="button" data-go="3" aria-label="Scene 3: Packages, 00:03:02:09">03</button>
+    <button class="mk" type="button" data-go="4" aria-label="Scene 4: Behind the scenes, 00:04:26:21">04</button>
+    <button class="mk" type="button" data-go="5" aria-label="Scene 5: Contact, 00:05:40:00">05</button>
+  </div>
+  <p class="tl-end">00:06:12:00<br>25 fps</p>
+  <p class="strip" aria-hidden="true">2.39:1 · 25 fps · Sample reel</p>
+</nav>
+<script>
+(function(){
+  'use strict';
+  function $(id){return document.getElementById(id);}
+  var root=document.documentElement,FPS=25;
+  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function parseTC(s){var p=s.split(':').map(Number);return((p[0]*60+p[1])*60+p[2])*FPS+p[3];}
+  function pad(n){return(n<10?'0':'')+n;}
+  function fmt(fr){fr=Math.max(0,Math.floor(fr));var f=fr%FPS,s=Math.floor(fr/FPS);return[Math.floor(s/3600),Math.floor(s/60)%60,s%60,f].map(pad).join(':');}
+
+  /* ---------- scenes, timecode and the scrubber ---------- */
+  var barT=$('barTop'),barB=$('barBot'),scrub=$('scrub'),fill=$('fill'),tcEl=$('tc'),sceneEl=$('sceneNow'),bScene=$('bScene');
+  var secs=[].slice.call(document.querySelectorAll('[data-tc]'));
+  var TC=secs.map(function(s){return parseTC(s.getAttribute('data-tc'));}),END=parseTC('00:06:12:00');
+  var NAMES=secs.map(function(s){return s.getAttribute('data-name');});
+  var marks=[].slice.call(document.querySelectorAll('.mk'));
+  var P=[],dragging=false,curScene=-1,ticking=false;
+  scrub.max=END;
+  marks.forEach(function(m){var i=+m.getAttribute('data-go');m.style.left=(TC[i]/END*100).toFixed(2)+'%';m.addEventListener('click',function(){go(i);});});
+
+  function measure(){
+    var max=Math.max(1,root.scrollHeight-window.innerHeight),top=barT.offsetHeight,y=window.scrollY||0;
+    P=secs.map(function(s,i){return i?Math.min(max,s.getBoundingClientRect().top+y-top):0;});
+    P.push(max);
+    for(var i=1;i<P.length;i++)if(P[i]<=P[i-1])P[i]=P[i-1]+1;
+    update();
+  }
+  function seg(i){return[TC[i],i+1<TC.length?TC[i+1]:END];}
+  function framesAt(y){
+    for(var i=0;i<secs.length;i++){
+      if(y<P[i+1]||i===secs.length-1){var t=seg(i),f=(y-P[i])/(P[i+1]-P[i]);return{fr:t[0]+Math.max(0,Math.min(1,f))*(t[1]-t[0]),i:i};}
+    }
+    return{fr:0,i:0};
+  }
+  function yAt(fr){
+    for(var i=0;i<secs.length;i++){
+      var t=seg(i);
+      if(fr<t[1]||i===secs.length-1){var f=(fr-t[0])/(t[1]-t[0]);return P[i]+Math.max(0,Math.min(1,f))*(P[i+1]-P[i]);}
+    }
+    return 0;
+  }
+  function jump(y){root.style.scrollBehavior='auto';window.scrollTo(0,y);root.style.scrollBehavior='';}
+  function go(i){var y=P[i]+(i?1:0);if(reduce)jump(y);else window.scrollTo({top:y,behavior:'smooth'});}
+  function update(){
+    ticking=false;
+    if(!P.length)return;
+    var r=framesAt(window.scrollY||0);
+    tcEl.textContent=fmt(r.fr);
+    if(!dragging)scrub.value=Math.round(r.fr);
+    scrub.setAttribute('aria-valuetext',NAMES[r.i]+', '+fmt(r.fr));
+    fill.style.width=(r.fr/END*100).toFixed(2)+'%';
+    if(r.i!==curScene){
+      curScene=r.i;
+      var label=(r.i?'Scene 0'+r.i+' — ':'')+NAMES[r.i];
+      sceneEl.textContent=label;bScene.textContent=label;
+      marks.forEach(function(m){if(+m.getAttribute('data-go')===r.i)m.setAttribute('aria-current','step');else m.removeAttribute('aria-current');});
+    }
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+  scrub.addEventListener('input',function(){dragging=true;jump(yAt(+scrub.value));});
+  scrub.addEventListener('change',function(){dragging=false;update();});
+  scrub.addEventListener('pointerup',function(){dragging=false;});
+  scrub.addEventListener('blur',function(){dragging=false;});
+
+  function bars(){root.style.setProperty('--topH',barT.offsetHeight+'px');root.style.setProperty('--botH',barB.offsetHeight+'px');measure();}
+  if(window.ResizeObserver){var ro=new ResizeObserver(function(){bars();});ro.observe(barT);ro.observe(barB);}
+
+  /* ---------- generative footage ---------- */
+  var cv=$('cv'),ctx=cv.getContext('2d'),frame=$('frame'),clipEl=$('clipTc'),fmtEl=$('fmt'),stEl=$('st'),playBtn=$('play'),pp=$('pp');
+  var W=1,H=1,T=reduce?7.4:3,raf=0,playing=!reduce,onScreen=true,last=0,lastFr=-1,lsx=-1,lsy=-1;
+  function ridge(u,s){return Math.sin(u*7+s)*.5+Math.sin(u*15+s*1.7)*.3+Math.sin(u*33+s*.4)*.12;}
+  function land(x0,x1,base,peak,seed,col,shift){
+    ctx.fillStyle=col;ctx.beginPath();ctx.moveTo(x0+shift,base);
+    for(var x=x0;x<=x1+4;x+=5){var u=Math.min(1,(x-x0)/(x1-x0)),env=(1-Math.pow(u,2.4))*(.8+.2*Math.min(1,u*8));ctx.lineTo(x+shift,base-peak*env*(.86+.14*ridge(u,seed)));}
+    ctx.lineTo(x1+shift,base+1);ctx.closePath();ctx.fill();
+  }
+  function poly(pts){ctx.beginPath();ctx.moveTo(pts[0][0],pts[0][1]);for(var i=1;i<pts.length;i++)ctx.lineTo(pts[i][0],pts[i][1]);ctx.closePath();ctx.fill();}
+  function draw(t){
+    var w=W,h=H,nar=w/h<1.2,hz=h*(nar?.63:.6),cam=Math.sin(t*.07)*w*.02,i,x,y,f,g;
+    g=ctx.createLinearGradient(0,0,0,hz);
+    g.addColorStop(0,'#0a161b');g.addColorStop(.45,'#1e4751');g.addColorStop(.8,'#b67a50');g.addColorStop(1,'#f2b979');
+    ctx.fillStyle=g;ctx.fillRect(0,0,w,hz+1);
+    var sx=w*(nar?.56:.7)-cam*.2,sy=hz-h*.03+Math.sin(t*.09)*h*.004,sr=Math.max(10,Math.min(w,h)*.05);
+    g=ctx.createRadialGradient(sx,sy,sr*.4,sx,sy,sr*11);
+    g.addColorStop(0,'rgba(255,222,172,.9)');g.addColorStop(.12,'rgba(247,178,110,.42)');g.addColorStop(.5,'rgba(232,161,91,.1)');g.addColorStop(1,'rgba(232,161,91,0)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,w,hz+1);
+    ctx.fillStyle='#ffe7c4';ctx.beginPath();ctx.arc(sx,sy,sr,0,6.2832);ctx.fill();
+    for(i=0;i<5;i++){
+      var cw=w*(.18+.05*(i%3)),cx=((((i*.29+t*.003*(1+i*.4))%1.3)+1.3)%1.3-.15)*w-cam*.4;
+      ctx.fillStyle='rgba(255,'+(170+i*10)+',120,'+(.1+.03*i).toFixed(2)+')';
+      ctx.beginPath();ctx.ellipse(cx,hz*(.22+i*.11),cw,1.2+i*.9,0,0,6.2832);ctx.fill();
+    }
+    g=ctx.createLinearGradient(0,hz,0,h);g.addColorStop(0,'#58756f');g.addColorStop(.22,'#1f4147');g.addColorStop(1,'#061216');
+    ctx.fillStyle=g;ctx.fillRect(0,hz,w,h-hz);
+    ctx.strokeStyle='rgba(190,225,220,.13)';ctx.lineWidth=1;
+    for(i=0;i<10;i++){
+      y=hz+(h-hz)*Math.pow((i+1)/11,1.6);ctx.beginPath();
+      for(x=-10;x<=w+20;x+=20){var yy=y+Math.sin(x*.013+t*.5+i*1.3)*(.6+i*.35);if(x<0)ctx.moveTo(x,yy);else ctx.lineTo(x,yy);}
+      ctx.stroke();
+    }
+    ctx.fillStyle='#ffdcaa';
+    for(i=0;i<80;i++){
+      f=i/80;y=hz+1.5+f*f*(h-hz)*.9;
+      var sp=4+(y-hz)*.75,len=3+(y-hz)*.2,a=(1-f)*.75*(.4+.6*Math.sin(i*3.7+t*2));
+      x=sx-cam*.1+Math.sin(i*12.99+t*.8)*sp*.55+Math.sin(i*4.3)*sp*.35;
+      if(a>0){ctx.globalAlpha=a;ctx.fillRect(x-len/2,y,len,1+f*1.8);}
+    }
+    ctx.globalAlpha=1;
+    land(-60,w*.46,hz+1,h*.085,1.2,'#2a4850',cam*.3);
+    land(-60,w*(nar?.34:.3),hz+h*.07,h*.2,4.1,'#12252b',cam*.6);
+    var dx=cam*1.1,cx2=w*(nar?.64:.82)+dx,crest=h*(nar?.86:.84),col='#03080a';
+    ctx.fillStyle='#040b0e';ctx.beginPath();ctx.moveTo(w*.34+dx,h+2);
+    ctx.quadraticCurveTo(w*.52+dx,crest,cx2-w*.1,crest);ctx.lineTo(cx2+w*.1,crest);
+    ctx.quadraticCurveTo(w*.95+dx,crest,w+40,h*.8);ctx.lineTo(w+40,h+2);ctx.closePath();ctx.fill();
+    ctx.strokeStyle='#040b0e';ctx.lineWidth=1.2;ctx.beginPath();
+    for(i=0;i<28;i++){x=cx2-w*.1+i*(w*.2/28);var bh=h*(.012+.01*((i*7)%5)/5);ctx.moveTo(x,crest+1);ctx.lineTo(x+Math.sin(t*1.5+i)*2+((i%3)-1)*2,crest-bh);}
+    ctx.stroke();
+    var s=h*(nar?.2:.25),by=crest+1,ax=cx2-s*.1,bx=cx2+s*.1,sway=Math.sin(t*1.3)*s*.025;
+    ctx.fillStyle=col;
+    ctx.beginPath();ctx.arc(ax,by-s*.93,s*.066,0,6.2832);ctx.fill();
+    poly([[ax-s*.1,by-s*.8],[ax+s*.1,by-s*.8],[ax+s*.085,by-s*.44],[ax+s*.075,by],[ax+s*.02,by],[ax,by-s*.36],[ax-s*.02,by],[ax-s*.075,by],[ax-s*.085,by-s*.44]]);
+    ctx.beginPath();ctx.arc(bx,by-s*.88,s*.062,0,6.2832);ctx.fill();
+    ctx.beginPath();ctx.arc(bx+s*.05,by-s*.91,s*.032,0,6.2832);ctx.fill();
+    poly([[bx-s*.07,by-s*.77],[bx+s*.07,by-s*.77],[bx+s*.05,by-s*.54],[bx+s*.2+sway,by-s*.01],[bx-s*.15+sway*.4,by],[bx-s*.05,by-s*.54]]);
+    ctx.globalAlpha=.55;ctx.beginPath();ctx.moveTo(bx+s*.03,by-s*.93);
+    ctx.quadraticCurveTo(bx+s*.3+sway*2,by-s*.8,bx+s*.34+sway*3,by-s*.5);ctx.quadraticCurveTo(bx+s*.2+sway,by-s*.62,bx+s*.06,by-s*.72);
+    ctx.closePath();ctx.fill();ctx.globalAlpha=1;
+    ctx.strokeStyle=col;ctx.lineWidth=s*.04;ctx.lineCap='round';ctx.beginPath();
+    ctx.moveTo(ax+s*.09,by-s*.76);ctx.lineTo(cx2,by-s*.5);ctx.lineTo(bx-s*.06,by-s*.74);ctx.stroke();
+    ctx.strokeStyle='rgba(8,18,22,.8)';ctx.lineWidth=1.3;
+    for(i=0;i<3;i++){
+      x=((((t*.018+i*.29)%1.2)+1.2)%1.2-.1)*w;y=hz*(.3+i*.09)+Math.sin(t*.7+i)*3;
+      var fl=Math.sin(t*5+i*2)*3,bs=5+i;
+      ctx.beginPath();ctx.moveTo(x-bs,y-fl*.5);ctx.quadraticCurveTo(x-bs*.4,y-bs*.5-fl,x,y);ctx.quadraticCurveTo(x+bs*.4,y-bs*.5-fl,x+bs,y-fl*.5);ctx.stroke();
+    }
+    var px=sx/w*100,py=sy/h*100;
+    if(Math.abs(px-lsx)>.05||Math.abs(py-lsy)>.05){lsx=px;lsy=py;frame.style.setProperty('--sx',px.toFixed(2)+'%');frame.style.setProperty('--sy',py.toFixed(2)+'%');}
+  }
+  function clip(){var fr=Math.floor(T*FPS);if(fr!==lastFr){lastFr=fr;clipEl.textContent='Clip '+fmt(fr);}}
+  function sizeCv(){
+    var r=cv.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);
+    W=Math.max(1,r.width);H=Math.max(1,r.height);cv.width=Math.round(W*d);cv.height=Math.round(H*d);ctx.setTransform(d,0,0,d,0,0);
+    fmtEl.textContent=W/H>1.6?'2.39:1 scope':'4:5 vertical';draw(T);clip();
+  }
+  function loop(now){
+    raf=0;if(!playing||!onScreen||document.hidden)return;
+    T+=Math.min(.1,Math.max(0,(now-last)/1000));last=now;draw(T);clip();raf=requestAnimationFrame(loop);
+  }
+  function start(){if(!raf&&playing&&onScreen&&!document.hidden){last=performance.now();raf=requestAnimationFrame(loop);}}
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){onScreen=es[0].isIntersecting;start();}).observe(frame);
+  document.addEventListener('visibilitychange',start);
+  function playUI(){
+    frame.classList.toggle('paused',!playing);
+    playBtn.querySelector('span').textContent=reduce?'Step frame':(playing?'Pause':'Play');
+    playBtn.setAttribute('aria-label',reduce?'Step the still frame forward':(playing?'Pause the footage':'Play the footage'));
+    pp.setAttribute('d',playing?'M4 3h3v10H4zM9 3h3v10H9z':'M4 2.5l9 5.5-9 5.5z');
+    stEl.textContent=reduce?'Still frame':(playing?'Play':'Paused');
+  }
+  playBtn.addEventListener('click',function(){
+    if(reduce){T+=.6;draw(T);clip();return;}
+    playing=!playing;playUI();start();
+  });
+
+  /* ---------- colour grades ---------- */
+  var GR={
+    log:['Ungraded (log)','Flat footage straight off the camera: every detail kept, no colour decisions yet. Every grade starts here.'],
+    warm:['Warm film','Golden highlights and gentle contrast, like colour negative at golden hour. Kind to skin in garden ceremonies.'],
+    teal:['Teal & orange','Cool shadows, warm skin. Our coastal look: sea and sky sit back, people come forward.'],
+    bw:['Black & white','Contrast and texture only. Timeless for vows and speeches, and it quietens a busy venue.'],
+    faded:['Faded','Lifted blacks and quiet colour, like a well-loved print. Suits hinterland mist and overcast days.']
+  };
+  var gBtns=[].slice.call(document.querySelectorAll('.gbtn')),gRead=$('gRead');
+  function grade(k){
+    root.setAttribute('data-grade',k);
+    gBtns.forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-grade')===k));});
+    var cs=getComputedStyle(root);function v(n){return cs.getPropertyValue(n).trim();}
+    gRead.textContent='';
+    var p=document.createElement('span'),b=document.createElement('b');b.textContent=GR[k][0];p.appendChild(b);p.appendChild(document.createTextNode(' — '+GR[k][1]));
+    var c=document.createElement('code');c.textContent='sat '+v('--sat')+' · con '+v('--con')+' · sepia '+v('--sep')+' · mono '+v('--gray');
+    gRead.appendChild(p);gRead.appendChild(c);
+  }
+  gBtns.forEach(function(b){b.addEventListener('click',function(){grade(b.getAttribute('data-grade'));});});
+
+  $('guides').addEventListener('click',function(){
+    var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',String(on));frame.classList.toggle('noguides',!on);
+  });
+
+  [].forEach.call(document.querySelectorAll('[data-pkg]'),function(a){
+    a.addEventListener('click',function(){var k=a.getAttribute('data-pkg');$('what').value=k;$('pkgNote').textContent=k+' (sample package) selected — change it any time.';});
+  });
+
+  /* ---------- film grain, drawn once ---------- */
+  try{
+    var gc=document.createElement('canvas');gc.width=gc.height=128;
+    var gx=gc.getContext('2d'),im=gx.createImageData(128,128),d=im.data;
+    for(var n=0;n<d.length;n+=4){var val=Math.random()*255|0;d[n]=d[n+1]=d[n+2]=val;d[n+3]=Math.random()*110|0;}
+    gx.putImageData(im,0,0);root.style.setProperty('--grain','url("'+gc.toDataURL()+'")');
+  }catch(e){}
+
+  grade('teal');playUI();sizeCv();bars();start();
+  var rz;window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(function(){sizeCv();measure();},120);});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(measure);
+  window.addEventListener('load',measure);
+})();
+</script>
+</body>
+</html>

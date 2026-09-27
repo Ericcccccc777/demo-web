@@ -1,0 +1,8 @@
+{
+  "id": "046",
+  "tech": ["SVG", "SVG animation", "Bilingual toggle", "IntersectionObserver", "Keyboard shortcuts", "Form logic", "Date logic"],
+  "features": ["bilingual", "story", "booking"],
+  "interaction": "Tap or Tab to any of the Five Elements (木 火 土 金 水) on an ink-wash wheel to read its traditional associations as cultural background, switch between the generating (相生) and controlling (相克) cycles with flowing arrows, and flip the whole hanging-scroll page between English and 中文.",
+  "fonts": ["Ma Shan Zheng", "Noto Serif SC"],
+  "notes": "Arrow flow and ink reveals are static under reduced motion. The appointment form ends in a demo toast; fees are sample prices."
+}

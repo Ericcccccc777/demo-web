@@ -1,0 +1,8 @@
+{
+  "id": "036",
+  "tech": ["CSS Grid", "CSS 3D", "SVG", "Pointer Events", "IntersectionObserver", "Keyboard shortcuts", "Date logic"],
+  "features": ["game"],
+  "interaction": "A 30-second 'Squish!' round: SVG cockroaches, huntsmen, termites and mosquitoes scuttle across a kitchen floor; tap or click (or Tab to a bug and press Enter) to splat them for points and combos, with pause and a 'Can't catch them all? Call us.' ending. A still 'spot the 8 bugs' version is the default under reduced motion, and the pest mugshot cards flip to show rap sheets.",
+  "fonts": ["Bungee", "Courier Prime"],
+  "notes": "The best score is kept only in this browser. The sighting form ends in a demo toast; prices are samples."
+}

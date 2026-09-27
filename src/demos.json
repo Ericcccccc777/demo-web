@@ -1,0 +1,4241 @@
+[
+ {
+  "id": "001",
+  "slug": "kettle-and-crema",
+  "name": "Kettle & Crema",
+  "industry": "food",
+  "type": {
+   "en": "Specialty café",
+   "zh": "精品咖啡馆"
+  },
+  "city": "Fitzroy, VIC",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "natural"
+  ],
+  "style": {
+   "en": "Japanese–Scandi minimal",
+   "zh": "日式北欧极简"
+  },
+  "interaction": {
+   "en": "Pour your own latte art",
+   "zh": "亲手拉一杯拿铁拉花"
+  },
+  "features": [
+   "menu",
+   "game"
+  ],
+  "fonts": [
+   "Shippori Mincho",
+   "Figtree"
+  ],
+  "palette": [
+   "#F8F5F0",
+   "#EFE9E1",
+   "#2B1D14",
+   "#6F4B34",
+   "#7C8C5A"
+  ],
+  "brief": "Quiet, airy specialty café. Palette: paper #F8F5F0, oat #EFE9E1, espresso #2B1D14, roast #6F4B34, matcha #7C8C5A used sparingly. Fonts: Shippori Mincho (display) + Figtree (UI). LAYOUT: desktop split screen — left 40% is a fixed panel (brand word mark, 'Open now / Opens 7am' computed from the visitor's clock against hours Mon–Fri 7:00–15:00, Sat–Sun 8:00–14:00, and the latte-art cup); right 60% scrolls: espresso & filter menu with dotted leaders and sample prices, tea, pastries, 'beans on rotation' origin cards, 'a slow bar' story, visit (Fitzroy). Phone: panel becomes the top section, then the menu. SIGNATURE: latte-art canvas — a cup seen from above with crema; press-and-drag (or hold Space and steer with arrow keys) to pour steamed milk: milk blobs spread, drift and get dragged by the pour path (particles/metaball-ish soft circles, crema edge darkening), so wiggles make a rosetta-like pattern; 'Reset cup' and a 'Show me a heart' auto-pour. Result text in DOM ('Nice pour — 72% milk'). Keep it elegant, lots of whitespace, thin rules, no heavy browns."
+ },
+ {
+  "id": "002",
+  "slug": "golden-steamer",
+  "name": "Golden Steamer",
+  "industry": "food",
+  "type": {
+   "en": "Yum cha restaurant",
+   "zh": "港式早茶餐厅"
+  },
+  "city": "Chatswood, NSW",
+  "lang": "en+zh",
+  "moods": [
+   "luxe",
+   "bold"
+  ],
+  "style": {
+   "en": "Modern Chinese lacquer",
+   "zh": "现代中式朱漆"
+  },
+  "interaction": {
+   "en": "Stack your steamer baskets",
+   "zh": "点单即叠蒸笼"
+  },
+  "features": [
+   "ordering",
+   "menu",
+   "bilingual"
+  ],
+  "fonts": [
+   "Noto Serif SC",
+   "Outfit"
+  ],
+  "palette": [
+   "#8E1B17",
+   "#1A1210",
+   "#C9A04A",
+   "#F6EFE3",
+   "#3F7A63"
+  ],
+  "brief": "Bilingual EN/中文 yum cha house, Chinese name 金笼 shown beside the English word mark (the data-brand element holds only 'Golden Steamer'). Palette: lacquer red #8E1B17, ink #1A1210, gold #C9A04A (decor only, not small text), rice paper #F6EFE3, jade #3F7A63. Fonts: Noto Serif SC + Outfit. HERO: a large bamboo steamer (CSS woven texture with repeating gradients) whose lid lifts on load revealing the name with rising steam wisps (SVG). MENU: categories as tabs — Steamed 蒸点, Fried 炸点, Rice rolls 肠粉, Sweets 甜点 — each dish a round steamer card: har gow 虾饺, siu mai 烧卖, char siu bao 叉烧包, cheung fun 肠粉, xiao long bao 小笼包, lo mai gai 糯米鸡, phoenix claws 凤爪, turnip cake 萝卜糕, egg tart 蛋挞, mango pancake 芒果班戟. SIGNATURE: 'Build your table' — adding a dish drops a steamer basket onto a growing stack on the right (bounce, stack height grows, dish initials on the rim), running total, 'Good for 4 people' suggestion, remove from stack; 'Send order' ends with a DemoKit toast. Also weekend queue tips, trolley hours, 'Sample prices'. Full EN ⇄ 中文 toggle (top right) switching all strings and html lang. Phone: the stack becomes a sticky bottom bar showing a mini stack + total."
+ },
+ {
+  "id": "003",
+  "slug": "ember-and-salt",
+  "name": "Ember & Salt",
+  "industry": "food",
+  "type": {
+   "en": "Degustation restaurant",
+   "zh": "主厨品鉴餐厅"
+  },
+  "city": "Surry Hills, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "editorial"
+  ],
+  "style": {
+   "en": "Dark, fire-lit fine dining",
+   "zh": "炉火暗调高级餐饮"
+  },
+  "interaction": {
+   "en": "Walk the 8-course menu, reserve a seat",
+   "zh": "逐道浏览八道菜并预订"
+  },
+  "features": [
+   "booking",
+   "story",
+   "menu"
+  ],
+  "fonts": [
+   "Cormorant Garamond",
+   "Hanken Grotesk"
+  ],
+  "palette": [
+   "#121010",
+   "#2A2522",
+   "#E4572E",
+   "#BDB3A8",
+   "#EFE7DC"
+  ],
+  "brief": "Wood-fired degustation. Palette: charcoal #121010, smoke #2A2522, ember #E4572E, ash #BDB3A8, bone #EFE7DC. Fonts: Cormorant Garamond (large italic display) + Hanken Grotesk (small-caps UI). LAYOUT: full-viewport scroll-snap 'courses' — an intro screen, then one screen per course I–VIII: huge thin roman numeral, dish name, three ingredient words, one sentence, wine pairing; behind each, a small canvas of rising embers/sparks (slow; stops off-screen; reduced motion = static warm glow). Right edge: course progress dots (buttons, keyboard, aria-current). After the courses: the room, the fire (story), dietary note, hours (Wed–Sat dinner). SIGNATURE: reservation side sheet — date strip for the next 14 days (open Wed–Sat only; others disabled with reason), party size 1–8 stepper, seating times 5:30/6:00/8:15/8:45 with a deterministic mix of 'Available' / 'Waitlist' states, dietary notes, summary card; confirm ends with 'Demo only — no reservation was made.' Phone: scroll-snap stays, sheet becomes full screen."
+ },
+ {
+  "id": "004",
+  "slug": "lucky-lime-tacos",
+  "name": "Lucky Lime Tacos",
+  "industry": "food",
+  "type": {
+   "en": "Food truck",
+   "zh": "墨西哥餐车"
+  },
+  "city": "Brisbane, QLD",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "playful"
+  ],
+  "style": {
+   "en": "Neo-brutalist bento",
+   "zh": "新粗野主义便当格"
+  },
+  "interaction": {
+   "en": "Follow the truck's weekly route",
+   "zh": "追踪餐车一周路线"
+  },
+  "features": [
+   "map",
+   "menu"
+  ],
+  "fonts": [
+   "Archivo Black",
+   "Space Grotesk"
+  ],
+  "palette": [
+   "#FFD23F",
+   "#111111",
+   "#FF3E8A",
+   "#3BCEAC",
+   "#FFFFFF"
+  ],
+  "brief": "Loud, joyful taco truck. Palette: sunflower #FFD23F, black #111, hot pink #FF3E8A, sea green #3BCEAC, white. Neo-brutalism: 3px black borders, hard 6px offset shadows, 14px radius, sticker badges rotated a few degrees, tiles that 'press' on click. Fonts: Archivo Black + Space Grotesk. LAYOUT: a bento grid of different-size tiles — giant logo tile, 'Where's the truck today?' tile (map), menu tiles (birria tacos, Baja fish, elote cup, chipotle cauli, churros, horchata) that flip on click to show allergens, 'Cater your party' tile, 'Hours' tile, 'Sold out? Here's why' tile. SIGNATURE: weekly route map — a stylised SVG of Brisbane (a big river curve + suburb blobs: West End, Fortitude Valley, Paddington, New Farm, Woolloongabba, Newstead); Mon–Sun day buttons (today pre-selected from the visitor's weekday); choosing a day drives the truck icon along a path to that spot and shows address-free location name, time window and a tip. Keyboard + aria-pressed. Phone: tiles collapse 2 → 1 column; map tile full width."
+ },
+ {
+  "id": "005",
+  "slug": "crumb-and-co",
+  "name": "Crumb & Co. Bakehouse",
+  "industry": "food",
+  "type": {
+   "en": "Artisan bakery",
+   "zh": "手工面包房"
+  },
+  "city": "Norwood, SA",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "natural"
+  ],
+  "style": {
+   "en": "Hand-drawn sketchbook on kraft",
+   "zh": "牛皮纸手绘速写本"
+  },
+  "interaction": {
+   "en": "Oven-timer bake schedule & draggable recipe cards",
+   "zh": "烤箱计时出炉表与可拖动配方卡"
+  },
+  "features": [
+   "menu",
+   "ordering"
+  ],
+  "fonts": [
+   "Caveat",
+   "Lora"
+  ],
+  "palette": [
+   "#D8C3A0",
+   "#F7F0E1",
+   "#3B2A1A",
+   "#D2553B",
+   "#F2C14E"
+  ],
+  "brief": "Everything looks drawn by hand. Palette: kraft #D8C3A0, paper #F7F0E1, brown ink #3B2A1A, tomato #D2553B, butter #F2C14E. Fonts: Caveat (headings, notes) + Lora (body). Wobbly SVG borders via an feTurbulence/feDisplacementMap filter, doodled loaves/croissants/scrolls as inline SVG line drawings, a coffee ring stain. LAYOUT: a kraft 'table top' with scattered, slightly rotated paper cards and notes: today's loaves, pastries, 'our slow ferment', Saturday pre-orders, visit. Desktop: cards are draggable (pointer events; keyboard: focus a card and move with arrow keys; 'Tidy up' button stacks them). Phone: cards stack neatly in reading order. SIGNATURE: 'Out of the oven' — a big analog oven timer dial with today's bake times (6:30 sourdough, 7:15 croissants, 8:00 cinnamon scrolls, 11:30 focaccia, 14:00 lemon tart); the hand points at the visitor's current time; tapping a slot shows what's fresh and 'about N left' (deterministic sample). Saturday pre-order form (loaf picker + pickup time) ends in a DemoKit toast."
+ },
+ {
+  "id": "006",
+  "slug": "nonnas-wood-fire",
+  "name": "Nonna's Wood Fire",
+  "industry": "food",
+  "type": {
+   "en": "Pizzeria",
+   "zh": "柴火披萨店"
+  },
+  "city": "Leichhardt, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "playful"
+  ],
+  "style": {
+   "en": "Trattoria enamel-sign retro",
+   "zh": "意式小馆搪瓷招牌复古"
+  },
+  "interaction": {
+   "en": "Drag toppings onto your pizza",
+   "zh": "拖拽配料做披萨"
+  },
+  "features": [
+   "customiser",
+   "ordering",
+   "menu"
+  ],
+  "fonts": [
+   "DM Serif Display",
+   "Work Sans"
+  ],
+  "palette": [
+   "#F4ECD8",
+   "#C8322B",
+   "#2E6B3F",
+   "#231F1C",
+   "#D9A441"
+  ],
+  "brief": "Family trattoria with a vintage enamel sign feel. Palette: enamel cream #F4ECD8, tomato #C8322B, basil #2E6B3F, charcoal #231F1C, gold stripe #D9A441; checkered tablecloth border, rounded enamel plaques with inner rim. Fonts: DM Serif Display + Work Sans. LAYOUT: centred circular pizza hero; menu printed as a paper placemat (Rosso / Bianco / Nonna's specials, sample prices); 'Nonna's rules' numbered list; wood-fire facts strip (450°C oven, 90-second bake); takeaway & hours. SIGNATURE: pizza builder — a round base (SVG); drag toppings (basil, mushroom, olive, salami, chilli, prosciutto, anchovy, rocket) from a tray and drop anywhere on the pizza (they scatter naturally as several pieces where dropped); 'Half & half' toggle splits the pizza so each half keeps its own toppings; size S/M/L scales it; price updates; keyboard/touch: every topping also has an 'Add' button. 'Into the oven' plays a short bake (cheese blisters, crust darkens) then a DemoKit toast. Phone: tray becomes a horizontal scroller under the pizza."
+ },
+ {
+  "id": "007",
+  "slug": "kaiten-hana",
+  "name": "Kaiten Hana",
+  "industry": "food",
+  "type": {
+   "en": "Sushi train",
+   "zh": "回转寿司"
+  },
+  "city": "Fortitude Valley, QLD",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "editorial"
+  ],
+  "style": {
+   "en": "Japanese scroll, right-to-left",
+   "zh": "日式绘卷，从右向左"
+  },
+  "interaction": {
+   "en": "Grab plates off the conveyor belt",
+   "zh": "从传送带上拿盘子"
+  },
+  "features": [
+   "ordering",
+   "menu"
+  ],
+  "fonts": [
+   "Zen Old Mincho",
+   "Inter"
+  ],
+  "palette": [
+   "#1F2F5C",
+   "#F3EEE3",
+   "#D9472B",
+   "#2B211C"
+  ],
+  "brief": "Sushi train told like an emaki hand scroll. Palette: indigo #1F2F5C, washi #F3EEE3, vermilion #D9472B, soy #2B211C; plate colours for price tiers (green $4.5, blue $5.5, red $6.5, gold $7.5, black $9 — sample). Fonts: Zen Old Mincho + Inter. LAYOUT (desktop): panels flow horizontally from RIGHT to LEFT like a scroll; vertical mouse wheel moves the scroll; small vertical Japanese labels (writing-mode: vertical-rl) using only correct words like 寿司, 回転寿司, いらっしゃいませ. Panels: welcome, how the train works, plate colour guide, the conveyor, sake & green tea, visit. Phone: normal vertical flow, same content. SIGNATURE: an animated conveyor belt carrying plates with SVG sushi (salmon nigiri, tuna, tamago, inari, ebi, california roll, edamame, mochi); click/tap/Enter a plate to take it — it flies to 'your table' stack grouped by colour with a running total; belt pauses on hover/focus and when off-screen; 'Call staff' → DemoKit toast."
+ },
+ {
+  "id": "008",
+  "slug": "the-gilded-key",
+  "name": "The Gilded Key",
+  "industry": "food",
+  "type": {
+   "en": "Speakeasy cocktail bar",
+   "zh": "地下酒吧"
+  },
+  "city": "Melbourne CBD, VIC",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "retro"
+  ],
+  "style": {
+   "en": "Art Deco",
+   "zh": "装饰艺术风"
+  },
+  "interaction": {
+   "en": "Knock to enter, find your cocktail",
+   "zh": "敲门入内，找到你的那杯"
+  },
+  "features": [
+   "game",
+   "menu",
+   "booking"
+  ],
+  "fonts": [
+   "Limelight",
+   "Josefin Sans"
+  ],
+  "palette": [
+   "#0B0B0C",
+   "#C9A45C",
+   "#0F3D32",
+   "#EDE3CF"
+  ],
+  "brief": "Hidden laneway bar. Palette: black #0B0B0C, gold #C9A45C, emerald #0F3D32, cream #EDE3CF; SVG sunburst/fan patterns, stepped frames, thin gold double rules. Fonts: Limelight + Josefin Sans. LAYOUT: landing = a closed ornate double door filling the viewport with a brass knocker and the hint 'Knock three times'. Three clicks/taps/Enter presses swing the doors open (CSS 3D rotateY) into the bar: eight cocktails in deco frames, 'house rules', 'Thursday: live jazz', bookings for groups. Provide a visible 'Enter without knocking' link for accessibility and reduced motion. SIGNATURE 2: every cocktail has a flavour radar (SVG polygon: sweet, sour, bitter, boozy, fruity) that morphs smoothly when a drink is hovered/focused; 'Find my drink' sliders set your taste and the closest cocktail lights up with its radar overlaid on yours. Group booking form → DemoKit toast. Phone: door fits the screen; menu stacks."
+ },
+ {
+  "id": "009",
+  "slug": "the-signal-box-hotel",
+  "name": "The Signal Box Hotel",
+  "industry": "food",
+  "type": {
+   "en": "Country pub",
+   "zh": "乡村老酒馆"
+  },
+  "city": "Bendigo, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "handmade"
+  ],
+  "style": {
+   "en": "Heritage pub tiles & gold leaf",
+   "zh": "百年酒馆瓷砖与金箔招牌"
+  },
+  "interaction": {
+   "en": "Pull the perfect pint",
+   "zh": "亲手打一杯完美啤酒"
+  },
+  "features": [
+   "game",
+   "menu"
+  ],
+  "fonts": [
+   "Playfair Display",
+   "Libre Franklin"
+  ],
+  "palette": [
+   "#1E4D3A",
+   "#F1E6CC",
+   "#C79A3B",
+   "#6E1F1B",
+   "#1F2421"
+  ],
+  "brief": "1880s railway pub with bistro and rooms upstairs. Palette: bottle-green glazed tiles #1E4D3A (CSS tile pattern with glossy highlight), cream #F1E6CC, gold leaf #C79A3B (large text only, with dark outline), oxblood #6E1F1B, chalkboard #1F2421. Fonts: Playfair Display (small caps signwriting) + Libre Franklin. LAYOUT: a pub facade header band (tiles + gold lettering like a signwritten fascia); a chalkboard 'This week' board (Mon parma night, Tue schnitty, Wed trivia, Fri live music, Sun roast — sample prices); bistro menu; beer garden; four rooms upstairs; getting here from the station. SIGNATURE: 'Pull a pint' — six tap handles (lager, pale ale, amber, stout, cider, ginger beer); choose one, then press-and-hold the tap (or hold Space) to pour: the glass fills with liquid + rising bubbles + a foam head; release near the line for a 'perfect pour' rating; shows ABV & style note. Mini Wednesday-trivia teaser (3 playful questions about the pub's fictional history). Phone: taps in a horizontal row above the glass."
+ },
+ {
+  "id": "010",
+  "slug": "two-hills-estate",
+  "name": "Two Hills Estate",
+  "industry": "food",
+  "type": {
+   "en": "Winery cellar door",
+   "zh": "酒庄品酒室"
+  },
+  "city": "McLaren Vale, SA",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "editorial"
+  ],
+  "style": {
+   "en": "Botanical watercolour parallax",
+   "zh": "植物水彩视差山丘"
+  },
+  "interaction": {
+   "en": "Build a tasting flight",
+   "zh": "搭配你的品酒组合"
+  },
+  "features": [
+   "booking",
+   "customiser",
+   "story"
+  ],
+  "fonts": [
+   "Fraunces",
+   "Figtree"
+  ],
+  "palette": [
+   "#F5EFE2",
+   "#6B7F4B",
+   "#5B1A2E",
+   "#B7A7C9",
+   "#8A6A4F"
+  ],
+  "brief": "Family vineyard cellar door. Palette: parchment #F5EFE2, vine green #6B7F4B, shiraz #5B1A2E, dusk lilac #B7A7C9, soil #8A6A4F. Fonts: Fraunces (soft italic) + Figtree. LAYOUT: vertical scroll through layered rolling hills (SVG paths with watercolour-like gradients, soft edges, paper grain) that move at different speeds (subtle parallax, off for reduced motion); sections sit on 'terraces': our wines, the cellar door, grazing platters, events, visit. SIGNATURE: tasting flight builder — pick 4 of 8 wines (sparkling, rosé, fiano, chardonnay, grenache, shiraz, cabernet sauvignon, fortified); chosen wines appear as glasses on a paper tasting mat, filled with the right colour, automatically ordered light → heavy with one line explaining why; tasting notes appear on focus. Then book a tasting (date, time, group size 1–10) → DemoKit toast. Phone: mat becomes 2×2."
+ },
+ {
+  "id": "011",
+  "slug": "scoop-scoop",
+  "name": "Scoop Scoop Gelato",
+  "industry": "food",
+  "type": {
+   "en": "Gelato bar",
+   "zh": "意式冰淇淋店"
+  },
+  "city": "St Kilda, VIC",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "bold"
+  ],
+  "style": {
+   "en": "Memphis pastel",
+   "zh": "孟菲斯糖果色"
+  },
+  "interaction": {
+   "en": "Spin the flavour wheel",
+   "zh": "转盘决定口味"
+  },
+  "features": [
+   "game",
+   "menu"
+  ],
+  "fonts": [
+   "Fredoka",
+   "DM Mono"
+  ],
+  "palette": [
+   "#FF8FB1",
+   "#7FD8BE",
+   "#FFE066",
+   "#C3A6FF",
+   "#22223B"
+  ],
+  "brief": "Seaside gelato bar, pure fun. Palette: bubblegum #FF8FB1, mint #7FD8BE, butter #FFE066, lilac #C3A6FF, navy #22223B (text). Memphis shapes: squiggles, zigzags, dots, half circles as SVG, some drifting slowly. Fonts: Fredoka + DM Mono (prices). LAYOUT: playful centred composition; flavour grid shown as top-down tubs (circles with swirl textures) for today's 24 flavours with filters (Dairy-free, Vegan, Nut-free); cones & cups sizes; gelato cakes; find us near the pier. SIGNATURE: 'Can't decide? Spin the scoop wheel' — a large wheel of the currently filtered flavours; spins with eased physics and lands on one (Space/Enter to spin; aria-live announces the result); then a cone builder stacks up to 3 scoops with a wobble; 'Your cone' card lists them. Phone: wheel fits width, grid 2 columns."
+ },
+ {
+  "id": "012",
+  "slug": "pearl-cloud",
+  "name": "Pearl Cloud",
+  "industry": "food",
+  "type": {
+   "en": "Bubble tea shop",
+   "zh": "珍珠奶茶店"
+  },
+  "city": "Box Hill, VIC",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "techy"
+  ],
+  "style": {
+   "en": "Y2K kawaii app",
+   "zh": "Y2K 可爱风 App"
+  },
+  "interaction": {
+   "en": "Customise a drink, watch the pearls drop",
+   "zh": "定制饮品，看珍珠落下"
+  },
+  "features": [
+   "customiser",
+   "ordering"
+  ],
+  "fonts": [
+   "Baloo 2",
+   "Noto Sans SC"
+  ],
+  "palette": [
+   "#C9B6FF",
+   "#FFB3D9",
+   "#FFFFFF",
+   "#6A4C93"
+  ],
+  "brief": "Bubble tea brand (Chinese sub-name 云珠 shown as decoration; drink names carry small Chinese labels). Y2K kawaii: glossy lilac #C9B6FF, candy pink #FFB3D9, cloud white, chrome gradient type, sparkles, blobby 3D highlights, pill buttons; text purple #6A4C93 or darker for contrast. Fonts: Baloo 2 + Noto Sans SC. LAYOUT: desktop shows the site as a phone app centred on a dreamy background with floating clouds and stickers; on phones it IS the app (bottom tab bar: Menu · Build · Stores). SIGNATURE: drink customiser — tea base (jasmine green 茉莉绿茶, oolong 乌龙, black milk tea 奶茶, taro 芋头, brown sugar 黑糖), sugar 0/25/50/75/100%, ice none/less/regular, toppings (tapioca pearls, coconut jelly, pudding, red bean, cheese foam); a big cup visual updates live: liquid colour, ice cubes, pearls drop in with a bouncy physics settle, cheese foam layer; price updates; add to order → mini cart → 'Pick up at' time → DemoKit toast. Stores tab: two fictional locations with hours."
+ },
+ {
+  "id": "013",
+  "slug": "hartley-and-sons",
+  "name": "Hartley & Sons Butchers",
+  "industry": "food",
+  "type": {
+   "en": "Family butcher",
+   "zh": "家族肉铺"
+  },
+  "city": "Ballarat, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Victorian letterpress",
+   "zh": "维多利亚活字印刷"
+  },
+  "interaction": {
+   "en": "Explore the cuts diagram",
+   "zh": "探索牛羊猪部位图"
+  },
+  "features": [
+   "menu",
+   "ordering"
+  ],
+  "fonts": [
+   "Alfa Slab One",
+   "IM Fell English"
+  ],
+  "palette": [
+   "#F2E8D5",
+   "#7A1F1F",
+   "#1C1A17",
+   "#FFFFFF"
+  ],
+  "brief": "Third-generation style butcher (fictional). Letterpress: cream #F2E8D5, oxblood #7A1F1F, ink #1C1A17; butcher-paper red/white stripes, ornamental rules and printer's fleurons, slightly uneven ink texture. Fonts: Alfa Slab One + IM Fell English. LAYOUT: a broadsheet price board 'This week's cuts' (sample prices per kg), then the interactive diagram, dry-ageing room, sausages made in-house (flavours list), BBQ packs, order for pickup. SIGNATURE: animal cuts diagrams — toggle Beef / Lamb / Pork; each is an SVG silhouette divided into primal cuts (chuck, rib, sirloin, rump, brisket, flank, shin; lamb shoulder/rack/loin/leg/shank; pork shoulder/belly/loin/leg); hover, tap or Tab to a cut: it highlights and a panel shows cut names, best methods (grill / roast / braise / slow cook), a cook's note and sample $/kg; 'Add to pickup list' builds a butcher-paper order slip with weights; submit → DemoKit toast. Phone: diagram full width; details below."
+ },
+ {
+  "id": "014",
+  "slug": "cedar-and-coal",
+  "name": "Cedar & Coal",
+  "industry": "food",
+  "type": {
+   "en": "Lebanese charcoal chicken",
+   "zh": "黎巴嫩炭烤鸡"
+  },
+  "city": "Granville, NSW",
+  "lang": "en+ar",
+  "moods": [
+   "bold"
+  ],
+  "style": {
+   "en": "Bold street-food, EN ⇄ Arabic RTL",
+   "zh": "街头炭烤风，英文⇄阿拉伯语 RTL"
+  },
+  "interaction": {
+   "en": "Feed-the-family calculator",
+   "zh": "全家分量计算器"
+  },
+  "features": [
+   "bilingual",
+   "quote",
+   "ordering",
+   "menu"
+  ],
+  "fonts": [
+   "Cairo",
+   "Archivo"
+  ],
+  "palette": [
+   "#1B1B1B",
+   "#F2A007",
+   "#FFF7E6",
+   "#B8322A",
+   "#2F5D3A"
+  ],
+  "brief": "Late-night charcoal chicken shop. Palette: charcoal #1B1B1B, saffron #F2A007, garlic cream #FFF7E6, sumac #B8322A, cedar green #2F5D3A; subtle 8-point star lattice (geometric, non-religious) as an SVG pattern; flame motif. Fonts: Cairo (Arabic + Latin) + Archivo. LAYOUT: bold header with flame; menu boards — chicken (whole / half / quarter), charcoal plates, wraps, sides (chips, toum garlic sauce, tabouli, hummus, pickles, bread); 'Feed the family'; open late hours; catering. SIGNATURE 1: EN ⇄ العربية toggle that switches every visible string, sets html lang and dir, and mirrors the layout correctly using logical CSS (margin-inline, padding-inline, inset-inline, text-align:start). Arabic must be simple and correct, e.g. دجاج على الفحم، ثوم، تبولة، حمص، بطاطا مقلية، خبز، مخللات. SIGNATURE 2: 'Feed the family' — steppers for adults and kids build a suggested pack (whole chickens, large chips, toum, tabouli, bread) drawn as an animated table spread, with total price; 'Order ahead' → DemoKit toast. Mobile-first."
+ },
+ {
+  "id": "015",
+  "slug": "saltys-fish-bar",
+  "name": "Salty's Fish Bar",
+  "industry": "food",
+  "type": {
+   "en": "Fish & chips",
+   "zh": "海边炸鱼薯条"
+  },
+  "city": "Cronulla, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Newspaper wrap broadsheet",
+   "zh": "包炸鱼的旧报纸版面"
+  },
+  "interaction": {
+   "en": "Order ahead, print your ticket",
+   "zh": "提前点单，打印取餐单"
+  },
+  "features": [
+   "ordering",
+   "menu"
+  ],
+  "fonts": [
+   "Old Standard TT",
+   "Oswald"
+  ],
+  "palette": [
+   "#EDE7DA",
+   "#151515",
+   "#F4D03F",
+   "#2D6E8E"
+  ],
+  "brief": "The site is the local newspaper your chips come wrapped in. Palette: newsprint #EDE7DA, ink #151515, lemon highlight #F4D03F, sea #2D6E8E; column rules, grainy newsprint, a greasy-paper translucent spot or two (subtle). Fonts: Old Standard TT (headlines) + Oswald (condensed heads). LAYOUT: newspaper front page — masthead with today's date, lead story 'Flathead is back' (catch of the day), multi-column body, menu as classifieds (flake, flathead, barramundi, calamari, potato scallops, chips by the scoop, minimum chips — sample prices), 'Tide & weather' box, 'Chippy notices' (hours, cash & card, beach tips). SIGNATURE: order ahead — tick items from the classifieds, choose a pickup slot (every 10 min, some marked 'busy'), and a paper ticket prints and slides out with the order and time; confirm → DemoKit toast. 'Catch of the day' cards flip to reveal species facts. Phone: single column that keeps column rules and newspaper typography."
+ },
+ {
+  "id": "016",
+  "slug": "batch-47",
+  "name": "Batch 47 Roasters",
+  "industry": "food",
+  "type": {
+   "en": "Coffee roaster",
+   "zh": "咖啡烘焙坊"
+  },
+  "city": "Osborne Park, WA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "minimal"
+  ],
+  "style": {
+   "en": "Lab spec sheet",
+   "zh": "实验室规格表"
+  },
+  "interaction": {
+   "en": "Morph the roast curve",
+   "zh": "拖动烘焙曲线"
+  },
+  "features": [
+   "story",
+   "ordering"
+  ],
+  "fonts": [
+   "IBM Plex Mono",
+   "IBM Plex Sans"
+  ],
+  "palette": [
+   "#FAFAF7",
+   "#1E1E1E",
+   "#E3E3DE",
+   "#FF5B1F",
+   "#1F9D55"
+  ],
+  "brief": "Data-obsessed small-batch roaster with wholesale and a subscription. Palette: white #FAFAF7, graphite #1E1E1E, grid #E3E3DE, signal orange #FF5B1F, data green #1F9D55. Fonts: IBM Plex Mono + IBM Plex Sans. LAYOUT: spec-sheet pages on graph paper — each coffee as a spec table: 'Ethiopia — Guji', 'Colombia — Huila', 'Brazil — Cerrado', 'PNG — Western Highlands' (process, altitude, varietal, roast date, tasting notes, sample price per 250 g); brew recipes (pour-over, espresso, cold brew) as numbered procedures; wholesale for cafés; subscription frequency selector (weekly / fortnightly / monthly). SIGNATURE: roast profile chart — SVG line chart of bean temperature over time with first-crack marker and development-time band; a roast-level slider (light → dark) smoothly morphs the curve (path interpolation), shifts which notes light up on a flavour wheel (jasmine/citrus → caramel/cocoa → smoke), and updates a bean colour swatch. Phone: charts full width; tables become key–value lists."
+ },
+ {
+  "id": "017",
+  "slug": "seoul-smoke",
+  "name": "Seoul Smoke",
+  "industry": "food",
+  "type": {
+   "en": "Korean BBQ",
+   "zh": "韩式烤肉"
+  },
+  "city": "Strathfield, NSW",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "techy"
+  ],
+  "style": {
+   "en": "Neon night street",
+   "zh": "霓虹夜街"
+  },
+  "interaction": {
+   "en": "Cook on the grill — don't burn it",
+   "zh": "在烤盘上烤肉，别烤焦"
+  },
+  "features": [
+   "game",
+   "booking",
+   "menu"
+  ],
+  "fonts": [
+   "Black Han Sans",
+   "Space Grotesk"
+  ],
+  "palette": [
+   "#0A0A0F",
+   "#FF2E88",
+   "#25D9F2",
+   "#FFB000"
+  ],
+  "brief": "Late-night Korean BBQ. Palette: black #0A0A0F, magenta neon #FF2E88, cyan neon #25D9F2, amber #FFB000; brick wall pattern, wet-asphalt reflections under signs. Neon via layered text-shadow; one sign may gently buzz (no flashing; none in reduced motion). Korean words only when correct: 고기, 불고기, 삼겹살, 소주. Fonts: Black Han Sans + Space Grotesk. LAYOUT: a wall of neon sign panels (sets for 2/4/6, à la carte meats, sides & banchan, drinks, hours till late, group bookings). SIGNATURE: interactive grill — a round charcoal grill (canvas or SVG) with grate; tap meats on the tray (samgyeopsal, bulgogi, galbi, mushrooms, corn cheese) to place them; each item cooks over time (colour raw → golden → charred) with sizzle particles; tap to flip; take it off at the right time for 'Perfect!'; score counter; keyboard: tray buttons + list of items on grill with flip/take buttons. Group booking form → DemoKit toast. Phone: grill full width, tray horizontal."
+ },
+ {
+  "id": "018",
+  "slug": "pho-sau",
+  "name": "Phở Sáu",
+  "industry": "food",
+  "type": {
+   "en": "Vietnamese pho kitchen",
+   "zh": "越南河粉店"
+  },
+  "city": "Footscray, VIC",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "bold"
+  ],
+  "style": {
+   "en": "Risograph zine",
+   "zh": "孔版印刷小志"
+  },
+  "interaction": {
+   "en": "Scrub the 12-hour broth",
+   "zh": "拖动看 12 小时熬汤"
+  },
+  "features": [
+   "story",
+   "menu"
+  ],
+  "fonts": [
+   "Be Vietnam Pro",
+   "Space Mono"
+  ],
+  "palette": [
+   "#F5F1E8",
+   "#FF48B0",
+   "#0078BF"
+  ],
+  "brief": "Pho kitchen presented as a two-colour risograph zine. Palette: off-white #F5F1E8 + fluorescent pink #FF48B0 + teal #0078BF; overprints via mix-blend-mode: multiply, deliberate 2–3 px misregistration, grain (SVG noise), halftone illustrations (bowl, herbs, lime, chilli, star anise). Fonts: Be Vietnam Pro (correct Vietnamese diacritics) + Space Mono. LAYOUT: zine pages with page numbers and staples; menu with correct Vietnamese: phở bò tái, phở gà, bún bò Huế, gỏi cuốn, cà phê sữa đá, sample prices. SIGNATURE: '12-hour broth' scrubber — a horizontal timeline 0h → 12h; drag the knob (or arrow keys; it's a real range input underneath) to move through stages: bones blanched, onion & ginger charred, star anise/cinnamon/clove toasted, long simmer, skimming, seasoning with fish sauce and rock sugar; an illustrated pot deepens in colour, steam intensity changes, and a paragraph explains each stage. Phone: timeline full width, stage text below."
+ },
+ {
+  "id": "019",
+  "slug": "green-wave-driving",
+  "name": "Green Wave Driving School",
+  "industry": "driving",
+  "type": {
+   "en": "Driving school",
+   "zh": "驾校"
+  },
+  "city": "Burwood, NSW",
+  "lang": "en+zh",
+  "moods": [
+   "playful"
+  ],
+  "style": {
+   "en": "Flat illustrated road trip",
+   "zh": "扁平插画公路之旅"
+  },
+  "interaction": {
+   "en": "A car drives the page; pick a lesson slot",
+   "zh": "小车随滚动开过页面；选课时段"
+  },
+  "features": [
+   "booking",
+   "story",
+   "bilingual"
+  ],
+  "fonts": [
+   "Plus Jakarta Sans",
+   "Noto Sans SC"
+  ],
+  "palette": [
+   "#FFF9F0",
+   "#3DDC97",
+   "#1B9E5A",
+   "#FF6B57",
+   "#2F3437"
+  ],
+  "brief": "Friendly bilingual EN/中文 driving school for nervous first-timers (Chinese name 绿波驾校 shown next to the word mark; data-brand holds the English name). Palette: cream #FFF9F0, mint #3DDC97, traffic green #1B9E5A, coral #FF6B57, asphalt #2F3437, lane-marking white. Do NOT use sky blue + yellow. Fonts: Plus Jakarta Sans + Noto Sans SC. LAYOUT: the page is a winding road (SVG path) running down the page; sections are stops along it: Start (hero: 'Nervous about driving? Start on green.' / '第一次上路，从绿灯开始'), Packages (single lesson, 5-pack, 10-pack, test package — sample prices), Test routes (Burwood, Silverwater, Ryde as stops), Instructors (illustrated avatars; languages English/Mandarin/Cantonese; fictional), FAQ (logbook hours — general info), Book. SIGNATURE 1: a little car follows the road as you scroll (getPointAtLength + tangent rotation); a traffic light at the top turns green on load; reduced motion: car parked at each stop. SIGNATURE 2: booking — choose package, pickup suburb, then a week availability grid (some slots taken) → summary → DemoKit toast. Full EN ⇄ 中文 toggle. Phone: road becomes a straight lane down the left edge with the car moving along it."
+ },
+ {
+  "id": "020",
+  "slug": "clutch-and-co",
+  "name": "Clutch & Co. Driving",
+  "industry": "driving",
+  "type": {
+   "en": "Manual driving lessons",
+   "zh": "手动挡驾驶课"
+  },
+  "city": "Adelaide, SA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "bold"
+  ],
+  "style": {
+   "en": "Car dashboard instrument cluster",
+   "zh": "汽车仪表盘"
+  },
+  "interaction": {
+   "en": "Shift gears to navigate, rev up with a road-rules quiz",
+   "zh": "换挡导航，答题让转速表飙升"
+  },
+  "features": [
+   "game",
+   "booking"
+  ],
+  "fonts": [
+   "Chakra Petch",
+   "Inter"
+  ],
+  "palette": [
+   "#111418",
+   "#FFB347",
+   "#E63946",
+   "#E8EEF2"
+  ],
+  "brief": "Manual-transmission specialist. The whole site is a dashboard. Palette: carbon #111418 (subtle carbon-fibre pattern), amber gauge light #FFB347, red line #E63946, cool white #E8EEF2. Fonts: Chakra Petch + Inter. LAYOUT (desktop): speedometer left, tachometer right, a centre display where content 'screens' appear; navigation is an H-pattern gear shifter — 1 About manual, 2 Packages (sample prices), 3 Quiz, 4 Instructors, 5 Book, R back; clicking a gear shifts screens with a needle sweep and a screen transition. SIGNATURE: road-rules warm-up quiz — 8 general, correct Australian questions (e.g. at a roundabout give way to vehicles already on it; default urban limit is 50 km/h unless signed; hazard-perception tips); each correct answer revs the tachometer and bumps the speedo; result screen with score and 'general information — check your state's handbook'. Phone: gauges shrink into a top strip, the screen becomes the page, gears become a bottom segmented control. Keyboard: number keys 1–5 shift gears."
+ },
+ {
+  "id": "021",
+  "slug": "heavy-haul-training",
+  "name": "Heavy Haul Training",
+  "industry": "driving",
+  "type": {
+   "en": "Truck licence school",
+   "zh": "卡车驾照培训"
+  },
+  "city": "Dandenong, VIC",
+  "lang": "en",
+  "moods": [
+   "bold"
+  ],
+  "style": {
+   "en": "Industrial hazard stencil",
+   "zh": "工业警示模板字"
+  },
+  "interaction": {
+   "en": "Slide the weight, watch the truck morph",
+   "zh": "拖动载重，卡车实时变形"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Saira Stencil One",
+   "Barlow Condensed"
+  ],
+  "palette": [
+   "#FFC400",
+   "#121212",
+   "#8A9199",
+   "#D9D6D0",
+   "#FF6A13"
+  ],
+  "brief": "Heavy-vehicle licence courses. Palette: hazard yellow #FFC400, black #121212, steel #8A9199, concrete #D9D6D0, safety orange #FF6A13; diagonal hazard stripes, riveted steel plates, stencil type. Fonts: Saira Stencil One + Barlow Condensed. LAYOUT: stencil plates grid for licence classes LR, MR, HR, HC, MC; course details (duration, what's included, assessment day); 'Is this for me?' checklist; illustrated fleet; enquiries. SIGNATURE: 'Which licence do I need?' — a GVM slider (tonnes), axle count toggle and trailer toggle; an SVG truck morphs smoothly between classes (LR van → MR rigid → HR 3-axle rigid → HC prime mover + semi-trailer → MC B-double) and the matching class plate lights up with a plain-English description (general info; check your state road authority). Phone: plates 2 columns, slider full width."
+ },
+ {
+  "id": "022",
+  "slug": "throttle-up",
+  "name": "Throttle Up Rider Training",
+  "industry": "driving",
+  "type": {
+   "en": "Motorcycle school",
+   "zh": "摩托车驾校"
+  },
+  "city": "Gold Coast, QLD",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "retro"
+  ],
+  "style": {
+   "en": "Punk moto zine, halftone",
+   "zh": "朋克摩托杂志网点风"
+  },
+  "interaction": {
+   "en": "Hold to rev (with optional engine sound)",
+   "zh": "按住轰油门（可选引擎声）"
+  },
+  "features": [
+   "sound",
+   "game",
+   "booking"
+  ],
+  "fonts": [
+   "Bebas Neue",
+   "Space Mono"
+  ],
+  "palette": [
+   "#0D0D0D",
+   "#FF5F1F",
+   "#F2F0EA"
+  ],
+  "brief": "Motorcycle rider training. Punk zine: black #0D0D0D, safety orange #FF5F1F, off-white #F2F0EA, halftone dots, torn-paper edges (SVG), diagonal slashes, sticker labels. Fonts: Bebas Neue + Space Mono. LAYOUT: magazine-cover hero with a diagonal split and huge type; courses (pre-learner, pre-provisional, refresher, advanced cornering — sample prices); gear checklist; wet-weather policy; the crew (fictional, illustrated helmets); book. SIGNATURE: hold-to-rev — a big REV button (press & hold, or hold Space): a tachometer needle climbs, the page shakes very slightly (none in reduced motion), releasing drops revs; optional engine sound synthesised with Web Audio (sawtooth + filtered noise, off by default, clear sound toggle). Hitting the red line unlocks a 'sample' voucher code. Phone: REV button at thumb reach."
+ },
+ {
+  "id": "023",
+  "slug": "easy-tiger-removals",
+  "name": "Easy Tiger Removals",
+  "industry": "driving",
+  "type": {
+   "en": "Removalist",
+   "zh": "搬家公司"
+  },
+  "city": "Perth, WA",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "playful"
+  ],
+  "style": {
+   "en": "Cardboard boxes & packing tape",
+   "zh": "纸箱与封箱胶带"
+  },
+  "interaction": {
+   "en": "Pack the truck to size your move",
+   "zh": "装满卡车估算搬家规模"
+  },
+  "features": [
+   "quote",
+   "customiser"
+  ],
+  "fonts": [
+   "Permanent Marker",
+   "Archivo"
+  ],
+  "palette": [
+   "#C8A27A",
+   "#E8D9B0",
+   "#1A1A1A",
+   "#C0392B"
+  ],
+  "brief": "Friendly removalist. Every section is a cardboard box: kraft #C8A27A with corrugated edge, translucent tape #E8D9B0, black stencil stamps ('FRAGILE', 'THIS WAY UP'), red marker #C0392B handwriting. Fonts: Permanent Marker + Archivo. LAYOUT: staggered stack of boxes on desktop (flaps, tape, handwritten labels): services (house moves, office, piano, packing & boxes), how pricing works, moving-day checklist, Perth areas, get a quote. SIGNATURE: truck-fill estimator — drag furniture icons (sofa, bed, fridge, washing machine, 10 boxes, dining table, desk, bookshelf, TV) into an SVG truck's cargo grid; items snap into free cells; a fill % bar recommends truck size (4.5 t / 6 t / 10 t) and 'about N movers, N hours' (illustrative); 'Request this quote' → DemoKit toast. Keyboard/touch: each item has + / − buttons. Phone: list with steppers and the truck fill bar."
+ },
+ {
+  "id": "024",
+  "slug": "mirror-finish",
+  "name": "Mirror Finish Detailing",
+  "industry": "driving",
+  "type": {
+   "en": "Car detailing",
+   "zh": "汽车美容"
+  },
+  "city": "Alexandria, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "techy"
+  ],
+  "style": {
+   "en": "Glossy automotive chrome",
+   "zh": "汽车烤漆镜面质感"
+  },
+  "interaction": {
+   "en": "Drag from swirled paint to mirror gloss",
+   "zh": "拖动对比：划痕漆面变镜面"
+  },
+  "features": [
+   "customiser",
+   "booking"
+  ],
+  "fonts": [
+   "Michroma",
+   "Inter"
+  ],
+  "palette": [
+   "#07080A",
+   "#1C2127",
+   "#19E3D2",
+   "#C9D1D9"
+  ],
+  "brief": "Premium detailing. Palette: jet black #07080A, gunmetal #1C2127, electric teal #19E3D2, chrome #C9D1D9; reflections via layered linear-gradients, a light sweep across surfaces. Fonts: Michroma + Inter. LAYOUT: full-bleed hero with a stylised side-profile sedan (SVG) and an animated light sweep reflection; packages (wash & wax, interior deep clean, paint correction, ceramic coating — sample prices); process steps; mobile detailing zones; book. SIGNATURE: before/after slider on a close-up car panel — left side dull with swirl marks (SVG noise + fine scratch pattern, low contrast), right side glossy with sharp reflections; a draggable handle (pointer + arrow keys, role=slider); package toggles (wash / correction / ceramic) change the 'after' intensity, and ceramic adds water beading droplets. Phone: slider full width."
+ },
+ {
+  "id": "025",
+  "slug": "spanner-and-sons",
+  "name": "Spanner & Sons Auto",
+  "industry": "driving",
+  "type": {
+   "en": "Mechanic",
+   "zh": "汽修厂"
+  },
+  "city": "Toowoomba, QLD",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "handmade"
+  ],
+  "style": {
+   "en": "Workshop service manual",
+   "zh": "修车手册"
+  },
+  "interaction": {
+   "en": "'What's that noise?' diagnostic",
+   "zh": "“那是什么声音？”故障诊断"
+  },
+  "features": [
+   "finder",
+   "sound",
+   "booking"
+  ],
+  "fonts": [
+   "Courier Prime",
+   "Archivo Narrow"
+  ],
+  "palette": [
+   "#EFE6D2",
+   "#1A1A1A",
+   "#C62828"
+  ],
+  "brief": "Family mechanic. The site is a spiral-bound service manual: beige pages #EFE6D2, black line diagrams, red annotations #C62828, tab dividers on the side, faint grease smudges. Fonts: Courier Prime + Archivo Narrow. LAYOUT: side tabs (Services, Logbook servicing, Tyres & brakes, Diagnostics, Fleet, Book) — clicking a tab flips to that section with a page-turn; on phones tabs become a top scroll bar. SIGNATURE: 'What's that noise?' — choose a symptom (squeal when braking, grinding, clunk over bumps, clicking when turning, whine that rises with speed); an animated SVG waveform shows the 'shape' of that sound, an optional short synthesised sample plays on click (Web Audio, off by default), and a plain-English 'likely suspects' list shows with an urgency level; 'Book a check' pre-fills the booking form. General-information note: a mechanic must inspect."
+ },
+ {
+  "id": "026",
+  "slug": "arrivals-chauffeur",
+  "name": "Arrivals Chauffeur Co.",
+  "industry": "driving",
+  "type": {
+   "en": "Airport transfers",
+   "zh": "机场接送专车"
+  },
+  "city": "Melbourne, VIC",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "minimal"
+  ],
+  "style": {
+   "en": "Boarding-pass travel luxe",
+   "zh": "登机牌式旅行质感"
+  },
+  "interaction": {
+   "en": "Route-drawing fare estimator",
+   "zh": "画路线估算车费"
+  },
+  "features": [
+   "quote",
+   "map",
+   "booking"
+  ],
+  "fonts": [
+   "Jost",
+   "Cormorant"
+  ],
+  "palette": [
+   "#0E1B2C",
+   "#F7F4EE",
+   "#B08D57",
+   "#D8E3EE"
+  ],
+  "brief": "Airport and corporate transfers. Palette: navy #0E1B2C, ivory #F7F4EE, brass #B08D57, sky tint #D8E3EE; boarding-pass cards with perforations, stubs and SVG barcodes. Fonts: Jost + Cormorant. LAYOUT: stacked boarding passes — hero pass ('Brand → Your destination'), fleet (sedan, SUV, people mover — illustrated), services (airport, corporate, wedding cars), how it works, quote. SIGNATURE: fare estimator — choose pickup and drop-off from a list (Melbourne Airport, Avalon Airport, CBD, Docklands, St Kilda, Box Hill, Frankston, Geelong), vehicle, passengers & bags; an SVG map of Port Phillip draws an animated route between the two points; the fare shows as 'illustrative estimate'; optional flight-number field with format hint ('e.g. XY123', no real airline codes). Output: an e-ticket styled confirmation marked DEMO and a DemoKit toast."
+ },
+ {
+  "id": "027",
+  "slug": "lessons-with-mei",
+  "name": "Lessons with Mei",
+  "industry": "driving",
+  "type": {
+   "en": "Independent driving instructor",
+   "zh": "个人驾驶教练"
+  },
+  "city": "Hurstville, NSW",
+  "lang": "en",
+  "moods": [
+   "minimal"
+  ],
+  "style": {
+   "en": "Swiss minimal personal card",
+   "zh": "瑞士极简个人名片"
+  },
+  "interaction": {
+   "en": "Check your pickup zone, request a slot",
+   "zh": "查接送范围，申请上课时段"
+  },
+  "features": [
+   "map",
+   "booking"
+  ],
+  "fonts": [
+   "Inter Tight",
+   "Noto Sans SC"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#111111",
+   "#FF5A1F",
+   "#F2F2F2"
+  ],
+  "brief": "One-person driving instructor brand (fictional). Swiss minimal: white, black #111, one signal orange #FF5A1F, light grey #F2F2F2; strict grid, big numerals, generous whitespace. Fonts: Inter Tight + Noto Sans SC (a few labels: 普通话 / 粤语). LAYOUT: a profile card at the top (name, 'Auto & manual lessons in Mandarin, Cantonese and English', availability status dot), then a numbers grid (60 / 90 min lessons, test package, sample prices), 'what a first lesson looks like' in 3 steps, weekly timetable, FAQ, contact. SIGNATURE 1: pickup zone map — an abstract SVG map of St George suburbs (Hurstville, Kogarah, Rockdale, Penshurst, Mortdale, Oatley, Beverly Hills, Bexley); tap a suburb to see 'free pickup', 'small travel fee' or 'outside my area'. SIGNATURE 2: a week timetable where you tap free slots to request them; copy is explicit that a request is not a booking until confirmed; summary → DemoKit toast. Phone: map then timetable, large tap targets."
+ },
+ {
+  "id": "028",
+  "slug": "flowright-plumbing",
+  "name": "Flowright Plumbing",
+  "industry": "trades",
+  "type": {
+   "en": "Emergency plumber",
+   "zh": "紧急水管工"
+  },
+  "city": "Newcastle, NSW",
+  "lang": "en",
+  "moods": [
+   "bold"
+  ],
+  "style": {
+   "en": "High-contrast emergency utility",
+   "zh": "高对比应急工具风"
+  },
+  "interaction": {
+   "en": "Triage the problem, tighten the leak",
+   "zh": "分诊问题，拧紧漏水"
+  },
+  "features": [
+   "finder",
+   "game"
+  ],
+  "fonts": [
+   "Archivo",
+   "Inter"
+  ],
+  "palette": [
+   "#0B2545",
+   "#FF6B00",
+   "#FFFFFF",
+   "#E6EBF0"
+  ],
+  "brief": "Emergency-first plumber. Palette: navy #0B2545, safety orange #FF6B00, white, light steel #E6EBF0; big type, big buttons, zero fuss. Fonts: Archivo (wide, heavy) + Inter. LAYOUT: the top half is 'Burst pipe? Blocked drain? No hot water?' with a huge call button (fictional number, kit-intercepted) and 'Help me work out what's wrong'; below: services, service area (Newcastle, Lake Macquarie, Maitland), how pricing works (call-out explained in general terms), hot water systems, before-you-call checklist. SIGNATURE 1: triage stepper (what's wrong → is water running now? → where → how urgent) ending in honest advice, e.g. 'Turn off water at the meter — here's where it usually is' with a mini SVG diagram, and a prefilled enquiry. SIGNATURE 2: 'Fix the leak' — an SVG dripping pipe joint; drag the wrench to rotate it (or press 'Tighten' / arrow keys) until drips stop; a counter shows litres saved (playful). Phone: sticky bottom call bar with safe-area padding."
+ },
+ {
+  "id": "029",
+  "slug": "live-wire-electrical",
+  "name": "Live Wire Electrical",
+  "industry": "trades",
+  "type": {
+   "en": "Electrician",
+   "zh": "电工"
+  },
+  "city": "Belconnen, ACT",
+  "lang": "en",
+  "moods": [
+   "techy"
+  ],
+  "style": {
+   "en": "PCB circuit board",
+   "zh": "电路板"
+  },
+  "interaction": {
+   "en": "Flip switches to power up each section",
+   "zh": "拨动开关点亮每个板块"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Share Tech Mono",
+   "Rajdhani"
+  ],
+  "palette": [
+   "#0F3D2E",
+   "#C88A4A",
+   "#F2F2EA",
+   "#0A1F18"
+  ],
+  "brief": "Residential & small-commercial electrician. The page is a printed circuit board: solder-mask green #0F3D2E, copper traces #C88A4A that glow when powered, silkscreen white #F2F2EA labels (R12, C4, U1), dark #0A1F18. Fonts: Share Tech Mono + Rajdhani. LAYOUT: each section is a 'component' — IC chip = About, resistor bank = Services (switchboards, lighting, power points, EV chargers, safety inspections, smoke alarms), capacitor = Safety checks, LED array = Lighting design, header pins = Contact — connected by SVG traces. SIGNATURE: a master switch plus per-section toggle switches; flipping one animates current flowing along the traces (stroke-dashoffset pulses) and 'powers' that section: content brightens from dim, LEDs light. Content must stay readable when 'off' (dimmed but ≥4.5:1). Short safety note: electrical work must be done by a licensed electrician. Phone: board becomes a vertical bus with components stacked along one trace."
+ },
+ {
+  "id": "030",
+  "slug": "framework-builders",
+  "name": "Framework Builders",
+  "industry": "trades",
+  "type": {
+   "en": "Renovation builder",
+   "zh": "装修建筑商"
+  },
+  "city": "Geelong, VIC",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "editorial"
+  ],
+  "style": {
+   "en": "Blueprint drawing set",
+   "zh": "建筑蓝图图纸"
+  },
+  "interaction": {
+   "en": "House draws itself; explore the floor plan",
+   "zh": "房子自己画出来；探索平面图"
+  },
+  "features": [
+   "story",
+   "customiser"
+  ],
+  "fonts": [
+   "Architects Daughter",
+   "IBM Plex Sans Condensed"
+  ],
+  "palette": [
+   "#1B3A6B",
+   "#EAF2FF",
+   "#2C5091",
+   "#FF5A5F"
+  ],
+  "brief": "Renovations and extensions. The site is a set of blueprint sheets: blueprint blue #1B3A6B, white linework #EAF2FF, grid #2C5091, red-pencil annotations #FF5A5F, a proper title block (project, scale 1:100, sheet A-01…A-06, drawn by). Fonts: Architects Daughter (annotations) + IBM Plex Sans Condensed. LAYOUT: sheets — A-01 About, A-02 Services (extensions, kitchens, bathrooms, decks), A-03 Process, A-04 Projects (drawn elevations with dimension lines), A-05 Inclusions, A-06 Contact. SIGNATURE 1: a house elevation that draws itself line by line (stroke-dashoffset) when it enters the viewport (reduced motion: fully drawn). SIGNATURE 2: floor-plan explorer — an SVG plan; click rooms (kitchen, bathroom, living, laundry, deck) to see renovation options and considerations; a 'Before / After' toggle animates the change (a wall removed to open the kitchen, a deck added). Phone: simplified title block, plan fits width."
+ },
+ {
+  "id": "031",
+  "slug": "saltbush-and-stone",
+  "name": "Saltbush & Stone Gardens",
+  "industry": "trades",
+  "type": {
+   "en": "Landscape designer",
+   "zh": "园林景观设计"
+  },
+  "city": "Fremantle, WA",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "handmade"
+  ],
+  "style": {
+   "en": "Botanical illustrated seasons",
+   "zh": "植物插画四季"
+  },
+  "interaction": {
+   "en": "Switch seasons in the garden",
+   "zh": "切换花园四季"
+  },
+  "features": [
+   "story",
+   "customiser"
+  ],
+  "fonts": [
+   "Gloock",
+   "Karla"
+  ],
+  "palette": [
+   "#EFE3CD",
+   "#9CAF88",
+   "#5E8C6A",
+   "#C98B3A",
+   "#3E3328"
+  ],
+  "brief": "Water-wise native garden designer. Palette: sand #EFE3CD, saltbush silver-green #9CAF88, eucalyptus #5E8C6A, ochre #C98B3A, soil #3E3328, bottlebrush red #C2362F (small accents). Fonts: Gloock + Karla. LAYOUT: an illustrated garden scene (SVG: stone path, grevillea, kangaroo paw, saltbush, bottlebrush, a gum tree silhouette, sky) as hero; then services (native garden design, water-wise makeovers, paving & stone, maintenance), a plant list with small drawings, process, contact. SIGNATURE: season switcher (Summer / Autumn / Winter / Spring, a real segmented control): recolours the scene with smooth transitions — flowers bloom or fade, grass tone shifts, sky gradient changes, a few leaves fall in autumn, bees in spring — and swaps in seasonal care tips; plant cards filter to 'flowering now'. Phone: scene crops to the focal plants."
+ },
+ {
+  "id": "032",
+  "slug": "sparkle-squad",
+  "name": "Sparkle Squad Cleaning",
+  "industry": "trades",
+  "type": {
+   "en": "House cleaning",
+   "zh": "家政保洁"
+  },
+  "city": "Hobart, TAS",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "playful"
+  ],
+  "style": {
+   "en": "Fresh bubbles, wipe-to-reveal",
+   "zh": "清新泡泡，擦一擦显现"
+  },
+  "interaction": {
+   "en": "Wipe the foggy screen clean; instant quote",
+   "zh": "擦干净起雾的屏幕；即时报价"
+  },
+  "features": [
+   "quote",
+   "game"
+  ],
+  "fonts": [
+   "Nunito",
+   "DM Sans"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#CFF5E7",
+   "#2EC4B6",
+   "#FFE66D",
+   "#1F2D3D"
+  ],
+  "brief": "Home cleaning. Palette: white, soft mint #CFF5E7, aqua #2EC4B6, lemon #FFE66D, slate #1F2D3D; soap bubbles with iridescent sheen. Fonts: Nunito + DM Sans. HERO: starts 'dirty' — a canvas fog/smudge layer covers the hero; the visitor wipes with pointer/touch (destination-out brush) to reveal a sparkling hero underneath, with a progress hint; 'Skip — clean it for me' auto-wipes; the hero text is also in the DOM underneath and fully readable immediately for screen readers and reduced motion (no fog). SECTIONS: services (regular, deep clean, end-of-lease, holiday-rental turnover), what's included checklists, instant quote, service areas (Hobart, Sandy Bay, Glenorchy, Kingston), FAQ. SIGNATURE 2: quote calculator — bedrooms, bathrooms, extras (oven, windows, fridge, balcony), frequency discount → illustrative price that counts up, 'Request this quote' → DemoKit toast."
+ },
+ {
+  "id": "033",
+  "slug": "two-coats-painting",
+  "name": "Two Coats Painting",
+  "industry": "trades",
+  "type": {
+   "en": "House painters",
+   "zh": "油漆工"
+  },
+  "city": "Sunshine Coast, QLD",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "minimal"
+  ],
+  "style": {
+   "en": "Paint-swatch colour fields",
+   "zh": "色卡大色块"
+  },
+  "interaction": {
+   "en": "Repaint the room with a roller",
+   "zh": "用滚筒重新粉刷房间"
+  },
+  "features": [
+   "customiser"
+  ],
+  "fonts": [
+   "Familjen Grotesk",
+   "DM Mono"
+  ],
+  "palette": [
+   "#E4572E",
+   "#F3A712",
+   "#29335C",
+   "#A8C686",
+   "#F7F5F0"
+  ],
+  "brief": "Interior & exterior painters. Swiss colour-field design: each section's background is a paint colour with its (fictional) name and code in the corner like a paint chip; crisp black type. Palette examples: terracotta #E4572E, marigold #F3A712, deep navy #29335C, sage #A8C686, off-white #F7F5F0. Fonts: Familjen Grotesk + DM Mono. LAYOUT: hero with a big fan of paint chips (CSS 3D) that spreads on hover/focus; sections: interior, exterior, roofs & decks, colour consult, process, quote. SIGNATURE: room visualiser — an SVG living room (wall, trim, ceiling, door, sofa, window light); pick swatches for walls / trim / door from palettes ('Coastal', 'Hinterland', 'Classic Queenslander'); surfaces repaint with a roller-wipe animation; warns if trim and wall are too similar; 'Save this scheme' creates a scheme card. Phone: the fan becomes a horizontal strip."
+ },
+ {
+  "id": "034",
+  "slug": "grain-and-joint",
+  "name": "Grain & Joint",
+  "industry": "trades",
+  "type": {
+   "en": "Custom furniture & joinery",
+   "zh": "定制家具木作"
+  },
+  "city": "Launceston, TAS",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "natural"
+  ],
+  "style": {
+   "en": "Isometric workshop",
+   "zh": "等轴测木工坊"
+  },
+  "interaction": {
+   "en": "Explore the workshop, assemble a joint",
+   "zh": "逛木工坊，组装榫卯"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Young Serif",
+   "Work Sans"
+  ],
+  "palette": [
+   "#F4EDE1",
+   "#C68B59",
+   "#3B2A20",
+   "#E1B866",
+   "#9DAA8D"
+  ],
+  "brief": "Custom furniture maker using Tasmanian timbers. Palette: workshop cream #F4EDE1, timber #C68B59, blackwood #3B2A20, Huon pine gold #E1B866, sage #9DAA8D. Fonts: Young Serif + Work Sans. LAYOUT: a large isometric workshop scene (SVG, true 30° iso) — workbench, saw horse, timber rack, a finished dining table, bench, shelving, cabinet; each object is a button: clicking zooms into an info card (dining tables, built-ins, restorations, timber selection: blackwood, Tasmanian oak, Huon pine, myrtle — general descriptions). SIGNATURE 2: joint explorer — choose dovetail, mortise & tenon, finger joint or bridle joint and press 'Assemble': two CSS-3D parts slide together, with a short explanation of when each is used. Also commission process and a contact form. Phone: the iso scene becomes a vertical list of objects with small iso icons; the joint explorer stays."
+ },
+ {
+  "id": "035",
+  "slug": "clearwater-pool-care",
+  "name": "Clearwater Pool Care",
+  "industry": "trades",
+  "type": {
+   "en": "Pool maintenance",
+   "zh": "泳池维护"
+  },
+  "city": "Gold Coast, QLD",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "techy"
+  ],
+  "style": {
+   "en": "Shader water surface",
+   "zh": "着色器水面"
+  },
+  "interaction": {
+   "en": "Ripple the water; balance the chemistry",
+   "zh": "拨动水面涟漪；调平水质"
+  },
+  "features": [
+   "game",
+   "finder"
+  ],
+  "fonts": [
+   "Lexend"
+  ],
+  "palette": [
+   "#29C5F6",
+   "#0A6C8C",
+   "#FFFFFF",
+   "#FFD166"
+  ],
+  "brief": "Pool service seen from above. Palette: pool turquoise #29C5F6, deep #0A6C8C, tile white, sunny #FFD166. Font: Lexend (several weights). HERO: the viewport is a pool surface — raw WebGL fragment shader for animated caustics (fallback: CSS gradients if WebGL fails or reduced motion); pointer/touch makes ripples (canvas ripple simulation or shader uniforms); pool tile edge around the viewport; content cards float like pool floats with gentle bob. SECTIONS: weekly service, green-pool rescue, equipment repair, water testing, service areas. SIGNATURE 2: water chemistry checker — sliders for pH, free chlorine, total alkalinity; a status panel shows 'Balanced / Adjust' with plain advice and a test-strip illustration whose pads change colour; general information note. Stop the shader when off-screen or hidden."
+ },
+ {
+  "id": "036",
+  "slug": "critter-control",
+  "name": "Critter Control Co.",
+  "industry": "trades",
+  "type": {
+   "en": "Pest control",
+   "zh": "害虫防治"
+  },
+  "city": "Darwin, NT",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "playful"
+  ],
+  "style": {
+   "en": "1950s B-movie poster",
+   "zh": "五十年代 B 级片海报"
+  },
+  "interaction": {
+   "en": "Squish the bugs mini-game",
+   "zh": "拍虫子小游戏"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Bungee",
+   "Courier Prime"
+  ],
+  "palette": [
+   "#8BE000",
+   "#3D1A6E",
+   "#FF5E1A",
+   "#F5E9C9"
+  ],
+  "brief": "Pest control with a sense of humour. B-movie poster: lurid green #8BE000, purple #3D1A6E, blood-orange #FF5E1A, pulp cream #F5E9C9, halftone and paper texture, dramatic angled type ('ATTACK OF THE TERMITES!'). Fonts: Bungee + Courier Prime. LAYOUT: movie-poster hero with tagline and 'Now showing' services (termite inspections, cockroaches, spiders, rodents, mosquitoes); 'The cast' — pests as mugshot cards drawn in SVG that flip to reveal facts and signs; survival guide tips; pricing notes (general); 'Call the crew'. SIGNATURE: bug squish mini-game — SVG bugs crawl across a canvas stage; tap/click to squish (splat + score); 30-second round, pause button; after the round: 'Can't catch them all? Call us.' Reduced motion: a still 'spot the 8 bugs' scene where you find and click hidden bugs instead. Keyboard: bugs are focusable during the game or provide a list alternative."
+ },
+ {
+  "id": "037",
+  "slug": "keyed-up-locksmiths",
+  "name": "Keyed Up Locksmiths",
+  "industry": "trades",
+  "type": {
+   "en": "Locksmith",
+   "zh": "锁匠"
+  },
+  "city": "Adelaide, SA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "luxe"
+  ],
+  "style": {
+   "en": "Bank-vault mechanical",
+   "zh": "银行金库机械"
+  },
+  "interaction": {
+   "en": "Crack the combination dial",
+   "zh": "转动密码盘开金库"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Big Shoulders Display",
+   "IBM Plex Mono"
+  ],
+  "palette": [
+   "#2B2F33",
+   "#B8914B",
+   "#0E4C4F",
+   "#FF3B3B"
+  ],
+  "brief": "Locksmith & safes. Bank vault: gunmetal #2B2F33 with brushed-steel gradients, brass #B8914B, deep teal #0E4C4F, LED red #FF3B3B; rivets and radial tick marks. Fonts: Big Shoulders Display + IBM Plex Mono. LAYOUT: a vault door hero; behind it the services — emergency lockouts, rekeying & lock changes, safes, car keys, commercial master-key systems, security audits — plus service area and contact. SIGNATURE: combination dial — drag to rotate (pointer), or arrow keys to turn and Enter to lock in a number; enter the 3-number combination shown as a hint ('R 12 · L 34 · R 7'); on success the bolts retract and the vault door swings open (CSS 3D) revealing the services; a visible 'Skip the puzzle' link for accessibility; reduced motion: door opens instantly. Phone: dial large and centred."
+ },
+ {
+  "id": "038",
+  "slug": "sunward-solar",
+  "name": "Sunward Solar",
+  "industry": "trades",
+  "type": {
+   "en": "Solar installer",
+   "zh": "太阳能安装"
+  },
+  "city": "Townsville, QLD",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "playful"
+  ],
+  "style": {
+   "en": "Bright clean-tech sky",
+   "zh": "明亮清洁能源天空"
+  },
+  "interaction": {
+   "en": "Move the sun, see generation & savings",
+   "zh": "移动太阳，看发电与节省"
+  },
+  "features": [
+   "quote",
+   "story"
+  ],
+  "fonts": [
+   "Sora",
+   "Inter"
+  ],
+  "palette": [
+   "#FFB400",
+   "#BFE6FF",
+   "#FFF3D6",
+   "#0B2A4A",
+   "#1D4F91"
+  ],
+  "brief": "Solar and batteries. Palette: sunshine #FFB400, sky gradient #BFE6FF → #FFF3D6, deep navy #0B2A4A, panel blue #1D4F91, white. Fonts: Sora + Inter. LAYOUT: a sky across the top with a sun travelling an arc over an illustrated house with roof panels; sections: systems, batteries, how it works, estimator, installation process, FAQ. SIGNATURE: 'Sun & savings' — a time-of-day slider (6am–7pm) moves the sun along the arc, shifts sky colours, lights panels by intensity and draws a live generation curve (SVG area chart) with a 'you are here' marker; an estimator (quarterly bill, roof direction, daytime usage) outputs a suggested system size and an illustrative savings range with its assumptions spelled out. No rebate or government-scheme claims; general-information note."
+ },
+ {
+  "id": "039",
+  "slug": "studio-lintel",
+  "name": "Studio Lintel Architects",
+  "industry": "trades",
+  "type": {
+   "en": "Residential architects",
+   "zh": "住宅建筑事务所"
+  },
+  "city": "Brisbane, QLD",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "editorial"
+  ],
+  "style": {
+   "en": "Strict Swiss grid",
+   "zh": "严格瑞士网格"
+  },
+  "interaction": {
+   "en": "Hover the index, reveal the grid",
+   "zh": "悬停项目索引，显出网格"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Schibsted Grotesk",
+   "IBM Plex Mono"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#000000",
+   "#8C8C8C",
+   "#FF0000"
+  ],
+  "brief": "Small architecture practice. International Typographic Style: white, black, one grey #8C8C8C; 12-column grid; huge numerals; flush-left ragged-right; no decoration at all. Fonts: Schibsted Grotesk + IBM Plex Mono. LAYOUT: a project index table (No., Project, Suburb, Type, Year, Status) — text only; hovering or focusing a row shows a floating preview that follows the cursor: a CSS/SVG abstract architectural composition in black/white/grey (planes, stairs, light shafts, screens) unique to each project; clicking opens a project detail panel with a larger composition and 120 words. Other sections: Practice, Approach (numbered principles), Contact. SIGNATURE 2: 'Show grid' toggle overlays the real 12-column layout grid in red lines (the only colour). Phone: the table becomes a list; previews appear inline under a tapped row."
+ },
+ {
+  "id": "040",
+  "slug": "brightside-dental",
+  "name": "Brightside Dental",
+  "industry": "health",
+  "type": {
+   "en": "Family dentist",
+   "zh": "家庭牙科诊所"
+  },
+  "city": "Box Hill, VIC",
+  "lang": "en+zh",
+  "moods": [
+   "playful"
+  ],
+  "style": {
+   "en": "Claymorphism soft 3D",
+   "zh": "黏土风软 3D"
+  },
+  "interaction": {
+   "en": "Tap a tooth to learn about treatments",
+   "zh": "点牙齿了解治疗"
+  },
+  "features": [
+   "bilingual",
+   "booking",
+   "finder"
+  ],
+  "fonts": [
+   "Outfit",
+   "Noto Sans SC"
+  ],
+  "palette": [
+   "#BFEBDD",
+   "#CFE3FF",
+   "#FFD7C2",
+   "#FFFFFF",
+   "#1B2A41"
+  ],
+  "brief": "Friendly bilingual EN/中文 family dentist. Claymorphism: soft rounded clay shapes with double inner/outer shadows, pastel mint #BFEBDD, pale periwinkle #CFE3FF, peach #FFD7C2, white; text navy #1B2A41. A clay tooth mascot (SVG with gradients) waves in the hero. Fonts: Outfit + Noto Sans SC. LAYOUT: floating clay cards — new patients, check-up & clean, kids dentistry, cosmetic, emergency appointments, payment options (health funds in general terms), Mandarin-speaking team (fictional), book. SIGNATURE: interactive tooth chart — adult/child toggle; an SVG arch of teeth; tap/Tab to a tooth to see its name and common treatments (general information); an 'Anxious about the dentist?' toggle reveals calm-visit tips. Full EN ⇄ 中文 toggle with html lang. General-information disclaimer."
+ },
+ {
+  "id": "041",
+  "slug": "motion-lab-physio",
+  "name": "Motion Lab Physio",
+  "industry": "health",
+  "type": {
+   "en": "Physiotherapy clinic",
+   "zh": "物理治疗诊所"
+  },
+  "city": "Canberra, ACT",
+  "lang": "en",
+  "moods": [
+   "minimal"
+  ],
+  "style": {
+   "en": "Anatomical line art",
+   "zh": "解剖线稿"
+  },
+  "interaction": {
+   "en": "Tap where it hurts on the body map",
+   "zh": "在人体图上点击疼痛部位"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Albert Sans",
+   "Newsreader"
+  ],
+  "palette": [
+   "#FBFBFB",
+   "#222222",
+   "#0FA3A3",
+   "#FF7F6E"
+  ],
+  "brief": "Sports & musculoskeletal physio. Palette: white #FBFBFB, graphite line #222, clinical teal #0FA3A3, soft coral #FF7F6E for highlights. Fonts: Albert Sans + Newsreader. LAYOUT: an elegant single-line body figure (SVG) centre stage, front/back toggle; around it: conditions we see, services (sports physio, dry needling, clinical pilates, hydrotherapy), our approach, your first visit, book. SIGNATURE: tap or Tab to a region (neck, shoulder, upper back, lower back, hip, knee, ankle, wrist/elbow) → it glows coral with a pulse; a panel lists common issues, what a physio may assess, and a suggested appointment type; a keyboard-friendly list mirrors the regions. General-information note: not a diagnosis."
+ },
+ {
+  "id": "042",
+  "slug": "stillwater-yoga",
+  "name": "Stillwater Yoga",
+  "industry": "health",
+  "type": {
+   "en": "Yoga studio",
+   "zh": "瑜伽馆"
+  },
+  "city": "Byron Bay, NSW",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "minimal"
+  ],
+  "style": {
+   "en": "Sunset gradient calm",
+   "zh": "日落渐变的宁静"
+  },
+  "interaction": {
+   "en": "Take one guided breath",
+   "zh": "跟着做一次呼吸"
+  },
+  "features": [
+   "booking",
+   "story"
+  ],
+  "fonts": [
+   "Marcellus",
+   "Nunito Sans"
+  ],
+  "palette": [
+   "#F6EEE6",
+   "#F9C9A8",
+   "#E8A0A8",
+   "#B8A9D9",
+   "#2E2140"
+  ],
+  "brief": "Calm yoga studio. Palette: sand #F6EEE6, dusk peach #F9C9A8, rose #E8A0A8, lavender #B8A9D9, deep plum text #2E2140. Fonts: Marcellus + Nunito Sans. LAYOUT: a centred breathing orb (soft gradient sphere) in the hero: 'Take one breath before you browse'; then a generous single column: classes, timetable, teachers, retreats, your first class, pricing (sample). SIGNATURE 1: guided breathing — 'Begin' makes the orb expand for a 4 s inhale, hold 4 s, exhale 6 s, with text cues and a cycle counter (3 cycles), stop button; reduced motion: text-only counter. SIGNATURE 2: timetable filter by style (vinyasa, yin, restorative, hatha) and level with day tabs; each class card has 'Book' → DemoKit toast. Phone: orb smaller, timetable as cards."
+ },
+ {
+  "id": "043",
+  "slug": "form-and-flow",
+  "name": "Form & Flow Reformer",
+  "industry": "health",
+  "type": {
+   "en": "Reformer pilates studio",
+   "zh": "普拉提器械馆"
+  },
+  "city": "Bondi, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "minimal"
+  ],
+  "style": {
+   "en": "Luxe athleisure booking app",
+   "zh": "高级运动风预约 App"
+  },
+  "interaction": {
+   "en": "Book a class, pick your reformer",
+   "zh": "订课并选择器械位"
+  },
+  "features": [
+   "booking"
+  ],
+  "fonts": [
+   "Bricolage Grotesque",
+   "Cormorant"
+  ],
+  "palette": [
+   "#E8E1D7",
+   "#D8CBB8",
+   "#3A2E27",
+   "#A3AD95",
+   "#FFFFFF"
+  ],
+  "brief": "Boutique reformer studio. Palette: stone #E8E1D7, sand #D8CBB8, espresso #3A2E27, sage #A3AD95, white; pill shapes, soft shadows, abstract body-line illustrations instead of photos. Fonts: Bricolage Grotesque + Cormorant. LAYOUT: app-like: a horizontal day selector strip, class cards with capacity bars, interleaved editorial blocks (the method, instructors, intro offer — sample, the studio). SIGNATURE: booking flow — filter by level (Foundations, Flow, Burn, Prenatal) and time of day; tap 'Book' → a bottom sheet with a studio floor plan of 12 reformers (some taken) where you pick your spot → confirm → DemoKit toast. Keyboard and screen-reader friendly (reformers are buttons with labels). Phone: native-app feel with safe-area padding."
+ },
+ {
+  "id": "044",
+  "slug": "southpaw-boxing",
+  "name": "Southpaw Boxing Club",
+  "industry": "health",
+  "type": {
+   "en": "Boxing gym",
+   "zh": "拳击馆"
+  },
+  "city": "Footscray, VIC",
+  "lang": "en",
+  "moods": [
+   "bold"
+  ],
+  "style": {
+   "en": "Gritty fight-night poster",
+   "zh": "粗粝拳赛海报"
+  },
+  "interaction": {
+   "en": "Round timer + punch the bag",
+   "zh": "回合计时器 + 打沙袋"
+  },
+  "features": [
+   "sound",
+   "game"
+  ],
+  "fonts": [
+   "Anton",
+   "Barlow"
+  ],
+  "palette": [
+   "#0C0C0C",
+   "#D7263D",
+   "#EFE8D8",
+   "#E9B44C"
+  ],
+  "brief": "Community boxing gym. Fight-night poster: black #0C0C0C, blood red #D7263D, bone #EFE8D8, gold #E9B44C; grain, torn edges, huge condensed type, stars. Fonts: Anton + Barlow. LAYOUT: poster hero ('SOUTHPAW vs YOUR EXCUSES' style, brand name as data-brand), class schedule as a 'fight card', coaches (fictional, illustrated), memberships (sample prices), kids boxing, free trial class (say 'trial class', no 'free' promise). SIGNATURE 1: working round timer — 3:00 rounds / 1:00 rest, round counter, start/pause/reset, big digits, optional bell via Web Audio (off by default). SIGNATURE 2: heavy bag — click/tap/Space to punch; the SVG bag swings with spring physics; combo counter and power meter. Phone: timer view works full-screen friendly."
+ },
+ {
+  "id": "045",
+  "slug": "quiet-harbour",
+  "name": "Quiet Harbour Counselling",
+  "industry": "health",
+  "type": {
+   "en": "Counsellor",
+   "zh": "心理咨询"
+  },
+  "city": "Hobart, TAS",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "minimal"
+  ],
+  "style": {
+   "en": "Soft watercolour, reading-first",
+   "zh": "柔和水彩，阅读优先"
+  },
+  "interaction": {
+   "en": "'How are you arriving today?' check-in",
+   "zh": "“今天带着什么心情来？”"
+  },
+  "features": [
+   "story",
+   "accessibility"
+  ],
+  "fonts": [
+   "Literata",
+   "Source Sans 3"
+  ],
+  "palette": [
+   "#FBF8F3",
+   "#BFD8D2",
+   "#F0D5CC",
+   "#DDE3E8",
+   "#2F3A40"
+  ],
+  "brief": "Gentle counselling practice. Palette: warm white #FBF8F3, sea-glass #BFD8D2, blush #F0D5CC, fog #DDE3E8 (soft blurred watercolour blobs), text slate #2F3A40. Fonts: Literata + Source Sans 3. LAYOUT: calm single reading column (max ~62ch, generous line-height): how I can help, what sessions are like, fees (sample; say Medicare rebates may apply in some cases — general), your first session, FAQ, contact. A small 'Quick exit' button (top right) that jumps away to a neutral anchor (common on sensitive sites). SIGNATURE: 'How are you arriving today?' — choose a word (tired, anxious, overwhelmed, okay, hopeful); the page tint and a sentence gently adapt and a short grounding exercise (5-4-3-2-1 senses) reveals step by step. Always visible support line: Lifeline 13 11 14, and 000 in an emergency. General-information note."
+ },
+ {
+  "id": "046",
+  "slug": "balance-chinese-medicine",
+  "name": "Balance Chinese Medicine",
+  "industry": "health",
+  "type": {
+   "en": "Acupuncture & TCM",
+   "zh": "针灸与中医"
+  },
+  "city": "Chatswood, NSW",
+  "lang": "en+zh",
+  "moods": [
+   "handmade",
+   "minimal"
+  ],
+  "style": {
+   "en": "Chinese ink-wash hanging scroll",
+   "zh": "水墨立轴"
+  },
+  "interaction": {
+   "en": "Turn the Five Elements wheel",
+   "zh": "转动五行图"
+  },
+  "features": [
+   "bilingual",
+   "story"
+  ],
+  "fonts": [
+   "Ma Shan Zheng",
+   "Noto Serif SC"
+  ],
+  "palette": [
+   "#F4EFE4",
+   "#1E1E1E",
+   "#B8322A",
+   "#9FB8A5"
+  ],
+  "brief": "Bilingual EN/中文 TCM clinic (Chinese name 和气中医 shown with the English word mark; data-brand holds 'Balance Chinese Medicine'). Ink wash: rice paper #F4EFE4, ink #1E1E1E with grey washes, cinnabar seal red #B8322A, pale jade #9FB8A5. Fonts: Ma Shan Zheng (Chinese brush headings only) + Noto Serif SC (all body text, Latin included). LAYOUT: a vertical hanging scroll — a narrow central scroll with wooden rollers top and bottom, ink mountains (SVG blurred gradients) at the top, a red seal: about the clinic, acupuncture, herbal consultation, cupping, what to expect, fees (sample), book. SIGNATURE: Five Elements wheel 五行 — 木 Wood, 火 Fire, 土 Earth, 金 Metal, 水 Water in a circle; tap/Tab an element to see its traditional associations (season, colour, organ pair, emotion) presented as cultural background, not medical claims; a toggle shows generating 相生 vs controlling 相克 cycles with animated arrows. Full EN ⇄ 中文 toggle. General-information disclaimer."
+ },
+ {
+  "id": "047",
+  "slug": "wagtail-vet",
+  "name": "Wagtail Vet Clinic",
+  "industry": "health",
+  "type": {
+   "en": "Veterinary clinic",
+   "zh": "宠物医院"
+  },
+  "city": "Toowoomba, QLD",
+  "lang": "en",
+  "moods": [
+   "playful"
+  ],
+  "style": {
+   "en": "Playful illustrated, pet-themed",
+   "zh": "俏皮插画，随宠物换主题"
+  },
+  "interaction": {
+   "en": "Choose your pet — the whole site adapts",
+   "zh": "选宠物，整站随之变化"
+  },
+  "features": [
+   "finder"
+  ],
+  "fonts": [
+   "Lilita One",
+   "Nunito"
+  ],
+  "palette": [
+   "#FFF6EC",
+   "#FF8A3D",
+   "#1AA7A1",
+   "#4A2E1F"
+  ],
+  "brief": "Friendly local vet. Palette: cream #FFF6EC, warm orange #FF8A3D, teal #1AA7A1, chocolate #4A2E1F; chunky rounded shapes, paw prints, friendly SVG animals. Fonts: Lilita One + Nunito. LAYOUT: 'Who's the patient?' hero with four big buttons (Dog, Cat, Rabbit, Bird). SIGNATURE: choosing a pet re-themes the whole page with a smooth morph: hero illustration swaps (animated SVG character), accent colour shifts, services reorder and adapt (vaccinations, desexing, dental, puppy/kitten packs, rabbit dental checks, bird health checks), care tips change; the choice is reflected in aria-pressed and a live region. Also: after-hours info (general), meet the team (illustrated), new client form → DemoKit toast, and a pet-age explainer (illustrative 'human years')."
+ },
+ {
+  "id": "048",
+  "slug": "fluff-and-buff",
+  "name": "Fluff & Buff Dog Grooming",
+  "industry": "health",
+  "type": {
+   "en": "Dog groomer",
+   "zh": "狗狗美容"
+  },
+  "city": "Brisbane, QLD",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "bold"
+  ],
+  "style": {
+   "en": "Bubbly pop",
+   "zh": "泡泡波普"
+  },
+  "interaction": {
+   "en": "Build a groom — the dog morphs",
+   "zh": "定制美容——狗狗随之变形"
+  },
+  "features": [
+   "quote",
+   "customiser"
+  ],
+  "fonts": [
+   "Chewy",
+   "Poppins"
+  ],
+  "palette": [
+   "#FF7AB6",
+   "#3D7BFF",
+   "#FFD93D",
+   "#FFFFFF",
+   "#1D1A3A"
+  ],
+  "brief": "Dog grooming salon. Bubbly pop: bubblegum pink #FF7AB6, bright blue #3D7BFF, yellow #FFD93D, white, text #1D1A3A; soap bubbles everywhere. Fonts: Chewy + Poppins. LAYOUT: bubbly hero with a dog in a bathtub (SVG) and bubbles you can pop by clicking (reduced motion: static); sections: groom menu, add-ons (teeth, nails, blueberry facial), before your appointment, breeds we love, book. SIGNATURE: 'Build my groom' — choose size (toy, small, medium, large, giant) and coat (short, double, curly, long); an SVG dog morphs size and coat style, and a price + time estimate updates (sample); add-ons as checkable chips; result card 'Your groom'. Phone: dog preview sticky at the top while choosing."
+ },
+ {
+  "id": "049",
+  "slug": "built-by-jas",
+  "name": "Built by Jas PT",
+  "industry": "health",
+  "type": {
+   "en": "Personal trainer",
+   "zh": "私人健身教练"
+  },
+  "city": "Perth, WA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "bold"
+  ],
+  "style": {
+   "en": "Dark fitness-app dashboard",
+   "zh": "暗色健身 App 仪表盘"
+  },
+  "interaction": {
+   "en": "Generate a 12-week program",
+   "zh": "生成 12 周训练计划"
+  },
+  "features": [
+   "customiser"
+  ],
+  "fonts": [
+   "Unbounded",
+   "Inter"
+  ],
+  "palette": [
+   "#0E0F11",
+   "#C6FF3D",
+   "#1C1F24",
+   "#FFFFFF"
+  ],
+  "brief": "Independent personal trainer. Dark fitness app: near-black #0E0F11, neon lime #C6FF3D, slate cards #1C1F24, white; dense data UI, 16px cards, charts. Fonts: Unbounded + Inter. LAYOUT: app dashboard — profile card 'Coach Jas', programs (strength foundations, hybrid athlete, return to training), method, pricing (sample), FAQ, contact. SIGNATURE: 12-week program generator — pick goal (strength / fat loss / fitness / sport), days per week (2–5), experience; generates a 12-week calendar grid with colour-coded session types and a deload week, plus an 'illustrative' training-volume line chart (SVG) that animates; clear note: illustrative plan, not medical or professional advice. Phone: native app look with bottom nav."
+ },
+ {
+  "id": "050",
+  "slug": "tide-pool-day-spa",
+  "name": "Tide Pool Day Spa",
+  "industry": "health",
+  "type": {
+   "en": "Day spa",
+   "zh": "日间水疗"
+  },
+  "city": "Noosa, QLD",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "natural"
+  ],
+  "style": {
+   "en": "Frosted glass over sea stones",
+   "zh": "海石上的磨砂玻璃"
+  },
+  "interaction": {
+   "en": "Mix your ambient soundscape",
+   "zh": "调一段属于你的环境音"
+  },
+  "features": [
+   "sound",
+   "booking"
+  ],
+  "fonts": [
+   "Italiana",
+   "Mulish"
+  ],
+  "palette": [
+   "#EDE3D6",
+   "#A8947C",
+   "#CFE3DD",
+   "#3B3A36"
+  ],
+  "brief": "Coastal day spa. Palette: sand #EDE3D6, driftwood #A8947C, sea-foam #CFE3DD, stone greys, text #3B3A36; frosted glass panels (backdrop-filter with fallback) drifting over soft pebble shapes. Fonts: Italiana + Mulish. LAYOUT: layered translucent panels: treatments (massage, facials, hot stone, couples), packages, spa etiquette, gift vouchers, book. SIGNATURE 1: ambient sound mixer — rain, ocean waves, birdsong, wind chimes, each synthesised with Web Audio (filtered noise, oscillators, random chime scheduling), individual volume sliders, master play/stop, everything off by default. SIGNATURE 2: massage pressure selector (light → firm) that re-orders the recommended treatments. Reduced motion: panels static."
+ },
+ {
+  "id": "051",
+  "slug": "open-door-support",
+  "name": "Open Door Support Services",
+  "industry": "health",
+  "type": {
+   "en": "Disability & community support",
+   "zh": "残障与社区支持"
+  },
+  "city": "Wollongong, NSW",
+  "lang": "en",
+  "moods": [
+   "minimal"
+  ],
+  "style": {
+   "en": "Accessibility-first, high contrast",
+   "zh": "无障碍优先、高对比"
+  },
+  "interaction": {
+   "en": "Working accessibility controls & Easy Read",
+   "zh": "真实可用的无障碍设置与易读模式"
+  },
+  "features": [
+   "accessibility"
+  ],
+  "fonts": [
+   "Atkinson Hyperlegible"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#0A3D91",
+   "#FFD23F",
+   "#111111"
+  ],
+  "brief": "Disability and community support provider (fictional — do not claim any registration). Accessibility-first yet beautiful: white, deep blue #0A3D91, warm yellow #FFD23F (backgrounds/highlights only), black #111; large text, big buttons, underlined links, simple line icons, generous spacing. Font: Atkinson Hyperlegible. LAYOUT: simple stacked sections — what we help with (daily living, community access, transport, respite), how to start, what it costs (plain words: 'depends on your plan'), meet the team, contact. SIGNATURE: an accessibility panel that really works — text size (100/125/150/175%), high-contrast mode, dyslexia-friendly spacing (letter/word spacing + line height), reduce motion, and an 'Easy Read' mode that swaps paragraphs for short sentences with icons; settings apply instantly, are announced, and are remembered (localStorage in try/catch). Everything keyboard-operable with obvious focus."
+ },
+ {
+  "id": "052",
+  "slug": "maison-wren",
+  "name": "Maison Wren",
+  "industry": "beauty",
+  "type": {
+   "en": "Hair salon",
+   "zh": "美发沙龙"
+  },
+  "city": "South Yarra, VIC",
+  "lang": "en",
+  "moods": [
+   "editorial",
+   "luxe"
+  ],
+  "style": {
+   "en": "High-fashion magazine",
+   "zh": "高级时装杂志"
+  },
+  "interaction": {
+   "en": "Try hair colours on a portrait",
+   "zh": "在肖像上试发色"
+  },
+  "features": [
+   "customiser",
+   "booking"
+  ],
+  "fonts": [
+   "Bodoni Moda",
+   "Syne"
+  ],
+  "palette": [
+   "#0A0A0A",
+   "#FFFFFF",
+   "#F3C6CF",
+   "#D1002F"
+  ],
+  "brief": "Fashion-led hair salon. High-fashion editorial: black #0A0A0A, white, blush #F3C6CF, one runway red #D1002F; huge Didone headlines, dramatic crops, asymmetric spreads, page numbers and cover lines. Fonts: Bodoni Moda + Syne. LAYOUT: a magazine — cover (masthead = brand, issue number, cover lines like 'The autumn colour edit'), then spreads: services & sample prices, colour (balayage, gloss, foils), the stylists (elegant line-art portraits), 'the edit' trends, book. SIGNATURE: hair colour try-on — an elegant SVG line-art portrait whose hair shape is filled by gradients; choose colour (espresso, honey, copper, platinum, rose gold, midnight) and technique (all-over, balayage, face-frame): the hair gradient morphs; 'Save this look' makes a look card to bring to the booking. Phone: spreads become vertical; masthead stays bold."
+ },
+ {
+  "id": "053",
+  "slug": "old-mate-barbers",
+  "name": "Old Mate Barbers",
+  "industry": "beauty",
+  "type": {
+   "en": "Barber shop",
+   "zh": "理发店"
+  },
+  "city": "Woolloongabba, QLD",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "Americana barber pole",
+   "zh": "美式复古理发店"
+  },
+  "interaction": {
+   "en": "Dial in your fade",
+   "zh": "调出你的渐变发型"
+  },
+  "features": [
+   "customiser",
+   "menu"
+  ],
+  "fonts": [
+   "Ultra",
+   "Oswald"
+  ],
+  "palette": [
+   "#C1121F",
+   "#16213E",
+   "#F4EBD9",
+   "#D4A017"
+  ],
+  "brief": "Neighbourhood barber with a cheeky Aussie name. Americana: red #C1121F, navy #16213E, cream #F4EBD9, gold #D4A017; animated barber-pole stripes, tattoo-flash style badges, stars, stitched borders. Fonts: Ultra + Oswald. LAYOUT: classic centred badge hero with a spinning barber pole (reduced motion: static stripes); price board (cut, skin fade, beard trim, hot towel shave, kids cut — sample prices); walk-ins vs bookings; the barbers (fictional, illustrated); shop rules. SIGNATURE: fade chart — a side-view head silhouette (SVG) with a clipper guard slider (#0–#4) and fade height (low / mid / high) and top length; the hair gradient updates live; 'Show my barber' saves a spec card (guard, height, top) you can show in the chair."
+ },
+ {
+  "id": "054",
+  "slug": "glaze-nail-bar",
+  "name": "Glaze Nail Bar",
+  "industry": "beauty",
+  "type": {
+   "en": "Nail salon",
+   "zh": "美甲店"
+  },
+  "city": "Chatswood, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "playful"
+  ],
+  "style": {
+   "en": "Holographic chrome",
+   "zh": "镭射镜面"
+  },
+  "interaction": {
+   "en": "Design your set, nail by nail",
+   "zh": "一只一只设计你的美甲"
+  },
+  "features": [
+   "customiser"
+  ],
+  "fonts": [
+   "Tilt Warp",
+   "Figtree"
+  ],
+  "palette": [
+   "#F7F3FF",
+   "#D7C9FF",
+   "#C0C0C8",
+   "#2A1B3D"
+  ],
+  "brief": "Nail salon. Holographic chrome: iridescent conic gradients, pearl #F7F3FF, lilac #D7C9FF, chrome silver, aubergine text #2A1B3D; glossy highlights, a subtle sparkle trail on pointer move (off in reduced motion). Fonts: Tilt Warp + Figtree. LAYOUT: an elegant hand illustration (SVG) at the centre with five nails; services (gel manicure, builder gel, extensions, nail art, pedicure), price list (sample), aftercare, book. SIGNATURE: nail designer — select a nail (or 'All'), choose colour, finish (gloss / matte / chrome / cat-eye shimmer) and art (French tip, dots, stripes, stars); nails update live; nail shape toggle (almond / square / coffin); 'Save my set' creates a design card. Phone: hand scaled, controls below."
+ },
+ {
+  "id": "055",
+  "slug": "black-swan-tattoo",
+  "name": "Black Swan Tattoo",
+  "industry": "beauty",
+  "type": {
+   "en": "Tattoo studio",
+   "zh": "纹身工作室"
+  },
+  "city": "Fremantle, WA",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "Traditional flash sheet",
+   "zh": "传统纹身手稿墙"
+  },
+  "interaction": {
+   "en": "Place a flash design on the body",
+   "zh": "把图案放到身上看效果"
+  },
+  "features": [
+   "customiser",
+   "booking"
+  ],
+  "fonts": [
+   "Pirata One",
+   "Space Mono"
+  ],
+  "palette": [
+   "#0B0B0B",
+   "#EDE6D6",
+   "#B3261E",
+   "#D4A24C",
+   "#1F6F78"
+  ],
+  "brief": "Traditional tattoo studio. Flash sheets: black #0B0B0B, bone #EDE6D6, red #B3261E, mustard #D4A24C, teal #1F6F78; thick black outlines, limited palette fills. Fonts: Pirata One + Space Mono. LAYOUT: a flash wall — a grid of framed SVG designs (swallow, dagger, rose, anchor, black swan, snake, eye, heart & banner, moth); artists (styles: traditional, fine line, blackwork); process & deposits (policy text); aftercare; book a consult. SIGNATURE: placement preview — pick a flash design and drag it onto a body silhouette (views: forearm, shoulder, calf, back), resize with a slider, rotate; shows approximate size in cm and an illustrative session length; keyboard: position / size / rotate buttons. Phone: body view on top, designs strip below."
+ },
+ {
+  "id": "056",
+  "slug": "fleur-brow-and-lash",
+  "name": "Fleur Brow & Lash",
+  "industry": "beauty",
+  "type": {
+   "en": "Brow & lash studio",
+   "zh": "眉睫工作室"
+  },
+  "city": "Parramatta, NSW",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "luxe"
+  ],
+  "style": {
+   "en": "Nude line-art minimal",
+   "zh": "裸色线稿极简"
+  },
+  "interaction": {
+   "en": "Redraw the lashes and brows",
+   "zh": "重画睫毛与眉形"
+  },
+  "features": [
+   "customiser",
+   "booking"
+  ],
+  "fonts": [
+   "Cormorant Infant",
+   "Red Hat Display"
+  ],
+  "palette": [
+   "#E9D8CC",
+   "#F2E2DC",
+   "#5A4034",
+   "#FFFFFF"
+  ],
+  "brief": "Brow & lash studio. Nude minimal: nude #E9D8CC, blush #F2E2DC, cocoa #5A4034, white; single-line illustrations of eyes and brows, large circles, lots of white space. Fonts: Cormorant Infant + Red Hat Display. LAYOUT: a centred single column with big circular frames holding line art; services (brow lamination, tint, lash lift, extensions: classic / hybrid / volume), prep & aftercare, book. SIGNATURE: style selector — an eye line-art (SVG) where choosing a lash style (natural, classic, hybrid, volume, cat-eye) procedurally redraws the lash curves (count, length, curl, direction), and brow shape (soft arch, straight, lifted) morphs the brow path; a result line gives time and a sample price; 'Add to booking' → DemoKit toast."
+ },
+ {
+  "id": "057",
+  "slug": "dermis-lab",
+  "name": "Dermis Lab Skin Clinic",
+  "industry": "beauty",
+  "type": {
+   "en": "Skin clinic",
+   "zh": "皮肤管理诊所"
+  },
+  "city": "Subiaco, WA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "minimal"
+  ],
+  "style": {
+   "en": "Scientific cross-section",
+   "zh": "科学剖面图"
+  },
+  "interaction": {
+   "en": "Scroll down through skin layers; build a routine",
+   "zh": "向下滚动穿过皮肤层；生成护肤流程"
+  },
+  "features": [
+   "finder",
+   "story"
+  ],
+  "fonts": [
+   "Onest",
+   "DM Mono"
+  ],
+  "palette": [
+   "#FAFCFD",
+   "#E3EEF6",
+   "#1D4ED8",
+   "#F4B6C2"
+  ],
+  "brief": "Skin clinic with a science voice. Palette: lab white #FAFCFD, pale blue #E3EEF6, cobalt #1D4ED8, cell pink #F4B6C2; microscope circles, thin mono labels, measurement ticks, cell illustrations. Fonts: Onest + DM Mono. LAYOUT: vertical 'depth' journey through a skin cross-section — surface (epidermis) → dermis → subcutaneous layer; a side depth gauge shows µm as you scroll and relevant treatments appear per layer (skin consult, peels, LED, microneedling) with general descriptions. SIGNATURE: routine builder quiz (skin type, main concern, sensitivity, SPF habit) → AM/PM routine steps using generic product types only (cleanser, serum, moisturiser, SPF 50+), no brand names; general-information note. Phone: gauge becomes a top progress bar."
+ },
+ {
+  "id": "058",
+  "slug": "makeup-by-anika",
+  "name": "Makeup by Anika",
+  "industry": "beauty",
+  "type": {
+   "en": "Bridal makeup artist",
+   "zh": "新娘化妆师"
+  },
+  "city": "Sydney, NSW",
+  "lang": "en",
+  "moods": [
+   "editorial",
+   "luxe"
+  ],
+  "style": {
+   "en": "Powder-pastel lookbook",
+   "zh": "粉彩妆容画册"
+  },
+  "interaction": {
+   "en": "Swipe through looks, save favourites",
+   "zh": "滑动浏览妆容，收藏喜欢的"
+  },
+  "features": [
+   "story",
+   "booking"
+  ],
+  "fonts": [
+   "Parisienne",
+   "Epilogue"
+  ],
+  "palette": [
+   "#F7D6E0",
+   "#FBD9C9",
+   "#F3E7D3",
+   "#5D3A5A"
+  ],
+  "brief": "Freelance bridal & event makeup artist (fictional person). Powder pastel: powder pink #F7D6E0, peach #FBD9C9, champagne #F3E7D3, plum #5D3A5A; soft grain, pressed-powder textures via radial gradients, a handwritten signature. Fonts: Parisienne (signature only) + Epilogue. LAYOUT: lookbook palette — services, bridal packages (trial, wedding day, bridal party — sample prices), travel fee note, FAQ, enquire. SIGNATURE: a card-stack lookbook — drag/swipe cards left/right (or ← → buttons and keys) to browse looks (Soft glam, Natural glow, Editorial, Classic bridal, Bold lip, Cultural bridal — respectful and generic); each card shows an illustrated face in that look (SVG: lid colour, blush, lip) and palette dots; 'Save' adds to a 'My looks' strip that is attached to the enquiry form (→ DemoKit toast)."
+ },
+ {
+  "id": "059",
+  "slug": "mathsy-tutoring",
+  "name": "Mathsy Tutoring",
+  "industry": "education",
+  "type": {
+   "en": "Maths tutoring",
+   "zh": "数学补习"
+  },
+  "city": "Epping, NSW",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "playful"
+  ],
+  "style": {
+   "en": "Graph-paper notebook",
+   "zh": "方格练习本"
+  },
+  "interaction": {
+   "en": "Type a function, watch it plot",
+   "zh": "输入函数，实时画图"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Kalam",
+   "Rubik"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#CFE0F5",
+   "#E05A5A",
+   "#1F4FB5"
+  ],
+  "brief": "Maths tutoring for Years 3–12. Graph-paper exercise book: white with blue grid #CFE0F5, red margin line #E05A5A, blue ink #1F4FB5, pencil grey; handwritten margin notes and doodles. Fonts: Kalam + Rubik. LAYOUT: exercise-book pages — primary maths, high school, senior maths (general), selective / scholarship exam prep (general wording), how sessions work, tutors (fictional), pricing (sample), book a trial. SIGNATURE 1: live function plotter — type expressions like x^2 - 3, sin(x), 2x + 1, abs(x)/2 into an input; a SAFE hand-written expression parser (no eval/Function) plots them on the grid with an animated draw; zoom and pan buttons; error messages for invalid input. SIGNATURE 2: 'Quick challenge' — 5 generated mental-maths questions with a timer, score and a friendly result. Fully keyboard friendly."
+ },
+ {
+  "id": "060",
+  "slug": "allegro-piano",
+  "name": "Allegro Piano Studio",
+  "industry": "education",
+  "type": {
+   "en": "Piano teacher",
+   "zh": "钢琴老师"
+  },
+  "city": "Mosman, NSW",
+  "lang": "en",
+  "moods": [
+   "editorial",
+   "retro"
+  ],
+  "style": {
+   "en": "Engraved sheet music",
+   "zh": "雕版乐谱"
+  },
+  "interaction": {
+   "en": "Play the piano (mouse, touch or keyboard)",
+   "zh": "弹钢琴（鼠标、触摸或键盘）"
+  },
+  "features": [
+   "sound",
+   "game"
+  ],
+  "fonts": [
+   "Libre Caslon Display",
+   "Questrial"
+  ],
+  "palette": [
+   "#FBF6EA",
+   "#161616",
+   "#7B1E3A",
+   "#B8923E"
+  ],
+  "brief": "Private piano studio. Sheet music aesthetic: cream #FBF6EA, ink #161616, burgundy #7B1E3A, gold #B8923E; staff lines as section dividers, clefs and notes as ornament. Fonts: Libre Caslon Display + Questrial. LAYOUT: sections as movements — I. Lessons (children, teens, adults), II. Exam preparation (general), III. Adult beginners, IV. Recitals, V. Fees (sample), VI. Enquire. SIGNATURE: a playable 2-octave piano — click/tap or computer keys (A S D F G H J K for white, W E T Y U for black); Web Audio synth with a piano-like envelope (a few detuned partials, quick attack, decay); keys light up; the notes you play appear on a staff above; a 'Play Twinkle Twinkle' demo highlights keys in sequence; sound only after the first user gesture; volume/mute. Phone: keyboard scrolls horizontally inside its container with clear affordance."
+ },
+ {
+  "id": "061",
+  "slug": "bamboo-chinese-school",
+  "name": "Bamboo Chinese School",
+  "industry": "education",
+  "type": {
+   "en": "Weekend Chinese school",
+   "zh": "周末中文学校"
+  },
+  "city": "Eastwood, NSW",
+  "lang": "en+zh",
+  "moods": [
+   "playful",
+   "handmade"
+  ],
+  "style": {
+   "en": "田字格 practice grid",
+   "zh": "田字格练习本"
+  },
+  "interaction": {
+   "en": "Hear and match the four tones",
+   "zh": "听辨四声"
+  },
+  "features": [
+   "sound",
+   "game",
+   "bilingual"
+  ],
+  "fonts": [
+   "ZCOOL KuaiLe",
+   "Noto Sans SC"
+  ],
+  "palette": [
+   "#FFFDF6",
+   "#3E8E5E",
+   "#D64541",
+   "#1D1D1D",
+   "#F1B8B8"
+  ],
+  "brief": "Bilingual EN/中文 weekend Chinese school (Chinese name 竹子中文学校 shown beside the English word mark). 田字格 practice paper: paper #FFFDF6, bamboo green #3E8E5E, red #D64541, ink #1D1D1D, dashed grid #F1B8B8; bamboo leaf SVG decorations. Fonts: ZCOOL KuaiLe (playful Chinese display) + Noto Sans SC. LAYOUT: sections sit in big 田字格 cells: classes (kids 4–12, teens, adult beginners), senior-school Chinese (general), teachers (fictional), term dates, fees (sample), enrol. SIGNATURE: tone game — the four tones of 'ma' (mā 妈, má 麻, mǎ 马, mà 骂) drawn as pitch-contour lines; tap each to hear it (Web Audio oscillator with a pitch glide following the contour); then a quiz: hear a random tone and pick its contour; stars for score. Also hover/tap characters 中, 文, 学, 好 to see pinyin and meaning. Full EN ⇄ 中文 toggle. Chinese must be correct."
+ },
+ {
+  "id": "062",
+  "slug": "little-dippers",
+  "name": "Little Dippers Swim School",
+  "industry": "education",
+  "type": {
+   "en": "Learn-to-swim school",
+   "zh": "儿童游泳学校"
+  },
+  "city": "Mackay, QLD",
+  "lang": "en",
+  "moods": [
+   "playful"
+  ],
+  "style": {
+   "en": "Pool lanes from above",
+   "zh": "俯视泳道"
+  },
+  "interaction": {
+   "en": "Find the right lane for your child",
+   "zh": "为孩子找到合适的泳道"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Grandstander",
+   "Quicksand"
+  ],
+  "palette": [
+   "#2EC4F1",
+   "#FFFFFF",
+   "#FFD60A",
+   "#0B3954",
+   "#E63946"
+  ],
+  "brief": "Learn-to-swim for kids. Pool seen from above: aqua #2EC4F1 water, lane ropes of red/white/blue floats, white tile grid edges, sunny yellow #FFD60A, navy text #0B3954. Fonts: Grandstander + Quicksand. LAYOUT: each level is a horizontal swim lane stacked vertically like a pool — Tadpoles (6 months–3 years with a parent), Turtles, Dolphins, Sharks, Squad; a little swimmer icon swims along a lane on hover/focus; below: class times, water-safety tips, make-up lesson policy, enrol. SIGNATURE: level finder — 3 questions (age, happy to put face in water?, can swim 5 m unassisted?) → the matching lane lights up with a splash and shows the class and times; collectible level badges (stickers) explain progression. Phone: lanes stay horizontal but full width."
+ },
+ {
+  "id": "063",
+  "slug": "encore-dance",
+  "name": "Encore Dance Academy",
+  "industry": "education",
+  "type": {
+   "en": "Dance school",
+   "zh": "舞蹈学校"
+  },
+  "city": "Adelaide, SA",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "playful"
+  ],
+  "style": {
+   "en": "Stage curtain & spotlight",
+   "zh": "舞台幕布与聚光灯"
+  },
+  "interaction": {
+   "en": "A spotlight follows you; pick a style",
+   "zh": "聚光灯跟随你；选择舞种"
+  },
+  "features": [
+   "story",
+   "booking"
+  ],
+  "fonts": [
+   "Righteous",
+   "Poppins"
+  ],
+  "palette": [
+   "#0B0710",
+   "#8C1C3A",
+   "#FFFFFF",
+   "#FF2D95",
+   "#FFC857"
+  ],
+  "brief": "Dance school. Stage: velvet black #0B0710, curtain crimson #8C1C3A with fold shading, warm spotlight white, magenta #FF2D95, gold #FFC857. Fonts: Righteous + Poppins. LAYOUT: velvet curtains open on load; sections are Acts — Act I Classes (ballet, jazz, hip hop, contemporary, tap), Act II Timetable, Act III Teachers, Act IV End-of-year concert, Encore: Enrol. SIGNATURE: a spotlight (radial mask) follows the pointer across the stage (on touch it rests on the focused section); a style selector changes the stage lighting colour, animates an equaliser with a different rhythm pattern per style, and filters the class list. Reduced motion: curtains already open, no moving spotlight, content fully lit. Keep text contrast high inside and outside the light."
+ },
+ {
+  "id": "064",
+  "slug": "byte-size-coders",
+  "name": "Byte Size Coders",
+  "industry": "education",
+  "type": {
+   "en": "Kids coding club",
+   "zh": "少儿编程俱乐部"
+  },
+  "city": "Canberra, ACT",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "techy"
+  ],
+  "style": {
+   "en": "Snap-together code blocks",
+   "zh": "积木式编程块"
+  },
+  "interaction": {
+   "en": "Program the robot to reach the star",
+   "zh": "编程让机器人拿到星星"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Mali",
+   "Space Mono"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#4C97FF",
+   "#9966FF",
+   "#FFAB19",
+   "#59C059",
+   "#FF6680"
+  ],
+  "brief": "After-school and holiday coding club. Block-coding look: white background, bright blocks — blue #4C97FF, purple #9966FF, orange #FFAB19, green #59C059, pink #FF6680 — chunky rounded puzzle-piece shapes with notches (CSS). Fonts: Mali + Space Mono. LAYOUT: sections snap together like blocks: term programs (visual coding, Python, robotics, game design), ages, holiday camps, how classes work, enrol. SIGNATURE: mini block-coding puzzle — a 6×6 grid with a robot and a star; drag blocks (move forward, turn left, turn right, repeat ×2) into a program area or tap to add; press Run to animate the robot step by step; 3 levels with walls; reset; celebrate on success. Every drag action also has a button path for keyboard and touch."
+ },
+ {
+  "id": "065",
+  "slug": "little-wattle",
+  "name": "Little Wattle Early Learning",
+  "industry": "education",
+  "type": {
+   "en": "Early learning centre",
+   "zh": "幼儿园/早教中心"
+  },
+  "city": "Ipswich, QLD",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "playful"
+  ],
+  "style": {
+   "en": "Crayon fridge door",
+   "zh": "冰箱门上的蜡笔画"
+  },
+  "interaction": {
+   "en": "Draw with crayons, stick it on the fridge",
+   "zh": "用蜡笔画画，贴上冰箱门"
+  },
+  "features": [
+   "game",
+   "story"
+  ],
+  "fonts": [
+   "Gochi Hand",
+   "Varela Round"
+  ],
+  "palette": [
+   "#FFFDF7",
+   "#F6C21C",
+   "#7FA37B",
+   "#9ED8F5",
+   "#E4572E"
+  ],
+  "brief": "Childcare / early learning centre. Crayon & fridge door: warm white #FFFDF7, wattle yellow #F6C21C, eucalyptus green #7FA37B, sky #9ED8F5, red #E4572E; crayon textures (SVG filters), wobbly shapes, magnets holding papers. Fonts: Gochi Hand + Varela Round. LAYOUT: a fridge door with magnet-held papers: our rooms (babies, toddlers, kindy), a day at the centre, meals, educators, fees & childcare subsidy (general information), book a tour. SIGNATURE 1: doodle pad — a canvas where visitors draw with crayon-textured strokes (colour picker, size, undo, clear); 'Stick it on the fridge' adds the drawing as a new magnet-held paper (this session only). SIGNATURE 2: daily rhythm clock — a round clock of the day's routine (arrival, play, morning tea, outdoor play, lunch, rest, craft, pick-up) with the current activity highlighted by the visitor's local time."
+ },
+ {
+  "id": "066",
+  "slug": "goodwave-surf",
+  "name": "Goodwave Surf School",
+  "industry": "education",
+  "type": {
+   "en": "Surf school",
+   "zh": "冲浪学校"
+  },
+  "city": "Torquay, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "playful"
+  ],
+  "style": {
+   "en": "70s surf poster",
+   "zh": "七十年代冲浪海报"
+  },
+  "interaction": {
+   "en": "Dial the swell, get a lesson level",
+   "zh": "调节浪高，推荐课程级别"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Shrikhand",
+   "Rubik"
+  ],
+  "palette": [
+   "#FAF0DC",
+   "#F28C28",
+   "#E85D75",
+   "#F2C14E",
+   "#1C7C7D"
+  ],
+  "brief": "Surf lessons on the Surf Coast. 70s surf poster: cream #FAF0DC, sunset stripes orange #F28C28, pink #E85D75, mustard #F2C14E, teal #1C7C7D; grain; groovy wavy headings. Fonts: Shrikhand + Rubik. LAYOUT: poster hero with sun and stripes; lessons (group, private, kids, surf camp — sample prices); what to bring; safety (swim between the flags, rip currents — general); the crew; book. SIGNATURE: surf forecast widget labelled 'sample forecast' — animated canvas waves whose height and period change with a swell slider and day tabs (Mon–Sun); it recommends a lesson level for the conditions ('Beginner-friendly', 'Intermediate', 'Stay on the sand') and shows tide and wind icons. Reduced motion: static wave illustration that still updates height."
+ },
+ {
+  "id": "067",
+  "slug": "open-studio-art",
+  "name": "Open Studio Art Classes",
+  "industry": "education",
+  "type": {
+   "en": "Adult art classes",
+   "zh": "成人艺术课"
+  },
+  "city": "Fremantle, WA",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "bold"
+  ],
+  "style": {
+   "en": "Gallery white with paint splashes",
+   "zh": "白墙画廊与颜料飞溅"
+  },
+  "interaction": {
+   "en": "Paint with generative brushes, frame it",
+   "zh": "用生成式笔刷作画并装框"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Syne",
+   "Archivo"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#222222",
+   "#E3342F",
+   "#3F51B5",
+   "#E0A526"
+  ],
+  "brief": "Art classes for adults. Gallery white #FFFFFF, charcoal #222, splashes of cadmium red #E3342F, ultramarine #3F51B5, yellow ochre #E0A526. Fonts: Syne + Archivo. LAYOUT: a masonry gallery of canvas-generated artworks (seeded abstract landscapes, still-life blobs, colour fields) labelled 'generated sample works'; classes (life drawing, watercolour, oil painting, ceramics taster), term calendar, materials, teachers, enrol. SIGNATURE: 'Make a mark' — an interactive canvas with generative brushes (bristle strokes that vary with pointer speed and pressure), palette choice, a 'mix' mode that blends colours, undo, clear; 'Frame it' puts your painting in a frame at the top of the gallery (session only). Keyboard: a 'paint a random stroke' button so it's usable without a pointer."
+ },
+ {
+  "id": "068",
+  "slug": "ledger-and-co",
+  "name": "Ledger & Co. Accounting",
+  "industry": "professional",
+  "type": {
+   "en": "Accountants & tax agents",
+   "zh": "会计与报税"
+  },
+  "city": "Parramatta, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Old ledger & adding-machine tape",
+   "zh": "老账本与计算器纸带"
+  },
+  "interaction": {
+   "en": "GST calculator that prints on tape",
+   "zh": "会打印纸带的 GST 计算器"
+  },
+  "features": [
+   "quote"
+  ],
+  "fonts": [
+   "Libre Baskerville",
+   "Cutive Mono"
+  ],
+  "palette": [
+   "#E8F1E4",
+   "#9FBF9A",
+   "#C84B31",
+   "#1F2A1F",
+   "#B08D57"
+  ],
+  "brief": "Small-business accountants. Old ledger book: green ledger paper #E8F1E4 with ruled columns #9FBF9A, red rules #C84B31, ink #1F2A1F, brass #B08D57. Fonts: Libre Baskerville + Cutive Mono. LAYOUT: ledger pages — services (individual tax returns, BAS, bookkeeping, business setup, payroll basics), who we help (sole traders, tradies, cafés, contractors), fees (sample), key dates, contact. SIGNATURE: GST calculator on an adding-machine — enter an amount, choose 'Add GST' or 'Remove GST' (10%); a paper tape rolls out with printed lines (amount, GST, total) with a satisfying print animation; keeps the last 5 calculations on the tape; a 'Tear off' button. PLUS a BAS countdown to the next quarterly due date for self-lodgers (28 Oct, 28 Feb, 28 Apr, 28 Jul), with a note that registered agents may have different dates. General-information note."
+ },
+ {
+  "id": "069",
+  "slug": "harbour-and-hale",
+  "name": "Harbour & Hale Lawyers",
+  "industry": "professional",
+  "type": {
+   "en": "Property & family lawyers",
+   "zh": "房产与家事律师"
+  },
+  "city": "Sydney, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "editorial"
+  ],
+  "style": {
+   "en": "Classic marble prestige",
+   "zh": "古典大理石"
+  },
+  "interaction": {
+   "en": "Step through buying or selling",
+   "zh": "逐步了解买房/卖房流程"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "EB Garamond",
+   "Lato"
+  ],
+  "palette": [
+   "#14213D",
+   "#F8F5EE",
+   "#B99A5B",
+   "#5A6473"
+  ],
+  "brief": "Property and family law firm. Classic prestige: navy #14213D, ivory #F8F5EE, marble (layered CSS gradients with veins), gold rule #B99A5B, slate #5A6473. Fonts: EB Garamond + Lato. LAYOUT: formal centred chapters with roman numerals — practice areas (conveyancing, wills & estates, family law, leases), our approach, fees (sample fixed-fee conveyancing), FAQs, contact. SIGNATURE: conveyancing timeline — a Buying / Selling toggle; steps (contract review → exchange → cooling-off → finance & searches → pre-settlement inspection → settlement) along an animated progress line; each step shows 'what you do' vs 'what we do' and typical documents; where a number appears, label it NSW (e.g. cooling-off for residential purchases is 5 business days in NSW). 'General information only, not legal advice' note."
+ },
+ {
+  "id": "070",
+  "slug": "southern-cross-migration",
+  "name": "Southern Cross Migration",
+  "industry": "professional",
+  "type": {
+   "en": "Migration agent",
+   "zh": "移民代理"
+  },
+  "city": "Melbourne, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Passport & guilloché",
+   "zh": "护照与防伪花纹"
+  },
+  "interaction": {
+   "en": "Flip through a passport; find your pathway",
+   "zh": "翻阅护照；找到你的方向"
+  },
+  "features": [
+   "finder",
+   "story"
+  ],
+  "fonts": [
+   "Crimson Pro",
+   "Overpass Mono"
+  ],
+  "palette": [
+   "#1D2B53",
+   "#2F7D6D",
+   "#6B3FA0",
+   "#C0392B",
+   "#F4F1E8"
+  ],
+  "brief": "Migration advice practice. Passport & guilloché: navy cover #1D2B53, security green #2F7D6D, stamp purple #6B3FA0, stamp red #C0392B, paper #F4F1E8; guilloché rosettes (SVG spirographs), microtext lines, rubber stamps. Fonts: Crimson Pro + Overpass Mono. LAYOUT: a passport that opens: cover → data page (about the practice) → visa pages with stamps as services (skilled, partner, student, employer-sponsored, citizenship). Page turns in CSS 3D (click, swipe or arrow keys); a 'view as a normal page' fallback on small screens. SIGNATURE: 'Where do I start?' pathway finder — choose your situation (study, work, partner, family, already in Australia on a visa) → shows general pathway categories and documents to prepare; no visa promises or subclass claims; 'Book a consultation with a registered migration agent'. General-information disclaimer."
+ },
+ {
+  "id": "071",
+  "slug": "keystone-home-loans",
+  "name": "Keystone Home Loans",
+  "industry": "professional",
+  "type": {
+   "en": "Mortgage broker",
+   "zh": "房贷经纪"
+  },
+  "city": "Brisbane, QLD",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "bold"
+  ],
+  "style": {
+   "en": "Gradient-mesh fintech",
+   "zh": "渐变网格金融科技"
+  },
+  "interaction": {
+   "en": "Repayment calculator with live chart",
+   "zh": "还款计算器与实时图表"
+  },
+  "features": [
+   "quote"
+  ],
+  "fonts": [
+   "Urbanist",
+   "JetBrains Mono"
+  ],
+  "palette": [
+   "#111127",
+   "#3A2E8C",
+   "#7B5CFF",
+   "#FFB199",
+   "#FFFFFF"
+  ],
+  "brief": "Mortgage broker. Modern fintech: gradient-mesh backgrounds (indigo #3A2E8C → violet #7B5CFF → peach #FFB199), glass cards, deep ink #111127, white; big numerals. Fonts: Urbanist + JetBrains Mono. LAYOUT: calculator-centric hero; sections: first home buyers, refinancing, investors, how brokers are paid (transparent, general), the process, book a chat. SIGNATURE: repayment calculator — loan amount, interest rate, term, frequency (monthly / fortnightly / weekly), principal & interest vs interest-only; outputs repayment, total interest and an animated amortisation chart (SVG stacked area of principal vs interest over time) with a hover/keyboard crosshair; borrowing power is intentionally NOT calculated (explain why in one line). 'Illustrative only, not a quote or advice.'"
+ },
+ {
+  "id": "072",
+  "slug": "lumen-property",
+  "name": "Lumen Property Co.",
+  "industry": "professional",
+  "type": {
+   "en": "Boutique real estate",
+   "zh": "精品房产中介"
+  },
+  "city": "Toorak, VIC",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "editorial"
+  ],
+  "style": {
+   "en": "Map-first warm modern",
+   "zh": "地图优先的暖调现代"
+  },
+  "interaction": {
+   "en": "Filter listings on a live map",
+   "zh": "在地图上筛选房源"
+  },
+  "features": [
+   "map",
+   "booking"
+  ],
+  "fonts": [
+   "Gilda Display",
+   "Inter"
+  ],
+  "palette": [
+   "#EFE6DA",
+   "#C4643D",
+   "#6F7355",
+   "#2B2B2B",
+   "#FFFFFF"
+  ],
+  "brief": "Boutique agency. Warm modern: sand #EFE6DA, terracotta #C4643D, olive #6F7355, charcoal #2B2B2B, white; 20px-radius cards. Listing images are CSS/SVG architectural facade illustrations; every listing is visibly tagged 'Demo listing'. Fonts: Gilda Display + Inter. LAYOUT (desktop): split view — left a stylised SVG map of inner-east Melbourne (Toorak, South Yarra, Armadale, Malvern, Prahran, Windsor) with price pins; right scrollable listing cards. Below: sell with us (appraisal), property management, recent sales (labelled demo), agents, contact. SIGNATURE: filters (buy/rent, beds, baths, dual-handle price slider) update both map pins and list with animation; hovering/focusing a card highlights its pin and vice versa; 'Book an inspection' → time slots → DemoKit toast. Phone: a Map / List toggle."
+ },
+ {
+  "id": "073",
+  "slug": "evergreen-planning",
+  "name": "Evergreen Planning",
+  "industry": "professional",
+  "type": {
+   "en": "Financial planner",
+   "zh": "理财规划师"
+  },
+  "city": "Adelaide, SA",
+  "lang": "en",
+  "moods": [
+   "editorial",
+   "natural"
+  ],
+  "style": {
+   "en": "Calm long-form editorial",
+   "zh": "安静的长文编辑风"
+  },
+  "interaction": {
+   "en": "Grow a tree with compound growth",
+   "zh": "复利让小树长大"
+  },
+  "features": [
+   "quote",
+   "story"
+  ],
+  "fonts": [
+   "Spectral",
+   "Public Sans"
+  ],
+  "palette": [
+   "#F7F3EA",
+   "#1F4D3A",
+   "#7A9A65",
+   "#1B1B1B",
+   "#C66B3D"
+  ],
+  "brief": "Fee-for-service financial planner. Calm editorial: cream #F7F3EA, forest #1F4D3A, moss #7A9A65, ink #1B1B1B, small terracotta #C66B3D accents. Fonts: Spectral + Public Sans. LAYOUT: long-form story 'A letter to your future self' with generous margins, drop cap, pull quotes; who we help (retirees, young families, business owners), our advice process, fees (sample: fixed fee, no commissions — as the fictional firm's policy), FAQ, book. SIGNATURE: 'Future you' visualiser — sliders for starting amount, monthly contribution, years (5–40) and assumed return (3–8%); an SVG tree grows (trunk thickness, branches, leaf count mapped to the value) beside a compound-growth line chart; numbers update live; 'Illustrative only — not advice; excludes fees, tax and inflation.'"
+ },
+ {
+  "id": "074",
+  "slug": "next-move-consulting",
+  "name": "Next Move Consulting",
+  "industry": "professional",
+  "type": {
+   "en": "Small-business consultant",
+   "zh": "小企业咨询"
+  },
+  "city": "Sydney, NSW",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "minimal"
+  ],
+  "style": {
+   "en": "Keynote slide deck",
+   "zh": "演讲幻灯片"
+  },
+  "interaction": {
+   "en": "Present the site like a keynote",
+   "zh": "像演讲一样翻页浏览"
+  },
+  "features": [
+   "story",
+   "booking"
+  ],
+  "fonts": [
+   "Anybody",
+   "Inter"
+  ],
+  "palette": [
+   "#000000",
+   "#FFFFFF",
+   "#2F5BFF"
+  ],
+  "brief": "Consultant for small businesses. The site is a keynote deck: black, white, electric blue #2F5BFF; one idea per slide, huge type. Fonts: Anybody (variable width) + Inter. LAYOUT: 16:9 slides fitted to the viewport — Title → Problem ('Busy isn't the same as growing') → Services (strategy sprints, pricing reviews, operations, hiring plans) → Process (4 slides) → A sample scenario (clearly labelled) → Pricing (sample) → Book. SIGNATURE: presentation mode — arrow keys / Space / click / swipe to advance; push & fade transitions; progress bar; slide overview grid (press O or a button); a presenter-style elapsed timer; deep link #slide-4 updates as you go. Phone: slides become vertically stacked cards with scroll snap."
+ },
+ {
+  "id": "075",
+  "slug": "ctrl-alt-support",
+  "name": "Ctrl Alt Support",
+  "industry": "professional",
+  "type": {
+   "en": "IT support for small offices",
+   "zh": "小型办公室 IT 支持"
+  },
+  "city": "Newcastle, NSW",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "retro"
+  ],
+  "style": {
+   "en": "Terminal / command line",
+   "zh": "终端命令行"
+  },
+  "interaction": {
+   "en": "Navigate by typing commands",
+   "zh": "输入命令浏览网站"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "VT323",
+   "Fira Code"
+  ],
+  "palette": [
+   "#0C0C0C",
+   "#33FF66",
+   "#FFB000",
+   "#6B6B6B"
+  ],
+  "brief": "IT support for small offices. A full-screen terminal: black #0C0C0C, phosphor green #33FF66, amber #FFB000, dim grey #6B6B6B; blinking cursor; faint scanlines (off in reduced motion). Fonts: VT323 + Fira Code. LAYOUT: a boot sequence types itself (skippable with any key/click); a prompt like `ctrl-alt@support:~$`; commands: help, services, pricing, about, contact, status, whoami, clear; tab-autocomplete; ↑/↓ history; output is formatted text (tables, lists). Services: managed IT, cybersecurity basics, email & office setup, backups, Wi-Fi, device setup, on-site help (no vendor names). For non-technical visitors: clickable command chips under the prompt, and a 'Switch to normal view' button that renders the same content as a normal page. Output in an aria-live region."
+ },
+ {
+  "id": "076",
+  "slug": "right-fit-recruitment",
+  "name": "Right Fit Recruitment",
+  "industry": "professional",
+  "type": {
+   "en": "Recruitment agency",
+   "zh": "招聘中介"
+  },
+  "city": "Perth, WA",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "minimal"
+  ],
+  "style": {
+   "en": "Kanban board",
+   "zh": "看板"
+  },
+  "interaction": {
+   "en": "Drag roles into your pipeline",
+   "zh": "把职位拖进你的进度板"
+  },
+  "features": [
+   "finder"
+  ],
+  "fonts": [
+   "Rethink Sans",
+   "Inconsolata"
+  ],
+  "palette": [
+   "#F7F7F5",
+   "#FFE58F",
+   "#A3D5FF",
+   "#FFB3C7",
+   "#B7EB8F",
+   "#262626"
+  ],
+  "brief": "Local recruitment agency. The page is a kanban board: off-white #F7F7F5, grey columns, sticky-note cards (yellow #FFE58F, blue #A3D5FF, pink #FFB3C7, green #B7EB8F), charcoal text #262626. Fonts: Rethink Sans + Inconsolata. LAYOUT: columns — 'For employers', 'For candidates', 'Open roles', 'I'm interested', 'How we work', 'Contact'; cards expand on click. SIGNATURE: open roles (sample roles: café manager, apprentice electrician, bookkeeper, warehouse lead, receptionist, chef) — drag a role card to 'I'm interested' → a quick-apply mini form slides open (→ DemoKit toast); filters by type (full-time / casual / contract) and area; every card also has a 'Move to…' menu for keyboard and touch. Phone: columns become swipeable tabs."
+ },
+ {
+  "id": "077",
+  "slug": "silver-and-grain",
+  "name": "Silver & Grain Photography",
+  "industry": "creative",
+  "type": {
+   "en": "Wedding photographer",
+   "zh": "婚礼摄影师"
+  },
+  "city": "Blue Mountains, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Film contact sheet",
+   "zh": "胶片印样"
+  },
+  "interaction": {
+   "en": "Loupe over the contact sheet, circle favourites",
+   "zh": "放大镜看印样，圈出喜欢的"
+  },
+  "features": [
+   "game",
+   "story"
+  ],
+  "fonts": [
+   "DM Mono",
+   "Cormorant SC"
+  ],
+  "palette": [
+   "#111111",
+   "#F2EDE4",
+   "#E8743B",
+   "#E53935"
+  ],
+  "brief": "Film-loving wedding photographer. Darkroom: black #111, contact-sheet white borders, film-rebate orange #E8743B, red grease pencil #E53935, cream #F2EDE4; grain overlay. Fonts: DM Mono + Cormorant SC. LAYOUT: a contact sheet grid of frames with frame numbers and edge markings; each frame is a CSS/SVG composed image (couple silhouettes, mountain ridges, window light, bokeh, light leaks) — tasteful and abstract; sections: approach, packages (sample), how the day flows, travel, enquire. SIGNATURE: a circular loupe follows the pointer over the sheet (2× zoom using a cloned, scaled layer); click to circle favourites with an animated red grease-pencil stroke; favourites appear in 'Your picks' and can be attached to the enquiry. Keyboard: arrow keys move the loupe frame by frame; Enter circles."
+ },
+ {
+  "id": "078",
+  "slug": "low-tide-radio",
+  "name": "Low Tide Radio",
+  "industry": "creative",
+  "type": {
+   "en": "Indie band",
+   "zh": "独立乐队"
+  },
+  "city": "Brunswick, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "Turntable & record sleeves",
+   "zh": "唱机与唱片封套"
+  },
+  "interaction": {
+   "en": "Drop the needle on a generated track",
+   "zh": "放下唱针播放生成的音乐"
+  },
+  "features": [
+   "sound",
+   "ordering"
+  ],
+  "fonts": [
+   "Rubik Mono One",
+   "Chivo"
+  ],
+  "palette": [
+   "#1A1714",
+   "#6B4A2F",
+   "#F1E4C8",
+   "#D9A441",
+   "#2E6E6A"
+  ],
+  "brief": "Indie band site. Turntable: warm black #1A1714, walnut #6B4A2F, cream label #F1E4C8, mustard #D9A441, teal #2E6E6A. Fonts: Rubik Mono One + Chivo. LAYOUT: turntable hero (SVG platter, record with grooves, tonearm); new record with tracklist; tour dates (sample; ticket links kit-intercepted); merch (tee, vinyl, tote — sample prices); about; mailing list (demo). SIGNATURE: drag the tonearm onto the record (or press Play) → the platter spins and an ORIGINAL lo-fi loop generated with Web Audio plays (chord pads + bass + simple drums from noise bursts); a visualiser reacts; choosing another track changes tempo, key and colour; volume and stop. Silent until a user gesture."
+ },
+ {
+  "id": "079",
+  "slug": "ines-moreau",
+  "name": "Inès Moreau",
+  "industry": "creative",
+  "type": {
+   "en": "Painter's portfolio",
+   "zh": "画家作品集"
+  },
+  "city": "Hobart, TAS",
+  "lang": "en",
+  "moods": [
+   "minimal",
+   "editorial"
+  ],
+  "style": {
+   "en": "White-cube gallery walk",
+   "zh": "白盒子画廊漫步"
+  },
+  "interaction": {
+   "en": "Walk the rooms; regenerate a study",
+   "zh": "逛展厅；重新生成一幅习作"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Libre Bodoni",
+   "Inter"
+  ],
+  "palette": [
+   "#FAFAF8",
+   "#E7E2DA",
+   "#1A1A1A"
+  ],
+  "brief": "Painter's portfolio (fictional artist). White-cube gallery: walls #FAFAF8, pale floor #E7E2DA with a floor line and soft shadows, label black #1A1A1A. Fonts: Libre Bodoni + Inter. LAYOUT (desktop): a horizontal gallery walk (vertical wheel → horizontal) through three rooms — 'Tide', 'Kelp forest', 'Salt' — each wall hanging 2–3 paintings: seeded generative Canvas artworks (layered abstract seascapes with brush-like strokes, stable per seed) with museum wall labels (title, year, 'oil on linen', size). Then: about, exhibitions (sample), studio visits, enquire about a work. SIGNATURE: click a painting → it zooms to fill (FLIP) with details; a 'Regenerate study' button creates a new variation, clearly labelled as a generative study. Phone: rooms scroll vertically."
+ },
+ {
+  "id": "080",
+  "slug": "doodle-dept",
+  "name": "Doodle Dept.",
+  "industry": "creative",
+  "type": {
+   "en": "Illustrator",
+   "zh": "插画师"
+  },
+  "city": "Collingwood, VIC",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "playful"
+  ],
+  "style": {
+   "en": "Colouring book",
+   "zh": "涂色本"
+  },
+  "interaction": {
+   "en": "Paint-bucket the line art",
+   "zh": "用油漆桶给线稿上色"
+  },
+  "features": [
+   "game"
+  ],
+  "fonts": [
+   "Patrick Hand",
+   "Outfit"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#111111",
+   "#FF6347",
+   "#FFC93C",
+   "#6EC6FF",
+   "#7ED957"
+  ],
+  "brief": "Freelance illustrator. Colouring book: bold black line art on white; spot colours when filled — tomato #FF6347, sunflower #FFC93C, sky #6EC6FF, grass #7ED957, lilac #B39DDB, pink #FF8FAB. Fonts: Patrick Hand + Outfit. LAYOUT: a big colouring page hero (an illustrated studio desk with a cat, plants, pencils, window), then work (sample projects drawn as line art: picture book, packaging, mural), services, process, prints (sample), commission. SIGNATURE: paint bucket — choose a colour, then click regions of the SVG (each region is its own path) to fill with a quick radial fill animation; 'Surprise me' fills randomly; undo; regions are focusable (Tab) and fill with Enter. Phone: the hero drawing fits width; palette as a bottom bar."
+ },
+ {
+  "id": "081",
+  "slug": "harriet-vale",
+  "name": "Harriet Vale",
+  "industry": "creative",
+  "type": {
+   "en": "Author",
+   "zh": "作家"
+  },
+  "city": "Castlemaine, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Typewriter page",
+   "zh": "打字机纸页"
+  },
+  "interaction": {
+   "en": "Type your first line on a typewriter",
+   "zh": "在打字机上写下第一句话"
+  },
+  "features": [
+   "game",
+   "sound"
+  ],
+  "fonts": [
+   "Special Elite",
+   "Gelasio"
+  ],
+  "palette": [
+   "#F6F1E7",
+   "#222222",
+   "#B22222",
+   "#9A9A9A"
+  ],
+  "brief": "Novelist's website (fictional author). Typewriter: paper #F6F1E7 with texture, ink #222, ribbon red #B22222, type-bar grey. Fonts: Special Elite + Gelasio. LAYOUT: a sheet of paper in a typewriter (SVG platen and paper bail) at the top; the heading types itself; sections: books (three fictional novels with CSS-designed covers and short blurbs), about, events (sample), newsletter (demo), for book clubs (discussion questions). SIGNATURE: 'Type your first line' — the visitor types (physical keyboard, or an input on phones) and letters strike onto the page with a slight jitter and ink variation; optional key clicks and an end-of-line bell via Web Audio (off by default); carriage return; 'Pull the page' tears it off onto a small pile of sheets."
+ },
+ {
+  "id": "082",
+  "slug": "small-talk-big-ideas",
+  "name": "Small Talk, Big Ideas",
+  "industry": "creative",
+  "type": {
+   "en": "Podcast",
+   "zh": "播客"
+  },
+  "city": "Adelaide, SA",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "On-air radio studio",
+   "zh": "直播间"
+  },
+  "interaction": {
+   "en": "Scrub episodes by chapter",
+   "zh": "按章节拖动播放"
+  },
+  "features": [
+   "sound",
+   "story"
+  ],
+  "fonts": [
+   "Darker Grotesque",
+   "Red Hat Mono"
+  ],
+  "palette": [
+   "#1E1B18",
+   "#FF3B30",
+   "#F5EDE0",
+   "#FFB547"
+  ],
+  "brief": "Interview podcast about small businesses. Radio studio: warm charcoal #1E1B18, ON AIR red #FF3B30, cream #F5EDE0, amber VU #FFB547; acoustic-foam pattern, microphone line art. Fonts: Darker Grotesque + Red Hat Mono. LAYOUT: an ON AIR light hero, latest-episode player, episode list with generated waveforms (seeded), hosts, guests (fictional), subscribe (kit-intercepted links), be a guest. SIGNATURE: an episode player — clickable chapter markers on the waveform, draggable playhead (range input underneath), speed 1× / 1.5× / 2×, VU-meter animation while playing; it's a clearly labelled demo player: the playhead moves in real time, optional soft generated 'room tone' (Web Audio, off by default), no real audio file. Phone: player docks to the bottom."
+ },
+ {
+  "id": "083",
+  "slug": "sam-nguyen",
+  "name": "Sam Nguyen",
+  "industry": "creative",
+  "type": {
+   "en": "Developer CV",
+   "zh": "程序员简历"
+  },
+  "city": "Sydney, NSW",
+  "lang": "en",
+  "moods": [
+   "techy"
+  ],
+  "style": {
+   "en": "Code editor IDE",
+   "zh": "代码编辑器"
+  },
+  "interaction": {
+   "en": "Open files, run contact.sh",
+   "zh": "打开文件，运行 contact.sh"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Source Code Pro",
+   "Inter"
+  ],
+  "palette": [
+   "#1E1E2E",
+   "#181825",
+   "#F38BA8",
+   "#A6E3A1",
+   "#89B4FA",
+   "#F9E2AF"
+  ],
+  "brief": "Software engineer's personal site / CV (fictional person). Code editor UI: editor #1E1E2E, sidebar #181825, syntax colours pink #F38BA8, green #A6E3A1, blue #89B4FA, yellow #F9E2AF; line numbers, tabs, status bar, minimap. Fonts: Source Code Pro + Inter. LAYOUT: file tree (about.md, experience.ts, projects/, skills.json, contact.sh), tabs, an editor pane with syntax-highlighted content (hand-built highlighting via spans), a status bar (branch, line/col). SIGNATURE: clicking files opens tabs; a command palette (Ctrl/⌘+K) jumps to files; 'Run ▶' on contact.sh 'executes' in a terminal panel with typed output (contact info = fictional); dark/light theme toggle. Phone: the tree becomes a top dropdown; editor full width with soft-wrapped lines."
+ },
+ {
+  "id": "084",
+  "slug": "bec-and-the-van",
+  "name": "Bec & The Van",
+  "industry": "creative",
+  "type": {
+   "en": "Creator link-in-bio",
+   "zh": "博主链接主页"
+  },
+  "city": "Byron Bay, NSW",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "bold"
+  ],
+  "style": {
+   "en": "Sticker-bomb collage",
+   "zh": "贴纸拼贴"
+  },
+  "interaction": {
+   "en": "Drag stickers anywhere; follow the van",
+   "zh": "随意拖贴纸；追踪房车路线"
+  },
+  "features": [
+   "game",
+   "map"
+  ],
+  "fonts": [
+   "Luckiest Guy",
+   "Inter"
+  ],
+  "palette": [
+   "#FF7B54",
+   "#4ECDC4",
+   "#FFD166",
+   "#7B2CBF",
+   "#FFFFFF"
+  ],
+  "brief": "Van-life creator's link-in-bio page (fictional person). Sticker-bomb collage: sunset orange #FF7B54, seafoam #4ECDC4, sunflower #FFD166, grape #7B2CBF, white die-cut stickers with drop shadows. Fonts: Luckiest Guy + Inter. LAYOUT: mobile-first single column of big link buttons (latest video, van tour, gear list, the route map, collabs & media kit, presets shop), with a small 'Where's the van?' mini map of the east coast showing the current stop; on desktop a phone-width column is centred with stickers scattered around. SIGNATURE: drag stickers (van, palm, sun, wave, 'hi!', camera, kangaroo road sign) anywhere — pointer + keyboard (focus + arrows); buttons wobble on hover; a 'tip jar' button (DemoKit toast). All outgoing links kit-intercepted."
+ },
+ {
+  "id": "085",
+  "slug": "rise-with-tara",
+  "name": "Rise with Tara",
+  "industry": "creative",
+  "type": {
+   "en": "Life coach & speaker",
+   "zh": "人生教练与讲者"
+  },
+  "city": "Perth, WA",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "editorial"
+  ],
+  "style": {
+   "en": "Kinetic sunrise typography",
+   "zh": "日出动态文字"
+  },
+  "interaction": {
+   "en": "Words move and grow as you scroll",
+   "zh": "文字随滚动生长变化"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Recursive",
+   "Inter"
+  ],
+  "palette": [
+   "#1B1F3B",
+   "#D1495B",
+   "#F79256",
+   "#FFF4E0"
+  ],
+  "brief": "Coach and speaker (fictional person). Kinetic typography on a sunrise: background gradient dawn navy #1B1F3B → magenta #D1495B → sun orange #F79256 → morning cream #FFF4E0 progressing as you scroll. Fonts: Recursive (variable: weight, slant, casual axes) + Inter. LAYOUT: a manifesto hero where lines animate in; coaching (1:1, group, workshops), speaking topics, how it works, free resources (demo), book a discovery call. SIGNATURE: scroll-driven kinetic type — each manifesto line's weight/slant/casual axes and scale are tied to its scroll progress (JS with rAF or CSS scroll timelines with fallback); values cards flip on click. Reduced motion: static, beautifully set type with the gradient."
+ },
+ {
+  "id": "086",
+  "slug": "rawhem",
+  "name": "RAWHEM",
+  "industry": "creative",
+  "type": {
+   "en": "Independent fashion label",
+   "zh": "独立服装品牌"
+  },
+  "city": "Melbourne, VIC",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "editorial"
+  ],
+  "style": {
+   "en": "Avant-garde brutalist fashion",
+   "zh": "先锋粗野时装"
+  },
+  "interaction": {
+   "en": "Leave a trail of garments with your cursor",
+   "zh": "光标拖出一串服装剪影"
+  },
+  "features": [
+   "story",
+   "game"
+  ],
+  "fonts": [
+   "Dela Gothic One",
+   "Martian Mono"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#000000",
+   "#FF2A1A"
+  ],
+  "brief": "Independent label. Avant-garde brutalism: white, black, safety red #FF2A1A; raw grid, oversized type bleeding off edges, mixed alignments, mono captions, overlapping blocks. Fonts: Dela Gothic One + Martian Mono. LAYOUT: a collage of flat garment silhouettes (SVG coats, trousers, dresses) and huge 'SS27' type; sections: collection (lookbook of 8 looks with look numbers), stockists (sample), the atelier, care, newsletter. SIGNATURE: cursor-trail lookbook — moving the pointer leaves a trail of garment cut-outs that fade; click to freeze a look into the grid; a size-guide modal with a measurement diagram; keyboard: 'Next look' / 'Freeze' buttons. Phone: tap to drop garments; all content remains readable."
+ },
+ {
+  "id": "087",
+  "slug": "always-and-ever",
+  "name": "Always & Ever Weddings",
+  "industry": "creative",
+  "type": {
+   "en": "Wedding planner",
+   "zh": "婚礼策划"
+  },
+  "city": "Hunter Valley, NSW",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "editorial"
+  ],
+  "style": {
+   "en": "Romantic invitation envelope",
+   "zh": "浪漫请柬信封"
+  },
+  "interaction": {
+   "en": "Break the wax seal; get your countdown plan",
+   "zh": "拆开火漆，获得倒计时计划"
+  },
+  "features": [
+   "story",
+   "booking"
+  ],
+  "fonts": [
+   "Great Vibes",
+   "Libre Caslon Text"
+  ],
+  "palette": [
+   "#FFFBF5",
+   "#F4D9D0",
+   "#A8B5A2",
+   "#5E2B34",
+   "#D8B76A"
+  ],
+  "brief": "Wedding planner in wine country. Romantic: ivory #FFFBF5, blush #F4D9D0, sage #A8B5A2, deep rose text #5E2B34, gold foil gradients #D8B76A; botanical line art. Fonts: Great Vibes (script accents only) + Libre Caslon Text. LAYOUT: hero is an envelope with a wax seal; click the seal (or Enter) → the flap opens (CSS 3D) and the invitation card slides up revealing the site; then planning packages (full, partial, on-the-day — sample prices), venues we love (fictional estates), our process, planning checklist, enquire. SIGNATURE 2: countdown planner — pick your wedding date → a countdown plus a generated timeline (12 months: venue; 9: photographer; 6: invitations; 3: final fittings; 1: seating plan; week-of tasks) with tickable items (session only). Provide 'Open' button and reduced-motion instant open. Phone: envelope scaled."
+ },
+ {
+  "id": "088",
+  "slug": "wildflower-and-wattle",
+  "name": "Wildflower & Wattle",
+  "industry": "retail",
+  "type": {
+   "en": "Florist",
+   "zh": "花店"
+  },
+  "city": "Fremantle, WA",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "editorial"
+  ],
+  "style": {
+   "en": "Pressed-flower editorial",
+   "zh": "压花编辑风"
+  },
+  "interaction": {
+   "en": "Build a bouquet of native blooms",
+   "zh": "用澳洲原生花材搭一束花"
+  },
+  "features": [
+   "customiser",
+   "ordering"
+  ],
+  "fonts": [
+   "Abhaya Libre",
+   "Work Sans"
+  ],
+  "palette": [
+   "#FAF6EE",
+   "#8FA89B",
+   "#E9B824",
+   "#C22A36",
+   "#D98032",
+   "#E8B4B8"
+  ],
+  "brief": "Florist specialising in Australian natives. Pressed flowers: cream #FAF6EE, eucalyptus #8FA89B, wattle yellow #E9B824, waratah red #C22A36, banksia orange #D98032, dusty pink #E8B4B8; pressed-petal textures in SVG. Fonts: Abhaya Libre + Work Sans. LAYOUT: bouquet at the centre of the hero; weekly bouquets, weddings & events, native arrangements, sympathy flowers, delivery zones, order. SIGNATURE: bouquet builder — tap flowers (waratah, banksia, kangaroo paw, eucalyptus, wattle, garden rose, lisianthus, gum nuts) to add stems; stems converge and arrange radially into a bouquet (SVG); choose wrap (kraft, linen, white) and size; price updates (sample); a card message with live handwritten preview; order → DemoKit toast."
+ },
+ {
+  "id": "089",
+  "slug": "long-take-films",
+  "name": "Long Take Films",
+  "industry": "creative",
+  "type": {
+   "en": "Videographer",
+   "zh": "视频制作"
+  },
+  "city": "Gold Coast, QLD",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "editorial"
+  ],
+  "style": {
+   "en": "Cinematic letterbox & timecode",
+   "zh": "电影宽银幕与时间码"
+  },
+  "interaction": {
+   "en": "Scrub scenes and apply colour grades",
+   "zh": "拖动场景并套用调色"
+  },
+  "features": [
+   "story"
+  ],
+  "fonts": [
+   "Teko",
+   "Azeret Mono"
+  ],
+  "palette": [
+   "#000000",
+   "#0E1A1F",
+   "#E8A15B",
+   "#2BB3B1",
+   "#F2F2F2"
+  ],
+  "brief": "Wedding & brand videographer. Cinematic: letterbox black bars, film grain, anamorphic lens flare streaks (CSS gradients), teal #2BB3B1 & orange #E8A15B grade; timecode HUD in monospace; safe-area guides. Fonts: Teko + Azeret Mono. LAYOUT: the page is a film player — sections are scenes with timecodes (00:00:12:05): Scene 1 Brand stories, Scene 2 Weddings, Scene 3 Packages (sample), Scene 4 Behind the scenes, Scene 5 Contact; a scrubber timeline at the bottom shows scene markers and jumps to them. The 'footage' is a generative animated scene (canvas parallax silhouettes: hills, sun, sea, a couple) behind the titles. SIGNATURE: colour-grade presets ('Warm film', 'Teal & orange', 'Black & white', 'Faded') apply CSS filter grades to the scene; play/pause. Reduced motion: a static frame."
+ },
+ {
+  "id": "090",
+  "slug": "dog-eared-books",
+  "name": "Dog-Eared Books",
+  "industry": "retail",
+  "type": {
+   "en": "Independent bookshop",
+   "zh": "独立书店"
+  },
+  "city": "Newtown, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "handmade"
+  ],
+  "style": {
+   "en": "Cosy library shelves",
+   "zh": "温暖的书架"
+  },
+  "interaction": {
+   "en": "Pull a book; blind-date a book",
+   "zh": "抽一本书；和书来场盲约"
+  },
+  "features": [
+   "game",
+   "ordering"
+  ],
+  "fonts": [
+   "Sorts Mill Goudy",
+   "Nunito Sans"
+  ],
+  "palette": [
+   "#5B3A29",
+   "#FFD8A8",
+   "#1F3B2D",
+   "#6D1A36",
+   "#F6EEDC"
+  ],
+  "brief": "Independent bookshop. Cosy library: wood #5B3A29, lamp glow #FFD8A8, deep green #1F3B2D, burgundy #6D1A36, cream pages #F6EEDC; book spines as CSS gradients with embossed fictional titles and authors. Fonts: Sorts Mill Goudy + Nunito Sans. LAYOUT: bookshelves as navigation; staff picks (fictional books with 'staff notes'), events (author talks — sample), book club, kids' corner, gift cards, visit. SIGNATURE 1: pull a book — click/Enter a spine and it slides out and turns to show its cover and a staff note; shelf is keyboard navigable. SIGNATURE 2: 'Blind date with a book' — brown-paper parcels with three hint words; unwrap animation reveals the fictional title; 'Reserve' → DemoKit toast."
+ },
+ {
+  "id": "091",
+  "slug": "second-spin-vintage",
+  "name": "Second Spin Vintage",
+  "industry": "retail",
+  "type": {
+   "en": "Vintage clothing store",
+   "zh": "古着店"
+  },
+  "city": "Fitzroy, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "editorial"
+  ],
+  "style": {
+   "en": "Mid-century mail-order catalogue",
+   "zh": "五六十年代邮购目录"
+  },
+  "interaction": {
+   "en": "Slide the clothing rack",
+   "zh": "拨动衣架"
+  },
+  "features": [
+   "ordering",
+   "game"
+  ],
+  "fonts": [
+   "Bowlby One SC",
+   "Karla"
+  ],
+  "palette": [
+   "#F3ECDC",
+   "#1F7A7A",
+   "#E4572E",
+   "#1A1A1A"
+  ],
+  "brief": "Vintage clothing store. Mid-century mail-order catalogue: two-colour print — teal #1F7A7A and tomato #E4572E on newsprint cream #F3ECDC, black text; halftone illustrations, item numbers, order codes, dashed coupons. Fonts: Bowlby One SC + Karla. LAYOUT: catalogue pages with numbered items ('No. 4021 — Suede jacket, 1970s, size M'); sections: new in, by era, sizing guide, trade in your clothes, visit. SIGNATURE: a clothing rack — drag the rack horizontally with inertia (or arrow keys / buttons) to browse SVG garments on hangers that swing slightly; filters by size and era; clicking an item opens its catalogue entry with measurements; 'Hold it for me' → DemoKit toast. Phone: rack swipes horizontally with visible affordance."
+ },
+ {
+  "id": "092",
+  "slug": "fern-and-frond",
+  "name": "Fern & Frond Nursery",
+  "industry": "retail",
+  "type": {
+   "en": "Plant nursery",
+   "zh": "植物苗圃"
+  },
+  "city": "Brisbane, QLD",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "editorial"
+  ],
+  "style": {
+   "en": "Botanical specimen plates",
+   "zh": "植物标本图版"
+  },
+  "interaction": {
+   "en": "Match plants to your light & lifestyle",
+   "zh": "按光照与生活方式匹配植物"
+  },
+  "features": [
+   "finder"
+  ],
+  "fonts": [
+   "Petrona",
+   "Overpass"
+  ],
+  "palette": [
+   "#F3EDDF",
+   "#8A9A7B",
+   "#2F4A3A",
+   "#4A3B2A"
+  ],
+  "brief": "Plant nursery. Vintage botanical specimen plates: aged paper #F3EDDF, sage #8A9A7B, deep green #2F4A3A, sepia ink #4A3B2A; engraved-style SVG line illustrations of plants, specimen labels. Fonts: Petrona + Overpass. LAYOUT: a grid of specimen plates (Latin name in italics, common name, care symbols), sections: indoor, Australian natives, edibles & herbs, workshops, delivery. SIGNATURE: plant matcher — controls for light (low → bright), pet-safe only, care level, space (desk / floor / balcony); matching plates stay vivid while others fade and shrink; selecting a plant generates a care card with a watering schedule; note: check toxicity for pets (general)."
+ },
+ {
+  "id": "093",
+  "slug": "spoke-and-chain",
+  "name": "Spoke & Chain Cycles",
+  "industry": "retail",
+  "type": {
+   "en": "Bike shop",
+   "zh": "自行车店"
+  },
+  "city": "Canberra, ACT",
+  "lang": "en",
+  "moods": [
+   "techy",
+   "minimal"
+  ],
+  "style": {
+   "en": "Technical exploded view",
+   "zh": "技术爆炸图"
+  },
+  "interaction": {
+   "en": "Explore parts; find your frame size",
+   "zh": "查看零件；计算车架尺寸"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Exo 2",
+   "Inter"
+  ],
+  "palette": [
+   "#1F2328",
+   "#FF6F00",
+   "#EDEFF2",
+   "#FFFFFF"
+  ],
+  "brief": "Bike shop and workshop. Technical exploded view: graphite #1F2328, safety orange #FF6F00, light grey #EDEFF2, white; line drawings with numbered callouts and leader lines. Fonts: Exo 2 + Inter. LAYOUT: exploded bicycle hero (SVG parts separated: frame, fork, wheels, crankset, chain, derailleur, saddle, bars); servicing (sample prices), bike fit, new bikes (road, gravel, commuter, kids), e-bikes, commuter tips, visit. SIGNATURE: hover/tap/Tab a part to highlight it with specs and service tips; an 'Assemble' button animates the parts snapping together (and back); a bike-fit calculator — height + inseam → suggested frame size range (illustrative) for road / MTB / hybrid; book a service via service-level cards → DemoKit toast."
+ },
+ {
+  "id": "094",
+  "slug": "kerb-crawlers",
+  "name": "Kerb Crawlers Skate Co.",
+  "industry": "retail",
+  "type": {
+   "en": "Skate shop",
+   "zh": "滑板店"
+  },
+  "city": "Melbourne, VIC",
+  "lang": "en",
+  "moods": [
+   "bold",
+   "handmade"
+  ],
+  "style": {
+   "en": "Street spray paint on concrete",
+   "zh": "混凝土墙上的街头喷漆"
+  },
+  "interaction": {
+   "en": "Design and spin a 3D deck",
+   "zh": "设计并旋转 3D 滑板"
+  },
+  "features": [
+   "customiser"
+  ],
+  "fonts": [
+   "Rock Salt",
+   "Barlow"
+  ],
+  "palette": [
+   "#BDBDBD",
+   "#111111",
+   "#39FF14",
+   "#FF5E13"
+  ],
+  "brief": "Skate shop. Street style: concrete grey texture #BDBDBD, black #111, spray neon green #39FF14, hot orange #FF5E13; spray drips, stencils, gaffer tape. Fonts: Rock Salt (spray headings) + Barlow. LAYOUT: a concrete wall with spray-painted headings; decks, wheels & trucks, complete setups, skate lessons, local spots (stylised map), shop. SIGNATURE: 3D deck designer — a skateboard deck in CSS 3D; drag to spin, arrow keys to rotate; choose shape (popsicle, cruiser, old-school), graphic (stencil pattern presets drawn in SVG), deck colour, grip tape style and wheel colour; live price (sample); 'Flip it' shows grip vs graphic side. Neon green on grey must meet contrast — use it on black."
+ },
+ {
+  "id": "095",
+  "slug": "opaline-jewellery",
+  "name": "Opaline Jewellery",
+  "industry": "retail",
+  "type": {
+   "en": "Handmade jewellery",
+   "zh": "手工珠宝"
+  },
+  "city": "Paddington, QLD",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "minimal"
+  ],
+  "style": {
+   "en": "Light luxury, opal shimmer",
+   "zh": "轻奢与欧泊光彩"
+  },
+  "interaction": {
+   "en": "Configure a ring with live shimmer",
+   "zh": "定制戒指，实时闪光"
+  },
+  "features": [
+   "customiser",
+   "booking"
+  ],
+  "fonts": [
+   "Cinzel",
+   "Montserrat"
+  ],
+  "palette": [
+   "#FBF8F2",
+   "#EEE8DF",
+   "#D9C3A0",
+   "#1C1C1C"
+  ],
+  "brief": "Handmade jewellery. Light luxury: ivory silk #FBF8F2, pearl #EEE8DF, champagne #D9C3A0, soft black #1C1C1C; opal play-of-colour as slowly animated conic/radial gradients (subtle; static in reduced motion). Fonts: Cinzel + Montserrat. LAYOUT: single hero product close-up (SVG ring with shimmering stone); collections (rings, earrings, necklaces), custom design process, care guide, ring sizing guide, book an appointment. SIGNATURE: ring configurator — metal (yellow gold, rose gold, white gold, sterling silver), stone (Australian opal, sapphire, morganite, lab-grown diamond — generic), setting (solitaire, halo, bezel), band width; the SVG ring updates with the right metal gradients and stone shimmer; a sample price range updates; a ring size helper (circumference → size). Phone: ring sticky at the top while configuring."
+ },
+ {
+  "id": "096",
+  "slug": "kiln-and-clay",
+  "name": "Kiln & Clay Studio",
+  "industry": "retail",
+  "type": {
+   "en": "Ceramics studio",
+   "zh": "陶艺工作室"
+  },
+  "city": "Daylesford, VIC",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "natural"
+  ],
+  "style": {
+   "en": "Earthy textured pottery",
+   "zh": "泥土质感陶艺"
+  },
+  "interaction": {
+   "en": "Shape a pot on the wheel, then fire it",
+   "zh": "在拉坯机上塑形并烧制"
+  },
+  "features": [
+   "customiser",
+   "game"
+  ],
+  "fonts": [
+   "Rozha One",
+   "Nunito Sans"
+  ],
+  "palette": [
+   "#F2EBE0",
+   "#B5643C",
+   "#D8B79A",
+   "#2E2B28",
+   "#A9C1B3"
+  ],
+  "brief": "Ceramics studio with classes and a shop. Earthy: oat #F2EBE0, terracotta #B5643C, clay #D8B79A, charcoal glaze #2E2B28, celadon #A9C1B3; grainy paper texture, irregular blob-shaped sections, handmade feel. Fonts: Rozha One + Nunito Sans. LAYOUT: organic blobs — classes (wheel throwing, handbuilding, glazing), studio membership, shop (cups, bowls, vases — sample prices), firing services, visit. SIGNATURE: pottery wheel — drag control points on one side of the pot profile (or use sliders for belly / neck / lip width and height); a Canvas/SVG lathe renders the revolved pot with shading while the wheel spins; choose a glaze; 'Fire it' → kiln glow animation and the final glazed look (glossy highlight, speckles)."
+ },
+ {
+  "id": "097",
+  "slug": "wick-and-wander",
+  "name": "Wick & Wander Candles",
+  "industry": "retail",
+  "type": {
+   "en": "Candle maker",
+   "zh": "香薰蜡烛"
+  },
+  "city": "Ballarat, VIC",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "handmade"
+  ],
+  "style": {
+   "en": "Candlelit darkness",
+   "zh": "烛光暗调"
+  },
+  "interaction": {
+   "en": "Light the wick; light follows you",
+   "zh": "点燃烛芯；光随你移动"
+  },
+  "features": [
+   "game",
+   "ordering"
+  ],
+  "fonts": [
+   "Prata",
+   "Quattrocento Sans"
+  ],
+  "palette": [
+   "#120E0B",
+   "#FFB45E",
+   "#F3E3C3",
+   "#3A2A33"
+  ],
+  "brief": "Small-batch candle maker. Dark and moody: near-black #120E0B, warm amber #FFB45E glow, wax cream #F3E3C3, smoky plum #3A2A33. Fonts: Prata + Quattrocento Sans. LAYOUT: the page is dark; a radial candlelight glow follows the pointer (on touch it centres on the section in view) with gentle flicker, warming nearby content — but ALL text stays readable outside the light (≥4.5:1). Sections: collections (Eucalypt & Rain, Fireside Tea, Salt & Fig, Wattle Bloom), pour-your-own workshops, ingredients (soy wax, cotton wick — the fictional brand's choices), stockists (sample), shop. SIGNATURE: light the wick — click the unlit candle (or Enter): a canvas flame ignites and flickers, the page warms; a scent picker tints the flame glow and swaps the scent notes. Reduced motion: steady glow, no flicker."
+ },
+ {
+  "id": "098",
+  "slug": "bittersweet-chocolatier",
+  "name": "Bittersweet Chocolatier",
+  "industry": "retail",
+  "type": {
+   "en": "Chocolatier",
+   "zh": "巧克力手作店"
+  },
+  "city": "Hahndorf, SA",
+  "lang": "en",
+  "moods": [
+   "luxe",
+   "bold"
+  ],
+  "style": {
+   "en": "Glossy chocolate box",
+   "zh": "光泽巧克力礼盒"
+  },
+  "interaction": {
+   "en": "Fill a box, bite to see the filling",
+   "zh": "装满礼盒，咬一口看夹心"
+  },
+  "features": [
+   "customiser",
+   "ordering"
+  ],
+  "fonts": [
+   "Yeseva One",
+   "Mulish"
+  ],
+  "palette": [
+   "#2B1710",
+   "#7B4B2A",
+   "#C9A227",
+   "#B0304A",
+   "#F5E9DA"
+  ],
+  "brief": "Hills chocolatier. Glossy chocolate: dark cocoa #2B1710, milk #7B4B2A, gold foil #C9A227, ruby #B0304A, cream #F5E9DA; glossy highlights with gradients, foil textures. Fonts: Yeseva One + Mulish. LAYOUT: the structure is a chocolate box — a grid of compartments holding the sections: signature collection, build a box, hot chocolate, workshops, corporate gifts, visit. SIGNATURE: build a box — drag chocolates (salted caramel, raspberry ruby, hazelnut praline, lemon myrtle ganache, sea-salt dark, wattleseed truffle) into a 9-slot box (or tap 'Add'); hover/focus shows a 'bite' cross-section revealing the filling; box price updates (sample); choose a ribbon colour; 'Wrap it' animation → DemoKit toast."
+ },
+ {
+  "id": "099",
+  "slug": "good-boy-supplies",
+  "name": "Good Boy Supplies",
+  "industry": "retail",
+  "type": {
+   "en": "Pet food subscription",
+   "zh": "宠物食品订阅"
+  },
+  "city": "Marrickville, NSW",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "bold"
+  ],
+  "style": {
+   "en": "Comic-book panels",
+   "zh": "漫画分镜"
+  },
+  "interaction": {
+   "en": "Pick your hero pet, get a box",
+   "zh": "选择你的宠物主角，定制礼盒"
+  },
+  "features": [
+   "customiser",
+   "ordering"
+  ],
+  "fonts": [
+   "Bangers",
+   "Comic Neue"
+  ],
+  "palette": [
+   "#FFFFFF",
+   "#00AEEF",
+   "#EC008C",
+   "#FFF200",
+   "#111111"
+  ],
+  "brief": "Pet food & treats subscription. Comic book: panels with thick black gutters, Ben-Day halftone dots, CMYK brights — cyan #00AEEF, magenta #EC008C, yellow #FFF200 — speech bubbles and action bursts ('WOOF!'). Fonts: Bangers + Comic Neue. LAYOUT: a comic page — panel 1 hero 'Meet Biscuit', panels for products (treats, food, toys), how the subscription works (a 3-panel strip), plans (sample prices), FAQ; panels pop in on scroll (reduced motion: static). SIGNATURE: 'Choose your hero' — pick dog or cat, size, age and allergies → a panel draws your pet in comic style (SVG variations) and suggests a monthly box with items; frequency toggle; 'Subscribe' → DemoKit toast (no payment)."
+ },
+ {
+  "id": "100",
+  "slug": "wren-cottage",
+  "name": "Wren Cottage B&B",
+  "industry": "travel",
+  "type": {
+   "en": "Bed & breakfast",
+   "zh": "民宿"
+  },
+  "city": "Bright, VIC",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "natural"
+  ],
+  "style": {
+   "en": "Storybook cottage at dusk",
+   "zh": "黄昏童话小屋"
+  },
+  "interaction": {
+   "en": "Peek through the windows; pick your nights",
+   "zh": "透过窗户看房间；选择入住日期"
+  },
+  "features": [
+   "booking",
+   "story"
+  ],
+  "fonts": [
+   "Merriweather",
+   "Source Sans 3"
+  ],
+  "palette": [
+   "#2E3A59",
+   "#FFD27F",
+   "#C9C0B3",
+   "#5E7D4E",
+   "#FBF4E6"
+  ],
+  "brief": "Three-room B&B in the high country. Storybook: evening blue #2E3A59, warm window glow #FFD27F, stone #C9C0B3, ivy green #5E7D4E, cream #FBF4E6; a painterly illustrated cottage (SVG with soft gradients) at dusk, fireflies drifting (off in reduced motion). Fonts: Merriweather + Source Sans 3. LAYOUT: the cottage hero; each lit window is a button → peeks into a room (The Wren Room, The Garden Suite, The Loft) with an illustrated interior and details (bed, view, bathroom); then breakfast menu, things to do nearby (general), policies, book. SIGNATURE: availability calendar with nightly sample rates, 2-night minimum on weekends, some nights unavailable; select check-in → check-out range (click, keyboard arrows + Enter) → summary with total → DemoKit toast."
+ },
+ {
+  "id": "101",
+  "slug": "red-dust-expeditions",
+  "name": "Red Dust Expeditions",
+  "industry": "travel",
+  "type": {
+   "en": "Outback 4WD tours",
+   "zh": "内陆越野游"
+  },
+  "city": "Alice Springs, NT",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "bold"
+  ],
+  "style": {
+   "en": "Topographic red earth",
+   "zh": "红土地形等高线"
+  },
+  "interaction": {
+   "en": "Drive the route day by day",
+   "zh": "逐日驾驶路线"
+  },
+  "features": [
+   "map",
+   "story",
+   "booking"
+  ],
+  "fonts": [
+   "Alumni Sans",
+   "Open Sans"
+  ],
+  "palette": [
+   "#B7472A",
+   "#E9C79A",
+   "#4B3B5C",
+   "#9CA36A",
+   "#F6EDE1"
+  ],
+  "brief": "Small-group 4WD tours of the Red Centre. Palette: ochre red #B7472A, sand #E9C79A, dusk purple #4B3B5C, spinifex green #9CA36A, off-white #F6EDE1; topographic contour lines (SVG), dust grain. Fonts: Alumni Sans + Open Sans. Do not depict or name sacred sites as decoration and do not imitate Aboriginal art; landscapes are generic gorges, dunes, ranges and night sky; include a brief, respectful line that tours travel on the lands of Traditional Owners and follow park rules. LAYOUT: map-led — a large topographic map with a dotted route; tours (1-day, 3-day, 5-day — sample prices), what's included, what to bring, book. SIGNATURE: Day 1…Day 5 buttons animate a 4WD icon along the route with an odometer counting kilometres; each stop shows camp, distance, highlights (gorge walk, dune sunset, star-gazing). Phone: map full width, itinerary cards below."
+ },
+ {
+  "id": "102",
+  "slug": "coral-coast-dive",
+  "name": "Coral Coast Dive Co.",
+  "industry": "travel",
+  "type": {
+   "en": "Reef dive tours",
+   "zh": "大堡礁潜水"
+  },
+  "city": "Cairns, QLD",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "techy"
+  ],
+  "style": {
+   "en": "Underwater descent",
+   "zh": "向深海下潜"
+  },
+  "interaction": {
+   "en": "Descend by depth; find your dive",
+   "zh": "按深度下潜；找到适合的潜水"
+  },
+  "features": [
+   "finder",
+   "story"
+  ],
+  "fonts": [
+   "Kanit",
+   "Inter"
+  ],
+  "palette": [
+   "#3ED6E0",
+   "#0B6E99",
+   "#041C32",
+   "#FFFFFF",
+   "#FF8C61"
+  ],
+  "brief": "Reef dive and snorkel trips. Underwater descent: background shifts from surface turquoise #3ED6E0 through #0B6E99 to deep navy #041C32 as you scroll; light rays from above, drifting particles, marine-life silhouettes (SVG/canvas: reef fish, turtle, manta, reef shark — gentle). Fonts: Kanit + Inter. LAYOUT: a side depth gauge (0–30 m) updates with scroll; content stations at depths: 0 m snorkel tours, 5 m intro dives, 12 m certified dives, 18 m advanced course, 30 m night dive (general info), then boat schedule (sample), what's included, book. SIGNATURE: 'Choose your dive' finder (experience level, days, snorkel or dive) highlights the matching station and animates a diver descending to it. Reduced motion: static colour bands per section."
+ },
+ {
+  "id": "103",
+  "slug": "southern-sky-glamping",
+  "name": "Southern Sky Glamping",
+  "industry": "travel",
+  "type": {
+   "en": "Eco glamping",
+   "zh": "生态豪华露营"
+  },
+  "city": "Grampians, VIC",
+  "lang": "en",
+  "moods": [
+   "natural",
+   "playful"
+  ],
+  "style": {
+   "en": "Night sky & day/night switch",
+   "zh": "星空与昼夜切换"
+  },
+  "interaction": {
+   "en": "Connect the Southern Cross",
+   "zh": "连出南十字星"
+  },
+  "features": [
+   "game",
+   "booking"
+  ],
+  "fonts": [
+   "Philosopher",
+   "Lato"
+  ],
+  "palette": [
+   "#0B1026",
+   "#1B2350",
+   "#F7F3E3",
+   "#FF8C42"
+  ],
+  "brief": "Eco glamping retreat. Night sky: deep navy #0B1026, indigo #1B2350, starlight #F7F3E3, campfire orange #FF8C42, eucalyptus silhouettes; a canvas starfield with subtle twinkle. Fonts: Philosopher + Lato. LAYOUT: night landscape hero with glowing tents; a day/night toggle switches the whole site palette (day: warm sand and eucalyptus greens); tents (bell tent, safari suite, stargazer dome), what's included, experiences (bushwalks, stargazing), getting here, book. SIGNATURE: constellation game — click the stars of Crux (the Southern Cross) and the Pointers (Alpha and Beta Centauri) in order; lines draw between them; then an explanation of using the Southern Cross to find south (general astronomy). Stars are real buttons in a logical order for keyboard users."
+ },
+ {
+  "id": "104",
+  "slug": "snowgum-lodge",
+  "name": "Snowgum Lodge",
+  "industry": "travel",
+  "type": {
+   "en": "Ski lodge",
+   "zh": "滑雪小屋"
+  },
+  "city": "Falls Creek, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "Vintage ski poster & split-flap board",
+   "zh": "复古滑雪海报与翻牌显示屏"
+  },
+  "interaction": {
+   "en": "Flip the lifts & snow board",
+   "zh": "翻牌显示缆车与雪况"
+  },
+  "features": [
+   "booking",
+   "story"
+  ],
+  "fonts": [
+   "Fjalla One",
+   "Cabin"
+  ],
+  "palette": [
+   "#1F4E79",
+   "#F7FBFF",
+   "#D7263D",
+   "#2E5E4E",
+   "#F2D492"
+  ],
+  "brief": "Alpine lodge. 1950s travel/ski poster: alpine blue #1F4E79, snow white #F7FBFF, cherry red #D7263D, pine green #2E5E4E, butter #F2D492; flat bold mountain shapes and skier silhouettes; gentle snowfall canvas (off in reduced motion). Fonts: Fjalla One + Cabin. LAYOUT: poster hero; rooms & bunks, lodge life (drying room, fondue night), season dates (sample), getting here (general: carry chains when required), book. SIGNATURE: a split-flap departure board 'Lifts & runs today' — rows flip letter by letter (animated split-flap characters) to show lifts OPEN / ON HOLD / CLOSED, snow depth, temperature, wind (clearly 'sample data'); an 'Update board' button re-flips with new values; the board is also readable as a plain table for screen readers."
+ },
+ {
+  "id": "105",
+  "slug": "salt-and-sail",
+  "name": "Salt & Sail Boat Hire",
+  "industry": "travel",
+  "type": {
+   "en": "Boat hire",
+   "zh": "游艇租赁"
+  },
+  "city": "Pittwater, NSW",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "playful"
+  ],
+  "style": {
+   "en": "Nautical signal flags",
+   "zh": "航海信号旗"
+  },
+  "interaction": {
+   "en": "Spell your name in signal flags",
+   "zh": "用信号旗拼出你的名字"
+  },
+  "features": [
+   "booking",
+   "game"
+  ],
+  "fonts": [
+   "Staatliches",
+   "Hind"
+  ],
+  "palette": [
+   "#0A2342",
+   "#FFFFFF",
+   "#D62828",
+   "#FCBF49",
+   "#2A9DF4"
+  ],
+  "brief": "Boat hire on sheltered waterways. Nautical: navy #0A2342, white, signal red #D62828, yellow #FCBF49, sky blue #2A9DF4; rope borders, knots, a halyard line. Fonts: Staatliches + Hind. LAYOUT: a marina grid of boat cards (runabout, pontoon party boat, small sailing yacht, kayaks) with specs (people, fuel, sample half/full-day prices), what's included, safety briefing, weather policy, licence requirements (general: 'requirements vary — we'll check with you'), book. SIGNATURE: signal-flag translator — type a name or boat name → it's spelled with correct International Code of Signals flags A–Z (accurate SVG designs) hoisted on a halyard with a gentle wave (static in reduced motion); plus booking: date, half/full day, boat → DemoKit toast."
+ },
+ {
+  "id": "106",
+  "slug": "wattle-park-wanderers",
+  "name": "Wattle Park Wanderers FC",
+  "industry": "community",
+  "type": {
+   "en": "Community football club",
+   "zh": "社区足球俱乐部"
+  },
+  "city": "Burwood East, VIC",
+  "lang": "en",
+  "moods": [
+   "retro",
+   "bold"
+  ],
+  "style": {
+   "en": "Old wooden scoreboard",
+   "zh": "老式木质记分牌"
+  },
+  "interaction": {
+   "en": "Sort the ladder, flip the scoreboard",
+   "zh": "排序积分榜，翻转记分牌"
+  },
+  "features": [
+   "finder",
+   "booking"
+  ],
+  "fonts": [
+   "Graduate",
+   "Roboto Condensed"
+  ],
+  "palette": [
+   "#1E6B3A",
+   "#F2C12E",
+   "#5B4A3A",
+   "#FFFFFF"
+  ],
+  "brief": "Community soccer club (juniors to masters). Club colours green #1E6B3A and gold #F2C12E; an old wooden scoreboard #5B4A3A with white painted numerals; chalk pitch lines. Fonts: Graduate + Roboto Condensed. LAYOUT: scoreboard hero (Wanderers vs opponent, last result — sample), fixtures & results, the ladder table, teams (U8–U17, women's, men's, masters), training times, registration (sample fees), sponsors (honest placeholder: 'Your business here — become a sponsor'), club news. SIGNATURE: ladder you can sort (points, goal difference, form) and filter by division; clicking a team shows its W/D/L form chips and next fixture; switching games on the scoreboard flips the numerals. Phone: the table scrolls horizontally inside its own container with a visible affordance; the page itself never scrolls sideways."
+ },
+ {
+  "id": "107",
+  "slug": "riverside-night-market",
+  "name": "Riverside Night Market",
+  "industry": "community",
+  "type": {
+   "en": "Night market",
+   "zh": "夜市"
+  },
+  "city": "South Bank, QLD",
+  "lang": "en",
+  "moods": [
+   "playful",
+   "bold"
+  ],
+  "style": {
+   "en": "Lantern-lit night market",
+   "zh": "灯笼夜市"
+  },
+  "interaction": {
+   "en": "Plan your night on the stall map",
+   "zh": "在摊位地图上规划路线"
+  },
+  "features": [
+   "map",
+   "finder"
+  ],
+  "fonts": [
+   "Titan One",
+   "DM Sans"
+  ],
+  "palette": [
+   "#101935",
+   "#E63946",
+   "#F4A261",
+   "#FFE66D",
+   "#2A9D8F"
+  ],
+  "brief": "Weekly riverside night market. Lantern-lit: dusk navy #101935, lantern red #E63946, warm gold #F4A261, string-light yellow #FFE66D, teal #2A9D8F; glowing SVG lanterns that sway, bokeh. Fonts: Titan One + DM Sans. LAYOUT: hero with swinging lanterns and 'Every Friday'; an interactive stall map (a stylised riverside park plan) with ~24 stalls (dumplings, gözleme, arepas, satay, mango sticky rice, churros, handmade jewellery, plants, candles, a live-music stage); this week, music line-up (sample), getting there, become a stallholder (demo form). SIGNATURE: map filters (Food, Makers, Music, Vegan) make pins glow; tap a stall for what they sell and where; 'Plan my night' adds stalls to a list and draws a walking path between them in order. Reduced motion: lanterns still."
+ },
+ {
+  "id": "108",
+  "slug": "second-chance-rescue",
+  "name": "Second Chance Animal Rescue",
+  "industry": "community",
+  "type": {
+   "en": "Animal rescue charity",
+   "zh": "动物救助"
+  },
+  "city": "Newcastle, NSW",
+  "lang": "en",
+  "moods": [
+   "handmade",
+   "playful"
+  ],
+  "style": {
+   "en": "Warm hand-painted gouache",
+   "zh": "温暖的手绘水粉"
+  },
+  "interaction": {
+   "en": "Find a match; see what a donation provides",
+   "zh": "匹配宠物；看看捐款能带来什么"
+  },
+  "features": [
+   "finder"
+  ],
+  "fonts": [
+   "Amatic SC",
+   "Mulish"
+  ],
+  "palette": [
+   "#FFF8EE",
+   "#F28C38",
+   "#5BA8A0",
+   "#5C3D2E",
+   "#F6A6B2"
+  ],
+  "brief": "Volunteer-run animal rescue (fictional; do not claim charity registration or tax-deductibility). Warm hand-painted: paper #FFF8EE, gouache textures via SVG filters, warm orange #F28C38, soft teal #5BA8A0, brown #5C3D2E, pink #F6A6B2. Fonts: Amatic SC (large headings only) + Mulish. LAYOUT: adoptable animals as cards with hand-painted SVG portraits (names, age, personality), foster program, volunteer, donate, events. SIGNATURE 1: adoption match — filter by species, size, energy, good with kids/cats; cards shuffle with animation; 'Meet me' opens a profile with personality sliders. SIGNATURE 2: donation impact slider ($10–$500) → shows what that could provide (illustrative: a week of kitten food, a vaccination, a vet check) with icons filling in; 'Donate' → DemoKit toast (no payment)."
+ }
+]

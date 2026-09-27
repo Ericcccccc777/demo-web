@@ -1,0 +1,8 @@
+{
+  "id": "044",
+  "tech": ["SVG", "Physics", "Pointer Events", "Web Audio", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["sound", "game", "booking"],
+  "interaction": "A working round timer (3:00 rounds and 1:00 rest by default, three presets, 1–12 rounds, start/pause/reset, ten-second warning, optional synthesised bell and a full-screen mode for phones) plus a heavy bag you punch with click, tap or Space: it swings on spring physics while a combo counter, punch calls and a power meter build towards a knockout.",
+  "fonts": ["Anton", "Barlow"],
+  "notes": "Sound is off by default and synthesised with Web Audio. The weekly fight card opens on today's day. The trial-class form ends in an on-page DEMO state and toast; nothing is booked."
+}

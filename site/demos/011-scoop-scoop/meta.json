@@ -1,0 +1,8 @@
+{
+  "id": "011",
+  "tech": ["SVG", "CSS Grid", "Pointer Events", "Physics", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["game", "customiser", "ordering"],
+  "interaction": "Filter today's 24 flavours (dairy-free, vegan, nut-free), then spin a friction-physics wheel of the matching flavours with the Spin button, Space/Enter, a tap or a flick; the result is announced and can be dropped into a wobbling cone or cup builder of up to three scoops that shows the size and sample price.",
+  "fonts": ["Fredoka", "DM Mono"],
+  "notes": "Nothing can be ordered: the cake request form ends in a demo toast and the cone card says to show it at the counter. Open/closed status and the earliest cake pick-up date use Melbourne time."
+}

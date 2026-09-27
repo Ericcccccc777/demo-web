@@ -1,0 +1,8 @@
+{
+  "id": "103",
+  "tech": ["Canvas 2D", "SVG", "Keyboard shortcuts", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["game", "booking"],
+  "interaction": "Flip the whole site between a twinkling night sky and a sunny day with one switch, then click, tap or Tab through six real star buttons — Gacrux, Acrux, Imai, Mimosa, Alpha Centauri and Hadar, plotted from real coordinates — to draw the Southern Cross and the Pointers; the chart then zooms out to construct the South Celestial Pole and drop a line to south, with each step explained, before a date-aware booking form gives a sample price.",
+  "fonts": ["Philosopher", "Lato"],
+  "notes": "Star positions use a simplified projection for an upright Cross; the horizon in the finding-south diagram is not to scale."
+}

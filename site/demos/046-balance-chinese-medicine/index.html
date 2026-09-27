@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="046">
+<meta name="demo:brand" content="Balance Chinese Medicine">
+<title>Balance Chinese Medicine — acupuncture &amp; Chinese medicine, Chatswood</title>
+<meta name="description" content="Balance Chinese Medicine (和气中医) is a fictional bilingual acupuncture and Chinese herbal medicine clinic in Chatswood, NSW.">
+<meta name="theme-color" content="#E7E1D6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --paper:#F4EFE4;--ink:#1E1E1E;--ink-2:#5C5148;--ink-3:#6B6258;--seal:#B8322A;--seal-d:#8A2A22;--jade:#9FB8A5;--jade-d:#7F9C88;--jade-t:#4E6B57;
+  --wall:#E7E1D6;--wood:#6B4A2E;
+  --brush:"Ma Shan Zheng","STKaiti","KaiTi",serif;--serif:"Noto Serif SC","Songti SC","SimSun",Georgia,serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .27 0 0 0 0 .22 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --ease:cubic-bezier(.3,.7,.2,1);
+}
+@font-face{font-family:"Latin Quotes";src:local("Georgia"),local("Noto Serif"),local("Times New Roman"),local("DejaVu Serif");unicode-range:U+2018-201F}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:70px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--grain),radial-gradient(120% 70% at 50% 0%,#EFEAE1 0%,var(--wall) 60%,#DDD6C9 100%);background-attachment:scroll;color:var(--ink);font:400 16px/1.85 var(--serif);-webkit-font-smoothing:antialiased;overflow-x:clip}
+html:not(.zh) body{font-family:"Latin Quotes",var(--serif)}
+html.zh body{line-height:1.95;letter-spacing:.02em}
+h1,h2,h3{margin:0;font-weight:600}
+p{margin:0}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--seal);outline-offset:3px;border-radius:2px}
+html.zh .e,html:not(.zh) .z{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- side panels (header) ---------- */
+.hd{position:relative;z-index:20}
+.vnav{position:fixed;top:120px;right:calc(50% + 392px);display:flex;flex-direction:row-reverse;gap:4px;list-style:none;margin:0;padding:0}
+.vnav a{writing-mode:vertical-rl;display:flex;align-items:center;gap:8px;padding:12px 5px;line-height:1.25;text-decoration:none;color:var(--ink-2);font-size:15px;letter-spacing:.12em;border-radius:3px;transition:color .3s,background .3s}
+.vnav a:hover{background:rgba(30,30,30,.05);color:var(--ink)}
+.vnav .n{font-family:var(--brush);font-size:17px;color:var(--seal-d)}
+.vnav .e{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.vnav a[aria-current=true]{color:var(--ink)}
+.vnav a[aria-current=true]::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--seal)}
+.act{position:fixed;top:120px;left:calc(50% + 380px);display:grid;gap:18px;justify-items:start}
+.lang{display:flex;flex-direction:column;border:1px solid rgba(30,30,30,.25);border-radius:3px;overflow:hidden;background:rgba(244,239,228,.6)}
+.lang button{border:0;background:none;padding:10px 14px;min-width:64px;min-height:44px;cursor:pointer;font-size:15px;letter-spacing:.06em}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.sealbtn{display:grid;place-items:center;width:78px;height:78px;background:var(--seal);color:#fff;text-decoration:none;border-radius:4px;box-shadow:inset 0 0 0 3px var(--seal),inset 0 0 0 5px rgba(255,255,255,.8);transform:rotate(-3deg);transition:transform .3s var(--ease)}
+.sealbtn:hover{transform:rotate(0) scale(1.04)}
+.sealbtn b{font:400 30px/1 var(--brush);letter-spacing:0}
+.sealbtn span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-top:-6px}
+.act .hint{font-size:13px;line-height:1.5;color:var(--ink-3);max-width:160px}
+.topbar{display:none}
+@media (max-width:1180px){
+  .vnav,.act{display:none}
+  .topbar{display:flex;position:sticky;top:0;z-index:30;align-items:center;gap:12px;padding:8px max(14px,env(safe-area-inset-left));background:rgba(231,225,214,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(30,30,30,.12)}
+  .topbar .mini{flex:none;width:34px;height:34px;display:grid;place-items:center;background:var(--seal);color:#fff;font:400 15px/1 var(--brush);border-radius:3px;writing-mode:vertical-rl;letter-spacing:-.05em}
+  .topbar .nm{font-size:14.5px;font-weight:600;line-height:1.2;margin-right:auto;min-width:0;overflow-wrap:anywhere}
+  .topbar .lang{flex-direction:row;flex:none;white-space:nowrap}
+  .topbar .lang button{min-width:48px;padding:8px 10px}
+  .topbar .bk{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;background:var(--seal);color:#fff;text-decoration:none;border-radius:3px;font-size:14.5px;white-space:nowrap}
+}
+
+/* ---------- the scroll ---------- */
+.scroll{width:min(680px,100% - 20px);margin:0 auto;position:relative;padding-top:64px}
+.cord{position:absolute;top:0;left:50%;width:220px;height:66px;transform:translateX(-50%)}
+.rod{position:relative;height:18px;margin:0 -24px;border-radius:9px;background:linear-gradient(180deg,#8A6440,#5A3B22 55%,#3E2715);box-shadow:0 6px 10px -6px rgba(0,0,0,.5)}
+.mount{background:var(--jade);background-image:radial-gradient(circle at 25% 25%,rgba(255,255,255,.2) 0 1.2px,transparent 1.8px),radial-gradient(circle at 75% 75%,rgba(40,60,45,.12) 0 1.2px,transparent 1.8px),linear-gradient(90deg,rgba(255,255,255,.08),rgba(0,0,0,.05));background-size:12px 12px,12px 12px,100% 100%;padding:0 16px;box-shadow:0 30px 60px -30px rgba(40,30,20,.45),0 2px 0 rgba(0,0,0,.04)}
+.tian{height:118px;position:relative;margin:0 -16px;background:#8FAA96;background-image:inherit;background-size:inherit;border-bottom:3px solid #D9CFB8}
+.tian::before,.tian::after{content:"";position:absolute;top:0;width:12px;height:100%;background:#B7CBB9;box-shadow:inset 0 0 0 1px rgba(40,60,45,.18)}
+.tian::before{left:33%}.tian::after{left:67%}
+.di{height:70px;margin:0 -16px;background:#8FAA96;background-image:inherit;background-size:inherit;border-top:3px solid #D9CFB8}
+.paper{background:var(--grain),var(--paper);box-shadow:inset 0 0 0 1px rgba(30,30,30,.08),inset 0 0 40px rgba(120,100,70,.08);position:relative}
+.roller{position:relative;height:30px;margin:0 -34px;border-radius:15px;background:linear-gradient(180deg,#8A6440,#6B4A2E 40%,#4A301A 80%,#3A2513);box-shadow:0 14px 20px -12px rgba(0,0,0,.55)}
+.roller::before,.roller::after{content:"";position:absolute;top:-4px;width:30px;height:38px;border-radius:8px;background:radial-gradient(circle at 40% 35%,#F2EBDD,#CDBF9F 60%,#9C8A66)}
+.roller::before{left:-14px}.roller::after{right:-14px}
+.pad{padding:0 clamp(20px,6vw,56px)}
+
+/* head */
+.head{position:relative;padding-bottom:36px}
+.mtn{display:block;width:100%;height:auto}
+.vtw{position:absolute;top:24px;right:clamp(16px,5vw,44px);display:flex;flex-direction:column;align-items:center;gap:12px}
+.vt{writing-mode:vertical-rl;font:400 clamp(38px,8vw,58px)/1 var(--brush);letter-spacing:.06em;color:var(--ink);text-shadow:0 0 18px rgba(244,239,228,.9)}
+.seal span{display:grid;place-items:center;width:clamp(34px,6vw,44px);height:clamp(34px,6vw,44px);background:var(--seal);color:#fff;font:400 clamp(14px,2.6vw,19px)/1 var(--brush);writing-mode:vertical-rl;letter-spacing:-.02em;border-radius:3px;box-shadow:inset 0 0 0 .05em var(--seal),inset 0 0 0 .08em rgba(255,255,255,.75);transform:rotate(4deg);filter:url(#rough)}
+.brand{margin-top:26px}
+.kick{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+html.zh .kick{letter-spacing:.3em}
+.h1{font-size:clamp(28px,4.6vw,40px);line-height:1.15;margin-top:8px;letter-spacing:.01em;overflow-wrap:anywhere}
+.lede{margin-top:14px;font-size:17px;color:var(--ink-2);max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.b{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:3px;text-decoration:none;font-size:15.5px;letter-spacing:.04em;border:1px solid var(--ink);cursor:pointer;background:transparent;transition:background .3s,color .3s}
+.b:hover{background:var(--ink);color:var(--paper)}
+.b.r{background:var(--seal);border-color:var(--seal);color:#fff}
+.b.r:hover{background:var(--seal-d)}
+
+/* sections */
+.sec{padding:34px 0 30px;position:relative}
+.stroke{display:block;width:62%;height:14px;margin:0 auto 30px;opacity:.85}
+.sec h2{display:flex;flex-direction:column;gap:2px}
+.cal{font:400 clamp(40px,7vw,54px)/1.05 var(--brush);letter-spacing:.04em;color:var(--ink)}
+.sec h2 .e{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--seal-d);font-weight:600}
+.num{position:absolute;right:0;top:36px;font:400 20px/1 var(--brush);color:#fff;background:var(--seal);width:30px;height:30px;display:grid;place-items:center;border-radius:2px;opacity:.9}
+.sec p.t{margin-top:16px;color:var(--ink)}
+.facts{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;font-size:15px;color:var(--ink-2)}
+.facts li{display:flex;gap:10px;align-items:baseline}
+.facts li::before{content:"";flex:none;width:7px;height:7px;background:var(--seal);transform:rotate(45deg) translateY(-2px)}
+.aside{margin-top:18px;padding:14px 16px;border-left:3px solid var(--jade-d);background:rgba(159,184,165,.16);font-size:14.5px;color:var(--ink-2)}
+[data-ink]{transition:opacity 1.1s var(--ease),filter 1.1s var(--ease),transform 1.1s var(--ease)}
+@media (prefers-reduced-motion:no-preference){.js [data-ink]:not(.in){opacity:0;filter:blur(7px);transform:translateY(10px)}
+  .js .head{animation:unroll 1s var(--ease) both}}
+@keyframes unroll{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@media (max-width:800px){.rod{margin:0 -7px}.roller{margin:0 -5px;height:26px}.roller::before{left:-4px;width:18px;height:32px}.roller::after{right:-4px;width:18px;height:32px}}
+@media (max-width:600px){.facts{grid-template-columns:1fr}.brand{padding-right:66px;margin-top:-4px}.tian{height:62px}.scroll{padding-top:46px}.cord{height:46px}.di{height:44px}}
+
+/* five elements */
+.wx-bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.cyc{min-height:44px;padding:0 13px;border:1px solid var(--ink);background:transparent;border-radius:3px;cursor:pointer;font-size:15px;letter-spacing:.04em}
+.cyc b{font:400 20px/1 var(--brush);margin-left:6px}
+.cyc[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.wheel{position:relative;width:min(100%,440px);aspect-ratio:1;margin:18px auto 0}
+.wheel svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ring{fill:none;stroke:rgba(30,30,30,.12);stroke-width:1}
+.arr{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;opacity:.55;marker-end:url(#ah);transition:opacity .4s,stroke .4s,stroke-width .4s}
+.arr.hi{opacity:1;stroke:var(--seal);stroke-width:3;marker-end:url(#ahR)}
+.arr.dim{opacity:.16}
+.grp{transition:opacity .5s}
+.grp.off{display:none}
+@media (prefers-reduced-motion:no-preference){.flow .arr{stroke-dasharray:7 7;animation:flow 1.4s linear infinite}.flow.paused .arr{animation-play-state:paused}}
+@keyframes flow{from{stroke-dashoffset:14}to{stroke-dashoffset:0}}
+.node{position:absolute;width:21%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1.5px solid var(--ink);background:radial-gradient(circle at 42% 38%,rgba(255,255,255,.55),transparent 60%),var(--wc);cursor:pointer;display:grid;place-items:center;align-content:center;gap:0;padding:0;transition:transform .35s var(--ease),box-shadow .35s}
+.node:hover{transform:translate(-50%,-50%) scale(1.06)}
+.node .c{font:400 clamp(30px,7vw,42px)/1 var(--brush);color:var(--tc,#1E1E1E)}
+.node .l{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tc,#1E1E1E);margin-top:2px}
+.node[aria-pressed=true]{box-shadow:0 0 0 4px var(--paper),0 0 0 6px var(--seal);transform:translate(-50%,-50%) scale(1.08)}
+.wx-info{margin-top:22px;padding:18px 20px;border:1px solid rgba(30,30,30,.18);border-radius:3px;background:rgba(255,255,255,.35);min-height:150px}
+.wx-info h3{display:flex;align-items:baseline;gap:12px;font-size:20px}
+.wx-info h3 .c{font:400 40px/1 var(--brush);color:var(--seal)}
+.wx-info dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px;margin:14px 0 0}
+.wx-info dt{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+html.zh .wx-info dt{letter-spacing:.3em}
+.wx-info dd{margin:2px 0 0;font-size:15.5px}
+.wx-info .rel{margin-top:12px;font-size:14.5px;color:var(--ink-2)}
+.cyc-note{margin-top:14px;font-size:15px;color:var(--ink-2)}
+.cyc-note b{font-family:var(--brush);font-weight:400;font-size:19px;color:var(--ink);letter-spacing:.06em}
+@media (max-width:600px){.wx-info dl{grid-template-columns:1fr 1fr}.cyc{padding:0 10px;font-size:14px}.btns .b{flex:1 1 100%;justify-content:center}.node .l{font-size:10px;letter-spacing:.1em}}
+
+/* expect, fees, book */
+.steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:16px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s,cjk-decimal);font:400 26px/44px var(--brush);text-align:center;width:44px;height:44px;border:1px solid var(--ink);border-radius:50%}
+.steps b{display:block;font-weight:600}
+.fees{margin:20px 0 0;border-top:1px solid var(--ink)}
+.fee{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid rgba(30,30,30,.2)}
+.fee h3{font-size:16.5px}
+.fee .d{grid-column:1;font-size:14px;color:var(--ink-3)}
+.fee .p{grid-row:1/3;grid-column:2;align-self:center;font-size:22px;font-weight:600;color:var(--seal-d)}
+.form{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:6px;font-size:13.5px;letter-spacing:.06em;color:var(--ink-2)}
+.fld.full{grid-column:1/-1}
+.fld input,.fld select{width:100%;min-height:48px;border:1px solid rgba(30,30,30,.45);border-radius:3px;background:rgba(255,255,255,.55);padding:0 12px;font-size:16px;color:var(--ink);letter-spacing:0}
+.form .b{grid-column:1/-1;justify-content:center;min-height:52px;font-size:16px}
+.form .fine{grid-column:1/-1;font-size:13.5px;color:var(--ink-3)}
+@media (max-width:600px){.form{grid-template-columns:1fr}}
+
+/* colophon (footer) */
+.colo{padding:30px 0 40px;display:grid;grid-template-columns:1fr auto;gap:18px 24px;align-items:start}
+.colo .bn{font-size:22px;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.colo .cn{font:400 30px/1 var(--brush);letter-spacing:.1em;margin-top:6px}
+.colo .seal2{width:64px;height:64px;display:grid;place-items:center;background:var(--seal);color:#fff;font:400 26px/1 var(--brush);writing-mode:vertical-rl;border-radius:3px;box-shadow:inset 0 0 0 3px var(--seal),inset 0 0 0 5px rgba(255,255,255,.75);transform:rotate(-4deg);filter:url(#rough)}
+.colo dl{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0;font-size:15px}
+.colo dt{color:var(--ink-3);font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding-top:2px}
+html.zh .colo dt{letter-spacing:.3em}
+.colo dd{margin:0}
+.colo .disc{grid-column:1/-1;font-size:13.5px;color:var(--ink-2);padding-top:14px;border-top:1px solid rgba(30,30,30,.2)}
+.wallnote{text-align:center;font-size:13px;color:var(--ink-3);padding:26px 16px 70px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="2.4"/></filter>
+  <filter id="softer"><feGaussianBlur stdDeviation="6"/></filter>
+  <linearGradient id="inkA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E1E1E" stop-opacity=".82"/><stop offset=".55" stop-color="#1E1E1E" stop-opacity=".25"/><stop offset="1" stop-color="#1E1E1E" stop-opacity="0"/></linearGradient>
+  <linearGradient id="inkB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A3A3A" stop-opacity=".5"/><stop offset=".7" stop-color="#3A3A3A" stop-opacity="0"/></linearGradient>
+  <linearGradient id="inkC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E7A72" stop-opacity=".38"/><stop offset=".8" stop-color="#6E7A72" stop-opacity="0"/></linearGradient>
+  <path id="brushline" d="M2,8 C60,4 120,9 200,6 C280,3 360,9 440,7 C470,6 490,8 498,7 C490,9 470,10 440,10 C360,12 280,8 200,10 C120,12 60,9 2,8Z"/>
+  <marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L8,5 L0,9 Z" fill="#1E1E1E"/></marker><marker id="ahR" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L8,5 L0,9 Z" fill="#B8322A"/></marker>
+</defs></svg>
+
+<header class="hd">
+  <div class="topbar">
+    <span class="mini" aria-hidden="true">和气</span>
+    <span class="nm" data-brand>Balance Chinese Medicine</span>
+    <div class="lang" role="group" aria-label="Language / 语言"><button type="button" data-l="en" aria-pressed="true" lang="en">EN</button><button type="button" data-l="zh" aria-pressed="false" lang="zh-Hans">中文</button></div>
+  </div>
+  <nav aria-label="Sections">
+    <ol class="vnav" id="vnav">
+      <li><a href="#about"><span class="n" aria-hidden="true">壹</span><span lang="zh-Hans">诊所</span><span class="e">About</span></a></li>
+      <li><a href="#acu"><span class="n" aria-hidden="true">贰</span><span lang="zh-Hans">针灸</span><span class="e">Acupuncture</span></a></li>
+      <li><a href="#herb"><span class="n" aria-hidden="true">叁</span><span lang="zh-Hans">中药</span><span class="e">Herbs</span></a></li>
+      <li><a href="#cup"><span class="n" aria-hidden="true">肆</span><span lang="zh-Hans">拔罐</span><span class="e">Cupping</span></a></li>
+      <li><a href="#wuxing"><span class="n" aria-hidden="true">伍</span><span lang="zh-Hans">五行</span><span class="e">Five Elements</span></a></li>
+      <li><a href="#expect"><span class="n" aria-hidden="true">陆</span><span lang="zh-Hans">须知</span><span class="e">Expect</span></a></li>
+      <li><a href="#fees"><span class="n" aria-hidden="true">柒</span><span lang="zh-Hans">收费</span><span class="e">Fees</span></a></li>
+      <li><a href="#book"><span class="n" aria-hidden="true">捌</span><span lang="zh-Hans">预约</span><span class="e">Book</span></a></li>
+    </ol>
+  </nav>
+  <div class="act">
+    <div class="lang" role="group" aria-label="Language / 语言"><button type="button" data-l="en" aria-pressed="true" lang="en">EN</button><button type="button" data-l="zh" aria-pressed="false" lang="zh-Hans">中文</button></div>
+    <a class="sealbtn" href="#book"><b lang="zh-Hans" aria-hidden="true">预约</b><span class="e">Book</span><span class="z" lang="zh-Hans">预约就诊</span></a>
+    <p class="hint"><span class="e">Mandarin &amp; English spoken<br>Chatswood, NSW</span><span class="z" lang="zh-Hans">可讲普通话及英语<br>新州查茨伍德</span></p>
+  </div>
+</header>
+
+<main class="scroll" id="main">
+  <svg class="cord" viewBox="0 0 220 66" aria-hidden="true" focusable="false"><path d="M8,66 L110,8 L212,66" fill="none" stroke="#4A3A2A" stroke-width="2"/><circle cx="110" cy="7" r="5" fill="#6B5A48"/></svg>
+  <div class="rod" aria-hidden="true"></div>
+  <div class="mount">
+    <div class="tian" aria-hidden="true"></div>
+    <div class="paper">
+      <section class="head" aria-labelledby="h1">
+        <svg class="mtn" viewBox="0 0 640 300" aria-hidden="true" focusable="false">
+          <circle cx="470" cy="78" r="17" fill="#B8322A" opacity=".85"/>
+          <path d="M0,190 C40,170 70,120 110,112 C150,104 170,150 200,150 C240,150 260,96 300,90 C340,84 370,140 410,146 C450,152 480,120 520,118 C570,116 600,150 640,160 L640,300 L0,300Z" fill="url(#inkC)" filter="url(#softer)"/>
+          <path d="M-10,230 C30,210 60,160 96,146 C120,136 138,150 150,168 C170,140 196,96 232,92 C262,90 280,130 300,170 C320,196 350,214 380,222 L380,300 L-10,300Z" fill="url(#inkB)" filter="url(#soft)"/>
+          <path d="M300,250 C340,226 380,180 420,150 C446,130 466,140 480,160 C500,128 530,112 560,122 C600,136 620,190 650,210 L650,300 L300,300Z" fill="url(#inkB)" filter="url(#soft)" opacity=".85"/>
+          <path d="M-10,300 L-10,240 C20,232 44,190 70,150 C84,128 96,98 118,90 C136,84 150,100 158,122 C166,146 170,176 190,196 C214,220 250,236 280,262 L300,300Z" fill="url(#inkA)"/>
+          <g fill="none" stroke="#1E1E1E" stroke-linecap="round" opacity=".55"><path d="M104,112 C98,140 92,170 70,200" stroke-width="2.2"/><path d="M126,104 C124,130 128,158 140,184" stroke-width="1.6"/><path d="M150,140 C148,160 156,190 176,210" stroke-width="1.4"/><path d="M84,150 C80,168 74,190 60,214" stroke-width="1.2"/></g>
+          <g fill="#1E1E1E" opacity=".72"><path d="M116,92 l-9,9 h5 l-8,9 h6 l-9,10 h24 l-9,-10 h6 l-8,-9 h5z"/><path d="M137,86 l-7,8 h4 l-7,8 h5 l-7,8 h20 l-7,-8 h5 l-7,-8 h4z"/></g>
+          <rect x="0" y="228" width="640" height="72" fill="#F4EFE4" opacity=".55" filter="url(#softer)"/>
+          <g fill="none" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round" opacity=".6"><path d="M392,70 q6,-5 11,0 q5,-5 11,0"/><path d="M418,88 q4,-4 8,0 q4,-4 8,0"/></g>
+        </svg>
+        <div class="vtw" aria-hidden="true"><p class="vt" lang="zh-Hans">和气中医</p><div class="seal"><span>和气</span></div></div>
+        <div class="pad brand">
+          <p class="kick"><span class="e">Acupuncture · Chinese herbal medicine · Cupping</span><span class="z" lang="zh-Hans">针灸 · 中药 · 拔罐</span></p>
+          <h1 class="h1" id="h1"><span data-brand>Balance Chinese Medicine</span><span class="sr" lang="zh-Hans">和气中医</span></h1>
+          <p class="lede"><span class="e">A quiet, unhurried clinic in Chatswood for acupuncture and Chinese herbal medicine. Consultations in English and Mandarin.</span><span class="z" lang="zh-Hans">位于查茨伍德的一间安静、从容的诊所，提供针灸与中药调理，可用英语或普通话问诊。</span></p>
+          <div class="btns">
+            <a class="b r" href="#book"><span class="e">Book a visit</span><span class="z" lang="zh-Hans">预约就诊</span></a>
+            <a class="b" href="#wuxing"><span class="e">Turn the Five Elements wheel</span><span class="z" lang="zh-Hans">转动五行图</span></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="pad">
+        <section class="sec" id="about" aria-labelledby="t-about" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">壹</span>
+          <h2 id="t-about"><span class="cal" lang="zh-Hans">关于诊所</span><span class="e">About the clinic</span></h2>
+          <p class="t"><span class="e">We’re a few minutes’ walk from Chatswood station: two treatment rooms, soft light and no rush. Our practitioners take time to listen, whether you want to unwind or to try a different approach alongside the care you already have.</span><span class="z" lang="zh-Hans">诊所距查茨伍德车站步行仅几分钟，设有两间治疗室，光线柔和，节奏从容。无论您是想放松身心，还是希望在现有医疗之外尝试另一种调理方式，我们的医师都会耐心倾听。</span></p>
+          <ul class="facts">
+            <li><span class="e">Mandarin and English spoken</span><span class="z" lang="zh-Hans">可讲普通话及英语</span></li>
+            <li><span class="e">Late appointments Tue &amp; Thu</span><span class="z" lang="zh-Hans">周二、周四晚间开诊</span></li>
+            <li><span class="e">Single-use, sterile needles only</span><span class="z" lang="zh-Hans">只使用一次性无菌针具</span></li>
+            <li><span class="e">Health fund rebates may apply</span><span class="z" lang="zh-Hans">部分私人医保或可报销</span></li>
+          </ul>
+        </section>
+
+        <section class="sec" id="acu" aria-labelledby="t-acu" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">贰</span>
+          <h2 id="t-acu"><span class="cal" lang="zh-Hans">针灸</span><span class="e">Acupuncture</span></h2>
+          <p class="t"><span class="e">Very fine, single-use needles are placed at chosen points and left for 20–30 minutes while you rest. Most people feel a dull ache, warmth or heaviness around the needle — not the sharpness of an injection.</span><span class="z" lang="zh-Hans">医师在选定的穴位施以极细的一次性针具，留针二十至三十分钟，期间您可静卧休息。多数人针下会有酸、胀、温热或沉重感，与打针的刺痛感不同。</span></p>
+          <p class="aside"><span class="e">Please tell us if you’re pregnant, take blood thinners, or tend to feel faint around needles.</span><span class="z" lang="zh-Hans">如您怀孕、正在服用抗凝药物或有晕针史，请提前告知医师。</span></p>
+        </section>
+
+        <section class="sec" id="herb" aria-labelledby="t-herb" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">叁</span>
+          <h2 id="t-herb"><span class="cal" lang="zh-Hans">中药调理</span><span class="e">Herbal consultation</span></h2>
+          <p class="t"><span class="e">We ask about sleep, digestion, energy and anything else you’d like to raise, look at your tongue and feel your pulse. If herbs are suggested, they come as easy-to-mix granules or as traditional raw herbs.</span><span class="z" lang="zh-Hans">医师会询问您的睡眠、消化、精力等情况，并察看舌象、切脉。如建议服用中药，可选择冲服方便的颗粒剂或传统饮片。</span></p>
+          <p class="aside"><span class="e">Bring a list of any medicines and supplements you take — some herbs don’t mix with them.</span><span class="z" lang="zh-Hans">请携带您正在服用的药物及保健品清单——部分中药不宜与其同服。</span></p>
+        </section>
+
+        <section class="sec" id="cup" aria-labelledby="t-cup" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">肆</span>
+          <h2 id="t-cup"><span class="cal" lang="zh-Hans">拔罐</span><span class="e">Cupping</span></h2>
+          <p class="t"><span class="e">Glass or silicone cups create gentle suction over the back and shoulders, usually for five to fifteen minutes. They can leave round marks that fade over several days — worth knowing before a beach weekend.</span><span class="z" lang="zh-Hans">以玻璃罐或硅胶罐在背部、肩部形成轻柔吸力，通常留罐五至十五分钟。拔罐后可能留下圆形印记，数日内逐渐消退——如周末打算去海边，不妨提前考虑。</span></p>
+        </section>
+
+        <section class="sec" id="wuxing" aria-labelledby="t-wx" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">伍</span>
+          <h2 id="t-wx"><span class="cal" lang="zh-Hans">五行</span><span class="e">The Five Elements</span></h2>
+          <p class="t"><span class="e">Wood, Fire, Earth, Metal and Water are a classical Chinese way of describing change and how things relate. Tap an element to see its traditional associations, then switch between the two cycles.</span><span class="z" lang="zh-Hans">木、火、土、金、水——五行——是中国古典思想中描述万物变化与相互关系的框架。点击任一元素，查看其传统对应；并可切换相生、相克两种循环。</span></p>
+          <div class="wx-bar" role="group" aria-label="Cycle / 循环">
+            <button class="cyc" type="button" data-c="gen" aria-pressed="true"><span class="e">Generating</span><span class="z" lang="zh-Hans">相生</span><b lang="zh-Hans" aria-hidden="true">生</b></button>
+            <button class="cyc" type="button" data-c="ctl" aria-pressed="false"><span class="e">Controlling</span><span class="z" lang="zh-Hans">相克</span><b lang="zh-Hans" aria-hidden="true">克</b></button>
+          </div>
+          <div class="wheel" id="wheel" role="group" aria-label="Five Elements wheel / 五行图">
+            <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle class="ring" cx="200" cy="208" r="144"/><g class="grp flow" id="gGen"></g><g class="grp flow off" id="gCtl"></g></svg>
+          </div>
+          <p class="cyc-note" id="cycNote" aria-live="polite"></p>
+          <div class="wx-info" id="wxInfo" aria-live="polite"></div>
+          <p class="aside"><span class="e">Shared as cultural background from classical Chinese thought — not a diagnosis or a health claim.</span><span class="z" lang="zh-Hans">以上为中国传统文化背景介绍，并非诊断或疗效说明。</span></p>
+        </section>
+
+        <section class="sec" id="expect" aria-labelledby="t-ex" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">陆</span>
+          <h2 id="t-ex"><span class="cal" lang="zh-Hans">初诊须知</span><span class="e">What to expect</span></h2>
+          <ol class="steps">
+            <li><p><b><span class="e">Before you come</span><span class="z" lang="zh-Hans">就诊前</span></b><span class="e">Wear loose clothing and have a light meal an hour or two before.</span><span class="z" lang="zh-Hans">请穿着宽松衣物，并在一两个小时前少量进食。</span></p></li>
+            <li><p><b><span class="e">Consultation · about 20 minutes</span><span class="z" lang="zh-Hans">问诊 · 约二十分钟</span></b><span class="e">Your health history and questions, then we look at your tongue and take your pulse.</span><span class="z" lang="zh-Hans">了解您的健康状况并问诊，随后察舌、切脉。</span></p></li>
+            <li><p><b><span class="e">Treatment</span><span class="z" lang="zh-Hans">治疗</span></b><span class="e">Acupuncture, cupping or both, while you rest in a warm, quiet room.</span><span class="z" lang="zh-Hans">在温暖安静的房间中静卧，进行针灸、拔罐或两者结合。</span></p></li>
+            <li><p><b><span class="e">Afterwards</span><span class="z" lang="zh-Hans">治疗后</span></b><span class="e">Drink some water, take it easy, and we’ll talk through a plan — no long packages.</span><span class="z" lang="zh-Hans">多喝水，适当休息；我们会与您商量后续安排，不捆绑长期疗程。</span></p></li>
+          </ol>
+        </section>
+
+        <section class="sec" id="fees" aria-labelledby="t-fee" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">柒</span>
+          <h2 id="t-fee"><span class="cal" lang="zh-Hans">收费标准</span><span class="e">Fees · sample prices</span></h2>
+          <div class="fees">
+            <div class="fee"><h3><span class="e">Initial consultation &amp; acupuncture</span><span class="z" lang="zh-Hans">初诊及针灸</span></h3><span class="d"><span class="e">75 minutes</span><span class="z" lang="zh-Hans">75分钟</span></span><span class="p">$120</span></div>
+            <div class="fee"><h3><span class="e">Follow-up acupuncture</span><span class="z" lang="zh-Hans">复诊针灸</span></h3><span class="d"><span class="e">45 minutes</span><span class="z" lang="zh-Hans">45分钟</span></span><span class="p">$90</span></div>
+            <div class="fee"><h3><span class="e">Herbal consultation</span><span class="z" lang="zh-Hans">中药咨询</span></h3><span class="d"><span class="e">30 minutes · herbs from $25 a week</span><span class="z" lang="zh-Hans">30分钟 · 药费每周$25起</span></span><span class="p">$60</span></div>
+            <div class="fee"><h3><span class="e">Cupping, added to a treatment</span><span class="z" lang="zh-Hans">拔罐（可附加于治疗）</span></h3><span class="d"><span class="e">15 minutes</span><span class="z" lang="zh-Hans">15分钟</span></span><span class="p">$30</span></div>
+          </div>
+          <p class="aside"><span class="e">Sample prices for this demo. Health fund rebates may apply, depending on your cover.</span><span class="z" lang="zh-Hans">以上为演示用示例价格。能否获得私人医保报销，视您的保险计划而定。</span></p>
+        </section>
+
+        <section class="sec" id="book" aria-labelledby="t-bk" data-ink>
+          <svg class="stroke" viewBox="0 0 500 14" preserveAspectRatio="none" aria-hidden="true"><use href="#brushline" fill="#1E1E1E"/></svg>
+          <span class="num" aria-hidden="true">捌</span>
+          <h2 id="t-bk"><span class="cal" lang="zh-Hans">预约</span><span class="e">Book a visit</span></h2>
+          <form class="form" id="form" novalidate>
+            <label class="fld full"><span><span class="e">Treatment</span><span class="z" lang="zh-Hans">项目</span></span>
+              <select name="svc" data-opts="svc"></select></label>
+            <label class="fld"><span><span class="e">Preferred day</span><span class="z" lang="zh-Hans">希望日期</span></span>
+              <select name="day" id="day"></select></label>
+            <label class="fld"><span><span class="e">Time of day</span><span class="z" lang="zh-Hans">时段</span></span>
+              <select name="time" data-opts="time"></select></label>
+            <label class="fld"><span><span class="e">Your name</span><span class="z" lang="zh-Hans">姓名</span></span><input name="name" autocomplete="name"></label>
+            <label class="fld"><span><span class="e">Mobile</span><span class="z" lang="zh-Hans">手机</span></span><input name="tel" type="tel" autocomplete="tel" placeholder="0491 570 158"></label>
+            <label class="fld full"><span><span class="e">Consultation language</span><span class="z" lang="zh-Hans">问诊语言</span></span>
+              <select name="lng" data-opts="lng"></select></label>
+            <button class="b r" type="submit"><span class="e">Request an appointment</span><span class="z" lang="zh-Hans">提交预约申请</span></button>
+            <p class="fine"><span class="e">This is a concept demo: nothing is sent and no appointment is made.</span><span class="z" lang="zh-Hans">此为概念演示网站：不会发送任何信息，也不会真正预约。</span></p>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="scroll" style="padding-top:0">
+  <div class="mount" style="padding-top:0">
+    <div class="paper pad">
+      <div class="colo">
+        <div><p class="bn" data-brand>Balance Chinese Medicine</p><p class="cn" lang="zh-Hans">和气中医</p></div>
+        <span class="seal2" aria-hidden="true">中医</span>
+        <dl>
+          <dt><span class="e">Hours</span><span class="z" lang="zh-Hans">时间</span></dt>
+          <dd><span class="e">Mon, Wed, Fri 9am–5pm · Tue &amp; Thu 9am–7pm · Sat 9am–1pm</span><span class="z" lang="zh-Hans">周一、三、五 9:00–17:00 · 周二、四 9:00–19:00 · 周六 9:00–13:00</span></dd>
+          <dt><span class="e">Where</span><span class="z" lang="zh-Hans">地址</span></dt>
+          <dd><span class="e">Chatswood, NSW — near the station</span><span class="z" lang="zh-Hans">新州查茨伍德 · 近火车站</span></dd>
+          <dt><span class="e">Call</span><span class="z" lang="zh-Hans">电话</span></dt>
+          <dd><a href="tel:0255503618">(02) 5550 3618</a></dd>
+          <dt><span class="e">Email</span><span class="z" lang="zh-Hans">邮箱</span></dt>
+          <dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+        </dl>
+        <p class="disc"><span class="e">General information only — not medical advice. Chinese medicine doesn’t replace your GP, and experiences differ from person to person. A concept demo for a fictional clinic.</span><span class="z" lang="zh-Hans">本网站内容仅为一般信息，不构成医疗建议。中医调理不能替代全科医生诊疗，个人体验因人而异。此为虚构诊所的概念演示。</span></p>
+      </div>
+    </div>
+    <div class="di" aria-hidden="true"></div>
+  </div>
+  <div class="roller" aria-hidden="true"></div>
+  <p class="wallnote"><span class="e">Sample prices · fictional business</span><span class="z" lang="zh-Hans">示例价格 · 虚构商户</span></p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var d=document, root=d.documentElement; root.classList.add("js");
+  var mq=matchMedia("(prefers-reduced-motion: reduce)");
+  function reduced(){return window.DemoKit?DemoKit.reducedMotion:mq.matches}
+  function $(s,c){return (c||d).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+  var lang="en";
+
+  /* ---------- data ---------- */
+  var EL=[
+    {k:"wood",c:"木",e:"Wood",wc:"#A9C2A6",tc:"#1E1E1E",a:198,d:{season:["Spring","春"],colour:["Green-blue","青"],organs:["Liver & Gallbladder","肝 · 胆"],emotion:["Anger","怒"],direction:["East","东"],taste:["Sour","酸"]}},
+    {k:"fire",c:"火",e:"Fire",wc:"#B8322A",tc:"#FFFFFF",a:-90,d:{season:["Summer","夏"],colour:["Red","赤"],organs:["Heart & Small Intestine","心 · 小肠"],emotion:["Joy","喜"],direction:["South","南"],taste:["Bitter","苦"]}},
+    {k:"earth",c:"土",e:"Earth",wc:"#D9B96E",tc:"#1E1E1E",a:-18,d:{season:["Late summer","长夏"],colour:["Yellow","黄"],organs:["Spleen & Stomach","脾 · 胃"],emotion:["Pensiveness","思"],direction:["Centre","中"],taste:["Sweet","甘"]}},
+    {k:"metal",c:"金",e:"Metal",wc:"#F1EEE6",tc:"#1E1E1E",a:54,d:{season:["Autumn","秋"],colour:["White","白"],organs:["Lung & Large Intestine","肺 · 大肠"],emotion:["Grief","悲"],direction:["West","西"],taste:["Pungent","辛"]}},
+    {k:"water",c:"水",e:"Water",wc:"#2B2B2B",tc:"#F4EFE4",a:126,d:{season:["Winter","冬"],colour:["Black","黑"],organs:["Kidney & Bladder","肾 · 膀胱"],emotion:["Fear","恐"],direction:["North","北"],taste:["Salty","咸"]}}
+  ];
+  var GEN=[["wood","fire"],["fire","earth"],["earth","metal"],["metal","water"],["water","wood"]];
+  var CTL=[["wood","earth"],["earth","water"],["water","fire"],["fire","metal"],["metal","wood"]];
+  var byK={}; EL.forEach(function(x){byK[x.k]=x});
+  var LBL={season:["Season","季节"],colour:["Colour","颜色"],organs:["Organ pair","脏腑"],emotion:["Emotion","情志"],direction:["Direction","方位"],taste:["Taste","五味"]};
+  var CX=200, CY=208, R=144;
+  function pt(a,r){var t=a*Math.PI/180;return [CX+(r||R)*Math.cos(t),CY+(r||R)*Math.sin(t)]}
+
+  /* ---------- wheel ---------- */
+  var wheel=$("#wheel"), gGen=$("#gGen"), gCtl=$("#gCtl"), mode="gen", sel="wood";
+  EL.forEach(function(x){
+    var p=pt(x.a), b=d.createElement("button");
+    b.type="button"; b.className="node"; b.dataset.k=x.k;
+    b.style.left=(p[0]/4)+"%"; b.style.top=(p[1]/4)+"%"; b.style.setProperty("--wc",x.wc); b.style.setProperty("--tc",x.tc);
+    b.innerHTML='<span class="c" lang="zh-Hans">'+x.c+'</span><span class="l e">'+x.e+'</span>';
+    wheel.appendChild(b);
+  });
+  function arc(a1,a2){var s=pt(a1+16),e=pt(a2-16);return "M"+s[0].toFixed(1)+","+s[1].toFixed(1)+" A"+R+","+R+" 0 0 1 "+e[0].toFixed(1)+","+e[1].toFixed(1)}
+  function line(p1,p2){var dx=p2[0]-p1[0],dy=p2[1]-p1[1],L=Math.hypot(dx,dy),o=50;return "M"+(p1[0]+dx/L*o).toFixed(1)+","+(p1[1]+dy/L*o).toFixed(1)+" L"+(p2[0]-dx/L*o).toFixed(1)+","+(p2[1]-dy/L*o).toFixed(1)}
+  gGen.innerHTML=GEN.map(function(g){var a1=byK[g[0]].a,a2=byK[g[1]].a;if(a2<a1)a2+=360;return '<path class="arr" data-f="'+g[0]+'" data-t="'+g[1]+'" d="'+arc(a1,a2)+'"/>'}).join("");
+  gCtl.innerHTML=CTL.map(function(g){return '<path class="arr" data-f="'+g[0]+'" data-t="'+g[1]+'" d="'+line(pt(byK[g[0]].a),pt(byK[g[1]].a))+'"/>'}).join("");
+
+  function T(pair){return lang==="zh"?pair[1]:pair[0]}
+  function nm(k){var x=byK[k];return lang==="zh"?x.c:x.c+" "+x.e}
+  function renderWx(){
+    $$(".node",wheel).forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k===sel);b.setAttribute("aria-label",byK[b.dataset.k].c+" "+byK[b.dataset.k].e)});
+    gGen.classList.toggle("off",mode!=="gen"); gCtl.classList.toggle("off",mode!=="ctl");
+    $$(".cyc").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.c===mode)});
+    var grp=mode==="gen"?gGen:gCtl;
+    $$(".arr",grp).forEach(function(p){var on=p.dataset.f===sel||p.dataset.t===sel;p.classList.toggle("hi",on);p.classList.toggle("dim",!on)});
+    var x=byK[sel], set=mode==="gen"?GEN:CTL;
+    var from=set.filter(function(g){return g[1]===sel})[0][0], to=set.filter(function(g){return g[0]===sel})[0][1];
+    var rel=mode==="gen"?(lang==="zh"?(byK[from].c+"生"+x.c+"，"+x.c+"生"+byK[to].c+"。"):(nm(from)+" nourishes "+x.e+"; "+x.e+" nourishes "+nm(to)+"."))
+                       :(lang==="zh"?(byK[from].c+"克"+x.c+"，"+x.c+"克"+byK[to].c+"。"):(nm(from)+" restrains "+x.e+"; "+x.e+" restrains "+nm(to)+"."));
+    $("#wxInfo").innerHTML='<h3><span class="c" lang="zh-Hans">'+x.c+'</span><span>'+(lang==="zh"?"五行之"+x.c:x.e)+'</span></h3><dl>'+
+      Object.keys(LBL).map(function(k){return '<div><dt>'+T(LBL[k])+'</dt><dd>'+T(x.d[k])+'</dd></div>'}).join("")+'</dl><p class="rel">'+rel+'</p>';
+    $("#cycNote").innerHTML=mode==="gen"
+      ?(lang==="zh"?'<b>相生</b>：木生火，火生土，土生金，金生水，水生木——一环滋养一环。':'<b lang="zh-Hans">相生</b> Generating: each element nourishes the next — Wood feeds Fire, Fire leaves Earth as ash, Earth yields Metal, Metal gathers Water, Water nourishes Wood.')
+      :(lang==="zh"?'<b>相克</b>：木克土，土克水，水克火，火克金，金克木——彼此制约，保持平衡。':'<b lang="zh-Hans">相克</b> Controlling: each element restrains another — Wood parts Earth, Earth dams Water, Water quenches Fire, Fire melts Metal, Metal cuts Wood.');
+  }
+  wheel.addEventListener("click",function(e){var b=e.target.closest(".node");if(b){sel=b.dataset.k;renderWx()}});
+  wheel.addEventListener("keydown",function(e){
+    var b=e.target.closest(".node"); if(!b) return;
+    var order=["fire","earth","metal","water","wood"], i=order.indexOf(b.dataset.k), n=null;
+    if(e.key==="ArrowRight"||e.key==="ArrowDown") n=order[(i+1)%5]; else if(e.key==="ArrowLeft"||e.key==="ArrowUp") n=order[(i+4)%5];
+    if(n){e.preventDefault();sel=n;renderWx();$('.node[data-k="'+n+'"]',wheel).focus()}
+  });
+  $$(".cyc").forEach(function(b){b.addEventListener("click",function(){mode=b.dataset.c;renderWx()})});
+  if("IntersectionObserver" in window){new IntersectionObserver(function(es){$$(".flow").forEach(function(g){g.classList.toggle("paused",!es[0].isIntersecting)})}).observe(wheel)}
+
+  /* ---------- booking form ---------- */
+  var OPTS={
+    svc:[["Initial consultation & acupuncture","初诊及针灸"],["Follow-up acupuncture","复诊针灸"],["Herbal consultation","中药咨询"],["Acupuncture with cupping","针灸加拔罐"]],
+    time:[["Morning","上午"],["Afternoon","下午"],["Evening (Tue & Thu)","晚间（周二、周四）"]],
+    lng:[["English","英语"],["Mandarin","普通话"]]
+  };
+  var DE=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], DZ=["周日","周一","周二","周三","周四","周五","周六"], ME=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var days=[], t=new Date(); t.setHours(12,0,0,0);
+  while(days.length<6){t.setDate(t.getDate()+1);if(t.getDay()!==0)days.push(new Date(t))}
+  function fillForm(){
+    $$("[data-opts]").forEach(function(s){var v=s.selectedIndex;s.innerHTML=OPTS[s.dataset.opts].map(function(o){return "<option>"+T(o)+"</option>"}).join("");s.selectedIndex=Math.max(0,v)});
+    var ds=$("#day"), v=ds.selectedIndex;
+    ds.innerHTML=days.map(function(x){return "<option>"+(lang==="zh"?(x.getMonth()+1)+"月"+x.getDate()+"日 "+DZ[x.getDay()]:DE[x.getDay()]+" "+x.getDate()+" "+ME[x.getMonth()])+"</option>"}).join("");
+    ds.selectedIndex=Math.max(0,v);
+  }
+  $("#form").addEventListener("submit",function(e){
+    e.preventDefault();
+    var f=e.target, msg=lang==="zh"?"演示网站——并未真正预约。您选择了："+f.svc.value+"，"+f.day.value+"，"+f.time.value+"。":"Demo only — no appointment was made. You asked for "+f.svc.value+", "+f.day.value+", "+f.time.value.toLowerCase()+".";
+    if(window.DemoKit) DemoKit.toast(msg,5200);
+  });
+
+  /* ---------- language ---------- */
+  function setLang(l,save){
+    lang=l==="zh"?"zh":"en";
+    root.classList.toggle("zh",lang==="zh");
+    root.lang=lang==="zh"?"zh-Hans":"en-AU";
+    $$(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===lang)});
+    var brand=window.DemoKit?DemoKit.brand:"Balance Chinese Medicine";
+    d.title=lang==="zh"?"和气中医 "+brand+" — 查茨伍德针灸与中医":brand+" — acupuncture & Chinese medicine, Chatswood";
+    fillForm(); renderWx();
+    if(save){try{localStorage.setItem("hd046-lang",lang)}catch(x){}}
+  }
+  $$(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l,true)})});
+  addEventListener("hd:brandchange",function(){setLang(lang,false)});
+  var saved=null; try{saved=localStorage.getItem("hd046-lang")}catch(x){}
+  setLang(saved||"en",false);
+
+  /* ---------- ink reveals + nav state ---------- */
+  var secs=$$("[data-ink]");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -10% 0px"});
+    secs.forEach(function(s){io.observe(s)});
+    var links=$$("#vnav a");
+    var nio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-45% 0px -50% 0px"});
+    secs.forEach(function(s){nio.observe(s)});
+  } else secs.forEach(function(s){s.classList.add("in")});
+})();
+</script>
+</body>
+</html>

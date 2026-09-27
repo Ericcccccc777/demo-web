@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="015">
+<meta name="demo:brand" content="Salty's Fish Bar">
+<title>Salty's Fish Bar — fish &amp; chips, Cronulla</title>
+<meta name="description" content="Concept site for Salty's Fish Bar, a fictional fish and chip shop in Cronulla, NSW — the menu as newspaper classifieds, with order-ahead pickup tickets.">
+<meta name="theme-color" content="#EDE7DA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --paper:#EDE7DA;--paper-2:#E5DDCB;--paper-3:#D8CDB6;
+  --ink:#151515;--ink-2:#34312B;--ink-3:#5A5448;
+  --lemon:#F4D03F;--sea:#2D6E8E;--sea-d:#1F5570;--ticket:#FBF8F0;
+  --serif:"Old Standard TT","Iowan Old Style","Times New Roman",Georgia,serif;
+  --cond:"Oswald","Arial Narrow","Roboto Condensed",Arial,sans-serif;
+  --gut:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;color:var(--ink);font:400 17px/1.55 var(--serif);background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .1 0 0 0 0 .07 0 0 0 .7 -.3'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3C/svg%3E"),
+  radial-gradient(1200px 700px at 12% 8%,rgba(255,252,240,.55),transparent 60%),
+  radial-gradient(900px 900px at 92% 60%,rgba(190,172,130,.18),transparent 60%);
+  overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.page{max-width:1360px;margin:0 auto;padding:0 var(--gut);position:relative}
+/* phone: the single column keeps its rules */
+.page::before,.page::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--ink);opacity:.8;pointer-events:none}
+.page::before{left:6px}.page::after{right:6px}
+@media(min-width:760px){:root{--gut:32px}.page::before,.page::after{display:none}}
+.fold{position:absolute;left:0;right:0;top:960px;height:18px;pointer-events:none;background:linear-gradient(rgba(60,50,30,.05),rgba(255,255,255,.28) 45%,rgba(60,50,30,.07) 55%,transparent)}
+.grease{position:absolute;pointer-events:none;mix-blend-mode:multiply;border-radius:46% 54% 58% 42%/52% 44% 56% 48%;
+  background:radial-gradient(closest-side,rgba(206,170,86,.20),rgba(206,170,86,.13) 62%,rgba(160,122,46,.22) 86%,rgba(160,122,46,0) 100%)}
+.lead{position:relative}
+.g1{width:190px;height:150px;right:16%;bottom:40px;transform:rotate(-12deg);opacity:.85}
+.g2{width:150px;height:130px;transform:rotate(18deg);opacity:.75}
+@media(max-width:759px){.callouts{display:none}.g1{right:4%;bottom:120px}}
+
+/* ---------- masthead ---------- */
+.strip{display:flex;justify-content:space-between;gap:12px;padding:12px 4px 9px;border-bottom:1px solid var(--ink);
+  font:500 11px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.strip .mid{display:none}
+.mast-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 4px 10px;align-items:stretch}
+.ear{margin:0;border:1px solid var(--ink);padding:8px 10px;font:400 14px/1.3 var(--serif);font-style:italic}
+.ear b{display:block;font:600 11px/1.2 var(--cond);font-style:normal;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px}
+.ear a{font-style:normal;font-family:var(--cond);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.title{grid-column:1/-1;order:-1;margin:2px 0 4px;text-align:center;font:700 clamp(44px,13.6vw,118px)/.9 var(--serif);
+  letter-spacing:-.022em;overflow-wrap:anywhere;text-wrap:balance}
+.dateline{border-top:4px solid var(--ink);box-shadow:0 -7px 0 -6px var(--ink);margin-top:3px;padding:7px 4px;border-bottom:1px solid var(--ink);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;font:500 12px/1.3 var(--cond);letter-spacing:.1em;text-transform:uppercase}
+.dateline .sea{color:var(--sea-d)}
+.sections{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:3px double var(--ink)}
+.sections a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:6px 4px;text-align:center;text-decoration:none;
+  font:500 13px/1.1 var(--cond);letter-spacing:.1em;text-transform:uppercase;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.sections a:nth-child(3n){border-right:0}
+.sections a:nth-last-child(-n+3){border-bottom:0}
+.sections a:hover{background:var(--lemon)}
+@media(min-width:760px){
+  .strip .mid{display:inline}
+  .mast-row{gap:16px;padding:16px 0 12px}
+  .ear{padding:10px 12px;font-size:15px}
+  .sections{display:flex;justify-content:center;flex-wrap:wrap}
+  .sections a{border:0;padding:6px 18px;min-height:40px;position:relative}
+  .sections a+a::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:1px;background:var(--ink)}
+}
+
+/* ---------- front page ---------- */
+.front{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--ink)}
+.lead{padding:22px 4px 26px}
+.kicker{margin:0 0 8px;font:500 12px/1.3 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.kicker mark{background:var(--lemon);color:var(--ink);padding:2px 6px;margin-right:8px}
+.headline{margin:0;font:700 clamp(46px,7.3vw,106px)/.93 var(--serif);letter-spacing:-.03em;text-wrap:balance}
+.deck{margin:14px 0 10px;font:italic 400 clamp(19px,1.9vw,25px)/1.35 var(--serif);max-width:44ch;color:var(--ink-2)}
+.byline{margin:0 0 16px;padding:7px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font:500 11px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.plate{margin:0 0 18px}
+.plate svg{display:block;width:100%;height:auto}
+.plate figcaption{font:italic 14px/1.4 var(--serif);color:var(--ink-3);border-bottom:1px solid var(--ink);padding:6px 0 8px}
+.plate figcaption b{font:600 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:var(--ink);margin-right:4px}
+.cols{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.cols p{margin:0 0 .8em}
+.cols p:first-child::first-letter{float:left;font:700 4.3em/.8 var(--serif);margin:.06em .08em 0 0}
+.rail{padding:0 4px 26px;display:grid;gap:18px;align-content:start}
+@media(min-width:760px){.cols{column-count:2;column-gap:30px;column-rule:1px solid var(--ink)}}
+@media(min-width:1100px){
+  .mast-row{grid-template-columns:190px minmax(0,1fr) 190px;gap:28px;padding:18px 0 12px;align-items:center}
+  .title{order:0;grid-column:auto;margin:0}
+  .front{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+  .lead{padding:26px 28px 30px 0;border-right:1px solid var(--ink)}
+  .rail{padding:26px 0 30px 28px}
+  .cols{column-count:3}
+}
+/* boxes */
+.box{border:1px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;margin:4px;padding:14px 14px 12px;background:rgba(255,252,242,.35)}
+.box-h{margin:-14px -14px 12px;padding:8px 14px;background:var(--sea);color:#fff;font:600 18px/1.1 var(--cond);letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+.box-h small{font:500 11px/1 var(--cond);letter-spacing:.12em;opacity:.9}
+.tide-chart{display:block;width:100%;height:auto;margin-bottom:6px}
+.tide-table{width:100%;border-collapse:collapse;font:500 14px/1.2 var(--cond);letter-spacing:.04em}
+.tide-table th,.tide-table td{padding:6px 2px;border-bottom:1px dotted var(--ink);text-align:left;font-weight:500}
+.tide-table th{text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.tide-table td:last-child{text-align:right}
+.wx{list-style:none;margin:12px 0 8px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 12px}
+.wx li{display:grid;grid-template-columns:26px 1fr;gap:6px;align-items:start;font-size:15px;line-height:1.25}
+.wx svg{width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wx b{display:block;font:600 12px/1.2 var(--cond);letter-spacing:.1em;text-transform:uppercase}
+.fine{font:italic 13px/1.4 var(--serif);color:var(--ink-3);margin:6px 0 0}
+.stop{margin:4px;background:var(--lemon);padding:14px 16px;border:1px solid var(--ink);position:relative}
+.stop p{margin:0}
+.stop .k{font:600 13px/1 var(--cond);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.stop .k::before{content:"";width:10px;height:10px;background:var(--ink);border-radius:50%}
+.teaser{margin:4px;border-top:4px solid var(--ink);padding-top:10px}
+.teaser h3{margin:0 0 6px;font:700 30px/1 var(--serif);letter-spacing:-.01em}
+.teaser p{margin:0 0 12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 18px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);
+  font:600 14px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;border-radius:0;transition:transform .15s,background .15s,color .15s}
+.btn:hover{background:var(--lemon);color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--lemon)}
+
+/* section bars */
+.bar{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:8px 4px 7px;margin-top:3px}
+.bar h2{margin:0;font:600 clamp(24px,3vw,34px)/1 var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.bar p{margin:0;font:italic 15px/1.3 var(--serif);color:var(--ink-2)}
+.bar.dark{background:var(--ink);color:var(--paper);border-color:var(--ink);padding:10px 12px}
+.bar.dark p{color:#E6DFCF}
+.bar .tag{font:500 11px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;background:var(--lemon);color:var(--ink);padding:4px 6px;margin-left:6px;font-style:normal}
+
+/* ---------- catch of the day ---------- */
+.catch{padding:26px 0 30px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:16px}
+.card{position:relative;perspective:1100px;padding:0 10px 14px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:14px}
+.card:nth-child(2n){border-right:0}
+.card:last-child{grid-column:1/-1;border-right:0;border-bottom:0;margin-bottom:0}
+.card:last-child .face svg{height:84px}
+@media(min-width:900px){.cards{grid-template-columns:repeat(5,1fr)}.card,.card:last-child{grid-column:auto;padding:0 16px 6px;border-right:1px solid var(--ink);border-bottom:0;margin-bottom:0}.card:last-child{border-right:0}.card:last-child .face svg{height:96px}}
+.card-in{display:grid;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.3,.8,.25,1);min-height:100%}
+.card.on .card-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column}
+.face.back{transform:rotateY(180deg);background:var(--ticket);border:1px solid var(--ink);padding:12px 12px 10px;box-shadow:3px 3px 0 var(--ink)}
+.face svg{width:100%;height:96px;margin:4px 0 8px}
+.sp{margin:0;font:700 23px/1.05 var(--serif);letter-spacing:-.01em}
+.lat{margin:3px 0 0;font:italic 14px/1.3 var(--serif);color:var(--ink-3)}
+.how{margin:8px 0 0;padding-top:6px;border-top:1px dotted var(--ink);font:500 13px/1.3 var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.turn{margin-top:auto;padding-top:10px;font:500 11px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+.turn svg{width:14px;height:14px;margin:0;fill:none;stroke:currentColor;stroke-width:2}
+.facts{margin:8px 0 0;padding:0;list-style:none;font-size:14.5px;line-height:1.3}
+.facts li{padding:5px 0;border-top:1px dotted var(--ink)}
+.flip{position:absolute;inset:0;z-index:3;background:transparent;border:0;cursor:pointer;padding:0}
+.flip:focus-visible{outline:3px solid var(--sea);outline-offset:-2px}
+.card:hover .turn{text-decoration:underline}
+
+/* ---------- classifieds + order desk ---------- */
+.market{padding:6px 0 30px;position:relative}
+.market-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.ads{display:grid;grid-template-columns:minmax(0,1fr)}
+.ad-col{padding:0 4px}
+.cat{margin:18px 0 6px;padding:5px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);text-align:center;font:600 14px/1.1 var(--cond);letter-spacing:.2em;text-transform:uppercase}
+.ad{padding:10px 0 11px;border-bottom:1px solid var(--ink)}
+.ad:last-child{border-bottom:0}
+.line{display:grid;grid-template-columns:30px minmax(0,1fr) auto;align-items:center;gap:0 8px;cursor:pointer;min-height:40px}
+.line+.line{margin-top:2px}
+.line input{position:absolute;opacity:0;width:1px;height:1px}
+.tick{width:26px;height:26px;border:1.5px solid var(--ink);background:var(--ticket);display:grid;place-items:center}
+.tick svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:30;stroke-dashoffset:30;transition:stroke-dashoffset .28s ease-out}
+.line input:checked+.tick svg{stroke-dashoffset:0}
+.line input:focus-visible+.tick{outline:3px solid var(--sea);outline-offset:2px}
+.nm{font:600 17px/1.1 var(--cond);letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:baseline;gap:6px;min-width:0}
+.nm::after{content:"";flex:1;border-bottom:2px dotted var(--ink-3);transform:translateY(-3px);min-width:12px}
+.nm small{font:400 13px/1 var(--cond);letter-spacing:.06em;text-transform:none;color:var(--ink-3)}
+.pr{font:700 17px/1 var(--serif);white-space:nowrap}
+.pr small{font:500 11px/1 var(--cond);letter-spacing:.06em;margin-left:2px;color:var(--ink-3)}
+.ad p{margin:6px 0 0 38px;font-size:15.5px;line-height:1.42;color:var(--ink-2)}
+.line input:checked~.nm{background:linear-gradient(var(--lemon),var(--lemon)) 0 85%/100% 45% no-repeat}
+.qty{display:flex;align-items:center;gap:0;margin:8px 0 0 38px;width:max-content;border:1.5px solid var(--ink);background:var(--ticket)}
+.qty[hidden]{display:none}
+.qty button{width:40px;height:38px;border:0;background:transparent;cursor:pointer;font:600 20px/1 var(--cond)}
+.qty button:hover{background:var(--lemon)}
+.qty output{min-width:34px;text-align:center;font:600 16px/1 var(--cond);border-left:1px solid var(--ink);border-right:1px solid var(--ink);padding:10px 0}
+.qty span{font:500 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;padding:0 10px}
+.ad.display{border:2px solid var(--ink);padding:12px 12px 12px;margin:12px 0;background:rgba(255,252,242,.5)}
+.ad.display.lemon{background:var(--lemon)}
+.ad.display.lemon p{color:var(--ink)}
+.ad.display .big{display:block;font:700 26px/1 var(--serif);letter-spacing:-.01em;margin:0 0 6px 0;text-align:center}
+.ad.display .line{grid-template-columns:30px minmax(0,1fr) auto}
+.ad.display p{margin-left:0;text-align:center}
+.ad.display .qty{margin-left:auto;margin-right:auto}
+@media(min-width:760px){
+  .ads{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ad-col{padding:0 14px;border-right:1px solid var(--ink)}
+  .ad-col:first-child{padding-left:0}
+  .ad-col:last-child{border-right:0;padding-right:0}
+  .nm{font-size:15.5px}.pr{font-size:16px}
+  .ad p{margin-left:0;font-size:15px}
+  .qty{margin-left:0}
+}
+@media(min-width:1100px){
+  .market-grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+  .ads{padding-right:14px;border-right:1px solid var(--ink)}
+}
+/* desk */
+.desk{padding:24px 4px 0}
+.desk-in{border:2px solid var(--ink);background:var(--ticket);box-shadow:6px 6px 0 var(--ink);padding:0 16px 18px}
+@media(min-width:1100px){.desk{padding:18px 0 0 22px}.desk-in{position:sticky;top:14px;max-height:calc(100vh - 28px);overflow:auto}}
+.desk-h{margin:0 -16px;padding:10px 16px 9px;background:var(--ink);color:var(--paper);font:600 22px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+.desk-h small{font:500 11px/1 var(--cond);letter-spacing:.14em;color:var(--lemon)}
+.desk-sub{margin:10px 0 12px;font:italic 15px/1.35 var(--serif);color:var(--ink-2)}
+.summary{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:6px 0}
+.summary .empty{margin:6px 0;font:italic 15px/1.35 var(--serif);color:var(--ink-3)}
+.lines{list-style:none;margin:0;padding:0;max-height:196px;overflow:auto}
+.lines li{display:flex;gap:6px;align-items:baseline;padding:4px 0;font:500 15px/1.2 var(--cond);letter-spacing:.04em}
+.lines li span:first-child{flex:1;display:flex;gap:6px;min-width:0}
+.lines li span:first-child::after{content:"";flex:1;border-bottom:1px dotted var(--ink-3);min-width:8px}
+.total{display:flex;justify-content:space-between;margin:6px 0 0;padding-top:6px;border-top:1px dashed var(--ink);font:600 18px/1.1 var(--cond);letter-spacing:.08em;text-transform:uppercase}
+.field{display:grid;gap:5px;margin:14px 0 4px}
+.field span{font:600 12px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.field input{min-height:44px;border:1.5px solid var(--ink);background:#fff;padding:8px 10px;font:400 17px/1.2 var(--serif);border-radius:0}
+.slots{border:0;margin:12px 0 0;padding:0;min-width:0}
+.slots legend{padding:0;margin-bottom:8px;font:600 12px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.slot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+@media(min-width:480px){.slot-grid{grid-template-columns:repeat(4,1fr)}}
+.slot{position:relative;display:grid;place-items:center;min-height:44px;border:1.5px solid var(--ink);background:#fff;cursor:pointer;text-align:center;padding:4px 2px}
+.slot input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.slot span{font:500 14px/1 var(--cond);letter-spacing:.03em}
+.slot small{font:500 9.5px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+.slot:has(input:checked){background:var(--ink);color:var(--lemon)}
+.slot:has(input:focus-visible){outline:3px solid var(--sea);outline-offset:2px}
+.slot.busy{cursor:not-allowed;color:var(--ink-3);background:repeating-linear-gradient(-45deg,transparent 0 5px,rgba(21,21,21,.09) 5px 6px),var(--paper-2);border-style:dashed}
+.slot.busy span{text-decoration:line-through}
+.desk-msg{min-height:1.4em;margin:10px 0 8px;font:italic 15px/1.35 var(--serif);color:#8A2A0E}
+.print{width:100%}
+.fab{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 16px;
+  background:var(--ink);color:var(--paper);text-decoration:none;font:600 14px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;box-shadow:4px 4px 0 var(--lemon);transition:transform .25s,opacity .25s}
+.fab[hidden]{display:flex;opacity:0;transform:translateY(20px);pointer-events:none;visibility:hidden}
+.fab b{background:var(--lemon);color:var(--ink);min-width:24px;height:24px;display:grid;place-items:center;border-radius:50%}
+
+/* ---------- printer dialog ---------- */
+.press{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:max(24px,env(safe-area-inset-top)) 12px max(24px,env(safe-area-inset-bottom));
+  background:rgba(17,16,14,.86);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);color:var(--ink);opacity:1;transition:opacity .2s}
+.press[hidden]{display:none}
+.press-in{width:100%;max-width:430px;margin:auto 0;padding:4px 4px 16px}
+.printer{position:relative;height:92px;background:linear-gradient(#2a2926,#161514);border-radius:14px 14px 6px 6px;box-shadow:0 10px 0 -4px #0b0b0a,inset 0 1px 0 rgba(255,255,255,.12);margin:0 6px}
+.printer .plate-t{position:absolute;left:18px;top:16px;font:600 12px/1 var(--cond);letter-spacing:.24em;color:#cfc6b2;text-transform:uppercase}
+.printer .led{position:absolute;right:20px;top:16px;width:10px;height:10px;border-radius:50%;background:#6c6c64}
+.press.printing .led{background:#9BE36B;box-shadow:0 0 10px #9BE36B}
+.printer .mouth{position:absolute;left:22px;right:22px;bottom:14px;height:8px;border-radius:4px;background:#050505;box-shadow:inset 0 2px 3px #000}
+.feed{position:relative;height:0;overflow:hidden;margin:-18px 36px 0;transition:height 1.7s steps(17,end)}
+.ticket{position:absolute;left:0;right:0;bottom:0;background:var(--ticket);padding:22px 18px 30px;color:var(--ink);font:500 14px/1.35 var(--cond);letter-spacing:.04em;
+  -webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 9px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 9px repeat-x;
+  mask:linear-gradient(#000,#000) top/100% calc(100% - 9px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 9px repeat-x}
+.feed.done{height:auto!important}
+.feed.done .ticket{position:relative}
+.t-brand{margin:0;text-align:center;font:700 25px/1 var(--serif);letter-spacing:-.01em;overflow-wrap:anywhere}
+.t-sub{margin:4px 0 10px;text-align:center;font:500 11px/1.2 var(--cond);letter-spacing:.2em;text-transform:uppercase}
+.t-row{display:flex;justify-content:space-between;gap:8px;margin:0;padding:6px 0;border-top:1px dashed var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:13px}
+.t-lines{list-style:none;margin:0;padding:6px 0;border-top:1px dashed var(--ink)}
+.t-lines li{display:flex;justify-content:space-between;gap:10px;padding:2px 0}
+.t-total{display:flex;justify-content:space-between;margin:0;padding:8px 0;border-top:2px solid var(--ink);font:600 20px/1 var(--cond);letter-spacing:.06em}
+.t-pick{margin:4px 0 0;padding:10px 8px;text-align:center;border:2px solid var(--ink);font:600 13px/1.2 var(--cond);letter-spacing:.16em;text-transform:uppercase}
+.t-pick b{display:block;font:700 30px/1.05 var(--serif);letter-spacing:0;text-transform:none}
+.t-pay{margin:10px 0 8px;text-align:center;font:italic 14px/1.3 var(--serif);text-transform:none;letter-spacing:0}
+.t-bars{height:34px;margin:6px 10px 6px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 12px,var(--ink) 12px 13px,transparent 13px 16px)}
+.t-demo{margin:0;text-align:center;font:600 11px/1.3 var(--cond);letter-spacing:.2em;text-transform:uppercase}
+.stamp{position:absolute;right:26px;bottom:46px;background:rgba(251,248,240,.82);transform:rotate(-14deg) scale(1.6);opacity:0;border:3px solid #B23A1B;color:#B23A1B;padding:6px 10px;font:600 16px/1 var(--cond);letter-spacing:.16em;text-transform:uppercase;border-radius:4px;transition:transform .25s cubic-bezier(.2,1.6,.4,1),opacity .2s;text-align:center}
+.stamp small{display:block;font-size:10px;letter-spacing:.14em;margin-top:3px}
+.ticket.stamped .stamp{opacity:.88;transform:rotate(-14deg) scale(1)}
+.press-h{margin:0 0 12px;text-align:center;color:var(--paper);font:600 14px/1.2 var(--cond);letter-spacing:.2em;text-transform:uppercase}
+.press-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:16px 30px 0}
+.press-actions .btn{flex:1 1 150px}
+.press-actions .btn.alt{background:var(--lemon);color:var(--ink);border-color:var(--lemon)}
+.press-actions .btn.ghost{color:var(--paper);border-color:var(--paper)}
+.press-actions .btn.ghost:hover{color:var(--ink)}
+.press-actions[hidden]{display:none}
+
+/* ---------- notices ---------- */
+.notices{padding:6px 0 26px}
+.notice-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.notice{padding:16px 4px;border-bottom:1px solid var(--ink)}
+.notice h3{margin:0 0 8px;font:600 19px/1.1 var(--cond);letter-spacing:.1em;text-transform:uppercase;display:flex;gap:10px;align-items:center}
+.notice h3 svg{width:26px;height:26px;flex:none;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.notice p{margin:0 0 8px;font-size:16px}
+.notice dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:16px}
+.notice dt{font:500 14px/1.5 var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.notice dd{margin:0;text-align:right}
+.notice ol{margin:0;padding-left:1.2em;font-size:16px}
+.notice ol li{margin-bottom:6px}
+.notice.boxed{border:2px solid var(--ink);padding:16px;margin:16px 0;background:rgba(255,252,242,.5)}
+@media(min-width:760px){
+  .notice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .notice{padding:18px 20px;border-right:1px solid var(--ink)}
+  .notice:nth-child(2n){border-right:0}
+}
+@media(min-width:1100px){
+  .notice-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .notice{border-bottom:0;border-right:1px solid var(--ink)!important}
+  .notice:first-child{padding-left:0}
+  .notice:last-child{border-right:0!important;padding-right:0}
+  .notice.boxed{margin:16px 12px;border-right:2px solid var(--ink)!important}
+}
+
+/* ---------- footer ---------- */
+.imprint{border-top:4px solid var(--ink);box-shadow:0 -7px 0 -6px var(--ink);margin:3px 0 0;padding:18px 4px 90px;text-align:center}
+.imp-name{margin:0 0 6px;font:700 clamp(30px,5vw,54px)/1 var(--serif);letter-spacing:-.02em;overflow-wrap:anywhere}
+.imprint p{margin:0 0 8px}
+.imprint .fine{max-width:60ch;margin:8px auto 14px}
+.imprint .small{font:500 12px/1.4 var(--cond);letter-spacing:.12em;text-transform:uppercase}
+@media(min-width:760px){.imprint{padding-bottom:40px}}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-28)"><line x1="0" y1="0" x2="0" y2="5" stroke="#151515" stroke-width="1.15"/></pattern>
+    <pattern id="hatch2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4" stroke="#151515" stroke-width="1"/></pattern>
+    <pattern id="rays" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(8)"><line x1="0" y1="0" x2="0" y2="7" stroke="#151515" stroke-width="1"/></pattern>
+    <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#fff" stop-opacity=".35"/><stop offset=".75" stop-color="#000"/></linearGradient>
+    <linearGradient id="shade2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#000"/></linearGradient>
+    <mask id="mShade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#shade)"/></mask>
+    <mask id="mShade2" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#shade2)"/></mask>
+    <path id="pBody" d="M36,176C58,160 96,140 150,130C220,117 320,109 430,110C540,111 630,126 712,150L730,156L730,178C700,184 660,190 610,196C520,206 420,208 320,204C240,201 170,194 120,188C84,184 56,182 36,176Z"/>
+    <clipPath id="cBody"><use href="#pBody"/></clipPath>
+    <symbol id="flathead" viewBox="0 0 900 290">
+      <path d="M20,262C200,254 420,268 880,256" fill="none" stroke="#151515" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="0 7"/>
+      <path d="M60,272C260,266 520,276 820,268" fill="none" stroke="#151515" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0 11" opacity=".7"/>
+      <path d="M236,117L252,84L268,78L283,80L296,86L307,94L314,112Z" fill="url(#rays)" stroke="#151515" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M252,116L252,84M268,114L268,78M283,113L283,80M296,112L296,86" stroke="#151515" stroke-width="2"/>
+      <path d="M330,111C352,88 398,80 452,82C520,85 576,100 612,130C560,121 470,112 330,111Z" fill="url(#rays)" stroke="#151515" stroke-width="1.5"/>
+      <path d="M392,205C430,222 508,226 566,218C596,214 618,204 632,194C560,200 470,206 392,205Z" fill="url(#rays)" stroke="#151515" stroke-width="1.5"/>
+      <path d="M728,156C752,142 780,126 812,116C826,140 830,176 822,212C792,204 758,192 728,178Z" fill="url(#rays)" stroke="#151515" stroke-width="1.6"/>
+      <path d="M732,166L812,120M732,166L819,142M732,167L823,165M732,168L824,188M732,169L821,207" stroke="#151515" stroke-width="1.1"/>
+      <use href="#pBody" fill="#F6F1E4" stroke="none"/>
+      <g clip-path="url(#cBody)">
+        <rect x="30" y="100" width="720" height="115" fill="url(#hatch)" mask="url(#mShade)"/>
+        <rect x="30" y="100" width="720" height="115" fill="url(#hatch2)" mask="url(#mShade2)"/>
+        <g fill="#151515" opacity=".85"><ellipse cx="262" cy="138" rx="11" ry="5"/><ellipse cx="344" cy="131" rx="9" ry="4"/><ellipse cx="424" cy="135" rx="12" ry="5"/><ellipse cx="506" cy="140" rx="9" ry="4"/><ellipse cx="586" cy="148" rx="10" ry="4.5"/><ellipse cx="660" cy="157" rx="7" ry="3.5"/><ellipse cx="304" cy="164" rx="6" ry="3"/><ellipse cx="468" cy="162" rx="6" ry="3"/><ellipse cx="552" cy="170" rx="5" ry="2.5"/></g>
+        <path d="M200,160C320,154 470,158 600,168C660,172 700,170 730,168" fill="none" stroke="#151515" stroke-width="1.4" stroke-dasharray="3 5"/>
+        <path d="M60,170C150,190 330,200 470,198C560,196 650,186 730,176" fill="none" stroke="#151515" stroke-width="1" opacity=".6"/>
+      </g>
+      <use href="#pBody" fill="none" stroke="#151515" stroke-width="2.2"/>
+      <path d="M186,168C220,172 262,196 274,226C250,236 206,220 182,190C178,182 179,174 186,168Z" fill="url(#rays)" stroke="#151515" stroke-width="1.5"/>
+      <path d="M140,188C160,200 178,216 186,230C166,232 150,218 138,198Z" fill="url(#rays)" stroke="#151515" stroke-width="1.4"/>
+      <path d="M36,176C60,178 92,174 112,166M40,179C64,186 94,184 116,172" fill="none" stroke="#151515" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M186,132C196,152 196,174 180,194" fill="none" stroke="#151515" stroke-width="2"/>
+      <path d="M182,140L210,133M184,153L214,150" stroke="#151515" stroke-width="2" stroke-linecap="round"/>
+      <path d="M70,160C100,148 130,142 172,140" fill="none" stroke="#151515" stroke-width="1.2"/>
+      <circle cx="128" cy="136" r="9" fill="#F6F1E4" stroke="#151515" stroke-width="2"/><circle cx="129" cy="136" r="4.6" fill="#151515"/><circle cx="127" cy="134" r="1.4" fill="#F6F1E4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="page">
+  <span class="fold" aria-hidden="true"></span>
+
+  <header id="top">
+    <div class="strip"><span>Cronulla, NSW</span><span class="mid">Wrapped fresh daily &middot; Late lunch edition</span><span>Open 11am till late</span></div>
+    <div class="mast-row">
+      <p class="ear"><b>Today</b>Flathead’s back on the board. <a href="#lead">Page one</a></p>
+      <h1 class="title" data-brand>Salty's Fish Bar</h1>
+      <p class="ear"><b>Price</b>Free with every scoop of chips. <a href="#menu">Classifieds</a></p>
+    </div>
+    <div class="dateline"><span id="today">Saturday 26 September 2026</span><span class="sea">Water 19°C &middot; Nor’easter 15 kn</span><span>Cronulla’s chip paper</span></div>
+    <nav class="sections" aria-label="Sections of the paper">
+      <a href="#lead">Front page</a><a href="#catch">The catch</a><a href="#menu">Classifieds</a><a href="#order">Order ahead</a><a href="#tides">Tides</a><a href="#notices">Notices</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="front" id="lead" aria-labelledby="lead-h">
+      <article class="lead"><span class="grease g1" aria-hidden="true"></span>
+        <p class="kicker"><mark>Catch of the day</mark>Kurnell side &middot; Line-caught</p>
+        <h2 class="headline" id="lead-h">Flathead is back</h2>
+        <p class="deck">Dusky flathead are running again off the Kurnell side. This morning’s boat came in at seven, the fillets were on the board by ten, and they stay there until they run out.</p>
+        <p class="byline">By the fry cook &middot; Filed from the back room</p>
+        <figure class="plate">
+          <svg viewBox="0 0 900 290" aria-hidden="true" focusable="false"><use href="#flathead"/><g class="callouts" font-family="Old Standard TT, Georgia, serif" font-style="italic" font-size="17" fill="#151515"><path d="M128,126L150,58" stroke="#151515" stroke-width="1"/><text x="110" y="50">eyes on top</text><path d="M216,134L236,58" stroke="#151515" stroke-width="1"/><text x="224" y="50">mind the spines</text><path d="M520,206L548,248" stroke="#151515" stroke-width="1"/><text x="552" y="252">three fillets, skin off</text></g></svg>
+          <figcaption><b>Fig. 1</b>The dusky flathead, drawn from life (briefly) on the back of a docket.</figcaption>
+        </figure>
+        <div class="cols">
+          <p>After a quiet winter of gummy shark and good intentions, the flathead have come back to the sand flats. The boat we buy from worked the drop-off before sunrise and brought in a tidy few — enough for today, and maybe tomorrow if the Friday crowd behaves.</p>
+          <p>We fillet them in the back room: skin off, pin bones out. Then it’s your call. Our light batter is plain flour, soda water and a pinch of salt; or we grill it on the flat-top with lemon and cracked pepper. Either way it comes as three fillets, because two never feels like enough.</p>
+          <p>Flathead is sweet, white and fine-flaked. It doesn’t need tartare, but nobody’s stopping you. Add a scoop of chips and a potato scallop and you have the traditional Cronulla lunch, eaten on the esplanade wall with one eye on the gulls.</p>
+          <p>When the board says <i>sold out</i>, it means it. If you’d rather not risk it, tick it in the classifieds and order ahead — we’ll set yours aside with your name on the ticket.</p>
+        </div>
+      </article>
+
+      <aside class="rail" aria-label="Tides, stop press and ordering">
+        <section class="box" id="tides" aria-labelledby="tides-h">
+          <h2 class="box-h" id="tides-h">Tide &amp; weather <small>Sample</small></h2>
+          <svg class="tide-chart" id="tide-chart" viewBox="0 0 320 132" role="img" aria-labelledby="tide-t">
+            <title id="tide-t">Sample tide curve for today: high 5:42 am, low 11:58 am, high 6:07 pm, low 12:20 am.</title>
+          </svg>
+          <table class="tide-table">
+            <caption class="sr">Sample tide times</caption>
+            <tbody>
+              <tr><th scope="row">High</th><td>5:42 am</td><td>1.6 m</td></tr>
+              <tr><th scope="row">Low</th><td>11:58 am</td><td>0.4 m</td></tr>
+              <tr><th scope="row">High</th><td>6:07 pm</td><td>1.5 m</td></tr>
+              <tr><th scope="row">Low</th><td>12:20 am</td><td>0.5 m</td></tr>
+            </tbody>
+          </table>
+          <ul class="wx">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span><b>Sky</b>Sunny, 24°</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></svg><span><b>Wind</b>NE 15–20 kn arvo</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M12 3v7M9 7l3 3 3-3"/></svg><span><b>Water</b>19°C</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 17c3-8 9-11 14-9-3 1-4 4-3 6 1 3 5 3 9 1-2 4-6 5-10 4"/></svg><span><b>Swell</b>SE 1–1.5 m</span></li>
+          </ul>
+          <p class="fine">Sample conditions for this demo. Check the official forecast and tide tables before you swim.</p>
+        </section>
+
+        <div class="stop">
+          <p class="k">Stop press</p>
+          <p>Fryer No. 2 is back from its holiday. Friday queues should move quicker. Bring patience anyway.</p>
+        </div>
+
+        <div class="teaser">
+          <h3>Skip the queue</h3>
+          <p>Tick what you want in the classifieds, pick a ten-minute slot, and the docket printer does the rest. Pay when you collect.</p>
+          <a class="btn" href="#menu">Open the classifieds</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="catch" id="catch" aria-labelledby="catch-h">
+      <div class="bar"><h2 id="catch-h">The catch</h2><p>Turn the cards over for species facts.</p></div>
+      <div class="cards">
+        <div class="card">
+          <button class="flip" type="button" aria-pressed="false"><span class="sr">Turn over: dusky flathead facts</span></button>
+          <div class="card-in">
+            <div class="face">
+              <svg viewBox="24 64 816 186" aria-hidden="true"><use href="#flathead" width="900" height="290"/></svg>
+              <p class="sp">Dusky flathead</p><p class="lat">Platycephalus fuscus</p><p class="how">Battered or grilled · $16.90</p>
+              <p class="turn">Turn over</p>
+            </div>
+            <div class="face back"><p class="sp">Dusky flathead</p>
+              <ul class="facts"><li>Lies half-buried in sand and ambushes passing baitfish.</li><li>Both eyes sit on top of its flat head.</li><li>Sharp spines on the gill covers — we do the filleting.</li></ul></div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="flip" type="button" aria-pressed="false"><span class="sr">Turn over: gummy shark facts</span></button>
+          <div class="card-in">
+            <div class="face">
+              <svg viewBox="0 0 200 96" aria-hidden="true"><path d="M8,56C24,46 52,40 84,40C110,40 136,42 160,48C172,51 180,52 188,46L197,32L193,56L199,76L186,63C176,62 166,64 156,66C120,74 70,76 40,70C24,66 14,62 8,56Z" fill="#F6F1E4" stroke="#151515" stroke-width="1.6"/><path d="M8,56C24,46 52,40 84,40C110,40 136,42 160,48C172,51 180,52 188,46L197,32L193,56L186,63C170,58 120,54 60,56C36,57 18,58 8,56Z" fill="url(#hatch)"/><path d="M74,41L90,19L104,42ZM132,44L140,33L148,46ZM60,68L48,89L80,70Z" fill="url(#rays)" stroke="#151515" stroke-width="1.4" stroke-linejoin="round"/><path d="M40,50L38,62M44,50L42,63M48,50L46,63" stroke="#151515" stroke-width="1.2"/><circle cx="25" cy="52" r="2.4" fill="#151515"/><path d="M10,86C60,82 120,90 190,84" stroke="#151515" stroke-width="2" stroke-dasharray="0 6" stroke-linecap="round" fill="none"/></svg>
+              <p class="sp">Flake</p><p class="lat">Gummy shark, Mustelus antarcticus</p><p class="how">Battered or grilled · $13.50</p>
+              <p class="turn">Turn over</p>
+            </div>
+            <div class="face back"><p class="sp">Flake</p>
+              <ul class="facts"><li>In Australian chip shops, “flake” usually means gummy shark.</li><li>Sharks have cartilage, not bones — so no bones in your fillet.</li><li>Mild and firm: the one kids trust.</li></ul></div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="flip" type="button" aria-pressed="false"><span class="sr">Turn over: barramundi facts</span></button>
+          <div class="card-in">
+            <div class="face">
+              <svg viewBox="0 0 200 96" aria-hidden="true"><path d="M10,56C18,42 32,32 54,27C88,20 128,24 158,40L168,47L190,30L186,56L192,78L170,64C150,74 112,82 72,80C42,78 20,70 10,56Z" fill="#F6F1E4" stroke="#151515" stroke-width="1.6"/><path d="M10,56C18,42 32,32 54,27C88,20 128,24 158,40L168,47L190,30L186,56C150,48 90,46 10,56Z" fill="url(#hatch)"/><path d="M62,26L70,10L78,8L86,10L94,14L100,24ZM104,26C114,14 136,16 150,34Z" fill="url(#rays)" stroke="#151515" stroke-width="1.3" stroke-linejoin="round"/><path d="M40,52C44,62 44,70 38,76M16,58L30,60" stroke="#151515" stroke-width="1.4" fill="none"/><circle cx="30" cy="44" r="4.2" fill="#F6F1E4" stroke="#151515" stroke-width="1.4"/><circle cx="30.5" cy="44" r="2" fill="#151515"/><path d="M84,74L78,90L100,76Z" fill="url(#rays)" stroke="#151515" stroke-width="1.2"/><path d="M50,50C90,48 130,50 168,56" stroke="#151515" stroke-width="1.1" stroke-dasharray="2 3" fill="none"/></svg>
+              <p class="sp">Barramundi</p><p class="lat">Lates calcarifer</p><p class="how">Grilled with lemon · $17.50</p>
+              <p class="turn">Turn over</p>
+            </div>
+            <div class="face back"><p class="sp">Barramundi</p>
+              <ul class="facts"><li>Lives happily in fresh, brackish and salt water.</li><li>Most start life male; many become female later on.</li><li>Big, buttery flakes — we grill it with lemon.</li></ul></div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="flip" type="button" aria-pressed="false"><span class="sr">Turn over: southern calamari facts</span></button>
+          <div class="card-in">
+            <div class="face">
+              <svg viewBox="0 0 200 96" aria-hidden="true"><path d="M78,48C104,22 160,24 194,48C160,72 104,74 78,48Z" fill="url(#rays)" stroke="#151515" stroke-width="1.3"/><path d="M72,48C100,36 150,34 192,48C150,62 100,60 72,48Z" fill="#F6F1E4" stroke="#151515" stroke-width="1.6"/><path d="M72,48C100,36 150,34 192,48C150,46 100,44 72,48Z" fill="url(#hatch)"/><ellipse cx="62" cy="48" rx="12" ry="9" fill="#F6F1E4" stroke="#151515" stroke-width="1.5"/><circle cx="60" cy="45" r="3" fill="#151515"/><path d="M50,44C36,38 24,40 10,34M50,47C34,46 22,48 8,44M50,50C36,52 22,54 10,56M50,53C38,58 26,62 12,66M50,45C30,32 20,26 6,22M50,52C32,64 22,72 6,78" fill="none" stroke="#151515" stroke-width="1.3" stroke-linecap="round"/></svg>
+              <p class="sp">Calamari</p><p class="lat">Southern calamari, Sepioteuthis australis</p><p class="how">Salt &amp; pepper · $12.00</p>
+              <p class="turn">Turn over</p>
+            </div>
+            <div class="face back"><p class="sp">Calamari</p>
+              <ul class="facts"><li>Its fins run almost the full length of its body.</li><li>Changes colour in the blink of an eye.</li><li>Scored, dusted in salt and pepper, ninety seconds in the fryer.</li></ul></div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="flip" type="button" aria-pressed="false"><span class="sr">Turn over: potato scallop facts</span></button>
+          <div class="card-in">
+            <div class="face">
+              <svg viewBox="0 0 200 96" aria-hidden="true"><path d="M44,48C40,26 70,14 102,14C136,14 162,26 160,48C158,70 132,82 100,82C68,82 46,70 44,48Z" fill="#F6F1E4" stroke="#151515" stroke-width="1.8"/><path d="M44,48C40,26 70,14 102,14C136,14 162,26 160,48C130,40 80,40 44,48Z" fill="url(#hatch)"/><ellipse cx="102" cy="50" rx="38" ry="21" fill="none" stroke="#151515" stroke-width="1.2" stroke-dasharray="4 4"/><g fill="#151515"><circle cx="70" cy="30" r="2"/><circle cx="132" cy="28" r="1.6"/><circle cx="150" cy="56" r="2"/><circle cx="62" cy="66" r="1.6"/><circle cx="118" cy="74" r="2"/></g><path d="M20,88C70,84 130,92 184,86" stroke="#151515" stroke-width="2" stroke-dasharray="0 6" stroke-linecap="round" fill="none"/></svg>
+              <p class="sp">Potato scallop</p><p class="lat">Solanum tuberosum (battered)</p><p class="how">Battered · $1.80 each</p>
+              <p class="turn">Turn over</p>
+            </div>
+            <div class="face back"><p class="sp">Potato scallop</p>
+              <ul class="facts"><li>A scallop in NSW and Queensland; a potato cake in Victoria.</li><li>No seafood was involved in its making.</li><li>Sliced thick, battered, fried till it crackles.</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="market" id="menu" aria-labelledby="menu-h">
+      <span class="grease g2" aria-hidden="true" style="top:40%;right:40%"></span>
+      <div class="bar dark"><h2 id="menu-h">Classifieds</h2><p>The menu. Tick anything to add it to your order.<span class="tag">Sample prices</span></p></div>
+      <div class="market-grid">
+        <div class="ads">
+          <div class="ad-col">
+            <h3 class="cat">Fish, for sale</h3>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="flathead" data-name="Flathead" data-price="16.90"><span class="tick" aria-hidden="true"></span><span class="nm">Flathead</span><span class="pr">$16.90</span></label>
+              <p>Catch of the day. Three dusky flathead fillets, battered or grilled, with lemon. While it lasts.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="flake" data-name="Flake" data-price="13.50"><span class="tick" aria-hidden="true"></span><span class="nm">Flake</span><span class="pr">$13.50</span></label>
+              <p>Gummy shark, boneless and mild. Light batter or grilled. The one the kids trust.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="barra" data-name="Barramundi" data-price="17.50"><span class="tick" aria-hidden="true"></span><span class="nm">Barramundi</span><span class="pr">$17.50</span></label>
+              <p>Thick fillet, grilled with lemon and sea salt. Battered on request, no judgement.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="whiting" data-name="Sand whiting" data-price="15.90"><span class="tick" aria-hidden="true"></span><span class="nm">Sand whiting</span><span class="pr">$15.90</span></label>
+              <p>Two delicate fillets in a golden crumb. Ask for grilled if you’d rather.</p>
+            </div>
+            <h3 class="cat">Seafood, misc.</h3>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="calamari" data-name="Calamari" data-price="12.00"><span class="tick" aria-hidden="true"></span><span class="nm">Calamari</span><span class="pr">$12.00</span></label>
+              <p>Salt and pepper, a good handful, aioli on the side.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="prawns" data-name="Prawn cutlets (4)" data-price="11.00"><span class="tick" aria-hidden="true"></span><span class="nm">Prawn cutlets <small>×4</small></span><span class="pr">$11.00</span></label>
+              <p>Butterflied, crumbed, tails on for holding.</p>
+            </div>
+          </div>
+
+          <div class="ad-col">
+            <h3 class="cat">Sides &amp; scoops</h3>
+            <div class="ad display">
+              <span class="big">Chips by the scoop</span>
+              <label class="line"><input type="checkbox" data-item="chips-s" data-name="Chips, small scoop" data-price="5.50"><span class="tick" aria-hidden="true"></span><span class="nm">Small scoop</span><span class="pr">$5.50</span></label>
+              <label class="line"><input type="checkbox" data-item="chips-l" data-name="Chips, large scoop" data-price="8.50"><span class="tick" aria-hidden="true"></span><span class="nm">Large scoop</span><span class="pr">$8.50</span></label>
+              <p>Thick-cut, twice-fried, chicken salt or plain. A large feeds two, allegedly.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="minchips" data-name="Minimum chips" data-price="4.00"><span class="tick" aria-hidden="true"></span><span class="nm">Minimum chips</span><span class="pr">$4.00</span></label>
+              <p>The smallest serve we’ll wrap. Perfect for one, disappointing for two.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="scallop" data-name="Potato scallop" data-price="1.80"><span class="tick" aria-hidden="true"></span><span class="nm">Potato scallops</span><span class="pr">$1.80<small>ea</small></span></label>
+              <p>Sliced thick, battered, fried until it crackles. Not a scallop. Not sorry.</p>
+            </div>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="dimsim" data-name="Dim sim" data-price="2.20"><span class="tick" aria-hidden="true"></span><span class="nm">Dim sims</span><span class="pr">$2.20<small>ea</small></span></label>
+              <p>Steamed or fried — tell us at the counter. Soy on request.</p>
+            </div>
+            <h3 class="cat">Sauces &amp; sundries</h3>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="tartare" data-name="Tartare" data-price="1.50"><span class="tick" aria-hidden="true"></span><span class="nm">Tartare</span><span class="pr">$1.50</span></label>
+              <label class="line"><input type="checkbox" data-item="aioli" data-name="Aioli" data-price="1.50"><span class="tick" aria-hidden="true"></span><span class="nm">Aioli</span><span class="pr">$1.50</span></label>
+              <label class="line"><input type="checkbox" data-item="lemon" data-name="Lemon wedge" data-price="0"><span class="tick" aria-hidden="true"></span><span class="nm">Lemon wedge</span><span class="pr">Free</span></label>
+              <p>Both sauces made here in small batches. Lemons from a mate’s tree.</p>
+            </div>
+          </div>
+
+          <div class="ad-col">
+            <h3 class="cat">Cold drinks</h3>
+            <div class="ad">
+              <label class="line"><input type="checkbox" data-item="squash" data-name="Lemon squash" data-price="3.50"><span class="tick" aria-hidden="true"></span><span class="nm">Lemon squash</span><span class="pr">$3.50</span></label>
+              <label class="line"><input type="checkbox" data-item="water" data-name="Water, bottle" data-price="3.00"><span class="tick" aria-hidden="true"></span><span class="nm">Bottled water</span><span class="pr">$3.00</span></label>
+              <p>From the fridge by the door. Cans only — the beach doesn’t need more glass.</p>
+            </div>
+            <h3 class="cat">Family notices</h3>
+            <div class="ad display lemon">
+              <span class="big">The Family Wrap</span>
+              <label class="line"><input type="checkbox" data-item="family" data-name="Family Wrap" data-price="62.00"><span class="tick" aria-hidden="true"></span><span class="nm">Feeds four</span><span class="pr">$62.00</span></label>
+              <p>Four flake, four potato scallops, a large scoop of chips and two sauces, wrapped as one fat parcel.</p>
+            </div>
+            <div class="ad">
+              <p style="margin:0;font-style:italic">WANTED: one lost thong, left foot, blue. Last seen near the kiosk. Enquire at the counter.</p>
+            </div>
+            <div class="ad">
+              <p style="margin:0;font-style:italic">NOTICE: the gulls have not changed. Keep your parcel wrapped until you are seated.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="desk" id="order" aria-labelledby="desk-h">
+          <div class="desk-in">
+            <h2 class="desk-h" id="desk-h">Order desk <small>Pick up hot</small></h2>
+            <p class="desk-sub">Tick items in the classifieds, choose a ten-minute pickup slot, then print your ticket. Pay when you collect.</p>
+            <div class="summary" aria-live="polite">
+              <p class="empty" id="empty">Nothing ticked yet. Start with the flathead — it won’t last.</p>
+              <ul class="lines" id="lines"></ul>
+              <p class="total"><span>Total</span><span id="total">$0.00</span></p>
+            </div>
+            <label class="field"><span>Name for the ticket</span><input id="cust" maxlength="22" autocomplete="given-name" placeholder="e.g. Sam"></label>
+            <fieldset class="slots">
+              <legend>Pickup &middot; <span id="slot-day">Today</span></legend>
+              <div class="slot-grid" id="slot-grid"></div>
+              <p class="fine">Every 10 minutes. Striped slots are already busy.</p>
+            </fieldset>
+            <p class="desk-msg" id="desk-msg" role="status"></p>
+            <button class="btn print" id="print" type="button">Print my ticket</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notices" id="notices" aria-labelledby="notices-h">
+      <div class="bar"><h2 id="notices-h">Chippy notices</h2><p>Posted by the till, updated when the owner remembers.</p></div>
+      <div class="notice-grid">
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Opening hours</h3>
+          <dl><dt>Mon–Thu</dt><dd>11am – 8.30pm</dd><dt>Fri – Sat</dt><dd>11am – 9pm</dd><dt>Sunday</dt><dd>11am – 8pm</dd></dl>
+          <p class="fine">Public holidays: usually open — the board out front has the final word.</p>
+        </article>
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="13" rx="1.5"/><path d="M2.5 10h19M6 15h4"/></svg>Cash &amp; card</h3>
+          <p>Both welcome. Tap, insert or hand over coins — we’ll count them with you.</p>
+          <p>Ordered ahead? Pay at the counter when you collect; your ticket name is all we need.</p>
+        </article>
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18c3 0 3-2 6-2s3 2 6 2 3-2 6-2M12 4a5 5 0 0 1 5 5H7a5 5 0 0 1 5-5ZM12 9v7"/></svg>Beach tips</h3>
+          <ol><li>Keep the parcel shut until you’re seated. The gulls work in teams.</li><li>Tables on the esplanade beat the sand, which gets into everything.</li><li>Bin your paper or take it home. The beach is everyone’s dining room.</li></ol>
+        </article>
+        <article class="notice boxed">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 20h19Z"/><path d="M12 9.5v5M12 17.2v.1"/></svg>Gluten &amp; allergens</h3>
+          <p>Our batter contains wheat. Fryers and the grill are shared, so we can’t promise anything is free of gluten, fish, shellfish or egg.</p>
+          <p>Ask before you order and we’ll tell you straight.</p>
+        </article>
+      </div>
+      <div class="notice-grid" style="border-top:1px solid var(--ink)">
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>Find us</h3>
+          <p>Cronulla, NSW — across from the beach, a short walk from the station. Look for the queue.</p>
+        </article>
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>Phone orders</h3>
+          <p><a href="tel:0255500142">(02) 5550 0142</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+        </article>
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg>Big orders</h3>
+          <p>Nippers carnival, work do, the whole footy team? Call a day ahead and we’ll quote and pack it by the box.</p>
+        </article>
+        <article class="notice">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20c-2-6 0-12 6-16 1 5 7 6 6 12-.6 3.3-3.5 4.6-6 4.6"/><path d="M9 20c0-3 1.5-5 3-6"/></svg>Paper &amp; packaging</h3>
+          <p>Plain unprinted paper inside, this paper outside. Both go in the recycling once the grease has done its thing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="imprint">
+    <p class="imp-name" data-brand>Salty's Fish Bar</p>
+    <p class="small">Printed, folded and wrapped around your chips in Cronulla, NSW</p>
+    <p class="fine">A concept demo for a fictional business: the shop, the newspaper and the fish are all made up, and every price is a sample.</p>
+    <a class="btn ghost" href="#top">Back to the front page</a>
+  </footer>
+</div>
+
+<a class="fab" id="fab" href="#order" hidden><b id="fab-n">0</b><span id="fab-t">$0.00</span><span aria-hidden="true">· Order desk</span></a>
+
+<div class="press" id="press" role="dialog" aria-modal="true" aria-labelledby="press-h" hidden>
+  <div class="press-in">
+    <p class="press-h" id="press-h">Printing your ticket…</p>
+    <div class="printer" aria-hidden="true"><span class="plate-t">Order desk</span><span class="led"></span><span class="mouth"></span></div>
+    <div class="feed" id="feed"><div class="ticket" id="ticket" tabindex="-1"></div></div>
+    <div class="press-actions" id="press-actions" hidden>
+      <button class="btn alt" id="confirm" type="button">Confirm order</button>
+      <button class="btn ghost" id="change" type="button">Change order</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var reduce = function(){ return (window.DemoKit && DemoKit.reducedMotion) || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); };
+  var money = function(n){ return n === 0 ? "Free" : "$" + n.toFixed(2); };
+  var brand = function(){ return (window.DemoKit && DemoKit.brand) || "Salty's Fish Bar"; };
+  var now = new Date();
+  $("#today").textContent = DAYS[now.getDay()] + " " + now.getDate() + " " + MONTHS[now.getMonth()] + " " + now.getFullYear();
+
+  /* ---------- tide chart (sample data) ---------- */
+  (function(){
+    var svg = $("#tide-chart"), NS = "http://www.w3.org/2000/svg";
+    var ext = [{t:-6.1,h:1.5},{t:0.33,h:0.5},{t:5.7,h:1.6},{t:11.97,h:0.4},{t:18.12,h:1.5},{t:24.33,h:0.5},{t:30.5,h:1.6}];
+    function at(hr){ for (var i=0;i<ext.length-1;i++){ var a=ext[i], b=ext[i+1]; if (hr>=a.t && hr<=b.t){ var p=(hr-a.t)/(b.t-a.t); return a.h+(b.h-a.h)*(1-Math.cos(Math.PI*p))/2; } } return 1; }
+    var X = function(hr){ return 14 + hr/24*296; }, Y = function(h){ return 104 - h*52; };
+    var d = "", area;
+    for (var hr=0; hr<=24.001; hr+=0.25){ d += (hr===0?"M":"L") + X(hr).toFixed(1) + "," + Y(at(hr)).toFixed(1); }
+    area = d + "L" + X(24) + ",112L" + X(0) + ",112Z";
+    function el(tag, attrs, text){ var e=document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text) e.textContent=text; svg.appendChild(e); return e; }
+    [0,6,12,18,24].forEach(function(h){ el("line",{x1:X(h),x2:X(h),y1:10,y2:112,stroke:"#151515","stroke-width":".6","stroke-dasharray":"2 3",opacity:".6"}); el("text",{x:X(h),y:126,"text-anchor":"middle","font-family":"Oswald, Arial Narrow, sans-serif","font-size":"10","letter-spacing":".6",fill:"#151515"}, ["12am","6am","noon","6pm","12am"][h/6]); });
+    el("path",{d:area,fill:"#2D6E8E",opacity:".16"});
+    el("path",{d:d,fill:"none",stroke:"#1F5570","stroke-width":"2.2"});
+    el("line",{x1:X(0),x2:X(24),y1:112,y2:112,stroke:"#151515","stroke-width":"1"});
+    [[5.7,1.6,"H 1.6"],[11.97,0.4,"L 0.4"],[18.12,1.5,"H 1.5"]].forEach(function(p){ el("circle",{cx:X(p[0]),cy:Y(p[1]),r:3.2,fill:"#151515"}); el("text",{x:X(p[0]),y:Y(p[1]) + (p[1]>1?-8:16),"text-anchor":"middle","font-family":"Oswald, Arial Narrow, sans-serif","font-size":"10.5",fill:"#151515"}, p[2]); });
+    var hn = now.getHours() + now.getMinutes()/60;
+    el("line",{x1:X(hn),x2:X(hn),y1:8,y2:112,stroke:"#151515","stroke-width":"1.4"});
+    el("circle",{cx:X(hn),cy:Y(at(hn)),r:4.5,fill:"#F4D03F",stroke:"#151515","stroke-width":"1.5"});
+    el("text",{x:Math.min(X(hn)+5,286),y:18,"font-family":"Oswald, Arial Narrow, sans-serif","font-size":"10.5","letter-spacing":"1",fill:"#151515"}, "NOW");
+  })();
+
+  /* ---------- catch cards ---------- */
+  $$(".card .flip").forEach(function(b){
+    b.addEventListener("click", function(){
+      var card = b.closest(".card"), on = !card.classList.contains("on");
+      card.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  });
+
+  $$(".tick").forEach(function(t){ t.innerHTML = '<svg viewBox="0 0 24 24"><path d="M4 13l5 6L21 4"/></svg>'; });
+  $$(".turn").forEach(function(t){ t.insertAdjacentHTML("afterbegin", '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 5A6 6 0 1 0 14 9M13 1v4H9"/></svg>'); });
+  /* ---------- order ---------- */
+  var items = {};
+  $$("input[data-item]").forEach(function(inp){
+    var id = inp.dataset.item;
+    items[id] = { name: inp.dataset.name, price: parseFloat(inp.dataset.price), qty: 0, input: inp };
+    var q = document.createElement("div");
+    q.className = "qty"; q.hidden = true;
+    q.innerHTML = '<button type="button" data-d="-1" aria-label="One fewer ' + inp.dataset.name + '">−</button><output aria-live="polite">1</output><button type="button" data-d="1" aria-label="One more ' + inp.dataset.name + '">+</button><span>Qty</span>';
+    inp.closest(".line").insertAdjacentElement("afterend", q);
+    items[id].qtyEl = q;
+    inp.addEventListener("change", function(){ items[id].qty = inp.checked ? Math.max(1, items[id].qty) : 0; render(); });
+    q.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if (!b) return;
+      var it = items[id]; it.qty = Math.max(0, Math.min(20, it.qty + Number(b.dataset.d)));
+      if (it.qty === 0){ inp.checked = false; inp.focus(); }
+      render();
+    });
+  });
+
+  function render(){
+    var lines = $("#lines"), count = 0, total = 0, html = "";
+    Object.keys(items).forEach(function(id){
+      var it = items[id];
+      it.qtyEl.hidden = !it.qty;
+      it.input.checked = it.qty > 0;
+      it.qtyEl.querySelector("output").textContent = it.qty;
+      if (it.qty){
+        count += it.qty; total += it.qty * it.price;
+        html += "<li><span>" + it.qty + " × " + it.name + "</span><span>" + money(it.qty * it.price) + "</span></li>";
+      }
+    });
+    lines.innerHTML = html;
+    $("#empty").hidden = count > 0;
+    $("#total").textContent = "$" + total.toFixed(2);
+    $("#fab-n").textContent = count;
+    $("#fab-t").textContent = "$" + total.toFixed(2);
+    state.count = count; state.total = total;
+    fabUpdate();
+    if (count) $("#desk-msg").textContent = "";
+  }
+  var state = { count: 0, total: 0, deskVisible: false };
+
+  /* pickup slots every 10 minutes */
+  function fmt(m){ var h = Math.floor(m/60), mm = m % 60, ap = h >= 12 ? "pm" : "am", h12 = h % 12 || 12; return h12 + ":" + (mm < 10 ? "0" : "") + mm + " " + ap; }
+  var slotDay = new Date(now), slotLabel = "Today";
+  (function(){
+    var day = now.getDay(), open = 11*60, close = (day === 5 || day === 6) ? 21*60 : (day === 0 ? 20*60 : 20*60 + 30);
+    var start = Math.ceil((now.getHours()*60 + now.getMinutes() + 20) / 10) * 10;
+    if (start < open) start = open;
+    if (start > close - 30){
+      slotDay.setDate(slotDay.getDate() + 1); slotLabel = "Tomorrow"; start = open;
+      var d2 = slotDay.getDay(); close = (d2 === 5 || d2 === 6) ? 21*60 : (d2 === 0 ? 20*60 : 20*60 + 30);
+    }
+    var seed = slotDay.getDate() * 7 + slotDay.getMonth() * 3, grid = $("#slot-grid"), html = "";
+    for (var i = 0, t = start; i < 12 && t <= close - 10; i++, t += 10){
+      var k = t / 10, busy = ((k * 37 + seed) % 11) < 3 || (t >= 12*60+20 && t <= 12*60+50 && k % 2 === 0) || (t >= 18*60 && t <= 18*60+40 && k % 2 === 1);
+      if (i === 0) busy = false;
+      html += '<label class="slot' + (busy ? " busy" : "") + '"><input type="radio" name="slot" value="' + t + '"' + (busy ? " disabled" : "") + '><span>' + fmt(t) + "</span>" + (busy ? "<small>busy</small>" : "<small>free</small>") + "</label>";
+    }
+    grid.innerHTML = html;
+    $("#slot-day").textContent = slotLabel + ", " + DAYS[slotDay.getDay()].slice(0,3) + " " + slotDay.getDate() + " " + MONTHS[slotDay.getMonth()].slice(0,3);
+  })();
+
+  /* floating order pill */
+  var fab = $("#fab");
+  function fabUpdate(){ fab.hidden = !(state.count > 0 && !state.deskVisible && !(dlg && dlg.open)); }
+  if ("IntersectionObserver" in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ state.deskVisible = e.isIntersecting; }); fabUpdate(); }, { threshold: 0.15 }).observe($("#order"));
+  }
+
+  /* ---------- printing ---------- */
+  var dlg = $("#press"), feed = $("#feed"), ticket = $("#ticket"), actions = $("#press-actions"), printBtn = $("#print"), confirmBtn = $("#confirm"), orderNo = 0, confirmed = false;
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function buildTicket(slot){
+    var name = ($("#cust").value || "").trim(), lines = "";
+    Object.keys(items).forEach(function(id){ var it = items[id]; if (it.qty) lines += "<li><span>" + it.qty + " × " + esc(it.name) + "</span><span>" + money(it.qty * it.price) + "</span></li>"; });
+    orderNo = 40 + ((now.getHours()*60 + now.getMinutes()) % 57);
+    var dayStr = DAYS[slotDay.getDay()].slice(0,3) + " " + slotDay.getDate() + " " + MONTHS[slotDay.getMonth()].slice(0,3);
+    ticket.innerHTML =
+      '<p class="t-brand">' + esc(brand()) + '</p>' +
+      '<p class="t-sub">Cronulla NSW · Order ahead</p>' +
+      '<p class="t-row"><span>No. ' + ("00" + orderNo).slice(-3) + '</span><span>' + dayStr + '</span></p>' +
+      (name ? '<p class="t-row"><span>For</span><span>' + esc(name) + '</span></p>' : "") +
+      '<ul class="t-lines">' + lines + '</ul>' +
+      '<p class="t-total"><span>TOTAL</span><span>$' + state.total.toFixed(2) + '</span></p>' +
+      '<p class="t-pick">Pick up ' + slotLabel.toLowerCase() + '<b>' + fmt(slot) + '</b></p>' +
+      '<p class="t-pay">Pay at the counter — cash or card.</p>' +
+      '<div class="t-bars" aria-hidden="true"></div>' +
+      '<p class="t-demo">Demo ticket · not a real order</p>' +
+      '<div class="stamp" aria-hidden="true">Demo<small>Not sent</small></div>';
+  }
+  printBtn.addEventListener("click", function(){
+    var msg = $("#desk-msg"), slotInput = $('input[name="slot"]:checked');
+    if (!state.count){ msg.textContent = "Tick at least one thing in the classifieds first."; return; }
+    if (!slotInput){ msg.textContent = "Pick a pickup time — any slot that isn’t striped."; var f = $('input[name="slot"]:not(:disabled)'); if (f) f.focus(); return; }
+    msg.textContent = "";
+    confirmed = false;
+    buildTicket(Number(slotInput.value));
+    ticket.classList.remove("stamped");
+    confirmBtn.textContent = "Confirm order";
+    actions.hidden = true;
+    feed.classList.remove("done");
+    feed.style.transition = "none"; feed.style.height = "0px";
+    $("#press-h").textContent = "Printing your ticket…";
+    openPress();
+    dlg.classList.add("printing");
+    void feed.offsetHeight;
+    var h = ticket.offsetHeight;
+    var finish = function(){
+      feed.classList.add("done");
+      dlg.classList.remove("printing");
+      $("#press-h").textContent = "Your ticket — pick up " + slotLabel.toLowerCase() + " at " + fmt(Number(slotInput.value));
+      actions.hidden = false;
+      confirmBtn.focus();
+    };
+    if (reduce()){ feed.style.height = h + "px"; finish(); return; }
+    feed.style.transition = "";
+    feed.style.height = h + "px";
+    var done = false;
+    var end = function(){ if (done) return; done = true; finish(); };
+    feed.addEventListener("transitionend", end, { once: true });
+    setTimeout(end, 2100);
+  });
+  var pageEl = $(".page");
+  function openPress(){ dlg.hidden = false; dlg.open = true; pageEl.inert = true; fab.inert = true; fab.hidden = true; document.documentElement.style.overflow = "hidden"; }
+  function closePress(){ if (!dlg.open) return; dlg.hidden = true; dlg.open = false; pageEl.inert = false; fab.inert = false; document.documentElement.style.overflow = ""; fabUpdate(); printBtn.focus(); }
+  confirmBtn.addEventListener("click", function(){
+    if (confirmed){ closePress(); return; }
+    confirmed = true;
+    ticket.classList.add("stamped");
+    confirmBtn.textContent = "Done";
+    if (window.DemoKit) DemoKit.toast("Demo only — no order was sent to the shop. On a real site this ticket would print by the fryer.");
+  });
+  $("#change").addEventListener("click", closePress);
+  document.addEventListener("keydown", function(e){
+    if (!dlg.open) return;
+    if (e.key === "Escape"){ e.preventDefault(); closePress(); return; }
+    if (e.key === "Tab"){
+      var f = $$("button", dlg).filter(function(b){ return b.offsetParent !== null; });
+      if (!f.length) { e.preventDefault(); return; }
+      var i = f.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0){ e.preventDefault(); f[f.length-1].focus(); }
+      else if (!e.shiftKey && (i === -1 || i === f.length - 1)){ e.preventDefault(); f[0].focus(); }
+    }
+  });
+  dlg.addEventListener("click", function(e){ if (e.target === dlg) closePress(); });
+
+  window.addEventListener("hd:brandchange", function(e){ var b = $(".t-brand", ticket); if (b) b.textContent = e.detail.name; });
+  render();
+})();
+</script>
+</body>
+</html>

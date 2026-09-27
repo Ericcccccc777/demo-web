@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="001">
+<meta name="demo:brand" content="Kettle &amp; Crema">
+<meta name="demo:badge" content="bottom-right">
+<title>Kettle &amp; Crema — specialty café &amp; slow bar, Fitzroy</title>
+<meta name="description" content="Kettle &amp; Crema is a fictional specialty café and slow bar in Fitzroy, Melbourne, made as a concept demo.">
+<meta name="theme-color" content="#F8F5F0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --paper:#F8F5F0; --oat:#EFE9E1; --esp:#2B1D14; --roast:#6F4B34; --matcha:#7C8C5A;
+  --mute:#6B5A4C; --rule:rgba(43,29,20,.13); --rule-2:rgba(43,29,20,.24);
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,"Times New Roman",serif;
+  --sans:Figtree,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--esp);font:400 16px/1.62 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,dl,dd,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--roast);outline-offset:3px;border-radius:2px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:20;background:var(--esp);color:var(--paper);padding:10px 14px;border-radius:4px;text-decoration:none;font-size:14px}
+.skip:focus{top:12px}
+
+/* ---------- split layout ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);min-height:100vh}
+.panel{position:sticky;top:0;height:100vh;height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;
+  padding:clamp(26px,3vw,44px) clamp(28px,3.4vw,52px) clamp(20px,2.4vw,30px);border-right:1px solid var(--rule);background:var(--paper);overflow:hidden}
+.p-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px 24px;flex-wrap:wrap}
+.brandrow{display:flex;gap:16px;align-items:flex-start;min-width:0;flex:1 1 260px}
+.mono{flex:none;width:40px;height:40px;border:1px solid var(--rule-2);display:grid;place-items:center;font:500 13px/1 var(--serif);letter-spacing:.06em;margin-top:5px}
+.brandtext{min-width:0}
+.wordmark{font:500 clamp(30px,2.8vw,42px)/1.08 var(--serif);letter-spacing:-.01em;overflow-wrap:anywhere}
+.kicker{margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-wrap:balance}
+.status{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:500;white-space:nowrap;padding:8px 0}
+.status small{display:block;font-size:12px;font-weight:400;color:var(--mute);letter-spacing:.02em}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--matcha);box-shadow:0 0 0 4px rgba(124,140,90,.18);flex:none}
+.status.closed .dot{background:transparent;border:1.5px solid var(--roast);box-shadow:none}
+
+.pour{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;padding:10px 0}
+.cupwrap{position:relative;width:min(100%,max(250px,calc(100dvh - 490px)),500px);aspect-ratio:1}
+#cup{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair;border-radius:50%}
+#cup:focus-visible{outline:1px dashed var(--roast);outline-offset:-8px}
+.pourbar{width:min(100%,440px);margin-top:14px;text-align:center}
+.meter{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.meter .track{flex:1;height:1px;background:var(--rule-2);position:relative}
+.meter .fill{position:absolute;left:0;top:-1px;height:3px;width:0;background:var(--roast);transition:width .12s linear}
+.meter output{font-variant-numeric:tabular-nums;min-width:4ch;text-align:right;letter-spacing:.04em}
+.result{margin-top:12px;font:500 17px/1.45 var(--serif);min-height:2.9em;text-wrap:balance}
+.pourbtns{display:flex;gap:10px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.btn{appearance:none;border:1px solid var(--rule-2);background:transparent;border-radius:999px;min-height:42px;padding:0 20px;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s var(--ease),border-color .2s var(--ease),color .2s}
+.btn:hover{background:var(--oat);border-color:rgba(43,29,20,.4)}
+.btn.primary{background:var(--esp);color:var(--paper);border-color:var(--esp)}
+.btn.primary:hover{background:#3d2a1e}
+.btn[disabled]{opacity:.45;cursor:default}
+.hint{margin-top:12px;font-size:13px;line-height:1.5;color:var(--mute)}
+.hint kbd{font:600 11px/1 var(--sans);border:1px solid var(--rule-2);border-bottom-width:2px;border-radius:4px;padding:2px 5px;background:#fff}
+.p-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--rule);padding-top:14px}
+.p-nav{display:flex;gap:4px 22px;flex-wrap:wrap}
+.p-nav a,.p-foot .tel{font-size:13px;font-weight:500;text-decoration:none;padding:6px 0;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s var(--ease)}
+.p-nav a:hover,.p-foot .tel:hover{background-size:100% 1px}
+.p-foot .tel{color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ---------- scrolling column ---------- */
+.col{min-width:0}
+main{padding:0 clamp(28px,5vw,80px)}
+.intro{padding:clamp(56px,9vh,104px) 0 72px;max-width:700px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.lede{margin-top:22px;font:500 clamp(36px,3.9vw,56px)/1.16 var(--serif);letter-spacing:-.015em;text-wrap:balance}
+.intro-copy{margin-top:26px;font-size:18px;line-height:1.7;max-width:34em;color:#44342a;text-wrap:pretty}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:40px;border-top:1px solid var(--rule)}
+.facts div{padding:16px 28px 0 0;margin-right:28px;border-right:1px solid var(--rule)}
+.facts div:last-child{border-right:0;margin-right:0}
+.facts dt{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.facts dd{margin-top:4px;font:500 17px/1.35 var(--serif)}
+
+.sec{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:clamp(24px,3vw,44px);padding:88px 0 96px;border-top:1px solid var(--rule)}
+.sec-label{writing-mode:vertical-rl;position:sticky;top:44px;align-self:start;font:600 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.sec-label span{color:var(--esp);margin-bottom:14px;display:inline-block;letter-spacing:.12em}
+.statement{font:500 clamp(26px,2.5vw,34px)/1.3 var(--serif);letter-spacing:-.01em;max-width:21em;text-wrap:balance}
+.sub{margin-top:14px;color:var(--mute);max-width:36em;font-size:16px;text-wrap:pretty}
+.note{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.note::before{content:"";width:18px;height:1px;background:currentColor}
+
+/* menu */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:56px clamp(32px,4vw,64px);margin-top:52px}
+.mblock h3{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--esp);display:flex;justify-content:space-between;gap:10px}
+.mblock h3 em{font-style:normal;font-weight:500;letter-spacing:.06em;text-transform:none;color:var(--mute)}
+.items li{display:grid;grid-template-columns:auto minmax(14px,1fr) auto;align-items:baseline;column-gap:10px;padding:13px 0 12px;border-bottom:1px solid var(--rule)}
+.items .it{font-weight:500;font-size:16px}
+.items i{border-bottom:1px dotted rgba(43,29,20,.4);transform:translateY(-5px)}
+.items .pr{font-variant-numeric:tabular-nums;font-size:15px}
+.items small{grid-column:1/-1;font-size:13px;line-height:1.45;color:var(--mute);margin-top:3px}
+.extras{margin-top:14px;font-size:13px;color:var(--mute);line-height:1.55}
+
+/* beans */
+.beans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;margin-top:52px;background:var(--rule);border:1px solid var(--rule)}
+.bean{background:var(--paper);padding:26px 26px 22px;display:flex;flex-direction:column;gap:14px;transition:background .3s var(--ease)}
+.bean:hover{background:#FBF9F5}
+.bean-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.bean-top .use{display:flex;align-items:center;gap:8px}
+.bean-top .use::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--matcha)}
+.bean-top .use.filter::before{background:transparent;border:1.5px solid var(--matcha)}
+.bean h3{font:500 25px/1.15 var(--serif);letter-spacing:-.01em}
+.bean h3 small{display:block;margin-top:5px;font:500 13px/1.3 var(--sans);letter-spacing:.02em;color:var(--mute)}
+.bean dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px}
+.bean dt{color:var(--mute)}
+.bean dd{text-align:right}
+.alt{width:100%;height:34px;color:var(--roast)}
+.tastes{font:500 16px/1.45 var(--serif);color:#4a3527}
+.bean-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--rule);font-size:14px}
+.roast{display:flex;gap:4px;align-items:center}
+.roast b{width:8px;height:8px;border-radius:50%;border:1px solid var(--roast)}
+.roast b.on{background:var(--roast)}
+.roast span{font-size:12px;color:var(--mute);margin-right:6px}
+
+/* slow bar */
+.slow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px clamp(28px,4vw,64px);align-items:start;margin-top:8px}
+.slow figure{position:sticky;top:64px;padding-top:12px}
+.kettle{width:100%;height:auto;color:var(--esp)}
+.kettle .fillo{fill:var(--oat)}
+.kettle .fillp{fill:var(--paper)}
+.stream{stroke-dasharray:4 5;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-18}}
+.steps{margin-top:36px;border-top:1px solid var(--rule)}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.steps time{font-variant-numeric:tabular-nums;font-size:14px;font-weight:600;color:var(--roast);padding-top:2px}
+.steps b{display:block;font:500 19px/1.3 var(--serif)}
+.steps span{display:block;font-size:14px;color:var(--mute);margin-top:3px}
+.figcap{margin-top:10px;font-size:12px;color:var(--mute);text-align:center;letter-spacing:.04em}
+
+/* visit */
+.visit{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:48px clamp(32px,4vw,64px);margin-top:48px}
+.hours{border-top:1px solid var(--esp)}
+.hours div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.hours dt{display:flex;align-items:center;gap:10px}
+.hours dd{font-variant-numeric:tabular-nums}
+.hours .today dt::after{content:"Today";font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--matcha);padding:3px 6px;border-radius:2px}
+.hours-note{margin-top:12px;font-size:13px;color:var(--mute)}
+.where h3,.hours-h{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+.where p{font-size:15px;line-height:1.65}
+.where .big{font:500 24px/1.3 var(--serif);margin-bottom:12px}
+.contact{margin-top:20px;display:grid;gap:2px}
+.contact a{font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;min-height:40px;width:max-content;max-width:100%;border-bottom:1px solid var(--rule-2)}
+.contact a:hover{border-color:var(--esp)}
+.notes{margin-top:22px;display:grid;gap:9px;font-size:14px;color:#4a3527}
+.notes li{display:flex;gap:12px}
+.notes li::before{content:"";flex:none;width:12px;height:1px;background:var(--roast);margin-top:.8em}
+
+footer{margin:0 clamp(28px,5vw,80px);padding:56px 0 64px;border-top:1px solid var(--esp);display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px 40px;align-items:flex-end}
+.f-brand{font:500 clamp(28px,2.6vw,36px)/1.1 var(--serif);overflow-wrap:anywhere;max-width:100%}
+.f-fine{margin-top:12px;font-size:13px;line-height:1.6;color:var(--mute);max-width:32em}
+.f-top{font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.12em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid currentColor}
+
+/* ---------- tablet & phone: panel becomes the opening screen ---------- */
+@media (max-width:999px){
+  .layout{display:block}
+  .panel{position:relative;height:auto;display:block;border-right:0;border-bottom:1px solid var(--rule);padding:22px 20px 0;overflow:visible}
+  .p-head{flex-direction:column;gap:14px}
+  .brandrow{flex:none}
+  .status{padding:7px 14px 7px 12px;border:1px solid var(--rule-2);border-radius:999px;white-space:normal}
+  .pour{padding:18px 0 22px}
+  .cupwrap{width:min(78vw,380px)}
+  .pourbar{width:100%;max-width:460px}
+  .p-foot{margin:0 -20px;padding:0 8px;border-top:1px solid var(--rule)}
+  .p-nav{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .p-nav a{text-align:center;padding:14px 4px;min-height:48px;background:none}
+  .p-foot .tel{display:none}
+  main{padding:0 20px}
+  .intro{padding:56px 0 56px}
+  .sec{display:block;padding:56px 0 64px}
+  .sec-label{writing-mode:horizontal-tb;position:static;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  .sec-label span{margin:0}
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .slow{grid-template-columns:1fr}
+  .slow figure{order:-1;max-width:420px;position:static}
+  footer{margin:0 20px}
+}
+@media (max-width:520px){
+  .wordmark{font-size:34px}
+  .lede{font-size:34px}
+  .intro-copy{font-size:17px}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div{padding:14px 12px 14px 0;margin-right:12px}
+  .facts div:nth-child(2){border-right:0;margin-right:0}
+  .facts div:last-child{grid-column:1/-1;border-top:1px solid var(--rule)}
+  .bean{padding:22px 20px 20px}
+  .result{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .stream{animation:none}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to menu</a>
+<div class="layout">
+  <header class="panel">
+    <div class="p-head">
+      <div class="brandrow">
+        <span class="mono" aria-hidden="true" data-brand-initials>KC</span>
+        <div class="brandtext">
+          <h1 class="wordmark" data-brand>Kettle &amp; Crema</h1>
+          <p class="kicker">Specialty coffee · Slow bar · Fitzroy</p>
+        </div>
+      </div>
+      <p class="status" id="status"><span class="dot" aria-hidden="true"></span><span><span id="statusText">Weekdays 7am – 3pm</span><small id="statusSub">Weekends 8am – 2pm</small></span></p>
+    </div>
+
+    <section class="pour" aria-labelledby="pourTitle">
+      <h2 id="pourTitle" class="vh">Pour your own latte art</h2>
+      <div class="cupwrap">
+        <canvas id="cup" width="400" height="400" tabindex="0" role="application" aria-roledescription="latte art cup" aria-label="Latte art cup. Hold Space to pour and steer with the arrow keys." aria-describedby="pourHint"></canvas>
+      </div>
+      <div class="pourbar">
+        <div class="meter" aria-hidden="true"><span>Milk</span><span class="track"><span class="fill" id="meterFill"></span></span><output id="meterOut">0%</output></div>
+        <p class="result" id="result" aria-live="polite">A flat white, poured the slow way. Try pouring your own.</p>
+        <div class="pourbtns">
+          <button class="btn" type="button" id="resetBtn">Reset cup</button>
+          <button class="btn primary" type="button" id="heartBtn">Show me a heart</button>
+        </div>
+        <p class="hint" id="pourHint">Press and drag in the cup to pour. Wiggle side to side, then pull through the middle. Keyboard: hold <kbd>Space</kbd> and steer with the arrows.</p>
+      </div>
+    </section>
+
+    <div class="p-foot">
+      <nav class="p-nav" aria-label="Sections">
+        <a href="#menu">Menu</a><a href="#beans">Beans</a><a href="#slowbar">Slow bar</a><a href="#visit">Visit</a>
+      </nav>
+      <a class="tel" href="tel:+61355504127">(03) 5550 4127</a>
+    </div>
+  </header>
+
+  <div class="col">
+    <main id="main">
+      <section class="intro" aria-labelledby="introTitle">
+        <p class="eyebrow">Specialty coffee · Fitzroy, Melbourne</p>
+        <h2 class="lede" id="introTitle">Good coffee, poured without hurry.</h2>
+        <p class="intro-copy">Eight stools, one long timber bench and a kettle that never quite cools. We dial in the espresso every morning, brew filter to order at the slow bar and bake small batches before the doors open.</p>
+        <dl class="facts">
+          <div><dt>Weekdays</dt><dd>7am – 3pm</dd></div>
+          <div><dt>Weekends</dt><dd>8am – 2pm</dd></div>
+          <div><dt>Seats</dt><dd>8 stools &amp; a window bench</dd></div>
+        </dl>
+      </section>
+
+      <section class="sec" id="menu" aria-labelledby="menuT">
+        <h2 class="sec-label" id="menuT"><span>01</span>Menu</h2>
+        <div>
+          <p class="statement">Short menu, long attention. Everything is made to order, one cup at a time.</p>
+          <p class="note">Sample prices · AUD</p>
+          <div class="menu-grid">
+            <div class="mblock">
+              <h3>Espresso &amp; milk <em>double shot</em></h3>
+              <ul class="items">
+                <li><span class="it">Espresso</span><i aria-hidden="true"></i><span class="pr">4.50</span><small>With a small glass of soda water</small></li>
+                <li><span class="it">Piccolo</span><i aria-hidden="true"></i><span class="pr">5.00</span><small>Ristretto, a finger of silky milk</small></li>
+                <li><span class="it">Macchiato</span><i aria-hidden="true"></i><span class="pr">4.80</span><small>Espresso marked with a spoon of foam</small></li>
+                <li><span class="it">Magic</span><i aria-hidden="true"></i><span class="pr">5.60</span><small>Double ristretto, three-quarter milk — a Melbourne habit</small></li>
+                <li><span class="it">Flat white</span><i aria-hidden="true"></i><span class="pr">5.60</span><small>Our house pour, the one in the cup</small></li>
+                <li><span class="it">Latte · Cappuccino</span><i aria-hidden="true"></i><span class="pr">5.60</span><small>Glass or cup, as you like it</small></li>
+                <li><span class="it">Long black</span><i aria-hidden="true"></i><span class="pr">5.20</span><small>Double shot over hot water</small></li>
+              </ul>
+              <p class="extras">Oat, soy or lactose-free +0.80 · Extra shot +0.60 · Decaf on request</p>
+            </div>
+            <div class="mblock">
+              <h3>Filter &amp; slow bar <em>this week</em></h3>
+              <ul class="items">
+                <li><span class="it">Batch brew</span><i aria-hidden="true"></i><span class="pr">5.50</span><small>The week's filter, ready in a moment</small></li>
+                <li><span class="it">Pour-over</span><i aria-hidden="true"></i><span class="pr">7.50</span><small>Brewed to order at the slow bar, about four minutes</small></li>
+                <li><span class="it">Cold brew</span><i aria-hidden="true"></i><span class="pr">6.50</span><small>Steeped 16 hours, served over one big cube</small></li>
+                <li><span class="it">Espresso tonic</span><i aria-hidden="true"></i><span class="pr">7.00</span><small>Double shot over tonic with a twist of orange</small></li>
+              </ul>
+              <p class="extras">Ask which origin is on the slow bar — it changes when the bag runs out.</p>
+            </div>
+            <div class="mblock">
+              <h3>Tea <em>loose leaf</em></h3>
+              <ul class="items">
+                <li><span class="it">Sencha</span><i aria-hidden="true"></i><span class="pr">5.50</span><small>Steamed green tea, grassy and bright</small></li>
+                <li><span class="it">Hojicha</span><i aria-hidden="true"></i><span class="pr">5.50</span><small>Roasted green tea, toasty and gentle</small></li>
+                <li><span class="it">Matcha latte</span><i aria-hidden="true"></i><span class="pr">6.50</span><small>Whisked to order with the milk of your choice</small></li>
+                <li><span class="it">Lemon myrtle &amp; ginger</span><i aria-hidden="true"></i><span class="pr">5.00</span><small>Caffeine-free, warming, a little citrusy</small></li>
+              </ul>
+            </div>
+            <div class="mblock">
+              <h3>Pastries &amp; toast <em>baked here</em></h3>
+              <ul class="items">
+                <li><span class="it">Cardamom knot</span><i aria-hidden="true"></i><span class="pr">6.50</span><small>Laminated dough, cardamom sugar</small></li>
+                <li><span class="it">Black sesame banana bread</span><i aria-hidden="true"></i><span class="pr">7.50</span><small>Toasted, with whipped miso butter</small></li>
+                <li><span class="it">Rye toast</span><i aria-hidden="true"></i><span class="pr">8.00</span><small>Cultured butter and this week's jam</small></li>
+                <li><span class="it">Pear &amp; almond tart</span><i aria-hidden="true"></i><span class="pr">8.50</span><small>Frangipane, poached pear, a little sea salt</small></li>
+              </ul>
+              <p class="extras">Pastries run out most days by early afternoon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec" id="beans" aria-labelledby="beansT">
+        <h2 class="sec-label" id="beansT"><span>02</span>Beans on rotation</h2>
+        <div>
+          <p class="statement">Two for espresso, two for the slow bar. When a bag runs out, the next one comes in.</p>
+          <p class="sub">Every coffee is roasted within the fortnight and rested before it reaches the grinder. Bags are available to take home, ground to order for your brewer.</p>
+          <div class="beans">
+            <article class="bean">
+              <div class="bean-top"><span class="use">On espresso</span><span>No. 1</span></div>
+              <h3>Huila<small>Colombia · washed</small></h3>
+              <dl><dt>Variety</dt><dd>Caturra &amp; Castillo</dd><dt>Altitude</dt><dd>1,750 m</dd></dl>
+              <svg class="alt" viewBox="0 0 240 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 33 L40 24 L62 27 L104 9 L128 18 L150 13 L196 26 L240 30" fill="none" stroke="currentColor" stroke-width="1"/><path d="M0 11 H240" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity=".55"/><circle cx="104" cy="11" r="3" fill="currentColor"/></svg>
+              <p class="tastes">Red apple, panela, cocoa</p>
+              <div class="bean-foot"><span class="roast"><span>Roast</span><b class="on"></b><b class="on"></b><b class="on"></b><b></b><b></b></span><span>250 g · 24.00</span></div>
+            </article>
+            <article class="bean">
+              <div class="bean-top"><span class="use">On espresso</span><span>No. 2</span></div>
+              <h3>Cerrado Mineiro<small>Brazil · pulped natural</small></h3>
+              <dl><dt>Variety</dt><dd>Yellow Catuaí</dd><dt>Altitude</dt><dd>1,150 m</dd></dl>
+              <svg class="alt" viewBox="0 0 240 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 33 L52 28 L88 22 L126 19 L170 24 L210 27 L240 31" fill="none" stroke="currentColor" stroke-width="1"/><path d="M0 19 H240" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity=".55"/><circle cx="126" cy="19" r="3" fill="currentColor"/></svg>
+              <p class="tastes">Hazelnut, milk chocolate, dried fig</p>
+              <div class="bean-foot"><span class="roast"><span>Roast</span><b class="on"></b><b class="on"></b><b class="on"></b><b class="on"></b><b></b></span><span>250 g · 22.00</span></div>
+            </article>
+            <article class="bean">
+              <div class="bean-top"><span class="use filter">Slow bar</span><span>No. 3</span></div>
+              <h3>Guji<small>Ethiopia · natural</small></h3>
+              <dl><dt>Variety</dt><dd>Heirloom varieties</dd><dt>Altitude</dt><dd>2,050 m</dd></dl>
+              <svg class="alt" viewBox="0 0 240 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 33 L30 22 L56 25 L92 4 L118 14 L146 8 L190 23 L240 29" fill="none" stroke="currentColor" stroke-width="1"/><path d="M0 5 H240" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity=".55"/><circle cx="92" cy="5" r="3" fill="currentColor"/></svg>
+              <p class="tastes">Blueberry, jasmine, cacao nib</p>
+              <div class="bean-foot"><span class="roast"><span>Roast</span><b class="on"></b><b></b><b></b><b></b><b></b></span><span>250 g · 28.00</span></div>
+            </article>
+            <article class="bean">
+              <div class="bean-top"><span class="use filter">Slow bar</span><span>No. 4</span></div>
+              <h3>Kiambu<small>Kenya · washed</small></h3>
+              <dl><dt>Variety</dt><dd>SL28 &amp; SL34</dd><dt>Altitude</dt><dd>1,800 m</dd></dl>
+              <svg class="alt" viewBox="0 0 240 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 33 L46 25 L70 16 L96 20 L134 8 L160 17 L204 24 L240 31" fill="none" stroke="currentColor" stroke-width="1"/><path d="M0 9 H240" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity=".55"/><circle cx="134" cy="9" r="3" fill="currentColor"/></svg>
+              <p class="tastes">Blackcurrant, grapefruit, brown sugar</p>
+              <div class="bean-foot"><span class="roast"><span>Roast</span><b class="on"></b><b class="on"></b><b></b><b></b><b></b></span><span>250 g · 29.00</span></div>
+            </article>
+          </div>
+          <p class="note">Sample prices · origins change often</p>
+        </div>
+      </section>
+
+      <section class="sec" id="slowbar" aria-labelledby="slowT">
+        <h2 class="sec-label" id="slowT"><span>03</span>A slow bar</h2>
+        <div class="slow">
+          <div>
+            <p class="statement">A slow bar is a counter where the coffee sets the pace.</p>
+            <p class="sub">Take the stool at the end of the bench and we'll brew your filter by hand — weighed, bloomed and poured in slow circles. You're welcome to watch, ask questions, or simply sit with the window.</p>
+            <ol class="steps">
+              <li><time>0:00</time><div><b>Weigh</b><span>15 g of coffee, ground medium-fine just before brewing.</span></div></li>
+              <li><time>0:15</time><div><b>Bloom</b><span>45 g of water at 94°C. The bed rises, breathes and settles.</span></div></li>
+              <li><time>0:45</time><div><b>Pour</b><span>Slow spirals from the centre out, to 250 g in total.</span></div></li>
+              <li><time>3:30</time><div><b>Rest</b><span>It drains through, and we pour it into a warmed cup.</span></div></li>
+            </ol>
+          </div>
+          <figure>
+            <svg class="kettle" viewBox="0 0 320 240" role="img" aria-labelledby="kettleT">
+              <title id="kettleT">Line drawing of a gooseneck kettle pouring into a filter cone over a glass server</title>
+              <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 222 H314" stroke-width="1"/>
+                <path class="fillo" d="M42 220 L56 128 Q58 116 70 116 H132 Q144 116 146 128 L160 220 Z"/>
+                <path d="M72 116 Q101 94 130 116"/>
+                <circle class="fillp" cx="101" cy="101" r="5"/>
+                <path d="M60 134 C20 128 16 190 48 202"/>
+                <path d="M154 200 C188 200 184 146 198 122 C206 108 218 102 230 106 C236 108 238 112 238 116"/>
+                <path class="stream" d="M239 121 C240 134 241 146 241 158" stroke-width="1"/>
+                <path class="fillp" d="M214 158 H268 L256 186 H226 Z"/>
+                <path d="M210 158 H272"/>
+                <path class="fillp" d="M222 186 H260 V216 Q260 220 256 220 H226 Q222 220 222 216 Z"/>
+                <path d="M224 206 H258" stroke-width="1" opacity=".5"/>
+                <path d="M92 80 c-6 -8 6 -14 0 -22 M110 84 c-6 -8 6 -14 0 -22" stroke-width="1" opacity=".45"/>
+              </g>
+            </svg>
+            <figcaption class="figcap">Pour-over · about four minutes</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sec" id="visit" aria-labelledby="visitT">
+        <h2 class="sec-label" id="visitT"><span>04</span>Visit</h2>
+        <div>
+          <p class="statement">Fitzroy, Melbourne. Walk-ins only — pull up a stool.</p>
+          <div class="visit">
+            <div>
+              <h3 class="hours-h">Hours</h3>
+              <dl class="hours" id="hours">
+                <div data-days="1,2,3,4,5"><dt>Monday – Friday</dt><dd>7am – 3pm</dd></div>
+                <div data-days="0,6"><dt>Saturday &amp; Sunday</dt><dd>8am – 2pm</dd></div>
+                <div><dt>Public holidays</dt><dd>8am – 1pm</dd></div>
+              </dl>
+              <p class="hours-note">Hours shown in Melbourne time. Last orders 15 minutes before close.</p>
+            </div>
+            <div class="where">
+              <h3>Find us</h3>
+              <p class="big">Fitzroy, Melbourne VIC</p>
+              <p>A short walk from the trams, with a bike rack out front and step-free entry through the side door.</p>
+              <div class="contact">
+                <a href="tel:+61355504127">(03) 5550 4127</a>
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </div>
+              <ul class="notes">
+                <li>Dogs are welcome at the window bench.</li>
+                <li>Bring your own cup and we'll take 50c off.</li>
+                <li>Groups of six or more, give us a ring first.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p class="f-brand" data-brand>Kettle &amp; Crema</p>
+        <p class="f-fine">A fictional café, designed as a concept demo. Prices are samples; no orders or bookings are taken on this page.</p>
+      </div>
+      <a class="f-top" href="#top" id="toTop">Back to the cup</a>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var TAU = Math.PI * 2;
+  var $ = function (id) { return document.getElementById(id); };
+  var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- open now (Melbourne time) ---------- */
+  var HOURS = [[480, 840], [420, 900], [420, 900], [420, 900], [420, 900], [420, 900], [480, 840]];
+  function fmt(m) { var h = Math.floor(m / 60), mm = m % 60, ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12; return h + (mm ? ":" + (mm < 10 ? "0" : "") + mm : "") + ap; }
+  function melNow() {
+    try {
+      var parts = new Intl.DateTimeFormat("en-US", { timeZone: "Australia/Melbourne", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+      var g = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; return ""; };
+      var d = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(g("weekday"));
+      if (d < 0) throw 0;
+      return { d: d, m: (parseInt(g("hour"), 10) % 24) * 60 + parseInt(g("minute"), 10) };
+    } catch (e) { var n = new Date(); return { d: n.getDay(), m: n.getHours() * 60 + n.getMinutes() }; }
+  }
+  function status() {
+    var t = melNow(), h = HOURS[t.d], el = $("status"), txt, sub;
+    if (t.m >= h[0] && t.m < h[1]) {
+      txt = "Open now"; sub = (h[1] - t.m <= 30 ? "Closing soon · " : "Until ") + fmt(h[1]);
+      el.classList.remove("closed");
+    } else if (t.m < h[0]) {
+      txt = "Opens " + fmt(h[0]); sub = "Closed for now · back this morning";
+      el.classList.add("closed");
+    } else {
+      var nx = HOURS[(t.d + 1) % 7];
+      txt = "Opens " + fmt(nx[0]) + " tomorrow"; sub = "Closed for today · see you then";
+      el.classList.add("closed");
+    }
+    $("statusText").textContent = txt; $("statusSub").textContent = sub;
+    var rows = document.querySelectorAll("#hours [data-days]");
+    for (var i = 0; i < rows.length; i++) rows[i].classList.toggle("today", rows[i].getAttribute("data-days").split(",").indexOf(String(t.d)) !== -1);
+  }
+  status(); setInterval(status, 60000);
+
+  /* ---------- latte art: marbling-style milk layers ----------
+     Each pour layer is a closed polygon. New milk displaces every vertex radially
+     (area-preserving, so older layers become rings), and the moving stream drags
+     nearby vertices along its path (that is what turns a disc into a heart). */
+  var cv = $("cup"), ctx = cv.getContext("2d");
+  var W = 400, CX = 200, CY = 200, RL = 128, RIM = 150, SAU = 186;
+  var ESP = 60, CAP = 160, AREA = 230, MAXL = 64, MAXV = 36000;
+  var layers = [], milk = 0, flowNow = 1, driftW = 0;
+  var pouring = false, src = "", house = false, auto = null;
+  var cur = { x: CX, y: CY }, tgt = { x: CX, y: CY }, prev = { x: CX, y: CY }, sv = { x: 0, y: 0 };
+  var segDir = null, sinceLayer = 0, leaves = 0, straight = 0, sDir = null, pulled = false;
+  var keys = {}, kbFocus = false;
+  var scale = 1, bg = null, ov = null, running = false, visible = true, idle = 0, last = 0, acc = 0, raf = 0;
+  var seed = 7;
+  function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function circ(c, x, y, r) { c.beginPath(); c.arc(x, y, r, 0, TAU); }
+  function roundRect(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+
+  function drawStatic() {
+    var px = cv.width, g, i;
+    bg = document.createElement("canvas"); bg.width = bg.height = px;
+    var b = bg.getContext("2d"); b.setTransform(scale, 0, 0, scale, 0, 0);
+    g = b.createRadialGradient(CX + 5, CY + 9, SAU - 24, CX + 5, CY + 9, SAU + 12);
+    g.addColorStop(0, "rgba(43,29,20,.16)"); g.addColorStop(1, "rgba(43,29,20,0)");
+    b.fillStyle = g; circ(b, CX + 5, CY + 9, SAU + 12); b.fill();
+    g = b.createRadialGradient(CX - 60, CY - 70, 10, CX, CY, SAU);
+    g.addColorStop(0, "#FFFFFF"); g.addColorStop(.7, "#F6F2EC"); g.addColorStop(1, "#E9E2D7");
+    b.fillStyle = g; circ(b, CX, CY, SAU); b.fill();
+    b.strokeStyle = "rgba(43,29,20,.07)"; b.lineWidth = 1; circ(b, CX, CY, SAU - 12); b.stroke();
+    b.save(); b.translate(CX, CY); b.rotate(-0.5);
+    b.fillStyle = "rgba(43,29,20,.13)"; roundRect(b, RIM - 6, 4, 40, 20, 10); b.fill();
+    g = b.createLinearGradient(0, -11, 0, 11); g.addColorStop(0, "#FFFFFF"); g.addColorStop(1, "#E2D9CC");
+    b.fillStyle = g; roundRect(b, RIM - 12, -10, 46, 20, 10); b.fill();
+    b.strokeStyle = "rgba(43,29,20,.10)"; b.stroke();
+    b.restore();
+    g = b.createRadialGradient(CX + 6, CY + 11, RIM - 8, CX + 6, CY + 11, RIM + 18);
+    g.addColorStop(0, "rgba(43,29,20,.24)"); g.addColorStop(1, "rgba(43,29,20,0)");
+    b.fillStyle = g; circ(b, CX + 6, CY + 11, RIM + 18); b.fill();
+    g = b.createLinearGradient(CX - RIM, CY - RIM, CX + RIM, CY + RIM);
+    g.addColorStop(0, "#FFFFFF"); g.addColorStop(.55, "#F7F3EE"); g.addColorStop(1, "#E3DBCF");
+    b.fillStyle = g; circ(b, CX, CY, RIM); b.fill();
+    b.strokeStyle = "rgba(43,29,20,.10)"; circ(b, CX, CY, RIM - .5); b.stroke();
+    g = b.createRadialGradient(CX, CY, RL - 2, CX, CY, RL + 12);
+    g.addColorStop(0, "#D6CCBF"); g.addColorStop(1, "#FBF8F4");
+    b.fillStyle = g; circ(b, CX, CY, RL + 12); b.fill();
+    g = b.createRadialGradient(CX - 20, CY - 26, 4, CX, CY, RL);
+    g.addColorStop(0, "#BD8954"); g.addColorStop(.5, "#9D6635"); g.addColorStop(.86, "#76441F"); g.addColorStop(1, "#4B2A12");
+    b.fillStyle = g; circ(b, CX, CY, RL); b.fill();
+    seed = 11;
+    b.save(); circ(b, CX, CY, RL); b.clip();
+    for (i = 0; i < 1500; i++) {
+      var a = rnd() * TAU, rr = Math.sqrt(rnd()) * RL, s = .35 + rnd() * 1.2;
+      b.fillStyle = rnd() < .55 ? "rgba(238,192,132," + (.05 + rnd() * .12) + ")" : "rgba(50,24,8," + (.05 + rnd() * .12) + ")";
+      b.beginPath(); b.arc(CX + Math.cos(a) * rr, CY + Math.sin(a) * rr, s, 0, TAU); b.fill();
+    }
+    for (i = 0; i < 30; i++) {
+      var a2 = rnd() * TAU, r2 = 24 + rnd() * (RL - 30);
+      b.strokeStyle = "rgba(236,186,120," + (.05 + rnd() * .06) + ")"; b.lineWidth = .8 + rnd() * 1.6;
+      b.beginPath(); b.arc(CX, CY, r2, a2, a2 + .25 + rnd() * .7); b.stroke();
+    }
+    b.restore();
+    ov = document.createElement("canvas"); ov.width = ov.height = px;
+    var o = ov.getContext("2d"); o.setTransform(scale, 0, 0, scale, 0, 0);
+    o.save(); circ(o, CX, CY, RL); o.clip();
+    g = o.createRadialGradient(CX, CY, RL - 18, CX, CY, RL);
+    g.addColorStop(0, "rgba(35,16,4,0)"); g.addColorStop(1, "rgba(35,16,4,.36)");
+    o.fillStyle = g; o.fillRect(0, 0, W, W);
+    g = o.createRadialGradient(CX - 56, CY - 64, 0, CX - 56, CY - 64, 140);
+    g.addColorStop(0, "rgba(255,250,240,.13)"); g.addColorStop(1, "rgba(255,250,240,0)");
+    o.fillStyle = g; o.fillRect(0, 0, W, W);
+    o.restore();
+    o.strokeStyle = "rgba(255,255,255,.75)"; o.lineWidth = 1.4; o.lineCap = "round";
+    o.beginPath(); o.arc(CX, CY, RIM - 5, Math.PI * 1.08, Math.PI * 1.42); o.stroke();
+  }
+
+  /* geometry */
+  function addLayer(x, y, r) {
+    if (layers.length >= MAXL) return false;
+    source(x, y, Math.PI * r * r);
+    var N = 40, p = [];
+    for (var i = 0; i < N; i++) { var a = i / N * TAU; p.push(x + Math.cos(a) * r, y + Math.sin(a) * r); }
+    layers.push(p);
+    return true;
+  }
+  function source(cx, cy, area) {
+    var r2 = area / Math.PI;
+    for (var l = 0; l < layers.length; l++) {
+      var p = layers[l];
+      for (var i = 0; i < p.length; i += 2) {
+        var dx = p[i] - cx, dy = p[i + 1] - cy, s = dx * dx + dy * dy;
+        if (s < 1e-4) { dx = .01; dy = 0; s = 1e-4; }
+        var k = Math.sqrt(1 + r2 / s); p[i] = cx + dx * k; p[i + 1] = cy + dy * k;
+      }
+    }
+  }
+  function drag(cx, cy, mx, my, sig) {
+    var inv = 1 / (2 * sig * sig), lim = 9 * sig * sig;
+    for (var l = 0; l < layers.length; l++) {
+      var p = layers[l];
+      for (var i = 0; i < p.length; i += 2) {
+        var dx = p[i] - cx, dy = p[i + 1] - cy, s = dx * dx + dy * dy;
+        if (s > lim) continue;
+        var w = Math.exp(-s * inv); p[i] += mx * w; p[i + 1] += my * w;
+      }
+    }
+  }
+  function swirl(w) {
+    var c = Math.cos(w), s = Math.sin(w);
+    for (var l = 0; l < layers.length; l++) {
+      var p = layers[l];
+      for (var i = 0; i < p.length; i += 2) { var dx = p[i] - CX, dy = p[i + 1] - CY; p[i] = CX + dx * c - dy * s; p[i + 1] = CY + dx * s + dy * c; }
+    }
+  }
+  function wall() {
+    var lim = RL - .8, lim2 = lim * lim;
+    for (var l = 0; l < layers.length; l++) {
+      var p = layers[l];
+      for (var i = 0; i < p.length; i += 2) {
+        var dx = p[i] - CX, dy = p[i + 1] - CY, s = dx * dx + dy * dy;
+        if (s > lim2) { var k = lim / Math.sqrt(s); p[i] = CX + dx * k; p[i + 1] = CY + dy * k; }
+      }
+    }
+  }
+  function refine() {
+    var total = 0;
+    for (var l = 0; l < layers.length; l++) {
+      var p = layers[l], m = p.length >> 1, q = [p[0], p[1]], lx = p[0], ly = p[1];
+      for (var i = 1; i <= m; i++) {
+        var ii = (i % m) * 2, x = p[ii], y = p[ii + 1], dx = x - lx, dy = y - ly, s = dx * dx + dy * dy;
+        if (s > 9 && total + (q.length >> 1) < MAXV) {
+          var parts = Math.min(8, Math.ceil(Math.sqrt(s) / 3));
+          for (var k = 1; k < parts; k++) q.push(lx + dx * k / parts, ly + dy * k / parts);
+        }
+        if (i === m) break;
+        if (s < .36 && m > 30) continue;
+        q.push(x, y); lx = x; ly = y;
+      }
+      layers[l] = q; total += q.length >> 1;
+    }
+  }
+  function inside(p, x, y) {
+    var c = false, m = p.length;
+    for (var i = 0, j = m - 2; i < m; j = i, i += 2) {
+      var yi = p[i + 1], yj = p[j + 1];
+      if ((yi > y) !== (yj > y) && x < (p[j] - p[i]) * (y - yi) / (yj - yi) + p[i]) c = !c;
+    }
+    return c;
+  }
+
+  /* rendering */
+  function polyPath(p) {
+    var path = new Path2D();
+    path.moveTo(p[0], p[1]);
+    for (var i = 2; i < p.length; i += 2) path.lineTo(p[i], p[i + 1]);
+    path.closePath();
+    return path;
+  }
+  function render() {
+    if (!bg) return;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.drawImage(bg, 0, 0);
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    if (layers.length) {
+      ctx.save(); circ(ctx, CX, CY, RL - .3); ctx.clip();
+      ctx.lineJoin = "round";
+      var paths = layers.map(polyPath), i;
+      ctx.strokeStyle = "rgba(46,20,5,.10)";
+      for (i = 0; i < paths.length; i++) { ctx.lineWidth = 16; ctx.stroke(paths[i]); }
+      ctx.strokeStyle = "rgba(46,20,5,.16)";
+      for (i = 0; i < paths.length; i++) { ctx.lineWidth = 6; ctx.stroke(paths[i]); }
+      for (i = 0; i < paths.length; i++) {
+        ctx.fillStyle = i % 2 ? "#F5ECDD" : "#FAF4EA"; ctx.fill(paths[i]);
+        ctx.strokeStyle = "rgba(130,84,44,.22)"; ctx.lineWidth = 3.2; ctx.stroke(paths[i]);
+        ctx.strokeStyle = "rgba(94,55,25,.9)"; ctx.lineWidth = 1.05; ctx.stroke(paths[i]);
+      }
+      ctx.restore();
+    }
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(ov, 0, 0);
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    if (pouring && !auto) {
+      ctx.fillStyle = "rgba(255,255,255,.95)"; circ(ctx, cur.x, cur.y, 3); ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,.4)"; ctx.lineWidth = 1; circ(ctx, cur.x, cur.y, 7); ctx.stroke();
+    } else if (kbFocus && !auto) {
+      ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.lineWidth = 1.2; ctx.setLineDash([3, 3]);
+      circ(ctx, cur.x, cur.y, 10); ctx.stroke(); ctx.setLineDash([]);
+    }
+    $("meterFill").style.width = (Math.min(1, milk / CAP) * 100).toFixed(1) + "%";
+    $("meterOut").textContent = pct() + "%";
+  }
+  function pct() { return Math.round(100 * milk / (milk + ESP)); }
+  function clampLiquid(p, pad) {
+    var dx = p.x - CX, dy = p.y - CY, d = Math.sqrt(dx * dx + dy * dy), lim = RL - (pad || 8);
+    if (d > lim) { p.x = CX + dx / d * lim; p.y = CY + dy / d * lim; }
+    return p;
+  }
+
+  /* one simulation step (60 per second) */
+  function tick() {
+    if (auto) autoStep();
+    else if (src === "key" || kbFocus) {
+      var kx = (keys.ArrowRight ? 1 : 0) - (keys.ArrowLeft ? 1 : 0), ky = (keys.ArrowDown ? 1 : 0) - (keys.ArrowUp ? 1 : 0);
+      if (kx || ky) { tgt.x += kx * 3.2; tgt.y += ky * 3.2; clampLiquid(tgt); }
+    }
+    if (!auto) { cur.x += (tgt.x - cur.x) * .45; cur.y += (tgt.y - cur.y) * .45; }
+    var mx = cur.x - prev.x, my = cur.y - prev.y, len = Math.sqrt(mx * mx + my * my);
+    sv.x = sv.x * .7 + mx * .3; sv.y = sv.y * .7 + my * .3;
+    var sp = Math.sqrt(sv.x * sv.x + sv.y * sv.y);
+    if (pouring) {
+      if (milk >= CAP) { stopPour(true); }
+      else {
+        var thin = Math.min(1, len / 7), fl = flowNow * (1 - .85 * thin), area = AREA * fl;
+        sinceLayer++;
+        if (sp > .8 && !auto) {
+          var dx = sv.x / sp, dy = sv.y / sp;
+          if (!segDir) segDir = { x: dx, y: dy };
+          else if (dx * segDir.x + dy * segDir.y < -.2 && sinceLayer > 4 && fl > .15) {
+            if (addLayer(cur.x, cur.y, Math.max(3, Math.sqrt(area / Math.PI)))) { leaves++; area = 0; }
+            sinceLayer = 0; segDir = { x: dx, y: dy };
+          }
+          if (sp > 3) {
+            if (sDir && dx * sDir.x + dy * sDir.y > .9) straight += sp; else straight = sp;
+            sDir = { x: dx, y: dy };
+            if (straight > 70) pulled = true;
+          } else { straight = 0; sDir = null; }
+        }
+        var sub = Math.max(1, Math.ceil(len / 3)), top = layers[layers.length - 1];
+        for (var k = 1; k <= sub; k++) {
+          var px = prev.x + mx * k / sub, py = prev.y + my * k / sub;
+          if (len > .05) drag(px, py, mx / sub, my / sub, auto ? 13 : 11);
+          if (area > 0) {
+            if (!top || !inside(top, px, py)) { if (addLayer(px, py, Math.sqrt(area / sub / Math.PI))) top = layers[layers.length - 1]; }
+            else source(px, py, area / sub);
+          }
+        }
+        milk = Math.min(CAP, milk + .9 * fl);
+      }
+    } else if (driftW > 2e-5) { swirl(driftW); driftW *= .965; }
+    prev.x = cur.x; prev.y = cur.y;
+    if (layers.length) { wall(); refine(); }
+  }
+
+  /* the house heart: a disc, three nested rings, then a pull-through */
+  var HEART = [
+    { until: 8, x: 200, y: 176, f: 0 },
+    { until: 78, x: 200, y: 176, f: 1 },
+    { until: 79, x: 200, y: 179, f: 1, ring: 1 },
+    { until: 91, x: 200, y: 179, f: .9 },
+    { until: 92, x: 200, y: 182, f: .9, ring: 1 },
+    { until: 102, x: 200, y: 182, f: .8 },
+    { until: 103, x: 200, y: 185, f: .8, ring: 1 },
+    { until: 111, x: 200, y: 185, f: .7 },
+    { until: 115, x: 200, y: 78, f: 0, jump: 1 },
+    { until: 139, x: 200, y: 288, f: 0, line: 1 },
+    { until: 205, x: 200, y: 288, f: 0, rest: 1 }
+  ];
+  function autoStep() {
+    var s = auto.s++, ph = null, start = 0;
+    for (var i = 0; i < HEART.length; i++) { if (s < HEART[i].until) { ph = HEART[i]; start = i ? HEART[i - 1].until : 0; break; } }
+    if (!ph) { finishAuto(); return; }
+    if (ph.jump) { pouring = false; cur.x = prev.x = tgt.x = ph.x; cur.y = prev.y = tgt.y = ph.y; return; }
+    if (ph.rest) { if (pouring) { pouring = false; driftW = .0012; } return; }
+    if (ph.line) {
+      pouring = true; flowNow = 0;
+      var t = (s - start + 1) / (ph.until - start);
+      cur.x = tgt.x = 200; cur.y = tgt.y = 78 + (ph.y - 78) * t;
+      return;
+    }
+    if (ph.f && !pouring) { pouring = true; cur.x = prev.x = tgt.x = ph.x; cur.y = prev.y = tgt.y = ph.y; addLayer(ph.x, ph.y, 3); }
+    flowNow = ph.f;
+    cur.x = tgt.x = ph.x; cur.y = tgt.y = ph.y;
+    if (ph.ring) addLayer(ph.x, ph.y, 4);
+  }
+  function finishAuto() {
+    var wasHouse = auto && auto.house;
+    auto = null; pouring = false; src = ""; leaves = 0; pulled = false;
+    say(wasHouse ? "House pour: a heart, " + pct() + "% milk. Your turn — press and drag in the cup." : "That's a heart — " + pct() + "% milk. Press and drag to pour your own.");
+    house = true;
+    $("heartBtn").disabled = false;
+  }
+  function runHeart(instant, isHouse) {
+    resetCup(true);
+    auto = { s: 0, house: !!isHouse };
+    $("heartBtn").disabled = true;
+    if (instant) {
+      var guard = 0;
+      while (auto && guard++ < 1000) tick();
+      render();
+    } else { say("Pouring a heart…"); wake(); }
+  }
+
+  function resetCup(silent) {
+    layers = []; milk = 0; leaves = 0; pulled = false; straight = 0; segDir = null; sDir = null; driftW = 0;
+    pouring = false; auto = null; house = false; flowNow = 1;
+    cur.x = tgt.x = prev.x = CX; cur.y = tgt.y = prev.y = CY - 10;
+    if (!silent) say("Fresh cup. Press and drag inside it to pour.");
+    render();
+  }
+  function startPour(from) {
+    if (auto) return;
+    if (house) { var kx = cur.x, ky = cur.y; resetCup(true); cur.x = tgt.x = prev.x = kx; cur.y = tgt.y = prev.y = ky; }
+    if (milk >= CAP - .5) { say("This cup is full — " + pct() + "% milk. Reset for another."); return; }
+    pouring = true; src = from; flowNow = 1; segDir = null; sinceLayer = 0; straight = 0; sDir = null; driftW = 0;
+    addLayer(cur.x, cur.y, 3);
+    wake();
+  }
+  function stopPour(full) {
+    if (!pouring) return;
+    pouring = false; src = ""; driftW = .0014;
+    say(judge(full));
+    wake();
+  }
+  function judge(full) {
+    var p = pct(), lv = Math.min(leaves, 12), h;
+    if (p < 30 && !full) return "Just a splash so far — " + p + "% milk. Keep pouring for a flat white.";
+    h = full ? "Cup's full — " + p + "% milk. " : "Nice pour — " + p + "% milk. ";
+    if (lv >= 5 && pulled) return h + "A " + lv + "-leaf rosetta with a clean pull-through.";
+    if (lv >= 5) return h + lv + " leaves — finish with a quick pull through the middle.";
+    if (pulled) return h + "Heart territory. Wiggle side to side next time for leaves.";
+    if (lv >= 2) return h + lv + " ripples. Wiggle a little more, then pull through.";
+    return h + "A soft round pour — wiggle side to side as you pour for leaves.";
+  }
+  function say(t) { $("result").textContent = t; }
+
+  /* loop — only while something moves, on screen, in a visible tab */
+  function frame(t) {
+    if (!running) return;
+    if (!last) last = t;
+    acc += Math.min(50, t - last); last = t;
+    var steps = 0;
+    while (acc >= 16.6 && steps < 3) { tick(); acc -= 16.6; steps++; }
+    render();
+    var busy = pouring || auto || driftW > 2e-5 || (kbFocus && (keys.ArrowUp || keys.ArrowDown || keys.ArrowLeft || keys.ArrowRight));
+    if (busy) idle = 0; else idle += steps;
+    if (idle > 30) { running = false; last = 0; return; }
+    raf = requestAnimationFrame(frame);
+  }
+  function wake() {
+    idle = 0;
+    if (!running && visible && !document.hidden) { running = true; last = 0; acc = 0; raf = requestAnimationFrame(frame); }
+  }
+  function sleep() { running = false; last = 0; cancelAnimationFrame(raf); }
+
+  function toSim(e) {
+    var r = cv.getBoundingClientRect();
+    return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * W };
+  }
+  cv.addEventListener("pointerdown", function (e) {
+    var p = toSim(e), dx = p.x - CX, dy = p.y - CY;
+    if (Math.sqrt(dx * dx + dy * dy) > RIM + 6 || auto) return;
+    e.preventDefault();
+    try { cv.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    clampLiquid(p);
+    tgt.x = cur.x = prev.x = p.x; tgt.y = cur.y = prev.y = p.y; sv.x = sv.y = 0;
+    startPour("ptr");
+  });
+  cv.addEventListener("pointermove", function (e) {
+    if (src !== "ptr" || !pouring) return;
+    var p = clampLiquid(toSim(e)); tgt.x = p.x; tgt.y = p.y;
+  });
+  function endPtr() { if (src === "ptr") stopPour(false); }
+  cv.addEventListener("pointerup", endPtr);
+  cv.addEventListener("pointercancel", endPtr);
+  cv.addEventListener("lostpointercapture", endPtr);
+
+  cv.addEventListener("keydown", function (e) {
+    if (e.key === " " || e.code === "Space") { e.preventDefault(); if (!e.repeat && !pouring) startPour("key"); }
+    else if (/^Arrow/.test(e.key)) { e.preventDefault(); keys[e.key] = true; wake(); }
+  });
+  cv.addEventListener("keyup", function (e) {
+    if (e.key === " " || e.code === "Space") { e.preventDefault(); if (src === "key") stopPour(false); }
+    else if (/^Arrow/.test(e.key)) keys[e.key] = false;
+  });
+  cv.addEventListener("focus", function () { kbFocus = true; render(); });
+  cv.addEventListener("blur", function () { kbFocus = false; keys = {}; if (src === "key") stopPour(false); render(); });
+
+  $("resetBtn").addEventListener("click", function () { if (auto) { auto = null; $("heartBtn").disabled = false; } resetCup(false); });
+  $("heartBtn").addEventListener("click", function () { runHeart(reduced, false); });
+
+  function size() {
+    var r = cv.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var px = Math.max(160, Math.round(r.width * dpr));
+    if (cv.width !== px) { cv.width = cv.height = px; scale = px / W; drawStatic(); }
+    render();
+  }
+  if (window.ResizeObserver) new ResizeObserver(size).observe(cv); else window.addEventListener("resize", size);
+  if (window.IntersectionObserver) {
+    new IntersectionObserver(function (es) {
+      visible = es[0].isIntersecting;
+      if (!visible) sleep(); else if (pouring || auto || driftW > 2e-5) wake();
+    }).observe(cv);
+  }
+  document.addEventListener("visibilitychange", function () { if (document.hidden) sleep(); else if (pouring || auto) wake(); });
+
+  size();
+  runHeart(true, true);
+
+  /* test hooks for QA: scripted pours */
+  window.KC = {
+    heart: function () { runHeart(true, false); },
+    reset: function () { resetCup(false); },
+    pour: function (pts) {
+      if (house) resetCup(true);
+      cur.x = tgt.x = prev.x = pts[0][0]; cur.y = tgt.y = prev.y = pts[0][1];
+      startPour("ptr");
+      for (var i = 1; i < pts.length; i++) { tgt.x = pts[i][0]; tgt.y = pts[i][1]; tick(); }
+      stopPour(false); for (var j = 0; j < 40; j++) tick(); render();
+      return $("result").textContent;
+    }
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="107">
+<meta name="demo:brand" content="Riverside Night Market">
+<title>Riverside Night Market — every Friday by the river, South Bank</title>
+<meta name="description" content="A fictional weekly night market by the river at South Bank, QLD: street food, local makers and live music, with a stall map you can plan your night on.">
+<meta name="theme-color" content="#101935">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Titan+One&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --dusk:#101935;--deep:#0A1128;--panel:#18234A;--red:#E63946;--gold:#F4A261;--glow:#FFE66D;--teal:#2A9D8F;
+  --cream:#FFF6E4;--mute:#CACEE6;--food:#F25C66;
+  --display:'Titan One','Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;
+  --body:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--dusk);color:var(--cream);font:400 16px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
+svg{display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:10px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1200px,100% - 2 * var(--gutter));margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--glow);color:var(--dusk);padding:10px 14px;border-radius:10px;font-weight:700}
+.skip:focus{top:12px}
+h2{font:400 clamp(36px,5.2vw,68px)/.98 var(--display);letter-spacing:.005em;margin:0 0 14px;text-shadow:0 .06em 0 var(--red);text-wrap:balance}
+.kick{font:700 13px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.lede{font-size:18px;line-height:1.55;color:var(--mute);max-width:56ch;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;border:0;cursor:pointer;
+  font:700 16px/1 var(--body);text-decoration:none;background:var(--glow);color:var(--dusk);box-shadow:0 5px 0 #c9a52a;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 #c9a52a}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 #c9a52a}
+.btn.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 2px rgba(255,246,228,.55)}
+.btn.ghost:hover{transform:none;background:rgba(255,246,228,.08)}
+.btn.small{min-height:42px;padding:0 16px;font-size:14px}
+
+/* header */
+.top{position:absolute;inset:0 0 auto;z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo svg{flex:none;width:34px;height:44px}
+.logo span{font:400 19px/1.05 var(--display);color:var(--cream);overflow-wrap:anywhere}
+.nav{display:flex;align-items:center;gap:2px;flex:none}
+.nav a{padding:12px 13px;border-radius:999px;font:700 14px/1 var(--body);text-decoration:none;color:var(--cream)}
+.nav a:hover{background:rgba(255,246,228,.1)}
+.nav .btn{margin-left:8px;color:var(--dusk)}
+.nav .btn:hover{background:var(--glow)}
+@media (max-width:980px){.nav a:not(.btn){display:none}}
+@media (max-width:420px){.logo span{font-size:16px}.nav .btn{padding:0 14px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;
+  background:radial-gradient(90% 55% at 72% 100%,rgba(244,162,97,.32),transparent 62%),linear-gradient(180deg,#070C22 0%,#101935 48%,#1B1F4E 100%)}
+.lanterns{position:absolute;left:0;top:0;width:100%;height:clamp(250px,30vw,440px);z-index:-1;pointer-events:none}
+.lantern{transform-box:view-box;animation:sway var(--t,6s) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.twk{animation:twk 3.2s ease-in-out infinite alternate}
+@keyframes twk{from{opacity:.35}to{opacity:1}}
+.bokeh{position:absolute;inset:0;z-index:-2;pointer-events:none}
+.bokeh i{position:absolute;border-radius:50%;background:radial-gradient(circle,var(--c,rgba(255,230,109,.5)) 0,transparent 68%);animation:float 16s ease-in-out infinite alternate}
+@keyframes float{from{transform:translate(0,0)}to{transform:translate(24px,-30px)}}
+.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:32px;align-items:end;
+  padding:clamp(150px,15vw,210px) 0 150px}
+.hero h1{margin:0}
+.brandline{display:inline-block;font:400 clamp(22px,2.6vw,34px)/1.1 var(--display);color:var(--glow);overflow-wrap:anywhere;margin-bottom:10px;
+  text-shadow:0 0 22px rgba(255,230,109,.45)}
+.every{display:block;font:400 clamp(76px,12.4vw,178px)/.86 var(--display);letter-spacing:-.005em;color:var(--cream);
+  text-shadow:.045em .05em 0 var(--red),0 0 60px rgba(244,162,97,.35)}
+.hero .lede{margin:26px 0 28px;color:#E3E5F3}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.pills li{padding:8px 14px;border-radius:999px;background:rgba(255,246,228,.1);box-shadow:inset 0 0 0 1px rgba(255,246,228,.25);font:700 14px/1.2 var(--body)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.ticket{position:relative;justify-self:end;width:min(100%,340px);padding:24px 26px;border-radius:22px;background:var(--cream);color:var(--dusk);transform:rotate(2.5deg);
+  box-shadow:10px 12px 0 var(--red);
+  -webkit-mask:radial-gradient(circle 14px at 0 62%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% 62%,transparent 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 14px at 0 62%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% 62%,transparent 98%,#000) right/51% 100% no-repeat}
+.ticket .kick{color:#9a3412}
+.ticket b{display:block;font:400 40px/1 var(--display);margin:2px 0 6px}
+.ticket p{margin:0;font-size:15px;line-height:1.45}
+.ticket hr{border:0;border-top:2px dashed rgba(16,25,53,.35);margin:16px 0 14px}
+.river{position:absolute;left:0;right:0;bottom:0;height:96px;z-index:-1;background:linear-gradient(180deg,#153b55,#0c2238)}
+.river::before{content:"";position:absolute;inset:0;opacity:.9;
+  background:repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,230,109,.5) 60px 84px,transparent 84px 150px,rgba(230,57,70,.45) 150px 166px,transparent 166px 230px) 0 22px/100% 3px no-repeat,
+  repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,230,109,.35) 40px 56px,transparent 56px 120px,rgba(42,157,143,.55) 120px 150px,transparent 150px 200px) 30px 46px/100% 3px no-repeat,
+  repeating-linear-gradient(90deg,transparent 0 90px,rgba(244,162,97,.35) 90px 110px,transparent 110px 170px) 10px 70px/100% 2px no-repeat;
+  animation:shimmer 7s ease-in-out infinite alternate}
+@keyframes shimmer{from{transform:translateX(0);opacity:.75}to{transform:translateX(-26px);opacity:1}}
+@media (max-width:860px){
+  .hero-in{grid-template-columns:minmax(0,1fr);padding:clamp(170px,44vw,220px) 0 130px;gap:34px}
+  .ticket{justify-self:start;transform:rotate(-1.5deg)}
+}
+
+/* this week */
+.sec{padding:clamp(72px,10vw,120px) 0}
+.week{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+.card{position:relative;padding:22px 20px 20px;border-radius:22px;background:var(--panel);box-shadow:inset 0 0 0 2px rgba(255,246,228,.1);transition:transform .2s}
+.card:nth-child(1){transform:rotate(-1.2deg)}.card:nth-child(2){transform:rotate(1deg)}.card:nth-child(3){transform:rotate(-.6deg)}.card:nth-child(4){transform:rotate(1.4deg)}
+.card:hover{transform:rotate(0) translateY(-4px)}
+.card .when{display:inline-block;padding:6px 11px;border-radius:999px;background:var(--glow);color:var(--dusk);font:700 13px/1 var(--body);margin-bottom:14px}
+.card.t .when{background:var(--teal);color:var(--dusk)}.card.r .when{background:var(--food);color:var(--dusk)}.card.g .when{background:var(--gold);color:var(--dusk)}
+.card h3{font:400 24px/1.1 var(--display);margin:0 0 8px}
+.card p{margin:0;color:var(--mute);font-size:15px;line-height:1.5}
+.card .lnk{margin-top:14px;display:inline-flex;align-items:center;gap:6px;min-height:40px;background:none;border:0;padding:0;cursor:pointer;color:var(--glow);font:700 14px/1 var(--body);text-decoration:underline;text-underline-offset:4px}
+@media (max-width:980px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.week{grid-template-columns:minmax(0,1fr)}}
+
+/* map */
+.mapsec{background:linear-gradient(180deg,var(--dusk),var(--deep) 30%)}
+.map-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:22px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid rgba(255,246,228,.28);background:transparent;
+  font:700 15px/1 var(--body);cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
+.chip i{width:12px;height:12px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--dusk)}
+.chip[aria-pressed="true"] i{background:var(--dusk)}
+.chip.reset{border-style:dashed}
+.count{font:700 14px/1.3 var(--body);color:var(--mute);min-width:12ch}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:22px;align-items:start}
+.stage{position:relative;aspect-ratio:1000/620;border-radius:26px;overflow:hidden;background:#16224B;box-shadow:0 0 0 2px rgba(255,246,228,.12),0 30px 80px -30px rgba(0,0,0,.8)}
+.stage>svg{position:absolute;inset:0;width:100%;height:100%}
+.lbl{position:absolute;transform:translate(-50%,-50%);font:700 11px/1.1 var(--body);letter-spacing:.14em;color:rgba(255,246,228,.72);white-space:nowrap;pointer-events:none}
+.lbl.fac{letter-spacing:.04em;padding:4px 7px;border-radius:7px;background:rgba(255,246,228,.14);color:var(--cream)}
+.pin{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;border:2.5px solid var(--dusk);background:var(--c);color:var(--dusk);
+  font:700 13px/1 var(--body);display:grid;place-items:center;cursor:pointer;padding:0;transition:opacity .25s,transform .25s,box-shadow .25s;z-index:2}
+.pin::before{content:"";position:absolute;inset:-6px;border-radius:50%}
+.pin.food{--c:var(--food)}.pin.makers{--c:var(--teal)}.pin.music{--c:var(--glow)}
+.pin:hover,.pin[aria-expanded="true"]{transform:translate(-50%,-50%) scale(1.18);z-index:4}
+.pin.dim{opacity:.25}
+.pin.glow{box-shadow:0 0 0 5px color-mix(in srgb,var(--c) 30%,transparent),0 0 26px 8px color-mix(in srgb,var(--c) 70%,transparent);animation:halo 2.4s ease-in-out infinite alternate}
+@keyframes halo{to{box-shadow:0 0 0 9px color-mix(in srgb,var(--c) 18%,transparent),0 0 34px 12px color-mix(in srgb,var(--c) 80%,transparent)}}
+.pin .ord{position:absolute;top:-11px;right:-13px;min-width:22px;height:22px;padding:0 5px;border-radius:999px;background:var(--cream);color:var(--dusk);font:700 11px/22px var(--body);box-shadow:0 0 0 2px var(--dusk)}
+.pin .ord:empty{display:none}
+.route{pointer-events:none;z-index:1}
+.stallcard{position:absolute;z-index:6;width:300px;padding:18px 18px 16px;border-radius:20px;background:var(--cream);color:var(--dusk);box-shadow:0 20px 50px -12px rgba(0,0,0,.7);display:none}
+.stallcard.on{display:block;animation:pop .22s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.97)}}
+.stallcard h3{font:400 23px/1.08 var(--display);margin:0 0 6px;padding-right:34px}
+.stallcard h3:focus{outline:none}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:0;list-style:none}
+.tags li{padding:4px 9px;border-radius:999px;font:700 12px/1.2 var(--body);background:rgba(16,25,53,.08)}
+.tags .veg{background:#cdeee9;color:#0f4d45}
+.stallcard p{margin:0 0 8px;font-size:15px;line-height:1.45}
+.stallcard .meta{font-size:13.5px;color:#3d4468}
+.stallcard .x{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(16,25,53,.08);cursor:pointer;font:700 20px/1 var(--body)}
+.stallcard .btn{width:100%;margin-top:8px;box-shadow:0 4px 0 #c9a52a}
+.stallcard .btn.added{background:var(--teal);box-shadow:0 4px 0 #1d6f65}
+.planner{border-radius:26px;background:var(--panel);padding:22px;box-shadow:inset 0 0 0 2px rgba(255,246,228,.1)}
+.planner h3{font:400 28px/1 var(--display);margin:0 0 4px}
+.planner .hint{margin:0 0 16px;color:var(--mute);font-size:14.5px;line-height:1.45}
+.plan{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px;counter-reset:s}
+.plan li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:10px;padding:8px 8px 8px 10px;border-radius:14px;background:rgba(255,246,228,.07)}
+.plan .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--glow);color:var(--dusk);font:700 13px/1 var(--body)}
+.plan .nm{font-weight:700;line-height:1.25;overflow-wrap:anywhere}
+.plan .nm small{display:block;font-weight:400;color:var(--mute);font-size:12.5px}
+.plan .ctl{display:flex;gap:2px}
+.plan .ctl button{width:36px;height:40px;border:0;border-radius:10px;background:transparent;cursor:pointer;font:700 16px/1 var(--body);color:var(--cream)}
+.plan .ctl button:hover{background:rgba(255,246,228,.12)}
+.plan .ctl button:disabled{opacity:.3;cursor:default}
+.empty{padding:16px;border-radius:14px;border:2px dashed rgba(255,246,228,.22);color:var(--mute);font-size:14.5px;line-height:1.45;margin:0 0 14px}
+.walk{display:flex;gap:12px;align-items:center;padding:14px;border-radius:16px;background:rgba(255,230,109,.1);margin:0 0 14px}
+.walk b{font:400 28px/1 var(--display);color:var(--glow);white-space:nowrap}
+.walk span{font-size:13.5px;line-height:1.35;color:var(--mute)}
+.plan-btns{display:flex;flex-wrap:wrap;gap:8px}
+.listview{margin-top:22px;border-radius:22px;background:rgba(255,246,228,.04);box-shadow:inset 0 0 0 2px rgba(255,246,228,.08)}
+.listview summary{cursor:pointer;min-height:52px;display:flex;align-items:center;padding:0 20px;font:700 16px/1.2 var(--body);list-style:none}
+.listview summary::-webkit-details-marker{display:none}
+.listview summary::after{content:"＋";margin-left:auto;color:var(--glow)}
+.listview[open] summary::after{content:"－"}
+.lv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 18px;padding:4px 20px 20px}
+.lv button{display:flex;gap:10px;align-items:center;min-height:42px;border:0;background:none;padding:4px 6px;border-radius:10px;text-align:left;cursor:pointer;font-size:15px}
+.lv button:hover{background:rgba(255,246,228,.08)}
+.lv i{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--c);color:var(--dusk);font:700 11px/1 var(--body);font-style:normal}
+@media (max-width:1060px){.map-layout{grid-template-columns:minmax(0,1fr)}.lv{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:699px){
+  .stage{aspect-ratio:620/1000;border-radius:22px}
+  .pin{width:28px;height:28px;font-size:12px}
+  .lbl{font-size:9.5px;letter-spacing:.1em}
+  .stallcard{left:8px!important;right:8px!important;top:auto!important;bottom:8px!important;width:auto}
+  .lv{grid-template-columns:minmax(0,1fr)}
+  .filters{gap:6px}.chip{padding:0 13px}
+}
+
+/* line-up */
+.lineup{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}
+.sets{list-style:none;margin:0;padding:0;border-top:2px solid rgba(255,246,228,.14)}
+.sets li{display:grid;grid-template-columns:136px minmax(0,1fr) auto;gap:6px 18px;align-items:center;padding:18px 0;border-bottom:2px solid rgba(255,246,228,.14)}
+.sets time{font:400 28px/1 var(--display);color:var(--glow);white-space:nowrap}
+.lineup .lede{margin-top:20px}
+.sets b{display:block;font:400 22px/1.15 var(--display)}
+.sets span{color:var(--mute);font-size:14.5px}
+.sets .tag{padding:6px 10px;border-radius:999px;background:rgba(42,157,143,.25);color:#bff0e8;font:700 12px/1 var(--body);white-space:nowrap}
+.sets li.brk b{color:var(--gold)}
+.note{font-size:13.5px;color:var(--mute);margin:16px 0 0}
+@media (max-width:860px){.lineup{grid-template-columns:minmax(0,1fr)}.sets li{grid-template-columns:86px minmax(0,1fr)}.sets .tag{grid-column:2;justify-self:start}.sets time{font-size:22px}}
+
+/* getting there */
+.go{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.go div{padding:22px;border-radius:22px;background:var(--panel)}
+.go svg{width:40px;height:40px;margin-bottom:12px}
+.go h3{font:400 21px/1.15 var(--display);margin:0 0 6px}
+.go p{margin:0;color:var(--mute);font-size:15px;line-height:1.5}
+@media (max-width:900px){.go{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.go{grid-template-columns:minmax(0,1fr)}}
+
+/* stallholders */
+.stall{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.facts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.45}
+.facts li::before{content:"";flex:none;width:14px;height:18px;margin-top:3px;border-radius:7px 7px 5px 5px;background:var(--red);box-shadow:0 0 12px rgba(230,57,70,.8)}
+form.apply{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:clamp(18px,2.4vw,28px);border-radius:26px;background:var(--cream);color:var(--dusk);box-shadow:12px 14px 0 var(--teal)}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label,.fld legend{font:700 13px/1.2 var(--body);color:#2b3358;padding:0}
+.fld input,.fld select,.fld textarea{width:100%;min-height:48px;padding:10px 13px;border-radius:12px;border:2px solid rgba(16,25,53,.2);background:#fff;font-size:16px;color:var(--dusk)}
+.fld textarea{min-height:88px;resize:vertical}
+.fld input:focus-visible,.fld select:focus-visible,.fld textarea:focus-visible{outline:3px solid var(--teal);outline-offset:1px}
+fieldset.fld{border:0;margin:0;padding:0}
+.days{display:flex;flex-wrap:wrap;gap:8px}
+.days label{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 12px;border-radius:12px;border:2px solid rgba(16,25,53,.18);font:700 14px/1 var(--body);color:var(--dusk);cursor:pointer}
+.days input{width:18px;height:18px;min-height:0;accent-color:var(--teal)}
+.chk{display:flex;align-items:center;gap:10px;font:700 14px/1.3 var(--body);min-height:42px}
+.chk input{width:20px;height:20px;accent-color:var(--teal)}
+form.apply .btn{grid-column:1/-1;background:var(--dusk);color:var(--cream);box-shadow:0 5px 0 var(--red)}
+.out{grid-column:1/-1;margin:0;font-size:14px;color:#8a1c25;min-height:1.4em}
+@media (max-width:860px){.stall{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){form.apply{grid-template-columns:minmax(0,1fr);box-shadow:7px 9px 0 var(--teal)}}
+
+footer{background:var(--deep);padding:56px 0 calc(48px + env(safe-area-inset-bottom));border-top:2px solid rgba(255,246,228,.08)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px 40px}
+.fname{font:400 30px/1.05 var(--display);margin:0 0 8px;color:var(--glow);overflow-wrap:anywhere}
+.foot p{margin:0;color:var(--mute);font-size:14px;max-width:52ch}
+
+.hero.off *,.hero.hidden-tab *{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .card{transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#map">Skip to the stall map</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><radialGradient id="halo"><stop offset="0" stop-color="#FFE66D" stop-opacity=".5"/><stop offset=".45" stop-color="#F4A261" stop-opacity=".16"/><stop offset="1" stop-color="#F4A261" stop-opacity="0"/></radialGradient></defs>
+  <symbol id="lan" viewBox="-50 -8 100 120" overflow="visible">
+    <circle cy="34" r="56" fill="url(#halo)"/>
+    <rect x="-11" y="0" width="22" height="7" rx="2" fill="#2a1622"/>
+    <ellipse cy="34" rx="30" ry="28" fill="currentColor"/>
+    <ellipse cy="34" rx="15" ry="21" fill="#FFE66D" opacity=".42"/>
+    <path d="M-16 9Q-28 34-16 59M0 7v54M16 9Q28 34 16 59" stroke="#000" stroke-opacity=".2" stroke-width="2" fill="none"/>
+    <rect x="-10" y="60" width="20" height="6" rx="2" fill="#2a1622"/>
+    <path d="M0 66v22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="lant" viewBox="-50 -8 100 120" overflow="visible">
+    <circle cy="38" r="54" fill="url(#halo)"/>
+    <rect x="-13" y="0" width="26" height="7" rx="2" fill="#2a1622"/>
+    <rect x="-21" y="6" width="42" height="66" rx="16" fill="currentColor"/>
+    <rect x="-10" y="14" width="20" height="50" rx="10" fill="#FFE66D" opacity=".4"/>
+    <path d="M-21 24h42M-21 54h42" stroke="#000" stroke-opacity=".18" stroke-width="2"/>
+    <rect x="-13" y="71" width="26" height="6" rx="2" fill="#2a1622"/>
+    <path d="M0 77v20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Riverside Night Market home">
+      <svg viewBox="0 0 34 44" aria-hidden="true"><path d="M17 0v6" stroke="#FFE66D" stroke-width="2"/><rect x="11" y="5" width="12" height="4" rx="1.5" fill="#FFE66D"/><ellipse cx="17" cy="21" rx="14" ry="13" fill="#E63946"/><ellipse cx="17" cy="21" rx="6" ry="9" fill="#FFE66D" opacity=".55"/><rect x="12" y="33" width="10" height="3.5" rx="1.5" fill="#FFE66D"/><path d="M17 37v7" stroke="#E63946" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span data-brand>Riverside Night Market</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#week">This Friday</a><a href="#music">Line-up</a><a href="#getting-there">Getting there</a><a href="#stallholders">Stallholders</a>
+      <a class="btn small" href="#map">Plan my night</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="bokeh" aria-hidden="true">
+    <i style="left:6%;top:58%;width:120px;height:120px;--c:rgba(230,57,70,.35);animation-duration:18s"></i>
+    <i style="left:18%;top:30%;width:60px;height:60px;animation-delay:-4s"></i>
+    <i style="left:34%;top:72%;width:90px;height:90px;--c:rgba(42,157,143,.35);animation-duration:21s"></i>
+    <i style="left:47%;top:44%;width:44px;height:44px;animation-delay:-8s"></i>
+    <i style="left:58%;top:16%;width:70px;height:70px;--c:rgba(244,162,97,.4);animation-duration:15s"></i>
+    <i style="left:66%;top:62%;width:140px;height:140px;--c:rgba(255,230,109,.28);animation-delay:-2s"></i>
+    <i style="left:80%;top:38%;width:56px;height:56px;--c:rgba(230,57,70,.4);animation-duration:19s"></i>
+    <i style="left:90%;top:70%;width:96px;height:96px;--c:rgba(42,157,143,.3);animation-delay:-11s"></i>
+    <i style="left:26%;top:8%;width:36px;height:36px;animation-delay:-6s"></i>
+  </div>
+  <svg class="lanterns" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><g transform="translate(0 34)">
+    <path d="M-20 24Q380 140 760 40M740 40Q1100 170 1460 30" stroke="#8d86b8" stroke-width="1.6" fill="none" opacity=".7"/>
+    <g fill="#FFE66D"><circle class="twk" cx="60" cy="45" r="3.2"/><circle class="twk" cx="218" cy="74" r="3.2" style="animation-delay:-1.1s"/><circle class="twk" cx="375" cy="86" r="3.2" style="animation-delay:-2.3s"/><circle class="twk" cx="530" cy="81" r="3.2" style="animation-delay:-.6s"/><circle class="twk" cx="684" cy="58" r="3.2" style="animation-delay:-1.8s"/><circle class="twk" cx="812" cy="63" r="3.2" style="animation-delay:-2.9s"/><circle class="twk" cx="956" cy="94" r="3.2" style="animation-delay:-.3s"/><circle class="twk" cx="1100" cy="102" r="3.2" style="animation-delay:-1.5s"/><circle class="twk" cx="1244" cy="90" r="3.2" style="animation-delay:-2.6s"/><circle class="twk" cx="1388" cy="55" r="3.2" style="animation-delay:-.9s"/></g>
+    <g class="lantern" style="--t:5.2s;--dl:-1s;transform-origin:139px 62px"><use href="#lan" x="101" y="56" width="76" height="91" style="color:#F4A261"/></g>
+    <g class="lantern" style="--t:6.4s;--dl:-3s;transform-origin:297px 82px"><path d="M297 82v6" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lant" x="259" y="82" width="76" height="91" style="color:#2A9D8F"/></g>
+    <g class="lantern" style="--t:5.8s;--dl:-2s;transform-origin:453px 85px"><use href="#lan" x="415" y="79" width="76" height="91" style="color:#E63946"/></g>
+    <g class="lantern" style="--t:7s;--dl:-4s;transform-origin:607px 71px"><path d="M607 71v18" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lan" x="557" y="81" width="100" height="120" style="color:#FFE66D"/></g>
+    <g class="lantern" style="--t:6s;--dl:-.5s;transform-origin:884px 81px"><path d="M884 81v110" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lan" x="822" y="181" width="124" height="149" style="color:#E63946"/></g>
+    <g class="lantern" style="--t:5.4s;--dl:-2.5s;transform-origin:1028px 101px"><path d="M1028 101v70" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lant" x="990" y="165" width="76" height="91" style="color:#F4A261"/></g>
+    <g class="lantern" style="--t:7.4s;--dl:-1.5s;transform-origin:1172px 99px"><path d="M1172 99v150" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lan" x="1122" y="241" width="100" height="120" style="color:#2A9D8F"/></g>
+    <g class="lantern" style="--t:6.2s;--dl:-3.5s;transform-origin:1316px 75px"><path d="M1316 75v84" stroke="#FFE66D" stroke-opacity=".5" stroke-width="1.5"/><use href="#lan" x="1278" y="153" width="76" height="91" style="color:#E63946"/></g>
+  </g></svg>
+  <div class="hero-in wrap">
+    <div>
+      <h1 id="h1"><span class="brandline" data-brand>Riverside Night Market</span><span class="every">Every Friday</span></h1>
+      <p class="lede">Street food, local makers and live music under the fig trees on the riverbank at South Bank, QLD. Come hungry, bring your mates, stay till the lanterns go out.</p>
+      <ul class="pills"><li>5 pm – 10 pm</li><li>Free entry</li><li>24 stalls</li><li>Live music from 5.30 pm</li></ul>
+      <div class="cta-row"><a class="btn" href="#map">Plan my night on the map</a><a class="btn ghost" href="#week">What's on this Friday</a></div>
+    </div>
+    <aside class="ticket" aria-label="Next market">
+      <p class="kick">Next market</p>
+      <b class="nextDate">Fri 2 Oct</b>
+      <p>5 pm – 10 pm · riverbank lawns, South Bank QLD</p>
+      <hr>
+      <p><strong>Free entry.</strong> Bring a reusable cup — water refills at the Info Tent.</p>
+    </aside>
+  </div>
+  <div class="river" aria-hidden="true"></div>
+</section>
+
+<section class="sec" id="week" aria-labelledby="hw">
+  <div class="wrap">
+    <p class="kick">This Friday · <span class="nextDate">Fri 2 Oct</span></p>
+    <h2 id="hw">Jacaranda Friday</h2>
+    <p class="lede">The jacarandas are flowering along the river, so this week goes purple. Here's what's on — a sample programme for this demo.</p>
+    <div class="week">
+      <article class="card"><span class="when">5.30 pm</span><h3>Lantern-making for kids</h3><p>Paper, glue and a battery tealight — no flames. At the Info Tent, $5 for materials.</p></article>
+      <article class="card t"><span class="when">7.30 pm</span><h3>Lantern walk</h3><p>Follow the drummers along the River Walk to the footbridge and back. Bring the lantern you made.</p></article>
+      <article class="card r"><span class="when">New stall</span><h3>Casa Arepa</h3><p>Venezuelan arepas stuffed to bursting. The black bean &amp; plantain one is vegan.</p><button class="lnk" type="button" data-show="3">Show on the map →</button></article>
+      <article class="card g"><span class="when">All night</span><h3>Purple everything</h3><p>Ube soft-serve at Night Gelato and jacaranda-scented candles at Slow Burn.</p><button class="lnk" type="button" data-show="19">Show on the map →</button></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec mapsec" id="map" aria-labelledby="hm">
+  <div class="wrap">
+    <div class="map-head">
+      <div><p class="kick">The stall map</p><h2 id="hm">Plan your night</h2>
+      <p class="lede">Light up what you're after, tap a stall to see what they sell, then add it to your night — we'll draw your walking route in order.</p></div>
+    </div>
+    <div class="filters" role="group" aria-label="Filter stalls" style="margin-bottom:18px">
+      <button class="chip" type="button" data-f="food" aria-pressed="false" style="--c:var(--food)"><i></i>Food</button>
+      <button class="chip" type="button" data-f="makers" aria-pressed="false" style="--c:var(--teal)"><i></i>Makers</button>
+      <button class="chip" type="button" data-f="music" aria-pressed="false" style="--c:var(--glow)"><i></i>Music</button>
+      <button class="chip" type="button" data-f="vegan" aria-pressed="false" style="--c:#9BE3C9"><i></i>Vegan</button>
+      <button class="chip reset" type="button" id="fReset">Show all</button>
+      <span class="count" id="count" aria-live="polite">24 stalls</span>
+    </div>
+    <div class="map-layout">
+      <div class="stage" id="stage">
+        <svg id="base" viewBox="0 0 1000 620" aria-hidden="true"><g id="baseG">
+          <rect width="1000" height="620" fill="#16224B"/>
+          <g fill="#1B3A4D"><rect x="24" y="24" width="428" height="112" rx="24"/><rect x="548" y="24" width="428" height="112" rx="24"/><rect x="40" y="282" width="224" height="130" rx="30"/><ellipse cx="480" cy="355" rx="170" ry="62"/><rect x="700" y="292" width="150" height="120" rx="30"/><rect x="890" y="292" width="86" height="120" rx="26"/></g>
+          <g fill="#28336A"><rect x="20" y="178" width="960" height="46" rx="23"/><rect x="20" y="432" width="960" height="44" rx="22"/><rect x="474" y="14" width="52" height="170"/><rect x="274" y="210" width="28" height="240"/><rect x="860" y="210" width="28" height="240"/></g>
+          <path d="M40 178H960M40 224H960M40 432H960" stroke="#FFE66D" stroke-width="5" stroke-dasharray="0 26" stroke-linecap="round" opacity=".75"/>
+          <path d="M464 14h72v12h-8v30h-10V26h-36v30h-10V26h-8z" fill="#F4A261"/>
+          <g fill="#1F5A4A"><circle cx="70" cy="78" r="30"/><circle cx="210" cy="64" r="22"/><circle cx="930" cy="72" r="32"/><circle cx="800" cy="62" r="22"/><circle cx="236" cy="470" r="16"/><circle cx="960" cy="360" r="20"/></g>
+          <circle cx="450" cy="352" r="52" fill="#236B53"/><circle cx="426" cy="338" r="26" fill="#2B7D60"/><circle cx="472" cy="366" r="22" fill="#2B7D60"/>
+          <path d="M84 300h124a14 14 0 0 1 14 14v62a14 14 0 0 1-14 14H84z" fill="#2E2A63"/><path d="M92 302a60 44 0 0 1 0 86" stroke="#FFE66D" stroke-width="4" fill="none" opacity=".7"/>
+          <path d="M0 500C140 486 260 516 420 502S760 484 1000 506V620H0z" fill="#0F4A5C"/>
+          <path d="M0 546C200 532 380 560 560 544S860 530 1000 550V620H0z" fill="#0C3B4D"/>
+          <g stroke="#2A9D8F" stroke-width="3" stroke-linecap="round" opacity=".6"><path d="M90 560h40M300 585h60M520 566h36M700 596h54M430 604h28M180 604h30M620 530h24"/></g>
+          <g fill="#FFE66D" opacity=".55"><rect x="160" y="522" width="18" height="4" rx="2"/><rect x="380" y="530" width="12" height="4" rx="2"/><rect x="590" y="516" width="16" height="4" rx="2"/><rect x="760" y="540" width="20" height="4" rx="2"/></g>
+          <path d="M862 476h56l14 144h-84z" fill="#3A3F6E"/><path d="M866 500h58M866 530h62M866 560h66M864 590h70" stroke="#16224B" stroke-width="3"/>
+        </g></svg>
+        <svg class="route" id="route" viewBox="0 0 1000 620" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%">
+          <path id="rGlow" d="" fill="none" stroke="#FFE66D" stroke-opacity=".22" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+          <path id="rLine" d="" fill="none" stroke="#FFE66D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path id="rDots" d="" fill="none" stroke="#101935" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+        </svg>
+        <div class="stallcard" id="card" role="region" aria-label="Stall details">
+          <button class="x" type="button" id="cardX" aria-label="Close stall details">×</button>
+          <h3 id="cName" tabindex="-1">Stall</h3>
+          <ul class="tags" id="cTags"></ul>
+          <p id="cSells"></p>
+          <p class="meta" id="cWhere"></p>
+          <button class="btn" type="button" id="cAdd">Add to my night</button>
+        </div>
+      </div>
+      <aside class="planner" aria-labelledby="hp">
+        <h3 id="hp">My night</h3>
+        <p class="hint">Your stops, in the order you'll walk them. Reorder with the arrows.</p>
+        <p class="empty" id="empty">Nothing here yet. Tap a stall on the map and choose “Add to my night” — or start from a sample night.</p>
+        <ol class="plan" id="plan"></ol>
+        <div class="walk" id="walk" hidden><b id="walkM">0 m</b><span id="walkT"></span></div>
+        <div class="plan-btns"><button class="btn small" type="button" id="sample">Try a sample night</button><button class="btn small ghost" type="button" id="clear">Clear</button></div>
+        <p class="note" id="planNote" aria-live="polite">Hint: filters make matching pins glow.</p>
+      </aside>
+    </div>
+    <details class="listview"><summary>All 24 stalls as a list</summary><div class="lv" id="lv"></div></details>
+    <p class="note">Stalls shown are a sample for this demo. Prices are sample prices in AUD.</p>
+  </div>
+</section>
+
+<section class="sec" id="music" aria-labelledby="hl">
+  <div class="wrap lineup">
+    <div>
+      <p class="kick">Riverside Stage · sample line-up</p>
+      <h2 id="hl">Music under the fig trees</h2>
+      <p class="lede">Bring a picnic rug for the West Lawn. Sets run about 45 minutes, and Busker's Corner by the footbridge has acoustic sets all night.</p>
+      <button class="btn ghost" type="button" data-show="22" style="margin-top:24px">Find the stage on the map</button>
+    </div>
+    <div>
+      <ol class="sets">
+        <li><time>5.30 pm</time><div><b>The Paper Moons</b><span>Folk-pop duo — harmonies and a banjo</span></div><span class="tag">Folk</span></li>
+        <li><time>6.30 pm</time><div><b>Salt &amp; Tamarind</b><span>Latin jazz trio, cumbia to bossa nova</span></div><span class="tag">Latin jazz</span></li>
+        <li class="brk"><time>7.30 pm</time><div><b>Lantern walk</b><span>The stage takes a breather while the parade heads down the River Walk</span></div><span class="tag">Parade</span></li>
+        <li><time>8.00 pm</time><div><b>Brass Tacks Street Band</b><span>Nine-piece brass band, second-line grooves</span></div><span class="tag">Brass</span></li>
+        <li><time>9.00 pm</time><div><b>DJ Mangosteen</b><span>Soul &amp; funk on vinyl to close, at the Vinyl Tent</span></div><span class="tag">Vinyl</span></li>
+      </ol>
+      <p class="note">Sample line-up for this demo — acts change every week.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="getting-there" style="background:var(--deep)" aria-labelledby="hg">
+  <div class="wrap">
+    <p class="kick">Getting there</p>
+    <h2 id="hg">Leave the car at home</h2>
+    <p class="lede">We're on the riverbank lawns at South Bank. Parking nearby fills fast on a Friday night, so public transport is the easy option.</p>
+    <div class="go">
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="5" width="22" height="24" rx="6"/><path d="M9 18h22M14 34l-3 4M26 34l3 4M15 24h.01M25 24h.01"/></svg><h3>Train</h3><p>South Brisbane station, then about six minutes' walk towards the river.</p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="6" width="26" height="24" rx="5"/><path d="M7 20h26M12 30v4M28 30v4M13 25h.01M27 25h.01"/></svg><h3>Bus</h3><p>Busway stops are a short walk away — look for services to South Bank.</p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h28l-4 8H10zM12 24v-8h14l4 8M3 36q4-3 8 0t8 0 8 0 8 0"/></svg><h3>River ferry</h3><p>Ferries stop at the South Bank terminals, then follow the lanterns along the path.</p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="27" r="7"/><circle cx="30" cy="27" r="7"/><path d="M10 27l6-12h10l4 12M16 15l4 12h-2M24 10h4"/></svg><h3>Bike or walk</h3><p>Bike racks at the North Gate; the riverside path runs right past the market.</p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="7" r="3"/><path d="M20 11v11h8l4 9M20 16h8M16 18a9 9 0 1 0 10 13"/></svg><h3>Access</h3><p>Step-free paths throughout, accessible toilets by the Info Tent, and a quiet hour on the Fig Tree Lawn from 5–6 pm.</p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#FFE66D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20a12 12 0 0 1 24 0zM20 20v12a3 3 0 0 1-6 0"/></svg><h3>Rain or shine</h3><p>We run in light rain. If storms are forecast, we'll post a decision by 2 pm on the Friday.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="stallholders" aria-labelledby="hst">
+  <div class="wrap stall">
+    <div>
+      <p class="kick">Become a stallholder</p>
+      <h2 id="hst">Got something good? Bring it to the river.</h2>
+      <p class="lede">We keep a mix of street food, makers and music, and we save a few spots each month for first-time stallholders.</p>
+      <ul class="facts">
+        <li>3 × 3 m sites from $65 a Friday, power +$15 (sample prices).</li>
+        <li>Bump-in from 3 pm, lights on at 5 pm, packed down by 10.45 pm.</li>
+        <li>Food stalls need a current council food licence and a fire extinguisher.</li>
+        <li>Makers: handmade or designed by you — no resellers, please.</li>
+        <li>Buskers apply free for 20-minute sets at Busker's Corner.</li>
+      </ul>
+    </div>
+    <form class="apply" id="apply" data-kit-ignore novalidate>
+      <div class="fld"><label for="aStall">Stall name</label><input id="aStall" required></div>
+      <div class="fld"><label for="aName">Your name</label><input id="aName" autocomplete="name" required></div>
+      <div class="fld"><label for="aEmail">Email</label><input id="aEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="fld"><label for="aCat">Stall type</label><select id="aCat"><option>Street food</option><option>Maker / handmade</option><option>Music / busking</option></select></div>
+      <div class="fld full"><label for="aWhat">What you'd sell or play</label><textarea id="aWhat" placeholder="e.g. hand-pulled noodles, two dishes, one vegan"></textarea></div>
+      <fieldset class="fld full"><legend>Fridays you could do</legend><div class="days" id="aDays"></div></fieldset>
+      <label class="chk full"><input type="checkbox" id="aPower"> I'll need power (+$15)</label>
+      <button class="btn" type="submit">Send application</button>
+      <p class="out" id="aOut" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><p class="fname" data-brand>Riverside Night Market</p><p>Every Friday, 5 pm – 10 pm on the riverbank lawns, South Bank QLD. A fictional market made for a studio showcase — stalls, prices and line-up are samples.</p></div>
+    <p>Market office: <a href="tel:+61755502107">(07) 5550 2107</a><br><a href="mailto:hello@example.com">hello@example.com</a><br>Stallholders: <a href="mailto:stalls@example.com">stalls@example.com</a></p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia("(prefers-reduced-motion: reduce)"), pmq = window.matchMedia("(max-width: 699px)");
+  var CAT = { food: "Food", makers: "Makers", music: "Music" };
+  var S = [
+    [1, "Dumpling Lantern", "food", 1, "Pork & chive or mushroom dumplings, steamed or pan-fried, with chilli oil on the side.", "$10–$16", "Lantern Lane, north side", 120, 150],
+    [2, "Gözleme Sisters", "food", 1, "Hand-rolled gözleme: spinach & feta, lamb & mint, or potato & herb (vegan).", "$14–$17", "Lantern Lane, north side", 200, 150],
+    [3, "Casa Arepa", "food", 1, "Venezuelan arepas: shredded beef, chicken & avocado, or black bean & plantain (vegan).", "$13–$16", "Lantern Lane, north side", 280, 150],
+    [4, "Charcoal Satay Co.", "food", 1, "Chicken and beef satay off the coals, tofu skewers (vegan), peanut sauce and rice cakes.", "$12–$18", "Lantern Lane, north side", 360, 150],
+    [5, "Sticky Mango", "food", 1, "Mango sticky rice with salted coconut cream and toasted mung beans.", "$11", "Lantern Lane, north side", 640, 150],
+    [6, "Churro Riot", "food", 0, "Churros by the bag with dulce de leche or dark chocolate for dipping.", "$9–$14", "Lantern Lane, north side", 720, 150],
+    [7, "Hopper House", "food", 1, "Sri Lankan hoppers: egg hoppers, coconut sambol and dhal curry (vegan).", "$12–$16", "Lantern Lane, north side", 800, 150],
+    [8, "Myrtle & Lime", "food", 1, "Lemon myrtle lemonade, iced hibiscus tea and cold brew.", "$6–$8", "Lantern Lane, north side", 880, 150],
+    [9, "Silver & Stone", "makers", 0, "Handmade silver rings, studs and river-pebble pendants.", "$25–$140", "Lantern Lane, south side", 330, 255],
+    [10, "Fern Friends", "makers", 0, "Potted ferns, pothos cuttings and hanging planters.", "$8–$45", "Lantern Lane, south side", 410, 255],
+    [11, "Slow Burn Candles", "makers", 1, "Hand-poured soy candles in recycled glass: jacaranda, fig leaf, sea salt.", "$18–$38", "Lantern Lane, south side", 590, 255],
+    [12, "Riverclay Ceramics", "makers", 0, "Wheel-thrown mugs, bud vases and noodle bowls.", "$22–$65", "Lantern Lane, south side", 670, 255],
+    [13, "Ink & Lino", "makers", 0, "Lino-cut prints of river birds and jacarandas, plus cards and tea towels.", "$6–$55", "Lantern Lane, south side", 750, 255],
+    [14, "Knot & Weave", "makers", 0, "Macramé plant hangers, woven market bags and cotton coasters.", "$12–$60", "Lantern Lane, south side", 830, 255],
+    [15, "Pillow Bao", "food", 1, "Fluffy bao: pork belly, crispy chicken, or shiitake & pickles (vegan).", "$8–$12", "River Walk", 300, 455],
+    [16, "Spiral Spud", "food", 1, "Tornado potatoes on a stick: sea salt, chilli-lime or cheesy.", "$8–$10", "River Walk", 380, 455],
+    [17, "Yiayia's Loukoumades", "food", 0, "Greek honey doughnuts with cinnamon and crushed walnuts.", "$10–$13", "River Walk", 460, 455],
+    [18, "Smoke & Corn", "food", 1, "Charred corn, elote-style with cheese or chilli-lime (vegan).", "$8", "River Walk", 540, 455],
+    [19, "Night Gelato", "food", 1, "Gelato and dairy-free sorbets: mango, passionfruit and this week's ube.", "$7–$11", "River Walk", 620, 455],
+    [20, "Suds & Co. Soap", "makers", 1, "Cold-process soaps and shampoo bars made with plant oils, plastic-free.", "$8–$16", "River Walk", 700, 455],
+    [21, "Pocket Leather", "makers", 0, "Hand-stitched leather wallets, key fobs and dog collars.", "$20–$95", "River Walk", 780, 455],
+    [22, "Riverside Stage", "music", 0, "Live sets from 5.30 pm (see the line-up). Picnic rugs welcome on the West Lawn.", "Free", "West Lawn", 150, 345],
+    [23, "Busker's Corner", "music", 0, "Acoustic sets by the footbridge, 20 minutes each, all night long.", "Free — tips welcome", "By the footbridge", 905, 395],
+    [24, "Vinyl Tent", "music", 0, "Sunset DJ spinning soul and funk, plus a crate-dig record swap.", "Free · records $5–$30", "Fig Tree Lawn", 570, 352]
+  ].map(function (a) { return { n: a[0], name: a[1], cat: a[2], vegan: !!a[3], sells: a[4], price: a[5], where: a[6], x: a[7], y: a[8] }; });
+  var LBL = [["NORTH GATE", 500, 146], ["LANTERN LANE", 100, 201, 1], ["FIG TREE LAWN", 480, 300], ["RIVER WALK", 150, 455], ["WEST LAWN", 150, 402, 1],
+    ["THE RIVER", 300, 580, 1], ["FOOTBRIDGE", 900, 604, 1], ["Info", 575, 80, 0, 1], ["WC", 700, 72, 0, 1], ["Water", 420, 72, 0, 1]];
+
+  var stage = $("#stage"), base = $("#base"), baseG = $("#baseG"), route = $("#route"), card = $("#card");
+  var cName = $("#cName"), cTags = $("#cTags"), cAdd = $("#cAdd"), planEl = $("#plan"), note = $("#planNote");
+  var rGlow = $("#rGlow"), rLine = $("#rLine"), rDots = $("#rDots"), current = null, plan = [];
+  function isP() { return pmq.matches; }
+  function P(x, y) { return isP() ? [620 - y, x] : [x, y]; }
+  function label(s) { return s.n + ". " + s.name + " — " + CAT[s.cat] + (s.vegan ? ", vegan options" : ""); }
+
+  var labels = LBL.map(function (l) {
+    var el = document.createElement("span");
+    el.className = "lbl" + (l[4] ? " fac" : "");
+    el.setAttribute("aria-hidden", "true");
+    el.textContent = l[0];
+    stage.insertBefore(el, card);
+    return { el: el, x: l[1], y: l[2], hideP: !!l[3] };
+  });
+  S.forEach(function (s) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "pin " + s.cat; b.textContent = s.n;
+    b.setAttribute("aria-expanded", "false"); b.setAttribute("aria-controls", "card");
+    s.ord = document.createElement("span"); s.ord.className = "ord"; s.ord.setAttribute("aria-hidden", "true");
+    b.appendChild(s.ord);
+    b.addEventListener("click", function () { if (current === s) closeCard(true); else select(s.n); });
+    s.el = b;
+    stage.insertBefore(b, card);
+  });
+
+  function layout() {
+    var p = isP(), w = p ? 620 : 1000, h = p ? 1000 : 620, vb = "0 0 " + w + " " + h;
+    base.setAttribute("viewBox", vb); route.setAttribute("viewBox", vb);
+    if (p) baseG.setAttribute("transform", "translate(620 0) rotate(90)"); else baseG.removeAttribute("transform");
+    S.forEach(function (s) { var q = P(s.x, s.y); s.el.style.left = (q[0] / w * 100) + "%"; s.el.style.top = (q[1] / h * 100) + "%"; });
+    labels.forEach(function (l) {
+      l.el.hidden = p && l.hideP;
+      var q = P(l.x, l.y); l.el.style.left = (q[0] / w * 100) + "%"; l.el.style.top = (q[1] / h * 100) + "%";
+    });
+    drawRoute(false);
+    placeCard();
+  }
+
+  /* ---------- filters ---------- */
+  var F = { food: false, makers: false, music: false, vegan: false }, chips = $$(".chip[data-f]"), count = $("#count");
+  function applyFilters() {
+    var cats = ["food", "makers", "music"].filter(function (c) { return F[c]; }), any = cats.length || F.vegan, n = 0;
+    S.forEach(function (s) {
+      var m = (!cats.length || cats.indexOf(s.cat) > -1) && (!F.vegan || s.vegan);
+      if (m) n++;
+      s.el.classList.toggle("glow", !!any && m);
+      s.el.classList.toggle("dim", !!any && !m);
+    });
+    count.textContent = !any ? "24 stalls" : n ? n + (n === 1 ? " stall glowing" : " stalls glowing") : "Nothing matches — try another mix";
+  }
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () { var f = c.dataset.f; F[f] = !F[f]; c.setAttribute("aria-pressed", String(F[f])); applyFilters(); });
+  });
+  $("#fReset").addEventListener("click", function () { chips.forEach(function (c) { F[c.dataset.f] = false; c.setAttribute("aria-pressed", "false"); }); applyFilters(); });
+
+  /* ---------- stall card ---------- */
+  function select(n, noFocus) {
+    var s = S[n - 1];
+    current = s;
+    S.forEach(function (t) { t.el.setAttribute("aria-expanded", t === s ? "true" : "false"); });
+    cName.textContent = s.name;
+    cTags.innerHTML = "";
+    [["#" + s.n + " · " + CAT[s.cat]], s.vegan ? ["Vegan options", "veg"] : null, [s.price + " (sample)"]].forEach(function (t) {
+      if (!t) return;
+      var li = document.createElement("li"); li.textContent = t[0]; if (t[1]) li.className = t[1]; cTags.appendChild(li);
+    });
+    $("#cSells").textContent = s.sells;
+    $("#cWhere").textContent = "Where: " + s.where + " — look for pin " + s.n + ".";
+    addBtn();
+    card.classList.add("on");
+    placeCard();
+    if (!noFocus) cName.focus({ preventScroll: true });
+  }
+  function placeCard() {
+    if (!current) return;
+    if (isP()) { card.style.left = card.style.top = ""; return; }
+    var sw = stage.clientWidth, sh = stage.clientHeight, q = P(current.x, current.y);
+    var px = q[0] / 1000 * sw, py = q[1] / 620 * sh, cw = card.offsetWidth, ch = card.offsetHeight;
+    card.style.left = Math.max(10, Math.min(sw - cw - 10, px < sw / 2 ? px + 30 : px - 30 - cw)) + "px";
+    card.style.top = Math.max(10, Math.min(sh - ch - 10, py - ch / 2)) + "px";
+  }
+  function closeCard(refocus) {
+    if (!current) return;
+    var el = current.el;
+    card.classList.remove("on"); el.setAttribute("aria-expanded", "false"); current = null;
+    if (refocus) el.focus();
+  }
+  $("#cardX").addEventListener("click", function () { closeCard(true); });
+  card.addEventListener("keydown", function (e) { if (e.key === "Escape") { e.preventDefault(); closeCard(true); } });
+  function addBtn() {
+    var inP = !!current && plan.indexOf(current.n) > -1;
+    cAdd.textContent = inP ? "✓ In my night · remove" : "Add to my night";
+    cAdd.classList.toggle("added", inP);
+    cAdd.setAttribute("aria-pressed", String(inP));
+  }
+  cAdd.addEventListener("click", function () {
+    if (!current) return;
+    var i = plan.indexOf(current.n);
+    if (i > -1) plan.splice(i, 1); else plan.push(current.n);
+    note.textContent = (i > -1 ? "Removed " : "Added ") + current.name + (i > -1 ? "." : " as stop " + plan.length + ".");
+    renderPlan(true); addBtn();
+  });
+
+  /* ---------- my night + walking route ---------- */
+  try { plan = JSON.parse(localStorage.getItem("rnm-plan") || "[]").filter(function (n) { return n >= 1 && n <= 24; }); } catch (e) { plan = []; }
+  function curve(pts) {
+    if (pts.length < 2) return "";
+    var d = "M" + pts[0][0] + " " + pts[0][1];
+    for (var i = 0; i < pts.length - 1; i++) {
+      var p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      d += " C" + [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6, p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6, p2[0], p2[1]]
+        .map(function (v) { return Math.round(v * 10) / 10; }).join(" ");
+    }
+    return d;
+  }
+  function drawRoute(anim) {
+    var d = curve(plan.map(function (n) { return P(S[n - 1].x, S[n - 1].y); }));
+    [rGlow, rLine, rDots].forEach(function (p) { p.setAttribute("d", d); });
+    if (!d) return;
+    var L = rLine.getTotalLength();
+    [rGlow, rLine].forEach(function (p) { p.style.transition = "none"; p.style.strokeDasharray = L + " " + L; p.style.strokeDashoffset = anim && !mq.matches ? L : 0; });
+    rDots.style.transition = "none"; rDots.style.opacity = anim && !mq.matches ? 0 : 1;
+    if (anim && !mq.matches) {
+      rLine.getBoundingClientRect();
+      requestAnimationFrame(function () {
+        [rGlow, rLine].forEach(function (p) { p.style.transition = "stroke-dashoffset 1.2s ease-in-out"; p.style.strokeDashoffset = 0; });
+        rDots.style.transition = "opacity .4s ease 1.1s"; rDots.style.opacity = 1;
+      });
+    }
+  }
+  function renderPlan(anim) {
+    planEl.innerHTML = "";
+    plan.forEach(function (n, i) {
+      var s = S[n - 1], li = document.createElement("li");
+      li.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="nm"></span><span class="ctl">' +
+        '<button type="button" data-a="up">↑</button><button type="button" data-a="down">↓</button><button type="button" data-a="rm">×</button></span>';
+      var nm = li.querySelector(".nm"); nm.textContent = s.name;
+      var sm = document.createElement("small"); sm.textContent = CAT[s.cat] + " · " + s.where; nm.appendChild(sm);
+      var b = li.querySelectorAll("button");
+      b[0].setAttribute("aria-label", "Move " + s.name + " earlier"); b[0].disabled = i === 0;
+      b[1].setAttribute("aria-label", "Move " + s.name + " later"); b[1].disabled = i === plan.length - 1;
+      b[2].setAttribute("aria-label", "Remove " + s.name);
+      li.dataset.i = i;
+      planEl.appendChild(li);
+    });
+    $("#empty").hidden = plan.length > 0;
+    S.forEach(function (s) {
+      var i = plan.indexOf(s.n);
+      s.ord.textContent = i > -1 ? String(i + 1) : "";
+      s.el.setAttribute("aria-label", label(s) + (i > -1 ? " — stop " + (i + 1) + " of your night" : ""));
+    });
+    var m = 0;
+    for (var k = 1; k < plan.length; k++) { var a = S[plan[k - 1] - 1], c = S[plan[k] - 1]; m += Math.hypot(a.x - c.x, a.y - c.y) * 0.42; }
+    var walk = $("#walk");
+    walk.hidden = plan.length < 2;
+    if (plan.length > 1) {
+      m = Math.round(m / 10) * 10;
+      $("#walkM").textContent = "≈ " + m + " m";
+      $("#walkT").textContent = "About " + Math.max(1, Math.round(m / 55)) + " min of strolling between " + plan.length + " stops — illustrative, queues not included.";
+    }
+    drawRoute(anim);
+    try { localStorage.setItem("rnm-plan", JSON.stringify(plan)); } catch (e) { /* storage optional */ }
+  }
+  planEl.addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    var i = +b.closest("li").dataset.i, n = plan[i], a = b.dataset.a, j = i;
+    if (a === "up" && i > 0) { plan.splice(i, 1); plan.splice(i - 1, 0, n); j = i - 1; }
+    else if (a === "down" && i < plan.length - 1) { plan.splice(i, 1); plan.splice(i + 1, 0, n); j = i + 1; }
+    else if (a === "rm") { plan.splice(i, 1); }
+    note.textContent = a === "rm" ? "Removed " + S[n - 1].name + "." : S[n - 1].name + " is now stop " + (j + 1) + ".";
+    renderPlan(true); addBtn();
+    var li = planEl.children[a === "rm" ? Math.min(i, plan.length - 1) : j];
+    var f = li && (li.querySelector('[data-a="' + a + '"]:not(:disabled)') || li.querySelector('[data-a="rm"]'));
+    (f || $("#sample")).focus();
+  });
+  $("#sample").addEventListener("click", function () {
+    plan = [3, 1, 22, 19, 11];
+    note.textContent = "Sample night: arepas, dumplings, the stage, gelato, then candles. Reorder or add your own.";
+    renderPlan(true); addBtn();
+  });
+  $("#clear").addEventListener("click", function () { plan = []; note.textContent = "Cleared — start again from the map."; renderPlan(false); addBtn(); });
+
+  /* ---------- list view + "show on map" ---------- */
+  var lv = $("#lv");
+  S.forEach(function (s) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.innerHTML = '<i style="--c:var(--' + (s.cat === "food" ? "food" : s.cat === "makers" ? "teal" : "glow") + ')">' + s.n + "</i>";
+    b.appendChild(document.createTextNode(s.name + " · " + CAT[s.cat]));
+    b.addEventListener("click", function () { show(s.n); });
+    lv.appendChild(b);
+  });
+  function show(n) {
+    select(n, true);
+    stage.scrollIntoView({ behavior: mq.matches ? "auto" : "smooth", block: "center" });
+    setTimeout(function () { cName.focus({ preventScroll: true }); }, mq.matches ? 0 : 600);
+  }
+  $$("[data-show]").forEach(function (b) { b.addEventListener("click", function () { show(+b.dataset.show); }); });
+
+  /* ---------- dates (next Friday) + stallholder form ---------- */
+  var D = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], M = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function fmt(d) { return D[d.getDay()] + " " + d.getDate() + " " + M[d.getMonth()]; }
+  var now = new Date(), nf = new Date(now.getFullYear(), now.getMonth(), now.getDate()), add = (5 - nf.getDay() + 7) % 7;
+  if (add === 0 && now.getHours() >= 22) add = 7;
+  nf.setDate(nf.getDate() + add);
+  $$(".nextDate").forEach(function (el) { el.textContent = (add === 0 ? "Tonight · " : "") + fmt(nf); });
+  var days = $("#aDays");
+  for (var w = 1; w <= 4; w++) {
+    var d = new Date(nf); d.setDate(nf.getDate() + 7 * w);
+    var lab = document.createElement("label"), cb = document.createElement("input");
+    cb.type = "checkbox"; cb.value = fmt(d); lab.appendChild(cb); lab.appendChild(document.createTextNode(fmt(d)));
+    days.appendChild(lab);
+  }
+  $("#apply").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var out = $("#aOut"), miss = ["aStall", "aName"].filter(function (id) { return !$("#" + id).value.trim(); });
+    if (!/^\S+@\S+\.\S+$/.test($("#aEmail").value.trim())) miss.push("aEmail");
+    if (miss.length) { out.textContent = "Add a stall name, your name and an email first — it's a demo, so nothing will be sent."; $("#" + miss[0]).focus(); return; }
+    var picked = $$("input:checked", days).map(function (c) { return c.value; });
+    out.textContent = "Demo only: “" + $("#aStall").value.trim() + "” (" + $("#aCat").value + ")" + (picked.length ? " for " + picked.join(", ") : "") + " was not sent. On a real site this would reach the market office.";
+    if (window.DemoKit) DemoKit.toast("Demo only — no application was sent.");
+  });
+
+  /* ---------- pause hero motion off-screen ---------- */
+  var hero = $(".hero");
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { hero.classList.toggle("off", !es[0].isIntersecting); }).observe(hero);
+  document.addEventListener("visibilitychange", function () { hero.classList.toggle("hidden-tab", document.hidden); });
+
+  pmq.addEventListener ? pmq.addEventListener("change", layout) : pmq.addListener(layout);
+  window.addEventListener("resize", placeCard);
+  layout(); applyFilters(); renderPlan(false);
+})();
+</script>
+</body>
+</html>

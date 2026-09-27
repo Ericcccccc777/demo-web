@@ -1,0 +1,8 @@
+{
+  "id": "099",
+  "tech": ["CSS Grid", "SVG", "IntersectionObserver", "Form logic"],
+  "features": ["customiser", "ordering"],
+  "interaction": "In 'Choose your hero', pick dog or cat, a name, size, age and allergies: a comic panel redraws the pet in SVG (ears, eyes, senior glasses, whiskers and more change) with a new speech bubble and sound-effect burst, while an allergy-aware box of food, treats and a toy is repacked with a sample price; a delivery-frequency toggle updates the monthly estimate and Subscribe shows a demo notice.",
+  "fonts": ["Bangers", "Comic Neue"],
+  "notes": ""
+}

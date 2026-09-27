@@ -1,0 +1,8 @@
+{
+  "id": "067",
+  "tech": ["Canvas 2D", "Generative art", "Pointer Events", "CSS Grid", "IntersectionObserver"],
+  "features": ["game"],
+  "interaction": "Paint on an easel canvas with a generative bristle brush that responds to pointer speed and pressure — pick one of six paints and three brush sizes, switch on Mix to pick up wet paint already on the canvas, undo, clear or press 'Random stroke' (keyboard friendly) — then 'Frame it' to hang your painting first in a gallery of generated sample works for this visit.",
+  "fonts": ["Syne", "Archivo"],
+  "notes": "Framed paintings are kept in memory for the current visit only."
+}

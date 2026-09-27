@@ -1,0 +1,8 @@
+{
+  "id": "062",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "Form logic"],
+  "features": ["booking"],
+  "interaction": "Answer three questions (age, face in the water, can they swim 5 m) and the matching pool lane lights up with splash rings while its swimmer does laps, and the deck card shows the level, class times and an enrol shortcut; hovering or tabbing to any lane sends its swimmer along the black line.",
+  "fonts": ["Grandstander", "Quicksand"],
+  "notes": "Question 3 adds a '25 m or more' answer so the Squad lane can be reached. Level stickers explain progression but are not interactive collectibles. Enrolment ends in an on-page DEMO state and toast; nothing is sent."
+}

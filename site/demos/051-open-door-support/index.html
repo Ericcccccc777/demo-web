@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="051">
+<meta name="demo:brand" content="Open Door Support Services">
+<title>Open Door Support Services — disability and community support, Wollongong</title>
+<meta name="description" content="Concept site for Open Door Support Services, a fictional disability and community support provider in Wollongong, NSW, with working accessibility settings and an Easy Read mode.">
+<meta name="theme-color" content="#0A3D91">
+<script>
+(function(){try{var d=document.documentElement,s=JSON.parse(localStorage.getItem("opendoor-a11y")||"null"),rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;if(s){if(s.size)d.style.fontSize=s.size+"%";if(s.size>=150)d.classList.add("ts-big");["hc","dys","rm","er"].forEach(function(k){if(s[k])d.classList.add(k);});if(s.rm===undefined&&rm)d.classList.add("rm");}else if(rm){d.classList.add("rm");}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--bg:#fff;--fg:#111;--muted:#374151;--blue:#0A3D91;--blue-2:#072C6B;--yellow:#FFD23F;--soft:#EEF3FB;--card:#fff;--line:#BFCDE6;--link:#0A3D91;--btn:#0A3D91;--btn-fg:#fff;--halo:#FFD23F;--ls:normal;--ws:normal;--lh:1.6;--hs:-.01em;
+  --font:"Atkinson Hyperlegible",Verdana,"Segoe UI",system-ui,sans-serif;--r:16px}
+html.hc{--bg:#000;--fg:#fff;--muted:#fff;--blue:#FFD23F;--blue-2:#FFD23F;--soft:#000;--card:#000;--line:#fff;--link:#FFD23F;--btn:#FFD23F;--btn-fg:#000;--halo:#fff}
+html.dys{--ls:.12em;--ws:.16em;--lh:1.9;--hs:.04em}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:6rem}
+html.rm{scroll-behavior:auto}
+html.rm *,html.rm *::before,html.rm *::after{transition:none!important;animation:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.25rem/var(--lh) var(--font);letter-spacing:var(--ls);word-spacing:var(--ws);overflow-x:hidden;overflow-wrap:anywhere}
+h1,h2,h3{line-height:1.2;letter-spacing:var(--hs);overflow-wrap:anywhere;hyphens:auto}
+p{margin:0 0 1em}
+html.dys p{margin-bottom:2em}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:.08em;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:.16em}
+button,input,select,textarea{font:inherit;letter-spacing:inherit;word-spacing:inherit;color:inherit}
+:focus-visible{outline:4px solid var(--fg);outline-offset:3px;box-shadow:0 0 0 10px var(--halo)}
+a:focus-visible{outline:none;background:var(--halo);color:#111;box-shadow:0 5px 0 #111;text-decoration:none}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;background:var(--yellow);color:#111;padding:.75rem 1rem;font-weight:700}
+.skip:focus{top:1rem}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+@media(min-width:700px){.wrap{padding:0 2rem}}
+svg.ic{width:1.5em;height:1.5em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3.5rem;padding:.75rem 1.4rem;border:3px solid var(--btn);border-radius:12px;background:var(--btn);color:var(--btn-fg);
+  font-weight:700;font-size:1.125rem;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 -1px var(--blue-2)}
+.btn.alt{background:var(--bg);color:var(--link)}
+.btn.warm{background:var(--yellow);border-color:#111;color:#111}
+html.hc .btn.warm{background:#000;color:var(--yellow);border-color:var(--yellow)}
+.btn[aria-pressed="true"]{background:var(--yellow);color:#111;border-color:#111}
+html.hc .btn[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:3px solid var(--blue)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;min-height:4.25rem;padding-top:.5rem;padding-bottom:.5rem}
+.logo{display:flex;align-items:center;gap:.6rem;margin-right:auto;text-decoration:none;color:var(--fg);font-weight:700;font-size:1.1rem;line-height:1.15;min-width:0}
+.logo svg{width:2.6rem;height:2.6rem;flex:none}
+.logo .name{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(min-width:760px){.logo .name{position:static;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal;overflow-wrap:anywhere}}
+.hbtn{min-height:3rem;padding:.5rem .9rem;font-size:1rem;border-width:2px}
+.hbtn{max-width:100%}
+.hbtn .lbl{min-width:0}
+.call .lbl{display:none}
+@media(min-width:980px){.call .lbl{display:inline}}
+.nav{border-top:1px solid var(--line);background:var(--soft)}
+.nav ul{list-style:none;margin:0 auto;padding:.25rem 1rem;display:flex;flex-wrap:wrap;gap:0 1.25rem;max-width:72rem}
+.nav a{display:inline-flex;align-items:center;min-height:2.75rem;font-weight:700;font-size:1.05rem}
+@media(max-width:699px){.nav{display:none}}
+
+/* hero */
+.hero{padding:2.5rem 0 3rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3rem}.hero{padding:4rem 0 4.5rem}}
+.kicker{display:inline-block;background:var(--yellow);color:#111;font-weight:700;font-size:1rem;padding:.3rem .7rem;border-radius:8px;margin:0 0 1rem}
+html.hc .kicker{background:#000;color:var(--yellow);border:2px solid var(--yellow)}
+.brandline{font-weight:700;color:var(--blue);margin:0 0 .5rem;font-size:1.15rem;overflow-wrap:anywhere}
+h1{font-size:clamp(2.4rem,5.2vw,3.6rem);margin:0 0 1.25rem;color:var(--blue)}
+.lede{font-size:1.35rem;max-width:34em}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.75rem}
+@media(max-width:599px){.actions .btn{width:100%}}
+.door{width:100%;max-width:30rem;height:auto;display:block;margin:0 auto}
+.door .st{stroke:var(--blue);fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.door .lt{fill:var(--yellow)}
+.door .bg{fill:var(--soft)}
+.door .leaf{fill:var(--bg);stroke:var(--blue);stroke-width:5;stroke-linejoin:round}
+.door .tx{fill:var(--blue);font:700 22px var(--font)}
+.door .beam{fill:var(--yellow);opacity:.55;transition:opacity 1.2s .4s}
+html.hc .door .beam{opacity:.8}
+
+/* easy read */
+.easy{display:none;list-style:none;margin:0 0 1.25rem;padding:0;gap:.9rem;grid-template-columns:minmax(0,1fr)}
+html.er .easy{display:grid}
+html.er .std{display:none}
+.easy li{display:grid;grid-template-columns:3.5rem minmax(0,1fr);gap:1rem;align-items:center;font-size:1.3rem;font-weight:700;line-height:1.4}
+.easy .ei{width:3.5rem;height:3.5rem;padding:.6rem;border-radius:14px;background:var(--soft);border:2px solid var(--line);color:var(--blue);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+html.hc .easy .ei{border-color:#fff}
+.er-note{display:none;margin:0 0 1.5rem;padding:.75rem 1rem;border-left:6px solid var(--yellow);background:var(--soft);font-weight:700}
+html.er .er-note{display:block}
+
+/* sections */
+.sec{padding:3.5rem 0}
+.sec.soft{background:var(--soft)}
+html.hc .sec{border-top:2px solid #fff}
+.sec h2{font-size:clamp(2rem,3.6vw,2.6rem);margin:0 0 .5rem;color:var(--blue);display:inline-block}
+.sec h2::after{content:"";display:block;height:.35rem;width:3.5rem;background:var(--yellow);border-radius:4px;margin-top:.5rem}
+.sec-intro{max-width:40em;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
+@media(min-width:800px){.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}}
+.card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column}
+html.hc .card{border-color:#fff}
+.card h3{display:flex;align-items:center;gap:.8rem;font-size:1.5rem;margin:0 0 .75rem;color:var(--blue)}
+.card h3 .badge{display:grid;place-items:center;width:3.25rem;height:3.25rem;border-radius:50%;background:var(--yellow);color:#111;flex:none}
+.card h3 .badge svg{width:1.8rem;height:1.8rem;fill:none;stroke:#111;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+html.hc .card h3 .badge{background:#000;border:2px solid var(--yellow)}
+html.hc .card h3 .badge svg{stroke:var(--yellow)}
+.card ul.look{margin:.25rem 0 0;padding-left:1.25em}
+.card ul.look li{margin-bottom:.35em}
+.card .std p{margin-bottom:.75em}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;position:relative;max-width:48rem}
+.steps>li{position:relative;display:grid;grid-template-columns:4rem minmax(0,1fr);gap:1.25rem;padding-bottom:2rem}
+.steps>li:not(:last-child)::before{content:"";position:absolute;left:1.9rem;top:4rem;bottom:0;width:4px;background:var(--line)}
+html.hc .steps>li:not(:last-child)::before{background:#fff}
+.num{width:4rem;height:4rem;border-radius:50%;background:var(--yellow);border:3px solid #111;display:grid;place-items:center;font-weight:700;font-size:1.6rem;color:#111}
+html.hc .num{background:#000;color:var(--yellow);border-color:var(--yellow)}
+.steps h3{font-size:1.45rem;margin:.6rem 0 .5rem}
+.steps{container-type:inline-size}
+@container (max-width:17rem){.steps>li{grid-template-columns:minmax(0,1fr);gap:.6rem}.steps>li:not(:last-child)::before{display:none}}
+.card,.person,.faq{container-type:inline-size}
+@container (max-width:13rem){.easy li{grid-template-columns:minmax(0,1fr);gap:.5rem}}
+
+.start-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem}
+@media(min-width:960px){.start-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3rem;align-items:start}}
+.faq{background:var(--soft);border-radius:var(--r);padding:1.5rem;border:2px solid var(--line)}
+html.hc .faq{border-color:#fff}
+.faq h3{margin:0 0 1rem;font-size:1.4rem;color:var(--blue)}
+.faq details{border-top:2px solid var(--line)}
+html.hc .faq details{border-color:#fff}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.5rem;padding:.6rem 0;font-weight:700;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--btn);color:var(--btn-fg);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 1rem}
+/* cost */
+.cost-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;align-items:center}
+.bill{display:none}
+@media(min-width:960px){.cost-grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:3rem}.bill{display:block;width:100%;max-width:20rem;height:auto;margin:0 auto}}
+.bill .st{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.bill .pa{fill:var(--card);stroke:var(--blue);stroke-width:4}
+.bill .hd{fill:var(--blue)}
+.bill .ok{fill:var(--yellow);stroke:#111;stroke-width:3}
+.cost{border:4px solid var(--blue);border-radius:var(--r);padding:1.75rem;background:var(--card);max-width:52rem}
+.cost .big{font-size:clamp(1.8rem,3.4vw,2.4rem);font-weight:700;color:var(--blue);margin:0 0 1rem;line-height:1.2}
+.facts{list-style:none;margin:1.25rem 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem}
+.facts li{display:flex;gap:.75rem;align-items:flex-start;font-weight:700}
+.facts svg{margin-top:.1em;color:var(--blue)}
+.gen{margin:1.25rem 0 0;padding:.9rem 1rem;background:var(--soft);border-radius:10px;font-size:1.05rem}
+html.hc .gen{border:2px solid #fff}
+
+/* team */
+.team{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem}
+@media(min-width:620px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.team{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.person{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:1.25rem;text-align:left}
+html.hc .person{border-color:#fff}
+.person svg.av{width:6rem;height:6rem;display:block;margin-bottom:.75rem}
+.av .face{fill:var(--soft);stroke:var(--blue);stroke-width:3}
+.av .hair{fill:var(--blue)}
+.av .ln{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round}
+.av .bgc{fill:var(--yellow)}
+@media(max-width:619px){.person svg.av{float:left;width:4.75rem;height:4.75rem;margin:0 1rem .5rem 0}.person .std,.person .easy{clear:both}}
+.person h3{margin:0;font-size:1.4rem}
+.person .role{margin:.2rem 0 .75rem;color:var(--blue);font-weight:700}
+.person p{font-size:1.1rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem}
+@media(min-width:960px){.contact-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem;align-items:start}}
+.ways{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}
+.ways li>span:last-child,.facts li span,.row>div,.easy li span,.card h3,.a11y-top h2{min-width:0}
+.ways li{display:flex;gap:1rem;align-items:flex-start;padding:1rem;border:2px solid var(--line);border-radius:14px;background:var(--card)}
+html.hc .ways li{border-color:#fff}
+.ways .wi{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--soft);color:var(--blue);flex:none}
+.ways b{display:block}
+.ways a{font-weight:700;font-size:1.3rem}
+.form{background:var(--card);border:3px solid var(--blue);border-radius:var(--r);padding:1.5rem}
+.form h3{margin:0 0 .5rem;font-size:1.6rem;color:var(--blue)}
+.field{display:grid;gap:.4rem;margin-bottom:1.25rem}
+.field label,.field legend{font-weight:700}
+.field .hint{font-size:1rem;color:var(--muted);margin:0}
+.field input[type=text],.field input[type=tel],.field input[type=email],.field textarea{width:100%;min-height:3.25rem;padding:.6rem .8rem;border:3px solid var(--fg);border-radius:10px;background:var(--bg);color:var(--fg)}
+.field textarea{min-height:8rem;resize:vertical}
+fieldset.field{border:0;padding:0;margin:0 0 1.25rem;min-width:0}
+.opts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.25rem}
+.opt{position:relative}
+.opt input{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:1.4rem;height:1.4rem;margin:0;accent-color:var(--blue)}
+.opt span{display:flex;align-items:center;min-height:3.25rem;padding:.5rem 1rem .5rem 2.9rem;border:2px solid var(--line);border-radius:10px;cursor:pointer;background:var(--bg)}
+html.hc .opt span{border-color:#fff}
+.opt input:checked+span{border-color:var(--blue);background:var(--soft);font-weight:700}
+.opt input:focus-visible+span{outline:4px solid var(--fg);outline-offset:3px;box-shadow:0 0 0 10px var(--halo)}
+.emerg{margin:1rem 0 0;font-size:1.05rem;font-weight:700}
+
+/* footer */
+.foot{background:var(--blue);color:#fff;padding:3rem 0 5rem}
+html.hc .foot{background:#000;border-top:3px solid #fff}
+.foot a{color:#fff}
+.foot .fname{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin:0 0 .75rem;overflow-wrap:anywhere}
+.foot p{max-width:46em}
+.foot small{font-size:1rem;display:block;margin-top:1.5rem;opacity:.95}
+
+/* accessibility panel */
+.a11y{position:fixed;z-index:60;right:0;bottom:0;left:0;max-height:78vh;overflow:auto;background:var(--bg);color:var(--fg);border-top:4px solid var(--blue);border-radius:20px 20px 0 0;box-shadow:0 -12px 40px rgba(0,0,0,.3);
+  padding:1.25rem 1rem calc(1.5rem + env(safe-area-inset-bottom));transform:translateY(0);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.a11y[hidden]{display:block;transform:translateY(110%);visibility:hidden}
+@media(min-width:800px){.a11y{top:0;left:auto;width:min(31rem,94vw);max-height:none;border-top:0;border-left:4px solid var(--blue);border-radius:0;padding:1.5rem 1.5rem 3rem}.a11y[hidden]{transform:translateX(105%)}}
+html.hc .a11y{border-color:#fff}
+.a11y-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.5rem}
+.a11y h2{margin:0;font-size:1.6rem;color:var(--blue);flex:1 1 auto}
+.a11y-top .btn{flex:none;white-space:nowrap;overflow-wrap:normal}
+@media(max-width:699px){html.ts-big .top{position:static}}
+.a11y .note{font-size:1.05rem;color:var(--muted)}
+.set{border:2px solid var(--line);border-radius:14px;padding:1rem;margin:0 0 1rem;background:var(--card)}
+html.hc .set{border-color:#fff}
+.set legend,.set h3{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.2rem;margin:0;padding:0}
+.set legend{float:left;width:100%;margin-bottom:.75rem}
+.set legend+*{clear:both}
+.sizes{display:grid;grid-template-columns:repeat(auto-fit,minmax(5.2rem,1fr));gap:.5rem}
+.sizes label{position:relative}
+.sizes input{position:absolute;opacity:0;inset:0;margin:0}
+.sizes span{display:grid;place-items:center;min-height:3.25rem;border:3px solid var(--blue);border-radius:10px;font-weight:700;cursor:pointer}
+.sizes label:nth-child(1) span{font-size:1rem}.sizes label:nth-child(2) span{font-size:1.2rem}.sizes label:nth-child(3) span{font-size:1.4rem}.sizes label:nth-child(4) span{font-size:1.6rem}
+.sizes input:checked+span{background:var(--btn);color:var(--btn-fg)}
+.sizes input:focus-visible+span{outline:4px solid var(--fg);outline-offset:3px;box-shadow:0 0 0 10px var(--halo)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.row p{margin:.3rem 0 0;font-size:1.05rem;color:var(--muted)}
+.row>div{flex:1 1 12rem}
+.switch{display:inline-flex;align-items:center;gap:.6rem;min-height:3rem;padding:.35rem .9rem .35rem .4rem;border:3px solid var(--blue);border-radius:999px;background:var(--bg);cursor:pointer;font-weight:700}
+.switch .track{position:relative;width:3.4rem;height:2rem;border-radius:999px;background:#6B7280;flex:none;transition:background .2s}
+.switch .track::after{content:"";position:absolute;left:.25rem;top:.25rem;width:1.5rem;height:1.5rem;border-radius:50%;background:#fff;transition:transform .2s}
+.switch[aria-checked="true"]{background:var(--soft)}
+.switch[aria-checked="true"] .track{background:var(--blue)}
+.switch[aria-checked="true"] .track::after{transform:translateX(1.4rem)}
+html.hc .switch[aria-checked="true"] .track::after{background:#000}
+.saved{display:flex;gap:.5rem;align-items:center;font-size:1rem;color:var(--muted);margin:.5rem 0 1rem}
+.a11y .foot-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.backdrop{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.35)}
+.backdrop[hidden]{display:none}
+@media(min-width:800px){.backdrop{display:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9 0 5 2.2 5 5.3"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 16V11l2-5h11l3 5h2v5"/><path d="M3 16h18"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M6 11h14M11 6v5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/><path d="M17 3v3M15.5 4.5h3"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4Z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-text2" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M10 18h4"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.4-7-12a7 7 0 0 1 14 0c0 5.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2.5h6V4"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.5-1-1.6-1.6-2.8-1.6-1.6 0-2.8.9-2.8 2.1 0 2.9 5.8 1.6 5.8 4.6 0 1.2-1.3 2.1-3 2.1-1.3 0-2.4-.6-2.9-1.6M12 6v1.6M12 16.4V18"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="6.8" r="1.6"/><path d="M6.5 9.5 12 10.6l5.5-1.1M12 10.6v3.4l-2.6 5M12 14l2.6 5"/></symbol>
+  <symbol id="i-aa" viewBox="0 0 24 24"><path d="M3 19 8 5l5 14M4.8 14h6.4"/><path d="M14.5 12.5a3 3 0 0 1 5.5 1.5V19M20 16.2c-3.8-.6-5.8.4-5.8 1.7 0 1.9 4 1.9 5.8-.9"/></symbol>
+  <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></symbol>
+  <symbol id="i-space" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h12"/><path d="m18 15 2.5 2-2.5 2"/></symbol>
+  <symbol id="i-still" viewBox="0 0 24 24"><path d="M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0"/><path d="M4 20 20 4"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5.5c3-1.3 6-1.3 9 .5 3-1.8 6-1.8 9-.5V19c-3-1.3-6-1.3-9 .5-3-1.8-6-1.8-9-.5Z"/><path d="M12 6v13.5"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="10" cy="5" r="1.8"/><path d="M10 8v6h6l2.5 5"/><path d="M10 11h5"/><path d="M7.5 11.5a5.5 5.5 0 1 0 7.8 6.3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6Z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="11" r="4"/><path d="M12 2.5v2M4.5 11h-2M21.5 11h-2M6.3 5.3l1.4 1.4M17.7 5.3l-1.4 1.4M3 19c3-2 6 2 9 0s6 2 9 0"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to main content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#main">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="4" width="36" height="42" rx="3" fill="#FFD23F" stroke="#0A3D91" stroke-width="3.5"/><path d="M6 4l16 5v37L6 46Z" fill="#0A3D91"/><circle cx="18" cy="27" r="2" fill="#FFD23F"/></svg>
+      <span class="name" data-brand>Open Door Support Services</span>
+    </a>
+    <button class="btn hbtn" type="button" id="a11y-open" aria-expanded="false" aria-controls="a11y"><svg class="ic" aria-hidden="true"><use href="#i-access"/></svg><span class="lbl">Accessibility</span></button>
+    <a class="btn alt hbtn call" href="tel:0255504127"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="lbl" aria-hidden="true">(02) 5550 4127</span><span class="sr">Call us on (02) 5550 4127</span></a>
+  </div>
+  <nav class="nav" aria-label="Main">
+    <ul><li><a href="#help">What we help with</a></li><li><a href="#start">How to start</a></li><li><a href="#cost">What it costs</a></li><li><a href="#team">Our team</a></li><li><a href="#contact">Contact</a></li></ul>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Disability and community support · Wollongong, NSW</p>
+        <p class="brandline" data-brand>Open Door Support Services</p>
+        <h1 id="hero-h">Support that fits your life.</h1>
+        <div class="std"><p class="lede">We help people with disability live the way they choose — at home, out in the community and on the road. You tell us what matters. We listen, make a plan with you, and turn up when we said we would.</p></div>
+        <ul class="easy" role="list">
+          <li><svg class="ei" aria-hidden="true"><use href="#i-heart"/></svg><span>We help people with disability.</span></li>
+          <li><svg class="ei" aria-hidden="true"><use href="#i-home"/></svg><span>We help at home and when you go out.</span></li>
+          <li><svg class="ei" aria-hidden="true"><use href="#i-chat"/></svg><span>We listen to you.</span></li>
+          <li><svg class="ei" aria-hidden="true"><use href="#i-clock"/></svg><span>We come when we say we will.</span></li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="#contact"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Talk to us</a>
+          <button class="btn warm" type="button" id="er-quick" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Easy Read</button>
+          <button class="btn alt" type="button" id="a11y-open-2" aria-controls="a11y"><svg class="ic" aria-hidden="true"><use href="#i-aa"/></svg>Change how this page looks</button>
+        </div>
+      </div>
+      <svg class="door" viewBox="0 0 480 420" aria-hidden="true" focusable="false">
+        <rect class="bg" x="20" y="20" width="440" height="380" rx="28"/>
+        <path class="beam" d="M170,318H290L420,392H70Z"/>
+        <rect class="lt" x="130" y="58" width="160" height="260"/>
+        <path class="leaf" d="M130,58L174,76V300L130,318Z"><animate id="door-anim" attributeName="d" begin="indefinite" dur="1.3s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" from="M130,58L290,58V318L130,318Z" to="M130,58L174,76V300L130,318Z"/></path>
+        <circle cx="164" cy="190" r="5" fill="var(--blue)"/>
+        <path class="st" d="M118,318V46H302V318"/>
+        <path class="st" d="M60,392H440"/>
+        <path class="st" d="M290,318L430,392M290,318H118"/>
+        <path class="st" d="M300,282L440,356M320,293V330M380,325V362M430,351V388" style="stroke-width:4"/>
+        <path class="st" d="M76,392V340H112V392M70,340H118" style="stroke-width:4"/>
+        <path class="st" d="M94,340C94,300 80,286 66,276M94,340C96,300 110,284 124,278M94,340V270" style="stroke-width:4"/>
+        <path class="st" d="M160,338H262L270,352H152Z" style="stroke-width:3.5"/>
+        <text class="tx" x="211" y="351" text-anchor="middle" style="font-size:11px">WELCOME</text>
+        <path class="st" d="M338,70l10,-10M356,92h14M344,112l10,10" style="stroke-width:4"/>
+        <path class="st" d="M366,168c-18-26 8-52 30-36 11-24 44-10 36 14" style="stroke-width:4"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="sec soft" id="help" aria-labelledby="help-h">
+    <div class="wrap">
+      <h2 id="help-h">What we help with</h2>
+      <p class="er-note">Easy Read is on. Each part of the page now uses short sentences with pictures.</p>
+      <div class="std sec-intro"><p>Every person is different, so every plan is too. These are the four kinds of support we offer — most people mix and match.</p></div>
+      <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-check"/></svg><span>We can help in 4 ways. You can pick more than one.</span></li></ul>
+      <div class="cards">
+        <article class="card">
+          <h3><span class="badge"><svg aria-hidden="true"><use href="#i-home"/></svg></span>Daily living</h3>
+          <div class="std"><p>Help with the everyday things at home: cooking, cleaning, showering and getting ready, shopping lists and keeping on top of appointments. We go at your pace.</p>
+            <ul class="look"><li>Meal planning and cooking together</li><li>Personal care, done your way</li><li>Sorting mail, bills and appointments</li></ul></div>
+          <ul class="easy" role="list">
+            <li><svg class="ei" aria-hidden="true"><use href="#i-home"/></svg><span>We help you at home.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-bag"/></svg><span>We help you shop, cook and clean.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-heart"/></svg><span>We help you shower and get dressed.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-check"/></svg><span>You choose how we help.</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3><span class="badge"><svg aria-hidden="true"><use href="#i-people"/></svg></span>Community access</h3>
+          <div class="std"><p>Getting out and doing what you enjoy: the beach, the library, the footy on the weekend, a class, catching up with friends. We can come along, or help you build the confidence to go on your own.</p>
+            <ul class="look"><li>Classes, clubs and volunteering</li><li>Learning a new bus or train trip</li><li>Social outings with a familiar face</li></ul></div>
+          <ul class="easy" role="list">
+            <li><svg class="ei" aria-hidden="true"><use href="#i-sun"/></svg><span>We help you go out and have fun.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-people"/></svg><span>To the beach, the shops or the footy.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-heart"/></svg><span>We can come with you.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-check"/></svg><span>Or we help you go on your own.</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3><span class="badge"><svg aria-hidden="true"><use href="#i-car"/></svg></span>Transport</h3>
+          <div class="std"><p>Rides to appointments, work, study and social plans. Our van fits a wheelchair, and your support worker can wait with you if you need them to.</p>
+            <ul class="look"><li>Medical and therapy appointments</li><li>Regular trips to work or TAFE</li><li>Door-to-door, with help at both ends</li></ul></div>
+          <ul class="easy" role="list">
+            <li><svg class="ei" aria-hidden="true"><use href="#i-car"/></svg><span>We can drive you.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-cal"/></svg><span>To the doctor, to work or to fun things.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-wheel"/></svg><span>Our van fits a wheelchair.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-clock"/></svg><span>We can wait with you.</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3><span class="badge"><svg aria-hidden="true"><use href="#i-moon"/></svg></span>Respite</h3>
+          <div class="std"><p>Short breaks for you and the people who care for you — a day out, a quiet evening in, or an overnight stay at home with a worker you already know.</p>
+            <ul class="look"><li>Day outings and evening support</li><li>Overnight support in your own home</li><li>Planned breaks so carers can rest too</li></ul></div>
+          <ul class="easy" role="list">
+            <li><svg class="ei" aria-hidden="true"><use href="#i-moon"/></svg><span>Short breaks.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-people"/></svg><span>For you and your family or carers.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-clock"/></svg><span>For a day, an evening or a night.</span></li>
+            <li><svg class="ei" aria-hidden="true"><use href="#i-heart"/></svg><span>With someone you know.</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="start" aria-labelledby="start-h">
+    <div class="wrap">
+      <h2 id="start-h">How to start</h2>
+      <div class="std sec-intro"><p>Four steps, no paperwork to begin with. You can stop at any point.</p></div>
+      <div class="start-grid">
+      <ol class="steps">
+        <li><span class="num" aria-hidden="true">1</span><div><h3>Get in touch</h3>
+          <div class="std"><p>Call, text, email or use the form below. A real person from our Wollongong office will get back to you.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-phone"/></svg><span>Call, text or email us.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-chat"/></svg><span>A real person will reply.</span></li></ul></div></li>
+        <li><span class="num" aria-hidden="true">2</span><div><h3>Have a chat</h3>
+          <div class="std"><p>We meet at your home, at a café or on a video call — wherever you feel comfortable. Bring anyone you like.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-people"/></svg><span>We meet you.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-home"/></svg><span>At home, at a café or on video.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-heart"/></svg><span>You can bring someone.</span></li></ul></div></li>
+        <li><span class="num" aria-hidden="true">3</span><div><h3>Make a plan together</h3>
+          <div class="std"><p>We write down what you want help with, when, and who with. You read it, change it, and only say yes when it feels right.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-plan"/></svg><span>We make a plan with you.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-swap"/></svg><span>You can change the plan.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-check"/></svg><span>You say yes when you are ready.</span></li></ul></div></li>
+        <li><span class="num" aria-hidden="true">4</span><div><h3>Support starts</h3>
+          <div class="std"><p>You meet your support worker before the first visit. If it isn’t the right fit, tell us and we’ll change it — no hard feelings.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-people"/></svg><span>You meet your worker first.</span></li><li><svg class="ei" aria-hidden="true"><use href="#i-swap"/></svg><span>Not a good match? We change it.</span></li></ul></div></li>
+      </ol>
+      <aside class="faq" aria-labelledby="faq-h">
+        <h3 id="faq-h">Questions people ask first</h3>
+        <details><summary>Do I need a plan before I call?</summary><p>No. Call us first. We can talk about support whether or not you have a plan yet.</p></details>
+        <details><summary>Can I choose who supports me?</summary><p>Yes. You meet workers before they start, and you can ask for someone different at any time.</p></details>
+        <details><summary>Can family come to the first chat?</summary><p>Of course. Bring whoever helps you feel comfortable — or come on your own.</p></details>
+        <details><summary>What if I need to cancel a visit?</summary><p>Tell us as early as you can. We explain our cancellation rules in writing before any support starts.</p></details>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec soft" id="cost" aria-labelledby="cost-h">
+    <div class="wrap">
+      <h2 id="cost-h">What it costs</h2>
+      <div class="cost-grid">
+      <div class="cost">
+        <p class="big">It depends on your plan.</p>
+        <div class="std"><p>If your support is paid for through a funding plan, we’ll show you which of our supports it can cover before anything starts. If you’re paying yourself, you’ll get the price in writing first.</p></div>
+        <ul class="facts">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-coin"/></svg><span>You see the price before you say yes.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><span>The first chat is free.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-plan"/></svg><span>A clear statement every two weeks. No surprise bills.</span></li>
+        </ul>
+        <p class="gen"><strong>General information only.</strong> Your plan and its funding rules decide what can be covered. We’ll help you check — this page is not financial or planning advice.</p>
+      </div>
+      <svg class="bill" viewBox="0 0 260 300" aria-hidden="true" focusable="false"><rect class="pa" x="30" y="20" width="190" height="250" rx="14"/><path class="hd" d="M30,34a14,14 0 0 1 14-14h162a14,14 0 0 1 14,14V62H30Z"/><path class="st" d="M58,92H192M58,118H160M58,144H176M58,170H140"/><path class="st" d="M58,210H120M150,210H192" style="stroke-width:6"/><circle class="ok" cx="200" cy="246" r="34"/><path d="m184,246 11,11 22-24" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="41" r="6" fill="var(--yellow)"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="team" aria-labelledby="team-h">
+    <div class="wrap">
+      <h2 id="team-h">Meet the team</h2>
+      <div class="std sec-intro"><p>A small local team, so you see the same faces. Drawings, not photos — you’ll meet everyone properly before they visit.</p></div>
+      <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-people"/></svg><span>This is our team. You will meet them before they help you.</span></li></ul>
+      <div class="team">
+        <article class="person">
+          <svg class="av" viewBox="0 0 96 96" aria-hidden="true"><circle class="bgc" cx="48" cy="48" r="46"/><path class="ln" d="M20,90C22,70 34,62 48,62S74,70 76,90"/><path class="hair" d="M28,44C26,22 40,14 50,15C64,16 72,26 70,44C74,56 70,66 66,68C68,56 66,48 62,42C52,40 42,36 36,30C34,40 32,50 34,66C28,62 26,54 28,44Z"/><circle class="face" cx="48" cy="44" r="16"/><path class="ln" d="M42,48C45,51 51,51 54,48" style="stroke-width:2.5"/><circle cx="42" cy="41" r="2" fill="var(--blue)"/><circle cx="54" cy="41" r="2" fill="var(--blue)"/></svg>
+          <h3>Priya</h3><p class="role">Support coordinator</p>
+          <div class="std"><p>Organises plans, rosters and the occasional birthday cake. Speaks English and Hindi.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-plan"/></svg><span>Priya helps make your plan.</span></li></ul>
+        </article>
+        <article class="person">
+          <svg class="av" viewBox="0 0 96 96" aria-hidden="true"><circle class="bgc" cx="48" cy="48" r="46"/><path class="ln" d="M20,90C22,70 34,62 48,62S74,70 76,90"/><circle class="face" cx="48" cy="44" r="16"/><path class="hair" d="M31,40C30,26 40,22 48,22C58,22 66,28 65,40C60,34 52,32 44,33C38,34 34,36 31,40Z"/><path class="ln" d="M40,52C44,56 52,56 56,52M34,46C34,56 40,62 48,62S62,56 62,46" style="stroke-width:2.5"/><circle cx="42" cy="42" r="2" fill="var(--blue)"/><circle cx="54" cy="42" r="2" fill="var(--blue)"/></svg>
+          <h3>Tom</h3><p class="role">Community access</p>
+          <div class="std"><p>Knows the beach access ramps from Thirroul to Shellharbour. Currently learning Auslan.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-sun"/></svg><span>Tom helps you go out.</span></li></ul>
+        </article>
+        <article class="person">
+          <svg class="av" viewBox="0 0 96 96" aria-hidden="true"><circle class="bgc" cx="48" cy="48" r="46"/><path class="ln" d="M20,90C22,70 34,62 48,62S74,70 76,90"/><path class="hair" d="M30,46C28,26 38,18 48,18C60,18 68,26 66,46C62,40 56,30 48,30C40,30 34,40 30,46Z"/><circle class="hair" cx="48" cy="17" r="8"/><circle class="face" cx="48" cy="45" r="16"/><path class="ln" d="M42,50C45,53 51,53 54,50" style="stroke-width:2.5"/><circle cx="42" cy="43" r="2" fill="var(--blue)"/><circle cx="54" cy="43" r="2" fill="var(--blue)"/></svg>
+          <h3>Mele</h3><p class="role">Respite and overnight support</p>
+          <div class="std"><p>Calm, patient and a serious card player. Speaks English and Tongan.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-moon"/></svg><span>Mele helps with short breaks.</span></li></ul>
+        </article>
+        <article class="person">
+          <svg class="av" viewBox="0 0 96 96" aria-hidden="true"><circle class="bgc" cx="48" cy="48" r="46"/><path class="ln" d="M20,90C22,70 34,62 48,62S74,70 76,90"/><circle class="face" cx="48" cy="44" r="16"/><path class="hair" d="M32,38C32,26 40,24 48,24S64,26 64,38C60,33 54,31 48,31S36,33 32,38Z"/><path class="ln" d="M37,42h8M51,42h8M45,42h6" style="stroke-width:2.5"/><circle cx="41" cy="42" r="4.5" style="fill:none;stroke:var(--blue);stroke-width:2.5"/><circle cx="55" cy="42" r="4.5" style="fill:none;stroke:var(--blue);stroke-width:2.5"/><path class="ln" d="M42,51C45,54 51,54 54,51" style="stroke-width:2.5"/></svg>
+          <h3>Dan</h3><p class="role">Transport and support</p>
+          <div class="std"><p>Drives our wheelchair-accessible van and always has a spare phone charger.</p></div>
+          <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-car"/></svg><span>Dan drives you where you need to go.</span></li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec soft" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Contact us</h2>
+      <div class="std sec-intro"><p>Pick whatever way is easiest for you. Relay service calls and interpreters are welcome — just let us know.</p></div>
+      <ul class="easy" role="list"><li><svg class="ei" aria-hidden="true"><use href="#i-phone"/></svg><span>Call, text or email us. Or fill in the form.</span></li></ul>
+      <div class="contact-grid">
+        <ul class="ways">
+          <li><span class="wi"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span><b>Call</b><a href="tel:0255504127">(02) 5550 4127</a></span></li>
+          <li><span class="wi"><svg class="ic" aria-hidden="true"><use href="#i-text2"/></svg></span><span><b>Text</b><a href="sms:0491570158">0491 570 158</a></span></li>
+          <li><span class="wi"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><span><b>Email</b><a href="mailto:hello@example.com">hello@example.com</a></span></li>
+          <li><span class="wi"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span><span><b>Office hours</b>Monday to Friday, 8.30am to 5pm. Support visits happen 7 days.</span></li>
+          <li><span class="wi"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span><span><b>Where we visit</b>Wollongong, NSW and nearby suburbs — from Thirroul to Shellharbour and out to Dapto.</span></li>
+        </ul>
+        <form class="form" data-demo-message="Demo only — nothing was sent. On a real site, the Open Door team would get your message.">
+          <h3>Send us a message</h3>
+          <p>Only your name and one way to reach you are needed.</p>
+          <div class="field"><label for="f-name">Your name</label><input type="text" id="f-name" name="name" autocomplete="name"></div>
+          <fieldset class="field"><legend>How should we reply?</legend>
+            <div class="opts"><label class="opt"><input type="radio" name="reply" value="phone" checked><span>Phone call</span></label><label class="opt"><input type="radio" name="reply" value="text"><span>Text message</span></label><label class="opt"><input type="radio" name="reply" value="email"><span>Email</span></label></div>
+          </fieldset>
+          <div class="field"><label for="f-contact">Phone number or email</label><input type="text" id="f-contact" name="contact" autocomplete="on"></div>
+          <fieldset class="field"><legend>What would you like help with? <span style="font-weight:400">(optional)</span></legend>
+            <div class="opts"><label class="opt"><input type="checkbox" name="help" value="daily"><span>Daily living</span></label><label class="opt"><input type="checkbox" name="help" value="community"><span>Community access</span></label><label class="opt"><input type="checkbox" name="help" value="transport"><span>Transport</span></label><label class="opt"><input type="checkbox" name="help" value="respite"><span>Respite</span></label><label class="opt"><input type="checkbox" name="help" value="unsure"><span>Not sure yet</span></label></div>
+          </fieldset>
+          <div class="field"><label for="f-msg">Anything else? <span style="font-weight:400">(optional)</span></label><p class="hint" id="f-msg-hint">For example, the best time to call, or if you would like an interpreter.</p><textarea id="f-msg" name="message" aria-describedby="f-msg-hint"></textarea></div>
+          <button class="btn" type="submit"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Send my message</button>
+          <p class="emerg">This form is not for emergencies. In an emergency, call 000.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="fname" data-brand>Open Door Support Services</p>
+    <p>Disability and community support in Wollongong, NSW. <a href="tel:0255504127">(02) 5550 4127</a> · <a href="mailto:hello@example.com">hello@example.com</a></p>
+    <p>General information only. This page does not give medical, financial or planning advice.</p>
+    <small>This is a concept demo for a fictional business. The team, services and contact details are made up, and no registration is claimed. Your accessibility settings are saved in this browser only.</small>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<section class="a11y" id="a11y" aria-labelledby="a11y-h" hidden>
+  <div class="a11y-top"><h2 id="a11y-h">Make this page work for you</h2><button class="btn hbtn" type="button" id="a11y-close">Done</button></div>
+  <p class="note">Changes happen straight away and are remembered in this browser.</p>
+  <fieldset class="set">
+    <legend><svg class="ic" aria-hidden="true"><use href="#i-aa"/></svg>Text size</legend>
+    <div class="sizes"><label><input type="radio" name="ts" value="100"><span>100%</span></label><label><input type="radio" name="ts" value="125"><span>125%</span></label><label><input type="radio" name="ts" value="150"><span>150%</span></label><label><input type="radio" name="ts" value="175"><span>175%</span></label></div>
+  </fieldset>
+  <div class="set row"><div><h3 id="hc-l"><svg class="ic" aria-hidden="true"><use href="#i-contrast"/></svg>High contrast</h3><p id="hc-d">White and yellow on black.</p></div><button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="hc-l" aria-describedby="hc-d" data-k="hc"><span class="track" aria-hidden="true"></span><span class="st">Off</span></button></div>
+  <div class="set row"><div><h3 id="dys-l"><svg class="ic" aria-hidden="true"><use href="#i-space"/></svg>Easier-to-read spacing</h3><p id="dys-d">More space between letters, words and lines. Helpful for dyslexia.</p></div><button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="dys-l" aria-describedby="dys-d" data-k="dys"><span class="track" aria-hidden="true"></span><span class="st">Off</span></button></div>
+  <div class="set row"><div><h3 id="rm-l"><svg class="ic" aria-hidden="true"><use href="#i-still"/></svg>Reduce motion</h3><p id="rm-d">Stops movement and smooth scrolling.</p></div><button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="rm-l" aria-describedby="rm-d" data-k="rm"><span class="track" aria-hidden="true"></span><span class="st">Off</span></button></div>
+  <div class="set row"><div><h3 id="er-l"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Easy Read</h3><p id="er-d">Short sentences with pictures.</p></div><button class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="er-l" aria-describedby="er-d" data-k="er"><span class="track" aria-hidden="true"></span><span class="st">Off</span></button></div>
+  <p class="saved" id="saved-msg"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Using the default settings.</span></p>
+  <div class="foot-row"><button class="btn alt" type="button" id="a11y-reset"><svg class="ic" aria-hidden="true"><use href="#i-swap"/></svg>Reset to default</button></div>
+</section>
+<p class="sr" id="live" role="status" aria-live="polite"></p>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var d = document.documentElement, KEY = "opendoor-a11y";
+  var osReduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var NAMES = { hc: "High contrast", dys: "Easier-to-read spacing", rm: "Reduce motion", er: "Easy Read" };
+  var state = { size: 100, hc: false, dys: false, rm: osReduce, er: false };
+  try { var s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s) Object.keys(state).forEach(function(k){ if (s[k] !== undefined) state[k] = s[k]; }); } catch (e) { /* storage blocked */ }
+
+  var live = $("#live"), liveTimer;
+  function say(msg){ clearTimeout(liveTimer); live.textContent = ""; liveTimer = setTimeout(function(){ live.textContent = msg; }, 60); }
+  function isDefault(){ return state.size === 100 && !state.hc && !state.dys && !state.er && state.rm === osReduce; }
+  function save(){
+    var ok = true;
+    try { if (isDefault()) localStorage.removeItem(KEY); else localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { ok = false; }
+    $("#saved-msg span").textContent = isDefault() ? "Using the default settings." : (ok ? "Saved in this browser." : "Applied for this visit (this browser can’t save settings).");
+  }
+  function apply(){
+    d.style.fontSize = state.size === 100 ? "" : state.size + "%";
+    d.classList.toggle("ts-big", state.size >= 150);
+    ["hc","dys","rm","er"].forEach(function(k){
+      d.classList.toggle(k, !!state[k]);
+      var b = $('.switch[data-k="' + k + '"]');
+      b.setAttribute("aria-checked", state[k] ? "true" : "false");
+      $(".st", b).textContent = state[k] ? "On" : "Off";
+    });
+    $$('input[name="ts"]').forEach(function(r){ r.checked = Number(r.value) === state.size; });
+    $("#er-quick").setAttribute("aria-pressed", state.er ? "true" : "false");
+  }
+  apply(); save();
+
+  $$('input[name="ts"]').forEach(function(r){
+    r.addEventListener("change", function(){ state.size = Number(r.value); apply(); save(); say("Text size " + state.size + " percent."); });
+  });
+  $$(".switch").forEach(function(b){
+    b.addEventListener("click", function(){
+      var k = b.dataset.k; state[k] = !state[k]; apply(); save();
+      say(NAMES[k] + (state[k] ? " on." : " off.") + (k === "er" && state[k] ? " Paragraphs are now short sentences with pictures." : ""));
+    });
+  });
+  $("#er-quick").addEventListener("click", function(){
+    state.er = !state.er; apply(); save();
+    say("Easy Read " + (state.er ? "on. Paragraphs are now short sentences with pictures." : "off."));
+  });
+  $("#a11y-reset").addEventListener("click", function(){
+    state = { size: 100, hc: false, dys: false, rm: osReduce, er: false }; apply(); save();
+    say("All settings reset to default.");
+  });
+
+  /* panel */
+  var panel = $("#a11y"), openers = [$("#a11y-open"), $("#a11y-open-2")], back = $("#backdrop"), lastOpener = null;
+  function open(from){
+    lastOpener = from || openers[0];
+    panel.hidden = false; back.hidden = false;
+    openers[0].setAttribute("aria-expanded", "true");
+    setTimeout(function(){ var c = $('input[name="ts"]:checked', panel) || $("#a11y-close"); c.focus(); }, 30);
+  }
+  function close(){
+    if (panel.hidden) return;
+    panel.hidden = true; back.hidden = true;
+    openers[0].setAttribute("aria-expanded", "false");
+    if (lastOpener) lastOpener.focus();
+  }
+  openers.forEach(function(b){ b.addEventListener("click", function(){ if (panel.hidden) open(b); else close(); }); });
+  $("#a11y-close").addEventListener("click", close);
+  back.addEventListener("click", close);
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !panel.hidden){ e.preventDefault(); close(); } });
+
+  /* the door opens once, unless motion is reduced */
+  var anim = $("#door-anim");
+  if (anim && !state.rm && !osReduce && typeof anim.beginElement === "function"){
+    try { var leaf = anim.parentNode; leaf.setAttribute("d", "M130,58L290,58V318L130,318Z"); $(".door .beam").style.opacity = "0";
+      setTimeout(function(){ anim.beginElement(); $(".door .beam").style.opacity = ""; }, 350); } catch (e) { /* static door */ }
+  }
+})();
+</script>
+</body>
+</html>

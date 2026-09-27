@@ -1,0 +1,8 @@
+{
+  "id": "071",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "Form logic", "Date logic", "CSS Grid"],
+  "features": ["quote", "booking"],
+  "interaction": "Set loan amount, rate, term, repayment frequency and principal-and-interest vs interest-only to get an illustrative repayment, total interest and an animated SVG amortisation chart (principal vs interest per year) with a hover, touch and keyboard crosshair; audience cards load example scenarios, and a book-a-chat form picks real upcoming weekdays and ends in a demo summary.",
+  "fonts": ["Urbanist", "JetBrains Mono"],
+  "notes": "Borrowing power is deliberately not calculated. Figures assume a constant rate with no fees and are labelled illustrative; booking is demo-only."
+}

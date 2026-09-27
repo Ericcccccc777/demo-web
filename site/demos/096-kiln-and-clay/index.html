@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="096">
+<meta name="demo:brand" content="Kiln & Clay Studio">
+<title>Kiln & Clay Studio — ceramics classes and shop, Daylesford</title>
+<meta name="description" content="A fictional ceramics studio in Daylesford, Victoria, with wheel and handbuilding classes, a members' studio, firing services and a shop of handmade pots.">
+<meta name="theme-color" content="#F2EBE0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Rozha+One&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--oat:#F2EBE0;--oat2:#EAE0D0;--terra:#B5643C;--terra-ink:#8F4526;--clay:#D8B79A;--char:#2E2B28;--cel:#A9C1B3;--cel2:#D6E3DA;--muted:#5A534C;
+--serif:"Rozha One",Georgia,"Times New Roman",serif;--sans:"Nunito Sans","Segoe UI",system-ui,-apple-system,sans-serif;--pad:clamp(16px,4vw,60px);
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--oat) var(--grain);color:var(--char);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+main{overflow-x:clip}
+svg,canvas{display:block}
+a{color:inherit}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--terra-ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--char);color:var(--oat);padding:12px 16px;border-radius:12px;font-weight:700}
+.skip:focus{top:12px}
+.eyebrow{font:800 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--terra-ink)}
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+h2{font-size:clamp(38px,4.8vw,68px);line-height:.98;margin:.12em 0 .3em}
+h3{font:800 21px/1.25 var(--sans);margin:0 0 .35em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:30px 26px 32px 24px/26px 32px 24px 30px;background:var(--char);color:var(--oat);font:800 16px/1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg);background:#000}
+.btn.terra{background:var(--terra-ink)}
+.btn.terra:hover{background:#7A3A1F}
+.btn.line{background:transparent;color:var(--char);box-shadow:inset 0 0 0 2px var(--char)}
+.btn.line:hover{background:rgba(46,43,40,.07)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{flex:none;width:44px;height:44px}
+.logo span{font:400 25px/1 var(--serif);overflow-wrap:anywhere}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.nav a:hover{background:rgba(181,100,60,.14)}
+.nav .btn{min-height:44px;padding:0 18px;margin-left:8px;font-size:15px}
+.menu{display:none;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--char);background:transparent;font:800 15px/1 var(--sans);color:var(--char);cursor:pointer}
+
+/* hero + wheel */
+.hero{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,3.4vw,56px);align-items:center;padding-top:clamp(8px,2vw,28px);padding-bottom:clamp(48px,6vw,88px)}
+h1{font-size:clamp(54px,6vw,100px);line-height:.9;margin:.14em 0 .24em;overflow-wrap:anywhere}
+.lede{font-size:clamp(18px,1.45vw,21px);line-height:1.55;max-width:32em;color:#3F3A35}
+.scrib{position:relative;white-space:nowrap}
+.scrib svg{position:absolute;left:-2%;bottom:-.28em;width:104%;height:.5em;overflow:visible}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{padding:7px 14px;border-radius:999px;background:var(--oat2);font-weight:700;font-size:14px}
+.wheel{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 316px;align-items:center;gap:8px;padding:22px}
+.wheel::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--clay) var(--grain);border-radius:47% 53% 44% 56%/56% 46% 54% 44%}
+.stage{position:relative;min-width:0}
+.stage canvas{width:100%;height:500px;cursor:grab;touch-action:pan-y}
+.stage canvas.grab{cursor:grabbing}
+.stage-hint{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);width:max-content;max-width:92%;margin:0;padding:6px 14px;border-radius:999px;background:rgba(242,235,224,.9);font-size:13.5px;font-weight:700;text-align:center;transition:opacity .4s}
+.temp{position:absolute;left:18px;top:14px;margin:0;font:400 clamp(30px,3vw,44px)/1 var(--serif);color:#FFE3C2;text-shadow:0 0 18px rgba(255,120,40,.7);opacity:0;transition:opacity .4s;pointer-events:none}
+.temp small{display:block;font:800 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#F6D5B6}
+.firing .temp{opacity:1}
+.firing .stage-hint{opacity:0}
+.ctl{display:grid;gap:12px;padding:22px 20px;background:var(--oat) var(--grain);border-radius:34px 46px 30px 52px/44px 32px 50px 36px;box-shadow:0 20px 44px -26px rgba(46,43,40,.55)}
+.ctl h2{font-size:34px;margin:0}
+.ctl>p{margin:-8px 0 0;font-size:15px;color:var(--muted)}
+.ctl fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:12px}
+.ctl legend{padding:0;margin-bottom:6px}
+.presets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.preset{min-width:0;min-height:40px;padding:0 4px;border:2px solid var(--char);border-radius:999px;background:transparent;color:var(--char);font:800 14px/1 var(--sans);cursor:pointer}
+.preset:hover{background:rgba(46,43,40,.08)}
+.sl{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 10px}
+.sl label{font-weight:800;font-size:14px}
+.sl output{font:700 14px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--terra-ink)}
+.sl input{grid-column:1/-1}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;margin:0;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--clay),var(--terra))}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--clay),var(--terra))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;border-radius:52% 48% 50% 50%;background:var(--oat);border:3px solid var(--terra-ink);box-shadow:0 2px 6px rgba(46,43,40,.3)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--oat);border:3px solid var(--terra-ink)}
+input[type=range]:disabled{opacity:.45;cursor:not-allowed}
+.glazes{display:flex;flex-wrap:wrap;gap:8px}
+.gz{position:relative}
+.gz input{position:absolute;opacity:0;width:1px;height:1px}
+.gz label{display:grid;justify-items:center;gap:4px;width:58px;cursor:pointer;font-size:12px;font-weight:700;text-align:center;line-height:1.15}
+.gz i{width:40px;height:40px;border-radius:50% 46% 52% 48%;box-shadow:inset -5px -6px 10px rgba(0,0,0,.25),inset 4px 5px 8px rgba(255,255,255,.45);border:2px solid transparent;outline:2px solid transparent;outline-offset:2px}
+.gz input:checked+label i{outline-color:var(--char)}
+.gz input:focus-visible+label i{outline:3px solid var(--terra-ink)}
+.gz input:disabled+label{opacity:.45;cursor:not-allowed}
+.actions{display:grid;grid-template-columns:1fr auto;gap:8px}
+.actions .btn{min-height:48px;padding:0 16px}
+.spin[aria-pressed="true"]{background:var(--char);color:var(--oat)}
+.spin{min-height:48px;padding:0 14px;border:2px solid var(--char);border-radius:999px;background:transparent;color:var(--char);font:800 14px/1 var(--sans);cursor:pointer}
+.pot-status{margin:0;padding:10px 12px;border-radius:14px 18px 12px 20px;background:var(--cel2);font-size:14.5px;font-weight:600;line-height:1.45}
+
+/* sections */
+.sec{padding:clamp(56px,7vw,110px) 0;position:relative}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:clamp(24px,3vw,44px)}
+.head p{color:var(--muted);font-size:18px;margin:0}
+.wave{display:block;width:100%;height:28px;color:var(--clay)}
+.classes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.8vw,26px)}
+.cl{display:flex;flex-direction:column;gap:10px;padding:34px 26px 28px;background:var(--c,var(--clay)) var(--grain)}
+.cl:nth-child(1){--c:var(--clay);border-radius:64px 42px 58px 36px/48px 62px 40px 58px}
+.cl:nth-child(2){--c:var(--cel);border-radius:40px 70px 44px 60px/62px 42px 64px 40px;transform:translateY(22px)}
+.cl:nth-child(3){--c:var(--oat2);border-radius:58px 40px 70px 44px/40px 58px 44px 66px}
+.cl:nth-child(4){--c:#E6C9B0;border-radius:44px 60px 40px 70px/66px 44px 60px 42px;transform:translateY(22px)}
+.cl .when{font:800 12px/1.35 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#4A3A2E}
+.cl h3{font:400 30px/1.05 var(--serif);margin:0}
+.cl p{margin:0;font-size:16px}
+.cl ul{margin:0;padding-left:1.1em;font-size:15px}
+.cl .price{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;border-top:2px dotted rgba(46,43,40,.35)}
+.cl .price b{font:400 32px/1 var(--serif)}
+.cl .price small{display:block;font:600 12px/1.2 var(--sans);color:#4A3A2E}
+.cl .btn{min-height:44px;padding:0 16px;font-size:14px}
+.note{font-size:14px;color:var(--muted);margin-top:36px}
+
+.member{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(34px,5vw,72px) clamp(22px,5vw,80px)}
+.member::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--cel) var(--grain);border-radius:120px 70px 140px 60px/90px 130px 70px 120px}
+.tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tier{padding:24px 22px;background:var(--oat);border-radius:30px 44px 26px 40px/40px 28px 44px 30px}
+.tier b{display:block;font:400 42px/1 var(--serif);margin:6px 0 2px}
+.tier b small{font:700 15px var(--sans);color:var(--muted)}
+.tier ul{margin:12px 0 0;padding-left:1.1em;font-size:15px}
+
+.shop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,34px)}
+.item{display:grid;grid-template-rows:auto 1fr;gap:10px}
+.plinth{position:relative;display:grid;place-items:center;aspect-ratio:5/4;background:var(--p,var(--oat2)) var(--grain);border-radius:48% 52% 44% 56%/52% 48% 56% 44%}
+.item:nth-child(3n+2) .plinth{--p:var(--cel2);border-radius:55% 45% 52% 48%/46% 55% 45% 54%}
+.item:nth-child(3n) .plinth{--p:#EAD6C4;border-radius:44% 56% 47% 53%/56% 43% 57% 44%}
+.plinth canvas{width:62%;height:86%}
+.item-body{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:start}
+.item h3{font-size:19px;margin:0}
+.item p{grid-column:1;margin:0;font-size:15px;color:var(--muted)}
+.item .cost{grid-row:1/3;grid-column:2;font:400 28px/1 var(--serif)}
+.item .btn{grid-column:1/-1;justify-self:start;margin-top:8px;min-height:42px;padding:0 16px;font-size:14px}
+
+.firing{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.rates{margin:0}
+.rates div{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:16px 0;border-bottom:2px dotted rgba(46,43,40,.3)}
+.rates dt{font-weight:800}
+.rates dd{margin:0;font:400 26px/1 var(--serif);text-align:right}
+.rates span{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.chart{padding:22px;background:var(--oat2) var(--grain);border-radius:40px 56px 36px 60px/54px 40px 60px 38px}
+.chart svg{width:100%;height:auto}
+.chart figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+
+.visit{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);padding:clamp(36px,5vw,72px) clamp(22px,5vw,72px);color:var(--oat)}
+.visit::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--char) var(--grain);border-radius:90px 150px 80px 140px/140px 80px 150px 90px}
+.visit h2{color:var(--oat);grid-column:1/-1;margin:0}
+.visit .eyebrow{color:var(--clay)}
+.visit dl{margin:0}
+.visit dl div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(242,235,224,.3)}
+.visit dt{font-weight:700}
+.visit dd{margin:0;color:#E8DFD2}
+.visit a{color:var(--oat);font-weight:700;overflow-wrap:anywhere}
+.visit p{color:#E8DFD2}
+details{border-bottom:1px dashed rgba(242,235,224,.35)}
+summary{cursor:pointer;padding:12px 0;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 24px/1 var(--serif);color:var(--clay)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;font-size:15.5px}
+footer.wrap{padding-top:clamp(48px,6vw,80px);padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+.foot-name{font:400 clamp(46px,8vw,120px)/.9 var(--serif);margin:0 0 20px;color:var(--terra);overflow-wrap:anywhere}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;padding-top:16px;border-top:2px dotted rgba(46,43,40,.35);font-size:14px;color:var(--muted)}
+
+@media (max-width:1180px){
+  .hero{grid-template-columns:1fr}
+  .hero-copy{max-width:720px}
+  .classes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cl:nth-child(n){transform:none}
+  .visit{grid-template-columns:1fr 1fr}
+  .visit .faq{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .menu{display:inline-flex;align-items:center}
+  .nav{position:absolute;right:var(--pad);top:74px;z-index:30;display:none;flex-direction:column;align-items:stretch;min-width:220px;padding:14px;background:var(--oat) var(--grain);border-radius:30px 40px 26px 44px;box-shadow:0 24px 50px -20px rgba(46,43,40,.5)}
+  .nav.open{display:flex}
+  .nav a{padding:12px 16px}
+  .nav .btn{margin:6px 0 0}
+  .top{position:relative}
+  .wheel{grid-template-columns:1fr;padding:18px 14px}
+  .wheel::before{border-radius:38% 62% 32% 68%/22% 26% 74% 78%}
+  .head,.member,.firing{grid-template-columns:1fr}
+  .shop{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .logo span{font-size:21px}
+  .logo svg{width:38px;height:38px}
+  .stage canvas{height:330px}
+  .stage-hint{font-size:12.5px;bottom:2px}
+  .ctl{padding:18px 16px}
+  .classes,.tiers,.visit{grid-template-columns:1fr}
+  .cl{padding:28px 22px 24px}
+  .shop{gap:22px 14px}
+  .item h3{font-size:16px}
+  .item .cost{grid-row:auto;grid-column:1;font-size:24px}
+  .item-body{grid-template-columns:1fr}
+  .item .btn{width:100%}
+  .member::before{border-radius:60px 36px 70px 40px/50px 70px 40px 60px}
+  .visit::before{border-radius:50px 80px 44px 70px/70px 44px 80px 50px}
+  .gz label{width:52px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#wheel">Skip to the pottery wheel</a>
+<header class="wrap top">
+  <a class="logo" href="#top" aria-label="Back to top"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M15 5h14c0 3-2 4-2 6 0 3 9 7 9 17 0 7-6 12-14 12S8 35 8 28c0-10 9-14 9-17 0-2-2-3-2-6z" fill="#B5643C"/><path d="M11.6 21c3-2.6 5.4-6 5.4-10h10c0 4 2.4 7.4 5.4 10-1.6 3.2-3.6.8-4.8 4-1.2-2.6-3-1-4.2 2.4-1-3-3-3.4-4.2-.8-1.2-2.4-3.6-1.4-4.6-5.6z" fill="#2E2B28"/></svg><span data-brand>Kiln & Clay Studio</span></a>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="nav" id="menuBtn">Menu</button>
+  <nav class="nav" id="nav" aria-label="Main">
+    <a href="#classes">Classes</a><a href="#membership">Membership</a><a href="#shop">Shop</a><a href="#firing">Firing</a><a href="#visit">Visit</a>
+    <a class="btn" href="#classes">Book a class</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero" aria-labelledby="brandTitle">
+    <div class="hero-copy">
+      <p class="eyebrow">Ceramics studio &amp; shop · Daylesford, VIC</p>
+      <h1 id="brandTitle" data-brand>Kiln & Clay Studio</h1>
+      <p class="lede">Wheel-throwing and handbuilding classes, a members' studio and a small shop of pots made in the Central Highlands — all under <span class="scrib">one tin roof<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9C40 3 80 12 120 6s60 2 78-1" fill="none" stroke="#B5643C" stroke-width="3.5" stroke-linecap="round"/></svg></span>, with two kilns out the back.</p>
+      <div class="ctas"><a class="btn" href="#classes">Book a class</a><a class="btn line" href="#shop">See the shop</a></div>
+      <ul class="chips"><li>Open Wed–Sun</li><li>Classes from $85</li><li>Small groups of 8</li></ul>
+    </div>
+
+    <div class="wheel" id="wheel" aria-labelledby="wheelTitle">
+      <div class="stage" id="stage">
+        <canvas id="pot" role="img" aria-label="A wet clay pot on a potter's wheel."></canvas>
+        <p class="temp" aria-hidden="true"><small>Kiln temperature</small><span id="tempVal">20°C</span></p>
+        <p class="stage-hint" id="hint">Drag the dots sideways to shape the pot</p>
+      </div>
+      <div class="ctl">
+        <h2 id="wheelTitle">Throw a pot</h2>
+        <p>Shape it, pick a glaze, then fire it.</p>
+        <fieldset id="shapeSet">
+          <legend class="eyebrow">Start from</legend>
+          <div class="presets"><button class="preset" type="button" data-preset="cup">Cup</button><button class="preset" type="button" data-preset="bowl">Bowl</button><button class="preset" type="button" data-preset="vase">Vase</button><button class="preset" type="button" data-preset="bottle">Bottle</button></div>
+          <div class="sl"><label for="sH">Height</label><output id="oH" for="sH">18 cm</output><input type="range" id="sH" min="8" max="28" step="0.5" value="18"></div>
+          <div class="sl"><label for="sB">Belly width</label><output id="oB" for="sB">15 cm</output><input type="range" id="sB" min="8" max="24" step="0.5" value="15"></div>
+          <div class="sl"><label for="sN">Neck width</label><output id="oN" for="sN">9 cm</output><input type="range" id="sN" min="3" max="22" step="0.5" value="9"></div>
+          <div class="sl"><label for="sL">Lip width</label><output id="oL" for="sL">11 cm</output><input type="range" id="sL" min="4" max="26" step="0.5" value="11"></div>
+        </fieldset>
+        <fieldset id="glazeSet">
+          <legend class="eyebrow">Glaze</legend>
+          <div class="glazes">
+            <div class="gz"><input type="radio" name="glaze" id="gCel" value="celadon" checked><label for="gCel"><i style="background:radial-gradient(circle at 34% 30%,#EEF5F0,#A9C1B3 46%,#6B8C7E)"></i>Celadon</label></div>
+            <div class="gz"><input type="radio" name="glaze" id="gOat" value="oatmeal"><label for="gOat"><i style="background:radial-gradient(circle at 30% 70%,#5b4030 1px,transparent 2px) 0 0/9px 9px,radial-gradient(circle at 34% 30%,#FFFDF6,#E8DDC9 50%,#B9A88E)"></i>Oatmeal speckle</label></div>
+            <div class="gz"><input type="radio" name="glaze" id="gChar" value="charcoal"><label for="gChar"><i style="background:radial-gradient(circle at 34% 30%,#77695E,#2E2B28 48%,#0F0D0C)"></i>Charcoal</label></div>
+            <div class="gz"><input type="radio" name="glaze" id="gBare" value="bare"><label for="gBare"><i style="background:radial-gradient(circle at 34% 30%,#E0987A,#B5643C 50%,#76381D)"></i>Bare terracotta</label></div>
+          </div>
+        </fieldset>
+        <div class="actions"><button class="btn terra" type="button" id="fire">Fire it</button><button class="spin" type="button" id="spin" aria-pressed="true">Spin wheel</button></div>
+        <p class="pot-status" id="potStatus" aria-live="polite">Wet clay, 18 cm tall. Holds about 1.6 L (illustrative).</p>
+      </div>
+    </div>
+  </section>
+
+  <svg class="wave" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14Q50 0 100 14T200 14T300 14T400 14T500 14T600 14T700 14T800 14T900 14T1000 14T1100 14T1200 14" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+
+  <section class="sec" id="classes" aria-labelledby="classesTitle">
+    <div class="wrap">
+      <div class="head"><div><p class="eyebrow">Classes</p><h2 id="classesTitle">Get your hands in the clay</h2></div><p>Small groups, patient teachers and all the mess handled for you. Every class includes clay, tools, aprons and firing — you just turn up.</p></div>
+      <div class="classes">
+        <article class="cl"><p class="when">6 weeks · Tue or Thu, 6.30–9pm</p><h3>Wheel throwing</h3><p>Centre, open, pull and trim. Groups of eight, so you get proper time on the wheel each week.</p><ul><li>5 kg stoneware clay</li><li>Two glaze firings</li><li>Aprons and tools</li></ul><div class="price"><div><b>$420</b><small>per person</small></div><button class="btn" type="button" data-toast="Demo only — no class was booked. A real studio would confirm your spot by email.">Book a spot</button></div></article>
+        <article class="cl"><p class="when">Sat 10am–1pm · one-off</p><h3>Handbuilding</h3><p>Pinch, coil and slab your way to a planter or a set of cups. No wheel, no pressure.</p><ul><li>Clay, tools and a cuppa</li><li>One glaze firing</li><li>Collect in about 3 weeks</li></ul><div class="price"><div><b>$95</b><small>per person</small></div><button class="btn" type="button" data-toast="Demo only — no class was booked. A real studio would confirm your spot by email.">Book a spot</button></div></article>
+        <article class="cl"><p class="when">Sun 1–3.30pm · monthly</p><h3>Glazing workshop</h3><p>Bring bisqueware from any class and learn dipping, pouring and layering with our studio glazes.</p><ul><li>Six studio glazes</li><li>Test tiles to take home</li><li>Glaze firing included</li></ul><div class="price"><div><b>$85</b><small>per person</small></div><button class="btn" type="button" data-toast="Demo only — no class was booked. A real studio would confirm your spot by email.">Book a spot</button></div></article>
+        <article class="cl"><p class="when">Fri 7–9pm · for two</p><h3>Date night at the wheel</h3><p>A relaxed intro for two, with a wheel each. BYO snacks — we'll put the kettle on.</p><ul><li>Two pots each, trimmed for you</li><li>Glazed in celadon</li><li>Collect in about 3 weeks</li></ul><div class="price"><div><b>$150</b><small>for two people</small></div><button class="btn" type="button" data-toast="Demo only — no class was booked. A real studio would confirm your spot by email.">Book a spot</button></div></article>
+      </div>
+      <p class="note">Sample prices in AUD. Beginners welcome in every class; aprons provided, but wear clothes you don't mind getting clay on.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="membership" aria-labelledby="memberTitle">
+    <div class="wrap">
+      <div class="member">
+        <div><p class="eyebrow">Studio membership</p><h2 id="memberTitle">A bench, a shelf and a key</h2><p>Finished a course? Keep going on your own time. Members get shelf space, studio clay at cost and a spot in every glaze firing.</p><a class="btn" href="mailto:members@example.com">Ask about a studio tour</a></div>
+        <div class="tiers">
+          <div class="tier"><h3>Casual member</h3><b>$190 <small>/ month</small></b><ul><li>Two open-studio sessions a week</li><li>A shelf for work in progress</li><li>10 kg clay included</li></ul></div>
+          <div class="tier"><h3>Full member</h3><b>$320 <small>/ month</small></b><ul><li>Any time, with your own key</li><li>Two shelves and a locker</li><li>25 kg clay and firings included</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="shop" aria-labelledby="shopTitle">
+    <div class="wrap">
+      <div class="head"><div><p class="eyebrow">The shop</p><h2 id="shopTitle">Made here, fired out the back</h2></div><p>Cups, bowls and vases thrown by our teachers and members. Every piece is a one-off, so glazes pool and speckle a little differently each time.</p></div>
+      <div class="shop" id="shopGrid">
+        <article class="item"><div class="plinth"><canvas data-pot="cup" data-glaze="celadon" aria-hidden="true"></canvas></div><div class="item-body"><h3>Morning cup</h3><p>Celadon · 300 ml</p><span class="cost">$42</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+        <article class="item"><div class="plinth"><canvas data-pot="bowl" data-glaze="oatmeal" aria-hidden="true"></canvas></div><div class="item-body"><h3>Pasta bowl</h3><p>Oatmeal speckle · 22 cm</p><span class="cost">$58</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+        <article class="item"><div class="plinth"><canvas data-pot="bud" data-glaze="charcoal" aria-hidden="true"></canvas></div><div class="item-body"><h3>Bud vase</h3><p>Charcoal · 14 cm</p><span class="cost">$48</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+        <article class="item"><div class="plinth"><canvas data-pot="bottle" data-glaze="bare" aria-hidden="true"></canvas></div><div class="item-body"><h3>Tall bottle vase</h3><p>Bare terracotta · 30 cm</p><span class="cost">$120</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+        <article class="item"><div class="plinth"><canvas data-pot="serve" data-glaze="celadon" aria-hidden="true"></canvas></div><div class="item-body"><h3>Serving bowl</h3><p>Celadon · 30 cm</p><span class="cost">$110</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+        <article class="item"><div class="plinth"><canvas data-pot="tumbler" data-glaze="oatmeal" aria-hidden="true"></canvas></div><div class="item-body"><h3>Tumbler</h3><p>Oatmeal speckle · 350 ml</p><span class="cost">$38</span><button class="btn line" type="button" data-toast="Demo only — nothing was reserved. A real site would hold this one-off for 24 hours.">Reserve</button></div></article>
+      </div>
+      <p class="note">Sample prices in AUD. Everything is food-safe and dishwasher-friendly; bare terracotta is for flowers, not soup.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="firing" aria-labelledby="firingTitle">
+    <div class="wrap">
+      <div class="head"><div><p class="eyebrow">Firing services</p><h2 id="firingTitle">Bring us your greenware</h2></div><p>Made something at home or at another studio? We'll fire it in our electric kilns. Drop off Wednesday to Sunday with your name on the base.</p></div>
+      <div class="firing">
+        <dl class="rates">
+          <div><dt>Bisque firing, to 1000°C</dt><dd>$28</dd><span>Per half shelf. Work must be bone dry and under 35 cm tall.</span></div>
+          <div><dt>Stoneware glaze firing, to 1240°C</dt><dd>$38</dd><span>Per half shelf. Mid-fire and stoneware clays only; keep glaze 5 mm above the foot.</span></div>
+          <div><dt>Earthenware glaze firing, to 1060°C</dt><dd>$32</dd><span>Per half shelf, for low-fire clays and glazes.</span></div>
+          <div><dt>Turnaround</dt><dd>10–14 days</dd><span>We fire twice a week and call when your work is ready. Sample prices.</span></div>
+        </dl>
+        <figure class="chart">
+          <svg viewBox="0 0 520 300" role="img" aria-label="Illustrative stoneware glaze firing: the kiln climbs slowly to about 600 degrees over four hours, faster to 1180, then slowly to 1240 degrees, holds for fifteen minutes and cools over the next day.">
+            <g stroke="#2E2B28" stroke-opacity=".18" stroke-dasharray="3 5"><path d="M50 189H500M50 118H500M50 48H500"/></g>
+            <path d="M50 260H500M50 260V24" stroke="#2E2B28" stroke-width="2" fill="none"/>
+            <path d="M50 256C120 214 160 170 200 154S280 62 309 51S340 41 346 40.5H358" fill="none" stroke="#B5643C" stroke-width="5" stroke-linecap="round"/>
+            <path d="M358 40.5C400 60 460 150 500 186" fill="none" stroke="#B5643C" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+            <circle cx="352" cy="40.5" r="7" fill="#F2EBE0" stroke="#2E2B28" stroke-width="2.5"/>
+            <g font-family="Nunito Sans, sans-serif" font-size="13" fill="#2E2B28" font-weight="700">
+              <text x="44" y="193" text-anchor="end">400°</text><text x="44" y="122" text-anchor="end">800°</text><text x="44" y="52" text-anchor="end">1200°</text>
+              <text x="50" y="282">0 h</text><text x="200" y="282" text-anchor="middle">4 h</text><text x="350" y="282" text-anchor="middle">8 h</text><text x="500" y="282" text-anchor="end">12 h</text>
+              <text x="120" y="232" font-weight="400" font-style="italic">slow while water leaves</text>
+              <text x="372" y="30" font-weight="400" font-style="italic">glaze melts · 15 min hold</text>
+              <text x="404" y="120" font-weight="400" font-style="italic">cool slowly,</text><text x="404" y="136" font-weight="400" font-style="italic">lid stays shut</text>
+            </g>
+          </svg>
+          <figcaption>An illustrative stoneware glaze firing. Real schedules vary with clay, glaze and kiln load.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visitTitle">
+    <div class="wrap">
+      <div class="visit">
+        <h2 id="visitTitle">Come and get your hands dirty</h2>
+        <div>
+          <p class="eyebrow">Studio &amp; shop hours</p>
+          <dl>
+            <div><dt>Mon – Tue</dt><dd>Classes only</dd></div>
+            <div><dt>Wed – Fri</dt><dd>10am – 4pm</dd></div>
+            <div><dt>Saturday</dt><dd>9am – 4pm</dd></div>
+            <div><dt>Sunday</dt><dd>10am – 3pm</dd></div>
+          </dl>
+          <p style="margin-top:14px">Evening classes run Tuesday, Thursday and Friday.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Find us</p>
+          <p>Daylesford, VIC — in the old tin shed behind the community garden, a short walk from the main street.</p>
+          <p><a href="tel:+61355504812">(03) 5550 4812</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p>Parking out front, step-free entry and an accessible bathroom.</p>
+        </div>
+        <div class="faq">
+          <p class="eyebrow">Good to know</p>
+          <details><summary>Do I need any experience?</summary><p>None at all. Every course starts from centring, and our teachers have seen every wobble there is.</p></details>
+          <details><summary>What should I wear?</summary><p>Short nails, sleeves you can push up and clothes you don't mind getting clay on. We lend aprons.</p></details>
+          <details><summary>How long until I get my pots?</summary><p>About three weeks: drying, a bisque firing, glazing, then the glaze firing.</p></details>
+          <details><summary>Do you run kids' classes?</summary><p>School-holiday handbuilding for ages 8–14, with a grown-up nearby. Ask us for dates.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p class="foot-name" data-brand>Kiln & Clay Studio</p>
+  <div class="foot"><span>Daylesford, VIC · Central Highlands</span><span>A fictional studio made as a design concept. Sample prices in AUD.</span><a href="#top">Back to top ↑</a></div>
+</footer>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var mq=window.matchMedia("(prefers-reduced-motion: reduce)");
+function RM(){return window.DemoKit?DemoKit.reducedMotion:mq.matches}
+function toast(m){if(window.DemoKit)DemoKit.toast(m)}
+function clamp(v,a,b){return v<a?a:v>b?b:v}
+function fmt(v){return (Math.round(v*2)/2).toString()}
+
+/* ---------- menu + demo buttons ---------- */
+var mb=$("#menuBtn"),nav=$("#nav");
+function setMenu(o){nav.classList.toggle("open",o);mb.setAttribute("aria-expanded",String(o))}
+mb.addEventListener("click",function(){setMenu(!nav.classList.contains("open"))});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){e.preventDefault();setMenu(false);mb.focus()}});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-toast]");if(b)toast(b.getAttribute("data-toast"))});
+
+/* ---------- clay textures (seeded, so every visit looks the same) ---------- */
+var TW=256,TH=96,SPK=new Float32Array(TW*TH),MOT=new Float32Array(TW*TH),seed=11,i,x,y;
+function rnd(){seed=seed*16807%2147483647;return (seed-1)/2147483646}
+for(i=0;i<TW*TH;i++)SPK[i]=rnd()<.045?.45+rnd()*.55:0;
+var GW=32,GH=14,grid=[];for(i=0;i<GW*GH;i++)grid.push(rnd());
+for(y=0;y<TH;y++)for(x=0;x<TW;x++){var gx=x/TW*GW,gy=y/TH*(GH-1),x0=gx|0,y0=gy|0,fx=gx-x0,fy=gy-y0,x1=(x0+1)%GW,y1=Math.min(GH-1,y0+1);fx=fx*fx*(3-2*fx);fy=fy*fy*(3-2*fy);var ga=grid[y0*GW+x0]+(grid[y0*GW+x1]-grid[y0*GW+x0])*fx,gb=grid[y1*GW+x0]+(grid[y1*GW+x1]-grid[y1*GW+x0])*fx;MOT[y*TW+x]=ga+(gb-ga)*fy}
+
+var MAT={
+ wet:{a:[.58,.42,.31],spec:.24,sh:12,ring:.13,spk:0,mot:.16,gloss:.05},
+ celadon:{a:[.64,.76,.69],pool:[.36,.54,.47],spec:.85,sh:70,ring:.05,spk:.25,sc:[.35,.4,.35],mot:.06,gloss:.34,foot:1},
+ oatmeal:{a:[.91,.87,.79],pool:[.78,.70,.58],spec:.42,sh:56,ring:.04,spk:1,sc:[.34,.22,.14],mot:.07,gloss:.2,rim:[.62,.44,.30],foot:1},
+ charcoal:{a:[.15,.14,.13],pool:[.07,.065,.06],spec:1.1,sh:90,ring:.05,spk:.2,sc:[.52,.3,.18],mot:.1,gloss:.42,rim:[.55,.31,.17],foot:1},
+ bare:{a:[.72,.40,.25],spec:.05,sh:8,ring:.06,spk:.55,sc:[.88,.66,.52],mot:.14,gloss:0}
+};
+var FOOT=[.80,.68,.56],K=.2;
+var LX=-.5,LY=.55,LZ=.67,ln=Math.hypot(LX,LY,LZ);LX/=ln;LY/=ln;LZ/=ln;
+var VY=.2,VZ=.98,HX=LX,HY=LY+VY,HZ=LZ+VZ,hn=Math.hypot(HX,HY,HZ);HX/=hn;HY/=hn;HZ/=hn;
+
+/* ---------- profile: monotone cubic through foot, belly, neck, lip ---------- */
+var NL=192,RY=new Float32Array(NL),DY=new Float32Array(NL);
+function lut(P){
+  var r0=clamp(P.rb*.68,2.2,6.2),ys=[0,P.fb*P.h,P.fn*P.h,P.h],rs=[r0,P.rb,P.rn,P.rl],d=[],m=[],k,s;
+  for(k=0;k<3;k++)d[k]=(rs[k+1]-rs[k])/(ys[k+1]-ys[k]);
+  m[0]=d[0]*1.5;m[3]=d[2];
+  for(k=1;k<3;k++)m[k]=d[k-1]*d[k]<=0?0:(d[k-1]+d[k])/2;
+  for(k=0;k<3;k++){if(d[k]===0){m[k]=m[k+1]=0;continue}var a=m[k]/d[k],b=m[k+1]/d[k];s=a*a+b*b;if(s>9){var t=3/Math.sqrt(s);m[k]=t*a*d[k];m[k+1]=t*b*d[k]}}
+  var seg=0,rmax=0;
+  for(k=0;k<NL;k++){var yy=k/(NL-1)*P.h;while(seg<2&&yy>ys[seg+1])seg++;var hh=ys[seg+1]-ys[seg],tt=(yy-ys[seg])/hh,t2=tt*tt,t3=t2*tt;
+    var r=(2*t3-3*t2+1)*rs[seg]+(t3-2*t2+tt)*hh*m[seg]+(-2*t3+3*t2)*rs[seg+1]+(t3-t2)*hh*m[seg+1];
+    RY[k]=Math.max(.6,r);if(RY[k]>rmax)rmax=RY[k]}
+  for(k=0;k<NL;k++){var k0=Math.max(0,k-1),k1=Math.min(NL-1,k+1);DY[k]=(RY[k1]-RY[k0])/((k1-k0)/(NL-1)*P.h)}
+  return {r0:RY[0],rmax:rmax};
+}
+function volume(P){var info=lut(P),v=0,dy=P.h/(NL-1);for(var k=0;k<NL;k++){var yy=k*dy;if(yy<.8)continue;var r=Math.max(0,RY[k]-.55);v+=Math.PI*r*r*dy}return v/1000}
+
+/* ---------- lathe renderer: per-pixel shading of the revolved profile ---------- */
+var off=document.createElement("canvas"),octx=off.getContext("2d"),img=null;
+function drawPot(ctx,P,o){
+  var info=lut(P),sc=o.sc,cx=o.cx,by=o.by,q=o.q,h=P.h,inv=(NL-1)/h,mat=MAT[o.mat],A=mat.a,PL=mat.pool,SCc=mat.sc,RIM=mat.rim,g=o.glow||0,rot=o.rot||0;
+  var er=clamp(g*2.2,0,1),eg=clamp((g-.3)*1.5,0,1),eb=clamp((g-.72)*2,0,1)*.8,gm=1-g*.85;
+  var rmax=info.rmax,L0=Math.floor(cx-rmax*sc-2),R0=Math.ceil(cx+rmax*sc+2),T0=Math.floor(by-h*sc-2),B0=Math.ceil(by+info.r0*K*sc+3);
+  var bw=Math.max(1,Math.ceil((R0-L0)*q)),bh=Math.max(1,Math.ceil((B0-T0)*q));
+  if(off.width!==bw||off.height!==bh){off.width=bw;off.height=bh;img=null}
+  if(!img)img=octx.createImageData(bw,bh);
+  var dd=img.data,pxs=sc*q,footY=mat.foot?.9:-9,TWp=TW/(2*Math.PI);dd.fill(0);
+  for(var j=0;j<bh;j++){
+    var Y0=(by-(T0+(j+.5)/q))/sc;
+    for(var ii=0;ii<bw;ii++){
+      var dx=(L0+(ii+.5)/q-cx)/sc,adx=dx<0?-dx:dx;if(adx>rmax)continue;
+      var yy=Y0,r=0,c=0,f,ki,yc;
+      for(var it=0;it<3;it++){yc=yy<0?0:yy>h?h:yy;f=yc*inv;ki=f|0;r=ki>=NL-1?RY[NL-1]:RY[ki]+(RY[ki+1]-RY[ki])*(f-ki);c=adx<r?Math.sqrt(1-adx*adx/(r*r)):0;yy=Y0+r*K*c}
+      if(adx>=r)continue;
+      var cov=Math.min(1,(r-adx)*pxs,yy*pxs+.5,(h-yy)*pxs+.5);if(cov<=0)continue;
+      yc=yy<0?0:yy>h?h:yy;f=yc*inv;ki=Math.min(NL-2,f|0);
+      var s=dx/r;c=Math.sqrt(Math.max(0,1-s*s));
+      var D=DY[ki]+(DY[ki+1]-DY[ki])*(f-ki),a=1/Math.sqrt(1+D*D),nx=s*a,ny=-D*a,nz=c*a;
+      var dif=nx*LX+ny*LY+nz*LZ;if(dif<0)dif=0;
+      var hd=nx*HX+ny*HY+nz*HZ,sp=hd>0?Math.pow(hd,mat.sh):0;
+      var nv=ny*VY+nz*VZ;nv=nv<0?0:nv;var fr=1-nv;fr=fr*fr*fr;
+      var iu=((Math.atan2(s,c)+rot)*TWp|0)%TW;if(iu<0)iu+=TW;
+      var ti=((yc*4.5|0)%TH)*TW+iu,spv=SPK[ti],mo=MOT[ti],ring=Math.sin(yc*15+mo*4);
+      var cr=A[0],cg=A[1],cb=A[2],spec=mat.spec,gl=mat.gloss,t;
+      if(PL&&ring<-.2){t=(-.2-ring)*.9;cr+=(PL[0]-cr)*t;cg+=(PL[1]-cg)*t;cb+=(PL[2]-cb)*t}
+      if(RIM&&yc>h-.8){t=(yc-(h-.8))/.8*.85;cr+=(RIM[0]-cr)*t;cg+=(RIM[1]-cg)*t;cb+=(RIM[2]-cb)*t}
+      if(spv&&mat.spk){t=spv*mat.spk;cr+=(SCc[0]-cr)*t;cg+=(SCc[1]-cg)*t;cb+=(SCc[2]-cb)*t}
+      if(yc<footY+(mo-.5)*.6){cr=FOOT[0];cg=FOOT[1];cb=FOOT[2];spec=.04;gl=0}
+      var lit=(.3+.12*ny+dif*.82)*(.72+.28*c)*(1+mat.ring*ring+mat.mot*(mo-.5)*2);
+      var R=cr*lit+sp*spec+fr*gl*.9,G=cg*lit+sp*spec*.97+fr*gl*.87,B=cb*lit+sp*spec*.9+fr*gl*.8;
+      if(R>.86)R=.86+(R-.86)*.35;if(G>.86)G=.86+(G-.86)*.35;if(B>.86)B=.86+(B-.86)*.35;
+      if(g>0){var em=.75+.25*c;R=R*gm+er*em;G=G*gm+eg*em;B=B*gm+eb*em}
+      var idx=(j*bw+ii)*4;dd[idx]=R*255;dd[idx+1]=G*255;dd[idx+2]=B*255;dd[idx+3]=cov*255;
+    }
+  }
+  octx.putImageData(img,0,0);
+  ctx.drawImage(off,L0,T0,bw/q,bh/q);
+  function col(cc,mul){return "rgb("+[0,1,2].map(function(n){return Math.round(clamp(cc[n]*mul*gm+[er,eg,eb][n]*.9,0,1)*255)}).join(",")+")"}
+  var ty=by-h*sc,rx=P.rl*sc,ry=rx*K,wl=Math.min(.6*sc,rx*.3);
+  ctx.beginPath();ctx.ellipse(cx,ty,rx,ry,0,0,Math.PI*2);ctx.fillStyle=col(RIM||A,1.05);ctx.fill();
+  var gr=ctx.createLinearGradient(0,ty-ry,0,ty+ry);gr.addColorStop(0,col(A,.8));gr.addColorStop(.55,col(A,.38));gr.addColorStop(1,col(A,.16));
+  ctx.beginPath();ctx.ellipse(cx,ty+wl*K*.3,Math.max(.5,rx-wl),Math.max(.3,ry-wl*K),0,0,Math.PI*2);ctx.fillStyle=gr;ctx.fill();
+  if(o.handles){
+    S.hp=[{key:"b",yv:P.fb*h,r:P.rb},{key:"n",yv:P.fn*h,r:P.rn},{key:"l",yv:h,r:P.rl}].map(function(p){return {key:p.key,x:cx+p.r*sc,y:by-p.yv*sc}});
+    S.hp.forEach(function(p){var on=S.drag&&S.drag.key===p.key;
+            ctx.beginPath();ctx.arc(p.x,p.y,on?12:9.5,0,Math.PI*2);ctx.fillStyle="#F2EBE0";ctx.fill();ctx.lineWidth=3.5;ctx.strokeStyle="#8F4526";ctx.stroke();
+      ctx.fillStyle="#8F4526";ctx.beginPath();ctx.moveTo(p.x+15,p.y-4.5);ctx.lineTo(p.x+21,p.y);ctx.lineTo(p.x+15,p.y+4.5);ctx.fill();
+      ctx.beginPath();ctx.moveTo(p.x-15,p.y-4.5);ctx.lineTo(p.x-21,p.y);ctx.lineTo(p.x-15,p.y+4.5);ctx.fill()});
+  }
+}
+
+/* ---------- the wheel ---------- */
+var cv=$("#pot"),ctx=cv.getContext("2d"),stage=$("#stage"),tempVal=$("#tempVal"),hint=$("#hint"),statusEl=$("#potStatus"),fireBtn=$("#fire"),spinBtn=$("#spin"),shapeSet=$("#shapeSet"),glazeSet=$("#glazeSet");
+var sH=$("#sH"),sB=$("#sB"),sN=$("#sN"),sL=$("#sL");
+var CW=0,CH=0,DPR=1,raf=0,last=0,visible=true;
+var S={P:{h:18,rb:7.5,rn:4.5,rl:5.5,fb:.4,fn:.8},rot:0,spin:true,mat:"wet",glaze:"celadon",fired:false,fire:null,tw:null,glow:0,kiln:0,drag:null,hp:[],q:1.5,geo:null};
+var GN={celadon:"celadon",oatmeal:"oatmeal speckle",charcoal:"charcoal",bare:"bare terracotta"};
+var GD={celadon:"Celadon: a soft green that pools darker in the throwing lines.",oatmeal:"Oatmeal speckle: creamy, with iron flecks that bloom in the kiln.",charcoal:"Charcoal: glossy near-black that breaks to rust on the rim.",bare:"Bare terracotta: no glaze, just the clay fired warm and matte."};
+function size(){var r=cv.getBoundingClientRect();CW=r.width;CH=r.height;DPR=Math.min(2,window.devicePixelRatio||1);cv.width=Math.max(1,Math.round(CW*DPR));cv.height=Math.max(1,Math.round(CH*DPR));ctx.setTransform(DPR,0,0,DPR,0,0);S.q=Math.min(DPR,1.5)}
+function wheel(cx,by,WR){
+  var ry=WR*K,pr=WR*1.3,a2=Math.PI*2;
+  ctx.beginPath();ctx.ellipse(cx,by+ry*.55+14,pr,pr*K,0,0,a2);ctx.fillStyle="#2E2B28";ctx.fill();
+  ctx.beginPath();ctx.ellipse(cx,by+ry*.55+10,pr*.93,pr*K*.88,0,0,a2);ctx.fillStyle="#4A443E";ctx.fill();
+  ctx.fillStyle="#57514A";ctx.fillRect(cx-WR,by,WR*2,9);ctx.beginPath();ctx.ellipse(cx,by+9,WR,ry,0,0,a2);ctx.fill();
+  var g=ctx.createRadialGradient(cx-WR*.3,by-ry*.5,WR*.1,cx,by,WR);g.addColorStop(0,"#BDB6AB");g.addColorStop(.7,"#8C857B");g.addColorStop(1,"#6B655D");
+  ctx.beginPath();ctx.ellipse(cx,by,WR,ry,0,0,a2);ctx.fillStyle=g;ctx.fill();
+  ctx.beginPath();ctx.ellipse(cx,by,WR*.66,ry*.66,0,0,a2);ctx.fillStyle="rgba(140,98,70,.32)";ctx.fill();
+  for(var n=0;n<18;n++){var an=n/18*a2+S.rot,cs=Math.cos(an);ctx.fillStyle="rgba(46,43,40,"+(.16+.3*(cs+1)/2).toFixed(2)+")";ctx.beginPath();ctx.ellipse(cx+Math.sin(an)*WR*.85,by+cs*ry*.85,2.8,1.4,0,0,a2);ctx.fill()}
+  for(n=0;n<3;n++){var b=n*2.1+S.rot,cb=Math.cos(b);if(cb<-.2)continue;ctx.strokeStyle="rgba(120,80,55,"+(.25*(cb+.2)).toFixed(2)+")";ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(cx,by,WR*(.72+n*.06),ry*(.72+n*.06),0,b-.5,b+.2);ctx.stroke()}
+}
+function kiln(cx,by,sc){
+  ctx.save();ctx.globalAlpha=S.kiln;ctx.beginPath();if(ctx.roundRect)ctx.roundRect(4,4,CW-8,CH-8,34);else ctx.rect(4,4,CW-8,CH-8);ctx.clip();
+  var g=ctx.createRadialGradient(cx,by-9*sc,10,cx,by-9*sc,Math.max(CW,CH)*.75);
+  g.addColorStop(0,"rgb("+(110+145*S.glow|0)+","+(45+80*S.glow|0)+","+(22+20*S.glow|0)+")");g.addColorStop(1,"#1D130E");
+  ctx.fillStyle=g;ctx.fillRect(0,0,CW,CH);
+  ctx.strokeStyle="rgba(255,170,110,"+(.07+.15*S.glow).toFixed(3)+")";ctx.lineWidth=1.5;ctx.beginPath();
+  for(var yy=14,row=0;yy<CH;yy+=26,row++){ctx.moveTo(0,yy);ctx.lineTo(CW,yy);for(var xx=(row%2)*30;xx<CW;xx+=60){ctx.moveTo(xx,yy);ctx.lineTo(xx,yy+26)}}
+  ctx.stroke();ctx.fillStyle="#5A4234";ctx.fillRect(cx-CW*.4,by+3,CW*.8,9);ctx.restore();
+}
+function scene(){
+  if(!CW)return;
+  ctx.clearRect(0,0,CW,CH);
+  var sc=Math.min(CH*.0262,CW*.86/26),cx=CW/2,by=CH*.83,WR=Math.min(CW*.36,15.5*sc);
+  if(S.kiln<1){ctx.save();ctx.globalAlpha=1-S.kiln;wheel(cx,by,WR);ctx.restore()}
+  if(S.kiln>0)kiln(cx,by,sc);
+  var r0=clamp(S.P.rb*.68,2.2,6.2)*sc*1.7,sg=ctx.createRadialGradient(cx,by+2,1,cx,by+2,r0);sg.addColorStop(0,"rgba(30,22,16,.4)");sg.addColorStop(1,"rgba(30,22,16,0)");
+  ctx.fillStyle=sg;ctx.beginPath();ctx.ellipse(cx,by+2,r0,r0*K,0,0,Math.PI*2);ctx.fill();
+  var t0=performance.now();
+  drawPot(ctx,S.P,{sc:sc,cx:cx,by:by,q:S.q,mat:S.mat,rot:S.rot,glow:S.glow,handles:!S.fire&&!S.fired});
+  var ms=performance.now()-t0;if(ms>14&&S.q>1)S.q=Math.max(1,S.q-.25);else if(ms<5&&S.q<DPR)S.q=Math.min(DPR,S.q+.25);
+  S.geo={sc:sc,cx:cx,by:by};
+}
+function loop(t){
+  raf=0;var dt=last?Math.min(.05,(t-last)/1000):.016,more=false;last=t;
+  if(S.spin&&!S.fire){S.rot=(S.rot+dt*(S.fired?1.6:4.4))%(Math.PI*2);more=true}
+  if(S.tw){var p=Math.min(1,(t-S.tw.t0)/650),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;for(var k in S.tw.to)S.P[k]=S.tw.from[k]+(S.tw.to[k]-S.tw.from[k])*e;syncSliders();if(p>=1){S.tw=null;done()}else more=true}
+  if(S.fire){stepFire(t);more=true}
+  scene();
+  if(more&&visible)raf=requestAnimationFrame(loop);else last=0;
+}
+function kick(){if(!raf){if(visible)raf=requestAnimationFrame(loop);else scene()}}
+
+function syncSliders(){var P=S.P;sH.value=P.h;sB.value=P.rb*2;sN.value=P.rn*2;sL.value=P.rl*2;$("#oH").textContent=fmt(P.h)+" cm";$("#oB").textContent=fmt(P.rb*2)+" cm";$("#oN").textContent=fmt(P.rn*2)+" cm";$("#oL").textContent=fmt(P.rl*2)+" cm"}
+function shapeName(){var P=S.P;if(P.h<P.rl*1.3&&P.rl>=P.rb*.95)return "bowl";if(P.rn<P.rb*.42&&P.h>=14)return "bottle";if(P.h<=12)return "cup";return "vase"}
+function describe(){var P=S.P;return fmt(P.h)+" cm tall and "+fmt(Math.max(P.rb,P.rl)*2)+" cm across"}
+function done(){
+  if(S.fire)return;var L=volume(S.P);
+  var txt=S.fired?"Fired to 1240°C: "+(/^[aeiou]/.test(GN[S.mat])?"an ":"a ")+GN[S.mat]+" "+shapeName()+", "+describe()+". In a real class you'd collect it in about three weeks.":"Wet clay "+shapeName()+", "+describe()+". Holds about "+(L<1?Math.round(L*1000/10)*10+" ml":L.toFixed(1)+" L")+" (illustrative).";
+  statusEl.textContent=txt;
+  cv.setAttribute("aria-label",(S.fired?"A fired "+GN[S.mat]+" ":"A wet clay ")+shapeName()+" on a potter's wheel, "+describe()+".");
+}
+[[sH,"h",1],[sB,"rb",.5],[sN,"rn",.5],[sL,"rl",.5]].forEach(function(a){
+  a[0].addEventListener("input",function(){S.tw=null;S.P[a[1]]=+a[0].value*a[2];syncSliders();kick()});
+  a[0].addEventListener("change",done);
+});
+var PRE={cup:{h:10,rb:4.6,rn:4.3,rl:4.6,fb:.35,fn:.8},bowl:{h:8,rb:8.5,rn:10.5,rl:11.5,fb:.32,fn:.72},vase:{h:24,rb:8,rn:3.2,rl:4.6,fb:.36,fn:.78},bottle:{h:26,rb:7.5,rn:1.8,rl:2.4,fb:.3,fn:.72}};
+$$("[data-preset]").forEach(function(b){b.addEventListener("click",function(){var to=PRE[b.getAttribute("data-preset")];if(RM()){for(var k in to)S.P[k]=to[k];syncSliders();done();kick();return}S.tw={from:Object.assign({},S.P),to:to,t0:performance.now()};kick()})});
+
+/* drag the handles (touch: sideways; mouse/pen: any direction) */
+function pos(e){var r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]}
+function move(xy){var g=S.geo,P=S.P,rr=Math.abs(xy[0]-g.cx)/g.sc,yy=(g.by-xy[1])/g.sc,k=S.drag.key;
+  if(k==="b"){P.rb=clamp(rr,4,12);P.fb=clamp(yy/P.h,.18,.6);if(P.fn<P.fb+.12)P.fn=Math.min(.9,P.fb+.12)}
+  else if(k==="n"){P.rn=clamp(rr,1.5,11);P.fn=clamp(yy/P.h,P.fb+.12,.9)}
+  else{P.rl=clamp(rr,2,13);P.h=clamp(yy,8,28)}
+  syncSliders();kick()}
+cv.addEventListener("pointerdown",function(e){
+  if(S.fire||S.fired||!S.geo||!S.hp.length||(e.pointerType==="mouse"&&e.button!==0))return;
+  var xy=pos(e),g=S.geo,best=null,bd=1e9;
+  S.hp.forEach(function(h){var d=Math.hypot(Math.abs(xy[0]-g.cx)-(h.x-g.cx),xy[1]-h.y);if(d<bd){bd=d;best=h}});
+  if(bd>40){if(xy[1]<g.by-S.P.h*g.sc-40||xy[1]>g.by+16||Math.abs(xy[0]-g.cx)>14*g.sc+30)return;best=S.hp.reduce(function(a,h){return Math.abs(h.y-xy[1])<Math.abs(a.y-xy[1])?h:a})}
+  S.drag={key:best.key,id:e.pointerId};S.tw=null;try{cv.setPointerCapture(e.pointerId)}catch(err){}cv.classList.add("grab");hint.style.opacity="0";move(xy);
+});
+cv.addEventListener("pointermove",function(e){if(S.drag&&S.drag.id===e.pointerId)move(pos(e))});
+function up(e){if(!S.drag||S.drag.id!==e.pointerId)return;S.drag=null;cv.classList.remove("grab");kick();done()}
+cv.addEventListener("pointerup",up);cv.addEventListener("pointercancel",up);
+
+/* glaze + firing */
+$$("input[name=glaze]").forEach(function(r){r.addEventListener("change",function(){S.glaze=r.value;if(S.fired)startFire();else statusEl.textContent=GD[r.value]+" Press “Fire it” to see it glazed."})});
+function setBusy(b){fireBtn.disabled=b;glazeSet.disabled=b;spinBtn.disabled=b;shapeSet.disabled=b||S.fired}
+function startFire(){
+  if(S.fire)return;
+  if(RM()){S.mat=S.glaze;S.fired=true;finishFire();return}
+  S.fire={t0:performance.now(),swapped:false};setBusy(true);stage.classList.add("firing");statusEl.textContent="Into the kiln — firing to 1240°C…";kick();
+}
+function stepFire(t){
+  var p=(t-S.fire.t0)/5200;
+  if(p>=1){S.fire=null;S.kiln=0;S.glow=0;S.fired=true;stage.classList.remove("firing");finishFire();return}
+  S.kiln=p<.1?p/.1:p>.86?(1-p)/.14:1;
+  var T=p<.6?20+1220*(1-Math.pow(1-p/.6,2)):1240-1160*Math.pow((p-.6)/.4,.8);
+  var gl=clamp((T-520)/720,0,1);S.glow=gl*gl*(3-2*gl);
+  if(p>=.6&&!S.fire.swapped){S.fire.swapped=true;S.mat=S.glaze}
+  var tv=Math.round(T/10)*10;if(tv!==S.lastT){S.lastT=tv;tempVal.textContent=tv+"°C"}
+}
+function finishFire(){setBusy(false);hint.style.opacity="0";fireBtn.textContent="Throw another";done();kick()}
+fireBtn.addEventListener("click",function(){
+  if(S.fired){S.fired=false;S.mat="wet";setBusy(false);hint.style.opacity="";fireBtn.textContent="Fire it";statusEl.textContent="Fresh clay on the wheel — shape away, then fire it again.";kick();return}
+  startFire();
+});
+spinBtn.addEventListener("click",function(){S.spin=!S.spin;spinBtn.setAttribute("aria-pressed",String(S.spin));kick()});
+
+/* ---------- start + manners ---------- */
+size();S.spin=!RM();spinBtn.setAttribute("aria-pressed",String(S.spin));syncSliders();done();kick();
+if("ResizeObserver" in window)new ResizeObserver(function(){var r=cv.getBoundingClientRect();if(Math.abs(r.width-CW)<1&&Math.abs(r.height-CH)<1)return;size();kick()}).observe(cv);
+if("IntersectionObserver" in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting&&!document.hidden;if(visible)kick();else if(raf){cancelAnimationFrame(raf);raf=0;last=0}}).observe(stage);
+document.addEventListener("visibilitychange",function(){if(document.hidden){visible=false;if(raf){cancelAnimationFrame(raf);raf=0;last=0}}else{var r=stage.getBoundingClientRect();visible=r.bottom>0&&r.top<innerHeight;kick()}});
+mq.addEventListener&&mq.addEventListener("change",function(){if(RM()){S.spin=false;spinBtn.setAttribute("aria-pressed","false")}});
+
+/* ---------- shop thumbnails, fired with the same renderer ---------- */
+var SHOP={cup:{h:9.5,rb:4.3,rn:4,rl:4.3,fb:.3,fn:.8},bowl:{h:6.5,rb:8.2,rn:10.2,rl:11,fb:.3,fn:.72},bud:{h:14,rb:5,rn:1.4,rl:2.2,fb:.36,fn:.74},bottle:{h:30,rb:7.2,rn:1.8,rl:2.6,fb:.3,fn:.7},serve:{h:9,rb:11,rn:13.5,rl:14.5,fb:.3,fn:.7},tumbler:{h:11,rb:4,rn:4.1,rl:4.5,fb:.3,fn:.7}};
+var shopDone=false;
+function renderShop(){
+  shopDone=true;
+  $$("canvas[data-pot]").forEach(function(c,n){
+    var r=c.getBoundingClientRect(),w=r.width,h=r.height;if(!w||!h)return;var d=Math.min(2,window.devicePixelRatio||1);
+    c.width=Math.round(w*d);c.height=Math.round(h*d);var x=c.getContext("2d");x.setTransform(d,0,0,d,0,0);
+    var P=SHOP[c.getAttribute("data-pot")],info=lut(P),sc=Math.min(h*.88/(P.h+(P.rl+info.r0)*K),w*.94/(2*info.rmax)),by=h-info.r0*K*sc-6,rs=info.r0*sc*1.9;
+    var sg=x.createRadialGradient(w/2,by+2,1,w/2,by+2,rs);sg.addColorStop(0,"rgba(46,43,40,.38)");sg.addColorStop(1,"rgba(46,43,40,0)");x.fillStyle=sg;x.beginPath();x.ellipse(w/2,by+2,rs,rs*K,0,0,Math.PI*2);x.fill();
+    drawPot(x,P,{sc:sc,cx:w/2,by:by,q:d,mat:c.getAttribute("data-glaze"),rot:n*1.7,glow:0,handles:false});
+  });
+  kick();
+}
+if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){if(es[0].isIntersecting){so.disconnect();renderShop()}},{rootMargin:"400px"});so.observe($("#shopGrid"))}else renderShop();
+var rz;window.addEventListener("resize",function(){if(!shopDone)return;clearTimeout(rz);rz=setTimeout(renderShop,200)});
+})();
+</script>
+</body>
+</html>

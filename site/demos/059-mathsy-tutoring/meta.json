@@ -1,0 +1,8 @@
+{
+  "id": "059",
+  "tech": ["Canvas 2D", "SVG", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "CSS Grid", "Form logic"],
+  "features": ["game", "booking"],
+  "interaction": "Type a function such as x^2 - 3, sin x, 2x + 1, abs(x)/2 or 1/x and a hand-written parser (no eval) plots it on graph paper with an animated pen stroke, notes the intercepts and shape, points to the exact character when the input is wrong, and lets you drag, pan, zoom, trace points and keep up to two lines to compare. A five-question mental-maths challenge (Years 3–6 or 7–10) runs with a timer, score and friendly result, and a free-trial request form ends in an honest demo state.",
+  "fonts": ["Kalam", "Rubik"],
+  "notes": "Implicit multiplication follows the usual calculator reading (1/2x means x/2). The challenge's best score is kept only on this device (localStorage)."
+}

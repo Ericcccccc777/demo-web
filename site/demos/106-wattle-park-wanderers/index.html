@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="106">
+<meta name="demo:brand" content="Wattle Park Wanderers FC">
+<title>Wattle Park Wanderers FC — community football, Burwood East</title>
+<meta name="description" content="Wattle Park Wanderers FC is a fictional community football club in Burwood East, Victoria, with teams from under-8s to masters.">
+<meta name="theme-color" content="#1E6B3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=Roboto+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--green:#1E6B3A;--green-d:#134A27;--green-dd:#0E3A1E;--gold:#F2C12E;--gold-d:#C99A12;--wood:#5B4A3A;--wood-d:#3F3226;--wood-f:#4F3F31;--brick:#8A3B2B;--cream:#F5F0E3;--ink:#1D1A16;--muted:#5A5046;
+--disp:"Graduate","Rockwell","Courier New",serif;--body:"Roboto Condensed","Arial Narrow",system-ui,sans-serif;--gut:clamp(16px,4vw,56px);
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='320'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006 .19' numOctaves='3' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 .13 0 0 0 0 .09 0 0 0 0 .05 0 0 0 1.4 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.55 var(--body);overflow-x:clip}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:400;line-height:1.02;letter-spacing:.01em}
+p{margin:0 0 1em}
+a{color:inherit}
+svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px}
+.light :focus-visible{outline-color:var(--green)}
+section[id]{scroll-margin-top:66px}
+.wrap{max-width:1240px;margin:0 auto}
+.sec{padding:clamp(64px,8.5vw,116px) var(--gut)}
+.kick{font:700 13px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase;margin:0 0 12px;color:var(--green)}
+.h2{font-size:clamp(36px,4.6vw,62px);text-transform:uppercase;margin-bottom:16px}
+.lede{font-size:clamp(17px,1.4vw,19px);max-width:58ch;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border:0;border-radius:4px;background:var(--gold);color:var(--ink);font:700 16px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:0 4px 0 var(--gold-d);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 5px 0 var(--gold-d)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--gold-d)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.8)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.green{background:var(--green);color:#fff;box-shadow:0 4px 0 var(--green-dd)}
+/* header */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;min-height:62px;padding:8px var(--gut);background:var(--green-d);color:#fff;border-bottom:4px solid var(--gold)}
+.crest-link{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.crest{flex:none;width:40px;height:46px}
+.club{font:400 17px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.03em;overflow-wrap:anywhere}
+.nav{margin-left:auto;display:flex;gap:2px}
+.nav a{font:700 14px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:13px 12px;border-radius:4px;color:#E4EFE7}
+.nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.top .btn{min-height:42px;padding:0 16px;font-size:14px;flex:none;box-shadow:0 3px 0 var(--gold-d)}
+/* hero: pitch + scoreboard */
+.hero{position:relative;overflow:hidden;color:#fff;background:repeating-linear-gradient(90deg,#1E6B3A 0 90px,#1B6335 90px 180px);padding:clamp(28px,4vw,54px) var(--gut) clamp(40px,5vw,70px)}
+.chalk{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
+.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:clamp(28px,4vw,64px);align-items:center;max-width:1320px;margin:0 auto}
+.intro .kick{color:var(--gold)}
+.intro h2{font-size:clamp(32px,3.3vw,50px);text-transform:uppercase;margin:0 0 16px;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.intro p{color:#E8F1EA;max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.quick{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:0;border-top:1px dashed rgba(255,255,255,.4)}
+.quick li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.4);font-size:15.5px}
+.quick b{font:700 13px/1.6 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+/* the wooden scoreboard */
+.board{position:relative;--ph:124px;--pw:96px;--pf:92px;--nf:34px;background:var(--grain),linear-gradient(180deg,#65523F,#54443A 50%,#4A3B2E);background-size:640px 320px,auto;border-radius:6px;padding:0 22px 20px;box-shadow:0 0 0 3px #2E241B,0 26px 50px rgba(0,0,0,.4),inset 0 2px 0 rgba(255,255,255,.12)}
+.board::before,.board::after{content:"";position:absolute;bottom:-44px;width:22px;height:46px;background:linear-gradient(90deg,#3A2E23,#5B4A3A 45%,#3A2E23);z-index:-1}
+.board::before{left:12%}.board::after{right:12%}
+.sign{position:relative;margin:0 -22px 16px;padding:18px 70px 16px;background:var(--green-d);border-bottom:5px solid #2E241B;border-radius:6px 6px 0 0;text-align:center;color:var(--gold);font-size:clamp(26px,2.9vw,44px);text-transform:uppercase;letter-spacing:.04em;line-height:1.05;overflow-wrap:anywhere;text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.bolt{position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#E9E2D0,#8C8474 55%,#4B463C);box-shadow:0 1px 0 rgba(0,0,0,.4)}
+.sample-tag{position:absolute;right:18px;top:calc(100% + 12px);z-index:2;background:var(--gold);color:var(--ink);font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;padding:6px 9px 5px;border-radius:2px;transform:rotate(3deg);box-shadow:0 2px 0 rgba(0,0,0,.3)}
+.strip{display:flex;align-items:center;gap:18px;padding:4px 4px 16px;border-bottom:2px solid rgba(0,0,0,.35);margin-bottom:14px}
+.clock{flex:none;width:92px;height:92px;border-radius:50%;background:#F7F3E8;box-shadow:0 0 0 6px #2E241B,0 0 0 8px #7A634D,0 6px 12px rgba(0,0,0,.4);position:relative}
+.clock svg{width:100%;height:100%}
+.hand{transition:transform .9s cubic-bezier(.5,1.6,.4,1);transform-origin:50px 50px}
+.info{flex:1;min-width:0}
+.info-l{font:700 14px/1.2 var(--body);letter-spacing:.2em;text-transform:uppercase;color:#E9DFC9;margin:0 0 6px}
+.info-v{font:400 clamp(20px,2vw,28px)/1.1 var(--disp);text-transform:uppercase;margin:0;overflow-wrap:anywhere}
+.lights{display:flex;gap:14px;flex:none}
+.lamp{display:flex;flex-direction:column;align-items:center;gap:6px;font:700 11px/1 var(--body);letter-spacing:.14em;color:#E9DFC9}
+.bulb{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#8B7F66,#3A3226);box-shadow:inset 0 0 0 2px #2E241B;transition:background .3s,box-shadow .3s}
+.lamp.on .bulb{background:radial-gradient(circle at 35% 35%,#FFF6C8,#F2C12E 55%,#B98A0B);box-shadow:inset 0 0 0 2px #2E241B,0 0 16px 3px rgba(242,193,46,.6)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) var(--pw) var(--pw);gap:12px 16px;align-items:center}
+.col-h{font:700 14px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:#E9DFC9;text-align:center}
+.col-h:first-child{text-align:left;padding-left:6px}
+.plate{position:relative;height:var(--ph);width:var(--pw);perspective:420px;color:#fff;font:400 var(--pf)/var(--ph) var(--disp);text-align:center;border-radius:6px;box-shadow:0 5px 0 rgba(0,0,0,.35)}
+.plate.name{width:100%;font-size:var(--nf);text-align:left}
+.plate::before{content:"";position:absolute;left:50%;top:-9px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#9A917F;box-shadow:0 1px 0 #000;z-index:3}
+.plate.name::before{left:24px}
+.half,.flap{position:absolute;left:0;right:0;height:50%;overflow:hidden;background:#20291F;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.half b,.flap b{display:block;height:var(--ph);font-weight:400;white-space:nowrap;padding:0 .35em}
+.name .half b,.name .flap b{padding:0 18px;overflow:hidden;text-overflow:clip}
+.top-h,.ftop{top:0;border-radius:6px 6px 0 0;background:linear-gradient(#2A3528,#20291F)}
+.bot-h,.fbot{bottom:0;border-radius:0 0 6px 6px}
+.bot-h b,.fbot b{transform:translateY(-50%)}
+.ftop{transform-origin:50% 100%;z-index:2}
+.fbot{transform-origin:50% 0;transform:rotateX(90deg);z-index:2}
+.plate::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:rgba(0,0,0,.55);z-index:4}
+.plate.flip .ftop{animation:ftop .28s ease-in forwards}
+.plate.flip .fbot{animation:fbot .3s .26s ease-out forwards}
+@keyframes ftop{to{transform:rotateX(-90deg)}}
+@keyframes fbot{from{transform:rotateX(90deg)}to{transform:rotateX(0)}}
+.home .half,.home .flap{background:#1E6B3A}
+.home .top-h,.home .ftop{background:linear-gradient(#237A43,#1E6B3A)}
+.scorers{margin:16px 0 0;padding-top:12px;border-top:2px solid rgba(0,0,0,.35);font:600 15px/1.45 var(--body);color:#F0E8D6;min-height:2.9em}
+.switch{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:62px;flex-wrap:wrap}
+.switch button{min-width:58px;min-height:48px;padding:6px 10px;border-radius:4px;border:2px solid rgba(255,255,255,.55);background:rgba(14,58,30,.55);color:#fff;font:700 13px/1.05 var(--body);letter-spacing:.1em;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.switch button small{display:block;font-weight:600;font-size:11px;letter-spacing:.06em;opacity:.85;margin-top:3px}
+.switch button:hover{border-color:var(--gold)}
+.switch button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.switch .arrow{min-width:48px;font-size:20px}
+.switch-hint{text-align:center;font-size:14px;color:#DCEBDF;margin:10px 0 0}
+</style>
+<style>
+.board{z-index:1}
+.sign-wrap{position:relative;margin:0 -22px 16px}
+.sign{margin:0}
+.bolt{z-index:2}.kick{text-wrap:balance}.sign,.h2,.intro h2,.note h3,.tcard h3{text-wrap:balance}.info-v .t::before{content:" · "}.intro .kick{letter-spacing:.14em}
+.bolt.b1{left:22px;top:50%;margin-top:-6px}.bolt.b2{right:22px;top:50%;margin-top:-6px}
+.sample-tag{top:auto;bottom:-14px}
+/* fixtures */
+.fx{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,4vw,60px);margin-top:34px}
+.fx h3{font-size:22px;text-transform:uppercase;margin:0 0 12px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fx h3 small{font:700 13px/1 var(--body);letter-spacing:.14em;color:var(--muted)}
+.slats{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:7px}
+.slat{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 16px;background:var(--grain),linear-gradient(#5E4C3B,#524233);background-size:640px 320px,auto;color:#fff;border-radius:3px;box-shadow:0 3px 0 #2E241B}
+.slat time{font:400 17px/1.1 var(--disp);color:var(--gold)}
+.slat b{display:block;font:700 17px/1.2 var(--body);letter-spacing:.04em;text-transform:uppercase}
+.slat span{display:block;font-size:15px;color:#EADFCB}
+.ha{font:700 12px/1 var(--body);letter-spacing:.12em;padding:7px 8px;border-radius:3px;background:var(--cream);color:var(--ink);white-space:nowrap}
+.ha.a{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.score{font:400 22px/1 var(--disp);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.res{width:30px;height:30px;border-radius:3px;display:grid;place-items:center;font:700 14px/1 var(--body)}
+.f-W{background:#1E6B3A;color:#fff}.f-D{background:var(--gold);color:var(--ink)}.f-L{background:#A2442F;color:#fff}
+.fine-note{font-size:14px;color:var(--muted);margin:0}
+/* ladder */
+.ladder{background:repeating-linear-gradient(90deg,#134A27 0 90px,#16502B 90px 180px);color:#fff}
+.ladder .kick{color:var(--gold)}
+.ladder .lede{color:#DCEBDF}
+.controls{display:flex;flex-wrap:wrap;gap:18px 34px;align-items:flex-end;margin:30px 0 22px}
+.seg-l{font:700 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 9px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{min-height:44px;padding:0 15px;border-radius:4px;border:2px solid rgba(255,255,255,.55);background:transparent;color:#fff;font:700 14px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .15s,color .15s}
+.seg button:hover{border-color:var(--gold)}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--green-d);border-color:#fff}
+.lad-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start}
+.lad-board{position:relative;min-width:0;background:var(--grain),linear-gradient(#65523F,#4A3B2E);background-size:640px 320px,auto;padding:14px;border-radius:6px;box-shadow:0 0 0 3px #2E241B,0 20px 40px rgba(0,0,0,.35)}
+.swipe{display:none;align-items:center;gap:8px;margin:2px 4px 12px;font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.swipe svg{width:26px;height:14px;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(6px)}}
+.lad-board.can .swipe{display:flex}
+.scroll-wrap{position:relative}
+.scroll-wrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:48px;pointer-events:none;background:linear-gradient(90deg,rgba(79,63,49,0),#4F3F31 80%);opacity:0;transition:opacity .2s}
+.lad-board.can:not(.end) .scroll-wrap::after{opacity:1}
+.scroller{overflow-x:auto;overscroll-behavior-x:contain;background:var(--wood-f);border-radius:3px}
+.scroller:focus-visible{outline-offset:2px}
+table{border-collapse:collapse;width:100%;min-width:640px;font:600 16px/1.2 var(--body);color:#fff}
+caption{text-align:left;padding:0 4px 10px;font-size:14px;color:#EADFCB}
+th{font:700 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:12px 6px;text-align:center;border-bottom:3px solid #2E241B;background:var(--wood-f);white-space:nowrap}
+td{padding:0 6px;height:54px;text-align:center;border-bottom:2px solid rgba(0,0,0,.28);font-variant-numeric:tabular-nums;background:var(--wood-f);transition:background .2s}
+th.c-club,td.c-club{text-align:left}
+.c-pos{width:50px;font:400 20px/1 var(--disp)}
+th.c-pos{font:700 12px/1 var(--body)}
+.c-club{min-width:170px}
+.stk{position:sticky;left:0;z-index:1}
+.stk2{position:sticky;left:50px;z-index:1;box-shadow:8px 0 8px -8px rgba(0,0,0,.7)}
+.team-btn{all:unset;box-sizing:border-box;cursor:pointer;display:block;width:100%;padding:10px 4px;font:700 16px/1.15 var(--body);text-transform:uppercase;letter-spacing:.03em;overflow-wrap:anywhere}
+.team-btn:hover{color:var(--gold)}
+.team-btn:focus-visible{outline:3px solid var(--gold);outline-offset:-2px}
+tr.us td{background:#735C30}
+tr.sel td{background:#6B5643}
+tr.us.sel td{background:#86692C}
+tr.sel .team-btn::before{content:"▸ ";color:var(--gold)}
+td.pts{font:400 22px/1 var(--disp);color:var(--gold)}
+th[aria-sort="descending"]{color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.fchips{display:flex;gap:4px;justify-content:center}
+.fchips i{width:22px;height:22px;border-radius:3px;display:grid;place-items:center;font:700 12px/1 var(--body);font-style:normal}
+.lad-note{font-size:14px;color:#DCEBDF;margin:14px 0 0}
+.card{background:var(--cream);color:var(--ink);border-radius:6px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.card-h{background:var(--gold);padding:16px 20px 14px}
+.card-h p{font:700 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px}
+.card-h h3{font-size:24px;text-transform:uppercase;overflow-wrap:anywhere}
+.card-b{padding:18px 20px 22px}
+.rec{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 18px;text-align:center}
+.rec div{background:#fff;border:1.5px solid rgba(29,26,22,.14);border-radius:4px;padding:9px 2px 8px}
+.rec b{display:block;font:400 25px/1 var(--disp);margin-bottom:4px}
+.rec span{font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lab{font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin:0 0 8px}
+.chips{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;perspective:400px}
+.chips li{height:50px;border-radius:4px;display:grid;place-items:center;font:400 22px/1 var(--disp);animation:chip .45s both}
+@keyframes chip{from{transform:rotateX(-90deg);opacity:0}}
+.nx{background:#fff;border-left:5px solid var(--green);padding:12px 14px;border-radius:0 4px 4px 0;font-size:16px;margin:0}
+.nx b{display:block;font:400 17px/1.25 var(--disp);text-transform:uppercase;margin-bottom:3px}
+/* teams */
+.teams-grid{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.tcard{background:#fff;border:2px solid var(--ink);border-radius:6px;padding:18px 16px 18px;display:flex;flex-direction:column;box-shadow:6px 6px 0 var(--green)}
+.tcard svg{width:96px;height:96px;margin:0 auto 10px}
+.tcard h3{font-size:20px;text-transform:uppercase;margin-bottom:4px}
+.tcard .ages{font:700 13px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:0 0 10px}
+.tcard p{font-size:15.5px;color:var(--muted);margin:0 0 10px}
+.tcard dl{margin:auto 0 0;padding-top:10px;border-top:1.5px dashed rgba(29,26,22,.25);font-size:14.5px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}
+.tcard dt{font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:12.5px;padding-top:2px}
+.tcard dd{margin:0}
+/* training chalkboard */
+.train{background:var(--cream)}
+.chalkboard{margin-top:34px;padding:clamp(20px,3vw,36px);border-radius:4px;color:#F3F3EC;background:radial-gradient(ellipse at 25% 20%,rgba(255,255,255,.07),transparent 55%),radial-gradient(ellipse at 80% 80%,rgba(255,255,255,.05),transparent 50%),#233A2D;box-shadow:0 0 0 14px #6B533C,0 0 0 17px #3F3226,0 24px 40px 14px rgba(0,0,0,.25);display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.cday h3{font-size:22px;text-transform:uppercase;padding-bottom:8px;margin-bottom:12px;border-bottom:2px solid rgba(243,243,236,.5)}
+.sess{margin:0 0 14px;font-size:15.5px;line-height:1.35}
+.sess b{display:block;font-weight:700;color:#FBE7A1}
+.sess.sen b{color:#fff}
+.sess span{color:#D9E2DA}
+.tr-note{margin:44px 0 0;font-size:15px;color:var(--muted)}
+/* register */
+.reg{background:#fff;border-top:4px solid var(--green)}
+.reg-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,4vw,64px);margin-top:34px;align-items:start}
+.fees{background:var(--grain),linear-gradient(#65523F,#4A3B2E);background-size:640px 320px,auto;color:#fff;border-radius:6px;padding:22px 24px;box-shadow:0 0 0 3px #2E241B}
+.fees h3{color:var(--gold);font-size:22px;text-transform:uppercase;margin-bottom:10px}
+.fee{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:11px 0;border-bottom:2px solid rgba(0,0,0,.3)}
+.fee b{font:400 26px/1 var(--disp);color:var(--gold)}
+.fee span small{display:block;color:#EADFCB;font-size:14px}
+.fees ul{margin:16px 0 0;padding-left:18px;font-size:15px;color:#F0E8D6}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font:700 13px/1.2 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.f input,.f select,.f textarea{font:400 17px/1.3 var(--body);color:var(--ink);background:var(--cream);border:2px solid var(--ink);border-radius:4px;padding:10px 12px;min-height:48px;width:100%}
+.f textarea{min-height:80px;resize:vertical}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.chk{display:flex;align-items:center;gap:10px;font-size:16px;min-height:44px;cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:var(--green)}
+.quote{grid-column:1/-1;background:var(--cream);border:2px dashed var(--green);border-radius:6px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.quote p{margin:0;font-size:16px}
+.quote b{font:400 32px/1 var(--disp);color:var(--green)}
+/* sponsors */
+.spons{background:var(--green-d);color:#fff;overflow:hidden}
+.spons .kick{color:var(--gold)}
+.spons .lede{color:#DCEBDF}
+.fence{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 30px;padding:18px 0 26px;border-bottom:10px solid #2E241B;position:relative}
+.adboard{min-height:124px;border:3px dashed rgba(255,255,255,.7);border-radius:4px;display:grid;place-content:center;text-align:center;padding:16px;background:rgba(255,255,255,.06)}
+.adboard b{font:400 clamp(20px,2vw,28px)/1.1 var(--disp);text-transform:uppercase;color:var(--gold)}
+.adboard span{font-size:14px;color:#DCEBDF;margin-top:6px}
+.pk{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0 0 24px;padding:0;list-style:none;font-size:16px}
+.pk b{color:var(--gold)}
+/* news: noticeboard */
+.news{background:var(--grain),linear-gradient(#5E4C3B,#4A3B2E);background-size:640px 320px,auto;color:#fff}
+.news .kick{color:var(--gold)}
+.notes{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.note{position:relative;background:var(--cream);color:var(--ink);padding:26px 22px 22px;box-shadow:0 12px 22px rgba(0,0,0,.35);transform:rotate(var(--r,0deg))}
+.note::before{content:"";position:absolute;left:50%;top:-8px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#F7D56A,#C99A12 60%,#8A6A09);box-shadow:0 3px 4px rgba(0,0,0,.4)}
+.note time{font:700 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.note h3{font-size:21px;text-transform:uppercase;margin:10px 0 10px}
+.note p{font-size:16px;color:var(--muted);margin:0}
+/* footer */
+.foot{background:var(--green-dd);color:#DCEBDF;border-top:6px solid var(--gold);padding:54px var(--gut) calc(34px + env(safe-area-inset-bottom))}
+.foot-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}
+.foot-name{font:400 30px/1.05 var(--disp);text-transform:uppercase;color:#fff;margin:14px 0 10px;overflow-wrap:anywhere}
+.foot h3{font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.foot p{font-size:15.5px;margin:0 0 6px}
+.foot a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(242,193,46,.5)}
+.fine{max-width:1240px;margin:36px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:13.5px;color:#BFD3C5}
+/* responsive */
+@media (max-width:1180px){.teams-grid{grid-template-columns:repeat(3,1fr)}.chalkboard{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:1080px){
+ .nav{display:none}.top .btn{margin-left:auto}
+ .hero-in{grid-template-columns:1fr}
+ .lad-grid{grid-template-columns:1fr}
+ .card{max-width:560px}
+}
+@media (max-width:900px){.fx,.reg-grid{grid-template-columns:1fr}.notes{grid-template-columns:1fr;max-width:560px}.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>:first-child{grid-column:1/-1}.fence{grid-template-columns:1fr 1fr}.fence .adboard:last-child{display:none}}
+@media (max-width:640px){
+ .top{min-height:58px;gap:10px}.crest{width:34px;height:40px}.club{font-size:14px}.top .btn{min-height:40px;padding:0 12px;font-size:13px}
+ .hero{padding:18px 12px 34px}
+ .board{--ph:72px;--pw:56px;--pf:52px;--nf:17px;padding:0 12px 14px}
+ .sign-wrap{margin:0 -12px 12px}.sign{padding:14px 34px 12px;font-size:24px}
+ .bolt.b1{left:12px}.bolt.b2{right:12px}
+ .strip{gap:12px;padding:0 0 12px;margin-bottom:12px}
+ .clock{width:58px;height:58px;box-shadow:0 0 0 4px #2E241B,0 0 0 6px #7A634D}
+ .info-l{font-size:11px;letter-spacing:.14em}.info-v{font-size:17px}.info-v span{display:block}.info-v .t::before{content:none}
+ .lights{gap:8px}.bulb{width:16px;height:16px}.lamp{font-size:9.5px}
+ .grid{gap:10px 8px}.col-h{font-size:11px;letter-spacing:.14em}
+ .plate.name::before{left:14px}.name .half b,.name .flap b{padding:0 10px}
+ .scorers{font-size:14px}
+ .switch{margin-top:52px;gap:6px}.switch button{min-width:0;flex:1;padding:6px 4px}.switch .arrow{display:none}
+ .slat{grid-template-columns:64px minmax(0,1fr);row-gap:8px}.slat>:last-child{grid-column:2;justify-self:start}
+ .lad-board{padding:10px;margin:0 -4px}.seg button{padding:0 10px;font-size:13px;letter-spacing:.05em}
+ .teams-grid{grid-template-columns:1fr 1fr;gap:12px}.tcard{padding:14px 12px;box-shadow:4px 4px 0 var(--green)}.tcard svg{width:72px;height:72px}.tcard h3{font-size:17px}
+ .chalkboard{grid-template-columns:1fr;box-shadow:0 0 0 10px #6B533C,0 0 0 12px #3F3226;margin:34px 10px 0}
+ .cday{display:grid;grid-template-columns:64px 1fr;gap:12px}.cday h3{border:0;border-right:2px solid rgba(243,243,236,.5);font-size:18px;padding:0;margin:0}
+ .form{grid-template-columns:1fr}
+ .fence{grid-template-columns:1fr}.fence .adboard:nth-child(2){display:none}
+ .foot-grid{grid-template-columns:1fr}
+}
+@media (max-width:380px){.teams-grid{grid-template-columns:1fr}.board{--nf:13px;--pw:48px;--pf:44px;--ph:64px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+ <a class="crest-link" href="#top"><svg class="crest" viewBox="0 0 40 46" aria-hidden="true"><path d="M20 2l17 5v15c0 12-8 19-17 22C11 41 3 34 3 22V7z" fill="#1E6B3A" stroke="#F2C12E" stroke-width="2.4"/><path d="M4 27L36 13v6L4.8 33z" fill="#F2C12E"/><circle cx="20" cy="23" r="6.4" fill="#fff" stroke="#0E3A1E" stroke-width="1.2"/><path d="M20 19.6l3 2.2-1.1 3.5h-3.8L17 21.8z" fill="#0E3A1E"/></svg><span class="club" data-brand>Wattle Park Wanderers FC</span></a>
+ <nav class="nav" aria-label="Sections"><a href="#fixtures">Fixtures</a><a href="#ladder">Ladder</a><a href="#teams">Teams</a><a href="#training">Training</a><a href="#news">News</a></nav>
+ <a class="btn" href="#register">Join the club</a>
+</header>
+<main>
+<section class="hero" id="top" aria-label="Scoreboard and club welcome">
+ <svg class="chalk" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter></defs><g fill="none" stroke="#fff" stroke-width="4" filter="url(#rough)"><path d="M820 -10V830"/><circle cx="820" cy="410" r="150"/><circle cx="820" cy="410" r="5" fill="#fff"/><path d="M1450 170h-200v480h200M1450 290h-80v240h80"/><path d="M1250 330a110 110 0 0 0 0 160"/><path d="M-10 170h200v480H-10M-10 290h80v240h-80"/><path d="M190 330a110 110 0 0 1 0 160"/></g></svg>
+ <div class="hero-in">
+  <div>
+   <div class="board" id="board">
+    <div class="sign-wrap"><span class="bolt b1"></span><h1 class="sign" data-brand>Wattle Park Wanderers FC</h1><span class="bolt b2"></span><span class="sample-tag">Sample results</span></div>
+    <div class="strip">
+     <div class="clock" aria-hidden="true"><svg viewBox="0 0 100 100"><g stroke="#1D1A16" stroke-width="2.4" stroke-linecap="round" id="ticks"></g><line class="hand" id="hh" x1="50" y1="54" x2="50" y2="27" stroke="#1D1A16" stroke-width="5" stroke-linecap="round"/><line class="hand" id="mh" x1="50" y1="56" x2="50" y2="15" stroke="#1E6B3A" stroke-width="3.2" stroke-linecap="round"/><circle cx="50" cy="50" r="4" fill="#F2C12E" stroke="#1D1A16" stroke-width="1.5"/></svg></div>
+     <div class="info"><p class="info-l" id="info-l">Round 16 · Senior men</p><p class="info-v" id="info-v"><span>Sat 26 Sep</span><span class="t">3:00 pm</span></p></div>
+     <div class="lights" aria-hidden="true"><span class="lamp" id="l-ft"><span class="bulb"></span>FULL TIME</span><span class="lamp" id="l-nx"><span class="bulb"></span>NEXT UP</span></div>
+    </div>
+    <div class="grid" aria-hidden="true">
+     <span class="col-h">Team</span><span class="col-h">Half</span><span class="col-h">Full</span>
+     <div class="plate name home" id="p-hn"></div><div class="plate home" id="p-hh"></div><div class="plate home" id="p-hf"></div>
+     <div class="plate name" id="p-an"></div><div class="plate" id="p-ah"></div><div class="plate" id="p-af"></div>
+    </div>
+    <p class="scorers" id="scorers"></p>
+   </div>
+   <div class="switch" id="switch" role="group" aria-label="Choose a senior men's game"><button class="arrow" type="button" id="prev" aria-label="Earlier game">◀</button><button class="arrow" type="button" id="next" aria-label="Later game">▶</button></div>
+   <p class="switch-hint">Pick a round to flip the numbers. All results are samples.</p>
+   <p class="sr" id="sb-live" aria-live="polite"></p>
+  </div>
+  <div class="intro">
+   <p class="kick">Community football · Burwood East, VIC</p>
+   <h2>Juniors to masters. Everyone gets a game.</h2>
+   <p>Ten junior age groups, two women’s and two men’s sides and a Sunday masters crew — all sharing two pitches, one canteen and a lot of half-time oranges.</p>
+   <div class="ctas"><a class="btn" href="#register">Register for 2027</a><a class="btn ghost" href="#ladder">See the ladder</a></div>
+   <ul class="quick"><li><b>Next home game</b><span>Sat 3 Oct · U9 Gold, 9:00 am</span></li><li><b>Training</b><span>Tue–Fri evenings, under lights</span></li><li><b>Canteen</b><span>Saturdays 8:30 am – 2 pm</span></li></ul>
+  </div>
+ </div>
+</section>
+<section class="sec light" id="fixtures" aria-labelledby="fx-h">
+ <div class="wrap">
+  <p class="kick">Fixtures &amp; results</p>
+  <h2 class="h2" id="fx-h">This weekend at the club</h2>
+  <p class="lede">Home games are at our ground in Burwood East. Grab a coffee from the canteen, bring a folding chair and cheer loudly — especially for the under-9s.</p>
+  <div class="fx">
+   <div>
+    <h3>Sat 3 Oct <small>Fixtures</small></h3>
+    <ul class="slats">
+     <li class="slat"><time>9:00 am</time><div><b>U9 Gold v Bellbird Hill SC</b><span>Pitch 2 · 7-a-side</span></div><span class="ha">HOME</span></li>
+     <li class="slat"><time>10:15 am</time><div><b>U12 Green v Stringybark United</b><span>Their ground · leave by 9:30 am</span></div><span class="ha a">AWAY</span></li>
+     <li class="slat"><time>11:30 am</time><div><b>U15 Girls v Magpie Creek FC</b><span>Pitch 1</span></div><span class="ha">HOME</span></li>
+     <li class="slat"><time>1:00 pm</time><div><b>Women Div 1 v Old Orchard City</b><span>Pitch 1 · canteen BBQ from noon</span></div><span class="ha">HOME</span></li>
+     <li class="slat"><time>2:30 pm</time><div><b>Senior men Div 2 v Kurrajong Rovers</b><span>Their ground</span></div><span class="ha a">AWAY</span></li>
+    </ul>
+    <h3>Sun 4 Oct <small>Fixtures</small></h3>
+    <ul class="slats">
+     <li class="slat"><time>9:30 am</time><div><b>Masters O35 v Banksia Vale SC</b><span>Pitch 1 · rolling subs</span></div><span class="ha">HOME</span></li>
+    </ul>
+   </div>
+   <div>
+    <h3>Sat 26 Sep <small>Results · sample</small></h3>
+    <ul class="slats">
+     <li class="slat"><time>Men D2</time><div><b>v Magpie Creek FC</b><span>Home</span></div><span class="score">3–1 <i class="res f-W" title="Win">W</i></span></li>
+     <li class="slat"><time>Women D1</time><div><b>v Ironbark Athletic</b><span>Away</span></div><span class="score">2–0 <i class="res f-W" title="Win">W</i></span></li>
+     <li class="slat"><time>U15 Girls</time><div><b>v Banksia Vale SC</b><span>Home</span></div><span class="score">4–0 <i class="res f-W" title="Win">W</i></span></li>
+     <li class="slat"><time>U17 Boys</time><div><b>v Kurrajong Rovers</b><span>Away</span></div><span class="score">1–1 <i class="res f-D" title="Draw">D</i></span></li>
+     <li class="slat"><time>Masters</time><div><b>v Stringybark United</b><span>Away</span></div><span class="score">1–2 <i class="res f-L" title="Loss">L</i></span></li>
+    </ul>
+    <p class="fine-note">Under-12s play for fun — their scores aren’t published. All fixtures and results shown are samples.</p>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="sec ladder" id="ladder" aria-labelledby="lad-h">
+ <div class="wrap">
+  <p class="kick">2026 ladder · after round 16</p>
+  <h2 class="h2" id="lad-h">Where we stand</h2>
+  <p class="lede">Sort by points, goal difference or recent form, switch divisions, and tap any club to see its last five games and next fixture. Sample ladder — the league and the other clubs are fictional too.</p>
+  <div class="controls">
+   <div><p class="seg-l" id="div-l">Division</p><div class="seg" role="group" aria-labelledby="div-l" id="divs"><button type="button" data-div="men" aria-pressed="true">Men’s Div 2</button><button type="button" data-div="women" aria-pressed="false">Women’s Div 1</button><button type="button" data-div="masters" aria-pressed="false">Masters O35</button></div></div>
+   <div><p class="seg-l" id="sort-l">Sort by</p><div class="seg" role="group" aria-labelledby="sort-l" id="sorts"><button type="button" data-sort="pts" aria-pressed="true">Points</button><button type="button" data-sort="gd" aria-pressed="false">Goal diff</button><button type="button" data-sort="form" aria-pressed="false">Form</button></div></div>
+  </div>
+  <div class="lad-grid">
+   <div class="lad-board" id="lad-board">
+    <p class="swipe" aria-hidden="true"><svg viewBox="0 0 26 14"><path d="M1 7h22M17 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>Swipe the table for more columns</p>
+    <div class="scroll-wrap"><div class="scroller" id="scroller" tabindex="0" role="region" aria-label="Ladder table — scrolls sideways on small screens">
+     <table><caption id="cap">Men’s Div 2 · sorted by points</caption>
+      <thead><tr><th class="c-pos stk" scope="col" title="Ladder position">#</th><th class="c-club stk2" scope="col">Club</th><th scope="col" title="Played">P</th><th scope="col" title="Won">W</th><th scope="col" title="Drawn">D</th><th scope="col" title="Lost">L</th><th scope="col" title="Goals for">GF</th><th scope="col" title="Goals against">GA</th><th scope="col" id="th-gd" title="Goal difference">GD</th><th scope="col" id="th-pts" title="Points">Pts</th><th scope="col" id="th-form">Form</th></tr></thead>
+      <tbody id="rows"></tbody>
+     </table>
+    </div></div>
+   </div>
+   <aside class="card" id="card" aria-live="polite" aria-label="Selected club"></aside>
+  </div>
+  <p class="lad-note">The # column follows points, then goal difference, then goals scored — it stays put when you re-sort. Form shows the last five games, oldest to newest.</p>
+ </div>
+</section>
+<section class="sec light" id="teams" aria-labelledby="teams-h">
+ <div class="wrap">
+  <p class="kick">Teams</p>
+  <h2 class="h2" id="teams-h">A shirt for every age</h2>
+  <p class="lede">From first touches to forty-something comebacks. New players are welcome at any time of year — come to a training night and have a go before you register.</p>
+  <ul class="teams-grid">
+   <li class="tcard"><span class="jersey" data-v="hoops"></span><h3>Little Wanderers</h3><p class="ages">U8 – U11</p><p>Small-sided games on half pitches: more touches, more goals, no published scores.</p><dl><dt>Games</dt><dd>Sat mornings</dd><dt>Train</dt><dd>Tue 5 pm</dd></dl></li>
+   <li class="tcard"><span class="jersey" data-v="stripes"></span><h3>Juniors</h3><p class="ages">U12 – U17</p><p>Boys’, girls’ and mixed teams stepping up to full 11-a-side, coached by parents and senior players.</p><dl><dt>Games</dt><dd>Sat</dd><dt>Train</dt><dd>Tue or Thu</dd></dl></li>
+   <li class="tcard"><span class="jersey" data-v="sash"></span><h3>Women’s</h3><p class="ages">18+ · Div 1 &amp; Div 4</p><p>A competitive Div 1 side and a social Div 4 team that loves a first-timer.</p><dl><dt>Games</dt><dd>Sat afternoon</dd><dt>Train</dt><dd>Wed &amp; Thu</dd></dl></li>
+   <li class="tcard"><span class="jersey" data-v="halves"></span><h3>Men’s</h3><p class="ages">18+ · Div 2 &amp; Reserves</p><p>Two squads, one warm-up. Reserves kick off before the seniors every week.</p><dl><dt>Games</dt><dd>Sat afternoon</dd><dt>Train</dt><dd>Wed &amp; Thu</dd></dl></li>
+   <li class="tcard"><span class="jersey" data-v="plain"></span><h3>Masters</h3><p class="ages">Over 35</p><p>Sunday football with rolling subs, a proper warm-up and a coffee afterwards.</p><dl><dt>Games</dt><dd>Sun mornings</dd><dt>Train</dt><dd>Fri 7 pm</dd></dl></li>
+  </ul>
+ </div>
+</section>
+<section class="sec train" id="training" aria-labelledby="tr-h">
+ <div class="wrap">
+  <p class="kick">Training times</p>
+  <h2 class="h2" id="tr-h">Under lights, all winter</h2>
+  <div class="chalkboard">
+   <div class="cday"><h3>Tue</h3><div><p class="sess"><b>5:00 – 6:00 pm</b><span>Little Wanderers U8–U11 · Pitch 2</span></p><p class="sess"><b>6:00 – 7:15 pm</b><span>Juniors U12–U14 · Pitch 1</span></p></div></div>
+   <div class="cday"><h3>Wed</h3><div><p class="sess sen"><b>6:30 – 8:00 pm</b><span>Women’s, both squads · Pitch 1</span></p><p class="sess sen"><b>7:30 – 9:00 pm</b><span>Men’s Div 2 &amp; Reserves · Pitch 2</span></p></div></div>
+   <div class="cday"><h3>Thu</h3><div><p class="sess"><b>5:30 – 6:45 pm</b><span>Juniors U15–U17 · Pitch 1</span></p><p class="sess sen"><b>7:00 – 8:30 pm</b><span>All senior squads · both pitches</span></p></div></div>
+   <div class="cday"><h3>Fri</h3><div><p class="sess sen"><b>7:00 – 8:15 pm</b><span>Masters O35 · Pitch 1</span></p></div></div>
+   <div class="cday"><h3>Sat</h3><div><p class="sess"><b>8:30 am – 1:00 pm</b><span>Junior games · both pitches</span></p><p class="sess sen"><b>1:00 pm on</b><span>Senior games</span></p></div></div>
+   <div class="cday"><h3>Sun</h3><div><p class="sess sen"><b>9:30 am</b><span>Masters games</span></p><p class="sess"><b>11:00 am</b><span>Kickabout for ages 5–7</span></p></div></div>
+  </div>
+  <p class="tr-note">Training runs February to September. Bring water, shin pads and a spare pair of socks. If heavy rain closes the pitches, we post it here by 3 pm.</p>
+ </div>
+</section>
+<section class="sec reg light" id="register" aria-labelledby="reg-h">
+ <div class="wrap">
+  <p class="kick">Registration · 2027 season</p>
+  <h2 class="h2" id="reg-h">Pull on the green and gold</h2>
+  <p class="lede">Registrations for the 2027 winter season open in November. Tell us who’s playing and we’ll point you to the right squad.</p>
+  <div class="reg-grid">
+   <div class="fees">
+    <h3>Season fees · sample</h3>
+    <div class="fee"><span>Kickabout<small>Ages 5–7 · one term</small></span><b>$90</b></div>
+    <div class="fee"><span>Little Wanderers<small>U8 – U11</small></span><b>$180</b></div>
+    <div class="fee"><span>Juniors<small>U12 – U17</small></span><b>$260</b></div>
+    <div class="fee"><span>Women’s &amp; men’s<small>All senior squads</small></span><b>$340</b></div>
+    <div class="fee"><span>Masters<small>Over 35</small></span><b>$290</b></div>
+    <ul><li>Includes shirt, shorts and socks, league registration and the end-of-season BBQ.</li><li>$30 off for each extra child in the same family.</li><li>Payment plans available — just ask.</li></ul>
+   </div>
+   <form class="form" id="reg-form" novalidate>
+    <div class="f"><label for="r-name">Player’s first name</label><input id="r-name" autocomplete="given-name" placeholder="e.g. Mia"></div>
+    <div class="f"><label for="r-year">Year of birth</label><select id="r-year"></select></div>
+    <div class="f full"><label for="r-squad">Squad</label><select id="r-squad"></select></div>
+    <div class="f full"><label for="r-email">Parent or player email</label><input id="r-email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    <label class="chk" style="grid-column:1/-1"><input type="checkbox" id="r-sib"> A brother or sister is already registered</label>
+    <div class="quote" aria-live="polite"><p id="r-out">Born 2014 → Under-13 in 2027</p><b id="r-fee">$260</b></div>
+    <button class="btn green" type="submit" style="grid-column:1/-1">Send registration</button>
+    <p class="fine-note" style="grid-column:1/-1">Demo form — nothing is sent. Fees are samples.</p>
+   </form>
+  </div>
+ </div>
+</section>
+<section class="sec spons" id="sponsors" aria-labelledby="sp-h">
+ <div class="wrap">
+  <p class="kick">Sponsors</p>
+  <h2 class="h2" id="sp-h">This fence could be yours</h2>
+  <p class="lede">Local sponsors keep junior fees low and the canteen fridge humming. There are none to show on a demo, so the boards are waiting.</p>
+  <div class="fence"><div class="adboard"><b>Your business here</b><span>Fence board · Pitch 1</span></div><div class="adboard"><b>Your business here</b><span>Junior shirt sponsor</span></div><div class="adboard"><b>Your business here</b><span>Player of the match</span></div></div>
+  <ul class="pk"><li>Fence board <b>$650</b> a season</li><li>Junior team shirts <b>$1,200</b></li><li>Player of the match <b>$250</b></li><li>Sample prices</li></ul>
+  <a class="btn" href="mailto:sponsors@example.com">Become a sponsor</a>
+ </div>
+</section>
+<section class="sec news" id="news" aria-labelledby="news-h">
+ <div class="wrap">
+  <p class="kick">Club news</p>
+  <h2 class="h2" id="news-h">From the noticeboard</h2>
+  <ul class="notes">
+   <li class="note" style="--r:-1.4deg"><time>Mon 21 Sep</time><h3>Pitch 2 lights are on</h3><p>The new lights on Pitch 2 are finished, so Tuesday juniors can train until 7:15 pm all winter. Thanks to every family who sold a raffle ticket.</p></li>
+   <li class="note" style="--r:1deg"><time>Fri 25 Sep</time><h3>Working bee · Sun 11 Oct</h3><p>Goal nets, a canteen clean-out and fresh paint for the scoreboard. 9 am start, sausage sizzle at noon. Bring gloves.</p></li>
+   <li class="note" style="--r:-.6deg"><time>Wed 16 Sep</time><h3>Teen referee course</h3><p>Players aged 15 and up can learn to referee junior games over two Saturday mornings in November. Spots are limited to twelve.</p></li>
+  </ul>
+ </div>
+</section>
+</main>
+<footer class="foot">
+ <div class="foot-grid">
+  <div><svg class="crest" viewBox="0 0 40 46" aria-hidden="true" style="width:46px;height:53px"><path d="M20 2l17 5v15c0 12-8 19-17 22C11 41 3 34 3 22V7z" fill="#1E6B3A" stroke="#F2C12E" stroke-width="2.4"/><path d="M4 27L36 13v6L4.8 33z" fill="#F2C12E"/><circle cx="20" cy="23" r="6.4" fill="#fff" stroke="#0E3A1E" stroke-width="1.2"/><path d="M20 19.6l3 2.2-1.1 3.5h-3.8L17 21.8z" fill="#0E3A1E"/></svg><p class="foot-name" data-brand>Wattle Park Wanderers FC</p><p>Community football for all ages · Burwood East, VIC</p></div>
+  <div><h3>Contact</h3><p><a href="tel:0355507316">(03) 5550 7316</a></p><p><a href="mailto:hello@example.com">hello@example.com</a></p><p>Burwood East, VIC</p></div>
+  <div><h3>Canteen</h3><p>Sat 8:30 am – 2 pm</p><p>Sun 9 am – noon</p></div>
+  <div><h3>Quick links</h3><p><a href="#fixtures">Fixtures</a></p><p><a href="#ladder">Ladder</a></p><p><a href="#register">Register</a></p></div>
+ </div>
+ <p class="fine">Concept demo for a fictional club. Results, ladder, fixtures and fees are samples; the league and the other clubs are fictional.</p>
+</footer>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+function reduced(){return (window.DemoKit&&DemoKit.reducedMotion)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function brand(){return (window.DemoKit&&DemoKit.brand)||"Wattle Park Wanderers FC"}
+
+/* ---------- scoreboard ---------- */
+var ticks=$("#ticks");
+for(var i=0;i<12;i++){var a=i*Math.PI/6,r1=i%3?40:35;ticks.insertAdjacentHTML("beforeend",'<line x1="'+(50+Math.sin(a)*r1).toFixed(1)+'" y1="'+(50-Math.cos(a)*r1).toFixed(1)+'" x2="'+(50+Math.sin(a)*45).toFixed(1)+'" y2="'+(50-Math.cos(a)*45).toFixed(1)+'"/>')}
+var GAMES=[
+ {r:13,d:"Sat 5 Sep",t:[15,0],v:"Home",o:"Stringybark",of:"Stringybark United",ht:[0,1],ft:[2,2],s:"Wanderers: Nguyen 55′, Haddad 77′ · Stringybark: Doyle 30′, 64′"},
+ {r:14,d:"Sat 12 Sep",t:[13,0],v:"Away",o:"Bellbird Hill",of:"Bellbird Hill SC",ht:[1,0],ft:[1,0],s:"Wanderers: O’Brien 38′ · a clean sheet in the wind"},
+ {r:15,d:"Sat 19 Sep",t:[15,0],v:"Home",o:"Ironbark Ath.",of:"Ironbark Athletic",ht:[0,2],ft:[1,3],s:"Wanderers: Haddad 71′ · Ironbark: Kelly 12′, Moretti 40′, 88′"},
+ {r:16,d:"Sat 26 Sep",t:[15,0],v:"Home",o:"Magpie Creek",of:"Magpie Creek FC",ht:[1,0],ft:[3,1],s:"Wanderers: Nguyen 12′, O’Brien 58′, Petrov 81′ · Magpie Creek: Walsh 70′"},
+ {r:17,d:"Sat 3 Oct",t:[14,30],v:"Away",o:"Kurrajong",of:"Kurrajong Rovers",next:1,s:"Next up: away at Kurrajong Rovers. Car-pool leaves the clubrooms at 1:15 pm."}
+];
+function mk(p){p.innerHTML='<span class="half top-h"><b></b></span><span class="half bot-h"><b></b></span><span class="flap ftop"><b></b></span><span class="flap fbot"><b></b></span>'}
+function set(p,v,now){var b=p.querySelectorAll("b"),old=p.getAttribute("data-v");v=String(v);if(old===v)return;p.setAttribute("data-v",v);clearTimeout(p._t);
+ if(now||old===null||reduced()){b[0].textContent=b[1].textContent=b[2].textContent=b[3].textContent=v;p.classList.remove("flip");return}
+ b[0].textContent=v;b[1].textContent=old;b[2].textContent=old;b[3].textContent=v;p.classList.remove("flip");void p.offsetWidth;p.classList.add("flip");
+ p._t=setTimeout(function(){b[1].textContent=v;b[2].textContent=v;p.classList.remove("flip")},640)}
+var P={};["hn","an","hh","ah","hf","af"].forEach(function(k){P[k]=$("#p-"+k);mk(P[k])});
+function fmtT(t){var h=t[0]%12||12;return h+":"+(t[1]<10?"0":"")+t[1]+" "+(t[0]<12?"am":"pm")}
+var hh=$("#hh"),mh=$("#mh");
+function hands(t){var m=t[1]*6,h=((t[0]%12)+t[1]/60)*30;hh.style.transform="rotate("+h+"deg)";mh.style.transform="rotate("+m+"deg)"}
+var sw=$("#switch"),nextBtn=$("#next"),swBtns=GAMES.map(function(g,k){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Round "+g.r+", "+g.d+(g.next?", next game":""));b.innerHTML="R"+g.r+"<small>"+(g.next?"Next":g.d.slice(4))+"</small>";b.addEventListener("click",function(){showGame(k)});sw.insertBefore(b,nextBtn);return b});
+var gi=3;
+function showGame(k,now){gi=Math.max(0,Math.min(GAMES.length-1,k));var g=GAMES[gi],dash="–";
+ swBtns.forEach(function(b,j){b.setAttribute("aria-pressed",j===gi?"true":"false")});$("#prev").disabled=gi===0;nextBtn.disabled=gi===GAMES.length-1;
+ var seq=[[P.hn,"WANDERERS"],[P.an,g.o.toUpperCase()],[P.hh,g.next?dash:g.ht[0]],[P.ah,g.next?dash:g.ht[1]],[P.hf,g.next?dash:g.ft[0]],[P.af,g.next?dash:g.ft[1]]];
+ seq.forEach(function(s,j){if(now)set(s[0],s[1],true);else setTimeout(function(){set(s[0],s[1])},j*90)});
+ $("#info-l").textContent="Round "+g.r+" · Senior men · "+g.v;$("#info-v").innerHTML="<span>"+g.d+"</span><span class=\"t\">"+fmtT(g.t)+"</span>";
+ $("#l-ft").classList.toggle("on",!g.next);$("#l-nx").classList.toggle("on",!!g.next);hands(g.t);$("#scorers").textContent=g.s;
+ $("#sb-live").textContent=g.next?"Round "+g.r+", "+g.d+": away at "+g.of+", kick-off "+fmtT(g.t)+".":"Round "+g.r+", "+g.d+", "+g.v.toLowerCase()+": Wanderers "+g.ft[0]+", "+g.of+" "+g.ft[1]+" (half-time "+g.ht[0]+"–"+g.ht[1]+"). Sample result."}
+$("#prev").addEventListener("click",function(){showGame(gi-1)});nextBtn.addEventListener("click",function(){showGame(gi+1)});
+sw.addEventListener("keydown",function(e){var d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!d)return;e.preventDefault();showGame(gi+d);swBtns[gi].focus()});
+showGame(3,true);
+
+/* ---------- ladder ---------- */
+var CLUBS=["Wattle Park Wanderers","Ironbark Athletic","Kurrajong Rovers","Magpie Creek FC","Stringybark United","Bellbird Hill SC","Banksia Vale SC","Old Orchard City"];
+function name(c){return c===0?brand():CLUBS[c]}
+var DIV={
+ men:{label:"Men’s Div 2",rows:[[1,11,3,2,38,15,"WWDWW"],[0,10,4,2,35,17,"WDWLW"],[2,9,3,4,30,21,"LWWWD"],[3,7,4,5,27,24,"WDLWL"],[4,6,4,6,24,25,"LDWDL"],[5,4,4,8,19,28,"LWLDW"],[6,2,4,10,16,31,"LLDWL"],[7,1,2,13,12,40,"LLLDL"]],
+  next:[[2,0,"Sat 3 Oct · 2:30 pm"],[1,7,"Sat 3 Oct · 3:00 pm"],[3,6,"Sat 3 Oct · 3:00 pm"],[4,5,"Sun 4 Oct · 1:00 pm"]]},
+ women:{label:"Women’s Div 1",rows:[[0,12,3,1,41,12,"WWWDW"],[6,11,2,3,36,16,"WWLWW"],[1,9,4,3,29,18,"DWWWL"],[5,7,3,6,25,24,"LWDWL"],[7,5,3,8,22,26,"WLDLW"],[3,5,2,9,19,30,"LLWLD"],[2,3,3,10,15,33,"DLLWL"],[4,1,2,13,10,38,"LLDLL"]],
+  next:[[0,7,"Sat 3 Oct · 1:00 pm"],[6,2,"Sat 3 Oct · 12:30 pm"],[1,4,"Sun 4 Oct · 11:00 am"],[5,3,"Sun 4 Oct · 11:00 am"]]},
+ masters:{label:"Masters O35",rows:[[4,10,4,2,33,14,"WWDWW"],[7,10,2,4,31,19,"WLWWD"],[3,8,4,4,27,20,"DWWLW"],[0,7,5,4,26,21,"WDWDL"],[2,6,4,6,22,23,"LDWWL"],[1,5,3,8,20,26,"LWLDW"],[5,3,4,9,16,30,"LLDLW"],[6,1,2,13,12,34,"LLLDL"]],
+  next:[[0,6,"Sun 4 Oct · 9:30 am"],[4,2,"Sun 4 Oct · 9:30 am"],[7,1,"Sun 4 Oct · 10:00 am"],[3,5,"Sun 4 Oct · 10:00 am"]]}
+};
+var FP={W:3,D:1,L:0},WORD={W:"win",D:"draw",L:"loss"};
+Object.keys(DIV).forEach(function(k){var d=DIV[k];d.rows=d.rows.map(function(r){var o={c:r[0],w:r[1],d:r[2],l:r[3],gf:r[4],ga:r[5],f:r[6]};o.p=o.w+o.d+o.l;o.pts=o.w*3+o.d;o.gd=o.gf-o.ga;o.fp=o.f.split("").reduce(function(s,x){return s+FP[x]},0);return o});
+ d.rows.slice().sort(function(a,b){return b.pts-a.pts||b.gd-a.gd||b.gf-a.gf}).forEach(function(r,i){r.pos=i+1})});
+var cur="men",sortBy="pts",sel=0,tbody=$("#rows"),trMap={};
+var SORTN={pts:"points",gd:"goal difference",form:"recent form"};
+function ord(n){return n+(n===1?"st":n===2?"nd":n===3?"rd":"th")}
+function build(){tbody.innerHTML="";trMap={};DIV[cur].rows.forEach(function(r){var tr=document.createElement("tr");tr.setAttribute("data-c",r.c);if(r.c===0)tr.className="us";
+ tr.innerHTML='<td class="c-pos stk">'+r.pos+'</td><td class="c-club stk2"><button class="team-btn" type="button" aria-pressed="false">'+esc(name(r.c))+'</button></td><td>'+r.p+'</td><td>'+r.w+'</td><td>'+r.d+'</td><td>'+r.l+'</td><td>'+r.gf+'</td><td>'+r.ga+'</td><td>'+(r.gd>0?"+":"")+r.gd+'</td><td class="pts">'+r.pts+'</td><td><span class="fchips" role="img" aria-label="Last five: '+r.f.split("").map(function(x){return WORD[x]}).join(", ")+'">'+r.f.split("").map(function(x){return '<i class="f-'+x+'">'+x+'</i>'}).join("")+'</span></td>';
+ tr.querySelector("button").addEventListener("click",function(){pick(r.c)});trMap[r.c]=tr;tbody.appendChild(tr)})}
+function paint(animate){var rows=DIV[cur].rows.slice().sort(function(a,b){if(sortBy==="gd")return b.gd-a.gd||b.pts-a.pts||b.gf-a.gf;if(sortBy==="form")return b.fp-a.fp||b.pts-a.pts||b.gd-a.gd;return a.pos-b.pos}),first={};
+ var anim=animate&&!reduced();if(anim)rows.forEach(function(r){first[r.c]=trMap[r.c].getBoundingClientRect().top});
+ rows.forEach(function(r){tbody.appendChild(trMap[r.c])});
+ if(anim)rows.forEach(function(r){var tr=trMap[r.c],dy=first[r.c]-tr.getBoundingClientRect().top;if(Math.abs(dy)<1)return;tr.style.transition="none";tr.style.transform="translateY("+dy+"px)";
+  requestAnimationFrame(function(){requestAnimationFrame(function(){tr.style.transition="transform .5s cubic-bezier(.3,.7,.2,1)";tr.style.transform=""})})});
+ [["pts","#th-pts"],["gd","#th-gd"],["form","#th-form"]].forEach(function(x){var th=$(x[1]);if(x[0]===sortBy)th.setAttribute("aria-sort","descending");else th.removeAttribute("aria-sort")});
+ $("#cap").textContent=DIV[cur].label+" · sorted by "+SORTN[sortBy]+" · sample ladder"}
+function pick(c){sel=c;Object.keys(trMap).forEach(function(k){var on=+k===c;trMap[k].classList.toggle("sel",on);trMap[k].querySelector("button").setAttribute("aria-pressed",on?"true":"false")});
+ var d=DIV[cur],r=d.rows.filter(function(x){return x.c===c})[0],nx=d.next.filter(function(p){return p[0]===c||p[1]===c})[0],home=nx[0]===c;
+ $("#card").innerHTML='<div class="card-h"><p>'+d.label+' · '+ord(r.pos)+' on the ladder</p><h3>'+esc(name(c))+'</h3></div><div class="card-b"><div class="rec"><div><b>'+r.w+'</b><span>Won</span></div><div><b>'+r.d+'</b><span>Drawn</span></div><div><b>'+r.l+'</b><span>Lost</span></div><div><b>'+r.pts+'</b><span>Points</span></div></div><p class="lab">Last five · oldest to newest</p><ol class="chips">'+r.f.split("").map(function(x,k){return '<li class="f-'+x+'" style="animation-delay:'+k*80+'ms"><span aria-hidden="true">'+x+'</span><span class="sr">'+WORD[x]+'</span></li>'}).join("")+'</ol><p class="lab">Next fixture</p><p class="nx"><b>'+(home?"v ":"at ")+esc(name(home?nx[1]:nx[0]))+'</b>'+nx[2]+' · '+(home?"home":"away")+'</p></div>'}
+function press(group,attr,val){$$("button",group).forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute(attr)===val?"true":"false")})}
+$("#divs").addEventListener("click",function(e){var b=e.target.closest("[data-div]");if(!b||b.getAttribute("data-div")===cur)return;cur=b.getAttribute("data-div");press(this,"data-div",cur);build();paint(false);pick(sel);aff()});
+$("#sorts").addEventListener("click",function(e){var b=e.target.closest("[data-sort]");if(!b)return;sortBy=b.getAttribute("data-sort");press(this,"data-sort",sortBy);paint(true)});
+build();paint(false);pick(0);
+window.addEventListener("hd:brandchange",function(){build();paint(false);pick(sel)});
+var sc=$("#scroller"),lb=$("#lad-board");
+function aff(){lb.classList.toggle("can",sc.scrollWidth>sc.clientWidth+2);lb.classList.toggle("end",sc.scrollLeft+sc.clientWidth>=sc.scrollWidth-4)}
+sc.addEventListener("scroll",aff,{passive:true});window.addEventListener("resize",aff);aff();
+
+/* ---------- jerseys ---------- */
+var JP="M38 10L20 18L4 40L18 52L28 44V110H92V44L102 52L116 40L100 18L82 10Q76 22 60 22Q44 22 38 10Z";
+var PAT={hoops:'<path d="M0 46h120v12H0zM0 70h120v12H0zM0 94h120v12H0z" fill="#F2C12E"/>',stripes:'<path d="M38 0h11v120H38zM71 0h11v120H71z" fill="#F2C12E"/>',sash:'<path d="M14 14l20-8 86 94-16 14z" fill="#F2C12E"/>',halves:'<path d="M60 0h60v120H60z" fill="#F2C12E"/>',plain:'<path d="M0 0h120v120H0z" fill="#F2C12E"/><path d="M0 100h120v20H0z" fill="#1E6B3A"/>'};
+$$(".jersey").forEach(function(s,k){var v=s.getAttribute("data-v");s.outerHTML='<svg viewBox="0 0 120 120" aria-hidden="true"><defs><clipPath id="jc'+k+'"><path d="'+JP+'"/></clipPath></defs><g clip-path="url(#jc'+k+')"><path d="'+JP+'" fill="#1E6B3A"/>'+PAT[v]+'</g><path d="'+JP+'" fill="none" stroke="#1D1A16" stroke-width="3" stroke-linejoin="round"/><path d="M38 10Q44 22 60 22Q76 22 82 10" fill="none" stroke="'+(v==="plain"?"#1E6B3A":"#F2C12E")+'" stroke-width="5"/><circle cx="76" cy="40" r="5" fill="#fff" stroke="#1D1A16" stroke-width="1.5"/></svg>'});
+
+/* ---------- registration ---------- */
+var yr=$("#r-year"),sq=$("#r-squad"),FEE={kick:90,little:180,junior:260,senior:340,masters:290};
+for(var y=2022;y>=1955;y--){var o=document.createElement("option");o.value=y;o.textContent=y;if(y===2014)o.selected=true;yr.appendChild(o)}
+function squads(){var age=2027-(+yr.value),opts,prev=sq.value;
+ if(age<8)opts=[["kick","Kickabout · ages 5–7"]];else if(age<=11)opts=[["little","Little Wanderers · Under-"+age]];else if(age<=17)opts=[["junior","Juniors · Under-"+age]];
+ else{opts=[["senior","Women’s squads · Div 1 or Div 4"],["senior","Men’s squads · Div 2 or Reserves"]];if(age>=35)opts.push(["masters","Masters · over 35"])}
+ sq.innerHTML="";opts.forEach(function(x){var e=document.createElement("option");e.value=x[0];e.textContent=x[1];sq.appendChild(e)});if(prev&&opts.some(function(x){return x[0]===prev}))sq.value=prev;quote()}
+function quote(){var age=2027-(+yr.value),sib=$("#r-sib").checked&&age<=17,f=FEE[sq.value]-(sib?30:0);
+ $("#r-out").textContent="Born "+yr.value+" → "+(age<8?"Kickabout, ages 5–7":age<=17?"Under-"+age+" in 2027":sq.options[sq.selectedIndex].text)+(sib?" · family discount":"")+" · sample fee";
+ $("#r-fee").textContent="$"+f}
+yr.addEventListener("change",squads);sq.addEventListener("change",quote);$("#r-sib").addEventListener("change",quote);squads();
+$("#reg-form").addEventListener("submit",function(e){e.preventDefault();var n=$("#r-name"),em=$("#r-email"),out=$("#r-out");
+ if(!n.value.trim()){out.textContent="Add the player’s first name first.";n.focus();return}
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){out.textContent="Add an email address the registrar could reply to.";em.focus();return}
+ out.textContent=n.value.trim()+" · "+sq.options[sq.selectedIndex].text+" — ready to send (demo: nothing was sent).";
+ if(window.DemoKit)DemoKit.toast("Demo only — no registration was made. A real club site would send this to the registrar.")});
+})();
+</script>
+</body>
+</html>

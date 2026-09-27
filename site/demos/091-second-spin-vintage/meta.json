@@ -1,0 +1,8 @@
+{
+  "id": "091",
+  "tech": ["SVG", "Pointer Events", "Physics", "Keyboard shortcuts", "IntersectionObserver", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["ordering", "game"],
+  "interaction": "Drag or swipe the clothing rack (inertia, snapping, hangers that swing with the motion; arrow buttons, arrow keys or trackpad also work), filter the 18 SVG garments by size and era, open any piece's catalogue entry with measurements and order code, and 'Hold it for me' adds it to a tear-off order form with a demo toast.",
+  "fonts": ["Bowlby One SC", "Karla"],
+  "notes": "Garments are two-ink SVG illustrations generated from a small shape library. Holds and the order form are demo-only (toast, nothing sent); trade-in drop-off days are the next Tue–Thu dates and opening status uses Melbourne time."
+}

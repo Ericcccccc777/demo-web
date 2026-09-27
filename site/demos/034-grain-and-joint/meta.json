@@ -1,0 +1,8 @@
+{
+  "id": "034",
+  "tech": ["SVG", "CSS 3D", "CSS Grid", "Pointer Events", "Form logic"],
+  "features": ["story", "quote"],
+  "interaction": "Tap numbered tags in a true-isometric SVG workshop to zoom into cards on tables, built-ins, restorations and Tasmanian timbers (a list with iso icons on phones); then pick dovetail, mortise & tenon, finger or bridle joint and press Assemble to slide two CSS-3D timber parts together, dragging to turn them around.",
+  "fonts": ["Young Serif", "Work Sans"],
+  "notes": "The commission form ends in a demo toast; the isometric scene is illustrative, not a real workshop plan."
+}

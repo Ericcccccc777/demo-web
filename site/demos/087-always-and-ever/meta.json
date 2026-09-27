@@ -1,0 +1,8 @@
+{
+  "id": "087",
+  "tech": ["CSS 3D", "SVG", "CSS Grid", "IntersectionObserver", "Date logic", "Form logic"],
+  "features": ["story", "booking"],
+  "interaction": "Break the wax seal (click, tap, Enter or the Open button) and the envelope's flap folds back in 3D while the invitation card rises out with the site's first calls to action; further down, pick a wedding date for a live countdown, a seasonal note for the Hunter Valley and a generated month-by-month plan (12, 9, 6, 3 and 1 months out, plus wedding week) with tickable tasks, catch-up flags for short engagements and a progress bar, which can be carried into the enquiry form.",
+  "fonts": ["Great Vibes", "Libre Caslon Text"],
+  "notes": "Ticks are kept for the current visit only (not saved). The enquiry form ends in a demo toast; estates and prices are samples."
+}

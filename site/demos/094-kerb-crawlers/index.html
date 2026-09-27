@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="094">
+<meta name="demo:brand" content="Kerb Crawlers Skate Co.">
+<title>Kerb Crawlers Skate Co. — skate shop &amp; deck lab, Brunswick, Melbourne</title>
+<meta name="description" content="A fictional rider-run skate shop in Brunswick, Melbourne, with a 3D deck designer, lessons and a stylised map of local spots.">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Rock+Salt&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--concrete:#BDBDBD;--black:#111;--neon:#39FF14;--orange:#FF5E13;--tag:#F2EFE6;--steel:#EDEDED;--muted:#BDBDBD;--gut:clamp(16px,4vw,48px);
+--spray:"Rock Salt","Marker Felt","Comic Sans MS",cursive;--sans:"Barlow","Arial Narrow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--black);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.wrap{width:100%;max-width:1320px;margin-inline:auto;padding-inline:var(--gut)}
+a{color:inherit}
+p{margin:0 0 1em}
+h1,h2,h3{margin:0;font-weight:400}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--black);outline-offset:3px}
+.dark :focus-visible,.dark:focus-visible{outline-color:var(--neon)}
+/* surfaces */
+.wall{position:relative;color:var(--black);background-color:var(--concrete);background-image:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .1 0 0 0 0 .1 0 0 0 0 .1 .9 0 0 0 -.33'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+ radial-gradient(circle at 60px 60px,rgba(0,0,0,.26) 0 3.6px,rgba(255,255,255,.22) 4.2px 5.4px,transparent 6px),
+ linear-gradient(90deg,rgba(0,0,0,.09) 1px,transparent 1px),
+ linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),
+ radial-gradient(70% 50% at 18% 12%,rgba(255,255,255,.2),transparent 70%),
+ radial-gradient(45% 60% at 88% 78%,rgba(0,0,0,.09),transparent 70%);
+ background-size:260px 260px,480px 240px,480px 100%,100% 240px,100% 100%,100% 100%}
+.dark{position:relative;color:var(--steel);background-color:var(--black);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .5 0 0 0 -.22'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.sec{padding-block:clamp(3.5rem,8vw,7rem)}
+/* spray type */
+.spray{position:relative;font-family:var(--spray);font-weight:400;line-height:1.45;letter-spacing:.01em;color:var(--black);text-shadow:0 0 1px rgba(17,17,17,.75),0 0 9px rgba(17,17,17,.2)}
+.dark .spray{color:var(--neon);text-shadow:0 0 1px rgba(57,255,20,.85),0 0 16px rgba(57,255,20,.35)}
+.dr{position:relative;display:inline-block}
+.drip{position:absolute;top:calc(100% - .55em);width:5px;border-radius:0 0 3px 3px;background:currentColor;transform-origin:top;opacity:.9;pointer-events:none}
+.drip::after{content:"";position:absolute;left:50%;bottom:-3px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:currentColor}
+@media (prefers-reduced-motion:no-preference){.drip{transform:scaleY(0)}.go .drip{animation:drip 1.5s cubic-bezier(.3,.1,.3,1) forwards}}
+@keyframes drip{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.deck.bare .trk{display:none}
+.gp{display:block;width:26px;height:26px;border-radius:4px;border:1px solid #444}
+h2.spray{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.3rem);margin-bottom:1.6rem}
+.kicker{display:inline-block;margin:0 0 1rem;font:800 .78rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.wall .kicker{background:var(--black);color:var(--concrete);padding:.45em .7em}
+.dark .kicker{color:var(--black);background:var(--neon);padding:.45em .7em}
+.lead{font-size:clamp(1.05rem,.98rem + .35vw,1.25rem);max-width:36em}
+/* tape + tags */
+.tape{display:inline-block;padding:.45em 1.1em .4em;background:#262626;color:#EFEFEF;font:800 .76rem/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 2px 0 rgba(0,0,0,.25);transform:rotate(-2deg);clip-path:polygon(0 12%,2% 0,50% 6%,98% 0,100% 16%,99% 50%,100% 86%,97% 100%,50% 94%,3% 100%,0 88%,1.5% 50%)}
+.ptag{position:relative;display:inline-block;padding:.9rem 1.1rem .85rem 1.6rem;background:var(--tag);color:var(--black);box-shadow:0 10px 18px -12px rgba(0,0,0,.6);font:600 .95rem/1.3 var(--sans)}
+.ptag::before{content:"";position:absolute;left:.55rem;top:50%;width:.55rem;height:.55rem;margin-top:-.275rem;border-radius:50%;background:var(--concrete);box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.ptag b{display:block;font:800 1.5rem/1.05 var(--sans)}
+.ptag small{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:.25rem}
+.strip{position:absolute;width:74px;height:22px;background:rgba(38,38,38,.92);clip-path:polygon(0 10%,4% 0,96% 8%,100% 0,98% 50%,100% 92%,96% 100%,4% 92%,0 100%,2% 50%)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:50px;padding:.7em 1.35em;border:2px solid var(--black);border-radius:3px;background:var(--black);color:var(--neon);font:800 .92rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--orange)}
+.btn.line{background:transparent;color:var(--black)}
+.btn.line:hover{background:var(--black);color:var(--steel)}
+.dark .btn{background:var(--neon);color:var(--black);border-color:var(--neon)}
+.dark .btn:hover{box-shadow:4px 4px 0 var(--orange)}
+.dark .btn.line{background:transparent;color:var(--steel);border-color:#555}
+.dark .btn.line:hover{border-color:var(--neon);color:var(--neon)}
+/* header */
+.top{position:relative;z-index:20;background:var(--black);color:var(--steel);border-bottom:3px solid var(--neon)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.logo{display:flex;align-items:center;gap:.75rem;min-width:0;text-decoration:none;color:var(--neon)}
+.mark{flex:none;display:grid;place-items:center;width:44px;height:44px;border:2px dashed var(--neon);border-radius:50%;font:800 .95rem/1 var(--sans);letter-spacing:.04em;color:var(--black);background:var(--neon);box-shadow:0 0 0 3px var(--black),0 0 0 4px rgba(57,255,20,.5)}
+.logo-name{font:400 clamp(.92rem,.8rem + .5vw,1.15rem)/1.5 var(--spray);overflow-wrap:anywhere;text-shadow:0 0 12px rgba(57,255,20,.35)}
+.nav ul{display:flex;gap:clamp(.6rem,1.4vw,1.5rem);margin:0;padding:0;list-style:none}
+.nav a{display:block;padding:.8rem .1rem;font:600 .9rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--steel);border-bottom:2px solid transparent}
+.nav a:hover{color:var(--neon);border-color:var(--neon)}
+.menu{display:none;min-height:44px;padding:0 1rem;border:2px solid var(--neon);border-radius:3px;background:transparent;color:var(--neon);font:800 .82rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+/* hero */
+.hero{overflow:hidden;padding-block:clamp(2.5rem,6vw,5rem) clamp(3.5rem,7vw,6rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(1.5rem,4vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.1rem,1.2rem + 3.6vw,4.4rem);line-height:1.38;margin:.4rem 0 2.4rem}
+.hero h1 .o{display:inline;background:linear-gradient(transparent 20%,var(--orange) 20% 84%,transparent 84%);padding:0 .15em;-webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:.4em .2em .5em .3em}
+.hero .lead{margin-bottom:1.8rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero-art{position:relative;min-width:0}
+.hero-art svg{display:block;width:100%;height:auto;overflow:visible}
+.hero-art .ptag{position:absolute;left:30%;top:0;transform:rotate(-4deg)}
+.hero-art .ptag::after{content:"";position:absolute;top:-11px;left:50%;width:70px;height:21px;margin-left:-35px;background:rgba(38,38,38,.92);transform:rotate(6deg);clip-path:polygon(0 10%,4% 0,96% 8%,100% 0,98% 50%,100% 92%,96% 100%,4% 92%,0 100%,2% 50%)}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:2.2rem 0 0;padding:0;list-style:none;font:600 .92rem/1.3 var(--sans)}
+.facts li{display:flex;align-items:center;gap:.5rem}
+.facts li::before{content:"";width:.7rem;height:.7rem;background:var(--black);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+
+/* deck lab */
+.lab-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(1.5rem,3vw,3rem);align-items:start}
+.lab-head{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.5rem 3rem;align-items:end;margin-bottom:.4rem}
+.lab-head p{color:var(--muted);margin:0 0 1.6rem;max-width:34em}
+.stage{position:sticky;top:12px;height:min(660px,calc(100vh - 24px));min-height:430px;overflow:hidden;border:2px solid #2B2B2B;border-radius:6px;perspective:1500px;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none;
+ background:radial-gradient(55% 50% at 50% 46%,#2A2A2A 0,#161616 62%,#0B0B0B 100%)}
+.stage.grab{cursor:grabbing}
+.stage:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.halo{position:absolute;left:50%;top:47%;width:min(78%,440px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;
+ background:radial-gradient(circle,transparent 49%,rgba(57,255,20,.24) 55%,rgba(57,255,20,.07) 61%,transparent 67%),radial-gradient(circle,rgba(255,94,19,.13),transparent 60%)}
+.floor{position:absolute;left:50%;bottom:10%;width:44%;height:26px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.85),transparent);pointer-events:none}
+.scene{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateZ(-11deg)}
+.deck{position:absolute;left:50%;top:47%;width:0;height:0;transform-style:preserve-3d}
+.deck.anim{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.deck.slow{transition-duration:.9s}
+.deck.intro{transition:transform 1.5s cubic-bezier(.16,.8,.24,1)}
+.lay{position:absolute;left:0;top:0;transform-style:preserve-3d}
+.sg{position:absolute;left:0;width:100%;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.ply .sg{-webkit-backface-visibility:visible;backface-visibility:visible}
+.sg svg{position:absolute;left:0;display:block}
+.trk{position:absolute;left:0;top:0;transform-style:preserve-3d}
+.trk>div{position:absolute;left:0;top:0}
+.metal{background:linear-gradient(90deg,#8E8E8E,#DADADA 35%,#A9A9A9 60%,#7A7A7A)}
+.whd{border-radius:50%;background:radial-gradient(circle,#4A4A4A 0 16%,#B9B9B9 17% 24%,rgba(0,0,0,.18) 25% 27%,var(--wh) 28%)}
+.wht{background:linear-gradient(90deg,rgba(0,0,0,.28),rgba(255,255,255,.18) 45%,rgba(0,0,0,.28)),var(--wh)}
+.st-top{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem;pointer-events:none}
+.side{padding:.5em .75em;border:1px solid rgba(57,255,20,.45);background:#000;color:var(--neon);font:800 .74rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.st-price{text-align:right;color:var(--steel);font:600 .72rem/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.st-price span{display:block;margin-top:.1rem}
+.st-price b{display:block;font:400 clamp(1.5rem,1.2rem + 1vw,2rem)/1.7 var(--spray);letter-spacing:0;color:var(--neon);text-transform:none}
+.st-hint{position:absolute;left:0;right:0;bottom:76px;text-align:center;font:600 .78rem/1.3 var(--sans);letter-spacing:.08em;color:#A8A8A8;pointer-events:none}
+.st-bar{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:center;align-items:center;gap:.5rem}
+.icb{display:grid;place-items:center;width:48px;height:48px;padding:0;border:2px solid #3A3A3A;border-radius:50%;background:#000;color:var(--steel);cursor:pointer}
+.icb:hover{border-color:var(--neon);color:var(--neon)}
+.icb svg{width:22px;height:22px}
+.flip{min-height:48px;padding:0 1.3rem;border:2px solid var(--neon);border-radius:999px;background:#000;color:var(--neon);font:800 .86rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.flip[aria-pressed="true"]{background:var(--neon);color:#000}
+.ctl{min-width:0}
+.grp{min-width:0;margin:0 0 1.35rem;padding:0;border:0}
+.grp legend{display:flex;align-items:center;gap:.6rem;width:100%;margin-bottom:.65rem;padding:0;font:800 .8rem/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.grp legend b{padding:.25em .5em;background:var(--neon);color:#000}
+.grp legend output{margin-left:auto;color:var(--steel);letter-spacing:.06em;font-weight:600;text-transform:none;font-size:.9rem}
+.opts{display:grid;gap:8px}
+.o3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.o4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.opt{position:relative;display:block;min-width:0;cursor:pointer}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.opt>span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;height:100%;min-height:48px;padding:9px 5px 8px;border:2px solid #333;border-radius:5px;background:#1A1A1A;color:var(--steel);font:600 .84rem/1.15 var(--sans);text-align:center;transition:border-color .15s,background .15s}
+.opt>span small{font-size:.72rem;color:#A8A8A8;font-weight:600}
+.opt svg{display:block}
+.opt input:checked+span{border-color:var(--neon);background:#0F1D0C;box-shadow:inset 0 0 0 1px var(--neon)}
+.opt input:focus-visible+span{outline:3px solid var(--neon);outline-offset:2px}
+.opt input:disabled+span{opacity:.35;cursor:not-allowed}
+.sws{display:flex;flex-wrap:wrap;gap:10px}
+.sw>span{width:46px;height:46px;min-height:0;padding:0;border-radius:50%;background:var(--c);border-color:#444}
+.sw input:checked+span{box-shadow:0 0 0 3px #000,0 0 0 5px var(--neon);border-color:#000}
+.toggle{display:flex;align-items:center;gap:.8rem;min-height:48px;cursor:pointer;font-weight:600;color:var(--steel);position:relative}
+.toggle input{position:absolute;opacity:0;width:1px;height:1px}
+.tr{position:relative;flex:none;width:52px;height:30px;border:2px solid #555;border-radius:999px;background:#1A1A1A;transition:background .2s,border-color .2s}
+.tr::after{content:"";position:absolute;top:4px;left:4px;width:18px;height:18px;border-radius:50%;background:#777;transition:transform .2s,background .2s}
+.toggle input:checked+.tr{border-color:var(--neon)}
+.toggle input:checked+.tr::after{transform:translateX(22px);background:var(--neon)}
+.toggle input:focus-visible+.tr{outline:3px solid var(--neon);outline-offset:3px}
+.bill{margin-top:.4rem;padding:1.1rem 1.1rem 1rem;border:2px dashed #3A3A3A;border-radius:6px;background:#0C0C0C}
+.bill ul{margin:0 0 .8rem;padding:0;list-style:none;font-size:.92rem}
+.bill li{display:flex;justify-content:space-between;gap:1rem;padding:.3rem 0;border-bottom:1px solid #222;color:#D6D6D6}
+.bill li span:last-child{flex:none;font-weight:800;color:var(--steel)}
+.total{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:.9rem}
+.total span{font:800 .78rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.total b{font:400 2rem/1.3 var(--spray);color:var(--neon)}
+#buildTxt{font-size:.86rem;color:#BDBDBD;margin:.7rem 0 0}
+/* decks wall */
+.rack{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,2.2vw,32px);align-items:end;margin-top:1rem;padding-bottom:1.2rem;border-bottom:10px solid #2A2A2A;box-shadow:0 12px 0 -6px rgba(0,0,0,.25)}
+.rk{display:flex;flex-direction:column;align-items:center;gap:.9rem;min-width:0}
+.rk svg{width:100%;max-width:120px;height:auto;filter:drop-shadow(10px 14px 10px rgba(0,0,0,.35))}
+.rk .ptag{width:100%;padding:.7rem .75rem .7rem 1.45rem;font-size:.84rem}
+.rk .ptag b{font-size:1.2rem}
+.rk .ptag::before{left:.45rem}
+.rk:nth-child(odd) .ptag{transform:rotate(-2deg)}
+.rk:nth-child(even) .ptag{transform:rotate(2deg)}
+.rk button{margin-top:.2rem;min-height:44px;padding:0 .9rem;border:2px solid var(--black);border-radius:3px;background:transparent;font:800 .74rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;color:var(--black)}
+.rk button:hover{background:var(--black);color:var(--neon)}
+.note{font-size:.86rem;font-weight:600;margin-top:1.4rem}
+/* parts */
+.parts-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.5vw,2.2rem)}
+.part{padding:1.4rem 1.3rem 1.2rem;border:2px solid #2E2E2E;border-radius:6px;background:rgba(0,0,0,.35)}
+.part h3{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem;font:800 1.2rem/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--steel)}
+.part h3 svg{flex:none;width:40px;height:40px;color:var(--neon)}
+.part table{width:100%;border-collapse:collapse;font-size:.94rem}
+.part th,.part td{padding:.5rem .2rem;text-align:left;border-bottom:1px solid #2A2A2A}
+.part th{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#A8A8A8}
+.part td:last-child{text-align:right;font-weight:800;color:var(--steel)}
+.part p{color:#CFCFCF;font-size:.92rem;margin:.9rem 0 0}
+/* completes */
+.posters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,3vw,2.6rem);margin-top:1rem}
+.poster{position:relative;padding:1.8rem 1.5rem 1.4rem;background:var(--tag);box-shadow:0 18px 30px -18px rgba(0,0,0,.55)}
+.poster:nth-child(1){transform:rotate(-1.4deg)}
+.poster:nth-child(2){transform:rotate(1deg) translateY(10px)}
+.poster:nth-child(3){transform:rotate(-.6deg)}
+.poster .strip{top:-11px;left:50%;margin-left:-37px;transform:rotate(-4deg)}
+.poster h3{font:400 1.45rem/1.4 var(--spray);margin-bottom:.4rem}
+.poster .for{font-weight:600;margin-bottom:.8rem}
+.poster ul{margin:0 0 1rem;padding-left:1.1rem;font-size:.95rem}
+.poster .price{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding-top:.8rem;border-top:2px solid var(--black);font:800 1.7rem/1 var(--sans)}
+.poster .price small{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.poster .blob{position:absolute;right:-14px;top:-18px;width:74px;height:74px}
+/* spots */
+.spots-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.map{position:relative;border:2px solid #2B2B2B;border-radius:6px;background:#0B0B0B;overflow:hidden}
+.map svg{display:block;width:100%;height:auto}
+.map .cap{margin:0;padding:.55rem .8rem;border-top:1px solid #222;font:600 .74rem/1.2 var(--sans);letter-spacing:.08em;color:#A8A8A8}
+.pin{cursor:pointer}
+.pin circle{fill:var(--orange);stroke:#000;stroke-width:2}
+.pin text{font:800 13px var(--sans);fill:#000;text-anchor:middle;pointer-events:none}
+.pin .ring{fill:none;stroke:var(--neon);stroke-width:2;opacity:0}
+.pin.on .ring{opacity:1}
+.pin.on circle:first-child{fill:var(--neon)}
+@media (prefers-reduced-motion:no-preference){.pin.on .ring{animation:ping 1.6s ease-out 3}}
+@keyframes ping{from{transform:scale(.6);opacity:1}to{transform:scale(1.5);opacity:0}}
+.pin .ring{transform-box:fill-box;transform-origin:center}
+.spot-list{display:grid;gap:8px;margin:0 0 1.2rem;padding:0;list-style:none}
+.spot-list button{display:flex;align-items:center;gap:.8rem;width:100%;min-height:50px;padding:.5rem .8rem;border:2px solid #2E2E2E;border-radius:5px;background:#161616;color:var(--steel);font:600 1rem/1.2 var(--sans);text-align:left;cursor:pointer}
+.spot-list button b{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--orange);color:#000;font-weight:800}
+.spot-list button[aria-pressed="true"]{border-color:var(--neon);background:#0F1D0C}
+.spot-list button[aria-pressed="true"] b{background:var(--neon)}
+.spot-card{padding:1.1rem 1.2rem;border-left:4px solid var(--neon);background:#161616}
+.spot-card h3{font:800 1.25rem/1.2 var(--sans);color:var(--neon);margin-bottom:.5rem}
+.spot-card dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.3rem 1rem;margin:0;font-size:.94rem}
+.spot-card dt{font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#A8A8A8;padding-top:.2rem}
+.spot-card dd{margin:0}
+/* lessons */
+.lessons-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.sess{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 1.1rem;padding:0;border:0}
+.sess legend{margin-bottom:.7rem;font:800 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.ses{position:relative;display:block;cursor:pointer}
+.ses input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.ses span{display:block;height:100%;padding:.85rem .9rem;border:2px solid var(--black);border-radius:4px;background:rgba(242,239,230,.55);font-size:.9rem;line-height:1.35}
+.ses span b{display:block;font-size:1.05rem}
+.ses input:checked+span{background:var(--black);color:var(--steel)}
+.ses input:checked+span b{color:var(--neon)}
+.ses input:focus-visible+span{outline:3px solid var(--black);outline-offset:3px}
+.frow{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:10px;margin-bottom:1rem}
+.frow label{display:block;font:800 .74rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.frow input,.frow select{display:block;width:100%;min-height:48px;margin-top:.45rem;padding:.55rem .75rem;border:2px solid var(--black);border-radius:4px;background:var(--tag);color:var(--black);font:600 1rem/1.2 var(--sans)}
+#lessonOut{min-height:1.5em;margin:.9rem 0 0;font-weight:600}
+.safety{font-size:.84rem;margin-top:1rem}
+.lesson-list{display:grid;gap:12px}
+.lesson-list article{padding:1rem 1.1rem;background:rgba(17,17,17,.9);color:var(--steel);border-radius:4px}
+.lesson-list h3{font:800 1.1rem/1.2 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--neon);margin-bottom:.3rem}
+.lesson-list p{margin:0;font-size:.93rem;color:#D6D6D6}
+/* visit + footer */
+.visit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem)}
+.vcard{padding:1.3rem 1.3rem 1.1rem;border:2px solid #2E2E2E;border-radius:6px}
+.vcard h3{font:800 .82rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--neon);margin-bottom:.9rem}
+.vcard table{width:100%;border-collapse:collapse;font-size:.95rem}
+.vcard td{padding:.35rem 0;border-bottom:1px solid #262626}
+.vcard td:last-child{text-align:right;font-weight:600}
+.vcard ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.vcard li{margin-bottom:.35rem}
+.vcard a{color:var(--neon);text-underline-offset:3px}
+.foot{padding-block:2.8rem 5rem;border-top:3px solid var(--neon);text-align:center}
+.foot-name{margin:0 0 .6rem;font:400 clamp(1.5rem,1rem + 2.4vw,2.8rem)/1.45 var(--spray);color:var(--neon);overflow-wrap:anywhere;text-shadow:0 0 18px rgba(57,255,20,.35)}
+.foot p{color:#BDBDBD;font-size:.9rem}
+.fine{max-width:56em;margin:.8rem auto 0;font-size:.8rem!important}
+/* responsive */
+@media (max-width:1099px){
+ .nav{position:absolute;left:0;right:0;top:100%;display:none;background:var(--black);border-bottom:3px solid var(--neon);padding:.5rem var(--gut) 1rem}
+ .nav.open{display:block}
+ .nav ul{flex-direction:column;gap:0}
+ .nav a{padding:1rem 0;font-size:1.05rem;border-bottom:1px solid #262626}
+ .menu{display:inline-flex;align-items:center}
+ .rack{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:2rem}
+ .parts-grid,.posters,.visit-grid{grid-template-columns:minmax(0,1fr)}
+ .poster:nth-child(2){transform:rotate(1deg)}
+}
+@media (max-width:899px){
+ .hero-grid,.lab-grid,.lab-head,.spots-grid,.lessons-grid{grid-template-columns:minmax(0,1fr)}
+ .hero-art{max-width:560px}
+ .stage{top:0;height:min(48svh,440px);min-height:330px;margin-inline:calc(-1 * var(--gut));border-radius:0;border-width:2px 0;z-index:3}
+ .st-hint{bottom:70px;font-size:.72rem}
+ .lab-head p{margin-bottom:1rem}
+}
+@media (max-width:599px){
+ .rack{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rk:last-child{grid-column:1/-1}
+ .rk:last-child svg{max-width:90px}
+ .sess,.frow{grid-template-columns:minmax(0,1fr)}
+ .o4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hero-art .ptag{left:auto;right:0;top:-8px}
+ .st-price b{font-size:1.35rem}
+ h2.spray{font-size:1.7rem}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* the rotated 3D deck is clipped by .stage but Chrome still counts it toward page width at 320px */
+html,body{overflow-x:clip}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap top-in">
+  <a class="logo" href="#top" aria-label="Kerb Crawlers Skate Co. — back to top"><span class="mark" data-brand-initials aria-hidden="true">KC</span><span class="logo-name" data-brand>Kerb Crawlers Skate Co.</span></a>
+  <button class="menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Sections"><ul>
+   <li><a href="#lab">Deck lab</a></li><li><a href="#decks">Decks</a></li><li><a href="#parts">Wheels &amp; trucks</a></li><li><a href="#completes">Completes</a></li><li><a href="#spots">Spots</a></li><li><a href="#lessons">Lessons</a></li><li><a href="#visit">Visit</a></li>
+  </ul></nav>
+ </div>
+</header>
+<main>
+ <section class="wall hero" id="top">
+  <div class="wrap hero-grid">
+   <div>
+    <span class="tape">Brunswick · Melbourne · rider-run</span>
+    <h1 class="spray">Roll in. Build a deck. <span class="o">Go find a kerb.</span></h1>
+    <p class="lead">A skate shop on the north side with decks, wheels, trucks and completes on the wall, Saturday lessons for first-timers, and honest advice on where to skate this arvo. Design your own deck below and spin it in 3D.</p>
+    <div class="cta"><a class="btn" href="#lab">Open the deck lab</a><a class="btn line" href="#lessons">Book a lesson</a></div>
+    <ul class="facts"><li>Custom decks pressed &amp; printed in-shop</li><li>Free set-up with every complete</li><li>Open 6 days</li></ul>
+   </div>
+   <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 520 330">
+     <defs><filter id="os" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="7"/></filter><filter id="os2"><feGaussianBlur stdDeviation="1.1"/></filter>
+     <g id="board">
+      <path d="M44 132Q70 170 110 176L410 176Q450 170 476 132Q486 136 482 144Q452 184 412 188L108 188Q68 184 38 144Q36 136 44 132Z"/>
+      <path d="M132 188h36v8h-36zM124 196h52l-8 16h-36zM352 188h36v8h-36zM344 196h52l-8 16h-36z"/>
+      <circle cx="150" cy="234" r="23"/><circle cx="370" cy="234" r="23"/>
+     </g>
+     </defs>
+     <g fill="#111" opacity=".85" filter="url(#os2)"><path d="M0 262h520v14H0z"/><path d="M40 90l60-8M26 118l72-6M40 146l50-4" stroke="#111" stroke-width="7" stroke-linecap="round"/></g>
+     <use href="#board" fill="#111" transform="translate(7 7)" filter="url(#os2)" opacity=".9"/>
+     <use href="#board" fill="#FF5E13" filter="url(#os)" opacity=".55"/>
+     <use href="#board" fill="#FF5E13"/>
+     <g fill="#111"><circle cx="150" cy="234" r="8"/><circle cx="370" cy="234" r="8"/></g>
+     <g fill="#FF5E13"><path d="M196 188h5v34a2.5 2.5 0 0 1-5 0zM262 188h5v22a2.5 2.5 0 0 1-5 0zM300 188h4v44a2 2 0 0 1-4 0zM432 172h4v28a2 2 0 0 1-4 0zM86 176h5v18a2.5 2.5 0 0 1-5 0z"/></g>
+     <g fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" filter="url(#os2)"><path d="M300 44c40-24 96-24 128 6s24 58 4 70"/><path d="M420 106l14 18 16-24"/></g>
+     <g fill="#111" filter="url(#os2)"><path d="M470 34l6 14 15 1-12 9 4 15-13-8-13 8 4-15-12-9 15-1z"/></g>
+    </svg>
+    <p class="ptag">Custom decks<b>from $89</b><small>sample prices</small></p>
+   </div>
+  </div>
+ </section>
+
+ <section class="dark sec" id="lab" aria-labelledby="labTitle">
+  <div class="wrap lab-grid">
+   <div class="lab-head"><div><p class="kicker">Deck lab</p><h2 class="spray" id="labTitle">Design it. Spin it.</h2></div><p>Pick a shape, a stencil, colours and grip tape, then drag the deck to spin it — or focus it and use your arrow keys. Every custom deck is seven-ply maple, printed and gripped in the shop.</p></div>
+   <div class="stage" id="stage" tabindex="0" role="group" aria-roledescription="3D deck viewer" aria-label="Your deck in 3D. Drag, or use the left and right arrow keys to rotate and the up and down arrow keys to tilt." aria-describedby="deckLive">
+    <div class="halo"></div><div class="floor"></div>
+    <div class="scene"><div class="deck" id="deck"></div></div>
+    <div class="st-top"><span class="side" id="sideTxt">Graphic side</span><span class="st-price">Your build<b id="stPrice">$0</b><span>sample price</span></span></div>
+    <p class="st-hint">Drag to spin · ← → rotate · ↑ ↓ tilt</p>
+    <div class="st-bar">
+     <button class="icb" type="button" id="rotL" aria-label="Rotate left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5 4 10l5 5M4.5 10H14a6 6 0 0 1 0 12h-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+     <button class="flip" type="button" id="flip" aria-pressed="false">Flip it</button>
+     <button class="icb" type="button" id="rotR" aria-label="Rotate right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5 5 5-5 5M19.5 10H10a6 6 0 0 0 0 12h3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+     <button class="icb" type="button" id="rotReset" aria-label="Reset view"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/></svg></button>
+    </div>
+    <p class="vh" id="deckLive" aria-live="polite"></p>
+   </div>
+   <form class="ctl" id="ctl" data-kit-ignore>
+    <fieldset class="grp"><legend><b>1</b>Shape<output id="oShape"></output></legend>
+     <div class="opts o3">
+      <label class="opt"><input type="radio" name="shape" value="popsicle" checked><span><svg class="shp" data-s="popsicle" viewBox="0 0 82.5 320" width="15" height="46" aria-hidden="true"></svg>Popsicle<small>8.25″ · $89</small></span></label>
+      <label class="opt"><input type="radio" name="shape" value="cruiser"><span><svg class="shp" data-s="cruiser" viewBox="0 0 87.5 300" width="16" height="44" aria-hidden="true"></svg>Cruiser<small>8.75″ · $99</small></span></label>
+      <label class="opt"><input type="radio" name="shape" value="oldschool"><span><svg class="shp" data-s="oldschool" viewBox="0 0 100 305" width="18" height="44" aria-hidden="true"></svg>Old-school<small>10″ · $109</small></span></label>
+     </div>
+    </fieldset>
+    <fieldset class="grp"><legend><b>2</b>Stencil<output id="oGfx"></output></legend>
+     <div class="opts o3" id="gfxOpts"></div>
+    </fieldset>
+    <fieldset class="grp"><legend><b>3</b>Deck colour<output id="oCol"></output></legend>
+     <div class="sws" id="colOpts"></div>
+    </fieldset>
+    <fieldset class="grp"><legend><b>4</b>Grip tape<output id="oGrip"></output></legend>
+     <div class="opts o4" id="gripOpts"></div>
+    </fieldset>
+    <fieldset class="grp"><legend><b>5</b>Wheels<output id="oWh"></output></legend>
+     <label class="toggle"><input type="checkbox" id="complete" checked><span class="tr" aria-hidden="true"></span>Make it a complete: trucks, 53 mm wheels, bearings &amp; hardware</label>
+     <div class="sws" id="whOpts"></div>
+    </fieldset>
+    <div class="bill">
+     <div class="total"><span>Sample total</span><b id="total">$0</b></div>
+     <ul id="bill"></ul>
+     <button class="btn" type="button" id="send">Send build to the shop</button>
+     <p id="buildTxt" aria-live="polite"></p>
+    </div>
+   </form>
+  </div>
+ </section>
+
+ <section class="wall sec" id="decks" aria-labelledby="decksTitle">
+  <div class="wrap">
+   <p class="kicker">On the wall</p>
+   <h2 class="spray" id="decksTitle">Decks</h2>
+   <p class="lead">Shop decks in the widths people actually ride, a cruiser for cracked footpaths and one wide old-school shape for bowl days. Tap “Customise” to load any of them into the deck lab.</p>
+   <div class="rack" id="rack"></div>
+   <p class="note">Sample prices, deck only. Grip tape is free with any deck — we’ll lay it while you wait.</p>
+  </div>
+ </section>
+
+ <section class="dark sec" id="parts" aria-labelledby="partsTitle">
+  <div class="wrap">
+   <p class="kicker">Parts</p>
+   <h2 class="spray" id="partsTitle">Wheels &amp; trucks</h2>
+   <div class="parts-grid">
+    <article class="part"><h3><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="20" r="6" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/></svg>Wheels</h3>
+     <table><thead><tr><th>Size · hardness</th><th>Good for</th><th>From</th></tr></thead><tbody>
+      <tr><td>52 mm · 99A</td><td>Street, small parks</td><td>$55</td></tr>
+      <tr><td>54 mm · 99A</td><td>Bowls, bigger riders</td><td>$60</td></tr>
+      <tr><td>56 mm · 78A</td><td>Cruising, rough paths</td><td>$65</td></tr>
+     </tbody></table>
+     <p>Hard wheels slide; soft wheels grip and roll over bluestone laneways and tram tracks.</p></article>
+    <article class="part"><h3><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 9h14v5H13zM6 16h28l-4 7H10zM18 23h4v6h-4z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><circle cx="8" cy="30" r="4" fill="currentColor"/><circle cx="32" cy="30" r="4" fill="currentColor"/></svg>Trucks</h3>
+     <table><thead><tr><th>Deck width</th><th>Axle</th><th>Pair</th></tr></thead><tbody>
+      <tr><td>7.5–8.0″</td><td>129 mm</td><td>$89</td></tr>
+      <tr><td>8.0–8.5″</td><td>139 mm</td><td>$89</td></tr>
+      <tr><td>8.5–9.0″</td><td>149 mm</td><td>$95</td></tr>
+      <tr><td>9.0″ and up</td><td>159 mm</td><td>$99</td></tr>
+     </tbody></table>
+     <p>Match the axle to your deck width so the wheels sit flush with the edges.</p></article>
+    <article class="part"><h3><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><circle cx="20" cy="8.5" r="2"/><circle cx="31.5" cy="20" r="2"/><circle cx="20" cy="31.5" r="2"/><circle cx="8.5" cy="20" r="2"/><circle cx="28" cy="12" r="2"/><circle cx="12" cy="28" r="2"/><circle cx="28" cy="28" r="2"/><circle cx="12" cy="12" r="2"/></g></svg>Bearings &amp; bits</h3>
+     <table><tbody>
+      <tr><td>Bearings, set of eight</td><td>$25</td></tr>
+      <tr><td>Hardware, 1″ bolts</td><td>$6</td></tr>
+      <tr><td>Risers, 1/8″</td><td>$8</td></tr>
+      <tr><td>Grip sheet</td><td>$12</td></tr>
+      <tr><td>Bearing clean &amp; lube</td><td>$15</td></tr>
+     </tbody></table>
+     <p>Sample prices. Bring your board in and we’ll check it over while you wait.</p></article>
+   </div>
+  </div>
+ </section>
+
+ <section class="wall sec" id="completes" aria-labelledby="compTitle">
+  <div class="wrap">
+   <p class="kicker">Ready to roll</p>
+   <h2 class="spray" id="compTitle">Complete setups</h2>
+   <div class="posters">
+    <article class="poster"><span class="strip"></span><svg class="blob" viewBox="0 0 80 80" aria-hidden="true"><path fill="#FF5E13" d="M40 8c6 0 7 9 12 10s10-6 14-2-3 10 0 14 11 3 11 9-9 6-10 11 6 10 2 14-10-2-14 1-2 11-9 11-6-9-11-10-9 6-13 2 1-10-2-14-12-3-12-9 9-6 10-11-6-10-2-14 10 2 14-1S34 8 40 8z"/></svg>
+     <h3>First push</h3><p class="for">For first boards and riders aged 8 and up.</p>
+     <ul><li>7.75″ popsicle shop deck</li><li>129 mm trucks, 52 mm 99A wheels</li><li>Bearings, hardware and black grip</li></ul>
+     <p class="price"><span>$169</span><small>sample</small></p></article>
+    <article class="poster"><span class="strip"></span>
+     <h3>Street</h3><p class="for">For parks, ledges and the odd kerb.</p>
+     <ul><li>8.25″ popsicle shop deck</li><li>139 mm trucks, 53 mm 99A wheels</li><li>Bearings, hardware and black grip</li></ul>
+     <p class="price"><span>$219</span><small>sample</small></p></article>
+    <article class="poster"><span class="strip"></span><svg class="blob" viewBox="0 0 80 80" aria-hidden="true"><path fill="#111" d="M40 8c6 0 7 9 12 10s10-6 14-2-3 10 0 14 11 3 11 9-9 6-10 11 6 10 2 14-10-2-14 1-2 11-9 11-6-9-11-10-9 6-13 2 1-10-2-14-12-3-12-9 9-6 10-11-6-10-2-14 10 2 14-1S34 8 40 8z"/></svg>
+     <h3>Cruiser</h3><p class="for">For getting across town, not down stairs.</p>
+     <ul><li>8.75″ cruiser deck</li><li>149 mm trucks, 56 mm 78A soft wheels</li><li>Risers, bearings, hardware and grip</li></ul>
+     <p class="price"><span>$239</span><small>sample</small></p></article>
+   </div>
+   <p class="note">Every complete is set up and tuned in the shop, with a free bearing check after four weeks.</p>
+  </div>
+ </section>
+
+ <section class="dark sec" id="spots" aria-labelledby="spotsTitle">
+  <div class="wrap">
+   <p class="kicker">Local knowledge</p>
+   <h2 class="spray" id="spotsTitle">Where to skate</h2>
+   <div class="spots-grid">
+    <div class="map"><svg id="map" viewBox="0 0 400 320" role="img" aria-label="Stylised map of five skate spots around the shop, from Coburg in the north to Docklands in the south."></svg><p class="cap">Stylised — not to scale</p></div>
+    <div>
+     <ul class="spot-list" id="spotList"></ul>
+     <div class="spot-card" id="spotCard" aria-live="polite"></div>
+     <p class="note" style="color:#BDBDBD">Check local signs — some plazas don’t allow skating, and most parks close at dusk.</p>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="wall sec" id="lessons" aria-labelledby="lesTitle">
+  <div class="wrap lessons-grid">
+   <div>
+    <p class="kicker">Weekend mornings</p>
+    <h2 class="spray" id="lesTitle">Lessons</h2>
+    <p class="lead">Groups of six at a council skate park in Brunswick — we text the exact spot the day before. Boards, helmets and pads are included.</p>
+    <div class="lesson-list">
+     <article><h3>First push · ages 7–12</h3><p>Sat 9–10am · $35 per session (sample). Standing, pushing, stopping and falling safely.</p></article>
+     <article><h3>Basics · teens &amp; adults</h3><p>Sat 10.30–11.30am · $40 (sample). Carving, tic-tacs and your first kick-turn.</p></article>
+     <article><h3>Bowl basics · ages 10+</h3><p>Sun 9–10.30am · $50 (sample). Pumping, rock to fakie, and dropping in when you’re ready.</p></article>
+     <article><h3>Private coaching</h3><p>By arrangement · $70 an hour (sample). One rider, your goals.</p></article>
+    </div>
+   </div>
+   <form id="lessonForm" data-kit-ignore novalidate>
+    <fieldset class="sess"><legend>Pick a session</legend>
+     <label class="ses"><input type="radio" name="ses" value="First push, Sat 10 Oct, 9am" checked><span><b>First push</b>Sat 10 Oct · 9am</span></label>
+     <label class="ses"><input type="radio" name="ses" value="Basics, Sat 10 Oct, 10.30am"><span><b>Basics</b>Sat 10 Oct · 10.30am</span></label>
+     <label class="ses"><input type="radio" name="ses" value="Bowl basics, Sun 11 Oct, 9am"><span><b>Bowl basics</b>Sun 11 Oct · 9am</span></label>
+     <label class="ses"><input type="radio" name="ses" value="First push, Sat 17 Oct, 9am"><span><b>First push</b>Sat 17 Oct · 9am</span></label>
+    </fieldset>
+    <div class="frow"><label for="rider">Rider’s first name<input id="rider" name="rider" autocomplete="off"></label><label for="age">Age group<select id="age" name="age"><option>7–12</option><option>13–17</option><option>18+</option></select></label></div>
+    <button class="btn" type="submit">Request a spot</button>
+    <p id="lessonOut" aria-live="polite"></p>
+    <p class="safety">Helmets are compulsory in every lesson. Riders under 18 need a parent or guardian to sign on the day. General information only — skateboarding carries a risk of injury.</p>
+   </form>
+  </div>
+ </section>
+
+ <section class="dark sec" id="visit" aria-labelledby="visitTitle">
+  <div class="wrap">
+   <p class="kicker">Visit</p>
+   <h2 class="spray" id="visitTitle">Come say g’day</h2>
+   <div class="visit-grid">
+    <div class="vcard"><h3>Hours</h3><table><tbody><tr><td>Mon</td><td>Closed</td></tr><tr><td>Tue–Fri</td><td>11am–7pm</td></tr><tr><td>Sat</td><td>9am–5pm</td></tr><tr><td>Sun</td><td>10am–4pm</td></tr></tbody></table></div>
+    <div class="vcard"><h3>Find us</h3><ul style="list-style:none;padding:0"><li>Brunswick, Melbourne VIC</li><li>Close to the tram and the bike path</li><li><a href="tel:+61355507316">(03) 5550 7316</a></li><li><a href="tel:+61491570158">0491 570 158</a> — texts about lessons</li><li><a href="mailto:crew@example.com">crew@example.com</a></li></ul></div>
+    <div class="vcard"><h3>In the workshop</h3><ul><li>Board set-up while you wait — $10</li><li>Grip job, any deck — $10</li><li>Bearing clean &amp; lube — $15</li><li>Free set-up with any complete</li></ul><p style="font-size:.8rem;color:#A8A8A8;margin:.6rem 0 0">Sample prices.</p></div>
+   </div>
+  </div>
+ </section>
+</main>
+<footer class="dark foot"><div class="wrap"><p class="foot-name" data-brand>Kerb Crawlers Skate Co.</p><p>Brunswick, Melbourne VIC · open Tuesday to Sunday</p><p class="fine">A concept demo for a fictional skate shop. Sample prices; no real brands or products. Spots are described generally — check local rules before you skate.</p></div></footer>
+<script>
+(function(){
+'use strict';
+function $(s){return document.querySelector(s)}
+function r1(n){return Math.round(n*10)/10}
+function toast(m){if(window.DemoKit)window.DemoKit.toast(m)}
+function reduced(){return !!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)}
+
+/* ---------- catalogue (sample prices) ---------- */
+var SHAPES={
+ popsicle:{name:'Popsicle',w:8.25,l:32,price:89,nose:[.13,17],tail:[.13,17],tr:.235},
+ cruiser:{name:'Cruiser',w:8.75,l:30,price:99,nose:[0,0],tail:[.12,15],tr:.25},
+ oldschool:{name:'Old-school',w:10,l:30.5,price:109,nose:[.09,9],tail:[.15,19],tr:.24}
+};
+var COLS=[['orange','Hot orange','#FF5E13','#111','#F2EFE6'],['black','Black','#141414','#39FF14','#FF5E13'],['concrete','Concrete','#BDBDBD','#111','#FF5E13'],['neon','Spray neon','#39FF14','#111','#FF5E13'],['chalk','Chalk white','#F1EFE8','#111','#FF5E13'],['yarra','Yarra blue','#244B7A','#FF5E13','#F2EFE6'],['maple','Natural maple','#D8B98C','#111','#FF5E13']];
+var GRIPS=[['black','Black',0,'#171717'],['clear','Clear',8,'linear-gradient(rgba(25,25,25,.45),rgba(25,25,25,.45)),#D8B98C'],['stripe','Neon stripe',12,'linear-gradient(90deg,#171717 36%,#39FF14 36% 64%,#171717 64%)'],['cutout','Cut-out',15,'radial-gradient(circle,#D8B98C 0 38%,#171717 40%)']];
+var WHEELS=[['white','White','#EDEBE3'],['orange','Orange','#FF5E13'],['neon','Neon','#39FF14'],['black','Black','#1E1E1E'],['grey','Concrete','#9E9E9E']];
+var COMPLETE=129;
+function find(list,k){for(var i=0;i<list.length;i++)if(list[i][0]===k)return list[i];return list[0]}
+
+/* ---------- deck outlines, drawn in tenths of an inch ---------- */
+function pts(a,vw,vh){var s='M';a.forEach(function(x){s+=typeof x==='string'?x:r1(x[0]*vw)+' '+r1(x[1]*vh)+' '});return s+'Z'}
+function outline(k,vw,vh){
+ if(k==='popsicle'){var r=vw/2,ry=r1(r*.92);return 'M0 '+ry+'A'+r+' '+ry+' 0 0 1 '+vw+' '+ry+'V'+r1(vh-ry)+'A'+r+' '+ry+' 0 0 1 0 '+r1(vh-ry)+'Z'}
+ if(k==='cruiser')return pts([[.5,0],'C',[.8,0],[1,.1],[1,.3],'L',[1,.86],'C',[1,.965],[.82,1],[.5,1],'C',[.18,1],[0,.965],[0,.86],'L',[0,.3],'C',[0,.1],[.2,0],[.5,0]],vw,vh);
+ return pts([[.5,0],'C',[.86,0],[1,.035],[1,.14],'L',[1,.55],'C',[1,.72],[.86,.84],[.8,.93],'L',[.74,1],'L',[.5,.975],'L',[.26,1],'L',[.2,.93],'C',[.14,.84],[0,.72],[0,.55],'L',[0,.14],'C',[0,.035],[.14,0],[.5,0]],vw,vh);
+}
+/* ---------- stencil graphics in a 100 x 320 box ---------- */
+function drips(c,a){var s='';a.forEach(function(d){s+='M'+(d[0]-1.8)+' '+d[1]+'v'+d[2]+'a1.8 1.8 0 0 0 3.6 0v'+(-d[2])+'z'});return '<path fill="'+c+'" d="'+s+'"/>'}
+var GFX={
+ plain:{name:'Plain',p:0,d:function(){return ''}},
+ bolt:{name:'Bolt',p:20,d:function(i,a){return '<path fill="'+i+'" d="M62 22 24 154h28L34 300l50-172H56l22-106z"/><path fill="'+a+'" d="M22 62l-9 26h7l-5 21 14-29h-7l7-18zM84 200l-9 26h7l-5 21 14-29h-7l7-18z"/>'+drips(i,[[40,238,22],[46,150,16],[62,126,28]])}},
+ checker:{name:'Checker',p:20,d:function(i,a){var s='',r,c;for(r=0;r<5;r++)for(c=0;c<6;c++)if((r+c)%2)s+='M'+r1(c*16.67)+' '+(120+r*16)+'h16.7v16h-16.7z';return '<path fill="'+i+'" d="'+s+'M0 108h100v5H0zM0 207h100v5H0z"/><circle cx="50" cy="264" r="13" fill="none" stroke="'+a+'" stroke-width="5"/><circle cx="50" cy="56" r="13" fill="none" stroke="'+a+'" stroke-width="5"/>'}},
+ smile:{name:'Drip smile',p:20,d:function(i,a){return '<circle cx="50" cy="118" r="35" fill="'+i+'"/>'+drips(i,[[36,146,40],[50,152,24],[64,146,56],[26,134,18]])+'<g style="fill:var(--dc)"><ellipse cx="38" cy="106" rx="5" ry="9"/><ellipse cx="62" cy="106" rx="5" ry="9"/></g><path d="M30 124q20 22 40 0" fill="none" style="stroke:var(--dc)" stroke-width="6" stroke-linecap="round"/><path fill="'+a+'" d="M50 250l5 11 12 1-9 8 3 12-11-7-11 7 3-12-9-8 12-1z"/>'}},
+ flames:{name:'Flames',p:20,d:function(i,a){return '<path fill="'+i+'" d="M0 320V246C6 228 2 210 10 192C12 212 18 222 22 228C22 200 28 180 40 156C40 186 46 202 52 210C54 180 62 166 70 146C70 172 74 192 80 200C84 184 90 176 100 168V320Z"/><path fill="'+a+'" d="M8 320C8 294 14 280 20 268C22 284 26 292 30 296C32 276 38 262 46 246C46 268 52 282 56 288C60 270 66 260 74 250C74 270 78 284 84 290C88 282 92 278 100 272V320Z"/>'}},
+ tram:{name:'Tram lines',p:20,d:function(i,a){var s='',k;for(k=0;k<9;k++){var t=1-k/10,y=70+250*Math.pow(t,1.7),f=(y-70)/250,xl=46-28*f,xr=54+28*f;s+='<path d="M'+r1(xl-5*f)+' '+r1(y)+'H'+r1(xr+5*f)+'" stroke="'+i+'" stroke-width="'+r1(1+4*f)+'"/>'}
+  return '<circle cx="50" cy="62" r="15" fill="'+a+'"/><g fill="none" stroke-linecap="round">'+s+'<path d="M18 320 46 70M82 320 54 70" stroke="'+i+'" stroke-width="5"/><path d="M0 34 100 18M0 18 100 36M30 30v14M70 25v14" stroke="'+i+'" stroke-width="1.8"/></g>'}}
+};
+function grain(vw,vh){var s='';for(var k=0;k<11;k++){var x=r1(vw*(k+.5)/11+((k*37)%7-3));s+='M'+x+' 0C'+r1(x+4)+' '+r1(vh*.3)+' '+r1(x-4)+' '+r1(vh*.62)+' '+x+' '+vh}return '<path d="'+s+'" fill="none" stroke="rgba(120,78,30,.28)" stroke-width="1"/>'}
+
+/* ---------- state + shared defs ---------- */
+var S={shape:'popsicle',gfx:'bolt',col:'orange',grip:'black',wh:'white',complete:true};
+var NS='http://www.w3.org/2000/svg',defs=document.createElementNS(NS,'svg');
+defs.setAttribute('width','0');defs.setAttribute('height','0');defs.setAttribute('aria-hidden','true');defs.style.position='absolute';
+defs.innerHTML='<defs><clipPath id="cDeck"><path id="cPath"/></clipPath><pattern id="gt" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#171717"/><circle cx="1.2" cy="1.6" r=".45" fill="#333"/><circle cx="3.6" cy="3.9" r=".4" fill="#2C2C2C"/></pattern><g id="faceG"></g><g id="faceP"></g><g id="faceE"></g></defs>';
+document.body.appendChild(defs);
+function faces(){var sh=SHAPES[S.shape],vw=sh.w*10,vh=sh.l*10,o=outline(S.shape,vw,vh),c=find(COLS,S.col),mp=S.col==='maple',b='';
+ $('#cPath').setAttribute('d',o);
+ [-1,1].forEach(function(s){var ty=vh/2+s*sh.tr*vh;[-1,1].forEach(function(u){[-1,1].forEach(function(v){b+='<circle cx="'+r1(vw/2+u*vw*.085)+'" cy="'+r1(ty+v*vh*.019)+'" r="1.7" fill="#9A9A9A" stroke="#333" stroke-width=".5"/>'})})});
+ $('#faceG').innerHTML='<path d="'+o+'" style="fill:var(--dc)"/><g clip-path="url(#cDeck)">'+(mp?grain(vw,vh):'')+'<g transform="scale('+r1(vw)/100+' '+r1(vh)/320+')">'+GFX[S.gfx].d(c[3],c[4])+'</g></g><path d="'+o+'" fill="none" stroke="rgba(0,0,0,.45)" stroke-width="1.3"/>';
+ var g=S.grip,p;
+ if(g==='clear')p='<path d="'+o+'" style="fill:var(--dc)"/><g clip-path="url(#cDeck)">'+(mp?grain(vw,vh):'')+'</g><path d="'+o+'" fill="rgba(25,25,25,.42)"/><path d="'+o+'" fill="url(#gt)" opacity=".3"/>';
+ else{p='<path d="'+o+'" fill="url(#gt)"/>';
+  if(g==='stripe')p+='<g clip-path="url(#cDeck)"><rect x="'+r1(vw*.36)+'" width="'+r1(vw*.28)+'" height="'+vh+'" fill="#39FF14"/><rect x="'+r1(vw*.36)+'" width="'+r1(vw*.28)+'" height="'+vh+'" fill="url(#gt)" opacity=".28"/></g>';
+  if(g==='cutout')p+='<circle cx="'+r1(vw/2)+'" cy="'+r1(vh/2)+'" r="'+r1(vw*.3)+'" fill="#D8B98C"/><circle cx="'+r1(vw/2)+'" cy="'+r1(vh/2)+'" r="'+r1(vw*.3)+'" fill="none" stroke="#8C6B3E" stroke-width="1"/>'}
+ $('#faceP').innerHTML=p+b+'<path d="'+o+'" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1"/>';
+ $('#faceE').innerHTML='<path d="'+o+'" style="fill:var(--pc,#D9BE8E)" stroke="#6E532E" stroke-width="2"/>';
+}
+/* ---------- 3D deck: layered faces with kicked nose/tail segments, trucks and wheels ---------- */
+var deck=$('#deck'),stage=$('#stage'),Lpx=400;
+function measure(){Lpx=Math.round(Math.max(230,Math.min(stage.clientHeight*.72,stage.clientWidth*1.25,500)))}
+function build(){
+ var sh=SHAPES[S.shape],L=Lpx,W=Math.round(L*sh.w/sh.l),T=Math.max(6,Math.round(L*.018)),vw=sh.w*10,vh=sh.l*10,html='';
+ faces();
+ function layer(kind,z,ref,pc){var flip=kind==='p',s='<div class="lay'+(kind==='e'?' ply':'')+'" style="width:'+W+'px;height:'+L+'px;margin:'+(-L/2)+'px 0 0 '+(-W/2)+'px;transform:translateZ('+r1(z)+'px)'+(flip?' rotateY(180deg)':'')+(pc?';--pc:'+pc:'')+'">',
+   nL=Math.round(sh.nose[0]*L),tL=Math.round(sh.tail[0]*L);
+  [[0,nL,'50% 100%',sh.nose[1]],[nL,L-nL-tL,'',0],[L-tL,tL,'50% 0',-sh.tail[1]]].forEach(function(g){if(g[1]<=0)return;var a=flip?-g[3]:g[3];
+   s+='<div class="sg" style="top:'+g[0]+'px;height:'+g[1]+'px'+(a?';transform-origin:'+g[2]+';transform:rotateX('+a+'deg)':'')+'"><svg viewBox="0 0 '+vw+' '+vh+'" style="top:'+(-g[0])+'px;width:'+W+'px;height:'+L+'px" aria-hidden="true"><use href="#'+ref+'"/></svg></div>'});
+  return s+'</div>'}
+ html+=layer('p',-T/2,'faceP')+layer('e',-T/6,'faceE',find(COLS,S.col)[2])+layer('e',T/6,'faceE','#D9BE8E')+layer('g',T/2,'faceG');
+ var h=Math.round(L*.06),d=Math.round(L*.068),ww=Math.round(L*.042),zb=T/2,zc=zb+h,ax=W*.5;
+ function el(cls,w,hh,tr){return '<div class="'+cls+'" style="width:'+w+'px;height:'+hh+'px;margin:'+r1(-hh/2)+'px 0 0 '+r1(-w/2)+'px;transform:'+tr+'"></div>'}
+ [-1,1].forEach(function(s){var t='<div class="trk" style="transform:translate3d(0,'+r1(s*sh.tr*L)+'px,0)">';
+  t+=el('metal',Math.round(W*.34),Math.round(L*.075),'translateZ('+(zb+1)+'px)');
+  t+=el('metal',h,Math.round(L*.06),'translateZ('+r1(zb+h/2)+'px) rotateY(90deg)');
+  t+=el('metal',Math.round(W*.22),h,'translateZ('+r1(zb+h/2)+'px) rotateX(90deg)');
+  t+=el('metal',Math.round(ax*2+ww),4,'translateZ('+zc+'px)');
+  t+=el('metal',Math.round(ax*1.7),Math.round(L*.032),'translateZ('+r1(zc-2)+'px)');
+  t+=el('metal',Math.round(ax*1.7),Math.round(h*.6),'translateZ('+r1(zc-h*.3)+'px) rotateX(90deg)');
+  [-1,1].forEach(function(u){var wx=r1(u*(ax-ww*.3));
+   t+=el('whd',d,d,'translate3d('+r1(wx+ww/2)+'px,0,'+zc+'px) rotateY(90deg)');
+   t+=el('whd',d,d,'translate3d('+r1(wx-ww/2)+'px,0,'+zc+'px) rotateY(90deg)');
+   t+=el('wht',ww,d,'translate3d('+wx+'px,0,'+r1(zc+d/2-.5)+'px)');
+   t+=el('wht',ww,d,'translate3d('+wx+'px,'+r1(-d/2)+'px,'+zc+'px) rotateX(90deg)');
+   t+=el('wht',ww,d,'translate3d('+wx+'px,'+r1(d/2)+'px,'+zc+'px) rotateX(90deg)')});
+  html+=t+'</div>'});
+ deck.innerHTML=html;paintVars();
+}
+function paintVars(){deck.style.setProperty('--dc',find(COLS,S.col)[2]);deck.style.setProperty('--wh',find(WHEELS,S.wh)[2]);deck.classList.toggle('bare',!S.complete)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+
+/* ---------- controls ---------- */
+var form=$('#ctl');
+(function(){var h='',tp=outline('popsicle',100,320);
+ Object.keys(GFX).forEach(function(k,i){h+='<label class="opt"><input type="radio" name="gfx" value="'+k+'"'+(k===S.gfx?' checked':'')+'><span><svg viewBox="0 0 100 320" width="17" height="54" aria-hidden="true" style="--dc:#FF5E13"><defs><clipPath id="tc'+i+'"><path d="'+tp+'"/></clipPath></defs><path d="'+tp+'" fill="#FF5E13"/><g clip-path="url(#tc'+i+')">'+GFX[k].d('#111','#F2EFE6')+'</g></svg>'+GFX[k].name+'<small>'+(GFX[k].p?'+$'+GFX[k].p:'Free')+'</small></span></label>'});
+ $('#gfxOpts').innerHTML=h;h='';
+ COLS.forEach(function(c){h+='<label class="opt sw"><input type="radio" name="col" value="'+c[0]+'" aria-label="'+c[1]+'"'+(c[0]===S.col?' checked':'')+'><span style="--c:'+c[2]+'"></span></label>'});$('#colOpts').innerHTML=h;h='';
+ GRIPS.forEach(function(g){h+='<label class="opt"><input type="radio" name="grip" value="'+g[0]+'"'+(g[0]===S.grip?' checked':'')+'><span><i class="gp" style="background:'+g[3]+'"></i>'+g[1]+'<small>'+(g[2]?'+$'+g[2]:'Free')+'</small></span></label>'});$('#gripOpts').innerHTML=h;h='';
+ WHEELS.forEach(function(w){h+='<label class="opt sw"><input type="radio" name="wh" value="'+w[0]+'" aria-label="'+w[1]+' wheels"'+(w[0]===S.wh?' checked':'')+'><span style="--c:radial-gradient(circle,#4A4A4A 0 18%,#B9B9B9 19% 27%,'+w[2]+' 29%)"></span></label>'});$('#whOpts').innerHTML=h;
+ Array.prototype.forEach.call(document.querySelectorAll('svg.shp'),function(s){var k=s.getAttribute('data-s'),sh=SHAPES[k];s.innerHTML='<path d="'+outline(k,sh.w*10,sh.l*10)+'" fill="currentColor"/>'});
+})();
+function update(){var sh=SHAPES[S.shape],g=GFX[S.gfx],gr=find(GRIPS,S.grip),wh=find(WHEELS,S.wh),c=find(COLS,S.col),tot=0,h='',
+  items=[['Deck · '+sh.name+' '+sh.w+'″ × '+sh.l+'″',sh.price,1],['Stencil · '+g.name,g.p],['Grip tape · '+gr[1],gr[2]]];
+ if(S.complete)items.push(['Trucks, '+wh[1].toLowerCase()+' 53 mm wheels, bearings & hardware',COMPLETE,1]);
+ items.forEach(function(it){tot+=it[1];h+='<li><span>'+esc(it[0])+'</span><span>'+(it[2]?'$'+it[1]:it[1]?'+$'+it[1]:'Free')+'</span></li>'});
+ $('#bill').innerHTML=h;$('#total').textContent='$'+tot;$('#stPrice').textContent='$'+tot;
+ $('#oShape').textContent=sh.name+' '+sh.w+'″';$('#oGfx').textContent=g.name;$('#oCol').textContent=c[1];$('#oGrip').textContent=gr[1];$('#oWh').textContent=S.complete?wh[1]:'Deck only';
+ Array.prototype.forEach.call(document.querySelectorAll('input[name=wh]'),function(i){i.disabled=!S.complete});
+ $('#buildTxt').textContent=sh.name+' '+sh.w+'″ in '+c[1].toLowerCase()+(S.gfx==='plain'?'':' with the '+g.name.toLowerCase()+' stencil')+', '+gr[1].toLowerCase()+' grip'+(S.complete?' and '+wh[1].toLowerCase()+' wheels':', deck only')+' — $'+tot+' (sample price).'}
+form.addEventListener('change',function(e){var t=e.target;
+ if(t.name==='shape'){S.shape=t.value;build()}
+ else if(t.name==='gfx'){S.gfx=t.value;faces()}
+ else if(t.name==='col'){S.col=t.value;faces();paintVars();var ply=deck.querySelector('.lay.ply');if(ply)ply.style.setProperty('--pc',find(COLS,S.col)[2])}
+ else if(t.name==='grip'){S.grip=t.value;faces()}
+ else if(t.name==='wh'){S.wh=t.value;paintVars()}
+ else if(t.id==='complete'){S.complete=t.checked;paintVars()}
+ update()});
+$('#send').addEventListener('click',function(){toast('Demo only — nothing was ordered. A real shop would get your build sheet and call you back.')});
+
+/* ---------- spin: drag, keys, buttons, flip ---------- */
+var rot={x:-14,y:-32},drag=null,vel=0,raf=0;
+function side(){return Math.cos(rot.y*Math.PI/180)>=0}
+function paint(){deck.style.transform='rotateX('+r1(rot.x)+'deg) rotateY('+r1(rot.y)+'deg)';var g=side();$('#sideTxt').textContent=g?'Graphic side':'Grip side';$('#flip').setAttribute('aria-pressed',g?'false':'true')}
+function say(){var deg=((Math.round(rot.y)%360)+360)%360;$('#deckLive').textContent='Showing the '+(side()?'graphic':'grip')+' side, turned '+deg+' degrees, tilted '+Math.round(-rot.x)+' degrees.'}
+function animTo(fn,slow){cancelAnimationFrame(raf);vel=0;deck.classList.remove('intro');deck.classList.add('anim');deck.classList.toggle('slow',!!slow);fn();paint();say()}
+function resetRot(){rot.x=-14;rot.y=-32+360*Math.round((rot.y+32)/360)}
+stage.addEventListener('pointerdown',function(e){if(e.target.closest('button'))return;if(e.pointerType==='mouse'&&e.button!==0)return;
+ drag={x:e.clientX,y:e.clientY};vel=0;cancelAnimationFrame(raf);deck.classList.remove('anim','slow','intro');stage.classList.add('grab');try{stage.setPointerCapture(e.pointerId)}catch(err){}});
+stage.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag.x=e.clientX;drag.y=e.clientY;
+ rot.y+=dx*.55;if(e.pointerType!=='touch')rot.x=Math.max(-65,Math.min(65,rot.x-dy*.35));vel=dx*.55;paint()});
+function coast(){var step=function(){vel*=.93;rot.y+=vel;paint();if(Math.abs(vel)>.12&&!document.hidden)raf=requestAnimationFrame(step);else say()};raf=requestAnimationFrame(step)}
+function end(){if(!drag)return;drag=null;stage.classList.remove('grab');if(!reduced()&&Math.abs(vel)>1.2)coast();else say()}
+['pointerup','pointercancel','lostpointercapture'].forEach(function(n){stage.addEventListener(n,end)});
+stage.addEventListener('keydown',function(e){var k=e.key;
+ if(k==='ArrowLeft'||k==='ArrowRight')animTo(function(){rot.y+=k==='ArrowLeft'?-20:20});
+ else if(k==='ArrowUp'||k==='ArrowDown')animTo(function(){rot.x=Math.max(-65,Math.min(65,rot.x+(k==='ArrowUp'?-10:10)))});
+ else if(k==='Home')animTo(resetRot,true);
+ else return;
+ e.preventDefault()});
+$('#rotL').addEventListener('click',function(){animTo(function(){rot.y-=45})});
+$('#rotR').addEventListener('click',function(){animTo(function(){rot.y+=45})});
+$('#rotReset').addEventListener('click',function(){animTo(resetRot,true)});
+$('#flip').addEventListener('click',function(){animTo(function(){rot.y+=180},true)});
+var rz=0;window.addEventListener('resize',function(){cancelAnimationFrame(rz);rz=requestAnimationFrame(function(){var o=Lpx;measure();if(o!==Lpx)build()})});
+
+/* ---------- decks on the wall ---------- */
+var RACK=[{n:'Shop popsicle',sz:'8.0″ × 31.5″',p:79,c:{shape:'popsicle',gfx:'checker',col:'chalk'}},{n:'Shop popsicle',sz:'8.25″ × 32″',p:79,c:{shape:'popsicle',gfx:'bolt',col:'black'}},{n:'Merri cruiser',sz:'8.75″ × 30″',p:99,c:{shape:'cruiser',gfx:'tram',col:'yarra'}},{n:'Fishtail old-school',sz:'10″ × 30.5″',p:109,c:{shape:'oldschool',gfx:'flames',col:'black'}},{n:'Blank maple',sz:'8.5″ × 32″',p:59,c:{shape:'popsicle',gfx:'plain',col:'maple'}}];
+function flat(cfg,i){var sh=SHAPES[cfg.shape],vw=sh.w*10,vh=sh.l*10,o=outline(cfg.shape,vw,vh),c=find(COLS,cfg.col);
+ return '<svg viewBox="-2 -2 '+(vw+4)+' '+(vh+4)+'" aria-hidden="true" style="--dc:'+c[2]+';max-width:'+Math.round(12*sh.w)+'px"><defs><clipPath id="rk'+i+'"><path d="'+o+'"/></clipPath></defs><path d="'+o+'" fill="'+c[2]+'"/><g clip-path="url(#rk'+i+')">'+(cfg.col==='maple'?grain(vw,vh):'')+'<g transform="scale('+r1(vw)/100+' '+r1(vh)/320+')">'+GFX[cfg.gfx].d(c[3],c[4])+'</g></g><path d="'+o+'" fill="none" stroke="rgba(0,0,0,.55)" stroke-width="1.6"/></svg>'}
+$('#rack').innerHTML=RACK.map(function(r,i){return '<div class="rk">'+flat(r.c,i)+'<p class="ptag">'+r.n+'<b>$'+r.p+'</b><small>'+r.sz+'</small></p><button type="button" data-i="'+i+'" aria-label="Customise the '+r.n+' '+r.sz.split(' ')[0]+' in the deck lab">Customise</button></div>'}).join('');
+$('#rack').addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(!b)return;var c=RACK[+b.getAttribute('data-i')].c;
+ S.shape=c.shape;S.gfx=c.gfx;S.col=c.col;['shape','gfx','col'].forEach(function(n){var r=form.querySelector('input[name='+n+'][value="'+S[n]+'"]');if(r)r.checked=true});
+ build();update();resetRot();paint();$('#lab').scrollIntoView({behavior:reduced()?'auto':'smooth'});try{stage.focus({preventScroll:true})}catch(err){}});
+
+/* ---------- spots ---------- */
+var SPOTS=[
+ {n:'Brunswick bowl',x:118,y:178,good:'Transition, carving, first drop-ins',surf:'Smooth concrete bowl, roughly 1.5–2.4 m deep',best:'Weekday mornings; busy after school',tip:'Wait your turn on the deck — the locals are friendly if you do.'},
+ {n:'Coburg ledges',x:150,y:54,good:'Ledges, manuals and a flat bar',surf:'Waxed concrete ledges and a low rail',best:'Early on weekends, before the crowds',tip:'Bring your own wax and leave the benches as you found them.'},
+ {n:'Merri Creek path',x:262,y:122,good:'Cruising and pushing practice',surf:'Sealed shared path with a few rough patches',best:'Any dry arvo',tip:'Shared with bikes and walkers — keep left and slow down on blind bends.'},
+ {n:'Northcote banks',x:314,y:196,good:'Learning to pump on mellow banks',surf:'Smooth quarter-pipes and banks',best:'Sunday mornings',tip:'A good first session after a lesson or two.'},
+ {n:'Docklands flat',x:96,y:282,good:'Flatground tricks, lots of room',surf:'Huge, smooth paved flat',best:'After 6pm on weeknights',tip:'Pedestrians first — some areas are signed no-skate.'}];
+(function(){var g='',k;for(k=0;k<=400;k+=40)g+='M'+k+' -40V360';for(k=0;k<=320;k+=40)g+='M-40 '+k+'H440';
+ var m='<path d="'+g+'" stroke="#1E1E1E" stroke-width="1" transform="rotate(-8 200 160)"/>'+
+ '<path d="M250 0C236 40 276 70 262 110S238 160 268 200 300 260 284 320" fill="none" stroke="#39FF14" stroke-width="3" opacity=".55"/><text x="276" y="66" fill="#39FF14" font-size="12" font-weight="600">Merri Creek</text>'+
+ '<path d="M172 0V320" stroke="#EDEDED" stroke-width="2" stroke-dasharray="2 7" opacity=".55"/><text x="178" y="22" fill="#BDBDBD" font-size="12" font-weight="600">tram line</text>'+
+ '<path d="M0 306C80 286 140 318 220 298S340 256 400 274" fill="none" stroke="#FF5E13" stroke-width="6" opacity=".5"/><text x="292" y="306" fill="#FF5E13" font-size="12" font-weight="600">Yarra · city ↓</text>'+
+ '<path fill="#39FF14" d="M172 134l5 11 12 1-9 8 3 12-11-7-11 7 3-12-9-8 12-1z"/><text x="190" y="152" fill="#39FF14" font-size="12" font-weight="800">THE SHOP</text>';
+ SPOTS.forEach(function(s,i){m+='<g class="pin" data-i="'+i+'" transform="translate('+s.x+' '+s.y+')"><circle r="12"/><circle class="ring" r="17"/><text y="4.5">'+(i+1)+'</text></g>'});
+ $('#map').innerHTML=m;
+ $('#spotList').innerHTML=SPOTS.map(function(s,i){return '<li><button type="button" data-i="'+i+'" aria-pressed="false"><b>'+(i+1)+'</b>'+s.n+'</button></li>'}).join('');})();
+function pick(i){Array.prototype.forEach.call(document.querySelectorAll('#spotList button'),function(b,j){b.setAttribute('aria-pressed',j===i?'true':'false')});
+ Array.prototype.forEach.call(document.querySelectorAll('.pin'),function(p,j){p.classList.toggle('on',j===i)});var s=SPOTS[i];
+ $('#spotCard').innerHTML='<h3>'+(i+1)+' · '+s.n+'</h3><dl><dt>Good for</dt><dd>'+s.good+'</dd><dt>Surface</dt><dd>'+s.surf+'</dd><dt>Best time</dt><dd>'+s.best+'</dd><dt>Heads-up</dt><dd>'+s.tip+'</dd></dl>'}
+$('#spotList').addEventListener('click',function(e){var b=e.target.closest('button');if(b)pick(+b.getAttribute('data-i'))});
+$('#map').addEventListener('click',function(e){var p=e.target.closest('.pin');if(p)pick(+p.getAttribute('data-i'))});
+
+/* ---------- lessons ---------- */
+$('#lessonForm').addEventListener('submit',function(e){e.preventDefault();var f=e.target,n=f.rider.value.trim(),out=$('#lessonOut'),ses=f.querySelector('input[name=ses]:checked').value;
+ if(!n){out.textContent='Add the rider’s first name so the coach knows who’s coming.';f.rider.focus();return}
+ out.textContent='Request ready: '+n+' ('+f.age.value+') for '+ses+'. Demo only — nothing was sent.';
+ toast('Demo only — no lesson was booked. A real shop would text you to confirm.')});
+
+/* ---------- menu ---------- */
+var mb=$('#menuBtn'),nav=$('#nav');
+function menu(o){nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o?'true':'false')}
+mb.addEventListener('click',function(){var o=!nav.classList.contains('open');menu(o);if(o)nav.querySelector('a').focus()});
+nav.addEventListener('click',function(e){if(e.target.closest('a'))menu(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){e.preventDefault();menu(false);mb.focus()}});
+
+/* ---------- spray drips + first-view spin ---------- */
+Array.prototype.forEach.call(document.querySelectorAll('h2.spray'),function(h,n){var sp=document.createElement('span');sp.className='dr';while(h.firstChild)sp.appendChild(h.firstChild);h.appendChild(sp);
+ var seed=(n+3)*7919;function R(){seed=(seed*9301+49297)%233280;return seed/233280}
+ for(var i=0;i<4;i++){var d=document.createElement('i');d.className='drip';d.style.left=r1(6+i*23+R()*12)+'%';d.style.height=Math.round(10+R()*28)+'px';d.style.animationDelay=r1(R()*.5)+'s';sp.appendChild(d)}});
+measure();build();update();paint();pick(0);
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;io.unobserve(en.target);
+  if(en.target===stage){if(reduced())return;deck.classList.remove('anim','slow');rot.y-=360;paint();void deck.offsetWidth;deck.classList.add('intro');rot.y+=360;paint();setTimeout(function(){deck.classList.remove('intro')},1600)}
+  else en.target.classList.add('go')})},{threshold:.35});
+ io.observe(stage);Array.prototype.forEach.call(document.querySelectorAll('h2.spray'),function(h){io.observe(h)});
+}else Array.prototype.forEach.call(document.querySelectorAll('h2.spray'),function(h){h.classList.add('go')});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="029">
+<meta name="demo:brand" content="Live Wire Electrical">
+<title>Live Wire Electrical — electricians in Belconnen, ACT</title>
+<meta name="description" content="A fictional residential and small-commercial electrician in Belconnen, ACT: switchboards, lighting, power points, EV chargers, safety inspections and smoke alarms.">
+<meta name="theme-color" content="#0F3D2E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--pcb:#0F3D2E;--ink:#0A1F18;--card:#0C2A20;--cu:#C88A4A;--hot:#F4B46E;--silk:#F2F2EA;--off:#9BAAA0;--on:#E6EBE3;--dim:#C9D3CB;--gut:clamp(14px,3.6vw,48px);--d:"Rajdhani","Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;--m:"Share Tech Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;background:var(--pcb);color:var(--on);font:500 18px/1.55 var(--d);-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(circle,rgba(10,31,24,.55) 1.3px,transparent 1.7px),radial-gradient(circle,rgba(200,138,74,.3) 0 2.4px,var(--pcb) 2.5px 4px,rgba(200,138,74,.16) 4.1px 5.4px,transparent 5.6px);background-size:22px 22px,196px 238px;background-position:0 0,61px 37px}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.skip{position:absolute;left:10px;top:-60px;z-index:50;padding:10px 14px;background:var(--silk);color:var(--ink);font-weight:700;text-decoration:none}
+.skip:focus{top:10px}
+.silk{font:400 13px/1.3 var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--silk)}
+/* edge connector header */
+.edge{position:relative;z-index:5;background:var(--ink);border-bottom:1px solid rgba(242,242,234,.14)}
+.fingers{height:10px;background:repeating-linear-gradient(90deg,transparent 0 10px,#D7A45E 10px 24px,#B9803F 24px 26px,transparent 26px 36px);opacity:.85}
+.edge-in{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px 24px;padding:12px var(--gut)}
+.nav{justify-self:center}
+.logo{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none}
+.lmark{position:relative;flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:5px;background:#12382B;border:1px solid var(--cu);font:700 17px/1 var(--d);letter-spacing:.04em;color:var(--silk)}
+.lmark::before,.lmark::after{content:"";position:absolute;top:8px;bottom:8px;width:5px;background:repeating-linear-gradient(transparent 0 2px,var(--cu) 2px 6px)}
+.lmark::before{left:-6px}.lmark::after{right:-6px}
+.lword{font:700 22px/1 var(--d);letter-spacing:.1em;text-transform:uppercase;color:var(--silk);overflow-wrap:anywhere}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{display:inline-flex;align-items:baseline;gap:7px;min-height:44px;padding:12px 12px 0;font-weight:600;font-size:17px;text-decoration:none;color:var(--dim);border-bottom:2px solid transparent}
+.nav a b{font:400 11px/1 var(--m);letter-spacing:.08em;color:var(--cu)}
+.nav a:hover{color:var(--silk);border-color:var(--cu)}
+.call{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border:1px solid var(--cu);border-radius:4px;font:700 17px/1 var(--d);letter-spacing:.04em;text-decoration:none;color:var(--silk)}
+.call svg{width:16px;height:16px;fill:none;stroke:var(--hot);stroke-width:2}
+.call:hover{background:rgba(200,138,74,.16)}
+@media (max-width:1100px){.edge-in{grid-template-columns:minmax(0,1fr) auto}.nav{grid-row:2;grid-column:1/-1;justify-self:stretch;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--gut));padding:0 var(--gut)}.nav::-webkit-scrollbar{display:none}.nav a{flex:none}}
+@media (max-width:520px){.call span{display:none}.call{padding:0 13px}.lword{font-size:19px}}
+/* board grid */
+.pcb{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:34px 30px;padding:0 var(--gut) 90px calc(var(--gut) + 46px)}
+.traces{position:absolute;left:0;top:0;z-index:-1;pointer-events:none;overflow:visible}
+.t{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.base{stroke:#8E6537;stroke-width:5;opacity:.8}
+.lit{stroke:var(--hot);stroke-width:5;filter:drop-shadow(0 0 5px rgba(255,180,100,.85));transition:stroke-dashoffset var(--dur,.5s) linear var(--del,0s)}
+.flow{stroke:#FFF0D2;stroke-width:2;stroke-dasharray:3 23;opacity:0;transition:opacity .3s}
+.flow.on{opacity:.9;animation:flow .9s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-26}}
+.via{fill:var(--pcb);stroke:var(--cu);stroke-width:2.5}
+.pause .flow.on{animation-play-state:paused}
+/* hero */
+.hero{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);grid-template-areas:"copy mains" "spec mains";gap:0 56px;align-items:center;padding:clamp(34px,5vw,72px) 0 clamp(30px,4vw,56px)}
+.tag{display:inline-flex;flex-wrap:wrap;gap:4px 14px;padding:7px 10px;border:1px solid rgba(242,242,234,.5);border-radius:3px}
+.tag span+span::before{content:"◆";margin-right:14px;color:var(--cu)}
+h1{margin-top:22px;font:700 clamp(58px,7.4vw,112px)/.88 var(--d);letter-spacing:-.01em;text-transform:uppercase;color:var(--silk)}
+h1 span{display:block;color:var(--hot);text-shadow:0 0 34px rgba(255,170,90,.45)}
+.lede{max-width:36em;margin-top:24px;font-size:clamp(19px,1.6vw,22px);line-height:1.5;color:var(--dim)}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border:1px solid var(--hot);border-radius:4px;background:var(--hot);color:var(--ink);font:700 18px/1 var(--d);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background-color .2s,box-shadow .2s}
+.btn:hover{box-shadow:0 0 0 4px rgba(244,180,110,.25),0 0 24px rgba(244,180,110,.4)}
+.btn.ghost{background:transparent;color:var(--silk)}
+.hcopy{grid-area:copy}.mains{grid-area:mains}
+.spec{grid-area:spec;align-self:start;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:34px;border:1px solid rgba(242,242,234,.22);background:rgba(242,242,234,.22)}
+.spec div{padding:12px 14px;background:var(--pcb)}
+.spec dt{font:400 11px/1.2 var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--cu)}
+.spec dd{margin-top:5px;font-weight:600;font-size:17px;line-height:1.25;color:var(--silk)}
+.mains{position:relative;padding:22px 24px 26px;border:1px solid rgba(200,138,74,.7);border-radius:12px;background:linear-gradient(160deg,#0D2A20,var(--ink) 70%);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.mains::before,.mains::after{content:"";position:absolute;top:12px;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle,#2A3B34 0 1.5px,#8F958F 2px 4px,#5E6660 4.5px)}
+.mains::before{left:12px}.mains::after{right:12px}
+.mains .silk{text-align:center}
+.mbody{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;margin-top:18px}
+.lever{position:relative;display:grid;justify-items:center;gap:8px;width:132px;padding:12px 0;border:0;background:none}
+.lever small{font:400 12px/1 var(--m);letter-spacing:.14em;color:var(--off)}
+.plate{position:relative;width:96px;height:150px;border-radius:14px;background:linear-gradient(#16211D,#070F0C);border:1px solid rgba(242,242,234,.2);box-shadow:inset 0 2px 12px rgba(0,0,0,.6)}
+.plate::after{content:"";position:absolute;left:50%;top:50%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#C9CDC7,#6E746F 60%,#3B413D);box-shadow:0 2px 6px rgba(0,0,0,.6)}
+.arm{position:absolute;left:50%;top:50%;z-index:1;width:22px;height:70px;margin-left:-11px;border-radius:11px 11px 8px 8px;background:linear-gradient(90deg,#DADDD5,#FFFFF6 40%,#A9AEA7);box-shadow:0 4px 8px rgba(0,0,0,.5);transform-origin:50% 0;transform:rotate(0deg);transition:transform .32s cubic-bezier(.3,1.6,.5,1)}
+.lever[aria-checked=true] .arm{transform:rotate(180deg)}
+.lever:hover .plate{border-color:var(--cu)}
+.lever[aria-checked=true] .l-on,.lever[aria-checked=false] .l-off{color:var(--silk)}
+.readout{min-width:0}
+.ledrow{display:flex;align-items:center;gap:10px;font:700 20px/1 var(--d);letter-spacing:.1em;text-transform:uppercase}
+.led{flex:none;width:14px;height:14px;border-radius:50%;background:#3C1F12;border:1px solid #6B4A30;transition:background-color .3s,box-shadow .3s}
+.live .led{background:#FFB35C;box-shadow:0 0 12px 3px rgba(255,170,80,.75)}
+.count{margin-top:14px;padding:10px 14px;border-radius:4px;background:#050D0A;border:1px solid rgba(242,242,234,.14);font:400 44px/1 var(--m);letter-spacing:.06em;color:#FFB35C;text-shadow:0 0 12px rgba(255,170,80,.6)}
+.count .of{color:#5E4A36;text-shadow:none}
+.readout .silk{margin-top:8px;text-align:left;font-size:11px;color:var(--off)}
+.hint{margin-top:18px;padding-top:14px;border-top:1px dashed rgba(242,242,234,.3);font-size:16px;line-height:1.4;color:var(--dim)}
+.feedpad{position:absolute;left:50%;bottom:-7px;width:16px;height:14px;margin-left:-8px;border-radius:3px;background:var(--cu)}
+@media (max-width:980px){h1{font-size:clamp(44px,12.4vw,84px)}.hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "mains" "spec"}.mains{margin-top:36px}.spec{grid-template-columns:minmax(0,1fr)}}
+/* slots + cards */
+.slot{position:relative;display:flex;flex-direction:column;min-width:0}
+.s-u1{grid-column:1/span 6}.s-rb{grid-column:7/span 6}.s-c4{grid-column:1/span 5}.s-ld{grid-column:6/span 7}.s-j1{grid-column:1/-1}
+.sw{align-self:flex-start;display:inline-flex;align-items:center;gap:12px;min-height:46px;margin:0 0 16px 6px;padding:6px 14px 6px 6px;border:1px solid rgba(242,242,234,.28);border-radius:6px;background:rgba(10,31,24,.85);color:var(--dim);font:600 16px/1 var(--d);letter-spacing:.06em;text-transform:uppercase;transition:border-color .25s,color .25s,box-shadow .25s}
+.sw:hover{border-color:var(--cu);color:var(--silk)}
+.swg{position:relative;flex:none;width:58px;height:30px;border-radius:4px;background:#050D0A;border:1px solid #6B4A30;box-shadow:inset 0 1px 6px rgba(0,0,0,.7)}
+.swg::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:22px;border-radius:3px;background:linear-gradient(#D9DCD3,#9FA49C);transition:transform .22s cubic-bezier(.3,1.5,.5,1),background .22s}
+.sw b{font:400 12px/1 var(--m);letter-spacing:.1em;color:var(--cu)}
+.sw .st{min-width:3.2em;padding:5px 6px 4px;border-radius:3px;background:#1B2A24;font:400 12px/1 var(--m);letter-spacing:.1em;text-align:center;color:var(--off)}
+.sw[aria-checked=true]{border-color:var(--hot);color:var(--silk);box-shadow:0 0 18px rgba(244,180,110,.25)}
+.sw[aria-checked=true] .swg{border-color:var(--hot)}
+.sw[aria-checked=true] .swg::after{transform:translateX(26px);background:linear-gradient(#FFE3BC,#F4B46E)}
+.sw[aria-checked=true] .st{background:#FFB35C;color:var(--ink)}
+.card{position:relative;flex:1;padding:clamp(22px,2.4vw,32px);border:1px solid rgba(242,242,234,.2);border-radius:8px;background:var(--card);color:var(--off);transition:color .6s,border-color .6s,box-shadow .6s,background-color .6s}
+.card::before{content:"";position:absolute;inset:-9px;border:1px dashed rgba(242,242,234,.26);border-radius:12px;pointer-events:none}
+.card::after{content:attr(data-ref);position:absolute;right:4px;top:-30px;font:400 13px/1 var(--m);letter-spacing:.14em;color:var(--silk)}
+.pad{position:absolute;top:-8px;left:34px;width:16px;height:12px;border-radius:2px;background:var(--cu);transition:box-shadow .4s,background-color .4s}
+.card h2{margin-top:6px;font:700 clamp(32px,3.3vw,46px)/.98 var(--d);letter-spacing:.005em;text-transform:uppercase;color:var(--dim);transition:color .6s,text-shadow .6s}
+.card .k{font:400 12px/1.3 var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--cu)}
+.card p{margin-top:12px}
+.on .card{color:var(--on);border-color:rgba(244,180,110,.7);background-color:#0E3024;box-shadow:0 0 0 1px rgba(244,180,110,.25),0 0 46px rgba(244,180,110,.14)}
+.on .card h2{color:var(--silk);text-shadow:0 0 22px rgba(255,190,120,.35)}
+.on .pad{background:var(--hot);box-shadow:0 0 12px rgba(255,180,100,.9)}
+/* U1 chip */
+.ic{border-radius:6px;background:linear-gradient(150deg,#0E2B21,#081A14);padding-left:clamp(26px,3vw,40px);padding-right:clamp(26px,3vw,40px)}
+.pins{position:absolute;top:26px;bottom:26px;width:13px;background:repeating-linear-gradient(transparent 0 8px,#9A6B3A 8px 22px,transparent 22px 30px);transition:filter .5s}
+.pins.l{left:-13px}.pins.r{right:-13px}
+.on .pins{background:repeating-linear-gradient(transparent 0 8px,var(--hot) 8px 22px,transparent 22px 30px);filter:drop-shadow(0 0 4px rgba(255,180,100,.8))}
+.notch{position:absolute;left:50%;top:-1px;width:40px;height:20px;margin-left:-20px;border-radius:0 0 20px 20px;background:var(--pcb);border:1px solid rgba(242,242,234,.2);border-top:0}
+.mark{display:flex;align-items:flex-start;gap:14px;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid rgba(242,242,234,.12)}
+.dot1{flex:none;width:12px;height:12px;margin-top:6px;border-radius:50%;background:#1D3A2F;box-shadow:inset 0 1px 3px rgba(0,0,0,.7)}
+.icb{font:700 clamp(22px,2vw,28px)/1.05 var(--d);letter-spacing:.14em;text-transform:uppercase;color:#7E8D84;overflow-wrap:anywhere;transition:color .6s,text-shadow .6s}
+.on .icb{color:#D8DCD2;text-shadow:0 0 14px rgba(255,200,140,.25)}
+.mark .silk{margin-top:6px;font-size:11px;color:var(--off)}
+.pinout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin-top:22px}
+.pinout li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;align-items:start;font-size:16px;line-height:1.35}
+.pinout i{display:grid;place-items:center;height:26px;border-radius:3px;background:#3B2A1A;font:400 12px/1 var(--m);font-style:normal;color:#E8C9A0;transition:background-color .5s,color .5s}
+.on .pinout i{background:var(--hot);color:var(--ink)}
+.crew{margin-top:26px;padding-top:20px;border-top:1px solid rgba(242,242,234,.12)}
+.crew ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;margin-top:12px}
+.crew li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:center;font-size:15px;line-height:1.3}
+.crew i{position:relative;display:grid;place-items:center;height:24px;border-radius:2px;background:#1A2621;border:1px solid rgba(242,242,234,.25);font:400 11px/1 var(--m);font-style:normal;color:var(--silk)}
+.crew i::before,.crew i::after{content:"";position:absolute;bottom:-6px;width:4px;height:5px;background:#9A6B3A}
+.crew i::before{left:7px}.crew i::after{right:7px}
+.crew b{display:block;font-weight:700;font-size:17px;color:var(--dim)}
+.on .crew b{color:var(--silk)}
+.pinout b{display:block;font:400 12px/1.3 var(--m);letter-spacing:.12em;color:var(--dim)}
+/* resistor ladder */
+.ladder{position:relative;display:grid;gap:4px;margin-top:20px}
+.res{display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(242,242,234,.1)}
+.res:last-child{border:0}
+.res svg{width:118px;height:28px}
+.res h3{font:700 22px/1.05 var(--d);letter-spacing:.03em;text-transform:uppercase;color:var(--dim);transition:color .5s}
+.on .res h3{color:var(--silk)}
+.res p{grid-column:2/-1;margin:0;font-size:16px;line-height:1.4}
+.res .price{grid-column:3;grid-row:1;font:400 14px/1 var(--m);letter-spacing:.04em;color:var(--cu);white-space:nowrap}
+.res .rd{grid-row:1/span 2;align-self:start;margin-top:4px}
+.res .rid{display:block;margin-top:6px;font:400 11px/1 var(--m);letter-spacing:.12em;color:var(--off)}
+.band{transition:filter .5s}
+.on .band{filter:brightness(1.35) saturate(1.2)}
+.note{margin-top:16px;font:400 12px/1.4 var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--off)}
+/* capacitor */
+.capwrap{display:grid;grid-template-columns:86px minmax(0,1fr);gap:22px;margin-top:6px}
+.cap{width:86px;height:auto}
+.cap .sleeve{transition:fill .6s}
+.on .cap .sleeve{fill:#20414F}
+.checks{display:grid;gap:8px;margin-top:16px}
+.checks li{display:flex;gap:10px;align-items:baseline;font-size:17px;line-height:1.35}
+.checks li::before{content:"";flex:none;width:9px;height:9px;border:1.5px solid var(--cu);transform:translateY(-1px) rotate(45deg);transition:background-color .4s}
+.on .checks li::before{background:var(--hot)}
+.when{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.when li{padding:6px 10px;border:1px solid rgba(242,242,234,.3);border-radius:3px;font:400 12px/1.2 var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.warn{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;margin-top:22px;padding:14px 16px;border:1px solid #E0B25A;border-radius:6px;background:rgba(224,178,90,.08);color:var(--on);font-size:16px;line-height:1.45}
+.warn svg{width:30px;height:30px}
+.warn small{display:block;margin-top:4px;color:var(--dim);font-size:14px}
+/* led array */
+.leds{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin:22px 0 8px;padding:18px 16px 10px;border-radius:6px;background:#06120E;border:1px solid rgba(242,242,234,.12)}
+.leds li{display:grid;justify-items:center;gap:6px;font:400 11px/1 var(--m);letter-spacing:.08em;color:var(--off)}
+.leds svg{width:100%;max-width:40px;height:auto;overflow:visible}
+.dome{fill:#2B3A34;transition:fill .5s,filter .5s}
+.on .dome{fill:var(--led);filter:drop-shadow(0 0 10px var(--led)) drop-shadow(0 0 22px var(--led))}
+.on .leds li:nth-child(2) .dome{transition-delay:.05s}.on .leds li:nth-child(3) .dome{transition-delay:.1s}.on .leds li:nth-child(4) .dome{transition-delay:.15s}.on .leds li:nth-child(5) .dome{transition-delay:.2s}.on .leds li:nth-child(6) .dome{transition-delay:.25s}.on .leds li:nth-child(7) .dome{transition-delay:.3s}.on .leds li:nth-child(8) .dome{transition-delay:.35s}
+.temps{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.temps button{min-height:44px;padding:0 14px;border:1px solid rgba(242,242,234,.3);border-radius:4px;background:transparent;color:var(--dim);font:400 14px/1 var(--m);letter-spacing:.06em}
+.temps button span{display:inline-block;width:10px;height:10px;margin-right:8px;border-radius:50%;background:var(--c)}
+.temps button[aria-pressed=true]{border-color:var(--hot);color:var(--silk);background:rgba(244,180,110,.12)}
+.tnote{min-height:3em;margin-top:12px;font-size:17px}
+.tnote b{color:var(--silk)}
+.room{width:100%;height:auto;margin-top:18px}
+.c1{stop-color:var(--led);stop-opacity:.85}.c2{stop-color:var(--led);stop-opacity:0}
+.beam{opacity:.1;transition:opacity .6s}.pool{fill:var(--led);opacity:.06;transition:opacity .6s}
+.ln{stroke:#6F8078;transition:stroke .6s}
+.on .beam{opacity:.7}.on .pool{opacity:.35}.on .ln{stroke:#C9D3CB}
+.incl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;margin-top:16px;font-size:16px}
+.incl li{padding-left:16px;position:relative}
+.incl li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--cu)}
+/* J1 contact */
+.j1{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px 48px}
+.header-pins{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;padding:16px;border-radius:6px;background:#06120E;border:1px solid rgba(242,242,234,.12)}
+.hp{display:grid;justify-items:center;gap:8px;text-align:center;min-width:0}
+.hp i{position:relative;width:34px;height:34px;border-radius:3px;background:#3B2A1A;transition:background-color .5s,box-shadow .5s}
+.hp i::after{content:"";position:absolute;inset:10px;border-radius:2px;background:linear-gradient(135deg,#F6DC9C,#B98D3D)}
+.on .hp i{background:var(--hot);box-shadow:0 0 12px rgba(255,180,100,.6)}
+.hp span{font:400 11px/1.2 var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);overflow-wrap:anywhere}
+.cdet{display:grid;gap:14px;margin-top:18px}
+.cdet div{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;align-items:baseline}
+.cdet dt{font:400 12px/1.3 var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--cu)}
+.cdet dd{font-weight:600;font-size:18px;color:var(--dim)}
+.cdet a{color:inherit}
+.on .cdet dd{color:var(--silk)}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;align-content:start}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font:400 12px/1.3 var(--m);letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:10px 12px;border:1px solid rgba(242,242,234,.3);border-radius:4px;background:#06120E;color:var(--silk);font-size:18px;font-weight:500}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--hot);outline-offset:1px;border-color:var(--hot)}
+form .btn{justify-self:start}
+.fnote{grid-column:1/-1;font-size:15px;color:var(--off)}
+/* footer */
+.foot{position:relative;padding:40px var(--gut) 56px calc(var(--gut) + 46px);background:var(--ink);border-top:1px solid rgba(242,242,234,.14)}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 40px;align-items:flex-end}
+.foot .fbrand{max-width:18ch;font:700 clamp(34px,4.6vw,60px)/.95 var(--d);letter-spacing:.06em;text-transform:uppercase;color:var(--silk);overflow-wrap:anywhere}
+.foot p{color:var(--dim);font-size:16px}
+.foot .silk{margin-top:14px;font-size:11px;color:var(--off)}
+.status{position:fixed;left:-9999px}
+@media (max-width:980px){
+.pcb{grid-template-columns:minmax(0,1fr);row-gap:30px;padding-left:calc(var(--gut) + 30px)}
+.hero,.s-u1,.s-rb,.s-c4,.s-ld,.s-j1{grid-column:1/-1}
+.j1{grid-template-columns:minmax(0,1fr)}
+.foot{padding-left:calc(var(--gut) + 30px)}
+}
+@media (max-width:620px){
+.pcb{padding-right:calc(var(--gut) + 12px)}
+.card::after{display:none}
+.pinout,.incl,.crew ul{grid-template-columns:minmax(0,1fr)}
+.res{grid-template-columns:minmax(0,1fr) auto}
+.res .rd{grid-row:auto;grid-column:1/-1;margin:0 0 2px}
+.res .price{grid-column:2;grid-row:2}
+.res p{grid-column:1/-1}
+.capwrap{grid-template-columns:minmax(0,1fr)}
+.cap{width:64px}
+.leds{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:14px}
+.header-pins{grid-template-columns:repeat(3,minmax(0,1fr))}
+form{grid-template-columns:minmax(0,1fr)}
+.mbody{grid-template-columns:auto minmax(0,1fr);gap:16px}
+.lever{width:108px}
+.plate{width:84px;height:132px}
+.count{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#s-u1">Skip to the board</a>
+<header class="edge">
+  <div class="fingers" aria-hidden="true"></div>
+  <div class="edge-in">
+    <a class="logo" href="#top"><span class="lmark" aria-hidden="true" data-brand-initials>LW</span><span class="lword" data-brand>Live Wire Electrical</span></a>
+    <nav class="nav" aria-label="Sections"><a href="#s-u1"><b>U1</b>About</a><a href="#s-rb"><b>R1–6</b>Services</a><a href="#s-c4"><b>C4</b>Safety checks</a><a href="#s-ld"><b>D1–8</b>Lighting</a><a href="#s-j1"><b>J1</b>Contact</a></nav>
+    <a class="call" href="tel:+61255504417"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><span>(02) 5550 4417</span></a>
+  </div>
+</header>
+
+<main class="pcb" id="pcb">
+  <svg class="traces" id="traces" aria-hidden="true"></svg>
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="hcopy">
+      <p class="silk tag"><span>LW-2617</span><span>Homes &amp; small commercial</span><span>Belconnen, ACT</span></p>
+      <h1 id="h1">Wired right.<span>Switched on.</span></h1>
+      <p class="lede">Switchboard upgrades, lighting, power points, EV chargers and safety inspections for homes and small businesses across Belconnen and Canberra's north. Written quotes, tidy work, no surprises.</p>
+      <div class="ctas"><a class="btn" href="#s-j1">Request a quote</a><a class="btn ghost" href="tel:+61255504417">Call (02) 5550 4417</a></div>
+
+    </div>
+    <div class="mains" id="mains">
+      <p class="silk">Main switch · SW1</p>
+      <div class="mbody">
+        <button class="lever" id="master" type="button" role="switch" aria-checked="false" aria-label="Main switch SW1: power every section"><small class="l-on">ON</small><span class="plate"><span class="arm"></span></span><small class="l-off">OFF</small></button>
+        <div class="readout" id="readout">
+          <p class="ledrow"><span class="led" aria-hidden="true"></span><span id="mState">Board off</span></p>
+          <p class="count" aria-hidden="true"><span id="mCount">0</span><span class="of">/5</span></p>
+          <p class="silk">Sections live</p>
+        </div>
+      </div>
+      <p class="hint">Throw the main switch to power the whole board, or flip SW2–SW6 one at a time as you scroll.</p>
+      <span class="feedpad" id="feedPad" aria-hidden="true"></span>
+    </div>
+    <dl class="spec">
+        <div><dt>Service area</dt><dd>Belconnen &amp; north Canberra</dd></div>
+        <div><dt>Hours</dt><dd>Mon–Fri 7am–5pm, Sat by booking</dd></div>
+        <div><dt>Urgent</dt><dd>After-hours callouts, fees apply</dd></div>
+    </dl>
+  </section>
+
+  <section class="slot s-u1" id="s-u1" data-id="u1" aria-labelledby="h-u1">
+    <button class="sw" type="button" role="switch" aria-checked="false" aria-label="SW2: power About" data-t="u1"><span class="swg" aria-hidden="true"></span><span><b>SW2</b> About</span><span class="st" aria-hidden="true">OFF</span></button>
+    <div class="card ic" data-ref="U1">
+      <span class="pad" aria-hidden="true"></span><span class="pins l" aria-hidden="true"></span><span class="pins r" aria-hidden="true"></span><span class="notch" aria-hidden="true"></span>
+      <div class="mark"><span class="dot1" aria-hidden="true"></span><div><p class="icb" data-brand>Live Wire Electrical</p><p class="silk">LW-2617 · Belconnen ACT · 4-person crew</p></div></div>
+      <p class="k">U1 · About</p>
+      <h2 id="h-u1">A small crew that turns up</h2>
+      <p>We're four electricians based in Belconnen, looking after homes, strata blocks, cafés and small workshops across Canberra's north. You deal with the same people from the quote to the clean-up.</p>
+      <ol class="pinout">
+        <li><i>1</i><span><b>QUOTE</b>Written and itemised before we start</span></li>
+        <li><i>2</i><span><b>ARRIVE</b>On time, or we call ahead</span></li>
+        <li><i>3</i><span><b>PROTECT</b>Drop sheets down, boots covered</span></li>
+        <li><i>4</i><span><b>TEST</b>Every circuit tested before we leave</span></li>
+        <li><i>5</i><span><b>REPORT</b>Photos and a job summary by email</span></li>
+        <li><i>6</i><span><b>TIDY</b>We take our offcuts with us</span></li>
+      </ol>
+      <div class="crew"><p class="k">The crew</p><ul><li><i>Q1</i><span><b>Dani</b>Lead electrician, switchboards</span></li><li><i>Q2</i><span><b>Marcus</b>EV chargers and commercial fit-outs</span></li><li><i>Q3</i><span><b>Priya</b>Lighting design and smart switches</span></li><li><i>Q4</i><span><b>Tom</b>Third-year apprentice</span></li></ul></div>
+    </div>
+  </section>
+
+  <section class="slot s-rb" id="s-rb" data-id="rb" aria-labelledby="h-rb">
+    <button class="sw" type="button" role="switch" aria-checked="false" aria-label="SW3: power Services" data-t="rb"><span class="swg" aria-hidden="true"></span><span><b>SW3</b> Services</span><span class="st" aria-hidden="true">OFF</span></button>
+    <div class="card" data-ref="R1–R6">
+      <span class="pad" aria-hidden="true"></span>
+      <p class="k">R1–R6 · Services</p>
+      <h2 id="h-rb">From the switchboard out</h2>
+      <ul class="ladder" id="ladder"></ul>
+      <p class="note">Sample prices, GST included. Every job gets a written quote first.</p>
+    </div>
+  </section>
+
+  <section class="slot s-c4" id="s-c4" data-id="c4" aria-labelledby="h-c4">
+    <button class="sw" type="button" role="switch" aria-checked="false" aria-label="SW4: power Safety checks" data-t="c4"><span class="swg" aria-hidden="true"></span><span><b>SW4</b> Safety checks</span><span class="st" aria-hidden="true">OFF</span></button>
+    <div class="card" data-ref="C4">
+      <span class="pad" aria-hidden="true"></span>
+      <div class="capwrap">
+        <svg class="cap" viewBox="0 0 90 170" aria-hidden="true"><path d="M30 138v28M60 138v28" stroke="#A9ADA8" stroke-width="4"/><rect x="8" y="10" width="74" height="130" rx="12" class="sleeve" fill="#1A3440" stroke="rgba(242,242,234,.35)" stroke-width="1.5"/><rect x="8" y="10" width="20" height="130" fill="#9AA7AE" opacity=".85"/><path d="M13 36h10M13 66h10M13 96h10M13 126h10" stroke="#1A3440" stroke-width="3"/><ellipse cx="45" cy="14" rx="36" ry="7" fill="#8C979C"/><path d="M33 12l24 4M45 8v12" stroke="#3E4A50" stroke-width="2"/><text x="56" y="80" fill="#F2F2EA" font-family="Share Tech Mono,monospace" font-size="12" text-anchor="middle" transform="rotate(-90 56 80)">C4 · 470µF</text></svg>
+        <div>
+          <p class="k">C4 · Safety checks</p>
+          <h2 id="h-c4">Safety check, top to bottom</h2>
+          <p>A 60–90 minute inspection with a written report — for buyers, sellers, landlords and anyone living in an older home.</p>
+        </div>
+      </div>
+      <ul class="checks">
+        <li>Switchboard, RCDs and circuit breakers tested</li>
+        <li>Earthing and main connections checked</li>
+        <li>Smoke alarms tested and dated</li>
+        <li>Outlets, switches and visible wiring inspected</li>
+        <li>Oven, cooktop and hot-water circuits checked</li>
+        <li>Photos and plain-English fixes, priced separately</li>
+      </ul>
+      <ul class="when" aria-label="Good times to book"><li>Buying or selling</li><li>Before renting out</li><li>Home over 25 years old</li><li>After storm damage</li></ul>
+      <div class="warn" role="note"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 30 28H2z" fill="#E0B25A"/><path d="M16 12v8M16 23.5v.5" stroke="#0A1F18" stroke-width="3" stroke-linecap="round"/></svg><p>Please don't DIY it: in the ACT, electrical work must be done by a licensed electrician.<small>General information only — we'll advise on your home after an inspection.</small></p></div>
+    </div>
+  </section>
+
+  <section class="slot s-ld" id="s-ld" data-id="ld" aria-labelledby="h-ld">
+    <button class="sw" type="button" role="switch" aria-checked="false" aria-label="SW5: power Lighting design" data-t="ld"><span class="swg" aria-hidden="true"></span><span><b>SW5</b> Lighting design</span><span class="st" aria-hidden="true">OFF</span></button>
+    <div class="card" data-ref="D1–D8" id="ldCard" style="--led:#FFB46B">
+      <span class="pad" aria-hidden="true"></span>
+      <p class="k">D1–D8 · Lighting design</p>
+      <h2 id="h-ld">Light that suits the room</h2>
+      <p>We plan the layout, pick fittings, match dimmers to your LEDs and set the colour temperature room by room — then install it and tidy up.</p>
+      <ul class="leds" id="leds" aria-hidden="true"></ul>
+      <div class="temps" role="group" aria-label="Preview a colour temperature">
+        <button type="button" aria-pressed="true" data-k="2700" style="--c:#FFB46B"><span></span>2700K</button>
+        <button type="button" aria-pressed="false" data-k="3000" style="--c:#FFCB8F"><span></span>3000K</button>
+        <button type="button" aria-pressed="false" data-k="4000" style="--c:#FFF1DB"><span></span>4000K</button>
+        <button type="button" aria-pressed="false" data-k="5000" style="--c:#E6F0FF"><span></span>5000K</button>
+      </div>
+      <svg class="room" viewBox="0 0 600 176" aria-hidden="true"><defs><linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="c1"/><stop offset="1" class="c2"/></linearGradient></defs><path class="beam" d="M286 52 196 168H404L314 52Z" fill="url(#cone)"/><ellipse class="pool" cx="300" cy="168" rx="150" ry="9"/><g class="ln" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 168H584M300 0v34M280 52l10-18h20l10 18z"/><path d="M430 38h108v76H430zM484 38v76M430 76h108"/><path d="M92 168v-14h168v14M100 154v-38c0-10 8-14 16-14h120c8 0 16 4 16 14v38M100 128h152M86 124h14v30H86zM252 124h14v30h-14z"/><path d="M372 168v-44h42v44M366 124h54M500 168v-16h26v16M504 152c-10-22 0-40 9-46 9 6 19 24 9 46"/></g></svg>
+      <p class="tnote" id="tnote" aria-live="polite"><b>2700K · warm white.</b> Cosy and relaxed — lounges, bedrooms and dining.</p>
+      <ul class="incl"><li>Lighting plan and fitting schedule</li><li>Dimmers matched to your LEDs</li><li>Garden, path and security lighting</li><li>Smart switches and motion sensors</li></ul>
+    </div>
+  </section>
+
+  <section class="slot s-j1" id="s-j1" data-id="j1" aria-labelledby="h-j1">
+    <button class="sw" type="button" role="switch" aria-checked="false" aria-label="SW6: power Contact" data-t="j1"><span class="swg" aria-hidden="true"></span><span><b>SW6</b> Contact</span><span class="st" aria-hidden="true">OFF</span></button>
+    <div class="card j1" data-ref="J1">
+      <span class="pad" aria-hidden="true"></span>
+      <div class="header-pins" aria-hidden="true"><div class="hp"><i></i><span>1 Call</span></div><div class="hp"><i></i><span>2 Text</span></div><div class="hp"><i></i><span>3 Email</span></div><div class="hp"><i></i><span>4 Hours</span></div><div class="hp"><i></i><span>5 Area</span></div><div class="hp"><i></i><span>6 Urgent</span></div></div>
+      <div>
+        <p class="k">J1 · Contact</p>
+        <h2 id="h-j1">Get a written quote</h2>
+        <p>Tell us what needs doing and we'll call back within the working day to book a time. Most small jobs can be quoted from photos.</p>
+        <dl class="cdet">
+          <div><dt>Call</dt><dd><a href="tel:+61255504417">(02) 5550 4417</a></dd></div>
+          <div><dt>Text</dt><dd><a href="sms:+61491570157">0491 570 157</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:jobs@example.com">jobs@example.com</a></dd></div>
+          <div><dt>Hours</dt><dd>Mon–Fri 7am–5pm, Sat by booking</dd></div>
+          <div><dt>Area</dt><dd>Belconnen, Gungahlin and the inner north</dd></div>
+          <div><dt>Urgent</dt><dd>After-hours callouts for no power or burning smells — fees apply</dd></div>
+        </dl>
+      </div>
+      <form id="quote" data-demo-message="Demo only — no quote request was sent. A real site would pass this to the electricians.">
+        <div class="f"><label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="q-tel">Phone</label><input id="q-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="0491 570 156" required></div>
+        <div class="f"><label for="q-sub">Suburb</label><select id="q-sub" name="suburb"></select></div>
+        <div class="f"><label for="q-job">Job type</label><select id="q-job" name="job"><option>Switchboard upgrade</option><option>Lighting</option><option>Power points</option><option>EV charger</option><option>Safety inspection</option><option>Smoke alarms</option><option>Something else</option></select></div>
+        <div class="f full"><label for="q-msg">What needs doing?</label><textarea id="q-msg" name="msg" placeholder="e.g. Three extra power points in the garage and a dedicated circuit for a freezer."></textarea></div>
+        <button class="btn" type="submit">Send quote request</button>
+        <p class="fnote">We never ask for payment online. Quotes are free for jobs in our service area.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div><p class="fbrand" data-brand>Live Wire Electrical</p><p class="silk">LW-2617 · Rev C · Belconnen, ACT</p></div>
+    <div><p>(02) 5550 4417 · jobs@example.com</p><p>Electrical work must be done by a licensed electrician.</p><p class="silk">Concept demo for a fictional business · sample prices</p></div>
+  </div>
+</footer>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+
+<script>
+(()=>{
+'use strict';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const mq=matchMedia('(prefers-reduced-motion: reduce)'),calm=()=>mq.matches;
+const pcb=$('#pcb'),svg=$('#traces'),master=$('#master'),statusEl=$('#status');
+const NAMES={u1:'About',rb:'Services',c4:'Safety checks',ld:'Lighting design',j1:'Contact'};
+const ORDER=['u1','rb','c4','ld','j1'];
+const on={u1:false,rb:false,c4:false,ld:false,j1:false};
+
+/* resistor ladder */
+const BANDS=[['#8B5A2B','#1A1A1A','#D23B2F','#D4AF37'],['#D23B2F','#7A3FB5','#8B5A2B','#D4AF37'],['#E0782A','#E0782A','#1A1A1A','#C0C0C0'],['#EBCB3B','#7A3FB5','#D23B2F','#D4AF37'],['#3C7DD9','#8A8A8A','#8B5A2B','#D4AF37'],['#1E9E57','#3C7DD9','#E0782A','#D4AF37']];
+const SERV=[['Switchboards','Old ceramic fuses out, a modern board with safety switches (RCDs) and room to grow in.','from $1,450'],
+['Lighting','LED downlights, pendants, dimmers, garden and security lights — supplied and installed.','from $95/light'],
+['Power points','Extra outlets, USB points, weatherproof outdoor GPOs and dedicated circuits.','from $140'],
+['EV chargers','Wall chargers on their own circuit, after a load check of your switchboard.','from $1,200'],
+['Safety inspections','A full check for buyers, sellers and landlords, with a written report.','from $220'],
+['Smoke alarms','Interconnected photoelectric alarms, hardwired or 10-year lithium.','from $95/alarm']];
+$('#ladder').innerHTML=SERV.map((s,i)=>{const b=BANDS[i];return `<li class="res"><div class="rd"><svg viewBox="0 0 120 28" aria-hidden="true"><path d="M2 14h24M94 14h24" stroke="#A9ADA8" stroke-width="2.5"/><rect x="0" y="9" width="8" height="10" rx="2" fill="#C88A4A"/><rect x="112" y="9" width="8" height="10" rx="2" fill="#C88A4A"/><path d="M26 8c0-3 2-5 5-5h8c3 0 4 2 7 2h28c3 0 4-2 7-2h8c3 0 5 2 5 5v12c0 3-2 5-5 5h-8c-3 0-4-2-7-2H46c-3 0-4 2-7 2h-8c-3 0-5-2-5-5z" fill="#D8C29A"/>${[34,48,58,80].map((x,k)=>`<rect class="band" x="${x}" y="${k===0?3:5}" width="${k===3?4:5}" height="${k===0?22:18}" fill="${b[k]}"/>`).join('')}</svg><span class="rid">R${i+1}</span></div><h3>${s[0]}</h3><span class="price">${s[2]}</span><p>${s[1]}</p></li>`;}).join('');
+
+/* LEDs */
+$('#leds').innerHTML=Array.from({length:8},(_,i)=>`<li><svg viewBox="0 0 40 70"><path d="M13 46v22M27 46v18" stroke="#A9ADA8" stroke-width="2.5"/><rect x="4" y="40" width="32" height="7" rx="2" fill="#1C2A25"/><path class="dome" d="M8 42V18a12 12 0 0 1 24 0v24z"/><path d="M13 18a7 7 0 0 1 7-7" stroke="rgba(255,255,255,.55)" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>D${i+1}</li>`).join('');
+const TEMPS={2700:['#FFB46B','2700K · warm white.','Cosy and relaxed — lounges, bedrooms and dining.'],3000:['#FFCB8F','3000K · soft white.','Warm but clear — kitchens, bathrooms and hallways.'],4000:['#FFF1DB','4000K · neutral white.','Crisp and even — laundries, garages and home offices.'],5000:['#E6F0FF','5000K · cool white.','Bright task light — workshops and small commercial spaces.']};
+$$('.temps button').forEach(b=>b.addEventListener('click',()=>{const t=TEMPS[b.dataset.k];$$('.temps button').forEach(x=>x.setAttribute('aria-pressed',x===b));$('#ldCard').style.setProperty('--led',t[0]);$('#tnote').innerHTML=`<b>${t[1]}</b> ${t[2]}`;}));
+
+/* suburbs */
+$('#q-sub').innerHTML=['Aranda','Belconnen','Bruce','Charnwood','Cook','Dunlop','Evatt','Florey','Flynn','Fraser','Giralang','Hawker','Higgins','Holt','Kaleen','Latham','Lawson','Macgregor','Macquarie','McKellar','Melba','Page','Scullin','Spence','Strathnairn','Weetangera','Somewhere else in the north'].map(s=>`<option${s==='Belconnen'?' selected':''}>${s}</option>`).join('');
+
+/* traces */
+let G=null;
+function draw(){
+  const P=pcb.getBoundingClientRect(),W=pcb.clientWidth,H=pcb.clientHeight;
+  svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const rel=el=>{const r=el.getBoundingClientRect();return{x:r.left-P.left,y:r.top-P.top,w:r.width,h:r.height,r:r.right-P.left,b:r.bottom-P.top};};
+  const busX=Math.max(8,Math.round(parseFloat(getComputedStyle(pcb).paddingLeft)*.36));
+  const fp=rel($('#feedPad')),fx=Math.round(fp.x+fp.w/2),fy0=Math.round(fp.b);
+  const slots=ORDER.map(id=>{const s=$('#s-'+id);return{id,box:rel(s),sw:rel(s.querySelector('.swg')),pad:rel(s.querySelector('.pad'))};});
+  const firstTop=Math.min(...slots.map(s=>s.box.y));
+  const fy=Math.round(firstTop-40);
+  const c=10,rows={};
+  slots.forEach(s=>{const k=Math.round(s.box.y);(rows[k]=rows[k]||[]).push(s);});
+  slots.forEach(s=>{s.ry=Math.round(s.box.y-15);});
+  const lastY=Math.max(...slots.map(s=>s.ry));
+  const main=`M${fx} ${fy0}V${fy-c}L${fx-c} ${fy}H${busX+c}L${busX} ${fy+c}V${lastY}`;
+  let h=`<path class="t base" d="${main}"/>`;
+  slots.forEach(s=>{
+    const sx=Math.round(s.sw.x+s.sw.w/2),sy=Math.round(s.sw.y);
+    s.br=`M${busX} ${s.ry}H${sx-c}L${sx} ${s.ry+c}V${sy}`;
+    const px=Math.round(s.pad.x+s.pad.w/2);
+    s.st=`M${sx} ${Math.round(s.sw.b)}V${Math.round(s.pad.y+2)}`+(Math.abs(px-sx)>2?`H${px}`:'');
+    h+=`<path class="t base" d="${s.br}"/><path class="t base" d="${s.st}"/>`;
+  });
+  h+=`<path class="t lit" id="lmain" d="${main}"/>`;
+  slots.forEach(s=>{h+=`<path class="t lit" id="lb-${s.id}" d="${s.br}"/><path class="t lit" id="ls-${s.id}" d="${s.st}"/>`;});
+  h+=`<clipPath id="mclip"><rect id="mclipR" x="0" y="0" width="${W}" height="0"/></clipPath><path class="t flow" id="fmain" clip-path="url(#mclip)" d="${main}"/>`;
+  slots.forEach(s=>{h+=`<path class="t flow" id="fb-${s.id}" d="${s.br}"/><circle class="via" cx="${busX}" cy="${s.ry}" r="6"/>`;});
+  svg.innerHTML=h;
+  G={lastY,slots:{}};
+  const mainEl=$('#lmain');G.mainLen=mainEl.getTotalLength();
+  slots.forEach(s=>{const b=$('#lb-'+s.id),t=$('#ls-'+s.id);G.slots[s.id]={ry:s.ry,bl:b.getTotalLength(),sl:t.getTotalLength()};});
+  apply(true);
+}
+function setDash(el,len,lit,dur,del){el.style.strokeDasharray=`${len} ${len+4}`;el.style.setProperty('--dur',dur+'s');el.style.setProperty('--del',del+'s');el.style.strokeDashoffset=String(len-lit);}
+function apply(instant){
+  if(!G)return;
+  const I=instant||calm();
+  const lowest=ORDER.filter(id=>on[id]).reduce((m,id)=>Math.max(m,G.slots[id].ry),-1);
+  const mainLit=lowest<0?0:G.mainLen-(G.lastY-lowest);
+  const m=$('#lmain');
+  const prevMain=parseFloat(m.dataset.lit||0);m.dataset.lit=mainLit;
+  const mainDur=I?0:Math.min(1.1,Math.abs(mainLit-prevMain)/1800+.12);
+  setDash(m,G.mainLen,mainLit,mainDur,0);
+  $('#fmain').classList.toggle('on',mainLit>0);$('#mclipR').setAttribute('height',lowest<0?0:lowest+8);
+  ORDER.forEach(id=>{
+    const g=G.slots[id],b=$('#lb-'+id),st=$('#ls-'+id),x=on[id];
+    const d1=I?0:(x?mainDur*.85:0),bd=I?0:(x?g.bl/1600+.08:.18),sd=I?0:(x?.12:.1);
+    setDash(b,g.bl,x?g.bl:0,bd,d1);setDash(st,g.sl,x?g.sl:0,sd,x?d1+bd:0);
+    const fl=$('#fb-'+id);fl.style.transitionDelay=x?(d1+bd)+'s':'0s';fl.classList.toggle('on',x);
+    const slot=$('#s-'+id),delay=I?0:(x?(d1+bd+sd)*1000:0);
+    clearTimeout(slot._t);slot._t=setTimeout(()=>slot.classList.toggle('on',x),delay);
+  });
+}
+function sync(){
+  const n=ORDER.filter(id=>on[id]).length;
+  $('#mCount').textContent=n;
+  $('#mState').textContent=n===5?'Board live':n?'Partly live':'Board off';
+  $('#readout').classList.toggle('live',n>0);
+  master.setAttribute('aria-checked',String(n===5));
+  $$('.sw').forEach(b=>{const x=on[b.dataset.t];b.setAttribute('aria-checked',String(x));b.querySelector('.st').textContent=x?'LIVE':'OFF';});
+}
+function say(t){statusEl.textContent=t;}
+$$('.sw').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.t;on[id]=!on[id];sync();apply(false);const n=ORDER.filter(k=>on[k]).length;say(`${NAMES[id]} ${on[id]?'powered on':'switched off'}. ${n} of 5 sections live.`);}));
+master.addEventListener('click',()=>{
+  const all=ORDER.every(id=>on[id]),to=!all;
+  ORDER.forEach((id,i)=>{clearTimeout(master['_t'+i]);if(calm()){on[id]=to;return;}master['_t'+i]=setTimeout(()=>{on[id]=to;sync();apply(false);},(to?i:ORDER.length-1-i)*170);});
+  if(calm()){sync();apply(true);}
+  master.setAttribute('aria-checked',String(to));
+  say(to?'Main switch on. Powering all five sections.':'Main switch off. All sections switched off.');
+});
+let raf=0;
+const ro=new ResizeObserver(()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(draw);});
+ro.observe(pcb);
+window.addEventListener('hd:brandchange',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(draw);});
+document.addEventListener('visibilitychange',()=>pcb.classList.toggle('pause',document.hidden));
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>draw());
+sync();draw();
+})();
+</script>
+</body>
+</html>

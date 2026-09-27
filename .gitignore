@@ -1,0 +1,17 @@
+# Private project records and QA artefacts — kept locally, never published
+brief.md
+design.md
+decisions.md
+handoff.md
+assets.json
+project.json
+release.json
+evidence/
+backups/
+
+# OS / tooling
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*

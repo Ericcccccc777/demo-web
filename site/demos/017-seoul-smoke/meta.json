@@ -1,0 +1,8 @@
+{
+  "id": "017",
+  "tech": ["Canvas 2D", "CSS Grid", "SVG", "Pointer Events", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["game", "booking"],
+  "interaction": "Put samgyeopsal, bulgogi, galbi, mushrooms or corn cheese on a round charcoal grill, tap to flip, hold or drag off to serve, and score a Perfect for golden on both sides — with a keyboard-friendly on-grill list and a demo group-booking form.",
+  "fonts": ["Black Han Sans", "Space Grotesk"],
+  "notes": ""
+}

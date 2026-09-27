@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="081">
+<meta name="demo:brand" content="Harriet Vale">
+<title>Harriet Vale — novelist, Castlemaine</title>
+<meta name="description" content="The website of Harriet Vale, a fictional novelist in Castlemaine, Victoria — books, events, book-club questions and a typewriter to try.">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--paper:#F6F1E7;--sheet:#FBF8F1;--desk:#E7DFCF;--ink:#222;--red:#B22222;--grey:#9A9A9A;--muted:#58534c;--rule:rgba(34,34,34,.18);--type:"Special Elite","Courier New",Courier,monospace;--serif:"Gelasio",Georgia,"Times New Roman",serif;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .26 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--grain),var(--paper);color:var(--ink);font:400 18px/1.7 var(--serif)}
+a{color:inherit;text-decoration-color:var(--red);text-underline-offset:3px}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px dashed var(--red);outline-offset:3px}
+.wrap{width:min(1120px,calc(100% - 36px));margin:0 auto}
+.typed{font-family:var(--type)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border:1.5px solid var(--ink);border-radius:3px;background:var(--sheet);color:var(--ink);font:400 15px/1 var(--type);letter-spacing:.04em;cursor:pointer;text-decoration:none;box-shadow:2px 2px 0 var(--ink);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
+.btn.dark{background:var(--ink);color:var(--sheet)}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff;box-shadow:2px 2px 0 #5c1010}
+
+.top{padding:16px 0 0}
+.top nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;font:400 14px/1 var(--type);letter-spacing:.12em;text-transform:uppercase}
+.top a{display:inline-block;padding:10px 2px;text-decoration:none;border-bottom:1px solid transparent}
+.top a:hover{border-bottom-color:var(--red)}
+
+.desk{position:relative;overflow:hidden;padding:10px 0 34px}
+.machine{position:relative;width:min(760px,100%);margin:0 auto;overflow:hidden;padding-top:6px}
+.zone{position:relative;height:var(--zone,320px)}
+.sheet{position:absolute;left:50%;top:0;width:min(560px,92vw);min-height:780px;padding:36px 48px 60px;background:var(--grain),var(--sheet);box-shadow:0 1px 1px rgba(0,0,0,.08),0 10px 30px rgba(60,40,20,.18);transform:translate(-50%,var(--ty,0px));transition:transform .35s cubic-bezier(.3,.7,.2,1);will-change:transform}
+.sheet.nofx{transition:none}
+.zone:focus-within .sheet{box-shadow:0 0 0 1.5px rgba(178,34,34,.55),0 10px 30px rgba(60,40,20,.18)}
+.sheet h1{font:400 38px/1.15 var(--type);text-transform:uppercase;letter-spacing:.14em;text-align:center;min-height:1.15em;overflow-wrap:anywhere;color:#1d1d1d;text-shadow:.5px .5px 0 rgba(34,34,34,.35)}
+.sheet h1::after{content:"";display:block;width:4.5em;height:0;margin:10px auto 0;border-top:2px solid var(--ink);opacity:.7}
+.lh2,.prompt{font:400 20px/34px var(--type);text-align:center;margin-top:10px}
+.prompt{margin-top:18px;color:var(--red);min-height:34px}
+.w{white-space:nowrap}
+.sheet i{display:inline-block;font-style:normal;transform:translate(var(--x,0),var(--y,0)) rotate(var(--r,0));opacity:var(--o,1)}
+.sheet i.h{visibility:hidden}
+.lines{margin-top:26px;font:400 18px/34px var(--type)}
+.ln{white-space:nowrap;min-height:34px}
+.ln i{width:1ch;text-align:center}
+.ln.cur::after{content:"";display:inline-block;width:1ch;height:2px;background:var(--red);vertical-align:-3px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.sheet i.s{animation:strike .09s ease-out}
+@keyframes strike{from{transform:translate(var(--x,0),calc(var(--y,0) - 3px)) scale(1.35);opacity:0}}
+.sheet.tear{animation:tear .6s cubic-bezier(.5,0,.8,.4) forwards}
+@keyframes tear{to{transform:translate(-44%,calc(var(--ty,0px) - 520px)) rotate(-6deg);opacity:0}}
+.bail{position:absolute;left:50%;bottom:10px;transform:translateX(-50%);width:min(520px,82%);height:7px;border-radius:4px;background:linear-gradient(#f4f4f4,#8f8f8f 55%,#d9d9d9);box-shadow:0 2px 3px rgba(0,0,0,.3);pointer-events:none;z-index:3}
+.bail::before,.bail::after{content:"";position:absolute;top:-3px;width:26px;height:13px;border-radius:5px;background:#1b1b1b}
+.bail::before{left:22%}.bail::after{right:22%}
+.tw-input{position:absolute;inset:0;z-index:4;width:100%;height:100%;padding:0;border:0;margin:0;resize:none;opacity:0;font-size:16px;color:transparent;background:transparent;caret-color:transparent;cursor:text}
+.body{position:relative;z-index:2;display:block;width:100%;height:auto;margin-top:-4px}
+.body .bar{transform-box:view-box;transform-origin:380px 124px;opacity:0}
+.body .bar.go{animation:swing .12s ease-out}
+@keyframes swing{0%{opacity:1;transform:rotate(var(--a))}55%{opacity:1;transform:rotate(0)}100%{opacity:0;transform:rotate(var(--a))}}
+.key{transition:transform .06s}
+.key.down{transform:translateY(3px)}
+.key.down circle{stroke:var(--red)}
+.body text{font:400 13px var(--type);fill:#F6F1E7;text-anchor:middle}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px auto 0;width:min(760px,100%)}
+.rib{display:inline-flex;border:1.5px solid var(--ink);border-radius:3px;box-shadow:2px 2px 0 var(--ink)}
+.rib button{min-height:41px;padding:0 12px;border:0;background:var(--sheet);font:400 14px/1 var(--type);cursor:pointer}
+.rib button+button{border-left:1.5px solid var(--ink)}
+.rib button[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
+.rib button.r[aria-pressed="true"]{background:var(--red)}
+.status{min-height:1.7em;margin:12px auto 0;text-align:center;font:400 15px/1.5 var(--type);color:var(--muted);padding:0 12px}
+.pile{width:min(760px,100%);margin:22px auto 0}
+.pile-h{font:400 14px/1.3 var(--type);letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.pile-h b{font-weight:400;color:var(--red)}
+.stack{position:relative;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px;min-height:40px}
+.mini{position:relative;width:92px;height:124px;padding:10px 8px;background:var(--grain),var(--sheet);box-shadow:0 4px 10px rgba(60,40,20,.2);transform:rotate(var(--r));font:400 6.5px/1.45 var(--type);overflow:hidden;animation:land .45s cubic-bezier(.3,1.4,.5,1)}
+.mini b{display:block;font-weight:400;font-size:6px;letter-spacing:.1em;text-align:center;margin-bottom:5px;color:var(--muted)}
+.mini p{white-space:nowrap;overflow:hidden;text-overflow:clip}
+@keyframes land{from{transform:translateY(-40px) rotate(0);opacity:0}}
+.empty-pile{font:italic 400 15px/1.4 var(--serif);color:var(--muted)}
+.howto{display:none}
+
+section.s{padding:84px 0 20px}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;border-bottom:1px solid var(--rule);padding-bottom:12px}
+.sh h2{font:400 clamp(30px,4vw,44px)/1.1 var(--type);letter-spacing:.02em}
+.sh span{font:400 14px/1 var(--type);color:var(--red);letter-spacing:.1em}
+.books{display:grid;gap:44px}
+.book{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:start}
+.cover{position:relative;aspect-ratio:2/3;padding:14px 12px;display:flex;flex-direction:column;justify-content:space-between;text-align:center;box-shadow:inset 6px 0 8px -4px rgba(0,0,0,.35),6px 10px 22px rgba(40,25,10,.28);border-radius:2px 5px 5px 2px;transition:transform .35s;transform:perspective(700px) rotateY(-10deg)}
+.book:hover .cover{transform:perspective(700px) rotateY(0)}
+.cover::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.18)}
+.c-k{font:400 9px/1.2 var(--type);letter-spacing:.2em;text-transform:uppercase}
+.c-t{font:400 17px/1.15 var(--type)}
+.c-a{font:400 9.5px/1.2 var(--type);letter-spacing:.16em;text-transform:uppercase;overflow-wrap:anywhere}
+.cover svg{width:100%;height:auto}
+.c1{background:var(--grain),#efe6d2;color:var(--ink)}
+.c2{background:#1e1e1e;color:#f3ede0}
+.c3{background:var(--grain),var(--red);color:#fbf1e6}
+.book h3{font:400 26px/1.2 var(--type)}
+.book .fl{margin:12px 0 12px;padding-left:14px;border-left:3px solid var(--red);font:italic 400 19px/1.55 var(--serif)}
+.book .fl small{display:block;font:400 12px/1.4 var(--type);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-style:normal;margin-bottom:4px}
+.book p.b{font-size:16.5px;color:#3a3733}
+.book .meta{margin-top:10px;font:400 13px/1.5 var(--type);color:var(--muted)}
+.about{display:grid;gap:34px}
+.about .typedsheet{padding:34px 30px;background:var(--grain),var(--sheet);box-shadow:0 10px 30px rgba(60,40,20,.14);transform:rotate(-.6deg);position:relative}
+.about .typedsheet::before{content:"";position:absolute;top:-14px;left:40px;width:22px;height:52px;border:3px solid #8d8d8d;border-radius:12px;border-bottom-color:transparent;transform:rotate(8deg)}
+.about p+p{margin-top:1em}
+.quote{font:400 clamp(22px,2.4vw,27px)/1.45 var(--type);color:var(--ink);padding:10px 0 0}
+.quote::before{content:"“";display:block;font:400 70px/0.6 var(--serif);color:var(--red);margin-bottom:10px}
+.quote small{display:block;margin-top:14px;font:400 14px/1 var(--type);color:var(--muted);letter-spacing:.1em}
+.cards{display:grid;gap:22px}
+.card{position:relative;padding:18px 20px 16px 26px;background:repeating-linear-gradient(#fdfcf8 0 27px,#c9d9e6 27px 28px);background-position:0 44px;box-shadow:0 6px 18px rgba(60,40,20,.16);font-size:16px;line-height:28px}
+.card::before{content:"";position:absolute;left:16px;top:0;bottom:0;border-left:1.5px solid rgba(178,34,34,.45)}
+.card .when{font:400 15px/28px var(--type);color:var(--red);letter-spacing:.06em}
+.card h3{font:400 20px/28px var(--type)}
+.card:nth-child(2){transform:rotate(.7deg)}.card:nth-child(3){transform:rotate(-.5deg)}
+.note{margin-top:18px;font:400 13px/1.5 var(--type);color:var(--muted);letter-spacing:.04em}
+.clubs{display:grid;gap:26px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.qs{counter-reset:q;padding:26px 26px 22px;background:var(--grain),var(--sheet);box-shadow:0 10px 26px rgba(60,40,20,.14)}
+.qs h3{font:400 22px/1.3 var(--type);margin-bottom:12px}
+.qs li{counter-increment:q;display:grid;grid-template-columns:34px 1fr;padding:10px 0;border-top:1px dashed var(--rule);font-size:17px}
+.qs li::before{content:counter(q) ".";font:400 17px/1.7 var(--type);color:var(--red)}
+.letters{display:grid;gap:22px;padding:30px 26px;border:1.5px solid var(--ink);background:var(--grain),var(--sheet);box-shadow:5px 5px 0 var(--ink)}
+.letters h2{font:400 clamp(28px,3.4vw,38px)/1.15 var(--type)}
+.letters form{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.letters label{display:block;width:100%;font:400 13px/1.3 var(--type);letter-spacing:.12em;text-transform:uppercase}
+.letters input{flex:1 1 220px;min-height:46px;padding:0 12px;border:0;border-bottom:2px solid var(--ink);background:transparent;font:400 18px var(--type)}
+.foot{margin-top:84px;padding:40px 0 54px;border-top:1px solid var(--rule);text-align:center}
+.foot .foot-name{margin:0;color:var(--ink);font:400 clamp(30px,4.4vw,48px)/1.1 var(--type);text-transform:uppercase;letter-spacing:.14em;overflow-wrap:anywhere}
+.foot p{margin-top:12px;font:400 14.5px/1.6 var(--type);color:var(--muted)}
+
+@media (max-width:640px){
+  .top nav{gap:2px 12px;font-size:12px;letter-spacing:.07em}
+  .zone{--zone:252px}
+  .sheet{padding:26px 22px 60px;min-height:620px}
+  .sheet h1{font-size:26px;letter-spacing:.1em}
+  .lh2{font-size:15px;line-height:26px}
+  .prompt{font-size:15px;line-height:26px;min-height:26px;margin-top:12px}
+  .lines{font-size:16px;line-height:28px;margin-top:18px}
+  .ln{min-height:28px}
+  .book{grid-template-columns:112px 1fr;gap:16px}
+  .c-t{font-size:14px}
+}
+@media (min-width:860px){
+  .books{grid-template-columns:repeat(3,1fr);gap:34px}
+  .book{grid-template-columns:1fr}
+  .book .cover{width:78%}
+  .about{grid-template-columns:1.35fr 1fr;align-items:center;gap:56px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .clubs{grid-template-columns:260px 1fr;align-items:start}
+  .tabs{flex-direction:column}
+  .letters{grid-template-columns:1fr 1.1fr;align-items:center;padding:40px 44px}
+}
+@media (min-width:1180px){
+  .howto{display:block;position:absolute;left:max(24px,calc(50% - 600px));top:40px;width:200px;padding:16px 16px 12px 22px;transform:rotate(-2deg);background:repeating-linear-gradient(#fdfcf8 0 23px,#c9d9e6 23px 24px);background-position:0 38px;box-shadow:0 6px 16px rgba(60,40,20,.16);font:400 14px/24px var(--type)}
+  .howto::before{content:"";position:absolute;left:12px;top:0;bottom:0;border-left:1.5px solid rgba(178,34,34,.45)}
+  .hw-h{color:var(--red);letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+  .howto ol{list-style:decimal;padding-left:18px}
+  .pile{position:absolute;right:max(24px,calc(50% - 600px));top:30px;width:190px;margin:0}
+  .stack{display:block;height:260px}
+  .stack .mini{position:absolute;left:40px;top:calc(var(--i) * 10px)}
+  .empty-pile{text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sheet{transition:none}
+  .ln.cur::after,.sheet i.s,.mini{animation:none}
+  .sheet.tear{animation:none;opacity:0}
+  .body .bar.go{animation:none}
+  .cover{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="top"><nav class="wrap" aria-label="Sections"><a href="#books">Books</a><a href="#about">About</a><a href="#events">Events</a><a href="#clubs">Book clubs</a><a href="#letters">Letters</a></nav></header>
+<main>
+<section class="desk" aria-label="Typewriter — type your first line">
+<div class="machine" id="machine">
+<div class="zone" id="zone">
+<div class="sheet" id="sheet">
+<h1 id="h1" data-brand data-brand-original="Harriet Vale">Harriet Vale</h1>
+<p class="lh2" id="tag">Novelist · Castlemaine, Victoria</p>
+<p class="prompt" id="prompt" aria-hidden="true">Every novel starts with one line. Type yours.</p>
+<div class="lines" id="lines" aria-hidden="true"><p class="ln cur"></p></div>
+</div>
+<div class="bail" aria-hidden="true"></div>
+<label class="sr" for="tw-input">Typewriter: type your first line. Press Enter for a new line.</label>
+<textarea class="tw-input" id="tw-input" spellcheck="false" autocomplete="off" autocapitalize="sentences" aria-describedby="tw-status"></textarea>
+</div>
+<svg class="body" viewBox="0 0 760 272" aria-hidden="true">
+<defs>
+<linearGradient id="pl" x2="0" y2="1"><stop offset="0" stop-color="#474747"/><stop offset=".3" stop-color="#1c1c1c"/><stop offset=".7" stop-color="#0c0c0c"/><stop offset="1" stop-color="#2c2c2c"/></linearGradient>
+<linearGradient id="bd" x2="0" y2="1"><stop offset="0" stop-color="#303030"/><stop offset="1" stop-color="#151515"/></linearGradient>
+<linearGradient id="ch" x2="0" y2="1"><stop offset="0" stop-color="#f1f1f1"/><stop offset=".5" stop-color="#9A9A9A"/><stop offset="1" stop-color="#dcdcdc"/></linearGradient>
+</defs>
+<path d="M76 40H684Q726 40 732 82L750 236Q754 268 720 268H40Q6 268 10 236L28 82Q34 40 76 40Z" fill="url(#bd)"/>
+<path d="M60 58H700" stroke="#B22222" stroke-width="3" opacity=".9"/>
+<path d="M240 44Q380 176 520 44Z" fill="#0a0a0a"/>
+<g stroke="#9A9A9A" stroke-width="2.2" stroke-linecap="round" opacity=".7" id="fan"></g>
+<line class="bar" id="bar" x1="380" y1="124" x2="380" y2="2" stroke="#cfcfcf" stroke-width="3.2" stroke-linecap="round"/>
+<g><circle cx="168" cy="96" r="34" fill="#B22222"/><circle cx="168" cy="96" r="22" fill="#1a1a1a"/><circle cx="168" cy="96" r="7" fill="url(#ch)"/><circle cx="592" cy="96" r="34" fill="#B22222"/><circle cx="592" cy="96" r="22" fill="#1a1a1a"/><circle cx="592" cy="96" r="7" fill="url(#ch)"/></g>
+<rect x="44" y="0" width="672" height="44" rx="22" fill="url(#pl)"/>
+<path d="M60 10H700" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>
+<rect x="6" y="4" width="38" height="36" rx="8" fill="url(#ch)"/><rect x="716" y="4" width="38" height="36" rx="8" fill="url(#ch)"/>
+<path d="M13 8V36M19 8V36M25 8V36M31 8V36M37 8V36M723 8V36M729 8V36M735 8V36M741 8V36M747 8V36" stroke="#6d6d6d" stroke-width="1.6"/>
+<path d="M366 2H394V16H366Z" fill="none" stroke="url(#ch)" stroke-width="3"/>
+<g id="keys"></g>
+<rect x="250" y="246" width="260" height="14" rx="7" fill="#1b1b1b" stroke="url(#ch)" stroke-width="2.5"/>
+</svg>
+</div>
+<div class="controls">
+<button class="btn dark" type="button" id="start">Start typing</button>
+<button class="btn" type="button" id="ret">Return ↵</button>
+<button class="btn red" type="button" id="pull">Pull the page</button>
+<button class="btn" type="button" id="snd" aria-pressed="false">Sound: off</button>
+<div class="rib" role="group" aria-label="Ribbon colour"><button type="button" id="rib-k" aria-pressed="true">Black</button><button type="button" class="r" id="rib-r" aria-pressed="false">Red</button></div>
+</div>
+<p class="status" id="tw-status" role="status" aria-live="polite">Click the paper — or tap Start typing — and write the first line of your novel.</p>
+<div class="howto" aria-hidden="true"><p class="hw-h">Your turn</p><ol><li>Click the paper and type.</li><li>Return feeds a new line. Listen for the bell near the margin.</li><li>Pull the page when you&#39;re done — it lands on the pile.</li></ol></div>
+<aside class="pile" aria-labelledby="pile-h"><p class="pile-h" id="pile-h">Pulled pages · <b id="pile-n">0</b></p><div class="stack" id="stack"><p class="empty-pile" id="empty-pile">Nothing on the pile yet.</p></div></aside>
+</section>
+
+<section class="s" id="books" aria-labelledby="books-h">
+<div class="wrap">
+<div class="sh"><h2 id="books-h">The books</h2><span>Three novels</span></div>
+<ul class="books">
+<li class="book"><div class="cover c1" aria-hidden="true"><span class="c-k">A novel</span><p class="c-t">The Dry Creek Letters</p><svg viewBox="0 0 120 70"><circle cx="34" cy="35" r="24" fill="none" stroke="#B22222" stroke-width="3"/><circle cx="34" cy="35" r="17" fill="none" stroke="#B22222" stroke-width="1.2" stroke-dasharray="3 3"/><path d="M62 24q8-6 16 0t16 0t16 0M62 35q8-6 16 0t16 0t16 0M62 46q8-6 16 0t16 0t16 0" fill="none" stroke="#B22222" stroke-width="2.4"/></svg><p class="c-a" data-brand>Harriet Vale</p></div>
+<div><h3>The Dry Creek Letters</h3><p class="fl"><small>First line</small>The letters started arriving the week the creek ran dry, and none of them were meant for us.</p><p class="b">In a drought-struck goldfields town, twelve-year-old Nell intercepts letters addressed to a woman who left decades ago — and starts writing back.</p><p class="meta">Novel · 312 pages · paperback &amp; ebook</p></div></li>
+<li class="book"><div class="cover c2" aria-hidden="true"><span class="c-k">A novel</span><p class="c-t">A House Called Winter</p><svg viewBox="0 0 120 70"><path d="M30 64V34L60 12L90 34V64Z" fill="none" stroke="#f3ede0" stroke-width="2.6" stroke-linejoin="round"/><rect x="52" y="38" width="16" height="14" fill="#B22222"/><path d="M60 38V52M52 45H68" stroke="#1e1e1e" stroke-width="1.5"/><g fill="#f3ede0"><circle cx="14" cy="14" r="1.6"/><circle cx="104" cy="10" r="1.6"/><circle cx="96" cy="30" r="1.3"/><circle cx="22" cy="40" r="1.3"/><circle cx="108" cy="52" r="1.6"/><circle cx="10" cy="60" r="1.3"/></g></svg><p class="c-a" data-brand>Harriet Vale</p></div>
+<div><h3>A House Called Winter</h3><p class="fl"><small>First line</small>Nobody in town could remember who named the house, only that it had always been cold.</p><p class="b">Two sisters inherit a stone cottage outside Maldon and the forty-year-old argument that came with it.</p><p class="meta">Novel · 356 pages · book-club edition with questions</p></div></li>
+<li class="book"><div class="cover c3" aria-hidden="true"><span class="c-k">New novel</span><p class="c-t">Salt for the Road</p><svg viewBox="0 0 120 70"><path d="M6 66C40 60 30 44 58 40S96 26 70 12S96 2 116 4" fill="none" stroke="#fbf1e6" stroke-width="7" stroke-linecap="round"/><path d="M6 66C40 60 30 44 58 40S96 26 70 12S96 2 116 4" fill="none" stroke="#B22222" stroke-width="1.5" stroke-dasharray="5 5"/></svg><p class="c-a" data-brand>Harriet Vale</p></div>
+<div><h3>Salt for the Road</h3><p class="fl"><small>First line</small>My grandmother kept a jar of salt in the glovebox, for luck or for snails, she never said which.</p><p class="b">A road trip along the back roads of central Victoria, a borrowed station wagon, and a grandmother with one last address to visit.</p><p class="meta">Novel · 288 pages · out this spring</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="s" id="about" aria-labelledby="about-h">
+<div class="wrap">
+<div class="sh"><h2 id="about-h">About</h2><span>From the desk</span></div>
+<div class="about">
+<div class="typedsheet">
+<p>Harriet Vale writes novels about small towns, long memories and the weather. She grew up above a newsagency in Bendigo, spent years as a court reporter, and now writes in a weatherboard cottage in Castlemaine with a cattle dog called Biro.</p>
+<p>She drafts every first line on a portable typewriter bought at a clearing sale, then moves to a laptop for everything after. She teaches the occasional workshop, answers every reader letter eventually, and has strong opinions about scones.</p>
+</div>
+<p class="quote">I write the first line on a typewriter because it can't be deleted. Everything after that is allowed to be messy.<small>— from a talk to a local writers' group</small></p>
+</div>
+</div>
+</section>
+
+<section class="s" id="events" aria-labelledby="events-h">
+<div class="wrap">
+<div class="sh"><h2 id="events-h">Events</h2><span>Coming up</span></div>
+<ul class="cards">
+<li class="card"><p class="when">Sat 17 Oct · 3pm · Castlemaine</p><h3>Launch: Salt for the Road</h3><p>A reading and signing at an independent bookshop on the main street. Free — RSVP by email.</p></li>
+<li class="card"><p class="when">Thu 5 Nov · 6:30pm · Kyneton</p><h3>In conversation: writing small towns</h3><p>An evening talk in the town hall supper room. $15 including supper.</p></li>
+<li class="card"><p class="when">Sun 22 Nov · 11am · Online</p><h3>Book club Q&amp;A: A House Called Winter</h3><p>An hour on video with readers and their questions. Free, bring a cuppa.</p></li>
+</ul>
+<p class="note">Sample events and prices — dates are illustrative.</p>
+</div>
+</section>
+
+<section class="s" id="clubs" aria-labelledby="clubs-h">
+<div class="wrap">
+<div class="sh"><h2 id="clubs-h">For book clubs</h2><span>Questions to start with</span></div>
+<div class="clubs">
+<div><p style="font-size:16.5px;margin-bottom:16px">Choose a book for five questions your group can start with. Harriet can also join clubs of six or more by video for half an hour — ask by email.</p>
+<div class="tabs" role="group" aria-label="Choose a book"><button class="btn" type="button" aria-pressed="true" data-b="0">The Dry Creek Letters</button><button class="btn" type="button" aria-pressed="false" data-b="1">A House Called Winter</button><button class="btn" type="button" aria-pressed="false" data-b="2">Salt for the Road</button></div></div>
+<div class="qs" aria-live="polite"><h3 id="qs-h">The Dry Creek Letters</h3><ol id="qs"></ol></div>
+</div>
+</div>
+</section>
+
+<section class="s" id="letters" aria-labelledby="letters-h">
+<div class="wrap">
+<div class="letters">
+<div><h2 id="letters-h">Letters from the desk</h2><p style="margin-top:10px;font-size:16.5px">Four a year: what I'm reading, what I'm writing, and the occasional recipe. No fuss, easy to leave.</p></div>
+<form data-demo-message="Demo only — you haven't been subscribed to anything."><label for="nl-email">Your email</label><input id="nl-email" type="email" required autocomplete="email" placeholder="you@example.com"><button class="btn dark" type="submit">Send me letters</button></form>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<p class="foot-name" data-brand>Harriet Vale</p>
+<p>Castlemaine, VIC · rights, events &amp; book clubs: <a href="mailto:hello@example.com">hello@example.com</a></p>
+<p>A fictional author and fictional books, made for a design showcase.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var rmq=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):null;
+function reduced(){return !!(rmq&&rmq.matches);}
+function rnd(a){return ((Math.random()*2-1)*a).toFixed(2);}
+var sheet=$("#sheet"),zone=$("#zone"),linesEl=$("#lines"),ta=$("#tw-input"),statusEl=$("#tw-status"),h1=$("#h1"),tag=$("#tag"),prompt=$("#prompt");
+var MAXL=6,cols=36,model=[""],rendered=[""],ribbon="k",pages=0,soundOn=false,ac=null,noise=null,busy=false;
+
+/* ---- typewriter body: type-bar fan + keys ---- */
+var NS="http://www.w3.org/2000/svg",fan=$("#fan"),keysG=$("#keys"),KEYMAP={};
+for(var a=-62;a<=62;a+=6.2){var r=a*Math.PI/180,l=document.createElementNS(NS,"path");l.setAttribute("d","M"+(380+Math.sin(r)*30).toFixed(1)+" "+(124-Math.cos(r)*30).toFixed(1)+"L"+(380+Math.sin(r)*78).toFixed(1)+" "+(124-Math.cos(r)*78).toFixed(1));fan.appendChild(l);}
+["QWERTYUIOP","ASDFGHJKL","ZXCVBNM"].forEach(function(row,ri){
+  var y=158+ri*30,x0=380-(row.length-1)*25+ri*6;
+  row.split("").forEach(function(ch,ci){var g=document.createElementNS(NS,"g");g.setAttribute("class","key");g.innerHTML='<circle cx="'+(x0+ci*50)+'" cy="'+y+'" r="13" fill="#1b1b1b" stroke="url(#ch)" stroke-width="2.5"/><text x="'+(x0+ci*50)+'" y="'+(y+4.5)+'">'+ch+"</text>";keysG.appendChild(g);KEYMAP[ch]=g;});
+});
+var bar=$("#bar");
+function strike(ch){
+  if(reduced())return;
+  var up=(ch||"").toUpperCase(),code=up.charCodeAt(0)||65,ang=((code*37)%125)-62;
+  bar.style.setProperty("--a",ang+"deg");bar.classList.remove("go");bar.getBoundingClientRect();bar.classList.add("go");
+  var k=KEYMAP[up];if(k){k.classList.add("down");setTimeout(function(){k.classList.remove("down");},90);}
+}
+
+/* ---- sound (Web Audio, off by default) ---- */
+function audio(){
+  if(!ac){var C=window.AudioContext||window.webkitAudioContext;if(!C)return null;ac=new C();noise=ac.createBuffer(1,ac.sampleRate*.6,ac.sampleRate);var d=noise.getChannelData(0);for(var i=0;i<d.length;i++)d[i]=Math.random()*2-1;}
+  if(ac.state==="suspended")ac.resume();return ac;
+}
+function burst(t,dur,f,q,vol){var s=ac.createBufferSource(),b=ac.createBiquadFilter(),g=ac.createGain();s.buffer=noise;b.type="bandpass";b.frequency.value=f;b.Q.value=q;g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+dur);s.connect(b);b.connect(g);g.connect(ac.destination);s.start(t,Math.random()*.3);s.stop(t+dur+.02);}
+function thunk(t,f,vol){var o=ac.createOscillator(),g=ac.createGain();o.type="triangle";o.frequency.setValueAtTime(f,t);o.frequency.exponentialRampToValueAtTime(f*.5,t+.04);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+.06);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.07);}
+var snd={
+  key:function(){if(!soundOn||!ac)return;var t=ac.currentTime;burst(t,.035,2000+Math.random()*1600,1.3,.55);thunk(t,150+Math.random()*40,.25);},
+  bell:function(){if(!soundOn||!ac)return;var t=ac.currentTime;[[2480,.22],[5930,.08],[3710,.05]].forEach(function(p){var o=ac.createOscillator(),g=ac.createGain();o.frequency.value=p[0];g.gain.setValueAtTime(p[1],t);g.gain.exponentialRampToValueAtTime(.0001,t+1.3);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+1.35);});},
+  ret:function(){if(!soundOn||!ac)return;var t=ac.currentTime;for(var i=0;i<5;i++)burst(t+i*.045,.03,1400,2,.35);burst(t+.24,.22,700,.8,.25);},
+  tear:function(){if(!soundOn||!ac)return;var t=ac.currentTime,s=ac.createBufferSource(),b=ac.createBiquadFilter(),g=ac.createGain();s.buffer=noise;b.type="bandpass";b.Q.value=.9;b.frequency.setValueAtTime(3200,t);b.frequency.exponentialRampToValueAtTime(700,t+.4);g.gain.setValueAtTime(.45,t);g.gain.exponentialRampToValueAtTime(.0001,t+.45);s.connect(b);b.connect(g);g.connect(ac.destination);s.start(t);s.stop(t+.46);}
+};
+$("#snd").addEventListener("click",function(){
+  soundOn=!soundOn;this.setAttribute("aria-pressed",soundOn?"true":"false");this.textContent="Sound: "+(soundOn?"on":"off");
+  if(soundOn){if(audio())snd.key();else{soundOn=false;this.textContent="Sound: unavailable";}}else if(ac)ac.suspend();
+});
+
+/* ---- sheet position ---- */
+function measure(){
+  var p=document.createElement("p");p.className="ln";p.style.cssText="position:absolute;visibility:hidden";p.textContent="0000000000";linesEl.appendChild(p);
+  var cw=p.getBoundingClientRect().width/10;p.remove();
+  cols=Math.max(18,Math.min(44,Math.floor(linesEl.clientWidth/cw)-1));
+}
+function place(){
+  var cur=linesEl.lastElementChild;if(!cur)return;
+  var y=zone.clientHeight-26-(cur.offsetTop+cur.offsetHeight);
+  sheet.style.setProperty("--ty",y+"px");
+}
+function mk(c,s){var i=document.createElement("i");i.textContent=c===" "?" ":c;i.style.cssText="--x:"+rnd(.6)+"px;--y:"+rnd(.8)+"px;--r:"+rnd(1.8)+"deg;--o:"+(.72+Math.random()*.28).toFixed(2)+(ribbon==="r"?";color:var(--red)":"");if(s&&!reduced())i.className="s";return i;}
+function sync(nm,fx){
+  while(linesEl.children.length<nm.length){var p=document.createElement("p");p.className="ln";linesEl.appendChild(p);}
+  while(linesEl.children.length>nm.length)linesEl.lastElementChild.remove();
+  nm.forEach(function(line,li){
+    var p=linesEl.children[li],old=rendered[li]||"",k=0;
+    if(p.children.length!==old.length)old="";
+    while(k<old.length&&k<line.length&&old[k]===line[k])k++;
+    while(p.children.length>k)p.lastElementChild.remove();
+    for(var j=k;j<line.length;j++)p.appendChild(mk(line[j],fx&&j===line.length-1));
+    p.classList.toggle("cur",li===nm.length-1);
+  });
+  rendered=nm.slice();
+}
+function say(m){statusEl.textContent=m;}
+function onInput(){
+  var v=ta.value.replace(/\r/g,"").replace(/\t/g," "),ls=v.split("\n"),m="";
+  if(ls.length>MAXL){ls=ls.slice(0,MAXL);m="This page is full — pull it out for a fresh sheet.";}
+  var locked=false;ls=ls.map(function(l){if(l.length>cols){locked=true;return l.slice(0,cols);}return l;});
+  if(locked)m="The carriage is locked at the margin — press Return for a new line.";
+  var nv=ls.join("\n");if(nv!==ta.value){ta.value=nv;}
+  try{ta.setSelectionRange(nv.length,nv.length);}catch(e){}
+  var before=model.join("\n"),grew=nv.length>before.length,prevL=model.length,prevLen=model[model.length-1].length;
+  var curLen=ls[ls.length-1].length;
+  if(ls.length>prevL){snd.ret();m=m||(ls.length===MAXL?"Last line on this page.":"");}
+  else if(grew){snd.key();strike(nv.slice(-1));}
+  if(ls.length===prevL&&prevLen<cols-5&&curLen>=cols-5){snd.bell();ding();m=m||"Ding — five spaces left on this line.";}
+  model=ls;sync(ls,grew&&ls.length===prevL);place();
+  if(m)say(m);else if(nv.length===1)say("That's the spirit. Enter starts a new line; Pull the page when you're done.");
+}
+function ding(){sheet.animate&&!reduced()&&sheet.animate([{marginLeft:"0px"},{marginLeft:"2px"},{marginLeft:"-2px"},{marginLeft:"0px"}],{duration:160});}
+ta.addEventListener("input",onInput);
+ta.addEventListener("keydown",function(e){if(/^(ArrowLeft|ArrowRight|ArrowUp|ArrowDown|Home|End|PageUp|PageDown)$/.test(e.key))e.preventDefault();});
+ta.addEventListener("focus",function(){try{ta.setSelectionRange(ta.value.length,ta.value.length);}catch(e){}});
+document.addEventListener("keydown",function(e){
+  if(e.defaultPrevented||e.ctrlKey||e.metaKey||e.altKey||e.key.length!==1||e.key===" ")return;
+  var a=document.activeElement;if(a&&a!==document.body&&a!==document.documentElement)return;
+  var r=zone.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+  ta.focus({preventScroll:true});
+});
+function focusTa(){ta.focus({preventScroll:true});if(window.innerWidth<700)$("#machine").scrollIntoView({block:"start",behavior:reduced()?"auto":"smooth"});}
+$("#start").addEventListener("click",focusTa);
+$("#ret").addEventListener("click",function(){if(model.length>=MAXL){say("This page is full — pull it out for a fresh sheet.");return;}ta.value=model.join("\n")+"\n";onInput();ta.focus({preventScroll:true});});
+function setRib(r){ribbon=r;$("#rib-k").setAttribute("aria-pressed",r==="k"?"true":"false");$("#rib-r").setAttribute("aria-pressed",r==="r"?"true":"false");say(r==="r"?"Red half of the ribbon — new letters strike in red.":"Black ribbon — new letters strike in black.");ta.focus({preventScroll:true});}
+$("#rib-k").addEventListener("click",function(){setRib("k");});$("#rib-r").addEventListener("click",function(){setRib("r");});
+
+/* ---- pull the page ---- */
+$("#pull").addEventListener("click",function(){
+  if(busy)return;
+  if(!model.join("").trim()){say("Type a line first — a blank page isn't worth tearing out.");return;}
+  busy=true;snd.tear();
+  var lines=model.slice();
+  function finish(){
+    pages++;
+    var st=$("#stack"),ep=$("#empty-pile");if(ep)ep.remove();
+    var mini=document.createElement("div");mini.className="mini";mini.setAttribute("aria-hidden","true");mini.style.setProperty("--r",rnd(7)+"deg");mini.style.setProperty("--i",Math.min(pages-1,8));
+    mini.innerHTML="<b>p. "+pages+"</b>";lines.forEach(function(l){var p=document.createElement("p");p.textContent=l||" ";mini.appendChild(p);});
+    st.appendChild(mini);
+    $("#pile-n").textContent=pages;
+    model=[""];rendered=[""];linesEl.innerHTML='<p class="ln cur"></p>';ta.value="";
+    prompt.textContent="Page "+(pages+1)+" — keep going, or start something new.";
+    sheet.classList.remove("tear");sheet.classList.add("nofx");place();
+    var ty=parseFloat(sheet.style.getPropertyValue("--ty"))||0;
+    if(!reduced()){sheet.style.setProperty("--ty",(zone.clientHeight+40)+"px");void sheet.offsetWidth;sheet.classList.remove("nofx");snd.ret();requestAnimationFrame(function(){sheet.style.setProperty("--ty",ty+"px");});}
+    else sheet.classList.remove("nofx");
+    say("Page "+pages+" is on the pile: “"+(lines[0]||lines.join(" ")).trim()+"”. A fresh sheet is in.");
+    busy=false;
+  }
+  if(reduced()){finish();return;}
+  sheet.classList.add("tear");
+  setTimeout(finish,600);
+});
+
+/* ---- letterhead typing ---- */
+var ORIG=h1.getAttribute("data-brand-original")||h1.textContent,typing=true,timer=0;
+function wordsInto(el,text){el.textContent="";text.split(" ").forEach(function(w,wi){if(wi)el.appendChild(document.createTextNode(" "));var s=document.createElement("span");s.className="w";w.split("").forEach(function(c){var i=mk(c,false);i.classList.add("h");s.appendChild(i);});el.appendChild(s);});}
+wordsInto(tag,tag.textContent);wordsInto(prompt,prompt.textContent);
+function reveal(el,ms,cb){var q=$$("i.h",el),n=0;(function step(){if(n>=q.length){cb&&cb();return;}for(var k=0;k<2&&n<q.length;k++,n++){q[n].classList.remove("h");if(!reduced())q[n].classList.add("s");}timer=setTimeout(step,ms);})();}
+function brandName(){return window.DemoKit&&DemoKit.brand?DemoKit.brand:ORIG;}
+if(reduced()){$$("i.h",sheet).forEach(function(i){i.classList.remove("h");});typing=false;}
+else{
+  h1.textContent="";var n=0;
+  (function t(){if(!typing)return;var nm=brandName();n++;h1.textContent=nm.slice(0,n);strike(nm.charAt(n-1));if(n<nm.length){timer=setTimeout(t,40);}else{typing=false;reveal(tag,16,function(){reveal(prompt,16);});}})();
+}
+window.addEventListener("hd:brandchange",function(){if(typing){typing=false;clearTimeout(timer);h1.textContent=brandName();$$("i.h",sheet).forEach(function(i){i.classList.remove("h");});}requestAnimationFrame(place);});
+
+measure();place();
+sheet.classList.add("nofx");place();requestAnimationFrame(function(){sheet.classList.remove("nofx");});
+if(window.ResizeObserver)new ResizeObserver(function(){measure();place();}).observe(zone);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){measure();place();});
+new MutationObserver(function(){place();}).observe(h1,{childList:true,characterData:true,subtree:true});
+
+/* ---- book-club questions ---- */
+var QS=[["Why do you think the letters were addressed to someone who had already left town?","How does the drought shape the way people speak to one another?","Which letter changed your view of Nell's mother?","The creek is dry for most of the book. What does its return mean to you?","If you could send one letter to a character, who would it go to?"],
+["The house is 'always cold'. Is that about the building, or the family?","How do the two timelines echo each other?","Was June right to keep the key?","Which small-town rule would you have broken first?","What do you think happens the following spring?"],
+["Why does Mae insist on the back roads?","What does the salt jar come to mean by the end?","How does the grandmother's version of events differ from Mae's?","Which stop on the trip would you most like to visit?","Is the ending a homecoming or a leaving?"]];
+var TITLES=["The Dry Creek Letters","A House Called Winter","Salt for the Road"];
+function club(b){$$(".tabs button").forEach(function(x){x.setAttribute("aria-pressed",x.getAttribute("data-b")==b?"true":"false");});$("#qs-h").textContent=TITLES[b];$("#qs").innerHTML=QS[b].map(function(q){return "<li>"+q+"</li>";}).join("");}
+$$(".tabs button").forEach(function(x){x.addEventListener("click",function(){club(+x.getAttribute("data-b"));});});
+club(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="078">
+<meta name="demo:brand" content="Low Tide Radio">
+<title>Low Tide Radio — indie band from Brunswick, VIC</title>
+<meta name="description" content="Low Tide Radio is a fictional four-piece indie band from Brunswick, Victoria, with a new record, tour dates, merch and a turntable you can play.">
+<meta name="theme-color" content="#1A1714">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;1,400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#1A1714;--ink2:#221E1A;--ink3:#2B2621;--wal:#6B4A2F;--cream:#F1E4C8;--mute:#BDB199;--mus:#D9A441;--teal:#2E6E6A;--tl:#7CC3BB;--acc:#D9A441;--line:rgba(241,228,200,.13);--hd:64px;--pad:clamp(16px,4vw,48px);color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hd) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--cream);font:400 17px/1.6 Chivo,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.m{font-family:"Rubik Mono One","Arial Black",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+button{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--mus);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-80px;z-index:99;background:var(--mus);color:var(--ink);padding:10px 14px;border-radius:8px;font-weight:700}
+.skip:focus{top:10px}
+/* header */
+.hd{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:14px;min-height:var(--hd);padding:8px var(--pad);background:rgba(26,23,20,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo svg{flex:none;width:30px;height:30px}
+.logo .m{font-size:14px;line-height:1.15;overflow-wrap:anywhere;min-width:0}
+.nav{display:flex;gap:2px}
+.nav a{padding:10px 12px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;color:var(--mute)}
+.nav a:hover{color:var(--cream);background:rgba(241,228,200,.07)}
+.chip{display:none;align-items:center;gap:8px;flex:none;border:1.5px solid var(--acc);background:transparent;border-radius:999px;padding:6px 14px;min-height:40px;cursor:pointer;font-weight:700;font-size:13px;white-space:nowrap}
+.chip i{width:9px;height:9px;background:var(--acc);border-radius:2px}
+.playing .chip{display:inline-flex}
+.menu-b{display:none;flex:none;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:none;font-weight:700;font-size:14px;cursor:pointer}
+.menu-b span,.menu-b span::before{display:block;width:16px;height:2px;background:currentColor;position:relative}
+.menu-b span::before{content:"";position:absolute;top:5px}
+.menu-b span{transform:translateY(-3px)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);grid-template-areas:"t d" "r d";column-gap:clamp(24px,4.5vw,80px);row-gap:22px;align-items:center;max-width:1400px;margin:0 auto;padding:clamp(18px,3vh,36px) var(--pad) 44px;min-height:calc(100svh - var(--hd))}
+.h-t{grid-area:t;align-self:end}
+.kick{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mus);margin:0}
+.kick::before{content:"";width:26px;height:2px;background:currentColor}
+h1{margin:12px 0 12px;font-size:clamp(32px,5.1vw,78px);line-height:.94;overflow-wrap:anywhere}
+.lede{margin:0;max-width:33em;color:var(--mute);font-size:clamp(16px,1.25vw,18px)}
+.lede b{color:var(--cream);font-weight:700}
+.deck{grid-area:d;position:relative;justify-self:center;width:min(100%,640px,calc(100svh - var(--hd) - 64px));aspect-ratio:1;min-width:0;user-select:none;-webkit-user-select:none}
+.deck>svg{position:absolute;display:block;overflow:visible}
+.deck .base,.deck .armL{inset:0;width:100%;height:100%}
+.deck .armL{pointer-events:none}
+.deck .rec{left:1.833%;top:10.167%;width:81.333%;height:81.333%;will-change:transform;pointer-events:none}
+.deck .sheen{left:1.833%;top:10.167%;width:81.333%;height:81.333%;pointer-events:none}
+.arm{pointer-events:auto;cursor:grab;touch-action:none;outline:none}
+.arm.drag{cursor:grabbing}
+.arm .ring{opacity:0;transition:opacity .2s}
+.arm:focus-visible .ring{opacity:1}
+.pilot{transition:fill .3s}
+.playing .pilot{fill:var(--acc)}
+.dhint{position:absolute;right:2%;bottom:-34px;margin:0;font-size:13px;color:var(--mute);display:flex;align-items:center;gap:8px;pointer-events:none;transition:opacity .4s}
+.dhint svg{width:26px;height:18px}
+.playing .dhint{opacity:0}
+/* receiver */
+.rx{grid-area:r;align-self:start;background:linear-gradient(180deg,#2B2621,#1F1B17);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 24px 50px rgba(0,0,0,.35)}
+.rx-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 4px 10px;font-size:10.5px;letter-spacing:.12em;color:var(--mute)}
+.rx-top .m{font-size:10px;letter-spacing:.06em}
+.lamp{width:8px;height:8px;border-radius:50%;background:#3a332c;box-shadow:inset 0 0 0 1px rgba(0,0,0,.4);transition:background .3s,box-shadow .3s}
+.playing .lamp{background:var(--acc);box-shadow:0 0 10px var(--acc)}
+.screen{position:relative;height:124px;border-radius:10px;background:radial-gradient(120% 90% at 50% 0%,#18302d,#0E1513 70%);box-shadow:inset 0 0 0 1px rgba(124,195,187,.18),inset 0 10px 26px rgba(0,0,0,.6);overflow:hidden}
+.screen canvas{position:absolute;inset:0;width:100%;height:100%}
+.np{position:absolute;left:14px;top:10px;right:14px;margin:0;font-size:13px;line-height:1.35;color:var(--tl);text-shadow:0 0 12px rgba(124,195,187,.35)}
+.np b{display:block;font-family:"Rubik Mono One","Arial Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:12.5px;color:var(--cream);letter-spacing:0}
+.tracks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:12px 0}
+.tk{position:relative;display:grid;gap:2px;justify-items:start;min-height:56px;padding:9px 10px;border-radius:10px;border:1px solid rgba(241,228,200,.1);background:linear-gradient(180deg,#342E28,#27221D);box-shadow:0 3px 0 #120F0D,inset 0 1px 0 rgba(255,255,255,.06);cursor:pointer;text-align:left;transition:transform .12s,box-shadow .12s,background .2s}
+.tk .m{font-size:14px}
+.tk small{font-size:11.5px;color:var(--mute);white-space:nowrap}
+.tk::after{content:"";position:absolute;right:9px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--c);opacity:.35}
+.tk[aria-pressed=true]{transform:translateY(2px);box-shadow:0 1px 0 #120F0D,inset 0 0 0 1.5px var(--c);background:linear-gradient(180deg,#2A2520,#211D19)}
+.tk[aria-pressed=true]::after{opacity:1;box-shadow:0 0 8px var(--c)}
+.transport{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.play{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 22px 0 16px;border-radius:999px;border:0;background:var(--acc);color:var(--ink);font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.45);transition:transform .12s,background .3s}
+.play:active{transform:translateY(2px)}
+.play svg{width:22px;height:22px}
+.play .ic-stop,.playing .play .ic-play{display:none}
+.playing .play .ic-stop{display:block}
+.vol{display:flex;align-items:center;gap:10px;flex:1 1 180px;min-width:0;font-size:13px;font-weight:700;color:var(--mute)}
+.vol input{flex:1;min-width:0;height:40px;accent-color:var(--acc);cursor:pointer}
+.tip{margin:10px 2px 0;font-size:12.5px;color:var(--mute);line-height:1.45}
+/* sections */
+.sec{max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) var(--pad)}
+.sec-h{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 40px;margin-bottom:clamp(28px,4vw,52px)}
+h2{margin:12px 0 0;font-size:clamp(28px,4.3vw,60px);line-height:.98;overflow-wrap:anywhere}
+.sec-h>p{margin:0;max-width:30em;color:var(--mute)}
+.note{font-size:13px;color:var(--mute)}
+.band{border-top:1px solid var(--line)}
+/* record */
+.rec{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,84px);align-items:start}
+.sleeve-wrap{position:relative;padding-right:17%}
+.disc{position:absolute;top:5%;right:0;width:82%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,transparent 0 30%,rgba(255,255,255,.05) 30.5% 31%,transparent 31.5%),repeating-radial-gradient(circle,#1d1a17 0 1.4px,#121010 1.6px 3.2px);box-shadow:0 20px 40px rgba(0,0,0,.5);transform:translateX(-18%) rotate(-30deg);transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.disc::after{content:"";position:absolute;inset:33%;border-radius:50%;background:radial-gradient(circle,#0c0b0a 0 4%,var(--cream) 4.5% 60%,var(--acc) 61% 70%,var(--cream) 71%)}
+.in .disc,.no-js .disc{transform:none}
+.sleeve{position:relative;z-index:1;display:grid;aspect-ratio:1;border-radius:4px;overflow:hidden;background:var(--teal);box-shadow:0 30px 60px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.08)}
+.sleeve>*{grid-area:1/1}
+.sleeve svg{width:100%;height:100%}
+.cv{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:16px;padding:7%}
+.cv .m{font-size:clamp(15px,1.9vw,24px);line-height:1.02;overflow-wrap:anywhere}
+.cv .t2{font-size:clamp(12px,1.2vw,14px);letter-spacing:.14em;text-transform:uppercase;font-weight:700;display:flex;justify-content:space-between;gap:10px}
+.rel{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 0;padding:0;list-style:none;font-size:14px;color:var(--mute)}
+.rel b{color:var(--cream)}
+.sides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.side h3{margin:0 0 8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mus)}
+.tl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.tl button{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:8px;width:100%;min-height:58px;padding:10px 6px;background:none;border:0;border-bottom:1px solid var(--line);text-align:left;cursor:pointer;transition:background .2s}
+.tl button:hover{background:rgba(241,228,200,.05)}
+.tl .n{font-family:"Rubik Mono One",sans-serif;font-size:12px;color:var(--mute)}
+.tl .ti{font-weight:700;line-height:1.25}
+.tl .ti small{display:block;font-weight:400;font-size:12.5px;color:var(--mute)}
+.tl .du{font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.tl button[aria-current=true] .ti,.tl button[aria-current=true] .n{color:var(--acc)}
+.eq{display:inline-flex;gap:2px;align-items:flex-end;height:12px;margin-left:8px;vertical-align:-1px}
+.eq i{width:3px;height:4px;background:var(--acc);border-radius:1px}
+.playing [aria-current=true] .eq i{animation:eq .7s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:-.3s!important}.eq i:nth-child(3){animation-delay:-.55s!important}
+@keyframes eq{to{height:12px}}
+.buy{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:26px;padding:18px;border-radius:14px;background:var(--ink2);border:1px solid var(--line)}
+.buy p{margin:0;flex:1 1 220px;font-size:15px;color:var(--mute)}
+.buy p b{color:var(--cream)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--cream);background:none;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--cream);color:var(--ink)}
+.btn.solid{background:var(--mus);border-color:var(--mus);color:var(--ink)}
+.btn.solid:hover{background:var(--cream);border-color:var(--cream)}
+/* tour */
+.stubs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.stub{position:relative;display:grid;grid-template-columns:96px minmax(0,1fr) auto;align-items:center;gap:6px 18px;min-height:100px;padding:14px 18px 14px 0;border-radius:10px;background:var(--cream);color:var(--ink)}
+.stub::before,.stub::after{content:"";position:absolute;left:87px;width:18px;height:18px;border-radius:50%;background:var(--ink)}
+.stub::before{top:-9px}.stub::after{bottom:-9px}
+.dt{display:grid;place-content:center;text-align:center;align-self:stretch;border-right:2px dashed rgba(26,23,20,.3);line-height:1.1}
+.dt small{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--wal)}
+.dt b{font-family:"Rubik Mono One",sans-serif;font-weight:400;font-size:30px;line-height:1}
+.gig b{display:block;font-weight:700;font-size:17px;line-height:1.25}
+.gig span{font-size:14px;color:#5A4632}
+.tag{display:inline-block;margin-top:4px;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--cream)}
+.tag.hot{background:#B8452A;color:#fff}
+.tix{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--ink);color:var(--cream);font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+.tix:hover{background:var(--wal)}
+.tix.off{background:transparent;color:#5A4632;border:1.5px solid rgba(26,23,20,.3)}
+/* merch */
+.merch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.item{display:flex;flex-direction:column;gap:12px;padding:16px;border-radius:16px;background:var(--cream);color:var(--ink)}
+.art{display:grid;place-items:center;aspect-ratio:5/4;border-radius:10px;background:repeating-linear-gradient(94deg,rgba(0,0,0,.07) 0 2px,transparent 2px 9px),repeating-linear-gradient(88deg,rgba(255,255,255,.05) 0 1px,transparent 1px 23px),var(--wal)}
+.art svg{width:78%;height:auto;filter:drop-shadow(0 12px 14px rgba(0,0,0,.35))}
+.item h3{margin:2px 0 0;font-size:15px;line-height:1.2}
+.item p{margin:0;font-size:14.5px;line-height:1.5;color:#4A3A2A}
+.pr{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-weight:700}
+.pr span{font-size:20px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;border:0;margin:0;padding:0}
+.opts legend{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5A4632;margin-bottom:6px;padding:0}
+.opt{min-width:44px;min-height:40px;padding:0 12px;border:1.5px solid rgba(26,23,20,.55);border-radius:999px;background:transparent;font-weight:700;font-size:13.5px;cursor:pointer}
+.opt[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.opt:focus-visible,.add:focus-visible,.tix:focus-visible{outline-color:#8A5A12}
+.add{margin-top:auto;min-height:50px;border:0;border-radius:999px;background:var(--ink);color:var(--cream);font-weight:700;font-size:15px;cursor:pointer}
+.add:hover{background:var(--wal)}
+.crate{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:18px;padding:16px 18px;border:1.5px dashed rgba(241,228,200,.28);border-radius:16px}
+.crate .sum{flex:1 1 260px;margin:0;font-size:15px;color:var(--mute)}
+.crate .sum b{color:var(--cream)}
+.crate ul{flex:1 1 100%;margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.crate li{font-size:13px;padding:5px 10px;border-radius:999px;background:var(--ink3)}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(30px,5vw,84px)}
+.pull{margin:18px 0 0;font-size:clamp(22px,2.9vw,40px);line-height:1.08;color:var(--mus)}
+.liner{columns:2 250px;column-gap:34px;color:var(--mute);font-size:16px}
+.liner p{margin:0 0 14px}
+.lineup{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;margin:26px 0 0;padding:0;list-style:none}
+.lineup li{border-top:3px solid var(--wal);padding-top:10px;font-size:14.5px;color:var(--mute)}
+.lineup b{display:block;font-family:"Rubik Mono One",sans-serif;font-weight:400;font-size:15px;color:var(--cream);text-transform:uppercase}
+/* mailing list */
+.post{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);border-radius:8px;overflow:hidden;background:var(--cream);color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.post .l{position:relative;padding:clamp(24px,4vw,52px);border-right:2px dashed rgba(26,23,20,.25);background:repeating-linear-gradient(-45deg,transparent 0 14px,rgba(107,74,47,.06) 14px 15px)}
+.post .l h2{color:var(--ink);font-size:clamp(26px,3.4vw,46px)}
+.post .l p{color:#4A3A2A;max-width:26em}
+.stamp{position:absolute;right:clamp(16px,3vw,32px);top:clamp(16px,3vw,32px);width:clamp(64px,8vw,92px);transform:rotate(6deg)}
+.post .kick{color:#8A5A12}
+.post form{display:grid;gap:16px;align-content:center;padding:clamp(24px,4vw,52px)}
+.fld{display:grid;gap:4px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#5A4632}
+.fld input{min-height:48px;padding:8px 2px;border:0;border-bottom:2px solid var(--ink);border-radius:0;background:transparent;font-size:17px;text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink)}
+.fld input:focus-visible{outline:none;border-bottom-color:#8A5A12;box-shadow:0 3px 0 -1px #8A5A12}
+.cb{display:flex;gap:12px;align-items:center;min-height:44px;font-size:15px}
+.cb input{width:22px;height:22px;accent-color:var(--ink);flex:none}
+.post button{min-height:54px;border:0;border-radius:999px;background:var(--ink);color:var(--cream);font-weight:700;font-size:16px;cursor:pointer}
+.post button:hover{background:var(--wal)}
+.post button:focus-visible{outline-color:#8A5A12}
+/* footer */
+.ft{max-width:1400px;margin:0 auto;padding:clamp(48px,7vw,88px) var(--pad) calc(34px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.big{margin:0;font-size:clamp(34px,8.6vw,132px);line-height:.9;color:var(--cream);text-shadow:.05em .05em 0 var(--wal);overflow-wrap:anywhere}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px;font-size:15px;color:var(--mute)}
+.fcols h3{margin:0 0 8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mus)}
+.fcols p{margin:0}
+.fcols a{text-decoration-color:var(--wal);text-underline-offset:3px}
+.legal{margin:36px 0 0;font-size:12.5px;color:var(--mute)}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+/* responsive */
+@media (max-width:1080px){.merch{grid-template-columns:repeat(2,minmax(0,1fr))}.stubs{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){
+ .menu-b{display:inline-flex}
+ .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:6px var(--pad) 16px;background:var(--ink2);border-bottom:1px solid var(--line)}
+ .nav.open{display:flex}
+ .nav a{padding:12px 6px;font-size:17px;border-radius:8px}
+ .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"t" "d" "r";min-height:0;row-gap:16px;padding-top:18px}
+ .h-t{align-self:start}
+ h1{font-size:clamp(30px,10.4vw,56px)}
+ .deck{width:min(100%,560px);margin-bottom:24px}
+ .dhint{right:auto;left:2px;bottom:-32px}
+ .rec,.about,.post{grid-template-columns:minmax(0,1fr)}
+ .post .l{border-right:0;border-bottom:2px dashed rgba(26,23,20,.25)}
+ .fcols{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+ .tracks{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .sides{grid-template-columns:minmax(0,1fr)}
+ .merch{grid-template-columns:minmax(0,1fr)}
+ .stub{grid-template-columns:78px minmax(0,1fr);grid-template-areas:"d g" "d a";padding:14px 14px 14px 0}
+ .stub::before,.stub::after{left:69px}
+ .dt{grid-area:d}.gig{grid-area:g}.stub .act{grid-area:a;justify-self:start}
+ .dt b{font-size:26px}
+ .lede .more{display:none}
+ .chip span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .js .rv{opacity:1;transform:none}
+ .disc{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hd" id="top">
+ <a class="logo" href="#top" aria-label="Back to the top">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#0F0E0D" stroke="#6B4A2F" stroke-width="1.5"/><circle cx="16" cy="16" r="11" fill="none" stroke="#2E2A26"/><circle cx="16" cy="16" r="8" fill="none" stroke="#2E2A26"/><circle cx="16" cy="16" r="5" fill="#D9A441"/><circle cx="16" cy="16" r="1.4" fill="#1A1714"/></svg>
+  <span class="m" data-brand>Low Tide Radio</span>
+ </a>
+ <button class="chip" id="chip" type="button" aria-label="Stop the music"><i aria-hidden="true"></i>Stop<span id="chipT">&nbsp;· A1</span></button>
+ <button class="menu-b" id="menuB" type="button" aria-expanded="false" aria-controls="nav"><span aria-hidden="true"></span>Menu</button>
+ <nav class="nav" id="nav" aria-label="Main">
+  <a href="#record">Record</a><a href="#tour">Tour</a><a href="#merch">Merch</a><a href="#about">About</a><a href="#list">Mailing list</a>
+ </nav>
+</header>
+<main id="main">
+<section class="hero" aria-label="Listen">
+ <div class="h-t">
+  <p class="kick">Indie four-piece · Brunswick, VIC</p>
+  <h1 class="m" data-brand>Low Tide Radio</h1>
+  <p class="lede">Warm, slow-burning songs for tram windows and late walks home. <b>New LP <i>Saltwater Hours</i> is out Fri 6 Nov.</b> <span class="more">Drop the needle for a taste — each side plays an original loop built live in your browser.</span></p>
+ </div>
+
+ <div class="deck" id="deck" role="group" aria-label="Turntable">
+  <svg class="base" viewBox="0 0 600 600" aria-hidden="true">
+   <defs>
+    <linearGradient id="wd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C5738"/><stop offset=".55" stop-color="#6B4A2F"/><stop offset="1" stop-color="#523722"/></linearGradient>
+    <linearGradient id="al" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EFE8DA"/><stop offset=".45" stop-color="#A69E90"/><stop offset=".6" stop-color="#DCD5C7"/><stop offset="1" stop-color="#6E675D"/></linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.0045 0.12" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .16  0 0 0 0 .09  0 0 0 0 .04  1.8 0 0 0 -.66"/></filter>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter>
+    <clipPath id="pc"><rect x="8" y="8" width="584" height="584" rx="28"/></clipPath>
+   </defs>
+   <rect x="20" y="34" width="572" height="566" rx="30" fill="#000" opacity=".55" filter="url(#blur)"/>
+   <rect x="8" y="8" width="584" height="584" rx="28" fill="url(#wd)"/>
+   <g clip-path="url(#pc)"><rect x="8" y="8" width="584" height="584" filter="url(#grain)"/></g>
+   <rect x="9.5" y="9.5" width="581" height="581" rx="27" fill="none" stroke="rgba(255,236,204,.22)" stroke-width="2"/>
+   <rect x="13" y="13" width="574" height="574" rx="24" fill="none" stroke="rgba(0,0,0,.28)" stroke-width="2"/>
+   <circle cx="255" cy="309" r="246" fill="#000" opacity=".5" filter="url(#blur)"/>
+   <circle cx="515" cy="120" r="42" fill="#1F1B17" stroke="rgba(255,236,204,.16)" stroke-width="2"/>
+   <circle cx="515" cy="120" r="30" fill="url(#al)" opacity=".85"/>
+   <rect x="503" y="350" width="24" height="18" rx="5" fill="#1A1714" stroke="#A69E90" stroke-width="1.5"/>
+   <circle cx="552" cy="540" r="17" fill="url(#al)"/><circle cx="552" cy="540" r="11" fill="#2B2621"/><rect x="550" y="526" width="4" height="10" rx="2" fill="#D9D2C4"/>
+   <circle class="pilot" cx="36" cy="571" r="6" fill="#3A322A" stroke="#1A1714" stroke-width="2"/>
+   <g font-family="Chivo,Arial,sans-serif" font-weight="700" font-size="11" fill="#F1E4C8" opacity=".78" letter-spacing="1.5"><text x="52" y="575">33⅓</text><text x="92" y="575" opacity=".55">45</text><text x="534" y="574" font-size="9">CUE</text><text x="30" y="36" font-size="9" opacity=".7">LT-3 · DIRECT DRIVE</text></g>
+  </svg>
+  <svg class="rec" id="rec" viewBox="-244 -244 488 488" aria-hidden="true">
+   <defs>
+    <radialGradient id="vg"><stop offset=".3" stop-color="#1B1917"/><stop offset="1" stop-color="#0E0D0C"/></radialGradient>
+    <path id="lt" d="M-55 0a55 55 0 1 1 110 0"/>
+    <path id="lb" d="M-64 0a64 64 0 0 0 128 0"/>
+   </defs>
+   <circle r="242" fill="#24201C"/>
+   <circle r="239.5" fill="none" stroke="#D2C9B6" stroke-width="3.5" stroke-dasharray="1.6 4.36" opacity=".75"/>
+   <circle r="242.5" fill="none" stroke="#8E877B" stroke-width="1.5"/>
+   <circle r="226" fill="url(#vg)"/>
+   <g id="grooves" fill="none"></g>
+   <circle r="79" fill="#0B0A09"/>
+   <circle r="76" fill="#F1E4C8"/>
+   <circle r="70" fill="none" class="accS" stroke-width="5"/>
+   <text class="m" font-size="10.5" fill="#1A1714" id="lblBrand"><textPath href="#lt" startOffset="50%" text-anchor="middle" data-brand>Low Tide Radio</textPath></text>
+   <text class="m" font-size="7" fill="#6B4A2F"><textPath href="#lb" startOffset="50%" text-anchor="middle" id="lblSide">Saltwater Hours · Side A · 33⅓</textPath></text>
+   <text class="m accF" y="4" x="0" text-anchor="middle" font-size="26" id="lblLetter">A</text>
+   <text y="30" text-anchor="middle" font-size="8" font-family="Chivo,sans-serif" font-weight="700" fill="#6B4A2F" letter-spacing="1">LTR-003</text>
+   <circle r="4.5" fill="#CFC6B4" stroke="#6E675D"/>
+  </svg>
+  <svg class="sheen" viewBox="-244 -244 488 488" aria-hidden="true">
+   <defs><filter id="sb"><feGaussianBlur stdDeviation="7"/></filter></defs>
+   <g fill="#fff" opacity=".1" filter="url(#sb)"><path d="M-60.9-54.9L-166.4-149.9A224 224 0 0 1-91.1-204.7L-33.4-74.9A82 82 0 0 0-60.9-54.9Z"/><path d="M60.9 54.9L166.4 149.9A224 224 0 0 1 91.1 204.7L33.4 74.9A82 82 0 0 0 60.9 54.9Z"/></g>
+  </svg>
+  <svg class="armL" viewBox="0 0 600 600">
+   <g id="arm" class="arm" transform="rotate(0 515 120)" tabindex="0" role="button" aria-pressed="false" aria-label="Tonearm. Press Enter to drop the needle on the record, or again to lift it.">
+    <line x1="515" y1="70" x2="506" y2="432" stroke="transparent" stroke-width="46" pointer-events="stroke"/>
+    <rect x="498" y="42" width="34" height="42" rx="8" fill="url(#al)"/><path d="M500 54h30M500 62h30M500 70h30" stroke="rgba(0,0,0,.25)" stroke-width="1.5"/>
+    <rect x="512" y="82" width="6" height="40" fill="#8D8578"/>
+    <line x1="515" y1="120" x2="515" y2="390" stroke="#D5CEC0" stroke-width="7" stroke-linecap="round"/>
+    <line x1="513.2" y1="126" x2="513.2" y2="386" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="1.3"/>
+    <g transform="rotate(24 515 395)">
+     <rect x="504" y="384" width="22" height="44" rx="4" fill="#1A1714" stroke="#CFC6B4" stroke-width="1.5"/>
+     <rect x="507.5" y="404" width="15" height="17" rx="2" class="accF"/>
+     <path d="M526 391q15-1 21-13" fill="none" stroke="#CFC6B4" stroke-width="3" stroke-linecap="round"/>
+     <circle cx="515" cy="424" r="1.8" fill="#fff"/>
+    </g>
+    <circle cx="515" cy="120" r="17" fill="#2B2621" stroke="#CFC6B4" stroke-width="3"/>
+    <circle cx="515" cy="120" r="5" fill="#E6DFD1"/>
+    <circle class="ring" cx="507" cy="412" r="36" fill="none" stroke="#D9A441" stroke-width="3" stroke-dasharray="7 6"/>
+   </g>
+  </svg>
+  <p class="dhint"><svg viewBox="0 0 26 18" aria-hidden="true"><path d="M24 3C16 3 8 6 4 14" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round"/><path d="M2 9l2 6 6-2" fill="none" stroke="#D9A441" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Drag the tonearm onto the record</p>
+ </div>
+
+ <section class="rx" aria-label="Player">
+  <div class="rx-top"><span class="m">LTR · Three-band receiver</span><span class="lamp" aria-hidden="true"></span></div>
+  <div class="screen"><canvas id="viz" aria-hidden="true"></canvas><p class="np" id="np" aria-live="polite"><b>Needle up</b>Press play, or drag the tonearm onto a band of the record.</p></div>
+  <div class="tracks" role="group" aria-label="Choose a track">
+   <button class="tk" type="button" data-i="0" aria-pressed="true" style="--c:#D9A441" aria-label="A1, Sydney Road, 2am. 78 BPM, D minor"><span class="m">A1</span><small>78 bpm</small></button>
+   <button class="tk" type="button" data-i="1" aria-pressed="false" style="--c:#7CC3BB" aria-label="A2, Merri Creek Drift. 72 BPM, F major"><span class="m">A2</span><small>72 bpm</small></button>
+   <button class="tk" type="button" data-i="2" aria-pressed="false" style="--c:#D6785A" aria-label="A3, Salt on the Aerial. 86 BPM, A minor"><span class="m">A3</span><small>86 bpm</small></button>
+   <button class="tk" type="button" data-i="3" aria-pressed="false" style="--c:#B9C46E" aria-label="B1, Upfield Line. 92 BPM, G major"><span class="m">B1</span><small>92 bpm</small></button>
+   <button class="tk" type="button" data-i="4" aria-pressed="false" style="--c:#E09AA0" aria-label="B2, Milk Bar Summer. 98 BPM, E minor"><span class="m">B2</span><small>98 bpm</small></button>
+   <button class="tk" type="button" data-i="5" aria-pressed="false" style="--c:#9DB8E0" aria-label="B3, Saltwater Hours. 66 BPM, C major"><span class="m">B3</span><small>66 bpm</small></button>
+  </div>
+  <div class="transport">
+   <button class="play" id="play" type="button" aria-pressed="false"><svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1A1714"/><path d="M10 7.5l6 4.5-6 4.5z" fill="#F1E4C8"/></svg><svg class="ic-stop" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1A1714"/><rect x="8" y="8" width="8" height="8" rx="1" fill="#F1E4C8"/></svg><span id="playL">Play</span></button>
+   <label class="vol">Volume<input type="range" id="vol" min="0" max="100" value="70" aria-label="Volume"></label>
+  </div>
+  <p class="tip">Sound is off until you press play. Every loop is an original, generated on the spot: chord pads, bass, noise-burst drums and a little vinyl crackle.</p>
+ </section>
+</section>
+
+<section class="sec band" id="record" aria-labelledby="rec-h">
+ <div class="sec-h"><div><p class="kick">New record · out Fri 6 Nov</p><h2 class="m" id="rec-h">Saltwater Hours</h2></div><p>Six songs written between the Upfield line and the bay, recorded live to tape in a converted milk bar. Tap a track to put its loop on the turntable.</p></div>
+ <div class="rec">
+  <div class="rv">
+   <div class="sleeve-wrap"><div class="disc" aria-hidden="true"></div>
+    <div class="sleeve">
+     <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="400" height="400" fill="#2E6E6A"/>
+      <circle cx="262" cy="262" r="112" fill="#D9A441"/>
+      <circle cx="262" cy="262" r="84" fill="none" stroke="#E7BE68" stroke-width="2" opacity=".6"/>
+      <rect y="262" width="400" height="138" fill="#23524F"/>
+      <g fill="none" stroke="#F1E4C8" stroke-linecap="round"><path d="M0 272q25-9 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke-width="4"/><path d="M0 294q25-8 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke-width="3" opacity=".75"/><path d="M0 316q25-7 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke-width="2.4" opacity=".55"/><path d="M0 338q25-6 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0" stroke-width="1.8" opacity=".4"/></g>
+      <g stroke="#1A1714" stroke-width="3" fill="none" stroke-linejoin="round"><path d="M70 264L96 118L122 264M76 230h40M81 200h30M86 170h20M91 142h10M76 230L111 200M116 230L81 200M81 200L106 170M111 200L86 170"/></g>
+      <g fill="none" stroke="#F1E4C8" stroke-width="3" stroke-linecap="round" opacity=".85"><path d="M78 104a26 26 0 0 1 36 0"/><path d="M66 90a44 44 0 0 1 60 0" opacity=".7"/><path d="M54 76a62 62 0 0 1 84 0" opacity=".45"/></g>
+      <circle cx="96" cy="116" r="4" fill="#D9A441"/>
+     </svg>
+     <div class="cv"><span class="m" data-brand>Low Tide Radio</span><div><span class="m">Saltwater Hours</span><div class="t2"><span>LTR-003</span><span>33⅓ RPM</span></div></div></div>
+    </div>
+   </div>
+   <ul class="rel"><li><b>12-inch LP</b> · 180g</li><li><b>6 tracks</b> · 23 min</li><li>Recorded in Brunswick East</li></ul>
+  </div>
+  <div class="rv">
+   <div class="sides">
+    <div class="side"><h3>Side A</h3><ol class="tl">
+     <li><button type="button" data-i="0" aria-current="true"><span class="n">A1</span><span class="ti">Sydney Road, 2am<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>D minor · 78 bpm</small></span><span class="du">3:42</span></button></li>
+     <li><button type="button" data-i="1" aria-current="false"><span class="n">A2</span><span class="ti">Merri Creek Drift<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>F major · 72 bpm</small></span><span class="du">4:05</span></button></li>
+     <li><button type="button" data-i="2" aria-current="false"><span class="n">A3</span><span class="ti">Salt on the Aerial<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>A minor · 86 bpm</small></span><span class="du">3:27</span></button></li>
+    </ol></div>
+    <div class="side"><h3>Side B</h3><ol class="tl">
+     <li><button type="button" data-i="3" aria-current="false"><span class="n">B1</span><span class="ti">Upfield Line<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>G major · 92 bpm</small></span><span class="du">3:51</span></button></li>
+     <li><button type="button" data-i="4" aria-current="false"><span class="n">B2</span><span class="ti">Milk Bar Summer<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>E minor · 98 bpm</small></span><span class="du">3:09</span></button></li>
+     <li><button type="button" data-i="5" aria-current="false"><span class="n">B3</span><span class="ti">Saltwater Hours<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><small>C major · 66 bpm</small></span><span class="du">5:14</span></button></li>
+    </ol></div>
+   </div>
+   <div class="buy"><p><b>Pre-order the LP — $45</b> <span class="note">(sample price)</span><br>Gatefold sleeve, lyric insert and a download code. Classic black or mustard splatter, posted the week of release.</p><a class="btn solid" href="#merch">Go to merch</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec band" id="tour" aria-labelledby="tour-h">
+ <div class="sec-h"><div><p class="kick">Saltwater Hours tour</p><h2 class="m" id="tour-h">On the road</h2></div><p>Launch night at home in Brunswick, then up the east coast and across to the west. Sample dates for this demo — the ticket links don't sell anything.</p></div>
+ <ul class="stubs rv">
+  <li class="stub"><div class="dt"><small>Fri</small><b>06</b><small>Nov</small></div><div class="gig"><b>The Tidewater Room</b><span>Brunswick VIC · Record launch</span><br><span class="tag hot">Few left</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/brunswick">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Sat</small><b>07</b><small>Nov</small></div><div class="gig"><b>Sawtooth Hall</b><span>Geelong VIC · 18+</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/geelong">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Sun</small><b>08</b><small>Nov</small></div><div class="gig"><b>Bottlebrush Bowls Club</b><span>Castlemaine VIC · All ages, arvo show</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/castlemaine">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Fri</small><b>20</b><small>Nov</small></div><div class="gig"><b>The Mangrove Room</b><span>West End QLD · 18+</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/west-end">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Sat</small><b>21</b><small>Nov</small></div><div class="gig"><b>Harbourlight Social</b><span>Newtown NSW · 18+</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/newtown">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Sat</small><b>28</b><small>Nov</small></div><div class="gig"><b>The Kelp House</b><span>Hobart TAS · All ages</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/hobart">Tickets</a></div></li>
+  <li class="stub"><div class="dt"><small>Fri</small><b>04</b><small>Dec</small></div><div class="gig"><b>Salt Shed</b><span>Fremantle WA · On sale Fri 9 Oct</span></div><div class="act"><a class="tix off" href="#list">Get the dispatch</a></div></li>
+  <li class="stub"><div class="dt"><small>Sat</small><b>12</b><small>Dec</small></div><div class="gig"><b>Lantern Hall</b><span>Coburg VIC · Hometown closer</span></div><div class="act"><a class="tix" href="https://tickets.example.com/ltr/coburg">Tickets</a></div></li>
+ </ul>
+</section>
+
+<section class="sec band" id="merch" aria-labelledby="merch-h">
+ <div class="sec-h"><div><p class="kick">Merch table</p><h2 class="m" id="merch-h">Take some home</h2></div><p>Printed in small runs in Melbourne's north. Sample prices in AUD; postage anywhere in Australia is a flat $12 (sample).</p></div>
+ <div class="merch rv">
+  <article class="item" data-name="Wave tee" data-price="40">
+   <div class="art"><svg viewBox="0 0 200 170" aria-hidden="true"><path d="M70 14q30 16 60 0l42 18 20 40-30 14-8-14v90q-54 8-108 0V72l-8 14-30-14 20-40z" fill="#1D1A17" stroke="rgba(255,255,255,.1)"/><path d="M70 14q30 20 60 0" fill="none" stroke="#3A332C" stroke-width="5"/><path d="M79 96a21 21 0 0 1 42 0z" fill="#D9A441"/><g fill="none" stroke="#F1E4C8" stroke-width="2.6" stroke-linecap="round"><path d="M74 102q6.5-4 13 0t13 0 13 0 13 0"/><path d="M78 110q5.5-3.5 11 0t11 0 11 0 11 0" opacity=".7"/></g><path d="M92 96l5-26 5 26" fill="none" stroke="#F1E4C8" stroke-width="2"/></svg></div>
+   <h3 class="m">Wave tee</h3>
+   <p>Heavyweight organic cotton in washed black, with the tide-and-mast print in mustard and cream.</p>
+   <fieldset class="opts" data-k="size"><legend>Size</legend><button class="opt" type="button" aria-pressed="false">S</button><button class="opt" type="button" aria-pressed="true">M</button><button class="opt" type="button" aria-pressed="false">L</button><button class="opt" type="button" aria-pressed="false">XL</button><button class="opt" type="button" aria-pressed="false">XXL</button></fieldset>
+   <div class="pr"><span>$40</span><small class="note">sample price</small></div>
+   <button class="add" type="button">Add to crate</button>
+  </article>
+  <article class="item" data-name="Saltwater Hours LP" data-price="45">
+   <div class="art"><svg viewBox="0 0 200 170" aria-hidden="true"><g id="lpDisc"><circle cx="132" cy="85" r="62" fill="#141210"/><g fill="none" stroke="rgba(255,255,255,.06)"><circle cx="132" cy="85" r="52"/><circle cx="132" cy="85" r="42"/><circle cx="132" cy="85" r="32"/></g><g id="spl" fill="#141210" opacity="0"><circle cx="112" cy="50" r="5"/><circle cx="160" cy="70" r="4"/><circle cx="150" cy="120" r="6"/><circle cx="104" cy="112" r="3.5"/><circle cx="170" cy="100" r="3"/><circle cx="128" cy="36" r="3"/><circle cx="92" cy="80" r="4"/></g><circle cx="132" cy="85" r="20" fill="#F1E4C8"/><circle cx="132" cy="85" r="2.5" fill="#1A1714"/></g><rect x="14" y="22" width="126" height="126" fill="#2E6E6A"/><path d="M52 104a38 38 0 0 1 76 0z" fill="#D9A441"/><rect x="14" y="104" width="126" height="44" fill="#23524F"/><g fill="none" stroke="#F1E4C8" stroke-width="2" stroke-linecap="round"><path d="M14 110q10.5-4 21 0t21 0 21 0 21 0 21 0 21 0"/><path d="M14 120q10.5-3 21 0t21 0 21 0 21 0 21 0 21 0" opacity=".6"/></g></svg></div>
+   <h3 class="m">Saltwater Hours LP</h3>
+   <p>180g vinyl, gatefold sleeve, lyric insert and download code. Posted the week of release.</p>
+   <fieldset class="opts" data-k="press"><legend>Pressing</legend><button class="opt" type="button" aria-pressed="true">Classic black</button><button class="opt" type="button" aria-pressed="false">Mustard splatter</button></fieldset>
+   <div class="pr"><span>$45</span><small class="note">sample price</small></div>
+   <button class="add" type="button">Add to crate</button>
+  </article>
+  <article class="item" data-name="Crate-digger tote" data-price="25">
+   <div class="art"><svg viewBox="0 0 200 170" aria-hidden="true" id="tote" style="--bag:#E8DCC0;--ink:#1A1714"><g fill="none" stroke="var(--bag)" stroke-width="7" stroke-linecap="round"><path d="M72 64C72 22 98 22 98 64"/><path d="M104 64C104 22 130 22 130 64"/></g><rect x="44" y="60" width="114" height="104" rx="4" fill="var(--bag)"/><circle cx="101" cy="108" r="26" fill="none" stroke="var(--ink)" stroke-width="3"/><circle cx="101" cy="108" r="9" fill="#D9A441"/><circle cx="101" cy="108" r="17" fill="none" stroke="var(--ink)" stroke-width="1.2" opacity=".6"/><path d="M62 146q6-4 12 0t12 0 12 0 12 0 12 0 12 0 12 0" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+   <h3 class="m">Crate-digger tote</h3>
+   <p>Thick canvas, long handles, square enough to carry a dozen records home from the shops.</p>
+   <fieldset class="opts" data-k="colour"><legend>Colour</legend><button class="opt" type="button" aria-pressed="true">Natural</button><button class="opt" type="button" aria-pressed="false">Ink</button></fieldset>
+   <div class="pr"><span>$25</span><small class="note">sample price</small></div>
+   <button class="add" type="button">Add to crate</button>
+  </article>
+ </div>
+ <div class="crate"><p class="sum" id="sum" aria-live="polite">Your crate is empty — add something from the table.</p><button class="btn solid" id="checkout" type="button">Checkout</button><button class="btn" id="clear" type="button">Empty crate</button><ul id="crateList" aria-label="Items in your crate"></ul></div>
+</section>
+
+<section class="sec band" id="about" aria-labelledby="about-h">
+ <div class="about">
+  <div class="rv"><p class="kick">Liner notes</p><h2 class="m" id="about-h">Songs for the long way home</h2><p class="pull">“We write for the tram window, the bike path and the walk along the creek when you're not ready for the night to end.”</p></div>
+  <div class="rv">
+   <div class="liner">
+    <p>The band started as a Tuesday-night jam in a Brunswick share house: two guitars, a borrowed electric piano and a drum kit held together with gaffer tape. The name came from a transistor radio someone left on a pier at low tide, still playing to nobody.</p>
+    <p><i>Saltwater Hours</i> was tracked live to tape over one long Melbourne winter in a converted milk bar in Brunswick East — fridge unplugged, tram bells left in. Most songs are first or second takes.</p>
+    <p>Live, the songs stretch out: longer intros, a slow cover or two of songs our parents played in the car, and an encore if the room asks nicely.</p>
+   </div>
+   <ul class="lineup">
+    <li><b>Mae</b>Vocals, electric piano</li>
+    <li><b>Tomás</b>Guitars, lap steel</li>
+    <li><b>Priya</b>Bass, synths</li>
+    <li><b>Jonno</b>Drums, tape loops</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="list" aria-labelledby="list-h">
+ <div class="post rv">
+  <div class="l">
+   <svg class="stamp" viewBox="0 0 90 108" aria-hidden="true"><path d="M4 0h82v4a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8a4 4 0 0 0 0 8v8H4v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8v-8a4 4 0 0 0 0-8z" fill="#FBF6EA" stroke="#C9B994"/><rect x="12" y="12" width="66" height="84" fill="#2E6E6A"/><path d="M24 62a21 21 0 0 1 42 0z" fill="#D9A441"/><rect x="12" y="62" width="66" height="34" fill="#23524F"/><path d="M12 68q5.5-3 11 0t11 0 11 0 11 0 11 0 11 0" fill="none" stroke="#F1E4C8" stroke-width="2"/><text x="45" y="88" text-anchor="middle" font-family="Chivo,sans-serif" font-weight="700" font-size="9" fill="#F1E4C8">VIC</text></svg>
+   <p class="kick">Mailing list</p>
+   <h2 class="m" id="list-h">The Low Tide Dispatch</h2>
+   <p>One email a month, tops: new songs first, tour dates before they're announced, and the odd rehearsal-room demo. Unsubscribe whenever you like.</p>
+  </div>
+  <form data-demo-message="Demo only — you haven't been subscribed. A real site would send a confirmation email.">
+   <label class="fld">Email<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+   <label class="fld">Postcode (optional)<input type="text" name="postcode" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="postal-code" placeholder="3056"></label>
+   <label class="cb"><input type="checkbox" name="near" checked>Tell me when you play near me</label>
+   <button type="submit">Join the dispatch</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="ft">
+ <p class="big m" data-brand>Low Tide Radio</p>
+ <div class="fcols">
+  <div><h3>Bookings &amp; press</h3><p><a href="mailto:bookings@example.com">bookings@example.com</a><br><a href="tel:+61355501427">(03) 5550 1427</a></p></div>
+  <div><h3>Home base</h3><p>Brunswick, VIC — rehearsing most Tuesday nights, playing most weekends.</p></div>
+  <div><h3>On this page</h3><p><a href="#record">The record</a> · <a href="#tour">Tour</a> · <a href="#merch">Merch</a> · <a href="#list">Mailing list</a></p></div>
+ </div>
+ <p class="legal">This band is fictional, made for a studio showcase. Tour dates, venues and prices are samples, and the music on this page is generated live in your browser — no recordings.</p>
+</footer>
+<script>
+(function(){
+"use strict";
+var d=document,H=d.documentElement,$=function(s){return d.querySelector(s)},$$=function(s){return d.querySelectorAll(s)};
+H.classList.add("js");
+var MQ=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):null;
+function rm(){return !!(MQ&&MQ.matches)}
+function toast(m){if(window.DemoKit)DemoKit.toast(m)}
+
+/* ---------- tracks: each loop has its own tempo, key, progression and colour ---------- */
+var TR=[
+ {c:"A1",t:"Sydney Road, 2am",bpm:78,root:50,k:"D minor",col:"#D9A441",seed:3,kick:[0,7,10],prog:[[0,3,7,10],[-4,0,3,7],[3,7,10,14],[-2,2,5,9]]},
+ {c:"A2",t:"Merri Creek Drift",bpm:72,root:53,k:"F major",col:"#7CC3BB",seed:7,kick:[0,10],prog:[[0,4,7,11],[-3,0,4,7],[2,5,9,12],[-5,-1,2,5]]},
+ {c:"A3",t:"Salt on the Aerial",bpm:86,root:45,k:"A minor",col:"#D6785A",seed:11,kick:[0,6,8],prog:[[0,3,7,10],[5,8,12,15],[-4,0,3,7],[-5,-1,2,5]]},
+ {c:"B1",t:"Upfield Line",bpm:92,root:55,k:"G major",col:"#B9C46E",seed:5,kick:[0,7,8,11],prog:[[0,4,7,11],[5,9,12,16],[-3,0,4,7],[-5,-1,2,5]]},
+ {c:"B2",t:"Milk Bar Summer",bpm:98,root:52,k:"E minor",col:"#E09AA0",seed:13,kick:[0,3,8,11],prog:[[0,3,7,10],[-4,0,3,7],[-7,-4,0,3],[-2,2,5,9]]},
+ {c:"B3",t:"Saltwater Hours",bpm:66,root:48,k:"C major",col:"#9DB8E0",seed:2,kick:[0,10],prog:[[0,4,7,11],[4,7,11,14],[5,9,12,16],[5,8,12,15]]}
+];
+var cur=0,mel=[],playing=false;
+
+/* ---------- Web Audio: nothing is created until a user gesture ---------- */
+var ac=null,bus,padBus,master,an,dly,noise,crkBuf,crk=null,timer=0,step=0,nextT=0,vol=.7,lastPad=null;
+function mf(m){return 440*Math.pow(2,(m-69)/12)}
+function rng(s){return function(){s=(s*16807)%2147483647;return(s-1)/2147483646}}
+function makeMel(tr){var r=rng(tr.seed*7919+17),m=[];for(var b=0;b<4;b++){var ch=tr.prog[b];[2,3,6,7,10,11,14,15].forEach(function(p){if(r()<.36){m[b*16+p]=tr.root+12+ch[Math.floor(r()*4)]+(r()<.2?12:0)}})}return m}
+function init(){
+ var C=window.AudioContext||window.webkitAudioContext;if(!C)return false;
+ try{ac=new C()}catch(e){return false}
+ master=ac.createGain();master.gain.value=0;
+ var lp=ac.createBiquadFilter();lp.type="lowpass";lp.frequency.value=5200;lp.Q.value=.3;
+ var comp=ac.createDynamicsCompressor();comp.threshold.value=-16;comp.ratio.value=3;
+ an=ac.createAnalyser();an.fftSize=512;an.smoothingTimeConstant=.8;
+ bus=ac.createGain();bus.connect(lp);lp.connect(comp);comp.connect(master);master.connect(an);an.connect(ac.destination);
+ padBus=ac.createGain();var wd=ac.createDelay(.1);wd.delayTime.value=.016;
+ var wob=ac.createOscillator(),wg=ac.createGain();wob.frequency.value=.45;wg.gain.value=.0024;wob.connect(wg);wg.connect(wd.delayTime);wob.start();
+ padBus.connect(wd);wd.connect(bus);
+ dly=ac.createDelay(1.5);var fb=ac.createGain(),dl=ac.createBiquadFilter();fb.gain.value=.3;dl.type="lowpass";dl.frequency.value=2200;
+ dly.connect(dl);dl.connect(fb);fb.connect(dly);dl.connect(bus);
+ var n=ac.sampleRate*2,b=ac.createBuffer(1,n,ac.sampleRate),x=b.getChannelData(0);for(var i=0;i<n;i++)x[i]=Math.random()*2-1;noise=b;
+ n=ac.sampleRate*3;b=ac.createBuffer(1,n,ac.sampleRate);x=b.getChannelData(0);for(i=0;i<n;i++){x[i]=(Math.random()*2-1)*.014;if(Math.random()<.0007)x[i]+=(Math.random()*2-1)*.8}crkBuf=b;
+ return true;
+}
+function ensure(){if(!ac&&!init())return false;if(ac.state==="suspended")ac.resume();return true}
+function env(g,t,a,pk,dec){g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(pk,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+a+dec)}
+function nz(t,dur,type,fq,pk,q){var s=ac.createBufferSource(),fl=ac.createBiquadFilter(),g=ac.createGain();s.buffer=noise;fl.type=type;fl.frequency.value=fq;if(q)fl.Q.value=q;env(g,t,.004,pk,dur);s.connect(fl);fl.connect(g);g.connect(bus);s.start(t,Math.random()*1.5);s.stop(t+dur+.05)}
+function pad(ns,t,dur){
+ var g=ac.createGain(),fl=ac.createBiquadFilter();fl.type="lowpass";fl.Q.value=.8;
+ fl.frequency.setValueAtTime(650,t);fl.frequency.linearRampToValueAtTime(1500,t+dur*.45);fl.frequency.linearRampToValueAtTime(760,t+dur);
+ g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.075,t+.35);g.gain.setValueAtTime(.075,t+dur-.15);g.gain.exponentialRampToValueAtTime(.0001,t+dur+.55);
+ fl.connect(g);g.connect(padBus);lastPad=g;
+ ns.forEach(function(m){["triangle","sawtooth"].forEach(function(w,j){var o=ac.createOscillator(),og=ac.createGain();o.type=w;o.frequency.value=mf(m);o.detune.value=j?8:-6;og.gain.value=j?.3:.8;o.connect(og);og.connect(fl);o.start(t);o.stop(t+dur+.6)})});
+}
+function bass(m,t,dur){var o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),g2=ac.createGain(),fl=ac.createBiquadFilter();o.type="sine";o2.type="triangle";o.frequency.value=o2.frequency.value=mf(m);fl.type="lowpass";fl.frequency.value=380;g2.gain.value=.5;o.connect(g);o2.connect(fl);fl.connect(g2);g2.connect(g);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.3,t+.02);g.gain.setValueAtTime(.3,t+dur*.6);g.gain.exponentialRampToValueAtTime(.0001,t+dur);g.connect(bus);o.start(t);o2.start(t);o.stop(t+dur+.05);o2.stop(t+dur+.05)}
+function kick(t){var o=ac.createOscillator(),g=ac.createGain();o.frequency.setValueAtTime(118,t);o.frequency.exponentialRampToValueAtTime(42,t+.13);env(g,t,.005,.8,.4);o.connect(g);g.connect(bus);o.start(t);o.stop(t+.46);nz(t,.03,"lowpass",900,.22)}
+function snare(t){nz(t,.19,"bandpass",1850,.4,.8);nz(t,.08,"highpass",5200,.1);var o=ac.createOscillator(),g=ac.createGain();o.frequency.value=190;env(g,t,.003,.15,.08);o.connect(g);g.connect(bus);o.start(t);o.stop(t+.1)}
+function key(m,t){var o=ac.createOscillator(),o2=ac.createOscillator(),g=ac.createGain(),g2=ac.createGain();o.type=o2.type="sine";o.frequency.value=mf(m);o2.frequency.value=mf(m)*2.002;g2.gain.value=.16;o2.connect(g2);g2.connect(g);o.connect(g);env(g,t,.008,.1,.95);g.connect(padBus);g.connect(dly);o.start(t);o2.start(t);o.stop(t+1.1);o2.stop(t+1.1)}
+function thump(){if(!ac)return;var t=ac.currentTime+.01;nz(t,.09,"lowpass",320,.35)}
+function playStep(s,t){
+ var tr=TR[cur],sd=60/tr.bpm/4,bar=s>>4,p=s&15,ch=tr.prog[bar],sw=(p%4===2)?sd*.3:0,base=tr.root+(tr.root<50?12:0);
+ var bm=tr.root+ch[0];while(bm>45)bm-=12;while(bm<36)bm+=12;
+ if(p===0)pad(ch.map(function(o){return base+o}),t,sd*16);
+ if(p===0)bass(bm,t,sd*6);if(p===10)bass(bm,t,sd*3.6);if(p===14)bass(bm+(bar%2?7:12),t+sw,sd*1.8);
+ if(tr.kick.indexOf(p)>-1)kick(t);
+ if(p===4||p===12)snare(t+(p===12&&bar===3?sd*.08:0));
+ if(p%2===0)nz(t+sw,(p===14&&bar===3)?.24:.045,"highpass",7600,(p%4===0)?.06:.045);
+ if(mel[s])key(mel[s],t+sw);
+}
+function tick(){while(nextT<ac.currentTime+.15){var s=step,t=nextT;playStep(s,t);if(rm()&&s%4===0)setTimeout(drawViz,Math.max(0,(t-ac.currentTime)*1000));nextT+=60/TR[cur].bpm/4;step=(step+1)&63}}
+function gainTo(v,tc){var t=ac.currentTime;master.gain.cancelScheduledValues(t);master.gain.setValueAtTime(master.gain.value,t);master.gain.linearRampToValueAtTime(v,t+tc)}
+function start(){
+ if(!ensure()){toast("This browser can't generate sound here — the rest of the page still works.");return}
+ if(playing)return;playing=true;H.classList.add("playing");
+ gainTo(vol*vol,.45);thump();
+ crk=ac.createBufferSource();crk.buffer=crkBuf;crk.loop=true;var cg=ac.createGain(),hp=ac.createBiquadFilter();cg.gain.value=.3;hp.type="highpass";hp.frequency.value=700;crk.connect(hp);hp.connect(cg);cg.connect(bus);crk.start();
+ dly.delayTime.value=60/TR[cur].bpm*.75;step=0;nextT=ac.currentTime+.06;clearInterval(timer);timer=setInterval(tick,25);tick();
+ ui();loop();
+}
+function stop(msg){
+ if(!playing)return;playing=false;H.classList.remove("playing");
+ gainTo(0,.35);var c=crk;crk=null;
+ setTimeout(function(){if(!playing)clearInterval(timer);try{c&&c.stop()}catch(e){}},420);
+ ui(msg);loop();
+}
+
+/* ---------- turntable geometry (SVG units, 600 x 600) ---------- */
+var PV={x:515,y:120},CEN={x:255,y:305},STY={x:503.2,y:421.5};
+function stylusAt(th){var a=th*Math.PI/180,dx=STY.x-PV.x,dy=STY.y-PV.y;return{x:PV.x+dx*Math.cos(a)-dy*Math.sin(a),y:PV.y+dx*Math.sin(a)+dy*Math.cos(a)}}
+function rAt(th){var p=stylusAt(th);return Math.hypot(p.x-CEN.x,p.y-CEN.y)}
+function thFor(r){for(var t=0;t<60;t+=.1){if(rAt(t)<=r)return t}return 60}
+var TH_EDGE=thFor(222),TH_MAX=thFor(90),BAND=[thFor(203),thFor(166),thFor(126)],BEND=[thFor(182),thFor(147),thFor(101)];
+function bandOf(th){var r=rAt(th);return r>180?0:r>145?1:2}
+var arm=$("#arm"),armSvg=$(".armL"),rec=$("#rec"),armTh=0,drag=false,grab=0,tw=null;
+function setArm(th){armTh=th;arm.setAttribute("transform","rotate("+th.toFixed(2)+" 515 120)")}
+function moveArm(to,cb){
+ if(tw)cancelAnimationFrame(tw.id);
+ if(rm()){tw=null;setArm(to);if(cb)cb();return}
+ var from=armTh,t0=performance.now(),ms=Math.min(900,280+Math.abs(to-from)*22);
+ tw={id:0};(function st(now){var k=Math.min(1,(now-t0)/ms),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;setArm(from+(to-from)*e);if(k<1)tw.id=requestAnimationFrame(st);else{tw=null;if(cb)cb()}})(t0);
+}
+
+/* grooves, with visible gaps between the three bands of each side */
+(function(){var s="",r;for(r=84;r<=223;r+=2.05){s+='<circle r="'+r.toFixed(1)+'" stroke="#fff" stroke-opacity="'+(.025+Math.random()*.06).toFixed(3)+'" stroke-width="1"/>'}
+[181,146,101].forEach(function(r){s+='<circle r="'+r+'" stroke="#050404" stroke-width="3.2"/><circle r="'+(r+1.8)+'" stroke="#fff" stroke-opacity=".12" stroke-width=".8"/>'});
+s+='<circle r="224.5" stroke="#fff" stroke-opacity=".16" stroke-width="1.2"/>';$("#grooves").innerHTML=s})();
+
+/* ---------- UI state ---------- */
+var np=$("#np"),playB=$("#play"),playL=$("#playL"),chipT=$("#chipT");
+function setNP(a,b){np.textContent="";var e=d.createElement("b");e.textContent=a;np.appendChild(e);np.appendChild(d.createTextNode(b))}
+function ui(msg){
+ var tr=TR[cur];
+ playB.setAttribute("aria-pressed",playing?"true":"false");playL.textContent=playing?"Stop":"Play";
+ arm.setAttribute("aria-pressed",playing?"true":"false");chipT.textContent=" · "+tr.c;
+ if(playing)setNP(tr.c+" · "+tr.t,tr.bpm+" BPM · "+tr.k+" · original loop");
+ else setNP(msg?msg[0]:"Needle up",msg?msg[1]:"Press play, or drag the tonearm onto a band of the record.");
+}
+function setTrack(i){
+ var was=cur;cur=i;var tr=TR[i];
+ H.style.setProperty("--acc",tr.col);mel=makeMel(tr);
+ $$(".tk").forEach(function(b){b.setAttribute("aria-pressed",+b.dataset.i===i?"true":"false")});
+ $$(".tl button").forEach(function(b){b.setAttribute("aria-current",+b.dataset.i===i?"true":"false")});
+ var side=i<3?"A":"B";$("#lblLetter").textContent=side;$("#lblSide").textContent="Saltwater Hours · Side "+side+" · 33⅓";
+ if(playing&&ac&&was!==i){var t=ac.currentTime;if(lastPad){lastPad.gain.cancelScheduledValues(t);lastPad.gain.setTargetAtTime(.0001,t,.06)}dly.delayTime.setTargetAtTime(60/tr.bpm*.75,t,.05);step=0;nextT=Math.max(nextT,t+.03);thump()}
+ ui();
+}
+function choose(i){
+ setTrack(i);
+ if(playing)moveArm(BAND[i%3]);
+ else{if(!ensure()){toast("This browser can't generate sound here.");return}moveArm(BAND[i%3],start)}
+}
+function toggle(){if(playing){stop();moveArm(0)}else{if(!ensure()){toast("This browser can't generate sound here.");return}moveArm(Math.max(armTh,BAND[cur%3])>BEND[cur%3]?BAND[cur%3]:Math.max(armTh,BAND[cur%3]),start)}}
+playB.addEventListener("click",toggle);
+$("#chip").addEventListener("click",function(){stop();moveArm(0)});
+$$(".tk,.tl button").forEach(function(b){b.addEventListener("click",function(){choose(+b.dataset.i)})});
+$("#vol").addEventListener("input",function(e){vol=e.target.value/100;if(ac&&playing){master.gain.cancelScheduledValues(ac.currentTime);master.gain.setTargetAtTime(vol*vol,ac.currentTime,.05)}});
+arm.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
+
+/* ---------- drag the tonearm ---------- */
+function ptAngle(e){var s=armSvg.getBoundingClientRect(),x=(e.clientX-s.left)/s.width*600,y=(e.clientY-s.top)/s.height*600;return Math.atan2(-(x-PV.x),y-PV.y)*180/Math.PI}
+arm.addEventListener("pointerdown",function(e){if(e.button>0)return;e.preventDefault();if(tw){cancelAnimationFrame(tw.id);tw=null}drag=true;arm.classList.add("drag");try{arm.setPointerCapture(e.pointerId)}catch(x){}grab=ptAngle(e)-armTh;if(playing)stop(["Needle lifted","Lower it onto a band to play that track."])});
+arm.addEventListener("pointermove",function(e){if(!drag)return;setArm(Math.max(0,Math.min(TH_MAX,ptAngle(e)-grab)))});
+function release(){
+ if(!drag)return;drag=false;arm.classList.remove("drag");
+ if(armTh>=TH_EDGE){var b=bandOf(armTh),i=(cur<3?0:3)+b;setTrack(i);if(ensure())start();else toast("This browser can't generate sound here.")}
+ else moveArm(0);
+}
+arm.addEventListener("pointerup",release);arm.addEventListener("pointercancel",release);
+
+/* ---------- platter + visualiser loop (only while visible) ---------- */
+var cv=$("#viz"),cx=cv.getContext("2d"),fd=null,W=0,Hh=0,pk=[],ang=0,spd=0,raf=0,last=0,deckVis=true;
+function size(){var r=cv.getBoundingClientRect(),q=Math.min(window.devicePixelRatio||1,2);W=r.width;Hh=r.height;cv.width=Math.max(1,Math.round(W*q));cv.height=Math.max(1,Math.round(Hh*q));cx.setTransform(q,0,0,q,0,0);drawViz()}
+function drawViz(){
+ if(!W)return;cx.clearRect(0,0,W,Hh);
+ var n=W<420?28:40,gap=3,bw=(W-28-gap*(n-1))/n,base=Hh-12,mh=Hh-60,col=TR[cur].col,live=playing&&an;
+ if(live){if(!fd)fd=new Uint8Array(an.frequencyBinCount);an.getByteFrequencyData(fd)}
+ cx.fillStyle="rgba(124,195,187,.07)";for(var y=base;y>base-mh;y-=6)cx.fillRect(14,y,W-28,1);
+ for(var i=0;i<n;i++){
+  var v=0;if(live){var a=1+Math.floor(Math.pow(i/n,1.8)*fd.length*.62),b=1+Math.floor(Math.pow((i+1)/n,1.8)*fd.length*.62);for(var j=a;j<=b;j++)v=Math.max(v,fd[j]);v=Math.pow(v/255,1.4)}
+  var h=Math.max(2,v*mh),x=14+i*(bw+gap);pk[i]=Math.max((pk[i]||2)-(rm()?mh:1.2),h);
+  cx.globalAlpha=live?.92:.28;cx.fillStyle=col;cx.fillRect(x,base-h,bw,h);
+  cx.globalAlpha=live?.9:.2;cx.fillStyle="#F1E4C8";cx.fillRect(x,base-pk[i]-3,bw,2);
+ }
+ cx.globalAlpha=1;
+}
+function loop(){if(!raf&&deckVis&&!d.hidden&&!rm()&&(playing||spd>0)){last=performance.now();raf=requestAnimationFrame(frame)}if(rm())drawViz()}
+function frame(now){
+ raf=0;var dt=Math.min(.05,(now-last)/1000);last=now;
+ spd+=((playing?200:0)-spd)*Math.min(1,dt*(playing?2.4:1.3));if(!playing&&spd<3)spd=0;
+ ang=(ang+spd*dt)%360;rec.style.transform="rotate("+ang.toFixed(2)+"deg)";
+ if(playing&&!drag&&!tw){var b=bandOf(armTh);if(armTh<BEND[b]-.3)setArm(armTh+dt*.012)}
+ drawViz();
+ if((playing||spd>0)&&deckVis&&!d.hidden)raf=requestAnimationFrame(frame);
+}
+if(window.ResizeObserver)new ResizeObserver(size).observe(cv);else window.addEventListener("resize",size);
+size();
+if(window.IntersectionObserver){new IntersectionObserver(function(es){deckVis=es[0].isIntersecting;if(deckVis)loop()}).observe($(".hero"))}
+d.addEventListener("visibilitychange",function(){if(d.hidden&&playing){stop(["Paused","The music stops while this tab is hidden."]);moveArm(0)}});
+
+/* ---------- record label keeps a long business name on the arc ---------- */
+function fitLabel(){var tp=$("#lblBrand textPath"),n=(tp.textContent||"").length||1;$("#lblBrand").setAttribute("font-size",Math.max(5.6,Math.min(10.5,150/(n*.92))).toFixed(1))}
+window.addEventListener("hd:brandchange",fitLabel);fitLabel();
+
+/* ---------- menu ---------- */
+var mb=$("#menuB"),nav=$("#nav");
+function menu(o){nav.classList.toggle("open",o);mb.setAttribute("aria-expanded",o?"true":"false")}
+mb.addEventListener("click",function(){menu(!nav.classList.contains("open"))});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))menu(false)});
+d.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){e.preventDefault();menu(false);mb.focus()}});
+
+/* ---------- merch table + crate (demo) ---------- */
+var crate=[],sum=$("#sum"),cl=$("#crateList");
+$$(".opts").forEach(function(fs){fs.addEventListener("click",function(e){
+ var b=e.target.closest(".opt");if(!b)return;
+ fs.querySelectorAll(".opt").forEach(function(o){o.setAttribute("aria-pressed",o===b?"true":"false")});
+ var k=fs.dataset.k,v=b.textContent;
+ if(k==="press"){var sp=v.indexOf("Mustard")>-1;$("#lpDisc circle").setAttribute("fill",sp?"#D9A441":"#141210");$("#spl").setAttribute("opacity",sp?"1":"0")}
+ if(k==="colour"){var tt=$("#tote"),ink=v==="Ink";tt.style.setProperty("--bag",ink?"#2A2520":"#E8DCC0");tt.style.setProperty("--ink",ink?"#F1E4C8":"#1A1714")}
+})});
+function renderCrate(){
+ cl.textContent="";var tot=0;
+ crate.forEach(function(c,ix){tot+=c.p;var li=d.createElement("li");li.textContent=c.n+(c.o?" · "+c.o:"")+" — $"+c.p;cl.appendChild(li)});
+ if(!crate.length){sum.textContent="Your crate is empty — add something from the table.";return}
+ sum.textContent="";var b=d.createElement("b");b.textContent=crate.length+" item"+(crate.length>1?"s":"");sum.appendChild(b);
+ sum.appendChild(d.createTextNode(" in your crate · subtotal "));var b2=d.createElement("b");b2.textContent="$"+tot;sum.appendChild(b2);
+ sum.appendChild(d.createTextNode(" + $12 postage (sample prices)"));
+}
+$$(".item .add").forEach(function(btn){btn.addEventListener("click",function(){
+ var it=btn.closest(".item"),o=it.querySelector(".opt[aria-pressed=true]");
+ crate.push({n:it.dataset.name,o:o?o.textContent:"",p:+it.dataset.price});renderCrate();
+ btn.textContent="Added to crate";setTimeout(function(){btn.textContent="Add to crate"},1500);
+})});
+$("#checkout").addEventListener("click",function(){toast(crate.length?"Demo only — no order was placed and nothing was charged.":"Your crate is empty. (This is a demo shop — nothing can be bought here.)")});
+$("#clear").addEventListener("click",function(){crate=[];renderCrate()});
+
+/* ---------- reveals ---------- */
+var rv=$$(".rv");
+if(window.IntersectionObserver&&!rm()){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12,rootMargin:"0px 0px -6% 0px"});rv.forEach(function(el){io.observe(el)})}
+else rv.forEach(function(el){el.classList.add("in")});
+
+setTrack(0);setArm(0);
+})();
+</script>
+</body>
+</html>

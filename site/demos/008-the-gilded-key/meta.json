@@ -1,0 +1,8 @@
+{
+  "id": "008",
+  "tech": ["CSS 3D", "CSS Grid", "SVG", "Pointer Events", "Keyboard shortcuts", "Form logic", "Date logic"],
+  "features": ["game", "booking"],
+  "interaction": "Knock three times (click, tap or Enter) and the Art Deco double doors swing open in 3D onto the back bar; inside, hovering, tapping or tabbing to any of eight cocktails morphs a flavour radar, and five taste sliders light up the closest drink with its radar laid over yours.",
+  "fonts": ["Limelight", "Josefin Sans"],
+  "notes": "Group booking ends in an on-page DEMO ticket and toast; nothing is sent. Jazz dates are generated for the coming Thursdays; line-ups are sample content."
+}

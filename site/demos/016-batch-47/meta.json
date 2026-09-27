@@ -1,0 +1,8 @@
+{
+  "id": "016",
+  "tech": ["SVG", "Pointer Events", "CSS Grid", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["story", "ordering"],
+  "interaction": "Drag the roast curve's drop point, move the roast-level slider or load one of four lots to morph the SVG roast profile — first crack, development band, readouts, flavour wheel and bean colour update together; lots can be added to an order slip and a subscription priced by frequency.",
+  "fonts": ["IBM Plex Mono", "IBM Plex Sans"],
+  "notes": "Roast curves come from an illustrative model, not real roaster logs. Order slip, subscription and wholesale enquiry end in demo toasts."
+}

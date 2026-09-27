@@ -1,0 +1,8 @@
+{
+  "id": "083",
+  "tech": ["CSS Grid", "SVG", "Canvas 2D", "Pointer Events", "Keyboard shortcuts", "Form logic", "Clipboard", "Date logic"],
+  "features": ["story"],
+  "interaction": "Read the CV as a code editor: open files from the explorer (a dropdown on phones) into closable tabs with hand-built syntax highlighting, a Markdown preview, an outline and a draggable minimap; ⌘K / Ctrl+K opens a fuzzy command palette; Run ▶ types out contact.sh in the terminal, where you can copy the email or answer a prompt-style message form that ends in a demo-only notice; light/dark theme toggle.",
+  "fonts": ["Source Code Pro", "Inter"],
+  "notes": "Files are read-only (no text editing); the terminal only 'runs' contact.sh and its message prompt; the person, employers and contact details are fictional."
+}

@@ -1,0 +1,8 @@
+{
+  "id": "032",
+  "tech": ["Canvas 2D", "Pointer Events", "SVG", "CSS Grid", "IntersectionObserver", "Form logic"],
+  "features": ["quote", "game"],
+  "interaction": "Wipe the steamed-up hero glass clean with a finger or mouse (or tap 'Clean it for me' for an automatic squeegee), then build an illustrative cleaning estimate from service, bedrooms, bathrooms, extras and visit frequency.",
+  "fonts": ["Nunito", "DM Sans"],
+  "notes": ""
+}

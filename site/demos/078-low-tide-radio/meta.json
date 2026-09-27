@@ -1,0 +1,8 @@
+{
+  "id": "078",
+  "tech": ["SVG", "Canvas 2D", "Web Audio", "Pointer Events", "CSS Grid", "IntersectionObserver"],
+  "features": ["sound", "ordering"],
+  "interaction": "Drag the tonearm onto a band of the record (or press Play, pick one of six tracks, or press Enter on the focused tonearm): the platter spins up and an original lo-fi loop is synthesised live with chord pads, bass, noise-burst drums, bell keys and vinyl crackle, driving a spectrum visualiser; each track changes tempo, key, progression and accent colour, with volume and stop controls; the merch table adds a tee, LP or tote to a demo crate.",
+  "fonts": ["Rubik Mono One", "Chivo"],
+  "notes": "Each track plays a short generated loop, not a full song; music pauses when the tab is hidden. Checkout, ticket links and the mailing list end in demo toasts."
+}

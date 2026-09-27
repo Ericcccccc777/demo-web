@@ -1,0 +1,8 @@
+{
+  "id": "063",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "Pointer Events", "IntersectionObserver", "Form logic"],
+  "features": ["story", "booking"],
+  "interaction": "Velvet curtains open onto a stage where a warm spotlight follows the pointer (on touch it settles on the act in view); a sticky lighting desk of six style 'gels' re-lights the stage, drives an equaliser with a different rhythm per style, filters the class list and highlights matching timetable slots and teachers. A free-trial form ends in a demo notice.",
+  "fonts": ["Righteous", "Poppins"],
+  "notes": ""
+}

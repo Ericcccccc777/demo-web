@@ -1,0 +1,8 @@
+{
+  "id": "073",
+  "tech": ["SVG", "Generative art", "Pointer Events", "CSS Grid", "IntersectionObserver", "Form logic"],
+  "features": ["quote", "story"],
+  "interaction": "Four sliders (starting amount, monthly contribution, 5–40 years, 3–8% assumed return) grow a generated SVG tree — trunk thickness, branch depth and leaf count follow the projected total, with dark leaves for money put in and light leaves for compound growth — beside a live compound-growth line chart. Hover, drag or arrow-key across the chart to rewind the tree to any year, press 'Watch it grow' to animate it from today, or carry the sketch into the booking reply card. A two-question fee sketch totals the sample fixed fees.",
+  "fonts": ["Spectral", "Public Sans"],
+  "notes": "Figures are illustrative compound-interest arithmetic only (monthly contributions, a steady assumed return) — not advice; excludes fees, tax and inflation. The booking card ends in a demo message; nothing is sent."
+}

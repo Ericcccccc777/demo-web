@@ -1,0 +1,8 @@
+{
+  "id": "106",
+  "tech": ["CSS 3D", "SVG", "CSS Grid", "Form logic", "Date logic", "Keyboard shortcuts"],
+  "features": ["booking"],
+  "interaction": "Pick a round on the wooden scoreboard and the painted numerals and team boards flip over like split-flap plates while the clock swings to kick-off; below, the sample ladder sorts by points, goal difference or form (rows glide into place), filters by division, and tapping a club shows its W/D/L form chips and next fixture; the registration form suggests a squad and sample fee from year of birth and ends in a demo toast.",
+  "fonts": ["Graduate", "Roboto Condensed"],
+  "notes": "Fictional club, league and opponents; results, ladder, fixtures, fees and sponsor packages are samples. Sponsor boards are an honest 'Your business here' placeholder. Registration sends nothing."
+}

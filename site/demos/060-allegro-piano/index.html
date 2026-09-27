@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="060">
+<meta name="demo:brand" content="Allegro Piano Studio">
+<title>Allegro Piano Studio — private piano lessons, Mosman</title>
+<meta name="description" content="A fictional private piano studio in Mosman, NSW, with lessons for children, teens and adults, exam preparation, recitals and a playable two-octave piano.">
+<meta name="theme-color" content="#FBF6EA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Questrial&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--paper:#FBF6EA;--paper2:#F3EBD8;--ink:#161616;--ink2:#4A4540;--bur:#7B1E3A;--gold:#B8923E;--line:rgba(22,22,22,.14);
+--disp:"Libre Caslon Display","Big Caslon","Book Antiqua",Georgia,serif;--sans:"Questrial","Century Gothic","Avenir Next",system-ui,sans-serif;--g:20px}
+@media (min-width:760px){:root{--g:44px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--paper)}
+body{margin:0;color:var(--ink);font:400 17px/1.7 var(--sans);background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+h1,h2,h3,p,ul,ol,dl,dd,figure,table{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--bur);outline-offset:3px}
+section{scroll-margin-top:16px}
+.page{max-width:1240px;margin:0 auto;padding:0 var(--g)}
+.caps{font:400 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+
+/* masthead */
+.mast{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.mast-brand{font:400 20px/1.2 var(--disp);text-decoration:none;min-width:0;overflow-wrap:anywhere}
+.contents{position:relative}
+.contents summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:10px;padding:0 4px}
+.contents summary::-webkit-details-marker{display:none}
+.contents summary::after{content:"";width:8px;height:8px;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg) translateY(-3px)}
+.contents[open] summary::after{transform:rotate(-135deg)}
+.toc{position:absolute;right:0;top:100%;z-index:20;min-width:250px;background:var(--paper);border:1px solid var(--ink);box-shadow:6px 6px 0 rgba(22,22,22,.08);padding:8px 18px}
+.toc a{display:flex;gap:14px;align-items:baseline;padding:10px 0;text-decoration:none;border-bottom:1px dotted var(--line)}
+.toc a:last-child{border:0}
+.toc a b{font:400 18px/1 var(--disp);color:var(--bur);min-width:30px}
+.navline{display:none}
+@media (min-width:1000px){
+  .contents{display:none}
+  .navline{display:flex;gap:4px}
+  .navline a{text-decoration:none;padding:10px 12px;font-size:14px;letter-spacing:.06em}
+  .navline a b{font:400 15px/1 var(--disp);color:var(--bur);margin-right:6px}
+  .navline a:hover{text-decoration:underline;text-underline-offset:5px}
+}
+
+/* title page */
+.title{position:relative;text-align:center;padding:clamp(28px,5vw,56px) 0 clamp(24px,4vw,40px)}
+.tp-top{display:flex;justify-content:space-between;gap:20px;text-align:left;color:var(--ink2)}
+.tp-top span:last-child{text-align:right;max-width:18ch}
+.tp-top i{font-style:normal;font-family:var(--disp);font-size:18px;letter-spacing:.02em;text-transform:none;color:var(--ink)}
+.tp-pre{margin-top:clamp(18px,4vw,30px);color:var(--ink2)}
+h1{font:400 clamp(46px,9.4vw,128px)/.98 var(--disp);letter-spacing:-.015em;margin:10px auto 0;max-width:12ch;overflow-wrap:anywhere}
+.tp-sub{margin-top:18px;font-size:clamp(16px,1.5vw,19px);color:var(--ink2);text-wrap:balance}
+.tp-rule{height:5px;border-top:1.5px solid var(--ink);border-bottom:.8px solid var(--ink);max-width:560px;margin:26px auto 0}
+.tp-tempo{margin-top:16px;display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.tp-tempo b{font:400 22px/1 var(--disp)}
+.tp-tempo svg{width:12px;height:22px}
+
+/* practice room */
+.practice{margin-top:clamp(10px,2vw,20px);border:1.5px solid var(--ink);background:rgba(255,253,247,.7);padding:clamp(16px,3vw,32px);box-shadow:8px 8px 0 rgba(123,30,58,.08)}
+.pr-head{display:grid;gap:10px}
+@media (min-width:900px){.pr-head{grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:end}}
+.pr-head h2{font:400 clamp(28px,3vw,38px)/1.1 var(--disp)}
+.pr-head p{color:var(--ink2);font-size:15.5px;max-width:70ch}
+kbd{font:inherit;font-size:13px;border:1px solid rgba(22,22,22,.3);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:#fff;white-space:nowrap}
+.staffbox{margin-top:18px;height:132px;position:relative;border-top:1px dotted var(--line);border-bottom:1px dotted var(--line)}
+#staff{display:block;width:100%;height:100%}
+#staff .sl{stroke:var(--ink);stroke-width:1}
+#staff .head{fill:var(--ink)}
+#staff .stem,#staff .ledger{stroke:var(--ink);stroke-width:1.3}
+#staff .sharp path{stroke:var(--ink);stroke-width:1.4;fill:none}
+#staff .sharp path.t{stroke-width:2.6}
+#staff .nm{font:400 10px var(--sans);fill:var(--ink2);text-anchor:middle;letter-spacing:.06em}
+#staff .n{animation:ink .35s ease-out both}
+#staff .n.next .head{fill:var(--gold)}
+#staff .n.next .stem,#staff .n.next .ledger{stroke:var(--gold)}
+#staff .n.next .nm{fill:var(--bur)}
+#staff .roll{transition:transform .35s ease}
+@keyframes ink{from{opacity:0;transform:translateY(-6px)}}
+.empty-staff{position:absolute;inset:0;display:grid;place-items:center;color:var(--ink2);font-size:14px;pointer-events:none;transition:opacity .4s}
+.ctrl{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 18px;border:1.5px solid var(--ink);background:transparent;font-size:15px;cursor:pointer;border-radius:0;transition:background .2s,color .2s;text-decoration:none}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--bur);border-color:var(--bur);color:#FFF8EE}
+.btn.solid:hover{background:#5F1229}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px}
+.vol{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink2);margin-left:auto}
+.vol input{width:120px;accent-color:var(--bur)}
+.pstatus{width:100%;min-height:1.6em;font-size:15px;color:var(--bur)}
+.kbwrap{position:relative;margin-top:10px;display:flex;align-items:stretch;gap:8px}
+.oct{min-height:44px;border:1.5px solid var(--ink);background:transparent;cursor:pointer;font-size:15px;display:none}
+.kbs{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;touch-action:pan-x;padding-bottom:2px}
+.kbs::-webkit-scrollbar{display:none}
+.kb{position:relative;display:flex;height:clamp(170px,19vw,230px);width:max(100%,690px);user-select:none;-webkit-user-select:none}
+.wk,.bk{border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:pan-x}
+.wk{flex:1 0 46px;position:relative;background:linear-gradient(#FFFDF8,#F1EADA 92%,#E4DAC4);box-shadow:inset 0 0 0 1px var(--ink),inset 0 -6px 0 rgba(22,22,22,.06);border-radius:0 0 7px 7px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:10px;gap:2px;transition:background .08s}
+.wk + .wk{margin-left:-1px}
+.wk.on{background:linear-gradient(#F1EADA,#E9DFC8);box-shadow:inset 0 0 0 1px var(--ink),inset 0 -2px 0 rgba(22,22,22,.06),inset 0 6px 10px rgba(22,22,22,.12)}
+.wk.hint{background:linear-gradient(#FBF1D6,#E9D29C)}
+.wk.hint::before,.bk.hint::before{content:"";position:absolute;left:50%;bottom:34px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(184,146,62,.3);animation:pulse 1.2s ease-in-out infinite}
+.bk.hint::before{bottom:14px}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(184,146,62,0)}}
+.wk.miss,.bk.miss{animation:miss .35s ease}
+@keyframes miss{30%{transform:translateX(-3px)}70%{transform:translateX(3px)}}
+.bk{position:absolute;top:0;height:62%;width:var(--bw);margin-left:calc(var(--bw) / -2);z-index:2;background:linear-gradient(#3A3633,#121212 70%,#050505);border-radius:0 0 5px 5px;box-shadow:inset 0 -5px 0 #2C2926,inset 2px 0 0 rgba(255,255,255,.06),0 3px 5px rgba(0,0,0,.3);display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px}
+.bk.on{background:linear-gradient(#2A2624,#0E0E0E);box-shadow:inset 0 -2px 0 #2C2926,0 1px 2px rgba(0,0,0,.3)}
+.bk.hint{box-shadow:inset 0 -5px 0 #2C2926,0 0 0 2px var(--gold)}
+.kl{font-size:11px;line-height:1;color:#8A8277;letter-spacing:.04em;text-transform:uppercase;pointer-events:none}
+.bk .kl{color:#B4AA9C}
+.nn{font:400 12px/1 var(--disp);color:var(--bur);pointer-events:none}
+.kbhint{display:none;font-size:13.5px;color:var(--ink2);margin-top:10px}
+@media (max-width:759px){.kbwrap{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kbs{grid-column:1/-1;order:-1}.oct{display:block}.kbhint{display:block}.kbs{-webkit-mask:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent);mask:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent)}.vol{margin-left:0}}
+
+/* staff rule divider */
+.srule{position:relative;height:31px;margin:clamp(56px,8vw,96px) 0;background:repeating-linear-gradient(180deg,rgba(22,22,22,.5) 0 1px,transparent 1px 7.5px)}
+.srule svg{position:absolute;left:4px;top:-10px;height:52px;width:27px}
+.srule::after{content:"";position:absolute;right:0;top:1px;bottom:0;width:7px;border-left:1.5px solid var(--ink);border-right:4px solid var(--ink)}
+
+/* movements */
+.mvt{display:grid;gap:18px}
+@media (min-width:1000px){.mvt{grid-template-columns:280px minmax(0,1fr);gap:60px}.mside{position:sticky;top:30px;align-self:start}}
+.num{font:400 clamp(58px,7vw,96px)/.9 var(--disp);color:var(--bur)}
+.mside h2{font:400 clamp(32px,3.4vw,46px)/1.05 var(--disp);margin-top:8px}
+.tempo{margin-top:10px;color:var(--ink2)}
+@media (max-width:999px){.mside{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:18px;align-items:end}.num{grid-row:span 2}.mside h2{margin:0}.tempo{margin:4px 0 0}}
+.lead{font:400 clamp(22px,2.2vw,28px)/1.35 var(--disp);max-width:34ch}
+.body p+p{margin-top:14px}
+.parts{display:grid;gap:18px;margin-top:30px}
+@media (min-width:760px){.parts{grid-template-columns:repeat(3,1fr)}}
+.part{border-top:1.5px solid var(--ink);padding-top:14px}
+.part h3{font:400 24px/1.15 var(--disp)}
+.part .caps{color:var(--bur);margin-top:4px;display:block}
+.part ul{margin-top:12px;display:grid;gap:8px;font-size:15.5px;line-height:1.5}
+.part li{padding-left:18px;position:relative}
+.part li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:5px;border-radius:50%;background:var(--ink);transform:rotate(-22deg)}
+.comp{margin-top:26px;border-top:1.5px solid var(--ink)}
+.comp div{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.comp dt{font:400 20px/1.3 var(--disp)}
+.comp dd{font-size:15.5px;color:var(--ink2);line-height:1.55}
+@media (max-width:560px){.comp div{grid-template-columns:1fr}}
+.note{margin-top:18px;font-size:14px;color:var(--ink2);border-left:3px solid var(--gold);padding-left:14px}
+.bars{margin-top:30px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1.5px solid var(--ink);border-right:4px double var(--ink)}
+.bar{position:relative;padding:62px 14px 0 14px;border-right:1px solid var(--ink)}
+.bar:last-child{border-right:0}
+.bar::before{content:"";position:absolute;left:0;right:0;top:0;height:37px;background:repeating-linear-gradient(transparent 0 8px,rgba(22,22,22,.7) 8px 9px)}
+.bar svg{position:absolute;top:0;left:50%;margin-left:-8px;width:16px;height:37px}
+.bar b{display:block;font:400 17px/1.2 var(--disp);color:var(--bur)}
+.bar p{font-size:14.5px;line-height:1.5;margin-top:6px;padding-bottom:4px}
+@media (max-width:759px){.bars{grid-template-columns:1fr 1fr;border-right:0}.bar:nth-child(2){border-right:0}.bar:nth-child(-n+2){border-bottom:1px solid var(--line);padding-bottom:16px}.bar:nth-child(n+3){padding-top:62px}}
+.prog{margin-top:30px;border:1.5px solid var(--ink);padding:clamp(20px,3vw,34px);background:rgba(255,253,247,.7);display:grid;gap:16px;max-width:620px}
+.prog h3{text-align:center;font:400 28px/1.1 var(--disp)}
+.prog .caps{text-align:center;color:var(--bur)}
+.prog ol{display:grid;gap:4px}
+.prog li{display:flex;align-items:baseline;gap:10px;font-size:15.5px}
+.prog li i{font-style:normal;font-family:var(--disp);font-size:18px}
+.prog li::after{content:"";flex:1;order:1;border-bottom:1px dotted rgba(22,22,22,.4);min-width:20px}
+.prog li span{order:2;color:var(--ink2);font-size:14px;white-space:nowrap}
+.fees{width:100%;border-collapse:collapse;margin-top:26px;font-size:15.5px}
+.fees caption{text-align:left;padding-bottom:10px;color:var(--ink2);font-size:14px}
+.fees th,.fees td{text-align:left;padding:14px 10px 14px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.fees thead th{font:400 12px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);border-bottom:1.5px solid var(--ink)}
+.fees tbody th{font:400 20px/1.25 var(--disp)}
+.fees td.p{font:400 22px/1 var(--disp);text-align:right;padding-right:0}
+.fees thead th.p{text-align:right;padding-right:0}
+@media (max-width:560px){.fees .len{display:none}}
+.form{margin-top:28px;display:grid;gap:20px}
+.two{display:grid;gap:18px}
+@media (min-width:700px){.two{grid-template-columns:1fr 1fr}}
+.fl{display:grid;gap:7px}
+.fl>span,.fs legend{font:400 12px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink2)}
+.in{width:100%;min-height:48px;border:0;border-bottom:1.5px solid var(--ink);background:transparent;padding:8px 2px;font-size:17px;border-radius:0}
+.in:focus{outline:none;border-bottom-color:var(--bur);box-shadow:0 2px 0 var(--bur)}
+textarea.in{min-height:100px;resize:vertical;border:1.5px solid var(--ink);padding:10px 12px}
+select.in{appearance:none;background:linear-gradient(45deg,transparent 50%,var(--ink) 50%) calc(100% - 14px) 22px/6px 6px no-repeat,linear-gradient(135deg,var(--ink) 50%,transparent 50%) calc(100% - 8px) 22px/6px 6px no-repeat}
+.fs{border:0;padding:0;margin:0;min-width:0}
+.fs legend{margin-bottom:10px;padding:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid rgba(22,22,22,.35);font-size:15px;transition:background .2s,border-color .2s}
+.opt input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opt input:focus-visible+span{outline:2px solid var(--bur);outline-offset:3px}
+.fstatus{min-height:1.5em;color:var(--bur)}
+
+/* footer */
+.foot{margin-top:clamp(64px,9vw,110px);border-top:1.5px solid var(--ink);padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+.fgrid{display:grid;gap:24px}
+@media (min-width:900px){.fgrid{grid-template-columns:1.4fr 1fr auto;align-items:end}}
+.fname{font:400 clamp(30px,3.6vw,46px)/1.05 var(--disp);overflow-wrap:anywhere}
+.foot p{font-size:15px;color:var(--ink2)}
+.fine{font:400 34px/1 var(--disp);color:var(--bur);display:flex;align-items:center;gap:14px}
+.fine::after{content:"";width:9px;height:40px;border-left:1.5px solid var(--ink);border-right:5px solid var(--ink)}
+.legal{grid-column:1/-1;font-size:13px!important;border-top:1px solid var(--line);padding-top:16px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  #staff .n,.wk.miss,.bk.miss{animation:none}
+  .wk.hint::before,.bk.hint::before{animation:none}
+  #staff .roll{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="mast">
+ <a class="mast-brand" href="#top" data-brand>Allegro Piano Studio</a>
+ <nav class="navline" aria-label="Movements"><a href="#lessons"><b>I</b>Lessons</a><a href="#exams"><b>II</b>Exams</a><a href="#adults"><b>III</b>Adults</a><a href="#recitals"><b>IV</b>Recitals</a><a href="#fees"><b>V</b>Fees</a><a href="#enquire"><b>VI</b>Enquire</a></nav>
+ <details class="contents"><summary class="caps">Contents</summary>
+  <nav class="toc" aria-label="Movements"><a href="#play"><b>♪</b>The practice room</a><a href="#lessons"><b>I</b>Lessons</a><a href="#exams"><b>II</b>Exam preparation</a><a href="#adults"><b>III</b>Adult beginners</a><a href="#recitals"><b>IV</b>Recitals</a><a href="#fees"><b>V</b>Fees</a><a href="#enquire"><b>VI</b>Enquire</a></nav>
+ </details>
+</header>
+
+<main id="top">
+ <section class="title" aria-labelledby="h1">
+  <div class="tp-top caps"><span><i>Op. 1</i><br>Mosman</span><span>for pianists aged six to eighty-six</span></div>
+  <p class="tp-pre caps">Private lessons at</p>
+  <h1 id="h1" data-brand>Allegro Piano Studio</h1>
+  <p class="tp-sub">Piano for children, teens and adults · Mosman, NSW</p>
+  <div class="tp-rule" aria-hidden="true"></div>
+  <p class="tp-tempo"><b>Allegro con brio</b><span class="caps" aria-label="crotchet equals 132"><svg viewBox="0 0 12 22" aria-hidden="true"><ellipse cx="5" cy="18" rx="4.4" ry="3.2" transform="rotate(-22 5 18)" fill="#161616"/><path d="M9 17V1" stroke="#161616" stroke-width="1.3"/></svg> = 132</span></p>
+ </section>
+
+ <section class="practice" id="play" aria-labelledby="play-t">
+  <div class="pr-head">
+   <h2 id="play-t">The practice room</h2>
+   <p id="kbHelp">Click or tap the keys — or use your keyboard: <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> <kbd>G</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>K</kbd> for white notes, <kbd>W</kbd> <kbd>E</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>U</kbd> for black. <kbd>Z</kbd> <kbd>X</kbd> move an octave. Whatever you play is written on the staff.</p>
+  </div>
+  <div class="staffbox"><svg id="staff" aria-hidden="true"></svg><p class="empty-staff" id="emptyStaff">Your notes will appear here</p></div>
+  <div class="ctrl">
+   <button class="btn solid" type="button" id="demoBtn"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg><span>Play “Twinkle Twinkle”</span></button>
+   <button class="btn" type="button" id="teachBtn" aria-pressed="false">Teach me the tune</button>
+   <button class="btn" type="button" id="muteBtn" aria-pressed="false">Mute</button>
+   <label class="vol">Volume <input type="range" id="vol" min="0" max="100" value="70"></label>
+   <p class="pstatus" id="pstatus" aria-live="polite">Sound starts when you play the first note.</p>
+  </div>
+  <div class="kbwrap">
+   <button class="oct" type="button" id="octL">‹ Lower octave</button>
+   <div class="kbs" id="kbs"><div class="kb" id="kb" role="group" aria-label="Piano, C4 to C6" aria-describedby="kbHelp"></div></div>
+   <button class="oct" type="button" id="octR">Upper octave ›</button>
+  </div>
+  <p class="kbhint">Swipe the keyboard sideways for more keys.</p>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="lessons" aria-labelledby="m1">
+  <div class="mside"><p class="num" aria-hidden="true">I.</p><h2 id="m1">Lessons</h2><p class="tempo caps">Allegro moderato</p></div>
+  <div class="body">
+   <p class="lead">Weekly one-to-one lessons at the studio, on a grand piano, with a plan written for the student in front of us.</p>
+   <div class="parts">
+    <div class="part"><h3>Children</h3><span class="caps">Ages 6–12 · 30 minutes</span><ul><li>Reading music from the very first week</li><li>Rhythm games, duets and composing tiny pieces</li><li>A parent sits in for the first lesson</li></ul></div>
+    <div class="part"><h3>Teens</h3><span class="caps">Ages 13–18 · 45 minutes</span><ul><li>Pieces they actually want to play, beside the classics</li><li>Technique, theory and improvising</li><li>After-school and Saturday times</li></ul></div>
+    <div class="part"><h3>Adults</h3><span class="caps">Any age · 45 or 60 minutes</span><ul><li>Weekly or fortnightly — it's your schedule</li><li>Practice plans that fit a working week</li><li>Returners welcome, rust and all</li></ul></div>
+   </div>
+  </div>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="exams" aria-labelledby="m2">
+  <div class="mside"><p class="num" aria-hidden="true">II.</p><h2 id="m2">Exam preparation</h2><p class="tempo caps">Andante, ben marcato</p></div>
+  <div class="body">
+   <p class="lead">Graded practical and theory exams, from the first grade to diploma level — if and when a student wants them.</p>
+   <p style="margin-top:16px">Exams are optional. Some students love a goal on the calendar; others never sit one and play beautifully anyway. When we do prepare, we cover every section and hold a mock exam in the studio a fortnight before.</p>
+   <dl class="comp">
+    <div><dt>Pieces</dt><dd>Choosing a balanced list the student enjoys, then shaping it bar by bar.</dd></div>
+    <div><dt>Technical work</dt><dd>Scales, arpeggios and studies — practised little and often, never in a panic.</dd></div>
+    <div><dt>Aural</dt><dd>Clapping, singing back and recognising intervals, done as games in every lesson.</dd></div>
+    <div><dt>Sight-reading</dt><dd>A new short piece each week, so the real thing feels familiar.</dd></div>
+    <div><dt>General knowledge</dt><dd>Composers, terms and what the music is doing — the fun part of theory.</dd></div>
+   </dl>
+   <p class="note">General information only: exam requirements are set by each examining board, and entry fees are paid to the board separately. We'll tell you honestly when we think a student is ready.</p>
+  </div>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="adults" aria-labelledby="m3">
+  <div class="mside"><p class="num" aria-hidden="true">III.</p><h2 id="m3">Adult beginners</h2><p class="tempo caps">Adagio, con pazienza</p></div>
+  <div class="body">
+   <p class="lead">You don't need to have learnt as a child. You need a piano, twenty minutes most days, and a little patience with your left hand.</p>
+   <p style="margin-top:16px">No keyboard at home yet? Start on a weighted 88-key digital piano — we'll help you choose one, with no commissions involved. Here's how a first ten-week term usually goes, in four bars:</p>
+   <div class="bars">
+    <div class="bar"><svg viewBox="0 0 16 37" aria-hidden="true"><ellipse cx="8" cy="31" rx="5" ry="3.6" transform="rotate(-22 8 31)" fill="#161616"/></svg><b>Weeks 1–2</b><p>Find middle C, read the treble clef, play with a steady pulse.</p></div>
+    <div class="bar"><svg viewBox="0 0 16 37" aria-hidden="true"><ellipse cx="8" cy="22" rx="5" ry="3.6" transform="rotate(-22 8 22)" fill="#161616"/></svg><b>Weeks 3–5</b><p>Both hands, simple rhythms, your first chords.</p></div>
+    <div class="bar"><svg viewBox="0 0 16 37" aria-hidden="true"><ellipse cx="8" cy="13" rx="5" ry="3.6" transform="rotate(-22 8 13)" fill="#161616"/></svg><b>Weeks 6–8</b><p>A piece you chose, learnt left hand first.</p></div>
+    <div class="bar"><svg viewBox="0 0 16 37" aria-hidden="true"><ellipse cx="8" cy="4.5" rx="5" ry="3.6" transform="rotate(-22 8 4.5)" fill="#161616"/></svg><b>Weeks 9–10</b><p>Put it together slowly — then play it for someone.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="recitals" aria-labelledby="m4">
+  <div class="mside"><p class="num" aria-hidden="true">IV.</p><h2 id="m4">Recitals</h2><p class="tempo caps">Grazioso</p></div>
+  <div class="body">
+   <p class="lead">Two informal recitals a year, in June and December, in a community hall in Mosman.</p>
+   <p style="margin-top:16px">Everyone may play one piece; nobody has to. Beginners go first so they can relax and enjoy the rest, and there's afternoon tea afterwards — bring a plate if you like.</p>
+   <div class="prog">
+    <p class="caps">Programme · Sun 6 Dec · 2pm</p>
+    <h3>The December Recital</h3>
+    <ol>
+     <li><i>Minuet in G</i><span>Petzold</span></li>
+     <li><i>The Entertainer</i><span>Joplin</span></li>
+     <li><i>Gymnopédie No. 1</i><span>Satie</span></li>
+     <li><i>Für Elise</i><span>Beethoven</span></li>
+     <li><i>Prelude in E minor</i><span>Chopin</span></li>
+    </ol>
+    <p style="text-align:center;font-size:14px;color:var(--ink2)">A sample running order — played by students of all ages.</p>
+   </div>
+  </div>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="fees" aria-labelledby="m5">
+  <div class="mside"><p class="num" aria-hidden="true">V.</p><h2 id="m5">Fees</h2><p class="tempo caps">Moderato</p></div>
+  <div class="body">
+   <p class="lead">Invoiced per school term, with no enrolment fee.</p>
+   <table class="fees">
+    <caption>Sample prices in AUD, including GST.</caption>
+    <thead><tr><th scope="col">Lesson</th><th scope="col" class="len">Length</th><th scope="col" class="p">Per lesson</th><th scope="col" class="p">Per term</th></tr></thead>
+    <tbody>
+     <tr><th scope="row">Trial lesson</th><td class="len">30 min</td><td class="p">$30</td><td class="p">—</td></tr>
+     <tr><th scope="row">Children</th><td class="len">30 min</td><td class="p">$45</td><td class="p">$450</td></tr>
+     <tr><th scope="row">Teens &amp; adults</th><td class="len">45 min</td><td class="p">$65</td><td class="p">$650</td></tr>
+     <tr><th scope="row">Extended</th><td class="len">60 min</td><td class="p">$85</td><td class="p">$850</td></tr>
+    </tbody>
+   </table>
+   <p class="note">A term is ten weekly lessons. Lessons cancelled with 24 hours' notice are rescheduled; home visits on the lower north shore add $15.</p>
+  </div>
+ </section>
+
+ <div class="srule" aria-hidden="true"><svg viewBox="0 0 26 50"><path d="M15 31c2-2 5-1 5 2 0 4-4 6-7 5-4-1-6-5-5-9 1-6 7-10 10-15 2-4 2-9 1-12-1-3-4-3-5 0-2 4-2 10-1 15l3 30c.5 4-2 6-5 5-2-.5-2-3 .5-3.5" fill="none" stroke="#161616" stroke-width="1.6" stroke-linecap="round"/><circle cx="13" cy="47" r="1.9" fill="#161616"/></svg></div>
+
+ <section class="mvt" id="enquire" aria-labelledby="m6">
+  <div class="mside"><p class="num" aria-hidden="true">VI.</p><h2 id="m6">Enquire</h2><p class="tempo caps">Da capo</p></div>
+  <div class="body">
+   <p class="lead">Tell us a little about the pianist, and we'll suggest a lesson time and a trial.</p>
+   <form class="form" id="enq">
+    <div class="two">
+     <label class="fl"><span>Your name</span><input class="in" name="name" autocomplete="name" required></label>
+     <label class="fl"><span>Email</span><input class="in" name="email" type="email" autocomplete="email" required></label>
+    </div>
+    <fieldset class="fs"><legend>Who's learning?</legend><div class="opts">
+     <label class="opt"><input type="radio" name="who" value="a child" checked><span>A child</span></label>
+     <label class="opt"><input type="radio" name="who" value="a teenager"><span>A teenager</span></label>
+     <label class="opt"><input type="radio" name="who" value="an adult"><span>An adult</span></label>
+    </div></fieldset>
+    <div class="two">
+     <label class="fl"><span>Experience</span><select class="in" name="exp"><option>None yet</option><option>A little</option><option>Several years</option><option>Returning after a break</option></select></label>
+     <label class="fl"><span>Best times</span><select class="in" name="time"><option>Weekday afternoons</option><option>Weekday evenings</option><option>Saturday mornings</option></select></label>
+    </div>
+    <label class="fl"><span>Anything else? (optional)</span><textarea class="in" name="msg" placeholder="Pieces you'd love to play, exam plans, questions…"></textarea></label>
+    <div><button class="btn solid" type="submit">Send enquiry</button></div>
+    <p class="fstatus" id="fstatus" role="status"></p>
+   </form>
+  </div>
+ </section>
+</main>
+
+<footer class="foot">
+ <div class="fgrid">
+  <div><p class="fname" data-brand>Allegro Piano Studio</p><p style="margin-top:8px">Mosman, NSW · <a href="tel:0255503906">(02) 5550 3906</a> · <a href="mailto:lessons@example.com">lessons@example.com</a></p></div>
+  <p>Lessons Monday to Saturday.<br>The studio is a short walk from the ferry.</p>
+  <p class="fine" aria-label="Fine — the end">Fine</p>
+  <p class="legal">A concept demo for a fictional studio. Lessons, prices and the recital are invented, the phone number is from the fictional range, and the enquiry form sends nothing.</p>
+ </div>
+</footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const mq = matchMedia("(prefers-reduced-motion: reduce)");
+const toast = m => { if (window.DemoKit) DemoKit.toast(m); };
+const status = $("#pstatus");
+
+/* ---------------- keyboard layout ---------------- */
+const LO = 60, HI = 84; // C4 .. C6
+const NAMES = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"];
+const isBlack = m => [1, 3, 6, 8, 10].includes(m % 12);
+const nameOf = m => NAMES[m % 12] + (Math.floor(m / 12) - 1);
+const kb = $("#kb"), kbs = $("#kbs");
+const whites = [];
+for (let m = LO; m <= HI; m++) if (!isBlack(m)) whites.push(m);
+kb.style.setProperty("--bw", `calc(${100 / whites.length}% * .6)`);
+let html = "";
+whites.forEach(m => { html += `<button type="button" class="wk" tabindex="-1" data-m="${m}" aria-label="${nameOf(m)}">${m % 12 === 0 ? `<span class="nn">C${Math.floor(m / 12) - 1}</span>` : ""}<span class="kl"></span></button>`; });
+for (let m = LO; m <= HI; m++) if (isBlack(m)) {
+  const wi = whites.indexOf(m - 1) + 1;
+  html += `<button type="button" class="bk" tabindex="-1" data-m="${m}" aria-label="${nameOf(m)}" style="left:${(wi * 100 / whites.length).toFixed(4)}%"><span class="kl"></span></button>`;
+}
+kb.innerHTML = html;
+const keyEl = m => kb.querySelector(`[data-m="${m}"]`);
+
+/* computer keys */
+const MAP = { a: 0, w: 1, s: 2, e: 3, d: 4, f: 5, t: 6, g: 7, y: 8, h: 9, u: 10, j: 11, k: 12, o: 13, l: 14, p: 15, ";": 16, "'": 17 };
+let base = LO;
+function labelKeys() {
+  $$(".kl", kb).forEach(l => (l.textContent = ""));
+  for (const [k, off] of Object.entries(MAP)) { const el = keyEl(base + off); if (el) el.querySelector(".kl").textContent = k; }
+}
+labelKeys();
+
+/* ---------------- audio ---------------- */
+let ac = null, master = null, noiseBuf = null, vol = .7, muted = false;
+const voices = new Map();
+function audio() {
+  if (!ac) {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    ac = new AC();
+    const comp = ac.createDynamicsCompressor();
+    comp.threshold.value = -16; comp.ratio.value = 4; comp.attack.value = .003; comp.release.value = .25;
+    master = ac.createGain(); master.gain.value = muted ? 0 : vol * .9;
+    master.connect(comp); comp.connect(ac.destination);
+    const n = Math.floor(ac.sampleRate * .045);
+    noiseBuf = ac.createBuffer(1, n, ac.sampleRate);
+    const d = noiseBuf.getChannelData(0);
+    for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 4);
+  }
+  if (ac.state === "suspended") ac.resume();
+  return ac;
+}
+function noteOn(m) {
+  const a = audio(); if (!a) return;
+  stopVoice(m, .02);
+  const t = a.currentTime + .005, f = 440 * Math.pow(2, (m - 69) / 12);
+  const out = a.createGain(); out.gain.value = 0;
+  const lp = a.createBiquadFilter(); lp.type = "lowpass"; lp.Q.value = .5;
+  lp.frequency.setValueAtTime(Math.min(14000, f * 16), t);
+  lp.frequency.exponentialRampToValueAtTime(Math.max(f * 2.5, 500), t + 1.4);
+  lp.connect(out); out.connect(master);
+  const dec = 3.2 * Math.pow(.972, m - 60);
+  const oscs = [[1, 1, 0, "triangle"], [2, .38, 4, "sine"], [3, .16, -5, "sine"], [4, .08, 6, "sine"], [6, .03, -3, "sine"]].map(([k, g, c, type]) => {
+    const o = a.createOscillator(); o.type = type;
+    o.frequency.value = f * k * Math.sqrt(1 + .00035 * k * k); o.detune.value = c;
+    const gg = a.createGain(); gg.gain.setValueAtTime(g, t); gg.gain.exponentialRampToValueAtTime(g * (k > 1 ? .25 : .6), t + dec * .5);
+    o.connect(gg); gg.connect(lp); o.start(t); o.stop(t + dec + .1);
+    return o;
+  });
+  out.gain.setValueAtTime(0, t);
+  out.gain.linearRampToValueAtTime(.34, t + .005);
+  out.gain.exponentialRampToValueAtTime(.13, t + .3);
+  out.gain.exponentialRampToValueAtTime(.0005, t + dec);
+  const s = a.createBufferSource(); s.buffer = noiseBuf;
+  const bp = a.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = Math.min(f * 7, 6000); bp.Q.value = 1.1;
+  const hg = a.createGain(); hg.gain.value = .07;
+  s.connect(bp); bp.connect(hg); hg.connect(master); s.start(t);
+  voices.set(m, { out, oscs });
+}
+function stopVoice(m, rel) {
+  const v = voices.get(m); if (!v || !ac) return;
+  voices.delete(m);
+  const t = ac.currentTime, g = v.out.gain;
+  if (g.cancelAndHoldAtTime) g.cancelAndHoldAtTime(t); else { g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); }
+  g.exponentialRampToValueAtTime(.0001, t + rel);
+  v.oscs.forEach(o => { try { o.stop(t + rel + .03); } catch (e) { /* already stopped */ } });
+}
+function setGain() { if (master) master.gain.setTargetAtTime(muted ? 0 : vol * .9, ac.currentTime, .02); }
+$("#vol").addEventListener("input", e => { vol = e.target.value / 100; setGain(); });
+$("#muteBtn").addEventListener("click", e => {
+  muted = !muted; e.currentTarget.setAttribute("aria-pressed", String(muted));
+  e.currentTarget.textContent = muted ? "Muted — tap to unmute" : "Mute";
+  if (muted) voices.forEach((v, m) => stopVoice(m, .05));
+  setGain();
+});
+
+/* ---------------- staff ---------------- */
+const staff = $("#staff"), SPACE = 10, TOP = 44, STEP = 5, GAP = 34, X0 = 74;
+const LETTER = [0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6];
+const stepOf = m => (Math.floor(m / 12) - 1) * 7 + LETTER[m % 12] - 30; // E4 = 0
+const yOf = st => TOP + 4 * SPACE - st * STEP;
+let W = 800, written = [], roll = null, nextG = null;
+const CLEF = `<path d="M26 ${TOP + 30}c2-2.5 6-1.5 6 2 0 4.5-5 7-9 5.5-4.5-1.7-6.5-6-5-10.5 2-6.5 9-11 12-17 2.3-4.6 2.2-10 .6-13.5-1.4-3-4.4-2.6-5.6.4-1.8 4.4-1.6 11-.5 16.6l3.6 34c.5 4.6-2.2 7-5.8 6-2.4-.7-2.4-3.6.4-4" fill="none" stroke="#161616" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="${TOP + 60}" r="2.4" fill="#161616"/>`;
+function staffBase() {
+  W = Math.max(280, Math.round(staff.clientWidth || 800));
+  staff.setAttribute("viewBox", `0 0 ${W} 132`);
+  let s = "";
+  for (let i = 0; i < 5; i++) s += `<line class="sl" x1="6" x2="${W - 6}" y1="${TOP + i * SPACE}" y2="${TOP + i * SPACE}"/>`;
+  s += `<line class="sl" x1="6" x2="6" y1="${TOP}" y2="${TOP + 40}"/><line class="sl" x1="${W - 6}" x2="${W - 6}" y1="${TOP}" y2="${TOP + 40}" style="stroke-width:2"/>`;
+  s += CLEF + `<g clip-path="url(#sclip)"><g class="roll" id="roll"></g><g id="nextG"></g></g><defs><clipPath id="sclip"><rect x="46" y="0" width="${W - 56}" height="132"/></clipPath></defs>`;
+  staff.innerHTML = s;
+  roll = $("#roll", staff); nextG = $("#nextG", staff);
+  redraw();
+}
+function noteSVG(m, x, cls) {
+  const st = stepOf(m), y = yOf(st), sharp = isBlack(m);
+  let s = "";
+  for (let l = -2; l >= st; l -= 2) s += `<line class="ledger" x1="${x - 10}" x2="${x + 10}" y1="${yOf(l)}" y2="${yOf(l)}"/>`;
+  for (let l = 10; l <= st; l += 2) s += `<line class="ledger" x1="${x - 10}" x2="${x + 10}" y1="${yOf(l)}" y2="${yOf(l)}"/>`;
+  if (sharp) s += `<g class="sharp" transform="translate(${x - 15} ${y})"><path d="M-2-8V9M2-9V8"/><path class="t" d="M-4.5-2.5L4.5-5M-4.5 3.5L4.5 1"/></g>`;
+  s += `<ellipse class="head" cx="${x}" cy="${y}" rx="5.8" ry="4.2" transform="rotate(-22 ${x} ${y})"/>`;
+  s += st < 4 ? `<line class="stem" x1="${x + 5.3}" x2="${x + 5.3}" y1="${y - 1.5}" y2="${y - 31}"/>` : `<line class="stem" x1="${x - 5.3}" x2="${x - 5.3}" y1="${y + 1.5}" y2="${y + 31}"/>`;
+  s += `<text class="nm" x="${x}" y="126">${NAMES[m % 12].replace("♯", "#")}</text>`;
+  return `<g class="n ${cls || ""}">${s}</g>`;
+}
+function capacity() { return Math.max(4, Math.floor((W - X0 - 30) / GAP)); }
+function redraw() {
+  if (!roll) return;
+  const cap = capacity(), list = written.slice(-cap);
+  roll.innerHTML = list.map((m, i) => noteSVG(m, X0 + i * GAP)).join("");
+}
+function write(m) {
+  written.push(m); if (written.length > 200) written = written.slice(-100);
+  $("#emptyStaff").style.opacity = "0";
+  const cap = capacity();
+  if (written.length > cap) {
+    const list = written.slice(-cap - 1);
+    roll.style.transition = "none"; roll.style.transform = "";
+    roll.innerHTML = list.map((mm, i) => noteSVG(mm, X0 + i * GAP, i === list.length - 1 ? "" : "old")).join("");
+    void roll.getBoundingClientRect();
+    roll.style.transition = ""; roll.style.transform = `translateX(${-GAP}px)`;
+    clearTimeout(write.t); write.t = setTimeout(() => { roll.style.transition = "none"; roll.style.transform = ""; redraw(); }, mq.matches ? 0 : 380);
+  } else roll.insertAdjacentHTML("beforeend", noteSVG(m, X0 + (written.length - 1) * GAP));
+}
+function showNext(m) { if (nextG) nextG.innerHTML = m == null ? "" : noteSVG(m, W - 34, "next"); }
+if ("ResizeObserver" in window) new ResizeObserver(() => { if (Math.round(staff.clientWidth) !== W) staffBase(); }).observe(staff);
+staffBase();
+
+/* ---------------- playing ---------------- */
+let teach = null, demo = null;
+function press(m, src) {
+  const el = keyEl(m); if (!el) return;
+  el.classList.add("on");
+  noteOn(m);
+  write(m);
+  if (status.dataset.fresh !== "1") { status.dataset.fresh = "1"; if (!teach && !demo) status.textContent = `Playing ${nameOf(m)}. Try the tune, or let us teach you.`; }
+  if (teach && src !== "demo") teachCheck(m, el);
+}
+function release(m) { const el = keyEl(m); if (el) el.classList.remove("on"); stopVoice(m, .45); }
+const held = new Map();
+kb.addEventListener("pointerdown", e => {
+  const el = e.target.closest("[data-m]"); if (!el || (e.pointerType === "mouse" && e.button !== 0)) return;
+  e.preventDefault();
+  if (el.hasPointerCapture && el.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId);
+  const m = +el.dataset.m; held.set(e.pointerId, m); press(m);
+});
+kb.addEventListener("pointerover", e => {
+  if (e.pointerType !== "mouse" || !(e.buttons & 1) || !held.has(e.pointerId)) return;
+  const el = e.target.closest("[data-m]"); if (!el) return;
+  const m = +el.dataset.m; if (held.get(e.pointerId) === m) return;
+  release(held.get(e.pointerId)); held.set(e.pointerId, m); press(m);
+});
+const up = e => { if (held.has(e.pointerId)) { release(held.get(e.pointerId)); held.delete(e.pointerId); } };
+window.addEventListener("pointerup", up); window.addEventListener("pointercancel", up);
+kb.addEventListener("click", e => { if (e.detail === 0) { const el = e.target.closest("[data-m]"); if (el) { press(+el.dataset.m); setTimeout(() => release(+el.dataset.m), 300); } } });
+
+/* computer keyboard — only while the practice room is on screen */
+let inView = true;
+if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(en => { inView = en.intersectionRatio > .25; }), { threshold: [0, .25, .5] }).observe($("#play"));
+const down = new Set();
+document.addEventListener("keydown", e => {
+  if (!inView || e.metaKey || e.ctrlKey || e.altKey) return;
+  const t = e.target; if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+  const k = e.key.toLowerCase();
+  if (k === "z" || k === "x") { base = k === "z" ? LO : LO + 12; labelKeys(); status.textContent = k === "z" ? "Typing keys now start at C4." : "Typing keys now start at C5."; e.preventDefault(); return; }
+  if (!(k in MAP)) return;
+  e.preventDefault();
+  const m = base + MAP[k]; if (m > HI || e.repeat || down.has(k)) return;
+  down.add(k); press(m);
+});
+document.addEventListener("keyup", e => { const k = e.key.toLowerCase(); if (down.has(k)) { down.delete(k); release(base + MAP[k]); } });
+window.addEventListener("blur", () => { down.forEach(k => release(base + MAP[k])); down.clear(); });
+
+/* phone: octave scroll buttons */
+function octScroll(dir) { kbs.scrollBy({ left: dir * kbs.clientWidth * .8, behavior: mq.matches ? "auto" : "smooth" }); }
+$("#octL").addEventListener("click", () => octScroll(-1));
+$("#octR").addEventListener("click", () => octScroll(1));
+
+/* ---------------- Twinkle Twinkle ---------------- */
+const C4 = 60, D = 62, E = 64, F = 65, G = 67, A = 69;
+const TUNE = [C4, C4, G, G, A, A, G, F, F, E, E, D, D, C4, G, G, F, F, E, E, D, G, G, F, F, E, E, D, C4, C4, G, G, A, A, G, F, F, E, E, D, D, C4];
+const LONG = new Set([6, 13, 20, 27, 34, 41]);
+const demoBtn = $("#demoBtn"), teachBtn = $("#teachBtn");
+function clearHints() { $$(".hint", kb).forEach(el => el.classList.remove("hint")); }
+function ensureVisible(m) {
+  const el = keyEl(m); if (!el) return;
+  const r = el.getBoundingClientRect(), c = kbs.getBoundingClientRect();
+  if (r.left < c.left || r.right > c.right) kbs.scrollBy({ left: r.left - c.left - c.width / 2 + r.width / 2, behavior: mq.matches ? "auto" : "smooth" });
+}
+function stopDemo(msg) {
+  if (!demo) return;
+  demo.timers.forEach(clearTimeout);
+  voices.forEach((v, m) => stopVoice(m, .2));
+  $$(".on", kb).forEach(el => el.classList.remove("on"));
+  demo = null; clearHints();
+  demoBtn.querySelector("span").textContent = "Play “Twinkle Twinkle”";
+  if (msg) status.textContent = msg;
+}
+demoBtn.addEventListener("click", () => {
+  if (demo) { stopDemo("Stopped. Your turn — or press Teach me."); return; }
+  stopTeach();
+  audio();
+  demo = { timers: [] };
+  demoBtn.querySelector("span").textContent = "Stop";
+  status.textContent = "Playing “Twinkle Twinkle, Little Star” — watch the gold keys.";
+  const beat = .44;
+  let t = 250;
+  TUNE.forEach((m, i) => {
+    const dur = (LONG.has(i) ? 2 : 1) * beat * 1000;
+    demo.timers.push(setTimeout(() => { clearHints(); const el = keyEl(m); el.classList.add("hint"); ensureVisible(m); press(m, "demo"); }, t));
+    demo.timers.push(setTimeout(() => release(m), t + dur * .85));
+    t += dur;
+  });
+  demo.timers.push(setTimeout(() => stopDemo("That's the tune. Press Teach me and play it yourself."), t + 200));
+});
+
+/* ---------------- Teach me (follow the gold key) ---------------- */
+function stopTeach(msg) {
+  if (!teach) return;
+  teach = null; clearHints(); showNext(null);
+  teachBtn.setAttribute("aria-pressed", "false"); teachBtn.textContent = "Teach me the tune";
+  if (msg) status.textContent = msg;
+}
+function teachShow() {
+  clearHints();
+  const m = TUNE[teach.i];
+  keyEl(m).classList.add("hint"); ensureVisible(m); showNext(m);
+  status.textContent = `Note ${teach.i + 1} of ${TUNE.length}: play ${NAMES[m % 12]} — the gold key.`;
+}
+function teachCheck(m, el) {
+  const want = TUNE[teach.i];
+  if (m !== want) {
+    el.classList.remove("miss"); void el.offsetWidth; el.classList.add("miss");
+    status.textContent = `Not quite — that was ${NAMES[m % 12]}. Look for the gold key (${NAMES[want % 12]}).`;
+    return;
+  }
+  teach.i++;
+  if (teach.i >= TUNE.length) { stopTeach("Bravo! That's the whole tune, all 42 notes. Fine."); return; }
+  teachShow();
+}
+teachBtn.addEventListener("click", () => {
+  if (teach) { stopTeach("Lesson paused. Press Teach me to start again."); return; }
+  stopDemo();
+  teach = { i: 0 };
+  teachBtn.setAttribute("aria-pressed", "true"); teachBtn.textContent = "Stop lesson";
+  teachShow();
+});
+
+/* ---------------- enquiry ---------------- */
+$("#enq").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  $("#fstatus").textContent = `Thanks, ${String(f.get("name")).split(" ")[0]} — this is a demo, so nothing was sent about ${f.get("who")}.`;
+  toast("Demo only — nothing was sent. On the real site this enquiry would reach the studio.");
+});
+})();
+</script>
+</body>
+</html>

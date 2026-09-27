@@ -1,0 +1,8 @@
+{
+  "id": "040",
+  "tech": ["CSS Grid", "SVG", "Bilingual toggle", "Keyboard shortcuts", "Form logic"],
+  "features": ["bilingual", "booking", "accessibility"],
+  "interaction": "Switch between adult and child teeth, then tap (or Tab and arrow-key) any tooth in the clay arch to see its name, FDI number and common treatments as general information; an 'Anxious about the dentist?' switch reveals calm-visit tips and calms the mascot, and the whole page toggles between English and 中文.",
+  "fonts": ["Outfit", "Noto Sans SC"],
+  "notes": "Treatment notes are general information only. Chinese copy is written for Simplified Chinese (zh-CN)."
+}

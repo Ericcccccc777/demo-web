@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="080">
+<meta name="demo:brand" content="Doodle Dept.">
+<title>Doodle Dept. — illustration studio, Collingwood</title>
+<meta name="description" content="Doodle Dept. is a fictional one-person illustration studio in Collingwood, Victoria, drawing picture books, packaging and murals.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#111;--mute:#4a4a4a;--tomato:#FF6347;--sun:#FFC93C;--sky:#6EC6FF;--grass:#7ED957;--lilac:#B39DDB;--pink:#FF8FAB;--cur:#FF6347;--tint:#FF634750;
+--wob:255px 15px 225px 15px/15px 225px 15px 255px;--hand:"Patrick Hand","Chalkboard SE","Comic Sans MS",cursive;--sans:"Outfit",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.55 var(--sans);padding-bottom:calc(128px + env(safe-area-inset-bottom))}
+a{color:inherit}
+:focus-visible{outline:3px dashed var(--ink);outline-offset:4px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-80px;z-index:60;background:var(--ink);color:#fff;padding:12px 16px;border-radius:10px;font-weight:500;text-decoration:none}
+.skip:focus{top:12px}
+/* header */
+.top{max-width:1320px;margin:0 auto;padding:22px 40px 10px;display:flex;align-items:center;gap:48px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 31px/1 var(--hand);min-width:0}
+.logo span{overflow-wrap:anywhere}
+.logo svg{width:46px;height:46px;flex:none;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.logo:hover svg{transform:rotate(-14deg)}
+.nav{display:flex;flex-wrap:wrap;gap:4px}
+.nav a{font:500 15px/1 var(--sans);text-decoration:none;padding:11px 14px;border:2.5px solid transparent;border-radius:var(--wob)}
+.nav a:hover{border-color:var(--ink)}
+/* hero */
+.hero{max-width:1320px;margin:0 auto;padding:14px 40px 40px;display:grid;grid-template-columns:minmax(280px,370px) minmax(0,1fr);gap:56px;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 18px;font:500 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:3px;background:var(--ink)}
+h1{font:400 clamp(54px,6vw,90px)/.9 var(--hand);margin:0 0 22px;letter-spacing:-.01em}
+.hl{background:linear-gradient(transparent 56%,var(--cur) 56%,var(--cur) 88%,transparent 88%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lede{font-size:18px;color:#262626;max-width:36ch;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 20px;border:3px solid var(--ink);border-radius:var(--wob);background:#fff;color:var(--ink);font:500 16px/1 var(--sans);text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.solid{background:var(--ink);color:#fff}
+.hint{font:400 18px/1.35 var(--hand);color:#333;margin:18px 4px 0;display:flex;gap:10px;align-items:flex-start}
+.hint svg{flex:none;width:34px;height:30px;margin-top:-4px}
+kbd{font:500 13px/1 var(--sans);border:2px solid var(--ink);border-bottom-width:3px;border-radius:6px;padding:2px 6px;background:#fff}
+/* the colouring page */
+.page{position:relative;background:#fff;border:3px solid var(--ink);border-radius:14px 18px 12px 16px;padding:40px 16px 16px;box-shadow:9px 9px 0 var(--ink)}
+.page::before{content:"";position:absolute;left:26px;right:26px;top:-15px;height:30px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='30'%3E%3Crect x='12' y='2' width='10' height='25' rx='5' fill='%23fff' stroke='%23111' stroke-width='3'/%3E%3C/svg%3E") space no-repeat left top/34px 30px}
+.page::after{content:"";position:absolute;left:26px;right:26px;top:13px;height:10px;background:radial-gradient(circle,#111 3.4px,transparent 4px) space no-repeat left center/34px 10px}
+.done{animation:wiggle .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes wiggle{30%{transform:rotate(-1.2deg)}60%{transform:rotate(.8deg)}}
+.page-head{display:flex;justify-content:space-between;gap:12px;font:400 20px/1 var(--hand);margin:0 6px 10px}
+.art{display:block;width:100%;height:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;overflow:hidden}
+.rg{fill:#fff;stroke:var(--ink);stroke-width:5;stroke-linejoin:round;stroke-linecap:round;cursor:var(--cursor,pointer);transition:fill .2s}
+.ink{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.thin{stroke-width:3}
+.solid{fill:var(--ink);stroke:var(--ink);stroke-width:2;stroke-linejoin:round;pointer-events:none}
+.tip{fill:#fff;stroke:var(--ink);stroke-width:4;stroke-linejoin:round;pointer-events:none}
+.art text{font:400 17px var(--hand);fill:var(--ink);pointer-events:none}
+@media (hover:hover){.rg:hover{fill:var(--tint)}}
+.rg:focus{outline:none}
+.rg:focus-visible{stroke-width:7;stroke-dasharray:10 7;animation:ants .7s linear infinite}
+@keyframes ants{to{stroke-dashoffset:-17}}
+/* crayon tray */
+.tray{position:fixed;z-index:40;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:16px;padding:8px 12px 8px 14px;background:#fff;border:3px solid var(--ink);border-radius:20px 24px 18px 22px;box-shadow:5px 5px 0 var(--ink);transition:transform .4s cubic-bezier(.3,1.4,.5,1),visibility 0s}
+.tray.away{transform:translate(-50%,170%);visibility:hidden;transition:transform .3s ease-in,visibility 0s .3s}
+.crayons{display:flex;align-items:flex-end;gap:2px;height:58px;clip-path:inset(-40px -8px 0 -8px);margin:-2px 0 -8px}
+.cr{appearance:none;border:0;background:none;padding:0;width:42px;height:58px;cursor:pointer;display:flex;justify-content:center;align-items:flex-start;border-radius:10px;color:#111}
+.cr svg{width:30px;height:66px;transform:translateY(12px);transition:transform .25s cubic-bezier(.3,1.7,.5,1)}
+.cr:hover svg{transform:translateY(6px)}
+.cr[aria-pressed="true"] svg{transform:translateY(-10px)}
+.cr:focus-visible{outline-offset:-2px}
+.meter{font:400 18px/1.1 var(--hand);min-width:128px}
+.meter i{display:block;height:8px;border:2px solid var(--ink);border-radius:8px;margin-top:5px;overflow:hidden}
+.meter i b{display:block;height:100%;width:0;background:var(--cur);transition:width .35s}
+.tools{display:flex;gap:8px}
+.tool{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border:2.5px solid var(--ink);border-radius:var(--wob);background:#fff;color:var(--ink);font:500 15px/1 var(--sans);cursor:pointer;white-space:nowrap}
+.tool svg{width:18px;height:18px}
+.tool:disabled{opacity:.38;cursor:default}
+.tool.pop{background:var(--ink);color:#fff}
+.tool:not(:disabled):hover{background:var(--cur);color:var(--ink)}
+/* sections */
+.sec{max-width:1240px;margin:0 auto;padding:104px 40px 24px}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;align-items:center;margin-bottom:52px}
+.pno{width:70px;height:70px;display:grid;place-items:center;border:3px solid var(--ink);border-radius:52% 48% 50% 46%/48% 52% 46% 54%;font:400 19px/1 var(--hand);transform:rotate(-8deg);text-align:center}
+h2{font:400 clamp(44px,5vw,70px)/.95 var(--hand);margin:0;padding-bottom:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='14'%3E%3Cpath d='M3 9C23 1 40 13 61 7S99 2 118 8 146 10 157 5' fill='none' stroke='%23111' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") left bottom/160px 14px no-repeat}
+.sec-head p{grid-column:2;margin:0;max-width:58ch;color:var(--mute)}
+h3{font-weight:400}
+.tag{display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border:2px solid var(--ink);border-radius:999px;margin:0 6px 6px 0}
+/* work */
+.work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 44px}
+.proj{margin:0}
+.proj.big{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
+.frame{position:relative;border:3px solid var(--ink);border-radius:12px 16px 10px 14px;padding:12px;background:#fff}
+.frame::before{content:"";position:absolute;top:-15px;left:50%;width:118px;height:28px;margin-left:-59px;background:var(--tape,#FFC93C);opacity:.8;transform:rotate(-3deg);-webkit-mask:linear-gradient(90deg,transparent 0 3px,#000 3px calc(100% - 3px),transparent 0)}
+.proj:nth-child(2) .frame::before{--tape:#6EC6FF;transform:rotate(2deg)}
+.proj:nth-child(3) .frame::before{--tape:#FF8FAB;transform:rotate(-1deg)}
+.proj h3{font:400 34px/1 var(--hand);margin:20px 0 10px}
+.proj p{margin:8px 0 0;color:var(--mute);max-width:52ch}
+.proj.big h3{font-size:44px;margin-top:0}
+/* services */
+.svc-wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:start}
+.svc{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.svc li{display:grid;grid-template-columns:54px minmax(0,1fr) auto;gap:22px;align-items:center;padding:24px 4px;border-bottom:2.5px dashed var(--ink)}
+.blob{width:54px;height:54px}
+.blob path{fill:#fff;stroke:var(--ink);stroke-width:3;transition:fill .3s}
+.svc li:hover .blob path{fill:var(--c)}
+.svc h3{font:400 31px/1.05 var(--hand);margin:0 0 4px}
+.svc p{margin:0;color:var(--mute)}
+.price{font:400 28px/1 var(--hand);text-align:right;white-space:nowrap}
+.price small{display:block;font:500 11px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.note{border:3px solid var(--ink);border-radius:18px 14px 20px 12px;padding:24px;position:sticky;top:24px;background:#fff}
+.note h3{font:400 28px/1 var(--hand);margin:0 0 12px}
+.note ul{margin:0;padding-left:20px}
+.note li{margin:6px 0}
+.small{font-size:14px;color:var(--mute)}
+/* process */
+.dots{position:relative;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.dots li{position:relative;z-index:1}
+.dots li:nth-child(even){margin-top:96px}
+.dot{width:54px;height:54px;border-radius:50%;border:3px solid var(--ink);background:#fff;display:grid;place-items:center;font:400 26px/1 var(--hand);margin-bottom:16px;transition:background .4s,transform .4s cubic-bezier(.3,1.6,.5,1)}
+.dotwrap.on .dot{background:var(--c);transform:scale(1.06)}
+.dotwrap.on li:nth-child(2) .dot{transition-delay:.35s}.dotwrap.on li:nth-child(3) .dot{transition-delay:.7s}.dotwrap.on li:nth-child(4) .dot{transition-delay:1.05s}.dotwrap.on li:nth-child(5) .dot{transition-delay:1.4s}
+.dots h3{font:400 28px/1.05 var(--hand);margin:0 0 6px}
+.dots p{margin:0;color:var(--mute);font-size:16px}
+.dots h3,.dots p{position:relative;background:#fff}
+.dotwrap{position:relative}
+.joins{position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible;pointer-events:none}
+.joins path{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s ease-in-out}
+.dotwrap.on .joins path{stroke-dashoffset:0}
+/* prints */
+.prints{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+.wall{position:relative;padding:36px 36px 30px;border-radius:16px;background:repeating-linear-gradient(90deg,#fff 0 22px,#f4f4f4 22px 24px)}
+.wall::before{content:"";position:absolute;left:50%;top:6px;width:2px;height:30px;background:var(--ink)}
+.fr{border:16px solid var(--ink);padding:22px;background:#fff;box-shadow:inset 0 0 0 2px #111,10px 12px 0 rgba(17,17,17,.1)}
+.fr svg{display:block;width:100%;height:auto}
+.fr .rg{cursor:default}
+.plist{list-style:none;margin:0 0 20px;padding:0}
+.plist li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:16px 0;border-bottom:2.5px dashed var(--ink)}
+.plist li:first-child{border-top:3px solid var(--ink)}
+.plist b{display:block;font:400 25px/1.05 var(--hand)}
+.plist span{font-size:14px;color:var(--mute)}
+.plist .p{font:400 24px/1 var(--hand)}
+.mini{min-height:42px;padding:8px 14px;font-size:14px;box-shadow:3px 3px 0 var(--ink)}
+/* commission */
+.cgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:start}
+.contact{margin:0 0 28px;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.contact dt{font:400 20px/1.3 var(--hand)}
+.contact dd{margin:0}
+details{border-top:2.5px dashed var(--ink);padding:14px 0}
+details:last-of-type{border-bottom:2.5px dashed var(--ink)}
+summary{cursor:pointer;font:400 23px/1.2 var(--hand);list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:40px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 24px/1 var(--sans);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:8px 0 4px;color:var(--mute)}
+.brief{border:3px solid var(--ink);border-radius:16px 20px 14px 18px;padding:30px;box-shadow:9px 9px 0 var(--ink);background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:grid;gap:6px;min-width:0}
+.f.w{grid-column:1/-1}
+.f label,.f .lab{font:400 20px/1.1 var(--hand)}
+input,select,textarea{font:400 16px/1.4 var(--sans);color:var(--ink);background:#fff;border:2.5px solid var(--ink);border-radius:12px 14px 11px 13px;padding:11px 13px;min-height:48px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;box-shadow:4px 4px 0 var(--cur)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.chk input{width:22px;min-height:22px;height:22px;margin:2px 0 0;accent-color:#111;flex:none}
+.brief .btn{justify-self:start}
+/* footer */
+.foot{max-width:1240px;margin:110px auto 0;padding:40px 40px 30px;border-top:3px solid var(--ink)}
+.foot .name{font:400 clamp(56px,10vw,150px)/.85 var(--hand);margin:0 0 20px;overflow-wrap:anywhere}
+.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:15px;color:var(--mute)}
+@media (max-width:1100px){
+ html:not(.hd-in-frame) .tray{bottom:calc(max(12px,env(safe-area-inset-bottom)) + 52px)}
+ html:not(.hd-in-frame) body{padding-bottom:190px}
+}
+@media (max-width:1000px){
+ .hero{grid-template-columns:1fr;gap:34px}
+ .hero-copy{max-width:640px}
+ .svc-wrap,.prints,.cgrid{grid-template-columns:1fr}
+ .note{position:static}
+ .dots{grid-template-columns:1fr 1fr}
+ .dots li:nth-child(even){margin-top:60px}
+}
+@media (max-width:760px){
+ body{font-size:16px;padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+ .top{padding:14px 16px 6px}
+ .logo{font-size:27px}
+ .logo svg{width:38px;height:38px}
+ .nav{display:none}
+ .hero{padding:8px 16px 24px;gap:0}
+ .hero-copy{display:contents}
+ .eyebrow{order:1;margin-bottom:12px}
+ h1{order:2}
+ .page{order:3;margin:8px 0 26px}
+ .lede{order:4}
+ .btns{order:5}
+ .hint{order:6}
+ .btns .btn{padding:12px 15px;font-size:15px}
+ h1{font-size:clamp(50px,14vw,64px);margin-bottom:16px}
+ .lede{font-size:16.5px;margin-bottom:20px}
+ .page{padding:34px 9px 9px;box-shadow:5px 5px 0 var(--ink)}
+ .page::before,.page::after{left:14px;right:14px}
+ .page-head{font-size:18px;margin-bottom:8px}
+ .hint{font-size:17px}
+ .sec{padding:76px 16px 16px}
+ .sec-head{grid-template-columns:1fr;margin-bottom:34px}
+ .sec-head p{grid-column:1}
+ .pno{width:58px;height:58px;font-size:16px}
+ .work{grid-template-columns:1fr;gap:56px}
+ .proj.big{grid-template-columns:1fr;gap:0}
+ .proj.big h3{font-size:36px;margin-top:20px}
+ .svc li{grid-template-columns:44px minmax(0,1fr);gap:4px 16px;align-items:start}
+ .blob{width:44px;height:44px}
+ .price{grid-column:2;text-align:left;margin-top:8px}
+ .price small{display:inline;margin-left:6px}
+ .dots{grid-template-columns:1fr;gap:26px;padding-left:4px}
+ .dots li{display:grid;grid-template-columns:54px 1fr;gap:0 18px}
+ .dots li:nth-child(even){margin-top:0}
+ .dots .dot{grid-row:span 2;margin:0}
+ .wall{padding:26px 14px 18px}
+ .fr{border-width:11px;padding:12px}
+ .brief{grid-template-columns:1fr;padding:20px;box-shadow:5px 5px 0 var(--ink)}
+ .foot{padding:30px 16px 24px;margin-top:80px}
+}
+@media (max-width:640px){
+ .tray{left:0;right:0;bottom:0;transform:none;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 10px;padding:6px 12px calc(10px + env(safe-area-inset-bottom));border-radius:20px 20px 0 0;border-bottom:0;box-shadow:0 -3px 0 rgba(17,17,17,.08)}
+ .tray.away{transform:translateY(115%)}
+ .crayons{grid-column:1/-1;justify-content:space-between;margin:0}
+ .cr{flex:1 1 0;width:auto;min-width:40px}
+ .meter{min-width:0;font-size:16px;align-self:center}
+ .tool{padding:8px 11px;font-size:14px}
+ html:not(.hd-in-frame) .tray{left:8px;right:8px;bottom:calc(max(12px,env(safe-area-inset-bottom)) + 50px);border-bottom:3px solid var(--ink);border-radius:20px 22px 18px 20px;padding-bottom:10px}
+ html:not(.hd-in-frame) body{padding-bottom:220px}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .joins path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#work">Skip the colouring page</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs id="fx">
+<symbol id="cray" viewBox="0 0 30 66"><path d="M8 22L13 6Q15 2 17 6L22 22Z" fill="currentColor" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/><rect x="5" y="21" width="20" height="46" rx="3" fill="currentColor" stroke="#111" stroke-width="2.5"/><path d="M5 30H25M5 56H25" stroke="#111" stroke-width="2.5"/><path d="M9 38Q15 42 21 38M9 47Q15 51 21 47" fill="none" stroke="#111" stroke-width="2" opacity=".5"/></symbol>
+<symbol id="eras" viewBox="0 0 30 66"><rect x="4" y="9" width="22" height="58" rx="5" fill="#fff" stroke="#111" stroke-width="2.5"/><path d="M4 32H26V67H4Z" fill="#6EC6FF" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 43L20 55M20 43L10 55" stroke="#111" stroke-width="2" opacity=".5"/></symbol>
+</defs></svg>
+
+<header class="top">
+ <a class="logo" href="#top"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M23 3C36 3 43 11 43 23S35 43 22 43 3 35 3 23 10 3 23 3Z" fill="#FFC93C" stroke="#111" stroke-width="3"/><path d="M11 28C15 17 21 32 25 22S33 20 35 27" fill="none" stroke="#111" stroke-width="3.2" stroke-linecap="round"/><circle cx="16" cy="15" r="2.6" fill="#111"/></svg><span data-brand>Doodle Dept.</span></a>
+ <nav class="nav" aria-label="Sections"><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#prints">Prints</a><a href="#commission">Commission</a></nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <div class="hero-copy">
+  <p class="eyebrow">Illustrator · Collingwood, VIC</p>
+  <h1 id="h1">Go on, <span class="hl">colour it in.</span></h1>
+  <p class="lede">I’m Juno Marsh. I draw picture books, packaging and murals with thick black lines and bright flat colour. This page is my desk — pick a crayon and fill it in.</p>
+  <div class="btns"><a class="btn solid" href="#commission">Commission a drawing</a><a class="btn" href="#work">See the work</a></div>
+  <p class="hint"><svg viewBox="0 0 30 66" aria-hidden="true" style="color:var(--cur);transform:rotate(38deg)"><use href="#cray"/></svg><span>Tap a crayon, then tap any shape. Keyboard: <kbd>Tab</kbd> to a shape, <kbd>Enter</kbd> fills, <kbd>1</kbd>–<kbd>7</kbd> swap crayons, <kbd>Z</kbd> undoes.</span></p>
+ </div>
+ <div class="page" id="studio-page">
+  <div class="page-head" aria-hidden="true"><span>p. 1 — The studio</span><span>colour me in!</span></div>
+  <svg id="studio" class="art" viewBox="0 0 800 600" role="group" aria-label="Colouring page: an illustrator’s desk with a cat, plants, pencils and a window. Every shape can be filled." data-title="The studio">
+  <g id="scene">
+   <rect class="rg" data-n="wall" x="0" y="0" width="800" height="440"/>
+   <rect class="rg" data-n="floor" x="0" y="440" width="800" height="160"/>
+   <path class="ink thin" d="M0 492H800M0 548H800M150 440V492M430 440V492M700 440V492M70 492V548M320 492V548M580 492V548M210 548V600M490 548V600M760 548V600"/>
+   <rect class="rg" data-n="skirting board" x="0" y="424" width="800" height="16"/>
+   <ellipse class="rg" data-n="rug" cx="320" cy="550" rx="214" ry="36"/>
+   <ellipse class="ink thin" cx="320" cy="550" rx="176" ry="25" stroke-dasharray="2 11"/>
+   <path class="rg" data-n="window frame" d="M468 316V160A132 132 0 0 1 732 160V316Z"/>
+   <path class="rg" data-n="top-left window pane" d="M490 198V160A110 110 0 0 1 596 50.1V198Z"/>
+   <path class="rg" data-n="top-right window pane" d="M604 198V50.1A110 110 0 0 1 710 160V198Z"/>
+   <rect class="rg" data-n="bottom-left window pane" x="490" y="206" width="106" height="88"/>
+   <rect class="rg" data-n="bottom-right window pane" x="604" y="206" width="106" height="88"/>
+   <circle class="rg" data-n="sun" cx="652" cy="124" r="22"/>
+   <path class="ink thin" d="M681 124H689M672.5 144.5L678.2 150.2M652 153V161M631.5 144.5L625.8 150.2M623 124H615M631.5 103.5L625.8 97.8M652 95V87M672.5 103.5L678.2 97.8"/>
+   <path class="rg" data-n="cloud" d="M516 172C502 172 502 150 518 150C518 132 546 128 552 144C560 136 578 142 574 156C586 158 584 172 572 172Z"/>
+   <path class="rg" data-n="tree outside" d="M500 294C494 272 510 256 528 262C534 244 564 246 570 264C586 262 594 280 588 294Z"/>
+   <path class="rg" data-n="house next door" d="M616 294V262L646 236L676 262V294Z"/>
+   <path class="ink thin" d="M638 270H654V284H638Z"/>
+   <rect class="rg" data-n="window sill" x="452" y="312" width="296" height="16" rx="4"/>
+   <rect class="rg" data-n="tall book" x="150" y="118" width="20" height="64"/>
+   <rect class="rg" data-n="big book" x="172" y="104" width="24" height="78"/>
+   <g transform="rotate(-12 226 182)"><rect class="rg" data-n="leaning book" x="206" y="124" width="20" height="58"/><path class="ink thin" d="M206 138H226"/></g>
+   <path class="ink thin" d="M150 132H170M150 168H170M172 118H196M172 166H196"/>
+   <path class="rg" data-n="plant pot" d="M54 182L48 144H112L106 182Z"/>
+   <path class="ink thin" d="M50 156H110"/>
+   <path class="rg" data-n="upright leaf" d="M78 144C60 128 58 104 70 88C84 104 86 126 78 144Z"/>
+   <path class="rg" data-n="tall leaf" d="M86 144C92 118 110 106 128 104C126 124 108 140 86 144Z"/>
+   <rect class="rg" data-n="shelf" x="36" y="182" width="210" height="14" rx="3"/>
+   <path class="ink" d="M62 196V222L88 196M220 196V222L194 196"/>
+   <path class="ink" d="M104 150C124 170 122 204 110 230C100 252 104 270 116 286"/>
+   <path class="rg" data-n="top trailing leaf" d="M112 212C124 198 144 202 148 214C136 226 120 226 112 212Z"/>
+   <path class="rg" data-n="middle trailing leaf" d="M106 252C92 240 74 244 70 256C84 268 100 266 106 252Z"/>
+   <path class="rg" data-n="bottom trailing leaf" d="M116 286C128 274 146 278 148 290C136 300 122 298 116 286Z"/>
+   <g transform="rotate(-4 350 122)">
+    <rect class="rg" data-n="pinned sketch" x="292" y="52" width="116" height="140"/>
+    <path class="rg" data-n="star on the sketch" d="M350 82L360 108.2L388 109.6L366.2 127.3L373.5 154.4L350 139L326.5 154.4L333.8 127.3L312 109.6L340 108.2Z"/>
+    <path class="ink thin" d="M314 172H356M314 180H340"/>
+    <circle class="rg" data-n="drawing pin" cx="350" cy="62" r="8"/>
+   </g>
+   <circle class="rg" data-n="crumpled sketch" cx="450" cy="514" r="15"/>
+   <path class="ink thin" d="M441 506L449 510L445 516M456 504L452 511L460 514"/>
+   <path class="rg" data-n="waste-paper bin" d="M418 590L410 518H490L482 590Z"/>
+   <path class="ink thin" d="M413 532H487"/>
+   <circle class="rg" data-n="paper ball" cx="522" cy="580" r="11"/>
+   <path class="ink thin" d="M516 576L524 580L520 586"/>
+   <rect class="rg" data-n="desk leg" x="108" y="410" width="22" height="180"/>
+   <rect class="rg" data-n="drawer cabinet" x="566" y="410" width="188" height="180"/>
+   <rect class="rg" data-n="top drawer" x="580" y="424" width="160" height="48" rx="4"/>
+   <rect class="rg" data-n="middle drawer" x="580" y="480" width="160" height="48" rx="4"/>
+   <rect class="rg" data-n="bottom drawer" x="580" y="536" width="160" height="44" rx="4"/>
+   <path class="solid" d="M644 444H676V452H644ZM644 500H676V508H644ZM644 554H676V562H644Z"/>
+   <rect class="rg" data-n="desk top" x="78" y="390" width="704" height="22" rx="5"/>
+   <g transform="rotate(-14 561 330)"><rect class="rg" data-n="left pencil" x="554" y="238" width="14" height="92"/><path class="tip" d="M554 238L561 214L568 238Z"/><path class="solid" d="M558.7 222L561 214L563.3 222Z"/><path class="ink thin" d="M554 250H568"/></g>
+   <g transform="rotate(3 579 330)"><rect class="rg" data-n="middle pencil" x="572" y="222" width="14" height="108"/><path class="tip" d="M572 222L579 198L586 222Z"/><path class="solid" d="M576.7 206L579 198L581.3 206Z"/><path class="ink thin" d="M572 234H586"/></g>
+   <g transform="rotate(16 595 330)"><rect class="rg" data-n="right pencil" x="588" y="248" width="14" height="82"/><path class="tip" d="M588 248L595 224L602 248Z"/><path class="solid" d="M592.7 232L595 224L597.3 232Z"/><path class="ink thin" d="M588 260H602"/></g>
+   <path class="rg" data-n="pencil cup" d="M546 390L550 318H606L610 390Z"/>
+   <path class="ink thin" d="M548.8 340H607.2"/>
+   <path class="ink" d="M676 350C700 350 700 380 676 380" style="stroke-width:7"/>
+   <rect class="rg" data-n="mug" x="626" y="336" width="50" height="54" rx="8"/>
+   <path class="ink thin" d="M640 324C632 312 648 304 640 290M660 324C652 312 668 304 660 290"/>
+   <path class="rg" data-n="cactus arm" d="M722 332C706 332 702 318 702 304C702 294 714 294 714 304C714 312 716 318 724 318Z"/>
+   <path class="rg" data-n="cactus" d="M718 352C716 318 720 288 732 286C744 288 748 318 746 352Z"/>
+   <path class="ink" d="M728 302L723 299M740 316L745 313M729 332L724 334M739 342L744 344" style="stroke-width:2.5"/>
+   <path class="rg" data-n="cactus pot" d="M700 390L706 350H758L764 390Z"/>
+   <path class="ink thin" d="M704.5 362H759.5"/>
+   <path class="rg" data-n="drawing board" d="M384 390L402 268H530L540 390Z"/>
+   <path class="rg" data-n="sketch paper" d="M398 380L414 282H518L528 380Z"/>
+   <path class="rg" data-n="heart doodle" d="M466 350C446 336 440 322 450 314C458 308 466 314 466 320C466 314 474 308 482 314C492 322 486 336 466 350Z"/>
+   <path class="ink thin" d="M424 300H452M422 366H450M488 366H510"/>
+   <rect class="solid" x="446" y="260" width="40" height="14" rx="4"/>
+   <path class="rg" data-n="cat’s tail" d="M292 386C336 390 356 366 352 334C350 320 364 316 370 328C378 362 350 402 294 400Z"/>
+   <path class="rg" data-n="cat’s body" d="M196 390C184 352 196 318 236 306C268 298 300 312 306 348C310 368 306 380 300 390Z"/>
+   <path class="ink thin" d="M238 356L244 362L250 356"/>
+   <path class="rg" data-n="cat’s paws" d="M212 390C210 376 238 374 242 390ZM258 390C262 374 290 376 288 390Z"/>
+   <path class="ink thin" d="M222 383V390M231 383V390M268 383V390M277 383V390"/>
+   <path class="rg" data-n="cat’s left ear" d="M204 262L210 210L244 240Z"/>
+   <path class="rg" data-n="cat’s right ear" d="M256 238L290 208L298 260Z"/>
+   <path class="ink thin" d="M213 247L216 225L232 240M269 237L285 223L289 247"/>
+   <ellipse class="rg" data-n="cat’s head" cx="250" cy="276" rx="56" ry="46"/>
+   <path class="rg" data-n="cat’s collar" d="M212 310C236 328 266 328 290 310L294 320C268 340 234 340 208 320Z"/>
+   <circle class="rg" data-n="collar tag" cx="251" cy="342" r="8"/>
+   <path class="ink" d="M224 272C228 265 236 265 240 272M260 272C264 265 272 265 276 272"/>
+   <path class="solid" d="M244 284H256L250 291Z"/>
+   <path class="ink thin" d="M250 291C250 298 242 300 238 295M250 291C250 298 258 300 262 295M226 289L196 284M226 296L198 301M274 289L304 284M274 296L302 301M241 243L245 254M250 240V252M259 243L255 254"/>
+  </g>
+  </svg>
+ </div>
+</section>
+
+<section class="sec" id="work" aria-labelledby="work-h">
+ <div class="sec-head"><span class="pno" aria-hidden="true">p. 2</span><h2 id="work-h">Work, still wet</h2><p>Three sample projects, left as line art so you can colour them too. The crayon tray works on every drawing on this page.</p></div>
+ <div class="work">
+  <figure class="proj big">
+   <div class="frame">
+    <svg class="art" viewBox="0 0 400 300" role="group" aria-label="Colourable line art: an open picture book with a moon and stars on the left page and a wide-awake wombat tucked into bed on the right." data-title="Picture book">
+     <path class="rg" data-n="book cover" d="M14 262V70Q108 50 200 74Q292 50 386 70V262Q292 244 200 266Q108 244 14 262Z"/>
+     <path class="rg" data-n="left page" d="M28 250V64Q114 46 196 68V256Q114 236 28 250Z"/>
+     <path class="rg" data-n="right page" d="M204 68Q286 46 372 64V250Q286 236 204 256Z"/>
+     <path class="rg" data-n="moon" d="M120 92A32 32 0 1 0 120 152A40 40 0 0 1 120 92Z"/>
+     <path class="rg" data-n="big star" d="M160 99L163.2 107.6L172.4 108L165.2 113.7L167.6 122.5L160 117.5L152.4 122.5L154.8 113.7L147.6 108L156.8 107.6Z"/>
+     <path class="rg" data-n="little star" d="M150 156L152.5 162.6L159.5 162.9L154 167.3L155.8 174.1L150 170.2L144.2 174.1L146 167.3L140.5 162.9L147.5 162.6Z"/>
+     <text x="50" y="210">Not tired.</text><text x="50" y="230">Not even a bit.</text>
+     <path class="rg" data-n="headboard" d="M224 200V140Q288 116 352 140V200Z"/>
+     <ellipse class="rg" data-n="pillow" cx="252" cy="182" rx="32" ry="15"/>
+     <path class="rg" data-n="wombat" d="M230 174C228 152 244 146 256 148C268 146 284 154 282 172C282 186 268 192 256 192C242 192 230 186 230 174Z"/>
+     <path class="ink thin" d="M237 154C233 144 243 140 247 148M266 148C270 140 280 144 276 154"/>
+     <circle class="solid" cx="246" cy="167" r="3.2"/><circle class="solid" cx="266" cy="167" r="3.2"/><ellipse class="solid" cx="256" cy="179" rx="8" ry="5"/>
+     <g transform="rotate(-3 290 212)">
+      <rect class="rg" data-n="quilt patch 1" x="216" y="190" width="46" height="22"/><rect class="rg" data-n="quilt patch 2" x="262" y="190" width="46" height="22"/><rect class="rg" data-n="quilt patch 3" x="308" y="190" width="48" height="22"/>
+      <rect class="rg" data-n="quilt patch 4" x="216" y="212" width="46" height="22"/><rect class="rg" data-n="quilt patch 5" x="262" y="212" width="46" height="22"/><rect class="rg" data-n="quilt patch 6" x="308" y="212" width="48" height="22"/>
+     </g>
+    </svg>
+   </div>
+   <figcaption><span class="tag">Picture book</span><span class="tag">Sample project</span><h3>The Wombat Who Wouldn’t Nap</h3><p>A 32-page bedtime story about a very awake wombat: twelve spreads of chunky line and flat colour, drawn to be read aloud (and slightly too loudly). Pencil roughs, final line art and colour, cover and end papers.</p></figcaption>
+  </figure>
+  <figure class="proj">
+   <div class="frame">
+    <svg class="art" viewBox="0 0 400 300" role="group" aria-label="Colourable line art: a granola box with a fig on the label, next to a bowl of granola topped with fig slices." data-title="Packaging">
+     <path class="rg" data-n="box top" d="M70 84L140 62H300L230 84Z"/>
+     <path class="rg" data-n="box side" d="M230 84L300 62V250L230 276Z"/>
+     <path class="ink thin" d="M244 110L286 96M244 140L286 126M244 170L286 156M244 200L286 186M244 230L286 216"/>
+     <path class="rg" data-n="box front" d="M70 84H230V276H70Z"/>
+     <text x="150" y="111" text-anchor="middle" style="font-size:24px">Morning Fig</text>
+     <ellipse class="rg" data-n="label" cx="150" cy="170" rx="58" ry="50"/>
+     <path class="rg" data-n="fig leaf" d="M152 132C148 116 160 106 178 106C176 124 166 132 152 132Z"/>
+     <path class="rg" data-n="fig" d="M150 206C126 206 118 184 126 166C132 154 144 150 148 138C152 150 166 154 172 166C180 184 172 206 150 206Z"/>
+     <path class="ink thin" d="M142 184L144 186M154 190L156 188M150 176L151 178M160 182L161 180M140 172L142 171"/>
+     <path class="rg" data-n="banner" d="M78 230H222V258H78Z"/>
+     <text x="150" y="250" text-anchor="middle" style="font-size:16px">granola · 500 g</text>
+     <path class="rg" data-n="granola" d="M258 252C264 236 286 232 302 238C320 228 352 232 366 252Z"/>
+     <circle class="rg" data-n="fig slice" cx="290" cy="240" r="9"/>
+     <circle class="rg" data-n="second fig slice" cx="332" cy="238" r="9"/>
+     <path class="rg" data-n="bowl" d="M252 250H372C372 282 342 296 312 296C282 296 252 282 252 250Z"/>
+    </svg>
+   </div>
+   <figcaption><span class="tag">Packaging</span><span class="tag">Sample project</span><h3>Morning Fig granola</h3><p>Front-of-pack art for a fictional small-batch cereal maker: a hero fig, a patterned side panel and a bowl that doubles as a sticker for the farmers’ market stall.</p></figcaption>
+  </figure>
+  <figure class="proj">
+   <div class="frame">
+    <svg class="art" viewBox="0 0 400 300" role="group" aria-label="Colourable line art: a mural on a brick wall with a smiling sun, rolling hills, a tram and two flowers." data-title="Mural">
+     <rect class="rg" data-n="brick wall" x="0" y="0" width="400" height="300"/>
+     <path class="ink" style="stroke-width:2" d="M0 24H400M0 48H400M0 72H400M0 96H400M0 120H400M0 144H400M0 168H400M0 192H400M40 0V24M120 0V24M200 0V24M280 0V24M360 0V24M80 24V48M160 24V48M240 24V48M320 24V48M40 48V72M120 48V72M200 48V72M280 48V72M360 48V72M80 72V96M160 72V96M240 72V96M320 72V96M40 96V120M120 96V120M200 96V120M280 96V120M360 96V120M80 120V144M160 120V144M240 120V144M320 120V144M40 144V168M120 144V168M200 144V168M280 144V168M360 144V168M80 168V192M160 168V192M240 168V192M320 168V192M40 192V216M120 192V216M200 192V216"/>
+     <path class="rg" data-n="sun rays" d="M300 34L311.9 51.6L331 42.3L332.5 63.5L353.7 65L344.4 84.1L362 96L344.4 107.9L353.7 127L332.5 128.5L331 149.7L311.9 140.4L300 158L288.1 140.4L269 149.7L267.5 128.5L246.3 127L255.6 107.9L238 96L255.6 84.1L246.3 65L267.5 63.5L269 42.3L288.1 51.6Z"/>
+     <circle class="rg" data-n="mural sun" cx="300" cy="96" r="36"/>
+     <path class="ink thin" d="M288 90V96M312 90V96M286 106C294 116 306 116 314 106"/>
+     <path class="rg" data-n="back hill" d="M0 214C60 160 140 158 214 200C262 170 340 166 400 204V300H0Z"/>
+     <path class="rg" data-n="front hill" d="M0 258C80 222 170 222 238 248C300 230 358 232 400 244V300H0Z"/>
+     <path class="ink" d="M20 252H380"/>
+     <path class="ink thin" d="M160 180L174 166L188 180M174 166V156M158 156H190"/>
+     <rect class="rg" data-n="tram" x="96" y="180" width="156" height="62" rx="12"/>
+     <rect class="rg" data-n="tram windows" x="108" y="192" width="132" height="22" rx="4"/>
+     <path class="ink thin" d="M141 192V214M174 192V214M207 192V214M96 226H252"/>
+     <circle class="solid" cx="128" cy="244" r="8"/><circle class="solid" cx="220" cy="244" r="8"/>
+     <path class="rg" data-n="big flower" d="M34 264a6 6 0 1 0 12 0a6 6 0 1 0-12 0M41.6 269.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M38.7 278.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M29.3 278.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M26.4 269.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/>
+     <path class="rg" data-n="little flower" d="M354 268a6 6 0 1 0 12 0a6 6 0 1 0-12 0M361.6 273.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M358.7 282.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M349.3 282.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0M346.4 273.5a6 6 0 1 0 12 0a6 6 0 1 0-12 0"/>
+     <circle class="solid" cx="40" cy="272" r="3.5"/><circle class="solid" cx="360" cy="276" r="3.5"/>
+     <path class="ink thin" d="M40 70Q48 62 56 70Q64 62 72 70M86 98Q92 92 98 98Q104 92 110 98"/>
+    </svg>
+   </div>
+   <figcaption><span class="tag">Mural · 14 m²</span><span class="tag">Sample project</span><h3>Laneway sunrise</h3><p>A café laneway wall in Collingwood, outlined in black first so neighbourhood kids could help fill it in on a Saturday paint day. Designed, primed and sealed for outdoors.</p></figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="svc-h">
+ <div class="sec-head"><span class="pno" aria-hidden="true">p. 3</span><h2 id="svc-h">What I draw</h2><p>Starting prices for the usual jobs. Every brief is a little different, so you’ll always get a written quote before a pencil moves.</p></div>
+ <div class="svc-wrap">
+  <ul class="svc">
+   <li style="--c:#FF6347"><svg class="blob" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 3C41 3 51 13 51 27S41 51 26 51 3 41 3 27 13 3 27 3Z"/><path class="ink" style="stroke-width:2.5" d="M15 20Q21 17 27 20V36Q21 33 15 36ZM27 20Q33 17 39 20V36Q33 33 27 36Z"/></svg><div><h3>Picture books</h3><p>Cover plus 12–16 spreads, from pencil roughs to final colour, delivered to your publisher’s specs.</p></div><p class="price">from $8,500<small>per book</small></p></li>
+   <li style="--c:#FFC93C"><svg class="blob" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 3C41 3 51 13 51 27S41 51 26 51 3 41 3 27 13 3 27 3Z"/><path class="ink" style="stroke-width:2.5" d="M16 22L27 17L38 22V34L27 39L16 34ZM16 22L27 27L38 22M27 27V39"/></svg><div><h3>Packaging &amp; labels</h3><p>One hero illustration, one flavour or colour variation and print-ready dielines for your printer.</p></div><p class="price">from $1,900<small>per design</small></p></li>
+   <li style="--c:#6EC6FF"><svg class="blob" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 3C41 3 51 13 51 27S41 51 26 51 3 41 3 27 13 3 27 3Z"/><path class="ink" style="stroke-width:2.5" d="M18 37L31 24M31 24L36 19Q39 16 36 14Q33 12 31 15L27 21M15 40Q13 35 17 34Q20 35 19 38Q18 41 15 40Z"/></svg><div><h3>Murals, inside or out</h3><p>Design, wall prep, painting and anti-graffiti sealer. Scaffold or lift hire quoted separately.</p></div><p class="price">from $190<small>per m²</small></p></li>
+   <li style="--c:#7ED957"><svg class="blob" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 3C41 3 51 13 51 27S41 51 26 51 3 41 3 27 13 3 27 3Z"/><path class="ink" style="stroke-width:2.5" d="M27 14L36 30L27 40L18 30ZM27 14V28"/></svg><div><h3>Editorial &amp; spot drawings</h3><p>Single images for magazines, annual reports, newsletters and websites. Quick turnarounds welcome.</p></div><p class="price">from $420<small>per image</small></p></li>
+   <li style="--c:#B39DDB"><svg class="blob" viewBox="0 0 54 54" aria-hidden="true"><path d="M27 3C41 3 51 13 51 27S41 51 26 51 3 41 3 27 13 3 27 3Z"/><path class="ink" style="stroke-width:2.5" d="M18 14H32L37 19V40H18ZM32 14V19H37M22 28Q27 22 32 28M22 34H33"/></svg><div><h3>Custom colouring pages</h3><p>Line art for cafés, kids’ menus, school fêtes and launches. You get the files to print as many as you like.</p></div><p class="price">from $650<small>set of three</small></p></li>
+  </ul>
+  <aside class="note" aria-labelledby="inc-h">
+   <h3 id="inc-h">Every job includes</h3>
+   <ul><li>Two rounds of changes at rough and line stage</li><li>A written usage licence for the agreed use</li><li>Print-ready and web files</li><li>A black-and-white colouring version, because why not</li></ul>
+   <p class="small">Sample prices in AUD, including GST. Deposits of 30% book a spot in the calendar.</p>
+  </aside>
+ </div>
+</section>
+
+<section class="sec" id="process" aria-labelledby="pro-h">
+ <div class="sec-head"><span class="pno" aria-hidden="true">p. 4</span><h2 id="pro-h">Join the dots</h2><p>How a commission usually goes, from first hello to files in your inbox. Small jobs skip a dot or two.</p></div>
+ <div class="dotwrap" id="dotwrap"><svg class="joins" aria-hidden="true"><path id="join" pathLength="1" d="M0 0"/></svg>
+ <ol class="dots">
+  <li style="--c:#FF6347"><span class="dot">1</span><h3>Say hello</h3><p>A 20-minute call or email: what it’s for, where it will live, budget and deadline.</p></li>
+  <li style="--c:#FFC93C"><span class="dot">2</span><h3>Roughs</h3><p>Two or three pencil thumbnails within a week. Pick one, mix two, or send me back to the desk.</p></li>
+  <li style="--c:#6EC6FF"><span class="dot">3</span><h3>Line art</h3><p>Clean black lines, like this page. One round of tweaks before any colour goes down.</p></li>
+  <li style="--c:#7ED957"><span class="dot">4</span><h3>Colour</h3><p>Your palette or mine. Flat, bright and checked in print as well as on screen.</p></li>
+  <li style="--c:#FF8FAB"><span class="dot">5</span><h3>Hand-off</h3><p>Final files, the licence letter and a colouring-page version for the kids in your life.</p></li>
+</ol></div>
+</section>
+
+<section class="sec" id="prints" aria-labelledby="pr-h">
+ <div class="sec-head"><span class="pno" aria-hidden="true">p. 5</span><h2 id="pr-h">Prints (sample shop)</h2><p>Whatever you coloured on page one is already framed below. It updates as you paint.</p></div>
+ <div class="prints">
+  <div class="wall">
+   <div class="fr"><svg viewBox="0 0 800 600" aria-hidden="true"><use href="#scene"/></svg></div>
+  </div>
+  <div>
+   <ul class="plist">
+    <li><div><b>Your studio page</b><span>A3 giclée print of the page you coloured</span></div><span class="p">$65</span><button class="btn mini" type="button" data-print="your coloured studio page">Add</button></li>
+    <li><div><b>Studio Pets colouring book</b><span>A4, 24 pages, staple-bound</span></div><span class="p">$24</span><button class="btn mini" type="button" data-print="the Studio Pets colouring book">Add</button></li>
+    <li><div><b>Laneway sunrise</b><span>A3 giclée print, signed</span></div><span class="p">$58</span><button class="btn mini" type="button" data-print="the Laneway sunrise print">Add</button></li>
+    <li><div><b>Wombat, not napping</b><span>A4 print on cotton rag</span></div><span class="p">$38</span><button class="btn mini" type="button" data-print="the wombat print">Add</button></li>
+   </ul>
+   <p class="small">Sample prices in AUD. Posted flat in a stiff mailer from Collingwood; pick-up by arrangement.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="commission" aria-labelledby="co-h">
+ <div class="sec-head"><span class="pno" aria-hidden="true">p. 6</span><h2 id="co-h">Commission a drawing</h2><p>Tell me what you’re making. I reply within two working days, usually with a question or three.</p></div>
+ <div class="cgrid">
+  <div>
+   <dl class="contact">
+    <dt>Email</dt><dd><a href="mailto:juno@example.com">juno@example.com</a></dd>
+    <dt>Phone</dt><dd><a href="tel:0491570158">0491 570 158</a></dd>
+    <dt>Studio days</dt><dd>Tue–Fri, 9:30 am – 5 pm</dd>
+    <dt>Where</dt><dd>Collingwood, VIC — visits by appointment</dd>
+   </dl>
+   <details><summary>How far ahead should I book?</summary><p>Picture books: four to six months. Packaging and spot drawings: usually two to four weeks. Ask anyway if it’s urgent.</p></details>
+   <details><summary>Who owns the artwork?</summary><p>You get a licence for the agreed use — for example, packaging sold in Australia for three years. Copyright stays with the studio unless we agree on a buy-out.</p></details>
+   <details><summary>Do you paint murals outside Melbourne?</summary><p>Yes, around Victoria and interstate. Travel and accommodation are quoted separately.</p></details>
+  </div>
+  <form class="brief" data-demo-message="Demo only — nothing was sent. On a real site your brief would land in the studio inbox.">
+   <div class="f"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+   <div class="f"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
+   <div class="f"><label for="f-type">What are we drawing?</label><select id="f-type" name="type"><option>Picture book</option><option>Packaging or labels</option><option>Mural</option><option>Editorial or spot drawing</option><option>Colouring pages</option><option>Something else</option></select></div>
+   <div class="f"><label for="f-bud">Rough budget</label><select id="f-bud" name="budget"><option>Under $1,000</option><option>$1,000 – $3,000</option><option>$3,000 – $8,000</option><option>$8,000 +</option><option>Not sure yet</option></select></div>
+   <div class="f w"><label for="f-msg">The brief</label><textarea id="f-msg" name="brief" placeholder="What it’s for, where it will live, and when you need it."></textarea></div>
+   <label class="chk f w"><input type="checkbox" name="page" checked> Attach my coloured studio page, so you can see my favourite colours</label>
+   <button class="btn solid" type="submit">Send the brief</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <p class="name" data-brand>Doodle Dept.</p>
+ <div class="foot-row"><span>Illustration studio · Collingwood, VIC</span><span>Sample prices, sample projects</span><span>A fictional studio made for a design showcase</span></div>
+</footer>
+
+<div class="tray" id="tray" role="region" aria-label="Crayon tray">
+ <div class="crayons" role="group" aria-label="Crayons">
+  <button class="cr" type="button" aria-pressed="true" title="Tomato (1)" style="color:#FF6347"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Tomato</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Sunflower (2)" style="color:#FFC93C"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Sunflower</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Sky (3)" style="color:#6EC6FF"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Sky</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Grass (4)" style="color:#7ED957"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Grass</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Lilac (5)" style="color:#B39DDB"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Lilac</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Pink (6)" style="color:#FF8FAB"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#cray"/></svg><span class="sr">Pink</span></button>
+  <button class="cr" type="button" aria-pressed="false" title="Eraser (7)"><svg viewBox="0 0 30 66" aria-hidden="true"><use href="#eras"/></svg><span class="sr">Eraser</span></button>
+ </div>
+ <div class="meter" aria-hidden="true"><span id="mtxt">The studio · 0/0</span><i><b id="mbar"></b></i></div>
+ <div class="tools">
+  <button class="tool" id="undo" type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6L4 11L9 16M4 11H15C18.5 11 20.5 13.5 20.5 16.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Undo</button>
+  <button class="tool pop" id="surprise" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5L14 9.5L21 11.5L14 13.5L12 20.5L10 13.5L3 11.5L10 9.5Z" fill="currentColor"/></svg>Surprise me</button>
+ </div>
+</div>
+<p class="sr" id="say" aria-live="polite"></p>
+
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg",doc=document,root=doc.documentElement;
+var COLS=[["Tomato","#FF6347"],["Sunflower","#FFC93C"],["Sky","#6EC6FF"],["Grass","#7ED957"],["Lilac","#B39DDB"],["Pink","#FF8FAB"],["Eraser",""]];
+var mq=window.matchMedia("(prefers-reduced-motion: reduce)");
+var $=function(id){return doc.getElementById(id);};
+var fx=$("fx"),say=$("say"),mtxt=$("mtxt"),mbar=$("mbar"),undoB=$("undo"),surB=$("surprise"),tray=$("tray");
+var crs=[].slice.call(tray.querySelectorAll(".cr"));
+var arts=[].slice.call(doc.querySelectorAll("svg.art"));
+var cur=0,hist=[],gid=0,active=arts[0],sayT;
+
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+function nm(el){return cap(el.getAttribute("data-n"));}
+function nameOf(c){for(var i=0;i<6;i++){if(COLS[i][1]===c)return COLS[i][0];}return "white";}
+function ttl(svg){return svg.getAttribute("data-title")||"This drawing";}
+function label(el){var c=el.getAttribute("data-c");el.setAttribute("aria-label",nm(el)+(c?", coloured "+nameOf(c):", not coloured yet"));}
+function announce(t){clearTimeout(sayT);say.textContent="";sayT=setTimeout(function(){say.textContent=t;},40);}
+function shade(hex,k){var n=parseInt(hex.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;
+  return "rgb("+Math.round(r*k)+","+Math.round(g*k)+","+Math.round(b*k)+")";}
+function cursorFor(c){
+  var f=c||"#ffffff",s="<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><path d='M14 4L27 17L16 28L3 15Z' fill='"+f+"' stroke='#111' stroke-width='2.4' stroke-linejoin='round'/><path d='M8 10L21 23' stroke='#111' stroke-width='2' opacity='.35'/><path d='M3 15C1 20 2 25 5 27' fill='none' stroke='#111' stroke-width='2.4' stroke-linecap='round'/><circle cx='5' cy='28' r='2.6' fill='"+f+"' stroke='#111' stroke-width='1.6'/></svg>";
+  return "url(\"data:image/svg+xml,"+s.replace(/#/g,"%23")+"\") 5 28, pointer";
+}
+
+/* ---- crayons ---- */
+function pick(i,quiet){
+  cur=i;
+  crs.forEach(function(b,j){b.setAttribute("aria-pressed",j===i?"true":"false");});
+  var c=COLS[i][1];
+  root.style.setProperty("--cur",c||"#d9d9d9");
+  root.style.setProperty("--tint",c?c+"55":"#00000010");
+  root.style.setProperty("--cursor",cursorFor(c));
+  if(!quiet)announce(COLS[i][0]+(c?" crayon.":" — tap a shape to rub it back to white."));
+}
+crs.forEach(function(b,i){b.addEventListener("click",function(){pick(i);});});
+
+/* ---- the radial paint flood ---- */
+function flood(el,from,to,pt){
+  var f=el._f;
+  if(f){cancelAnimationFrame(f.id);if(f.g.parentNode)f.g.parentNode.removeChild(f.g);el._f=null;}
+  var fin=el.getAttribute("data-c")||"";
+  var bb=null;try{bb=el.getBBox();}catch(err){}
+  if(mq.matches||!bb||!bb.width){el.style.fill=fin;return;}
+  var x=bb.x+bb.width/2,y=bb.y+bb.height/2;
+  if(pt&&window.DOMPoint){var m=el.getScreenCTM();if(m){var p=new DOMPoint(pt[0],pt[1]).matrixTransform(m.inverse());x=p.x;y=p.y;}}
+  var R=0;[[0,0],[1,0],[0,1],[1,1]].forEach(function(c){R=Math.max(R,Math.hypot(bb.x+c[0]*bb.width-x,bb.y+c[1]*bb.height-y));});
+  R+=4;
+  var g=doc.createElementNS(NS,"radialGradient");g.id="fl"+(++gid);
+  [["gradientUnits","userSpaceOnUse"],["cx",x],["cy",y],["fx",x],["fy",y],["r",R]].forEach(function(a){g.setAttribute(a[0],a[1]);});
+  var rim=to==="#FFFFFF"?"#e4e4e4":shade(to,.82);
+  var st=[to,rim,rim,from].map(function(c){var s=doc.createElementNS(NS,"stop");s.setAttribute("stop-color",c);s.setAttribute("offset","0");g.appendChild(s);return s;});
+  fx.appendChild(g);
+  el.style.fill="url(#"+g.id+")";
+  var t0=performance.now(),D=Math.max(300,Math.min(680,260+R*.95));
+  f=el._f={g:g,id:0};
+  (function step(now){
+    var k=Math.min(1,Math.max(0,(now-t0)/D)),e=1-Math.pow(1-k,3),a=Math.max(0,e-.04);
+    st[0].setAttribute("offset",a);st[1].setAttribute("offset",a);st[2].setAttribute("offset",e);st[3].setAttribute("offset",e);
+    if(k<1){f.id=requestAnimationFrame(step);}
+    else{if(g.parentNode)g.parentNode.removeChild(g);el._f=null;el.style.fill=el.getAttribute("data-c")||"";}
+  })(t0);
+}
+function apply(el,from,to,pt){
+  if(to)el.setAttribute("data-c",to);else el.removeAttribute("data-c");
+  label(el);
+  flood(el,from||"#FFFFFF",to||"#FFFFFF",pt);
+}
+function progress(svg){return ttl(svg)+": "+svg.querySelectorAll(".rg[data-c]").length+" of "+svg.querySelectorAll(".rg").length+" coloured.";}
+function paint(el,pt){
+  var svg=el.ownerSVGElement||active,to=COLS[cur][1],from=el.getAttribute("data-c")||"";
+  active=svg;
+  if(from===to){announce(nm(el)+" is already "+(to?nameOf(to):"white")+".");meter();return;}
+  hist.push([[el,from]]);
+  apply(el,from,to,pt);
+  announce(nm(el)+(to?" — "+COLS[cur][0]+". ":" rubbed out. ")+progress(svg));
+  after();
+}
+function undo(){
+  var b=hist.pop();if(!b)return;
+  b.forEach(function(p){var el=p[0];apply(el,el.getAttribute("data-c")||"",p[1],null);});
+  announce("Undone: "+(b.length>1?b.length+" shapes put back.":nm(b[0][0])+" put back."));
+  after();
+}
+function surprise(){
+  var svg=active||arts[0],r=svg.getBoundingClientRect(),batch=[],last=-1;
+  var ox=r.left+Math.random()*r.width,oy=r.top+Math.random()*r.height;
+  var items=[].map.call(svg.querySelectorAll(".rg"),function(el){var b=el.getBoundingClientRect();return {el:el,d:Math.hypot(b.left+b.width/2-ox,b.top+b.height/2-oy)};});
+  items.sort(function(a,b){return a.d-b.d;});
+  items.forEach(function(it){
+    var el=it.el,from=el.getAttribute("data-c")||"",ci,n=0;
+    if(!from&&Math.random()<.16)return;
+    do{ci=Math.floor(Math.random()*6);n++;}while((ci===last||COLS[ci][1]===from)&&n<20);
+    last=ci;var to=COLS[ci][1];batch.push([el,from]);
+    el.setAttribute("data-c",to);label(el);
+    var go=function(){flood(el,from||"#FFFFFF",to,null);};
+    if(mq.matches)go();else setTimeout(go,Math.min(900,it.d*1.15));
+  });
+  if(batch.length)hist.push(batch);
+  announce("Surprise! "+batch.length+" shapes in "+ttl(svg)+" got a random colour. Undo puts them all back.");
+  after();
+}
+function after(){undoB.disabled=!hist.length;meter();}
+function meter(){
+  var svg=active||arts[0],n=svg.querySelectorAll(".rg[data-c]").length,t=svg.querySelectorAll(".rg").length;
+  mtxt.textContent=ttl(svg)+" · "+n+"/"+t;
+  mbar.style.width=(t?100*n/t:0)+"%";
+  if(n===t&&!svg._done){
+    svg._done=true;
+    var pg=svg.closest(".page,.frame");
+    if(pg){pg.classList.remove("done");void pg.offsetWidth;pg.classList.add("done");}
+    announce("Page complete — every shape in "+ttl(svg)+" is coloured."+(svg===arts[0]?" It’s framed in the prints section too.":""));
+  }else if(n<t)svg._done=false;
+}
+
+/* ---- regions: mouse, touch, keyboard ---- */
+arts.forEach(function(svg){
+  [].forEach.call(svg.querySelectorAll(".rg"),function(el){el.setAttribute("tabindex","0");el.setAttribute("role","button");label(el);});
+  svg.addEventListener("click",function(e){var el=e.target.closest&&e.target.closest(".rg");if(el)paint(el,[e.clientX,e.clientY]);});
+  svg.addEventListener("keydown",function(e){
+    var el=e.target.closest&&e.target.closest(".rg");if(!el)return;
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();paint(el,null);return;}
+    var list=[].slice.call(svg.querySelectorAll(".rg")),i=list.indexOf(el),n=-1;
+    if(e.key==="ArrowRight"||e.key==="ArrowDown")n=Math.min(list.length-1,i+1);
+    else if(e.key==="ArrowLeft"||e.key==="ArrowUp")n=Math.max(0,i-1);
+    else if(e.key==="Home")n=0;else if(e.key==="End")n=list.length-1;
+    if(n>-1){e.preventDefault();list[n].focus();}
+  });
+  svg.addEventListener("focusin",function(){if(active!==svg){active=svg;meter();}});
+});
+undoB.addEventListener("click",undo);
+surB.addEventListener("click",surprise);
+doc.addEventListener("keydown",function(e){
+  var t=e.target;if(e.defaultPrevented||e.altKey)return;
+  if(t&&(/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.isContentEditable))return;
+  if(!e.ctrlKey&&!e.metaKey&&/^[1-7]$/.test(e.key)){pick(+e.key-1);e.preventDefault();}
+  else if((e.key==="z"||e.key==="Z")&&!e.shiftKey&&hist.length){undo();e.preventDefault();}
+});
+
+/* ---- which drawing is "active", tray hide, dot-to-dot ---- */
+var dw=$("dotwrap"),join=$("join");
+function joinDots(){
+  var r=dw.getBoundingClientRect();
+  var pts=[].map.call(dw.querySelectorAll(".dot"),function(d){var b=d.getBoundingClientRect();return (b.left+b.width/2-r.left).toFixed(1)+" "+(b.top+b.height/2-r.top).toFixed(1);});
+  join.setAttribute("d","M"+pts.join("L"));
+}
+joinDots();
+window.addEventListener("resize",joinDots);
+if(doc.fonts&&doc.fonts.ready)doc.fonts.ready.then(joinDots);
+if("IntersectionObserver" in window){
+  var ratios=new Map();
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){ratios.set(en.target,en.intersectionRatio);});
+    var best=null,bv=.15;ratios.forEach(function(v,k){if(v>bv){bv=v;best=k;}});
+    if(best&&best!==active){active=best;meter();}
+  },{threshold:[0,.25,.5,.75,1]});
+  arts.forEach(function(a){io.observe(a);});
+  var away=new Set();
+  var io2=new IntersectionObserver(function(es){
+    es.forEach(function(en){if(en.isIntersecting)away.add(en.target);else away.delete(en.target);});
+    var a=away.size>0;tray.classList.toggle("away",a);
+    if(a)tray.setAttribute("inert","");else tray.removeAttribute("inert");
+  },{rootMargin:"0px 0px -35% 0px"});
+  io2.observe($("commission"));io2.observe(doc.querySelector(".foot"));
+  var io3=new IntersectionObserver(function(es){if(es[0].isIntersecting){joinDots();dw.classList.add("on");io3.disconnect();}},{threshold:.3});
+  io3.observe(dw);
+}else{dw.classList.add("on");}
+
+/* ---- sample shop ---- */
+[].forEach.call(doc.querySelectorAll("[data-print]"),function(b){
+  b.addEventListener("click",function(){
+    var n=arts[0].querySelectorAll(".rg[data-c]").length;
+    var msg="Demo only — nothing was added to a cart. A real shop would let you order "+b.getAttribute("data-print")+(b.getAttribute("data-print").indexOf("your")===0?" ("+n+" shapes coloured so far).":".");
+    if(window.DemoKit)window.DemoKit.toast(msg);else announce(msg);
+  });
+});
+
+pick(0,true);after();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "029",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "Form logic"],
+  "features": ["story", "quote"],
+  "interaction": "Throw the main switch or flip each section's slide switch (SW2–SW6) to send current along copper SVG traces that are routed live between the page's components; each powered section lights up (chip pins, resistor bands, capacitor, LEDs), and the LED array previews four colour temperatures in a line-drawn room.",
+  "fonts": ["Rajdhani", "Share Tech Mono"],
+  "notes": "Traces are re-routed on resize, font load and brand rename. The quote form ends in a demo toast; prices are labelled as samples."
+}

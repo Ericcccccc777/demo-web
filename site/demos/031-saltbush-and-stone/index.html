@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en-AU" data-season="spring" class="boot">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="031">
+<meta name="demo:brand" content="Saltbush & Stone Gardens">
+<title>Saltbush & Stone Gardens — water-wise native gardens, Fremantle</title>
+<meta name="description" content="A fictional water-wise native garden designer in Fremantle, WA, with a garden scene you can switch through the four seasons.">
+<meta name="theme-color" content="#5E8C6A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+--sand:#EFE3CD;--sand-2:#E5D5B8;--paper:#F8F1E4;--salt:#9CAF88;--euc:#5E8C6A;--ochre:#C98B3A;--soil:#3E3328;--soil-2:#5A4A3A;--red:#C2362F;
+--serif:"Gloock","Iowan Old Style",Georgia,serif;--sans:"Karla","Helvetica Neue",Arial,sans-serif;
+--gut:clamp(16px,4vw,56px);
+--acc:#5E8C6A;--ink:#3F6B4E;--sky1:#A9D1D8;--sky2:#E9F2E3;
+--grass:#7FAE5E;--grass2:#679648;--sea:#7DB8BF;--canopy:#5E8C6A;--canopy2:#78A27A;--leaf:#5E8C6A;--leaf2:#79A56C;
+--salt1:#9CAF88;--salt2:#B4C2A2;--salt3:#879B76;--mulch:#CDB48E;--canopy3:#487457;
+}
+html[data-season=summer]{--acc:#C98B3A;--ink:#8A5413;--sky1:#EDCF96;--sky2:#F8EBD2;--grass:#CDB67A;--grass2:#B89E60;--sea:#86B6B5;--canopy:#6C8A62;--canopy2:#8AA37C;--canopy3:#56714F;--leaf:#6F8E5E;--leaf2:#93A874;--salt1:#A9B99A;--salt2:#C3CEB6;--salt3:#94A585;--mulch:#D5BD93}
+html[data-season=autumn]{--acc:#B4532A;--ink:#8E3E1E;--sky1:#E4AE82;--sky2:#F3DEC4;--grass:#B7A468;--grass2:#A08A52;--sea:#86A9A6;--canopy:#657F58;--canopy2:#8A9A6A;--canopy3:#51684A;--leaf:#667F55;--leaf2:#8C9C68;--salt1:#A0AF8E;--salt2:#B9C4A6;--salt3:#8C9B7A}
+html[data-season=winter]{--acc:#4F7C8A;--ink:#355A66;--sky1:#A9BCC2;--sky2:#DDE4DF;--grass:#8FB173;--grass2:#789E5E;--sea:#7A9499;--canopy:#58866A;--canopy2:#6F9A7C;--canopy3:#44705A;--leaf:#557F5D;--leaf2:#6E9870;--salt1:#95AA88;--salt2:#ADBEA0;--salt3:#809676}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--sand);color:var(--soil);font:400 18px/1.6 var(--sans);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--soil);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0;padding:0;border:0}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--gut)}
+.eyebrow{margin:0 0 12px;font:700 13px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink);transition:color 1.2s}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5vw,68px);line-height:1.02}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--soil);background:var(--soil);color:var(--paper);font:700 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .15s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+.btn.line{background:transparent;color:var(--soil)}
+.btn.line:hover{background:var(--soil);color:var(--paper);border-color:var(--soil)}
+
+/* ---------- header ---------- */
+.top{position:absolute;top:0;left:0;right:0;z-index:6}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:18px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo svg{width:40px;height:40px;flex:none}
+.logo span{font:400 23px/1.05 var(--serif);overflow-wrap:anywhere}
+.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:16px}
+.top nav a:hover{background:rgba(248,241,228,.6)}
+.top .btn{min-height:44px;padding:0 18px;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:clamp(660px,100vh,900px);overflow:hidden;background:var(--sky1);transition:background-color 1.2s}
+.scene{position:absolute;inset:0;margin:0}
+.scene svg{width:100%;height:100%}
+.hero-copy{position:relative;z-index:3;padding-top:clamp(118px,15vh,150px);max-width:760px}
+.hero h1{font-size:clamp(42px,min(5.2vw,8.6vh),76px);line-height:.98;max-width:12.5ch}
+.hero-copy .sub{max-width:40ch;font-size:clamp(17px,1.3vw,19px);margin:18px 0 0;color:var(--soil-2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.dock-wrap{position:absolute;z-index:4;left:50%;bottom:26px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;width:max-content;max-width:calc(100% - 32px)}
+.dock-hint{margin:0;font-size:14px;font-weight:500;padding:4px 12px;border-radius:999px;background:rgba(248,241,228,.8)}
+.dock{position:relative;display:grid;grid-template-columns:repeat(4,1fr);margin:0;padding:5px;border:1.5px solid var(--soil);border-radius:999px;background:rgba(248,241,228,.92);box-shadow:0 14px 40px -18px rgba(62,51,40,.55);--i:3}
+.dock legend{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.seg{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;cursor:pointer;font-weight:700;font-size:16px;transition:color .5s}
+.seg input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.seg svg{width:22px;height:22px;flex:none}
+.seg:has(input:checked){color:var(--paper)}
+.seg:has(input:focus-visible){outline:3px solid var(--soil);outline-offset:2px}
+.seg.kf{outline:3px solid var(--soil);outline-offset:2px}
+.thumb{position:absolute;z-index:0;top:5px;bottom:5px;left:5px;width:calc((100% - 10px)/4);border-radius:999px;background:var(--ink);transform:translateX(calc(var(--i)*100%));transition:transform .55s cubic-bezier(.5,1.4,.5,1),background-color 1.2s}
+
+/* scene parts */
+.sky-l{opacity:0;transition:opacity 1.2s}
+html[data-season=summer] .sky-l.su,html[data-season=autumn] .sky-l.au,html[data-season=winter] .sky-l.wi,html[data-season=spring] .sky-l.sp{opacity:1}
+.f-grass{fill:var(--grass);transition:fill 1.2s}.f-grass2{fill:var(--grass2);transition:fill 1.2s}
+.f-sea{fill:var(--sea);transition:fill 1.2s}.f-mulch{fill:var(--mulch);transition:fill 1.2s}
+.f-can{fill:var(--canopy);transition:fill 1.2s}.f-can3{fill:var(--canopy3);transition:fill 1.2s}.f-can2{fill:var(--canopy2);transition:fill 1.2s}
+.s-leaf{stroke:var(--leaf);transition:stroke 1.2s}.s-leaf2{stroke:var(--leaf2);transition:stroke 1.2s}
+.sb1{fill:var(--salt1);transition:fill 1.2s}.sb2{fill:var(--salt2);transition:fill 1.2s}.sb3{fill:var(--salt3);transition:fill 1.2s}
+.sun{transition:transform 1.6s cubic-bezier(.4,0,.2,1),opacity 1.2s;transform:translate(900px,40px)}
+html[data-season=summer] .sun{transform:translate(820px,-110px)}
+html[data-season=autumn] .sun{transform:translate(880px,210px)}
+html[data-season=winter] .sun{transform:translate(760px,320px);opacity:.3}
+.sun-core{fill:#FFF4D8}
+.clouds{opacity:0;transition:opacity 1.2s}
+html[data-season=winter] .clouds{opacity:1}
+html[data-season=autumn] .clouds{opacity:.45}
+.bloom{transform-box:fill-box;transform-origin:50% 100%;transform:scale(.12);opacity:0;transition:transform 1s cubic-bezier(.3,1.35,.5,1),opacity .7s}
+.bloom.half{transform:scale(.72);opacity:.55}
+.bloom.full{transform:none;opacity:1}
+.fx{opacity:0;transition:opacity .9s}
+html[data-season=autumn] .fx.leaves,html[data-season=autumn] .fx.litter,html[data-season=winter] .fx.rain,html[data-season=spring] .fx.bees,html[data-season=summer] .fx.haze{opacity:1}
+.leaf-f{animation:fall 9s linear infinite;animation-delay:var(--dl);transform-box:fill-box}
+@keyframes fall{0%{transform:translate(0,0) rotate(0);opacity:0}8%{opacity:1}30%{transform:translate(-26px,120px) rotate(80deg)}55%{transform:translate(18px,240px) rotate(160deg)}80%{transform:translate(-14px,360px) rotate(250deg);opacity:1}100%{transform:translate(8px,440px) rotate(320deg);opacity:0}}
+.drop{animation:rain 1.1s linear infinite;animation-delay:var(--dl)}
+@keyframes rain{from{transform:translate(0,-40px)}to{transform:translate(-18px,70px)}}
+.bee-in{animation:buzz 7s ease-in-out infinite;animation-delay:var(--dl)}
+@keyframes buzz{0%,100%{transform:translate(0,0)}20%{transform:translate(38px,-26px)}40%{transform:translate(74px,-4px)}60%{transform:translate(40px,22px)}80%{transform:translate(-10px,-14px)}}
+.wing{animation:flap .12s linear infinite alternate;transform-box:fill-box;transform-origin:50% 100%}
+@keyframes flap{to{transform:scaleY(.4)}}
+.haze-l{animation:haze 6s ease-in-out infinite alternate}
+@keyframes haze{to{transform:translateX(24px)}}
+.paused .leaf-f,.paused .drop,.paused .bee-in,.paused .wing,.paused .haze-l{animation-play-state:paused}
+html:not([data-season=autumn]) .leaf-f,html:not([data-season=winter]) .drop,html:not([data-season=spring]) .bee-in,html:not([data-season=spring]) .wing,html:not([data-season=summer]) .haze-l{animation-play-state:paused}
+.boot *{transition:none!important}
+
+/* ---------- season notes ---------- */
+.notes{padding:clamp(48px,6vw,84px) 0;background:var(--paper)}
+.notes-grid{display:grid;grid-template-columns:1.05fr 1.4fr .95fr;gap:clamp(24px,4vw,56px);align-items:start}
+.n-title{font-size:clamp(36px,4vw,56px);line-height:1.02}
+.n-meta{margin:14px 0 0;font-size:15px;color:var(--soil-2)}
+.n-meta b{display:block;color:var(--soil);font-weight:700}
+.n-art{display:flex;align-items:center;gap:16px;margin-top:26px}
+.n-art svg{width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FFFBF2,#EFE3CD);border:1px solid rgba(62,51,40,.15);padding:6px}
+.n-art span{font:italic 400 16px/1.3 var(--sans);color:var(--soil-2);max-width:14ch}
+.tips{list-style:none;margin:0;padding:0;counter-reset:t}
+.tips li{position:relative;padding:0 0 20px 58px;margin:0 0 20px;border-bottom:1px solid rgba(62,51,40,.16);counter-increment:t}
+.tips li:last-child{margin:0;border:0;padding-bottom:0}
+.tips li::before{content:counter(t);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--acc);color:var(--ink);font:400 20px/1 var(--serif);transition:border-color 1.2s,color 1.2s}
+.tips b{display:block;font:400 22px/1.2 var(--serif);margin-bottom:4px}
+.swap{transition:opacity .35s,transform .35s}
+.swap.out{opacity:0;transform:translateY(6px)}
+.n-flower{border-radius:28px;padding:24px 24px 22px;background:var(--sand);border:1px solid rgba(62,51,40,.14)}
+.n-flower h3{font-size:24px;line-height:1.15}
+.n-count{font:400 64px/1 var(--serif);color:var(--ink);transition:color 1.2s}
+.n-count small{font:500 15px/1.3 var(--sans);color:var(--soil-2);margin-left:6px}
+.n-list{list-style:none;margin:14px 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.n-list li{font-size:14.5px;font-weight:500;padding:5px 11px;border-radius:999px;background:var(--paper);border:1px solid rgba(62,51,40,.18)}
+
+/* ---------- services ---------- */
+.services{padding:clamp(56px,8vw,120px) 0}
+.svc-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,6vw,96px)}
+.svc-head{position:sticky;top:32px;align-self:start}
+.svc-head p{max-width:40ch;color:var(--soil-2)}
+.svc-art{width:min(100%,380px);margin-top:26px}
+.svc{display:grid;grid-template-columns:64px 1fr;gap:6px 22px;padding:30px 0;border-top:1px solid rgba(62,51,40,.22)}
+.svc:last-child{border-bottom:1px solid rgba(62,51,40,.22)}
+.svc svg{width:56px;height:56px;color:var(--ink);transition:color 1.2s}
+.svc h3{font-size:clamp(28px,2.6vw,36px);line-height:1.1}
+.svc p{margin:8px 0 0;color:var(--soil-2)}
+.svc ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;font-weight:500}
+.svc ul li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:8px;transform:translateY(-1px);transition:background 1.2s}
+.svc .from{margin-top:14px;font-size:15px}
+.svc .from b{font:400 22px/1 var(--serif);margin-right:6px}
+
+/* ---------- plants ---------- */
+.plants{padding:clamp(56px,8vw,110px) 0;background:var(--sand-2);border-radius:clamp(28px,5vw,64px) clamp(28px,5vw,64px) 0 0}
+.pl-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.pl-head p{max-width:52ch;margin:14px 0 0;color:var(--soil-2)}
+.filter{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--paper);border:1px solid rgba(62,51,40,.2)}
+.filter button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:transparent;font-weight:700;font-size:15px;cursor:pointer}
+.filter button[aria-pressed=true]{background:var(--soil);color:var(--paper)}
+.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card[hidden]{display:none}
+.card{background:var(--paper);border-radius:22px;padding:14px 14px 20px;display:flex;flex-direction:column;animation:rise .5s both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.card .art{aspect-ratio:1/1.02;border-radius:999px 999px 16px 16px;background:linear-gradient(#FBF6EC,#EFE5D2);display:grid;place-items:end center;padding:10px 10px 4px;overflow:hidden;position:relative}
+.card .art svg{width:88%;height:88%}
+.card .now{position:absolute;top:18%;left:50%;transform:translateX(-50%);font:700 11.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:6px 9px;border-radius:999px;background:var(--ink);color:var(--paper);white-space:nowrap;transition:background 1.2s}
+.card h3{font-size:24px;line-height:1.1;margin:16px 4px 2px}
+.card .lat{margin:0 4px;font-style:italic;font-size:15px;color:var(--soil-2)}
+.card .note{margin:10px 4px 0;font-size:15.5px;line-height:1.5}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:14px 4px 0;padding-top:12px;border-top:1px dashed rgba(62,51,40,.3);font-size:14px}
+.card dt{font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px;align-self:center;color:var(--soil-2)}
+.card dd{margin:0}
+.dots{display:flex;gap:5px;align-items:center}
+.dots i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font:700 10px/1 var(--sans);font-style:normal;border:1.5px solid rgba(62,51,40,.35);color:var(--soil-2)}
+.dots i.on{background:var(--soil);border-color:var(--soil);color:var(--paper)}
+.dots i.cur{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--acc)}
+.fine{font-size:14px;color:var(--soil-2)}
+
+/* ---------- process ---------- */
+.process{background:var(--soil);color:var(--sand);padding:clamp(56px,8vw,110px) 0 clamp(64px,8vw,120px)}
+.process .eyebrow{color:#D9B98A}
+.process h2{max-width:14ch}
+.path{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:56px;list-style:none;padding:0}
+.path::before{content:"";position:absolute;left:5%;right:5%;top:56px;border-top:2px dashed rgba(239,227,205,.35)}
+.step{position:relative}
+.step:nth-child(even){margin-top:46px}
+.stone{position:relative;width:112px;height:112px;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#F1E7D3,#D6C7A8 70%);color:var(--soil);font:400 40px/1 var(--serif);box-shadow:inset -6px -8px 0 rgba(62,51,40,.12),0 10px 24px -10px rgba(0,0,0,.6)}
+.step:nth-child(1) .stone{border-radius:58% 42% 55% 45%/48% 60% 40% 52%}
+.step:nth-child(2) .stone{border-radius:45% 55% 40% 60%/55% 45% 58% 42%}
+.step:nth-child(3) .stone{border-radius:62% 38% 52% 48%/42% 58% 46% 54%}
+.step:nth-child(4) .stone{border-radius:40% 60% 62% 38%/52% 40% 60% 48%}
+.step:nth-child(5) .stone{border-radius:52% 48% 38% 62%/60% 52% 48% 40%}
+.step h3{font-size:26px;margin:22px 0 6px;color:var(--paper)}
+.step p{margin:0;font-size:16px;color:#E3D5BC}
+.step .when{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D9B98A}
+
+/* ---------- contact ---------- */
+.contact{padding:clamp(56px,8vw,110px) 0}
+.c-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(28px,6vw,90px);align-items:start}
+.c-list{list-style:none;margin:28px 0 0;padding:0}
+.c-list li{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(62,51,40,.18)}
+.c-list b{font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+form.enq{background:var(--paper);border-radius:28px;padding:clamp(22px,3vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form.enq .full{grid-column:1/-1}
+form.enq label,form.enq legend{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
+form.enq input,form.enq select,form.enq textarea{width:100%;min-height:48px;border:1.5px solid rgba(62,51,40,.35);border-radius:14px;background:#FFFDF8;padding:10px 14px;font-size:17px}
+form.enq textarea{min-height:110px;resize:vertical}
+form.enq input:focus-visible,form.enq select:focus-visible,form.enq textarea:focus-visible{outline:3px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+form.enq fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{margin:0;position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(62,51,40,.35);font-weight:500;font-size:15px;cursor:pointer;transition:background .2s,color .2s}
+.chips input:checked+span{background:var(--soil);color:var(--paper);border-color:var(--soil)}
+.chips input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+form.enq .btn{justify-self:start}
+
+footer{background:var(--sand-2);padding:clamp(44px,6vw,80px) 0 calc(36px + env(safe-area-inset-bottom))}
+.f-name{font:400 clamp(42px,7vw,104px)/.95 var(--serif);margin:0;overflow-wrap:anywhere}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px;margin-top:40px;padding-top:26px;border-top:1px solid rgba(62,51,40,.25)}
+.f-grid h3{font:700 13px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px}
+.f-grid p{margin:0;font-size:16px}
+.ack{font-size:16px;max-width:52ch}
+
+@media (prefers-reduced-motion:reduce){
+.leaf-f,.drop,.bee-in,.wing,.haze-l{animation:none}
+.bloom,.sky-l,.sun,.thumb,.swap,.card{transition:none;animation:none}
+.fx.leaves{display:none}
+}
+@media (max-width:1100px){
+.notes-grid{grid-template-columns:1fr 1.3fr}
+.n-flower{grid-column:1/-1}
+.path{grid-template-columns:repeat(3,1fr);row-gap:40px}
+.path::before{display:none}
+.step:nth-child(even){margin-top:0}
+}
+@media (max-width:860px){
+.top nav{display:none}
+.svc-grid,.c-grid{grid-template-columns:1fr}
+.svc-head{position:relative;top:0}
+.svc-art{display:none}
+.f-grid{grid-template-columns:1fr 1fr}
+.ack{grid-column:1/-1}
+}
+@media (max-width:760px){
+body{font-size:17px}
+.top{position:relative;background:var(--sky1);transition:background-color 1.2s}
+.top .wrap{padding-top:14px;padding-bottom:10px}
+.logo span{font-size:20px}
+.top .lg,.hero-copy .lg,.hero .ctas .line{display:none}
+.hero .ctas{margin-top:20px}
+.hero-copy .sub{margin-top:14px}
+.logo svg{width:34px;height:34px}
+.hero{height:auto}
+.hero-copy{padding:18px 0 34px;max-width:none}
+.hero-copy .sub{font-size:17px}
+.scene{position:relative;height:auto;aspect-ratio:600/524}
+.scene::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:96px;background-color:var(--sky1);transition:background-color 1.2s;-webkit-mask-image:linear-gradient(#000 10%,transparent);mask-image:linear-gradient(#000 10%,transparent);pointer-events:none}
+.dock-wrap{position:relative;left:auto;bottom:auto;transform:none;width:auto;max-width:none;margin:-34px var(--gut) 0;align-items:stretch}
+.dock{border-radius:24px}
+.seg{flex-direction:column;gap:3px;padding:0 4px;min-height:60px;font-size:13.5px;border-radius:18px}
+.thumb{border-radius:18px}
+.dock-hint{order:2;text-align:center;background:none;padding:6px 0 0}
+.notes-grid{grid-template-columns:1fr}
+.path{grid-template-columns:1fr;gap:0}
+.step{display:grid;grid-template-columns:92px 1fr;gap:18px;padding-bottom:28px;position:relative}
+.step::after{content:"";position:absolute;left:45px;top:92px;bottom:0;border-left:2px dashed rgba(239,227,205,.35)}
+.step:last-child::after{display:none}
+.stone{width:88px;height:88px;font-size:32px}
+.step h3{margin:14px 0 4px}
+form.enq{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr 1fr;gap:12px}
+.card{padding:10px 10px 16px;border-radius:18px}
+.card h3{font-size:20px}
+.card .note{display:none}
+.card dl{grid-template-columns:1fr;gap:4px}
+.dots i{width:20px;height:20px;font-size:9px}
+.filter{width:100%}
+.filter button{flex:1;padding:0 10px}
+.f-grid{grid-template-columns:1fr}
+}
+@media (max-width:360px){.cards{grid-template-columns:1fr}.seg{font-size:12.5px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<a class="logo" href="#top" aria-label="Home">
+<svg viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="31" rx="15" ry="5" fill="#D6C7A8"/><path d="M20 30C12 26 9 17 12 8c5 4 8 11 8 22Z" fill="#9CAF88"/><path d="M20 30c8-4 11-13 8-22-5 4-8 11-8 22Z" fill="#5E8C6A"/><path d="M20 30V14" stroke="#3E3328" stroke-width="1.4"/></svg>
+<span data-brand>Saltbush &amp; Stone Gardens</span>
+</a>
+<nav aria-label="Main"><ul><li><a href="#seasons">Seasons</a></li><li><a href="#services">Services</a></li><li><a href="#plants">Plants</a></li><li><a href="#process">Process</a></li></ul></nav>
+<a class="btn" href="#contact"><span>Book a <span class="lg">garden </span>walk</span></a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+<div class="wrap"><div class="hero-copy">
+<p class="eyebrow">Fremantle, WA · <span class="lg">Water-wise </span>native gardens</p>
+<h1 id="h1">Gardens that drink less and flower all year.</h1>
+<p class="sub">Designed for coastal sand and salt wind, and planted so every season has something in bloom.</p>
+<div class="ctas"><a class="btn" href="#contact">Book a garden walk</a><a class="btn line" href="#plants">See what’s flowering</a></div>
+</div></div>
+<figure class="scene" id="scene"><svg id="sceneSvg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"></svg></figure>
+<div class="dock-wrap">
+<p class="dock-hint" id="dockHint">Try another season — the garden changes with it</p>
+<fieldset class="dock" id="dock">
+<legend>Season shown in the garden</legend>
+<label class="seg"><input type="radio" name="season" value="summer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Summer</span></label>
+<label class="seg"><input type="radio" name="season" value="autumn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C4 11 9 5 19 4c1 9-5 15-14 15Z" fill="currentColor"/><path d="M5 19 13 11" stroke="#F8F1E4" stroke-width="1.5" stroke-linecap="round"/></svg><span>Autumn</span></label>
+<label class="seg"><input type="radio" name="season" value="winter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 15a4 4 0 0 1-.4-8A5.5 5.5 0 0 1 17 7.5 3.8 3.8 0 0 1 17 15Z" fill="currentColor"/><path d="M8 18l-1 3M12 18l-1 3M16 18l-1 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Winter</span></label>
+<label class="seg"><input type="radio" name="season" value="spring" checked><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><circle cx="12" cy="6.5" r="3.6"/><circle cx="17.2" cy="10.3" r="3.6"/><circle cx="15.2" cy="16.5" r="3.6"/><circle cx="8.8" cy="16.5" r="3.6"/><circle cx="6.8" cy="10.3" r="3.6"/></g><circle cx="12" cy="12" r="2.6" fill="#E0A526"/></svg><span>Spring</span></label>
+<span class="thumb" aria-hidden="true"></span>
+</fieldset>
+</div>
+<p class="sr" aria-live="polite" id="live"></p>
+</section>
+
+<section class="notes" id="seasons" aria-labelledby="nTitle">
+<div class="wrap notes-grid">
+<div class="swap" id="nHead">
+<p class="eyebrow">In the garden now</p>
+<h2 class="n-title" id="nTitle">Spring: the paws are up</h2>
+<p class="n-meta"><b id="nMonths">September to November</b><span id="nNoon">Noongar seasons: Djilba and Kambarang</span></p>
+<div class="n-art"><svg viewBox="0 0 120 120" id="nArt" aria-hidden="true"></svg><span id="nArtCap">Kangaroo paw</span></div>
+</div>
+<ol class="tips swap" id="tips" aria-label="Care tips for this season"></ol>
+<aside class="n-flower" aria-labelledby="nfH">
+<h3 id="nfH">Flowering now</h3>
+<div class="n-count" id="nCount">7<small>of 10 plants we use</small></div>
+<ul class="n-list" id="nList"></ul>
+<a class="btn line" href="#plants">Browse the plant list</a>
+</aside>
+</div>
+</section>
+
+<section class="services" id="services" aria-labelledby="svcH">
+<div class="wrap svc-grid">
+<div class="svc-head">
+<p class="eyebrow">What we do</p>
+<h2 id="svcH">From a sketch on site to the first year of growth.</h2>
+<p>Small team, local plants, no lawn required. We work across Fremantle and the southern suburbs, on everything from courtyards to quarter-acre blocks.</p>
+<svg class="svc-art" viewBox="0 0 380 260" aria-hidden="true">
+<ellipse cx="190" cy="232" rx="170" ry="16" fill="#E0CFAF"/>
+<path d="M60 232c-6-40 4-80 26-110M86 122c-20-12-42-8-54 6 16 10 36 10 54-6ZM80 150c18-16 42-18 58-6-16 14-40 16-58 6ZM72 186c-20-8-42-2-52 12 18 8 38 6 52-12Z" fill="#9CAF88" stroke="#3E3328" stroke-width="1.6"/>
+<path d="M190 232c0-60 10-120 40-170" fill="none" stroke="#3E3328" stroke-width="1.6"/>
+<path d="M230 62c10-30 34-44 58-40-4 28-28 44-58 40ZM214 110c-26-14-54-6-66 12 22 12 48 8 66-12ZM206 160c22-18 50-18 66-4-18 16-46 18-66 4ZM196 200c-24-6-46 4-54 20 22 6 42-2 54-20Z" fill="#5E8C6A" stroke="#3E3328" stroke-width="1.6"/>
+<path d="M276 234c-4-12 2-22 14-26 18-6 44-4 56 8 8 8 4 18-10 20-20 4-44 4-60-2Z" fill="#D6C7A8" stroke="#3E3328" stroke-width="1.6"/>
+<path d="M300 212c2-10 10-16 22-16 12 0 22 6 22 14" fill="none" stroke="#3E3328" stroke-width="1.2" opacity=".5"/>
+</svg>
+</div>
+<div>
+<article class="svc">
+<svg viewBox="0 0 56 56" aria-hidden="true"><rect x="6" y="10" width="44" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36c10-4 16-14 30-12 6 1 10 5 14 4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="37" cy="38" r="3" fill="currentColor"/></svg>
+<div><h3>Native garden design</h3><p>A plan drawn for your block’s sun, soil and wind, with a plant palette chosen so each season has something in flower.</p><ul><li>Site walk &amp; soil test</li><li>Concept &amp; planting plans</li><li>Local species schedule</li></ul><p class="from"><b>From $1,450</b>for a full planting plan · garden walk $180, credited</p></div>
+</article>
+<article class="svc">
+<svg viewBox="0 0 56 56" aria-hidden="true"><path d="M28 6C20 18 14 26 14 34a14 14 0 0 0 28 0c0-8-6-16-14-28Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M28 46V30m0 8c-4-2-6-6-6-10 4 0 6 4 6 10Zm0-4c4-2 6-6 6-10-4 0-6 4-6 10Z" fill="currentColor" stroke="currentColor" stroke-width="1.5"/></svg>
+<div><h3>Water-wise makeovers</h3><p>Lawn out, natives in. We rework thirsty front yards into low-water gardens with drip irrigation on a timer.</p><ul><li>Lawn removal</li><li>Soil improvement</li><li>Drip irrigation</li><li>Mulch &amp; planting</li></ul><p class="from"><b>From $9,500</b>for a typical front yard</p></div>
+</article>
+<article class="svc">
+<svg viewBox="0 0 56 56" aria-hidden="true"><path d="M8 44c0-6 6-10 14-10s14 4 14 10ZM24 32c-2-6 2-12 10-12s14 5 12 12ZM30 44c0-5 6-8 12-8s8 4 8 8Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 46h48" stroke="currentColor" stroke-width="2"/></svg>
+<div><h3>Paving &amp; stone</h3><p>Limestone paths, crazy paving, seating walls and dry-stone edging — laid so winter rain soaks into the garden, not the drain.</p><ul><li>Limestone &amp; granite</li><li>Permeable paths</li><li>Low retaining walls</li></ul><p class="from"><b>From $140/m²</b>for limestone paving, laid</p></div>
+</article>
+<article class="svc">
+<svg viewBox="0 0 56 56" aria-hidden="true"><path d="M18 40 38 12M22 40 42 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="44" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="44" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M38 12c2-3 6-4 8-2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+<div><h3>Seasonal care</h3><p>Four visits a year, timed to the seasons: pruning, feeding, mulching and an irrigation check before summer.</p><ul><li>Seasonal pruning</li><li>Irrigation audit</li><li>Weeding &amp; mulch</li></ul><p class="from"><b>From $320</b>per seasonal visit</p></div>
+</article>
+<p class="fine">Sample prices for this concept demo, including GST. Every garden is quoted after a site walk.</p>
+</div>
+</div>
+</section>
+
+<section class="plants" id="plants" aria-labelledby="plH">
+<div class="wrap">
+<div class="pl-head">
+<div><p class="eyebrow">Plants we love</p><h2 id="plH">Tough, local and <span id="plSeason">in flower</span>.</h2><p>Chosen for Fremantle’s sand, limestone and salt wind. Switch the season in the garden above and this list follows.</p></div>
+<div class="filter" role="group" aria-label="Filter plants"><button type="button" id="fNow" aria-pressed="true">Flowering now</button><button type="button" id="fAll" aria-pressed="false">All plants</button></div>
+</div>
+<ul class="cards" id="cards"></ul>
+<p class="fine" style="margin-top:22px">A general guide for the Perth coastal plain — flowering times shift with rain, heat and the plant itself.</p>
+</div>
+</section>
+
+<section class="process" id="process" aria-labelledby="prH">
+<div class="wrap">
+<p class="eyebrow">How it works</p>
+<h2 id="prH">Five steps, one stone at a time.</h2>
+<ol class="path">
+<li class="step"><div class="stone" aria-hidden="true">1</div><div><h3>Garden walk</h3><p>An hour on site: sun, soil, wind, and what you’d love to see from the kitchen window.</p><span class="when">Week 1</span></div></li>
+<li class="step"><div class="stone" aria-hidden="true">2</div><div><h3>Concept</h3><p>A sketch plan and plant palette, with a rough budget before we go any further.</p><span class="when">Weeks 2–3</span></div></li>
+<li class="step"><div class="stone" aria-hidden="true">3</div><div><h3>Design &amp; quote</h3><p>Detailed planting and irrigation plans, and a fixed quote for the build.</p><span class="when">Weeks 4–5</span></div></li>
+<li class="step"><div class="stone" aria-hidden="true">4</div><div><h3>Build</h3><p>Earthworks, stone, drip lines and planting — best timed for autumn.</p><span class="when">1–3 weeks on site</span></div></li>
+<li class="step"><div class="stone" aria-hidden="true">5</div><div><h3>First year</h3><p>A visit each season while the garden settles in and the roots go deep.</p><span class="when">4 visits</span></div></li>
+</ol>
+</div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="cH">
+<div class="wrap c-grid">
+<div>
+<p class="eyebrow">Start here</p>
+<h2 id="cH">Book a garden walk.</h2>
+<p>Tell us a little about your block and we’ll suggest a time to walk it together. Autumn builds book out first, so it pays to plan in summer.</p>
+<ul class="c-list">
+<li><b>Phone</b><span><a href="tel:+61855502381">(08) 5550 2381</a></span></li>
+<li><b>Email</b><span><a href="mailto:hello@example.com">hello@example.com</a></span></li>
+<li><b>Based in</b><span>Fremantle, WA — working from Cottesloe down to Coogee</span></li>
+<li><b>Hours</b><span>Mon–Fri 7am–4pm · site visits Sat by arrangement</span></li>
+</ul>
+</div>
+<form class="enq" data-demo-message="Demo only — no enquiry was sent. A real studio would reply by email to book the walk.">
+<div><label for="fn">Your name</label><input id="fn" name="name" autocomplete="name" required></div>
+<div><label for="fe">Email</label><input id="fe" name="email" type="email" autocomplete="email" required></div>
+<div><label for="fs">Suburb</label><select id="fs" name="suburb"><option>Fremantle</option><option>North Fremantle</option><option>East Fremantle</option><option>South Fremantle</option><option>White Gum Valley</option><option>Beaconsfield</option><option>Hilton</option><option>Bicton</option><option>Palmyra</option><option>Mosman Park</option><option>Cottesloe</option><option>Hamilton Hill</option><option>Spearwood</option><option>Coogee</option><option>Somewhere else</option></select></div>
+<div><label for="fz">Garden size</label><select id="fz" name="size"><option>Courtyard or balcony</option><option>Front or back yard</option><option>Whole block</option><option>Larger than a block</option></select></div>
+<fieldset class="full"><legend>I’m interested in</legend><div class="chips">
+<label><input type="checkbox" name="i" value="design" checked><span>Garden design</span></label>
+<label><input type="checkbox" name="i" value="makeover"><span>Water-wise makeover</span></label>
+<label><input type="checkbox" name="i" value="paving"><span>Paving &amp; stone</span></label>
+<label><input type="checkbox" name="i" value="care"><span>Seasonal care</span></label>
+</div></fieldset>
+<div class="full"><label for="fm">About your garden</label><textarea id="fm" name="msg" placeholder="North-facing front yard, lots of lawn, one old peppermint tree we’d like to keep…"></textarea></div>
+<button class="btn full" type="submit">Send enquiry</button>
+<p class="fine full" style="margin:0">Concept demo — this form doesn’t send anything.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p class="f-name" data-brand>Saltbush &amp; Stone Gardens</p>
+<div class="f-grid">
+<p class="ack">We acknowledge the Whadjuk Noongar people, the Traditional Custodians of the land where we live and work, and pay our respects to Elders past and present.</p>
+<div><h3>Visit &amp; call</h3><p>Fremantle, WA<br><a href="tel:+61855502381">(08) 5550 2381</a><br><a href="mailto:hello@example.com">hello@example.com</a></p></div>
+<div><h3>This is a demo</h3><p>A concept site for a fictional business. Prices are samples; plant notes are a general guide.</p></div>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var html=document.documentElement,$=function(s){return document.querySelector(s);};
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var f=function(n){return Math.round(n*10)/10;};
+function rng(seed){var s=seed>>>0;return function(){s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296;};}
+function q(p0,p1,p2,t){var u=1-t;return[u*u*p0[0]+2*u*t*p1[0]+t*t*p2[0],u*u*p0[1]+2*u*t*p1[1]+t*t*p2[1]];}
+function B(full,half,inner){return '<g class="bloom" data-full="'+full+'" data-half="'+(half||"")+'">'+inner+'</g>';}
+
+/* ---------- plant drawings (base at 0,0, growing up) ---------- */
+function paw(r,full,half){
+var s='<g fill="none" stroke-linecap="round">';
+for(var i=0;i<12;i++){var bx=(r()-.5)*28,len=64+r()*48,a=(r()-.5)*1.15;s+='<path class="'+(i%3?"s-leaf":"s-leaf2")+'" stroke-width="5.5" d="M'+f(bx)+' 0Q'+f(bx+Math.sin(a)*len*.25)+' '+f(-len*.6)+' '+f(bx+Math.sin(a)*len)+' '+f(-Math.cos(a)*len)+'"/>';}
+s+='</g>';
+for(var j=0;j<6;j++){var sx=(r()-.5)*30,h=160+r()*100,ln=(r()-.5)*96,p0=[sx,-6],p1=[sx+ln*.15,-h*.55],p2=[sx+ln,-h],g='<path d="M'+f(p0[0])+' '+f(p0[1])+'Q'+f(p1[0])+' '+f(p1[1])+' '+f(p2[0])+' '+f(p2[1])+'" stroke="#8E3A2A" stroke-width="3.4" fill="none"/>';
+for(var k=0;k<9;k++){var t=.72+k*.035,pt=q(p0,p1,p2,Math.min(t,1)),sd=k%2?1:-1,len2=16+r()*7;g+='<path d="M'+f(pt[0])+' '+f(pt[1])+'q'+f(sd*len2*.5)+' '+f(-2)+' '+f(sd*len2)+' '+f(-len2*.75)+'" stroke="#5F9A3C" stroke-width="6.4" stroke-linecap="round" fill="none"/><circle cx="'+f(pt[0])+'" cy="'+f(pt[1])+'" r="3.2" fill="#C2362F"/>';}
+s+=B(full,half,g);}
+return s;}
+function grev(r,W,H,full,half){
+var s='<g stroke="#7A5E44" stroke-width="2.4" fill="none">';
+for(var i=0;i<7;i++){var a=-1.25+i*.42+(r()-.5)*.2;s+='<path d="M0 0Q'+f(Math.sin(a)*W*.2)+' '+f(-H*.4)+' '+f(Math.sin(a)*W*.46)+' '+f(-Math.cos(a)*H*.92)+'"/>';}
+var d1='',d2='';
+for(var n=0;n<130;n++){var u=r()*Math.PI,rr=Math.sqrt(r()),px=Math.cos(u)*W/2*rr,py=-Math.sin(u)*H*rr-4,a2=r()*6.28,l=7+r()*6,seg='M'+f(px)+' '+f(py)+'l'+f(Math.cos(a2)*l)+' '+f(Math.sin(a2)*l);if(n%4)d1+=seg;else d2+=seg;}
+s+='</g><g stroke-width="2.2" stroke-linecap="round" fill="none"><path class="s-leaf" d="'+d1+'"/><path class="s-leaf2" d="'+d2+'"/></g>';
+for(var c=0;c<12;c++){var u2=.18+c/11*2.8+(r()-.5)*.2,cx=Math.cos(u2)*W/2*.9,cy=-Math.sin(u2)*H*.9-4,rot=f(-Math.cos(u2)*50+(r()-.5)*30),cd='',ct='';
+for(var m=0;m<8;m++){var ang=(-70+m*20)*Math.PI/180,ca=Math.cos(ang),sa=Math.sin(ang);var P=function(x,y){return f(x*ca-y*sa)+' '+f(x*sa+y*ca);};cd+='M0 0C'+P(2,-8)+' '+P(9,-13)+' '+P(17,-12);ct+='M'+P(17,-12)+'h.01';}
+s+='<g transform="translate('+f(cx)+' '+f(cy)+') rotate('+rot+')">'+B(full,half,'<circle r="4" fill="#A8262A"/><path d="'+cd+'" stroke="#C2362F" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="'+ct+'" stroke="#E7C457" stroke-width="3.6" stroke-linecap="round"/>')+'</g>';}
+return s;}
+function head(r){var d='',t='';for(var y=3;y<=35;y+=1.6){var pr=Math.sin(Math.PI*y/38),L=3.5+7.5*pr+r()*1.4;for(var sd=-1;sd<2;sd+=2){var an=(r()-.5)*.6,ex=f(sd*L*Math.cos(an)),ey=f(-y-L*Math.sin(an)*.5);d+='M0 '+f(-y)+'L'+ex+' '+ey;if(r()>.35)t+='M'+ex+' '+ey+'h.01';}}
+return '<path d="M0 2V-37" stroke="#6B4E36" stroke-width="1.6"/><path d="'+d+'" stroke="#C2362F" stroke-width="1.25"/><path d="'+t+'" stroke="#E9B64A" stroke-width="2.3" stroke-linecap="round"/>';}
+function brush(r,W,H,full,half){
+var s='<g stroke="#6B4E36" stroke-width="3" fill="none">',tips=[];
+for(var i=0;i<9;i++){var a=-.9+i*.225+(r()-.5)*.15,ex=Math.sin(a)*W*.45,ey=-H*(.55+r()*.4);tips.push([ex,ey,a]);s+='<path d="M0 0Q'+f(ex*.3)+' '+f(ey*.5)+' '+f(ex)+' '+f(ey)+'"/>';}
+s+='</g>';
+for(var n=0;n<150;n++){var t=tips[n%9],k=.35+r()*.75,px=t[0]*k+(r()-.5)*40,py=t[1]*k+(r()-.5)*30,ro=f(-60+r()*120);s+='<ellipse class="'+(n%3?"f-can":"f-can2")+'" cx="'+f(px)+'" cy="'+f(py)+'" rx="8" ry="2" transform="rotate('+ro+' '+f(px)+' '+f(py)+')"/>';}
+for(var b=0;b<9;b++){var tt=tips[b];s+='<g transform="translate('+f(tt[0])+' '+f(tt[1]+10)+') rotate('+f(tt[2]*28)+')">'+B(full,half,head(r))+'</g>';}
+return s;}
+function salt(r,W,H){
+var s='';for(var n=0;n<130;n++){var u=r()*Math.PI,rr=Math.pow(r(),.6),px=Math.cos(u)*W/2*rr,py=-Math.sin(u)*H*rr;s+='<ellipse class="sb'+(1+n%3)+'" cx="'+f(px)+'" cy="'+f(py)+'" rx="'+f(6+r()*3)+'" ry="'+f(4+r()*2)+'" transform="rotate('+f(r()*180)+' '+f(px)+' '+f(py)+')"/>';}
+return s;}
+function banksia(r,W,H,full,half){
+var s='<path d="M-6 0C-4-40-6-80-2-'+f(H*.45)+'L4-'+f(H*.45)+'C6-80 8-40 8 0Z" fill="#6B4E36"/><g stroke="#6B4E36" stroke-width="3" fill="none">',tips=[];
+for(var i=0;i<7;i++){var a=-1+i*.33,ex=Math.sin(a)*W*.45,ey=-H*(.5+r()*.45);tips.push([ex,ey]);s+='<path d="M0 -'+f(H*.4)+'Q'+f(ex*.4)+' '+f(ey*.7)+' '+f(ex)+' '+f(ey)+'"/>';}
+s+='</g>';
+for(var n=0;n<84;n++){var t=tips[n%7],px=t[0]*(.45+r()*.65)+(r()-.5)*34,py=t[1]*(.55+r()*.55),ro=f(r()*180);s+='<ellipse class="'+(n%3?"f-can":"f-can3")+'" cx="'+f(px)+'" cy="'+f(py)+'" rx="15" ry="2.6" transform="rotate('+ro+' '+f(px)+' '+f(py)+')"/>';}
+for(var c=0;c<7;c++){var tp=tips[c],g='<rect x="-8" y="-42" width="16" height="42" rx="8" fill="url(#cone)"/><path d="M-7 -8h14M-7 -14h14M-7 -20h14M-7 -26h14M-7 -32h14" stroke="#8E3A2A" stroke-width="1" opacity=".45"/><path d="M-3 -38v30" stroke="#F4D7B8" stroke-width="2" opacity=".5" stroke-linecap="round"/>';
+s+='<g transform="translate('+f(tp[0])+' '+f(tp[1]+6)+')">'+B(full,half,g)+'</g>';}
+return s;}
+function daisy(r,col,full,half,sc){
+var g='<path d="M0 0q'+f((r()-.5)*6)+' -10 0 -'+f(18*sc)+'" stroke="#6F8E5E" stroke-width="1.6" fill="none"/><g transform="translate(0 -'+f(18*sc)+') scale('+sc+')">';
+for(var p=0;p<12;p++)g+='<ellipse rx="5.2" ry="1.9" cx="5.4" transform="rotate('+p*30+')" fill="'+col+'"/>';
+return B(full,half,g+'<circle r="2.8" fill="#C98B2A"/></g>');}
+function pea(r,col,leaf,full,half,vine){
+var s='<g fill="none" stroke="#6B4E36" stroke-width="2">',pts=[];
+for(var i=0;i<5;i++){var a=-.8+i*.4,ex=Math.sin(a)*34,ey=-(vine?70:48)-r()*20;pts.push([ex,ey]);s+='<path d="M0 0Q'+f(ex*.2+(vine?14:0))+' '+f(ey*.5)+' '+f(ex)+' '+f(ey)+'"/>';}
+s+='</g>';
+for(var n=0;n<36;n++){var t=pts[n%5],k=.3+r()*.7,px=t[0]*k+(r()-.5)*10,py=t[1]*k;s+='<ellipse cx="'+f(px)+'" cy="'+f(py)+'" rx="'+(vine?7:5)+'" ry="'+(vine?2.8:3.2)+'" fill="'+leaf+'" transform="rotate('+f(r()*180)+' '+f(px)+' '+f(py)+')"/>';}
+for(var c=0;c<5;c++){var tp=pts[c],g='';for(var m=0;m<5;m++){var yy=-m*5,xx=(m%2?3:-3);g+=vine?'<circle cx="'+xx+'" cy="'+yy+'" r="3.2" fill="'+col+'"/><circle cx="'+(xx+1)+'" cy="'+(yy-1)+'" r="1.2" fill="#F3E3A0"/>':'<ellipse cx="'+(xx*1.4)+'" cy="'+yy+'" rx="2.4" ry="6" fill="'+col+'" transform="rotate('+(m%2?28:-28)+' '+(xx*1.4)+' '+yy+')"/>';}s+='<g transform="translate('+f(tp[0])+' '+f(tp[1]+4)+')">'+B(full,half,g)+'</g>';}
+return s;}
+function fan(r,full,half){
+var s='';for(var n=0;n<26;n++){var px=(r()-.5)*84,py=-r()*22;s+='<ellipse cx="'+f(px)+'" cy="'+f(py)+'" rx="7" ry="4" fill="#6F8E5E" transform="rotate('+f(r()*180)+' '+f(px)+' '+f(py)+')"/>';}
+for(var c=0;c<9;c++){var px2=(r()-.5)*80,py2=-10-r()*26,g='';for(var p=0;p<5;p++)g+='<ellipse rx="6.4" ry="2.6" cx="6" transform="rotate('+(-170+p*40)+')" fill="#8A7FCB"/>';g+='<circle r="2" fill="#F1D46A"/>';s+='<g transform="translate('+f(px2)+' '+f(py2)+')">'+B(full,half,g)+'</g>';}
+return s;}
+function olearia(r,full,half){
+var s=salt(r,110,64).replace(/class="sb\d"/g,function(){return 'fill="'+["#A7B3A4","#BFC8BB","#95A393"][Math.floor(r()*3)]+'"';});
+for(var c=0;c<16;c++){var u=r()*Math.PI,px=Math.cos(u)*48*Math.sqrt(r()),py=-Math.sin(u)*56*Math.sqrt(r()),g='';for(var p=0;p<8;p++)g+='<ellipse rx="3.4" ry="1.3" cx="3.4" transform="rotate('+p*45+')" fill="#F6EFD9"/>';g+='<circle r="1.6" fill="#D2A93A"/>';s+='<g transform="translate('+f(px)+' '+f(py)+')">'+B(full,half,g)+'</g>';}
+return s;}
+
+/* ---------- scene ---------- */
+var svg=$("#sceneSvg");
+function stone(cx,cy,rx,ry,r){var pts=[];for(var i=0;i<9;i++){var a=i/9*6.283,j=.86+r()*.2;pts.push([cx+Math.cos(a)*rx*j,cy+Math.sin(a)*ry*j]);}
+var d='M'+f((pts[8][0]+pts[0][0])/2)+' '+f((pts[8][1]+pts[0][1])/2);for(var k=0;k<9;k++){var p=pts[k],n=pts[(k+1)%9];d+='Q'+f(p[0])+' '+f(p[1])+' '+f((p[0]+n[0])/2)+' '+f((p[1]+n[1])/2);}
+return '<path d="'+d+'" transform="translate(0 '+f(ry*.28)+')" fill="#A99C86"/><path d="'+d+'" fill="#D9CFBD"/><path d="'+d+'" fill="none" stroke="#F1EADC" stroke-width="1.4" stroke-dasharray="'+f(rx)+' '+f(rx*3)+'"/>';}
+function build(){
+var r=rng(7),s='<defs>';
+[["su","#EDCF96","#F8EBD2"],["au","#E4AE82","#F3DEC4"],["wi","#A9BCC2","#DDE4DF"],["sp","#A9D1D8","#E9F2E3"]].forEach(function(k){s+='<linearGradient id="g'+k[0]+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+k[1]+'"/><stop offset="1" stop-color="'+k[2]+'"/></linearGradient>';});
+s+='<radialGradient id="glow"><stop offset="0" stop-color="#FFF6DD" stop-opacity=".95"/><stop offset=".35" stop-color="#FFF1CC" stop-opacity=".5"/><stop offset="1" stop-color="#FFF1CC" stop-opacity="0"/></radialGradient><linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6A06A"/><stop offset=".55" stop-color="#D0655A"/><stop offset="1" stop-color="#9B3B3E"/></linearGradient></defs>';
+["su","au","wi","sp"].forEach(function(k){s+='<rect class="sky-l '+k+'" x="-180" y="-300" width="1800" height="770" fill="url(#g'+k+')"/>';});
+s+='<g class="sun"><circle r="150" fill="url(#glow)"/><circle class="sun-core" r="42"/></g>';
+s+='<g class="clouds" fill="#F4F2EC">'+[[180,-60,1],[720,-150,.8],[1000,110,1.2],[1380,-20,.9],[420,200,.7]].map(function(c){return '<g transform="translate('+c[0]+' '+c[1]+') scale('+c[2]+')"><ellipse rx="70" ry="22"/><ellipse cx="-34" cy="-10" rx="38" ry="24"/><ellipse cx="22" cy="-20" rx="42" ry="30"/></g>';}).join("")+'</g>';
+s+='<g class="fx haze"><path class="haze-l" d="M-100 330c60-8 120 8 180 0s120-8 180 0M540 300c60-8 120 8 180 0" stroke="#FFF6E0" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round"/></g>';
+s+='<rect class="f-sea" x="-180" y="396" width="1800" height="44"/><path d="M-180 402h1800" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="40 26 90 30"/>';
+s+='<path d="M-180 432C-80 420 0 422 120 414C260 406 380 416 520 406C640 398 760 414 900 402C1040 392 1180 410 1320 400C1440 394 1540 404 1620 400V470H-180Z" fill="#E8DAC0"/>';
+s+='<path class="f-mulch" d="M-180 470C300 460 600 472 900 464C1100 458 1300 468 1620 466V760H-180Z"/>';
+var w='<g stroke="#C8B690" stroke-width="1.5">';for(var row=0;row<4;row++){var x=-180-(row%2)*26,y=486+row*22;while(x<540){var bw=34+r()*38;w+='<rect x="'+f(x)+'" y="'+y+'" width="'+f(Math.min(bw,560-x))+'" height="22" rx="3" fill="'+["#EBE0C8","#E2D5B9","#EEE6D3"][Math.floor(r()*3)]+'"/>';x+=bw;}}
+w+='</g><path d="M-184 478H552V490H-184Z" fill="#F2EADA" stroke="#C8B690" stroke-width="1.5"/><path d="M-180 574H560" stroke="#B9A67E" stroke-width="3" opacity=".6"/>';s+=w;
+var g='<path d="M1172 704C1182 640 1186 560 1182 470C1178 410 1166 360 1140 318C1120 286 1096 250 1070 214L1082 206C1112 240 1140 276 1162 306C1174 270 1190 230 1214 190L1226 198C1206 236 1194 280 1190 326C1212 300 1244 276 1284 258L1290 270C1252 290 1222 316 1204 350C1198 380 1200 420 1206 480C1212 560 1220 640 1236 704Z" fill="#E7E0D3" stroke="#6B5A48" stroke-width="2"/>';
+g+='<g fill="#CFC5B2"><ellipse cx="1192" cy="600" rx="9" ry="22"/><ellipse cx="1205" cy="520" rx="6" ry="16"/><ellipse cx="1186" cy="430" rx="7" ry="15"/><ellipse cx="1150" cy="330" rx="5" ry="12"/></g>';
+g+='<g stroke="#8A7A66" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M1076 210C1050 196 1020 196 996 206M1076 210C1066 180 1070 160 1086 146M1220 194C1200 160 1170 150 1140 150M1220 194C1236 160 1262 140 1290 128M1287 264C1310 250 1340 236 1372 232M1287 264C1320 276 1360 290 1400 300"/></g>';
+[[1030,206,1],[1120,150,1],[1250,118,1.05],[1350,222,1],[1190,268,.8],[1420,300,.85],[1540,250,.9]].forEach(function(c){var k=c[2],cl='';
+for(var i=0;i<30;i++){var a=r()*6.28,d=Math.sqrt(r());cl+='<circle class="'+(["f-can","f-can2","f-can3"][i%3])+'" cx="'+f(c[0]+Math.cos(a)*d*86*k)+'" cy="'+f(c[1]+Math.sin(a)*d*36*k)+'" r="'+f((9+r()*11)*k)+'"/>';}
+for(var l=0;l<26;l++){var lx=c[0]+(r()-.5)*170*k,ly=c[1]+(18+r()*22)*k;cl+='<ellipse class="'+(l%2?"f-can2":"f-can")+'" cx="'+f(lx)+'" cy="'+f(ly)+'" rx="2.4" ry="'+f(8+r()*4)+'" transform="rotate('+f((r()-.5)*36)+' '+f(lx)+' '+f(ly)+')"/>';}g+=cl;});
+s+=g;
+s+='<path class="f-grass2" d="M520 520C640 500 860 498 1010 512V548C860 532 660 534 520 556Z" opacity=".9"/>';
+s+='<path class="f-grass" d="M-180 690C0 664 470 682 640 722V760H-180ZM820 734C980 690 1210 676 1620 694V760H820Z"/>';
+[[748,748,98,24],[704,704,80,19],[752,664,64,15],[716,629,52,12],[750,598,44,10],[727,572,36,8],[752,550,30,7],[736,532,25,6],[754,516,20,5]].forEach(function(p){s+=stone(p[0],p[1],p[2],p[3],r);});
+s+='<g transform="translate(-60 628)">'+brush(r,250,250,"summer spring","autumn")+'</g>';
+s+='<g transform="translate(250 680)">'+salt(r,250,118)+'</g>';
+s+='<g transform="translate(1340 706)">'+salt(r,210,96)+'</g>';
+s+='<g transform="translate(1560 700)">'+salt(r,200,90)+'</g>';
+s+='<g transform="translate(1095 650)">'+banksia(r,210,270,"autumn winter","spring")+'</g>';
+s+='<g transform="translate(900 668)">'+grev(r,250,170,"winter spring","autumn")+'</g>';
+s+='<g transform="translate(560 664)">'+paw(r,"spring","summer")+'</g>';
+s+='<g transform="translate(450 712) scale(.72)">'+paw(r,"spring","summer")+'</g>';
+var tuft='';[[-120,720],[40,700],[610,740],[860,736],[1010,716],[1250,726],[1420,744],[1590,730]].forEach(function(t){var d1='',d2='';for(var i=0;i<12;i++){var a=(r()-.5)*1.6,l=30+r()*26,seg='M'+t[0]+' '+t[1]+'q'+f(Math.sin(a)*l*.3)+' '+f(-l*.6)+' '+f(Math.sin(a)*l)+' '+f(-Math.cos(a)*l);if(i%2)d1+=seg;else d2+=seg;}tuft+='<path class="s-leaf" d="'+d1+'"/><path class="s-leaf2" d="'+d2+'"/>';});s+='<g fill="none" stroke-linecap="round" stroke-width="2.4">'+tuft+'</g>';
+var ds='';for(var d=0;d<54;d++){var dx=d<34?-160+r()*780:840+r()*760,dy=718+r()*40;ds+='<g transform="translate('+f(dx)+' '+f(dy)+')">'+daisy(r,d%3?"#EBA1B3":"#F8F1E6","spring","winter",.8+r()*.5)+'</g>';}s+=ds;
+var lv='<g class="fx leaves">';for(var i=0;i<11;i++){var lx=960+r()*560,ly=180+r()*140;lv+='<g transform="translate('+f(lx)+' '+f(ly)+')"><path class="leaf-f" style="--dl:-'+f(r()*9)+'s" d="M0 0c5-6 14-8 20-5-5 6-13 8-20 5Z" fill="'+(i%2?"#C98B3A":"#B4532A")+'"/></g>';}
+s+=lv+'</g><g class="fx litter">'+[[980,712],[1060,728],[1180,716],[1290,734],[900,744],[1470,736]].map(function(p,i){return '<path d="M'+p[0]+' '+p[1]+'c5-6 14-8 20-5-5 6-13 8-20 5Z" fill="'+(i%2?"#C98B3A":"#B4532A")+'" transform="rotate('+(i*37)+' '+p[0]+' '+p[1]+')"/>';}).join("")+'</g>';
+var rn='<g class="fx rain" stroke="#F2F5F4" stroke-width="1.6" stroke-linecap="round" opacity=".7">';for(var k=0;k<90;k++){var rx=-180+r()*1840,ry=-280+r()*1020;rn+='<path class="drop" style="--dl:-'+f(r()*1.1)+'s" d="M'+f(rx)+' '+f(ry)+'l-6 18"/>';}s+=rn+'</g>';
+var bz='<g class="fx bees">';[[540,380,0],[620,430,-2.4],[880,520,-4.6]].forEach(function(b){bz+='<g transform="translate('+b[0]+' '+b[1]+')"><g class="bee-in" style="--dl:'+b[2]+'s"><ellipse class="wing" cx="-2" cy="-7" rx="5" ry="7" fill="#fff" opacity=".75"/><ellipse class="wing" cx="4" cy="-7" rx="5" ry="7" fill="#fff" opacity=".75"/><ellipse rx="9" ry="6" fill="#E0A526"/><path d="M-3-5.5v11M2-5.5v11" stroke="#3E3328" stroke-width="2.2"/><circle cx="9" r="3.4" fill="#3E3328"/></g></g>';});
+s+=bz+'</g>';
+svg.innerHTML=s;
+var mq=window.matchMedia("(max-width: 760px)");
+function vb(){svg.setAttribute("viewBox",mq.matches?"440 236 600 524":"-180 -300 1800 1060");}
+vb();if(mq.addEventListener)mq.addEventListener("change",vb);
+}
+build();
+
+/* ---------- data ---------- */
+var SEASONS={
+summer:{t:"Summer: deep and early",m:"December to February",n:"Noongar seasons: Birak and Bunuru",tips:[["Water deeply, and early","Before 9am on your rostered days. Long, slow drinks send roots down where the soil stays cool."],["Top up the mulch","Keep 50–75 mm over sandy soil to hold moisture and keep roots cool."],["Plan, don’t plant","New plants struggle in the heat. Sketch the changes now and plant in autumn."]]},
+autumn:{t:"Autumn: planting season",m:"March to May",n:"Noongar seasons: Bunuru and Djeran",tips:[["Plant now","The soil is still warm and the first rains will settle roots in before winter."],["Tidy the paws","Cut spent kangaroo paw stems and tired leaves right down to the base."],["Wake up the sand","Dig in compost and a soil wetter — coastal sand repels water after a long summer."]]},
+winter:{t:"Winter: let the rain work",m:"June to August",n:"Noongar seasons: Makuru and Djilba",tips:[["Switch the retic off","Winter rain does the watering. Save the system for spring."],["Tip-prune grevilleas","A light trim after flowering keeps them dense and full of new flower buds."],["Watch where water goes","The first big storm shows every low spot and runoff path — best time to fix levels."]]},
+spring:{t:"Spring: the paws are up",m:"September to November",n:"Noongar seasons: Djilba and Kambarang",tips:[["Deadhead the paws","Snip fading kangaroo paw stems and more will follow through to summer."],["Ease the retic back on","Start with one deep water a week and increase as the days warm up."],["Feed gently","Use a low-phosphorus native fertiliser — many local plants dislike the standard kind."]]}
+};
+var ORDER=["summer","autumn","winter","spring"],AB={summer:"Su",autumn:"Au",winter:"Wi",spring:"Sp"},NAMES={summer:"Summer",autumn:"Autumn",winter:"Winter",spring:"Spring"};
+var PLANTS=[
+{n:"Red and green kangaroo paw",l:"Anigozanthos manglesii",s:["spring"],w:"Low",h:"0.6–1 m",note:"Western Australia’s floral emblem. Full sun, good drainage, and deadheading keeps it going.",d:function(r){return '<g transform="translate(60 118) scale(.44)">'+paw(r,"x","")+'</g>';}},
+{n:"Spider net grevillea",l:"Grevillea thelemanniana",s:["winter","spring"],w:"Low",h:"0.5–1.5 m",note:"Fine grey-green foliage and red spider flowers that honeyeaters visit all winter.",d:function(r){return '<g transform="translate(60 116)">'+grev(r,104,86,"x","")+'</g>';}},
+{n:"Grey saltbush",l:"Atriplex cinerea",s:[],w:"Very low",h:"0.5–1.5 m",note:"Silver foliage that shrugs off salt spray. Clip it into soft mounds or a low hedge.",d:function(r){return '<g transform="translate(60 114)">'+salt(r,104,70)+'</g>';}},
+{n:"Albany bottlebrush",l:"Callistemon glaucus",s:["spring","summer"],w:"Low",h:"2–3 m",note:"Blue-green leaves and big red brushes from late spring. Great screening shrub.",d:function(r){return '<g transform="translate(60 118) scale(.9)">'+brush(r,100,100,"x","")+'</g>';}},
+{n:"Firewood banksia",l:"Banksia menziesii",s:["autumn","winter"],w:"Low",h:"3–7 m",note:"Pink and bronze cones through the cooler months. A small tree for a sunny corner.",d:function(r){return '<g transform="translate(60 118)">'+banksia(r,92,104,"x","")+'</g>';}},
+{n:"Native wisteria",l:"Hardenbergia comptoniana",s:["winter","spring"],w:"Low",h:"Climber",note:"Purple pea flowers scrambling up a fence or trellis from late winter.",d:function(r){return '<g transform="translate(60 116)">'+pea(r,"#6B4C9A","#4F7D5B","x","",1)+'</g>';}},
+{n:"Pink everlasting",l:"Rhodanthe chlorocephala",s:["spring"],w:"Low",h:"0.3–0.5 m",note:"Sow the seed in autumn for papery pink drifts in spring. An annual, so re-sow each year.",d:function(r){var s='';for(var i=0;i<7;i++)s+='<g transform="translate('+f(22+i*13+(r()-.5)*6)+' '+f(114-r()*8)+')">'+daisy(r,i%3?"#EBA1B3":"#F8F1E6","x","",2.2+r()*1.2)+'</g>';return s;}},
+{n:"Thick-leaved fan flower",l:"Scaevola crassifolia",s:["spring","summer"],w:"Very low",h:"0.5–1 m",note:"A coastal toughie with lilac fan-shaped flowers. Happy in pure sand.",d:function(r){return '<g transform="translate(60 110) scale(1.15)">'+fan(r,"x","")+'</g>';}},
+{n:"Coastal daisy bush",l:"Olearia axillaris",s:["summer","autumn"],w:"Very low",h:"1–2 m",note:"Silvery, salt-tolerant shrub with small cream daisies. Prune lightly to keep it dense.",d:function(r){return '<g transform="translate(60 114)">'+olearia(r,"x","")+'</g>';}},
+{n:"Cockies tongues",l:"Templetonia retusa",s:["winter","spring"],w:"Low",h:"1–2 m",note:"Red pea flowers on blue-green leaves. Thrives on limestone near the coast.",d:function(r){return '<g transform="translate(60 118) scale(1.25)">'+pea(r,"#C2362F","#7F9C88","x","",0)+'</g>';}}
+];
+
+/* ---------- cards ---------- */
+var list=$("#cards"),filterNow=true;
+PLANTS.forEach(function(p,i){
+var li=document.createElement("li");li.className="card";li.dataset.i=i;
+var r=rng(40+i*13),art=p.d(r).replace(/class="bloom"/g,'class="bloom full"');
+li.innerHTML='<div class="art"><svg viewBox="0 0 120 120" aria-hidden="true">'+art+'</svg><span class="now" hidden>Flowering now</span></div><h3></h3><p class="lat"></p><p class="note"></p><dl><dt>Flowers</dt><dd class="dots"></dd><dt>Water</dt><dd></dd><dt>Size</dt><dd></dd></dl>';
+li.querySelector("h3").textContent=p.n;li.querySelector(".lat").textContent=p.l;li.querySelector(".note").textContent=p.note;
+var dd=li.querySelectorAll("dd");
+dd[0].innerHTML=ORDER.map(function(k){return '<i data-k="'+k+'" class="'+(p.s.indexOf(k)>-1?"on":"")+'" title="'+NAMES[k]+'">'+AB[k]+'</i>';}).join("")+'<span class="sr">'+(p.s.length?p.s.map(function(k){return NAMES[k];}).join(", "):"Grown for foliage")+'</span>';
+if(!p.s.length)dd[0].insertAdjacentHTML("beforeend",'<span style="font-size:13px;margin-left:4px">foliage</span>');
+dd[1].textContent=p.w;dd[2].textContent=p.h;
+list.appendChild(li);
+});
+
+/* ---------- season logic ---------- */
+var blooms=[].slice.call(svg.querySelectorAll(".bloom"));
+blooms.forEach(function(b){b.style.transitionDelay=Math.round(Math.random()*650)+"ms";});
+var cur=null;
+function setSeason(k,fromUser){
+if(!SEASONS[k])return;var first=cur===null;cur=k;html.dataset.season=k;
+var idx=ORDER.indexOf(k);$("#dock").style.setProperty("--i",idx);
+[].forEach.call(document.querySelectorAll('input[name=season]'),function(inp){inp.checked=inp.value===k;});
+blooms.forEach(function(b){var fu=b.dataset.full.split(" ").indexOf(k)>-1,ha=b.dataset.half.split(" ").indexOf(k)>-1;b.classList.toggle("full",fu);b.classList.toggle("half",!fu&&ha);});
+var S=SEASONS[k],flowering=PLANTS.filter(function(p){return p.s.indexOf(k)>-1;});
+function fill(){
+$("#nTitle").textContent=S.t;$("#nMonths").textContent=S.m;$("#nNoon").textContent=S.n;
+$("#tips").innerHTML=S.tips.map(function(t){return "<li><b>"+t[0]+"</b>"+t[1]+"</li>";}).join("");
+$("#nCount").innerHTML=flowering.length+"<small>of "+PLANTS.length+" plants we use</small>";
+$("#nList").innerHTML=flowering.map(function(p){return "<li>"+p.n+"</li>";}).join("");
+var sig={spring:0,summer:3,autumn:4,winter:1}[k],sp=PLANTS[sig];$("#nArt").innerHTML=sp.d(rng(40+sig*13)).replace(/class="bloom"/g,'class="bloom full"');$("#nArtCap").textContent=sp.n+" — our "+k+" favourite";
+$("#plSeason").textContent="in flower this "+k;
+$("#fNow").textContent="Flowering now ("+flowering.length+")";
+applyFilter();
+}
+if(first||reduce)fill();else{var sw=[].slice.call(document.querySelectorAll(".swap"));sw.forEach(function(e){e.classList.add("out");});setTimeout(function(){fill();sw.forEach(function(e){e.classList.remove("out");});},330);}
+if(fromUser)$("#live").textContent="Showing "+k+" in the garden. "+flowering.length+" of "+PLANTS.length+" plants flowering.";
+}
+function applyFilter(){
+[].forEach.call(list.children,function(li){var p=PLANTS[li.dataset.i],on=p.s.indexOf(cur)>-1;li.hidden=filterNow&&!on;li.querySelector(".now").hidden=!on;
+[].forEach.call(li.querySelectorAll(".dots i"),function(i){i.classList.toggle("cur",i.dataset.k===cur);});});
+}
+$("#fNow").addEventListener("click",function(){filterNow=true;this.setAttribute("aria-pressed","true");$("#fAll").setAttribute("aria-pressed","false");applyFilter();});
+$("#fAll").addEventListener("click",function(){filterNow=false;this.setAttribute("aria-pressed","true");$("#fNow").setAttribute("aria-pressed","false");applyFilter();});
+[].forEach.call(document.querySelectorAll('input[name=season]'),function(inp){inp.addEventListener("change",function(){if(inp.checked)setSeason(inp.value,true);});});
+var mo=new Date().getMonth(),start=mo===11||mo<2?"summer":mo<5?"autumn":mo<8?"winter":"spring";
+setSeason(start,false);
+requestAnimationFrame(function(){requestAnimationFrame(function(){html.classList.remove("boot");});});
+/* pause scene animation when off-screen or tab hidden */
+var hero=$(".hero");
+if("IntersectionObserver" in window){new IntersectionObserver(function(es){hero.classList.toggle("paused",!es[0].isIntersecting);}).observe(hero);}
+document.addEventListener("visibilitychange",function(){hero.classList.toggle("paused",document.hidden);});
+})();
+</script>
+</body>
+</html>

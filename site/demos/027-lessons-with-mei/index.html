@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="027">
+<meta name="demo:brand" content="Lessons with Mei">
+<title>Lessons with Mei — driving lessons around Hurstville, NSW</title>
+<meta name="description" content="A fictional independent driving instructor in Hurstville, NSW, teaching auto and manual lessons in Mandarin, Cantonese and English.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&text=%E6%99%AE%E9%80%9A%E8%AF%9D%E7%B2%A4%E8%AF%AD&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--k:#111;--o:#FF5A1F;--oi:#C23B0B;--g:#F2F2F2;--mid:#5c5c5c;--hair:#d6d6d6;--sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--sc:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;--pad:16px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px;scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--k);font:400 17px/1.55 var(--sans)}
+a{color:inherit;text-underline-offset:3px}
+h1,h2,h3,p,dl,dd,ol,ul{margin:0}
+ol,ul{padding:0;list-style:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--o);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.zh{font-family:var(--sc);font-weight:500}
+.guides{position:fixed;inset:0;z-index:-1;pointer-events:none;display:none}
+.guides .wrap{height:100%;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px}
+.guides i{border-inline:1px solid rgba(17,17,17,.055)}
+.nogrid .guides{display:none!important}
+.gk{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 22px;border:1px solid var(--k);background:var(--k);color:#fff;font:600 16px/1 var(--sans);text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--o);border-color:var(--o);color:var(--k)}
+.btn.line{background:#fff;color:var(--k)}
+.btn.line:hover{background:var(--k);color:#fff;border-color:var(--k)}
+.lbl{font:600 13px/1.2 var(--sans);letter-spacing:.05em;text-transform:uppercase}
+
+.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);border-bottom:1px solid var(--k)}
+.top-in{position:relative;display:flex;align-items:center;gap:14px;min-height:64px}
+.mark{display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:8px 0;text-decoration:none}
+.lp{flex:none;display:grid;place-items:center;width:32px;height:32px;background:var(--k);color:#fff;font:700 22px/1 var(--sans);letter-spacing:-.02em}
+.wm{font:600 19px/1.1 var(--sans);letter-spacing:-.02em;overflow-wrap:anywhere}
+.menu-btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border:1px solid var(--k);background:#fff;font-weight:600;cursor:pointer}
+.menu-btn i{width:16px;height:10px;border-block:2px solid}
+.menu-btn[aria-expanded="true"]{background:var(--k);color:#fff}
+.nav{display:none;position:absolute;left:calc(var(--pad) * -1);right:calc(var(--pad) * -1);top:100%;background:#fff;border-bottom:1px solid var(--k);padding:0 var(--pad) 10px}
+.nav.open{display:block}
+.nav a{display:flex;justify-content:space-between;align-items:center;min-height:54px;border-bottom:1px solid var(--hair);text-decoration:none;font:500 21px/1 var(--sans);letter-spacing:-.02em}
+.nav a::after{content:"→"}
+.top .btn{display:none}
+
+.hero{display:grid;gap:34px;padding-top:30px;padding-bottom:60px}
+.idx{display:flex;gap:14px;margin-bottom:26px}
+.idx b{font-weight:600}
+h1{font:600 clamp(46px,7.6vw,112px)/.95 var(--sans);letter-spacing:-.038em;max-width:10.5ch}
+h1 span{color:var(--o)}
+.lede{font-size:clamp(18px,1.55vw,22px);line-height:1.45;max-width:31em;margin-top:26px}
+.langs{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.langs li{display:flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid var(--k);font-weight:500;font-size:15px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.card{align-self:start;background:var(--g);padding:22px 20px 20px;display:flex;flex-direction:column;gap:22px}
+.card-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.lp.big{width:76px;height:76px;font-size:54px}
+.status{display:flex;align-items:flex-start;gap:10px;font:500 14.5px/1.4 var(--sans);max-width:15.5em}
+.dot{position:relative;flex:none;width:10px;height:10px;margin-top:5px;border-radius:50%;background:var(--o)}
+.dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--o);opacity:0;animation:ping 2.4s cubic-bezier(.2,.6,.3,1) infinite}
+@keyframes ping{0%{transform:scale(.4);opacity:1}100%{transform:scale(1.6);opacity:0}}
+.who{border-top:1px solid var(--k);padding-top:14px}
+.who b{display:block;font:600 46px/1 var(--sans);letter-spacing:-.035em}
+.who span{display:block;margin-top:8px;color:var(--mid);font-size:15px}
+.facts div{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:10px 0;border-top:1px solid #cdcdcd;font-size:15px;line-height:1.4}
+.facts dt{font-weight:600}
+
+.sec{padding:60px 0}
+.sec.alt{background:var(--g)}
+.sh{display:grid;gap:12px;border-top:2px solid var(--k);padding-top:16px;margin-bottom:36px}
+.sh .n{font:600 14px/1 var(--sans);letter-spacing:.04em}
+.sh h2{font:600 clamp(36px,4.4vw,60px)/1.02 var(--sans);letter-spacing:-.032em}
+.sh p{color:var(--mid);max-width:34em;font-size:16.5px}
+.sh p strong{color:var(--k)}
+
+.nums{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--k)}
+.num{display:flex;flex-direction:column;gap:8px;min-height:260px;padding:18px 14px 20px 0;border-bottom:1px solid var(--k)}
+.num:nth-child(odd){border-right:1px solid var(--k)}
+.num:nth-child(even){padding-left:14px}
+.num .big{font:600 clamp(84px,10.5vw,156px)/.78 var(--sans);letter-spacing:-.06em;margin:4px 0 6px -.03em;color:var(--k)}
+.num.hot .big{color:var(--o)}
+.num p{font-size:15px;line-height:1.45;color:var(--mid)}
+.num .pr{margin-top:auto;font:600 30px/1 var(--sans);letter-spacing:-.02em;color:var(--k)}
+.num .lbl{color:var(--k)}
+.num .pr small{font:500 14px/1 var(--sans);letter-spacing:0;color:var(--mid);margin-left:4px}
+.note{margin-top:16px;font-size:14px;color:var(--mid)}
+
+.steps{display:grid;gap:26px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:6px 16px;padding-top:16px;border-top:1px solid var(--k)}
+.step .sn{grid-row:span 3;font:600 64px/.8 var(--sans);letter-spacing:-.05em}
+.step h3{font:600 23px/1.2 var(--sans);letter-spacing:-.025em}
+.step p{font-size:16px;color:#333}
+.step .m{color:var(--oi)}
+.tl{display:grid;grid-template-columns:10fr 35fr 15fr;gap:4px;margin-top:40px}
+.tl span{border-top:10px solid var(--k);padding-top:10px;font:500 13px/1.3 var(--sans)}
+.tl .o{border-color:var(--o)}
+
+.pick{display:grid;gap:26px}
+.map{display:block;width:100%;max-width:580px;height:auto;margin:0 auto}
+.map text{font:600 20px var(--sans);fill:var(--k);paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.map .rl{font:600 12.5px var(--sans);letter-spacing:.1em}
+.nd{cursor:pointer}
+.nd .hit{fill:#fff;fill-opacity:0}
+.nd .dot{fill:var(--k);stroke:#fff;stroke-width:3;transition:fill .15s}
+.nd:hover .dot{fill:var(--o)}
+.nd.on .dot{fill:var(--o);stroke:var(--k);stroke-width:3.5}
+.nd.on circle.dot{r:12px}
+.nd.on text{font-weight:700;text-decoration:underline;text-decoration-thickness:2px}
+.zr{border-top:2px solid var(--k);padding-top:14px;min-height:238px}
+.zr-name{font:600 clamp(38px,4.2vw,58px)/1 var(--sans);letter-spacing:-.035em;margin-top:12px;overflow-wrap:anywhere}
+.zr-zone{display:flex;align-items:center;gap:10px;margin-top:14px;font:600 21px/1.2 var(--sans);letter-spacing:-.015em}
+.zr-zone i{width:22px;height:22px;flex:none}
+.zr-note{margin-top:10px;max-width:34em}
+.zr-dist{margin-top:10px;color:var(--mid);font-size:14px}
+.sw{display:inline-block;border:1px solid var(--k);background:#fff}
+.sw.z0{background:var(--o)}
+.sw.z1{background:repeating-linear-gradient(45deg,var(--o) 0 2px,#fff 2px 7px)}
+.subs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.sub{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;padding:0 12px;border:1px solid var(--k);background:#fff;font-weight:500;font-size:15.5px;text-align:left;cursor:pointer;transition:background-color .15s,color .15s}
+.sub .sw{width:14px;height:14px;flex:none}
+.sub:hover{background:var(--g)}
+.sub[aria-pressed="true"]{background:var(--k);color:#fff}
+.sub[aria-pressed="true"] .sw{border-color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:14px}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend .sw{width:16px;height:16px}
+.legend .ln{width:22px;height:3px;background:var(--k)}
+
+.tt-days{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--k);margin-bottom:12px}
+.dtab{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:60px;padding:0;border:0;border-left:1px solid var(--k);background:#fff;cursor:pointer}
+.dtab:first-child{border-left:0}
+.dtab b{font:600 12px/1 var(--sans);letter-spacing:.04em;text-transform:uppercase}
+.dtab span{font:600 20px/1 var(--sans);letter-spacing:-.03em}
+.dtab[aria-pressed="true"]{background:var(--k);color:#fff}
+.dtab.has::after{content:"";position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--o)}
+.tt-col{display:none}
+.tt-col.on{display:grid;gap:8px}
+.tt-h{display:none}
+.slot{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:54px;margin:0;padding:0 16px;border:1px solid var(--k);background:#fff;font:500 17px/1 var(--sans);text-align:left;cursor:pointer;transition:background-color .12s}
+.slot span{font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+button.slot:hover{background:var(--g)}
+.slot.taken{background:var(--g);border-color:var(--g);color:#666;cursor:default}
+.slot.off{border:1px dashed #b3b3b3;color:#666;cursor:default}
+.slot[aria-pressed="true"],.slot[aria-pressed="true"]:hover{background:var(--o);border-color:var(--o);color:var(--k)}
+.slot[aria-pressed="true"] span::before{content:"✓ "}
+.tt-msg{min-height:1.5em;margin-top:12px;font-weight:500;color:var(--oi)}
+.req{display:grid;gap:30px;margin-top:30px;border-top:2px solid var(--k);padding-top:20px}
+.req h3{font:600 28px/1.1 var(--sans);letter-spacing:-.035em;margin-bottom:14px}
+.picked li{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:56px;border-bottom:1px solid var(--hair);font-weight:500}
+.picked li b{font-weight:600}
+.picked button{min-height:40px;padding:0 12px;border:1px solid var(--k);background:#fff;font-size:14px;cursor:pointer}
+.picked button:hover{background:var(--k);color:#fff}
+.empty{color:var(--mid);padding:14px 0;border-bottom:1px solid var(--hair)}
+.rq{margin-top:18px;font-size:15px;color:#333}
+.rq strong{color:var(--k)}
+.req form{display:grid;gap:16px}
+.field label,.field legend{display:block;margin-bottom:7px;padding:0}
+.field input[type=text],.field input[type=tel],.field select{width:100%;min-height:52px;padding:0 14px;border:1px solid var(--k);border-radius:0;background:#fff;font-size:16px;-webkit-appearance:none;appearance:none}
+.field select{background:linear-gradient(45deg,transparent 50%,var(--k) 50%) calc(100% - 20px) 50%/6px 6px no-repeat,linear-gradient(-45deg,transparent 50%,var(--k) 50%) calc(100% - 14px) 50%/6px 6px no-repeat,#fff;padding-right:40px}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--k)}
+.seg label{position:relative;margin:0;display:flex;align-items:center;justify-content:center;min-height:50px;cursor:pointer;font-weight:600}
+.seg label+label{border-left:1px solid var(--k)}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg label:has(input:checked){background:var(--k);color:#fff}
+.seg label:has(input:focus-visible){outline:2px solid var(--o);outline-offset:-5px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.chk input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--k)}
+.fine{font-size:14px;color:var(--mid)}
+.msg:not(:empty){padding:12px 14px;background:var(--g);border-left:4px solid var(--o);font-weight:500}
+
+.faq{border-top:1px solid var(--k);max-width:900px}
+.faq details{border-bottom:1px solid var(--k)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:66px;padding:12px 0;cursor:pointer;list-style:none;font:600 19px/1.3 var(--sans);letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:400 32px/1 var(--sans);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;max-width:40em;color:#333}
+
+.contact{display:grid;gap:30px}
+.tel{display:inline-block;font:600 clamp(46px,8.4vw,128px)/.9 var(--sans);letter-spacing:-.045em;text-decoration:none;transition:color .15s}
+.tel:hover{color:var(--o)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+.cgrid div{border-top:1px solid var(--k);padding-top:10px}
+.cgrid dt{color:var(--mid);margin-bottom:4px}
+.cgrid dd{font-weight:500}
+.gen{font-size:14px;color:var(--mid);max-width:46em;border-left:3px solid var(--o);padding-left:12px}
+.foot{border-top:2px solid var(--k);padding:28px 0 44px}
+.wm2{font:600 clamp(46px,10vw,156px)/.92 var(--sans);letter-spacing:-.045em;overflow-wrap:anywhere}
+.frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:26px;font-size:14px;color:var(--mid)}
+kbd{font:600 12px/1 var(--sans);border:1px solid currentColor;padding:2px 5px}
+
+@media (min-width:640px){
+  :root{--pad:28px}
+  .subs{grid-template-columns:repeat(4,1fr)}
+  .cgrid{grid-template-columns:repeat(4,1fr)}
+}
+@media (min-width:960px){
+  :root{--pad:48px}
+  .guides{display:block}
+  .gk{display:inline}
+  .menu-btn{display:none}
+  .nav{display:flex;position:static;gap:24px;padding:0;border:0;background:none}
+  .nav a{min-height:44px;border:0;font:500 15px/1 var(--sans);letter-spacing:0}
+  .nav a::after{display:none}
+  .nav a:hover{text-decoration:underline;text-decoration-thickness:2px}
+  .top .btn{display:inline-flex;min-height:44px}
+  .hero,.sh,.pick,.req,.contact{grid-template-columns:repeat(12,1fr);column-gap:24px}
+  .hero{padding-top:44px;padding-bottom:88px}
+  .hero-main{grid-column:1/9}
+  .card{grid-column:9/13;margin-top:40px}
+  .sec{padding:84px 0}
+  .sh{align-items:start;margin-bottom:44px}
+  .sh .n{grid-column:1/3}
+  .sh h2{grid-column:3/9}
+  .sh p{grid-column:9/13;padding-top:6px}
+  .nums{grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--k)}
+  .num,.num:nth-child(odd),.num:nth-child(even){border:0;border-right:1px solid var(--k);padding:22px 22px 26px;min-height:340px}
+  .num:first-child{padding-left:0}
+  .num:last-child{border-right:0}
+  .steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .step{grid-template-columns:1fr}
+  .step .sn{grid-row:auto;font-size:96px;margin-bottom:18px}
+  .map-wrap{grid-column:1/8}
+  .side{grid-column:8/13}
+  .subs{grid-template-columns:1fr 1fr}
+  .tt-days{display:none}
+  .tt-grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--k);border-left:1px solid var(--k)}
+  .tt-col,.tt-col.on{display:grid;gap:0;align-content:start;border-right:1px solid var(--k)}
+  .tt-h{display:block;padding:12px 14px;border-bottom:1px solid var(--k);font-size:15px}
+  .tt-h b{display:block;font:600 13px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+  .slot{flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;min-height:64px;padding:0 14px;border:0;border-bottom:1px solid var(--k)}
+  .slot.taken{border-bottom:1px solid var(--k)}
+  .slot.off{border:0;border-bottom:1px solid var(--k);background:repeating-linear-gradient(-45deg,transparent 0 6px,rgba(17,17,17,.06) 6px 7px)}
+  .req-list{grid-column:1/6}
+  .req form{grid-column:7/13;grid-template-columns:1fr 1fr;column-gap:16px}
+  .req form>.wide{grid-column:1/-1}
+  .faq{margin-left:calc((100% - 11 * 24px) / 12 * 2 + 48px)}
+  .contact .tel-box{grid-column:1/8}
+  .contact .cinfo{grid-column:8/13}
+  .cgrid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1280px){
+  .card{grid-column:9/13}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .dot::after{animation:none;opacity:.35;transform:scale(1.2)}
+  .btn,.sub,.slot,.nd .dot,.faq summary::after{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="guides" aria-hidden="true"><div class="wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<header class="top">
+<div class="wrap top-in">
+<a class="mark" href="#top" aria-label="Lessons with Mei, back to top"><span class="lp" aria-hidden="true">L</span><span class="wm" data-brand>Lessons with Mei</span></a>
+<button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i>Menu</button>
+<nav class="nav" id="nav" aria-label="Sections"><a href="#prices">Prices</a><a href="#first">First lesson</a><a href="#pickup">Pickup zone</a><a href="#timetable">Timetable</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#timetable">Request a slot</a>
+</div>
+</header>
+
+<main id="top">
+<section class="wrap hero" aria-labelledby="h1">
+<div class="hero-main">
+<p class="idx lbl"><b>01</b><span>Driving instructor · Hurstville, NSW</span></p>
+<h1 id="h1">Learn to drive in the language you think in<span>.</span></h1>
+<p class="lede">Auto &amp; manual lessons in Mandarin, Cantonese and English — one calm instructor, one dual-control car, pickups across the St George area.</p>
+<ul class="langs" aria-label="Languages taught"><li><span class="zh" lang="zh-Hans">普通话</span>Mandarin</li><li><span class="zh" lang="zh-Hans">粤语</span>Cantonese</li><li>English</li></ul>
+<div class="cta"><a class="btn" href="#timetable">Request a slot <b aria-hidden="true">→</b></a><a class="btn line" href="#pickup">Check my suburb</a></div>
+</div>
+<aside class="card" aria-label="Instructor card">
+<div class="card-top"><span class="lp big" aria-hidden="true">L</span><p class="status"><i class="dot" aria-hidden="true"></i><span id="status">Taking new learners this month</span></p></div>
+<p class="who"><b>Mei Lin</b><span>Driving instructor. Patient by nature, precise by habit.</span></p>
+<dl class="facts">
+<div><dt>Car</dt><dd>Dual-control automatic hatchback · manual on request</dd></div>
+<div><dt>Area</dt><dd>Free pickup around Hurstville, Penshurst, Mortdale &amp; Beverly Hills</dd></div>
+<div><dt>Hours</dt><dd>Mon–Sat 7am–7pm · Sun mornings</dd></div>
+<div><dt>Text</dt><dd><a href="sms:0491570156">0491 570 156</a></dd></div>
+</dl>
+</aside>
+</section>
+
+<section class="sec alt" id="prices" aria-labelledby="prices-h">
+<div class="wrap">
+<div class="sh"><p class="n">02</p><h2 id="prices-h">Prices, in numbers</h2><p>Every lesson includes pickup in the free zone, the car and fuel, and written notes afterwards.</p></div>
+<div class="nums">
+<div class="num"><p class="lbl">Single lesson</p><p class="big">60</p><p>Minutes. Good once you're past the basics and want focused practice.</p><p class="pr">$75</p></div>
+<div class="num hot"><p class="lbl">Most booked</p><p class="big">90</p><p>Minutes. Time to settle in — best for first lessons and test preparation.</p><p class="pr">$110</p></div>
+<div class="num"><p class="lbl">Lesson pack</p><p class="big">5</p><p>Five 60-minute lessons, used within three months. Saves $25.</p><p class="pr">$350</p></div>
+<div class="num"><p class="lbl">Test day</p><p class="big">1</p><p>A 60-minute warm-up, then my car for your driving test.</p><p class="pr">$240</p></div>
+</div>
+<p class="note">Sample prices in AUD, GST included. Manual car +$10 a lesson.</p>
+</div>
+</section>
+
+<section class="sec" id="first" aria-labelledby="first-h">
+<div class="wrap">
+<div class="sh"><p class="n">03</p><h2 id="first-h">What a first lesson looks like</h2><p>No highways, no surprises. Sixty minutes, in three parts.</p></div>
+<ol class="steps">
+<li class="step"><span class="sn" aria-hidden="true">1</span><h3>Pickup &amp; paperwork</h3><p>I pick you up from home, school or work, check your learner licence, and we set up the seat, mirrors and wheel together.</p><p class="m lbl">10 minutes</p></li>
+<li class="step"><span class="sn" aria-hidden="true">2</span><h3>Quiet streets</h3><p>We drive to wide, quiet streets near Mortdale to practise moving off, steering, indicating and stopping smoothly.</p><p class="m lbl">35 minutes</p></li>
+<li class="step"><span class="sn" aria-hidden="true">3</span><h3>Debrief</h3><p>Parked up, we talk through what went well and what's next. You get written notes in English or Chinese.</p><p class="m lbl">15 minutes</p></li>
+</ol>
+<div class="tl" aria-hidden="true"><span>10 min</span><span class="o">35 min on the road</span><span>15 min</span></div>
+</div>
+</section>
+
+<section class="sec alt" id="pickup" aria-labelledby="pickup-h">
+<div class="wrap">
+<div class="sh"><p class="n">04</p><h2 id="pickup-h">Pickup zone</h2><p>Tap your suburb on the map or in the list. Distances are measured from Hurstville, where I'm based.</p></div>
+<div class="pick">
+<div class="map-wrap">
+<svg class="map" id="map" viewBox="0 0 520 520" aria-hidden="true">
+<defs><pattern id="ht" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#fff"/><path d="M0 0V8" stroke="#FF5A1F" stroke-width="2.2"/></pattern></defs>
+<circle cx="260" cy="260" r="250" fill="#fff" stroke="#111" stroke-dasharray="1 6"/>
+<circle cx="260" cy="260" r="208" fill="url(#ht)" stroke="#111"/>
+<circle cx="260" cy="260" r="132" fill="#FFE0D3" stroke="#111"/>
+<path d="M260 10V510M10 260H510" stroke="#111" stroke-opacity=".14"/>
+<text class="rl" x="260" y="36" text-anchor="middle">OUTSIDE MY AREA</text>
+<text class="rl" x="260" y="80" text-anchor="middle">$10 FEE · TO ~5 KM</text>
+<text class="rl" x="260" y="156" text-anchor="middle">FREE · ~3 KM</text>
+<polyline points="435,113 394,236 260,260 192,260 162,342 150,417" fill="none" stroke="#111" stroke-width="3.5" stroke-linejoin="round"/>
+<g id="nodes"></g>
+<text class="rl" x="30" y="498">N ↑</text>
+</svg>
+</div>
+<div class="side">
+<div class="zr" aria-live="polite" aria-atomic="true">
+<p class="lbl" style="color:var(--mid)">Pickup check</p>
+<p class="zr-name" id="zr-name">Tap your suburb</p>
+<p class="zr-zone"><i class="sw z0" id="zr-sw" aria-hidden="true"></i><span id="zr-zone">Free within about 3 km</span></p>
+<p class="zr-note" id="zr-note">A small travel fee applies to about 5 km. Further out, meet me at Hurstville station for free.</p>
+<p class="zr-dist" id="zr-dist"></p>
+</div>
+<div class="subs" id="subs" role="group" aria-label="Suburbs"></div>
+<ul class="legend" aria-label="Map legend"><li><i class="sw z0"></i>Free pickup</li><li><i class="sw z1"></i>$10 travel fee</li><li><i class="sw"></i>Outside my area</li><li><i class="ln"></i>Rail line</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="timetable" aria-labelledby="tt-h">
+<div class="wrap">
+<div class="sh"><p class="n">05</p><h2 id="tt-h">Next seven days</h2><p><strong>Tap up to three free times that suit you.</strong> A request is not a booking — I'll text to confirm one time, and until then the slot stays open to others.</p></div>
+<div class="tt">
+<div class="tt-days" id="tt-days" role="group" aria-label="Choose a day"></div>
+<div class="tt-grid" id="tt-grid"></div>
+<p class="tt-msg" id="tt-msg" role="status" aria-live="polite"></p>
+</div>
+<div class="req">
+<div class="req-list">
+<h3>Your request</h3>
+<ol class="picked" id="picked"></ol>
+<p class="empty" id="empty">No times picked yet — tap a free slot above.</p>
+<p class="rq" id="rq">Pickup: <strong id="rq-sub">not chosen yet</strong> · <a href="#pickup">check the map</a></p>
+</div>
+<form id="req-form" novalidate>
+<fieldset class="field wide"><legend class="lbl">Lesson length</legend><div class="seg"><label><input type="radio" name="len" value="60">60 min</label><label><input type="radio" name="len" value="90" checked>90 min</label></div></fieldset>
+<div class="field"><label class="lbl" for="f-sub">Pickup suburb</label><select id="f-sub" name="suburb"><option value="">Choose…</option></select></div>
+<div class="field"><label class="lbl" for="f-lang">Lesson language</label><select id="f-lang" name="lang"><option>English</option><option>Mandarin 普通话</option><option>Cantonese 粤语</option><option>A mix</option></select></div>
+<div class="field"><label class="lbl" for="f-name">Your name</label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
+<div class="field"><label class="lbl" for="f-tel">Mobile</label><input type="tel" id="f-tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="04" required></div>
+<label class="chk wide"><input type="checkbox" id="f-lic" required>I hold a current NSW learner licence</label>
+<div class="wide"><button class="btn" type="submit">Send request <b aria-hidden="true">→</b></button></div>
+<p class="fine wide">Sending a request doesn't book anything. I reply by text, usually between lessons, to confirm one time.</p>
+<p class="msg wide" id="req-msg" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+
+<section class="sec alt" id="faq" aria-labelledby="faq-h">
+<div class="wrap">
+<div class="sh"><p class="n">06</p><h2 id="faq-h">Questions</h2><p>The six things people ask before a first lesson.</p></div>
+<div class="faq">
+<details><summary>Do I need my own car?</summary><p>No. Lessons are in my dual-control automatic hatchback. If you're learning manual, I'll bring a manual car — just say so when you send a request.</p></details>
+<details><summary>Can you explain things in Mandarin or Cantonese?</summary><p>Yes. I teach in <span class="zh" lang="zh-Hans">普通话</span>, <span class="zh" lang="zh-Hans">粤语</span> or English and often switch between them. Road rules and test terms come with notes in whichever language helps you most.</p></details>
+<details><summary>Can you pick me up from school or work?</summary><p>Yes — anywhere in the free pickup zone, and from the edge suburbs for a small fee. Check your suburb on the map above.</p></details>
+<details><summary>What's included in the test package?</summary><p>A 60-minute warm-up lesson right before your driving test, then you sit the test in my car. You book the test yourself; I'll help you choose a time that suits us both.</p></details>
+<details><summary>Do lessons count towards my logbook?</summary><p>In NSW, structured lessons with a professional instructor can count for extra logbook hours. The rules change from time to time, so check the current guidance for your licence before you plan around it.</p></details>
+<details><summary>What if I need to cancel?</summary><p>Reschedule for free with 24 hours' notice. Later than that the lesson is charged — unless you're unwell, in which case just text me.</p></details>
+</div>
+</div>
+</section>
+
+<section class="sec" id="contact" aria-labelledby="contact-h">
+<div class="wrap">
+<div class="sh"><p class="n">07</p><h2 id="contact-h">Contact</h2><p>Text is best — I can't answer while I'm teaching.</p></div>
+<div class="contact">
+<div class="tel-box"><p class="lbl" style="margin-bottom:12px">Text or call</p><a class="tel" href="tel:0491570156">0491 570 156</a></div>
+<div class="cinfo">
+<dl class="cgrid">
+<div><dt class="lbl">Email</dt><dd><a href="mailto:mei@example.com">mei@example.com</a></dd></div>
+<div><dt class="lbl">Based in</dt><dd>Hurstville, NSW</dd></div>
+<div><dt class="lbl">Lessons</dt><dd>Mon–Sat 7am–7pm</dd></div>
+<div><dt class="lbl">Sundays</dt><dd>7am–12pm only</dd></div>
+</dl>
+</div>
+<p class="gen" style="grid-column:1/-1">General information only. How quickly you become test-ready depends on your practice between lessons, and no instructor can guarantee a test result.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<p class="wm2" data-brand>Lessons with Mei</p>
+<div class="frow"><span>Hurstville &amp; St George, NSW · Sample prices</span><span>A fictional business made for a design showcase</span><span class="gk">Press <kbd>G</kbd> to toggle the grid</span></div>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var toast=function(m){if(window.DemoKit)DemoKit.toast(m);};
+var D=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+/* menu */
+var mb=$("#menu-btn"),nav=$("#nav");
+function menu(o){mb.setAttribute("aria-expanded",o?"true":"false");nav.classList.toggle("open",o);}
+mb.addEventListener("click",function(){menu(mb.getAttribute("aria-expanded")!=="true");});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))menu(false);});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"&&nav.classList.contains("open")){e.preventDefault();menu(false);mb.focus();}
+  if((e.key==="g"||e.key==="G")&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName||""))document.documentElement.classList.toggle("nogrid");
+});
+
+/* pickup map */
+var SUBS=[
+ {id:"hv",n:"Hurstville",x:260,y:260,lx:0,ly:40,a:"middle",z:0,d:"Home base",t:"Free pickup from home, school, TAFE or work — I'm usually nearby already."},
+ {id:"ph",n:"Penshurst",x:192,y:260,lx:0,ly:-20,a:"middle",z:0,d:"About 1.7 km from Hurstville",t:"Free pickup and drop-off. Five minutes from base and close to the quiet streets where first lessons happen."},
+ {id:"bh",n:"Beverly Hills",x:156,y:200,lx:0,ly:-20,a:"middle",z:0,d:"About 3 km from Hurstville",t:"Free pickup and drop-off anywhere in the suburb."},
+ {id:"md",n:"Mortdale",x:162,y:342,lx:16,ly:7,a:"start",z:0,d:"About 3 km from Hurstville",t:"Free. Mortdale's wide, quiet streets are where most first lessons start anyway."},
+ {id:"kg",n:"Kogarah",x:394,y:236,lx:16,ly:7,a:"start",z:1,d:"About 3.4 km from Hurstville",t:"A $10 travel fee per lesson. Or meet me at Hurstville station and it's free."},
+ {id:"bx",n:"Bexley",x:309,y:125,lx:16,ly:7,a:"start",z:1,d:"About 3.6 km from Hurstville",t:"A $10 travel fee per lesson, or free if we meet in Hurstville."},
+ {id:"ot",n:"Oatley",x:150,y:417,lx:16,ly:7,a:"start",z:1,d:"About 4.8 km from Hurstville",t:"A $10 travel fee per lesson. Great hills for practising hill starts, too."},
+ {id:"rk",n:"Rockdale",x:435,y:113,lx:0,ly:-20,a:"middle",z:2,d:"About 5.7 km from Hurstville",t:"Outside my usual area — take the train to Hurstville and I'll pick you up at the station for free."}
+];
+var ZN=["Free pickup","$10 travel fee","Outside my area"],NS="http://www.w3.org/2000/svg",ng=$("#nodes"),subsEl=$("#subs"),fsub=$("#f-sub"),cur=null;
+SUBS.forEach(function(s){
+  var g=document.createElementNS(NS,"g");g.setAttribute("class","nd");
+  g.innerHTML='<circle class="hit" cx="'+s.x+'" cy="'+s.y+'" r="30"/>'+(s.id==="hv"?'<rect class="dot" x="'+(s.x-10)+'" y="'+(s.y-10)+'" width="20" height="20"/>':'<circle class="dot" cx="'+s.x+'" cy="'+s.y+'" r="8"/>')+'<text x="'+(s.x+s.lx)+'" y="'+(s.y+s.ly)+'" text-anchor="'+s.a+'">'+s.n+'</text>';
+  g.addEventListener("click",function(){pick(s.id);});
+  ng.appendChild(g);s.g=g;
+  var b=document.createElement("button");b.type="button";b.className="sub";b.setAttribute("aria-pressed","false");
+  b.innerHTML="<span>"+s.n+'</span><i class="sw z'+s.z+'" aria-hidden="true"></i>';
+  b.addEventListener("click",function(){pick(s.id);});subsEl.appendChild(b);s.b=b;
+  var o=document.createElement("option");o.value=s.id;o.textContent=s.n+" — "+ZN[s.z].toLowerCase();fsub.appendChild(o);
+});
+var oo=document.createElement("option");oo.value="other";oo.textContent="Somewhere else — I'll explain";fsub.appendChild(oo);
+function pick(id,quiet){
+  var s=null;SUBS.forEach(function(x){var on=x.id===id;if(on)s=x;x.g.classList.toggle("on",on);x.b.setAttribute("aria-pressed",on?"true":"false");});
+  cur=s;fsub.value=s?s.id:(id||"");
+  $("#rq-sub").textContent=s?s.n+" ("+ZN[s.z].toLowerCase()+")":id==="other"?"somewhere else":"not chosen yet";
+  if(!s)return;
+  $("#zr-name").textContent=s.n;$("#zr-zone").textContent=ZN[s.z];$("#zr-sw").className="sw z"+s.z;
+  $("#zr-note").textContent=s.t;$("#zr-dist").textContent=s.d+" · saved to your request below";
+}
+fsub.addEventListener("change",function(){pick(fsub.value);});
+
+/* timetable */
+var TIMES=["7:00am","8:30am","10:00am","11:30am","1:00pm","2:30pm","4:00pm","5:30pm"];
+var AV=["FTF-----","TFTTFTFT","FTTFTFFT","TTFTFTTF","FTFTTFTT","TFFTTFTF","TTFTFT--"];
+var grid=$("#tt-grid"),tabs=$("#tt-days"),picked=[],days=[],firstFree=null;
+function lbl(d){return D[d.getDay()]+" "+d.getDate()+" "+M[d.getMonth()];}
+for(var i=1;i<=7;i++){var dd=new Date();dd.setHours(12,0,0,0);dd.setDate(dd.getDate()+i);days.push(dd);}
+days.forEach(function(d,di){
+  var col=document.createElement("div");col.className="tt-col"+(di===0?" on":"");col.setAttribute("role","group");col.setAttribute("aria-label",lbl(d));
+  var h='<p class="tt-h"><b>'+D[d.getDay()]+"</b>"+d.getDate()+" "+M[d.getMonth()]+"</p>",av=AV[d.getDay()];
+  TIMES.forEach(function(t,si){
+    var c=av[si];
+    if(c==="F"){h+='<button type="button" class="slot" aria-pressed="false" data-d="'+di+'" data-s="'+si+'" aria-label="'+lbl(d)+", "+t+'"><b>'+t+"</b><span>Free</span></button>";if(!firstFree)firstFree=lbl(d)+", "+t;}
+    else if(c==="T")h+='<p class="slot taken"><b>'+t+"</b><span>Taken</span></p>";
+    else h+='<p class="slot off"><b>'+t+"</b><span>Not teaching</span></p>";
+  });
+  col.innerHTML=h;grid.appendChild(col);
+  var tb=document.createElement("button");tb.type="button";tb.className="dtab";tb.setAttribute("aria-pressed",di===0?"true":"false");tb.setAttribute("aria-label",lbl(d));
+  tb.innerHTML="<b>"+D[d.getDay()]+"</b><span>"+d.getDate()+"</span>";
+  tb.addEventListener("click",function(){setDay(di);});tabs.appendChild(tb);
+});
+var cols=$$(".tt-col"),dtabs=$$(".dtab"),msg=$("#tt-msg");
+function setDay(di){cols.forEach(function(c,j){c.classList.toggle("on",j===di);});dtabs.forEach(function(t,j){t.setAttribute("aria-pressed",j===di?"true":"false");});}
+if(firstFree)$("#status").textContent="Taking new learners · next free time "+firstFree;
+function len(){var r=$("input[name=len]:checked");return r?+r.value:90;}
+function toMin(t){var m=t.match(/(\d+):(\d+)(am|pm)/),h=+m[1]%12+(m[3]==="pm"?12:0);return h*60+(+m[2]);}
+function fmt(x){var h=Math.floor(x/60),m=x%60,ap=h>=12?"pm":"am";return (h%12||12)+":"+(m<10?"0":"")+m+ap;}
+function slotText(p){var t=TIMES[p.s],a=toMin(t);return lbl(days[p.d])+" · "+t.replace(/(am|pm)$/,"")+"–"+fmt(a+len());}
+function render(){
+  var ol=$("#picked");ol.innerHTML="";
+  picked.forEach(function(p,j){
+    var li=document.createElement("li");li.innerHTML="<span><b>"+(j+1)+".</b> "+slotText(p)+'</span><button type="button">Remove</button>';
+    li.querySelector("button").setAttribute("aria-label","Remove "+slotText(p));
+    li.querySelector("button").addEventListener("click",function(){toggle(p.d,p.s);});
+    ol.appendChild(li);
+  });
+  $("#empty").hidden=picked.length>0;
+  dtabs.forEach(function(t,j){t.classList.toggle("has",picked.some(function(p){return p.d===j;}));});
+}
+function toggle(d,s){
+  var btn=grid.querySelector('.slot[data-d="'+d+'"][data-s="'+s+'"]'),k=-1;
+  picked.forEach(function(p,j){if(p.d===d&&p.s===s)k=j;});
+  if(k>-1){picked.splice(k,1);btn.setAttribute("aria-pressed","false");btn.querySelector("span").textContent="Free";msg.textContent="Removed "+lbl(days[d])+", "+TIMES[s]+".";}
+  else{
+    if(picked.length>=3){msg.textContent="Three times is plenty — remove one to add another.";return;}
+    picked.push({d:d,s:s});picked.sort(function(a,b){return a.d-b.d||a.s-b.s;});
+    btn.setAttribute("aria-pressed","true");btn.querySelector("span").textContent="Requested";
+    msg.textContent="Added "+lbl(days[d])+", "+TIMES[s]+" · "+picked.length+" of 3 picked.";
+  }
+  render();
+}
+grid.addEventListener("click",function(e){var b=e.target.closest("button.slot");if(b)toggle(+b.getAttribute("data-d"),+b.getAttribute("data-s"));});
+$$("input[name=len]").forEach(function(r){r.addEventListener("change",render);});
+render();
+
+/* request (demo) */
+var form=$("#req-form"),rmsg=$("#req-msg");
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!picked.length){rmsg.textContent="Pick at least one free time in the timetable first.";$("#timetable").scrollIntoView();return;}
+  if(!form.checkValidity()){form.reportValidity();return;}
+  var who=$("#f-name").value.trim();
+  rmsg.textContent="Not sent — this is a demo. On the real site, "+(who?who+"'s":"your")+" request for "+picked.map(slotText).join("; ")+" would reach Mei, who texts back to confirm one time. Nothing is booked until then.";
+  toast("Demo only — no request was sent and nothing was booked.");
+});
+})();
+</script>
+</body>
+</html>

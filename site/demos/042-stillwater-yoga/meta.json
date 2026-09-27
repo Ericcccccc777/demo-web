@@ -1,0 +1,8 @@
+{
+  "id": "042",
+  "tech": ["SVG", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["booking", "story", "accessibility"],
+  "interaction": "Press Begin for three guided 4-4-6 breaths — the orb swells on the inhale, holds, and settles on the exhale with text cues, a countdown and a cycle counter (Stop any time; reduced motion gets a text-only counter) — then filter the week's timetable by style, level and day and tap Book for a demo toast.",
+  "fonts": ["Marcellus", "Nunito Sans"],
+  "notes": "Classes that have already started today (Byron Bay time) show as Started."
+}

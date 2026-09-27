@@ -1,0 +1,8 @@
+{
+  "id": "096",
+  "tech": ["Canvas 2D", "Pointer Events", "SVG", "IntersectionObserver", "CSS Grid", "Generative art"],
+  "features": ["customiser", "game"],
+  "interaction": "Shape a pot on a spinning wheel by dragging the belly, neck and lip handles (or using the height and width sliders and cup/bowl/vase/bottle presets); a per-pixel Canvas lathe shades the revolved clay, then pick one of four glazes and 'Fire it' for a kiln-glow firing to 1240°C that reveals the glossy, speckled glazed pot.",
+  "fonts": ["Rozha One", "Nunito Sans"],
+  "notes": "The pot is rendered by a small software lathe (per-pixel shading of a monotone-spline profile) rather than WebGL. Class bookings and shop reserves are demo toasts; volume and firing curve are illustrative."
+}

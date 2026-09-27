@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="068">
+<meta name="demo:brand" content="Ledger &amp; Co. Accounting">
+<title>Ledger &amp; Co. Accounting — small-business accountants in Parramatta</title>
+<meta name="description" content="Ledger & Co. Accounting is a fictional small-business accounting practice in Parramatta, NSW: tax returns, BAS, bookkeeping, business set-up and payroll basics.">
+<meta name="theme-color" content="#1F2A1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--paper:#E8F1E4;--paper-lt:#F3F8F0;--desk:#D6E4D0;--rule:#9FBF9A;--rule-s:rgba(159,191,154,.55);--red:#C84B31;--red-t:#A33A23;--ink:#1F2A1F;--ink2:#3D4B3C;--brass:#B08D57;--brass-t:#76592B;--tape:#FBFAF2;
+--serif:"Libre Baskerville",Baskerville,"Baskerville Old Face","Hoefler Text",Georgia,serif;--mono:"Cutive Mono","Courier New",Courier,monospace;--m:156px;--c:200px;--pr:40px;--h:92px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font:400 16px/1.75 var(--serif);-webkit-font-smoothing:antialiased}
+svg{display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:400;margin:0}
+p{margin:0}
+em{font-style:italic;color:var(--red-t)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;background:var(--ink);color:var(--paper);padding:10px 16px;font:14px var(--mono)}
+.skip:focus{top:12px}
+
+/* header: brass label plate + index */
+.top{position:sticky;top:0;z-index:50;background:rgba(232,241,228,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid var(--ink);box-shadow:0 3px 0 -1px var(--paper),0 4px 0 -1px var(--ink)}
+.top-in{position:relative;max-width:1360px;margin:0 auto;display:flex;align-items:center;gap:20px;min-height:72px;padding:12px var(--pr) 12px 28px}
+.plate{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:4px;text-decoration:none;color:var(--ink);max-width:min(60vw,360px);background:linear-gradient(160deg,#E2C895,#C9A66E 50%,#B89660);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -2px 0 rgba(0,0,0,.16),0 2px 5px rgba(31,42,31,.28)}
+.plate-name{font:700 16px/1.25 var(--serif);overflow-wrap:anywhere}
+.screw{flex:none;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#F4E2B8,#8C6D3C 72%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{font:15px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;padding:13px 11px;border-radius:3px}
+.nav a:hover{background:rgba(159,191,154,.4)}
+.nav .nav-cta{background:var(--ink);color:var(--paper);margin-left:10px;padding:13px 16px}
+.nav .nav-cta:hover{background:#314231}
+.navbtn{display:none;margin-left:auto;align-items:center;gap:10px;min-height:44px;padding:10px 14px;border:1.5px solid var(--ink);border-radius:3px;background:transparent;color:var(--ink);font:15px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+.navbtn i{display:block;width:16px;height:10px;border-top:1.5px solid;border-bottom:1.5px solid;position:relative}
+.navbtn i::after{content:"";position:absolute;left:0;right:0;top:3px;border-top:1.5px solid}
+
+/* the ledger sheet and its rules */
+.sheet{position:relative;max-width:1360px;margin:0 auto;background-color:var(--paper);box-shadow:0 0 0 1px rgba(31,42,31,.07),0 40px 80px -40px rgba(31,42,31,.35);background-image:
+linear-gradient(90deg,transparent calc(var(--m) - 7px),var(--red) calc(var(--m) - 7px) calc(var(--m) - 5px),transparent calc(var(--m) - 5px) calc(var(--m) - 2px),var(--red) calc(var(--m) - 2px) var(--m),transparent var(--m)),
+linear-gradient(270deg,transparent calc(var(--c) - 1px),var(--rule) calc(var(--c) - 1px) var(--c),transparent var(--c)),
+linear-gradient(270deg,transparent 89px,var(--rule) 89px 90px,transparent 90px)}
+.folio{position:relative;padding:76px var(--pr) 92px calc(var(--m) + 40px);scroll-margin-top:84px}
+.folio+.folio{border-top:1px solid var(--rule)}
+.mnote{position:absolute;left:0;top:82px;width:calc(var(--m) - 24px);display:flex;flex-direction:column;align-items:flex-end;gap:4px;font:13px/1.35 var(--mono);color:var(--ink2);text-align:right;text-transform:uppercase;letter-spacing:.06em}
+.mnote span:first-child{font-size:16px;color:var(--red-t)}
+.kicker{font:14px/1.45 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--brass-t);margin-bottom:14px}
+h2{font-size:clamp(31px,3.6vw,50px);line-height:1.12;letter-spacing:-.012em}
+.sub{max-width:40em;color:var(--ink2);margin-top:14px;font-size:16.5px}
+.fhead{margin-bottom:44px;max-width:calc(100% - var(--c) + var(--pr))}
+
+/* hero */
+.hero{padding-top:44px;padding-bottom:60px}
+.hero .mnote{top:52px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:52px;align-items:center}
+h1{font-size:clamp(44px,6.1vw,86px);line-height:1.03;letter-spacing:-.024em}
+h1 em{white-space:nowrap}
+.dbl{width:min(100%,430px);height:14px;margin:18px 0 26px;overflow:visible}
+.dbl path{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-dasharray:440;stroke-dashoffset:440;animation:draw 1s .35s cubic-bezier(.6,.1,.2,1) forwards}
+.dbl path+path{animation-delay:.6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.lede{font-size:18px;line-height:1.72;max-width:31em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border:1.5px solid var(--ink);border-radius:3px;font:15px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.08em;text-decoration:none;cursor:pointer;background:transparent;color:var(--ink)}
+.btn.ink{background:var(--ink);color:var(--paper)}
+.btn.ink:hover{background:#314231}
+.btn.line:hover{background:rgba(159,191,154,.35)}
+.stamp{display:inline-grid;gap:3px;padding:14px 22px 13px;border:3px solid var(--red-t);outline:1px solid var(--red-t);outline-offset:-9px;border-radius:5px;color:var(--red-t);text-decoration:none;transform:rotate(-3deg);font:13px/1.35 var(--mono);text-transform:uppercase;letter-spacing:.12em;background:rgba(200,75,49,.05)}
+.stamp strong{font:700 27px/1.15 var(--serif);letter-spacing:0;text-transform:none}
+.stamp:hover{background:rgba(200,75,49,.11)}
+
+/* the adding machine */
+.machine{margin:0;display:flex;flex-direction:column;align-items:center}
+.tape-zone{position:relative;z-index:1;width:250px;height:232px;margin-bottom:-10px;display:flex;flex-direction:column;justify-content:flex-end}
+.paper{position:relative;display:flex;flex-direction:column;max-height:100%;filter:drop-shadow(5px 7px 7px rgba(31,42,31,.2))}
+.edge{flex:none;height:7px;background:var(--tape);-webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%}
+.paper.full .edge{visibility:hidden}
+.paper.full .tape{-webkit-mask-image:linear-gradient(transparent,#000 44px);mask-image:linear-gradient(transparent,#000 44px)}
+.tape{background:var(--tape);overflow-y:auto;overflow-x:hidden;padding:2px 0 20px;scrollbar-width:thin;scrollbar-color:var(--rule) transparent}
+.tape:focus-visible{outline-offset:-3px}
+#tapeList{list-style:none;margin:0;padding:0}
+#tapeList:empty::before{content:"— fresh tape —";display:block;text-align:center;font:12px/24px var(--mono);color:#80847A;padding:8px 0 0}
+.calc{padding:6px 16px 8px;border-bottom:1px dashed #D2D0C0}
+.ln{display:flex;justify-content:space-between;gap:10px;height:24px;font:15px/24px var(--mono);color:#262B26;white-space:nowrap}
+.ln.h{font-size:12px;color:#5E635A;letter-spacing:.04em}
+.ln.t{color:#AE321E}
+.ln.new{animation:strike .2s ease-out both}
+@keyframes strike{0%{opacity:0;transform:translateY(6px);filter:blur(1.4px)}55%{opacity:1}100%{opacity:1;transform:none;filter:none}}
+.calc.gone{animation:gone .34s ease-in forwards}
+@keyframes gone{to{opacity:0;transform:translateY(-14px)}}
+.torn{position:absolute;z-index:3;pointer-events:none;animation:tear .9s cubic-bezier(.5,0,.75,.25) forwards}
+.torn::after{content:"";flex:none;height:7px;background:var(--tape);-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%}
+@keyframes tear{0%{transform:none}22%{transform:translate(-3px,-8px) rotate(-2deg)}100%{transform:translate(-90px,-150px) rotate(-19deg);opacity:0}}
+.slot{position:relative;z-index:2;width:300px;height:26px;border-radius:10px 10px 0 0;background:linear-gradient(#0E150E,#223024 60%,#2C3A2E)}
+.slot::before{content:"";position:absolute;left:22px;right:22px;top:9px;height:6px;border-radius:3px;background:#070B07;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.head{position:absolute;left:50%;top:5px;width:64px;height:5px;margin-left:-32px;border-radius:3px;background:linear-gradient(90deg,#8C6D3C,#E6CC96,#8C6D3C)}
+.machine.printing .head{animation:hammer .23s steps(2) infinite}
+@keyframes hammer{50%{transform:translateY(4px)}}
+.body{position:relative;z-index:2;width:100%;padding:16px 20px 20px;border-radius:24px 24px 30px 30px;background:linear-gradient(180deg,#2F3E31,#1F2A1F 38%,#172017);box-shadow:inset 0 2px 0 rgba(255,255,255,.08),inset 0 -8px 0 rgba(0,0,0,.22),0 26px 40px -16px rgba(20,28,20,.6),0 5px 0 #0E140E}
+.body::before{content:"";position:absolute;left:16px;right:16px;top:9px;height:3px;border-radius:2px;background:linear-gradient(90deg,transparent,rgba(226,200,149,.75),transparent)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 12px}
+.model{font:12px/1.3 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#E2C895}
+.tear{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1.5px solid #C9A66E;border-radius:999px;background:transparent;color:#F2E0B6;font:13px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer}
+.tear:hover{background:rgba(226,200,149,.14)}
+.tear svg{width:18px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6}
+.display{display:flex;align-items:baseline;gap:6px;padding:8px 16px 6px;border-radius:10px;background:linear-gradient(#F7F4E7,#EBE6D1);border:3px solid var(--brass);box-shadow:inset 0 3px 8px rgba(0,0,0,.2)}
+.display>span{font:26px/1 var(--mono);color:#555D53}
+.display input{flex:1;min-width:0;width:100%;border:0;background:transparent;font:36px/1.2 var(--mono);color:var(--ink);text-align:right;padding:0;outline:0}
+.display input::placeholder{color:#8B9087}
+.display:focus-within{box-shadow:inset 0 3px 8px rgba(0,0,0,.2),0 0 0 3px #172017,0 0 0 6px #E2C895}
+.machine.nudge .display{animation:nudge .36s}
+@keyframes nudge{25%{transform:translateX(-6px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 12px}
+.mode{position:relative;display:grid;gap:3px;justify-items:start;min-height:48px;padding:8px 10px 8px 30px;border:0;border-radius:10px;background:linear-gradient(#D8BC87,#C4A26B);color:var(--ink);text-align:left;cursor:pointer;box-shadow:0 4px 0 #7C5F2F,0 6px 10px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.45);transition:transform .07s,box-shadow .07s}
+.mode b{font:700 17px/1.05 var(--serif)}
+.mode small{font:12px/1.1 var(--mono);letter-spacing:.03em}
+.mode::before{content:"";position:absolute;left:11px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#6F5427;box-shadow:inset 0 1px 2px rgba(0,0,0,.5)}
+.mode[aria-pressed="true"]{transform:translateY(3px);box-shadow:0 1px 0 #7C5F2F,0 2px 5px rgba(0,0,0,.3),inset 0 2px 6px rgba(0,0,0,.22)}
+.mode[aria-pressed="true"]::before{background:#FF6A47;box-shadow:0 0 0 2px rgba(255,106,71,.3),0 0 9px #FF6A47}
+.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.key{height:46px;border:0;border-radius:11px;background:linear-gradient(#FCF9EF,#E2DBC3);color:var(--ink);font:22px/1 var(--mono);cursor:pointer;touch-action:manipulation;box-shadow:0 4px 0 #9C9474,0 6px 9px rgba(0,0,0,.35),inset 0 1px 0 #fff;transition:transform .06s,box-shadow .06s}
+.key:active,.key.hit{transform:translateY(3px);box-shadow:0 1px 0 #9C9474,0 2px 4px rgba(0,0,0,.3),inset 0 1px 0 #fff}
+.key.fn{background:linear-gradient(#EFE7CF,#D4C9A6);font-size:18px}
+.key.print{grid-column:4;grid-row:3/span 2;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:linear-gradient(#C84B31,#AE3B24);color:#fff;font:700 15px/1.1 var(--serif);box-shadow:0 4px 0 #74260F,0 6px 9px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.key.print span{font:24px/1 var(--mono)}
+.key.print:active,.key.print.hit{box-shadow:0 1px 0 #74260F,0 2px 4px rgba(0,0,0,.3)}
+.cap{margin-top:22px;max-width:430px;text-align:center}
+.cap p{font-size:14px;line-height:1.6;color:var(--ink2)}
+.cap .readout{margin-top:8px;min-height:3.2em;font:14px/1.6 var(--mono);color:var(--ink)}
+
+/* services ledger */
+.cols,.entries li{display:grid;grid-template-columns:76px minmax(0,1fr) calc(var(--c) - var(--pr));column-gap:24px}
+.cols{font:13px/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink2);padding-bottom:10px;border-bottom:1px solid var(--ink);box-shadow:0 3px 0 -1px var(--paper),0 4px 0 -1px var(--ink)}
+.cols .dc{display:grid;grid-template-columns:minmax(0,1fr) 50px;text-align:right}
+.cols .dc span{padding-right:12px}
+.entries{list-style:none;margin:0;padding:0}
+.entries li{padding:22px 0;border-bottom:1px solid var(--rule);align-items:start}
+.entries li:hover{background:linear-gradient(90deg,transparent,rgba(159,191,154,.16) 30%)}
+.ref{font:15px/1.6 var(--mono);color:var(--red-t)}
+.entries h3{font-size:21px;line-height:1.35;margin-bottom:6px}
+.entries p{color:var(--ink2);max-width:40em}
+.amt{display:grid;grid-template-columns:minmax(0,1fr) 50px;font:23px/1.3 var(--mono);text-align:right}
+.amt .d{padding-right:12px}
+.amt .c{padding-right:4px}
+.amt small{grid-column:1/-1;font-size:12px;line-height:1.4;letter-spacing:.06em;color:var(--ink2);text-transform:uppercase;padding-right:12px;margin-top:4px}
+.carry{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px;padding-top:18px;font:14px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
+.carry a{color:var(--red-t)}
+
+/* who we help: account cards */
+.accounts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.acct{position:relative;padding:22px 20px 24px;border-top:4px solid var(--red);border-radius:2px;background:var(--paper-lt) repeating-linear-gradient(180deg,transparent 0 27px,var(--rule-s) 27px 28px) 0 12px;box-shadow:0 1px 0 rgba(31,42,31,.08),0 14px 26px -16px rgba(31,42,31,.45)}
+.ico{width:48px;height:48px;margin-bottom:12px}
+.ico *{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ico .f{fill:rgba(176,141,87,.4)}
+.ico .r{stroke:var(--red)}
+.no{font:13px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red-t)}
+.acct h3{font-size:22px;line-height:1.3;margin:4px 0 8px}
+.acct p{font-size:15px;line-height:28px;color:var(--ink2)}
+.ticks{list-style:none;margin:12px 0 0;padding:0}
+.ticks li{position:relative;padding-left:26px;font-size:15px;line-height:28px}
+.ticks li::before{content:"";position:absolute;left:3px;top:8px;width:12px;height:6px;border-left:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(-45deg)}
+
+/* fees */
+.pkgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--ink);background:var(--paper-lt);box-shadow:8px 8px 0 rgba(176,141,87,.5)}
+.pkg{display:flex;flex-direction:column;padding:26px 26px 24px;border-right:1px solid var(--rule)}
+.pkg:last-child{border-right:0}
+.pkg h3{font-size:25px;line-height:1.25;margin-top:4px}
+.pkg header p:last-child{font-size:15px;color:var(--ink2);margin-top:6px;line-height:1.6}
+.pkg .ticks{flex:1;margin:18px 0 24px;padding-top:12px;border-top:1px solid var(--rule)}
+.pkg.feat{background:linear-gradient(var(--ink),var(--ink)) top/100% 6px no-repeat,rgba(176,141,87,.12)}
+.flag{display:inline-block;margin-top:10px;padding:3px 9px;border-radius:2px;background:var(--ink);color:var(--paper);font:12px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.price{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid var(--ink)}
+.price b{font:400 40px/1.1 var(--mono);text-decoration:underline double var(--red);text-decoration-thickness:1px;text-underline-offset:9px}
+.price span{font:13px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);text-align:right}
+.note{margin-top:22px;font:14px/1.65 var(--mono);color:var(--ink2);max-width:62em}
+.note strong{color:var(--red-t);font-weight:400;text-transform:uppercase;letter-spacing:.08em}
+
+/* key dates */
+.count{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:center;margin-bottom:44px}
+.drums{display:flex;gap:6px;padding:12px;border-radius:12px;background:linear-gradient(#2F3E31,#1A241B);box-shadow:inset 0 2px 6px rgba(0,0,0,.5),0 3px 0 #0E140E}
+.drum{width:66px;height:var(--h);overflow:hidden;border-radius:6px;background:linear-gradient(#CFC8AE,#FBF8EE 28%,#FBF8EE 72%,#CFC8AE)}
+.strip{display:block;transform:translateY(calc(var(--d,0) * -1 * var(--h)));transition:transform 1.8s cubic-bezier(.2,.75,.1,1)}
+.strip span{display:block;height:var(--h);font:74px/var(--h) var(--mono);text-align:center;color:var(--ink)}
+.drum+.drum .strip{transition-delay:.15s}
+.reset .strip{transition:none}
+.drum:last-child .strip{transition-delay:.3s}
+.count-txt{font-size:21px;line-height:1.6;max-width:30em}
+.count-txt strong{font-weight:700}
+.quarters{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper)}
+.quarters li{position:relative;padding:18px 20px 20px;border-right:1px solid var(--rule)}
+.quarters li:last-child{border-right:0}
+.quarters .q{display:block;font:13px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink2)}
+.quarters .due{display:block;font-size:30px;line-height:1.35;margin-top:8px}
+.quarters .lab{display:block;min-height:1.5em;font:12px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--red-t)}
+.circle{position:absolute;left:6px;top:34px;width:156px;height:64px;overflow:visible;pointer-events:none}
+.circle path{fill:none;stroke:var(--red);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:430;stroke-dashoffset:430}
+.in .circle path{animation:draw 1s .6s ease-out forwards}
+.dnotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:36px}
+.dnotes div{border-top:2px solid var(--ink);padding-top:12px}
+.dnotes h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.dnotes p{font-size:15px;line-height:1.65;color:var(--ink2)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:start}
+.voucher{background:var(--paper-lt);border:1px solid var(--ink);padding:26px 28px 24px;box-shadow:8px 8px 0 rgba(176,141,87,.5)}
+.vno{display:flex;justify-content:space-between;gap:12px;font:13px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:18px}
+.field{display:grid;gap:4px;margin-bottom:16px}
+.field>span,legend{font:13px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink2)}
+input,select,textarea,button{font-family:inherit}
+.field input,.field select,.field textarea{width:100%;min-height:44px;padding:8px 2px;border:0;border-bottom:1.5px solid var(--ink2);border-radius:0;background:transparent;color:var(--ink);font:16px/1.4 var(--serif)}
+.field select{-webkit-appearance:none;appearance:none;padding-right:26px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231F2A1F' stroke-width='1.6'/%3E%3C/svg%3E") right 4px center/12px 8px no-repeat}
+.field textarea{resize:vertical;min-height:96px;line-height:32px;padding-top:0;background:repeating-linear-gradient(180deg,transparent 0 31px,var(--rule-s) 31px 32px)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-bottom-color:var(--red)}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{box-shadow:0 2px 0 var(--red)}
+fieldset{border:0;padding:0;margin:0 0 18px;min-width:0}
+legend{padding:0;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border:1.5px solid var(--ink);border-radius:999px;font-size:14.5px;cursor:pointer}
+.chip input:checked+span{background:var(--ink);color:var(--paper)}
+.chip input:focus-visible+span{outline:3px solid var(--red);outline-offset:2px}
+.fine{font:13px/1.55 var(--mono);color:var(--ink2);margin-top:12px}
+.details dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid var(--ink)}
+.details dt{font:13px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);padding:15px 20px 13px 0;border-bottom:1px solid var(--rule)}
+.details dd{margin:0;padding:12px 0;border-bottom:1px solid var(--rule)}
+.details dd a{text-decoration-color:var(--red);text-underline-offset:4px}
+.faq{margin-top:34px}
+.faq h3{font-size:22px;margin-bottom:8px}
+details{border-bottom:1px solid var(--rule)}
+summary{position:relative;cursor:pointer;list-style:none;padding:14px 34px 14px 0;font-size:16.5px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:12px;font:24px/1 var(--mono);color:var(--red-t)}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 16px;font-size:15.5px;color:var(--ink2)}
+
+/* footer */
+.foot{position:relative;border-top:1px solid var(--ink);padding:56px var(--pr) 76px calc(var(--m) + 40px)}
+.foot .mnote{top:62px}
+.foot-name{font-size:clamp(36px,6vw,84px);line-height:1.05;letter-spacing:-.02em;overflow-wrap:anywhere}
+.foot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:30px;padding-top:20px;border-top:1px solid var(--rule)}
+.foot-grid p{font-size:14.5px;line-height:1.7;color:var(--ink2)}
+.foot-grid strong{color:var(--ink)}
+
+@media (max-width:1180px){
+ :root{--m:118px;--c:176px}
+ .hero-grid{grid-template-columns:minmax(0,1fr) 400px;gap:36px}
+ .accounts{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .nav a{padding:13px 8px;font-size:14px}
+}
+@media (max-width:900px){
+ :root{--m:28px;--pr:20px}
+ .sheet{background-image:linear-gradient(90deg,transparent 14px,var(--red) 14px 16px,transparent 16px 19px,var(--red) 19px 21px,transparent 21px)}
+ .navbtn{display:inline-flex}
+ .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 18px;background:var(--paper);border-bottom:1px solid var(--ink);box-shadow:0 18px 30px -18px rgba(31,42,31,.45)}
+ .nav.open{display:flex}
+ .nav a{padding:15px 4px;border-bottom:1px solid var(--rule);font-size:15px}
+ .nav .nav-cta{margin:12px 0 0;text-align:center;border-bottom:0}
+ .top-in{min-height:64px;padding:10px 16px}
+ .folio,.foot{padding:52px var(--pr) 64px 40px}
+ .mnote,.foot .mnote{position:static;width:auto;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-bottom:12px;text-align:left}
+ .hero{padding-top:30px}
+ .hero-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+ .fhead{max-width:none;margin-bottom:30px}
+ .cols{display:none}
+ .entries li{grid-template-columns:48px minmax(0,1fr);row-gap:8px;padding:18px 0}
+ .amt{grid-column:2;display:flex;flex-wrap:wrap;align-items:baseline;font-size:20px;text-align:left}
+ .amt .d,.amt .c{padding:0}
+ .amt .d::before{content:"$"}
+ .amt .c::before{content:"."}
+ .amt small{margin:0 0 0 10px;padding:0}
+ .pkgs{grid-template-columns:minmax(0,1fr)}
+ .pkg{border-right:0;border-bottom:1px solid var(--rule)}
+ .pkg:last-child{border-bottom:0}
+ .count{grid-template-columns:minmax(0,1fr);gap:20px}
+ .quarters{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quarters li:nth-child(2){border-right:0}
+ .quarters li:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+ .dnotes,.foot-grid{grid-template-columns:minmax(0,1fr);gap:20px}
+ .contact-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+}
+@media (max-width:560px){
+ :root{--h:74px}
+ h1{font-size:clamp(38px,11.4vw,46px)}
+ .lede{font-size:16.5px}
+ .accounts{grid-template-columns:minmax(0,1fr)}
+ .tape-zone{width:238px;height:218px}
+ .slot{width:280px}
+ .body{padding:14px 14px 18px;border-radius:20px 20px 26px 26px}
+ .keys{gap:8px}
+ .key{height:52px}
+ .display input{font-size:32px}
+ .drum{width:54px}
+ .strip span{font-size:58px}
+ .count-txt{font-size:18px}
+ .quarters li{padding:14px 12px 16px}
+ .quarters .due{font-size:25px}
+ .circle{left:0;width:132px;top:30px}
+ .voucher{padding:22px 18px 20px;box-shadow:6px 6px 0 rgba(176,141,87,.5)}
+ .details dl{grid-template-columns:minmax(0,1fr)}
+ .details dt{padding:14px 0 0;border-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+ <div class="top-in">
+  <a class="plate" href="#top"><span class="screw" aria-hidden="true"></span><span class="plate-name" data-brand>Ledger &amp; Co. Accounting</span><span class="screw" aria-hidden="true"></span></a>
+  <button class="navbtn" id="navBtn" type="button" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i>Index</button>
+  <nav class="nav" id="nav" aria-label="Sections">
+   <a href="#machine">GST machine</a><a href="#services">Services</a><a href="#help">Who we help</a><a href="#fees">Fees</a><a href="#dates">Key dates</a><a class="nav-cta" href="#contact">Book a chat</a>
+  </nav>
+ </div>
+</header>
+
+<div class="sheet">
+<main id="main">
+ <section class="folio hero" id="top" aria-labelledby="h1">
+  <p class="mnote"><span>Fol. 01</span><span id="today">Opening entry</span><span>Opening entry</span></p>
+  <div class="hero-grid">
+   <div class="hero-copy">
+    <p class="kicker">Accountants &amp; tax agents · Parramatta, NSW</p>
+    <h1 id="h1">Your books, <em>all square.</em></h1>
+    <svg class="dbl" viewBox="0 0 430 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 4C120 1 300 7 428 3"/><path d="M5 11c140-2 280 2 420-1"/></svg>
+    <p class="lede">We’re a small practice in Parramatta keeping the numbers straight for sole traders, tradies, cafés and contractors across Western Sydney — tax returns, BAS, bookkeeping, business set-up and payroll basics, explained in plain English.</p>
+    <div class="ctas"><a class="btn ink" href="#contact">Book a first chat</a><a class="btn line" href="#machine">Try the GST machine</a></div>
+    <a class="stamp" href="#dates"><span>Next BAS due</span><strong id="stampDate">28 Oct</strong><span id="stampDays">Quarterly</span><span>Self-lodgers · see key dates</span></a>
+   </div>
+
+   <figure class="machine" id="machine" aria-labelledby="mcap">
+    <div class="tape-zone" id="tapeZone">
+     <div class="paper" id="paper">
+      <span class="edge" aria-hidden="true"></span>
+      <div class="tape" id="tape" tabindex="0" role="log" aria-label="Printed tape — your last five calculations"><ol id="tapeList"></ol></div>
+     </div>
+    </div>
+    <div class="slot" aria-hidden="true"><span class="head"></span></div>
+    <div class="body">
+     <div class="bar"><span class="model" aria-hidden="true">Model GST·10</span><button class="tear" id="tear" type="button"><svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 8l3-4 3 4 3-4 3 4 3-4 1 1"/></svg>Tear off</button></div>
+     <label class="sr" for="amt">Amount in Australian dollars</label>
+     <div class="display"><span aria-hidden="true">$</span><input id="amt" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="1250" placeholder="0.00"></div>
+     <div class="modes" role="group" aria-label="GST calculation">
+      <button class="mode" type="button" data-mode="add" aria-pressed="true"><b>+ GST</b><small>add 10%</small></button>
+      <button class="mode" type="button" data-mode="remove" aria-pressed="false"><b>− GST</b><small>take out 1/11</small></button>
+     </div>
+     <div class="keys">
+      <button class="key" type="button" data-k="7">7</button><button class="key" type="button" data-k="8">8</button><button class="key" type="button" data-k="9">9</button><button class="key fn" type="button" data-k="C" aria-label="Clear amount">C</button>
+      <button class="key" type="button" data-k="4">4</button><button class="key" type="button" data-k="5">5</button><button class="key" type="button" data-k="6">6</button><button class="key fn" type="button" data-k="B" aria-label="Delete last digit">⌫</button>
+      <button class="key" type="button" data-k="1">1</button><button class="key" type="button" data-k="2">2</button><button class="key" type="button" data-k="3">3</button><button class="key print" type="button" data-k="P" id="print">Print<span aria-hidden="true">✱</span></button>
+      <button class="key" type="button" data-k="0">0</button><button class="key" type="button" data-k="00" aria-label="Double zero">00</button><button class="key" type="button" data-k=".">.</button>
+     </div>
+    </div>
+    <figcaption class="cap" id="mcap">
+     <p>Type an amount, choose <strong>+ GST</strong> or <strong>− GST</strong>, then press <strong>Print</strong>. The tape keeps your last five sums — tear it off to start fresh. Illustrative, rounded to the cent.</p>
+     <p class="readout" id="readout" aria-live="polite"></p>
+    </figcaption>
+   </figure>
+  </div>
+ </section>
+
+ <section class="folio" id="services" aria-labelledby="sv-h">
+  <p class="mnote"><span>Fol. 02</span><span>Services</span></p>
+  <div class="fhead">
+   <p class="kicker">Particulars</p>
+   <h2 id="sv-h">What we <em>look after</em></h2>
+   <p class="sub">Five everyday jobs, done carefully and lodged on time. The figures on the right are where most clients start — sample prices, GST included.</p>
+  </div>
+  <div class="cols" aria-hidden="true"><span>Ref.</span><span>Particulars</span><span class="dc"><span>$</span><span>c</span></span></div>
+  <ol class="entries">
+   <li><span class="ref">S-01</span><div><h3>Individual tax returns</h3><p>Wage and salary earners, rental property schedules and work-related deductions checked line by line, then lodged for you.</p></div><p class="amt"><span class="d">180</span><span class="c">00</span><small>from</small></p></li>
+   <li><span class="ref">S-02</span><div><h3>BAS &amp; GST</h3><p>Quarterly or monthly activity statements prepared from your books, GST reconciled, PAYG instalments checked — and a reminder a fortnight before each due date.</p></div><p class="amt"><span class="d">260</span><span class="c">00</span><small>per quarter</small></p></li>
+   <li><span class="ref">S-03</span><div><h3>Bookkeeping</h3><p>Bank feeds reconciled, receipts matched, overdue invoices flagged, and a one-page month-end summary you’ll actually read.</p></div><p class="amt"><span class="d">70</span><span class="c">00</span><small>per hour</small></p></li>
+   <li><span class="ref">S-04</span><div><h3>Business set-up</h3><p>Sole trader, partnership or company? The trade-offs in plain English, help with ABN and GST registration, and a chart of accounts that fits how you work.</p></div><p class="amt"><span class="d">240</span><span class="c">00</span><small>per session</small></p></li>
+   <li><span class="ref">S-05</span><div><h3>Payroll basics</h3><p>Single Touch Payroll set up properly, pay runs checked, and super and leave accruals explained so you’re not guessing on a Thursday night.</p></div><p class="amt"><span class="d">300</span><span class="c">00</span><small>set-up, from</small></p></li>
+  </ol>
+  <p class="carry"><span>Carried forward: one practice, five services, no jargon.</span><a href="#fees">Monthly packages ↓</a></p>
+ </section>
+
+ <section class="folio" id="help" aria-labelledby="hp-h">
+  <p class="mnote"><span>Fol. 03</span><span>Accounts</span></p>
+  <div class="fhead">
+   <p class="kicker">Who we help</p>
+   <h2 id="hp-h">Small operators, <em>no finance department</em></h2>
+   <p class="sub">Most of our clients are just them, a phone full of receipts and a busy week. We set things up so the books mostly keep themselves.</p>
+  </div>
+  <ul class="accounts">
+   <li class="acct"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle class="f" cx="24" cy="15" r="7"/><path d="M11 39c1.5-8 6.5-12 13-12s11.5 4 13 12"/><path class="r" d="M7 42h34"/></svg><p class="no">Acct 110</p><h3>Sole traders</h3><p>Freelancers, consultants and makers whose side hustle became the main gig.</p><ul class="ticks"><li>Records that suit a business of one</li><li>When GST registration kicks in</li><li>Tax set aside each quarter, not in June</li></ul></li>
+   <li class="acct"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path class="f" d="M10 28a14 14 0 0 1 28 0z"/><path d="M6 28h36v4H6zM24 14v8M18 16l2 7M30 16l-2 7"/><rect x="8" y="37" width="32" height="6" rx="1.5"/><path class="r" d="M22 40h4"/></svg><p class="no">Acct 120</p><h3>Tradies</h3><p>Sparkies, chippies, plumbers and painters running the business from the ute.</p><ul class="ticks"><li>Vehicle and tool records that hold up</li><li>Quotes, deposits and invoices matched</li><li>A BAS that doesn’t eat your Sunday</li></ul></li>
+   <li class="acct"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path class="f" d="M10 20h24v8a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10z"/><path d="M34 23h3a4 4 0 0 1 0 8h-4M17 8c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8"/><path class="r" d="M6 43h32"/></svg><p class="no">Acct 130</p><h3>Cafés</h3><p>Owner-operators with a small crew, early starts and margins measured in cents.</p><ul class="ticks"><li>Payroll, super and leave in order</li><li>Supplier bills and takings reconciled</li><li>A monthly look at food and wage costs</li></ul></li>
+   <li class="acct"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><rect class="f" x="10" y="12" width="28" height="18" rx="2"/><path d="M5 34h38l-3 5H8zM15 18h12M15 22h18"/><path class="r" d="M15 26h8"/></svg><p class="no">Acct 140</p><h3>Contractors</h3><p>IT, design, engineering and allied health contractors billing agencies or clients direct.</p><ul class="ticks"><li>Contractor or employee? Explained</li><li>PAYG instalments planned ahead</li><li>Home-office costs kept tidy</li></ul></li>
+  </ul>
+ </section>
+
+ <section class="folio" id="fees" aria-labelledby="fe-h">
+  <p class="mnote"><span>Fol. 04</span><span>Fees</span></p>
+  <div class="fhead">
+   <p class="kicker">Fee schedule</p>
+   <h2 id="fe-h">Fees, <em>in black and white</em></h2>
+   <p class="sub">Monthly packages spread the cost across the year, so tax time isn’t a lump sum. Every quote is confirmed in writing after a free 20-minute first chat.</p>
+  </div>
+  <div class="pkgs">
+   <article class="pkg"><header><p class="no">Col. A</p><h3>Sole trader</h3><p>One-person businesses with simple books.</p></header><ul class="ticks"><li>Tax return with business schedule</li><li>Quarterly BAS, if you’re registered for GST</li><li>Tax office letters handled for you</li><li>Two check-ins a year</li></ul><p class="price"><b>$85</b><span>a month<br>sample</span></p></article>
+   <article class="pkg feat"><header><p class="no">Col. B</p><h3>Trade &amp; contract</h3><p>Tradies and contractors with a vehicle, tools and a few moving parts.</p><span class="flag">Tradies start here</span></header><ul class="ticks"><li>Everything in column A</li><li>Bookkeeping review each quarter</li><li>Vehicle, tool and equipment records</li><li>Tax planning chat before 30 June</li></ul><p class="price"><b>$165</b><span>a month<br>sample</span></p></article>
+   <article class="pkg"><header><p class="no">Col. C</p><h3>Café &amp; small crew</h3><p>Hospitality and retail with staff on the books.</p></header><ul class="ticks"><li>Monthly bookkeeping</li><li>Quarterly BAS and GST reconciliation</li><li>Payroll support for up to 10 staff</li><li>Year-end accounts and returns</li></ul><p class="price"><b>$290</b><span>a month<br>sample</span></p></article>
+  </div>
+  <p class="note"><strong>Sample prices</strong> for a fictional practice, GST included. One-off work — catch-up books, amendments, set-up sessions — is quoted per job before we start.</p>
+ </section>
+
+ <section class="folio" id="dates" aria-labelledby="kd-h">
+  <p class="mnote"><span>Fol. 05</span><span>Key dates</span></p>
+  <div class="fhead">
+   <p class="kicker">Diary</p>
+   <h2 id="kd-h">Key dates, <em>circled in red</em></h2>
+  </div>
+  <div class="count">
+   <div class="drums" aria-hidden="true"><span class="drum"><span class="strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="drum"><span class="strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="drum"><span class="strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+   <p class="count-txt" id="countTxt">Quarterly BAS for self-lodgers are due on 28 October, 28 February, 28 April and 28 July.</p>
+  </div>
+  <ol class="quarters" aria-label="Quarterly BAS due dates for self-lodgers">
+   <li data-m="9"><span class="q">Jul – Sep quarter</span><span class="due">28 Oct</span><span class="lab"></span><svg class="circle" id="circle" viewBox="0 0 156 64" aria-hidden="true"><path d="M20 15C52 2 132 4 147 25c10 17-32 35-80 34C24 58 4 46 8 31c3-10 18-17 38-19"/></svg></li>
+   <li data-m="1"><span class="q">Oct – Dec quarter</span><span class="due">28 Feb</span><span class="lab"></span></li>
+   <li data-m="3"><span class="q">Jan – Mar quarter</span><span class="due">28 Apr</span><span class="lab"></span></li>
+   <li data-m="6"><span class="q">Apr – Jun quarter</span><span class="due">28 Jul</span><span class="lab"></span></li>
+  </ol>
+  <div class="dnotes">
+   <div><h3>Agents’ dates can differ</h3><p>These dates are for businesses that lodge their own BAS. Registered tax agents may have different (often later) due dates for clients on their lodgement program.</p></div>
+   <div><h3>Weekends &amp; public holidays</h3><p>When a due date lands on a weekend or public holiday, you can generally lodge and pay on the next business day. Monthly BAS are due on the 21st of the following month.</p></div>
+   <div><h3>Your own tax return</h3><p>If you lodge your individual return yourself, it’s due by 31 October. Lodging through a tax agent usually means a later date — ask us early.</p></div>
+  </div>
+ </section>
+
+ <section class="folio" id="contact" aria-labelledby="ct-h">
+  <p class="mnote"><span>Fol. 06</span><span>Contact</span></p>
+  <div class="fhead">
+   <p class="kicker">New accounts</p>
+   <h2 id="ct-h">Open an <em>account</em> with us</h2>
+   <p class="sub">Tell us a little about your business and we’ll suggest a time for a free 20-minute chat — at our Parramatta office or on a video call.</p>
+  </div>
+  <div class="contact-grid">
+   <form class="voucher" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the practice.">
+    <p class="vno"><span>Enquiry voucher</span><span>No. 0417</span></p>
+    <label class="field"><span>Your name</span><input name="name" autocomplete="name"></label>
+    <label class="field"><span>Email</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+    <label class="field"><span>Your business</span><select name="type"><option>Sole trader</option><option>Tradie</option><option>Café or hospitality</option><option>Contractor</option><option>Something else</option></select></label>
+    <fieldset><legend>What do you need a hand with?</legend><div class="chips">
+     <label class="chip"><input type="checkbox" name="need" value="return"><span>Tax return</span></label><label class="chip"><input type="checkbox" name="need" value="bas" checked><span>BAS &amp; GST</span></label><label class="chip"><input type="checkbox" name="need" value="books"><span>Bookkeeping</span></label><label class="chip"><input type="checkbox" name="need" value="setup"><span>Business set-up</span></label><label class="chip"><input type="checkbox" name="need" value="payroll"><span>Payroll</span></label>
+    </div></fieldset>
+    <label class="field"><span>Anything else we should know?</span><textarea name="msg" rows="3"></textarea></label>
+    <button class="btn ink" type="submit">Request a first chat</button>
+    <p class="fine">Demo form — nothing is sent or stored.</p>
+   </form>
+   <div class="details">
+    <dl>
+     <dt>Office</dt><dd>Parramatta, NSW — by appointment, a short walk from the river</dd>
+     <dt>Phone</dt><dd><a href="tel:+61255504817">(02) 5550 4817</a></dd>
+     <dt>Email</dt><dd><a href="mailto:desk@example.com">desk@example.com</a></dd>
+     <dt>Hours</dt><dd>Mon–Fri 8:30am–5:30pm<br>Thursdays until 7pm, July to October</dd>
+    </dl>
+    <div class="faq">
+     <h3>Common questions</h3>
+     <details><summary>Do I need to register for GST?</summary><p>Generally, yes once your GST turnover reaches $75,000 a year ($150,000 for non-profits). Taxi and ride-sourcing drivers must register whatever their turnover. We’ll walk you through it.</p></details>
+     <details><summary>Can you untangle a messy year of books?</summary><p>Yes. We’ll look at the file first and give you a fixed catch-up quote before any work starts.</p></details>
+     <details><summary>Which bookkeeping software do you use?</summary><p>We work with the common cloud bookkeeping platforms, and with plain spreadsheets if that’s what you’ve got.</p></details>
+     <details><summary>What should I bring to a first chat?</summary><p>Last year’s return if you have it, a rough list of income and costs, and every question you’ve been saving up.</p></details>
+    </div>
+   </div>
+  </div>
+ </section>
+</main>
+
+<footer class="foot">
+ <p class="mnote"><span>Fol. 07</span><span>Closing balance</span></p>
+ <p class="foot-name" data-brand>Ledger &amp; Co. Accounting</p>
+ <div class="foot-grid">
+  <p><strong>Accountants &amp; tax agents</strong><br>Parramatta, NSW · (02) 5550 4817<br>desk@example.com</p>
+  <p><strong>General information only.</strong> Nothing here considers your personal circumstances — talk to a registered tax agent before acting. GST is 10%; calculator figures are illustrative.</p>
+  <p><strong>A fictional business</strong> made for a studio showcase. Sample prices throughout; phone numbers are from the fictional ACMA range.</p>
+ </div>
+</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var d=document,$=function(s,r){return (r||d).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||d).querySelectorAll(s))};
+var mq=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):null;
+function reduced(){return !!((window.DemoKit&&DemoKit.reducedMotion)||(mq&&mq.matches))}
+var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MONS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+function pad(n,l){n=String(n);while(n.length<l)n="0"+n;return n}
+function longDate(x){return DAYS[x.getDay()]+" "+x.getDate()+" "+MONS[x.getMonth()]+" "+x.getFullYear()}
+$("#today").textContent=DAYS[today.getDay()]+" "+today.getDate()+" "+MONS[today.getMonth()];
+
+/* index menu (phone) */
+var navBtn=$("#navBtn"),nav=$("#nav");
+function setNav(o){navBtn.setAttribute("aria-expanded",o?"true":"false");nav.classList.toggle("open",o)}
+navBtn.addEventListener("click",function(){setNav(navBtn.getAttribute("aria-expanded")!=="true")});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))setNav(false)});
+d.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){e.preventDefault();setNav(false);navBtn.focus()}});
+
+/* ---------- the adding machine ---------- */
+var mach=$("#machine"),amt=$("#amt"),list=$("#tapeList"),tape=$("#tape"),paper=$("#paper"),zone=$("#tapeZone"),readout=$("#readout");
+var mode="add",no=0,busy=false,fmt=new Intl.NumberFormat("en-AU",{minimumFractionDigits:2,maximumFractionDigits:2});
+function m(c){return fmt.format(c/100)}
+function tidy(v){v=String(v).replace(/[^\d.]/g,"");var i=v.indexOf(".");if(i>-1)v=v.slice(0,i+1)+v.slice(i+1).replace(/\./g,"").slice(0,2);var p=v.split(".");p[0]=p[0].replace(/^0+(?=\d)/,"").slice(0,9);return p.join(".")}
+function press(k){var v=amt.value;
+ if(k==="C")v="";else if(k==="B")v=v.slice(0,-1);else if(k==="."){if(v.indexOf(".")<0)v=(v||"0")+"."}else v+=k;
+ amt.value=tidy(v)}
+function flash(k){var b=$('.key[data-k="'+k+'"]');if(!b)return;b.classList.add("hit");setTimeout(function(){b.classList.remove("hit")},110)}
+amt.addEventListener("input",function(){var t=tidy(amt.value);if(t!==amt.value)amt.value=t});
+amt.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();flash("P");print()}});
+$$(".key").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-k");if(k==="P")print();else press(k)})});
+mach.addEventListener("keydown",function(e){
+ if(e.target===amt||e.metaKey||e.ctrlKey||e.altKey)return;
+ var k=e.key;
+ if(/^[0-9.]$/.test(k)){press(k);flash(k);e.preventDefault()}
+ else if(k==="Backspace"){press("B");flash("B");e.preventDefault()}
+});
+$$(".mode").forEach(function(b){b.addEventListener("click",function(){mode=b.getAttribute("data-mode");$$(".mode").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")})})});
+
+function stamp(){return pad(today.getDate(),2)+"·"+pad(today.getMonth()+1,2)+"·"+String(today.getFullYear()).slice(2)}
+function sums(c,md){var g,t,n="No."+pad(no,4);
+ if(md==="add"){g=Math.round(c/10);t=c+g;return {rows:[["h",n,"ADD GST · "+stamp()],["","AMOUNT",m(c)],["","GST 10%","+"+m(g)],["t","TOTAL INC GST",m(t)+" *"]],say:"$"+m(c)+" plus $"+m(g)+" GST makes $"+m(t)+" including GST."}}
+ g=Math.round(c/11);t=c-g;return {rows:[["h",n,"REMOVE GST · "+stamp()],["","AMOUNT INC GST",m(c)],["","GST (1/11)","−"+m(g)],["t","PRICE EX GST",m(t)+" *"]],say:"$"+m(c)+" including GST holds $"+m(g)+" GST, so $"+m(t)+" before GST."}}
+function row(r,anim){var s=d.createElement("span"),a=d.createElement("span"),b=d.createElement("span");s.className="ln"+(r[0]?" "+r[0]:"")+(anim?" new":"");a.textContent=r[1];b.textContent=r[2];s.appendChild(a);s.appendChild(b);return s}
+function fit(){tape.scrollTop=tape.scrollHeight;paper.classList.toggle("full",tape.scrollHeight>tape.clientHeight+2)}
+function trim(anim){var cs=$$(".calc:not(.gone)",list),extra=cs.length-5;
+ cs.slice(0,Math.max(0,extra)).forEach(function(el){if(anim){el.classList.add("gone");setTimeout(function(){el.remove();fit()},340)}else el.remove()})}
+function seed(c,md){no++;var L=sums(c,md),li=d.createElement("li");li.className="calc";L.rows.forEach(function(r){li.appendChild(row(r,false))});list.appendChild(li);return L}
+function print(){
+ if(busy)return;
+ var v=parseFloat(tidy(amt.value));
+ if(!(v>0)){readout.textContent="Type an amount first, then press Print.";mach.classList.remove("nudge");void mach.offsetWidth;mach.classList.add("nudge");amt.focus();return}
+ var c=Math.round(v*100),anim=!reduced(),i=0,li=d.createElement("li");no++;var L=sums(c,mode);
+ li.className="calc";list.appendChild(li);
+ function done(){busy=false;mach.classList.remove("printing");trim(anim);fit();readout.textContent="Printed No."+pad(no,4)+": "+L.say}
+ if(!anim){L.rows.forEach(function(r){li.appendChild(row(r,false))});done();return}
+ busy=true;mach.classList.add("printing");
+ (function step(){li.appendChild(row(L.rows[i],true));fit();i++;if(i<L.rows.length)setTimeout(step,230);else setTimeout(done,180)})();
+}
+$("#tear").addEventListener("click",function(){
+ if(busy)return;
+ var n=$$(".calc",list).length;
+ if(!n){readout.textContent="Nothing to tear off — the tape is blank.";return}
+ if(!reduced()){
+  var r=paper.getBoundingClientRect(),z=zone.getBoundingClientRect(),t=paper.cloneNode(true),st=tape.scrollTop;
+  $$("[id]",t).forEach(function(x){x.removeAttribute("id")});t.removeAttribute("id");t.classList.add("torn");t.setAttribute("aria-hidden","true");
+  var tt=t.querySelector(".tape");if(tt){tt.removeAttribute("tabindex");tt.removeAttribute("role")}
+  t.style.left=(r.left-z.left)+"px";t.style.top=(r.top-z.top)+"px";t.style.width=r.width+"px";t.style.height=(r.height+7)+"px";
+  zone.appendChild(t);if(tt)tt.scrollTop=st;
+  var gone=function(){if(t.parentNode)t.remove()};t.addEventListener("animationend",gone);setTimeout(gone,1300);
+ }
+ list.innerHTML="";fit();
+ readout.textContent="Tape torn off — "+n+(n===1?" calculation":" calculations")+" cleared. Nothing was saved or sent.";
+});
+seed(125000,"add");var last=seed(33000,"remove");fit();
+readout.textContent="Last print, No."+pad(no,4)+": "+last.say;
+window.addEventListener("resize",function(){paper.classList.toggle("full",tape.scrollHeight>tape.clientHeight+2)});
+
+/* ---------- BAS countdown (self-lodgers, quarterly) ---------- */
+var Q=[[1,"October–December"],[3,"January–March"],[6,"April–June"],[9,"July–September"]],cand=[];
+for(var y=today.getFullYear()-1;y<=today.getFullYear()+1;y++)Q.forEach(function(q){cand.push({d:new Date(y,q[0],28),q:q[1],m:q[0]})});
+cand.sort(function(a,b){return a.d-b.d});
+var nx=cand.filter(function(c){return c.d>=today})[0],days=Math.round((nx.d-today)/864e5);
+$("#stampDate").textContent=DAYS[nx.d.getDay()]+" "+nx.d.getDate()+" "+MONS[nx.d.getMonth()];
+$("#stampDays").textContent=days===0?"Due today":days===1?"1 day to go":days+" days to go";
+var ct=$("#countTxt");ct.textContent="";
+function strong(t){var s=d.createElement("strong");s.textContent=t;return s}
+ct.appendChild(strong(days===0?"Due today:":days===1?"1 day":days+" days"));
+ct.appendChild(d.createTextNode(days===0?" the quarterly BAS for self-lodgers is due ":" until the next quarterly BAS is due for self-lodgers — "));
+ct.appendChild(strong(longDate(nx.d)));
+ct.appendChild(d.createTextNode(", for the "+nx.q+" quarter."));
+$$(".quarters li").forEach(function(li){
+ if(+li.getAttribute("data-m")===nx.m){li.classList.add("next");li.querySelector(".lab").textContent="Next due";li.appendChild($("#circle"));li.setAttribute("aria-current","date")}
+});
+var digits=pad(Math.min(days,999),3).split(""),dates=$("#dates");
+function drums(on){$$(".strip").forEach(function(s,i){s.style.setProperty("--d",on?digits[i]:0)});dates.classList.toggle("in",on)}
+drums(true);
+if(!reduced()&&"IntersectionObserver" in window){var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();
+ dates.classList.add("reset");drums(false);void dates.offsetWidth;dates.classList.remove("reset");
+ requestAnimationFrame(function(){requestAnimationFrame(function(){drums(true)})})},{threshold:0});io.observe(dates)}
+})();
+</script>
+</body>
+</html>

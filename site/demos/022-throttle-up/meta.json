@@ -1,0 +1,8 @@
+{
+  "id": "022",
+  "tech": ["CSS Grid", "SVG", "Web Audio", "Pointer Events", "Keyboard shortcuts", "Date logic", "Clipboard", "Form logic"],
+  "features": ["sound", "game", "booking"],
+  "interaction": "Press and hold REV (or hold Space) to climb the tachometer: the page shakes slightly and an optional synthesised engine note follows the revs; holding the red line unlocks a sample voucher you can copy or drop into the booking coupon.",
+  "fonts": ["Bebas Neue", "Space Mono"],
+  "notes": "Engine sound is off by default and synthesised live with Web Audio (sawtooth, square and band-passed noise); there are no audio files."
+}

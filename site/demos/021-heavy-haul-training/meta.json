@@ -1,0 +1,8 @@
+{
+  "id": "021",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "Form logic", "IntersectionObserver"],
+  "features": ["customiser", "quote"],
+  "interaction": "Drag the gross-mass slider (or pick axles, trailer or a class plate) and a parametric SVG truck morphs from a van through MR and HR rigids to a prime mover with a semi-trailer and a B-double, while the matching LR/MR/HR/HC/MC plate lights up with a plain-English, general-information description; plus a tick-box pre-start checklist that drives a pressure gauge.",
+  "fonts": ["Saira Stencil One", "Barlow Condensed"],
+  "notes": "Licence descriptions are simplified general information; the mass thresholds used to switch vehicle types are illustrative."
+}

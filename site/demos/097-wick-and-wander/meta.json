@@ -1,0 +1,8 @@
+{
+  "id": "097",
+  "tech": ["Canvas 2D", "SVG", "Pointer Events", "IntersectionObserver", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["game", "ordering", "booking"],
+  "interaction": "Click the unlit candle (or Tab to it and press Enter) to strike a flickering canvas flame that warms the whole dark page; a candlelight glow follows the pointer (or settles on the section in view on touch), the scent picker re-tints the flame, glow and wax and swaps the top/heart/base notes, and the collections feed a working bag and a workshop request form that end in demo toasts.",
+  "fonts": ["Prata", "Quattrocento Sans"],
+  "notes": "Under reduced motion the flame is drawn once and the glow stays steady (no flicker). The glow is capped so every text colour keeps at least 4.5:1 contrast inside and outside the light. Stockists are a clearly labelled sample section with no shops named."
+}

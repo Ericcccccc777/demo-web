@@ -1,0 +1,8 @@
+{
+  "id": "005",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "Drag & drop", "IntersectionObserver", "Keyboard shortcuts", "Date logic", "Form logic", "CSS Grid"],
+  "features": ["ordering"],
+  "interaction": "An analog oven-timer dial points at the current Norwood time; tap (or arrow-key through) any of the five bake times to see what's fresh and roughly how many are left (sample counts), or scrub the day with a slider. On wide screens the menu cards on the kraft bench can be dragged or nudged with arrow keys, and 'Tidy up' re-deals them into neat columns. A Saturday pre-order notepad with steppers and pick-up times ends in a demo toast.",
+  "fonts": ["Caveat", "Lora"],
+  "notes": "Stock counts are a deterministic sample based on the date and time, not live data. Cards stack in reading order (no dragging) below 900px wide."
+}

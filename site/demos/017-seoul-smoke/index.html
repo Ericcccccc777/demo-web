@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="017">
+<meta name="demo:brand" content="Seoul Smoke">
+<title>Seoul Smoke — late-night Korean charcoal BBQ, Strathfield</title>
+<meta name="description" content="Seoul Smoke is a fictional late-night Korean charcoal BBQ in Strathfield, NSW, with a playable practice grill.">
+<meta name="theme-color" content="#0A0A0F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --bg:#0A0A0F;--mag:#FF2E88;--cy:#25D9F2;--am:#FFB000;
+  --tx:#ECEAF3;--mut:#A9A6BA;--panel:#0E0D15;--line:#2A2836;--hh:64px;
+  --fd:'Black Han Sans','Arial Black',Impact,system-ui,sans-serif;
+  --fb:'Space Grotesk',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --g:clamp(16px,4.4vw,72px);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 16px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.6 var(--fb);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg,canvas{display:block}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--cy);outline-offset:3px;border-radius:6px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--am);color:#0A0A0F;padding:10px 14px;border-radius:8px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+
+/* brick wall + asphalt */
+.bricks{background-color:#0b0a0e;background-image:
+  radial-gradient(60% 55% at 18% 28%,rgba(255,46,136,.13),transparent 70%),
+  radial-gradient(50% 50% at 84% 36%,rgba(37,217,242,.10),transparent 70%),
+  linear-gradient(180deg,rgba(10,10,15,.35),rgba(10,10,15,.78)),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='56'%3E%3Crect width='120' height='56' fill='%230b0a0e'/%3E%3Crect x='1' y='1' width='58' height='26' rx='1.5' fill='%23241b20'/%3E%3Crect x='61' y='1' width='58' height='26' rx='1.5' fill='%231e171c'/%3E%3Crect x='-29' y='29' width='58' height='26' rx='1.5' fill='%23201a1e'/%3E%3Crect x='31' y='29' width='58' height='26' rx='1.5' fill='%23271d22'/%3E%3Crect x='91' y='29' width='58' height='26' rx='1.5' fill='%23201a1e'/%3E%3C/svg%3E");
+  background-size:auto,auto,auto,120px 56px}
+.asphalt{background-color:#07070b;background-image:
+  linear-gradient(180deg,rgba(255,46,136,.06),transparent 40%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .55 0 0 0 0 .62 0 0 0 .28 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* neon type */
+.neon{--c:var(--mag);color:#FFF0F7;text-shadow:0 0 1px #fff,0 0 5px var(--c),0 0 14px var(--c),0 0 30px var(--c),0 0 62px color-mix(in srgb,var(--c) 60%,transparent)}
+.neon.cy{--c:var(--cy);color:#EDFDFF}
+.neon.am{--c:var(--am);color:#FFF8E6}
+.tube{--c:var(--cy);color:transparent;-webkit-text-stroke:2px color-mix(in srgb,var(--c) 70%,#fff);filter:drop-shadow(0 0 4px var(--c)) drop-shadow(0 0 14px color-mix(in srgb,var(--c) 70%,transparent))}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:16px;min-height:var(--hh);padding:10px var(--g);padding-top:max(10px,env(safe-area-inset-top));background:rgba(10,10,15,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo-mark{flex:none;display:grid;place-items:center;width:38px;height:38px;border:2px solid var(--cy);border-radius:10px;font:400 13px/1 var(--fd);color:#EDFDFF;box-shadow:0 0 10px rgba(37,217,242,.6),inset 0 0 8px rgba(37,217,242,.35);text-shadow:0 0 6px var(--cy)}
+.logo-word{font:400 21px/1.05 var(--fd);letter-spacing:.02em;overflow-wrap:anywhere;min-width:0}
+.nav{display:none;gap:4px}
+.nav a{text-decoration:none;color:var(--mut);font-weight:500;font-size:15px;padding:10px 12px;border-radius:8px}
+.nav a:hover{color:var(--tx);background:rgba(255,255,255,.05)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;border:2px solid var(--c,var(--mag));cursor:pointer;background:transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-mag{--c:var(--mag);background:var(--mag);color:#0A0A0F;box-shadow:0 0 18px rgba(255,46,136,.55)}
+.btn-mag:hover{box-shadow:0 0 28px rgba(255,46,136,.8)}
+.btn-cy{--c:var(--cy);color:#EDFDFF;box-shadow:0 0 14px rgba(37,217,242,.35),inset 0 0 10px rgba(37,217,242,.2)}
+.btn-am{--c:var(--am);color:#FFF8E6;box-shadow:0 0 14px rgba(255,176,0,.3),inset 0 0 10px rgba(255,176,0,.18)}
+.top .btn{flex:none;min-height:42px;padding:8px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;display:flex;flex-direction:column;min-height:calc(100svh - var(--hh));overflow:hidden}
+.hero-wall{flex:1 1 auto;display:flex;align-items:flex-end;padding:28px var(--g) 0}
+.signs{position:relative;width:100%;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"v main" "pills pills";gap:16px 18px;align-items:end;padding-bottom:22px}
+.vsign{grid-area:v;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:14px 8px;border:2px solid var(--cy);border-radius:14px;background:rgba(8,8,14,.7);box-shadow:0 0 12px rgba(37,217,242,.6),0 0 40px rgba(37,217,242,.22),inset 0 0 14px rgba(37,217,242,.28)}
+.vsign span{writing-mode:vertical-rl;text-orientation:upright;font:400 clamp(40px,11vw,92px)/1 var(--fd);letter-spacing:.06em}
+.main-sign{grid-area:main;min-width:0}
+.eyebrow{display:inline-block;font:700 12px/1 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:#EDFDFF;padding:8px 12px;border:1.5px solid var(--cy);border-radius:999px;box-shadow:0 0 10px rgba(37,217,242,.45);text-shadow:0 0 6px var(--cy)}
+.brand-neon{margin:14px 0 10px;font:400 clamp(58px,17vw,172px)/.9 var(--fd);letter-spacing:.01em;text-transform:uppercase;overflow-wrap:anywhere}
+.len-m .brand-neon{font-size:clamp(46px,13vw,136px)}.len-l .brand-neon{font-size:clamp(38px,10.6vw,112px);line-height:.95}.len-l .logo-word{font-size:16px}.len-l .foot-name{font-size:clamp(36px,9vw,92px)}
+.sub-sign{display:inline-flex;flex-wrap:wrap;gap:4px 12px;font:700 clamp(14px,3.8vw,22px)/1.2 var(--fb);letter-spacing:.14em;text-transform:uppercase}
+.pills{grid-area:pills;display:flex;flex-wrap:wrap;gap:10px}
+.pill{font:400 clamp(20px,5.4vw,34px)/1 var(--fd);padding:10px 16px 12px;border-radius:999px;border:2px solid var(--c);background:rgba(8,8,14,.7);box-shadow:0 0 12px color-mix(in srgb,var(--c) 60%,transparent),inset 0 0 10px color-mix(in srgb,var(--c) 30%,transparent)}
+.p-mag{--c:var(--mag)}.p-cy{--c:var(--cy)}.p-am{--c:var(--am)}
+.street{position:relative;flex:none;min-height:clamp(250px,34vh,330px);border-top:5px solid #22212b;box-shadow:inset 0 1px 0 #3a3947}
+.reflect{position:absolute;left:0;right:0;bottom:100%;padding:28px var(--g) 22px;transform-origin:50% 100%;transform:scaleY(-1);opacity:.34;filter:blur(2.2px) saturate(1.2);pointer-events:none;-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 58%);mask-image:linear-gradient(to top,rgba(0,0,0,.9),transparent 58%)}
+.reflect .signs{padding-bottom:22px}
+.ripples{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(180deg,transparent 0 5px,rgba(7,7,11,.5) 5px 7px);-webkit-mask-image:linear-gradient(to bottom,#000,transparent 70%);mask-image:linear-gradient(to bottom,#000,transparent 70%)}
+.street-ui{position:relative;display:grid;gap:18px;padding:26px var(--g) 30px;padding-bottom:max(30px,env(safe-area-inset-bottom))}
+.lede{max-width:44ch;font-size:17px;color:#EEECF5;text-shadow:0 0 6px #07070b,0 0 14px #07070b,0 0 24px #07070b}
+.chips{text-shadow:0 0 6px #07070b,0 0 12px #07070b}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.chips li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--am);box-shadow:0 0 8px var(--am);margin-right:8px;transform:translateY(-2px)}
+
+/* section heads */
+.sec{position:relative;padding:clamp(64px,9vw,120px) var(--g)}
+.sec-head{display:grid;gap:12px;margin-bottom:clamp(28px,4vw,48px);max-width:760px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--am)}
+.h2{font:400 clamp(40px,9vw,84px)/.95 var(--fd);text-transform:uppercase}
+.sec-head p{color:#D4D2DE;max-width:56ch}
+.note{font-size:13px;color:var(--mut)}
+.note b{color:var(--am);font-weight:700}
+
+/* sign wall */
+.board{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;overflow-x:clip}
+.sign{--c:var(--mag);position:relative;background:linear-gradient(165deg,#13121b,#0a0a10 70%);border:2px solid var(--c);border-radius:18px;padding:26px 22px 24px;box-shadow:0 0 0 1px color-mix(in srgb,var(--c) 28%,transparent),0 0 16px color-mix(in srgb,var(--c) 55%,transparent),0 0 46px color-mix(in srgb,var(--c) 20%,transparent),inset 0 0 20px color-mix(in srgb,var(--c) 20%,transparent)}
+.sign::before{content:"";position:absolute;inset:7px;pointer-events:none;background:
+  radial-gradient(circle,#77747f 0 1.5px,#23222a 2px 3px,transparent 3.5px) left top/9px 9px no-repeat,
+  radial-gradient(circle,#77747f 0 1.5px,#23222a 2px 3px,transparent 3.5px) right top/9px 9px no-repeat,
+  radial-gradient(circle,#77747f 0 1.5px,#23222a 2px 3px,transparent 3.5px) left bottom/9px 9px no-repeat,
+  radial-gradient(circle,#77747f 0 1.5px,#23222a 2px 3px,transparent 3.5px) right bottom/9px 9px no-repeat}
+.sign.cy{--c:var(--cy)}.sign.am{--c:var(--am)}
+.sign-title{font:400 clamp(30px,7vw,46px)/1 var(--fd);text-transform:uppercase;margin-bottom:6px}
+.sign-kick{font-size:13px;color:var(--mut);letter-spacing:.04em;margin-bottom:18px}
+.sets li{display:grid;grid-template-columns:auto 1fr auto;gap:4px 16px;align-items:start;padding:16px 0;border-top:1px dashed rgba(255,255,255,.14)}
+.sets .n{font:400 44px/0.9 var(--fd);color:#FFF0F7;text-shadow:0 0 10px var(--mag),0 0 26px var(--mag);min-width:.9em;text-align:center}
+.sets h4{font-size:18px;font-weight:700;letter-spacing:.02em}
+.sets p{font-size:14.5px;color:#CFCDD9;line-height:1.5}
+.price{font-weight:700;font-size:20px;color:var(--am);font-variant-numeric:tabular-nums;text-shadow:0 0 12px rgba(255,176,0,.45)}
+.menu li{display:flex;align-items:baseline;gap:10px;padding:9px 0;font-size:15.5px}
+.menu li span:first-child{min-width:0}
+.menu .dots{flex:1 1 20px;border-bottom:2px dotted rgba(255,255,255,.2);transform:translateY(-4px)}
+.menu b{color:var(--am);font-variant-numeric:tabular-nums}
+.menu i{font-style:normal;color:var(--mut);font-size:13.5px;margin-left:6px}
+.fine{margin-top:14px;font-size:13px;color:var(--mut)}
+.banchan{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px}
+.banchan li{font-size:13px;font-weight:500;padding:6px 11px;border-radius:999px;border:1px solid rgba(255,176,0,.55);color:#FFE9B8}
+/*hours*/.hours{--c:var(--cy);border-radius:50%;aspect-ratio:1;display:grid;place-content:center;text-align:center;padding:24px;width:min(100%,320px);justify-self:center}
+.hours .sign-title{font-size:clamp(28px,7vw,36px);line-height:.95}
+.hours-wrap{display:grid;align-content:start;justify-items:center}
+.hours-note{text-align:center;font-size:13px;color:var(--mut);margin-top:12px}
+.hours dl{margin:14px 0 0;display:grid;gap:4px;font-size:14.5px}
+.hours dt{font-weight:700;color:#EDFDFF;letter-spacing:.06em;text-transform:uppercase;font-size:12px}
+.hours dd{margin:0 0 6px;color:#E4E2EC;font-variant-numeric:tabular-nums}
+.arrow{--c:var(--am);border-radius:14px}
+.arrow .big{font:400 clamp(36px,8vw,60px)/.95 var(--fd);text-transform:uppercase}
+.arrow ul{margin:14px 0 18px;display:grid;gap:8px;color:#E4E2EC;font-size:15px}
+.arrow li::before{content:"→";color:var(--am);margin-right:10px}
+.arrow-ico{display:none;width:120px;height:auto;filter:drop-shadow(0 0 4px #FFB000) drop-shadow(0 0 14px rgba(255,176,0,.7))}
+.drink-ico{position:absolute;right:20px;top:22px;width:34px;height:auto;opacity:.95}
+.s-drinks .sign-title{padding-right:48px;font-size:clamp(30px,6.4vw,42px)}
+
+/* grill */
+.grill-sec{background:radial-gradient(70% 50% at 30% 40%,rgba(255,106,0,.10),transparent 70%),var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grill-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.stage{min-width:0}
+.score{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.score div{border:1.5px solid rgba(255,255,255,.12);border-radius:12px;padding:8px 10px;background:#0d0c14}
+.score span{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.score b{display:block;font:400 26px/1.1 var(--fd);font-variant-numeric:tabular-nums;color:#FFF0F7;text-shadow:0 0 8px var(--mag)}
+.score div:nth-child(2) b{color:#FFF8E6;text-shadow:0 0 8px var(--am)}
+.score div:nth-child(4) b{color:#EDFDFF;text-shadow:0 0 8px var(--cy)}
+.grill-wrap{position:relative;width:100%;max-width:620px;margin:0 auto}
+#grill-cv{width:100%;height:auto;aspect-ratio:1;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;border-radius:20px;background:#101017}
+.hint{margin-top:12px;font-size:14px;color:#D4D2DE;display:flex;gap:10px;align-items:flex-start}
+.hint svg{flex:none;margin-top:2px}
+.side{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;align-content:start;min-width:0}
+.side h3{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);display:flex;justify-content:space-between;gap:8px}
+.tray{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px;margin:0 -2px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.t-item{scroll-snap-align:start;flex:0 0 auto;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 10px;min-height:64px;width:188px;text-align:left;padding:10px 12px;border-radius:14px;border:1.5px solid #34323f;background:#12111a;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .12s}
+.t-item:hover{border-color:var(--am);box-shadow:0 0 16px rgba(255,176,0,.25)}
+.t-item:active{transform:scale(.97)}
+.t-item[aria-disabled="true"]{opacity:.5;cursor:not-allowed}
+.t-item svg{grid-row:span 2;width:52px;height:36px}
+.t-item b{font-size:15px;line-height:1.2}
+.t-item small{font-size:12.5px;color:var(--mut);line-height:1.3}
+.t-item small span{white-space:nowrap}
+.ongrill{display:grid;gap:10px}
+.gi{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:12px 12px 12px 14px;border-radius:14px;background:#12111a;border:1.5px solid #2c2a36;transition:border-color .25s,box-shadow .25s}
+.gi.gold{border-color:var(--am);box-shadow:0 0 14px rgba(255,176,0,.3)}
+.gi.burn{border-color:#ff4d4d;box-shadow:0 0 14px rgba(255,77,77,.3)}
+.gi-name{font-weight:700;font-size:15px}
+.gi-state{display:block;font-size:13px;color:var(--mut);font-weight:400}
+.gi.gold .gi-state{color:#FFD470}.gi.burn .gi-state{color:#FF8F8F}
+.bars{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:center;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.bar{position:relative;height:8px;border-radius:99px;background:#24222e;overflow:hidden}
+.bar::before{content:"";position:absolute;top:0;bottom:0;left:41.4%;width:27.6%;background:rgba(255,176,0,.22);border-left:1px solid rgba(255,176,0,.6);border-right:1px solid rgba(255,176,0,.6)}
+.bar i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:99px;background:#d9a3a0}
+.gi-btns{display:flex;gap:8px}
+.mini{min-height:40px;padding:6px 14px;border-radius:10px;border:1.5px solid #4a4757;background:#1a1924;font-weight:700;font-size:14px;cursor:pointer}
+.mini:hover{border-color:var(--cy)}
+.mini.take{border-color:rgba(255,176,0,.7);color:#FFE3A1}
+.mini:disabled{opacity:.45;cursor:not-allowed}
+.empty{font-size:14px;color:var(--mut);padding:14px;border:1.5px dashed #34323f;border-radius:14px}
+.result{min-height:52px;font-weight:700;font-size:16px;padding:12px 14px;border-radius:12px;background:#12111a;border:1.5px solid #2c2a36}
+.result.perfect{border-color:var(--mag);box-shadow:0 0 18px rgba(255,46,136,.35);color:#FFD9EA}
+.result.bad{border-color:#ff5d5d;color:#FFB4B4}
+.row-btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.form{--c:var(--cy);display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label,.legend{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#D8D6E2}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1.5px solid #3a3848;background:#0b0b11;color:var(--tx);font-size:16px}
+.field textarea{min-height:92px;resize:vertical}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:none;border-color:var(--cy);box-shadow:0 0 0 3px rgba(37,217,242,.25),0 0 18px rgba(37,217,242,.35)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.choice{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.choice label{position:relative}
+.choice input{position:absolute;opacity:0;inset:0}
+.choice span{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:999px;border:1.5px solid #3a3848;font-size:14.5px;cursor:pointer}
+.choice input:checked+span{border-color:var(--mag);color:#FFE3EF;box-shadow:0 0 12px rgba(255,46,136,.45),inset 0 0 8px rgba(255,46,136,.25)}
+.choice input:focus-visible+span{outline:3px solid var(--cy);outline-offset:2px}
+.form-status{font-size:15px;color:#E4E2EC;min-height:1.6em}
+.form-status strong{color:var(--am)}
+.faq details{border-top:1px dashed rgba(255,255,255,.16);padding:4px 0}
+.faq details:last-child{border-bottom:1px dashed rgba(255,255,255,.16)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;font-weight:700;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--fd);color:var(--am);text-shadow:0 0 8px var(--am);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 0 14px;color:#D4D2DE;font-size:15px;max-width:60ch}
+.contact-lines{display:grid;gap:6px;margin-top:18px;font-size:15px}
+.contact-lines a{color:#EDFDFF;text-decoration-color:rgba(37,217,242,.6);text-underline-offset:3px}
+
+/* footer */
+.foot{padding:56px var(--g) calc(84px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:22px}
+.foot-name{font:400 clamp(44px,12vw,120px)/.9 var(--fd);text-transform:uppercase;overflow-wrap:anywhere}
+.foot-meta{display:grid;gap:8px;color:var(--mut);font-size:14px}
+.foot-meta b{color:var(--tx);font-weight:500}
+
+/* motion */
+@keyframes buzz{0%,86%,100%{opacity:1}87%{opacity:.66}88.2%{opacity:1}90.4%{opacity:.8}91.4%{opacity:1}}
+@keyframes powerOn{0%{opacity:.08}45%{opacity:1}55%{opacity:.5}72%,100%{opacity:1}}
+@keyframes wobble{from{transform:scaleY(-1) skewX(-.6deg) scaleX(1.004)}to{transform:scaleY(-1) skewX(.6deg) scaleX(.996)}}
+@media (prefers-reduced-motion:no-preference){
+  .buzz{animation:buzz 7.5s ease-in-out 2s infinite}
+  .on{animation:powerOn .8s ease-out both;animation-delay:var(--d,0s)}
+  .reflect{animation:wobble 5s ease-in-out infinite alternate}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+
+/* ≥ 720 */
+@media (min-width:720px){
+  .nav{display:flex}
+  .signs{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"v main pills";gap:28px}
+  .pills{flex-direction:column;align-items:flex-end;align-self:center}
+  .street-ui{grid-template-columns:minmax(0,1.2fr) auto;align-items:end}
+  .chips{grid-column:1/-1}
+  .board{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .s-sets{grid-column:span 6}.s-meat{grid-column:span 3}.s-sides{grid-column:span 3}
+  .hours-wrap{grid-column:span 3;display:grid;align-content:start}.s-drinks{grid-column:span 3}.arrow{grid-column:span 6}
+  .two-col-md{grid-template-columns:1fr 1fr}
+}
+/* ≥ 1100 */
+@media (min-width:1100px){
+  :root{--hh:72px}
+  .logo-word{font-size:24px}
+  .hero-wall{padding-top:44px}
+  .pill{font-size:40px;padding:12px 22px 14px}
+  .signs{gap:44px}
+  .board{grid-template-columns:repeat(12,minmax(0,1fr));gap:30px;align-items:start}
+  .s-sets{grid-column:1/span 7;transform:rotate(-.6deg)}
+  .s-meat{grid-column:8/span 5;transform:rotate(.8deg);margin-top:28px}
+  .hours-wrap{grid-column:1/span 3;margin-top:-6px}
+  .s-sides{grid-column:4/span 5;transform:rotate(.5deg)}
+  .s-drinks{grid-column:9/span 4;transform:rotate(-.7deg);margin-top:18px}
+  .arrow{grid-column:3/span 8;display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;padding:30px 36px}
+  .arrow-ico{display:block!important}
+  .arrow-wrap{grid-column:2/span 10;display:flex;align-items:center;gap:26px}
+  .grill-layout{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
+  .tray{flex-wrap:wrap;overflow:visible;scroll-snap-type:none}
+  .t-item{width:calc(50% - 5px)}
+  .book-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start}
+  .foot{grid-template-columns:1fr auto;align-items:end}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true" lang="ko">고기</span><span class="logo-word neon" data-brand>Seoul Smoke</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#menu">Menu</a><a href="#grill">Grill</a><a href="#hours">Hours</a><a href="#book">Groups</a>
+  </nav>
+  <a class="btn btn-mag" href="#book">Book a table</a>
+</header>
+
+<main id="main">
+  <section class="hero bricks" id="top" aria-labelledby="hero-title">
+    <div class="hero-wall">
+      <div class="signs">
+        <div class="vsign on" style="--d:.05s" aria-hidden="true"><span class="neon cy" lang="ko">고기</span></div>
+        <div class="main-sign">
+          <p class="eyebrow on" style="--d:.1s">Strathfield · NSW</p>
+          <h1 class="brand-neon neon buzz" id="hero-title" data-brand>Seoul Smoke</h1>
+          <p class="sub-sign neon am on" style="--d:.25s"><span>Charcoal Korean BBQ</span><span aria-hidden="true">·</span><span>Grill at your table</span></p>
+        </div>
+        <div class="pills on" style="--d:.2s" aria-hidden="true">
+          <span class="pill p-mag neon" lang="ko">삼겹살</span>
+          <span class="pill p-cy neon cy" lang="ko">불고기</span>
+          <span class="pill p-am neon am" lang="ko">소주</span>
+        </div>
+      </div>
+    </div>
+    <div class="street asphalt">
+      <div class="reflect" aria-hidden="true">
+        <div class="signs">
+          <div class="vsign"><span class="neon cy" lang="ko">고기</span></div>
+          <div class="main-sign">
+            <p class="eyebrow">Strathfield · NSW</p>
+            <div class="brand-neon neon" data-brand>Seoul Smoke</div>
+            <p class="sub-sign neon am"><span>Charcoal Korean BBQ</span><span>·</span><span>Grill at your table</span></p>
+          </div>
+          <div class="pills"><span class="pill p-mag neon" lang="ko">삼겹살</span><span class="pill p-cy neon cy" lang="ko">불고기</span><span class="pill p-am neon am" lang="ko">소주</span></div>
+        </div>
+      </div>
+      <div class="ripples" aria-hidden="true"></div>
+      <div class="street-ui">
+        <p class="lede">A charcoal grill in the middle of every table, meats marinated in-house each afternoon, and a banchan spread that keeps coming back. Bring the crew — we're open past midnight on weekends.</p>
+        <div class="ctas"><a class="btn btn-mag" href="#grill">Try the practice grill</a><a class="btn btn-cy" href="#menu">See the menu wall</a></div>
+        <ul class="chips"><li>5pm – late, 7 nights</li><li>Groups up to 30</li><li>3 min walk from Strathfield station</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bricks" id="menu" aria-labelledby="menu-title">
+    <div class="sec-head">
+      <p class="kicker">The menu wall</p>
+      <h2 class="h2 neon cy" id="menu-title">Pick a sign, any sign</h2>
+      <p>Every table gets its own charcoal grill, lettuce wraps and free banchan refills. Order a set to share or build your own round of <span lang="ko">고기</span>.</p>
+      <p class="note"><b>Sample prices</b> — this is a concept demo for a fictional restaurant.</p>
+    </div>
+    <div class="board">
+      <article class="sign s-sets" aria-labelledby="sets-t">
+        <h3 class="sign-title neon" id="sets-t">BBQ sets</h3>
+        <p class="sign-kick">Built for sharing · banchan, lettuce wraps, rice and dipping sauces included</p>
+        <ol class="sets">
+          <li><span class="n" aria-hidden="true">2</span><div><h4>Set for 2</h4><p>Pork belly <span lang="ko">삼겹살</span>, marinated beef <span lang="ko">불고기</span>, steamed egg and a bubbling soybean stew.</p></div><span class="price">$79</span></li>
+          <li><span class="n" aria-hidden="true">4</span><div><h4>Set for 4</h4><p>Everything in the 2, plus galbi short rib, spicy pork, a corn cheese skillet and cold noodles to finish.</p></div><span class="price">$149</span></li>
+          <li><span class="n" aria-hidden="true">6</span><div><h4>Set for 6</h4><p>The lot, a second round of pork belly, a seafood pancake and fried rice made on your grill in the last of the fat.</p></div><span class="price">$219</span></li>
+        </ol>
+      </article>
+
+      <article class="sign cy s-meat" aria-labelledby="meat-t">
+        <h3 class="sign-title neon cy" id="meat-t"><span lang="ko">고기</span> à la carte</h3>
+        <p class="sign-kick">Served raw for your grill · minimum two serves per table</p>
+        <ul class="menu">
+          <li><span>Pork belly<i lang="ko">삼겹살</i></span><span class="dots"></span><b>$32</b></li>
+          <li><span>Marinated beef<i lang="ko">불고기</i></span><span class="dots"></span><b>$34</b></li>
+          <li><span>Galbi beef short rib</span><span class="dots"></span><b>$42</b></li>
+          <li><span>Spicy gochujang pork</span><span class="dots"></span><b>$30</b></li>
+          <li><span>Thin-sliced brisket</span><span class="dots"></span><b>$29</b></li>
+          <li><span>King oyster mushrooms</span><span class="dots"></span><b>$16</b></li>
+          <li><span>Corn cheese skillet</span><span class="dots"></span><b>$14</b></li>
+        </ul>
+      </article>
+
+      <div class="hours-wrap" id="hours"><article class="sign cy hours" aria-labelledby="hours-t">
+        <h3 class="sign-title neon cy buzz" id="hours-t">Open<br>till late</h3>
+        <dl>
+          <dt>Mon – Thu</dt><dd>5pm – 11:30pm</dd>
+          <dt>Fri – Sat</dt><dd>5pm – 1am</dd>
+          <dt>Sunday</dt><dd>5pm – 10:30pm</dd>
+        </dl>
+      </article><p class="hours-note">Last grill orders 45 min before close</p></div>
+
+      <article class="sign am s-sides" aria-labelledby="sides-t">
+        <h3 class="sign-title neon am" id="sides-t">Sides &amp; banchan</h3>
+        <p class="sign-kick">Banchan come free and keep coming:</p>
+        <ul class="banchan"><li>Cabbage kimchi</li><li>Pickled radish</li><li>Bean sprouts</li><li>Fish cake</li><li>Potato salad</li></ul>
+        <ul class="menu">
+          <li><span>Steamed egg, fluffy</span><span class="dots"></span><b>$12</b></li>
+          <li><span>Kimchi pancake</span><span class="dots"></span><b>$19</b></li>
+          <li><span>Soybean paste stew</span><span class="dots"></span><b>$15</b></li>
+          <li><span>Cold buckwheat noodles</span><span class="dots"></span><b>$17</b></li>
+          <li><span>Grill fried rice</span><span class="dots"></span><b>$12</b></li>
+        </ul>
+      </article>
+
+      <article class="sign s-drinks" aria-labelledby="drinks-t">
+        <svg class="drink-ico" viewBox="0 0 40 80" aria-hidden="true"><path d="M15 4h10v14c0 4 8 8 8 16v38c0 3-2 4-4 4H11c-2 0-4-1-4-4V34c0-8 8-12 8-16z" fill="none" stroke="#FF8FC0" stroke-width="2.5" style="filter:drop-shadow(0 0 4px #FF2E88) drop-shadow(0 0 10px #FF2E88)"/><path d="M9 46h22" stroke="#FF8FC0" stroke-width="2"/></svg>
+        <h3 class="sign-title neon" id="drinks-t"><span lang="ko">소주</span> &amp; drinks</h3>
+        <p class="sign-kick">Designated driver? Soft drinks are on us.</p>
+        <ul class="menu">
+          <li><span>Soju, bottle — three flavours</span><span class="dots"></span><b>$16</b></li>
+          <li><span>Sparkling rice wine, bottle</span><span class="dots"></span><b>$22</b></li>
+          <li><span>Lager, pint</span><span class="dots"></span><b>$11</b></li>
+          <li><span>Yuzu soda</span><span class="dots"></span><b>$6</b></li>
+          <li><span>Iced barley tea</span><span class="dots"></span><b>free</b></li>
+        </ul>
+      </article>
+
+      <div class="arrow-wrap" style="display:contents">
+        <article class="sign arrow" aria-labelledby="grp-t">
+          <div>
+          <h3 class="big neon am" id="grp-t">Groups 8 – 30</h3>
+          <ul>
+            <li>Back room: 24 seats, five grills, its own speaker for the birthday playlist</li>
+            <li>Set menus from $55 per person · one bill or split</li>
+            <li>We hold the room for 2.5 hours on Fri &amp; Sat</li>
+          </ul>
+          <a class="btn btn-am" href="#book">Request a group booking</a>
+          </div>
+          <svg class="arrow-ico" viewBox="0 0 120 120" aria-hidden="true"><path d="M22 18c40 4 66 26 72 70M94 88l-24-10M94 88l10-24" fill="none" stroke="#FFE3A1" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec grill-sec" id="grill" aria-labelledby="grill-title">
+    <div class="sec-head">
+      <p class="kicker">Practice round</p>
+      <h2 class="h2 neon" id="grill-title">Cook it. Don't burn it.</h2>
+      <p>Put something from the tray on the grill, flip it once when the underside turns golden, then take it off before it chars. Golden on both sides scores a <strong>Perfect</strong>.</p>
+    </div>
+    <div class="grill-layout">
+      <div class="stage">
+        <div class="score" role="group" aria-label="Scoreboard">
+          <div><span>Score</span><b id="sc">0</b></div>
+          <div><span>Perfect</span><b id="pf">0</b></div>
+          <div><span>Burnt</span><b id="bt">0</b></div>
+          <div><span>Best</span><b id="best">0</b></div>
+        </div>
+        <div class="grill-wrap">
+          <canvas id="grill-cv" role="img" aria-label="Round charcoal grill seen from above. Everything cooking is listed in 'On the grill'."></canvas>
+        </div>
+        <p class="hint"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="#FFB000" stroke-width="1.6"/><path d="M9 5v5M9 12.5v.5" stroke="#FFB000" stroke-width="1.8" stroke-linecap="round"/></svg><span>Tap meat on the grill to flip it · hold it (or drag it off the grill) to take it off. A glowing amber edge means the underside is golden.</span></p>
+      </div>
+      <div class="side">
+        <div>
+          <h3 id="tray-t">Tray — tap to grill</h3>
+          <div class="tray" role="group" aria-labelledby="tray-t">
+            <button class="t-item" type="button" data-type="pork"><svg viewBox="0 0 52 36" aria-hidden="true"><rect x="3" y="10" width="46" height="17" rx="6" fill="#ECAAA6"/><rect x="3" y="13.5" width="46" height="3" fill="#FAEDE6"/><rect x="3" y="20" width="46" height="2.4" fill="#FAEDE6"/><rect x="3" y="10" width="46" height="2" rx="1" fill="#F6DCD2"/></svg><b>Samgyeopsal</b><small>pork belly · <span lang="ko">삼겹살</span> · medium</small></button>
+            <button class="t-item" type="button" data-type="bulgogi"><svg viewBox="0 0 52 36" aria-hidden="true"><path d="M6 20c6-9 13-2 19-8s14-3 21 2c-5 7-11 3-17 9S12 28 6 20z" fill="#96342D"/><path d="M10 24c6-6 12 0 18-5s12-2 16 1" stroke="#B4523F" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="19" cy="17" r="1.3" fill="#F3E7C9"/><circle cx="31" cy="21" r="1.3" fill="#F3E7C9"/><path d="M24 14l5-2M34 17l4 1" stroke="#5FA34A" stroke-width="2" stroke-linecap="round"/></svg><b>Bulgogi</b><small>marinated beef · <span lang="ko">불고기</span> · fast</small></button>
+            <button class="t-item" type="button" data-type="galbi"><svg viewBox="0 0 52 36" aria-hidden="true"><rect x="12" y="8" width="36" height="21" rx="6" fill="#B33A3F"/><path d="M18 14c8 2 14-1 24 2M17 22c9 1 15-2 25 1" stroke="#E7A2A0" stroke-width="1.6" fill="none"/><rect x="4" y="10" width="10" height="17" rx="4" fill="#EFE6D2"/></svg><b>Galbi</b><small>beef short rib · slow</small></button>
+            <button class="t-item" type="button" data-type="mush"><svg viewBox="0 0 52 36" aria-hidden="true"><ellipse cx="17" cy="18" rx="11" ry="10" fill="#EADCC0"/><ellipse cx="36" cy="19" rx="10" ry="9" fill="#E2D1B0"/><path d="M11 13l12 10M11 21l10-9M31 14l10 10M31 23l9-8" stroke="#BFA984" stroke-width="1.2"/></svg><b>Mushrooms</b><small>king oyster · fast</small></button>
+            <button class="t-item" type="button" data-type="corn"><svg viewBox="0 0 52 36" aria-hidden="true"><rect x="36" y="15" width="14" height="6" rx="3" fill="#2A2930"/><circle cx="22" cy="18" r="15" fill="#1C1C21" stroke="#45434E" stroke-width="2"/><circle cx="22" cy="18" r="11" fill="#F6D65A"/><circle cx="17" cy="15" r="3.4" fill="#FFF4D6"/><circle cx="26" cy="21" r="3.8" fill="#FFF4D6"/><circle cx="24" cy="13" r="1.6" fill="#E9B830"/><circle cx="16" cy="22" r="1.6" fill="#E9B830"/></svg><b>Corn cheese</b><small>in a skillet · no flip · slow</small></button>
+          </div>
+        </div>
+        <div>
+          <h3><span id="list-t">On the grill</span><span id="count" aria-live="polite">0 / 7</span></h3>
+          <ul class="ongrill" id="list" aria-labelledby="list-t"></ul>
+          <p class="empty" id="empty">Nothing cooking yet. Pick something from the tray — bulgogi is quickest.</p>
+        </div>
+        <p class="result" id="result" role="status" aria-live="polite">Ready when you are. Aim for golden, not black.</p>
+        <div class="row-btns"><button class="mini" type="button" id="reset">New round</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec bricks" id="book" aria-labelledby="book-title">
+    <div class="sec-head">
+      <p class="kicker">Group bookings</p>
+      <h2 class="h2 neon am" id="book-title">Bring the whole crew</h2>
+      <p>Birthdays, end-of-season footy dinners, work drinks that turn into work dinners. Tell us who's coming and we'll hold the grills.</p>
+    </div>
+    <div class="book-grid">
+      <form class="sign cy form" id="book-form" novalidate data-kit-ignore>
+        <div class="two">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required placeholder="e.g. Jess"></div>
+          <div class="field"><label for="f-phone">Mobile</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="0491 570 156"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-date">Date</label><input id="f-date" name="date" type="date" required></div>
+          <div class="field"><label for="f-time">Time</label><select id="f-time" name="time"><option>5:30pm</option><option>6:00pm</option><option selected>6:30pm</option><option>7:00pm</option><option>7:30pm</option><option>8:00pm</option><option>8:30pm</option><option>9:00pm</option></select></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="f-size">People</label><input id="f-size" name="size" type="number" min="8" max="30" value="10" inputmode="numeric" required></div>
+          <div class="field"><label for="f-occ">Occasion</label><select id="f-occ" name="occasion"><option>Birthday</option><option>Work do</option><option>Team or club dinner</option><option>Just because</option></select></div>
+        </div>
+        <fieldset class="choice"><legend class="legend" style="margin-bottom:8px">How do you want to eat?</legend>
+          <label><input type="radio" name="plan" value="Set menu" checked><span>Set menu from $55 pp</span></label>
+          <label><input type="radio" name="plan" value="À la carte"><span>À la carte</span></label>
+          <label><input type="radio" name="plan" value="Help me choose"><span>Help me choose</span></label>
+        </fieldset>
+        <div class="field"><label for="f-notes">Anything we should know?</label><textarea id="f-notes" name="notes" placeholder="Allergies, a cake, someone who can't handle spice…"></textarea></div>
+        <div class="row-btns"><button class="btn btn-mag" type="submit">Send booking request</button></div>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="sign faq" aria-labelledby="faq-t">
+        <h3 class="sign-title neon" id="faq-t">Good to know</h3>
+        <details open><summary>Do you take walk-ins?</summary><p>Yes — tables of 2 to 6 are walk-in only. Fridays after 7pm there's usually a short wait; we'll text you when a grill frees up.</p></details>
+        <details><summary>Vegetarian or gluten-free?</summary><p>King oyster mushrooms, tofu, corn cheese and most banchan are vegetarian. Tell us about coeliac or allergies when you arrive and the kitchen will walk you through the marinades.</p></details>
+        <details><summary>Kids?</summary><p>Very welcome until 9pm. We'll put them at the end of the table, well away from the coals.</p></details>
+        <details><summary>Will I smell like barbecue?</summary><p>A little. Every grill has its own extraction hood, and there are jacket bags on the hooks by the door.</p></details>
+        <div class="contact-lines">
+          <span>Strathfield, NSW — 3 minutes from the station</span>
+          <a href="tel:0255504127">(02) 5550 4127</a>
+          <a href="mailto:grill@example.com">grill@example.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot bricks">
+  <div>
+    <p class="foot-name neon" data-brand>Seoul Smoke</p>
+    <p class="note" style="margin-top:12px">Charcoal Korean BBQ · Strathfield, NSW</p>
+  </div>
+  <div class="foot-meta">
+    <span><b>Mon–Thu</b> 5pm–11:30pm · <b>Fri–Sat</b> 5pm–1am · <b>Sun</b> 5pm–10:30pm</span>
+    <span>Sample prices. A concept demo for a fictional restaurant — no real bookings are taken.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var RMQ = matchMedia('(prefers-reduced-motion: reduce)');
+var reduced = RMQ.matches;
+if (RMQ.addEventListener) RMQ.addEventListener('change', function(e){ reduced = e.matches; wake(); });
+
+/* long business names (Try it on) get a calmer size */
+function fitBrand(name){
+  var n = (name || '').length, root = document.documentElement;
+  root.classList.toggle('len-m', n > 13 && n <= 20); root.classList.toggle('len-l', n > 20);
+}
+addEventListener('hd:brandchange', function(e){ fitBrand(e.detail && e.detail.name); });
+
+/* ---------------- grill game ---------------- */
+var cv = document.getElementById('grill-cv'), ctx = cv.getContext('2d');
+var GMIN = 0.6, GMAX = 1.0, CAP = 1.45, MAX_ITEMS = 7, HOLD = 520;
+var T = {
+  pork:   {name:'Samgyeopsal', rate:.11, fat:1.4, flip:true,  w:.52, h:.17, raw:[236,170,166], gold:[208,136,70], char:[42,25,19]},
+  bulgogi:{name:'Bulgogi',     rate:.16, fat:.6,  flip:true,  w:.40, h:.26, raw:[150,52,44],   gold:[132,70,32],  char:[34,20,14]},
+  galbi:  {name:'Galbi',       rate:.09, fat:.8,  flip:true,  w:.38, h:.23, raw:[182,60,64],   gold:[146,82,40],  char:[38,23,17]},
+  mush:   {name:'Mushrooms',   rate:.13, fat:.2,  flip:true,  w:.22, h:.2,  raw:[236,222,192], gold:[204,152,86], char:[46,34,24]},
+  corn:   {name:'Corn cheese', rate:.07, fat:.3,  flip:false, w:.32, h:.32, raw:[246,214,90],  gold:[228,160,58], char:[62,38,20]}
+};
+var SLOTS = [[0,0],[-.52,-.3],[.52,-.3],[-.52,.32],[.52,.32],[0,-.6],[0,.62]];
+var items = [], parts = [], floats = [], embers = [], nid = 1, counts = {};
+var score = 0, perfect = 0, burnt = 0, streak = 0, best = 0;
+try { best = +localStorage.getItem('ss-best') || 0; } catch (e) {}
+var S = 0, dpr = 1, cx = 0, cy = 0, R = 0, r = 0, table = null, coal = null, grate = null, emberImg = null;
+var visible = false, running = false, last = 0, press = null, tNow = 0;
+
+function mix(a, b, k){ return [a[0]+(b[0]-a[0])*k, a[1]+(b[1]-a[1])*k, a[2]+(b[2]-a[2])*k]; }
+function rgb(c, a){ return 'rgba(' + (c[0]|0) + ',' + (c[1]|0) + ',' + (c[2]|0) + ',' + (a == null ? 1 : a) + ')'; }
+function ramp(t, c){
+  var deep = t.gold.map(function(v){ return v * .8; });
+  if (c < GMIN) return mix(t.raw, t.gold, c / GMIN);
+  if (c <= GMAX) return mix(t.gold, deep, (c - GMIN) / (GMAX - GMIN));
+  return mix(deep, t.char, Math.min(1, (c - GMAX) / .35));
+}
+var FAT = {raw:[250,236,229], gold:[242,196,120], char:[70,46,30]};
+function rrect(c, x, y, w, h, rad){ c.beginPath(); if (c.roundRect) c.roundRect(x, y, w, h, rad); else c.rect(x, y, w, h); }
+function rand(seed){ var s = seed; return function(){ s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }; }
+
+function layout(){
+  var w = cv.clientWidth; if (!w) return;
+  dpr = Math.min(window.devicePixelRatio || 1, 2); S = w;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(w * dpr);
+  cx = cy = S / 2; R = S * .455; r = R * .87;
+  buildStatic(); draw(performance.now());
+}
+function off(){ var c = document.createElement('canvas'); c.width = Math.round(S * dpr); c.height = Math.round(S * dpr); var g = c.getContext('2d'); g.scale(dpr, dpr); return [c, g]; }
+function buildStatic(){
+  var o = off(), g = o[1], rn = rand(7);
+  // table
+  var tg = g.createLinearGradient(0, 0, S, S); tg.addColorStop(0, '#1a1920'); tg.addColorStop(1, '#0c0c11');
+  g.fillStyle = tg; rrect(g, 0, 0, S, S, 20); g.fill();
+  for (var i = 0; i < 900; i++){ g.fillStyle = 'rgba(255,255,255,' + (rn() * .035) + ')'; g.fillRect(rn() * S, rn() * S, 1, 1); }
+  var glow = g.createRadialGradient(cx, cy, R * .8, cx, cy, R * 1.5); glow.addColorStop(0, 'rgba(255,110,30,.22)'); glow.addColorStop(1, 'rgba(255,110,30,0)');
+  g.fillStyle = glow; g.fillRect(0, 0, S, S);
+  // side dishes
+  var d = S * .068, m = S * .085;
+  dish(g, m, m, d, '#C2371F', '#E0633F');           // kimchi
+  dish(g, S - m, m, d, '#EFDC72', '#F8EEA8');        // radish
+  dish(g, m, S - m, d, '#5E9A40', '#8CC766');        // lettuce
+  dish(g, S - m, S - m, d * .8, '#3B2415', '#6B4428'); // sauce
+  // chopsticks
+  g.save(); g.translate(S - m * 2.4, S - m * .55); g.rotate(-.18);
+  g.fillStyle = '#B9B7C2'; rrect(g, -S * .16, -2.2, S * .2, 3, 1.5); g.fill(); rrect(g, -S * .16, 3, S * .2, 3, 1.5); g.fill(); g.restore();
+  // rim
+  g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); var rg = g.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
+  rg.addColorStop(0, '#9C9AA6'); rg.addColorStop(.45, '#4A4854'); rg.addColorStop(1, '#17161C'); g.fillStyle = rg; g.fill();
+  g.beginPath(); g.arc(cx, cy, R * .955, 0, Math.PI * 2); g.fillStyle = '#121117'; g.fill();
+  table = o[0];
+  // coal bed
+  o = off(); g = o[1];
+  g.save(); g.beginPath(); g.arc(cx, cy, r * 1.04, 0, Math.PI * 2); g.clip();
+  var cg = g.createRadialGradient(cx, cy, 0, cx, cy, r * 1.04);
+  cg.addColorStop(0, '#FF9A3C'); cg.addColorStop(.38, '#E0561C'); cg.addColorStop(.72, '#7A1E0B'); cg.addColorStop(1, '#1C0906');
+  g.fillStyle = cg; g.fillRect(0, 0, S, S);
+  for (i = 0; i < 34; i++){
+    var a = rn() * Math.PI * 2, dd = Math.sqrt(rn()) * r, lx = cx + Math.cos(a) * dd, ly = cy + Math.sin(a) * dd, lr = r * (.07 + rn() * .08);
+    g.beginPath();
+    for (var k = 0; k < 7; k++){ var aa = k / 7 * Math.PI * 2, rr2 = lr * (.7 + rn() * .45); g[k ? 'lineTo' : 'moveTo'](lx + Math.cos(aa) * rr2, ly + Math.sin(aa) * rr2); }
+    g.closePath(); g.fillStyle = 'rgba(22,10,8,' + (.35 + rn() * .35) + ')'; g.fill();
+    g.strokeStyle = 'rgba(255,140,50,.35)'; g.lineWidth = 1; g.stroke();
+  }
+  g.restore(); coal = o[0];
+  // grate
+  o = off(); g = o[1];
+  g.save(); g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.clip();
+  var n = 15, bw = r * .05;
+  for (i = 0; i < n; i++){
+    var y = cy - r + (i + .5) * (2 * r / n);
+    var bg = g.createLinearGradient(0, y - bw / 2, 0, y + bw / 2);
+    bg.addColorStop(0, '#8A8894'); bg.addColorStop(.35, '#474552'); bg.addColorStop(1, '#141318');
+    g.fillStyle = bg; g.fillRect(cx - r, y - bw / 2, 2 * r, bw);
+  }
+  g.fillStyle = '#26252D'; g.fillRect(cx - r, cy - bw * .45, 2 * r, bw * .9);
+  g.globalCompositeOperation = 'source-atop';
+  var hg = g.createRadialGradient(cx, cy, 0, cx, cy, r); hg.addColorStop(0, 'rgba(255,120,40,.35)'); hg.addColorStop(1, 'rgba(255,120,40,0)');
+  g.fillStyle = hg; g.fillRect(0, 0, S, S);
+  g.restore();
+  g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.lineWidth = r * .035; g.strokeStyle = '#2B2A33'; g.stroke();
+  grate = o[0];
+  // ember sprite
+  var e = document.createElement('canvas'); e.width = e.height = 64; var eg = e.getContext('2d');
+  var er = eg.createRadialGradient(32, 32, 0, 32, 32, 32); er.addColorStop(0, 'rgba(255,230,160,1)'); er.addColorStop(.25, 'rgba(255,150,40,.8)'); er.addColorStop(1, 'rgba(255,60,0,0)');
+  eg.fillStyle = er; eg.fillRect(0, 0, 64, 64); emberImg = e;
+  if (!embers.length){ var re = rand(99); for (i = 0; i < 38; i++){ var ea = re() * Math.PI * 2, ed = Math.sqrt(re()) * .95; embers.push({x: Math.cos(ea) * ed, y: Math.sin(ea) * ed, s: .05 + re() * .09, a: .35 + re() * .6, p: re() * 6.28, f: .6 + re() * 1.6}); } }
+}
+function dish(g, x, y, rad, c1, c2){
+  g.beginPath(); g.arc(x, y + rad * .12, rad * 1.05, 0, Math.PI * 2); g.fillStyle = 'rgba(0,0,0,.45)'; g.fill();
+  g.beginPath(); g.arc(x, y, rad, 0, Math.PI * 2); g.fillStyle = '#E9E6E0'; g.fill();
+  g.beginPath(); g.arc(x, y, rad * .78, 0, Math.PI * 2); var dg = g.createRadialGradient(x - rad * .2, y - rad * .2, 0, x, y, rad * .78); dg.addColorStop(0, c2); dg.addColorStop(1, c1); g.fillStyle = dg; g.fill();
+}
+
+function heatAt(it){ return 1.2 - .38 * Math.min(1, Math.hypot(it.x, it.y)); }
+function add(type){
+  if (items.filter(function(i){ return !i.out; }).length >= MAX_ITEMS){ say('The grill is full — take something off first.', ''); return false; }
+  var used = items.map(function(i){ return i.slot; }), slot = -1;
+  for (var s = 0; s < SLOTS.length; s++) if (used.indexOf(s) < 0){ slot = s; break; }
+  var p = slot >= 0 ? SLOTS[slot] : [(Math.random() - .5) * .8, (Math.random() - .5) * .8];
+  counts[type] = (counts[type] || 0) + 1;
+  var it = {id: nid++, type: type, t: T[type], n: counts[type], slot: slot, x: p[0] + (Math.random() - .5) * .08, y: p[1] + (Math.random() - .5) * .08,
+    rot: (Math.random() - .5) * .5, sides: [0, 0], marks: [0, 0], down: 0, flipAt: -1, born: performance.now(), out: 0, seed: (Math.random() * 1e6 | 0) + 1};
+  it.rng = rand(it.seed); it.spots = []; for (var i = 0; i < 18; i++) it.spots.push([it.rng(), it.rng(), it.rng()]);
+  items.push(it); addRow(it); updateCount(); wake();
+  say(it.t.name + ' is on the grill. Watch the edge for the amber glow.', '');
+  return true;
+}
+function label(it){ return it.t.name + (counts[it.type] > 1 || it.n > 1 ? ' ' + it.n : ''); }
+function flip(it){
+  if (it.out) return;
+  if (!it.t.flip){ say('Corn cheese stays in its skillet — no flipping. Take it off when it bubbles gold.', ''); return; }
+  it.down = 1 - it.down; it.flipAt = performance.now(); wake(); syncRow(it, true);
+}
+function verdict(it){
+  var v = it.t.flip ? it.sides : [it.sides[0]];
+  if (v.some(function(x){ return x > GMAX; })) return 'burnt';
+  if (v.every(function(x){ return x >= GMIN; })) return 'perfect';
+  if (v.every(function(x){ return x >= .42; })) return 'almost';
+  return 'raw';
+}
+function take(it){
+  if (it.out) return;
+  it.out = performance.now();
+  var v = verdict(it), name = label(it), msg, cls = '', pts = 0, col = '#FFB000', word = '';
+  if (v === 'perfect'){ streak++; pts = 100 + (streak > 1 ? (streak - 1) * 20 : 0); perfect++; cls = 'perfect'; col = '#FF2E88'; word = streak > 1 ? 'PERFECT ×' + streak : 'PERFECT!';
+    msg = 'Perfect! ' + name + ' — golden on both sides. +' + pts + (streak > 1 ? ' (streak ×' + streak + ')' : ''); }
+  else if (v === 'almost'){ streak = 0; pts = 40; word = 'ALMOST'; msg = 'Almost — ' + name + ' wanted a little longer. +40'; }
+  else if (v === 'raw'){ streak = 0; pts = 0; word = 'TOO RAW'; col = '#25D9F2'; msg = 'Too early — that ' + name + ' was still pink. +0'; }
+  else { streak = 0; pts = -25; burnt++; cls = 'bad'; col = '#FF5D5D'; word = 'BURNT'; msg = 'Burnt! ' + name + ' — the smoke was the clue. −25'; }
+  score = Math.max(0, score + pts);
+  if (score > best){ best = score; try { localStorage.setItem('ss-best', best); } catch (e) {} }
+  floats.push({txt: word, x: it.x, y: it.y, t0: performance.now(), col: col});
+  if (!reduced && v === 'burnt') for (var i = 0; i < 12; i++) smoke(it, 1.3);
+  say(msg, cls); updateScore(); removeRow(it); wake();
+}
+function say(msg, cls){ var el = document.getElementById('result'); el.textContent = msg; el.className = 'result' + (cls ? ' ' + cls : ''); }
+function updateScore(){
+  document.getElementById('sc').textContent = score; document.getElementById('pf').textContent = perfect;
+  document.getElementById('bt').textContent = burnt; document.getElementById('best').textContent = best;
+}
+function updateCount(){
+  var n = items.filter(function(i){ return !i.out; }).length;
+  document.getElementById('count').textContent = n + ' / ' + MAX_ITEMS;
+  document.getElementById('empty').hidden = n > 0;
+  document.querySelectorAll('.t-item').forEach(function(b){ b.setAttribute('aria-disabled', n >= MAX_ITEMS ? 'true' : 'false'); });
+}
+
+/* list rows (keyboard + screen-reader path) */
+var list = document.getElementById('list'), rows = {};
+function addRow(it){
+  var li = document.createElement('li'); li.className = 'gi';
+  li.innerHTML = '<div><span class="gi-name"></span><span class="gi-state"></span></div><div class="gi-btns"><button type="button" class="mini flip">Flip</button><button type="button" class="mini take">Take off</button></div>' +
+    '<div class="bars" aria-hidden="true"><span>Down</span><span class="bar"><i></i></span><span>Up</span><span class="bar"><i></i></span></div>';
+  li.querySelector('.gi-name').textContent = label(it);
+  var fb = li.querySelector('.flip'), tb = li.querySelector('.take');
+  fb.setAttribute('aria-label', 'Flip ' + label(it)); tb.setAttribute('aria-label', 'Take ' + label(it) + ' off the grill');
+  if (!it.t.flip){ fb.disabled = true; fb.textContent = 'No flip'; }
+  fb.addEventListener('click', function(){ flip(it); });
+  tb.addEventListener('click', function(){ var next = li.nextElementSibling || li.previousElementSibling; take(it); var t = next && next.querySelector('.take'); (t || document.querySelector('.t-item')).focus(); });
+  list.appendChild(li); rows[it.id] = {li: li, st: li.querySelector('.gi-state'), bars: li.querySelectorAll('.bar i'), last: ''};
+  syncRow(it, true);
+}
+function removeRow(it){ var r0 = rows[it.id]; if (r0){ r0.li.remove(); delete rows[it.id]; } updateCount(); }
+function word(v){ return v < .3 ? 'raw' : v < GMIN ? 'browning' : v <= GMAX ? 'golden' : 'charring'; }
+function barCol(v){ return v < GMIN ? '#D9A3A0' : v <= GMAX ? '#FFB000' : '#FF4D4D'; }
+function syncRow(it, force){
+  var o = rows[it.id]; if (!o) return;
+  var dn = it.sides[it.down], up = it.sides[1 - it.down], s;
+  if (!it.t.flip) s = 'Skillet: ' + word(dn) + (dn >= GMIN && dn <= GMAX ? ' — take it off now' : '');
+  else if (dn > GMAX || up > GMAX) s = 'Burning! Take it off';
+  else if (dn >= GMIN && up >= GMIN) s = 'Golden both sides — take it off';
+  else if (dn >= GMIN) s = 'Underside golden — flip it';
+  else s = 'Underside ' + word(dn) + ', top ' + word(up);
+  if (s !== o.last || force){ o.st.textContent = s; o.last = s; }
+  o.li.classList.toggle('gold', s.indexOf('Golden both') === 0 || s.indexOf('take it off now') > 0);
+  o.li.classList.toggle('burn', s.indexOf('Burn') === 0);
+  var vals = it.t.flip ? [dn, up] : [dn, dn];
+  for (var i = 0; i < 2; i++){ o.bars[i].style.width = Math.min(100, vals[i] / CAP * 100) + '%'; o.bars[i].style.background = barCol(vals[i]); }
+}
+
+/* particles */
+function spark(it){
+  var a = Math.random() * Math.PI * 2, w = it.t.w / 2, h = it.t.h / 2;
+  var lx = Math.cos(a) * w, ly = Math.sin(a) * h, c = Math.cos(it.rot), s = Math.sin(it.rot);
+  parts.push({k: 0, x: it.x + lx * c - ly * s, y: it.y + lx * s + ly * c, vx: (Math.random() - .5) * .9, vy: -.5 - Math.random() * .7, life: 0, max: .25 + Math.random() * .35});
+}
+function smoke(it, d){
+  parts.push({k: 1, x: it.x + (Math.random() - .5) * it.t.w * .6, y: it.y + (Math.random() - .5) * it.t.h * .6, vx: (Math.random() - .5) * .08, vy: -.16 - Math.random() * .14, life: 0, max: 1.6 + Math.random() * .9, d: d});
+}
+
+/* drawing */
+function drawItem(it, now){
+  var t = it.t, u = r, w = t.w * u, h = t.h * u, top = it.sides[1 - it.down], dn = it.sides[it.down];
+  if (!t.flip) top = dn;
+  var sc = 1, alpha = 1, hop = 0, fy = 1;
+  var age = now - it.born; if (age < 260 && !reduced){ var k = age / 260; sc = 1.25 - .25 * k; alpha = Math.min(1, k * 1.6); }
+  if (it.out){ var o = (now - it.out) / 380; sc = 1 + .15 * o; alpha = 1 - o; hop = o * u * .12; }
+  if (it.flipAt > 0 && !reduced){ var f = (now - it.flipAt) / 300; if (f < 1){ fy = Math.cos(Math.PI * f); hop += Math.sin(Math.PI * f) * u * .09; if (f < .5) top = dn; } }
+  ctx.save(); ctx.globalAlpha = Math.max(0, alpha);
+  ctx.translate(cx + it.x * u, cy + it.y * u - hop); ctx.rotate(it.rot); ctx.scale(sc, sc * Math.max(.06, Math.abs(fy)));
+  // glow cue for underside
+  var glow = null;
+  if (!it.out){ if (dn > GMAX) glow = 'rgba(255,60,50,.95)'; else if (dn >= GMIN) glow = 'rgba(255,176,0,.95)'; }
+  if (!t.flip && dn >= GMIN && dn <= GMAX) glow = 'rgba(255,176,0,.95)';
+  if (glow){ ctx.shadowColor = glow; ctx.shadowBlur = u * (reduced ? .07 : .06 + .03 * Math.sin(now / 160)); }
+  var col = ramp(t, top), mk = it.marks[1 - it.down];
+  if (it.type === 'pork'){
+    rrect(ctx, -w / 2, -h / 2, w, h, h * .35); ctx.fillStyle = rgb(col); ctx.fill(); ctx.shadowBlur = 0;
+    ctx.save(); ctx.clip(); var fc = ramp(FAT, top);
+    ctx.fillStyle = rgb(fc); ctx.fillRect(-w / 2, -h * .3, w, h * .14); ctx.fillRect(-w / 2, h * .1, w, h * .11);
+    ctx.fillStyle = rgb(fc, .8); ctx.fillRect(-w / 2, -h / 2, w, h * .12);
+    marks(w, h, mk); ctx.restore();
+  } else if (it.type === 'bulgogi'){
+    for (var i = 0; i < 3; i++){
+      ctx.beginPath(); ctx.ellipse((i - 1) * w * .22, (i % 2 ? .18 : -.12) * h, w * .34, h * .34, (i - 1) * .35, 0, Math.PI * 2);
+      ctx.fillStyle = rgb(mix(col, [0, 0, 0], i * .08)); ctx.fill(); if (i === 0) ctx.shadowBlur = 0;
+    }
+    ctx.save(); ctx.beginPath(); ctx.ellipse(0, 0, w * .56, h * .5, 0, 0, Math.PI * 2); ctx.clip(); marks(w, h, mk); ctx.restore();
+    for (i = 0; i < 9; i++){ var sp = it.spots[i]; ctx.fillStyle = i < 5 ? rgb(mix([243,231,201], [80,60,40], Math.max(0, top - .9))) : rgb(mix([95,163,74], [30,40,20], Math.max(0, top - .7)));
+      ctx.beginPath(); ctx.ellipse((sp[0] - .5) * w * .9, (sp[1] - .5) * h * .8, i < 5 ? u * .011 : u * .022, u * .008, sp[2] * 3, 0, Math.PI * 2); ctx.fill(); }
+  } else if (it.type === 'galbi'){
+    rrect(ctx, -w / 2 + w * .12, -h / 2, w * .88, h, h * .3); ctx.fillStyle = rgb(col); ctx.fill(); ctx.shadowBlur = 0;
+    ctx.save(); ctx.clip();
+    ctx.strokeStyle = rgb(mix([240,190,185], col, Math.min(1, top)), .55); ctx.lineWidth = u * .012;
+    for (i = 0; i < 3; i++){ ctx.beginPath(); ctx.moveTo(-w * .3, (i - 1) * h * .28); ctx.bezierCurveTo(-w * .05, (i - 1.3) * h * .28, w * .15, (i - .7) * h * .28, w * .5, (i - 1) * h * .28); ctx.stroke(); }
+    marks(w, h, mk); ctx.restore();
+    rrect(ctx, -w / 2 - u * .01, -h * .38, u * .085, h * .76, u * .04); ctx.fillStyle = rgb(mix([239,230,210], [150,120,90], Math.min(1, top * .6))); ctx.fill();
+  } else if (it.type === 'mush'){
+    ctx.beginPath(); ctx.ellipse(0, 0, w / 2, h / 2, 0, 0, Math.PI * 2); ctx.fillStyle = rgb(col); ctx.fill(); ctx.shadowBlur = 0;
+    ctx.save(); ctx.clip();
+    ctx.beginPath(); ctx.ellipse(0, 0, w * .36, h * .36, 0, 0, Math.PI * 2); ctx.fillStyle = rgb(mix(col, [255,250,240], .15)); ctx.fill();
+    ctx.strokeStyle = 'rgba(80,50,20,.28)'; ctx.lineWidth = u * .007;
+    for (i = -3; i <= 3; i++){ ctx.beginPath(); ctx.moveTo(i * w * .14 - w * .3, -h / 2); ctx.lineTo(i * w * .14 + w * .3, h / 2); ctx.stroke(); ctx.beginPath(); ctx.moveTo(i * w * .14 + w * .3, -h / 2); ctx.lineTo(i * w * .14 - w * .3, h / 2); ctx.stroke(); }
+    marks(w, h, mk); ctx.restore();
+  } else {
+    var rad = w / 2;
+    rrect(ctx, rad * .85, -u * .03, u * .14, u * .06, u * .03); ctx.fillStyle = '#2A2930'; ctx.fill();
+    ctx.beginPath(); ctx.arc(0, 0, rad, 0, Math.PI * 2); ctx.fillStyle = '#1C1C21'; ctx.fill(); ctx.shadowBlur = 0;
+    ctx.lineWidth = u * .022; ctx.strokeStyle = '#4A4853'; ctx.stroke();
+    ctx.save(); ctx.beginPath(); ctx.arc(0, 0, rad * .8, 0, Math.PI * 2); ctx.clip();
+    ctx.fillStyle = rgb(col); ctx.fillRect(-rad, -rad, 2 * rad, 2 * rad);
+    for (i = 0; i < 18; i++){ sp = it.spots[i]; var px = (sp[0] - .5) * rad * 1.6, py = (sp[1] - .5) * rad * 1.6;
+      if (i % 3 === 0){ ctx.fillStyle = rgb(ramp(FAT, top * 1.05), .95); ctx.beginPath(); ctx.arc(px, py, rad * (.14 + sp[2] * .12), 0, Math.PI * 2); ctx.fill(); }
+      else { ctx.fillStyle = rgb(mix([233,184,48], [120,70,20], Math.max(0, top - .6))); ctx.beginPath(); ctx.arc(px, py, rad * .06, 0, Math.PI * 2); ctx.fill(); } }
+    if (top > .5){ ctx.fillStyle = 'rgba(120,60,20,' + Math.min(.55, (top - .5) * .9) + ')'; for (i = 0; i < 6; i++){ sp = it.spots[i + 6]; ctx.beginPath(); ctx.arc((sp[1] - .5) * rad * 1.2, (sp[2] - .5) * rad * 1.2, rad * .16, 0, Math.PI * 2); ctx.fill(); } }
+    if (top > .3 && !reduced && !it.out){ ctx.strokeStyle = 'rgba(255,250,230,.6)'; ctx.lineWidth = 1;
+      for (i = 0; i < 4; i++){ var ph = (now / 700 + it.spots[i][2] * 5) % 1; ctx.beginPath(); ctx.arc((it.spots[i][0] - .5) * rad, (it.spots[i][1] - .5) * rad, rad * .08 * ph, 0, Math.PI * 2); ctx.stroke(); } }
+    ctx.restore();
+  }
+  ctx.restore();
+  // hold ring
+  if (press && press.it === it && !press.moved && !it.out){
+    var pr = Math.min(1, (now - press.t0) / HOLD);
+    if (pr > .12){ ctx.beginPath(); ctx.arc(cx + it.x * u, cy + it.y * u, Math.max(w, h) * .62, -Math.PI / 2, -Math.PI / 2 + pr * Math.PI * 2); ctx.lineWidth = 4; ctx.strokeStyle = '#25D9F2'; ctx.shadowColor = '#25D9F2'; ctx.shadowBlur = 10; ctx.stroke(); ctx.shadowBlur = 0; }
+  }
+}
+function marks(w, h, m){
+  if (m < .2) return;
+  ctx.strokeStyle = 'rgba(28,12,6,' + Math.min(.8, (m - .2) * 1.1) + ')'; ctx.lineWidth = r * .028;
+  for (var i = -3; i <= 3; i++){ var x = i * w / 6.5; ctx.beginPath(); ctx.moveTo(x - h * .25, -h / 2); ctx.lineTo(x + h * .25, h / 2); ctx.stroke(); }
+}
+function draw(now){
+  if (!table) return;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, S, S);
+  ctx.drawImage(table, 0, 0, S, S); ctx.drawImage(coal, 0, 0, S, S);
+  ctx.save(); ctx.globalCompositeOperation = 'lighter';
+  for (var i = 0; i < embers.length; i++){ var e = embers[i], a = e.a * (reduced ? .8 : .62 + .38 * Math.sin(now / 1000 * e.f + e.p)), sz = e.s * r;
+    ctx.globalAlpha = a; ctx.drawImage(emberImg, cx + e.x * r - sz, cy + e.y * r - sz, sz * 2, sz * 2); }
+  ctx.restore();
+  ctx.drawImage(grate, 0, 0, S, S);
+  if (press && press.moved){ var pd = Math.hypot(press.it.x, press.it.y);
+    ctx.beginPath(); ctx.arc(cx, cy, r * 1.02, 0, Math.PI * 2); ctx.lineWidth = 3; ctx.strokeStyle = pd > 1.02 ? 'rgba(37,217,242,.95)' : 'rgba(37,217,242,.3)'; ctx.stroke(); }
+  for (i = 0; i < items.length; i++) drawItem(items[i], now);
+  // particles
+  for (i = 0; i < parts.length; i++){ var p = parts[i], k = p.life / p.max;
+    if (p.k === 0){ ctx.fillStyle = 'rgba(255,' + (200 + (k * 40 | 0)) + ',120,' + (1 - k) + ')'; ctx.beginPath(); ctx.arc(cx + p.x * r, cy + p.y * r, Math.max(.8, r * .007), 0, Math.PI * 2); ctx.fill(); }
+    else { var c = p.d > 1 ? '48,44,52' : '215,212,222'; ctx.fillStyle = 'rgba(' + c + ',' + (.16 * Math.sin(Math.PI * k) * Math.min(1.6, p.d)) + ')'; ctx.beginPath(); ctx.arc(cx + p.x * r, cy + p.y * r, r * (.05 + k * .14), 0, Math.PI * 2); ctx.fill(); } }
+  // floating verdicts
+  for (i = 0; i < floats.length; i++){ var f = floats[i], fk = (now - f.t0) / 1200;
+    ctx.save(); ctx.globalAlpha = fk < .65 ? 1 : Math.max(0, 1 - (fk - .65) / .35);
+    ctx.font = '400 ' + Math.round(S * .075) + 'px "Black Han Sans", Impact, sans-serif'; ctx.textAlign = 'center';
+    ctx.shadowColor = f.col; ctx.shadowBlur = 18; ctx.fillStyle = '#fff';
+    ctx.fillText(f.txt, cx + Math.max(-.5, Math.min(.5, f.x)) * r, cy + f.y * r - (reduced ? 0 : fk * r * .22) - r * .1); ctx.restore(); }
+}
+function step(dt, now){
+  for (var i = items.length - 1; i >= 0; i--){
+    var it = items[i];
+    if (it.out){ if (now - it.out > 380) items.splice(i, 1); continue; }
+    if (press && press.it === it && press.moved) continue;
+    var h = heatAt(it), d = it.down;
+    it.sides[d] = Math.min(CAP, it.sides[d] + it.t.rate * h * dt);
+    it.marks[d] = it.sides[d];
+    if (it.t.flip) it.sides[1 - d] = Math.min(CAP, it.sides[1 - d] + it.t.rate * .08 * h * dt);
+    if (!reduced){
+      var dn = it.sides[d];
+      if (dn > .12 && dn < 1.25 && Math.random() < dt * 7 * it.t.fat * h) spark(it);
+      if (dn > .75 && Math.random() < dt * (dn - .7) * 9) smoke(it, dn);
+    }
+  }
+  for (i = parts.length - 1; i >= 0; i--){ var p = parts[i]; p.life += dt;
+    if (p.life > p.max){ parts.splice(i, 1); continue; }
+    p.x += p.vx * dt; p.y += p.vy * dt; if (p.k === 0) p.vy += 2.2 * dt; else p.vx += Math.sin(now / 500 + i) * .02 * dt; }
+  if (parts.length > 180) parts.splice(0, parts.length - 180);
+  for (i = floats.length - 1; i >= 0; i--) if (now - floats[i].t0 > 1200) floats.splice(i, 1);
+  // hold to take
+  if (press && !press.moved && !press.it.out && now - press.t0 >= HOLD){ var h0 = press.it; press = null; take(h0); }
+}
+var rowTick = 0;
+function loop(now){
+  if (!running) return;
+  var dt = Math.min(.05, (now - last) / 1000); last = now; tNow = now;
+  step(dt, now); draw(now);
+  rowTick += dt; if (rowTick > .15){ rowTick = 0; items.forEach(function(it){ if (!it.out) syncRow(it); }); }
+  var busy = items.length || parts.length || floats.length || press;
+  if (!visible || document.hidden || (reduced && !busy)){ running = false; return; }
+  requestAnimationFrame(loop);
+}
+function wake(){ if (running || !visible || document.hidden) { if (!running) draw(performance.now()); return; } running = true; last = performance.now(); requestAnimationFrame(loop); }
+
+/* pointer */
+function toG(e){ var b = cv.getBoundingClientRect(); return {x: ((e.clientX - b.left) / b.width * S - cx) / r, y: ((e.clientY - b.top) / b.height * S - cy) / r}; }
+function hit(p){
+  for (var i = items.length - 1; i >= 0; i--){ var it = items[i]; if (it.out) continue;
+    var dx = p.x - it.x, dy = p.y - it.y, c = Math.cos(-it.rot), s = Math.sin(-it.rot), lx = dx * c - dy * s, ly = dx * s + dy * c;
+    if (Math.abs(lx) <= it.t.w / 2 + .05 && Math.abs(ly) <= it.t.h / 2 + .05) return it; }
+  return null;
+}
+cv.addEventListener('pointerdown', function(e){
+  var p = toG(e), it = hit(p); if (!it) return;
+  try { cv.setPointerCapture(e.pointerId); } catch (err) {}
+  press = {it: it, id: e.pointerId, x0: p.x, y0: p.y, dx: it.x - p.x, dy: it.y - p.y, t0: performance.now(), moved: false}; wake();
+});
+cv.addEventListener('pointermove', function(e){
+  var p = toG(e);
+  if (!press){ cv.style.cursor = hit(p) ? 'pointer' : 'default'; return; }
+  if (e.pointerId !== press.id) return;
+  if (!press.moved && Math.hypot(p.x - press.x0, p.y - press.y0) > .06) press.moved = true;
+  if (press.moved){ press.it.x = p.x + press.dx; press.it.y = p.y + press.dy; cv.style.cursor = 'grabbing'; }
+});
+function release(e, cancel){
+  if (!press || e.pointerId !== press.id) return;
+  var it = press.it, moved = press.moved, held = performance.now() - press.t0; press = null; cv.style.cursor = 'default';
+  if (it.out) return;
+  if (moved){
+    var d = Math.hypot(it.x, it.y);
+    if (!cancel && d > 1.02) take(it);
+    else if (d > .78){ it.x *= .78 / d; it.y *= .78 / d; }
+    it.slot = -1;
+  } else if (!cancel && held < HOLD) flip(it);
+  wake();
+}
+cv.addEventListener('pointerup', function(e){ release(e, false); });
+cv.addEventListener('pointercancel', function(e){ release(e, true); });
+cv.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+document.querySelectorAll('.t-item').forEach(function(b){ b.addEventListener('click', function(){ if (b.getAttribute('aria-disabled') === 'true'){ say('The grill is full — take something off first.', ''); return; } add(b.dataset.type); }); });
+document.getElementById('reset').addEventListener('click', function(){
+  items.slice().forEach(function(it){ removeRow(it); }); items = []; parts = []; floats = []; score = 0; perfect = 0; burnt = 0; streak = 0;
+  updateScore(); updateCount(); say('Fresh grill, new round. Aim for golden, not black.', ''); draw(performance.now());
+});
+
+if ('IntersectionObserver' in window){
+  new IntersectionObserver(function(es){ visible = es[0].isIntersecting; if (visible) wake(); }, {rootMargin: '80px'}).observe(cv);
+} else visible = true;
+document.addEventListener('visibilitychange', function(){ if (!document.hidden) wake(); });
+if ('ResizeObserver' in window) new ResizeObserver(function(){ layout(); }).observe(cv); else addEventListener('resize', layout);
+layout(); updateScore(); updateCount();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ draw(performance.now()); });
+
+/* ---------------- booking form (demo state) ---------------- */
+var form = document.getElementById('book-form'), fd = document.getElementById('f-date');
+var DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'], MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var today = new Date(); var iso = function(d){ return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+fd.min = iso(today); var sat = new Date(today); sat.setDate(today.getDate() + ((6 - today.getDay() + 7) % 7 || 7)); fd.value = iso(sat);
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var st = document.getElementById('form-status'), bad = null;
+  ['f-name', 'f-phone', 'f-date', 'f-size'].forEach(function(id){ var el = document.getElementById(id); var ok = el.checkValidity(); el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = el; });
+  if (bad){ st.textContent = 'Please fill in ' + bad.labels[0].textContent.toLowerCase() + (bad.id === 'f-size' ? ' (8 to 30 people)' : '') + '.'; bad.focus(); return; }
+  var d = new Date(fd.value + 'T12:00:00'), when = DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MON[d.getMonth()];
+  var size = document.getElementById('f-size').value, plan = form.querySelector('input[name=plan]:checked').value;
+  st.innerHTML = ''; var s1 = document.createElement('strong'); s1.textContent = 'Demo only — nothing was sent. ';
+  st.appendChild(s1); st.appendChild(document.createTextNode('Your request: ' + size + ' people, ' + when + ' at ' + document.getElementById('f-time').value + ', ' + plan.toLowerCase() + '. A real site would pass this to the restaurant to confirm by text.'));
+  if (window.DemoKit) DemoKit.toast('Demo only — no booking was made.');
+});
+})();
+</script>
+</body>
+</html>

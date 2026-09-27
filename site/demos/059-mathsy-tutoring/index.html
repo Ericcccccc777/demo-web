@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="059">
+<meta name="demo:brand" content="Mathsy Tutoring">
+<title>Mathsy Tutoring — maths tutoring for Years 3–12 in Epping</title>
+<meta name="description" content="Mathsy Tutoring is a fictional maths tutoring service in Epping, NSW, for primary, high school and senior students, in person or online.">
+<meta name="theme-color" content="#1F4FB5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--grid:#CFE0F5;--grid2:#AFC8EC;--margin:#E05A5A;--red:#B8373A;--ink:#1F4FB5;--ink2:#163F97;--pencil:#5A606B;--lead:#262A31;--wash:#EEF4FC;--pink:#FDEEEE;--m:18px;--gut:16px;
+--hand:"Kalam","Segoe Print","Bradley Hand","Comic Sans MS",cursive;--sans:"Rubik",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+@media (min-width:760px){:root{--m:50px;--gut:32px}}
+@media (min-width:1100px){:root{--m:78px;--gut:44px}}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--lead);font:400 17px/1.6 var(--sans);background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px,#fff}
+body::before{content:"";position:fixed;top:0;bottom:0;left:var(--m);width:2px;background:var(--margin);pointer-events:none}
+.wrap{padding-left:calc(var(--m) + var(--gut));padding-right:var(--gut);max-width:1380px}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--margin);outline-offset:3px;border-radius:6px}
+h1,h2,h3,p{margin:0}
+.skip{position:absolute;left:12px;top:-80px;z-index:60;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px}
+.skip:focus{top:12px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);border-bottom:1.5px solid var(--grid2);padding-top:env(safe-area-inset-top)}
+.top-in{position:relative;display:flex;align-items:center;gap:14px;min-height:62px;padding:8px var(--gut) 8px calc(var(--m) + var(--gut))}
+.logo{display:flex;align-items:center;gap:10px;flex:0 1 auto;min-width:0;text-decoration:none;color:var(--ink)}
+.logo svg{flex:none;width:38px;height:38px}
+.logo b{font:700 23px/1.05 var(--hand);overflow-wrap:anywhere}
+.nav{margin-left:auto}
+.nav ol{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+.nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--lead);text-decoration:none;font:500 15px/1.2 var(--sans)}
+.nav a:hover{background:var(--wash);color:var(--ink)}
+.nav a.cta{margin-left:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px 15px 11px 16px}
+.toc-btn{display:none;margin-left:auto;flex:none;align-items:center;gap:8px;min-height:44px;padding:8px 14px;font:700 18px/1 var(--hand);color:var(--ink);background:#fff;border:1.5px solid var(--ink);border-radius:12px 14px 10px 15px;cursor:pointer}
+.toc-btn i{display:block;width:16px;height:2px;background:currentColor;box-shadow:0 -5px 0 currentColor,0 5px 0 currentColor}
+@media (max-width:1099px){
+.toc-btn{display:inline-flex}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:2px solid var(--ink);box-shadow:0 24px 30px -24px rgba(23,57,138,.4);padding:6px var(--gut) 18px calc(var(--m) + var(--gut))}
+.nav.open{display:block}
+.nav ol{flex-direction:column;align-items:stretch}
+.nav p{font:700 20px/1 var(--hand);color:var(--red);margin:10px 0 4px}
+.nav a,.nav a.cta{display:flex;align-items:baseline;gap:10px;margin:0;padding:12px 2px;border-radius:0;border-bottom:1.5px dashed var(--grid2);background:none;color:var(--lead);font-size:17px}
+.nav a::after{content:attr(data-p);margin-left:auto;font:700 17px/1 var(--hand);color:var(--red)}
+}
+@media (min-width:1100px){.nav p{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 22px;font:500 17px/1.15 var(--sans);color:#fff;background:var(--ink);border:2px solid var(--ink);border-radius:14px 18px 12px 20px/18px 12px 20px 14px;box-shadow:3px 4px 0 rgba(31,79,181,.25);text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-1px,-2px);box-shadow:4px 6px 0 rgba(31,79,181,.28)}
+.btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 rgba(31,79,181,.3)}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.sm{min-height:46px;padding:8px 18px;font-size:16px}
+
+/* hero */
+.hero{position:relative;display:grid;gap:34px;padding-top:26px;padding-bottom:40px}
+@media (min-width:1100px){.hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:50px;align-items:start;padding-top:34px}}
+.pg-no{font:700 18px/1 var(--hand);color:var(--red);margin:0 0 12px}
+@media (min-width:760px){.pg-no{position:absolute;left:0;top:var(--pgt,40px);width:calc(var(--m) - 10px);margin:0;text-align:right;transform:rotate(-5deg)}}
+.hero-copy{position:relative}
+.hero>*,.quiz-wrap>*,.price-wrap>*,.book>*,.units>*,.tutors>*,.steps>*{min-width:0}
+@media (min-width:760px){.hero-copy .pg-no{left:calc(-1*(var(--m) + var(--gut)));top:8px}}
+.eyebrow{font:700 19px/1.3 var(--hand);color:var(--red);margin:0 0 12px}
+h1{font:700 clamp(50px,12.4vw,96px)/.98 var(--hand);color:var(--ink);letter-spacing:-.015em;margin:0 0 20px}
+.circled{position:relative;display:inline-block;white-space:nowrap}
+.circled svg{position:absolute;left:-10%;top:-4%;width:120%;height:112%;overflow:visible;pointer-events:none}
+.circled path,.draw{fill:none;stroke:var(--margin);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;animation:draw 1.3s .5s cubic-bezier(.6,.1,.3,1) backwards}
+@keyframes draw{from{stroke-dashoffset:1}}
+.lead{font-size:clamp(17px,1.45vw,19.5px);max-width:34em;margin:0 0 26px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px 14px}
+.facts{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 22px;font:400 19px/1.35 var(--hand);color:var(--ink)}
+.facts li::before{content:"✓ ";color:var(--margin);font-weight:700}
+.arrow-note{display:flex;align-items:center;gap:6px;margin-top:26px;font:400 20px/1.2 var(--hand);color:var(--red);transform:rotate(-2.5deg);transform-origin:left}
+.arrow-note svg{flex:none;width:64px;height:40px;transform:rotate(80deg)}
+.arrow-note path{fill:none;stroke:var(--margin);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+@media (min-width:1100px){.arrow-note{margin:44px 0 0 auto;justify-content:flex-end}.arrow-note svg{transform:none}}
+
+/* plotter */
+.sheet{position:relative;background:#fff;border:1.5px solid #C4D6F0;border-radius:6px;box-shadow:0 2px 0 #E4ECF8,0 26px 50px -30px rgba(23,57,138,.45);padding:22px 18px 18px}
+.sheet::before,.sheet::after{content:"";position:absolute;top:-13px;width:88px;height:26px;background:repeating-linear-gradient(135deg,rgba(224,90,90,.32) 0 7px,rgba(224,90,90,.18) 7px 14px)}
+.sheet::before{left:22px;transform:rotate(-5deg)}
+.sheet::after{right:26px;transform:rotate(4deg)}
+.plot-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.plot-head h2{font:700 clamp(25px,2.3vw,30px)/1.1 var(--hand);color:var(--ink)}
+.stamp{flex:none;font:700 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--red);border:2px solid var(--margin);border-radius:6px;padding:6px 8px;transform:rotate(6deg)}
+.fx-row{display:flex;align-items:center;gap:8px;border:2px solid var(--ink);border-radius:14px 16px 12px 18px/16px 12px 18px 14px;padding:4px 4px 4px 14px;background:#fff}
+.fx-row:focus-within{outline:3px solid var(--margin);outline-offset:3px}
+.fx-row.bad{border-color:var(--red)}
+.fx-row label{flex:none;font:700 25px/1 var(--hand);color:var(--ink)}
+.fx-row input{flex:1;min-width:0;width:1px;border:0;background:transparent;font:500 21px/1.2 var(--sans);color:var(--lead);padding:9px 2px;outline:none}
+.help{font-size:14.5px;line-height:1.5;color:var(--pencil);margin:8px 2px 12px}
+.help code{font:500 13.5px/1 ui-monospace,Menlo,Consolas,monospace;background:var(--wash);color:var(--ink2);padding:2px 5px;border-radius:5px;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{min-height:40px;padding:6px 14px;font:400 18px/1 var(--hand);color:var(--ink);background:#fff;border:1.5px dashed #8FB0E4;border-radius:999px;cursor:pointer}
+.chip:hover,.chip[aria-pressed="true"]{background:var(--wash);border-style:solid;border-color:var(--ink)}
+.stage{position:relative;border:1.5px solid #BCD1EF;border-radius:4px;overflow:hidden;background:#fff}
+.stage:has(canvas:focus-visible){outline:3px solid var(--margin);outline-offset:3px}
+#graph{display:block;width:100%;height:clamp(290px,38vw,380px);touch-action:pan-y;cursor:grab;outline:none}
+#graph.dragging{cursor:grabbing}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.tb{min-width:44px;height:44px;padding:0 11px;font:500 18px/1 var(--sans);color:var(--ink);background:#fff;border:1.5px solid #9DB9E6;border-radius:10px;cursor:pointer}
+.tb:hover{background:var(--wash);border-color:var(--ink)}
+.tb.txt{font-size:15px}
+.tools .gap{flex:1 1 0;min-width:0}
+.msg{min-height:1.4em;margin:12px 2px 2px;font:700 19px/1.35 var(--hand);color:var(--ink)}
+.msg.err{color:var(--red)}
+.msg .where{display:block;margin-top:4px;font:500 15px/1.5 ui-monospace,Menlo,Consolas,monospace;color:var(--lead);word-break:break-all}
+.msg mark{background:rgba(224,90,90,.2);color:var(--red);border-bottom:2px solid var(--margin);padding:0 2px}
+.notes{list-style:none;margin:4px 0 0;padding:0;font:400 18.5px/1.4 var(--hand);color:var(--lead)}
+.notes li{position:relative;padding-left:24px;margin-top:2px}
+.notes li::before{content:"→";position:absolute;left:0;color:var(--margin);font-weight:700}
+.pins{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.pins li{display:flex;align-items:center;gap:8px;padding:3px 3px 3px 12px;border:1.5px solid #C4D6F0;border-radius:999px;font:500 15px/1.2 var(--sans);max-width:100%;overflow-wrap:anywhere}
+.pins i{flex:none;width:20px;height:0;border-top:3px solid currentColor}
+.pins li.dash i{border-top-style:dashed}
+.pins button{flex:none;width:36px;height:36px;border-radius:50%;border:0;background:var(--wash);color:var(--lead);font-size:18px;cursor:pointer}
+.readout{font-size:14.5px;color:var(--pencil);margin:10px 2px 0;font-variant-numeric:tabular-nums}
+
+/* pages */
+.pg{position:relative;padding-top:clamp(70px,8vw,104px);padding-bottom:10px;--pgt:clamp(74px,8.3vw,108px)}
+.h2{display:inline-block;font:700 clamp(40px,5.2vw,62px)/1 var(--hand);color:var(--ink);margin:0 0 16px}
+.h2::after{content:"";display:block;height:12px;margin-top:2px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8C40 2 80 11 120 6s60-3 76 1' fill='none' stroke='%23E05A5A' stroke-width='3' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.intro{max-width:40em;font-size:18px;margin:0 0 34px}
+.aside{font:400 20px/1.3 var(--hand);color:var(--red);transform:rotate(-2deg);margin:18px 0 0}
+.units{display:grid;gap:20px}
+@media (min-width:760px){.units{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}}
+.unit{position:relative;background:#fff;border:1.5px solid #C4D6F0;border-radius:4px 4px 4px 26px;padding:22px 22px 24px;box-shadow:0 18px 36px -30px rgba(23,57,138,.5)}
+.unit .doodle{float:right;width:112px;height:84px;margin:-2px -4px 8px 14px}
+.doodle path,.doodle circle,.doodle rect{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.doodle .r{stroke:var(--margin)}.doodle .dot{stroke-width:4.5}
+.doodle text{font:700 15px var(--hand);fill:var(--red);stroke:none}
+.lvl{font:700 18px/1 var(--hand);color:var(--red);margin:0 0 6px}
+.unit h3{font:700 25px/1.15 var(--sans);color:var(--ink);letter-spacing:-.01em;margin-bottom:8px}
+.unit p{margin:0 0 12px}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:4px;clear:both}
+.ticks li{position:relative;padding-left:28px}
+.ticks li::before{content:"";position:absolute;left:3px;top:.42em;width:14px;height:7px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(-45deg)}
+
+/* challenge */
+.quiz-wrap{display:grid;gap:26px;align-items:start}
+@media (min-width:1000px){.quiz-wrap{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px}}
+.lbl{font:500 15px var(--sans);color:var(--pencil);margin:0 0 8px}
+.levels{display:flex;flex-wrap:wrap;gap:8px}
+.lv{min-height:46px;padding:8px 18px;border-radius:999px;border:1.5px solid #9DB9E6;background:#fff;font:500 16px var(--sans);color:var(--lead);cursor:pointer}
+.lv[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.quiz{padding:24px 20px 22px}
+.qbar{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;font:500 15px var(--sans);color:var(--pencil)}
+.qbar .timer{margin-left:auto;font:700 26px/1 var(--hand);color:var(--ink);font-variant-numeric:tabular-nums}
+.boxes{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0 22px;padding:0;list-style:none}
+.boxes li{height:50px;border:1.5px solid #9DB9E6;border-radius:6px;display:grid;place-items:center;font:700 28px/1 var(--hand);color:var(--pencil)}
+.boxes li.now{border:2.5px solid var(--ink)}
+.boxes li.ok{color:var(--ink)}.boxes li.no{color:var(--red)}
+.boxes li.ok,.boxes li.no{animation:pop .35s ease-out}
+@keyframes pop{from{transform:scale(.6)}}
+.qtext{display:block;font:700 clamp(40px,6vw,60px)/1.05 var(--hand);color:var(--lead);margin:0 0 16px;overflow-wrap:anywhere}
+.qrow{display:flex;gap:8px;align-items:center}
+.qrow input{flex:1;min-width:0;width:1px;height:56px;font:500 26px var(--sans);padding:0 14px;border:2px solid var(--ink);border-radius:12px;color:var(--lead);background:#fff}
+.qrow .tb{height:56px;min-width:52px;font-size:22px}
+.qfb{min-height:1.5em;margin:12px 0 0;font:700 20px/1.35 var(--hand);color:var(--ink)}
+.qfb.no{color:var(--red)}
+.result{text-align:center;padding:6px 0 4px}
+.result:focus{outline:none}
+.result svg{width:92px;height:92px;margin:0 auto 6px;display:block}
+.rbig{font:700 clamp(44px,6vw,60px)/1 var(--hand);color:var(--ink);margin:0 0 8px}
+.rline{font:400 22px/1.3 var(--hand);color:var(--lead);margin:0 auto 6px;max-width:24em}
+.rbest{font-size:14.5px;color:var(--pencil);margin:0 0 18px}
+.result .ctas{justify-content:center}
+
+/* sessions */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:30px;counter-reset:s}
+@media (min-width:900px){.steps{grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}}
+.steps li{position:relative;padding-top:66px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:52px;height:52px;border:2.5px solid var(--ink);border-radius:54% 46% 52% 44%/48% 54% 46% 52%;display:grid;place-items:center;font:700 27px/1 var(--hand);color:var(--ink);background:#fff}
+.steps h3{font:500 20px/1.25 var(--sans);color:var(--ink);margin-bottom:6px}
+.steps p{max-width:30em}
+@media (min-width:900px){.steps li:not(:last-child)::after{content:"";position:absolute;top:22px;left:66px;right:6px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10' preserveAspectRatio='none'%3E%3Cpath d='M2 5c50-4 100 3 190 0' fill='none' stroke='%23E05A5A' stroke-width='2' stroke-dasharray='6 6' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}}
+.where{display:grid;gap:14px;margin-top:40px}
+@media (min-width:760px){.where{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.where div{background:#fff;border:1.5px dashed #9DB9E6;border-radius:10px;padding:14px 16px}
+.where b{display:block;font:700 19px/1.2 var(--hand);color:var(--red);margin-bottom:4px}
+
+/* tutors */
+.tutors{display:grid;gap:28px;padding-top:8px}
+@media (min-width:760px){.tutors{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}}
+.tutor{position:relative;padding:24px 22px 20px;background:var(--wash);border-radius:3px;box-shadow:0 16px 28px -22px rgba(23,57,138,.6);transform:rotate(var(--r,-1deg))}
+.tutor:nth-child(2){--r:1deg;background:var(--pink)}
+.tutor:nth-child(3){--r:-.5deg;background:#fff}
+.tutor::before{content:"";position:absolute;top:-11px;left:50%;width:76px;height:22px;margin-left:-38px;background:rgba(31,79,181,.16);transform:rotate(-3deg)}
+.tutor svg{display:block;width:84px;height:84px;margin-bottom:8px}
+.tutor h3{font:700 27px/1.1 var(--hand);color:var(--ink)}
+.role{font:500 13px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin:4px 0 10px}
+.fave{margin-top:12px;padding-top:10px;border-top:1.5px dashed #9DB9E6;font:400 18px/1.3 var(--hand);color:var(--pencil)}
+
+/* prices */
+.price-wrap{display:grid;gap:26px;align-items:start}
+@media (min-width:1000px){.price-wrap{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:48px}}
+.sum{padding:8px 22px 18px}
+.sum table{width:100%;border-collapse:collapse}
+.sum th,.sum td{padding:15px 0;border-bottom:1.5px solid var(--grid);vertical-align:baseline;text-align:left}
+.sum th{font:500 17px/1.3 var(--sans)}
+.sum th small{display:block;font:400 14.5px/1.4 var(--sans);color:var(--pencil);margin-top:2px}
+.sum td{text-align:right;padding-left:14px;font:700 30px/1 var(--hand);color:var(--ink);white-space:nowrap}
+.sum td span{font:400 14px var(--sans);color:var(--pencil)}
+.sum tr:last-child th,.sum tr:last-child td{border-bottom:3px double var(--ink)}
+.sum .small{margin-top:14px;font-size:14.5px;color:var(--pencil)}
+
+/* booking */
+.book{display:grid;gap:30px;align-items:start}
+@media (min-width:1000px){.book{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px}}
+.trial{display:grid;gap:16px;padding:26px 20px 22px}
+.field label,.field .legend{display:block;font:500 15px var(--sans);color:var(--lead);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:10px 12px;font:400 17px var(--sans);color:var(--lead);background:#fff;border:1.5px solid #8FB0E4;border-radius:10px}
+.field textarea{min-height:84px;resize:vertical}
+.two{display:grid;gap:16px}
+@media (min-width:600px){.two{grid-template-columns:1fr 1fr}}
+fieldset.field{border:0;padding:0;margin:0;min-width:0}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative;display:inline-flex}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.opt span{display:inline-flex;align-items:center;min-height:42px;padding:6px 14px;border:1.5px dashed #8FB0E4;border-radius:999px;font:400 18px/1 var(--hand);color:var(--ink)}
+.opt input:checked+span{background:var(--ink);color:#fff;border:1.5px solid var(--ink)}
+.opt input:focus-visible+span{outline:3px solid var(--margin);outline-offset:2px}
+.done{padding:14px 16px;border:2px dashed var(--margin);border-radius:12px;background:var(--pink);font:400 19px/1.35 var(--hand);color:var(--lead)}
+.contact{display:grid;gap:10px;margin-top:22px;font-size:16.5px}
+.contact b{font:700 19px var(--hand);color:var(--red);display:block}
+
+/* footer */
+.foot{margin-top:80px;border-top:2px solid var(--ink);background:#fff;padding-top:34px;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+.foot-name{display:block;font:700 clamp(40px,6vw,68px)/1 var(--hand);color:var(--ink);overflow-wrap:anywhere;margin:0 0 12px}
+.foot-grid{display:grid;gap:22px;margin-top:22px;font-size:16px}
+@media (min-width:760px){.foot-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.foot-grid b{display:block;font:700 19px var(--hand);color:var(--red)}
+.fine{margin-top:26px;font-size:14px;color:var(--pencil);max-width:60em}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="top-in">
+<a class="logo" href="#main"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="8" fill="#fff" stroke="#1F4FB5" stroke-width="2.4"/><path d="M8.5 21.5h4l4.5 8.5 7-19.5h8" fill="none" stroke="#E05A5A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b data-brand>Mathsy Tutoring</b></a>
+<button class="toc-btn" id="toc-btn" type="button" aria-expanded="false" aria-controls="toc"><i aria-hidden="true"></i>Contents</button>
+<nav class="nav" id="toc" aria-label="Contents">
+<p aria-hidden="true">Contents</p>
+<ol>
+<li><a href="#plotter" data-p="p. 1">Plotter</a></li>
+<li><a href="#teach" data-p="p. 2">What we teach</a></li>
+<li><a href="#challenge" data-p="p. 3">Quick challenge</a></li>
+<li><a href="#sessions" data-p="p. 4">How sessions work</a></li>
+<li><a href="#tutors" data-p="p. 5">Tutors</a></li>
+<li><a href="#prices" data-p="p. 6">Prices</a></li>
+<li><a class="cta" href="#book" data-p="p. 7">Book a free trial</a></li>
+</ol>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="hero wrap" aria-labelledby="h1">
+<div class="hero-copy">
+<p class="pg-no" aria-hidden="true">p. 1</p>
+<p class="eyebrow">Maths tutoring · Years 3–12 · Epping, NSW &amp; online</p>
+<h1 id="h1">Maths that finally <span class="circled">clicks.<svg viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" vector-effect="non-scaling-stroke" d="M156 12C118 1 40 3 16 28C-4 50 28 84 104 84C170 84 198 62 190 36C183 13 142 5 88 9"/></svg></span></h1>
+<p class="lead">Patient one-to-one and small-group tutoring for primary, high school and senior maths. We work it out on paper, together — until the method makes sense and the confidence follows.</p>
+<div class="ctas"><a class="btn" href="#book">Book a free 30-min trial</a><a class="btn ghost" href="#challenge">Try the quick challenge</a></div>
+<ul class="facts"><li>Years 3–12</li><li>Epping rooms or online</li><li>Same tutor each week</li></ul>
+<p class="arrow-note" aria-hidden="true">Type your own function into the plotter<svg viewBox="0 0 64 40"><path d="M4 30C20 10 40 6 58 16"/><path d="M47 8l11 8-12 6"/></svg></p>
+</div>
+
+<div class="sheet plot" id="plotter" role="region" aria-labelledby="plot-h">
+<div class="plot-head"><h2 id="plot-h">Type a function, watch it plot</h2><span class="stamp">Live</span></div>
+<form id="fx-form" class="fx-row" autocomplete="off" data-kit-ignore>
+<label for="fx">y =</label>
+<input id="fx" name="fx" value="x^2 - 3" maxlength="60" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go" aria-describedby="fx-help fx-msg">
+<button class="btn sm" type="submit">Plot</button>
+</form>
+<p class="help" id="fx-help">Use <code>^</code> for powers, <code>2x</code> or <code>3(x+1)</code> for times, plus <code>sqrt</code> <code>abs</code> <code>sin</code> <code>cos</code> <code>tan</code> <code>ln</code> <code>log</code> <code>pi</code>.</p>
+<div class="chips" role="group" aria-label="Example functions">
+<button type="button" class="chip" data-fx="x^2 - 3">x² − 3</button>
+<button type="button" class="chip" data-fx="sin(x)">sin(x)</button>
+<button type="button" class="chip" data-fx="2x + 1">2x + 1</button>
+<button type="button" class="chip" data-fx="abs(x)/2">abs(x)/2</button>
+<button type="button" class="chip" data-fx="1/x">1/x</button>
+<button type="button" class="chip" data-fx="x^3 - 4x">x³ − 4x</button>
+</div>
+<div class="stage"><canvas id="graph" tabindex="0" role="img" aria-label="Graph of y = x^2 - 3" aria-describedby="graph-keys"></canvas></div>
+<div class="tools" role="group" aria-label="Zoom and pan the graph">
+<button type="button" class="tb" data-act="out" aria-label="Zoom out">−</button>
+<button type="button" class="tb" data-act="in" aria-label="Zoom in">+</button>
+<button type="button" class="tb" data-act="left" aria-label="Pan left">←</button>
+<button type="button" class="tb" data-act="up" aria-label="Pan up">↑</button>
+<button type="button" class="tb" data-act="down" aria-label="Pan down">↓</button>
+<button type="button" class="tb" data-act="right" aria-label="Pan right">→</button>
+<button type="button" class="tb txt" data-act="home">Reset view</button>
+<span class="gap"></span>
+<button type="button" class="tb txt" id="keep">Keep this line</button>
+</div>
+<p class="help" id="graph-keys">Drag the graph to pan. Or click it and use the arrow keys, + and −, and 0 to reset.</p>
+<p class="msg" id="fx-msg" role="status" aria-live="polite"></p>
+<ul class="notes" id="notes" aria-label="What the graph shows"></ul>
+<ul class="pins" id="pins" aria-label="Lines kept on the graph"></ul>
+<p class="readout" id="trace" aria-live="off">Hover over or tap the graph to read a point.</p>
+</div>
+</section>
+
+<section class="pg wrap" id="teach" aria-labelledby="teach-h">
+<p class="pg-no" aria-hidden="true">p. 2</p>
+<h2 class="h2" id="teach-h">What we teach</h2>
+<p class="intro">Four notebooks, one approach: find the gap, fill it properly, then practise until it sticks. Every session follows the NSW syllabus your child is working on at school.</p>
+<div class="units">
+<article class="unit">
+<svg class="doodle" viewBox="0 0 112 84" aria-hidden="true"><path d="M6 62h100"/><path d="M12 56v12M28 56v12M44 56v12M60 56v12M76 56v12M92 56v12"/><path class="r" d="M12 55c4-16 28-16 32 0M44 55c4-16 28-16 32 0M76 55c3-12 13-12 16 0"/><path class="r" d="M39 50l5 5 5-4M71 50l5 5 5-4"/><text x="21" y="34">+4</text><text x="53" y="34">+4</text><text x="80" y="38">+2</text></svg>
+<p class="lvl">Years 3–6</p>
+<h3>Primary maths</h3>
+<p>Number sense first: place value, times tables, fractions and the “why” behind the written methods. Plenty of hands-on examples and small wins that add up.</p>
+<ul class="ticks"><li>Times tables and mental strategies</li><li>Fractions, decimals and percentages</li><li>Worded problems, one step at a time</li></ul>
+</article>
+<article class="unit">
+<svg class="doodle" viewBox="0 0 112 84" aria-hidden="true"><path d="M14 64h80V10z"/><path d="M84 64V54h10"/><path class="r" d="M38 64c0-6-2-10-5-13"/><text x="42" y="60">θ</text><text x="99" y="42">a</text><text x="50" y="80">b</text><text x="40" y="32">c</text></svg>
+<p class="lvl">Years 7–10</p>
+<h3>High school maths</h3>
+<p>Algebra is where many students wobble. We patch the gaps from earlier years so the new topics have something solid to stand on.</p>
+<ul class="ticks"><li>Algebra, equations and linear graphs</li><li>Pythagoras and trigonometry</li><li>Statistics, probability and measurement</li></ul>
+</article>
+<article class="unit">
+<svg class="doodle" viewBox="0 0 112 84" aria-hidden="true"><path d="M8 74h98M16 80V6"/><path d="M18 70c24-2 38-12 50-28s24-30 38-34"/><path class="r" d="M44 74L98 2"/><circle class="r" cx="68" cy="42" r="4"/><text x="74" y="66">dy/dx</text></svg>
+<p class="lvl">Years 11–12</p>
+<h3>Senior maths</h3>
+<p>Standard, Advanced and Extension 1 courses. Functions, calculus, statistics and exam technique — with full worked solutions set out the way markers like to see them.</p>
+<ul class="ticks"><li>Differentiation and integration</li><li>Exponentials, logs and trig functions</li><li>Past-paper practice under time</li></ul>
+</article>
+<article class="unit">
+<svg class="doodle" viewBox="0 0 112 84" aria-hidden="true"><rect x="4" y="30" width="24" height="28" rx="3"/><rect x="31" y="30" width="24" height="28" rx="3"/><rect x="58" y="30" width="24" height="28" rx="3"/><rect class="r" x="85" y="30" width="24" height="28" rx="3"/><text x="12" y="51" fill="#1F4FB5">2</text><text x="39" y="51" fill="#1F4FB5">4</text><text x="66" y="51" fill="#1F4FB5">8</text><text x="93" y="51">?</text><path class="r" d="M16 26c4-10 22-10 26 0M43 26c4-10 22-10 26 0"/><text x="21" y="14">×2</text><text x="48" y="14">×2</text></svg>
+<p class="lvl">Years 4–6 · test prep</p>
+<h3>Selective &amp; scholarship prep</h3>
+<p>General practice for selective school and scholarship tests: mathematical reasoning, problem solving and working calmly under time. We teach strategies — we can’t promise a place.</p>
+<ul class="ticks"><li>Patterns, puzzles and reasoning</li><li>Timed practice sets, reviewed together</li><li>Estimating and checking habits</li></ul>
+</article>
+</div>
+<p class="aside">psst — the quick challenge is on the next page ↓</p>
+</section>
+
+<section class="pg wrap" id="challenge" aria-labelledby="ch-h">
+<p class="pg-no" aria-hidden="true">p. 3</p>
+<h2 class="h2" id="ch-h">Quick challenge</h2>
+<div class="quiz-wrap">
+<div>
+<p class="intro">Five mental-maths questions against the clock. No calculator, no pressure — just a warm-up to see how your brain is ticking today.</p>
+<p class="lbl" id="lv-l">Pick a level</p>
+<div class="levels" role="group" aria-labelledby="lv-l">
+<button type="button" class="lv" data-level="1" aria-pressed="true">Years 3–6</button>
+<button type="button" class="lv" data-level="2" aria-pressed="false">Years 7–10</button>
+</div>
+<p class="aside">tip: press Enter to check each answer ✎</p>
+</div>
+<div class="sheet quiz" id="quiz">
+<div class="qbar"><span id="q-count">5 questions</span><span id="q-score">Score 0</span><span class="timer" id="q-time" role="timer" aria-label="Time taken">0:00</span></div>
+<ol class="boxes" id="q-boxes" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ol>
+<div id="q-idle"><p class="qtext">Ready when you are.</p><button class="btn" id="q-start" type="button">Start the challenge</button></div>
+<form id="q-form" hidden autocomplete="off" data-kit-ignore>
+<label class="qtext" for="q-in" id="q-text">6 × 7 =</label>
+<div class="qrow"><button class="tb" type="button" id="q-neg" aria-label="Add or remove a minus sign">±</button><input id="q-in" inputmode="decimal" enterkeyhint="done" autocomplete="off" aria-describedby="q-fb"><button class="btn sm" type="submit">Check</button></div>
+</form>
+<p class="qfb" id="q-fb" role="status" aria-live="polite"></p>
+<div class="result" id="q-res" hidden tabindex="-1">
+<svg viewBox="0 0 92 92" aria-hidden="true"><path d="M46 6l11 24 26 3-19 18 5 26-23-13-23 13 5-26L9 33l26-3z" fill="#FDEEEE" stroke="#E05A5A" stroke-width="3" stroke-linejoin="round"/><path d="M34 50c4 5 9 7 14 5M36 42h.01M52 42h.01" fill="none" stroke="#1F4FB5" stroke-width="3" stroke-linecap="round"/></svg>
+<p class="rbig" id="r-big"></p>
+<p class="rline" id="r-line"></p>
+<p class="rbest" id="r-best"></p>
+<div class="ctas"><button class="btn" id="q-again" type="button">Go again</button><a class="btn ghost" href="#book">Book a free trial</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="pg wrap" id="sessions" aria-labelledby="se-h">
+<p class="pg-no" aria-hidden="true">p. 4</p>
+<h2 class="h2" id="se-h">How sessions work</h2>
+<p class="intro">No mystery, no lock-in. Here’s the working out.</p>
+<ol class="steps">
+<li><h3>A free 30-minute trial</h3><p>We meet your child in Epping or online, try a few problems together and find exactly where things wobble.</p></li>
+<li><h3>A plan on one page</h3><p>You get a short written plan: the topics for this term, in order, and how we’ll know it’s working.</p></li>
+<li><h3>Weekly 60-minute sessions</h3><p>Same tutor each week. Worked examples, lots of questions, and homework of 15 minutes, tops.</p></li>
+<li><h3>A two-line note home</h3><p>After every session: what we covered and one thing to practise before next time.</p></li>
+</ol>
+<div class="where">
+<div><b>In the rooms</b>Bright, quiet tutoring rooms a short walk from Epping station. Spare pencils provided.</div>
+<div><b>Online</b>A video call and a shared whiteboard. We send the worked examples to you afterwards.</div>
+<div><b>When</b>Mon–Thu 3:30–8 pm and Sat 9 am–1 pm, during NSW school terms.</div>
+</div>
+</section>
+
+<section class="pg wrap" id="tutors" aria-labelledby="tu-h">
+<p class="pg-no" aria-hidden="true">p. 5</p>
+<h2 class="h2" id="tu-h">Your tutors</h2>
+<p class="intro">A small team who genuinely like explaining things twice (or five times). Every student keeps the same tutor through the term.</p>
+<div class="tutors">
+<article class="tutor">
+<svg class="doodle" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="38" r="17"/><path d="M16 82c2-14 12-20 26-20s24 6 26 20"/><path d="M25 40c-2-16 8-24 17-24s19 8 17 24M25 40c-1 10-2 17-6 21M59 40c1 10 2 17 6 21M29 26c7 6 17 7 28 5"/><circle cx="35" cy="39" r="5"/><circle cx="49" cy="39" r="5"/><path d="M40 39h4M37 48c3 3 7 3 10 0"/></svg>
+<h3>Anjali R.</h3>
+<p class="role">Senior maths · Years 10–12</p>
+<p>Calm, organised and very good at turning a scary exam question into three small ones. Takes Advanced and Extension 1.</p>
+<p class="fave">fave topic: calculus — “it’s just the maths of change”</p>
+</article>
+<article class="tutor">
+<svg class="doodle" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="38" r="17"/><path d="M16 82c2-14 12-20 26-20s24 6 26 20"/><path d="M26 32c-3-9 5-15 10-11 2-6 11-6 12-1 5-4 13 1 10 8 4 2 4 7 1 9"/><path class="dot" d="M36 38h.01M48 38h.01"/><path d="M35 45c4 5 10 5 14 0M33 43h.01M51 43h.01"/></svg>
+<h3>Callum O.</h3>
+<p class="role">Primary &amp; lower high school</p>
+<p>Patient, funny and endlessly inventive with times-tables games. Brilliant with students who’ve decided they’re “just not a maths person”.</p>
+<p class="fave">fave topic: fractions (yes, really)</p>
+</article>
+<article class="tutor">
+<svg class="doodle" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="38" r="17"/><path d="M16 82c2-14 12-20 26-20s24 6 26 20"/><circle cx="42" cy="15" r="6"/><path d="M26 35c1-12 30-15 32 0-7-1-17-6-22-3-3 2-6 3-10 3"/><path class="dot" d="M36 40h.01M48 40h.01"/><path d="M37 47c3 3 7 3 10 0"/></svg>
+<h3>Lucy T.</h3>
+<p class="role">Reasoning &amp; test prep</p>
+<p>Loves a good puzzle and teaches students to slow down, read carefully and check their answers before moving on.</p>
+<p class="fave">fave topic: patterns — “spot the rule, then test it”</p>
+</article>
+</div>
+</section>
+
+<section class="pg wrap" id="prices" aria-labelledby="pr-h">
+<p class="pg-no" aria-hidden="true">p. 6</p>
+<h2 class="h2" id="pr-h">Prices</h2>
+<div class="price-wrap">
+<div class="sheet sum">
+<table>
+<caption class="vh">Sample prices per session</caption>
+<tr><th scope="row">Primary, one-to-one<small>Years 3–6 · 60 min</small></th><td>$70 <span>/ session</span></td></tr>
+<tr><th scope="row">High school, one-to-one<small>Years 7–10 · 60 min</small></th><td>$80 <span>/ session</span></td></tr>
+<tr><th scope="row">Senior, one-to-one<small>Years 11–12 · 60 min</small></th><td>$95 <span>/ session</span></td></tr>
+<tr><th scope="row">Small group<small>Up to 4 students, similar level · 90 min</small></th><td>$45 <span>/ student</span></td></tr>
+<tr><th scope="row">Test prep block<small>Selective &amp; scholarship practice · 8 × 90 min, small group</small></th><td>$340 <span>/ block</span></td></tr>
+<tr><th scope="row">Trial lesson<small>30 min · meet your tutor, no obligation</small></th><td>$0</td></tr>
+</table>
+<p class="small">Sample prices for this demo, in AUD incl. GST. Online sessions cost the same. Pay per session or per term.</p>
+</div>
+<div>
+<p class="lbl">Every session includes</p>
+<ul class="ticks">
+<li>Worked examples to keep</li>
+<li>A practice sheet matched to the lesson</li>
+<li>The two-line note home</li>
+<li>Free rescheduling with 24 hours’ notice</li>
+</ul>
+<p class="aside">siblings back to back? ask about 10% off</p>
+</div>
+</div>
+</section>
+
+<section class="pg wrap" id="book" aria-labelledby="bk-h">
+<p class="pg-no" aria-hidden="true">p. 7</p>
+<div class="book">
+<div>
+<h2 class="h2" id="bk-h">Book a free trial</h2>
+<p class="intro">A relaxed 30 minutes to meet a tutor, try a few problems and sketch out a plan. No obligation — if it’s not the right fit, that’s completely fine.</p>
+<div class="contact">
+<p><b>Call or text</b><a href="tel:0255503141">(02) 5550 3141</a></p>
+<p><b>Email</b><a href="mailto:hello@example.com">hello@example.com</a></p>
+<p><b>Where</b>Epping, NSW (near the station) · online anywhere in NSW</p>
+</div>
+</div>
+<form class="sheet trial" id="trial" data-kit-ignore>
+<div class="two">
+<div class="field"><label for="t-name">Student’s first name</label><input id="t-name" name="name" required autocomplete="off"></div>
+<div class="field"><label for="t-year">Year level</label><select id="t-year" name="year" required><option value="">Choose…</option><option>Year 3</option><option>Year 4</option><option>Year 5</option><option>Year 6</option><option>Year 7</option><option>Year 8</option><option>Year 9</option><option>Year 10</option><option>Year 11</option><option>Year 12</option></select></div>
+</div>
+<fieldset class="field"><legend class="legend">What would help most?</legend>
+<div class="opts">
+<label class="opt"><input type="checkbox" name="help" value="Times tables"><span>times tables</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Fractions"><span>fractions</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Algebra"><span>algebra</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Graphs"><span>graphs</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Calculus"><span>calculus</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Test prep"><span>test prep</span></label>
+<label class="opt"><input type="checkbox" name="help" value="Confidence"><span>confidence</span></label>
+</div>
+</fieldset>
+<div class="two">
+<fieldset class="field"><legend class="legend">Where?</legend>
+<div class="opts"><label class="opt"><input type="radio" name="where" value="Epping rooms" checked><span>Epping rooms</span></label><label class="opt"><input type="radio" name="where" value="Online"><span>online</span></label></div>
+</fieldset>
+<div class="field"><label for="t-time">Best time</label><select id="t-time" name="time"><option>Weekday after school (3:30–6 pm)</option><option>Weekday evening (6–8 pm)</option><option>Saturday morning (9 am–1 pm)</option></select></div>
+</div>
+<div class="two">
+<div class="field"><label for="t-email">Parent or guardian email</label><input id="t-email" name="email" type="email" required placeholder="you@example.com" autocomplete="off"></div>
+<div class="field"><label for="t-phone">Mobile (optional)</label><input id="t-phone" name="phone" type="tel" placeholder="0491 570 156" autocomplete="off"></div>
+</div>
+<div><button class="btn" type="submit">Request a free trial</button></div>
+<p class="done" id="t-done" role="status" hidden></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<p class="foot-name" data-brand>Mathsy Tutoring</p>
+<p>Maths tutoring for Years 3–12 · Epping, NSW and online</p>
+<div class="foot-grid">
+<p><b>Hours</b>Mon–Thu 3:30–8 pm<br>Sat 9 am–1 pm<br>Closed Sundays and public holidays</p>
+<p><b>Contact</b><a href="tel:0255503141">(02) 5550 3141</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+<p><b>Jump to</b><a href="#plotter">Plotter</a> · <a href="#challenge">Quick challenge</a> · <a href="#prices">Prices</a> · <a href="#book">Free trial</a></p>
+</div>
+<p class="fine">A fictional business created as a design demo. Tutors, prices and times are samples. We don’t promise marks, ATARs or school placements — just patient, well-planned lessons.</p>
+</div>
+</footer>
+
+<script>
+(function () {
+"use strict";
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+const reduced = () => (window.DemoKit ? DemoKit.reducedMotion : !!(mq && mq.matches));
+const toast = (m) => { if (window.DemoKit) DemoKit.toast(m); };
+const MINUS = "−";
+const pick = (a) => a[Math.floor(Math.random() * a.length)];
+
+/* ---------- contents menu (phones and tablets) ---------- */
+const tocBtn = $("#toc-btn"), toc = $("#toc");
+function setToc(open, focus) {
+tocBtn.setAttribute("aria-expanded", String(open));
+toc.classList.toggle("open", open);
+if (open && focus) { const a = toc.querySelector("a"); if (a) a.focus(); }
+}
+tocBtn.addEventListener("click", () => setToc(tocBtn.getAttribute("aria-expanded") !== "true", true));
+toc.addEventListener("click", (e) => { if (e.target.closest("a")) setToc(false); });
+document.addEventListener("click", (e) => { if (toc.classList.contains("open") && !e.target.closest(".top")) setToc(false); });
+document.addEventListener("keydown", (e) => {
+if (e.key === "Escape" && toc.classList.contains("open")) { e.preventDefault(); setToc(false); tocBtn.focus(); }
+});
+
+/* ---------- a small, safe expression parser: tokens -> recursive descent -> closures (no eval, no Function) ---------- */
+function PErr(message, pos) { this.message = message; this.pos = pos; }
+const FNS = { sin: Math.sin, cos: Math.cos, tan: Math.tan, asin: Math.asin, acos: Math.acos, atan: Math.atan, sqrt: Math.sqrt, abs: Math.abs, ln: Math.log, log: Math.log10, exp: Math.exp, floor: Math.floor, ceil: Math.ceil, round: Math.round };
+const NAMES = Object.keys(FNS).concat(["pi", "π", "x", "e"]).sort((a, b) => b.length - a.length);
+const OPS = { "+": "+", "-": "-", "−": "-", "–": "-", "*": "*", "×": "*", "·": "*", "/": "/", "÷": "/", "^": "^", "(": "(", ")": ")", "[": "(", "]": ")" };
+const SYM = { "+": "+", "-": MINUS, "*": "×", "/": "÷", "^": "^", "(": "(", ")": ")" };
+function near(a, b) { // edit distance of at most one
+if (Math.abs(a.length - b.length) > 1) return false;
+let i = 0, j = 0, d = 0;
+while (i < a.length && j < b.length) {
+if (a[i] === b[j]) { i++; j++; continue; }
+if (++d > 1) return false;
+if (a.length > b.length) i++; else if (a.length < b.length) j++; else { i++; j++; }
+}
+return d + (a.length - i) + (b.length - j) <= 1;
+}
+function word(w, p, out) {
+let k = 0;
+while (k < w.length) {
+const rest = w.slice(k), name = NAMES.find((n) => rest.startsWith(n));
+if (!name) {
+const guess = Object.keys(FNS).find((f) => near(rest.slice(0, f.length), f) || near(rest.slice(0, f.length - 1), f));
+if (guess && rest.length > 1) throw new PErr("“" + rest + "” isn’t a function I know — did you mean " + guess + "?", p + k);
+if (rest.length === 1) throw new PErr("Use x as the letter — “" + rest + "” isn’t something I can plot.", p + k);
+throw new PErr("I don’t know “" + rest + "”. Try sin, cos, tan, sqrt, abs, ln, log or exp.", p + k);
+}
+if (FNS[name]) out.push({ t: "fn", v: name, p: p + k });
+else if (name === "x") out.push({ t: "x", p: p + k });
+else out.push({ t: "num", v: name === "e" ? Math.E : Math.PI, p: p + k });
+k += name.length;
+}
+}
+function tokenize(s) {
+const out = [];
+let i = 0;
+while (i < s.length) {
+const c = s[i];
+if (c === " " || c === "\t") { i++; continue; }
+if ((c >= "0" && c <= "9") || c === ".") {
+let j = i, dots = 0;
+while (j < s.length && ((s[j] >= "0" && s[j] <= "9") || s[j] === ".")) { if (s[j] === ".") dots++; j++; }
+const txt = s.slice(i, j);
+if (dots > 1) throw new PErr("“" + txt + "” has two decimal points.", i);
+if (txt === ".") throw new PErr("A dot on its own isn’t a number.", i);
+out.push({ t: "num", v: parseFloat(txt), p: i });
+i = j; continue;
+}
+if (/[a-zA-Zπ]/.test(c)) {
+let j = i;
+while (j < s.length && /[a-zA-Zπ]/.test(s[j])) j++;
+word(s.slice(i, j).toLowerCase(), i, out);
+i = j; continue;
+}
+if (OPS[c]) { out.push({ t: OPS[c], p: i }); i++; continue; }
+if (c === "²" || c === "³") { out.push({ t: "^", p: i }, { t: "num", v: c === "²" ? 2 : 3, p: i }); i++; continue; }
+if (c === "√") { out.push({ t: "fn", v: "sqrt", p: i }); i++; continue; }
+if (c === "|") throw new PErr("For absolute value, write abs(x) instead of |x|.", i);
+if (c === "=") throw new PErr("Just type the right-hand side — for y = 2x + 1, type 2x + 1.", i);
+if (c === ",") throw new PErr("Use a dot for decimals, like 2.5.", i);
+throw new PErr("I don’t recognise “" + c + "”. Stick to numbers, x, + − × ÷ ^ and brackets.", i);
+}
+out.push({ t: "end", p: s.length });
+return out;
+}
+function parse(input) {
+const m = /^\s*(?:y|f\s*\(\s*x\s*\))\s*=/i.exec(input);
+const off = m ? m[0].length : 0, s = input.slice(off);
+if (!s.trim()) throw new PErr("Type something for y to equal — like 2x + 1.", off);
+let toks, k = 0, depth = 0;
+const peek = () => toks[k], next = () => toks[k++];
+const starts = (t) => t.t === "num" || t.t === "x" || t.t === "fn" || t.t === "(";
+function bad(t) {
+if (t.t === "end") throw new PErr("It stops too early — something’s missing at the end.", t.p);
+if (t.t === ")") throw new PErr("There’s a “)” without a matching “(”.", t.p);
+throw new PErr("I didn’t expect “" + (SYM[t.t] || (t.t === "fn" ? t.v : t.t)) + "” there.", t.p);
+}
+function need(t) { if (peek().t === "end") throw new PErr("Something’s missing after “" + (SYM[t.t] || t.t) + "”.", t.p); }
+function close(open) {
+if (peek().t === ")") { next(); return; }
+if (peek().t === "end") throw new PErr("A bracket was opened but never closed — add a “)”.", open.p);
+bad(peek());
+}
+function expr() {
+if (++depth > 40) throw new PErr("That’s a lot of brackets — try something simpler.", peek().p);
+let a = mul();
+while (peek().t === "+" || peek().t === "-") {
+const t = next(); need(t);
+const b = mul(), l = a;
+a = t.t === "+" ? (x) => l(x) + b(x) : (x) => l(x) - b(x);
+}
+depth--;
+return a;
+}
+function mul() {
+let a = unary();
+for (;;) {
+const t = peek();
+if (t.t === "*" || t.t === "/") {
+next(); need(t);
+const b = unary(), l = a;
+a = t.t === "*" ? (x) => l(x) * b(x) : (x) => l(x) / b(x);
+} else if (starts(t)) { // implicit multiplication: 2x, 3(x+1), x sin(x)
+const b = pow(), l = a;
+a = (x) => l(x) * b(x);
+} else return a;
+}
+}
+function unary() {
+const t = peek();
+if (t.t === "-") { next(); need(t); const a = unary(); return (x) => -a(x); }
+if (t.t === "+") { next(); need(t); return unary(); }
+return pow();
+}
+function pow() {
+const b = primary();
+if (peek().t === "^") { const t = next(); need(t); const e = unary(); return (x) => Math.pow(b(x), e(x)); }
+return b;
+}
+function primary() {
+const t = next();
+if (t.t === "num") { const v = t.v; return () => v; }
+if (t.t === "x") return (x) => x;
+if (t.t === "(") {
+if (peek().t === ")") throw new PErr("Empty brackets — put something inside them.", t.p);
+const e = expr(); close(t); return e;
+}
+if (t.t === "fn") {
+const f = FNS[t.v];
+let a;
+if (peek().t === "(") {
+const o = next();
+if (peek().t === ")") throw new PErr(t.v + "() needs something inside, like " + t.v + "(x).", o.p);
+a = expr(); close(o);
+} else if (peek().t === "end") {
+throw new PErr(t.v + " needs something to work on, like " + t.v + "(x).", t.p);
+} else if (starts(peek()) || peek().t === "-") { // sin x, sin 2x
+a = unary();
+while (peek().t === "num" || peek().t === "x") { const b = pow(), l = a; a = (x) => l(x) * b(x); }
+} else bad(peek());
+const g = a;
+return (x) => f(g(x));
+}
+return bad(t);
+}
+try {
+toks = tokenize(s);
+const f = expr();
+if (peek().t !== "end") bad(peek());
+return f;
+} catch (e) {
+if (e instanceof PErr) e.pos += off;
+throw e;
+}
+}
+
+/* ---------- plotter ---------- */
+const cv = $("#graph"), ctx = cv.getContext("2d");
+const input = $("#fx"), form = $("#fx-form"), msg = $("#fx-msg"), notesEl = $("#notes"), pinsEl = $("#pins"), traceEl = $("#trace");
+const INK = "#1F4FB5", RED = "#E05A5A", PENCIL = "#5A606B";
+const view = { cx: 0, cy: 0, s: 30 };
+let W = 0, H = 0, dpr = 1, raf = 0, prog = 1, traceX = null, homed = false, cur = null, pins = [];
+const X = (px) => (px - W / 2) / view.s + view.cx;
+const PX = (x) => (x - view.cx) * view.s + W / 2;
+const PY = (y) => H / 2 - (y - view.cy) * view.s;
+function nice(r) { const e = Math.floor(Math.log10(r)), f = r / Math.pow(10, e); return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * Math.pow(10, e); }
+function fmt(n, dp) {
+if (!isFinite(n)) return "undefined";
+if (Math.abs(n) < 1e-9) n = 0;
+let s = n.toFixed(dp == null ? 2 : dp);
+if (s.indexOf(".") > -1) s = s.replace(/0+$/, "").replace(/\.$/, "");
+if (s === "-0") s = "0";
+return s.replace("-", MINUS);
+}
+const pretty = (src) => src.trim().replace(/^\s*(?:y|f\s*\(\s*x\s*\))\s*=\s*/i, "").replace(/\*/g, "×").replace(/-/g, MINUS).replace(/\^2(?![0-9.])/g, "²").replace(/\^3(?![0-9.])/g, "³");
+function home() { view.s = W / (W >= 560 ? 20 : 12); view.cx = 0; view.cy = 0; }
+function resize() {
+const r = cv.getBoundingClientRect();
+const w = Math.round(r.width), h = Math.round(r.height), d = Math.min(window.devicePixelRatio || 1, 2);
+if (!w || !h || (w === W && h === H && d === dpr)) return;
+W = w; H = h; dpr = d;
+cv.width = Math.round(w * d); cv.height = Math.round(h * d);
+if (!homed) { home(); homed = true; }
+draw();
+}
+function curve(f, color, p, dash) {
+const end = W * p;
+let on = false, py0 = 0, last = null;
+ctx.save();
+ctx.beginPath();
+ctx.strokeStyle = color; ctx.lineWidth = 2.7; ctx.lineJoin = "round"; ctx.lineCap = "round";
+if (dash) ctx.setLineDash([8, 7]);
+for (let px = 0; px <= end; px += 1) {
+const y = f(X(px));
+if (!isFinite(y)) { on = false; continue; }
+const py = PY(y);
+if (on && Math.abs(py - py0) > H) { // a jump across the whole view: only join it if the curve really passes between
+const ym = f(X(px - 0.5)), pm = PY(ym);
+if (!isFinite(ym) || pm < Math.min(py, py0) - 1 || pm > Math.max(py, py0) + 1) on = false;
+}
+const cy = Math.max(-H, Math.min(2 * H, py));
+if (on) ctx.lineTo(px, cy); else ctx.moveTo(px, cy);
+on = true; py0 = py; last = [px, cy];
+}
+ctx.stroke();
+ctx.restore();
+return last;
+}
+function draw() {
+if (!W) return;
+ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, W, H);
+const minor = nice(22 / view.s), major = nice(minor * 4.5);
+const xa = X(0), xb = X(W), ya = view.cy - H / 2 / view.s, yb = view.cy + H / 2 / view.s;
+const grid = (step, color) => {
+ctx.beginPath(); ctx.strokeStyle = color; ctx.lineWidth = 1;
+for (let i = Math.ceil(xa / step); i * step <= xb; i++) { const p = Math.round(PX(i * step)) + 0.5; ctx.moveTo(p, 0); ctx.lineTo(p, H); }
+for (let i = Math.ceil(ya / step); i * step <= yb; i++) { const p = Math.round(PY(i * step)) + 0.5; ctx.moveTo(0, p); ctx.lineTo(W, p); }
+ctx.stroke();
+};
+grid(minor, "#E3ECF8");
+grid(major, "#B9CFEE");
+const ox = PX(0), oy = PY(0);
+ctx.beginPath(); ctx.strokeStyle = "#2F3A52"; ctx.lineWidth = 1.6;
+if (oy >= 0 && oy <= H) { ctx.moveTo(0, oy); ctx.lineTo(W, oy); }
+if (ox >= 0 && ox <= W) { ctx.moveTo(ox, 0); ctx.lineTo(ox, H); }
+ctx.stroke();
+const dp = Math.max(0, -Math.floor(Math.log10(major) + 1e-9));
+ctx.font = "500 11px Rubik, system-ui, sans-serif"; ctx.textBaseline = "top"; ctx.textAlign = "left";
+const tag = (t, x, y, align) => {
+const w = ctx.measureText(t).width, x0 = align === "r" ? x - w : align === "l" ? x : x - w / 2;
+ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.fillRect(x0 - 2, y - 1, w + 4, 14);
+ctx.fillStyle = PENCIL; ctx.fillText(t, x0, y);
+};
+const ly = Math.min(Math.max(oy + 5, 4), H - 16);
+for (let i = Math.ceil(xa / major); i * major <= xb; i++) {
+const p = PX(i * major);
+if (i !== 0 && p > 14 && p < W - 14) tag(fmt(i * major, dp), p, ly, "c");
+}
+const left = ox < 40, lx = left ? Math.max(ox, 0) + 6 : Math.min(ox, W) - 6;
+for (let i = Math.ceil(ya / major); i * major <= yb; i++) {
+const p = PY(i * major);
+if (i !== 0 && p > 12 && p < H - 12) tag(fmt(i * major, dp), lx, p - 7, left ? "l" : "r");
+}
+if (ox > 10 && ox < W - 10 && oy > 0 && oy < H - 16) tag("0", ox - 5, oy + 5, "r");
+ctx.font = "700 17px Kalam, cursive"; ctx.fillStyle = "#B8373A";
+if (oy > 12 && oy < H - 4) ctx.fillText("x", W - 16, oy - 24);
+if (ox > 4 && ox < W - 20) ctx.fillText("y", ox + 8, 4);
+pins.forEach((p, i) => curve(p.f, i ? PENCIL : RED, 1, i === 1));
+if (!cur) return;
+const tip = curve(cur.f, INK, prog, false);
+if (tip && prog < 1 && tip[1] > -10 && tip[1] < H + 10) {
+ctx.beginPath(); ctx.fillStyle = "rgba(31,79,181,.18)"; ctx.arc(tip[0], tip[1], 11, 0, 7); ctx.fill();
+ctx.beginPath(); ctx.fillStyle = INK; ctx.arc(tip[0], tip[1], 4.5, 0, 7); ctx.fill();
+}
+if (traceX != null && prog >= 1) {
+const y = cur.f(traceX), px = PX(traceX);
+ctx.save(); ctx.setLineDash([4, 4]); ctx.strokeStyle = "rgba(90,96,107,.75)"; ctx.lineWidth = 1;
+ctx.beginPath(); ctx.moveTo(Math.round(px) + 0.5, 0); ctx.lineTo(Math.round(px) + 0.5, H); ctx.stroke(); ctx.restore();
+if (isFinite(y)) {
+const py = PY(y);
+if (py > -10 && py < H + 10) { ctx.beginPath(); ctx.fillStyle = "#fff"; ctx.strokeStyle = RED; ctx.lineWidth = 2.5; ctx.arc(px, py, 5.5, 0, 7); ctx.fill(); ctx.stroke(); }
+}
+}
+}
+function animate() {
+cancelAnimationFrame(raf);
+if (reduced() || !W) { prog = 1; draw(); return; }
+const t0 = performance.now(), dur = 950;
+prog = 0;
+const step = (now) => {
+const k = Math.min(1, (now - t0) / dur);
+prog = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+draw();
+if (k < 1) raf = requestAnimationFrame(step); else { prog = 1; draw(); }
+};
+raf = requestAnimationFrame(step);
+}
+const join = (l) => (l.length > 1 ? l.slice(0, -1).join(", ") + " and " + l[l.length - 1] : l[0]);
+function analyse(f, src) {
+const out = [], c = f(0), p1 = f(1), m1 = f(-1);
+if ([c, p1, m1].every(isFinite)) { // straight line or parabola? fit through x = -1, 0, 1 then test other points
+const a = (p1 + m1 - 2 * c) / 2, b = (p1 - m1) / 2;
+const fits = [-2.45, -0.7, 0.29, 1.66, 3.03].every((x) => { const y = f(x); return isFinite(y) && Math.abs(y - (a * x * x + b * x + c)) <= 1e-7 * (1 + Math.abs(y)); });
+if (fits && Math.abs(a) < 1e-9) out.push(Math.abs(b) < 1e-9 ? "A flat line: y is " + fmt(c) + " for every x." : "A straight line with gradient " + fmt(b) + " — it goes " + (b > 0 ? "up " : "down ") + fmt(Math.abs(b)) + " for every 1 across.");
+else if (fits) { const h = -b / (2 * a); out.push("A parabola that opens " + (a > 0 ? "upwards" : "downwards") + ", turning at (" + fmt(h) + ", " + fmt(a * h * h + b * h + c) + ")."); }
+}
+out.push(isFinite(c) ? "Cuts the y-axis at (0, " + fmt(c) + ")." : "Not defined at x = 0, so it never touches the y-axis.");
+const xa = X(0), xb = X(W), n = Math.max(240, Math.round(W)), dx = (xb - xa) / n, roots = [];
+let undef = 0, px = xa, py = f(xa);
+if (!isFinite(py)) undef++;
+for (let i = 1; i <= n; i++) {
+const x = xa + i * dx, y = f(x);
+if (!isFinite(y)) undef++;
+else if (y === 0) roots.push(x);
+else if (isFinite(py) && py !== 0 && (py < 0) !== (y < 0)) {
+let lo = px, hi = x, flo = py;
+for (let j = 0; j < 60; j++) { const mid = (lo + hi) / 2, fm = f(mid); if (!isFinite(fm)) break; if ((fm < 0) === (flo < 0)) { lo = mid; flo = fm; } else hi = mid; }
+const r = (lo + hi) / 2, fr = f(r);
+if (isFinite(fr) && Math.abs(fr) < 1e-6 * (1 + Math.abs(py) + Math.abs(y))) roots.push(r); // skip jumps such as 1/x
+}
+px = x; py = y;
+}
+if (undef > n) return ["Nothing to draw in this window — try Reset view, or zoom out."];
+const u = [];
+roots.forEach((r) => { if (!u.length || Math.abs(r - u[u.length - 1]) > Math.abs(dx) * 1.5) u.push(r); });
+const show = u.slice(0, 4).map((r) => (Math.abs(r - Math.round(r)) < 1e-6 ? "x = " + fmt(Math.round(r)) : "x ≈ " + fmt(r)));
+out.push(u.length ? "Crosses the x-axis at " + join(show) + (u.length > 4 ? " and " + (u.length - 4) + " more places" : "") + " in this window." : "Doesn’t cross the x-axis in this window.");
+if (undef > 0) out.push(/sqrt|√/.test(src) ? "Missing where the square root would be negative — no real answer there." : /ln|log/.test(src) ? "Missing where the log’s input is zero or negative." : "Undefined for part of this window.");
+return out;
+}
+function renderNotes() {
+notesEl.textContent = "";
+if (!cur) return;
+analyse(cur.f, cur.src).forEach((t) => { const li = document.createElement("li"); li.textContent = t; notesEl.appendChild(li); });
+const kept = pins.length ? ", with " + pins.map((p) => "y = " + pretty(p.src)).join(" and ") + " kept" : "";
+cv.setAttribute("aria-label", "Graph of y = " + pretty(cur.src) + kept + ", showing x from " + fmt(X(0), 1) + " to " + fmt(X(W), 1) + ".");
+}
+let notesT = 0;
+const notesSoon = () => { clearTimeout(notesT); notesT = setTimeout(renderNotes, 160); };
+function say(t, err) { msg.className = err ? "msg err" : "msg"; msg.textContent = t; }
+function showError(src, e) {
+say("Hmm — " + e.message, true);
+const where = document.createElement("span"), mk = document.createElement("mark"), pos = Math.max(0, Math.min(e.pos, src.length));
+where.className = "where";
+mk.textContent = src.slice(pos, pos + 1) || "  ";
+where.append(document.createTextNode(src.slice(0, pos)), mk, document.createTextNode(src.slice(pos + 1)));
+msg.appendChild(where);
+}
+function tryPlot(src, typing) {
+let f;
+try { f = parse(src); } catch (e) {
+if (!(e instanceof PErr)) throw e;
+form.classList.add("bad"); input.setAttribute("aria-invalid", "true");
+showError(src, e);
+return;
+}
+form.classList.remove("bad"); input.removeAttribute("aria-invalid");
+const clean = src.trim();
+if (typing && cur && cur.src === clean) return;
+cur = { src: clean, f };
+traceX = null;
+traceEl.textContent = "Hover over or tap the graph to read a point.";
+say("Plotted y = " + pretty(clean) + ".");
+renderNotes();
+animate();
+}
+function syncChips() { $$(".chip").forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.fx === input.value.trim()))); }
+let typeT = 0;
+input.addEventListener("input", () => { clearTimeout(typeT); syncChips(); typeT = setTimeout(() => tryPlot(input.value, true), 550); });
+form.addEventListener("submit", (e) => { e.preventDefault(); clearTimeout(typeT); syncChips(); tryPlot(input.value); });
+$$(".chip").forEach((c) => c.addEventListener("click", () => { input.value = c.dataset.fx; syncChips(); clearTimeout(typeT); tryPlot(input.value); }));
+
+function renderPins() {
+pinsEl.textContent = "";
+pins.forEach((p, i) => {
+const li = document.createElement("li"), sw = document.createElement("i"), t = document.createElement("span"), b = document.createElement("button");
+li.style.color = i ? PENCIL : RED;
+if (i) li.className = "dash";
+sw.setAttribute("aria-hidden", "true");
+t.style.color = "var(--lead)";
+t.textContent = "y = " + pretty(p.src);
+b.type = "button"; b.textContent = "×"; b.setAttribute("aria-label", "Remove y = " + pretty(p.src));
+b.addEventListener("click", () => { pins = pins.filter((q) => q !== p); renderPins(); draw(); renderNotes(); input.focus(); });
+li.append(sw, t, b);
+pinsEl.appendChild(li);
+});
+}
+$("#keep").addEventListener("click", () => {
+if (!cur) return;
+if (pins.some((p) => p.src === cur.src)) { say("That line is already on the graph."); return; }
+pins.push({ src: cur.src, f: cur.f });
+if (pins.length > 2) pins.shift();
+renderPins(); draw(); renderNotes();
+say("Kept y = " + pretty(cur.src) + " in red — now type another function to compare.");
+input.focus(); input.select();
+});
+
+function act(a) {
+const sx = (W * 0.2) / view.s, sy = (H * 0.2) / view.s;
+if (a === "in") view.s = Math.min(view.s * 1.5, 5000);
+else if (a === "out") view.s = Math.max(view.s / 1.5, 1.5);
+else if (a === "left") view.cx -= sx;
+else if (a === "right") view.cx += sx;
+else if (a === "up") view.cy += sy;
+else if (a === "down") view.cy -= sy;
+else if (a === "home") home();
+draw(); notesSoon();
+}
+$$(".tools [data-act]").forEach((b) => b.addEventListener("click", () => act(b.dataset.act)));
+cv.addEventListener("keydown", (e) => {
+const a = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down", "+": "in", "=": "in", "-": "out", _: "out", 0: "home", Home: "home" }[e.key];
+if (!a) return;
+e.preventDefault(); act(a);
+});
+function setTrace(x) {
+traceX = x;
+if (x == null || !cur) traceEl.textContent = "Hover over or tap the graph to read a point.";
+else { const y = cur.f(x); traceEl.textContent = "On y = " + pretty(cur.src) + ": when x = " + fmt(x, view.s > 80 ? 2 : 1) + ", y = " + (isFinite(y) ? fmt(y, 2) : "undefined") + "."; }
+draw();
+}
+let drag = null;
+const localX = (e) => e.clientX - cv.getBoundingClientRect().left;
+cv.addEventListener("pointerdown", (e) => {
+drag = { x: e.clientX, y: e.clientY, cx: view.cx, cy: view.cy, moved: false };
+try { cv.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+});
+cv.addEventListener("pointermove", (e) => {
+if (drag) {
+const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+if (!drag.moved && Math.hypot(dx, dy) > 4) { drag.moved = true; cv.classList.add("dragging"); }
+if (drag.moved) { view.cx = drag.cx - dx / view.s; view.cy = drag.cy + dy / view.s; draw(); }
+} else if (e.pointerType === "mouse" && cur && prog >= 1) setTrace(X(localX(e)));
+});
+cv.addEventListener("pointerup", (e) => {
+if (drag && !drag.moved && cur) setTrace(X(localX(e)));
+if (drag && drag.moved) notesSoon();
+drag = null; cv.classList.remove("dragging");
+});
+cv.addEventListener("pointercancel", () => { drag = null; cv.classList.remove("dragging"); });
+cv.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse" && !drag && traceX != null) setTrace(null); });
+
+resize();
+if (window.ResizeObserver) new ResizeObserver(resize).observe(cv); else addEventListener("resize", resize);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+let kicked = false;
+const kick = () => { if (kicked) return; kicked = true; resize(); tryPlot(input.value); syncChips(); };
+if ("IntersectionObserver" in window) {
+const io = new IntersectionObserver((es) => { if (es.some((x) => x.isIntersecting)) { io.disconnect(); kick(); } }, { threshold: 0.3 });
+io.observe(cv);
+} else kick();
+
+/* ---------- quick challenge ---------- */
+const ri = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const GEN = {
+1: [
+() => { const a = ri(3, 12), b = ri(3, 12); return [a + " × " + b, a * b]; },
+() => { const b = ri(3, 9), q = ri(3, 12); return [b * q + " ÷ " + b, q]; },
+() => { const a = ri(24, 68), b = ri(13, 29); return [a + " + " + b, a + b]; },
+() => { const a = ri(52, 97), b = ri(14, 38); return [a + " " + MINUS + " " + b, a - b]; },
+() => { const a = ri(13, 49) * 2; return ["Half of " + a, a / 2]; },
+() => { const a = ri(16, 48); return ["Double " + a, a * 2]; },
+() => { const a = ri(2, 9) * 100 + ri(1, 9) * 10; return [a + " + 99", a + 99]; }
+],
+2: [
+() => { const q = pick([[10, 70], [20, 45], [25, 64], [50, 38], [75, 40], [15, 60], [5, 80], [30, 90]]); return [q[0] + "% of " + q[1], (q[0] * q[1]) / 100]; },
+() => { const a = ri(3, 12), b = ri(a + 2, 20); return [MINUS + a + " + " + b, b - a]; },
+() => { const a = ri(3, 9), b = ri(3, 9); return [MINUS + a + " × " + b, -a * b]; },
+() => { const a = ri(11, 15); return [a + "²", a * a]; },
+() => { const a = ri(6, 15); return ["√" + a * a, a]; },
+() => { const q = pick([[3, 4], [2, 3], [3, 5], [5, 6], [3, 8]]), m = ri(2, 9) * q[1]; return [q[0] + "/" + q[1] + " of " + m, (q[0] * m) / q[1]]; },
+() => { const a = ri(2, 6), x = ri(2, 9), b = ri(1, 12); return ["If " + a + "x + " + b + " = " + (a * x + b) + ", x", x]; },
+() => { const a = ri(2, 9), b = ri(2, 9), c = ri(2, 9); return [a + " + " + b + " × " + c, a + b * c]; }
+]
+};
+const qTime = $("#q-time"), qCount = $("#q-count"), qScore = $("#q-score"), boxes = $$("#q-boxes li"), qForm = $("#q-form"), qIn = $("#q-in");
+const qText = $("#q-text"), qFb = $("#q-fb"), qIdle = $("#q-idle"), qRes = $("#q-res");
+let level = 1, qs = [], qi = 0, score = 0, t0 = 0, timer = 0, lock = false;
+const mmss = (ms) => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+const num = (n) => String(n).replace("-", MINUS);
+function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function idle() {
+clearInterval(timer); lock = false;
+boxes.forEach((b) => { b.className = ""; b.textContent = ""; });
+qIdle.hidden = false; qForm.hidden = true; qRes.hidden = true;
+qFb.textContent = ""; qCount.textContent = "5 questions"; qScore.textContent = "Score 0"; qTime.textContent = "0:00";
+}
+function show() {
+const q = qs[qi];
+qText.textContent = q[0] + " =";
+qCount.textContent = "Question " + (qi + 1) + " of 5";
+qScore.textContent = "Score " + score;
+boxes.forEach((b, i) => b.classList.toggle("now", i === qi));
+qIn.value = ""; qIn.readOnly = false;
+}
+function start() {
+qs = shuffle(GEN[level].slice()).slice(0, 5).map((g) => g());
+qi = 0; score = 0; lock = false;
+boxes.forEach((b) => { b.className = ""; b.textContent = ""; });
+qIdle.hidden = true; qRes.hidden = true; qForm.hidden = false;
+qFb.className = "qfb"; qFb.textContent = "";
+t0 = performance.now(); qTime.textContent = "0:00";
+clearInterval(timer); timer = setInterval(() => { qTime.textContent = mmss(performance.now() - t0); }, 250);
+show(); qIn.focus();
+}
+function finish() {
+clearInterval(timer);
+const ms = performance.now() - t0;
+qTime.textContent = mmss(ms);
+qForm.hidden = true; qRes.hidden = false;
+boxes.forEach((b) => b.classList.remove("now"));
+qCount.textContent = "Finished";
+$("#r-big").textContent = score + " / 5 in " + mmss(ms);
+$("#r-line").textContent = score === 5 ? "Full marks! Your brain is well and truly warmed up." : score === 4 ? "So close — and one slip is how we learn." : score === 3 ? "Solid! A few more goes and these will feel automatic." : score === 2 ? "Good effort. Mental maths gets quicker with a little practice every day." : "Everyone starts somewhere — that’s exactly what we’re here for.";
+let best = "";
+try {
+const key = "mathsy-demo-best-" + level, prev = JSON.parse(localStorage.getItem(key) || "null");
+const better = !prev || score > prev.s || (score === prev.s && ms < prev.t);
+if (better) localStorage.setItem(key, JSON.stringify({ s: score, t: ms }));
+best = !prev ? "Your first go at this level on this device." : better ? "A new personal best on this device!" : "Your best on this device: " + prev.s + " / 5 in " + mmss(prev.t) + ".";
+} catch (e) { best = ""; }
+$("#r-best").textContent = best;
+qFb.className = "qfb"; qFb.textContent = "Finished — " + score + " out of 5.";
+qRes.focus({ preventScroll: true });
+}
+qForm.addEventListener("submit", (e) => {
+e.preventDefault();
+if (lock) return;
+const t = qIn.value.replace(/[−–]/g, "-").replace(/[\s,]/g, "");
+if (!/^[-+]?(\d+\.?\d*|\.\d+)$/.test(t)) { qFb.className = "qfb"; qFb.textContent = "Type a number first — like 42 or −5."; qIn.focus(); return; }
+const q = qs[qi], right = Math.abs(parseFloat(t) - q[1]) < 1e-9, b = boxes[qi];
+b.classList.remove("now"); b.classList.add(right ? "ok" : "no"); b.textContent = right ? "✓" : "✗";
+if (right) { score++; qFb.className = "qfb"; qFb.textContent = pick(["Correct!", "Yes — nice one.", "Spot on.", "Too easy!", "Nailed it."]); }
+else { qFb.className = "qfb no"; qFb.textContent = "Not quite — the answer is " + num(q[1]) + "."; }
+qScore.textContent = "Score " + score;
+lock = true; qIn.readOnly = true;
+setTimeout(() => { lock = false; qi++; if (qi < 5) { show(); qIn.focus(); } else finish(); }, right ? 650 : 1400);
+});
+$("#q-neg").addEventListener("click", () => { if (!lock) qIn.value = qIn.value.charAt(0) === "-" || qIn.value.charAt(0) === MINUS ? qIn.value.slice(1) : "-" + qIn.value; qIn.focus(); });
+$("#q-start").addEventListener("click", start);
+$("#q-again").addEventListener("click", start);
+$$(".lv").forEach((b) => b.addEventListener("click", () => {
+level = Number(b.dataset.level);
+$$(".lv").forEach((o) => o.setAttribute("aria-pressed", String(o === b)));
+idle();
+}));
+
+/* ---------- free trial form (demo state only) ---------- */
+const trial = $("#trial"), done = $("#t-done");
+trial.addEventListener("submit", (e) => {
+e.preventDefault();
+const d = new FormData(trial), who = String(d.get("name") || "").trim() || "your child", helps = d.getAll("help").map((h) => String(h).toLowerCase());
+done.hidden = false;
+done.textContent = "Demo only — no trial was booked and nothing was sent. On a real site, a tutor would email you within one school day to set up a " + (d.get("where") === "Online" ? "free online trial" : "free trial at the Epping rooms") + " for " + who + " (" + d.get("year") + (helps.length ? ", " + helps.join(", ") : "") + ").";
+toast("Demo only — no trial lesson was booked.");
+});
+})();
+</script>
+</body>
+</html>

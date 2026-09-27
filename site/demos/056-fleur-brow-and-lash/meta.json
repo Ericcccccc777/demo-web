@@ -1,0 +1,8 @@
+{
+  "id": "056",
+  "tech": ["SVG", "SVG animation", "Generative art", "IntersectionObserver", "CSS Grid", "Form logic"],
+  "features": ["customiser", "booking"],
+  "interaction": "Pick a lash style (natural, classic, hybrid, volume, cat-eye) and a brow shape (soft arch, straight, lifted, optional tint) and the single-line eye drawing is procedurally redrawn: lash count, length, curl and direction morph along the lid and the brow outline and brushed-up hairs reshape, while a result line gives the combined time and a sample price. 'Add to booking' carries the look into the appointment request form, which ends in a demo-only message.",
+  "fonts": ["Cormorant Infant", "Red Hat Display"],
+  "notes": "Line art is stylised, not a visual promise of results; times and prices are samples."
+}

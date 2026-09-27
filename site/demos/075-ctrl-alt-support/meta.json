@@ -1,0 +1,8 @@
+{
+  "id": "075",
+  "tech": ["Keyboard shortcuts", "Form logic", "Date logic"],
+  "features": ["game"],
+  "interaction": "A skippable boot sequence types itself, then visitors navigate by typing commands at a ctrl-alt@support:~$ prompt (help, services, pricing, about, contact, status, whoami, book, faq, clear) with Tab completion, ↑/↓ history and typo suggestions, or by tapping command chips; 'book' runs a four-question callout request that ends in a demo toast, 'printer' is a tiny text game, and 'Switch to normal view' renders the same content as a regular page.",
+  "fonts": ["VT323", "Fira Code"],
+  "notes": "Status board is demo data (the helpdesk line follows Newcastle business hours). Sample prices. Scanlines, the refresh band, cursor blink and typing effects are off with reduced motion."
+}

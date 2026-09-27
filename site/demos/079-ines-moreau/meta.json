@@ -1,0 +1,8 @@
+{
+  "id": "079",
+  "tech": ["Canvas 2D", "Generative art", "Scroll-driven", "IntersectionObserver", "Keyboard shortcuts", "CSS Grid", "Date logic", "Form logic"],
+  "features": ["story", "booking"],
+  "interaction": "Walk a white-cube gallery: on desktop, vertical scrolling (or ← / →, trackpad swipes and a floor-plan map) moves you sideways through a foyer and three rooms of seeded generative 'oil paintings' with museum wall labels; click a painting to zoom it to fill the screen (FLIP) with its details, step between works, and press 'Regenerate study' to watch a clearly labelled code-drawn variation paint itself. Also pick a first-Saturday studio visit slot and send an enquiry about a work (both demo-only). On phones the rooms stack vertically.",
+  "fonts": ["Libre Bodoni", "Inter"],
+  "notes": "The paintings are generative canvas images standing in for a fictional artist's work; visit requests and enquiries end in demo-only notices; prices and venues are samples."
+}

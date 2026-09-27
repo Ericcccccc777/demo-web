@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="100">
+<meta name="demo:brand" content="Wren Cottage B&amp;B">
+<title>Wren Cottage B&amp;B — three-room bed &amp; breakfast in Bright</title>
+<meta name="description" content="Wren Cottage B&amp;B is a fictional three-room stone cottage bed and breakfast in Bright, Victoria: peek into the rooms and choose your nights.">
+<meta name="theme-color" content="#2E3A59">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --dusk:#2E3A59;--dusk-2:#1F2842;--glow:#FFD27F;--stone:#C9C0B3;--ivy:#5E7D4E;--ivy-t:#4A6540;--cream:#FBF4E6;--paper:#F6EEDD;--ink:#2E3A59;--ink-2:#5B6478;--brown:#6B5E4E;
+  --serif:"Merriweather",Georgia,serif;--sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(18px,4.5vw,56px);--ease:cubic-bezier(.25,.8,.25,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:20px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--serif);margin:0;font-weight:700;line-height:1.15}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:6px}
+.page :focus-visible,.cal :focus-visible{outline-color:var(--dusk)}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:max(660px,100svh);overflow:clip;color:var(--cream);
+  background:radial-gradient(1.4px 1.4px at 12% 14%,#FBF4E6 60%,transparent 62%),radial-gradient(1.2px 1.2px at 28% 8%,#FBF4E6 60%,transparent 62%),radial-gradient(1.6px 1.6px at 41% 19%,#FFE7AE 60%,transparent 62%),radial-gradient(1.2px 1.2px at 57% 6%,#FBF4E6 60%,transparent 62%),radial-gradient(1.4px 1.4px at 66% 23%,#FBF4E6 60%,transparent 62%),radial-gradient(1.1px 1.1px at 78% 12%,#FBF4E6 60%,transparent 62%),radial-gradient(1.5px 1.5px at 88% 28%,#FFE7AE 60%,transparent 62%),radial-gradient(1.1px 1.1px at 6% 31%,#FBF4E6 60%,transparent 62%),radial-gradient(1.2px 1.2px at 35% 33%,#FBF4E6 60%,transparent 62%),radial-gradient(1.2px 1.2px at 94% 6%,#FBF4E6 60%,transparent 62%),
+  linear-gradient(180deg,#19213A 0%,#2E3A59 38%,#4E5A7B 62%,#857B91 78%,#B58E82 92%,#B58E82 100%)}
+.moon{position:absolute;top:9%;right:13%;width:44px;height:44px;border-radius:50%;box-shadow:-11px 7px 0 0 #F8EBC9;transform:rotate(-20deg);opacity:.95}
+.scene{position:absolute;inset:0;width:100%;height:100%}
+.flies{position:absolute;left:0;right:0;bottom:0;height:58%;width:100%;pointer-events:none}
+.hero-copy{position:relative;z-index:3;width:min(1280px,100% - 2*var(--gut));margin:0 auto;padding-top:clamp(40px,9vh,110px);max-width:1280px}
+.hero-copy>div{max-width:560px}
+.kick{font:700 13px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--glow)}
+.hero h1{font-size:clamp(46px,6.2vw,86px);line-height:1.02;margin-top:12px;overflow-wrap:anywhere;text-shadow:0 2px 24px rgba(20,26,45,.5)}
+.hero .lede{margin-top:16px;font:italic 400 clamp(18px,1.6vw,21px)/1.6 var(--serif);color:#F1E7D2;max-width:30em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:999px;border:2px solid var(--glow);background:var(--glow);color:var(--dusk);font:700 16.5px/1 var(--sans);text-decoration:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(255,210,127,.7)}
+.btn.line{background:transparent;color:var(--cream);border-color:rgba(251,244,230,.6)}
+.btn.dark{background:var(--dusk);border-color:var(--dusk);color:var(--cream)}
+.hint{margin-top:18px;display:inline-flex;align-items:center;gap:10px;font:600 15px/1.3 var(--sans);color:var(--cream);background:rgba(31,40,66,.55);padding:9px 14px 9px 10px;border-radius:999px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.hint i{width:12px;height:12px;border-radius:3px;background:var(--glow);box-shadow:0 0 12px var(--glow)}
+.win-btn{position:absolute;z-index:4;border:0;padding:0;background:transparent;cursor:pointer;border-radius:8px;min-width:44px;min-height:44px}
+.win-btn span{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;background:var(--cream);color:var(--dusk);font:700 13.5px/1 var(--sans);padding:7px 10px;border-radius:999px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.win-btn:hover span,.win-btn:focus-visible span{opacity:1;transform:translateX(-50%) translateY(-3px)}
+.win-btn:hover,.win-btn:focus-visible{box-shadow:0 0 0 3px rgba(255,210,127,.9),0 0 34px 8px rgba(255,210,127,.45)}
+.scene .pn{transition:filter .3s}
+.scene .pn.lit{filter:brightness(1.18)}
+@media (prefers-reduced-motion:no-preference){.scene .breath{animation:breath 4.5s ease-in-out infinite}.scene .smoke{animation:smoke 7s linear infinite}.scene .smoke:nth-child(2){animation-delay:-2.3s}.scene .smoke:nth-child(3){animation-delay:-4.6s}}
+@keyframes breath{50%{opacity:.62}}
+@keyframes smoke{0%{transform:translate(0,0) scale(.6);opacity:0}15%{opacity:.55}100%{transform:translate(-60px,-150px) scale(1.8);opacity:0}}
+.smoke{transform-box:fill-box;transform-origin:center}
+@media (max-width:760px){
+  .hero{min-height:max(760px,100svh)}
+  .scene{top:auto;height:58%}
+  .flies{height:52%}
+  .hero-copy{padding-top:34px}
+  .hero h1{font-size:clamp(40px,11.5vw,52px)}
+  .moon{top:10px;right:14px;width:26px;height:26px;box-shadow:-7px 5px 0 0 #F8EBC9}
+  .hint{font-size:14px}
+}
+
+/* ---------- storybook pages ---------- */
+.page{position:relative;background:var(--cream);background-image:radial-gradient(120% 60% at 50% 0%,rgba(233,220,196,.45),transparent 60%);}
+.chapter{width:min(1180px,100% - 2*var(--gut));margin:0 auto;padding:clamp(56px,8vw,104px) 0 clamp(20px,3vw,34px)}
+.ch-head{text-align:center;max-width:720px;margin:0 auto clamp(26px,4vw,46px)}
+.ch-no{display:inline-flex;align-items:center;gap:14px;font:700 12.5px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--ivy-t)}
+.ch-no::before,.ch-no::after{content:"";width:34px;height:1px;background:currentColor;opacity:.6}
+.ch-head h2{font:italic 700 clamp(32px,4.2vw,54px)/1.12 var(--serif);margin-top:12px}
+.ch-head p{margin-top:12px;color:var(--ink-2);font-size:18px}
+.fleuron{display:block;width:120px;height:28px;margin:10px auto 0}
+.drop::first-letter{float:left;font:700 3.4em/.85 var(--serif);margin:.06em .12em 0 0;color:var(--ivy-t)}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,30px)}
+.room{background:#FFFBF2;border:1px solid #E7DCC7;border-radius:18px;padding:16px 16px 20px;display:grid;gap:12px;box-shadow:0 20px 40px -32px rgba(46,58,89,.6)}
+.room .mini{border-radius:120px 120px 10px 10px;overflow:hidden;background:#EADFC8;aspect-ratio:5/4}
+.room .mini svg{display:block;width:100%;height:100%}
+.room h3{font-size:24px}
+.room ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15.5px;color:var(--ink-2)}
+.room li::before{content:"❧";color:var(--ivy);margin-right:8px;font-size:13px}
+.room .rate{font:italic 400 16px var(--serif);color:var(--ink)}
+.room .rate b{font-style:normal;font-weight:700;font-size:20px}
+.room .acts{display:flex;flex-wrap:wrap;gap:8px}
+.room .acts .btn{min-height:44px;font-size:15px;padding:0 16px}
+.room .acts .btn.ghost{background:transparent;color:var(--dusk);border-color:rgba(46,58,89,.35)}
+@media (max-width:900px){.rooms{grid-template-columns:minmax(0,1fr)}.room{grid-template-columns:minmax(0,42%) minmax(0,1fr);align-items:center}.room .mini{grid-row:span 4}}
+@media (max-width:560px){.room{grid-template-columns:minmax(0,1fr)}.room .mini{grid-row:auto;aspect-ratio:16/10}}
+
+/* breakfast */
+.spread{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.menu{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
+.menu li{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.menu b{font:700 18px/1.3 var(--serif)}
+.menu span{display:block;font-size:15.5px;color:var(--ink-2)}
+.menu i{font-style:normal;color:var(--ivy);font-size:18px;line-height:1.5}
+.note{margin-top:16px;padding:12px 16px;border-left:3px solid var(--glow);background:#FFF6E0;font-size:15.5px;color:var(--ink-2);border-radius:0 10px 10px 0}
+.plate{width:100%;height:auto;display:block}
+@media (max-width:860px){.spread{grid-template-columns:minmax(0,1fr)}.plate{max-width:380px;margin:0 auto}}
+
+/* nearby */
+.near{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.near div{padding:18px 18px 16px;border-radius:16px;background:#FFFBF2;border:1px solid #E7DCC7}
+.near svg{width:36px;height:36px}
+.near h3{font-size:19px;margin-top:8px}
+.near p{font-size:15.5px;color:var(--ink-2);margin-top:6px}
+@media (max-width:860px){.near{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:560px){.near{grid-template-columns:minmax(0,1fr)}}
+
+/* policies */
+.small{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;background:#FFFBF2;border:1px solid #E7DCC7;border-radius:18px;padding:clamp(18px,3vw,36px);box-shadow:inset 0 0 0 6px #FFFBF2,inset 0 0 0 7px #E7DCC7}
+.small dl{margin:0}
+.small dt{font:700 16.5px/1.3 var(--serif);margin-top:16px}
+.small dd{margin:4px 0 0;font-size:15.5px;color:var(--ink-2)}
+@media (max-width:700px){.small{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- calendar ---------- */
+.cal{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(18px,3vw,36px);align-items:start}
+.pick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pick button{min-height:48px;padding:6px 16px;border-radius:999px;border:1.5px solid rgba(46,58,89,.3);background:#FFFBF2;cursor:pointer;font:600 15.5px/1.2 var(--sans);text-align:left}
+.pick button small{display:block;font-weight:400;font-size:12.5px;color:var(--ink-2)}
+.pick button[aria-pressed=true]{background:var(--dusk);border-color:var(--dusk);color:var(--cream)}
+.pick button[aria-pressed=true] small{color:#D8CFC2}
+.months{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.mh{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.mh h3{font:italic 700 21px/1.2 var(--serif)}
+.nav{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(46,58,89,.3);background:#FFFBF2;cursor:pointer;font-size:20px;line-height:1}
+.nav:disabled{opacity:.3;cursor:default}
+.nav.ph{visibility:hidden}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.dow{font:700 11.5px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);text-align:center;padding:6px 0}
+.day{position:relative;display:grid;place-items:center;align-content:center;gap:1px;aspect-ratio:1/1.05;min-height:44px;border:1px solid #E9DFCC;border-radius:10px;background:#FFFBF2;cursor:pointer;padding:0;transition:background .2s,border-color .2s,color .2s}
+.day .dn{font:700 15.5px/1 var(--sans)}
+.day .rt{font:400 11.5px/1 var(--sans);color:var(--ink-2)}
+.day.we{background:#FFF6E0}
+.day:hover{border-color:var(--dusk)}
+.day[aria-disabled=true]{cursor:not-allowed;background:repeating-linear-gradient(-45deg,#F1E8D6 0 5px,#F7F0E2 5px 10px);color:#8F8878;border-color:#EDE3D0}
+.day[aria-disabled=true] .rt{text-decoration:line-through;color:#8F8878}
+.day.past{background:transparent;border-color:transparent;color:#A9A08F;cursor:default}
+.day.past .rt{display:none}
+.day.in{background:#E6E9F1;border-color:#C9CFDD}
+.day.hov{background:#EEF0F6}
+.day.ci,.day.co{background:var(--dusk);border-color:var(--dusk);color:var(--cream)}
+.day.ci .rt,.day.co .rt{color:#D8CFC2}
+.day.ci::after,.day.co::after{content:attr(data-tag);position:absolute;top:-7px;left:50%;transform:translateX(-50%);font:700 9.5px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;background:var(--glow);color:var(--dusk);padding:3px 5px;border-radius:999px;white-space:nowrap}
+.blank{aspect-ratio:1/1.05}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:14px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:16px;height:16px;border-radius:4px;border:1px solid #E9DFCC;background:#FFFBF2}
+.legend i.w{background:#FFF6E0}.legend i.b{background:repeating-linear-gradient(-45deg,#F1E8D6 0 3px,#F7F0E2 3px 6px)}.legend i.s{background:var(--dusk)}
+.msg{margin-top:12px;min-height:1.6em;font:italic 400 16px/1.5 var(--serif);color:var(--ivy-t)}
+.msg.warn{color:#9B3D2E}
+.sum{position:sticky;top:20px;background:var(--dusk);color:var(--cream);border-radius:20px;padding:24px;box-shadow:0 30px 60px -30px rgba(31,40,66,.8)}
+.sum .k{font:700 12px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--glow)}
+.sum h3{font:italic 700 25px/1.2 var(--serif);margin-top:8px}
+.sum dl{margin:16px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15.5px}
+.sum dt{color:#D8CFC2}
+.sum dd{margin:0;text-align:right}
+.sum .lines{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(251,244,230,.3);font-size:15px;color:#E8DFCF;display:grid;gap:4px}
+.sum .lines p{display:flex;justify-content:space-between;gap:10px}
+.sum .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;padding-top:12px;border-top:1px solid rgba(251,244,230,.3)}
+.sum .tot b{font:700 30px/1 var(--serif);color:var(--glow)}
+.sum .fine{margin-top:12px;font-size:13.5px;color:#D8CFC2}
+.sum .btn{width:100%;margin-top:16px}
+.sum .btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+@media (max-width:980px){.cal{grid-template-columns:minmax(0,1fr)}.sum{position:static}}
+@media (max-width:760px){.months{grid-template-columns:minmax(0,1fr)}.day .rt{font-size:10.5px}.grid{gap:3px}}
+
+/* ---------- peek dialog ---------- */
+dialog.peek{border:0;padding:0;margin:0;width:100%;max-width:none;height:100%;max-height:none;background:transparent;color:var(--cream);overflow:auto}
+dialog.peek::backdrop{background:rgba(20,26,45,.72)}
+.pk{min-height:100%;display:grid;place-items:center;padding:clamp(16px,4vw,48px);background:radial-gradient(80% 70% at var(--ox,50%) var(--oy,50%),#34426A,#1C2439 70%);clip-path:circle(150% at var(--ox,50%) var(--oy,50%))}
+@media (prefers-reduced-motion:no-preference){.pk{transition:clip-path .65s var(--ease)}.peek:not(.open) .pk{clip-path:circle(0 at var(--ox,50%) var(--oy,50%))}}
+.pk-in{position:relative;display:grid;grid-template-columns:minmax(0,440px) minmax(0,420px);gap:clamp(20px,4vw,52px);align-items:center;max-width:960px;width:100%}
+.arch{border-radius:220px 220px 16px 16px;overflow:hidden;border:10px solid #F3E6CC;box-shadow:0 0 0 2px #B9AD99,0 30px 60px -20px rgba(0,0,0,.6),0 0 80px rgba(255,210,127,.25);background:#EADFC8;aspect-ratio:5/6}
+.arch svg{display:block;width:100%;height:100%}
+.pk .kk{font:700 12.5px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--glow)}
+.pk h2{font:italic 700 clamp(32px,4vw,48px)/1.1 var(--serif);margin-top:10px}
+.pk .lede{margin-top:12px;color:#E8DFCF;font-size:17px}
+.pk dl{margin:18px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:16px}
+.pk dt{font:700 12px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#D8CFC2}
+.pk dd{margin:0}
+.pk .rate{margin-top:16px;font:italic 400 17px var(--serif);color:var(--glow)}
+.pk .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pk .x{position:absolute;top:-6px;right:-6px;width:48px;height:48px;border-radius:50%;border:2px solid rgba(251,244,230,.5);background:rgba(31,40,66,.8);color:var(--cream);font-size:26px;line-height:1;cursor:pointer}
+@media (max-width:760px){.pk{place-items:start center}.pk-in{grid-template-columns:minmax(0,1fr);padding-top:50px}.arch{max-width:320px;width:100%;margin:0 auto}.pk .x{top:0;right:0}}
+
+/* footer */
+.foot{background:var(--dusk);color:var(--cream);padding:clamp(40px,6vw,70px) 0 calc(40px + env(safe-area-inset-bottom))}
+.foot .in{width:min(1180px,100% - 2*var(--gut));margin:0 auto;display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:24px}
+.foot .nm{font:italic 700 clamp(30px,3.6vw,44px)/1.1 var(--serif);overflow-wrap:anywhere}
+.foot .nm+p{margin-top:8px;color:#D8CFC2;font-size:15.5px}
+.foot b{display:block;font:700 12px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--glow);margin-bottom:6px}
+.foot p{font-size:15.5px}
+.foot small{grid-column:1/-1;display:block;padding-top:16px;border-top:1px solid rgba(251,244,230,.18);font-size:13.5px;color:#D8CFC2}
+@media (max-width:860px){.foot .in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.foot .in>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header class="hero" id="top" aria-label="Wren Cottage at dusk">
+  <span class="moon" aria-hidden="true"></span>
+  <svg class="scene" id="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="gl" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD27F" stop-opacity=".8"/><stop offset=".4" stop-color="#FFC45E" stop-opacity=".35"/><stop offset="1" stop-color="#FFD27F" stop-opacity="0"/></radialGradient>
+      <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFEBB8"/><stop offset="1" stop-color="#FFBF55"/></linearGradient>
+      <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9A3A0"/><stop offset="1" stop-color="#7E7A7E"/></linearGradient>
+      <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4260"/><stop offset="1" stop-color="#2A3048"/></linearGradient>
+      <linearGradient id="grd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34462F"/><stop offset="1" stop-color="#1E2A1E"/></linearGradient>
+      <pattern id="stones" width="44" height="30" patternUnits="userSpaceOnUse"><rect width="44" height="30" fill="none"/><g fill="#B8B1AA" opacity=".55"><rect x="2" y="2" width="24" height="12" rx="5"/><rect x="29" y="3" width="13" height="11" rx="4"/><rect x="-6" y="17" width="16" height="11" rx="4"/><rect x="13" y="16" width="25" height="12" rx="5"/></g></pattern>
+      <filter id="paint" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/></filter>
+      <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
+    </defs>
+    <g filter="url(#paint)">
+      <path d="M-40,560 C120,470 240,440 380,470 C500,496 560,420 690,410 C820,400 900,470 1030,450 C1150,432 1260,380 1480,420 L1480,900 L-40,900Z" fill="#46527A" opacity=".85"/>
+      <path d="M-40,610 C140,560 300,540 460,570 C620,600 720,540 880,540 C1040,540 1160,600 1300,580 C1380,570 1440,560 1480,566 L1480,900 L-40,900Z" fill="#37436A"/>
+      <path d="M-40,690 C180,650 360,660 560,680 C760,700 980,660 1200,670 C1320,676 1420,690 1480,694 L1480,900 L-40,900Z" fill="#2A3552"/>
+    </g>
+    <g fill="#243049">
+      <path d="M150,700 C146,640 156,590 170,560 C184,590 192,640 188,700Z"/><path d="M196,705 C193,660 200,620 210,598 C220,620 226,660 222,705Z"/>
+      <path d="M1370,700 C1366,630 1378,580 1392,548 C1406,580 1414,630 1410,700Z"/><path d="M1330,706 C1328,662 1334,630 1344,610 C1354,630 1358,662 1356,706Z"/>
+      <path d="M560,690 c-30,-10 -44,-40 -26,-62 c-10,-26 18,-48 42,-36 c20,-24 58,-12 58,16 c28,4 30,40 8,52 c4,24 -30,38 -52,28 c-8,6 -20,6 -30,2Z"/>
+    </g>
+    <path d="M-40,720 C200,700 420,712 700,716 C980,720 1200,704 1480,712 L1480,900 L-40,900Z" fill="url(#grd)" filter="url(#paint)"/>
+    <ellipse cx="1060" cy="770" rx="340" ry="60" fill="url(#gl)" opacity=".45" class="breath"/>
+    <!-- cottage -->
+    <g id="cottage" transform="translate(850 360)">
+      <g class="smokes" fill="#C9C7D2" filter="url(#soft)" opacity=".8"><circle class="smoke" cx="372" cy="-40" r="16"/><circle class="smoke" cx="372" cy="-40" r="14"/><circle class="smoke" cx="372" cy="-40" r="18"/></g>
+      <rect x="350" y="-30" width="46" height="120" fill="url(#wall)"/><rect x="350" y="-30" width="46" height="120" fill="url(#stones)"/><rect x="344" y="-38" width="58" height="12" rx="2" fill="#6F6A6E"/>
+      <path d="M-26,160 L118,40 L340,40 L486,160 Z" fill="url(#roof)"/>
+      <g stroke="#232A40" stroke-width="2" opacity=".6"><path d="M-2,140 H462"/><path d="M22,120 H438"/><path d="M46,100 H414"/><path d="M70,80 H390"/><path d="M94,60 H366"/></g>
+      <rect x="0" y="156" width="460" height="226" fill="url(#wall)"/><rect x="0" y="156" width="460" height="226" fill="url(#stones)"/>
+      <path d="M0,156 H460 V168 H0Z" fill="#2A3048" opacity=".6"/>
+      <ellipse cx="230" cy="380" rx="250" ry="30" fill="#1E2A1E" opacity=".5"/>
+      <!-- dormer: the loft -->
+      <path d="M176,112 L176,62 L228,24 L280,62 L280,112Z" fill="url(#wall)"/><path d="M166,68 L228,18 L290,68" fill="none" stroke="#2A3048" stroke-width="12" stroke-linejoin="round"/>
+      <ellipse cx="228" cy="84" rx="70" ry="54" fill="url(#gl)" class="breath"/>
+      <rect id="w2" class="pn" x="200" y="56" width="56" height="52" rx="4" fill="url(#pane)"/><path d="M228,56 V108 M200,82 H256" stroke="#F3E6CC" stroke-width="4"/><rect x="200" y="56" width="56" height="52" rx="4" fill="none" stroke="#F3E6CC" stroke-width="5"/>
+      <!-- wren room window -->
+      <ellipse cx="96" cy="250" rx="110" ry="84" fill="url(#gl)" class="breath"/>
+      <rect id="w0" class="pn" x="52" y="206" width="90" height="92" rx="4" fill="url(#pane)"/>
+      <path d="M52,206 h18 v92 h-18Z M124,206 h18 v92 h-18Z" fill="#D9776A" opacity=".55"/>
+      <path d="M97,206 V298 M52,252 H142" stroke="#F3E6CC" stroke-width="5"/><rect x="52" y="206" width="90" height="92" rx="4" fill="none" stroke="#F3E6CC" stroke-width="6"/>
+      <rect x="44" y="300" width="106" height="16" rx="3" fill="#6B5E4E"/><g fill="#E08E9E"><circle cx="58" cy="298" r="6"/><circle cx="74" cy="296" r="6"/><circle cx="92" cy="298" r="6"/><circle cx="110" cy="296" r="6"/><circle cx="128" cy="298" r="6"/></g><g fill="#5E7D4E"><circle cx="66" cy="300" r="5"/><circle cx="100" cy="300" r="5"/><circle cx="136" cy="300" r="5"/></g>
+      <!-- door -->
+      <path d="M196,382 V252 a32,32 0 0 1 64,0 V382Z" fill="#5E7D4E"/><path d="M196,382 V252 a32,32 0 0 1 64,0 V382" fill="none" stroke="#3F5A36" stroke-width="4"/><circle cx="248" cy="318" r="3.5" fill="#FFD27F"/>
+      <rect x="272" y="244" width="12" height="18" rx="3" fill="#FFD27F"/><circle cx="278" cy="252" r="30" fill="url(#gl)" class="breath"/>
+      <!-- garden suite window -->
+      <ellipse cx="362" cy="258" rx="120" ry="96" fill="url(#gl)" class="breath"/>
+      <rect id="w1" class="pn" x="310" y="200" width="104" height="112" rx="4" fill="url(#pane)"/>
+      <path d="M362,200 V312 M310,238 H414 M310,276 H414" stroke="#F3E6CC" stroke-width="5"/><rect x="310" y="200" width="104" height="112" rx="4" fill="none" stroke="#F3E6CC" stroke-width="6"/>
+      <rect x="302" y="314" width="120" height="16" rx="3" fill="#6B5E4E"/><g fill="#B7A2E0"><circle cx="316" cy="312" r="6"/><circle cx="334" cy="310" r="6"/><circle cx="352" cy="312" r="6"/><circle cx="372" cy="310" r="6"/><circle cx="392" cy="312" r="6"/><circle cx="408" cy="310" r="6"/></g>
+      <!-- ivy -->
+      <g fill="#5E7D4E"><ellipse cx="6" cy="370" rx="16" ry="10"/><ellipse cx="14" cy="346" rx="14" ry="9"/><ellipse cx="4" cy="322" rx="15" ry="9"/><ellipse cx="18" cy="300" rx="13" ry="8"/><ellipse cx="6" cy="278" rx="14" ry="9"/><ellipse cx="22" cy="256" rx="12" ry="8"/><ellipse cx="10" cy="232" rx="14" ry="9"/><ellipse cx="26" cy="210" rx="12" ry="8"/><ellipse cx="12" cy="188" rx="14" ry="9"/><ellipse cx="30" cy="170" rx="12" ry="8"/><ellipse cx="44" cy="190" rx="10" ry="7"/><ellipse cx="36" cy="232" rx="10" ry="7"/></g>
+      <g fill="#3F5A36"><ellipse cx="-2" cy="356" rx="10" ry="7"/><ellipse cx="26" cy="330" rx="10" ry="7"/><ellipse cx="-4" cy="296" rx="10" ry="7"/><ellipse cx="30" cy="282" rx="9" ry="6"/><ellipse cx="-2" cy="250" rx="10" ry="7"/><ellipse cx="22" cy="190" rx="9" ry="6"/></g>
+    </g>
+    <!-- garden -->
+    <path d="M1066,742 C1050,780 1000,810 960,900 L1110,900 C1110,840 1090,790 1094,742Z" fill="#B7AB98" opacity=".55" filter="url(#paint)"/>
+    <g fill="#2F4A2C"><circle cx="880" cy="746" r="30"/><circle cx="846" cy="760" r="22"/><circle cx="1230" cy="748" r="34"/><circle cx="1270" cy="764" r="24"/></g>
+    <g fill="#8E7BC4" opacity=".9"><circle cx="1010" cy="780" r="5"/><circle cx="1022" cy="770" r="5"/><circle cx="998" cy="792" r="5"/><circle cx="1128" cy="782" r="5"/><circle cx="1140" cy="772" r="5"/><circle cx="1150" cy="790" r="5"/><circle cx="1036" cy="786" r="4"/><circle cx="1118" cy="796" r="4"/></g>
+    <g fill="#E9DFCE" opacity=".85">
+      <path d="M760,830 h260 v8 h-260Z M1128,830 h300 v8 h-300Z M760,856 h260 v8 h-260Z M1128,856 h300 v8 h-300Z"/>
+      <path id="pickets" d="M770,812 l6,-10 l6,10 v60 h-12Z M800,812 l6,-10 l6,10 v60 h-12Z M830,812 l6,-10 l6,10 v60 h-12Z M860,812 l6,-10 l6,10 v60 h-12Z M890,812 l6,-10 l6,10 v60 h-12Z M920,812 l6,-10 l6,10 v60 h-12Z M950,812 l6,-10 l6,10 v60 h-12Z M980,812 l6,-10 l6,10 v60 h-12Z M1138,812 l6,-10 l6,10 v60 h-12Z M1168,812 l6,-10 l6,10 v60 h-12Z M1198,812 l6,-10 l6,10 v60 h-12Z M1228,812 l6,-10 l6,10 v60 h-12Z M1258,812 l6,-10 l6,10 v60 h-12Z M1288,812 l6,-10 l6,10 v60 h-12Z M1318,812 l6,-10 l6,10 v60 h-12Z M1348,812 l6,-10 l6,10 v60 h-12Z M1378,812 l6,-10 l6,10 v60 h-12Z"/>
+      <rect x="1016" y="792" width="16" height="96"/><rect x="1112" y="792" width="16" height="96"/>
+    </g>
+    <g transform="translate(1024 792)"><path d="M-12,-2 C-12,-14 2,-20 10,-12 C14,-8 16,-4 14,0 C8,4 -6,4 -12,-2Z" fill="#6B5446"/><path d="M-10,-6 L-22,-24 L-14,-8Z" fill="#6B5446"/><circle cx="8" cy="-12" r="1.6" fill="#FBF4E6"/><path d="M13,-11 l5,1 l-5,1Z" fill="#C9A47A"/></g>
+  </svg>
+  <canvas class="flies" id="flies" aria-hidden="true"></canvas>
+  <div class="hero-copy">
+    <div>
+      <p class="kick">Bed &amp; breakfast · Bright, Victoria</p>
+      <h1 id="h1" data-brand>Wren Cottage B&amp;B</h1>
+      <p class="lede">Three rooms, one wood fire and a garden full of wrens, a short walk from the river in the high country.</p>
+      <div class="ctas"><a class="btn" href="#book">Choose your nights</a><a class="btn line" href="#rooms">See the rooms</a></div>
+      <p class="hint"><i aria-hidden="true"></i>The lights are on — tap a window to peek inside.</p>
+    </div>
+  </div>
+  <button class="win-btn" type="button" data-room="0" aria-label="Peek into The Wren Room"><span>The Wren Room</span></button>
+  <button class="win-btn" type="button" data-room="1" aria-label="Peek into The Garden Suite"><span>The Garden Suite</span></button>
+  <button class="win-btn" type="button" data-room="2" aria-label="Peek into The Loft"><span>The Loft</span></button>
+</header>
+
+<main class="page" id="main">
+  <section class="chapter" id="rooms" aria-labelledby="c1">
+    <div class="ch-head"><p class="ch-no">Chapter I</p><h2 id="c1">Three rooms under one roof</h2><p>Each one has its own bathroom, a proper bed and a window that glows at dusk.</p></div>
+    <div class="rooms" id="roomCards"></div>
+  </section>
+
+  <section class="chapter" id="breakfast" aria-labelledby="c2">
+    <div class="ch-head"><p class="ch-no">Chapter II</p><h2 id="c2">Breakfast by the fire</h2></div>
+    <div class="spread">
+      <div>
+        <p class="drop">Breakfast is served from eight until ten at the long kitchen table, with the fire going from May to September. Prefer a slow start? Ask for a hamper at your door — just let us know by 8pm the night before.</p>
+        <ul class="menu">
+          <li><i aria-hidden="true">❦</i><p><b>Stewed rhubarb &amp; valley berries</b><span>with thick yoghurt and toasted oats</span></p></li>
+          <li><i aria-hidden="true">❦</i><p><b>Buttermilk pancakes</b><span>poached pear, maple and a dusting of cinnamon</span></p></li>
+          <li><i aria-hidden="true">❦</i><p><b>Eggs your way</b><span>on sourdough, with hot-smoked trout or bacon</span></p></li>
+          <li><i aria-hidden="true">❦</i><p><b>Mushrooms on toast</b><span>thyme, garlic and local goat’s cheese</span></p></li>
+          <li><i aria-hidden="true">❦</i><p><b>Fruit loaf &amp; honey from up the road</b><span>plunger coffee, leaf tea or hot chocolate</span></p></li>
+        </ul>
+        <p class="note">Included with every stay. Gluten-free, vegetarian and vegan versions with a day’s notice.</p>
+      </div>
+      <svg class="plate" viewBox="0 0 460 400" role="img" aria-label="Illustration of the breakfast table: a teapot, a stack of pancakes with pears, a jar of honey and a sprig of ivy">
+        <ellipse cx="230" cy="330" rx="210" ry="46" fill="#EADFC8"/>
+        <path d="M60,300 C60,250 150,230 230,230 C310,230 400,250 400,300 C400,340 320,356 230,356 C140,356 60,340 60,300Z" fill="#FFFBF2" stroke="#D9CCB3" stroke-width="3"/>
+        <ellipse cx="230" cy="292" rx="120" ry="34" fill="none" stroke="#E7DCC7" stroke-width="3"/>
+        <g><ellipse cx="226" cy="290" rx="78" ry="20" fill="#D9A45B"/><ellipse cx="226" cy="278" rx="76" ry="19" fill="#E8B96C"/><ellipse cx="226" cy="266" rx="74" ry="18" fill="#D9A45B"/><ellipse cx="226" cy="256" rx="72" ry="17" fill="#EFC57A"/></g>
+        <path d="M190,250 C200,230 214,226 222,240 C230,256 206,262 190,250Z" fill="#E9E3B8" stroke="#C9B77A" stroke-width="2"/><path d="M236,252 C246,232 262,230 268,244 C272,258 250,264 236,252Z" fill="#E9E3B8" stroke="#C9B77A" stroke-width="2"/>
+        <path d="M170,248 C200,262 250,264 290,246" fill="none" stroke="#A4622A" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+        <g transform="translate(96 150)"><path d="M0,70 C-8,30 14,4 50,4 C86,4 108,30 100,70 C94,96 6,96 0,70Z" fill="#2E3A59"/><path d="M100,40 C126,36 134,62 108,74" fill="none" stroke="#2E3A59" stroke-width="8"/><path d="M0,40 L-34,20 L-30,28 L2,54Z" fill="#2E3A59"/><ellipse cx="50" cy="6" rx="24" ry="6" fill="#3E4A6B"/><circle cx="50" cy="-2" r="7" fill="#FFD27F"/><path d="M20,40 C30,30 44,30 54,40" fill="none" stroke="#FFD27F" stroke-width="3" opacity=".7"/></g>
+        <g transform="translate(330 170)"><rect x="0" y="10" width="54" height="66" rx="10" fill="#F4C25A" opacity=".85"/><rect x="-4" y="0" width="62" height="14" rx="4" fill="#6B5E4E"/><path d="M10,40 h34" stroke="#FFF3CF" stroke-width="3" opacity=".7"/></g>
+        <path d="M40,360 C70,340 90,344 110,330" fill="none" stroke="#4A6540" stroke-width="3"/><g fill="#5E7D4E"><ellipse cx="62" cy="346" rx="9" ry="5" transform="rotate(-30 62 346)"/><ellipse cx="84" cy="338" rx="9" ry="5" transform="rotate(20 84 338)"/><ellipse cx="102" cy="332" rx="8" ry="5" transform="rotate(-20 102 332)"/></g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="chapter" id="nearby" aria-labelledby="c3">
+    <div class="ch-head"><p class="ch-no">Chapter III</p><h2 id="c3">Out and about</h2><p>A few general ideas for your days. Check conditions and opening times before you head off.</p></div>
+    <div class="near">
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><circle cx="9" cy="25" r="6"/><circle cx="27" cy="25" r="6"/><path d="M9 25l6-11h8l4 11M15 14l-2-4h-3M23 14l-3 11"/></svg><h3>Ride the rail trail</h3><p>Flat, easy riding through the valley. Bikes can be hired in town; we’ll pack you a snack.</p></div>
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><path d="M18 32V14M18 20l-6-5M18 17l6-6"/><path d="M8 13c4-1 7 1 8 4M26 9c-3 2-4 5-3 8" stroke="#C98A3E"/></svg><h3>Autumn colour</h3><p>Around April and May the town’s street trees turn gold and red — the whole valley glows.</p></div>
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><path d="M2 30l10-16 7 10 5-6 10 12z"/><path d="M12 14l3 5" stroke="#8E7BC4"/></svg><h3>Up the mountain</h3><p>Plateau walks, granite lookouts and, in winter, snow — all a scenic drive from the door.</p></div>
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><path d="M3 22c4-4 8 4 12 0s8 4 12 0 6 2 6 2M3 29c4-4 8 4 12 0s8 4 12 0 6 2 6 2"/><circle cx="26" cy="9" r="4" stroke="#C98A3E"/></svg><h3>River swims</h3><p>The river runs right through town, with shallow spots for a dip on hot summer afternoons.</p></div>
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><path d="M12 4h12M14 4v8l-5 8v10h18V20l-5-8V4"/><path d="M9 22h18" stroke="#8E7BC4"/></svg><h3>Cellar doors &amp; breweries</h3><p>The valley has plenty. We’re happy to suggest a local driver so nobody draws the short straw.</p></div>
+      <div><svg viewBox="0 0 36 36" fill="none" stroke="#4A6540" stroke-width="2.2" aria-hidden="true"><path d="M18 3v30M5 10l26 16M31 10L5 26"/><path d="M14 5l4 3 4-3M14 31l4-3 4 3" stroke="#8E7BC4"/></svg><h3>The snowfields</h3><p>A day trip away in winter. Carry chains if the road signs say so and leave early.</p></div>
+    </div>
+  </section>
+
+  <section class="chapter" id="policies" aria-labelledby="c4">
+    <div class="ch-head"><p class="ch-no">Chapter IV</p><h2 id="c4">The small print</h2><p>Sample house rules for this concept demo.</p></div>
+    <div class="small">
+      <dl><dt>Arriving &amp; leaving</dt><dd>Check-in 3–7pm (later by arrangement), check-out 10am. A lantern stays on for late arrivals.</dd>
+        <dt>Weekends</dt><dd>Friday and Saturday nights have a two-night minimum.</dd>
+        <dt>Children</dt><dd>Guests 12 and over — it’s a quiet cottage, and the Loft stairs are steep.</dd>
+        <dt>Pets</dt><dd>Assistance animals only, sorry. The wrens appreciate it.</dd></dl>
+      <dl><dt>Cancelling</dt><dd>Full refund up to 14 days before arrival; after that, 50% unless we can re-let the room.</dd>
+        <dt>Accessibility</dt><dd>The Wren Room is on the ground floor with one small step at the door. Ask us anything.</dd>
+        <dt>The fire</dt><dd>Firewood and kindling supplied from May to September.</dd>
+        <dt>Parking</dt><dd>Off-street for three cars at the side gate.</dd></dl>
+    </div>
+  </section>
+
+  <section class="chapter" id="book" aria-labelledby="c5">
+    <div class="ch-head"><p class="ch-no">Chapter V</p><h2 id="c5">Choose your nights</h2><p>Pick a room, then tap a check-in day and a check-out day. Use the arrow keys and Enter if you prefer the keyboard.</p></div>
+    <div class="cal">
+      <div>
+        <div class="pick" id="pick" role="group" aria-label="Room"></div>
+        <div class="months" id="months"></div>
+        <div class="legend" aria-hidden="true"><span><i></i>Weeknight</span><span><i class="w"></i>Fri &amp; Sat night</span><span><i class="b"></i>Booked</span><span><i class="s"></i>Your stay</span></div>
+        <p class="msg" id="msg" aria-live="polite"></p>
+      </div>
+      <aside class="sum" aria-labelledby="sumH">
+        <p class="k">Your stay</p>
+        <h3 id="sumH">The Wren Room</h3>
+        <dl><dt>Check-in</dt><dd id="sIn">—</dd><dt>Check-out</dt><dd id="sOut">—</dd><dt>Nights</dt><dd id="sN">—</dd></dl>
+        <div class="lines" id="sLines"><p><span>Pick your dates to see the total.</span></p></div>
+        <div class="tot"><span>Total</span><b id="sTot">$0</b></div>
+        <p class="fine">Sample nightly rates, breakfast for two included. This is a demo — no booking is made and nothing is charged.</p>
+        <button class="btn" type="button" id="req" disabled>Request these dates</button>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div><p class="nm" data-brand>Wren Cottage B&amp;B</p><p>A stone cottage with three rooms in Bright, Victoria.</p></div>
+    <div><b>Stay with us</b><p><a href="tel:0355504108">(03) 5550 4108</a><br><a href="mailto:stay@example.com">stay@example.com</a></p></div>
+    <div><b>Find us</b><p>Bright, VIC<br>Directions sent after booking</p></div>
+    <div><b>Good to know</b><p>Sample rates and policies. Check-in 3–7pm.</p></div>
+    <small>A concept demo for a fictional bed &amp; breakfast. Rooms, rates and availability are illustrative; nothing here books, charges or sends anything.</small>
+  </div>
+</footer>
+
+<dialog class="peek" id="peek" aria-labelledby="pkT">
+  <div class="pk">
+    <div class="pk-in">
+      <div class="arch" id="pkArt"></div>
+      <div>
+        <p class="kk">Peeking into</p>
+        <h2 id="pkT">The Wren Room</h2>
+        <p class="lede" id="pkL"></p>
+        <dl id="pkD"></dl>
+        <p class="rate" id="pkR"></p>
+        <div class="acts"><button class="btn" type="button" id="pkBook">Check dates for this room</button><button class="btn line" type="button" id="pkNext">Next window →</button></div>
+      </div>
+      <button class="x" type="button" id="pkX" aria-label="Close">×</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  "use strict";
+  var d=document, root=d.documentElement;
+  var mq=matchMedia("(prefers-reduced-motion: reduce)"), phone=matchMedia("(max-width: 760px)");
+  function reduced(){return window.DemoKit?DemoKit.reducedMotion:mq.matches}
+  function $(s,c){return (c||d).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+
+  /* ---------- rooms ---------- */
+  var R=[
+    {n:"The Wren Room",lede:"Ground floor, tucked beside the garden, with the wrens’ nest box right outside the window.",bed:"Queen bed with a patchwork quilt",view:"The cottage garden and the nest box",bath:"Ensuite with a rain shower",sleeps:"2 adults",wd:210,we:250,wall:"#E9D7C2",quilt:["#D9776A","#E8B96C","#5E7D4E","#8E7BC4"],feat:"garden"},
+    {n:"The Garden Suite",lede:"The biggest room: French windows to a private courtyard, a clawfoot bath and a little wood heater.",bed:"King bed",view:"Across the lavender to the ridge",bath:"Clawfoot bath and a separate shower",sleeps:"2 adults",wd:265,we:310,wall:"#DCE2D2",quilt:["#5E7D4E","#FBF4E6"],feat:"bath"},
+    {n:"The Loft",lede:"Up the stairs under the rafters, with a reading nook and a skylight for counting stars.",bed:"Queen bed under the eaves",view:"A skylight full of stars",bath:"Ensuite shower (steep stairs — not ideal for limited mobility)",sleeps:"2 adults",wd:235,we:275,wall:"#E6DCEB",quilt:["#2E3A59","#FFD27F"],feat:"loft"}
+  ];
+  function interior(r,i){
+    var q=r.quilt, quilt="";
+    if(i===0){for(var x=0;x<6;x++)for(var y=0;y<3;y++)quilt+='<rect x="'+(92+x*36)+'" y="'+(318+y*26)+'" width="36" height="26" fill="'+q[(x+y)%4]+'" opacity=".92"/>'}
+    else if(i===1){for(var s=0;s<6;s++)quilt+='<rect x="'+(92+s*36)+'" y="318" width="18" height="78" fill="'+q[0]+'" opacity=".85"/>'}
+    else quilt='<rect x="92" y="318" width="216" height="78" fill="'+q[0]+'"/><path d="M92,340 H308" stroke="'+q[1]+'" stroke-width="6" opacity=".8"/>';
+    var view=i===2
+      ?'<path d="M0,0 L400,0 L400,130 L0,200Z" fill="#CFC3B2"/><g transform="translate(150 30) rotate(-8)"><rect width="110" height="80" rx="6" fill="#1F2842" stroke="#F3E6CC" stroke-width="7"/><g fill="#FFE7AE"><circle cx="24" cy="20" r="2"/><circle cx="60" cy="30" r="1.6"/><circle cx="84" cy="16" r="2.2"/><circle cx="40" cy="52" r="1.6"/><circle cx="90" cy="58" r="1.8"/></g><path d="M55,6 V74 M6,40 H104" stroke="#F3E6CC" stroke-width="4"/></g>'
+      :'<g transform="translate(140 70)"><rect width="120" height="130" rx="6" fill="'+(i===0?"#7FA06B":"#5A6690")+'"/>'+(i===0?'<path d="M0,90 C30,70 70,80 120,66 V130 H0Z" fill="#5E7D4E"/><rect x="80" y="30" width="18" height="22" rx="3" fill="#8A6A4F"/><circle cx="89" cy="38" r="3" fill="#2E3A59"/>':'<path d="M0,86 L30,56 L54,76 L84,44 L120,80 V130 H0Z" fill="#37436A"/><g fill="#B7A2E0"><circle cx="20" cy="118" r="5"/><circle cx="36" cy="114" r="5"/><circle cx="52" cy="118" r="5"/><circle cx="70" cy="114" r="5"/><circle cx="90" cy="118" r="5"/></g><circle cx="98" cy="26" r="9" fill="#FFE7AE"/>')+'<path d="M60,0 V130 M0,65 H120" stroke="#F3E6CC" stroke-width="6"/><rect width="120" height="130" rx="6" fill="none" stroke="#F3E6CC" stroke-width="8"/><path d="M-8,-6 H128" stroke="#8A6A4F" stroke-width="6"/><path d="M-6,-4 C10,40 4,90 -2,136 L-14,136 L-14,-4Z M126,-4 C110,40 116,90 122,136 L134,136 L134,-4Z" fill="'+(i===0?"#D9776A":"#8E7BC4")+'" opacity=".85"/></g>';
+    var feat=r.feat==="bath"?'<g transform="translate(292 360)"><path d="M0,0 H96 C96,34 78,48 48,48 C18,48 0,34 0,0Z" fill="#FBF4E6" stroke="#9A9082" stroke-width="3"/><path d="M8,46 l-6,14 M86,46 l6,14" stroke="#B89B5E" stroke-width="5" stroke-linecap="round"/><path d="M86,0 V-40 H70" fill="none" stroke="#B89B5E" stroke-width="5"/></g>'
+      :r.feat==="loft"?'<g transform="translate(316 300)"><rect x="0" y="40" width="70" height="60" rx="14" fill="#8E7BC4"/><rect x="6" y="10" width="58" height="50" rx="14" fill="#A08FD0"/><rect x="-6" y="-120" width="10" height="160" fill="#8A6A4F"/><g fill="#D9776A"><rect x="8" y="-110" width="10" height="34"/><rect x="22" y="-104" width="10" height="28" fill="#5E7D4E"/><rect x="36" y="-112" width="10" height="36" fill="#FFD27F"/></g><path d="M4,-74 H62" stroke="#8A6A4F" stroke-width="6"/></g>'
+      :'<g transform="translate(318 250)" fill="#6B5446"><path d="M0,0 C0,-10 10,-16 18,-10 C22,-7 24,-4 22,0 C16,4 4,4 0,0Z"/><path d="M2,-4 L-8,-18 L-2,-6Z"/><rect x="-18" y="-30" width="58" height="46" rx="4" fill="none" stroke="#8A6A4F" stroke-width="4"/></g>';
+    return '<svg viewBox="0 0 400 480" role="img" aria-label="Illustration of '+r.n+'"><rect width="400" height="480" fill="'+r.wall+'"/><g opacity=".22" fill="#5E7D4E">'+[40,120,200,280,360].map(function(x){return '<path d="M'+x+',40 c6,-10 14,-10 14,0 c0,8 -8,10 -14,0Z M'+(x-40)+',130 c6,-10 14,-10 14,0 c0,8 -8,10 -14,0Z M'+x+',220 c6,-10 14,-10 14,0 c0,8 -8,10 -14,0Z"/>'}).join("")+'</g>'+view+
+      '<rect y="410" width="400" height="70" fill="#B08A63"/><g stroke="#94704D" stroke-width="2"><path d="M0,430 H400 M0,455 H400"/></g>'+
+      '<ellipse cx="200" cy="440" rx="150" ry="18" fill="'+(i===1?"#C9A47A":"#8E7BC4")+'" opacity=".6"/>'+
+      '<rect x="84" y="250" width="232" height="74" rx="14" fill="#8A6A4F"/><rect x="80" y="300" width="240" height="104" rx="10" fill="#FBF4E6"/>'+quilt+
+      '<rect x="100" y="286" width="84" height="34" rx="14" fill="#FFFBF2" stroke="#E0D4BF" stroke-width="2"/><rect x="216" y="286" width="84" height="34" rx="14" fill="#FFFBF2" stroke="#E0D4BF" stroke-width="2"/>'+
+      '<rect x="22" y="330" width="50" height="70" rx="4" fill="#8A6A4F"/><path d="M36,330 L30,298 H64 L58,330Z" fill="#FFD27F"/><circle cx="47" cy="300" r="46" fill="#FFD27F" opacity=".22"/>'+feat+'</svg>';
+  }
+  $("#roomCards").innerHTML=R.map(function(r,i){
+    return '<article class="room"><div class="mini">'+interior(r,i).replace('role="img"','aria-hidden="true"')+'</div><h3>'+r.n+'</h3><ul><li>'+r.bed+'</li><li>'+r.view+'</li><li>'+r.bath+'</li></ul><p class="rate">from <b>$'+r.wd+'</b> a night · weekends $'+r.we+' <small>(sample)</small></p><div class="acts"><button class="btn dark" type="button" data-peek="'+i+'">Peek inside</button><button class="btn ghost" type="button" data-dates="'+i+'">Check dates</button></div></article>';
+  }).join("");
+
+  /* ---------- window buttons over the illustration ---------- */
+  var hero=$(".hero"), scene=$("#scene"), wins=$$(".win-btn");
+  function artDirect(){scene.setAttribute("viewBox",phone.matches?"770 300 620 600":"0 0 1440 900")}
+  function placeWins(){
+    var hr=hero.getBoundingClientRect();
+    wins.forEach(function(b,i){var r=$("#w"+i).getBoundingClientRect(),pad=Math.max(0,(44-r.width)/2);
+      b.style.left=(r.left-hr.left-pad-4)+"px";b.style.top=(r.top-hr.top-4)+"px";b.style.width=(Math.max(r.width,44)+8)+"px";b.style.height=(Math.max(r.height,44)+8)+"px"});
+  }
+  artDirect(); placeWins();
+  addEventListener("resize",function(){artDirect();placeWins();sizeFlies()});
+  phone.addEventListener&&phone.addEventListener("change",function(){artDirect();placeWins();renderCal()});
+  if(d.fonts&&d.fonts.ready) d.fonts.ready.then(placeWins);
+  wins.forEach(function(b,i){
+    b.addEventListener("click",function(){openPeek(i,b)});
+    b.addEventListener("mouseenter",function(){$("#w"+i).classList.add("lit")});b.addEventListener("mouseleave",function(){$("#w"+i).classList.remove("lit")});
+    b.addEventListener("focus",function(){$("#w"+i).classList.add("lit")});b.addEventListener("blur",function(){$("#w"+i).classList.remove("lit")});
+  });
+
+  /* ---------- peek dialog ---------- */
+  var dlg=$("#peek"), cur=0, opener=null;
+  function fillPeek(i){
+    var r=R[i]; cur=i;
+    $("#pkArt").innerHTML=interior(r,i); $("#pkT").textContent=r.n; $("#pkL").textContent=r.lede;
+    $("#pkD").innerHTML="<dt>Bed</dt><dd>"+r.bed+"</dd><dt>View</dt><dd>"+r.view+"</dd><dt>Bathroom</dt><dd>"+r.bath+"</dd><dt>Sleeps</dt><dd>"+r.sleeps+"</dd>";
+    $("#pkR").textContent="From $"+r.wd+" a night · Fri & Sat $"+r.we+" · sample rates, breakfast included";
+  }
+  function openPeek(i,from){
+    opener=from||d.activeElement; fillPeek(i);
+    var r=from?from.getBoundingClientRect():{left:innerWidth/2,top:innerHeight/2,width:0,height:0};
+    dlg.style.setProperty("--ox",(r.left+r.width/2)+"px"); dlg.style.setProperty("--oy",(r.top+r.height/2)+"px");
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+    requestAnimationFrame(function(){requestAnimationFrame(function(){dlg.classList.add("open")})});
+    $("#pkX").focus();
+  }
+  function closePeek(){
+    dlg.classList.remove("open");
+    setTimeout(function(){if(dlg.close)dlg.close();else dlg.removeAttribute("open");if(opener&&opener.focus)opener.focus()},reduced()?0:420);
+  }
+  $("#pkX").addEventListener("click",closePeek);
+  dlg.addEventListener("keydown",function(e){if(e.key==="Escape"){e.preventDefault();closePeek()}});
+  dlg.addEventListener("cancel",function(e){e.preventDefault();closePeek()});
+  dlg.addEventListener("click",function(e){if(e.target===dlg||e.target.classList.contains("pk"))closePeek()});
+  $("#pkNext").addEventListener("click",function(){fillPeek((cur+1)%3)});
+  $("#pkBook").addEventListener("click",function(){setRoom(cur);closePeek();setTimeout(function(){$("#book").scrollIntoView({behavior:reduced()?"auto":"smooth"})},reduced()?0:430)});
+  $("#roomCards").addEventListener("click",function(e){var p=e.target.closest("[data-peek]"),q=e.target.closest("[data-dates]");if(p)openPeek(+p.dataset.peek,p);if(q){setRoom(+q.dataset.dates);$("#book").scrollIntoView({behavior:reduced()?"auto":"smooth"})}});
+
+  /* ---------- fireflies ---------- */
+  var cv=$("#flies"), cx=cv.getContext("2d"), flies=[], W=0, H=0, raf=0, vis=true, dpr=1;
+  function sizeFlies(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);cx.setTransform(dpr,0,0,dpr,0,0);if(reduced())drawStatic()}
+  for(var k=0;k<26;k++)flies.push({x:Math.random(),y:.25+Math.random()*.7,p:Math.random()*6.28,s:.4+Math.random()*.6,r:1.2+Math.random()*1.6,b:3+Math.random()*3});
+  function dot(x,y,r,a){var g=cx.createRadialGradient(x,y,0,x,y,r*7);g.addColorStop(0,"rgba(255,226,150,"+a+")");g.addColorStop(.25,"rgba(255,210,127,"+(a*.45)+")");g.addColorStop(1,"rgba(255,210,127,0)");cx.fillStyle=g;cx.beginPath();cx.arc(x,y,r*7,0,6.283);cx.fill();cx.fillStyle="rgba(255,244,210,"+a+")";cx.beginPath();cx.arc(x,y,r,0,6.283);cx.fill()}
+  function drawStatic(){cx.clearRect(0,0,W,H)}
+  function tick(t){
+    raf=0; if(!vis||d.hidden||reduced()) return;
+    cx.clearRect(0,0,W,H); var s=t/1000;
+    flies.forEach(function(f){var x=(f.x+Math.sin(s*.13*f.s+f.p)*.06+Math.sin(s*.31+f.p*2)*.02)*W, y=(f.y+Math.cos(s*.17*f.s+f.p)*.05)*H, a=Math.max(0,Math.sin(s*6.283/f.b+f.p));dot(x,y,f.r,.15+.85*a*a)});
+    raf=requestAnimationFrame(tick);
+  }
+  function startFlies(){if(!raf&&vis&&!d.hidden&&!reduced())raf=requestAnimationFrame(tick)}
+  sizeFlies();
+  if("IntersectionObserver" in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)startFlies()}).observe(hero)}
+  d.addEventListener("visibilitychange",startFlies); startFlies();
+
+  /* ---------- calendar ---------- */
+  var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], DL=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], MN=["January","February","March","April","May","June","July","August","September","October","November","December"], MS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function day0(x){var y=new Date(x);y.setHours(12,0,0,0);return y}
+  function add(x,n){var y=new Date(x);y.setDate(y.getDate()+n);return day0(y)}
+  function key(x){return x.getFullYear()*10000+(x.getMonth()+1)*100+x.getDate()}
+  function fmt(x){return DN[x.getDay()]+" "+x.getDate()+" "+MS[x.getMonth()]}
+  var today=day0(new Date()), room=0, ci=null, co=null, focus=add(today,1), vy=today.getFullYear(), vm=today.getMonth(), hover=null;
+  var maxM=new Date(today.getFullYear(),today.getMonth()+6,1);
+  function we(x){return x.getDay()===5||x.getDay()===6}
+  function booked(x,r){var h=Math.sin(key(x)*12.9898+r*78.233)*43758.5453;h-=Math.floor(h);return h<(we(x)?.3:.17)}
+  function rate(x){return we(x)?R[room].we:R[room].wd}
+  var months=$("#months"), msg=$("#msg");
+  function say(t,warn){msg.textContent=t;msg.classList.toggle("warn",!!warn)}
+  function nMonths(){return phone.matches?1:2}
+  function renderCal(){
+    var html="", n=nMonths();
+    for(var m=0;m<n;m++){
+      var first=new Date(vy,vm+m,1), y=first.getFullYear(), mo=first.getMonth(), days=new Date(y,mo+1,0).getDate(), lead=(first.getDay()+6)%7;
+      var canPrev=new Date(vy,vm,1)>new Date(today.getFullYear(),today.getMonth(),1), canNext=new Date(vy,vm+n,1)<=maxM;
+      html+='<div class="month"><div class="mh">'+(m===0?'<button class="nav" type="button" data-mv="-1" aria-label="Previous month"'+(canPrev?"":" disabled")+'>‹</button>':'<span class="nav ph"></span>')+'<h3 id="mh'+m+'">'+MN[mo]+" "+y+'</h3>'+(m===n-1?'<button class="nav" type="button" data-mv="1" aria-label="Next month"'+(canNext?"":" disabled")+'>›</button>':'<span class="nav ph"></span>')+'</div>';
+      html+='<div class="grid" role="grid" aria-labelledby="mh'+m+'"><div role="row" style="display:contents">'+["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(function(w){return '<span class="dow" role="columnheader">'+w+'</span>'}).join("")+'</div>';
+      var cells=[];
+      for(var b=0;b<lead;b++) cells.push('<span class="blank" role="gridcell"></span>');
+      for(var dd=1;dd<=days;dd++){
+        var x=day0(new Date(y,mo,dd)), past=x<today, bk=!past&&booked(x,room), cls="day"+(we(x)?" we":"")+(past?" past":""), tag="";
+        if(ci&&key(x)===key(ci)){cls+=" ci";tag="In"} else if(co&&key(x)===key(co)){cls+=" co";tag="Out"} else if(ci&&co&&x>ci&&x<co) cls+=" in"; else if(ci&&!co&&hover&&x>ci&&x<=hover) cls+=" hov";
+        var label=DL[x.getDay()]+" "+x.getDate()+" "+MN[mo]+(past?", past":bk?", booked":", $"+rate(x)+(we(x)?" weekend night":" weeknight")+", available")+(tag==="In"?", your check-in":tag==="Out"?", your check-out":"");
+        cells.push('<span role="gridcell"'+(tag||cls.indexOf(" in")>0?' aria-selected="true"':"")+'><button type="button" class="'+cls+'" data-k="'+key(x)+'" data-tag="'+tag+'" tabindex="'+(key(x)===key(focus)?0:-1)+'" aria-label="'+label+'"'+(past||bk?' aria-disabled="true"':"")+'><span class="dn">'+dd+'</span><span class="rt">'+(past?"":bk?"Booked":"$"+rate(x))+'</span></button></span>');
+      }
+      while(cells.length%7) cells.push('<span class="blank" role="gridcell"></span>');
+      for(var w=0;w<cells.length;w+=7) html+='<div role="row" style="display:contents">'+cells.slice(w,w+7).join("")+'</div>';
+      html+='</div></div>';
+    }
+    months.innerHTML=html; summary();
+  }
+  function fromKey(k){return day0(new Date(Math.floor(k/10000),Math.floor(k/100)%100-1,k%100))}
+  function nightsFree(a,b){for(var x=a;x<b;x=add(x,1))if(booked(x,room))return x;return null}
+  function choose(x){
+    if(x<today) return;
+    if(!ci||co||x<=ci){
+      if(booked(x,room)){say("That night is already booked — try another check-in day.",true);return}
+      ci=x;co=null;hover=null;say("Lovely. Now tap your check-out day.");
+    } else {
+      var bad=nightsFree(ci,x);
+      if(bad){say("The night of "+fmt(bad)+" is booked, so that stay won’t fit. Try a shorter stay or other dates.",true);return}
+      var n=Math.round((x-ci)/864e5), hasWe=false; for(var y=ci;y<x;y=add(y,1)) if(we(y)) hasWe=true;
+      if(hasWe&&n<2){say("Friday and Saturday nights have a two-night minimum — pick a check-out at least two nights after check-in.",true);return}
+      co=x; say(n+" night"+(n>1?"s":"")+" in "+R[room].n+". Your total is in the summary.");
+    }
+    focus=x; renderCal(); var btn=months.querySelector('[data-k="'+key(x)+'"]'); if(btn) btn.focus();
+  }
+  months.addEventListener("click",function(e){
+    var mv=e.target.closest("[data-mv]"); if(mv){shiftView(+mv.dataset.mv);return}
+    var b=e.target.closest(".day"); if(!b) return;
+    if(b.getAttribute("aria-disabled")==="true"){var x=fromKey(+b.dataset.k);if(x>=today)say("That night is already booked — try another day.",true);return}
+    choose(fromKey(+b.dataset.k));
+  });
+  months.addEventListener("mouseover",function(e){var b=e.target.closest(".day");if(!b||!ci||co)return;var x=fromKey(+b.dataset.k);if(hover&&key(hover)===key(x))return;hover=x;$$(".day",months).forEach(function(el){var y=fromKey(+el.dataset.k);el.classList.toggle("hov",y>ci&&y<=hover&&!el.classList.contains("ci"))})});
+  function shiftView(n){var t=new Date(vy,vm+n,1);if(t<new Date(today.getFullYear(),today.getMonth(),1)||new Date(t.getFullYear(),t.getMonth()+nMonths()-1,1)>maxM)return;vy=t.getFullYear();vm=t.getMonth();renderCal()}
+  months.addEventListener("keydown",function(e){
+    var b=e.target.closest(".day"); if(!b) return;
+    var mv={ArrowLeft:-1,ArrowRight:1,ArrowUp:-7,ArrowDown:7,Home:-((fromKey(+b.dataset.k).getDay()+6)%7),End:6-((fromKey(+b.dataset.k).getDay()+6)%7)}[e.key];
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();if(b.getAttribute("aria-disabled")!=="true")choose(fromKey(+b.dataset.k));else say("That night isn’t available.",true);return}
+    if(mv==null) return;
+    e.preventDefault();
+    var x=add(fromKey(+b.dataset.k),mv); if(x<today) return; if(x>=maxM&&new Date(x.getFullYear(),x.getMonth(),1)>maxM) return;
+    focus=x;
+    var viewStart=new Date(vy,vm,1), viewEnd=new Date(vy,vm+nMonths(),1);
+    if(x<viewStart){vy=x.getFullYear();vm=x.getMonth()}else if(x>=viewEnd){var t=new Date(x.getFullYear(),x.getMonth()-nMonths()+1,1);vy=t.getFullYear();vm=t.getMonth()}
+    if(ci&&!co) hover=x;
+    renderCal(); var nb=months.querySelector('[data-k="'+key(x)+'"]'); if(nb) nb.focus();
+  });
+  function summary(){
+    $("#sumH").textContent=R[room].n;
+    $("#sIn").textContent=ci?fmt(ci)+", 3pm":"—"; $("#sOut").textContent=co?fmt(co)+", 10am":"—";
+    if(ci&&co){
+      var wd=0,wn=0; for(var x=ci;x<co;x=add(x,1)) we(x)?wn++:wd++;
+      var tot=wd*R[room].wd+wn*R[room].we;
+      $("#sN").textContent=wd+wn;
+      $("#sLines").innerHTML=(wd?'<p><span>'+wd+' weeknight'+(wd>1?"s":"")+' × $'+R[room].wd+'</span><span>$'+(wd*R[room].wd)+'</span></p>':"")+(wn?'<p><span>'+wn+' Fri/Sat night'+(wn>1?"s":"")+' × $'+R[room].we+'</span><span>$'+(wn*R[room].we)+'</span></p>':"")+'<p><span>Breakfast for two, every morning</span><span>included</span></p>';
+      $("#sTot").textContent="$"+tot.toLocaleString("en-AU"); $("#req").disabled=false;
+    } else {$("#sN").textContent="—";$("#sLines").innerHTML='<p><span>'+(ci?"Now pick a check-out day.":"Pick your dates to see the total.")+'</span></p>';$("#sTot").textContent="$0";$("#req").disabled=true}
+  }
+  function setRoom(i){
+    room=i; $$("#pick button").forEach(function(b){b.setAttribute("aria-pressed",+b.dataset.r===i)});
+    if(ci&&(booked(ci,room)||co&&nightsFree(ci,co))){ci=null;co=null;say("Some of those nights are booked in "+R[room].n+" — please pick new dates.",true)} else if(ci&&co) say("Same dates, now in "+R[room].n+".");
+    renderCal();
+  }
+  $("#pick").innerHTML=R.map(function(r,i){return '<button type="button" data-r="'+i+'" aria-pressed="'+(i===0)+'">'+r.n+'<small>from $'+r.wd+' · Fri/Sat $'+r.we+'</small></button>'}).join("");
+  $("#pick").addEventListener("click",function(e){var b=e.target.closest("[data-r]");if(b)setRoom(+b.dataset.r)});
+  $("#req").addEventListener("click",function(){
+    if(!ci||!co) return; var n=Math.round((co-ci)/864e5);
+    if(window.DemoKit) DemoKit.toast("Demo only — no booking was made. "+R[room].n+", "+fmt(ci)+" → "+fmt(co)+", "+n+" night"+(n>1?"s":"")+", "+$("#sTot").textContent+" (sample rates).",5600);
+  });
+  if(phone.matches&&new Date(vy,vm+1,0).getDate()-today.getDate()<7){var nx=new Date(vy,vm+1,1);vy=nx.getFullYear();vm=nx.getMonth()}
+  say("Tap a day to choose your check-in.");
+  renderCal();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "085",
+  "tech": ["Scroll-driven", "IntersectionObserver", "CSS 3D", "SVG"],
+  "features": ["story"],
+  "interaction": "Scroll through a sunrise: the page moves from dawn navy through magenta and orange to morning cream while a sun rises behind the content, and each manifesto line 'wakes up' as it reaches the middle of the screen — its Recursive weight, slant, casual axis and scale all tied to its scroll position; the four value cards flip over on click, tap or keyboard.",
+  "fonts": ["Recursive", "Inter"],
+  "notes": "With reduced motion the manifesto is set statically in bold upright type over the same gradient; resource buttons show a demo toast instead of downloading."
+}

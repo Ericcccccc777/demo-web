@@ -1,0 +1,8 @@
+{
+  "id": "057",
+  "tech": ["SVG", "Generative art", "Scroll-driven", "IntersectionObserver", "CSS Grid", "Form logic"],
+  "features": ["story", "customiser"],
+  "interaction": "Scroll down through a generated skin cross-section (sticky specimen with a reticle on desktop, per-layer slices on phones) while a depth gauge reads out micrometres and the layer; treatments appear at the depth they work. A four-question routine builder (skin type, main concern, sensitivity, SPF habit) returns AM and PM steps using generic product types only, with general-information notes.",
+  "fonts": ["Onest", "DM Mono"],
+  "notes": "The cross-section is diagrammatic and not to scale (epidermis enlarged); depth figures are typical values for facial skin."
+}

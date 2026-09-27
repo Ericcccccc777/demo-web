@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="023">
+<meta name="demo:brand" content="Easy Tiger Removals">
+<meta name="demo:badge" content="top-right">
+<title>Easy Tiger Removals — friendly Perth removalists</title>
+<meta name="description" content="Concept site for a fictional Perth removalist: pack a virtual truck to size your move, then ask for a quote.">
+<meta name="theme-color" content="#1A1A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --kraft:#C8A27A;--kraft-l:#D8B78E;--kraft-d:#A9845B;--tape:#E8D9B0;--ink:#1A1A1A;--red:#C0392B;--red-ink:#A32A1E;
+  --wall:#EFE8D8;--paper:#FBF8F1;--muted:#4A4036;
+  --sans:"Archivo","Arial Narrow",Arial,sans-serif;--marker:"Permanent Marker","Comic Sans MS",cursive;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .17 0 0 0 0 .08 0 0 0 1.1 -.58'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  --inkmask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='m' x='0' y='0' width='1' height='1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.4 2.75'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23m)'/%3E%3C/svg%3E");
+  --flute:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12'%3E%3Crect width='16' height='12' fill='%23D9BC94'/%3E%3Cpath d='M0 1h16M0 11h16' stroke='%23946D45' stroke-width='1.6'/%3E%3Cpath d='M0 6q4-5 8 0t8 0' fill='none' stroke='%23946D45' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 16.5px/1.55 var(--sans);background:var(--wall);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='128'%3E%3Cpath d='M0 .5h256M0 64.5h256M.5 0v64M128.5 0v64M64.5 64v64M192.5 64v64' stroke='%231A1A1A' stroke-opacity='.06' fill='none'/%3E%3C/svg%3E"),var(--noise)}
+svg{display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.ico{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.stencil{font-family:var(--sans);font-weight:900;font-stretch:62%;text-transform:uppercase;line-height:.86;letter-spacing:.005em}
+.marker{font-family:var(--marker);font-weight:400}
+.wrap{width:min(1240px,calc(100% - 32px));margin-inline:auto}
+main{overflow-x:clip}
+
+/* ---------- band + header ---------- */
+.band{background:var(--ink);color:var(--tape);font:700 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;min-height:46px;display:flex;align-items:center}
+.band .wrap{display:flex;gap:10px 28px;align-items:center;flex-wrap:wrap;padding:10px 0}
+.band a{text-decoration:none;color:var(--paper)}
+.band .dot{width:8px;height:8px;background:var(--red);display:inline-block;margin-right:8px;transform:rotate(45deg)}
+.top{display:flex;align-items:center;gap:14px 28px;padding:18px 0 10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;flex:1 1 240px}
+.brand svg{width:54px;height:54px;flex:none}
+.brand-name{font-size:clamp(24px,2.6vw,32px);overflow-wrap:anywhere}
+.nav{display:flex;gap:4px 22px;flex-wrap:wrap}
+.nav a{font:700 15px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:12px 2px;border-bottom:3px solid transparent}
+.nav a:hover{border-color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border:3px solid var(--ink);font:900 19px/1 var(--sans);font-stretch:70%;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn-red{background:var(--red);color:#fff}
+.btn-ink{background:var(--ink);color:var(--tape)}
+.btn-paper{background:var(--paper)}
+
+/* ---------- box system ---------- */
+.box{position:relative;background-color:var(--kraft);
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 3px,rgba(60,35,10,.035) 3px 7px),var(--noise),linear-gradient(180deg,rgba(255,255,255,.12),rgba(90,55,20,.12));
+  border-radius:3px;padding:52px clamp(20px,3.6vw,48px) 40px;
+  box-shadow:inset 0 0 0 1.5px rgba(26,26,26,.22),inset 0 -14px 20px -16px rgba(70,40,10,.5),0 22px 34px -22px rgba(26,26,26,.6),0 3px 0 rgba(26,26,26,.25)}
+.box::before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:var(--flute) repeat-x 0 0/16px 12px;border-radius:3px 3px 0 0;opacity:.95}
+.box>.tape{position:absolute;left:50%;top:-4px;width:84px;height:112px;margin-left:-42px;pointer-events:none;
+  background:linear-gradient(90deg,rgba(255,255,255,.4),rgba(255,255,255,0) 28%,rgba(255,255,255,.22) 62%,rgba(255,255,255,0)),rgba(232,217,176,.8);
+  box-shadow:0 1px 1px rgba(26,26,26,.18);clip-path:polygon(0 0,100% 0,100% 93%,90% 100%,78% 94%,64% 100%,50% 94%,36% 100%,22% 94%,10% 100%,0 93%);transform-origin:top;z-index:1}
+.box h2{font-size:clamp(46px,6vw,84px);margin-bottom:14px;position:relative;z-index:2}
+.box .note{font:400 clamp(19px,1.8vw,24px)/1.2 var(--marker);color:var(--red-ink);transform:rotate(-2deg);display:inline-block;position:relative;z-index:2}
+.box p,.box li{position:relative;z-index:2}
+.stamp{display:inline-block;border:4px solid currentColor;padding:6px 12px 4px;font:900 22px/1 var(--sans);font-stretch:62%;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-7deg);
+  -webkit-mask:var(--inkmask) 0 0/160px;mask:var(--inkmask) 0 0/160px;pointer-events:none;user-select:none}
+.stamp.red{color:var(--red)}
+.arrows{display:inline-flex;gap:4px;vertical-align:-4px;margin-right:8px}
+.arrows svg{width:18px;height:24px}
+
+/* ---------- hero ---------- */
+.hero{display:grid;gap:34px;padding:74px 0 56px;align-items:start}
+.hero .box{padding-top:64px}
+.flaps{position:absolute;left:-3%;right:-3%;top:-66px;height:72px;pointer-events:none}
+.flaps svg{width:100%;height:100%;overflow:visible}
+.flap{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:50% 100%}
+.flap.back{fill:#9C7650}.flap.side{fill:var(--kraft-l)}
+.kicker{font:400 22px/1.2 var(--marker);color:var(--red-ink);margin-bottom:12px}
+h1.stencil{font-size:clamp(66px,10.4vw,148px);line-height:.82}
+h1 .under{position:relative;display:inline-block;color:var(--paper);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill}
+.lede{font-size:clamp(17px,1.5vw,19px);max-width:34em;margin:22px 0 26px;font-weight:500}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero .stamp{position:absolute;right:28px;bottom:26px;font-size:26px}
+.label{position:relative;background:var(--paper);border:2px solid var(--ink);padding:0 0 18px;transform:rotate(2.2deg);box-shadow:0 18px 30px -20px rgba(26,26,26,.6);max-width:460px;justify-self:center;width:100%}
+.label>.tape{position:absolute;top:-6px;right:-26px;width:104px;height:30px;background:rgba(232,217,176,.88);transform:rotate(38deg);box-shadow:0 1px 2px rgba(26,26,26,.2);z-index:2}
+.label-head{background:var(--ink);color:var(--paper);padding:12px 60px 12px 18px;display:flex;flex-direction:column;gap:6px}
+.label-co{font-size:24px;overflow-wrap:anywhere;min-width:0}
+.label-head small{font:700 11px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--tape);white-space:nowrap}
+.label-body{padding:16px 18px 0;display:grid;gap:12px}
+.lf{display:grid;grid-template-columns:62px 1fr;align-items:center;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.lf span{font:900 15px/1 var(--sans);font-stretch:70%;letter-spacing:.1em;text-transform:uppercase}
+.lf input{border:0;background:transparent;font:400 20px/1.2 var(--marker);color:var(--red-ink);padding:6px 4px;min-height:44px;width:100%;min-width:0}
+.lf input::placeholder{color:#8a7f73}
+.label-row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-top:6px}
+.bars{height:46px;width:132px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 7px,transparent 7px 9px,var(--ink) 9px 10px,transparent 10px 13px)}
+.contents{font:400 17px/1.2 var(--marker);color:var(--ink)}
+
+/* ---------- estimator ---------- */
+.est{margin-top:22px}
+.est-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 30px;margin-bottom:22px}
+.est-hint{max-width:38em;font-weight:500}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.presets button{font:800 14px/1 var(--sans);font-stretch:75%;letter-spacing:.08em;text-transform:uppercase;border:2px solid var(--ink);background:var(--paper);padding:10px 14px;min-height:42px;cursor:pointer}
+.presets button:hover{background:var(--tape)}
+.presets .clear{background:transparent;border-style:dashed}
+.est-grid{display:grid;gap:22px;align-items:start}
+.inv{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tile{display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center;background:var(--paper);border:2px solid var(--ink);padding:6px 8px 6px 6px;box-shadow:3px 3px 0 rgba(26,26,26,.85);user-select:none;-webkit-user-select:none;transition:transform .15s}
+.tile .ico-w{width:48px;height:48px;display:grid;place-items:center;background:var(--kraft-l);border:2px solid var(--ink)}
+.tile .ico-w svg{width:36px;height:36px}
+.tile b{display:block;font:800 17px/1.1 var(--sans);font-stretch:85%}
+.tile small{display:block;font-size:13.5px;color:var(--muted);line-height:1.3}
+.tile.has{background:#FFF6DE}
+.can-drag .tile{cursor:grab}
+.can-drag .tile:hover{transform:translate(-1px,-1px)}
+.step{display:flex;align-items:center;gap:2px}
+.step button{width:42px;height:42px;border:2px solid var(--ink);background:var(--paper);font:900 22px/1 var(--sans);cursor:pointer;display:grid;place-items:center;padding:0}
+.step button:hover{background:var(--tape)}
+.step output{min-width:34px;text-align:center;font:900 22px/1 var(--sans);font-stretch:70%}
+.truck-card{background:var(--paper);border:3px solid var(--ink);padding:18px 18px 16px;box-shadow:5px 5px 0 var(--ink)}
+.truck{width:100%;height:auto;overflow:visible;touch-action:pan-y}
+.hold{fill:#2B2622}.ghost{fill:none;stroke:var(--ink);stroke-width:2;stroke-dasharray:9 8;opacity:.45}
+.shell{fill:none;stroke:var(--ink);stroke-width:5;stroke-linejoin:round}
+.gl{stroke:rgba(232,217,176,.14);stroke-width:1}
+.capline{stroke:rgba(232,217,176,.38);stroke-width:2;stroke-dasharray:4 7}
+.cap-t{font:900 18px var(--sans);font-stretch:70%;text-anchor:middle;fill:#6b6157;letter-spacing:.04em}
+.cap-t.on{fill:var(--red-ink)}
+.cab{fill:var(--paper);stroke:var(--ink);stroke-width:4;stroke-linejoin:round}
+.glass{fill:#2B2622}
+.it rect{fill:var(--kraft-l);stroke:var(--ink);stroke-width:2.5}
+.it use{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.it text{font:800 12px var(--sans);font-stretch:70%;letter-spacing:.06em;fill:var(--ink);text-anchor:middle;text-transform:uppercase}
+.it{cursor:grab}
+.it.drop{animation:drop .6s cubic-bezier(.34,1.56,.64,1)}
+@keyframes drop{from{transform:translateY(-80px)}}
+#target{display:none;stroke-width:3;pointer-events:none}
+#target.ok{display:block;fill:rgba(232,217,176,.45);stroke:var(--tape)}
+#target.no{display:block;fill:rgba(192,57,43,.3);stroke:var(--red)}
+.fill{margin-top:14px}
+.sizes{list-style:none;margin:18px 0 0;padding:14px 0 0;border-top:3px dashed rgba(26,26,26,.35);display:grid;gap:10px}
+.sizes li{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:baseline;font-size:14.5px;line-height:1.35}
+.sizes b{font-size:26px}
+.dock{display:none}
+.fill-track{position:relative;height:26px;border:3px solid var(--ink);background:repeating-linear-gradient(-45deg,#efe6d2 0 8px,#e6dbc3 8px 16px)}
+.fill-bar{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--red);transition:width .5s cubic-bezier(.34,1.3,.64,1)}
+.fill-mark{position:absolute;top:-3px;bottom:-3px;width:3px;background:var(--ink)}
+.fill-lbl{display:flex;justify-content:space-between;font:800 13px/1 var(--sans);font-stretch:75%;letter-spacing:.08em;text-transform:uppercase;margin-top:6px;position:relative;height:14px}
+.fill-lbl span{position:absolute;transform:translateX(-100%);white-space:nowrap}
+.readout{display:grid;gap:4px;margin-top:14px}
+.rec{font-size:clamp(30px,3.4vw,44px)}
+.rec-sub{font-weight:600}
+.rec-small{font-size:14px;color:var(--muted)}
+.est-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;align-items:center}
+.est-msg{min-height:1.4em;font:400 17px/1.3 var(--marker);color:var(--red-ink)}
+.ghost-drag{position:fixed;left:0;top:0;z-index:50;pointer-events:none;width:64px;height:64px;display:grid;place-items:center;background:var(--kraft-l);border:3px solid var(--ink);box-shadow:6px 8px 0 rgba(26,26,26,.35);transform:translate(-92%,-118%) rotate(-6deg)}
+.ghost-drag svg{width:44px;height:44px}
+
+/* ---------- services ---------- */
+.pile{display:grid;gap:26px;margin-top:70px}
+.svc{padding-top:48px}
+.svc>.tape{left:74%}
+.svc h3{font-size:clamp(34px,3.2vw,44px);margin:8px 0 10px}
+.svc .ico{width:54px;height:54px;stroke-width:2.4}
+.svc .price{margin-top:14px;font:800 15px/1.2 var(--sans);font-stretch:80%;letter-spacing:.06em;text-transform:uppercase;border-top:2px dashed rgba(26,26,26,.45);padding-top:10px}
+.svc .note{font-size:19px}
+.pile-head{margin-bottom:6px}
+.pile-head h2{font-size:clamp(46px,6vw,84px)}
+
+/* ---------- pricing docket + checklist ---------- */
+.duo{display:grid;gap:34px;margin-top:70px;align-items:start}
+.docket{background:var(--paper);border:2px solid var(--ink);padding:22px 22px 18px;position:relative;margin-top:6px;box-shadow:0 12px 20px -14px rgba(26,26,26,.6);transform:rotate(-.8deg);z-index:2;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),96% 100%,92% calc(100% - 10px),88% 100%,84% calc(100% - 10px),80% 100%,76% calc(100% - 10px),72% 100%,68% calc(100% - 10px),64% 100%,60% calc(100% - 10px),56% 100%,52% calc(100% - 10px),48% 100%,44% calc(100% - 10px),40% 100%,36% calc(100% - 10px),32% 100%,28% calc(100% - 10px),24% 100%,20% calc(100% - 10px),16% 100%,12% calc(100% - 10px),8% 100%,4% calc(100% - 10px),0 100%)}
+.docket h3{font-size:22px;letter-spacing:.14em;border-bottom:3px double var(--ink);padding-bottom:8px;margin-bottom:8px}
+.rate{display:flex;align-items:baseline;gap:8px;padding:6px 0;font-weight:600}
+.rate i{flex:1;border-bottom:2px dotted rgba(26,26,26,.5);transform:translateY(-4px);min-width:12px}
+.rate b{font:900 20px/1 var(--sans);font-stretch:75%;white-space:nowrap}
+.fine{font-size:14.5px;line-height:1.5;margin-top:10px}
+.fine li{margin:3px 0}
+.docket .stamp{position:absolute;right:10px;top:12px;font-size:17px;border-width:3px}
+.checks{list-style:none;padding:0;margin:0}
+.duo-l{display:grid;gap:34px}
+.faq details{border-top:2px solid rgba(26,26,26,.5);position:relative;z-index:2}
+.faq details:last-of-type{border-bottom:2px solid rgba(26,26,26,.5)}
+.faq summary{list-style:none;cursor:pointer;padding:14px 40px 14px 0;font:800 18px/1.25 var(--sans);font-stretch:85%;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:2px solid var(--ink);display:grid;place-items:center;font:900 20px/1 var(--sans);background:var(--paper)}
+.faq details[open] summary::after{content:"−";background:var(--tape)}
+.faq details p{padding:0 0 14px;max-width:34em}
+.grp{font:400 20px/1.2 var(--marker);color:var(--red-ink);margin:16px 0 6px}
+.chk{display:flex;align-items:flex-start;gap:12px;padding:6px 0;cursor:pointer;font-weight:500;line-height:1.35}
+.chk input{position:absolute;opacity:0;width:1px;height:1px}
+.chk .sq{flex:none;width:30px;height:30px;border:3px solid var(--ink);background:rgba(251,248,241,.6);display:grid;place-items:center;margin-top:-3px}
+.chk .sq svg{width:30px;height:30px;stroke:var(--red);stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:40;stroke-dashoffset:40;transition:stroke-dashoffset .35s ease-out}
+.chk input:checked+.sq svg{stroke-dashoffset:0}
+.chk input:checked~.t{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(163,42,30,.8)}
+.chk input:focus-visible+.sq{outline:3px solid var(--red);outline-offset:3px}
+.prog{display:flex;align-items:center;gap:14px;margin:6px 0 4px;flex-wrap:wrap}
+.prog-track{flex:1 1 160px;height:14px;border:2px solid var(--ink);background:var(--paper)}
+.prog-bar{height:100%;width:0;background:var(--ink);transition:width .3s}
+.linkbtn{background:none;border:0;padding:10px 0;text-decoration:underline;text-underline-offset:3px;font-weight:700;cursor:pointer}
+
+/* ---------- areas ---------- */
+.areas{margin-top:70px}
+.areas-grid{display:grid;gap:22px;align-items:start}
+.map{width:100%;height:auto;background:#E3D2B3;border:3px solid var(--ink)}
+.map .coast{fill:none;stroke:var(--ink);stroke-width:3}
+.map .river{fill:none;stroke:var(--ink);stroke-width:12;stroke-linecap:round;stroke-linejoin:round}
+.map .river2{fill:none;stroke:#E3D2B3;stroke-width:5;stroke-linecap:round}
+.map circle{fill:var(--red);stroke:var(--ink);stroke-width:2}
+.map text{font:700 13px var(--sans);font-stretch:80%;fill:var(--ink)}
+.map .big{font:900 15px var(--sans);font-stretch:62%;letter-spacing:.2em;fill:#6b5a44}
+.map .mk{font:400 17px var(--marker);fill:var(--red-ink)}
+.cols{display:grid;gap:16px 26px}
+.cols h3{font-size:28px;margin-bottom:6px}
+.cols ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.cols li{background:rgba(251,248,241,.7);border:2px solid var(--ink);padding:3px 9px;font-weight:600;font-size:15px}
+
+/* ---------- quote ---------- */
+.quote{margin-top:70px;margin-bottom:80px}
+.qform{display:grid;gap:14px;margin-top:10px}
+.qf{display:grid;gap:4px}
+.qf label,.qf legend{font:900 15px/1 var(--sans);font-stretch:70%;letter-spacing:.12em;text-transform:uppercase}
+.qf input,.qf select,.qf textarea{width:100%;min-height:48px;border:3px solid var(--ink);background:var(--paper);padding:10px 12px;border-radius:0;font-size:16px}
+.qf textarea{min-height:92px;resize:vertical}
+.attach{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:3px dashed var(--ink);padding:12px 14px;cursor:pointer}
+.attach input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--red);flex:none}
+.attach small{display:block;color:var(--muted);font-size:14px}
+.q-msg{min-height:1.4em;font:400 18px/1.3 var(--marker);color:var(--red-ink)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--kraft-l);position:relative;padding:64px 0 48px}
+.foot::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:repeating-linear-gradient(-45deg,var(--kraft) 0 16px,var(--ink) 16px 32px)}
+.foot .wrap{display:grid;gap:20px 40px}
+.foot-name{font-size:clamp(52px,9vw,128px);color:var(--kraft);overflow-wrap:anywhere}
+.foot p{max-width:40em}
+.foot a{color:var(--paper)}
+.foot .sm{font-size:14px;color:#bfae93}
+
+/* ---------- motion ---------- */
+.motion .box.thunk{animation:thunk .75s cubic-bezier(.3,1.35,.5,1) both}
+@keyframes thunk{0%{transform:translateY(-46px) rotate(var(--rot,0deg)) scaleY(1.02)}62%{transform:translateY(4px) rotate(var(--rot,0deg)) scaleY(.985)}100%{transform:translateY(0) rotate(var(--rot,0deg))}}
+.motion .box.thunk>.tape{animation:rip .5s .35s ease-out both}
+@keyframes rip{from{transform:scaleY(0)}}
+.motion .flap{animation:flap .8s cubic-bezier(.3,1.5,.5,1) both}
+.motion .flap:nth-child(2){animation-delay:.12s}.motion .flap:nth-child(3){animation-delay:.22s}
+@keyframes flap{from{transform:scaleY(.05)}}
+
+/* ---------- responsive ---------- */
+@media (min-width:760px){
+  .est-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"inv truck"}
+  .inv{grid-area:inv}.truck-card{grid-area:truck}
+  .sizes{grid-template-columns:repeat(3,1fr)}
+  .sizes li{grid-template-columns:1fr;gap:2px}
+  .pile{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cols{grid-template-columns:1fr 1fr}
+  .qform{grid-template-columns:1fr 1fr}
+  .qform .span{grid-column:1/-1}
+}
+@media (min-width:1000px){
+  .wrap{width:min(1240px,calc(100% - 96px))}
+  .hero{grid-template-columns:minmax(0,7.4fr) minmax(0,4.6fr);gap:0;padding-top:96px}
+  .hero .box{--rot:-.5deg;transform:rotate(-.5deg);padding-right:clamp(40px,6vw,110px)}
+  .label{margin:120px 0 0 -46px;z-index:3;max-width:none;width:calc(100% + 46px)}
+  .pile{grid-template-columns:repeat(4,minmax(0,1fr));align-items:end;gap:18px}
+  .pile-head{grid-column:1/-1}
+  .svc:nth-child(2){--rot:-1deg;transform:rotate(-1deg);margin-bottom:0}
+  .svc:nth-child(3){--rot:.8deg;transform:rotate(.8deg);margin-bottom:34px}
+  .svc:nth-child(4){--rot:-.6deg;transform:rotate(-.6deg);margin-bottom:10px}
+  .svc:nth-child(5){--rot:1.2deg;transform:rotate(1.2deg);margin-bottom:52px}
+  .duo{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:0}
+  .duo-l{margin-right:-20px;margin-top:40px;gap:44px}
+  .duo-l>#pricing{--rot:.6deg;transform:rotate(.6deg)}
+  .duo-l>.faq{--rot:-.5deg;transform:rotate(-.5deg);width:94%;margin-left:3%}
+  .duo>.box:last-child{--rot:-.9deg;transform:rotate(-.9deg);z-index:1}
+  .areas{width:88%;--rot:-.4deg;transform:rotate(-.4deg)}
+  .areas-grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:34px}
+  .quote{width:90%;margin-left:auto;--rot:.5deg;transform:rotate(.5deg)}
+  .qform{grid-template-columns:1fr 1fr 1fr}
+  .foot .wrap{grid-template-columns:1.4fr 1fr;align-items:end}
+}
+.show-s{display:none}
+@media (max-width:759px){
+  body{font-size:16px}
+  .show-s{display:inline}
+  .tel-b{display:none}
+  html.hd-in-frame .tel-b{display:inline;margin-left:auto}
+  .band{font-size:12px;letter-spacing:.1em}
+  .band .hide-s{display:none}
+  .nav{display:none}
+  .top .btn{min-height:44px;padding:10px 14px;font-size:16px}
+  .brand svg{width:44px;height:44px}
+  .hero{padding-top:64px}
+  .hero .stamp{position:static;margin-top:22px}
+  .box{padding:48px 18px 30px}
+  .flaps{top:-54px;height:58px}
+  .hide-s{display:none}
+  .top{flex-wrap:nowrap}.brand{flex:1 1 auto}.top .btn{flex:none}
+  .est-grid{display:flex;flex-direction:column;gap:14px}
+  .truck-card{display:contents}
+  .truck{order:1;background:var(--paper);border:3px solid var(--ink);padding:6px;box-shadow:3px 3px 0 var(--ink)}
+  .fillbox{order:2;background:var(--paper);border:3px solid var(--ink);padding:4px 12px 12px;box-shadow:3px 3px 0 var(--ink)}
+  .fillbox .rec{font-size:30px}
+  .inv{order:3}.est-actions{order:4;margin-top:4px}.sizes{order:5;margin-top:6px}
+  .dock{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 12px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:3px solid var(--ink);padding:10px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(115%);transition:transform .25s ease-out;box-shadow:0 -12px 24px -16px rgba(26,26,26,.7)}
+  .dock.on{transform:none}
+  .dock-rec{font-size:26px}
+  .dock-pct{font-weight:600;font-size:14px;text-align:right}
+  .dock-track{grid-column:1/-1;height:12px;border:2px solid var(--ink);background:#efe6d2;position:relative}
+  .dock-bar{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--red);transition:width .4s}
+  .map text{font-size:19px}.map .mk{font-size:23px}.map .big{font-size:17px}
+  .tile{grid-template-columns:40px 1fr auto;gap:8px}
+  .tile .ico-w{width:40px;height:40px}
+  .tile .ico-w svg{width:30px;height:30px}
+  .tile b{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .fill-bar,.chk .sq svg,.btn,.tile{transition:none}
+  .it.drop{animation:none}
+}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-sofa" viewBox="0 0 48 48"><path d="M9 22v-6a3 3 0 0 1 3-3h24a3 3 0 0 1 3 3v6M5 25a3 3 0 0 1 6 0v4h26v-4a3 3 0 0 1 6 0v10H5ZM9 35v4M39 35v4"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 48 48"><path d="M5 12v26M5 30h38v8M5 24h38v6M43 30v8M10 24v-4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v4"/></symbol>
+  <symbol id="i-fridge" viewBox="0 0 48 48"><rect x="13" y="5" width="22" height="38" rx="3"/><path d="M13 19h22M18 10v5M18 24v8"/></symbol>
+  <symbol id="i-washer" viewBox="0 0 48 48"><rect x="9" y="7" width="30" height="34" rx="3"/><path d="M9 15h30M14 11h.1M19 11h.1"/><circle cx="24" cy="28" r="8"/><path d="M19 29c3 2 7 2 10-1"/></symbol>
+  <symbol id="i-boxes" viewBox="0 0 48 48"><path d="M5 24h19v17H5ZM24 29h19v12H24ZM13 8h22v16H13ZM14.5 24v5M33.5 29v4M24 8v5"/></symbol>
+  <symbol id="i-table" viewBox="0 0 48 48"><path d="M4 18h40l-4-6H8ZM9 18v22M39 18v22M16 18v10M32 18v10"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 48 48"><path d="M4 15h40v5H4ZM8 20v20M27 20h13v20M27 29h13M33 24h.1M33 34h.1"/></symbol>
+  <symbol id="i-shelf" viewBox="0 0 48 48"><rect x="11" y="4" width="26" height="40"/><path d="M11 17h26M11 30h26M15 7v10M19 9v8M24 20v10M29 21v9M16 33v11M22 35v9"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="25" rx="2"/><path d="M17 41h14M24 34v7M11 15l6-2"/></symbol>
+  <symbol id="i-house" viewBox="0 0 48 48"><path d="M5 22 24 7l19 15M10 18v22h28V18M20 40V28h8v12"/></symbol>
+  <symbol id="i-office" viewBox="0 0 48 48"><path d="M15 6h18v17H15ZM11 23h26M24 23v11M13 41l11-7 11 7M11 23v-4M37 23v-4"/></symbol>
+  <symbol id="i-piano" viewBox="0 0 48 48"><path d="M7 8h34v32H7ZM7 26h34M12.5 26v14M18 26v14M23.5 26v14M29 26v14M34.5 26v14"/><path d="M15.5 26v7M21 26v7M32 26v7" stroke-width="4"/></symbol>
+  <symbol id="i-carton" viewBox="0 0 48 48"><path d="M7 15 24 7l17 8v20l-17 8-17-8ZM7 15l17 8 17-8M24 23v20M15.5 11l17 8"/></symbol>
+  <symbol id="i-up" viewBox="0 0 18 24"><path d="M9 22V4M3 10l6-7 6 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square"/><path d="M2 23h14" stroke="currentColor" stroke-width="3"/></symbol>
+</defs></svg>
+
+<div class="band"><div class="wrap"><span><span class="dot" aria-hidden="true"></span><span class="hide-s">Perth metro &amp; Peel</span><span class="show-s">Perth, WA</span></span><a class="tel-b" href="tel:+61855503814">(08) 5550 3814</a><span class="hide-s">Mon–Sat · 7 am – 5 pm</span></div></div>
+<header class="wrap top" id="top">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M11 24 5 8l19 9 2 7ZM53 24l6-16-19 9-2 7Z" fill="#D8B78E" stroke="#1A1A1A" stroke-width="2.5" stroke-linejoin="round"/><rect x="10" y="22" width="44" height="36" rx="2" fill="#C8A27A" stroke="#1A1A1A" stroke-width="2.5"/><path d="M28 22h8v10h-8Z" fill="#E8D9B0" opacity=".9"/><path d="M10 33h9l-9 4ZM10 44h11l-11 5ZM54 33h-9l9 4ZM54 44H43l11 5Z" fill="#1A1A1A"/><circle cx="26" cy="38" r="2.4" fill="#1A1A1A"/><circle cx="38" cy="38" r="2.4" fill="#1A1A1A"/><path d="M29.5 44h5l-2.5 3Z" fill="#C0392B" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/><path d="M28 50c2 2 6 2 8 0" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/></svg>
+    <span class="brand-name stencil" data-brand>Easy Tiger Removals</span>
+  </a>
+  <nav class="nav" aria-label="Sections"><a href="#truck">Size your move</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#areas">Areas</a></nav>
+  <a class="btn btn-red" href="#quote"><span class="hide-s">Get a quote</span><span class="show-s">Quote</span></a>
+</header>
+
+<main>
+<section class="wrap hero" aria-labelledby="h1">
+  <div class="box">
+    <div class="flaps" aria-hidden="true"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon class="flap back" points="140,100 170,6 830,6 860,100"/><polygon class="flap side" points="30,100 0,30 60,4 150,82"/><polygon class="flap side" points="970,100 1000,30 940,4 850,82"/></svg></div>
+    <span class="tape" aria-hidden="true"></span>
+    <p class="kicker">Houses · units · offices · pianos</p>
+    <h1 class="stencil" id="h1">Big move? <span class="under">Easy, tiger.</span></h1>
+    <p class="lede">Friendly, careful removalists for Perth homes and offices. Pack our truck below to size up your move — heavy things on the floor, just like we'd load it — then ask us to quote it properly.</p>
+    <div class="cta-row"><a class="btn btn-ink" href="#truck">Pack the truck</a><a class="btn btn-paper" href="#quote">Get a quote</a></div>
+    <span class="stamp" aria-hidden="true"><span class="arrows"><svg viewBox="0 0 18 24"><use href="#i-up"/></svg><svg viewBox="0 0 18 24"><use href="#i-up"/></svg></span>This way up</span>
+  </div>
+  <aside class="label" aria-label="Quick start">
+    <span class="tape" aria-hidden="true"></span>
+    <div class="label-head"><small>Move label</small><p class="label-co stencil" data-brand>Easy Tiger Removals</p></div>
+    <div class="label-body">
+      <label class="lf"><span>From</span><input id="lFrom" placeholder="e.g. Scarborough" autocomplete="off"></label>
+      <label class="lf"><span>To</span><input id="lTo" placeholder="e.g. Fremantle" autocomplete="off"></label>
+      <label class="lf"><span>When</span><input id="lDate" type="date"></label>
+      <p class="contents">Contents: one household, carefully.</p>
+      <div class="label-row"><div class="bars" aria-hidden="true"></div><a class="btn btn-red" href="#truck">Size it up</a></div>
+    </div>
+  </aside>
+</section>
+
+<section class="wrap box est" id="truck" aria-labelledby="est-h">
+  <span class="tape" aria-hidden="true"></span>
+  <div class="est-head">
+    <div><h2 class="stencil" id="est-h">Pack the truck</h2><p class="note">we'll tell you what size it takes</p></div>
+    <p class="est-hint" id="estHint">Drag furniture into the truck, or use + and − on each item. Heavy things go on the floor at the front; everything else stacks on something flat.</p>
+  </div>
+  <div class="presets" role="group" aria-label="Quick fill">
+    <button type="button" data-preset="studio">Studio</button><button type="button" data-preset="unit2">2-bed unit</button><button type="button" data-preset="house3">3-bed house</button><button type="button" data-preset="office">Small office</button><button type="button" class="clear" data-preset="clear">Empty the truck</button>
+  </div>
+  <div class="est-grid">
+    <div class="truck-card">
+      <svg class="truck" id="truckSvg" viewBox="0 0 860 336" role="img" aria-labelledby="tt td">
+        <title id="tt">Removal truck, side view</title>
+        <desc id="td">The cargo area is a grid 12 squares long and 4 high. A 4.5 tonne truck holds the first 6 columns, a 6 tonne truck 8 columns, and a 10 tonne truck all 12.</desc>
+        <g id="caps"></g>
+        <rect class="ghost" x="200" y="86" width="624" height="204"/>
+        <rect class="hold" id="hold" x="200" y="86" width="312" height="204"/>
+        <g id="grid"></g>
+        <path class="capline" d="M512 86v204M616 86v204"/>
+        <g id="items"></g>
+        <rect id="target" x="0" y="0" width="0" height="0"/>
+        <rect class="shell" id="shell" x="200" y="86" width="312" height="204"/>
+        <rect x="150" y="86" width="52" height="46" class="cab"/>
+        <rect x="28" y="286" width="490" height="12" fill="#1A1A1A" id="rail"/>
+        <path class="cab" d="M30 292V198c0-9 4-16 11-22l38-32c6-5 12-7 20-7h57c8 0 12 4 12 12v143Z"/>
+        <path class="glass" d="M56 190l32-28c4-3 8-5 13-5h42v44H56Z"/>
+        <path d="M118 212v66M126 222h12M142 238l28-6-28 13ZM142 258l28-4-28 12Z" stroke="#1A1A1A" stroke-width="4" fill="#1A1A1A" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="30" y="236" width="16" height="14" fill="#E8D9B0" stroke="#1A1A1A" stroke-width="3"/>
+        <rect x="22" y="274" width="34" height="16" fill="#1A1A1A"/>
+        <g><circle cx="98" cy="300" r="27" fill="#1A1A1A"/><circle cx="98" cy="300" r="10" fill="#8b8177"/></g>
+        <g id="rear"><rect x="505" y="252" width="10" height="22" fill="#C0392B" stroke="#1A1A1A" stroke-width="3"/><circle cx="420" cy="300" r="27" fill="#1A1A1A"/><circle cx="420" cy="300" r="10" fill="#8b8177"/><circle cx="476" cy="300" r="27" fill="#1A1A1A"/><circle cx="476" cy="300" r="10" fill="#8b8177"/></g>
+        <path d="M0 327h860" stroke="#1A1A1A" stroke-width="3" stroke-dasharray="18 12"/>
+      </svg>
+      <div class="fillbox">
+        <div class="fill">
+          <div class="fill-track"><div class="fill-bar" id="fillBar"></div><span class="fill-mark" style="left:50%"></span><span class="fill-mark" style="left:66.66%"></span></div>
+          <div class="fill-lbl" aria-hidden="true"><span style="left:50%">4.5 t</span><span style="left:66.66%">6 t</span><span style="left:100%">10 t</span></div>
+        </div>
+        <div class="readout" id="readout" aria-live="polite">
+          <p class="rec stencil" id="rec">Empty truck</p>
+          <p class="rec-sub" id="recSub">Add a few things to see what size you need.</p>
+          <p class="rec-small" id="recSmall">Squares are roughly a cubic metre each. All figures are illustrative.</p>
+        </div>
+      </div>
+      <div class="est-actions"><button type="button" class="btn btn-red" id="ask">Request this quote</button><p class="est-msg" id="estMsg" aria-live="polite"></p></div>
+      <ul class="sizes" aria-label="Truck sizes">
+        <li><b class="stencil">4.5 t</b><span>Studios and 1–2 bedrooms · about 24 m³</span></li>
+        <li><b class="stencil">6 t</b><span>Most 3-bedroom homes · about 32 m³</span></li>
+        <li><b class="stencil">10 t</b><span>4–5 bedrooms, big sheds · about 48 m³</span></li>
+      </ul>
+    </div>
+    <ul class="inv" id="inv" aria-label="Furniture to pack"></ul>
+  </div>
+  <div class="dock" id="dock" aria-hidden="true"><span class="dock-rec stencil" id="dockRec">Empty truck</span><span class="dock-pct" id="dockPct">tap + to load</span><span class="dock-track"><span class="dock-bar" id="dockBar"></span></span></div>
+</section>
+
+<section class="wrap pile" id="services" aria-labelledby="svc-h">
+  <div class="pile-head"><h2 class="stencil" id="svc-h">What we move</h2><p class="note" style="font:400 22px/1.2 var(--marker);color:var(--red-ink)">the stuff you'd rather not carry</p></div>
+  <article class="box svc"><span class="tape" aria-hidden="true"></span><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-house"/></svg><h3 class="stencil">House moves</h3><p>Units to five-bedders. We wrap, load, drive, unload — and put the beds back together.</p><p class="price">From $150/hr · 2 movers + 4.5 t</p></article>
+  <article class="box svc"><span class="tape" aria-hidden="true"></span><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-office"/></svg><h3 class="stencil">Office moves</h3><p>After hours or on weekends. Crates labelled by desk number, so Monday starts on time.</p><p class="price">Quoted per job</p></article>
+  <article class="box svc"><span class="tape" aria-hidden="true"></span><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-piano"/></svg><h3 class="stencil">Piano moves</h3><p>Uprights and baby grands, with a piano board, straps and a slow, steady crew.</p><p class="price">Metro uprights from $380</p></article>
+  <article class="box svc"><span class="tape" aria-hidden="true"></span><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-carton"/></svg><h3 class="stencil">Packing &amp; boxes</h3><p>Full or partial packing, plus boxes, tape and butcher's paper to buy or borrow.</p><p class="price">Box kits from $95</p></article>
+</section>
+
+<section class="wrap duo" aria-label="Pricing, questions and checklist">
+  <div class="duo-l">
+  <div class="box" id="pricing">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="stencil">How pricing works</h2>
+    <p class="note">by the hour, no surprises</p>
+    <div class="docket">
+      <span class="stamp red" aria-hidden="true">Sample</span>
+      <h3 class="stencil">Hourly rates</h3>
+      <p class="rate"><span>2 movers + 4.5 t truck</span><i></i><b>$150/hr</b></p>
+      <p class="rate"><span>2 movers + 6 t truck</span><i></i><b>$175/hr</b></p>
+      <p class="rate"><span>3 movers + 10 t truck</span><i></i><b>$250/hr</b></p>
+      <p class="rate"><span>Extra mover</span><i></i><b>+$55/hr</b></p>
+      <ul class="fine">
+        <li>Two-hour minimum, then 15-minute blocks.</li>
+        <li>A flat half hour of travel each way in the metro area.</li>
+        <li>Blankets, trolleys, shrink wrap and flat-pack tools included.</li>
+        <li>Stairs and long carries take longer, so we ask about them up front.</li>
+        <li>Saturdays and public holidays: +15%.</li>
+      </ul>
+      <p class="fine"><b>Sample prices</b> for this concept site — a real quote depends on access, distance and what's going.</p>
+    </div>
+  </div>
+  <div class="box faq" id="faq">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="stencil">Fair questions</h2>
+    <details><summary>Do you do small jobs?</summary><p>Yes — a single couch or a marketplace pick-up is fine. The two-hour minimum still applies.</p></details>
+    <details><summary>Will you take pot plants?</summary><p>They ride up front with us, away from the heavy stuff. Water them the day before, not the morning of.</p></details>
+    <details><summary>Can you store things between moves?</summary><p>We don't run storage ourselves, but we'll happily deliver to, or collect from, a storage unit you've booked.</p></details>
+    <details><summary>What won't you move?</summary><p>Gas bottles, fuel, paint and anything flammable. Keep jewellery, cash and important papers with you.</p></details>
+    <details><summary>Is my stuff insured?</summary><p>Ask us about transit insurance when you book — we'll explain what's covered and what isn't, in plain English.</p></details>
+  </div>
+  </div>
+  <div class="box" id="checklist">
+    <span class="tape" aria-hidden="true"></span>
+    <h2 class="stencil">Moving-day checklist</h2>
+    <div class="prog"><span class="stencil" style="font-size:26px" id="progTxt">0 of 12 done</span><div class="prog-track" aria-hidden="true"><div class="prog-bar" id="progBar"></div></div><button type="button" class="linkbtn" id="resetChk">Start again</button></div>
+    <div id="checks"></div>
+  </div>
+</section>
+
+<section class="wrap box areas" id="areas" aria-labelledby="areas-h">
+  <span class="tape" aria-hidden="true"></span>
+  <h2 class="stencil" id="areas-h">Where we go</h2>
+  <p class="note" style="margin-bottom:18px">north or south of the river — we don't mind</p>
+  <div class="areas-grid">
+    <svg class="map" viewBox="0 0 520 360" aria-hidden="true">
+      <path class="coast" d="M92 0c-6 40 4 70-4 104s-10 60-2 92-14 58-10 90-6 50-2 74"/>
+      <text class="big" x="18" y="210" transform="rotate(-90 18 210)">Indian Ocean</text>
+      <path class="river" d="M88 214c30-6 44-24 70-20s36 22 64 10 30-36 62-30 40 20 70 6 44-40 76-44 50 6 80-8"/>
+      <path class="river2" d="M88 214c30-6 44-24 70-20s36 22 64 10 30-36 62-30 40 20 70 6 44-40 76-44 50 6 80-8"/>
+      <text class="mk" x="300" y="222">the river</text>
+      <circle cx="96" cy="44" r="6"/><text x="108" y="49">Joondalup</text>
+      <circle cx="90" cy="118" r="6"/><text x="102" y="123">Scarborough</text>
+      <circle cx="238" cy="120" r="6"/><text x="250" y="125">Morley</text>
+      <circle cx="404" cy="96" r="6"/><text x="416" y="101">Midland</text>
+      <circle cx="330" cy="46" r="6"/><text x="342" y="51">Ellenbrook</text>
+      <circle cx="228" cy="186" r="7"/><text x="190" y="176">Perth</text>
+      <circle cx="92" cy="226" r="6"/><text x="104" y="246">Fremantle</text>
+      <circle cx="236" cy="262" r="6"/><text x="248" y="267">Canning Vale</text>
+      <circle cx="376" cy="290" r="6"/><text x="388" y="295">Armadale</text>
+      <circle cx="102" cy="322" r="6"/><text x="114" y="327">Rockingham</text>
+      <circle cx="468" cy="160" r="6"/><text x="420" y="186">Kalamunda</text>
+    </svg>
+    <div class="cols">
+      <div><h3 class="stencil">North of the river</h3><ul><li>Joondalup</li><li>Wanneroo</li><li>Scarborough</li><li>Stirling</li><li>Morley</li><li>Ellenbrook</li><li>Midland</li><li>Subiaco</li></ul></div>
+      <div><h3 class="stencil">South of the river</h3><ul><li>Fremantle</li><li>Cockburn</li><li>Victoria Park</li><li>Canning Vale</li><li>Armadale</li><li>Rockingham</li></ul></div>
+      <div><h3 class="stencil">Hills &amp; Peel</h3><ul><li>Kalamunda</li><li>Mundaring</li><li>Mandurah</li></ul></div>
+      <p style="font-weight:500">Country WA? Tell us the run and we'll quote it — no promises until we've seen the map.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap box quote" id="quote" aria-labelledby="q-h">
+  <span class="tape" aria-hidden="true"></span>
+  <h2 class="stencil" id="q-h">Get a quote</h2>
+  <p class="note">we'll call you back with a real number</p>
+  <form class="qform" id="qform" data-demo-message="Demo only — no quote request was sent.">
+    <div class="qf"><label for="qFrom">Moving from</label><input id="qFrom" name="from" placeholder="Suburb" required></div>
+    <div class="qf"><label for="qTo">Moving to</label><input id="qTo" name="to" placeholder="Suburb" required></div>
+    <div class="qf"><label for="qDate">Move date</label><input id="qDate" name="date" type="date"></div>
+    <div class="qf"><label for="qType">Property</label><select id="qType" name="type"><option>House</option><option>Unit or apartment</option><option>Office</option><option>Storage unit</option></select></div>
+    <div class="qf"><label for="qBeds">Bedrooms</label><select id="qBeds" name="beds"><option>Studio</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5 or more</option><option>Not a home</option></select></div>
+    <div class="qf"><label for="qStairs">Stairs or lifts</label><select id="qStairs" name="stairs"><option>None — ground level</option><option>One flight</option><option>Two or more flights</option><option>Lift available</option></select></div>
+    <div class="qf"><label for="qName">Your name</label><input id="qName" name="name" autocomplete="name" required></div>
+    <div class="qf"><label for="qPhone">Mobile</label><input id="qPhone" name="phone" type="tel" autocomplete="tel" placeholder="0491 570 157"></div>
+    <div class="qf"><label for="qEmail">Email</label><input id="qEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+    <label class="attach span" for="qAttach"><input type="checkbox" id="qAttach" checked><span><b>Attach my truck estimate</b><small id="qSummary">Nothing packed yet — the truck is empty.</small></span></label>
+    <div class="qf span"><label for="qNotes">Anything tricky?</label><textarea id="qNotes" name="notes" placeholder="A narrow driveway, a pool table, a very anxious cat…"></textarea></div>
+    <div class="span" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center"><button class="btn btn-red" type="submit">Send my quote request</button><p class="q-msg" id="qMsg" aria-live="polite"></p></div>
+  </form>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-name stencil" data-brand>Easy Tiger Removals</p>
+    <div>
+      <p><b>Perth metro &amp; Peel</b> · Mon–Sat, 7 am – 5 pm<br><a href="tel:+61855503814">(08) 5550 3814</a> · <a href="mailto:moves@example.com">moves@example.com</a></p>
+      <p class="sm" style="margin-top:12px">A concept website for a fictional removalist. Prices are samples and truck estimates are illustrative only.</p>
+      <p style="margin-top:12px"><a href="#top">Back to the top ↑</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var NS = "http://www.w3.org/2000/svg";
+  var mqR = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function reduced() { return window.DemoKit ? DemoKit.reducedMotion : mqR.matches; }
+  function mk(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+  function toast(m) { if (window.DemoKit) DemoKit.toast(m); }
+  function brand() { return (window.DemoKit && DemoKit.brand) || "Easy Tiger Removals"; }
+
+  /* ---------- truck model ---------- */
+  var COLS = 12, ROWS = 4, X0 = 200, FLOOR = 290, CW = 52, CH = 50;
+  var ITEMS = [
+    { id: "sofa", name: "Sofa", w: 3, h: 1, note: "3-seater, legs off" },
+    { id: "bed", name: "Bed", w: 3, h: 1, note: "Queen base + mattress" },
+    { id: "fridge", name: "Fridge", w: 1, h: 2, heavy: 1, note: "Heavy — floor only" },
+    { id: "washer", name: "Washing machine", w: 1, h: 1, heavy: 1, note: "Heavy — floor only" },
+    { id: "boxes", name: "10 boxes", w: 1, h: 1, note: "Medium cartons, taped" },
+    { id: "table", name: "Dining table", w: 2, h: 1, note: "Chairs stacked on top" },
+    { id: "desk", name: "Desk", w: 2, h: 1, note: "Whole or flat-packed" },
+    { id: "shelf", name: "Bookshelf", w: 1, h: 2, note: "Emptied first, please" },
+    { id: "tv", name: "TV", w: 1, h: 1, note: "Blanket-wrapped" }
+  ];
+  var BY = {}; ITEMS.forEach(function (it) { BY[it.id] = it; });
+  var PRESETS = {
+    studio: ["fridge", "washer", "bed", "sofa", "desk", "boxes", "boxes", "tv"],
+    unit2: ["fridge", "washer", "shelf", "bed", "bed", "sofa", "table", "desk", "boxes", "boxes", "boxes", "tv"],
+    house3: ["fridge", "washer", "shelf", "shelf", "bed", "bed", "bed", "sofa", "sofa", "table", "desk", "boxes", "boxes", "boxes", "boxes", "tv"],
+    office: ["desk", "desk", "desk", "desk", "shelf", "shelf", "boxes", "boxes", "boxes", "boxes", "tv"]
+  };
+  var placed = [], uid = 0, grid = new Array(COLS * ROWS).fill(0);
+  function rebuildGrid() { grid.fill(0); placed.forEach(function (p) { var it = BY[p.id]; for (var i = p.x; i < p.x + it.w; i++) for (var j = p.y; j < p.y + it.h; j++) grid[j * COLS + i] = p.uid; }); }
+  function occ(x, y, ignore) { var v = grid[y * COLS + x]; return v && v !== ignore; }
+  function can(x, y, it, ignore) {
+    if (x < 0 || y < 0 || x + it.w > COLS || y + it.h > ROWS) return false;
+    if (it.heavy && y > 0) return false;
+    for (var i = x; i < x + it.w; i++) for (var j = y; j < y + it.h; j++) if (occ(i, j, ignore)) return false;
+    if (y > 0) for (i = x; i < x + it.w; i++) if (!occ(i, y - 1, ignore)) return false;
+    return true;
+  }
+  function firstFit(it, ignore) {
+    for (var x = 0; x <= COLS - it.w; x++) for (var y = 0; y <= ROWS - it.h; y++) if (can(x, y, it, ignore)) return { x: x, y: y };
+    return null;
+  }
+  function settle() {
+    var moved = true, guard = 0;
+    while (moved && guard++ < 40) {
+      moved = false;
+      placed.slice().sort(function (a, b) { return a.y - b.y; }).forEach(function (p) {
+        if (p.y > 0 && can(p.x, p.y - 1, BY[p.id], p.uid)) { p.y--; moved = true; rebuildGrid(); }
+      });
+    }
+  }
+  function add(id, at, silent) {
+    var it = BY[id], pos = at && can(at.x, at.y, it) ? at : firstFit(it);
+    if (!pos) { if (!silent) say("No room for the " + it.name.toLowerCase() + " — even our 10 t is full. That's two trips; we'd plan it with you."); return false; }
+    var p = { uid: ++uid, id: id, x: pos.x, y: pos.y, fresh: !silent };
+    placed.push(p); rebuildGrid(); return true;
+  }
+  function removeOne(id) {
+    for (var i = placed.length - 1; i >= 0; i--) if (placed[i].id === id) { placed.splice(i, 1); rebuildGrid(); settle(); return true; }
+    return false;
+  }
+  function count(id) { var n = 0; placed.forEach(function (p) { if (p.id === id) n++; }); return n; }
+
+  /* ---------- view ---------- */
+  var svg = $("#truckSvg"), layer = $("#items"), gridG = $("#grid"), target = $("#target");
+  var shell = $("#shell"), hold = $("#hold"), rear = $("#rear"), rail = $("#rail");
+  var curCols = 6, animFrom = 6, animT = 0, raf = 0;
+  function drawStatic() {
+    for (var c = 1; c < COLS; c++) mk("line", { x1: X0 + c * CW, y1: 86, x2: X0 + c * CW, y2: FLOOR, "class": "gl" }, gridG);
+    for (var r = 1; r < ROWS; r++) mk("line", { x1: X0, y1: FLOOR - r * CH, x2: X0 + COLS * CW, y2: FLOOR - r * CH, "class": "gl" }, gridG);
+    [[6, "4.5 t"], [8, "6 t"], [12, "10 t"]].forEach(function (c, i) {
+      var x = X0 + c[0] * CW;
+      mk("path", { d: "M" + x + " 66v18", stroke: "#1A1A1A", "stroke-width": 3 }, $("#caps"));
+      var t = mk("text", { x: i === 2 ? x - 14 : x, y: 56, "class": "cap-t", id: "cap" + i }, $("#caps")); t.textContent = c[1];
+    });
+  }
+  function setLength(cols) {
+    var w = cols * CW;
+    shell.setAttribute("width", w); hold.setAttribute("width", w);
+    rail.setAttribute("width", X0 + w - 40);
+    rear.setAttribute("transform", "translate(" + (w - 312) + " 0)");
+  }
+  function animateLength(to) {
+    if (to === curCols) return;
+    if (reduced()) { curCols = to; setLength(to); return; }
+    var from = curCols, start = null; curCols = to; cancelAnimationFrame(raf);
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min(1, (ts - start) / 520), e = 1 + 2.2 * Math.pow(t - 1, 3) + 1.2 * Math.pow(t - 1, 2);
+      setLength(from + (to - from) * e);
+      if (t < 1) raf = requestAnimationFrame(step);
+    }
+    raf = requestAnimationFrame(step);
+  }
+  function cellRect(x, y, w, h) { return { x: X0 + x * CW + 3, y: FLOOR - (y + h) * CH + 3, w: w * CW - 6, h: h * CH - 6 }; }
+  function drawItems() {
+    layer.textContent = "";
+    placed.forEach(function (p) {
+      var it = BY[p.id], r = cellRect(p.x, p.y, it.w, it.h);
+      var g = mk("g", { "class": "it" + (p.fresh && !reduced() ? " drop" : ""), "data-uid": p.uid }, layer);
+      mk("title", {}, g).textContent = it.name;
+      mk("rect", { x: r.x, y: r.y, width: r.w, height: r.h, rx: 4 }, g);
+      var s = Math.min(38, r.h - 8), lbl = it.w > 1;
+      mk("use", { href: "#i-" + p.id, x: r.x + (lbl ? 8 : (r.w - s) / 2), y: r.y + (r.h - s) / 2, width: s, height: s }, g);
+      if (lbl) { var t = mk("text", { x: r.x + 8 + s + (r.w - s - 16) / 2, y: r.y + r.h / 2 + 4 }, g); t.textContent = it.name.replace("Dining table", "Table"); }
+      p.fresh = false;
+    });
+  }
+  var readout = { rec: $("#rec"), sub: $("#recSub"), small: $("#recSmall") };
+  var lastSummary = "";
+  function estimate() {
+    var cols = 0, cells = 0;
+    grid.forEach(function (v, i) { if (v) { cells++; cols = Math.max(cols, (i % COLS) + 1); } });
+    if (!cells) return null;
+    var truck = cols <= 6 ? { t: "4.5 t", c: 6, i: 0 } : cols <= 8 ? { t: "6 t", c: 8, i: 1 } : { t: "10 t", c: 12, i: 2 };
+    var movers = truck.i === 0 ? 2 : truck.i === 1 ? (cells > 26 ? 3 : 2) : (cells > 40 ? 4 : 3);
+    var hrs = Math.max(2, Math.round((1 + cells * 0.19 / (movers / 2)) * 2) / 2);
+    var rate = [150, 175, 250][truck.i] + Math.max(0, movers - (truck.i === 2 ? 3 : 2)) * 55;
+    var lo = Math.round(rate * (hrs + 0.5) / 10) * 10, hi = Math.round(rate * (hrs + 1.5) / 10) * 10;
+    return { cols: cols, cells: cells, truck: truck, movers: movers, hrs: hrs, lo: lo, hi: hi, pct: Math.round(cells / (truck.c * ROWS) * 100) };
+  }
+  function money(n) { return "$" + n.toLocaleString("en-AU"); }
+  function update() {
+    drawItems();
+    var e = estimate(), bar = $("#fillBar");
+    $$(".cap-t").forEach(function (t, i) { t.classList.toggle("on", !!e && e.truck.i === i); });
+    if (!e) {
+      bar.style.width = "0";
+      readout.rec.textContent = "Empty truck";
+      readout.sub.textContent = "Add a few things to see what size you need.";
+      readout.small.textContent = "Squares are roughly a cubic metre each. All figures are illustrative.";
+      animateLength(6); lastSummary = "";
+    } else {
+      bar.style.width = (e.cells / 48 * 100) + "%";
+      readout.rec.textContent = e.truck.t + " truck · " + e.movers + " movers";
+      readout.sub.textContent = "About " + (e.hrs - 0.5) + "–" + (e.hrs + 0.5) + " hours · fills about " + e.pct + "% of the " + e.truck.t;
+      readout.small.textContent = placed.length + " things, " + e.cells + " squares · roughly " + money(e.lo) + "–" + money(e.hi) + " at our sample rates (illustrative).";
+      animateLength(e.truck.c);
+      lastSummary = e.truck.t + " truck, " + e.movers + " movers, about " + (e.hrs - 0.5) + "–" + (e.hrs + 0.5) + " hours, " + placed.length + " things packed";
+    }
+    $("#dockRec").textContent = e ? e.truck.t + " · " + e.movers + " movers" : "Empty truck";
+    $("#dockPct").textContent = e ? e.pct + "% full · " + placed.length + " things" : "tap + to load";
+    $("#dockBar").style.width = e ? (e.cells / 48 * 100) + "%" : "0";
+    $("#qSummary").textContent = lastSummary ? lastSummary + " (illustrative)." : "Nothing packed yet — the truck is empty.";
+    ITEMS.forEach(function (it) {
+      var li = $('.tile[data-id="' + it.id + '"]'); if (!li) return;
+      var n = count(it.id); $("output", li).textContent = n; li.classList.toggle("has", n > 0);
+    });
+  }
+  var msgT;
+  function say(m) { var el = $("#estMsg"); el.textContent = m; clearTimeout(msgT); msgT = setTimeout(function () { el.textContent = ""; }, 5200); }
+
+  /* ---------- inventory list ---------- */
+  function buildInv() {
+    var ul = $("#inv");
+    ITEMS.forEach(function (it) {
+      var li = document.createElement("li");
+      li.className = "tile"; li.setAttribute("data-id", it.id);
+      li.innerHTML = '<span class="ico-w" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-' + it.id + '"/></svg></span>' +
+        '<span><b>' + it.name + '</b><small>' + it.note + ' · ' + it.w + '×' + it.h + '</small></span>' +
+        '<span class="step"><button type="button" data-d="-1" aria-label="Remove one ' + it.name.toLowerCase() + '">−</button><output aria-label="' + it.name + ' in the truck">0</output><button type="button" data-d="1" aria-label="Add one ' + it.name.toLowerCase() + '">+</button></span>';
+      ul.appendChild(li);
+      $$("button", li).forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (b.getAttribute("data-d") === "1") { if (add(it.id)) say(""); } else if (!removeOne(it.id)) say("There's no " + it.name.toLowerCase() + " in the truck yet.");
+          update();
+        });
+      });
+    });
+  }
+
+  /* ---------- drag & drop ---------- */
+  var mqDrag = window.matchMedia("(min-width: 760px)");
+  var drag = null, ghost = null;
+  function svgPoint(cx, cy) {
+    var r = svg.getBoundingClientRect(), s = r.width / 860;
+    return { x: (cx - r.left) / s, y: (cy - r.top) / s, inside: cx >= r.left && cx <= r.right && cy >= r.top && cy <= r.bottom };
+  }
+  function cellAt(pt, it) {
+    var cx = Math.floor((pt.x - X0) / CW), cy = Math.floor((FLOOR - pt.y) / CH);
+    return { x: cx - Math.floor((it.w - 1) / 2), y: Math.max(0, cy - Math.floor((it.h - 1) / 2)) };
+  }
+  function overTruck(pt) { return pt.inside && pt.x > X0 - 26 && pt.x < X0 + COLS * CW + 26 && pt.y > 40 && pt.y < FLOOR + 20; }
+  function showTarget(pt) {
+    var it = BY[drag.id];
+    if (!overTruck(pt)) { target.setAttribute("class", ""); return null; }
+    var c = cellAt(pt, it), ok = can(c.x, c.y, it, drag.uid);
+    var cx = Math.max(0, Math.min(COLS - it.w, c.x)), cy = Math.max(0, Math.min(ROWS - it.h, c.y));
+    var r = cellRect(cx, cy, it.w, it.h);
+    target.setAttribute("x", r.x); target.setAttribute("y", r.y); target.setAttribute("width", r.w); target.setAttribute("height", r.h);
+    target.setAttribute("class", ok ? "ok" : "no");
+    return ok ? c : { bad: true };
+  }
+  function startDrag(e, id, fromUid) {
+    drag = { id: id, uid: fromUid || 0, sx: e.clientX, sy: e.clientY, moved: false, pid: e.pointerId };
+  }
+  function moveDrag(e) {
+    if (!drag || e.pointerId !== drag.pid) return;
+    if (!drag.moved && Math.abs(e.clientX - drag.sx) + Math.abs(e.clientY - drag.sy) < 7) return;
+    if (!drag.moved) {
+      drag.moved = true;
+      ghost = document.createElement("div"); ghost.className = "ghost-drag";
+      ghost.innerHTML = '<svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-' + drag.id + '"/></svg>';
+      document.body.appendChild(ghost);
+      if (drag.uid) { var g = layer.querySelector('[data-uid="' + drag.uid + '"]'); if (g) g.style.opacity = ".35"; }
+    }
+    ghost.style.left = e.clientX + "px"; ghost.style.top = e.clientY + "px";
+    showTarget(svgPoint(e.clientX, e.clientY));
+  }
+  function endDrag(e) {
+    if (!drag || e.pointerId !== drag.pid) return;
+    var d = drag; drag = null;
+    if (ghost) { ghost.remove(); ghost = null; }
+    target.setAttribute("class", "");
+    if (!d.moved) { if (!d.uid) { add(d.id); update(); } return; }
+    var pt = svgPoint(e.clientX, e.clientY), it = BY[d.id];
+    if (d.uid) {
+      var p = placed.filter(function (q) { return q.uid === d.uid; })[0];
+      if (!overTruck(pt)) { placed = placed.filter(function (q) { return q.uid !== d.uid; }); rebuildGrid(); settle(); say(it.name + " unloaded."); }
+      else { var c = cellAt(pt, it); if (p && can(c.x, c.y, it, d.uid)) { p.x = c.x; p.y = c.y; rebuildGrid(); settle(); } else say("That spot won't work — it needs something flat underneath."); }
+      update(); return;
+    }
+    if (overTruck(pt)) { var c2 = cellAt(pt, it); add(d.id, c2); update(); }
+  }
+  $("#inv").addEventListener("pointerdown", function (e) {
+    if (!mqDrag.matches || e.button !== 0 || e.target.closest("button")) return;
+    var li = e.target.closest(".tile"); if (!li) return;
+    e.preventDefault(); startDrag(e, li.getAttribute("data-id"));
+  });
+  layer.addEventListener("pointerdown", function (e) {
+    if (!mqDrag.matches || e.button !== 0) return;
+    var g = e.target.closest(".it"); if (!g) return;
+    var p = placed.filter(function (q) { return q.uid === +g.getAttribute("data-uid"); })[0];
+    if (!p) return;
+    e.preventDefault(); startDrag(e, p.id, p.uid);
+  });
+  window.addEventListener("pointermove", moveDrag);
+  window.addEventListener("pointerup", endDrag);
+  window.addEventListener("pointercancel", function (e) { if (drag && e.pointerId === drag.pid) { drag = null; if (ghost) { ghost.remove(); ghost = null; } target.setAttribute("class", ""); update(); } });
+  function onMq() {
+    document.body.classList.toggle("can-drag", mqDrag.matches);
+    $("#estHint").textContent = mqDrag.matches
+      ? "Drag furniture into the truck (drag it back out to unload), or use + and − on each item. Heavy things go on the floor at the front; everything else stacks on something flat."
+      : "Tap + and − to load the truck. Heavy things go on the floor at the front; everything else stacks on something flat.";
+  }
+  if (mqDrag.addEventListener) mqDrag.addEventListener("change", onMq); else mqDrag.addListener(onMq);
+
+  $$(".presets button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = b.getAttribute("data-preset");
+      placed = []; rebuildGrid();
+      if (k !== "clear") PRESETS[k].forEach(function (id) { add(id, null, true); });
+      placed.forEach(function (p) { p.fresh = true; });
+      update();
+      say(k === "clear" ? "Truck emptied." : b.textContent + " loaded — try adding or removing things.");
+    });
+  });
+  $("#ask").addEventListener("click", function () {
+    var e = estimate();
+    if (!e) { say("Pack a few things first, then we'll know which truck to send."); return; }
+    toast("Demo only — no quote was requested. A real site would send " + brand() + " your list: " + lastSummary + ".");
+  });
+
+  /* ---------- checklist ---------- */
+  var CHECK = [
+    ["Two weeks out", ["Book the lift or loading dock at your building", "Arrange power, gas and internet at both ends", "Start a 'don't pack' corner: keys, chargers, documents, medicines"]],
+    ["The week before", ["Use up the freezer; defrost the fridge 24 hours before", "Photograph how the TV and computer cables go", "Check where the truck can park — ask the council if unsure"]],
+    ["The night before", ["Pack a first-night box: kettle, mugs, loo paper, bedding", "Empty and drain the washing machine", "Plan a quiet room or a friend's place for pets"]],
+    ["On the day", ["Walk through every cupboard, shed and the meter box", "Take meter readings before you go", "Leave the keys where the agent or new owners expect them"]]
+  ];
+  var KEY = "et-checklist-v1", done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { done = {}; }
+  function buildChecks() {
+    var host = $("#checks"), n = 0;
+    CHECK.forEach(function (g) {
+      var h = document.createElement("p"); h.className = "grp"; h.textContent = g[0]; host.appendChild(h);
+      var ul = document.createElement("ul"); ul.className = "checks"; host.appendChild(ul);
+      g[1].forEach(function (t) {
+        var id = "c" + (n++), li = document.createElement("li");
+        li.innerHTML = '<label class="chk" for="' + id + '"><input type="checkbox" id="' + id + '"><span class="sq" aria-hidden="true"><svg viewBox="0 0 30 30"><path d="M6 15l6 7L25 7"/></svg></span><span class="t"></span></label>';
+        $(".t", li).textContent = t;
+        var cb = $("input", li); cb.checked = !!done[id];
+        cb.addEventListener("change", function () { done[id] = cb.checked; save(); prog(); });
+        ul.appendChild(li);
+      });
+    });
+    prog();
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) { /* storage unavailable */ } }
+  function prog() {
+    var all = $$("#checks input"), n = all.filter(function (c) { return c.checked; }).length;
+    $("#progTxt").textContent = n + " of " + all.length + " done";
+    $("#progBar").style.width = (n / all.length * 100) + "%";
+  }
+  $("#resetChk").addEventListener("click", function () { done = {}; save(); $$("#checks input").forEach(function (c) { c.checked = false; }); prog(); });
+
+  /* ---------- label ↔ quote form ---------- */
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function pretty(v) {
+    if (!v) return "";
+    var p = v.split("-"), d = new Date(+p[0], +p[1] - 1, +p[2]);
+    return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][d.getDay()] + " " + d.getDate() + " " + ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][d.getMonth()];
+  }
+  [["#lFrom", "#qFrom"], ["#lTo", "#qTo"], ["#lDate", "#qDate"]].forEach(function (pair) {
+    var a = $(pair[0]), b = $(pair[1]);
+    a.addEventListener("input", function () { b.value = a.value; });
+    b.addEventListener("input", function () { a.value = b.value; });
+  });
+  var today = iso(new Date()); $("#lDate").min = today; $("#qDate").min = today;
+  $("#qform").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var when = pretty($("#qDate").value), att = $("#qAttach").checked && lastSummary;
+    $("#qMsg").textContent = "Demo only — nothing was sent.";
+    toast("Demo only — no quote request was sent" + (when ? " for " + when : "") + (att ? ", and your truck list stayed on this page." : ". On a real site this would reach " + brand() + "."));
+  });
+
+  /* ---------- motion ---------- */
+  function observe() {
+    if (reduced() || !("IntersectionObserver" in window)) return;
+    document.documentElement.classList.add("motion");
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("thunk"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px 10% 0px" });
+    $$(".box").forEach(function (b) { if (b.getBoundingClientRect().top > innerHeight) io.observe(b); });
+  }
+
+  function dockWatch() {
+    if (!("IntersectionObserver" in window)) return;
+    var invOn = false, fillOn = true, dock = $("#dock");
+    function sync() { dock.classList.toggle("on", invOn && !fillOn && !mqDrag.matches); }
+    new IntersectionObserver(function (es) { invOn = es[0].isIntersecting; sync(); }).observe($("#inv"));
+    new IntersectionObserver(function (es) { fillOn = es[0].isIntersecting; sync(); }).observe($(".fillbox"));
+  }
+  function init() {
+    drawStatic(); buildInv(); buildChecks(); onMq(); setLength(6);
+    ["fridge", "washer", "bed", "sofa", "boxes"].forEach(function (id) { add(id, null, true); });
+    update(); observe(); dockWatch();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+</script>
+</body>
+</html>

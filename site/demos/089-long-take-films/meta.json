@@ -1,0 +1,8 @@
+{
+  "id": "089",
+  "tech": ["Canvas 2D", "Generative art", "SVG", "IntersectionObserver", "CSS Grid"],
+  "features": ["story"],
+  "interaction": "The page plays like a film: a generative canvas sunrise (sea, headlands, a couple on a dune) can be paused or played, five colour-grade presets (Ungraded, Warm film, Teal & orange, Black & white, Faded) re-grade the footage and every scene still with CSS filters, and a fixed timeline scrubber with scene markers jumps or drags through five timecoded scenes while the HUD timecode follows the scroll.",
+  "fonts": ["Teko", "Azeret Mono"],
+  "notes": "The enquiry form ends in a demo toast. Under reduced motion the footage is a still frame: the play button steps it forward instead of looping, and grain and flare pulses are off."
+}

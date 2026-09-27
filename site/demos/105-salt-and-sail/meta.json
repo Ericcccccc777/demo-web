@@ -1,0 +1,8 @@
+{
+  "id": "105",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["game", "booking"],
+  "interaction": "Type any name or boat name (or tap a suggestion) and it is hoisted on a rope halyard in International Code of Signals flags A–Z, drawn in SVG with a gentle flutter: spaces tie a knot, numbers and symbols are skipped and listed, and tapping a flag shows its phonetic name, pattern and single-flag meaning. The hero bunting spells the business name (and follows the Try-it-on rename), and a booking form (boat, date, half or full-day session, people, licence, extras, a welcome hoist of your name) totals a sample price and ends in a demo toast.",
+  "fonts": ["Staatliches", "Hind"],
+  "notes": "Flag colours use the demo palette; patterns follow the International Code of Signals."
+}

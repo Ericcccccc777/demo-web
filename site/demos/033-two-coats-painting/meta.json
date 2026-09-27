@@ -1,0 +1,8 @@
+{
+  "id": "033",
+  "tech": ["CSS Grid", "CSS 3D", "CSS Scroll Snap", "SVG", "SVG animation", "Form logic"],
+  "features": ["customiser", "quote"],
+  "interaction": "Choose walls, trim, door or ceiling in an SVG living room and pick colours from Coastal, Hinterland or Classic Queenslander palettes; each surface repaints with a roller wipe, a note warns when trim and walls are too similar, and schemes can be saved as cards or added to the quote form. The hero paint-chip fan spreads on hover or focus.",
+  "fonts": ["Familjen Grotesk", "DM Mono"],
+  "notes": "Colour names, codes and LRV values are fictional; LRV is estimated from on-screen luminance. Saved schemes stay in this browser only."
+}

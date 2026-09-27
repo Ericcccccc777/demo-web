@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="034">
+<meta name="demo:brand" content="Grain & Joint">
+<title>Grain & Joint — custom furniture & joinery, Launceston</title>
+<meta name="description" content="Grain & Joint is a fictional two-bench furniture workshop in Launceston, Tasmania, making dining tables, built-ins and restorations in Tasmanian timbers.">
+<meta name="theme-color" content="#F4EDE1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--cream:#F4EDE1;--cream2:#EBE1CF;--timber:#C68B59;--bw:#3B2A20;--gold:#E1B866;--sage:#9DAA8D;--muted:#6E5A4B;--acc:#8A5A33;
+--serif:"Young Serif",Georgia,"Times New Roman",serif;--sans:"Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--bw);font:400 17px/1.6 var(--sans)}
+h1,h2,h3,p,ol,ul,dl,dd{margin:0}
+ol,ul{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--bw);outline-offset:3px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.in{max-width:1320px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.eyebrow{font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--acc)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:0;background:var(--bw);color:var(--cream);font:500 15px var(--sans);text-decoration:none;cursor:pointer;transition:transform .2s var(--ease),background .2s}
+.pill:hover{background:#241912;transform:translateY(-1px)}
+.pill.ghost{background:transparent;color:var(--bw);box-shadow:inset 0 0 0 1.5px var(--bw)}
+.pill.ghost:hover{background:rgba(59,42,32,.06)}
+
+/* header */
+.hd{position:sticky;top:0;z-index:30;background:rgba(244,237,225,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(59,42,32,.12)}
+.hd .in{display:flex;align-items:center;gap:24px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;margin-right:auto}
+.logo svg{flex:none;width:38px;height:38px}
+.logo span{font:400 25px/1.1 var(--serif);letter-spacing:-.01em;overflow-wrap:anywhere}
+.hd nav{display:flex;gap:4px}
+.hd nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.hd nav a:hover{background:rgba(59,42,32,.07)}
+.menu{display:none}
+.ph-only{display:none}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,4.2fr) minmax(0,7.8fr);grid-template-areas:"copy scene" "list scene";column-gap:clamp(24px,3vw,48px);align-items:start;padding-top:clamp(24px,3vw,40px);padding-bottom:clamp(28px,4vw,56px)}
+.copy{grid-area:copy;padding-top:clamp(8px,2vw,28px)}
+h1{font:400 clamp(34px,3.35vw,50px)/1.06 var(--serif);letter-spacing:-.02em;margin:14px 0 18px}
+.lede{color:#4A3A2E;max-width:40ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hint{display:flex;gap:10px;align-items:center;margin-top:22px;font-size:14.5px;color:var(--muted)}
+.hint i{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--bw);font:600 12px var(--sans);font-style:normal}
+.objs{grid-area:list;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.ob{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:10px;width:100%;min-height:52px;padding:6px 10px 6px 6px;border:0;border-radius:14px;background:rgba(255,255,255,.45);text-align:left;cursor:pointer;transition:background .2s,box-shadow .2s}
+.ob:hover{background:#fff}
+.ob[aria-expanded=true]{background:#fff;box-shadow:inset 0 0 0 2px var(--bw)}
+.ob .ic{width:46px;height:40px}
+.ob b{display:block;font:500 14.5px/1.2 var(--sans)}
+.ob small{display:block;font-size:12.5px;color:var(--muted);line-height:1.3}
+.ob .n{display:none}
+.op{display:none}
+.scene{grid-area:scene;min-width:0}
+.vp{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(120% 90% at 50% 20%,#FBF7EF 0,#F1E7D6 70%);box-shadow:inset 0 0 0 1px rgba(59,42,32,.08)}
+.world{position:absolute;inset:0;transform-origin:0 0;transition:transform .85s var(--ease);--z:1}
+.world svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.iso polygon{stroke:#3B2A20;stroke-opacity:.42;stroke-width:.75;stroke-linejoin:round}
+.iso .lp{opacity:.62;stroke:none}
+.iso .fl{stroke:none}
+.obj{cursor:pointer;transition:opacity .5s var(--ease),transform .35s var(--ease)}
+.obj:hover{transform:translateY(-5px)}
+.dim .obj{opacity:.28}
+.dim .obj.on{opacity:1}
+.pins{position:absolute;inset:0}
+.pin{position:absolute;display:flex;align-items:center;gap:0;height:34px;padding:0;border:0;border-radius:999px;background:var(--bw);color:var(--cream);font:600 14px var(--sans);cursor:pointer;transform:translate(-50%,-100%) scale(calc(1/var(--z)));transform-origin:50% 100%;box-shadow:0 6px 14px -6px rgba(59,42,32,.7);transition:background .2s,opacity .4s}
+.pin::after{content:"";position:absolute;left:50%;bottom:-6px;margin-left:-6px;border:6px solid transparent;border-bottom:0;border-top-color:var(--bw)}
+.pin .pn{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--bw);box-shadow:0 0 0 3px var(--bw)}
+.pin .pl{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s var(--ease),padding .35s var(--ease)}
+.pin:hover .pl,.pin:focus-visible .pl,.pin.on .pl{max-width:180px;padding:0 14px 0 10px}
+.dim .pin:not(.on){opacity:0;pointer-events:none}
+.card{position:absolute;top:16px;right:16px;bottom:16px;width:min(410px,44%);overflow:auto;padding:24px 26px;border-radius:22px;background:#FBF8F2;box-shadow:0 30px 60px -30px rgba(59,42,32,.55),0 0 0 1px rgba(59,42,32,.08);opacity:0;transform:translateX(24px);transition:opacity .45s var(--ease),transform .55s var(--ease)}
+.card.show{opacity:1;transform:none}
+.card:focus{outline:none}.card:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+#cardK{padding-right:40px}
+.card h3{font:400 30px/1.1 var(--serif);margin:8px 0 12px}
+.card p,.op p{color:#4A3A2E;font-size:16px}
+.card .x{position:absolute;top:14px;right:14px;width:40px;height:40px;border:0;border-radius:50%;background:rgba(59,42,32,.07);cursor:pointer;font-size:20px;line-height:1}
+.ticks{margin-top:14px}
+.ticks li{position:relative;padding:7px 0 7px 26px;border-top:1px solid rgba(59,42,32,.12);font-size:15.5px}
+.ticks li::before{content:"";position:absolute;left:3px;top:15px;width:10px;height:10px;border-radius:3px;background:var(--gold);transform:rotate(45deg)}
+.price{margin-top:14px;font:400 20px/1.3 var(--serif)!important;color:var(--bw)!important}
+.price small{font:500 12px var(--sans);color:var(--muted);letter-spacing:.04em}
+.tims{display:grid;gap:10px;margin-top:14px}
+.tims li{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;font-size:14.5px;line-height:1.45}
+.tims b{display:block;font:400 17px var(--serif)}
+.cnav{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.cnav .pill{min-height:42px;padding:0 16px;font-size:14px}
+
+/* joints */
+.joints{background:var(--bw);color:var(--cream);padding:clamp(56px,7vw,100px) 0;position:relative;overflow:hidden}
+.joints::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(94deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px);pointer-events:none}
+.j{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center}
+.joints .eyebrow{color:var(--gold)}
+h2{font:400 clamp(30px,3.6vw,50px)/1.08 var(--serif);letter-spacing:-.015em;margin:12px 0 14px}
+.joints p{color:#D9CBB8}
+.jpick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:24px 0 20px}
+.jb{min-height:54px;padding:8px 14px;border-radius:14px;border:1.5px solid rgba(244,237,225,.28);background:transparent;color:var(--cream);text-align:left;font:500 15px/1.25 var(--sans);cursor:pointer;transition:background .2s,border-color .2s}
+.jb:hover{border-color:var(--gold)}
+.jb[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--bw)}
+.jinfo{border-top:1px solid rgba(244,237,225,.18);padding-top:16px}
+.jinfo h3{font:400 26px var(--serif);margin-bottom:8px}
+.jinfo dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15.5px}
+.jinfo dt{color:var(--gold);font:600 11.5px/2 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.jinfo dd{color:#E6DACA}
+.jstage{position:relative;border-radius:28px;background:radial-gradient(70% 60% at 50% 42%,#5A4232 0,#3F2D22 60%,#35261D 100%);box-shadow:inset 0 0 0 1px rgba(244,237,225,.08)}
+.stage{position:relative;height:clamp(330px,34vw,460px);perspective:1500px;display:grid;place-items:center;touch-action:pan-y;cursor:grab;overflow:hidden;user-select:none;-webkit-user-select:none}
+.stage:active{cursor:grabbing}
+.tap,.orbit,.ctr,.part{transform-style:preserve-3d}
+.tap,.orbit{position:relative;width:0;height:0}
+.tap.hit{animation:tap .32s ease-out}
+@keyframes tap{35%{transform:translateY(4px)}}
+.ctr,.part{position:absolute;left:0;top:0}
+.part{transition:transform 1s cubic-bezier(.62,0,.22,1)}
+.f{position:absolute;left:0;top:0;transform-origin:0 0}
+.gx{background-image:repeating-linear-gradient(0deg,rgba(35,20,10,.12) 0 1px,transparent 1px 6px,rgba(255,236,200,.08) 6px 8px,transparent 8px 13px)}
+.gy{background-image:repeating-linear-gradient(90deg,rgba(35,20,10,.12) 0 1px,transparent 1px 6px,rgba(255,236,200,.08) 6px 8px,transparent 8px 13px)}
+.eg{background-image:repeating-radial-gradient(circle at 30% 140%,rgba(35,20,10,.16) 0 1.3px,transparent 1.3px 6px)}
+.shadow{background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent)}
+.jctrl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:0 18px 18px}
+.jctrl .pill{background:var(--gold);color:var(--bw)}
+.jctrl .pill:hover{background:#EDC97D}
+.rot{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(244,237,225,.3);background:transparent;color:var(--cream);font-size:19px;cursor:pointer}
+.rot:hover{border-color:var(--gold)}
+.jhint{font-size:13.5px;color:#C9B8A6!important;margin-left:auto;max-width:34ch;line-height:1.45}
+.legend{position:absolute;top:16px;left:18px;display:flex;gap:14px;font-size:13px;color:#E6DACA}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:4px}
+
+/* process: tape measure */
+.process{padding-top:clamp(56px,7vw,104px);padding-bottom:clamp(56px,7vw,104px)}
+.phead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end;margin-bottom:34px}
+.phead p{color:#4A3A2E;max-width:46ch}
+.pwrap{position:relative}
+.tape{position:relative;height:78px;margin-right:78px;border-radius:4px 0 0 4px;background-color:var(--gold);
+background-image:linear-gradient(90deg,var(--bw) 2px,transparent 2px),linear-gradient(90deg,var(--bw) 1.4px,transparent 1.4px),linear-gradient(90deg,rgba(59,42,32,.75) 1px,transparent 1px),linear-gradient(#EFD08B,#E1B866 55%,#CFA553);
+background-size:60px 28px,30px 18px,6px 10px,100% 100%;background-repeat:repeat-x;box-shadow:0 14px 26px -16px rgba(59,42,32,.6)}
+.tape .nums{position:absolute;left:0;right:0;top:26px;height:24px;font:600 13px var(--sans);overflow:hidden}
+.tape .nums span{position:absolute;top:0;transform:translateX(-50%)}
+.tape .hook{position:absolute;left:-10px;top:-6px;width:12px;height:90px;border-radius:3px;background:linear-gradient(90deg,#9A968C,#D0CCC3)}
+.case{position:absolute;right:0;top:-21px;width:120px;height:120px;border-radius:26px;background:radial-gradient(circle at 35% 30%,#5F4535,#3B2A20 70%);box-shadow:0 18px 30px -16px rgba(0,0,0,.6);display:grid;place-items:center}
+.case i{width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 5px var(--gold)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:26px;margin-right:78px}
+.steps li{position:relative;padding-top:18px}
+.steps li::before{content:"";position:absolute;left:0;top:-18px;width:2px;height:30px;background:var(--bw)}
+.steps .mm{font:600 12px var(--sans);letter-spacing:.12em;color:var(--acc)}
+.steps h3{font:400 22px/1.2 var(--serif);margin:6px 0 6px}
+.steps p{font-size:15px;color:#4A3A2E}
+.steps .t{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;background:var(--cream2);font:500 12.5px var(--sans)}
+
+/* faq + visit */
+.faq{background:#E4E6D8;padding:clamp(52px,6vw,88px) 0}
+.faq .in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px)}
+.qs{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.qs details{background:#F3F2EA;border-radius:18px;padding:0 20px}
+.qs summary{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:62px;cursor:pointer;list-style:none;font:400 19px/1.25 var(--serif)}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--bw);border-bottom:2px solid var(--bw);transform:rotate(45deg) translateY(-3px);transition:transform .3s var(--ease)}
+.qs details[open] summary::after{transform:rotate(-135deg)}
+.qs details p{padding:0 0 18px;font-size:15.5px;color:#4A3A2E}
+.visit{padding:clamp(56px,7vw,100px) 0}
+.visit .in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px)}
+.facts{margin-top:22px;display:grid;gap:14px}
+.facts div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-top:14px;border-top:1px solid rgba(59,42,32,.14)}
+.facts dt{font:600 12px/1.9 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.form{background:#FBF8F2;border-radius:26px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 60px -40px rgba(59,42,32,.55),0 0 0 1px rgba(59,42,32,.07)}
+.form h3{font:400 28px var(--serif);margin-bottom:4px}
+.form>p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.fl2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label,.fld legend{font:500 14px var(--sans)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:48px;padding:10px 14px;border:1.5px solid #D6C8B3;border-radius:12px;background:#fff;font-size:16px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--bw);outline:none;box-shadow:0 0 0 3px rgba(225,184,102,.55)}
+.fld textarea{min-height:110px;resize:vertical}
+fieldset.fld{border:0;padding:0;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:1.5px solid #D6C8B3;background:#fff;font-size:14.5px;cursor:pointer}
+.chips input:checked+span{background:var(--bw);border-color:var(--bw);color:var(--cream)}
+.chips input:focus-visible+span{outline:3px solid var(--bw);outline-offset:2px}
+footer{background:#2E2119;color:#E9DFCF;padding:44px 0 36px}
+footer .in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+.fb{font:400 30px/1.1 var(--serif);overflow-wrap:anywhere}
+footer p{font-size:14.5px;color:#CDBFAC}
+footer a{color:#F4EDE1}
+
+@media (max-width:1100px){
+.hero{grid-template-columns:1fr;grid-template-areas:"copy" "scene" "list"}
+.objs{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:16px}
+.ob{grid-template-columns:1fr;justify-items:start}
+.j{grid-template-columns:1fr}
+.faq .in,.visit .in{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+.hd nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;padding:8px 16px 16px;background:var(--cream);border-bottom:1px solid rgba(59,42,32,.12);box-shadow:0 20px 30px -20px rgba(59,42,32,.4)}
+.hd nav.open{display:flex}
+.hd nav a{padding:14px 12px;font-size:17px}
+.menu{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--bw);background:transparent;font-weight:500;cursor:pointer}
+}
+@media (max-width:759px){
+body{font-size:16px}
+.hd .in{min-height:62px;gap:10px}
+.logo span{font-size:21px}
+.logo svg{width:32px;height:32px}
+.hd .pill.top{display:none}
+.ph-only{display:inline}.hd-only{display:none}
+.ctas .pill{padding:0 17px;font-size:14.5px}
+h1{margin:10px 0 14px}
+.vp{border-radius:20px}
+.pins,.card{display:none!important}
+.obj{pointer-events:none}
+.objs{grid-template-columns:1fr;gap:10px;margin-top:22px}
+.objs>li{background:#FBF8F2;border-radius:18px;box-shadow:0 0 0 1px rgba(59,42,32,.08);scroll-margin-top:76px}
+.ob{grid-template-columns:auto 60px 1fr auto;gap:12px;min-height:72px;padding:10px 14px 10px 12px;background:transparent;border-radius:18px}
+.ob:hover{background:transparent}
+.ob[aria-expanded=true]{box-shadow:none;background:transparent}
+.ob .n{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--gold);font:600 13px var(--sans)}
+.ob .ic{width:60px;height:52px}
+.ob b{font-size:16.5px}
+.ob::after{content:"";width:10px;height:10px;border-right:2px solid var(--bw);border-bottom:2px solid var(--bw);transform:rotate(45deg);transition:transform .3s var(--ease);margin-right:4px}
+.ob[aria-expanded=true]::after{transform:rotate(-135deg)}
+.op{display:block;padding:0 18px 18px}
+.op[hidden]{display:none}
+.jpick{grid-template-columns:1fr 1fr}
+.jctrl{padding:0 14px 14px}
+.jhint{margin-left:0}
+.legend{font-size:12px;left:14px;top:12px}
+.phead{grid-template-columns:1fr}
+.pwrap{display:grid;grid-template-columns:44px 1fr;gap:0 18px}
+.tape{height:auto;margin:0;border-radius:4px 4px 0 0;
+background-image:linear-gradient(0deg,var(--bw) 2px,transparent 2px),linear-gradient(0deg,var(--bw) 1.4px,transparent 1.4px),linear-gradient(0deg,rgba(59,42,32,.75) 1px,transparent 1px),linear-gradient(90deg,#EFD08B,#E1B866 55%,#CFA553);
+background-size:20px 60px,13px 30px,8px 6px,100% 100%;background-repeat:repeat-y}
+.tape .nums,.tape .hook,.case{display:none}
+.steps{grid-template-columns:1fr;margin:0;gap:26px}
+.steps li{padding-top:0}
+.steps li::before{left:-18px;top:10px;width:16px;height:2px}
+.qs{grid-template-columns:1fr}
+.fl2{grid-template-columns:1fr}
+.facts div{grid-template-columns:1fr;gap:2px}
+footer .in{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<header class="hd" id="top"><div class="in">
+<a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 36 12v18L20 39 4 30V12z" fill="#C68B59"/><path d="M20 3 36 12 20 21 4 12z" fill="#E1B866"/><path d="M20 21v18L4 30V12z" fill="#A6703F"/><path d="M11 16.5 15 14l4 3.2-2.6 1.6zM21 22.4l6-3.4v4.6l-6 3.4z" fill="#3B2A20"/><path d="M20 3 36 12v18L20 39 4 30V12zM20 21 36 12M20 21 4 12M20 21v18" fill="none" stroke="#3B2A20" stroke-width="1.4" stroke-linejoin="round"/></svg><span data-brand>Grain &amp; Joint</span></a>
+<button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><a href="#workshop">Workshop</a><a href="#joints">Joints</a><a href="#process">Commissions</a><a href="#visit">Visit</a></nav>
+<a class="pill top" href="#contact">Start a commission</a>
+</div></header>
+
+<main>
+<section class="in hero" id="workshop" aria-labelledby="h1">
+<div class="copy">
+<p class="eyebrow">Custom furniture &amp; joinery · Launceston, Tasmania</p>
+<h1 id="h1">Furniture made the slow way, from Tasmanian timber.</h1>
+<p class="lede">A two-bench workshop making dining tables, built-ins and restorations in blackwood, Tasmanian oak, Huon pine and myrtle — joined by hand, finished in oil, built to be handed down.</p>
+<div class="ctas"><a class="pill" href="#contact">Start a commission</a><a class="pill ghost" href="#joints">Explore the joints</a></div>
+<p class="hint"><i aria-hidden="true">1</i><span class="hd-only">Tap a numbered tag in the workshop — or pick from the list — to look closer.</span><span class="ph-only">Tap anything in the workshop list below to look closer.</span></p>
+</div>
+<div class="scene">
+<div class="vp" id="vp">
+<div class="world" id="world"><svg class="iso" id="iso" aria-hidden="true"></svg><div class="pins" id="pins"></div></div>
+<div class="card" id="card" role="region" aria-labelledby="cardT" tabindex="-1" hidden>
+<button class="x" type="button" id="cardX" aria-label="Back to the workshop">×</button>
+<p class="eyebrow" id="cardK"></p>
+<h3 id="cardT"></h3>
+<div id="cardB"></div>
+<div class="cnav"><button class="pill ghost" type="button" id="cardBack">← Workshop</button><button class="pill" type="button" id="cardNext">Next</button></div>
+</div>
+</div>
+</div>
+<ol class="objs" id="objs" aria-label="Things in the workshop"></ol>
+</section>
+
+<section class="joints" id="joints" aria-labelledby="jH">
+<div class="in j">
+<div>
+<p class="eyebrow">Joint explorer</p>
+<h2 id="jH">The joints that hold it together.</h2>
+<p>Good furniture is held by its joinery, not its screws. Pick a joint and press Assemble — we've made each part from a different timber so you can see how they lock.</p>
+<div class="jpick" role="group" aria-label="Choose a joint">
+<button class="jb" type="button" data-j="0" aria-pressed="true">Dovetail</button>
+<button class="jb" type="button" data-j="1" aria-pressed="false">Mortise &amp; tenon</button>
+<button class="jb" type="button" data-j="2" aria-pressed="false">Finger joint</button>
+<button class="jb" type="button" data-j="3" aria-pressed="false">Bridle joint</button>
+</div>
+<div class="jinfo" id="jinfo"></div>
+</div>
+<div class="jstage">
+<div class="legend" aria-hidden="true"><span><i style="background:#6E4E38"></i>Blackwood</span><span><i style="background:#E1B866"></i>Huon pine</span></div>
+<div class="stage" id="stage"><div class="tap" id="tap"><div class="orbit" id="orbit"></div></div></div>
+<div class="jctrl">
+<button class="pill" type="button" id="asm" aria-pressed="false">Assemble</button>
+<button class="rot" type="button" id="rotL" aria-label="Turn left">↺</button>
+<button class="rot" type="button" id="rotR" aria-label="Turn right">↻</button>
+<p class="jhint">Drag the joint to turn it around.</p>
+</div>
+<p class="sr" id="jsay" aria-live="polite"></p>
+</div>
+</div>
+</section>
+
+<section class="process in" id="process" aria-labelledby="pH">
+<div class="phead"><div><p class="eyebrow">Commissions</p><h2 id="pH">From first chat to delivery, measured out.</h2></div><p>Every commission follows the same five steps. You'll see drawings before we cut anything and photos while it's on the bench.</p></div>
+<div class="pwrap">
+<div class="tape" aria-hidden="true"><span class="hook"></span><div class="nums" id="nums"></div></div>
+<div class="case" aria-hidden="true"><i></i></div>
+<ol class="steps">
+<li><p class="mm">0 mm</p><h3>Chat</h3><p>Tell us about the piece, the room and your budget — by phone, email or a workshop visit.</p><span class="t">No charge</span></li>
+<li><p class="mm">300 mm</p><h3>Measure &amp; draw</h3><p>We measure up and send scaled drawings with a fixed quote.</p><span class="t">1–2 weeks</span></li>
+<li><p class="mm">600 mm</p><h3>Choose timber</h3><p>Pick the actual boards from our rack. We'll show you how the grain runs across the top.</p><span class="t">At the workshop</span></li>
+<li><p class="mm">900 mm</p><h3>Make</h3><p>We build it, sending photos at the dry fit and again before the finish goes on.</p><span class="t">6–14 weeks</span></li>
+<li><p class="mm">1200 mm</p><h3>Deliver</h3><p>We deliver and install across northern Tasmania, and crate pieces for freight to the mainland.</p><span class="t">40% deposit, rest on delivery</span></li>
+</ol>
+</div>
+</section>
+
+<section class="faq" aria-labelledby="fH">
+<div class="in">
+<div><p class="eyebrow">Good to know</p><h2 id="fH">Questions we hear at the bench.</h2></div>
+<div class="qs">
+<details><summary>How long is the wait?</summary><p>Most commissions start 6–10 weeks after the deposit and take 6–14 weeks to make, depending on size. We'll give you a start date with the quote.</p></details>
+<details><summary>Do you deliver to the mainland?</summary><p>Yes. We crate larger pieces and book freight; small pieces go by post. Freight is quoted separately.</p></details>
+<details><summary>Can I visit the workshop?</summary><p>Please do — by appointment, Tuesday to Saturday. It's a working shop, so closed shoes are a good idea.</p></details>
+<details><summary>How do I look after an oiled finish?</summary><p>Wipe with a damp cloth, use coasters for hot dishes, and re-oil every year or two. Each piece comes with a care card and a small tin of the oil we used.</p></details>
+</div>
+</div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="vH">
+<div class="in">
+<div>
+<p class="eyebrow">Visit &amp; contact</p>
+<h2 id="vH">Come and see the timber rack.</h2>
+<p class="lede">The best way to choose a timber is to see it in daylight. Book a time and we'll pull boards for you.</p>
+<dl class="facts">
+<div><dt>Workshop</dt><dd>Launceston, Tasmania — visits by appointment</dd></div>
+<div><dt>Hours</dt><dd>Tue–Fri 8 am–4:30 pm · Sat 9 am–12 pm</dd></div>
+<div><dt>Phone</dt><dd><a href="tel:+61355500234">(03) 5550 0234</a></dd></div>
+<div><dt>Email</dt><dd><a href="mailto:workshop@example.com">workshop@example.com</a></dd></div>
+<div><dt>Delivery</dt><dd>Northern Tasmania by us; mainland by freight</dd></div>
+</dl>
+</div>
+<form class="form" id="contact" data-demo-message="Demo only — nothing was sent. On a real site this enquiry would reach the workshop.">
+<h3>Start a commission</h3>
+<p>A few details help us come back with useful questions.</p>
+<div class="fl2">
+<div class="fld"><label for="cName">Your name</label><input id="cName" name="name" autocomplete="name" required></div>
+<div class="fld"><label for="cMail">Email</label><input id="cMail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+</div>
+<div class="fl2">
+<div class="fld"><label for="cWhat">What would you like made?</label><select id="cWhat" name="what"><option>Dining table</option><option>Built-in shelving or cabinetry</option><option>Restoration</option><option>Bench or seating</option><option>A small piece</option><option>Something else</option></select></div>
+<div class="fld"><label for="cBudget">Rough budget</label><select id="cBudget" name="budget"><option>Not sure yet</option><option>Under $2,000</option><option>$2,000–$5,000</option><option>$5,000–$10,000</option><option>Over $10,000</option></select></div>
+</div>
+<fieldset class="fld"><legend>Timber you're drawn to</legend>
+<div class="chips"><label><input type="radio" name="timber" value="Blackwood" checked><span>Blackwood</span></label><label><input type="radio" name="timber" value="Tasmanian oak"><span>Tasmanian oak</span></label><label><input type="radio" name="timber" value="Huon pine"><span>Huon pine accents</span></label><label><input type="radio" name="timber" value="Myrtle"><span>Myrtle</span></label><label><input type="radio" name="timber" value="Unsure"><span>Not sure</span></label></div>
+</fieldset>
+<div class="fld"><label for="cMsg">Tell us about the room</label><textarea id="cMsg" name="message" placeholder="Size, how many people it needs to seat, what's there now…"></textarea></div>
+<button class="pill" type="submit">Send enquiry</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><div class="in">
+<div><p class="fb" data-brand>Grain &amp; Joint</p><p>Custom furniture &amp; joinery in Tasmanian timbers · Launceston, Tas.</p></div>
+<div><p><a href="tel:+61355500234">(03) 5550 0234</a><br><a href="mailto:workshop@example.com">workshop@example.com</a></p></div>
+<div><p>Sample prices in AUD, shown for illustration. Concept demo — Grain &amp; Joint is a fictional business.</p></div>
+</div></footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var NS="http://www.w3.org/2000/svg",K=10,CX=Math.cos(Math.PI/6)*K,SY=.5*K,BB=null;
+function rm(){return (window.DemoKit&&DemoKit.reducedMotion)||matchMedia("(prefers-reduced-motion: reduce)").matches}
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function P(x,y,z){var X=(x-y)*CX,Y=(x+y)*SY-z*K;if(BB){if(X<BB[0])BB[0]=X;if(Y<BB[1])BB[1]=Y;if(X>BB[2])BB[2]=X;if(Y>BB[3])BB[3]=Y}return X.toFixed(1)+","+Y.toFixed(1)}
+function poly(g,a,f,c){var e=el("polygon",{points:a.map(function(p){return P(p[0],p[1],p[2])}).join(" "),fill:f},g);if(c)e.setAttribute("class",c);return e}
+function box(g,x,y,z,w,d,h,m){var X=x+w,Y=y+d,Z=z+h;poly(g,[[x,Y,z],[X,Y,z],[X,Y,Z],[x,Y,Z]],m[1]);poly(g,[[X,y,z],[X,Y,z],[X,Y,Z],[X,y,Z]],m[2]);poly(g,[[x,y,Z],[X,y,Z],[X,Y,Z],[x,Y,Z]],m[0])}
+function ln(g,a,b,c,w){var p=P(a[0],a[1],a[2]).split(","),q=P(b[0],b[1],b[2]).split(",");return el("line",{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:c,"stroke-width":w||.8,"stroke-linecap":"round"},g)}
+function grain(g,x,y,z,w,d,ax,n,c){for(var i=1;i<=n;i++){var t=i/(n+1)+((i*37%11)/11-.5)*.09;if(ax==="x")ln(g,[x+.5,y+d*t,z],[x+w-.5,y+d*t,z],c,.7);else ln(g,[x+w*t,y+.5,z],[x+w*t,y+d-.5,z],c,.7)}}
+function slant(g,b,t,h,m){poly(g,[[b[0]-h,b[1]+h,b[2]],[b[0]+h,b[1]+h,b[2]],[t[0]+h,t[1]+h,t[2]],[t[0]-h,t[1]+h,t[2]]],m[1]);poly(g,[[b[0]+h,b[1]-h,b[2]],[b[0]+h,b[1]+h,b[2]],[t[0]+h,t[1]+h,t[2]],[t[0]+h,t[1]-h,t[2]]],m[2])}
+function bowl(g,x,y,z,r,h,m){var c=P(x,y,z+h).split(",").map(Number),b=P(x,y,z).split(",").map(Number),rx=1.2247*r*K,ry=.7071*r*K;
+el("path",{d:"M"+(c[0]-rx)+" "+c[1]+"Q"+(c[0]-rx*.95)+" "+(b[1]+ry*.2)+" "+c[0]+" "+(b[1]+ry*.35)+"Q"+(c[0]+rx*.95)+" "+(b[1]+ry*.2)+" "+(c[0]+rx)+" "+c[1]+"Z",fill:m[1],stroke:"#3B2A20","stroke-opacity":.42,"stroke-width":.75},g);
+el("ellipse",{cx:c[0],cy:c[1],rx:rx,ry:ry,fill:m[0],stroke:"#3B2A20","stroke-opacity":.42,"stroke-width":.75},g);el("ellipse",{cx:c[0],cy:c[1]+ry*.12,rx:rx*.78,ry:ry*.7,fill:m[2],opacity:.55},g)}
+function leaves(g,x,y,z,n,s){var c=P(x,y,z).split(",").map(Number);for(var i=0;i<n;i++){var a=-150+i*(120/(n-1)),r=(9+i%3*3)*s;var lx=c[0]+Math.cos(a*Math.PI/180)*r*.7,ly=c[1]+Math.sin(a*Math.PI/180)*r*.9;
+el("ellipse",{cx:lx.toFixed(1),cy:ly.toFixed(1),rx:(7*s).toFixed(1),ry:(2.6*s).toFixed(1),fill:i%2?"#8C9B7C":"#A7B497",stroke:"#3B2A20","stroke-opacity":.35,"stroke-width":.6,transform:"rotate("+(a+10)+" "+lx.toFixed(1)+" "+ly.toFixed(1)+")"},g)}}
+var M={oak:["#ECD6AA","#D8BB88","#BD9C68"],tim:["#E0AC7A","#C68B59","#A6703F"],bw:["#80604A","#624836","#4A3424"],hp:["#F3D995","#E1B866","#C79D48"],my:["#D9A38D","#BF7F65","#A1654D"],sage:["#C7D0B8","#9DAA8D","#85927A"],dk:["#5B4636","#3B2A20","#2B1E16"],st:["#D6D2C8","#B6B1A6","#98938A"]};
+
+/* ---------- the room ---------- */
+function room(g){
+var W=64,D=40,H=22,y,r,x;
+poly(g,[[0,D,-2],[W,D,-2],[W,D,0],[0,D,0]],"#C68B59");poly(g,[[W,0,-2],[W,D,-2],[W,D,0],[W,0,0]],"#A6703F");
+poly(g,[[0,0,0],[W,0,0],[W,D,0],[0,D,0]],"#EAD9BD","fl");
+for(y=2.5;y<D;y+=2.5)ln(g,[0,y,0],[W,y,0],"#D8C29D",.7);
+for(r=0;r<16;r++){x=(r*23)%29+4;ln(g,[x,r*2.5,0],[x,r*2.5+2.5,0],"#D8C29D",.7);ln(g,[x+31,r*2.5,0],[x+31,r*2.5+2.5,0],"#D8C29D",.7)}
+poly(g,[[38.5,10,0],[52.5,10,0],[56.4,21.1,0],[42.4,21.1,0]],"#FFF9EA","lp");
+ln(g,[45.5,10,0],[49.4,21.1,0],"#EAD9BD",1.2);ln(g,[40.5,15.6,0],[54.5,15.6,0],"#EAD9BD",1.2);
+poly(g,[[0,0,0],[0,D,0],[0,D,H],[0,0,H]],"#DCE0CE");poly(g,[[0,0,0],[W,0,0],[W,0,H],[0,0,H]],"#EFE7D5");
+box(g,0,0,0,W,.3,1,M.tim);box(g,0,.3,0,.3,D-.3,1,M.tim);
+/* window + hills */
+poly(g,[[35,.05,9],[49,.05,9],[49,.05,19],[35,.05,19]],"url(#sky)");
+poly(g,[[35,.04,9],[35,.04,11.6],[37.5,.04,13],[40.5,.04,12.1],[43.5,.04,14],[46.5,.04,12.6],[49,.04,13.1],[49,.04,9]],"#AEBB9D");
+[[35,9,35,19],[49,9,49,19],[35,19,49,19],[42,9,42,19],[35,14,49,14]].forEach(function(l){ln(g,[l[0],.06,l[1]],[l[2],.06,l[3]],"#C68B59",1.8)});
+box(g,34.5,0,8.4,15,1,.6,M.tim);
+/* pegboard + tools */
+poly(g,[[.05,15,11],[.05,33,11],[.05,33,19],[.05,15,19]],"#E2C799");poly(g,[[.06,15,11],[.06,33,11],[.06,33,19],[.06,15,19]],"url(#peg)");
+poly(g,[[.1,16.6,17.6],[.1,22.4,17.1],[.1,22.4,16.2],[.1,16.6,15.1]],"#C9C5BB");poly(g,[[.1,15.4,17.9],[.1,16.8,17.9],[.1,16.8,14.8],[.1,15.4,14.8]],"#A6703F");
+poly(g,[[.1,23.6,18.3],[.1,24.5,18.3],[.1,24.5,14.4],[.1,23.6,14.4]],"#5F4433");poly(g,[[.1,24.5,18.3],[.1,28.4,18.3],[.1,28.4,17.7],[.1,24.5,17.7]],"#C9C5BB");
+poly(g,[[.1,25.4,16.9],[.1,28,16.9],[.1,28,15.5],[.1,25.4,15.5]],"#8A6246");poly(g,[[.1,26.4,15.5],[.1,26.9,15.5],[.1,26.9,12.3],[.1,26.4,12.3]],"#C68B59");
+[29.6,30.7,31.8].forEach(function(y,i){poly(g,[[.1,y,18.4],[.1,y+.5,18.4],[.1,y+.5,16.4],[.1,y,16.4]],"#C68B59");poly(g,[[.1,y+.08,16.4],[.1,y+.42,16.4],[.1,y+.42,14.2-i*.3],[.1,y+.08,14.2-i*.3]],"#D6D2C8")});
+/* pinned drawing */
+poly(g,[[10,.05,18.3],[23.5,.05,18.3],[23.5,.05,21.3],[10,.05,21.3]],"#FBF7EE");
+[[11.5,20.2,21.8,20.2],[12.4,20.2,12.4,18.9],[20.9,20.2,20.9,18.9],[12.4,19.7,20.9,19.7],[11.5,18.7,21.8,18.7]].forEach(function(l,i){ln(g,[l[0],.07,l[1]],[l[2],.07,l[3]],i===4?"#C68B59":"#3B2A20",i===4?.9:.7)});
+/* cut edges of the walls */
+poly(g,[[-1,-1,H],[0,-1,H],[0,D,H],[-1,D,H]],"#B98052");poly(g,[[-1,-1,H],[W,-1,H],[W,0,H],[-1,0,H]],"#C99463");
+poly(g,[[-1,D,-2],[0,D,-2],[0,D,H],[-1,D,H]],"#A6703F");poly(g,[[W,-1,-2],[W,0,-2],[W,0,H],[W,-1,H]],"#8E5D34");
+/* plant by the window */
+box(g,30.8,1.6,0,2,2,2.4,M.tim);leaves(g,31.8,2.6,2.6,7,1.25);
+}
+
+/* ---------- the objects (each is a button target) ---------- */
+var DRAW=[
+function(g){ /* workbench */
+box(g,1,15,0,1,1,8.4,M.tim);box(g,6.5,15,0,1,1,8.4,M.tim);box(g,1,32,0,1,1,8.4,M.tim);
+box(g,1.2,15.5,2,6.2,17,.5,M.tim);box(g,2,18.5,2.5,3.6,5,2.2,M.sage);box(g,2.4,26,2.5,2.6,3.2,1.3,M.hp);
+box(g,6.5,32,0,1,1,8.4,M.tim);
+box(g,.5,14,8.4,7.5,20,1,M.oak);grain(g,.5,14,9.4,7.5,20,"y",4,"rgba(150,110,60,.5)");
+box(g,2.2,34,6.9,4.6,1,2.5,M.bw);ln(g,[4.5,35,8],[4.5,37,8],"#8F8A80",1.3);ln(g,[3.6,37,8],[5.4,37,8],"#8F8A80",1.6);
+box(g,2.2,24.5,9.4,3.8,8.8,.5,M.hp);grain(g,2.2,24.5,9.9,3.8,8.8,"y",2,"rgba(170,120,40,.5)");
+box(g,3,17,9.4,1.5,3.6,.9,M.bw);box(g,3.35,17.5,10.3,.8,.8,.8,M.hp);
+[[3.4,21.6],[5.4,22.3],[4.2,23.1]].forEach(function(p){var q=P(p[0],p[1],9.45).split(",");el("path",{d:"M"+q[0]+" "+q[1]+"c3-4 8-3 7 1s-6 3-6 0",fill:"none",stroke:"#C99D48","stroke-width":1.3},g)});
+},
+function(g){ /* timber rack */
+[7,18,29].forEach(function(x){box(g,x,.3,0,1,1.2,17.5,M.bw)});
+function lvl(z,a,b){[7,18,29].forEach(function(x){box(g,x,1.5,z,1,4.2,.6,M.bw)});box(g,a[0],1.7,z+.6,a[1],1.4,.55,a[2]);box(g,b[0],3.3,z+.6,b[1],1.5,.6,b[2]);grain(g,b[0],3.3,z+1.2,b[1],1.5,"x",1,"rgba(59,42,32,.3)")}
+lvl(4,[6,23.5,M.bw],[6.8,22.2,M.bw]);lvl(9,[6.2,23.3,M.oak],[5.6,24.4,M.oak]);lvl(14,[7.4,20.5,M.hp],[6.4,22.8,M.my]);
+},
+function(g){ /* dining table */
+var x=26,y=15,w=20,d=10,l=.9;
+box(g,x+1,y+1,0,l,l,7,M.bw);box(g,x+w-1.9,y+1,0,l,l,7,M.bw);box(g,x+1,y+d-1.9,0,l,l,7,M.bw);
+box(g,x+1.4,y+1.3,5.7,w-2.8,.4,1.3,M.bw);box(g,x+1.3,y+1.4,5.7,.4,d-2.8,1.3,M.bw);box(g,x+1.4,y+d-1.7,5.7,w-2.8,.4,1.3,M.bw);box(g,x+w-1.7,y+1.4,5.7,.4,d-2.8,1.3,M.bw);
+box(g,x+w-1.9,y+d-1.9,0,l,l,7,M.bw);
+box(g,x,y,7,w,d,.7,M.bw);grain(g,x,y,7.7,w,d,"x",6,"rgba(35,22,14,.32)");
+bowl(g,x+6,y+5,7.7,2,1,M.hp);box(g,x+13.5,y+4.3,7.7,1.2,1.2,1.8,M.sage);leaves(g,x+14.1,y+4.9,9.5,5,.9);
+},
+function(g){ /* bench */
+box(g,29,28.6,0,.9,2.8,4.2,M.hp);box(g,29.9,29.7,1.3,12.2,.6,.8,M.hp);box(g,42.1,28.6,0,.9,2.8,4.2,M.hp);
+box(g,28,28.2,4.2,16,3.6,.6,M.hp);grain(g,28,28.2,4.8,16,3.6,"x",3,"rgba(170,120,40,.45)");
+},
+function(g){ /* shelving */
+box(g,52,.2,0,.8,4,20.4,M.oak);
+[.4,5.4,10.4,15.4].forEach(function(z,i){box(g,52.8,.2,z,8.4,4,.5,M.oak);z+=.5;
+if(i===0){var cs=[M.sage,M.bw,M.tim,M.hp,M.dk,M.sage,M.my,M.tim,M.oak],x=53.1;cs.forEach(function(m,k){box(g,x,1,z,.72,2.7,3+(k*5%3)*.4,m);x+=.8})}
+if(i===1){bowl(g,55,2.2,z,1.4,1,M.bw);bowl(g,58.8,2.2,z,1.7,1.1,M.my)}
+if(i===2){box(g,53.6,1,z,3.3,2.7,.45,M.sage);box(g,53.8,1.1,z+.45,3,2.5,.45,M.tim);box(g,53.5,1,z+.9,3.4,2.7,.45,M.hp);box(g,58,1.2,z,2.3,2.3,2.1,M.st)}
+if(i===3){box(g,55.6,1.4,z,1.6,1.6,1.7,M.tim);leaves(g,56.4,2.2,z+1.8,5,.8)}});
+box(g,52,.2,20.4,10,4,.5,M.oak);box(g,61.2,.2,0,.8,4,20.4,M.oak);
+},
+function(g){ /* cabinet under restoration */
+box(g,.8,2.3,0,4.8,8.4,1.2,M.dk);box(g,.6,2,1.2,5.4,9,15.6,M.bw);
+[[2.6,6.3],[6.7,10.4]].forEach(function(r){poly(g,[[6.02,r[0],2.2],[6.02,r[1],2.2],[6.02,r[1],16],[6.02,r[0],16]],"#56402F");poly(g,[[6.03,r[0]+.55,3.1],[6.03,r[1]-.55,3.1],[6.03,r[1]-.55,15.1],[6.03,r[0]+.55,15.1]],"#4A3424")});
+[6.05,6.95].forEach(function(y){var q=P(6.05,y,9.2).split(",");el("circle",{cx:q[0],cy:q[1],r:1.6,fill:"#E1B866",stroke:"#3B2A20","stroke-width":.6},g)});
+box(g,.4,1.8,16.8,5.8,9.4,.9,M.bw);
+poly(g,[[6.04,2.2,1.4],[6.04,5,1.4],[6.04,4.2,3.2]],"#E1B866");
+},
+function(g){ /* saw horses + plank */
+[13,21].forEach(function(xc){slant(g,[xc-1.6,26.8,0],[xc-.35,26.8,6.6],.35,M.tim);slant(g,[xc+1.6,26.8,0],[xc+.35,26.8,6.6],.35,M.tim);slant(g,[xc-1.6,31.4,0],[xc-.35,31.4,6.6],.35,M.tim);slant(g,[xc+1.6,31.4,0],[xc+.35,31.4,6.6],.35,M.tim);box(g,xc-.6,26,6.6,1.2,6.2,.8,M.tim)});
+box(g,9.5,27.6,7.4,15,2.6,.5,M.oak);grain(g,9.5,27.6,7.9,15,2.6,"x",2,"rgba(150,110,60,.45)");
+ln(g,[16.2,27.8,7.92],[16.2,30,7.92],"#3B2A20",.9);ln(g,[18.7,27.8,7.92],[18.7,30,7.92],"#3B2A20",.9);
+}];
+var ORDER=[5,1,0,6,2,4,3],PIN={0:[4.2,24,12],1:[18,3.5,19.5],2:[36,20,10.8],3:[36,30,7.6],4:[57,2,23.5],5:[3.3,6.5,20.6],6:[17,29,10.8]};
+
+var OBJ=[
+{t:"How we work",s:"The workbench",d:"Every piece starts here: hand-cut joinery where it shows, machines for the heavy lifting, and plenty of test fits. We only build two or three commissions at a time, so yours gets the bench to itself.",li:["Hand-cut dovetails and tenons on show surfaces","Hardwax-oil finishes you can refresh at home","Workshop visits by appointment, Tue–Sat"]},
+{t:"Timber selection",s:"The timber rack",d:"We work almost entirely in Tasmanian species, bought from small local mills and air-dried before we use it. You choose the actual boards for your piece.",tim:1},
+{t:"Dining tables",s:"A finished table",d:"Made to measure for your room and the way you eat — four at a round table or twelve along a long one. Solid tops, mortise-and-tenon bases, finished in hardwearing oil.",li:["Seats 4–12, lengths up to 3.2 m","Blackwood, Tasmanian oak or myrtle","Usually 10–14 weeks on the bench"],p:"From $4,800 for a 1.8 m table"},
+{t:"Benches & seating",s:"The Huon pine bench",d:"Dining benches, hall benches and window seats — often made alongside a table so the timber matches board for board.",li:["Dining benches from $1,350","Hall benches with a shoe shelf from $1,100","Cushion tops by a local upholsterer"]},
+{t:"Built-ins",s:"The shelving",d:"Bookshelves, alcove cabinets, window seats and wardrobes, measured, drawn and installed by us. We scribe everything to your walls, so crooked old houses are welcome.",li:["Measure-and-draw visit included in the quote","Installed across northern Tasmania","Painted or solid-timber finishes"],p:"From $2,400 per linear metre"},
+{t:"Restorations",s:"The old cabinet",d:"Old furniture with good bones. We reglue loose joints, make missing parts in matching timber and refinish by hand — keeping the marks that tell its story.",li:["Send photos for a first opinion","Traditional hide glue, shellac and oil","Most jobs take 3–8 weeks"],p:"Quoted once we've seen the piece"},
+{t:"Small pieces",s:"The saw horses",d:"Offcuts too good to burn become chopping boards, stools and serving boards, made in small batches between commissions.",li:["End-grain chopping boards from $180","Three-legged stools from $420","Serving boards from $95"]}];
+var TIM=[["Blackwood","Golden to chocolate brown, often with a ripple figure. Our favourite for tables and cabinets.",M.bw],["Tasmanian oak","Pale straw to light brown, straight-grained and hard-wearing. Good value for big surfaces.",M.oak],["Huon pine","Buttery yellow and fragrant. Very slow-growing, so we use recovered stock for accents and small pieces.",M.hp],["Myrtle","Pink-to-red heartwood with a fine, even texture. Lovely for drawer fronts and boxes.",M.my]];
+var NAMES=["Workbench","Timber rack","Dining table","Bench","Shelving","Cabinet","Saw horses"];
+
+function body(i){var o=OBJ[i],h="<p>"+o.d+"</p>";
+if(o.tim)h+='<ul class="tims">'+TIM.map(function(t){return"<li>"+swatch(t[2])+"<span><b>"+t[0]+"</b>"+t[1]+"</span></li>"}).join("")+"</ul>";
+if(o.li)h+='<ul class="ticks">'+o.li.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul>";
+if(o.p)h+='<p class="price">'+o.p+' <small>· sample price</small></p>';return h}
+function swatch(m){var s=document.createElementNS(NS,"svg"),g=el("g",{class:"iso"},s);BB=[1e9,1e9,-1e9,-1e9];box(g,0,0,0,5,2.2,1.2,m);grain(g,0,0,1.2,5,2.2,"x",2,"rgba(59,42,32,.3)");
+s.setAttribute("viewBox",(BB[0]-3)+" "+(BB[1]-3)+" "+(BB[2]-BB[0]+6)+" "+(BB[3]-BB[1]+6));s.setAttribute("aria-hidden","true");s.setAttribute("width","58");BB=null;return s.outerHTML}
+
+/* ---------- build the scene ---------- */
+var svg=$("#iso"),world=$("#world"),vp=$("#vp"),pinsEl=$("#pins"),card=$("#card"),VB;
+(function(){
+var defs=el("defs",{},svg),sky=el("linearGradient",{id:"sky",x1:0,y1:0,x2:0,y2:1},defs);el("stop",{offset:0,"stop-color":"#FBF6EA"},sky);el("stop",{offset:1,"stop-color":"#DCE6D8"},sky);
+var peg=el("pattern",{id:"peg",width:10,height:10,patternUnits:"userSpaceOnUse",patternTransform:"matrix(-0.866 0.5 0 -1 0 0)"},defs);el("circle",{cx:5,cy:5,r:1,fill:"#B18B58"},peg);
+BB=[1e9,1e9,-1e9,-1e9];
+room(el("g",{},svg));
+var groups=[];ORDER.forEach(function(i){var g=el("g",{class:"obj","data-i":i},svg);DRAW[i](g);groups[i]=g});
+VB=[BB[0]-12,BB[1]-14,BB[2]-BB[0]+24,BB[3]-BB[1]+26];BB=null;
+svg.setAttribute("viewBox",VB.join(" "));vp.style.aspectRatio=VB[2]+" / "+VB[3];
+OBJ.forEach(function(o,i){var q=P(PIN[i][0],PIN[i][1],PIN[i][2]).split(",").map(Number);o.fx=(q[0]-VB[0])/VB[2];o.fy=(q[1]-VB[1])/VB[3];o.g=groups[i];
+var b=document.createElement("button");b.type="button";b.className="pin";b.style.left=(o.fx*100).toFixed(2)+"%";b.style.top=(o.fy*100).toFixed(2)+"%";
+b.innerHTML='<span class="pn">'+(i+1)+'</span><span class="pl">'+NAMES[i]+"</span>";b.setAttribute("aria-label",(i+1)+". "+NAMES[i]+" — "+o.t);b.addEventListener("click",function(){open(i,b)});pinsEl.appendChild(b);o.pin=b;
+groups[i].addEventListener("click",function(){open(i,b)});});
+/* list with small iso icons */
+var ol=$("#objs");
+OBJ.forEach(function(o,i){var li=document.createElement("li"),b=document.createElement("button"),ic=document.createElementNS(NS,"svg"),g=el("g",{class:"iso"},ic);
+BB=[1e9,1e9,-1e9,-1e9];DRAW[i](g);ic.setAttribute("viewBox",(BB[0]-6)+" "+(BB[1]-6)+" "+(BB[2]-BB[0]+12)+" "+(BB[3]-BB[1]+12));BB=null;ic.setAttribute("class","ic");ic.setAttribute("aria-hidden","true");
+b.type="button";b.className="ob";b.setAttribute("aria-expanded","false");b.innerHTML='<span class="n" aria-hidden="true">'+(i+1)+"</span>";b.appendChild(ic);
+var tx=document.createElement("span");tx.className="ot";tx.innerHTML="<b>"+o.t+"</b><small>"+o.s+"</small>";b.appendChild(tx);
+var pn=document.createElement("div");pn.className="op";pn.id="op"+i;pn.hidden=true;pn.innerHTML=body(i);
+b.addEventListener("click",function(){if(phone())toggle(i);else open(i,b)});
+li.appendChild(b);li.appendChild(pn);ol.appendChild(li);o.btn=b;o.panel=pn});
+})();
+
+function phone(){return matchMedia("(max-width:759px)").matches}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+var cur=-1,opener=null;
+function open(i,from){
+if(phone())return;cur=i;opener=from||opener;var o=OBJ[i],z=vp.clientWidth<760?1.55:1.85,tx=.3,ty=.5;
+var X=clamp(tx-z*o.fx,1-z,0),Y=clamp(ty-z*o.fy,1-z,0);
+world.style.transform="translate("+(X*100).toFixed(2)+"%,"+(Y*100).toFixed(2)+"%) scale("+z+")";world.style.setProperty("--z",z);
+world.classList.add("dim");OBJ.forEach(function(p,k){p.g.classList.toggle("on",k===i);p.pin.classList.toggle("on",k===i);p.btn.setAttribute("aria-expanded",String(k===i))});
+$("#cardK").textContent=(i+1)+" of 7 · "+o.s;$("#cardT").textContent=o.t;$("#cardB").innerHTML=body(i);$("#cardNext").textContent="Next: "+NAMES[(i+1)%7]+" →";
+card.hidden=false;requestAnimationFrame(function(){card.classList.add("show")});card.scrollTop=0;card.focus({preventScroll:true});
+}
+function close(){if(cur<0)return;cur=-1;world.style.transform="";world.style.setProperty("--z",1);world.classList.remove("dim");
+OBJ.forEach(function(p){p.g.classList.remove("on");p.pin.classList.remove("on");p.btn.setAttribute("aria-expanded","false")});
+card.classList.remove("show");setTimeout(function(){if(cur<0)card.hidden=true},rm()?0:450);if(opener&&opener.focus)opener.focus({preventScroll:true})}
+$("#cardX").addEventListener("click",close);$("#cardBack").addEventListener("click",close);
+$("#cardNext").addEventListener("click",function(){var n=(cur+1)%7;open(n,OBJ[n].pin)});
+vp.addEventListener("keydown",function(e){if(cur<0)return;if(e.key==="Escape"){e.preventDefault();close()}else if(e.key==="ArrowRight"||e.key==="ArrowLeft"){if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;e.preventDefault();var n=(cur+(e.key==="ArrowRight"?1:6))%7;open(n,OBJ[n].pin)}});
+function toggle(i){OBJ.forEach(function(o,k){var on=k===i&&o.btn.getAttribute("aria-expanded")!=="true";o.btn.setAttribute("aria-expanded",String(on));o.panel.hidden=!on})}
+matchMedia("(max-width:759px)").addEventListener("change",function(){close();OBJ.forEach(function(o){o.panel.hidden=true;o.btn.setAttribute("aria-expanded","false")})});
+
+/* ---------- menu ---------- */
+var mb=$(".menu"),nav=$("#nav");mb.addEventListener("click",function(){var o=mb.getAttribute("aria-expanded")!=="true";mb.setAttribute("aria-expanded",String(o));nav.classList.toggle("open",o)});
+nav.addEventListener("click",function(e){if(e.target.closest("a")){mb.setAttribute("aria-expanded","false");nav.classList.remove("open")}});
+
+/* ---------- CSS 3D joint explorer ---------- */
+function sub(a,b){return[a[0]-b[0],a[1]-b[1],a[2]-b[2]]}function add(a,b){return[a[0]+b[0],a[1]+b[1],a[2]+b[2]]}function dot(a,b){return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]}
+function cross(a,b){return[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]}function len(a){return Math.hypot(a[0],a[1],a[2])}function nrm(a){var l=len(a)||1;return[a[0]/l,a[1]/l,a[2]/l]}
+var LIGHT=nrm([-.45,-.85,.55]);
+function face(par,O,U,V,rgb,g,n,clip,dim){var lu=len(U),lv=len(V),u=nrm(U),v=nrm(V),w=cross(u,v),e=document.createElement("i");
+e.className="f "+(Math.abs(dot(n,g))>.7?"eg":Math.abs(dot(u,g))>=Math.abs(dot(v,g))?"gx":"gy");
+var k=(.5+.5*Math.max(0,dot(n,LIGHT)))*(dim?.6:1);
+e.style.cssText="width:"+lu.toFixed(2)+"px;height:"+lv.toFixed(2)+"px;background-color:rgb("+rgb.map(function(c){return Math.round(c*k)}).join(",")+");transform:matrix3d("+[u[0],u[1],u[2],0,v[0],v[1],v[2],0,w[0],w[1],w[2],0,O[0],O[1],O[2],1].map(function(x){return+x.toFixed(4)}).join(",")+")"+(clip?";clip-path:polygon("+clip+")":"");par.appendChild(e)}
+function prism(par,pr,rgb,g){var p=pr.p,E=pr.e,n=p.length,Eu=nrm(E),nw=[0,0,0],i;
+for(i=0;i<n;i++){var a=p[i],b=p[(i+1)%n];nw=add(nw,[(a[1]-b[1])*(a[2]+b[2]),(a[2]-b[2])*(a[0]+b[0]),(a[0]-b[0])*(a[1]+b[1])])}
+var s=dot(nw,Eu)>0?1:-1;
+for(i=0;i<n;i++){var A=p[i],V=sub(p[(i+1)%n],A),N=nrm(cross(nrm(V),Eu)).map(function(x){return x*s});face(par,A,E,V,rgb,g,N,null,pr.inner&&pr.inner.indexOf(i)>-1)}
+cap(par,p,Eu.map(function(x){return-x}),Eu,rgb,g);cap(par,p.map(function(q){return add(q,E)}),Eu,Eu,rgb,g)}
+function cap(par,p,N,Eu,rgb,g){var u=Math.abs(Eu[0])>.9?[0,0,1]:[1,0,0],v=Math.abs(Eu[1])>.9?[0,0,1]:[0,1,0];
+var A=p.map(function(q){return dot(q,u)}),B=p.map(function(q){return dot(q,v)}),a0=Math.min.apply(0,A),a1=Math.max.apply(0,A),b0=Math.min.apply(0,B),b1=Math.max.apply(0,B);
+var O=add(add(p[0],u.map(function(x){return x*(a0-A[0])})),v.map(function(x){return x*(b0-B[0])}));
+face(par,O,u.map(function(x){return x*(a1-a0)}),v.map(function(x){return x*(b1-b0)}),rgb,g,N,p.map(function(q,k){return(A[k]-a0).toFixed(1)+"px "+(B[k]-b0).toFixed(1)+"px"}).join(","))}
+function rY(x0,x1,z0,z1,y){return[[x0,y,z0],[x1,y,z0],[x1,y,z1],[x0,y,z1]]}
+function geo(j){var T=40,L=190;
+if(j===0){var s=T/6,A=[{p:[[-L,-80,0],[-L,80,0],[-L,80,T],[-L,-80,T]],e:[L,0,0]}],b=[[0,-80,-L],[0,-80,0]],pv0=-80,pvT=-80;
+[[-70,-30],[-20,20],[30,70]].forEach(function(t){A.push({p:[[0,pv0,0],[0,t[0]+s,0],[0,t[0],T],[0,pvT,T]],e:[T,0,0]});b.push([0,t[0]+s,0],[0,t[0],T],[0,t[1],T],[0,t[1]-s,0]);pv0=t[1]-s;pvT=t[1]});
+A.push({p:[[0,pv0,0],[0,80,0],[0,80,T],[0,pvT,T]],e:[T,0,0]});b.push([0,80,0],[0,80,-L]);return{A:A,B:[{p:b,e:[T,0,0]}],ga:[1,0,0],gb:[0,0,1],off:[190,0,0]}}
+if(j===2)return{A:[{p:[[-L,-80,0],[T,-80,0],[T,-48,0],[0,-48,0],[0,-16,0],[T,-16,0],[T,16,0],[0,16,0],[0,48,0],[T,48,0],[T,80,0],[-L,80,0]],e:[0,0,T]}],
+B:[{p:[[0,-80,-L],[0,-80,0],[0,-48,0],[0,-48,T],[0,-16,T],[0,-16,0],[0,16,0],[0,16,T],[0,48,T],[0,48,0],[0,80,0],[0,80,-L]],e:[T,0,0]}],ga:[1,0,0],gb:[0,0,1],off:[190,0,0]};
+if(j===1)return{A:[{p:rY(-60,0,0,60,-130),e:[0,20,0]},{p:[[-60,-110,0],[0,-110,0],[0,-110,22],[-40,-110,22],[-40,-110,38],[0,-110,38],[0,-110,60],[-60,-110,60]],e:[0,60,0],inner:[2,3,4]},{p:rY(-60,0,0,60,-50),e:[0,180,0]}],
+B:[{p:[[0,-120,10],[0,-40,10],[0,-40,50],[0,-120,50]],e:[220,0,0]},{p:[[-40,-110,22],[-40,-50,22],[-40,-50,38],[-40,-110,38]],e:[40,0,0]}],ga:[0,1,0],gb:[1,0,0],off:[190,0,0]};
+return{A:[{p:rY(-60,0,0,20,-100),e:[0,80,0],inner:[2]},{p:rY(-60,0,40,60,-100),e:[0,80,0],inner:[0]},{p:rY(-60,0,0,60,-20),e:[0,180,0]}],
+B:[{p:[[0,-100,0],[0,-20,0],[0,-20,60],[0,-100,60]],e:[220,0,0]},{p:[[-60,-100,20],[-60,-20,20],[-60,-20,40],[-60,-100,40]],e:[60,0,0]}],ga:[0,1,0],gb:[1,0,0],off:[0,-190,0]}}
+var JOINTS=[["Dovetail","Drawers, boxes and carcase corners","Flared tails lock between pins, so the joint only comes apart one way — ideal wherever a drawer front gets pulled every day.","Every drawer we make, and the corners of blanket boxes."],
+["Mortise & tenon","Table bases, chairs, doors and frames","A tenon on the rail fits a snug pocket — the mortise — cut into the leg. Lots of glue surface and great resistance to racking.","Every table base. The tenons end up hidden inside the legs."],
+["Finger joint","Boxes, trays and drawer carcasses","Square fingers interlock evenly for a big glue area and a crisp, modern look. Quick to cut accurately with a jig.","Tool boxes, keepsake boxes and serving trays."],
+["Bridle joint","Frames, trestles and table bases","An open slot takes a full-width tongue. Easy to cut, very strong in a frame — and handsome left exposed.","Trestle bases and mirror frames, with the joint on show."]];
+var orbit=$("#orbit"),stage=$("#stage"),asmB=$("#asm"),G,pA,pB,jc=0,on=false,ry=-38,rx=-22,sc=1;
+function view(){orbit.style.transform="scale("+sc+") rotateX("+rx+"deg) rotateY("+ry+"deg)"}
+function fit(){sc=Math.min(1,stage.clientWidth/600);view()}
+function build(j){jc=j;G=geo(j);orbit.textContent="";var pts=[];G.A.concat(G.B).forEach(function(pr){pr.p.forEach(function(q){pts.push(q,add(q,pr.e))})});
+var mn=[0,1,2].map(function(k){return Math.min.apply(0,pts.map(function(q){return q[k]}))}),mx=[0,1,2].map(function(k){return Math.max.apply(0,pts.map(function(q){return q[k]}))}),c=mn.map(function(v,k){return(v+mx[k])/2});
+var ctr=document.createElement("div");ctr.className="ctr";ctr.style.transform="translate3d("+(-c[0])+"px,"+(-c[1])+"px,"+(-c[2])+"px)";
+var sh=document.createElement("i");sh.className="f shadow";var sw=mx[0]-mn[0]+200,sd=mx[2]-mn[2]+200;sh.style.cssText="width:"+sw+"px;height:"+sd+"px;transform:matrix3d(1,0,0,0,0,0,1,0,0,-1,0,0,"+(c[0]-sw/2)+","+(mx[1]+1)+","+(c[2]-sd/2)+",1)";ctr.appendChild(sh);
+pA=document.createElement("div");pB=document.createElement("div");pA.className=pB.className="part";ctr.appendChild(pA);ctr.appendChild(pB);orbit.appendChild(ctr);
+G.A.forEach(function(pr){prism(pA,pr,[112,80,58],G.ga)});G.B.forEach(function(pr){prism(pB,pr,[228,188,108],G.gb)});
+var J=JOINTS[j];$("#jinfo").innerHTML="<h3>"+J[0]+"</h3><dl><dt>Used for</dt><dd>"+J[1]+"</dd><dt>Why</dt><dd>"+J[2]+"</dd><dt>In our work</dt><dd>"+J[3]+"</dd></dl>";
+$$(".jb").forEach(function(b){b.setAttribute("aria-pressed",String(+b.dataset.j===j))});set(false,true)}
+function set(v,quiet){on=v;var o=G.off,h=function(s){return v?"translate3d(0,0,0)":"translate3d("+o[0]*s/2+"px,"+o[1]*s/2+"px,"+o[2]*s/2+"px)"};pA.style.transform=h(-1);pB.style.transform=h(1);
+asmB.setAttribute("aria-pressed",String(v));asmB.textContent=v?"Take apart":"Assemble";
+if(!quiet){$("#jsay").textContent=(v?"Assembled: ":"Taken apart: ")+JOINTS[jc][0]+".";if(v&&!rm())setTimeout(function(){var t=$("#tap");t.classList.remove("hit");void t.offsetWidth;t.classList.add("hit")},930)}}
+asmB.addEventListener("click",function(){set(!on)});
+$$(".jb").forEach(function(b){b.addEventListener("click",function(){build(+b.dataset.j)})});
+$("#rotL").addEventListener("click",function(){ry-=30;view()});$("#rotR").addEventListener("click",function(){ry+=30;view()});
+var drag=null;
+stage.addEventListener("pointerdown",function(e){drag={x:e.clientX,y:e.clientY,ry:ry,rx:rx};stage.setPointerCapture(e.pointerId)});
+stage.addEventListener("pointermove",function(e){if(!drag)return;ry=drag.ry+(e.clientX-drag.x)*.45;rx=clamp(drag.rx-(e.clientY-drag.y)*.3,-70,-4);view()});
+["pointerup","pointercancel"].forEach(function(t){stage.addEventListener(t,function(){drag=null})});
+build(0);fit();
+if("ResizeObserver" in window)new ResizeObserver(fit).observe(stage);else addEventListener("resize",fit);
+
+/* ---------- tape numbers ---------- */
+var nums=$("#nums");function tape(){var w=nums.clientWidth,h="";for(var i=1;i*60<w;i++)h+='<span style="left:'+i*60+'px">'+i*10+"</span>";nums.innerHTML=h}
+tape();addEventListener("resize",tape);
+})();
+</script>
+</body>
+</html>

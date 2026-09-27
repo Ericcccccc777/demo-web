@@ -1,0 +1,8 @@
+{
+  "id": "009",
+  "tech": ["Canvas 2D", "SVG", "CSS 3D", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["game", "booking", "map"],
+  "interaction": "Pick one of six tap handles, then press and hold (or hold Space) to pour a pint into a canvas glass with rising bubbles and a foam head; let go at the gold line for a pour rating with ABV and style notes. Also: flip-over beer-mat trivia and a table-request form that ends in a demo notice.",
+  "fonts": ["Playfair Display", "Libre Franklin"],
+  "notes": ""
+}

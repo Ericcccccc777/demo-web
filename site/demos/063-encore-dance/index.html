@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="063">
+<meta name="demo:brand" content="Encore Dance Academy">
+<title>Encore Dance Academy — dance classes in Norwood, Adelaide</title>
+<meta name="description" content="A fictional dance school in Norwood, Adelaide, teaching ballet, jazz, hip hop, contemporary and tap for ages 3 to adult.">
+<meta name="theme-color" content="#0B0710">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Righteous&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+@property --gel{syntax:"<color>";inherits:true;initial-value:#FFD9A0}
+:root{--gel:#FFD9A0;--velvet:#0B0710;--velvet-2:#170d1c;--crimson:#8C1C3A;--mag:#FF2D95;--gold:#FFC857;--warm:#FFF4E2;--dim:#cbbfd0;--disp:"Righteous","Arial Rounded MT Bold",system-ui,sans-serif;--sans:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;transition:--gel .9s ease}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:90px;scroll-behavior:smooth;background:var(--velvet)}
+body{margin:0;color:var(--warm);font:400 16.5px/1.65 var(--sans);background:radial-gradient(120% 60% at 50% 0,#1d1024,transparent 60%),var(--velvet);overflow-x:clip}
+a{color:inherit}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
+.spot{position:fixed;left:0;top:0;width:820px;height:820px;margin:-410px 0 0 -410px;z-index:0;pointer-events:none;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,#fff6e4 30%,color-mix(in srgb,var(--gel) 42%,transparent)),color-mix(in srgb,var(--gel) 30%,transparent) 34%,color-mix(in srgb,var(--gel) 12%,transparent) 60%,transparent 82%);will-change:transform}
+.wash{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(90% 60% at 50% 110%,color-mix(in srgb,var(--gel) 10%,transparent),transparent 70%)}
+main,.hero,.desk,.foot{position:relative;z-index:1}
+
+/* ---------- hero stage ---------- */
+.hero{min-height:min(100svh,940px);display:flex;flex-direction:column;overflow:hidden;isolation:isolate}
+.valance{position:absolute;left:0;right:0;top:0;height:62px;z-index:4;background:radial-gradient(circle at 50% -30%,#a1284b 0,#8C1C3A 45%,#4b0c1e 62%,transparent 63%) 0 0/110px 74px repeat-x,linear-gradient(#5c1127,#8C1C3A 60%,transparent 60%) 0 0/100% 40px no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.55))}
+.valance::after{content:"";position:absolute;left:0;right:0;top:36px;height:4px;background:repeating-linear-gradient(90deg,var(--gold) 0 6px,#b8862a 6px 9px)}
+.leg{position:absolute;top:0;bottom:0;width:50.5%;z-index:3;background:linear-gradient(rgba(0,0,0,.35),transparent 18%,transparent 75%,rgba(0,0,0,.5)),repeating-linear-gradient(90deg,#4d0b1d 0,#7a1733 2.2%,#a42c52 4%,#8C1C3A 5.6%,#5a0f24 8%);transition:transform 1.25s cubic-bezier(.65,.02,.2,1);box-shadow:0 0 40px rgba(0,0,0,.7)}
+.leg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:repeating-linear-gradient(90deg,var(--gold) 0 3px,transparent 3px 7px);opacity:.85;-webkit-mask:linear-gradient(transparent,#000);mask:linear-gradient(transparent,#000)}
+.leg.l{left:0;transform-origin:0 50%}
+.leg.r{right:0;transform-origin:100% 50%}
+.leg::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,color-mix(in srgb,var(--gel) 22%,transparent));mix-blend-mode:screen}
+.leg.r::before{background:linear-gradient(-90deg,transparent 60%,color-mix(in srgb,var(--gel) 22%,transparent))}
+.open .leg{transform:scaleX(.11)}
+.top{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:70px 6vw 0}
+.prog{display:none;gap:18px;font:500 13px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.prog a{text-decoration:none;color:var(--dim)}
+.prog a:hover{color:var(--gold)}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:2px solid var(--mag);background:var(--mag);color:#fff;font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer;box-shadow:0 0 24px rgba(255,45,149,.45);transition:transform .2s,box-shadow .2s}
+.pill:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(255,45,149,.7)}
+.pill.line{background:transparent;border-color:rgba(255,244,226,.6);box-shadow:none;color:var(--warm)}
+.stage{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px 12vw 0}
+.kick{font:600 12.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.marquee{position:relative;margin:18px 0 20px;padding:22px 26px 26px;max-width:min(980px,100%)}
+.marquee svg{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);overflow:visible;filter:drop-shadow(0 0 5px rgba(255,200,87,.9))}
+.marquee rect{fill:none;stroke:#ffe6a3;stroke-width:7;stroke-linecap:round;stroke-dasharray:0 21;animation:chase 1.4s linear infinite}
+@keyframes chase{to{stroke-dashoffset:-21}}
+h1{font:400 clamp(46px,8.4vw,124px)/.95 var(--disp);letter-spacing:.01em;overflow-wrap:anywhere;text-wrap:balance;color:#ffe9b8;text-shadow:0 0 18px rgba(255,200,87,.55),0 0 42px color-mix(in srgb,var(--gel) 55%,transparent),0 3px 0 #7a4a10}
+.tag{max-width:36em;font-size:clamp(16px,1.4vw,19px);color:#efe3d6}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.floor{position:relative;z-index:2;height:170px;margin-top:26px;perspective:420px}
+.boards{position:absolute;left:-10%;right:-10%;bottom:0;height:220px;transform:rotateX(62deg);transform-origin:50% 100%;background:linear-gradient(transparent,rgba(11,7,16,.2)),radial-gradient(40% 70% at 50% 20%,color-mix(in srgb,var(--gel) 30%,transparent),transparent 70%),repeating-linear-gradient(90deg,#2a1810 0 58px,#1e110b 58px 60px),#24150e}
+.eq{position:absolute;left:50%;bottom:40px;transform:translateX(-50%);width:min(620px,78vw);height:110px;display:flex;align-items:flex-end;gap:5px}
+.eq i{flex:1;height:100%;border-radius:4px 4px 1px 1px;background:linear-gradient(to top,color-mix(in srgb,var(--gel) 95%,#fff),color-mix(in srgb,var(--gel) 60%,transparent));transform-origin:50% 100%;transform:scaleY(.2);box-shadow:0 0 12px color-mix(in srgb,var(--gel) 50%,transparent)}
+.foots{position:absolute;left:8%;right:8%;bottom:10px;height:10px;background:radial-gradient(circle,#fff6d8 0 3px,color-mix(in srgb,var(--gel) 70%,transparent) 4px,transparent 8px) 0 50%/44px 10px repeat-x}
+
+/* ---------- lighting desk ---------- */
+.desk{position:sticky;top:0;z-index:20;background:rgba(14,8,18,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-block:1px solid rgba(255,200,87,.35)}
+.desk-in{display:flex;align-items:center;gap:14px;width:min(1180px,100%);margin:0 auto;padding:8px 18px}
+.desk-l{flex:none;font:600 11.5px/1.2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:none}
+@media (min-width:1300px){.desk .desk-l{display:block}}
+.gels{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;padding:4px 2px;-webkit-mask:linear-gradient(90deg,#000 88%,transparent);mask:linear-gradient(90deg,#000 88%,transparent)}
+.gels::-webkit-scrollbar{display:none}
+.gel{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 15px;border-radius:999px;border:1.5px solid rgba(255,244,226,.35);background:rgba(255,255,255,.04);color:var(--warm);font:500 14.5px/1 var(--sans);cursor:pointer;transition:background-color .3s,border-color .3s,color .3s}
+.gel i{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
+.gel:hover{border-color:var(--c)}
+.gel[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:#170a14}
+.gel[aria-pressed="true"] i{background:#170a14;box-shadow:none}
+.mini{flex:none;display:none;align-items:flex-end;gap:3px;width:64px;height:28px}
+.mini i{flex:1;height:100%;background:var(--gel);border-radius:2px;transform-origin:50% 100%;transform:scaleY(.2)}
+.rhythm{max-width:210px;position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;flex:none;min-width:0;font:500 13px/1.35 var(--sans);color:var(--dim);max-width:240px}
+.rhythm b{color:var(--warm);font-weight:600}
+
+/* ---------- acts ---------- */
+.act{padding:84px 0 40px}
+.act-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px;margin-bottom:12px}
+.act-n{font:400 18px/1 var(--disp);letter-spacing:.14em;color:var(--gold);padding:8px 12px;border:1.5px solid var(--gold);border-radius:4px}
+.act-h h2{font:400 clamp(42px,6.4vw,84px)/1 var(--disp);letter-spacing:.01em;text-shadow:0 0 30px color-mix(in srgb,var(--gel) 40%,transparent)}
+.act-sub{max-width:40em;color:var(--dim);font-size:17px;margin-bottom:34px}
+.hint{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;color:var(--gold)}
+.style-note{display:grid;gap:4px 28px;padding:22px 0 24px;border-top:1px solid rgba(255,244,226,.15)}
+.style-note h3{font:400 30px/1.1 var(--disp);color:var(--gel)}
+.style-note p{color:#e9dccf}
+.style-note .wear{font-size:14.5px;color:var(--dim)}
+.classes{display:grid;gap:0;border-top:1px solid rgba(255,244,226,.15)}
+.cl{display:grid;grid-template-columns:14px 1fr auto;gap:2px 14px;align-items:center;padding:16px 4px;border-bottom:1px solid rgba(255,244,226,.12);transition:opacity .4s}
+.cl .dot{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 12px var(--c)}
+.cl b{font:600 17.5px/1.3 var(--sans)}
+.cl .meta{grid-column:2;font-size:14.5px;color:var(--dim)}
+.cl .fee{grid-row:1/3;grid-column:3;text-align:right;font:400 22px/1 var(--disp);color:var(--gold)}
+.cl .fee small{display:block;font:400 12px/1.4 var(--sans);color:var(--dim)}
+.cl.off{display:none}
+.sample{margin-top:14px;font-size:13.5px;color:var(--dim)}
+
+.tt{display:grid;gap:18px}
+.day h3{font:400 22px/1 var(--disp);letter-spacing:.06em;color:var(--gold);padding-bottom:8px;border-bottom:1.5px solid rgba(255,200,87,.4);margin-bottom:8px}
+.blk{display:grid;grid-template-columns:72px 1fr;gap:0 10px;padding:9px 10px 9px 12px;margin-bottom:6px;border-radius:8px;background:rgba(255,255,255,.04);border-left:4px solid var(--c);transition:opacity .4s,background-color .4s,box-shadow .4s}
+.blk time{font:600 14px/1.5 var(--sans);color:var(--warm)}
+.blk span{font:500 14.5px/1.35 var(--sans)}
+.blk small{grid-column:2;font-size:12.5px;color:var(--dim)}
+.blk.hl{background:color-mix(in srgb,var(--c) 16%,transparent);box-shadow:0 0 22px color-mix(in srgb,var(--c) 28%,transparent)}
+.blk.off{display:none}
+.none{font-size:14px;color:var(--dim);padding:6px 0}
+
+.cast{display:grid;gap:18px}
+.t{display:grid;grid-template-columns:78px 1fr;gap:16px;align-items:center;padding:20px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,244,226,.1);transition:opacity .45s,transform .45s}
+.t svg{width:78px;height:96px;color:var(--c);filter:drop-shadow(0 0 12px color-mix(in srgb,var(--c) 60%,transparent));background:radial-gradient(closest-side,color-mix(in srgb,var(--c) 22%,transparent),transparent);border-radius:50%}
+.t svg path,.t svg circle{fill:none;stroke:currentColor;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.t svg circle{fill:currentColor;stroke:none}
+.t h3{font:400 26px/1.1 var(--disp)}
+.t .role{font:600 12px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:6px 0 8px}
+.t p{font-size:15px;color:#e5d9cd}
+.t.off{opacity:.3;transform:scale(.98)}
+
+.ticket{display:grid;border-radius:18px;overflow:hidden;background:#fff4e2;color:#1a0d14;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,200,87,.5)}
+.tk-main{position:relative;padding:28px 24px;background:radial-gradient(90% 120% at 0 0,rgba(255,45,149,.16),transparent 60%),#fff4e2}
+.tk-main .kick{color:#9a1447}
+.tk-main h3{font:400 clamp(40px,5vw,64px)/1 var(--disp);color:var(--crimson);margin:8px 0 12px}
+.tk-facts{display:grid;gap:10px;margin-top:16px}
+.tk-facts div{display:grid;grid-template-columns:96px 1fr;gap:10px;border-top:1px dashed rgba(26,13,20,.3);padding-top:10px;font-size:15.5px}
+.tk-facts dt{font:600 12px/1.8 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#6c3a4d}
+.tk-facts dd{margin:0}
+.tk-stub{position:relative;padding:24px;background:var(--crimson);color:#fff4e2;border-top:3px dashed rgba(255,244,226,.6)}
+.tk-stub h4{margin:0 0 10px;font:400 22px/1 var(--disp);color:var(--gold)}
+.tk-stub li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,244,226,.2);font-size:15.5px}
+.tk-stub li b{font:400 20px/1 var(--disp)}
+.count{margin-top:16px;font:400 40px/1 var(--disp);color:var(--gold)}
+.count small{display:block;font:500 13px/1.4 var(--sans);color:#f5dccf;letter-spacing:.06em}
+
+.enrol{display:grid;gap:30px;padding:30px 22px;border-radius:24px;background:linear-gradient(160deg,rgba(140,28,58,.5),rgba(23,13,28,.8));border:1px solid rgba(255,200,87,.35)}
+.enrol h2{font:400 clamp(44px,6vw,80px)/1 var(--disp);color:#ffe9b8;text-shadow:0 0 30px rgba(255,200,87,.45)}
+.steps{display:grid;gap:10px;margin-top:18px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;color:#eadfd3}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#1a0d14;font:400 16px/1 var(--disp)}
+form.f{display:grid;gap:14px}
+.fl label{display:block;margin-bottom:6px;font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.fl input,.fl select{width:100%;min-height:50px;padding:0 14px;border-radius:12px;border:1.5px solid rgba(255,244,226,.35);background:rgba(11,7,16,.65);color:var(--warm);font-size:16px;color-scheme:dark}
+.fl input:focus,.fl select:focus{border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fine{font-size:13.5px;color:var(--dim)}
+.foot{padding:56px 0 64px;border-top:1px solid rgba(255,200,87,.3);margin-top:60px;background:linear-gradient(transparent,rgba(140,28,58,.18))}
+.foot-name{font:400 clamp(34px,5vw,60px)/1 var(--disp);color:#ffe9b8;overflow-wrap:anywhere}
+.fcols{display:grid;gap:18px;margin-top:22px;font-size:15px;color:#e5d9cd}
+.fcols h3{font:600 12px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.fnote{margin-top:24px;font-size:13.5px;color:var(--dim);max-width:60em}
+
+@media (min-width:700px){
+  .cast{grid-template-columns:1fr 1fr}
+  .t{grid-template-columns:110px 1fr;gap:18px}
+  .t svg{width:110px;height:130px}
+  .tt{grid-template-columns:repeat(3,1fr)}
+  .ticket{grid-template-columns:1fr 300px}
+  .tk-stub{border-top:0;border-left:3px dashed rgba(255,244,226,.6)}
+  .fcols{grid-template-columns:repeat(3,1fr)}
+  .rhythm{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}
+  .style-note{grid-template-columns:260px 1fr}
+  .style-note h3{grid-row:span 2}
+}
+@media (min-width:1000px){
+  .prog{display:flex}
+  .mini{display:flex}
+  .gels{-webkit-mask:none;mask:none;flex:initial}
+  .desk-in{justify-content:space-between}
+  .tt{grid-template-columns:repeat(6,1fr);gap:12px}
+  .blk{grid-template-columns:1fr;padding:10px 10px 10px 12px}
+  .blk small{grid-column:1}
+  .blk.off{display:grid;opacity:.22}
+  .enrol{grid-template-columns:1fr 1.1fr;padding:44px;gap:48px}
+  .tk-main{padding:40px 44px}
+  .tk-stub{padding:36px 30px}
+}
+@media (hover:none),(pointer:coarse){.spot{width:640px;height:640px;margin:-320px 0 0 -320px}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  :root{transition:none}
+  .leg{transition:none;transform:scaleX(.11)}
+  .marquee rect{animation:none;stroke-dasharray:0 21}
+  .spot{display:none}
+  .wash{background:radial-gradient(80% 60% at 50% 30%,color-mix(in srgb,var(--gel) 12%,transparent),transparent 75%)}
+  .cl,.blk,.t,.gel,.pill{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="wash" aria-hidden="true"></div>
+<div class="spot" id="spot" aria-hidden="true"></div>
+
+<header class="hero" id="hero">
+<div class="valance" aria-hidden="true"></div>
+<div class="leg l" aria-hidden="true"></div><div class="leg r" aria-hidden="true"></div>
+<div class="top">
+<nav class="prog" aria-label="Programme"><a href="#act1">I · Classes</a><a href="#act2">II · Timetable</a><a href="#act3">III · Teachers</a><a href="#act4">IV · Concert</a></nav>
+<a class="pill" href="#encore" style="margin-left:auto">Book a free trial</a>
+</div>
+<div class="stage">
+<p class="kick">Norwood, Adelaide · ages 3 to adult</p>
+<div class="marquee"><svg aria-hidden="true"><rect width="100%" height="100%" rx="26"/></svg><h1 data-brand>Encore Dance Academy</h1></div>
+<p class="tag">Ballet, jazz, hip hop, contemporary and tap in two sprung-floor studios. Every student takes a bow at the end-of-year concert.</p>
+<div class="ctas"><a class="pill" href="#encore">Book a free trial class</a><a class="pill line" href="#act1">Read the programme</a></div>
+</div>
+<div class="floor" aria-hidden="true"><div class="boards"></div><div class="eq" id="eq"></div><div class="foots"></div></div>
+</header>
+
+<div class="desk" role="region" aria-label="Stage lighting — choose a dance style">
+<div class="desk-in">
+<p class="desk-l">Light the stage</p>
+<div class="gels" id="gels" role="group" aria-label="Dance styles"></div>
+<div class="mini" id="mini" aria-hidden="true"></div>
+<p class="rhythm" id="rhythm" aria-live="polite"><b>All styles</b> · house lights up</p>
+</div>
+</div>
+
+<main>
+<section class="act" id="act1" aria-labelledby="a1">
+<div class="wrap">
+<div class="act-h"><span class="act-n">ACT I</span><h2 id="a1">Classes</h2></div>
+<p class="act-sub">Ten-week terms, small classes, and the same teacher all term. Pick a style on the lighting desk to see just its classes.</p>
+<div class="style-note" id="style-note"><h3 id="sn-h">All five styles</h3><p id="sn-p">From first steps in Baby Ballet to adult hip hop after work — beginners are welcome in every style.</p><p class="wear" id="sn-w">What to wear: comfy clothes you can move in for a trial class. Uniform lists come with enrolment.</p></div>
+<ul class="classes" id="classes"></ul>
+<p class="sample">Sample prices per ten-week term. Siblings save 10%.</p>
+</div>
+</section>
+
+<section class="act" id="act2" aria-labelledby="a2">
+<div class="wrap">
+<div class="act-h"><span class="act-n">ACT II</span><h2 id="a2">Timetable</h2></div>
+<p class="act-sub">Term 4 starts Mon 12 Oct. Studio 1 has the barres and mirrors; Studio 2 has the big sound system.</p>
+<div class="tt" id="tt"></div>
+</div>
+</section>
+
+<section class="act" id="act3" aria-labelledby="a3">
+<div class="wrap">
+<div class="act-h"><span class="act-n">ACT III</span><h2 id="a3">Teachers</h2></div>
+<p class="act-sub">Four teachers who each run their own classes from first lesson to concert night.</p>
+<ul class="cast" id="cast">
+<li class="t" data-s="ballet contemporary" style="--c:#FF9FCB"><svg viewBox="0 0 100 130" aria-hidden="true"><circle cx="44" cy="20" r="9"/><path d="M45 32L50 68L52 118M50 68L92 54M46 40L10 30M46 40L78 22"/></svg><div><h3>Coralie Vance</h3><p class="role">Ballet · Contemporary</p><p>Toured in musical theatre before trading the stage for the studio floor. Ask about pointe shoes and she'll talk for an hour.</p></div></li>
+<li class="t" data-s="hiphop" style="--c:#FF2D95"><svg viewBox="0 0 100 130" aria-hidden="true"><circle cx="52" cy="20" r="9"/><path d="M51 32V66L30 88L26 118M51 66L74 88L78 118M51 40L74 44L68 22M51 42L28 58"/></svg><div><h3>Dev Anand</h3><p class="role">Hip hop</p><p>Came up through Adelaide's street-dance jams and runs the most talked-about warm-up in the building.</p></div></li>
+<li class="t" data-s="jazz" style="--c:#FFC857"><svg viewBox="0 0 100 130" aria-hidden="true"><circle cx="50" cy="18" r="9"/><path d="M50 30L48 64L44 118M48 64L90 44M49 38L28 8M49 38L72 10"/></svg><div><h3>Tilly Okafor</h3><p class="role">Jazz · Musical theatre</p><p>Choreographs the concert opener every year and knows every word to every musical ever staged.</p></div></li>
+<li class="t" data-s="tap" style="--c:#FFF0CF"><svg viewBox="0 0 100 130" aria-hidden="true"><circle cx="46" cy="18" r="9"/><path d="M47 30L50 66L58 90L46 116M50 66L70 100L86 104M48 40L16 50M48 40L82 46"/></svg><div><h3>Sam Reyes</h3><p class="role">Tap · Adult classes</p><p>Teaches tap with a metronome, a good sense of humour and very loud shoes.</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="act" id="act4" aria-labelledby="a4">
+<div class="wrap">
+<div class="act-h"><span class="act-n">ACT IV</span><h2 id="a4">The concert</h2></div>
+<p class="act-sub">The whole year builds to one night — well, two shows. Every enrolled student performs, no auditions.</p>
+<div class="ticket">
+<div class="tk-main">
+<p class="kick">End-of-year concert</p>
+<h3>Lights Up!</h3>
+<p>Ninety minutes of every class on one stage, from Baby Ballet's first bow to the senior hip hop finale.</p>
+<dl class="tk-facts">
+<div><dt>When</dt><dd>Sat 5 Dec · 1pm &amp; 6pm shows</dd></div>
+<div><dt>Where</dt><dd>A city theatre in Adelaide — details in the Term 4 newsletter</dd></div>
+<div><dt>Rehearsal</dt><dd>In class time from Sat 21 Nov · dress rehearsal Fri 4 Dec</dd></div>
+<div><dt>Costumes</dt><dd>Hired from the studio, fitted in Week 5</dd></div>
+</dl>
+</div>
+<div class="tk-stub">
+<h4>Tickets</h4>
+<ul><li>Adult <b>$32</b></li><li>Child under 14 <b>$18</b></li><li>Family, 2 + 2 <b>$90</b></li></ul>
+<p class="count" id="count">—<small>days to curtain up</small></p>
+<p class="fine" style="color:#f5dccf;margin-top:10px">Sample prices · sales open in Term 4</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="act" id="encore" aria-labelledby="enc">
+<div class="wrap">
+<div class="enrol">
+<div>
+<span class="act-n">ENCORE</span>
+<h2 id="enc" style="margin-top:14px">Enrol, starting with a free trial.</h2>
+<p style="margin-top:14px;color:#eadfd3">Try any class once, free, before you commit to a term.</p>
+<ol class="steps"><li>Choose a style and a day that suits.</li><li>We check there's room and reply with a class time.</li><li>Come ten minutes early — we'll show you the studio.</li></ol>
+</div>
+<form class="f" id="trial" data-demo-message="Demo only — no trial class was booked. A real studio would reply to confirm a place.">
+<div class="fl"><label for="t-name">Dancer's name</label><input id="t-name" name="name" required autocomplete="off"></div>
+<div class="two">
+<div class="fl"><label for="t-age">Age</label><select id="t-age" name="age"><option>3–4</option><option>5–8</option><option selected>9–12</option><option>13–17</option><option>Adult</option></select></div>
+<div class="fl"><label for="t-style">Style</label><select id="t-style" name="style"><option value="ballet">Ballet</option><option value="jazz">Jazz</option><option value="hiphop">Hip hop</option><option value="contemporary">Contemporary</option><option value="tap">Tap</option></select></div>
+</div>
+<div class="fl"><label for="t-day">Best day</label><select id="t-day" name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday morning</option></select></div>
+<div class="fl"><label for="t-contact">Parent, guardian or adult's email</label><input id="t-contact" name="contact" type="email" required autocomplete="email" placeholder="name@example.com"></div>
+<button class="pill" type="submit" style="justify-self:start">Request a trial class</button>
+<p class="fine">No payment is taken for a trial. Tell us about any injuries or health needs before the first class — this page is general information only.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<p class="foot-name" data-brand>Encore Dance Academy</p>
+<div class="fcols">
+<div><h3>Studio</h3><p>Norwood, SA<br>Parking behind the building</p></div>
+<div><h3>Talk to us</h3><p><a href="tel:0855503141">(08) 5550 3141</a><br><a href="mailto:hello@example.com">hello@example.com</a></p></div>
+<div><h3>Office hours</h3><p>Mon–Fri 3:30–8pm<br>Sat 8:30am–12:30pm</p></div>
+</div>
+<p class="fnote">Sample prices and timetable. General information only — please talk to us about injuries or health needs before starting classes. Encore is a fictional business made for a design showcase.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var rm=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):null;
+function reduced(){return !!(rm&&rm.matches);}
+var root=document.documentElement,hero=$("#hero");
+
+/* curtains */
+if(reduced())hero.classList.add("open");else requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add("open");});});
+
+var S={
+ all:{n:"All styles",c:"#FFD9A0",bpm:100,f:"house lights up",h:"All five styles",p:"From first steps in Baby Ballet to adult hip hop after work — beginners are welcome in every style.",w:"What to wear: comfy clothes you can move in for a trial class. Uniform lists come with enrolment."},
+ ballet:{n:"Ballet",c:"#FF9FCB",bpm:84,f:"3/4 waltz · soft swells",h:"Ballet",p:"Classical technique, musicality and posture, taught through a graded syllabus with optional exams from age 7.",w:"What to wear: leotard, pink tights and ballet shoes. Hair in a bun."},
+ jazz:{n:"Jazz",c:"#FFC857",bpm:132,f:"swing · kicks on the off-beat",h:"Jazz",p:"High-energy routines, turns, leaps and kicks — the backbone of musical theatre.",w:"What to wear: fitted top, jazz pants or shorts, tan jazz shoes."},
+ hiphop:{n:"Hip hop",c:"#FF2D95",bpm:92,f:"boom-bap · heavy on 2 and 4",h:"Hip hop",p:"Grooves, isolations and freestyle, set to clean edits of current tracks.",w:"What to wear: loose clothes and clean sneakers kept for the studio."},
+ contemporary:{n:"Contemporary",c:"#A08CFF",bpm:70,f:"6/8 · slow travelling waves",h:"Contemporary",p:"Floor work, release and storytelling — for dancers who want to move with feeling.",w:"What to wear: fitted layers and bare feet or half-soles."},
+ tap:{n:"Tap",c:"#FFF0CF",bpm:120,f:"crisp sixteenths",h:"Tap",p:"Rhythm you can hear: shuffles, flaps and time steps, from tiny tappers to adults who always wanted to.",w:"What to wear: comfortable clothes and tap shoes (loan pairs for trials)."}
+};
+var ORDER=["all","ballet","jazz","hiphop","contemporary","tap"],cur="all";
+var CL=[
+ ["ballet","Baby Ballet","3–4 yrs · beginner · 30 min","$150"],["ballet","Junior Ballet","5–8 yrs · Grades 1–3 · 45 min","$170"],["ballet","Senior Ballet & pre-pointe","12+ yrs · Grades 5–7 · 75 min","$230"],
+ ["jazz","Jazz Kids","5–8 yrs · all levels · 45 min","$170"],["jazz","Jazz Juniors","9–12 yrs · all levels · 60 min","$190"],["jazz","Musical Theatre Jazz","13+ yrs · intermediate · 60 min","$190"],
+ ["hiphop","Hip Hop Minis","5–8 yrs · beginner · 45 min","$170"],["hiphop","Hip Hop Crew","9–14 yrs · all levels · 60 min","$190"],["hiphop","Adult Hip Hop","18+ · beginner · 60 min","$200"],
+ ["contemporary","Contemporary Juniors","9–12 yrs · all levels · 60 min","$190"],["contemporary","Contemporary Seniors","13+ yrs · intermediate · 75 min","$230"],
+ ["tap","Tap Tots","4–6 yrs · beginner · 30 min","$150"],["tap","Adult Tap","18+ · beginner · 45 min","$180"]
+];
+var TT=[["Mon",[["4:00pm",0,1],["4:45pm",1,1],["5:30pm",4,2],["6:45pm",10,1],["7:30pm",12,2]]],["Tue",[["4:00pm",6,2],["4:15pm",11,1],["5:00pm",7,2],["6:15pm",2,1],["7:30pm",8,2]]],["Wed",[["4:00pm",3,1],["5:00pm",9,2],["6:15pm",5,1]]],["Thu",[["4:00pm",1,1],["5:00pm",7,2],["6:15pm",10,1]]],["Fri",[["4:00pm",11,1],["4:45pm",3,2],["5:45pm",9,1]]],["Sat",[["9:00am",0,1],["9:45am",6,2],["10:30am",2,1],["11:00am",4,2]]]];
+var DAYN={Mon:"Monday",Tue:"Tuesday",Wed:"Wednesday",Thu:"Thursday",Fri:"Friday",Sat:"Saturday"};
+
+/* build */
+var gels=$("#gels");
+ORDER.forEach(function(k){var b=document.createElement("button");b.type="button";b.className="gel";b.setAttribute("aria-pressed",k==="all"?"true":"false");b.dataset.k=k;b.style.setProperty("--c",S[k].c);b.innerHTML="<i></i>"+S[k].n;b.addEventListener("click",function(){setStyle(k);});gels.appendChild(b);});
+var ul=$("#classes");
+CL.forEach(function(c){var li=document.createElement("li");li.className="cl";li.dataset.s=c[0];li.style.setProperty("--c",S[c[0]].c);li.innerHTML='<i class="dot" aria-hidden="true"></i><b>'+c[1]+'</b><span class="fee">'+c[3]+'<small>per term</small></span><span class="meta">'+S[c[0]].n+" · "+c[2]+"</span>";ul.appendChild(li);});
+var tt=$("#tt");
+TT.forEach(function(d){var div=document.createElement("div");div.className="day";var h='<h3><abbr title="'+DAYN[d[0]]+'" style="text-decoration:none">'+d[0]+"</abbr></h3>";
+  d[1].forEach(function(e){var c=CL[e[1]];h+='<p class="blk" data-s="'+c[0]+'" style="--c:'+S[c[0]].c+'"><time>'+e[0]+"</time><span>"+c[1]+"</span><small>Studio "+e[2]+" · "+S[c[0]].n+"</small></p>";});
+  h+='<p class="none" hidden>No classes this day</p>';div.innerHTML=h;tt.appendChild(div);});
+var eq=$("#eq"),mini=$("#mini"),N=28;
+for(var i=0;i<N;i++)eq.appendChild(document.createElement("i"));
+for(i=0;i<10;i++)mini.appendChild(document.createElement("i"));
+var bars=$$("i",eq),mbars=$$("i",mini);
+
+function setStyle(k){
+  cur=k;var s=S[k];
+  root.style.setProperty("--gel",s.c);
+  $$(".gel").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k===k?"true":"false");});
+  $$(".cl").forEach(function(li){li.classList.toggle("off",k!=="all"&&li.dataset.s!==k);});
+  $$(".blk").forEach(function(b){var on=k==="all"||b.dataset.s===k;b.classList.toggle("off",!on);b.classList.toggle("hl",on&&k!=="all");});
+  $$(".day").forEach(function(d){var any=$$(".blk",d).some(function(b){return !b.classList.contains("off");});$(".none",d).hidden=any||window.innerWidth>=1000;});
+  $$(".t").forEach(function(t){t.classList.toggle("off",k!=="all"&&t.dataset.s.split(" ").indexOf(k)<0);});
+  $("#sn-h").textContent=s.h;$("#sn-p").textContent=s.p;$("#sn-w").textContent=s.w;
+  var n=CL.filter(function(c){return k==="all"||c[0]===k;}).length;
+  $("#rhythm").innerHTML="<b>"+s.n+"</b> · "+s.f+(k==="all"?"":" · "+n+" classes");
+  if(k!=="all")$("#t-style").value=k;
+  if(reduced())still();
+}
+
+/* equaliser */
+function fr(x){return x-Math.floor(x);}
+function hash(a){var x=Math.sin(a*127.1)*43758.5453;return x-Math.floor(x);}
+function pulse(ph,d){return Math.exp(-d*ph);}
+function level(k,t,i,n){
+  var bt=t*S[k].bpm/60,b=i/(n-1),v;
+  if(k==="ballet"){var sw=.5+.5*Math.cos(2*Math.PI*bt/3);v=.18+.62*(.5+.5*Math.sin(2*Math.PI*bt/3-b*3.2))*(.55+.45*sw);}
+  else if(k==="jazz"){var acc=Math.floor(bt)%2?1:.7;v=.12+.8*pulse(bt%1<.66?fr(bt):fr(bt)-.66,5)*acc*(.4+.6*hash(Math.floor(bt*1.5)*7+i));}
+  else if(k==="hiphop"){var kk=pulse(bt%2,5),sn=pulse(fr((bt-1)/2)*2,6),hh=pulse(fr(bt*2)/2,14),bell=Math.exp(-Math.pow((b-.52)/.2,2));v=(.08+(1-b)*(1-b)*1.05*kk+bell*.85*sn+b*b*.6*hh)*(.72+.28*hash(i*13+Math.floor(bt*2)));}
+  else if(k==="contemporary"){v=.15+.55*(.5+.5*Math.sin(2*Math.PI*bt/6*2-b*6))+.15*Math.sin(t*.7+b*4);}
+  else if(k==="tap"){var sx=Math.floor(bt*4),ph=fr(bt*4);v=.06+.9*pulse(ph,9)*(hash(sx*3+Math.floor(b*4))>.35?1:.25)*(.35+.65*hash(sx+i*.37));}
+  else{v=.22+.14*(.5+.5*Math.sin(t*1.3+b*5))+.08*Math.sin(t*.6-b*9);}
+  return Math.max(.05,Math.min(1,v));
+}
+var raf=0,heroVis=true,t0=performance.now();
+function frame(now){
+  raf=0;var t=(now-t0)/1000;
+  bars.forEach(function(el,i){el.style.transform="scaleY("+level(cur,t,i,N).toFixed(3)+")";});
+  mbars.forEach(function(el,i){el.style.transform="scaleY("+level(cur,t,i*3,N).toFixed(3)+")";});
+  loop();
+}
+function loop(){if(!raf&&(heroVis||mini.offsetParent!==null)&&!document.hidden&&!reduced())raf=requestAnimationFrame(frame);}
+function still(){bars.forEach(function(el,i){el.style.transform="scaleY("+level(cur,1.37,i,N).toFixed(3)+")";});mbars.forEach(function(el,i){el.style.transform="scaleY("+level(cur,1.37,i*3,N).toFixed(3)+")";});}
+still();loop();
+document.addEventListener("visibilitychange",function(){if(!document.hidden)loop();});
+
+/* spotlight */
+var spot=$("#spot"),sx=innerWidth/2,sy=innerHeight*.42,tx=sx,ty=sy,sraf=0,fine=window.matchMedia&&matchMedia("(hover: hover) and (pointer: fine)").matches;
+function place(){spot.style.transform="translate("+sx.toFixed(1)+"px,"+sy.toFixed(1)+"px)";}
+function glide(){sraf=0;sx+=(tx-sx)*.12;sy+=(ty-sy)*.12;place();if(Math.abs(tx-sx)>.5||Math.abs(ty-sy)>.5)sraf=requestAnimationFrame(glide);}
+function aim(x,y){tx=x;ty=y;if(reduced()){sx=x;sy=y;place();return;}if(!sraf)sraf=requestAnimationFrame(glide);}
+place();
+if(fine)window.addEventListener("pointermove",function(e){if(e.pointerType==="mouse")aim(e.clientX,e.clientY);},{passive:true});
+if("IntersectionObserver" in window){
+  new IntersectionObserver(function(es){heroVis=es[0].isIntersecting;loop();},{threshold:0}).observe(hero);
+  var acts=$$(".act");
+  var aio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!fine){var h=e.target.querySelector("h2");var r=h.getBoundingClientRect();aim(r.left+Math.min(r.width,300)/2,Math.max(120,Math.min(innerHeight-120,r.top+r.height/2)));}});},{rootMargin:"-35% 0px -55% 0px"});
+  acts.forEach(function(a){aio.observe(a);});
+  new IntersectionObserver(function(es){if(es[0].isIntersecting&&!fine)aim(innerWidth/2,innerHeight*.42);},{threshold:.5}).observe(hero);
+}
+document.addEventListener("focusin",function(e){if(fine)return;var a=e.target.closest&&e.target.closest(".act");if(a){var r=e.target.getBoundingClientRect();aim(r.left+r.width/2,r.top+r.height/2);}});
+
+/* countdown */
+var show=new Date(2026,11,5,13,0,0),days=Math.ceil((show-new Date())/864e5);
+$("#count").firstChild.nodeValue=days>0?days:"Tonight!";
+if(days<=0)$("#count small").textContent="it's show time";
+
+$("#t-style").addEventListener("change",function(){setStyle(this.value);});
+window.addEventListener("resize",function(){setStyle(cur);loop();});
+setStyle("all");
+})();
+</script>
+</body>
+</html>

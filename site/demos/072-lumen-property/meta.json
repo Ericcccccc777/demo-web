@@ -1,0 +1,8 @@
+{
+  "id": "072",
+  "tech": ["SVG", "CSS Grid", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["map", "booking"],
+  "interaction": "Filter demo listings by buy/rent, beds, baths and a dual-handle price slider: price pins on a stylised SVG map of Toorak, South Yarra, Armadale, Malvern, Prahran and Windsor shrink to dots while the card list re-flows with a FLIP animation; hovering or focusing a card lights up its pin and vice versa, and 'Book an inspection' opens date-aware time slots that end in a demo message. On phones a Map / List toggle swaps views, with a preview card under the map.",
+  "fonts": ["Gilda Display", "Inter"],
+  "notes": "The map is stylised and not to scale. Every listing is tagged 'Demo listing' with sample prices; recent sales are labelled demo examples with prices withheld; agents are fictional. The page is about 79 KB (facade illustrations are generated from parameters)."
+}

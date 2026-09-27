@@ -1,0 +1,8 @@
+{
+  "id": "004",
+  "tech": ["CSS Grid", "CSS 3D", "SVG", "SVG animation", "Date logic", "Form logic"],
+  "features": ["map", "quote"],
+  "interaction": "Pick a day (today is pre-selected) and the taco truck drives along the dotted weekly route across a stylised Brisbane map to that day's stop, showing the spot, serving hours and a tip; menu tiles flip to reveal allergens and a slider gives an illustrative catering estimate.",
+  "fonts": ["Archivo Black", "Space Grotesk"],
+  "notes": ""
+}

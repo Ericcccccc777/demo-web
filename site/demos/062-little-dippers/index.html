@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="062">
+<meta name="demo:brand" content="Little Dippers Swim School">
+<title>Little Dippers Swim School — learn-to-swim for kids, Mackay</title>
+<meta name="description" content="A fictional learn-to-swim school in Mackay with five levels shown as pool lanes and a three-question level finder.">
+<meta name="theme-color" content="#2EC4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@700;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+/* Little Dippers — the page is a pool seen from above: tiled deck, five lanes, float ropes, a swimmer per lane.
+   Motion is soft and bouncy: bobbing floats, stroking arms, splash rings; all still under reduced motion. */
+:root{--aqua:#2EC4F1;--deep:#1FA9D6;--light:#7FDBF7;--pale:#EAF7FC;--yellow:#FFD60A;--navy:#0B3954;--red:#E63946;--red-d:#C1272F;--white:#fff;--grout:#DCE9EF;
+--disp:"Grandstander","Baloo 2","Comic Sans MS","Chalkboard SE",cursive;--sans:"Quicksand","Nunito","Varela Round",system-ui,sans-serif;
+--tiles:linear-gradient(var(--grout) 1.5px,transparent 1.5px) 0 0/30px 30px,linear-gradient(90deg,var(--grout) 1.5px,transparent 1.5px) 0 0/30px 30px,#fff;
+--rope:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='18'%3E%3Cpath d='M0 9h96' stroke='%230B3954' stroke-opacity='.35' stroke-width='2'/%3E%3Cg stroke='%230B3954' stroke-opacity='.25'%3E%3Crect x='2' y='2.5' width='20' height='13' rx='6.5' fill='%23E63946'/%3E%3Crect x='26' y='2.5' width='20' height='13' rx='6.5' fill='%23fff'/%3E%3Crect x='50' y='2.5' width='20' height='13' rx='6.5' fill='%231D6FD1'/%3E%3Crect x='74' y='2.5' width='20' height='13' rx='6.5' fill='%23fff'/%3E%3C/g%3E%3Cpath d='M7 6h10M31 6h10M55 6h10M79 6h10' stroke='%23fff' stroke-opacity='.55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--tiles);color:var(--navy);font:500 17px/1.6 var(--sans)}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,44px)}
+.h2{font:900 clamp(34px,4.6vw,58px)/1.02 var(--disp);letter-spacing:-.01em}
+.kick{font:700 14px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--red-d)}
+.lead{font-size:clamp(17px,1.5vw,19px);max-width:56ch}
+.fine{font-size:14px;color:#35637F}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border:0;border-radius:999px;background:var(--yellow);color:var(--navy);font:700 17px/1 var(--disp);text-decoration:none;cursor:pointer;box-shadow:0 4px 0 #D9A900;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 #D9A900}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #D9A900}
+.btn.navy{background:var(--navy);color:#fff;box-shadow:0 4px 0 #05202F}
+.btn.ghost{background:#fff;box-shadow:0 0 0 2.5px var(--navy) inset,0 4px 0 var(--navy)}
+
+/* header on the deck */
+.top{display:flex;align-items:center;gap:18px;max-width:1320px;margin:0 auto;padding:14px clamp(16px,4vw,44px);padding-top:max(14px,env(safe-area-inset-top))}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0;text-decoration:none;font:900 21px/1.05 var(--disp)}
+.logo span{overflow-wrap:anywhere;min-width:0}
+.lring{flex:none;width:42px;height:42px}
+.top nav{display:none}
+@media (min-width:960px){.top nav{display:flex;gap:24px}.top nav a{font:700 16px/1 var(--sans);text-decoration:none;padding:12px 0}.top nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--yellow);text-underline-offset:6px}}
+
+/* intro row */
+.intro{display:grid;gap:10px 40px;max-width:1320px;margin:0 auto;padding:clamp(10px,2vw,22px) clamp(16px,4vw,44px) 0;align-items:end}
+@media (min-width:1100px){.intro{grid-template-columns:minmax(0,1fr) minmax(0,400px)}.intro .lead{padding-bottom:8px}}
+/* stage: deck column + pool */
+.stage{display:grid;gap:clamp(28px,4vw,40px);max-width:1320px;margin:0 auto;padding:clamp(14px,2.4vw,28px) clamp(16px,4vw,44px) clamp(40px,5vw,70px)}
+.side{display:grid;gap:clamp(22px,3vw,30px);align-content:start}
+@media (min-width:1100px){.stage{grid-template-columns:minmax(360px,410px) minmax(0,1fr);align-items:start}}
+@media (min-width:1100px) and (min-height:760px){.side{position:sticky;top:14px}}
+.sign{display:inline-block;padding:10px 18px 8px;border-radius:14px;background:var(--navy);color:#fff;font:900 clamp(20px,2.2vw,26px)/1.1 var(--disp);transform:rotate(-2deg);box-shadow:0 5px 0 var(--red);max-width:100%;overflow-wrap:anywhere}
+.intro h1{font:900 clamp(38px,5.2vw,68px)/1 var(--disp);letter-spacing:-.015em;margin:16px 0 0}
+.intro h1 em{font-style:normal;color:var(--aqua);-webkit-text-stroke:2px var(--navy);paint-order:stroke fill}
+.hfacts{display:flex;flex-wrap:wrap;gap:8px}
+.hfacts li{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--pale);font-weight:700;font-size:15px}
+.hfacts li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 3px #fff,0 0 0 4.5px var(--navy)}
+
+/* finder (a kickboard on the deck) */
+.finder{position:relative;background:var(--yellow);border-radius:44px 44px 26px 26px;padding:clamp(22px,3vw,34px);box-shadow:0 8px 0 #D9A900,0 18px 40px rgba(11,57,84,.18)}
+.finder::before{content:"";position:absolute;top:16px;left:50%;width:110px;height:22px;margin-left:-55px;border-radius:999px;background:rgba(11,57,84,.14);box-shadow:inset 0 3px 0 rgba(11,57,84,.2)}
+.finder h2{font:900 clamp(26px,2.6vw,34px)/1.05 var(--disp);margin-top:18px}
+.fhint{font-weight:600;margin:6px 0 14px}
+.q{border:0;margin:0 0 12px;padding:0;min-width:0;transition:opacity .25s}
+.q legend{display:flex;align-items:center;gap:10px;font:700 17px/1.3 var(--sans);padding:0;margin-bottom:8px}
+.q legend b{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--yellow);font:900 15px/1 var(--disp)}
+.q:disabled{opacity:.45}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;inset:0;margin:0}
+.chips span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:#fff;border:2.5px solid var(--navy);font:700 16px/1 var(--sans);transition:background .2s,color .2s,transform .2s}
+.chips input:checked+span{background:var(--navy);color:#fff;transform:scale(1.04)}
+.chips input:focus-visible+span{outline:3px solid var(--red-d);outline-offset:2px}
+.q:disabled .chips label{cursor:not-allowed}
+.qnote{font-size:14px;font-weight:700;margin:-4px 0 10px;min-height:1.2em}
+.result{margin-top:8px;border-radius:22px;background:#fff;padding:16px 18px;min-height:88px;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:center;border:2.5px dashed rgba(11,57,84,.35)}
+.result.on{border:2.5px solid var(--navy);animation:bounce .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes bounce{from{transform:scale(.94)}}
+.result .rs{width:72px;height:72px;grid-row:1/span 3}
+.result .empty{grid-column:1/-1;font-weight:600;color:#35637F}
+.rlane{font:700 13px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--red-d)}
+.rname{font:900 28px/1 var(--disp)}
+.rtimes{display:flex;flex-wrap:wrap;gap:6px;grid-column:1/-1;margin-top:8px}
+.rtimes li{padding:5px 10px;border-radius:8px;background:var(--pale);font-weight:700;font-size:14px}
+.ractions{display:flex;flex-wrap:wrap;gap:10px;grid-column:1/-1;margin-top:10px}
+.ractions .btn{min-height:44px;font-size:16px;padding:0 18px}
+
+/* the pool */
+.pool{min-width:0}
+.pool-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 18px;margin:0 0 12px}
+.pool-head h2{font:900 clamp(26px,2.6vw,32px)/1.1 var(--disp)}
+.pool-head h2 span{font:700 16px/1 var(--sans);color:#35637F}
+.pool-head p{font-weight:700;font-size:15px;color:#35637F}
+.basin{position:relative;margin:0;padding:0;list-style:none;container:pool/inline-size;border:clamp(10px,1.4vw,16px) solid #fff;border-radius:28px;box-shadow:0 0 0 2px var(--grout),0 14px 30px rgba(11,57,84,.16),inset 0 0 0 5px rgba(11,57,84,.12);overflow:hidden;
+  background:linear-gradient(rgba(255,255,255,.16) 1.5px,transparent 1.5px) 0 0/34px 34px,linear-gradient(90deg,rgba(255,255,255,.16) 1.5px,transparent 1.5px) 0 0/34px 34px,linear-gradient(180deg,#39CBF3,#22B4E4)}
+.basin::before{content:"";position:absolute;inset:-40%;background:radial-gradient(closest-side,rgba(255,255,255,.22),transparent) 0 0/180px 120px,radial-gradient(closest-side,rgba(255,255,255,.16),transparent) 60px 40px/240px 160px;animation:caustic 22s linear infinite alternate;pointer-events:none;mix-blend-mode:soft-light}
+@keyframes caustic{to{transform:translate(90px,60px) rotate(4deg)}}
+.lane{position:relative;container-type:inline-size;display:grid;grid-template-columns:40px 66px minmax(0,1fr);grid-template-areas:"n b t" "f f f" "a a a";gap:6px 14px;align-items:center;padding:16px 14px 56px;transition:background .4s}
+.lane+.lane{border-top:18px solid transparent}
+.lane+.lane::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px;background:var(--rope) 0 0/96px 18px repeat-x;animation:bob 3.2s ease-in-out infinite}
+.lane:nth-child(odd)::before{animation-delay:-1.6s}
+@keyframes bob{50%{transform:translateY(2px)}}
+.lane::after{content:"";position:absolute;left:clamp(56px,7vw,110px);right:clamp(56px,7vw,110px);bottom:22px;height:9px;border-radius:5px;background:rgba(11,57,84,.5);box-shadow:-10px 0 0 -2px rgba(11,57,84,.5),10px 0 0 -2px rgba(11,57,84,.5)}
+.lnum{grid-area:n;font:900 40px/1 var(--disp);color:#fff;-webkit-text-stroke:2.5px rgba(11,57,84,.55);paint-order:stroke fill;text-align:center}
+.badge{grid-area:b;width:100%;height:auto;aspect-ratio:1;filter:drop-shadow(0 4px 0 rgba(11,57,84,.25));transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.lane:hover .badge,.lane:focus-within .badge,.lane.lit .badge{transform:rotate(-8deg) scale(1.06)}
+.ltxt{grid-area:t;min-width:0}
+.ltxt h3{font:900 clamp(28px,2.6vw,36px)/1 var(--disp)}
+.age{font:700 15px/1.3 var(--sans);margin:4px 0 6px}
+.ltxt p:last-child{max-width:48ch}
+.lfacts{grid-area:f;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start;margin-top:6px}
+.lfacts li{padding:7px 12px;border-radius:12px;background:rgba(255,255,255,.88);font-size:14px;font-weight:600;white-space:nowrap}
+.lfacts b{font:900 17px/1 var(--disp);margin-right:3px}
+.lbtn{grid-area:a;justify-self:start;display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--navy);color:#fff;font:700 15px/1 var(--sans);text-decoration:none}
+.lbtn:hover{background:#12506F}
+.swimmer{position:absolute;left:clamp(40px,5vw,90px);bottom:9px;width:66px;height:34px;transition:transform 2.6s cubic-bezier(.45,.05,.35,1);z-index:2}
+.lane:hover .swimmer,.lane:focus-within .swimmer{transform:translateX(calc(100cqw - clamp(120px,15vw,230px)))}
+.arms{transform-box:view-box;transform-origin:38px 17px;animation:stroke .55s linear infinite;animation-play-state:var(--play,paused)}
+.kick{animation:kick .3s steps(2) infinite;animation-play-state:var(--play,paused)}
+.lane:hover,.lane:focus-within,.lane.lit{--play:running}
+@keyframes stroke{50%{transform:scaleY(-1)}}
+@keyframes kick{50%{opacity:.2}}
+.lane.lit{background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 5px var(--yellow)}
+.lane.lit .swimmer{animation:laps 7s ease-in-out infinite;transition:none}
+@keyframes laps{0%{transform:none}46%{transform:translateX(calc(100cqw - clamp(120px,15vw,230px)))}50%{transform:translateX(calc(100cqw - clamp(120px,15vw,230px))) scaleX(-1)}96%{transform:scaleX(-1)}100%{transform:none}}
+.flag{position:absolute;bottom:62px;right:clamp(14px,3vw,34px);padding:5px 12px;border-radius:999px;background:var(--yellow);font:900 14px/1.2 var(--disp);box-shadow:0 3px 0 #D9A900;opacity:0;transform:translateY(-6px) scale(.8);transition:opacity .3s,transform .4s cubic-bezier(.3,1.6,.5,1)}
+.lane.lit .flag{opacity:1;transform:none}
+.splash{position:absolute;left:clamp(40px,5vw,90px);bottom:-8px;width:70px;height:70px;pointer-events:none}
+.splash i{position:absolute;inset:0;border:4px solid #fff;border-radius:50%;opacity:0}
+.lane.lit .splash i{animation:splash 1.2s ease-out 2}
+.lane.lit .splash i:nth-child(2){animation-delay:.2s}.lane.lit .splash i:nth-child(3){animation-delay:.4s}
+@keyframes splash{0%{transform:scale(.2);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+
+
+@container pool (min-width:680px){.lane{grid-template-columns:48px 76px minmax(0,1fr) auto;grid-template-areas:"n b t a" "n b f a";gap:4px 18px;padding:12px 24px 44px}.lnum{font-size:60px}.ltxt h3{font-size:30px}.age{margin:2px 0 2px;font-size:14px}.ltxt p:last-child{font-size:16px}.lfacts{margin-top:4px}.lfacts li{padding:4px 9px;font-size:13px}.lfacts b{font-size:15px}.lbtn{justify-self:end;align-self:center}.flag{top:10px;bottom:auto;right:24px}.lane::after{bottom:15px}.swimmer{bottom:2px}.splash{bottom:-16px}}
+/* stickers */
+.stickers{padding-block:clamp(40px,6vw,80px)}
+.sheet{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:28px;counter-reset:s}
+.sheet li{position:relative;display:grid;justify-items:center;text-align:center;gap:6px;padding:18px 12px 20px;background:#fff;border-radius:24px;box-shadow:0 0 0 2px var(--grout),0 6px 0 var(--grout)}
+.sheet li:not(:last-child)::after{content:"";position:absolute;right:-17px;top:62px;width:16px;height:4px;background:repeating-linear-gradient(90deg,var(--navy) 0 4px,transparent 4px 7px)}
+.stk{width:min(120px,80%);height:auto;aspect-ratio:1;filter:drop-shadow(0 5px 0 rgba(11,57,84,.2));transform:rotate(var(--r,-4deg));transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.sheet li:nth-child(even) .stk{--r:5deg}
+.sheet li:hover .stk{transform:rotate(0) scale(1.08) translateY(-4px)}
+.sheet h3{font:900 22px/1.1 var(--disp)}
+.sheet p{font-size:15px;font-weight:600}
+@media (max-width:980px){.sheet{grid-template-columns:repeat(3,minmax(0,1fr))}.sheet li::after{display:none}}
+@media (max-width:560px){.sheet{grid-template-columns:1fr 1fr}.sheet li:last-child{grid-column:1/-1}}
+
+/* timetable */
+.times{padding-block:clamp(40px,6vw,70px)}
+.tt{width:100%;border-collapse:separate;border-spacing:0;margin-top:24px;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 0 0 2.5px var(--navy)}
+.tt th,.tt td{padding:12px 10px;text-align:left;border-bottom:1.5px solid var(--grout);vertical-align:top}
+.tt thead th{background:var(--navy);color:#fff;font:700 15px/1 var(--disp)}
+.tt tbody th{font:900 20px/1.1 var(--disp);white-space:nowrap}
+.tt tbody th small{display:block;font:600 13px/1.3 var(--sans);color:#35637F}
+.tt td span{display:inline-block;padding:4px 9px;border-radius:8px;background:var(--pale);font-weight:700;font-size:14.5px;white-space:nowrap}
+.tt tr.hl th,.tt tr.hl td{background:#FFF6C2}
+.tt tr:last-child>*{border-bottom:0}
+.times .fine{margin-top:14px}
+@media (max-width:760px){
+  .tt,.tt tbody,.tt tr,.tt th,.tt td{display:block}
+  .tt thead{display:none}
+  .tt tr{padding:12px 14px;border-bottom:1.5px solid var(--grout)}
+  .tt tbody th,.tt td{border:0;padding:2px 0}
+  .tt td:empty{display:none}
+  .tt td{display:inline-block;margin:6px 6px 0 0}
+  .tt td::before{content:attr(data-d) " ";font-weight:700;font-size:13px;color:#35637F}
+  .tt tr.hl{background:#FFF6C2}
+}
+
+/* safety + make-ups */
+.safe{padding-block:clamp(40px,6vw,70px)}
+.boards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:26px}
+.board{position:relative;padding:58px 20px 22px;background:var(--yellow);border-radius:48% 48% 22px 22px / 26% 26% 22px 22px;box-shadow:0 6px 0 #D9A900}
+.board::before,.board::after{content:"";position:absolute;top:22px;width:34px;height:14px;border-radius:999px;background:#fff;box-shadow:inset 0 3px 0 rgba(11,57,84,.2)}
+.board::before{left:calc(50% - 44px)}.board::after{left:calc(50% + 10px)}
+.board h3{font:900 21px/1.15 var(--disp);margin-bottom:6px}
+.board p{font-size:15px;font-weight:600}
+.policy{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,48px);margin-top:clamp(40px,6vw,70px);padding:clamp(22px,3vw,36px);background:var(--navy);color:#fff;border-radius:28px}
+.policy .h2{color:var(--yellow)}
+.policy ul{display:grid;gap:12px}
+.policy li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.policy li b{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--aqua);color:var(--navy);font:900 17px/1 var(--disp)}
+.policy p{font-size:16px}
+@media (max-width:900px){.boards{grid-template-columns:1fr 1fr}.policy{grid-template-columns:1fr}}
+@media (max-width:480px){.boards{grid-template-columns:1fr}}
+
+/* faq */
+.faq{padding-block:clamp(20px,4vw,40px) clamp(10px,2vw,20px)}
+.qs{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin-top:22px}
+.qs details{background:#fff;border-radius:20px;box-shadow:0 0 0 2.5px var(--aqua),0 5px 0 var(--aqua);padding:0 18px}
+.qs summary{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:58px;font:700 18px/1.25 var(--disp);cursor:pointer;list-style:none}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary::after{content:"+";flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--aqua);font:900 20px/1 var(--disp);transition:transform .3s}
+.qs details[open] summary::after{transform:rotate(45deg)}
+.qs p{padding:0 0 16px;font-size:16px}
+@media (max-width:760px){.qs{grid-template-columns:1fr}}
+/* enrol */
+.enrol{padding-block:clamp(40px,6vw,70px) clamp(60px,8vw,90px)}
+.eform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px;margin-top:24px;padding:clamp(20px,3vw,34px);background:#fff;border-radius:28px;box-shadow:0 0 0 2.5px var(--navy),0 8px 0 var(--navy)}
+.fld{display:grid;gap:5px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font:700 15px/1.2 var(--sans)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:48px;padding:10px 14px;border:2.5px solid var(--navy);border-radius:14px;background:var(--pale);color:var(--navy);font:600 16px/1.3 var(--sans);-webkit-appearance:none;appearance:none}
+.fld select{background:var(--pale) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230B3954' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") right 14px center no-repeat;padding-right:36px}
+.fld textarea{min-height:84px;resize:vertical}
+.fld [aria-invalid=true]{border-color:var(--red-d);background:#FFECEC}
+.eform .btn{justify-self:start}
+.ferr{grid-column:1/-1;min-height:1.3em;color:var(--red-d);font-weight:700}
+.done{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;padding:16px;border-radius:18px;background:var(--pale);border:2.5px dashed var(--navy);animation:bounce .5s cubic-bezier(.3,1.6,.5,1)}
+.done svg{width:64px;height:64px;grid-row:1/span 2}
+.done b{font:900 22px/1.1 var(--disp)}
+@media (max-width:640px){.eform{grid-template-columns:1fr}}
+
+/* footer on the deck edge */
+.foot{background:var(--navy);color:#fff;padding:clamp(40px,6vw,64px) 0 calc(70px + env(safe-area-inset-bottom));border-top:14px solid var(--aqua);box-shadow:inset 0 6px 0 rgba(255,255,255,.35)}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+.fbrand{font:900 clamp(30px,4vw,46px)/1.05 var(--disp);color:var(--yellow);overflow-wrap:anywhere}
+.foot h2{font:900 19px/1.2 var(--disp);color:var(--light);margin-bottom:8px}
+.foot p,.foot dl{font-size:16px}
+.foot dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px}
+.foot a{display:inline-block;padding:5px 0;text-underline-offset:4px;text-decoration-color:var(--yellow)}
+.fnote{margin-top:30px;padding-top:18px;border-top:1.5px solid rgba(255,255,255,.2);font-size:14px;color:#CFE6F0}
+@media (max-width:820px){.fgrid{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<svg class="sr" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="swim" viewBox="0 0 66 34"><g class="kick" fill="#fff"><circle cx="6" cy="12" r="2.6"/><circle cx="9" cy="23" r="2.2"/><circle cx="3" cy="18" r="1.6"/></g><ellipse cx="28" cy="17" rx="15" ry="6.5" fill="#0B3954" opacity=".3"/><g class="arms" stroke="#fff" stroke-width="4.2" stroke-linecap="round" fill="none"><path d="M38 13.5L60 6"/><path d="M36 20.5L20 29"/></g><circle cx="43" cy="17" r="7.6" style="fill:var(--cap,#FFD60A)" stroke="#0B3954" stroke-width="1.6"/><path d="M40 13.5q4-2 7.5 0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/></symbol>
+    <symbol id="b1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="42" fill="#FFD60A"/><path d="M18 60c10-8 18 6 28-2s12-10 20-6" fill="none" stroke="#0B3954" stroke-width="5" stroke-linecap="round"/><ellipse cx="62" cy="46" rx="17" ry="14" fill="#0B3954"/><circle cx="67" cy="42" r="4.5" fill="#fff"/><circle cx="68" cy="42" r="2" fill="#0B3954"/><path d="M24 30l4 4M30 24l2 5" stroke="#fff" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="b2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="42" fill="#2EC4F1"/><g stroke="#0B3954" stroke-width="3.5"><ellipse cx="30" cy="56" rx="7" ry="5" fill="#8FD88F"/><ellipse cx="70" cy="56" rx="7" ry="5" fill="#8FD88F"/><ellipse cx="36" cy="72" rx="6" ry="5" fill="#8FD88F"/><ellipse cx="64" cy="72" rx="6" ry="5" fill="#8FD88F"/><ellipse cx="50" cy="34" rx="8" ry="9" fill="#8FD88F"/><ellipse cx="50" cy="60" rx="20" ry="17" fill="#FFD60A"/></g><path d="M50 44v32M34 60h32M38 50l24 20M62 50L38 70" stroke="#0B3954" stroke-width="2.5" opacity=".55"/><circle cx="46" cy="31" r="1.8" fill="#0B3954"/><circle cx="54" cy="31" r="1.8" fill="#0B3954"/></symbol>
+    <symbol id="b3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="42" fill="#0B3954"/><path d="M14 66q9-6 18 0t18 0 18 0 18 0" fill="none" stroke="#7FDBF7" stroke-width="4" stroke-linecap="round"/><path d="M26 58C30 34 52 22 74 30c-6 2-8 4-9 7 6 2 9 6 10 11-8-4-18-4-26 2-7 5-14 10-23 8z" fill="#7FDBF7" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><circle cx="64" cy="36" r="2.4" fill="#0B3954"/><path d="M52 29l6-9 3 10" fill="#7FDBF7" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/></symbol>
+    <symbol id="b4" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="42" fill="#E63946"/><path d="M36 60C44 50 50 34 50 20c6 14 14 30 22 40z" fill="#0B3954" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M16 62q8-6 17 0t17 0 17 0 17 0M20 74q8-6 15 0t15 0 15 0 15 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></symbol>
+    <symbol id="b5" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="42" fill="#FFD60A"/><rect x="44" y="16" width="12" height="9" rx="3" fill="#0B3954"/><path d="M68 26l6 6" stroke="#E63946" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="56" r="25" fill="#fff" stroke="#0B3954" stroke-width="5"/><path d="M50 56V40M50 56l10 6" stroke="#E63946" stroke-width="4.5" stroke-linecap="round"/><circle cx="50" cy="56" r="3.5" fill="#0B3954"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="top">
+    <a class="logo" href="#top"><svg class="lring" viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="16" fill="none" stroke="#E63946" stroke-width="9"/><circle cx="21" cy="21" r="16" fill="none" stroke="#fff" stroke-width="9" stroke-dasharray="12.57 12.57"/><circle cx="21" cy="21" r="20.5" fill="none" stroke="#0B3954" stroke-width="1"/><circle cx="21" cy="21" r="11.5" fill="none" stroke="#0B3954" stroke-width="1"/></svg><span data-brand>Little Dippers Swim School</span></a>
+    <nav aria-label="Sections"><a href="#lanes">Levels</a><a href="#times">Class times</a><a href="#safety">Water safety</a><a href="#makeup">Make-ups</a></nav>
+    <a class="btn" href="#enrol">Enrol</a>
+  </div>
+</header>
+
+<main>
+  <div class="intro" id="top">
+  <div>
+      <p class="sign" data-brand>Little Dippers Swim School</p>
+      <h1 id="h1">Every little swimmer has a <em>lane.</em></h1>
+  </div>
+      <p class="lead">Learn-to-swim for babies and kids in a warm indoor pool in Mackay — small classes, patient teachers, five levels.</p>
+</div>
+<div class="stage">
+  <section class="side" aria-labelledby="fh">
+    <form class="finder" id="finder" aria-labelledby="fh" novalidate>
+      <h2 id="fh">Find the right lane</h2>
+      <p class="fhint">Three quick questions — the matching lane lights up in the pool below.</p>
+      <fieldset class="q"><legend><b>1</b>How old is your swimmer?</legend>
+        <div class="chips"><label><input type="radio" name="age" value="0"><span>6 mths–2</span></label><label><input type="radio" name="age" value="3"><span>3–4</span></label><label><input type="radio" name="age" value="5"><span>5–7</span></label><label><input type="radio" name="age" value="8"><span>8–12</span></label></div></fieldset>
+      <p class="qnote" id="qnote" aria-live="polite"></p>
+      <fieldset class="q" id="q2"><legend><b>2</b>Happy to put their face in the water?</legend>
+        <div class="chips"><label><input type="radio" name="face" value="yes"><span>Yes</span></label><label><input type="radio" name="face" value="no"><span>Not yet</span></label></div></fieldset>
+      <fieldset class="q" id="q3"><legend><b>3</b>Can they swim 5 metres on their own?</legend>
+        <div class="chips"><label><input type="radio" name="swim" value="no"><span>Not yet</span></label><label><input type="radio" name="swim" value="5"><span>Yes, 5 m</span></label><label><input type="radio" name="swim" value="25"><span>25 m or more</span></label></div></fieldset>
+      <div class="result" id="result" aria-live="polite"><p class="empty">Answer all three and we'll light up a lane for you.</p></div>
+    </form>
+    <ul class="hfacts"><li>Indoor pool, 32°C</li><li>6 months to 12 years</li><li>Mackay, QLD</li></ul>
+  </section>
+
+  <section class="pool" id="lanes" aria-labelledby="pool-h">
+    <div class="pool-head">
+      <h2 id="pool-h">The pool <span>· five levels, lane by lane</span></h2>
+      <p>Hover or tab to a lane for a lap.</p>
+    </div>
+    <ol class="basin" id="basin">
+      <li class="lane" id="lane-0" style="--cap:#FFD60A"><span class="lnum" aria-hidden="true">1</span><svg class="badge" aria-hidden="true"><use href="#b1"/></svg>
+        <div class="ltxt"><h3>Tadpoles</h3><p class="age">6 months – 3 years, with a parent in the water</p><p>Songs, back floats and safe entries — together.</p></div>
+        <ul class="lfacts"><li><b>30</b> min</li><li><b>1:8</b> pairs</li><li><b>$19</b> a lesson</li></ul>
+        <a class="lbtn" href="#times" data-row="0">Tadpoles times</a>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i></span><svg class="swimmer" aria-hidden="true"><use href="#swim"/></svg><span class="flag" aria-hidden="true">Your lane!</span></li>
+      <li class="lane" id="lane-1" style="--cap:#E63946"><span class="lnum" aria-hidden="true">2</span><svg class="badge" aria-hidden="true"><use href="#b2"/></svg>
+        <div class="ltxt"><h3>Turtles</h3><p class="age">3 – 5 years, first lessons on their own</p><p>Bubbles, face in and kicking with a board.</p></div>
+        <ul class="lfacts"><li><b>30</b> min</li><li><b>1:4</b> swimmers</li><li><b>$21</b> a lesson</li></ul>
+        <a class="lbtn" href="#times" data-row="1">Turtles times</a>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i></span><svg class="swimmer" aria-hidden="true"><use href="#swim"/></svg><span class="flag" aria-hidden="true">Your lane!</span></li>
+      <li class="lane" id="lane-2" style="--cap:#FFFFFF"><span class="lnum" aria-hidden="true">3</span><svg class="badge" aria-hidden="true"><use href="#b3"/></svg>
+        <div class="ltxt"><h3>Dolphins</h3><p class="age">3 years +, happy with their face in</p><p>Gliding, kicking and the first 5 m of freestyle.</p></div>
+        <ul class="lfacts"><li><b>30</b> min</li><li><b>1:4</b> swimmers</li><li><b>$21</b> a lesson</li></ul>
+        <a class="lbtn" href="#times" data-row="2">Dolphins times</a>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i></span><svg class="swimmer" aria-hidden="true"><use href="#swim"/></svg><span class="flag" aria-hidden="true">Your lane!</span></li>
+      <li class="lane" id="lane-3" style="--cap:#0B3954"><span class="lnum" aria-hidden="true">4</span><svg class="badge" aria-hidden="true"><use href="#b4"/></svg>
+        <div class="ltxt"><h3>Sharks</h3><p class="age">5 years +, swims 5 metres alone</p><p>Freestyle, backstroke and survival skills to 25 m.</p></div>
+        <ul class="lfacts"><li><b>45</b> min</li><li><b>1:6</b> swimmers</li><li><b>$23</b> a lesson</li></ul>
+        <a class="lbtn" href="#times" data-row="3">Sharks times</a>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i></span><svg class="swimmer" aria-hidden="true"><use href="#swim"/></svg><span class="flag" aria-hidden="true">Your lane!</span></li>
+      <li class="lane" id="lane-4" style="--cap:#FFD60A"><span class="lnum" aria-hidden="true">5</span><svg class="badge" aria-hidden="true"><use href="#b5"/></svg>
+        <div class="ltxt"><h3>Squad</h3><p class="age">8 – 12 years, swims 25 metres or more</p><p>All four strokes, turns, dives and 200 m non-stop.</p></div>
+        <ul class="lfacts"><li><b>60</b> min</li><li><b>1:10</b> swimmers</li><li><b>$26</b> a lesson</li></ul>
+        <a class="lbtn" href="#times" data-row="4">Squad times</a>
+        <span class="splash" aria-hidden="true"><i></i><i></i><i></i></span><svg class="swimmer" aria-hidden="true"><use href="#swim"/></svg><span class="flag" aria-hidden="true">Your lane!</span></li>
+    </ol>
+  </section>
+</div>
+
+  <section class="wrap stickers" id="badges" aria-labelledby="st-h">
+    <p class="kick">Moving up</p>
+    <h2 class="h2" id="st-h">Collect the stickers</h2>
+    <p class="lead" style="margin-top:10px">Every lane has a sticker. When a teacher sees the skill at the end of term, it goes on the swim card and your child moves up a lane.</p>
+    <ol class="sheet">
+      <li><svg class="stk" aria-hidden="true"><use href="#b1"/></svg><h3>Tadpole</h3><p>Gets in and out safely with a grown-up.</p></li>
+      <li><svg class="stk" aria-hidden="true"><use href="#b2"/></svg><h3>Turtle</h3><p>Blows bubbles and floats with a little help.</p></li>
+      <li><svg class="stk" aria-hidden="true"><use href="#b3"/></svg><h3>Dolphin</h3><p>Face in, glides and kicks 5 metres.</p></li>
+      <li><svg class="stk" aria-hidden="true"><use href="#b4"/></svg><h3>Shark</h3><p>Swims 25 metres and treads water for a minute.</p></li>
+      <li><svg class="stk" aria-hidden="true"><use href="#b5"/></svg><h3>Squad</h3><p>Four strokes and 200 metres without stopping.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap times" id="times" aria-labelledby="tt-h">
+    <p class="kick">Term 4</p>
+    <h2 class="h2" id="tt-h">Class times</h2>
+    <table class="tt" id="tt">
+      <caption class="sr">Weekly class times by level</caption>
+      <thead><tr><th scope="col">Level</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Tadpoles<small>6 mths–3 yrs</small></th><td data-d="Mon"><span>9:30am</span></td><td data-d="Tue"></td><td data-d="Wed"><span>9:30am</span></td><td data-d="Thu"></td><td data-d="Fri"></td><td data-d="Sat"><span>8:00am</span></td></tr>
+        <tr><th scope="row">Turtles<small>3–5 yrs</small></th><td data-d="Mon"></td><td data-d="Tue"><span>3:30pm</span></td><td data-d="Wed"></td><td data-d="Thu"><span>3:30pm</span></td><td data-d="Fri"></td><td data-d="Sat"><span>8:30am</span></td></tr>
+        <tr><th scope="row">Dolphins<small>3 yrs +</small></th><td data-d="Mon"><span>4:00pm</span></td><td data-d="Tue"></td><td data-d="Wed"><span>4:00pm</span></td><td data-d="Thu"></td><td data-d="Fri"><span>3:30pm</span></td><td data-d="Sat"><span>9:00am</span></td></tr>
+        <tr><th scope="row">Sharks<small>5 yrs +</small></th><td data-d="Mon"></td><td data-d="Tue"><span>4:30pm</span></td><td data-d="Wed"></td><td data-d="Thu"><span>4:30pm</span></td><td data-d="Fri"></td><td data-d="Sat"><span>9:45am</span></td></tr>
+        <tr><th scope="row">Squad<small>8–12 yrs</small></th><td data-d="Mon"><span>5:30pm</span></td><td data-d="Tue"></td><td data-d="Wed"><span>5:30pm</span></td><td data-d="Thu"></td><td data-d="Fri"><span>5:00pm</span></td><td data-d="Sat"><span>7:00am</span></td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Sample prices: Tadpoles $19, Turtles and Dolphins $21, Sharks $23, Squad $26 per lesson, billed for the ten-week term.</p>
+  </section>
+
+  <section class="wrap safe" id="safety" aria-labelledby="sf-h">
+    <p class="kick">Out of lessons</p>
+    <h2 class="h2" id="sf-h">Water safety at home</h2>
+    <ul class="boards">
+      <li class="board"><h3>Watch, don't browse</h3><p>Keep young children within arm's reach and your phone in your pocket.</p></li>
+      <li class="board"><h3>Close the gate</h3><p>Check the pool fence and self-closing gate every time you leave the yard.</p></li>
+      <li class="board"><h3>Learn CPR</h3><p>A short course gives you the skills to help in the minutes that matter.</p></li>
+      <li class="board"><h3>Swim between the flags</h3><p>At the beach, swim between the red and yellow flags with a grown-up.</p></li>
+    </ul>
+    <p class="fine" style="margin-top:14px">General information only — lessons build skills and confidence but never replace active adult supervision.</p>
+    <div class="policy" id="makeup">
+      <div><p class="kick" style="color:var(--light)">Missed one?</p><h2 class="h2">Make-up lessons</h2><p style="margin-top:10px">Life happens — ear infections, sniffles, school carnivals. Here's how catch-ups work.</p></div>
+      <ul>
+        <li><b>1</b><p>Let us know by 7am on the day and you'll earn a make-up credit.</p></li>
+        <li><b>2</b><p>Book it into any class at the same level before the end of term.</p></li>
+        <li><b>3</b><p>Up to two make-ups a term, and credits don't roll over.</p></li>
+        <li><b>4</b><p>If we cancel because of lightning or pool maintenance, the lesson is always credited.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap faq" id="faq" aria-labelledby="fq-h">
+    <p class="kick">From the pool deck</p>
+    <h2 class="h2" id="fq-h">First-lesson questions</h2>
+    <div class="qs">
+      <details><summary>Do I need to get in the water?</summary><p>For Tadpoles, yes — one parent or carer swims with each child. From Turtles up, you watch from the bench by the window.</p></details>
+      <details><summary>What if my child cries?</summary><p>Plenty do in week one. Teachers go gently, and nobody is ever dunked or made to put their face in before they're ready.</p></details>
+      <details><summary>Do babies need swim nappies?</summary><p>Yes — a reusable swim nappy over a disposable one for anyone under three, please.</p></details>
+      <details><summary>How do they move up a lane?</summary><p>Teachers check skills in the last fortnight of term. Earn the sticker and we'll suggest the next lane for the following term.</p></details>
+    </div>
+  </section>
+
+  <section class="wrap enrol" id="enrol" aria-labelledby="en-h">
+    <p class="kick">Term 4 spots</p>
+    <h2 class="h2" id="en-h">Enrol your swimmer</h2>
+    <form class="eform" id="eform" novalidate>
+      <div class="fld"><label for="cn">Child's first name</label><input id="cn" autocomplete="off" required></div>
+      <div class="fld"><label for="ca">Age</label><select id="ca"><option>Under 1</option><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div>
+      <div class="fld"><label for="lv">Level</label><select id="lv"><option>Tadpoles</option><option>Turtles</option><option>Dolphins</option><option>Sharks</option><option>Squad</option><option>Not sure — please assess</option></select></div>
+      <div class="fld"><label for="dy">Preferred day</label><select id="dy"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option selected>Saturday</option></select></div>
+      <div class="fld"><label for="pn">Parent or carer's name</label><input id="pn" autocomplete="name" required></div>
+      <div class="fld"><label for="pe">Email</label><input id="pe" type="email" autocomplete="email" required></div>
+      <div class="fld full"><label for="md">Anything we should know? (medical, ears, nerves)</label><textarea id="md" placeholder="Grommets, asthma, a bit scared of splashing…"></textarea></div>
+      <p class="ferr" id="ferr" role="alert"></p>
+      <button class="btn navy" type="submit">Send enrolment request</button>
+      <div class="done" id="done" hidden tabindex="-1"><svg aria-hidden="true"><use href="#b3" id="doneBadge"/></svg><b>Enrolment drafted — not sent</b><p id="doneTxt">This is a demo site, so no spot was held.</p></div>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><p class="fbrand" data-brand>Little Dippers Swim School</p><p style="margin-top:10px">Indoor heated pool, Mackay, QLD. Change rooms with a family room and a pram-friendly entrance.</p></div>
+      <div><h2>Pool hours</h2><dl><dt>Mon–Fri</dt><dd>9am–6:30pm</dd><dt>Sat</dt><dd>7am–12pm</dd><dt>Sun</dt><dd>Closed</dd></dl></div>
+      <div><h2>Say hello</h2><p><a href="tel:+61755501842">(07) 5550 1842</a><br><a href="mailto:splash@example.com">splash@example.com</a></p></div>
+    </div>
+    <p class="fnote">A fictional swim school made as a design concept. Sample prices. Water safety tips are general information only.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function rm() { return window.DemoKit ? DemoKit.reducedMotion : mq.matches; }
+  function toast(m) { if (window.DemoKit) DemoKit.toast(m); }
+  var LV = [
+    { n: 'Tadpoles', meta: '6 months – 3 years · with a parent · 30 min', t: ['Mon 9:30am', 'Wed 9:30am', 'Sat 8:00am'] },
+    { n: 'Turtles', meta: '3 – 5 years · 30 min · 1 teacher to 4', t: ['Tue 3:30pm', 'Thu 3:30pm', 'Sat 8:30am'] },
+    { n: 'Dolphins', meta: '3 years + · 30 min · 1 teacher to 4', t: ['Mon 4:00pm', 'Wed 4:00pm', 'Fri 3:30pm', 'Sat 9:00am'] },
+    { n: 'Sharks', meta: '5 years + · 45 min · 1 teacher to 6', t: ['Tue 4:30pm', 'Thu 4:30pm', 'Sat 9:45am'] },
+    { n: 'Squad', meta: '8 – 12 years · 60 min · 1 coach to 10', t: ['Mon 5:30pm', 'Wed 5:30pm', 'Fri 5:00pm', 'Sat 7:00am'] }
+  ];
+  var form = $('#finder'), q2 = $('#q2'), q3 = $('#q3'), result = $('#result'), lanes = $$('.lane'), rows = $$('#tt tbody tr');
+  var current = -1;
+  function val(name) { var r = $('input[name=' + name + ']:checked', form); return r ? r.value : null; }
+  function pick(age, face, swim) {
+    if (age === '0') return 0;
+    if (!face || !swim) return -1;
+    if (face === 'no') return 1;
+    if (swim === 'no') return 2;
+    if (swim === '25' && age === '8') return 4;
+    return 3;
+  }
+  function highlight(i) {
+    rows.forEach(function (r, k) { r.classList.toggle('hl', k === i); });
+    var sel = $('#lv'); if (i > -1) sel.selectedIndex = i;
+  }
+  function light(i, replay) {
+    lanes.forEach(function (l, k) { l.classList.toggle('lit', k === i); });
+    if (replay && i > -1) { var l = lanes[i]; l.classList.remove('lit'); void l.offsetWidth; l.classList.add('lit'); }
+  }
+  function update() {
+    var age = val('age'), under = age === '0';
+    q2.disabled = under; q3.disabled = under;
+    $('#qnote').textContent = under ? 'Questions 2 and 3 can wait — under-3s start in Tadpoles with a parent.' : '';
+    var i = pick(age, val('face'), val('swim'));
+    if (i === current) return;
+    current = i; light(i); highlight(i);
+    if (i > -1 && getComputedStyle($('.side')).position === 'sticky') lanes[i].scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'nearest' });
+    if (i < 0) { result.className = 'result'; result.innerHTML = '<p class="empty">Answer all three and we\'ll light up a lane for you.</p>'; return; }
+    var L = LV[i];
+    result.className = 'result on';
+    result.innerHTML = '<svg class="rs" aria-hidden="true"><use href="#b' + (i + 1) + '"/></svg><p class="rlane">Lane ' + (i + 1) + ' is lit up</p><p class="rname">' + L.n + '</p><p class="rmeta">' + L.meta + '</p>' +
+      '<ul class="rtimes" aria-label="Class times">' + L.t.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>' +
+      '<div class="ractions"><button class="btn navy" type="button" id="goLane">Swim to lane ' + (i + 1) + '</button><a class="btn ghost" href="#enrol" id="goEnrol">Enrol in ' + L.n + '</a></div>';
+    $('#goLane').addEventListener('click', function () {
+      lanes[i].scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'center' }); light(i, true);
+    });
+    $('#goEnrol').addEventListener('click', function () { $('#lv').selectedIndex = i; });
+  }
+  form.addEventListener('change', update);
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  $$('.lbtn').forEach(function (b) { b.addEventListener('click', function () { highlight(+b.getAttribute('data-row')); }); });
+
+  /* enrolment (demo) */
+  var ef = $('#eform');
+  ef.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = null;
+    ['#cn', '#pn', '#pe'].forEach(function (s) { var f = $(s), ok = f.value.trim() && f.checkValidity(); f.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = f; });
+    if (bad) { $('#ferr').textContent = 'Please add your child\'s name, your name and an email we can reply to.'; bad.focus(); return; }
+    $('#ferr').textContent = '';
+    var lvl = $('#lv').selectedIndex;
+    $('#doneBadge').setAttribute('href', '#b' + (lvl < 5 ? lvl + 1 : 3));
+    $('#doneTxt').textContent = $('#cn').value.trim() + ' · ' + $('#lv').value + ' · ' + $('#dy').value + 's. This is a demo site, so no spot was held and no email was sent.';
+    var d = $('#done'); d.hidden = false; d.focus();
+    toast('Demo only — no enrolment was made. A real swim school would email you to confirm.');
+  });
+  $$('#cn,#pn,#pe').forEach(function (f) { f.addEventListener('input', function () { if (f.getAttribute('aria-invalid') === 'true' && f.value.trim() && f.checkValidity()) f.setAttribute('aria-invalid', 'false'); }); });
+})();
+</script>
+</body>
+</html>

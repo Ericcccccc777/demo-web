@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="016">
+<meta name="demo:brand" content="Batch 47 Roasters">
+<title>Batch 47 Roasters — small-batch coffee roaster, Osborne Park WA</title>
+<meta name="description" content="Batch 47 Roasters is a fictional, data-minded small-batch coffee roaster in Osborne Park, WA, with single-origin lots, brew procedures, café wholesale and a subscription.">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+/* Batch 47 — "lab spec sheet": graph paper, title blocks, hairlines, one signal colour. */
+:root{
+--paper:#FAFAF7;--ink:#1E1E1E;--grid:#E3E3DE;--sig:#FF5B1F;--sig-ink:#B83A0B;--data:#1F9D55;--data-ink:#17804A;
+--muted:#5F5F5A;--soft:#EFEEE8;
+--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 16px/1.55 var(--sans);background-color:var(--paper);
+background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),
+linear-gradient(rgba(227,227,222,.45) 1px,transparent 1px),linear-gradient(90deg,rgba(227,227,222,.45) 1px,transparent 1px);
+background-size:40px 40px,40px 40px,8px 8px,8px 8px;background-position:-1px -1px}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px;box-shadow:0 0 0 5px rgba(255,91,31,.35)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--ink);color:var(--paper);padding:10px 14px;font:500 13px var(--mono)}
+.skip:focus{top:12px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+.mono,.kick,.bar,.lbl{font-family:var(--mono)}
+.kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kick b{color:var(--sig-ink);font-weight:600}
+.num{font-variant-numeric:tabular-nums}
+/* ---------- title-block header ---------- */
+.tb{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--ink)}
+.tb-in{display:grid;grid-template-columns:auto 1fr auto auto;align-items:stretch;max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;padding:10px 20px 10px 0;border-right:1px solid var(--ink);min-width:0}
+.mark{flex:none;display:grid;place-items:center;width:34px;height:34px;background:var(--sig);color:var(--ink);font:600 15px/1 var(--mono);letter-spacing:-.04em;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.bn{font:600 17px/1.15 var(--sans);letter-spacing:-.01em;overflow-wrap:anywhere;max-width:22ch}
+.docid{align-self:center;padding:0 20px;font:400 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tb nav{display:flex;align-items:stretch}
+.tb nav a{display:flex;align-items:center;padding:0 14px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-left:1px solid var(--grid)}
+.tb nav a:hover{background:var(--soft)}
+.slipbtn{display:flex;align-items:center;gap:8px;padding:0 0 0 18px;margin-left:14px;border-left:1px solid var(--ink);font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.slipbtn span{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 6px;background:var(--ink);color:var(--paper);font-size:12px}
+.slipbtn.bump span{animation:bump .5s ease}
+@keyframes bump{30%{background:var(--sig);color:var(--ink);transform:translateY(-2px)}}
+/* ---------- hero / fig 1 ---------- */
+.hero{padding:clamp(28px,4vw,48px) 0 clamp(40px,5vw,64px)}
+.hero-top{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:end;margin-bottom:28px}
+.hero-top>div:first-child{grid-column:1/8}
+.hero-top .lede{grid-column:8/13}
+h1{margin-top:14px;font:600 clamp(40px,6vw,82px)/.95 var(--sans);letter-spacing:-.035em}
+h1 em{font-style:normal;color:var(--sig-ink)}
+.lede p{font-size:17px;max-width:46ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--ink);background:var(--paper);font:500 13px var(--mono);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,transform .15s}
+.btn:hover{background:var(--soft)}
+.btn:active{transform:translateY(1px)}
+.btn.pri{background:var(--ink);color:var(--paper)}
+.btn.pri:hover{background:#000}
+.btn.sig{background:var(--sig);color:var(--ink)}
+.btn.sm{min-height:40px;padding:0 12px;font-size:12px}
+.fig{margin:0;border:1px solid var(--ink);background:var(--paper);box-shadow:8px 8px 0 rgba(30,30,30,.07)}
+.fig-head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:10px 16px;border-bottom:1px solid var(--ink);font:500 11.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.fig-head .t{margin-right:auto}
+.fig-head .t b{color:var(--sig-ink);font-weight:600}
+.lg{display:inline-flex;align-items:center;gap:7px;color:var(--muted)}
+.lg i{display:inline-block;width:18px;height:3px;background:var(--sig)}
+.lg.ror i{height:2px;background:var(--data)}
+.lg.dev i{height:10px;width:14px;background:repeating-linear-gradient(135deg,rgba(255,91,31,.55) 0 2px,rgba(255,91,31,.12) 2px 5px)}
+.fig-body{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr)}
+.plot{border-right:1px solid var(--ink);min-width:0}
+.chart{position:relative;height:clamp(300px,34vw,410px);touch-action:pan-y;cursor:crosshair;
+background-image:linear-gradient(rgba(227,227,222,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(227,227,222,.6) 1px,transparent 1px);background-size:8px 8px}
+.chart svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;font-family:var(--mono)}
+.ax{font-size:11px;fill:var(--muted)}
+.ax.r{fill:var(--data-ink)}
+.gl{stroke:#D5D5CF;stroke-width:1}
+.gl.base{stroke:var(--ink)}
+.bt{fill:none;stroke:var(--sig);stroke-width:2.75;stroke-linejoin:round;stroke-linecap:round}
+.ror{fill:none;stroke:var(--data);stroke-width:1.6;stroke-dasharray:1 0}
+.mk{font-size:11px;font-weight:500;fill:var(--ink)}
+.mkbox{fill:var(--paper);stroke:var(--ink);stroke-width:1}
+.fcl{stroke:var(--ink);stroke-width:1;stroke-dasharray:4 3}
+.ph{font-size:10.5px;letter-spacing:.06em;fill:var(--ink)}
+.handle{cursor:ew-resize;touch-action:none}
+.handle .hit{fill:transparent}
+.handle .ring{fill:var(--paper);stroke:var(--sig);stroke-width:3}
+.handle .dot{fill:var(--ink)}
+.handle:hover .ring{stroke-width:4}
+.hint{font-size:10.5px;fill:var(--sig-ink);letter-spacing:.05em}
+.xh line{stroke:var(--ink);stroke-width:1;stroke-dasharray:2 3}
+.xh rect{fill:var(--ink)}
+.xh text{fill:var(--paper);font-size:11px}
+.ctrl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;align-items:center;padding:14px 16px;border-top:1px solid var(--ink)}
+.ctrl label{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.rng{position:relative}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:32px;margin:0;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:linear-gradient(90deg,#C49A6C,#74482B 55%,#2B1A12)}
+input[type=range]::-moz-range-track{height:2px;background:linear-gradient(90deg,#C49A6C,#74482B 55%,#2B1A12)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-10px;background:var(--sig);border:2px solid var(--ink);border-radius:0;transform:rotate(45deg)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--sig);border:2px solid var(--ink);border-radius:0;transform:rotate(45deg)}
+.ticks{display:flex;justify-content:space-between;font:400 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:-2px}
+.presets{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.presets span{font:400 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-right:4px}
+.chip{min-height:40px;padding:0 12px;border:1px solid var(--ink);background:var(--paper);font:500 12px var(--mono);letter-spacing:.04em;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.chip:hover{background:var(--soft)}
+.chip[aria-pressed=true]:hover{background:#000}
+.reads{display:grid;grid-template-columns:repeat(5,1fr);margin:0;border-top:1px solid var(--ink)}
+.reads div{padding:12px 16px 14px;border-left:1px solid var(--grid)}
+.reads div:first-child{border-left:0}
+.reads dt{font:400 10.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.reads dd{margin:4px 0 0;font:500 clamp(18px,1.8vw,24px)/1.1 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.reads dd small{font-size:12px;color:var(--muted);letter-spacing:0}
+.rail{display:flex;flex-direction:column;min-width:0}
+.rail>div{padding:14px 16px;border-bottom:1px solid var(--grid)}
+.rail>div:last-child{border-bottom:0;flex:1}
+.rail .lbl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bean{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;margin-top:6px}
+.bean svg{width:96px;height:auto}
+.bean p{font:500 13px/1.45 var(--mono)}
+.scale{position:relative;height:10px;margin-top:10px;background:linear-gradient(90deg,#C49A6C,#9C6B43 30%,#74482B 55%,#4E2F1D 80%,#2B1A12);border:1px solid var(--ink)}
+.scale i{position:absolute;top:-7px;width:0;height:0;border:6px solid transparent;border-top:7px solid var(--ink);transform:translateX(-6px)}
+.wheel{display:block;width:100%;max-width:340px;margin:4px auto 0}
+.wheel .seg{fill:var(--sig);stroke:var(--paper);stroke-width:2}
+.wheel text{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;fill:var(--muted)}
+.wheel text.hot{fill:var(--ink);font-weight:600}
+.wheel .c1{font:600 15px var(--mono);fill:var(--ink);text-transform:uppercase}
+.wheel .c2{font-size:10px;fill:var(--muted)}
+.notes{font:500 15px/1.4 var(--sans);margin-top:6px}
+.notes b{font-weight:600}
+.figcap{padding:10px 16px;border-top:1px solid var(--ink);font:400 12px/1.5 var(--mono);color:var(--muted)}
+/* ---------- sheets ---------- */
+.sheet{position:relative;max-width:1320px;margin:0 auto clamp(32px,4vw,56px);background:var(--paper);border:1px solid var(--ink);box-shadow:8px 8px 0 rgba(30,30,30,.06);scroll-margin-top:76px}
+.sheets{padding:0 clamp(16px,3vw,40px)}
+.sheet::before,.sheet::after{content:"";position:absolute;width:14px;height:14px;border:0 solid var(--ink);pointer-events:none}
+.sheet::before{left:-9px;top:-9px;border-left-width:1px;border-top-width:1px}
+.sheet::after{right:-9px;bottom:-9px;border-right-width:1px;border-bottom-width:1px}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;padding:9px 16px;border-bottom:1px solid var(--ink);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase}
+.bar b{font-weight:600}
+.bar span:nth-child(2){color:var(--muted)}
+.sh-in{padding:clamp(22px,3vw,40px) clamp(16px,2.6vw,36px) clamp(26px,3vw,40px)}
+.sh-head{display:grid;grid-template-columns:repeat(12,1fr);gap:12px 24px;align-items:end;margin-bottom:clamp(20px,3vw,34px)}
+.sh-head h2{grid-column:1/8;font:600 clamp(28px,3.4vw,46px)/1.02 var(--sans);letter-spacing:-.03em}
+.sh-head p{grid-column:8/13;color:var(--muted);max-width:44ch}
+/* lots */
+.lots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.lot{display:flex;flex-direction:column;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:18px 20px 20px;min-width:0}
+.lot-h{display:grid;grid-template-columns:1fr 150px;gap:4px 16px;align-items:start;margin-bottom:12px}
+.lot-no{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lot h3{font:600 clamp(22px,2vw,28px)/1.1 var(--sans);letter-spacing:-.02em;grid-column:1}
+.spark{grid-column:2;grid-row:1/3;width:150px;height:62px;border:1px solid var(--grid);background:#fff}
+.spark path.c{fill:none;stroke:var(--sig);stroke-width:2}
+.spark rect{fill:rgba(255,91,31,.14)}
+.spark text{font:500 9px var(--mono);fill:var(--muted)}
+.spec{width:100%;border-collapse:collapse;font-size:14.5px}
+.spec th,.spec td{padding:8px 10px 8px 0;border-top:1px solid var(--grid);text-align:left;vertical-align:top}
+.spec th{width:24%;font:500 11px/1.9 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.spec td:nth-child(2){font-weight:500;width:40%}
+.spec td:nth-child(3){color:var(--muted);font-size:13.5px}
+.spec tr.pr td:nth-child(2){font:600 17px var(--mono)}
+.lot-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:14px}
+/* procedures */
+.tabs{display:flex;flex-wrap:wrap;border:1px solid var(--ink);border-bottom:0;width:max-content;max-width:100%}
+.tab{min-height:48px;padding:0 18px;border:0;border-right:1px solid var(--ink);background:var(--paper);font:500 12.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;cursor:pointer;text-align:left}
+.tab:last-child{border-right:0}
+.tab[aria-selected=true]{background:var(--ink);color:var(--paper)}
+.tab small{display:block;font-size:10.5px;opacity:.7}
+.proc{border:1px solid var(--ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr)}
+.proc[hidden]{display:none}
+.params{border-right:1px solid var(--ink);padding:18px 20px;display:flex;flex-direction:column;gap:16px}
+.params dl{display:grid;grid-template-columns:1fr 1fr;margin:0;border-top:1px solid var(--ink)}
+.params dl div{padding:10px 0;border-bottom:1px solid var(--grid)}
+.params dl div:nth-child(odd){padding-right:12px}
+.params dt{font:400 10.5px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.params dd{margin:2px 0 0;font:500 18px/1.2 var(--mono);font-variant-numeric:tabular-nums}
+.dose{display:flex;align-items:center;gap:0;border:1px solid var(--ink);width:max-content}
+.dose button{width:44px;height:44px;border:0;background:var(--paper);font:500 20px var(--mono);cursor:pointer}
+.dose button:hover{background:var(--soft)}
+.dose output{min-width:92px;text-align:center;font:600 15px var(--mono);border-left:1px solid var(--ink);border-right:1px solid var(--ink);line-height:44px}
+.dose-l{font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.steps{list-style:none;margin:0;padding:18px 20px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 88px 1fr;gap:10px;padding:11px 0;border-bottom:1px solid var(--grid);align-items:baseline}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(s,decimal-leading-zero);font:600 13px var(--mono);color:var(--sig-ink)}
+.steps .tm{font:500 12px var(--mono);color:var(--muted)}
+.steps b{font-family:var(--mono);font-weight:600}
+.tl{display:flex;height:34px;border:1px solid var(--ink);font:500 10.5px/1.1 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.tl span{display:flex;align-items:center;padding:0 6px;border-right:1px solid var(--ink);overflow:hidden;white-space:nowrap}
+.tl span:last-child{border-right:0}
+.tl .a{background:rgba(255,91,31,.18)}.tl .b{background:rgba(255,91,31,.38)}.tl .c{background:rgba(31,157,85,.16)}.tl .d{background:var(--soft)}
+.tl-l{display:flex;justify-content:space-between;font:400 10.5px var(--mono);color:var(--muted);margin-top:4px}
+/* wholesale */
+.two{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px)}
+.incl{list-style:none;margin:0 0 22px;padding:0;border-top:1px solid var(--ink)}
+.incl li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:11px 0;border-bottom:1px solid var(--grid)}
+.incl li::before{content:"";width:14px;height:8px;margin-top:6px;border-left:2px solid var(--data);border-bottom:2px solid var(--data);transform:rotate(-45deg)}
+.incl b{font-weight:600}
+.tiers{width:100%;border-collapse:collapse;font:400 14px var(--mono)}
+.tiers caption{text-align:left;font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-bottom:8px}
+.tiers th,.tiers td{border:1px solid var(--ink);padding:9px 12px;text-align:left}
+.tiers thead th{background:var(--ink);color:var(--paper);font-weight:500;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.tiers td:last-child{font-weight:600;text-align:right}
+.form{border:1px solid var(--ink);padding:18px 20px 20px;background:#fff}
+.form h3{font:600 20px var(--sans);letter-spacing:-.01em;margin-bottom:4px}
+.form>p{color:var(--muted);font-size:14px;margin-bottom:14px}
+.fld{display:grid;gap:5px;margin-bottom:12px}
+.fld label,.fld legend{font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase}
+.fld input,.fld select,.fld textarea{width:100%;min-height:44px;padding:9px 11px;border:1px solid var(--ink);border-radius:0;background:var(--paper);font-size:15px}
+.fld textarea{min-height:88px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* subscription + slip */
+.cfg fieldset{border:0;padding:0;margin:0 0 18px}
+.cfg legend{font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;padding:0}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink)}
+.seg label{position:relative;display:grid;place-items:center;min-height:56px;padding:6px;border-right:1px solid var(--ink);cursor:pointer;text-align:center;font:500 13px/1.25 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.seg label:last-child{border-right:0}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg small{display:block;font-size:10.5px;color:var(--muted);text-transform:none;letter-spacing:0}
+.seg label:has(input:checked){background:var(--ink);color:var(--paper)}
+.seg label:has(input:checked) small{color:#C9C9C2}
+.seg label:has(input:focus-visible){outline:2px solid var(--sig);outline-offset:-4px}
+.pick{display:grid;gap:6px}
+.pick label{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;min-height:48px;padding:6px 12px;border:1px solid var(--ink);cursor:pointer;font-size:15px}
+.pick label:has(input:checked){box-shadow:inset 4px 0 0 var(--sig);background:#fff}
+.pick input{width:16px;height:16px;accent-color:var(--ink);margin:0}
+.pick .p{font:500 13px var(--mono)}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);margin:18px 0 14px;background:#fff}
+.sum div{padding:10px 12px;border-right:1px solid var(--grid)}
+.sum div:last-child{border-right:0}
+.sum dt{font:400 10px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.sum dd{margin:3px 0 0;font:600 18px var(--mono);font-variant-numeric:tabular-nums}
+.slip{border:1px solid var(--ink);background:#fff;display:flex;flex-direction:column;align-self:start}
+.slip-h{display:flex;justify-content:space-between;align-items:baseline;padding:14px 18px;border-bottom:1px dashed var(--ink)}
+.slip-h h3{font:600 20px var(--sans)}
+.slip-h span{font:400 11px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.slip ul{list-style:none;margin:0;padding:6px 18px;flex:1}
+.slip li{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--grid);font-size:15px}
+.slip li .q{display:flex;align-items:center;border:1px solid var(--ink)}
+.slip li .q button{width:40px;height:40px;border:0;background:#fff;cursor:pointer;font:500 16px var(--mono)}
+.slip li .q span{min-width:28px;text-align:center;font:600 14px var(--mono)}
+.slip li .lp{font:600 14px var(--mono);min-width:64px;text-align:right}
+.slip .empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:100%;min-height:170px;padding:18px 0;color:var(--muted);font-size:14.5px;border:0;text-align:center}
+.slip .empty svg{width:64px;height:auto}
+.slip .empty a{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.slip ul:has(.empty){display:flex}
+.slip-f{padding:14px 18px 18px;border-top:1px dashed var(--ink)}
+.slip-tot{display:flex;justify-content:space-between;font:600 20px var(--mono);margin-bottom:12px}
+.slip-f .btns{display:flex;gap:8px;flex-wrap:wrap}
+.note{font:400 12px/1.5 var(--mono);color:var(--muted);margin-top:12px}
+/* visit */
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.cols3>div{padding:18px 20px 18px 0}
+.cols3>div+div{padding-left:20px;border-left:1px solid var(--grid)}
+.cols3 h3{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.cols3 p,.cols3 li{font-size:15px}
+.cols3 ul{margin:0;padding:0;list-style:none}
+.cols3 li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dotted #CFCFC8}
+.cols3 li span:last-child{font-family:var(--mono);font-size:14px}
+.faq{margin-top:26px;border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--grid)}
+.faq summary{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:52px;cursor:pointer;font-weight:500;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 20px var(--mono);color:var(--sig-ink)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 16px;max-width:70ch;color:#3A3A37}
+footer{border-top:1px solid var(--ink);background:var(--ink);color:var(--paper);margin-top:clamp(20px,3vw,40px)}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+.ft>div{padding:22px 18px 26px 0;border-right:1px solid #3A3A37;min-width:0}
+.ft>div+div{padding-left:18px}
+.ft>div:last-child{border-right:0}
+.ft .fb{font:600 22px/1.15 var(--sans);letter-spacing:-.01em;overflow-wrap:anywhere}
+.ft small,.ft p{display:block;font:400 12px/1.6 var(--mono);color:#C9C9C2}
+.ft .k{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#A9A9A2;margin-bottom:6px}
+.ft a{color:var(--paper)}
+/* reveal: draw the curve once when first seen */
+.draw .bt{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw .85s cubic-bezier(.3,.6,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (max-width:1100px){
+.docid{display:none}
+.tb nav a{padding:0 10px}
+.fig-body{grid-template-columns:1fr}
+.plot{border-right:0}
+.rail{flex-direction:row;flex-wrap:wrap;border-top:1px solid var(--ink)}
+.rail>div{flex:1 1 260px;border-bottom:0;border-right:1px solid var(--grid)}
+}
+@media (max-width:860px){
+.tb{position:relative}
+.tb-in{grid-template-columns:1fr auto;padding-right:0}
+.brand{border-right:0}
+.tb nav{grid-column:1/-1;grid-row:2;overflow-x:auto;scrollbar-width:none;border-top:1px solid var(--ink);margin-left:calc(-1*clamp(16px,3vw,40px))}
+.tb nav::-webkit-scrollbar{display:none}
+.tb nav a{min-height:44px;flex:none;border-left:0;border-right:1px solid var(--grid)}
+.slipbtn{margin-left:0;padding:0 clamp(16px,3vw,40px) 0 16px}
+.hero-top>div:first-child,.hero-top .lede{grid-column:1/-1}
+.hero-top .lede{margin-top:18px}
+.sh-head h2,.sh-head p{grid-column:1/-1}
+.lots{grid-template-columns:1fr}
+.proc{grid-template-columns:1fr}
+.params{border-right:0;border-bottom:1px solid var(--ink)}
+.two{grid-template-columns:1fr}
+.cols3{grid-template-columns:1fr}
+.cols3>div+div{padding-left:0;border-left:0;border-top:1px solid var(--grid)}
+.ft{grid-template-columns:1fr 1fr}
+.ft>div:nth-child(2){border-right:0}
+.ft>div:nth-child(3){padding-left:0}
+.ft>div:nth-child(n+3){border-top:1px solid #3A3A37}
+}
+@media (max-width:640px){
+body{font-size:15.5px;background-size:32px 32px,32px 32px,8px 8px,8px 8px}
+.bn{font-size:15.5px}
+.chart{height:280px}
+.fx{display:none}
+.fig-head{font-size:10.5px;padding:10px 12px;gap:6px 12px}
+.fig-head .t{flex:1 1 100%}
+.ctrl{grid-template-columns:1fr;gap:6px}
+.reads{grid-template-columns:repeat(2,1fr)}
+.reads div{border-left:0;border-bottom:1px solid var(--grid)}
+.reads div:nth-child(even){border-left:1px solid var(--grid)}
+.reads div:last-child{grid-column:1/-1;border-bottom:0;border-left:0}
+.rail{flex-direction:column}
+.rail>div{flex:none;border-right:0;border-bottom:1px solid var(--grid)}
+.sheets{padding:0 12px}
+.sheet::before,.sheet::after{display:none}
+.bar span:nth-child(2){display:none}
+.lot{padding:16px}
+.lot-h{grid-template-columns:1fr;gap:6px}
+.spark{grid-column:1;grid-row:auto;width:100%;height:70px}
+/* tables become key–value lists */
+.spec,.spec tbody,.spec tr,.spec th,.spec td{display:block;width:auto}
+.spec tr{display:grid;grid-template-columns:1fr;padding:9px 0;border-top:1px solid var(--grid)}
+.spec th,.spec td{border:0;padding:0}
+.spec th{font-size:10.5px;line-height:1.5}
+.spec td:nth-child(2){font-size:16px;width:auto}
+.cols3>div{padding-right:0}
+.tb nav{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.spec td:nth-child(3){font-size:13px}
+.lot-act .btn{flex:1}
+.tab{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--ink)}
+.tab:last-child{border-bottom:0}
+.tabs{width:100%}
+.steps li{grid-template-columns:34px 1fr;gap:2px 8px}
+.steps .tm{grid-column:2}
+.steps li>span:last-child{grid-column:2}
+.row2{grid-template-columns:1fr}
+.sum{grid-template-columns:1fr 1fr}
+.sum div:nth-child(2){border-right:0}
+.sum div:nth-child(-n+2){border-bottom:1px solid var(--grid)}
+.ft{grid-template-columns:1fr}
+.ft>div{border-right:0;padding-left:0!important;border-top:1px solid #3A3A37}
+.ft>div:first-child{border-top:0}
+.tl{font-size:9.5px}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.draw .bt{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="tb" id="top">
+<div class="tb-in">
+<a class="brand" href="#top"><span class="mark" aria-hidden="true">47</span><span class="bn" data-brand>Batch 47 Roasters</span></a>
+<p class="docid">Data sheet B47-26 · Rev 09 · Osborne Park WA</p>
+<nav aria-label="Sections"><a href="#fig1">Fig. 1</a><a href="#lots">Lots</a><a href="#brew">Brew</a><a href="#wholesale">Wholesale</a><a href="#subscribe">Subscribe</a><a href="#visit">Visit</a></nav>
+<a class="slipbtn" href="#slip" id="slipLink">Slip <span id="slipCount" class="num">0</span></a>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="fig1" aria-labelledby="h1">
+<div class="wrap">
+<div class="hero-top">
+<div>
+<p class="kick"><b>§01</b> — Roast profile · 12 kg drum · Osborne Park, WA</p>
+<h1 id="h1">Coffee, roasted <em>to&nbsp;spec.</em></h1>
+</div>
+<div class="lede">
+<p>We roast small batches twice a week and log every one — charge temperature, first crack, development time — then print the numbers on the bag, so you know exactly what's inside.</p>
+<div class="ctas"><a class="btn pri" href="#lots">Read the spec sheets</a><a class="btn" href="#subscribe">Start a subscription</a></div>
+</div>
+</div>
+<figure class="fig" aria-label="Figure 1: interactive roast profile">
+<div class="fig-head">
+<span class="t">Fig. 1<span class="fx"> — Bean temp vs time</span> · <b id="figName">Custom profile</b></span>
+<span class="lg"><i></i>Bean temp<span class="fx"> °C</span></span>
+<span class="lg ror"><i></i>Rate of rise<span class="fx"> °C/min</span></span>
+<span class="lg dev"><i></i>Development</span>
+</div>
+<div class="fig-body">
+<div class="plot">
+<div class="chart" id="chart">
+<svg id="svg" role="img" aria-labelledby="chartDesc"><desc id="chartDesc">Roast profile chart.</desc></svg>
+</div>
+<div class="ctrl">
+<label for="roast">Roast level</label>
+<div class="rng">
+<input type="range" id="roast" min="0" max="100" value="45" step="1" aria-valuetext="Medium">
+<div class="ticks" aria-hidden="true"><span>Light</span><span>Medium</span><span>Dark</span></div>
+</div>
+<div class="presets" role="group" aria-label="Load a current lot's profile">
+<span>Current lots</span>
+<button type="button" class="chip" data-lot="0" aria-pressed="false">ETH Guji</button>
+<button type="button" class="chip" data-lot="1" aria-pressed="false">COL Huila</button>
+<button type="button" class="chip" data-lot="2" aria-pressed="false">BRA Cerrado</button>
+<button type="button" class="chip" data-lot="3" aria-pressed="false">PNG W. Highlands</button>
+</div>
+</div>
+<dl class="reads">
+<div><dt>Total time</dt><dd id="rTot" class="num">—</dd></div>
+<div><dt>1st crack</dt><dd id="rFc" class="num">—</dd></div>
+<div><dt>Development</dt><dd id="rDev" class="num">—</dd></div>
+<div><dt>Dev. ratio</dt><dd id="rDtr" class="num">—</dd></div>
+<div><dt>Drop temp</dt><dd id="rDrop" class="num">—</dd></div>
+</dl>
+</div>
+<aside class="rail" aria-label="What this roast level means">
+<div>
+<p class="lbl">Whole-bean colour</p>
+<div class="bean">
+<svg viewBox="0 0 120 84" aria-hidden="true"><defs><radialGradient id="bh" cx=".36" cy=".3" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><g transform="rotate(-20 60 42)"><ellipse id="beanFill" cx="60" cy="42" rx="46" ry="30" fill="#7C4E2F" stroke="#1E1E1E" stroke-width="1.5"/><ellipse cx="60" cy="42" rx="46" ry="30" fill="url(#bh)"/><path d="M18 45C38 30 50 58 68 41S92 34 102 40" fill="none" stroke="#1E1E1E" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/></g></svg>
+<p><span id="beanName">Medium</span><br><span id="beanHex" class="num">#7C4E2F</span></p>
+</div>
+<div class="scale" aria-hidden="true"><i id="scaleMk"></i></div>
+</div>
+<div>
+<p class="lbl">Flavour wheel — what lights up</p>
+<svg class="wheel" id="wheel" viewBox="-32 -2 364 304" aria-hidden="true"></svg>
+</div>
+<div>
+<p class="lbl">Expect in the cup</p>
+<p class="notes" id="notes">Caramel · hazelnut · honey</p>
+</div>
+</aside>
+</div>
+<p class="figcap">Drag the orange drop point, use the slider or load a lot — the curve, flavour wheel and bean colour move together. Illustrative profile model, not a live roaster log.</p>
+</figure>
+<p class="sr" id="say" aria-live="polite"></p>
+</div>
+</section>
+<div class="sheets">
+<section class="sheet" id="lots" aria-labelledby="lotsH">
+<div class="bar"><b>§02 Current lots</b><span>Roasted Mon &amp; Thu · shipped within 48 h</span><span>Sheet 02/06</span></div>
+<div class="sh-in">
+<div class="sh-head"><h2 id="lotsH">Four coffees, fully specified.</h2><p>Every bag ships with its roast log and a recipe card. Here's what's on the bench this fortnight.</p></div>
+<div class="lots">
+<article class="lot" data-i="0">
+<div class="lot-h"><p class="lot-no">Spec 01 · Lot 0261</p><h3>Ethiopia — Guji</h3><svg class="spark" aria-hidden="true"></svg></div>
+<table class="spec"><caption class="sr">Specification: Ethiopia — Guji</caption><tbody>
+<tr><th scope="row">Process</th><td>Washed</td><td>36 h dry fermentation</td></tr>
+<tr><th scope="row">Altitude</th><td class="num">1,950–2,200 m</td><td>Guji Zone, Oromia</td></tr>
+<tr><th scope="row">Varietal</th><td>Ethiopian landraces</td><td>Smallholder washing station</td></tr>
+<tr><th scope="row">Roast date</th><td class="rd" data-d="5">Mon 21 Sep</td><td>Rest 5+ days for filter</td></tr>
+<tr><th scope="row">Roast</th><td class="rl">Light · DTR 15%</td><td class="rt">Drop 206 °C</td></tr>
+<tr><th scope="row">Tasting</th><td>Jasmine, bergamot, white peach</td><td>Best as pour-over</td></tr>
+<tr class="pr"><th scope="row">Price</th><td>$24.00</td><td>per 250 g · sample price</td></tr>
+</tbody></table>
+<div class="lot-act"><button type="button" class="btn sm" data-plot="0">Plot on Fig. 1</button><button type="button" class="btn sm pri" data-add="0">Add 250 g</button></div>
+</article>
+<article class="lot" data-i="1">
+<div class="lot-h"><p class="lot-no">Spec 02 · Lot 0262</p><h3>Colombia — Huila</h3><svg class="spark" aria-hidden="true"></svg></div>
+<table class="spec"><caption class="sr">Specification: Colombia — Huila</caption><tbody>
+<tr><th scope="row">Process</th><td>Washed</td><td>Fermented overnight, sun-dried</td></tr>
+<tr><th scope="row">Altitude</th><td class="num">1,650–1,900 m</td><td>Southern Huila</td></tr>
+<tr><th scope="row">Varietal</th><td>Caturra, Castillo</td><td>Two-farm blend</td></tr>
+<tr><th scope="row">Roast date</th><td class="rd" data-d="2">Thu 24 Sep</td><td>Filter or espresso</td></tr>
+<tr><th scope="row">Roast</th><td class="rl">Medium-light · DTR 18%</td><td class="rt">Drop 211 °C</td></tr>
+<tr><th scope="row">Tasting</th><td>Red apple, panela, orange zest</td><td>Sweet and round</td></tr>
+<tr class="pr"><th scope="row">Price</th><td>$22.00</td><td>per 250 g · sample price</td></tr>
+</tbody></table>
+<div class="lot-act"><button type="button" class="btn sm" data-plot="1">Plot on Fig. 1</button><button type="button" class="btn sm pri" data-add="1">Add 250 g</button></div>
+</article>
+<article class="lot" data-i="2">
+<div class="lot-h"><p class="lot-no">Spec 03 · Lot 0263</p><h3>Brazil — Cerrado</h3><svg class="spark" aria-hidden="true"></svg></div>
+<table class="spec"><caption class="sr">Specification: Brazil — Cerrado</caption><tbody>
+<tr><th scope="row">Process</th><td>Natural</td><td>Dried on patios, 18–22 days</td></tr>
+<tr><th scope="row">Altitude</th><td class="num">1,000–1,200 m</td><td>Cerrado Mineiro plateau</td></tr>
+<tr><th scope="row">Varietal</th><td>Yellow Catuaí, Mundo Novo</td><td>Mechanically harvested</td></tr>
+<tr><th scope="row">Roast date</th><td class="rd" data-d="2">Thu 24 Sep</td><td>Our house espresso base</td></tr>
+<tr><th scope="row">Roast</th><td class="rl">Medium · DTR 22%</td><td class="rt">Drop 216 °C</td></tr>
+<tr><th scope="row">Tasting</th><td>Milk chocolate, roasted hazelnut, caramel</td><td>Great with milk</td></tr>
+<tr class="pr"><th scope="row">Price</th><td>$19.00</td><td>per 250 g · sample price</td></tr>
+</tbody></table>
+<div class="lot-act"><button type="button" class="btn sm" data-plot="2">Plot on Fig. 1</button><button type="button" class="btn sm pri" data-add="2">Add 250 g</button></div>
+</article>
+<article class="lot" data-i="3">
+<div class="lot-h"><p class="lot-no">Spec 04 · Lot 0264</p><h3>PNG — Western Highlands</h3><svg class="spark" aria-hidden="true"></svg></div>
+<table class="spec"><caption class="sr">Specification: PNG — Western Highlands</caption><tbody>
+<tr><th scope="row">Process</th><td>Washed</td><td>Village-processed, then milled</td></tr>
+<tr><th scope="row">Altitude</th><td class="num">1,500–1,800 m</td><td>Wahgi Valley slopes</td></tr>
+<tr><th scope="row">Varietal</th><td>Typica, Bourbon, Arusha</td><td>Garden-grown</td></tr>
+<tr><th scope="row">Roast date</th><td class="rd" data-d="5">Mon 21 Sep</td><td>Rest 7+ days for espresso</td></tr>
+<tr><th scope="row">Roast</th><td class="rl">Medium-dark · DTR 25%</td><td class="rt">Drop 220 °C</td></tr>
+<tr><th scope="row">Tasting</th><td>Dark cocoa, brown sugar, cedar</td><td>Big in milk, bold short black</td></tr>
+<tr class="pr"><th scope="row">Price</th><td>$20.00</td><td>per 250 g · sample price</td></tr>
+</tbody></table>
+<div class="lot-act"><button type="button" class="btn sm" data-plot="3">Plot on Fig. 1</button><button type="button" class="btn sm pri" data-add="3">Add 250 g</button></div>
+</article>
+</div>
+</div>
+</section>
+<section class="sheet" id="brew" aria-labelledby="brewH">
+<div class="bar"><b>§03 Brew procedures</b><span>Written on our bench, scaled by you</span><span>Sheet 03/06</span></div>
+<div class="sh-in">
+<div class="sh-head"><h2 id="brewH">Three procedures. Change the dose, the numbers follow.</h2><p>Start here, then taste and adjust one variable at a time. Grind is the lever you'll use most.</p></div>
+<div class="tabs" role="tablist" aria-label="Brew method">
+<button class="tab" role="tab" id="t0" aria-controls="p0" aria-selected="true">Proc-01 Pour-over<small>cone dripper · 3 min</small></button>
+<button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Proc-02 Espresso<small>1:2.1 · 29 s</small></button>
+<button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Proc-03 Cold brew<small>concentrate · 17 h</small></button>
+</div>
+<div class="proc" role="tabpanel" id="p0" aria-labelledby="t0" data-min="10" data-max="30" data-step="1" data-dose="15">
+<div class="params">
+<div><p class="dose-l" id="dl0">Dose</p><div class="dose" role="group" aria-labelledby="dl0"><button type="button" data-dd="-1" aria-label="Less coffee">−</button><output aria-live="polite"><span class="dv">15</span> g</output><button type="button" data-dd="1" aria-label="More coffee">+</button></div></div>
+<dl><div><dt>Water</dt><dd><b data-k="16.67">250</b> g</dd></div><div><dt>Ratio</dt><dd>1 : 16.7</dd></div><div><dt>Water temp</dt><dd>94 °C</dd></div><div><dt>Grind</dt><dd>Medium-fine</dd></div><div><dt>Target time</dt><dd>2:45–3:15</dd></div><div><dt>Suits</dt><dd>ETH · COL</dd></div></dl>
+<div><div class="tl" aria-hidden="true"><span class="a" style="flex:40">Bloom</span><span class="b" style="flex:50">Pour 1</span><span class="b" style="flex:30">Pour 2</span><span class="d" style="flex:60">Drawdown</span></div><div class="tl-l" aria-hidden="true"><span>0:00</span><span>1:30</span><span>3:00</span></div></div>
+</div>
+<ol class="steps">
+<li><span class="tm">prep</span><span>Rinse the paper filter with hot water and tip the rinse water out.</span></li>
+<li><span class="tm">0:00</span><span>Add <b data-k="1">15</b> g ground coffee, level the bed and tare the scale.</span></li>
+<li><span class="tm">0:00–0:40</span><span>Bloom: pour <b data-k="3">45</b> g, swirl gently, wait.</span></li>
+<li><span class="tm">0:40–1:30</span><span>Pour in slow spirals to <b data-k="10">150</b> g.</span></li>
+<li><span class="tm">1:30–2:00</span><span>Pour to <b data-k="16.67">250</b> g, keeping the stream off the paper.</span></li>
+<li><span class="tm">2:00–3:15</span><span>Let it draw down. Sour and thin? Grind finer. Harsh and dry? Grind coarser.</span></li>
+</ol>
+</div>
+<div class="proc" role="tabpanel" id="p1" aria-labelledby="t1" hidden data-min="16" data-max="22" data-step="0.5" data-dose="19">
+<div class="params">
+<div><p class="dose-l" id="dl1">Dose</p><div class="dose" role="group" aria-labelledby="dl1"><button type="button" data-dd="-1" aria-label="Less coffee">−</button><output aria-live="polite"><span class="dv">19</span> g</output><button type="button" data-dd="1" aria-label="More coffee">+</button></div></div>
+<dl><div><dt>Yield</dt><dd><b data-k="2.1">40</b> g</dd></div><div><dt>Ratio</dt><dd>1 : 2.1</dd></div><div><dt>Water temp</dt><dd>93 °C</dd></div><div><dt>Shot time</dt><dd>27–31 s</dd></div><div><dt>Pressure</dt><dd>9 bar</dd></div><div><dt>Suits</dt><dd>BRA · PNG</dd></div></dl>
+<div><div class="tl" aria-hidden="true"><span class="c" style="flex:7">Pre</span><span class="b" style="flex:18">Main flow</span><span class="a" style="flex:4">Stop</span></div><div class="tl-l" aria-hidden="true"><span>0 s</span><span>15 s</span><span>29 s</span></div></div>
+</div>
+<ol class="steps">
+<li><span class="tm">prep</span><span>Dose <b data-k="1">19</b> g into a dry basket, distribute and tamp level.</span></li>
+<li><span class="tm">prep</span><span>Flush the group head for 2 seconds.</span></li>
+<li><span class="tm">0 s</span><span>Lock in and start the shot straight away.</span></li>
+<li><span class="tm">6–8 s</span><span>First drops appear — thick, dark and slow.</span></li>
+<li><span class="tm">27–31 s</span><span>Stop at <b data-k="2.1">40</b> g in the cup.</span></li>
+<li><span class="tm">taste</span><span>Sharp or thin: grind finer. Bitter or drying: grind coarser or cut the yield by 2 g.</span></li>
+</ol>
+</div>
+<div class="proc" role="tabpanel" id="p2" aria-labelledby="t2" hidden data-min="50" data-max="200" data-step="10" data-dose="100">
+<div class="params">
+<div><p class="dose-l" id="dl2">Dose</p><div class="dose" role="group" aria-labelledby="dl2"><button type="button" data-dd="-1" aria-label="Less coffee">−</button><output aria-live="polite"><span class="dv">100</span> g</output><button type="button" data-dd="1" aria-label="More coffee">+</button></div></div>
+<dl><div><dt>Cold water</dt><dd><b data-k="10">1000</b> g</dd></div><div><dt>Ratio</dt><dd>1 : 10</dd></div><div><dt>Steep</dt><dd>16–18 h</dd></div><div><dt>Grind</dt><dd>Coarse</dd></div><div><dt>Makes</dt><dd>≈ <b data-k="16">1600</b> ml diluted</dd></div><div><dt>Suits</dt><dd>BRA · COL</dd></div></dl>
+<div><div class="tl" aria-hidden="true"><span class="d" style="flex:6">Mix</span><span class="c" style="flex:70">Steep in the fridge</span><span class="a" style="flex:10">Filter</span></div><div class="tl-l" aria-hidden="true"><span>0 h</span><span>9 h</span><span>18 h</span></div></div>
+</div>
+<ol class="steps">
+<li><span class="tm">0 h</span><span>Grind <b data-k="1">100</b> g coarse — like raw sugar.</span></li>
+<li><span class="tm">0 h</span><span>Combine with <b data-k="10">1000</b> g cold filtered water and stir until every ground is wet.</span></li>
+<li><span class="tm">0–18 h</span><span>Cover and steep in the fridge for 16 to 18 hours.</span></li>
+<li><span class="tm">18 h</span><span>Filter through a paper filter. Slow is fine.</span></li>
+<li><span class="tm">serve</span><span>Dilute 1 : 1 with water or milk over ice.</span></li>
+<li><span class="tm">store</span><span>Keeps for up to 7 days, sealed, in the fridge.</span></li>
+</ol>
+</div>
+</div>
+</section>
+<section class="sheet" id="wholesale" aria-labelledby="whH">
+<div class="bar"><b>§04 Wholesale</b><span>Cafés &amp; offices · Perth metro</span><span>Sheet 04/06</span></div>
+<div class="sh-in">
+<div class="sh-head"><h2 id="whH">Wholesale for cafés that like the numbers.</h2><p>We supply a short list of cafés so every account gets a real dial-in, not a sales call.</p></div>
+<div class="two">
+<div>
+<ul class="incl">
+<li><span><b>House espresso + a rotating single origin.</b> Same roast targets every batch, logged and shared.</span></li>
+<li><span><b>Two barista sessions</b> at our roastery bench when you start, then refreshers each season.</span></li>
+<li><span><b>Dial-in visit</b> whenever you change coffees — we bring the scales.</span></li>
+<li><span><b>Delivery runs Tue &amp; Fri</b> across Perth metro. Standing orders or order by 2 pm the day before.</span></li>
+<li><span><b>Equipment advice with no lock-in.</b> Use the machine you like.</span></li>
+</ul>
+<table class="tiers">
+<caption>Volume tiers — sample prices, ex GST</caption>
+<thead><tr><th scope="col">Tier</th><th scope="col">Weekly volume</th><th scope="col">Per kg</th></tr></thead>
+<tbody><tr><td>W1</td><td>5–9 kg</td><td>$38.00</td></tr><tr><td>W2</td><td>10–19 kg</td><td>$35.00</td></tr><tr><td>W3</td><td>20 kg +</td><td>$32.00</td></tr></tbody>
+</table>
+</div>
+<form class="form" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the roastery.">
+<h3>Wholesale enquiry</h3>
+<p>Tell us about your café and we'll set up a tasting.</p>
+<div class="row2">
+<div class="fld"><label for="wCafe">Business name</label><input id="wCafe" name="cafe" autocomplete="organization" required></div>
+<div class="fld"><label for="wSub">Suburb</label><input id="wSub" name="suburb" placeholder="e.g. Leederville" required></div>
+</div>
+<div class="row2">
+<div class="fld"><label for="wVol">Weekly volume</label><select id="wVol" name="volume"><option>Under 5 kg</option><option selected>5–9 kg</option><option>10–19 kg</option><option>20 kg +</option></select></div>
+<div class="fld"><label for="wMail">Email</label><input id="wMail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+</div>
+<div class="fld"><label for="wMsg">What are you pouring now?</label><textarea id="wMsg" name="message" placeholder="Machine, grinders, milk vs black split…"></textarea></div>
+<button class="btn pri" type="submit">Send enquiry</button>
+</form>
+</div>
+</div>
+</section>
+<section class="sheet" id="subscribe" aria-labelledby="subH">
+<div class="bar"><b>§05 Subscription &amp; order slip</b><span>Roasted Mon &amp; Thu · dispatched next day</span><span>Sheet 05/06</span></div>
+<div class="sh-in">
+<div class="sh-head"><h2 id="subH">Set the interval. We'll keep the bag fresh.</h2><p>Pause, skip or change coffees whenever you like. Or add bags to a one-off order slip from the spec sheets above.</p></div>
+<div class="two">
+<form class="cfg" id="subForm" data-kit-ignore>
+<fieldset>
+<legend>Frequency</legend>
+<div class="seg">
+<label><input type="radio" name="freq" value="52">Weekly<small>52 a year</small></label>
+<label><input type="radio" name="freq" value="26" checked>Fortnightly<small>26 a year</small></label>
+<label><input type="radio" name="freq" value="12">Monthly<small>12 a year</small></label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Coffee</legend>
+<div class="pick">
+<label><input type="radio" name="kind" value="21" checked><span>Roaster's pick — rotating lot</span><span class="p">$21 / bag</span></label>
+<label><input type="radio" name="kind" value="22"><span>Filter only — light roasts</span><span class="p">$22 / bag</span></label>
+<label><input type="radio" name="kind" value="19"><span>Espresso only — Brazil base</span><span class="p">$19 / bag</span></label>
+</div>
+</fieldset>
+<fieldset>
+<legend id="bagsL">Bags per delivery (250 g)</legend>
+<div class="dose" role="group" aria-labelledby="bagsL"><button type="button" id="bagsMinus" aria-label="Fewer bags">−</button><output id="bags" aria-live="polite">2</output><button type="button" id="bagsPlus" aria-label="More bags">+</button></div>
+</fieldset>
+<dl class="sum">
+<div><dt>Per delivery</dt><dd id="sDel">$42</dd></div>
+<div><dt>≈ Per month</dt><dd id="sMon">$91</dd></div>
+<div><dt>Coffee / yr</dt><dd id="sKg">13 kg</dd></div>
+<div><dt>First roast</dt><dd id="sNext">Mon 28 Sep</dd></div>
+</dl>
+<button class="btn sig" type="submit">Start subscription</button>
+<p class="note">Sample prices in AUD. Free delivery in Perth metro; elsewhere in Australia is quoted at checkout.</p>
+</form>
+<div class="slip" id="slip" tabindex="-1" aria-labelledby="slipH">
+<div class="slip-h"><h3 id="slipH">Order slip</h3><span>One-off · 250 g bags</span></div>
+<ul id="slipList"></ul>
+<div class="slip-f">
+<div class="slip-tot"><span>Total</span><span id="slipTot" class="num">$0.00</span></div>
+<div class="btns"><button type="button" class="btn pri" id="placeOrder">Place order</button><button type="button" class="btn" id="clearSlip">Clear</button></div>
+<p class="note" id="slipNote" aria-live="polite"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sheet" id="visit" aria-labelledby="visitH">
+<div class="bar"><b>§06 Roastery</b><span>Osborne Park, WA</span><span>Sheet 06/06</span></div>
+<div class="sh-in">
+<div class="sh-head"><h2 id="visitH">Come for a cupping on Saturday.</h2><p>The roaster runs Monday and Thursday. On Saturday mornings the roller door is up for bag pick-ups and a free public cupping at 10 am.</p></div>
+<div class="cols3">
+<div><h3>Roller-door hours</h3><ul><li><span>Mon–Fri</span><span>Wholesale only</span></li><li><span>Sat</span><span>8:00–12:00</span></li><li><span>Public cupping</span><span>Sat 10:00</span></li><li><span>Sun</span><span>Closed</span></li></ul></div>
+<div><h3>Contact</h3><p>Osborne Park, Perth WA</p><p><a href="tel:+61855500147">(08) 5550 0147</a></p><p><a href="mailto:lab@example.com">lab@example.com</a></p></div>
+<div><h3>Shipping</h3><p>Orders roast on the next Monday or Thursday and ship the day after. Perth metro by courier; regional WA and interstate by post.</p></div>
+</div>
+<div class="faq">
+<details><summary>How fresh is “fresh”?</summary><p>Every bag carries its roast date. Filter coffees taste best from about day 5, espresso from about day 7, and both stay good for around six weeks sealed.</p></details>
+<details><summary>Can you grind it for me?</summary><p>Yes — choose a grind for your brewer when you order. Whole bean keeps longer, so we suggest it if you have a grinder.</p></details>
+<details><summary>Why do you publish the roast numbers?</summary><p>Because they explain the cup. A longer development time usually means more caramel and less acidity; a shorter one keeps fruit and florals. The numbers help you pick, and help us stay consistent.</p></details>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<div class="ft">
+<div><p class="k">Prepared by</p><p class="fb" data-brand>Batch 47 Roasters</p><small>Small-batch coffee roaster · Osborne Park, WA</small></div>
+<div><p class="k">Document</p><small>Data sheet B47-26 · Rev 09<br>Six sheets · printed on graph paper</small></div>
+<div><p class="k">Contact</p><small><a href="tel:+61855500147">(08) 5550 0147</a><br><a href="mailto:lab@example.com">lab@example.com</a></small></div>
+<div><p class="k">Notes</p><small>Sample prices in AUD. Concept demo — a fictional business; roast profiles are illustrative.</small></div>
+</div>
+</footer>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var NS="http://www.w3.org/2000/svg";
+function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function reduced(){return (window.DemoKit&&DemoKit.reducedMotion)||(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)}
+function mmss(t){var s=Math.round(t*60);return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
+var LOTS=[{n:"Ethiopia — Guji",s:"ETH Guji",r:.10,p:24},{n:"Colombia — Huila",s:"COL Huila",r:.30,p:22},{n:"Brazil — Cerrado",s:"BRA Cerrado",r:.55,p:19},{n:"PNG — Western Highlands",s:"PNG W. Highlands",r:.76,p:20}];
+/* ---- roast model: a smooth rate-of-rise curve, integrated analytically; first crack pinned at 196 °C ---- */
+function model(r){
+var tp=1.3,tFc=8.2+1.0*r,dev=1.4+2.4*r,tDrop=tFc+dev,a=.3,tau=4+2*r,F=2.5+1.5*r,k=1/a+1/tau;
+function I(s){return tau*(1-Math.exp(-s/tau))-(1-Math.exp(-s*k))/k}
+var sF=tFc-tp,P=(104-F*sF)/I(sF);
+function bt(t){if(t<=tp)return 92+108*Math.pow((tp-t)/tp,2.2);var s=t-tp;return 92+P*I(s)+F*s}
+function ror(t){var s=Math.max(0,t-tp);return P*(1-Math.exp(-s/a))*Math.exp(-s/tau)+F}
+for(var lo=tp,hi=tFc,i=0;i<24;i++){var mid=(lo+hi)/2;if(bt(mid)<150)lo=mid;else hi=mid}
+return{r:r,tp:tp,tDry:lo,tFc:tFc,dev:dev,tDrop:tDrop,drop:bt(tDrop),dtr:dev/tDrop*100,bt:bt,ror:ror};
+}
+function levelName(r){return r<.2?"Light":r<.4?"Medium-light":r<.62?"Medium":r<.82?"Medium-dark":"Dark"}
+var BEAN=[[0,[196,154,108]],[.3,[156,107,67]],[.55,[116,72,43]],[.8,[78,47,29]],[1,[43,26,18]]];
+function beanColour(r){for(var i=0;i<BEAN.length-1&&r>BEAN[i+1][0];i++);var a=BEAN[i],b=BEAN[Math.min(i+1,BEAN.length-1)],t=b[0]===a[0]?0:(r-a[0])/(b[0]-a[0]);
+return"#"+a[1].map(function(c,k){return Math.round(c+(b[1][k]-c)*t).toString(16).padStart(2,"0")}).join("").toUpperCase()}
+var NOTES=[["Jasmine",.02],["Citrus",.12],["Stone fruit",.24],["Berry",.33],["Honey",.44],["Caramel",.55],["Hazelnut",.64],["Cocoa",.74],["Spice",.86],["Smoke",.98]];
+function intens(r,c){var z=(r-c)/.13;return Math.exp(-z*z)}
+function notesFor(r){var top=NOTES.map(function(n){return{n:n[0],v:intens(r,n[1])}}).sort(function(a,b){return b.v-a.v}).slice(0,3).map(function(s){return s.n.toLowerCase()});top[0]=top[0].charAt(0).toUpperCase()+top[0].slice(1);return top.join(" · ")}
+/* ---- chart ---- */
+var svg=$("#svg"),chart=$("#chart"),W=0,H=0,M={l:44,r:40,t:40,b:30},T0=0,T1=14,Y0=60,Y1=240,R1=30;
+var G={};
+function sx(t){return M.l+(t-T0)/(T1-T0)*(W-M.l-M.r)}
+function sy(v){return H-M.b-(v-Y0)/(Y1-Y0)*(H-M.t-M.b)}
+function sr(v){return H-M.b-v/R1*(H-M.t-M.b)}
+function tx(x){return clamp(T0+(x-M.l)/(W-M.l-M.r)*(T1-T0),T0,T1)}
+function build(){
+var b=chart.getBoundingClientRect();W=Math.round(b.width);H=Math.round(b.height);if(!W||!H)return;
+var narrow=W<520;M={l:narrow?36:46,r:narrow?30:40,t:40,b:28};
+svg.setAttribute("viewBox","0 0 "+W+" "+H);
+var keep=svg.querySelector("desc");svg.textContent="";svg.appendChild(keep);
+var defs=el("defs",{},svg),pat=el("pattern",{id:"hatch",width:6,height:6,patternUnits:"userSpaceOnUse",patternTransform:"rotate(45)"},defs);
+el("rect",{width:6,height:6,fill:"rgba(255,91,31,.10)"},pat);el("line",{x1:0,y1:0,x2:0,y2:6,stroke:"rgba(255,91,31,.55)","stroke-width":2},pat);
+var g=el("g",{},svg),i,step=narrow?2:1;
+for(i=Y0;i<=Y1;i+=20){el("line",{x1:M.l,x2:W-M.r,y1:sy(i),y2:sy(i),class:"gl"+(i===Y0?" base":"")},g);if(!narrow||i%40===0)el("text",{x:M.l-8,y:sy(i)+4,"text-anchor":"end",class:"ax"},g).textContent=i}
+for(i=0;i<=14;i+=step){el("line",{x1:sx(i),x2:sx(i),y1:M.t,y2:H-M.b,class:"gl"+(i===0?" base":"")},g);el("text",{x:sx(i),y:H-M.b+17,"text-anchor":"middle",class:"ax"},g).textContent=i+(i===14?" min":"")}
+for(i=0;i<=30;i+=10)el("text",{x:W-M.r+7,y:sr(i)+4,class:"ax r"},g).textContent=i;
+el("text",{x:M.l-8,y:M.t-6,"text-anchor":"end",class:"ax"},g).textContent="°C";
+el("text",{x:W-M.r+7,y:M.t-6,class:"ax r"},g).textContent="RoR";
+G.ph=el("g",{},svg);G.dev=el("rect",{fill:"url(#hatch)",y:M.t,height:H-M.t-M.b},svg);
+G.fc=el("line",{class:"fcl",y1:M.t,y2:H-M.b},svg);
+G.ror=el("path",{class:"ror"},svg);G.bt=el("path",{class:"bt"},svg);
+G.tp=el("circle",{r:3.5,fill:"#1E1E1E"},svg);G.tpt=el("text",{class:"mk"},svg);
+G.fcb=el("rect",{class:"mkbox",height:20},svg);G.fct=el("text",{class:"mk"},svg);G.fcd=el("circle",{r:4,fill:"#FAFAF7",stroke:"#1E1E1E","stroke-width":1.5},svg);
+G.dt=el("text",{class:"mk","text-anchor":"end"},svg);
+G.xh=el("g",{class:"xh",style:"display:none"},svg);G.xl=el("line",{y1:M.t,y2:H-M.b},G.xh);G.xd=el("circle",{r:4,fill:"#FF5B1F",stroke:"#1E1E1E"},G.xh);G.xr=el("rect",{height:36},G.xh);G.xt1=el("text",{},G.xh);G.xt2=el("text",{},G.xh);
+G.h=el("g",{class:"handle","aria-hidden":"true"},svg);el("circle",{class:"hit",r:22},G.h);el("circle",{class:"ring",r:9},G.h);el("circle",{class:"dot",r:3},G.h);
+G.hint=el("text",{class:"hint","text-anchor":"middle"},svg);G.hint.textContent=hinted?"":"← drag →";
+handleEvents();
+render(cur,true);
+}
+var cur=.45,target=.45,raf=0,hinted=false,lastSaid="";
+function render(r,full){
+var m=model(r),n=140,i,t,d="",dr="";
+for(i=0;i<=n;i++){t=m.tDrop*i/n;d+=(i?"L":"M")+sx(t).toFixed(1)+","+sy(m.bt(t)).toFixed(1)}
+for(i=0;i<=80;i++){t=m.tp+.3+(m.tDrop-m.tp-.3)*i/80;dr+=(i?"L":"M")+sx(t).toFixed(1)+","+sr(clamp(m.ror(t),0,R1)).toFixed(1)}
+G.bt.setAttribute("d",d);G.ror.setAttribute("d",dr);
+var x1=sx(m.tFc),x2=sx(m.tDrop);
+G.dev.setAttribute("x",x1);G.dev.setAttribute("width",Math.max(0,x2-x1));
+G.fc.setAttribute("x1",x1);G.fc.setAttribute("x2",x1);
+G.tp.setAttribute("cx",sx(m.tp));G.tp.setAttribute("cy",sy(92));
+G.tpt.setAttribute("x",sx(m.tp)+8);G.tpt.setAttribute("y",sy(92)+16);G.tpt.textContent="TP "+mmss(m.tp)+" · 92°";
+var lbl="1ST CRACK "+mmss(m.tFc)+" · 196°",lw=lbl.length*6.7+12,lx=Math.max(M.l+4,x1-lw-8);
+G.fcb.setAttribute("x",lx);G.fcb.setAttribute("y",M.t+8);G.fcb.setAttribute("width",lw);
+G.fct.setAttribute("x",lx+6);G.fct.setAttribute("y",M.t+22);G.fct.textContent=lbl;
+G.fcd.setAttribute("cx",x1);G.fcd.setAttribute("cy",sy(196));
+var hx=x2,hy=sy(m.drop),dl="DROP "+Math.round(m.drop)+"°",room=W-hx-16>dl.length*6.7;
+G.h.setAttribute("transform","translate("+hx.toFixed(1)+","+hy.toFixed(1)+")");
+G.dt.setAttribute("text-anchor",room?"start":"end");G.dt.setAttribute("x",room?hx+14:hx-14);G.dt.setAttribute("y",room?hy+4:hy-16);G.dt.textContent=dl;
+G.hint.setAttribute("x",hx);G.hint.setAttribute("y",hy+32);
+// phase bar
+var ph=G.ph;ph.textContent="";var parts=[["DRYING",0,m.tDry,"#EFEEE8"],["MAILLARD",m.tDry,m.tFc,"#F6D6C8"],["DEV",m.tFc,m.tDrop,"#FF5B1F"]];
+parts.forEach(function(p){var a=sx(p[1]),b=sx(p[2]);el("rect",{x:a,y:12,width:Math.max(0,b-a),height:18,fill:p[3],stroke:"#1E1E1E","stroke-width":1},ph);
+var lab=p[0]+" "+mmss(p[2]-p[1]);if(b-a>lab.length*6.4+10)el("text",{x:a+6,y:25,class:"ph"},ph).textContent=lab;else if(b-a>p[0].length*6.4+8)el("text",{x:a+5,y:25,class:"ph"},ph).textContent=p[0];});
+// readouts
+$("#rTot").textContent=mmss(m.tDrop);
+$("#rFc").innerHTML=mmss(m.tFc)+" <small>196 °C</small>";
+$("#rDev").textContent=mmss(m.dev);
+$("#rDtr").innerHTML=m.dtr.toFixed(1)+"<small> %</small>";
+$("#rDrop").innerHTML=Math.round(m.drop)+"<small> °C</small>";
+var hex=beanColour(r);$("#beanFill").setAttribute("fill",hex);$("#beanHex").textContent=hex;$("#beanName").textContent=levelName(r);
+$("#scaleMk").style.left=(r*100)+"%";
+var sc=NOTES.map(function(n,k){return{k:k,n:n[0],v:intens(r,n[1])}});
+sc.forEach(function(s){var seg=wheelSegs[s.k];if(seg){seg.p.style.fillOpacity=(.07+.93*s.v).toFixed(3);seg.t.setAttribute("class",s.v>.5?"hot":"")}});
+wc1.textContent=levelName(r);wc2.textContent=Math.round(r*100)+" / 100";
+$("#notes").textContent=notesFor(r);
+$("#chartDesc").textContent=levelName(r)+" roast profile: turning point at "+mmss(m.tp)+", first crack at "+mmss(m.tFc)+" and 196 °C, drop at "+mmss(m.tDrop)+" and "+Math.round(m.drop)+" °C, development "+mmss(m.dev)+" ("+m.dtr.toFixed(0)+"% of the roast).";
+return m;
+}
+function tick(){
+var d=target-cur;
+if(Math.abs(d)<.0015||reduced()){cur=target;render(cur);raf=0;return}
+cur+=d*.16;render(cur);raf=requestAnimationFrame(tick);
+}
+function setTarget(r,src){
+target=clamp(r,0,1);
+if(src!=="slider"){$("#roast").value=Math.round(target*100)}
+$("#roast").setAttribute("aria-valuetext",levelName(target)+", "+Math.round(target*100)+" of 100");
+if(!raf)raf=requestAnimationFrame(tick);
+}
+function announce(){clearTimeout(announce.t);announce.t=setTimeout(function(){var m=model(target),txt=levelName(target)+" roast. First crack "+mmss(m.tFc)+", drop "+mmss(m.tDrop)+" at "+Math.round(m.drop)+" °C, development "+m.dtr.toFixed(0)+"%. Expect "+notesFor(target)+".";if(txt!==lastSaid){$("#say").textContent=txt;lastSaid=txt}},500)}
+function setPreset(i){
+$$(".chip[data-lot]").forEach(function(b){b.setAttribute("aria-pressed",String(+b.dataset.lot===i))});
+$("#figName").textContent=i==null?"Custom profile":LOTS[i].n+" · Lot 026"+(i+1);
+}
+function stopHint(){if(!hinted){hinted=true;if(G.hint)G.hint.textContent=""}}
+var dragging=false;
+function handleEvents(){
+G.h.addEventListener("pointerdown",function(e){dragging=true;stopHint();G.h.setPointerCapture(e.pointerId);e.preventDefault()});
+G.h.addEventListener("pointermove",function(e){if(!dragging)return;var b=svg.getBoundingClientRect(),t=tx(e.clientX-b.left);setPreset(null);setTarget((t-9.6)/3.4,"drag")});
+function up(){if(dragging){dragging=false;announce()}}
+G.h.addEventListener("pointerup",up);G.h.addEventListener("pointercancel",up);
+}
+chart.addEventListener("pointermove",function(e){
+if(dragging||!G.xh)return;var b=svg.getBoundingClientRect(),x=e.clientX-b.left,m=model(cur);
+var t=tx(x);if(t>m.tDrop){G.xh.style.display="none";return}
+var bt=m.bt(t),rr=t>m.tp?m.ror(t):null,px=sx(t),py=sy(bt);
+G.xh.style.display="";G.xl.setAttribute("x1",px);G.xl.setAttribute("x2",px);G.xd.setAttribute("cx",px);G.xd.setAttribute("cy",py);
+var s1="t "+mmss(t)+"  BT "+bt.toFixed(1)+"°",s2=rr==null?"RoR —":"RoR "+rr.toFixed(1)+"°/min",w=Math.max(s1.length,s2.length)*6.8+14;
+var bx=px+12+w>W-M.r?px-12-w:px+12,by=clamp(py-48,M.t+2,H-M.b-40);
+G.xr.setAttribute("x",bx);G.xr.setAttribute("y",by);G.xr.setAttribute("width",w);
+G.xt1.setAttribute("x",bx+7);G.xt1.setAttribute("y",by+15);G.xt1.textContent=s1;G.xt2.setAttribute("x",bx+7);G.xt2.setAttribute("y",by+29);G.xt2.textContent=s2;
+});
+chart.addEventListener("pointerleave",function(){if(G.xh)G.xh.style.display="none"});
+/* ---- flavour wheel ---- */
+var wheel=$("#wheel"),wheelSegs=[],wc1,wc2;
+(function(){
+var cx=150,cy=150,r0=54,r1=88,n=NOTES.length,gap=.018;
+NOTES.forEach(function(nt,k){
+var a0=-Math.PI/2+k*2*Math.PI/n+gap,a1=-Math.PI/2+(k+1)*2*Math.PI/n-gap,am=(a0+a1)/2;
+function P(r,a){return(cx+r*Math.cos(a)).toFixed(2)+" "+(cy+r*Math.sin(a)).toFixed(2)}
+var p=el("path",{class:"seg",d:"M"+P(r1,a0)+"A"+r1+" "+r1+" 0 0 1 "+P(r1,a1)+"L"+P(r0,a1)+"A"+r0+" "+r0+" 0 0 0 "+P(r0,a0)+"Z"},wheel);
+var c=Math.cos(am),s=Math.sin(am),lx=cx+(r1+10)*c,ly=cy+(r1+10)*s+(s>.3?9:s<-.3?-2:4);
+var t=el("text",{x:lx.toFixed(1),y:ly.toFixed(1),"text-anchor":c>.25?"start":c<-.25?"end":"middle"},wheel);t.textContent=nt[0];
+wheelSegs.push({p:p,t:t});
+});
+el("circle",{cx:cx,cy:cy,r:r0-6,fill:"#FAFAF7",stroke:"#1E1E1E","stroke-width":1},wheel);
+wc1=el("text",{x:cx,y:cy+2,"text-anchor":"middle",class:"c1"},wheel);wc2=el("text",{x:cx,y:cy+18,"text-anchor":"middle",class:"c2"},wheel);
+})();
+/* ---- wiring: slider, presets ---- */
+var slider=$("#roast");
+slider.addEventListener("input",function(){stopHint();setPreset(null);setTarget(slider.value/100,"slider")});
+slider.addEventListener("change",announce);
+$$(".chip[data-lot]").forEach(function(b){b.addEventListener("click",function(){var i=+b.dataset.lot;stopHint();setPreset(i);setTarget(LOTS[i].r);announce()})});
+/* ---- lots: sparklines + computed roast rows + roast dates ---- */
+$$(".lot").forEach(function(a){
+var i=+a.dataset.i,m=model(LOTS[i].r),s=$(".spark",a),w=150,h=62;
+s.setAttribute("viewBox","0 0 "+w+" "+h);s.setAttribute("preserveAspectRatio","none");
+var X=function(t){return 4+t/13.2*(w-8)},Y=function(v){return h-6-(v-80)/(230-80)*(h-12)},d="";
+el("rect",{x:X(m.tFc),y:0,width:X(m.tDrop)-X(m.tFc),height:h},s);
+for(var k=0;k<=60;k++){var t=m.tDrop*k/60;d+=(k?"L":"M")+X(t).toFixed(1)+","+Y(m.bt(t)).toFixed(1)}
+el("path",{class:"c",d:d,"vector-effect":"non-scaling-stroke"},s);
+$(".rl",a).textContent=levelName(LOTS[i].r)+" · DTR "+m.dtr.toFixed(0)+"%";
+$(".rt",a).textContent="Drop "+Math.round(m.drop)+" °C · "+mmss(m.tDrop)+" total";
+});
+var DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(d){return DAYS[d.getDay()]+" "+d.getDate()+" "+MON[d.getMonth()]}
+function roastDayOnOrBefore(d){d=new Date(d);while(d.getDay()!==1&&d.getDay()!==4)d.setDate(d.getDate()-1);return d}
+function nextRoastDay(){var d=new Date();d.setDate(d.getDate()+1);while(d.getDay()!==1&&d.getDay()!==4)d.setDate(d.getDate()+1);return d}
+$$(".rd").forEach(function(td){var d=new Date();d.setDate(d.getDate()-(+td.dataset.d));td.textContent=fmt(roastDayOnOrBefore(d))});
+$$("[data-plot]").forEach(function(b){b.addEventListener("click",function(){var i=+b.dataset.plot;stopHint();setPreset(i);setTarget(LOTS[i].r);announce();
+$("#fig1").scrollIntoView({behavior:reduced()?"auto":"smooth",block:"start"});setTimeout(function(){slider.focus({preventScroll:true})},reduced()?0:500)})});
+/* ---- brew tabs + dose scaling ---- */
+var tabs=$$(".tab");
+function selTab(i,focus){tabs.forEach(function(t,k){var on=k===i;t.setAttribute("aria-selected",String(on));t.tabIndex=on?0:-1;$("#p"+k).hidden=!on});if(focus)tabs[i].focus()}
+tabs.forEach(function(t,i){t.addEventListener("click",function(){selTab(i)});t.addEventListener("keydown",function(e){var k=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(k){e.preventDefault();selTab((i+k+tabs.length)%tabs.length,true)}else if(e.key==="Home"){e.preventDefault();selTab(0,true)}else if(e.key==="End"){e.preventDefault();selTab(tabs.length-1,true)}})});
+$$(".proc").forEach(function(p){
+var dose=+p.dataset.dose,mn=+p.dataset.min,mx=+p.dataset.max,st=+p.dataset.step;
+function upd(){$(".dv",p).textContent=dose;$$("b[data-k]",p).forEach(function(b){var v=dose*(+b.dataset.k);b.textContent=v>=100?Math.round(v).toLocaleString("en-AU"):Math.round(v*10)/10})}
+$$("[data-dd]",p).forEach(function(b){b.addEventListener("click",function(){dose=clamp(Math.round((dose+st*(+b.dataset.dd))*10)/10,mn,mx);upd()})});
+});
+/* ---- order slip ---- */
+var qty=[0,0,0,0],EMPTY='<svg viewBox="0 0 64 72" aria-hidden="true"><path d="M14 14h36l6 54H8z" fill="#FAFAF7" stroke="#1E1E1E" stroke-width="1.5"/><path d="M14 14l4-8h28l4 8" fill="none" stroke="#1E1E1E" stroke-width="1.5"/><rect x="20" y="30" width="24" height="20" fill="none" stroke="#FF5B1F" stroke-width="1.5"/><path d="M24 36h16M24 41h16M24 46h10" stroke="#1E1E1E" stroke-width="1"/></svg><span>Nothing on the slip yet.<br>Use “Add 250 g” on any spec sheet.</span><a href="#lots">Browse the lots ↑</a>';
+function money(v){return"$"+v.toFixed(2)}
+function drawSlip(){
+var ul=$("#slipList"),tot=0,count=0;ul.textContent="";
+qty.forEach(function(q,i){if(!q)return;tot+=q*LOTS[i].p;count+=q;
+var li=document.createElement("li");
+li.innerHTML='<span>'+LOTS[i].n+'</span><span class="q"><button type="button" aria-label="Remove one bag of '+LOTS[i].n+'">−</button><span class="num">'+q+'</span><button type="button" aria-label="Add one bag of '+LOTS[i].n+'">+</button></span><span class="lp num">'+money(q*LOTS[i].p)+'</span>';
+var bs=li.querySelectorAll("button");bs[0].onclick=function(){qty[i]--;drawSlip();say("Removed one bag of "+LOTS[i].n)};bs[1].onclick=function(){qty[i]++;drawSlip();say("Added one bag of "+LOTS[i].n)};
+ul.appendChild(li)});
+if(!count){var e=document.createElement("li");e.className="empty";e.innerHTML=EMPTY;ul.appendChild(e)}
+$("#slipTot").textContent=money(tot);$("#slipCount").textContent=count;
+}
+drawSlip();
+function say(t){$("#slipNote").textContent=t}
+$$("[data-add]").forEach(function(b){b.addEventListener("click",function(){var i=+b.dataset.add;qty[i]++;drawSlip();say("Added 250 g of "+LOTS[i].n+" to the order slip.");
+var s=$("#slipLink");s.classList.remove("bump");void s.offsetWidth;s.classList.add("bump");
+if(window.DemoKit)DemoKit.toast(LOTS[i].n+" added to the order slip — "+qty.reduce(function(a,b){return a+b},0)+" bag(s).",2200)})});
+$("#clearSlip").addEventListener("click",function(){qty=[0,0,0,0];drawSlip();say("Order slip cleared.")});
+$("#placeOrder").addEventListener("click",function(){var n=qty.reduce(function(a,b){return a+b},0);
+if(window.DemoKit)DemoKit.toast(n?"Demo only — no order was placed and nothing was charged.":"Add a bag from a spec sheet first — this demo won't place a real order either way.");});
+/* ---- subscription maths ---- */
+var bags=2,sf=$("#subForm");
+function sub(){var per=+sf.freq.value,price=+sf.kind.value,del=bags*price,yr=del*per;
+$("#bags").textContent=bags;$("#sDel").textContent="$"+del;$("#sMon").textContent="$"+Math.round(yr/12);
+$("#sKg").textContent=(bags*per*.25).toFixed(1).replace(/\.0$/,"")+" kg";$("#sNext").textContent=fmt(nextRoastDay())}
+sf.addEventListener("change",sub);
+$("#bagsMinus").addEventListener("click",function(){bags=Math.max(1,bags-1);sub()});
+$("#bagsPlus").addEventListener("click",function(){bags=Math.min(6,bags+1);sub()});
+sf.addEventListener("submit",function(e){e.preventDefault();if(window.DemoKit)DemoKit.toast("Demo only — no subscription was created and nothing was charged.")});
+sub();
+/* ---- boot ---- */
+build();
+var rt,lastW=W,lastH=H;
+function rebuild(){clearTimeout(rt);rt=setTimeout(function(){var b=chart.getBoundingClientRect();if(Math.round(b.width)!==lastW||Math.round(b.height)!==lastH){build();lastW=W;lastH=H}},60)}
+if("ResizeObserver" in window)new ResizeObserver(rebuild).observe(chart);else window.addEventListener("resize",rebuild);
+if("IntersectionObserver" in window&&!reduced()){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&G.bt){var L=G.bt.getTotalLength();chart.style.setProperty("--len",L);chart.classList.add("draw");setTimeout(function(){chart.classList.remove("draw")},1000);io.disconnect()}})},{threshold:.3});
+io.observe(chart);
+}
+})();
+</script>
+</body>
+</html>

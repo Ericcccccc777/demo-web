@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="040">
+<meta name="demo:brand" content="Brightside Dental">
+<title>Brightside Dental — family dentist, Box Hill · 家庭牙科</title>
+<meta name="description" content="Brightside Dental is a fictional bilingual (English/中文) family dentist in Box Hill, VIC, with an interactive tooth chart and calm-visit tips.">
+<meta name="theme-color" content="#BFEBDD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --mint:#BFEBDD;--peri:#CFE3FF;--peach:#FFD7C2;--white:#fff;--navy:#1B2A41;--navy2:#3B4A63;
+  --mint-d:#93D8C3;--peri-d:#AFCBF3;--peach-d:#F9B899;
+  --clay:0 24px 44px -20px rgba(27,42,65,.32),inset 0 -10px 18px rgba(27,42,65,.07),inset 0 10px 16px rgba(255,255,255,.8);
+  --clay-sm:0 12px 22px -12px rgba(27,42,65,.38),inset 0 -5px 10px rgba(27,42,65,.09),inset 0 5px 9px rgba(255,255,255,.85);
+  --press:inset 0 6px 12px rgba(27,42,65,.18),inset 0 -3px 6px rgba(255,255,255,.7);
+  --font:"Outfit","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--navy);font:400 17px/1.6 var(--font);background:linear-gradient(180deg,#E6F6F0 0%,#EEF4FF 38%,#F3F2FF 62%,#FFF1EA 100%)}
+html[lang^="zh"] body{line-height:1.75}
+h1,h2,h3,p,ul,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[id]{scroll-margin-top:96px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(16px,3.4vw,44px)}
+.tag{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.75);box-shadow:var(--clay-sm);font-size:13px;font-weight:600;letter-spacing:.04em}
+h2{text-wrap:balance;font-size:clamp(30px,2.6vw + 14px,48px);line-height:1.08;font-weight:700;letter-spacing:-.015em;margin:14px 0 10px}
+html[lang^="zh"] h1,html[lang^="zh"] h2{letter-spacing:.01em;line-height:1.25}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 24px;border:0;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn:active{transform:scale(.96);box-shadow:var(--press)}
+.b-navy{background:var(--navy);color:#fff;box-shadow:0 14px 24px -12px rgba(27,42,65,.7),inset 0 -4px 8px rgba(0,0,0,.25),inset 0 4px 8px rgba(255,255,255,.18)}
+.b-clay{background:var(--white);box-shadow:var(--clay-sm)}
+.sm{min-height:44px;padding:9px 18px;font-size:15px}
+
+/* header */
+.top{position:sticky;top:10px;z-index:30;margin:10px auto 0;max-width:1280px;padding:0 clamp(10px,2.4vw,32px)}
+.top-in{display:flex;align-items:center;gap:14px;padding:8px 10px 8px 16px;border-radius:999px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--clay-sm)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:19px;letter-spacing:-.01em;min-width:0;line-height:1.15}
+.logo svg{width:38px;height:38px;flex:none}
+.logo span{overflow-wrap:anywhere}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{background:var(--peri)}
+.lang{display:flex;flex:none;padding:4px;border-radius:999px;background:var(--mint);box-shadow:var(--press)}
+.lang button{min-width:48px;min-height:40px;padding:6px 12px;border:0;border-radius:999px;background:transparent;font-weight:600;font-size:15px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;box-shadow:var(--clay-sm)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;padding-top:56px;padding-bottom:40px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:999px;background:#fff;box-shadow:var(--clay-sm);font-weight:600;font-size:15px}
+.eyebrow::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--mint-d);box-shadow:inset 0 -2px 3px rgba(27,42,65,.2)}
+h1{text-wrap:balance;margin:22px 0 16px;font-size:clamp(40px,4.2vw + 12px,74px);line-height:1.02;font-weight:700;letter-spacing:-.025em}
+.lead{max-width:34em;font-size:clamp(17px,.4vw + 15px,20px);color:var(--navy2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0 26px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips li{padding:8px 14px;border-radius:999px;font-size:14.5px;font-weight:500;box-shadow:var(--clay-sm)}
+.chips li:nth-child(1){background:var(--mint)}.chips li:nth-child(2){background:var(--peri)}.chips li:nth-child(3){background:var(--peach)}
+.hero-art{position:relative;min-height:470px;display:grid;place-items:center}
+.blob{position:absolute;border-radius:50%;box-shadow:var(--clay)}
+.bl1{width:230px;height:230px;left:4%;top:6%;background:radial-gradient(circle at 35% 30%,#fff,var(--peri) 55%,var(--peri-d));animation:bob 7s ease-in-out infinite}
+.bl2{width:120px;height:120px;right:6%;top:2%;background:radial-gradient(circle at 35% 30%,#fff,var(--peach) 55%,var(--peach-d));animation:bob 6s ease-in-out -2s infinite}
+.bl3{width:150px;height:74px;border-radius:40px;right:2%;bottom:14%;background:radial-gradient(circle at 35% 30%,#fff,var(--mint) 55%,var(--mint-d));animation:bob 8s ease-in-out -4s infinite}
+@keyframes bob{50%{transform:translateY(-14px)}}
+.mascot-btn{position:relative;z-index:2;padding:0;border:0;background:none;cursor:pointer;border-radius:40px;-webkit-tap-highlight-color:transparent}
+.mascot{display:block;width:min(340px,78vw);height:auto;overflow:visible}
+.arm{transform-box:fill-box;transform-origin:8% 88%}
+.waving .arm{animation:wave .7s ease-in-out 4}
+@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-24deg)}}
+.m-closed{display:none}
+.calm .m-open{display:none}.calm .m-closed{display:inline}
+.bubble{position:absolute;z-index:3;left:-2%;top:30%;max-width:220px;padding:14px 18px;border-radius:26px 26px 26px 8px;background:#fff;box-shadow:var(--clay-sm);font-weight:600;font-size:16px;line-height:1.35}
+
+/* services */
+.sec{padding-top:72px;padding-bottom:72px}
+.sec-head{max-width:720px;margin-bottom:40px}
+.sec-head p:last-child{color:var(--navy2)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start}
+.card{position:relative;padding:28px 28px 26px;border-radius:40px;background:#fff;box-shadow:var(--clay)}
+.cards .card:nth-child(3n+2){margin-top:44px}
+.cards .card:nth-child(3n){margin-top:18px}
+.c-mint{background:linear-gradient(160deg,#fff 0%,var(--mint) 100%)}
+.c-peri{background:linear-gradient(160deg,#fff 0%,var(--peri) 100%)}
+.c-peach{background:linear-gradient(160deg,#fff 0%,var(--peach) 100%)}
+.ic{display:grid;place-items:center;width:64px;height:64px;margin-bottom:16px;border-radius:22px;background:#fff;box-shadow:var(--clay-sm)}
+.ic svg{width:38px;height:38px}
+.card h3{font-size:24px;line-height:1.15;font-weight:700;margin-bottom:8px}
+.card p{font-size:16px;color:var(--navy2)}
+.meta{display:inline-block;margin-top:16px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.8);box-shadow:var(--press);font-size:14px!important;font-weight:600;color:var(--navy)!important}
+.tip{margin-top:14px;padding:12px 14px;border-radius:20px;background:rgba(255,255,255,.72);font-size:14.5px!important}
+.team{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:center;margin-top:64px;background:linear-gradient(120deg,#fff 0%,var(--peri) 60%,var(--mint) 100%)}
+.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.person{padding:18px 14px;border-radius:30px;background:rgba(255,255,255,.8);box-shadow:var(--clay-sm);text-align:center}
+.person .av{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 10px;border-radius:50%;font:700 26px/1 "Noto Sans SC",var(--font);box-shadow:var(--clay-sm)}
+.person:nth-child(1) .av{background:radial-gradient(circle at 35% 30%,#fff,var(--mint) 60%,var(--mint-d))}
+.person:nth-child(2) .av{background:radial-gradient(circle at 35% 30%,#fff,var(--peach) 60%,var(--peach-d))}
+.person:nth-child(3) .av{background:radial-gradient(circle at 35% 30%,#fff,var(--peri) 60%,var(--peri-d))}
+.person b{display:block;font-size:17px;line-height:1.25}
+.person span{display:block;margin-top:4px;font-size:13.5px;color:var(--navy2);line-height:1.4}
+
+/* tooth chart */
+.tray{padding:clamp(22px,3vw,44px);border-radius:48px;background:linear-gradient(170deg,#fff 0%,#F4F8FF 45%,var(--peri) 100%);box-shadow:var(--clay)}
+.tray-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:end;margin-bottom:26px}
+.tray-head p.hint{color:var(--navy2)}
+.tray-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+.seg{display:inline-flex;padding:5px;border-radius:999px;background:var(--mint);box-shadow:var(--press);margin-bottom:18px}
+.seg button{min-height:44px;min-width:96px;padding:8px 20px;border:0;border-radius:999px;background:transparent;font-weight:600;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#fff;box-shadow:var(--clay-sm)}
+.jaws{position:relative;padding:18px 16px;border-radius:40px;background:rgba(255,255,255,.65);box-shadow:var(--press)}
+.jaw{position:relative;width:100%}
+.jaw svg.gum{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.jaw-lbl{position:absolute;left:50%;transform:translate(-50%,-50%);padding:6px 14px;border-radius:999px;background:#fff;box-shadow:var(--clay-sm);font-size:13px;font-weight:600;white-space:nowrap}
+.sides{display:flex;justify-content:space-between;margin:4px 6px;font-size:12.5px;font-weight:600;color:var(--navy2)}
+.tooth{position:absolute;left:0;top:0;display:grid;place-items:center;width:var(--w);height:var(--h);padding:0;border:0;border-radius:46% 46% 40% 40%;background:radial-gradient(circle at 34% 28%,#fff 0 26%,#F1F5FF 52%,#D3E1F6 100%);box-shadow:0 7px 10px -5px rgba(27,42,65,.45),inset 0 -4px 6px rgba(27,42,65,.13),inset 0 3px 5px #fff;font:600 11px/1 var(--font);color:var(--navy);cursor:pointer;transform:translate(var(--x),var(--y)) translate(-50%,-50%) rotate(var(--r));transition:transform .4s cubic-bezier(.3,1.7,.5,1),background .2s;-webkit-tap-highlight-color:transparent}
+.tooth.k-m{border-radius:32%}
+.tooth.k-c{border-radius:50% 50% 44% 44%}
+.tooth:hover{background:radial-gradient(circle at 34% 28%,#fff 0 26%,#F4FFFA 52%,var(--mint) 100%)}
+.tooth[aria-pressed="true"]{z-index:2;background:radial-gradient(circle at 34% 28%,#fff 0 20%,#FFE8DC 48%,#FFB997 100%);transform:translate(var(--x),var(--y)) translate(-50%,-50%) rotate(var(--r)) scale(1.22)}
+.tooth span{transform:rotate(calc(var(--r) * -1));pointer-events:none}
+.info{padding:26px 26px 24px;border-radius:36px;background:#fff;box-shadow:var(--clay)}
+.i-top{display:flex;align-items:center;gap:14px}
+.i-no{display:grid;place-items:center;flex:none;width:62px;height:62px;border-radius:22px;background:radial-gradient(circle at 34% 28%,#fff,var(--peach) 55%,var(--peach-d));box-shadow:var(--clay-sm);font-size:22px;font-weight:700}
+.info h3{font-size:25px;line-height:1.15;font-weight:700}
+.i-pos{font-size:14.5px;color:var(--navy2)}
+.i-h{margin:18px 0 8px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+html[lang^="zh"] .i-h{letter-spacing:.04em}
+.i-list{display:grid;gap:8px}
+.i-list li{position:relative;padding:10px 14px 10px 40px;border-radius:18px;background:#F4F8FF;font-size:15.5px;line-height:1.4}
+.i-list li::before{content:"";position:absolute;left:14px;top:14px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--mint-d));box-shadow:0 2px 3px rgba(27,42,65,.25)}
+.i-note{margin-top:14px;font-size:15px;color:var(--navy2)}
+.info .btn{margin-top:18px}
+.calm-box{margin-top:20px;padding:20px 22px;border-radius:32px;background:linear-gradient(160deg,#fff,var(--mint));box-shadow:var(--clay)}
+.calm-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.calm-row p{font-weight:700;font-size:18px;line-height:1.3}
+.switch{position:relative;flex:none;width:72px;height:42px;border:0;border-radius:999px;background:#E3E9F3;box-shadow:var(--press);cursor:pointer;transition:background .2s}
+.switch .knob{position:absolute;left:5px;top:5px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#E9EEF7);box-shadow:0 4px 8px rgba(27,42,65,.3);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.switch[aria-checked="true"]{background:var(--mint-d)}
+.switch[aria-checked="true"] .knob{transform:translateX(30px)}
+.calm h3{margin:16px 0 8px;font-size:17px}
+.calm ol{margin:0;padding:0;list-style:none;display:grid;gap:8px;counter-reset:c}
+.calm li{counter-increment:c;display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;font-size:15.5px;line-height:1.45}
+.calm li::before{content:counter(c);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff;box-shadow:var(--clay-sm);font-weight:700;font-size:14px}
+.dis{margin-top:18px;padding:12px 16px;border-radius:20px;background:rgba(255,255,255,.7);font-size:14px;color:var(--navy2)}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.hours{margin-top:26px;padding:22px 24px;border-radius:32px;background:linear-gradient(160deg,#fff,var(--peach));box-shadow:var(--clay)}
+.hours h3{font-size:18px;margin-bottom:10px}
+.hours dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-size:15.5px}
+.hours dd{font-weight:600;text-align:right}
+.contact{display:grid;gap:10px;margin-top:22px}
+.contact div{display:flex;gap:14px;align-items:baseline;padding:12px 18px;border-radius:22px;background:rgba(255,255,255,.75);box-shadow:var(--clay-sm)}
+.contact dt{min-width:64px;font-size:13px;font-weight:700;color:var(--navy2)}
+.contact dd{font-weight:600}
+.form{display:grid;gap:16px;padding:30px;border-radius:44px;background:#fff;box-shadow:var(--clay)}
+.form h3{font-size:24px}
+.form label,.form legend{display:grid;gap:7px;font-size:14.5px;font-weight:600}
+.form input[type=text],.form input[type=tel],.form input[type=email],.form select{width:100%;min-height:52px;padding:12px 16px;border:0;border-radius:20px;background:#F2F6FC;box-shadow:var(--press);font-size:16px;font-weight:400}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+fieldset{margin:0;padding:0;border:0;min-width:0}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills label{position:relative;display:block}
+.pills input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pills span{display:inline-flex;align-items:center;min-height:44px;padding:9px 18px;border-radius:999px;background:#F2F6FC;box-shadow:var(--clay-sm);font-weight:500;font-size:15px;cursor:pointer;transition:background .15s}
+.pills input:checked+span{background:var(--mint);box-shadow:var(--press);font-weight:600}
+.pills input:focus-visible+span{outline:3px solid var(--navy);outline-offset:3px}
+.fine{font-size:13.5px;color:var(--navy2)}
+.faq{margin-top:64px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.faq details{padding:6px 22px;border-radius:28px;background:rgba(255,255,255,.8);box-shadow:var(--clay-sm)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;font-weight:600;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--peri);box-shadow:var(--clay-sm);font-size:20px;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 16px;color:var(--navy2);font-size:16px}
+
+.foot{padding-bottom:36px}
+.foot-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px 40px;padding:34px clamp(22px,3vw,40px);border-radius:44px;background:var(--navy);color:#EEF3FB;box-shadow:0 30px 50px -28px rgba(27,42,65,.8),inset 0 -10px 20px rgba(0,0,0,.25),inset 0 8px 16px rgba(255,255,255,.08);--focus:#fff}
+.foot-card :focus-visible{outline-color:#fff}
+.foot-name{font-size:clamp(32px,3vw + 10px,52px);font-weight:700;line-height:1.05;letter-spacing:-.02em;overflow-wrap:anywhere}
+.foot-card p{color:#DCE5F3}
+.foot-card a{color:#fff;font-weight:600}
+.foot-card .small{grid-column:1/-1;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);font-size:13.5px;color:#C9D4E6}
+
+@media (max-width:1060px){
+  .nav{display:none}
+  .lang{margin-left:auto}
+  .cards{grid-template-columns:1fr 1fr}
+  .cards .card:nth-child(n){margin-top:0}
+  .cards .card:nth-child(even){margin-top:34px}
+  .tray-grid,.book-grid,.team{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:8px;padding-top:32px}
+  .hero-art{min-height:360px;order:-1}
+  .mascot{width:min(250px,64vw)}
+  .bubble{left:0;top:56%;max-width:150px;font-size:14px;padding:10px 14px}
+  .bl1{width:150px;height:150px}.bl2{width:80px;height:80px}.bl3{width:110px;height:56px}
+  .top-in>.btn{display:none}
+  .cards{grid-template-columns:minmax(0,1fr);gap:20px}
+  .cards .card:nth-child(n){margin-top:0}
+  .card{padding:24px 22px;border-radius:34px}
+  .people{grid-template-columns:minmax(0,1fr)}
+  .person{display:grid;grid-template-columns:56px 1fr;gap:4px 14px;text-align:left;align-items:center}
+  .person .av{margin:0;width:56px;height:56px;grid-row:span 2;font-size:24px}
+  .tray-head{grid-template-columns:minmax(0,1fr);gap:4px}
+  .jaws{padding:14px 6px}
+  .form{padding:22px 18px;border-radius:34px}
+  .form .two,.faq-grid,.foot-card{grid-template-columns:minmax(0,1fr)}
+  .tray{border-radius:36px;padding:20px 14px}
+  .info{padding:22px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .bl1,.bl2,.bl3,.waving .arm{animation:none}
+  .tooth,.switch .knob,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="gT" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#EEF4FF"/><stop offset="1" stop-color="#BCD2F1"/></radialGradient>
+    <radialGradient id="gP" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#FFD7C2"/><stop offset="1" stop-color="#F5AA86"/></radialGradient>
+    <radialGradient id="gM" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#BFEBDD"/><stop offset="1" stop-color="#7FCDB5"/></radialGradient>
+    <radialGradient id="gB" cx="36%" cy="30%" r="75%"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#CFE3FF"/><stop offset="1" stop-color="#9DBDEB"/></radialGradient>
+    <symbol id="tooth" viewBox="0 0 48 48"><path d="M10 16c0-7 5-10 10-8.5 2.6.8 5.4.8 8 0C33 6 38 9 38 16c0 7-1.6 11-3 16-1 3.4-1.4 9-4 9s-3-7-5-7h-4c-2 0-2.4 7-5 7s-3-5.6-4-9c-1.4-5-3-9-3-16z" fill="url(#gT)" stroke="#1B2A41" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#top"><svg aria-hidden="true"><use href="#tooth"/></svg><span data-brand>Brightside Dental</span></a>
+    <nav class="nav" aria-label="Sections" data-i-al="nav_al"><a href="#services" data-i="nav1">Services</a><a href="#chart" data-i="nav2">Tooth chart</a><a href="#team" data-i="nav3">Our team</a><a href="#book" data-i="nav4">Book</a></nav>
+    <div class="lang" role="group" aria-label="Language · 语言"><button type="button" lang="en" data-lang="en" aria-pressed="true">EN</button><button type="button" lang="zh-CN" data-lang="zh" aria-pressed="false">中文</button></div>
+    <a class="btn b-navy sm" href="#book" data-i="cta">Book a visit</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="h1">
+    <div>
+      <p class="eyebrow" data-i="h_eye">Family dentist · Box Hill, VIC</p>
+      <h1 id="h1" data-i="h_t">Gentle dental care for the whole family</h1>
+      <p class="lead" data-i="h_p">Check-ups, kids’ visits, cosmetic care and emergency appointments — with a Mandarin-speaking team and plenty of patience.</p>
+      <div class="cta-row"><a class="btn b-navy" href="#book" data-i="cta">Book a visit</a><a class="btn b-clay" href="#chart" data-i="cta_c">Explore the tooth chart</a></div>
+      <ul class="chips"><li data-i="f1">Open Saturdays</li><li data-i="f2">Health fund claims on the spot</li><li data-i="f3">普通话 spoken here</li></ul>
+    </div>
+    <div class="hero-art">
+      <span class="blob bl1" aria-hidden="true"></span><span class="blob bl2" aria-hidden="true"></span><span class="blob bl3" aria-hidden="true"></span>
+      <button class="mascot-btn" id="mascot-btn" type="button" aria-label="Molly the tooth — tap to wave" data-i-al="m_al">
+        <svg class="mascot" id="mascot" viewBox="0 0 280 318" aria-hidden="true" focusable="false">
+          <ellipse cx="140" cy="284" rx="104" ry="22" fill="#93D8C3"/>
+          <path d="M36 282v10c0 12 47 22 104 22s104-10 104-22v-10" fill="#7FCDB5"/>
+          <ellipse cx="140" cy="280" rx="104" ry="22" fill="url(#gM)"/>
+          <ellipse cx="140" cy="272" rx="58" ry="10" fill="#1B2A41" opacity=".16"/>
+          <g class="arm-l"><path d="M76 176c-18 8-26 22-28 36" fill="none" stroke="#C9DAF3" stroke-width="16" stroke-linecap="round"/><circle cx="47" cy="215" r="12" fill="url(#gT)"/></g>
+          <path d="M72 74c0-34 26-48 46-40 12 5 32 5 44 0 20-8 46 6 46 40 0 40-8 68-14 98-5 26-6 56-16 84-5 14-20 14-23-2-4-22-7-40-15-40s-11 18-15 40c-3 16-18 16-23 2-10-28-11-58-16-84-6-30-14-58-14-98z" fill="url(#gT)"/>
+          <path d="M96 58c6-10 18-14 28-10" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".9"/>
+          <g class="arm"><path d="M204 170c20-8 30-26 34-46" fill="none" stroke="#C9DAF3" stroke-width="16" stroke-linecap="round"/><circle cx="239" cy="119" r="13" fill="url(#gT)"/></g>
+          <g class="m-open" fill="#1B2A41"><ellipse cx="120" cy="124" rx="9" ry="13"/><ellipse cx="162" cy="124" rx="9" ry="13"/><circle cx="123" cy="119" r="3.4" fill="#fff"/><circle cx="165" cy="119" r="3.4" fill="#fff"/></g>
+          <g class="m-closed" fill="none" stroke="#1B2A41" stroke-width="5" stroke-linecap="round"><path d="M110 126q10 9 20 0"/><path d="M152 126q10 9 20 0"/></g>
+          <ellipse cx="104" cy="148" rx="13" ry="8" fill="#FFB997" opacity=".8"/><ellipse cx="178" cy="148" rx="13" ry="8" fill="#FFB997" opacity=".8"/>
+          <path d="M126 150q15 16 30 0" fill="none" stroke="#1B2A41" stroke-width="5" stroke-linecap="round"/>
+          <path d="M226 52l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="url(#gP)"/>
+          <path d="M52 92l3.5 9 9 3.5-9 3.5-3.5 9-3.5-9-9-3.5 9-3.5z" fill="url(#gM)"/>
+        </svg>
+      </button>
+      <p class="bubble" id="bubble" aria-live="polite"><span>Hi! I’m Molly. Come and tap a tooth.</span></p>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="services" aria-labelledby="s-h">
+    <div class="sec-head">
+      <p class="tag" data-i="s_tag">What we do</p>
+      <h2 id="s-h" data-i="s_h">Everything your family’s teeth need</h2>
+      <p data-i="s_p">Sample prices are a guide only — your quote comes after your check-up.</p>
+    </div>
+    <div class="cards">
+      <article class="card c-mint">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="8" width="30" height="36" rx="9" fill="url(#gB)"/><rect x="17" y="4" width="14" height="8" rx="4" fill="#1B2A41"/><path d="M17 23h14M17 31h9" stroke="#1B2A41" stroke-width="3.2" stroke-linecap="round"/></svg></span>
+        <h3 data-i="c1_t">New patients</h3>
+        <p data-i="c1_p">Your first visit takes about 60 minutes: a full check-up, X-rays if needed, a clean, and a plan explained in plain language.</p>
+        <p class="meta" data-i="c1_m">From $240 · sample price</p>
+      </article>
+      <article class="card c-peri">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="21" y="16" width="7" height="30" rx="3.5" fill="url(#gB)" transform="rotate(28 24 30)"/><rect x="14" y="3" width="15" height="14" rx="4" fill="url(#gM)" transform="rotate(28 22 10)"/><path d="M17 4l-3 6M21 6l-3 6M25 8l-3 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+        <h3 data-i="c2_t">Check-up &amp; clean</h3>
+        <p data-i="c2_p">A scale, polish and a careful look at every tooth and your gums, every 6 to 12 months — whatever your dentist recommends.</p>
+        <p class="meta" data-i="c2_m">From $195 · sample price</p>
+      </article>
+      <article class="card c-peach">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="19" rx="12" ry="14" fill="url(#gP)"/><path d="M24 33l-2 3h4zM24 36c-3 4 3 6 0 10" fill="none" stroke="#1B2A41" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 14c1-3 4-5 7-5" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/></svg></span>
+        <h3 data-i="c3_t">Kids dentistry</h3>
+        <p data-i="c3_p">First visits from age one. Kids ride the chair, count their teeth and pick a sticker on the way out. Eligible children may be covered by a government dental benefit — ask us.</p>
+        <p class="meta" data-i="c3_m">Ages 1 to 17</p>
+      </article>
+      <article class="card c-peri">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M22 6l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" fill="url(#gB)"/><path d="M38 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="url(#gP)"/></svg></span>
+        <h3 data-i="c4_t">Cosmetic care</h3>
+        <p data-i="c4_p">Whitening, bonding and veneers. We talk through the options, costs and risks first — and there’s never any pressure.</p>
+        <p class="meta" data-i="c4_m">Consult from $90 · sample price</p>
+      </article>
+      <article class="card c-peach">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="url(#gP)"/><path d="M24 15v18M15 24h18" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg></span>
+        <h3 data-i="c5_t">Emergency appointments</h3>
+        <p data-i="c5_p">Toothache, a broken tooth or a knocked-out adult tooth? Call as early as you can — we keep time aside every weekday.</p>
+        <p class="tip" data-i="c5_x">Knocked-out adult tooth: hold it by the crown, not the root, keep it in milk and call us straight away.</p>
+      </article>
+      <article class="card c-mint">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="5" y="11" width="38" height="27" rx="8" fill="url(#gM)"/><rect x="5" y="17" width="38" height="6" fill="#1B2A41"/><rect x="11" y="29" width="12" height="4" rx="2" fill="#fff"/></svg></span>
+        <h3 data-i="c6_t">Payment options</h3>
+        <p data-i="c6_p">Claim on the spot with most private health funds — bring your card; your rebate depends on your cover. Card or cash, and payment plans for larger treatment.</p>
+      </article>
+    </div>
+
+    <article class="card team" id="team" aria-labelledby="team-h">
+      <div>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 12a7 7 0 0 1 7-7h16a7 7 0 0 1 7 7v7a7 7 0 0 1-7 7H17l-7 6v-6.5A7 7 0 0 1 6 19z" fill="url(#gB)"/><path d="M20 30h15a7 7 0 0 1 7 7v1a7 7 0 0 1-5 6.7V47l-6-4H20" fill="url(#gP)"/></svg></span>
+        <h3 id="team-h" data-i="c7_t">Mandarin-speaking team</h3>
+        <p data-i="c7_p">Talk it through in the language you think in. Our front desk and two of our dentists speak Mandarin.</p>
+      </div>
+      <ul class="people">
+        <li class="person"><span class="av" aria-hidden="true">林</span><b data-i="t1n">Dr Grace Lin</b><span data-i="t1r">General dentist · Mandarin &amp; English</span></li>
+        <li class="person"><span class="av" aria-hidden="true">陈</span><b data-i="t2n">Dr Oliver Chen</b><span data-i="t2r">Kids &amp; nervous patients · Mandarin &amp; English</span></li>
+        <li class="person"><span class="av" aria-hidden="true">周</span><b data-i="t3n">Amy Zhou</b><span data-i="t3r">Oral health therapist · English &amp; Cantonese</span></li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="sec wrap" id="chart" aria-labelledby="t-h">
+    <div class="tray">
+      <div class="tray-head">
+        <div><p class="tag" data-i="t_tag">Interactive tooth chart</p><h2 id="t-h" data-i="t_h">Tap a tooth to learn more</h2></div>
+        <p class="hint" data-i="t_p">Choose adult or child teeth, then tap one — or Tab into the chart and use the arrow keys.</p>
+      </div>
+      <div class="tray-grid">
+        <div>
+          <div class="seg" role="group" aria-label="Which teeth" data-i-al="t_set"><button type="button" data-set="adult" aria-pressed="true" data-i="t_ad">Adult</button><button type="button" data-set="child" aria-pressed="false" data-i="t_ch">Child</button></div>
+          <div class="jaws" id="jaws">
+            <div class="jaw" id="jaw-u" role="group" aria-label="Upper teeth" data-i-al="t_ug"><span class="jaw-lbl" aria-hidden="true" data-i="t_up">Upper</span></div>
+            <p class="sides" aria-hidden="true"><span data-i="t_pr">← Patient’s right</span><span data-i="t_pl">Patient’s left →</span></p>
+            <div class="jaw" id="jaw-l" role="group" aria-label="Lower teeth" data-i-al="t_lg"><span class="jaw-lbl" aria-hidden="true" data-i="t_lo">Lower</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="info" id="info" aria-live="polite">
+            <div class="i-top"><span class="i-no" id="i-no">16</span><div><h3 id="i-name">First molar</h3><p class="i-pos" id="i-pos">Upper right · adult tooth</p></div></div>
+            <p class="i-h" data-i="i_tr">Common treatments</p>
+            <ul class="i-list" id="i-list"></ul>
+            <p class="i-note" id="i-note"></p>
+            <a class="btn b-navy sm" href="#book" data-i="i_bk">Book a check-up</a>
+          </div>
+          <div class="calm-box">
+            <div class="calm-row"><p id="calm-q" data-i="a_t">Anxious about the dentist?</p><button class="switch" id="calm-sw" type="button" role="switch" aria-checked="false" aria-controls="calm" aria-labelledby="calm-q calm-s"><span class="knob" aria-hidden="true"></span><span class="sr" id="calm-s" data-i="a_s">Show calm-visit tips</span></button></div>
+            <div class="calm" id="calm" hidden>
+              <h3 data-i="a_h">Calm-visit tips</h3>
+              <ol>
+                <li data-i="a1">Tell us when you book — we’ll allow extra time and never rush you.</li>
+                <li data-i="a2">Agree on a stop signal. Raise your hand and we pause, every time.</li>
+                <li data-i="a3">Bring headphones for music. Feeling cold? We have blankets.</li>
+                <li data-i="a4">Book a morning visit, so there’s less time to worry.</li>
+                <li data-i="a5">Ask us to explain each step first — or not, if you’d rather not know.</li>
+              </ol>
+            </div>
+          </div>
+          <p class="dis" data-i="t_dis">General information only — not a diagnosis. Your dentist will advise on your own teeth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="book" aria-labelledby="b-h">
+    <div class="book-grid">
+      <div>
+        <p class="tag" data-i="b_tag">Book</p>
+        <h2 id="b-h" data-i="b_h">Book a visit</h2>
+        <p data-i="b_p">Tell us what suits you and we’ll call to confirm a time.</p>
+        <div class="hours">
+          <h3 data-i="b_hrs">Opening hours</h3>
+          <dl>
+            <dt data-i="hr1">Mon–Wed, Fri</dt><dd data-i="hr1v">8:30am–6pm</dd>
+            <dt data-i="hr2">Thursday</dt><dd data-i="hr2v">8:30am–8pm</dd>
+            <dt data-i="hr3">Saturday</dt><dd data-i="hr3v">9am–1pm</dd>
+            <dt data-i="hr4">Sunday &amp; public holidays</dt><dd data-i="hr4v">Closed</dd>
+          </dl>
+        </div>
+        <dl class="contact">
+          <div><dt data-i="b_where">Where</dt><dd data-i="b_wv">Box Hill, VIC · a short walk from the station</dd></div>
+          <div><dt data-i="b_call">Call</dt><dd><a href="tel:0355504821">(03) 5550 4821</a></dd></div>
+          <div><dt data-i="b_mail">Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+        </dl>
+      </div>
+      <form class="form" id="bookform">
+        <h3 data-i="f_h">Appointment request</h3>
+        <fieldset><legend data-i="f_who">I’m a…</legend>
+          <div class="pills"><label><input type="radio" name="who" value="new" checked><span data-i="f_n1">New patient</span></label><label><input type="radio" name="who" value="returning"><span data-i="f_n2">Returning patient</span></label></div>
+        </fieldset>
+        <label><span data-i="f_svc">Visit type</span>
+          <select name="visit" id="f-visit">
+            <option value="new" data-i="o1">New patient visit</option>
+            <option value="clean" data-i="o2">Check-up &amp; clean</option>
+            <option value="kids" data-i="o3">Kids check-up</option>
+            <option value="cosmetic" data-i="o4">Cosmetic consult</option>
+            <option value="emergency" data-i="o5">Emergency</option>
+          </select>
+        </label>
+        <div class="two">
+          <label><span data-i="f_day">Preferred day</span>
+            <select name="day"><option data-i="d0">Any day</option><option data-i="d1">Monday</option><option data-i="d2">Tuesday</option><option data-i="d3">Wednesday</option><option data-i="d4">Thursday</option><option data-i="d5">Friday</option><option data-i="d6">Saturday</option></select>
+          </label>
+          <label><span data-i="f_time">Time of day</span>
+            <select name="time"><option data-i="tm1">Morning</option><option data-i="tm2">Afternoon</option><option data-i="tm3">Evening (Thursday)</option></select>
+          </label>
+        </div>
+        <fieldset><legend data-i="f_lang">Preferred language</legend>
+          <div class="pills"><label><input type="radio" name="lang" value="en" checked><span data-i="lg1">English</span></label><label><input type="radio" name="lang" value="zh"><span lang="zh-CN">普通话</span></label></div>
+        </fieldset>
+        <div class="two">
+          <label><span data-i="f_name">Name</span><input type="text" name="name" autocomplete="name" placeholder="e.g. Mei Chen" data-i-ph="ph_n"></label>
+          <label><span data-i="f_ph">Phone</span><input type="tel" name="phone" autocomplete="tel" placeholder="0491 570 157"></label>
+        </div>
+        <label><span data-i="f_em">Email</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com"></label>
+        <button class="btn b-navy" type="submit" data-i="f_go">Request appointment</button>
+        <p class="fine" data-i="f_fine">Demo form — nothing is sent. Prices on this page are samples.</p>
+      </form>
+    </div>
+
+    <section class="faq" aria-labelledby="q-h">
+      <h2 id="q-h" data-i="q_h">Good to know</h2>
+      <div class="faq-grid">
+        <details><summary data-i="q1">Do I need a referral?</summary><p data-i="q1a">No — just book. Bring any recent X-rays if you have them.</p></details>
+        <details><summary data-i="q2">Can I claim on my health fund?</summary><p data-i="q2a">Most private health funds can be claimed on the spot. How much you get back depends on your level of cover.</p></details>
+        <details><summary data-i="q3">Is there parking?</summary><p data-i="q3a">There’s street parking nearby, and the station is a few minutes’ walk.</p></details>
+        <details><summary data-i="q4">My child is scared. What should we do?</summary><p data-i="q4a">Their first visit can simply be a ride in the chair and a hello — no treatment at all.</p></details>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <div class="foot-card">
+    <div>
+      <p class="foot-name" data-brand>Brightside Dental</p>
+      <p data-i="ft_t">Family dentist in Box Hill, VIC · English &amp; <span lang="zh-CN" style="white-space:nowrap">普通话</span></p>
+    </div>
+    <p><a href="tel:0355504821">(03) 5550 4821</a><br><a href="mailto:hello@example.com">hello@example.com</a><br><a href="#top" data-i="ft_top">Back to top ↑</a></p>
+    <p class="small"><span data-brand>Brightside Dental</span> <span data-i="ft_s">is a fictional clinic in a concept demo. People, prices and services are samples, and everything here is general information only.</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var root = document.documentElement;
+  var mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+  var reduced = function(){ return (window.DemoKit && DemoKit.reducedMotion) || !!(mq && mq.matches); };
+  var lang = "en";
+
+  var ZH = {
+    nav_al:"页面导航", nav1:"服务项目", nav2:"牙齿图", nav3:"我们的团队", nav4:"预约", cta:"预约就诊",
+    h_eye:"家庭牙科 · 维州 Box Hill", h_t:"给全家人的<br>温柔牙科护理",
+    h_p:"定期检查、儿童看牙、美容牙科和急诊预约——我们有会说普通话的团队，也有足够的耐心。",
+    cta_c:"探索牙齿图", f1:"周六营业", f2:"健康保险现场理赔", f3:"可讲普通话",
+    m_al:"小白牙 Molly——点一下，挥挥手",
+    s_tag:"我们的服务", s_h:"全家牙齿所需，一站搞定", s_p:"示例价格仅供参考，实际费用以检查后的报价为准。",
+    c1_t:"新患者", c1_p:"首次就诊约60分钟：全面检查、必要时拍X光、洗牙，再用通俗易懂的话讲清治疗方案。", c1_m:"$240起 · 示例价格",
+    c2_t:"检查与洗牙", c2_p:"遵牙医建议，每6至12个月一次：洁治、抛光，并仔细检查每颗牙齿和牙龈。", c2_m:"$195起 · 示例价格",
+    c3_t:"儿童牙科", c3_p:"一岁起即可首次看牙。孩子们可以坐坐升降牙椅、数数牙齿，走的时候还能挑一张贴纸。符合条件的儿童或可享受政府牙科福利，欢迎咨询。", c3_m:"1至17岁",
+    c4_t:"美容牙科", c4_p:"美白、树脂粘接和贴面。我们会先讲清方案、费用和风险，绝不强推。", c4_m:"咨询$90起 · 示例价格",
+    c5_t:"急诊预约", c5_p:"牙痛、牙齿折断或恒牙被撞脱落？请尽早来电——我们每个工作日都预留了急诊时段。", c5_x:"恒牙脱落：捏住牙冠，不要碰牙根，把牙齿放进牛奶里，并立即来电。",
+    c6_t:"付款方式", c6_p:"大多数私人健康保险可现场理赔，请带上会员卡；报销金额取决于您的保险计划。可刷卡或付现金，较大的治疗可申请分期付款。",
+    c7_t:"普通话团队", c7_p:"用您最习惯的语言沟通。我们的前台和两位牙医都会说普通话。",
+    t1n:"林医生（Grace）", t1r:"全科牙医 · 普通话、英语", t2n:"陈医生（Oliver）", t2r:"儿童及紧张患者 · 普通话、英语", t3n:"周 Amy", t3r:"口腔健康治疗师 · 英语、粤语",
+    t_tag:"互动牙齿图", t_h:"点一颗牙，了解更多", t_p:"先选择成人或儿童牙齿，再点一下——也可以按 Tab 键进入牙齿图，用方向键移动。",
+    t_set:"选择牙齿类型", t_ad:"成人", t_ch:"儿童", t_ug:"上颌牙齿", t_lg:"下颌牙齿", t_up:"上颌", t_lo:"下颌", t_pr:"← 患者右侧", t_pl:"患者左侧 →",
+    i_tr:"常见治疗", i_bk:"预约检查",
+    a_t:"看牙会紧张吗？", a_s:"显示放松看牙小贴士", a_h:"放松看牙小贴士",
+    a1:"预约时告诉我们——我们会多留时间，绝不催促。", a2:"约定一个暂停手势：您一举手，我们就停下来，每一次都是。", a3:"可以戴耳机听音乐；怕冷的话，我们有小毯子。", a4:"选早上的时段，少一点等待和担心。", a5:"开始前可以请我们逐步讲解——不想听的话也完全没问题。",
+    t_dis:"仅供一般参考，不构成诊断。您的具体情况请以牙医的建议为准。",
+    b_tag:"预约", b_h:"预约就诊", b_p:"告诉我们您方便的时间，我们会致电确认。",
+    b_hrs:"营业时间", hr1:"周一至周三、周五", hr1v:"8:30–18:00", hr2:"周四", hr2v:"8:30–20:00", hr3:"周六", hr3v:"9:00–13:00", hr4:"周日及公众假期", hr4v:"休息",
+    b_where:"地址", b_wv:"维州 Box Hill · 从火车站步行即到", b_call:"电话", b_mail:"邮箱",
+    f_h:"预约申请", f_who:"我是……", f_n1:"新患者", f_n2:"老患者", f_svc:"就诊类型",
+    o1:"新患者首诊", o2:"检查与洗牙", o3:"儿童检查", o4:"美容咨询", o5:"急诊",
+    f_day:"希望的日子", d0:"哪天都可以", d1:"周一", d2:"周二", d3:"周三", d4:"周四", d5:"周五", d6:"周六",
+    f_time:"时段", tm1:"上午", tm2:"下午", tm3:"晚上（仅周四）", f_lang:"沟通语言", lg1:"英语",
+    f_name:"姓名", ph_n:"例如：陈美", f_ph:"电话", f_em:"邮箱", f_go:"提交预约申请", f_fine:"演示表单，不会发送任何信息。本页价格均为示例。",
+    q_h:"常见问题", q1:"需要转诊吗？", q1a:"不需要，直接预约即可。如有近期的X光片，欢迎带来。",
+    q2:"可以用健康保险报销吗？", q2a:"大多数私人健康保险可现场理赔，报销多少取决于您的保险计划。",
+    q3:"附近能停车吗？", q3a:"附近有路边停车位，从火车站步行也只需几分钟。",
+    q4:"孩子很害怕，怎么办？", q4a:"第一次来可以只是坐坐牙椅、和我们打个招呼，不做任何治疗。",
+    ft_t:"维州 Box Hill 家庭牙科 · 英语、普通话", ft_top:"回到顶部 ↑",
+    ft_s:"是概念演示中的虚构诊所。人员、价格和服务均为示例，本页内容仅供一般参考。"
+  };
+  var EN = {};
+
+  /* ---------- tooth data ---------- */
+  var T = {
+    en:{
+      adult:["Central incisor","Lateral incisor","Canine","First premolar","Second premolar","First molar","Second molar","Wisdom tooth (third molar)"],
+      child:["Baby central incisor","Baby lateral incisor","Baby canine","First baby molar","Second baby molar"],
+      pos:["Upper right","Upper left","Lower left","Lower right"], kindA:"adult tooth", kindC:"baby tooth", tooth:"Tooth", upperJaw:"Upper", lowerJaw:"Lower",
+      toast:"Demo only — no appointment was made. A real site would send this to the clinic.",
+      g:[
+        [["Tooth-coloured bonding for chips and small cracks","Whitening or veneers for stains and gaps (cosmetic consult)","A night guard if grinding is wearing the edges"],"Front teeth take the knocks in sport — a custom mouthguard helps."],
+        [["Gum-line cleaning and care for sensitivity","Checks for wear from grinding","Bonding if the tip chips"],"Canines have the longest roots in your mouth."],
+        [["Fillings for decay between teeth","Checks of the grooves on the biting surface","Sometimes removed as part of a braces plan"],"Floss reaches the gaps here that a brush can’t."],
+        [["Fillings — most decay starts on molars","Fissure sealants, especially for teens","Root canal treatment if the nerve is inflamed","A crown for a heavily filled tooth"],"First molars usually arrive around age six."],
+        [["An X-ray to see how it’s sitting","Keeping an eye on it if it’s healthy and has room","Removal only if it’s causing problems"],"Wisdom teeth usually appear between 17 and 25 — some people never get them."],
+        [["Gentle brushing twice a day with a smear of kids’ toothpaste","Checks for early decay near the gum","No bottles in bed — milk resting on teeth causes decay"],"Usually the first to arrive (6–12 months) and the first to go (6–7 years)."],
+        [["Fluoride varnish to strengthen enamel","Checks that the adult tooth has room to come through"],"Baby canines hold the space for adult canines until about age 9–12."],
+        [["Fissure sealants to protect the grooves","Fluoride varnish","A space maintainer if one is lost early"],"Baby molars do the chewing until around age 10–12."]
+      ]
+    },
+    zh:{
+      adult:["中切牙","侧切牙","尖牙","第一前磨牙","第二前磨牙","第一磨牙","第二磨牙","智齿（第三磨牙）"],
+      child:["乳中切牙","乳侧切牙","乳尖牙","第一乳磨牙","第二乳磨牙"],
+      pos:["右上","左上","左下","右下"], kindA:"恒牙", kindC:"乳牙", tooth:"号牙", upperJaw:"上颌", lowerJaw:"下颌",
+      toast:"仅为演示——并未预约就诊。正式网站会把信息发送给诊所。",
+      g:[
+        [["崩缺或小裂纹：牙色树脂粘接修复","变色或牙缝：美白或贴面（需美容咨询）","磨牙导致切缘磨损：夜间护牙套"],"运动时门牙最容易受伤——定制护齿套能起到保护作用。"],
+        [["清洁牙龈线，处理牙颈部敏感","检查磨牙造成的磨损","牙尖崩缺时做树脂粘接修复"],"尖牙是口腔中牙根最长的牙齿。"],
+        [["牙缝龋齿：补牙","检查咬合面的窝沟","正畸（戴牙套）时有时需要拔除"],"牙线能清洁到牙刷够不着的牙缝。"],
+        [["补牙——大多数蛀牙从磨牙开始","窝沟封闭，尤其适合青少年","牙神经发炎时进行根管治疗","大面积充填后可做牙冠修复"],"第一磨牙通常在六岁左右长出。"],
+        [["拍X光查看生长位置","健康且有足够空间时定期观察","只有引起问题时才建议拔除"],"智齿通常在17至25岁之间长出——也有人一辈子都不长。"],
+        [["每天两次轻柔刷牙，用米粒大小的儿童牙膏","检查牙龈附近的早期龋齿","不要含着奶瓶睡觉——奶液停留在牙面会导致蛀牙"],"通常最先长出（6至12个月），也最先脱落（6至7岁）。"],
+        [["涂氟，增强牙釉质","检查恒牙是否有足够空间萌出"],"乳尖牙会为恒尖牙保留位置，直到大约9至12岁。"],
+        [["窝沟封闭，保护咬合面的沟槽","涂氟","过早脱落时可能需要间隙保持器"],"乳磨牙负责咀嚼，直到大约10至12岁。"]
+      ]
+    }
+  };
+  var SETS = {
+    adult:{s:[1,.84,.92,.94,.94,1.18,1.14,1.04], k:["i","i","c","p","p","m","m","m"], g:[0,0,1,2,2,3,3,4], q:[1,2,3,4]},
+    child:{s:[1,.9,.98,1.22,1.32], k:["i","i","c","m","m"], g:[5,5,6,7,7], q:[5,6,7,8]}
+  };
+  var set = "adult", teeth = [], rows = {u:[], l:[]}, sel = null, jawU = $("#jaw-u"), jawL = $("#jaw-l");
+
+  function quarter(a, b){ return Math.PI / 4 * (3 * (a + b) - Math.sqrt((3 * a + b) * (a + 3 * b))); }
+  function arcTable(a, b){
+    var n = 240, pts = [], len = 0, px = 0, py = b;
+    for (var i = 0; i <= n; i++){
+      var f = i / n * Math.PI / 2, x = a * Math.sin(f), y = b * Math.cos(f);
+      if (i) len += Math.hypot(x - px, y - py);
+      pts.push({f:f, d:len}); px = x; py = y;
+    }
+    return pts;
+  }
+  function phiAt(tab, d){
+    for (var i = 1; i < tab.length; i++) if (tab[i].d >= d){ var p = tab[i - 1], q = tab[i]; return p.f + (q.f - p.f) * ((d - p.d) / (q.d - p.d || 1)); }
+    return Math.PI / 2;
+  }
+  function build(){
+    var S = SETS[set], W = jawU.clientWidth;
+    if (W < 200) W = 200;
+    var u = Math.max(set === "adult" ? 40 : 46, W * (set === "adult" ? 0.07 : 0.09));
+    var gap = u * 0.08, maxS = Math.max.apply(null, S.s), half = maxS * u / 2;
+    var L = S.s.reduce(function(t, v){ return t + v * u + gap; }, 0);
+    var a = Math.min(W / 2 - half - 6, set === "adult" ? W * 0.44 : W * 0.34), lo = 20, hi = 900;
+    for (var it = 0; it < 40; it++){ var mid = (lo + hi) / 2; if (quarter(a, mid) < L * 1.02) lo = mid; else hi = mid; }
+    var b = hi, tab = arcTable(a, b), pad = 12, H = Math.round(b + half * 2 + pad * 2);
+    [jawU, jawL].forEach(function(j){ $$(".tooth, svg.gum", j).forEach(function(x){ x.remove(); }); j.style.height = H + "px"; });
+    teeth = []; rows = {u:[], l:[]};
+    ["u", "l"].forEach(function(jw){
+      var jaw = jw === "u" ? jawU : jawL, cx = W / 2;
+      var cy = jw === "u" ? pad + half + b : pad + half, sgn = jw === "u" ? -1 : 1;
+      // gum
+      var gp = [];
+      for (var i = 0; i <= 40; i++){ var f = -Math.PI / 2 + Math.PI * i / 40; gp.push((cx + a * Math.sin(f)).toFixed(1) + " " + (cy + sgn * b * Math.cos(f)).toFixed(1)); }
+      var g = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      g.setAttribute("class", "gum"); g.setAttribute("aria-hidden", "true");
+      g.innerHTML = '<path d="M' + gp.join("L") + '" fill="none" stroke="#FFD7C2" stroke-width="' + (u * 1.5).toFixed(0) + '" stroke-linecap="round" stroke-linejoin="round"/><path d="M' + gp.join("L") + '" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="' + (u * 0.25).toFixed(0) + '" stroke-linecap="round" transform="translate(0 ' + (sgn * -u * 0.42).toFixed(1) + ')"/>';
+      jaw.insertBefore(g, jaw.firstChild);
+      $(".jaw-lbl", jaw).style.top = (jw === "u" ? cy - b * 0.28 : cy + b * 0.28) + "px";
+      var row = [];
+      [-1, 1].forEach(function(side){
+        var d = 0;
+        S.s.forEach(function(s, i){
+          var w = s * u; d += w / 2 + gap / 2;
+          var f = phiAt(tab, d); d += w / 2 + gap / 2;
+          var x = cx + side * a * Math.sin(f), y = cy + sgn * b * Math.cos(f);
+          var ang = Math.atan2(b * Math.sin(f), a * Math.cos(f)) * 180 / Math.PI;
+          var r = jw === "u" ? side * ang : -side * ang;
+          // quadrant: upper: screen-left = patient's right
+          var qi = jw === "u" ? (side < 0 ? 0 : 1) : (side < 0 ? 3 : 2);
+          var num = S.q[qi] * 10 + (i + 1);
+          var t = {num:num, i:i, qi:qi, g:S.g[i], jaw:jw, side:side};
+          var el = document.createElement("button");
+          el.type = "button"; el.className = "tooth k-" + S.k[i]; el.tabIndex = -1;
+          el.setAttribute("aria-pressed", "false");
+          el.style.setProperty("--x", x.toFixed(1) + "px"); el.style.setProperty("--y", y.toFixed(1) + "px");
+          el.style.setProperty("--r", r.toFixed(1) + "deg");
+          el.style.setProperty("--w", w.toFixed(1) + "px"); el.style.setProperty("--h", (w * (S.k[i] === "i" ? .8 : S.k[i] === "m" ? .94 : .9)).toFixed(1) + "px");
+          el.innerHTML = "<span>" + num + "</span>";
+          el.addEventListener("click", function(){ pick(t, false); });
+          t.el = el; teeth.push(t); row.push(t); jaw.appendChild(el);
+        });
+      });
+      // screen order left→right
+      row.sort(function(p, q){ return (p.side * (p.i + .5)) - (q.side * (q.i + .5)); });
+      rows[jw] = row;
+    });
+    labelTeeth();
+    var keep = sel && teeth.filter(function(t){ return t.num === sel.num; })[0];
+    pick(keep || teeth.filter(function(t){ return t.num === (set === "adult" ? 16 : 54); })[0] || teeth[0], false, true);
+  }
+  function tName(t){ var L = T[lang]; return (set === "adult" ? L.adult : L.child)[t.i]; }
+  function labelTeeth(){
+    var L = T[lang];
+    teeth.forEach(function(t){
+      t.el.setAttribute("aria-label", lang === "zh" ? t.num + L.tooth + "，" + L.pos[t.qi] + tName(t) : L.tooth + " " + t.num + ", " + L.pos[t.qi].toLowerCase() + " " + tName(t).toLowerCase());
+    });
+  }
+  function pick(t, focus, quiet){
+    if (!t) return;
+    teeth.forEach(function(x){ var on = x === t; x.el.setAttribute("aria-pressed", on ? "true" : "false"); x.el.tabIndex = on ? 0 : -1; });
+    sel = t;
+    if (focus) t.el.focus();
+    renderInfo(quiet);
+  }
+  function renderInfo(quiet){
+    if (!sel) return;
+    var L = T[lang], gi = L.g[sel.g], info = $("#info");
+    if (quiet) info.removeAttribute("aria-live");
+    $("#i-no").textContent = sel.num;
+    $("#i-name").textContent = tName(sel);
+    $("#i-pos").textContent = L.pos[sel.qi] + " · " + (set === "adult" ? L.kindA : L.kindC) + (lang === "zh" ? " · " + sel.num + L.tooth : " · " + L.tooth + " " + sel.num);
+    $("#i-list").innerHTML = gi[0].map(function(x){ return "<li>" + x + "</li>"; }).join("");
+    $("#i-note").textContent = gi[1];
+    if (quiet) setTimeout(function(){ info.setAttribute("aria-live", "polite"); }, 50);
+  }
+  function onKey(e){
+    if (!sel) return;
+    var row = rows[sel.jaw], idx = row.indexOf(sel), n = null;
+    if (e.key === "ArrowRight") n = row[Math.min(row.length - 1, idx + 1)];
+    else if (e.key === "ArrowLeft") n = row[Math.max(0, idx - 1)];
+    else if (e.key === "ArrowUp" || e.key === "ArrowDown"){ var other = rows[sel.jaw === "u" ? "l" : "u"]; n = other[Math.min(other.length - 1, idx)]; }
+    else if (e.key === "Home") n = row[0];
+    else if (e.key === "End") n = row[row.length - 1];
+    if (!n) return;
+    e.preventDefault(); pick(n, true);
+  }
+  jawU.addEventListener("keydown", onKey); jawL.addEventListener("keydown", onKey);
+  $$(".seg button").forEach(function(b){
+    b.addEventListener("click", function(){
+      if (set === b.getAttribute("data-set")) return;
+      set = b.getAttribute("data-set"); sel = null;
+      $$(".seg button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      build();
+    });
+  });
+  var rw = 0, rt;
+  window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(function(){ var w = $("#jaws").clientWidth; if (w !== rw){ rw = w; build(); } }, 150); });
+
+  /* ---------- calm mode ---------- */
+  var sw = $("#calm-sw"), calm = $("#calm"), mascot = $("#mascot"), bubble = $("#bubble span");
+  var BUB = {en:["Hi! I’m Molly. Come and tap a tooth.", "Breathe in… and slowly out."], zh:["你好！我是 Molly，来点一点牙齿吧。", "深呼吸，慢慢来。"]};
+  function isCalm(){ return sw.getAttribute("aria-checked") === "true"; }
+  function setBubble(){ bubble.textContent = BUB[lang][isCalm() ? 1 : 0]; }
+  sw.addEventListener("click", function(){
+    var on = !isCalm();
+    sw.setAttribute("aria-checked", on ? "true" : "false");
+    calm.hidden = !on;
+    mascot.classList.toggle("calm", on);
+    setBubble();
+  });
+
+  /* ---------- mascot wave ---------- */
+  var mb = $("#mascot-btn");
+  function wave(){ if (reduced()) return; mascot.classList.remove("waving"); void mascot.getBoundingClientRect(); mascot.classList.add("waving"); }
+  mb.addEventListener("click", wave);
+  mascot.addEventListener("animationend", function(){ mascot.classList.remove("waving"); });
+  setTimeout(wave, 500);
+
+  /* ---------- language ---------- */
+  function applyLang(l){
+    lang = l;
+    root.lang = l === "zh" ? "zh-CN" : "en-AU";
+    $$("[data-i]").forEach(function(el){
+      var k = el.getAttribute("data-i");
+      if (!(k in EN)) EN[k] = el.innerHTML;
+      var v = l === "zh" ? ZH[k] : EN[k];
+      if (v != null) el.innerHTML = v;
+    });
+    setBubble();
+    $$("[data-i-al]").forEach(function(el){
+      var k = "al:" + el.getAttribute("data-i-al");
+      if (!(k in EN)) EN[k] = el.getAttribute("aria-label");
+      el.setAttribute("aria-label", l === "zh" ? ZH[el.getAttribute("data-i-al")] : EN[k]);
+    });
+    $$("[data-i-ph]").forEach(function(el){
+      var k = "ph:" + el.getAttribute("data-i-ph");
+      if (!(k in EN)) EN[k] = el.getAttribute("placeholder");
+      el.setAttribute("placeholder", l === "zh" ? ZH[el.getAttribute("data-i-ph")] : EN[k]);
+    });
+    $$(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-lang") === l ? "true" : "false"); });
+    labelTeeth(); renderInfo(true);
+    try { localStorage.setItem("brightside-lang", l); } catch (e) {}
+  }
+  $$(".lang button").forEach(function(b){ b.addEventListener("click", function(){ if (b.getAttribute("data-lang") !== lang) applyLang(b.getAttribute("data-lang")); }); });
+
+  /* ---------- booking ---------- */
+  $$('a[href="#book"][data-i="i_bk"]').forEach(function(a){ a.addEventListener("click", function(){ $("#f-visit").value = set === "child" ? "kids" : "clean"; }); });
+  $("#bookform").addEventListener("submit", function(e){ e.preventDefault(); if (window.DemoKit) DemoKit.toast(T[lang].toast); });
+
+  build();
+  rw = $("#jaws").clientWidth;
+  var saved = null;
+  try { saved = localStorage.getItem("brightside-lang"); } catch (e) {}
+  if (saved === "zh") applyLang("zh");
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if ($("#jaws").clientWidth !== rw){ rw = $("#jaws").clientWidth; build(); } });
+})();
+</script>
+</body>
+</html>

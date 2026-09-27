@@ -1,0 +1,8 @@
+{
+  "id": "019",
+  "tech": ["SVG", "Pointer Events", "Bilingual toggle", "Form logic", "Date logic", "CSS Grid"],
+  "features": ["booking", "story", "bilingual"],
+  "interaction": "A traffic light turns green on load and a little learner car drives a winding SVG road down the page as you scroll (it parks at each stop with reduced motion); the booking flow lets you choose a package, pickup suburb and a free slot in next week's grid, then shows a summary and a demo toast — all in English or 中文.",
+  "fonts": ["Plus Jakarta Sans", "Noto Sans SC"],
+  "notes": "On phones the road becomes a straight lane down the left edge. Availability is generated deterministically from the date; logbook information is general and labelled as such."
+}

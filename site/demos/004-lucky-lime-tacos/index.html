@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="004">
+<meta name="demo:brand" content="Lucky Lime Tacos">
+<title>Lucky Lime Tacos — taco truck, Brisbane</title>
+<meta name="description" content="Lucky Lime Tacos is a fictional Brisbane taco truck: follow its weekly route, flip the menu for allergens and ask about party catering.">
+<meta name="theme-color" content="#FFD23F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --sun:#FFD23F;--ink:#111;--pink:#FF3E8A;--sea:#3BCEAC;--white:#fff;
+  --cream:#FFF4CC;--pink-t:#FFC9DD;--sea-t:#C3F2E5;
+  --bd:3px solid var(--ink);--r:14px;--sh:6px 6px 0 var(--ink);--gap:18px;
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Space Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font:500 16px/1.5 var(--body);background:var(--sun) radial-gradient(rgba(17,17,17,.13) 1.3px,transparent 1.6px) 0 0/22px 22px}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--sun)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1440px;margin:0 auto;padding:0 clamp(12px,2vw,28px)}
+section,[id]{scroll-margin-top:16px}
+
+/* ---------- shared pieces ---------- */
+.tile{position:relative;min-width:0;background:var(--white);border:var(--bd);border-radius:var(--r);box-shadow:var(--sh);padding:clamp(18px,2vw,28px)}
+.dark{background:var(--ink);color:var(--white)}
+.t-pink{background:var(--pink)}
+.t-sea{background:var(--sea)}
+.t-sun{background:var(--sun)}
+.h2{font:400 clamp(28px,1.6vw + 16px,40px)/.98 var(--display);letter-spacing:-.01em;text-transform:uppercase}
+.label{font:700 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border:var(--bd);border-radius:12px;background:var(--sun);color:var(--ink);font:700 16px/1.1 var(--body);text-decoration:none;box-shadow:4px 4px 0 var(--ink);cursor:pointer;transition:transform .08s ease,box-shadow .08s ease;-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.b-pink{background:var(--pink)}.b-white{background:var(--white)}.b-sea{background:var(--sea)}
+.b-ink{background:var(--ink);color:var(--sun)}
+.dark .btn{box-shadow:4px 4px 0 var(--sun)}
+.sticker{display:inline-block;font:700 12px/1 var(--body);letter-spacing:.09em;text-transform:uppercase;padding:8px 11px;border:var(--bd);border-radius:10px;background:var(--pink);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transform:rotate(var(--rot,-4deg));transition:transform .25s cubic-bezier(.3,1.8,.5,1)}
+.sticker:hover{transform:rotate(calc(var(--rot,-4deg) * -1)) scale(1.06)}
+.press{transition:transform .09s ease,box-shadow .09s ease;cursor:pointer}
+.press:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--ink)}
+
+/* ---------- top bar ---------- */
+.ticker{margin:calc(var(--gap) * 2) 0 0;display:flex;align-items:stretch;overflow:hidden;background:var(--ink);color:var(--sun);border:var(--bd);border-radius:12px;box-shadow:var(--sh)}
+.ticker-view{flex:1;overflow:hidden;display:flex;align-items:center;min-width:0}
+.ticker-track{display:flex;flex:none;width:max-content;animation:tick 38s linear infinite}
+.ticker.paused .ticker-track{animation-play-state:paused}
+.ticker-track span{display:flex;align-items:center;gap:18px;padding-right:18px;font:400 15px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;padding-block:12px}
+.ticker-track i{width:12px;height:12px;border-radius:50%;background:var(--sea);border:2px solid var(--sun);flex:none}
+.ticker-track i:nth-of-type(2n){background:var(--pink)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.ticker-btn{flex:none;width:48px;border:0;border-left:3px solid var(--sun);background:var(--ink);color:var(--sun);cursor:pointer;display:grid;place-items:center}
+.ticker-btn svg{width:16px;height:16px}
+.ticker-btn:focus-visible{outline:3px solid var(--sun);outline-offset:-6px}
+.top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:14px 0 var(--gap);padding:10px 12px 10px 14px;background:var(--white);border:var(--bd);border-radius:var(--r);box-shadow:var(--sh)}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 180px}
+.mark svg{width:40px;height:40px;flex:none;transform:rotate(-14deg)}
+.mark span{font:400 20px/1 var(--display);text-transform:uppercase;letter-spacing:-.01em;overflow-wrap:anywhere}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.nav a{padding:10px 14px;border:3px solid transparent;border-radius:10px;font-weight:700;text-decoration:none}
+.nav a:hover{border-color:var(--ink);background:var(--sun)}
+.top .btn{min-height:44px;flex:none}
+.cta svg{width:20px;height:20px}
+.cta-s{display:none}
+
+/* ---------- hero bento ---------- */
+.hero{display:grid;gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:1fr 1fr auto}
+.logo-tile{grid-column:1/6;grid-row:1/3;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:400px}
+.kicker{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:7px 12px;border:2px solid var(--sun);border-radius:999px;color:var(--sun)}
+.kicker b{width:9px;height:9px;border-radius:50%;background:var(--sea)}
+.brand-xl{position:relative;z-index:1;font:400 120px/.84 var(--display);letter-spacing:-.025em;text-transform:uppercase;color:var(--sun);overflow-wrap:normal;hyphens:none}
+.brand-xl.squeezed{overflow-wrap:anywhere}
+.logo-foot{position:relative;z-index:1;display:flex;flex-direction:column;gap:14px;max-width:62%}
+.logo-foot p{color:#f4f1e6;font-size:15px}
+.logo-foot .sticker{align-self:flex-start;--rot:-6deg}
+.lime-xl{position:absolute;right:-56px;bottom:-40px;width:min(300px,70%);height:auto;transform:rotate(-16deg);transition:transform .9s cubic-bezier(.3,1.5,.5,1)}
+.logo-tile:hover .lime-xl{transform:rotate(28deg)}
+.intro-tile{grid-column:1/6;grid-row:3;display:flex;flex-direction:column;gap:14px}
+.lead{font-size:clamp(17px,.3vw + 14px,19px);line-height:1.42}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts li{padding:5px 10px;border:2px solid var(--ink);border-radius:999px;font-weight:700;font-size:14px;background:var(--cream)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- map tile ---------- */
+.map-tile{grid-column:6/13;grid-row:1/4;display:flex;flex-direction:column;padding:24px}
+.map-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.map-stk{position:absolute;right:14px;bottom:14px;--rot:4deg;background:var(--sea)}
+.hint{margin-top:6px;color:#3a3a3a;font-size:15px}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:14px 0}
+.day{position:relative;min-height:48px;padding:0 2px;border:var(--bd);border-radius:10px;background:var(--white);font:700 14px/1 var(--body);letter-spacing:.05em;text-transform:uppercase;box-shadow:3px 3px 0 var(--ink);cursor:pointer;transition:transform .08s,box-shadow .08s,background .15s}
+.day:hover{background:var(--cream)}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--sun);transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.day.today::after{content:"";position:absolute;top:-8px;right:-7px;width:15px;height:15px;border-radius:50%;background:var(--pink);border:var(--bd)}
+.map-wrap{position:relative;border:var(--bd);border-radius:12px;overflow:hidden;background:var(--cream)}
+.map-wrap svg{display:block;width:100%;height:auto}
+.lbl{position:absolute;left:var(--x);top:var(--y);transform:translate(var(--tx,-50%),13px);transform-origin:50% 0;display:flex;align-items:center;gap:6px;padding:5px 8px 5px 9px;background:var(--white);border:2px solid var(--ink);border-radius:8px;font:700 13px/1 var(--body);white-space:nowrap;cursor:pointer;box-shadow:2px 2px 0 var(--ink);transition:background .2s,transform .3s cubic-bezier(.3,1.8,.5,1)}
+.lbl.side{transform:translate(var(--sx,40px),-50%);transform-origin:0 50%}
+.lbl.side.on{transform:translate(var(--sx,40px),-50%) scale(1.1) rotate(-3deg)}
+.lbl i{font-style:normal;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--sun);border-radius:4px;padding:3px 4px}
+.lbl.on{background:var(--pink);transform:translate(var(--tx,-50%),13px) scale(1.1) rotate(-3deg);z-index:2}
+.where{display:grid;grid-template-columns:1.25fr .85fr 1.6fr;gap:12px;margin-top:16px}
+.w-box{border:var(--bd);border-radius:12px;padding:12px 14px;background:var(--cream);min-width:0}
+.w-box:first-child{background:var(--pink)}
+.w-box:nth-child(2){background:var(--sea-t)}
+.w-day{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.w-today{background:var(--ink);color:var(--sun);border-radius:6px;padding:3px 6px;font-size:11px}
+.w-place{font:400 24px/1.02 var(--display);text-transform:uppercase;margin-top:6px;overflow-wrap:anywhere}
+.w-spot{font-size:14px;margin-top:4px}
+.w-hours{display:block;font:400 19px/1.15 var(--display);margin-top:6px}
+.w-tip{font-size:15px;line-height:1.45;margin-top:4px}
+.stop-pin{transition:transform .35s cubic-bezier(.3,1.8,.5,1);transform-box:fill-box;transform-origin:center}
+.stop-pin.on{transform:scale(1.35)}
+.blob{transition:fill .3s ease}
+.blob.on{fill:var(--pink)}
+.puff{transform-box:fill-box;transform-origin:center;animation:puff .7s ease-out forwards}
+@keyframes puff{from{opacity:.75;transform:scale(.4)}to{opacity:0;transform:scale(1.7) translateY(-6px)}}
+
+/* ---------- menu ---------- */
+.band{margin-top:calc(var(--gap) * 2)}
+.menu{display:grid;gap:var(--gap);grid-template-columns:repeat(4,minmax(0,1fr))}
+.menu-head{grid-row:span 2;display:flex;flex-direction:column;gap:16px;overflow:hidden}
+.menu-head .h2{font-size:clamp(44px,3.6vw + 10px,72px)}
+.key{display:grid;gap:8px}
+.key li{display:flex;gap:10px;align-items:center;font-size:15px}
+.tag{display:inline-block;min-width:34px;text-align:center;padding:4px 6px;border:2px solid var(--ink);border-radius:6px;background:var(--white);font:700 11px/1 var(--body);letter-spacing:.06em}
+.menu-note{padding-top:14px;border-top:3px dashed var(--ink);font-size:14px}
+.taco-doodle{width:min(100%,250px);height:auto;align-self:center;margin:auto 0;transform:rotate(-6deg);filter:drop-shadow(5px 5px 0 rgba(17,17,17,.9))}
+.dish{perspective:1100px;min-width:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.dish-in{display:grid;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.3,1.35,.5,1),translate .09s ease}
+.dish.flipped .dish-in{transform:rotateY(180deg)}
+.dish:active .dish-in{translate:3px 3px}
+.dish:active .face{box-shadow:3px 3px 0 var(--ink)}
+.face{grid-area:1/1;display:flex;flex-direction:column;gap:8px;min-width:0;padding:18px;border:var(--bd);border-radius:var(--r);box-shadow:var(--sh);background:var(--white);-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:box-shadow .09s}
+.dish:nth-of-type(3n+1) .front{background:var(--white)}
+.dish:nth-of-type(3n+2) .front{background:var(--sea-t)}
+.dish:nth-of-type(3n) .front{background:var(--pink-t)}
+.back{transform:rotateY(180deg);background:var(--ink);color:var(--white)}
+.art{display:block;width:100%;height:auto;max-height:150px;margin:-4px 0 2px}
+.dish h3{font:400 22px/1.02 var(--display);text-transform:uppercase}
+.dish p{font-size:15px;line-height:1.45}
+.dish-foot{margin-top:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:6px}
+.dish-foot .flip{margin-left:auto}
+.price{font:400 22px/1 var(--display);background:var(--sun);border:var(--bd);border-radius:10px;padding:6px 9px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--ink)}
+.flip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 12px;border:var(--bd);border-radius:10px;background:var(--white);font-weight:700;font-size:14px;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.flip svg{width:16px;height:16px}
+.back .flip{background:var(--sun);box-shadow:3px 3px 0 var(--sun);border-color:var(--sun);color:var(--ink)}
+.back h3{color:var(--sun)}
+.allergens{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.allergens li{padding:5px 9px;border-radius:999px;background:var(--pink);color:var(--ink);font-weight:700;font-size:13px}
+.allergens li.ok{background:var(--sea)}
+.back p{color:#e9e6dc;font-size:14px}
+.tags{display:flex;gap:5px;flex-wrap:wrap}
+
+/* ---------- info bento ---------- */
+.info{display:grid;gap:var(--gap);grid-template-columns:repeat(12,minmax(0,1fr))}
+.cater{grid-column:span 6;grid-row:span 2;display:flex;flex-direction:column;gap:18px}
+.hours{grid-column:span 3;grid-row:span 2}
+.sold{grid-column:span 3;overflow:hidden}
+.faq{grid-column:span 3}
+.cater .h2{font-size:clamp(34px,2.6vw + 12px,58px)}
+.cater-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.cater ul.inc{display:grid;gap:8px}
+.party{display:block;width:100%;max-width:460px;height:auto;margin-top:26px}
+.cater ul.inc li{display:flex;gap:10px;align-items:flex-start}
+.cater ul.inc li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border:2px solid var(--ink);border-radius:5px;background:var(--sun) linear-gradient(135deg,transparent 45%,var(--ink) 45% 58%,transparent 58%)}
+form.cf{display:grid;gap:12px;padding:16px;background:var(--white);border:var(--bd);border-radius:12px}
+.cf label{display:grid;gap:5px;font-weight:700;font-size:14px}
+.cf input[type=text],.cf input[type=email],.cf input[type=date]{width:100%;min-height:46px;padding:10px 12px;border:var(--bd);border-radius:10px;background:var(--cream);font-weight:500}
+.cf input:focus-visible{outline-offset:1px}
+.cf .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.range-row{display:flex;justify-content:space-between;align-items:baseline}
+.range-row output{font:400 22px/1 var(--display)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:12px;border:var(--bd);border-radius:999px;background:linear-gradient(90deg,var(--sea) var(--p,25%),var(--white) var(--p,25%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-11px;border:var(--bd);border-radius:8px;background:var(--pink);transform:rotate(45deg)}
+input[type=range]::-moz-range-track{height:8px;border:var(--bd);border-radius:999px;background:var(--white)}
+input[type=range]::-moz-range-progress{height:8px;background:var(--sea);border-radius:999px}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border:var(--bd);border-radius:8px;background:var(--pink)}
+.est{padding:10px 12px;border:2px dashed var(--ink);border-radius:10px;background:var(--sun);font-size:15px}
+.est b{font-family:var(--display);font-weight:400}
+.est small{display:block;font-size:12.5px;margin-top:2px}
+.hours ol{display:grid;gap:6px;margin-top:14px;padding:0;list-style:none}
+.hours li{display:grid;grid-template-columns:48px 1fr;gap:2px 10px;align-items:baseline;padding:8px 10px;border:2px solid var(--ink);border-radius:10px;background:var(--white)}
+.hours li b{font:400 15px/1.1 var(--display);text-transform:uppercase;grid-row:span 2}
+.hours li span{font-weight:700;font-size:15px;line-height:1.2}
+.hours li small{font-size:13.5px;color:#333}
+.hours li.today{background:var(--ink);color:var(--sun)}
+.hours li.today small{color:#f4f1e6}
+.hours li.today span::after{content:" · today";color:var(--pink)}
+.hours .note{margin-top:12px;font-size:13.5px}
+.stamp{display:table;margin:2px 0 12px;padding:9px 14px 8px;border:4px solid var(--ink);border-radius:10px;background:var(--pink);font:400 clamp(24px,1.2vw + 14px,32px)/1 var(--display);transform:rotate(-5deg);box-shadow:4px 4px 0 var(--ink)}
+.sold .h2{font-size:clamp(26px,1.2vw + 16px,34px)}
+.sold p{margin-top:12px;font-size:15px}
+.nums{display:grid;gap:8px;margin-top:14px}
+.nums div{display:flex;align-items:center;gap:12px;padding:8px 12px;border:2px solid var(--ink);border-radius:10px;background:var(--white);font-size:14px;font-weight:700;line-height:1.2}
+.nums b{flex:none;min-width:76px;font:400 22px/1 var(--display)}
+.faq details{border-top:2px solid var(--ink)}
+.faq details:last-child{border-bottom:2px solid var(--ink)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:48px;padding:8px 0;font-weight:700;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:28px;height:28px;border:2px solid var(--ink);border-radius:8px;background:var(--sun);font:400 18px/1 var(--display);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--pink)}
+.faq details p{padding:0 0 12px;font-size:15px}
+.faq .h2{margin-bottom:10px;font-size:clamp(26px,1.2vw + 16px,34px)}
+
+/* ---------- footer ---------- */
+.foot{margin:calc(var(--gap) * 2) 0 28px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:24px;align-items:end}
+.foot-name{font:400 clamp(40px,4.6vw,76px)/.9 var(--display);text-transform:uppercase;color:var(--sun);overflow-wrap:anywhere;letter-spacing:-.02em}
+.foot h2{font-size:12px;color:var(--sun)}
+.foot ul{display:grid;gap:6px;margin-top:8px}
+.foot a{color:var(--white);font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+.foot .small{grid-column:1/-1;padding-top:16px;border-top:2px solid #3a3a3a;font-size:13.5px;color:#d9d6cc}
+
+/* ---------- responsive ---------- */
+@media (max-width:1099px){
+  .hero{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .logo-tile{grid-column:1;grid-row:auto;min-height:360px}
+  .intro-tile{grid-column:2;grid-row:auto;justify-content:center}
+  .map-tile{grid-column:1/-1;grid-row:auto}
+  .menu{grid-template-columns:1fr 1fr}
+  .menu-head{grid-column:1/-1;grid-row:auto}
+  .taco-doodle{display:none}
+  .info{grid-template-columns:1fr 1fr}
+  .cater{grid-column:1/-1;grid-row:auto}
+  .hours,.sold{grid-column:auto;grid-row:auto}
+  .faq{grid-column:1/-1}
+  .nav{display:none}
+}
+@media (max-width:699px){
+  :root{--gap:14px;--sh:5px 5px 0 var(--ink)}
+  .hero,.menu,.info{grid-template-columns:minmax(0,1fr)}
+  .logo-tile,.intro-tile,.map-tile{grid-column:1}
+  .logo-tile{min-height:0}
+  .logo-foot{max-width:none}
+  .lime-xl{width:190px;right:-54px;bottom:-60px}
+  .logo-foot p{max-width:68%}
+  .where{grid-template-columns:1fr;gap:10px}
+  .w-box:nth-child(2){display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .w-box:nth-child(2) .w-hours{margin:0;text-align:right}
+  .cater-grid,.cf .two{grid-template-columns:1fr}
+  .hours,.sold,.faq{grid-column:1}
+  .dish .front{display:grid;grid-template-columns:112px 1fr;grid-template-rows:auto auto 1fr;column-gap:14px;row-gap:6px}
+  .dish .front .art{grid-row:1/3;align-self:center;margin:0}
+  .dish .front .dish-foot{grid-column:1/-1}
+  .foot{grid-template-columns:1fr 1fr;align-items:start}
+  .party{display:none}
+  .day{font-size:12.5px;letter-spacing:.01em}
+  .lbl .nm{display:none}
+  .lbl{padding:4px 5px;--sx:24px}
+  .lbl.on .nm{display:inline}
+  .map-stk{display:none}
+  .foot-name{grid-column:1/-1}
+  .top{gap:10px;padding:8px 10px 8px 12px}
+  .top .btn{padding:8px 11px;font-size:15px;gap:5px}
+  .cta-l{display:none}.cta-s{display:inline}
+  .mark{flex-basis:0;gap:8px}
+  .mark svg{width:34px;height:34px}
+  .mark span{font-size:16px}
+}
+@media (max-width:359px){
+  .days{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .where{grid-template-columns:1fr}
+  .dish .front{grid-template-columns:84px 1fr}
+  .lbl:not(.on){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .ticker-track{animation:none}
+  .lime-xl{transition:none}
+  .dish-in,.sticker,.lbl,.stop-pin{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="lime" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="92" fill="#3BCEAC" stroke="#111" stroke-width="7"/>
+    <circle cx="100" cy="100" r="78" fill="#fff" stroke="#111" stroke-width="3"/>
+    <circle cx="100" cy="100" r="70" fill="#A5EBD6"/>
+    <g stroke="#fff" stroke-width="7" stroke-linecap="round"><path d="M100 30v140M30 100h140M50.5 50.5l99 99M149.5 50.5l-99 99"/></g>
+    <circle cx="100" cy="100" r="11" fill="#fff" stroke="#111" stroke-width="3"/>
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#111" stroke-width="3"/>
+  </symbol>
+  <symbol id="flip" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 13.7-5.6M20 12a8 8 0 0 1-13.7 5.6M17 2.5v4.3h-4.3M7 21.5v-4.3h4.3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top"><svg aria-hidden="true"><use href="#lime"/></svg><span data-brand>Lucky Lime Tacos</span></a>
+    <nav class="nav" aria-label="Sections"><a href="#map">Truck map</a><a href="#menu">Menu</a><a href="#cater">Catering</a><a href="#hours">Hours</a></nav>
+    <a class="btn b-pink cta" href="#map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z" fill="#fff" stroke="#111" stroke-width="2.4"/><circle cx="12" cy="10" r="2.6" fill="#111"/></svg><span class="cta-l">Where’s the truck?</span><span class="cta-s">Map</span></a>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="tile dark logo-tile">
+        <p class="kicker label"><b></b>Taco truck · Brisbane, QLD</p>
+        <h1 class="brand-xl" data-brand>Lucky Lime Tacos</h1>
+        <div class="logo-foot">
+          <span class="sticker">Birria daily*</span>
+          <p>*Until the pot’s empty. We cook one batch a day — <a href="#sold">here’s why</a>.</p>
+        </div>
+        <svg class="lime-xl" aria-hidden="true"><use href="#lime"/></svg>
+      </div>
+
+      <div class="tile intro-tile">
+        <p class="lead">Slow-braised birria with consommé for dunking, crunchy Baja fish, elote in a cup and churros that crackle — served from a hot-pink truck with a lime on the roof, six days a week around Brisbane.</p>
+        <ul class="facts"><li>Corn tortillas</li><li>Vegan options</li><li>Card or cash</li><li>Dogs welcome</li></ul>
+        <div class="btn-row"><a class="btn b-pink" href="#menu">See the menu</a><a class="btn b-white" href="#cater">Book the truck</a></div>
+      </div>
+
+      <section class="tile map-tile" id="map" aria-labelledby="map-h">
+        <div class="map-head">
+          <div>
+            <h2 class="h2" id="map-h">Where’s the truck today?</h2>
+            <p class="hint">Pick a day and follow the truck. Today is marked with a pink dot.</p>
+          </div>
+        </div>
+        <div class="days" role="group" aria-label="Choose a day of the week" id="days"></div>
+        <div class="map-wrap" id="mapwrap">
+          <p class="sr">Stylised map of inner Brisbane showing the truck’s six weekly stops either side of the river. The selected stop is described below the map.</p>
+          <svg id="mapsvg" viewBox="0 8 640 404" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#111" stroke-opacity=".07" stroke-width="2"/></pattern>
+            </defs>
+            <rect width="640" height="420" fill="#FFF4CC"/>
+            <rect width="640" height="420" fill="url(#grid)"/>
+            <g stroke="#111" stroke-width="3" stroke-linejoin="round">
+              <path class="blob" data-stop="1" d="M76 250c-4-26 26-40 58-36 34 4 50 22 44 44-6 24-40 34-66 30-24-4-34-18-36-38z" fill="#fff"/>
+              <path class="blob" data-stop="2" d="M42 64c6-26 44-38 78-30 30 8 46 26 38 48-8 22-44 30-74 24-30-6-48-20-42-42z" fill="#C3F2E5"/>
+              <path class="blob" data-stop="3" d="M300 84c4-28 50-40 90-32 36 8 54 26 46 48-8 20-48 30-86 24-34-6-54-18-50-40z" fill="#FFC9DD"/>
+              <path class="blob" data-stop="4" d="M510 72c8-24 50-32 80-22 26 8 34 28 24 44-10 18-44 24-72 18-28-6-40-20-32-40z" fill="#fff"/>
+              <path class="blob" data-stop="5" d="M446 222c2-24 34-36 62-30 26 6 38 22 32 40-6 18-34 26-58 22-24-4-38-14-36-32z" fill="#C3F2E5"/>
+              <path class="blob" data-stop="6" d="M276 360c2-24 44-38 82-30 34 8 50 24 42 42-8 18-46 26-80 20-30-6-46-14-44-32z" fill="#FFC9DD"/>
+              <path class="blob" data-stop="0" d="M22 360c0-20 22-32 44-28 22 4 34 16 30 32-4 16-26 24-46 20-18-4-28-10-28-24z" fill="#fff"/>
+            </g>
+            <g aria-hidden="true">
+              <path id="river-c" d="M-40 212C20 204 70 148 130 148c66 0 76 102 124 136 38 27 80 12 94-32 12-40 44-64 74-40 28 24 22 84 64 100 46 18 76-26 90-68 14-40 46-58 114-56" fill="none" stroke="#111" stroke-width="46"/>
+              <path d="M-40 212C20 204 70 148 130 148c66 0 76 102 124 136 38 27 80 12 94-32 12-40 44-64 74-40 28 24 22 84 64 100 46 18 76-26 90-68 14-40 46-58 114-56" fill="none" stroke="#3BCEAC" stroke-width="38"/>
+              <path d="M-40 212C20 204 70 148 130 148c66 0 76 102 124 136 38 27 80 12 94-32 12-40 44-64 74-40 28 24 22 84 64 100 46 18 76-26 90-68 14-40 46-58 114-56" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="10 16" stroke-linecap="round" opacity=".85"/>
+              <text font-size="11" font-weight="700" letter-spacing="2" fill="#111"><textPath href="#river-c" startOffset="29.5%">BRISBANE RIVER</textPath></text>
+            </g>
+            <g class="bridges" stroke="#111" stroke-width="3" fill="#fff">
+              <rect x="94" y="136" width="22" height="42" rx="3" transform="rotate(-18 105 157)"/>
+              <rect x="428" y="262" width="22" height="46" rx="3" transform="rotate(38 439 285)"/>
+            </g>
+            <g class="cbd" stroke="#111" stroke-width="2.5" fill="#fff" aria-hidden="true">
+              <rect x="248" y="188" width="12" height="30"/><rect x="262" y="176" width="14" height="42" fill="#FFD23F"/><rect x="278" y="194" width="11" height="24"/><rect x="291" y="184" width="10" height="34" fill="#FF3E8A"/>
+              <path d="M240 218h68" stroke-width="3"/>
+              <text x="274" y="236" text-anchor="middle" font-size="12" font-weight="700" stroke="none" fill="#111" letter-spacing="2">CBD</text>
+            </g>
+            <g fill="#3BCEAC" stroke="#111" stroke-width="2.5">
+              <circle cx="206" cy="80" r="9"/><circle cx="220" cy="92" r="7"/><circle cx="600" cy="170" r="8"/><circle cx="170" cy="380" r="9"/><circle cx="186" cy="392" r="6"/><circle cx="420" cy="30" r="7"/><circle cx="238" cy="340" r="7"/><circle cx="560" cy="380" r="9"/><circle cx="578" cy="370" r="6"/>
+            </g>
+            <g transform="translate(606 36)" stroke="#111" stroke-width="2.5">
+              <circle r="20" fill="#fff"/><path d="M0-14l7 16H-7z" fill="#FF3E8A" stroke-linejoin="round"/>
+              <text y="15" text-anchor="middle" font-size="11" font-weight="700" stroke="none" fill="#111">N</text>
+            </g>
+            <g fill="none" stroke="#111" stroke-width="3.5" stroke-dasharray="1 10" stroke-linecap="round" id="route">
+              <path class="seg" d="M58 362C70 320 96 290 126 262"/>
+              <path class="seg" d="M126 262C160 222 70 150 98 72"/>
+              <path class="seg" d="M98 72C170 30 300 40 372 96"/>
+              <path class="seg" d="M372 96C430 140 500 50 562 96"/>
+              <path class="seg" d="M562 96C610 140 530 196 488 236"/>
+              <path class="seg" d="M488 236C450 276 410 340 340 364"/>
+              <path class="seg" d="M340 364C260 400 140 400 58 362"/>
+            </g>
+            <g id="pins" stroke="#111" stroke-width="3" fill="#fff"></g>
+            <g transform="translate(58 362)" aria-hidden="true">
+              <path d="M-16 0v-18l16-12 16 12V0z" fill="#fff" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+              <rect x="-5" y="-11" width="10" height="11" fill="#111"/>
+            </g>
+            <g id="puffs"></g>
+            <g id="truck">
+              <g id="truck-art">
+                <ellipse cx="0" cy="3" rx="30" ry="5" fill="#111" opacity=".2"/>
+                <g stroke="#111" stroke-width="3" stroke-linejoin="round">
+                  <rect x="-30" y="-44" width="60" height="36" rx="7" fill="#FF3E8A"/>
+                  <path d="M14-44h9a7 7 0 0 1 7 7v10H14z" fill="#fff"/>
+                  <rect x="-24" y="-35" width="30" height="15" rx="2" fill="#111"/>
+                  <path d="M-27-37h36v5q-4.5 6-9 0-4.5 6-9 0-4.5 6-9 0-4.5 6-9 0z" fill="#FFD23F"/>
+                  <circle cx="-15" cy="-6" r="7.5" fill="#111"/><circle cx="17" cy="-6" r="7.5" fill="#111"/>
+                  <circle cx="-2" cy="-52" r="9" fill="#3BCEAC"/>
+                </g>
+                <circle cx="-15" cy="-6" r="2.6" fill="#fff"/><circle cx="17" cy="-6" r="2.6" fill="#fff"/>
+                <path d="M-2-60v16M-10-52h16" stroke="#fff" stroke-width="2"/>
+                <circle cx="27" cy="-17" r="2.8" fill="#FFD23F" stroke="#111" stroke-width="1.5"/>
+              </g>
+            </g>
+          </svg>
+          <div id="labels"></div>
+          <span class="sticker map-stk" aria-hidden="true">Weekly route</span>
+        </div>
+        <div class="where" id="where" aria-live="polite">
+          <div class="w-box">
+            <p class="w-day label"><span id="w-dow">Saturday</span><span class="w-today" id="w-today">Today</span></p>
+            <p class="w-place" id="w-place">New Farm</p>
+            <p class="w-spot" id="w-spot">Park lawns by the river</p>
+          </div>
+          <div class="w-box">
+            <p class="label">Serving</p>
+            <p class="w-hours" id="w-time">10am – 3pm</p>
+          </div>
+          <div class="w-box">
+            <p class="label">Tip</p>
+            <p class="w-tip" id="w-tip">Our busiest stop. Come before 11:30am to beat the lunch rush.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="ticker" id="ticker">
+    <div class="ticker-view" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Birria tacos <i></i> Baja fish <i></i> Elote cup <i></i> Chipotle cauli <i></i> Churros <i></i> Horchata <i></i> Six stops a week <i></i> Dogs welcome <i></i></span>
+        <span>Birria tacos <i></i> Baja fish <i></i> Elote cup <i></i> Chipotle cauli <i></i> Churros <i></i> Horchata <i></i> Six stops a week <i></i> Dogs welcome <i></i></span>
+      </div>
+    </div>
+    <button class="ticker-btn" type="button" aria-pressed="false" aria-label="Pause the scrolling menu ticker">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><g class="ic-pause" fill="currentColor"><rect x="2" y="1" width="4" height="14" rx="1"/><rect x="10" y="1" width="4" height="14" rx="1"/></g><path class="ic-play" d="M3 1.5v13l11-6.5z" fill="currentColor" style="display:none"/></svg>
+    </button>
+  </div>
+
+    <section class="band menu" id="menu" aria-labelledby="menu-h">
+      <div class="tile t-pink menu-head">
+        <h2 class="h2" id="menu-h">The menu</h2>
+        <p class="lead">Everything is made in the truck that morning. <b>Tap a tile to flip it</b> and see what’s in it.</p>
+        <ul class="key" aria-label="Dietary key">
+          <li><span class="tag">VG</span>Vegan</li>
+          <li><span class="tag">V</span>Vegetarian</li>
+          <li><span class="tag">GF</span>No gluten ingredients</li>
+        </ul>
+        <svg class="taco-doodle" viewBox="0 0 160 120" aria-hidden="true"><use href="#taco"/></svg>
+        <p class="menu-note"><b>Sample prices</b> for this concept demo. Card or cash. One small kitchen, so traces of any allergen are possible — ask at the window.</p>
+      </div>
+
+      <article class="dish" aria-labelledby="d1">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><symbol id="taco" viewBox="0 0 160 120"><g stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M22 66c2-16 14-22 24-16 6-12 24-12 30-2 10-8 26-4 28 12 4 0 8 4 6 8z" fill="#9B2D1A"/><circle cx="44" cy="56" r="3" fill="#fff" stroke-width="2"/><circle cx="70" cy="52" r="3" fill="#fff" stroke-width="2"/><path d="M58 50c4-4 8-2 8 2M88 56c3-5 9-4 9 1" fill="none" stroke="#3BCEAC" stroke-width="3"/><path d="M18 66a47 40 0 0 0 94 0z" fill="#F2892B"/><path d="M34 70q4 8 2 14M60 72q6 8 3 18M88 70q3 6 0 12" fill="none" stroke="#FFD23F" stroke-width="3"/><path d="M104 64h46c0 22-10 32-23 32s-23-10-23-32z" fill="#fff"/><ellipse cx="127" cy="64" rx="23" ry="7" fill="#B83A1E"/></g><ellipse cx="46" cy="94" rx="5" ry="3" fill="#C9621A"/><ellipse cx="78" cy="98" rx="6" ry="3" fill="#C9621A"/><path d="M118 61c3-2 7-2 10 0" stroke="#FFD23F" stroke-width="2.5" fill="none" stroke-linecap="round"/></symbol><use href="#taco"/></svg>
+            <h3 id="d1">Birria tacos</h3>
+            <p>Three corn tortillas, beef braised overnight with dried chillies, melted cheese, onion, coriander — plus consommé for dunking.</p>
+            <div class="dish-foot"><span class="price">$18</span><span class="tags"><span class="tag">GF</span></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Birria tacos</h3>
+            <ul class="allergens" aria-label="Contains"><li>Dairy (cheese)</li><li class="ok">No gluten ingredients</li></ul>
+            <p>Corn tortillas are fried on the same plancha as flour tortillas. Consommé is beef stock, chillies, cinnamon and clove.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the taco</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish" aria-labelledby="d2">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><g stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M24 70c0-14 14-22 26-18 8-10 30-10 38-2 10-4 22 2 22 20z" fill="#FF7FB0"/><path d="M34 60c2-18 40-26 62-12 8 6 6 16-2 18H42c-6 0-9-2-8-6z" fill="#EFA53A"/><path d="M44 52l7-5 7 5 7-5 7 5 7-5 7 5" fill="none" stroke="#fff" stroke-width="3.5"/><path d="M18 70a48 40 0 0 0 96 0z" fill="#FFE2A6"/><path d="M114 96a24 24 0 0 1 40-18z" fill="#3BCEAC"/><path d="M122 92l12-10M134 94l10-12" stroke="#fff" stroke-width="2.5"/></g><ellipse cx="50" cy="92" rx="5" ry="3" fill="#E7B35C"/><ellipse cx="84" cy="96" rx="6" ry="3" fill="#E7B35C"/></svg>
+            <h3 id="d2">Baja fish</h3>
+            <p>Two flour tortillas, beer-battered flathead, pink cabbage slaw, chipotle crema and a squeeze of lime.</p>
+            <div class="dish-foot"><span class="price">$16</span><span class="tags"></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Baja fish</h3>
+            <ul class="allergens" aria-label="Contains"><li>Fish</li><li>Gluten</li><li>Egg (crema)</li><li>Dairy (crema)</li></ul>
+            <p>Batter uses wheat flour and beer. Fried in its own fryer — ask for it grilled on corn tortillas for no gluten ingredients.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the taco</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish" aria-labelledby="d3">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><g stroke="#111" stroke-width="2.5"><path d="M112 22l-12 40" stroke-width="4" stroke-linecap="round"/><ellipse cx="114" cy="18" rx="7" ry="10" fill="#fff" transform="rotate(16 114 18)"/><g fill="#FFD23F"><circle cx="58" cy="50" r="6"/><circle cx="70" cy="46" r="6"/><circle cx="82" cy="45" r="6"/><circle cx="94" cy="47" r="6"/><circle cx="104" cy="51" r="6"/><circle cx="64" cy="38" r="6"/><circle cx="77" cy="35" r="6"/><circle cx="90" cy="36" r="6"/><circle cx="71" cy="26" r="6"/><circle cx="84" cy="25" r="6"/></g><path d="M48 54h66l-9 54H57z" fill="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M62 54h9l-2 54h-8zM86 54h9l-4 54h-8z" fill="#FF3E8A" stroke="none"/><path d="M48 54h66l-9 54H57z" fill="none" stroke-width="3" stroke-linejoin="round"/><path d="M40 60a14 14 0 0 1 22-10z" fill="#3BCEAC" stroke-width="3"/></g><g fill="#D93A2B"><circle cx="66" cy="30" r="2"/><circle cx="88" cy="40" r="2"/><circle cx="76" cy="44" r="1.8"/><circle cx="98" cy="44" r="2"/><circle cx="80" cy="20" r="1.8"/></g><g fill="#fff" stroke="#111" stroke-width="1"><rect x="72" y="38" width="4" height="4"/><rect x="92" y="30" width="4" height="4"/><rect x="60" y="44" width="4" height="4"/></g></svg>
+            <h3 id="d3">Elote cup</h3>
+            <p>Charred corn off the cob, lime mayo, crumbled fetta, smoky chilli salt and a wedge of lime.</p>
+            <div class="dish-foot"><span class="price">$9</span><span class="tags"><span class="tag">V</span><span class="tag">GF</span></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Elote cup</h3>
+            <ul class="allergens" aria-label="Contains"><li>Dairy</li><li>Egg (mayo)</li><li class="ok">No gluten ingredients</li></ul>
+            <p>Ask for it “naked” — just corn, lime and chilli salt — and it’s vegan.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the corn</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish" aria-labelledby="d4">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><g stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><g fill="#FFF7E3" stroke-width="2.5"><circle cx="40" cy="60" r="10"/><circle cx="54" cy="52" r="11"/><circle cx="70" cy="50" r="11"/><circle cx="86" cy="52" r="11"/><circle cx="100" cy="60" r="10"/><circle cx="62" cy="62" r="9"/><circle cx="80" cy="62" r="9"/></g><path d="M36 50q8-8 14 0t14 0 14 0 14 0 14 0" fill="none" stroke="#D9542B" stroke-width="3.5"/><path d="M18 70a48 40 0 0 0 96 0z" fill="#FFD66B"/><path d="M118 58c6-6 18-6 22 0M122 66c6-5 14-5 18 0" fill="none" stroke="#FF3E8A" stroke-width="3"/></g><g fill="#3BCEAC" stroke="#111" stroke-width="1.5"><ellipse cx="50" cy="44" rx="4" ry="2.4" transform="rotate(-20 50 44)"/><ellipse cx="76" cy="40" rx="4" ry="2.4" transform="rotate(20 76 40)"/><ellipse cx="96" cy="48" rx="4" ry="2.4"/></g><ellipse cx="48" cy="92" rx="5" ry="3" fill="#E9B23E"/><ellipse cx="82" cy="98" rx="6" ry="3" fill="#E9B23E"/></svg>
+            <h3 id="d4">Chipotle cauli</h3>
+            <p>Two corn tortillas, roasted cauliflower in chipotle-lime glaze, cashew crema, pickled onion and pepitas.</p>
+            <div class="dish-foot"><span class="price">$15</span><span class="tags"><span class="tag">VG</span><span class="tag">GF</span></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Chipotle cauli</h3>
+            <ul class="allergens" aria-label="Contains"><li>Tree nuts (cashew)</li><li class="ok">Vegan</li><li class="ok">No gluten ingredients</li></ul>
+            <p>Nut allergy? Swap the cashew crema for salsa verde — just say so at the window.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the taco</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish" aria-labelledby="d5">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><g stroke="#111" stroke-width="3" stroke-linejoin="round"><g fill="#E9A23B"><rect x="54" y="10" width="15" height="62" rx="7.5" transform="rotate(-14 61 41)"/><rect x="72" y="4" width="15" height="66" rx="7.5" transform="rotate(4 79 37)"/><rect x="88" y="12" width="15" height="60" rx="7.5" transform="rotate(18 95 42)"/></g><path d="M44 58h72l-36 54z" fill="#FF3E8A"/><path d="M50 66h60l-5 8H55z" fill="#fff" stroke-width="2.5"/><path d="M118 88h34c0 14-7 20-17 20s-17-6-17-20z" fill="#fff"/><ellipse cx="135" cy="88" rx="17" ry="5" fill="#4A2616"/></g><g stroke="#B8741A" stroke-width="2" stroke-linecap="round"><path d="M58 22l-4 36M64 22l-3 36M76 12l1 40M82 12l1 40M94 20l-6 36M100 22l-6 36"/></g><g fill="#fff"><circle cx="60" cy="16" r="1.8"/><circle cx="80" cy="10" r="1.8"/><circle cx="98" cy="18" r="1.8"/><circle cx="66" cy="34" r="1.6"/><circle cx="84" cy="30" r="1.6"/></g></svg>
+            <h3 id="d5">Churros</h3>
+            <p>Four crackly churros rolled in cinnamon sugar, with a cup of dark chocolate for dipping.</p>
+            <div class="dish-foot"><span class="price">$10</span><span class="tags"><span class="tag">V</span></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Churros</h3>
+            <ul class="allergens" aria-label="Contains"><li>Gluten</li><li>Dairy (chocolate)</li><li>Soy (chocolate)</li></ul>
+            <p>Made with wheat flour and fried in the fish fryer’s neighbour — not the same oil, but the same small truck.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the churros</button></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dish" aria-labelledby="d6">
+        <div class="dish-in">
+          <div class="face front">
+            <svg class="art" viewBox="0 0 160 120" aria-hidden="true"><g stroke="#111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M92 4l-8 44" stroke="#111" stroke-width="10"/><path d="M92 4l-8 44" stroke="#3BCEAC" stroke-width="5" stroke-dasharray="6 6"/><path d="M56 24h52l-8 84H64z" fill="#fff"/><path d="M58.5 44h47l-6 62h-35z" fill="#FFF0D2" stroke="none"/><g fill="#fff" stroke-width="2"><rect x="66" y="48" width="14" height="14" rx="3" transform="rotate(-12 73 55)"/><rect x="84" y="52" width="13" height="13" rx="3" transform="rotate(14 90 58)"/></g><path d="M56 24h52l-8 84H64z" fill="none"/><rect x="112" y="46" width="30" height="9" rx="4" fill="#A0522D" transform="rotate(-30 127 50)"/><rect x="116" y="62" width="28" height="9" rx="4" fill="#A0522D" transform="rotate(-10 130 66)"/></g><g fill="#8A4B22"><circle cx="72" cy="44" r="1.6"/><circle cx="84" cy="42" r="1.6"/><circle cx="94" cy="45" r="1.6"/></g></svg>
+            <h3 id="d6">Horchata</h3>
+            <p>Our house rice-and-almond milk, steeped with cinnamon and vanilla, poured over plenty of ice.</p>
+            <div class="dish-foot"><span class="price">$7</span><span class="tags"><span class="tag">VG</span><span class="tag">GF</span></span><button class="flip" type="button" aria-expanded="false"><svg aria-hidden="true"><use href="#flip"/></svg>Allergens</button></div>
+          </div>
+          <div class="face back">
+            <h3>Horchata</h3>
+            <ul class="allergens" aria-label="Contains"><li>Tree nuts (almond)</li><li class="ok">Dairy-free</li><li class="ok">Vegan</li></ul>
+            <p>Sweetened with raw sugar. Ask for “half sweet” if you like it lighter.</p>
+            <div class="dish-foot"><button class="flip" type="button"><svg aria-hidden="true"><use href="#flip"/></svg>Back to the drink</button></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="band info">
+      <section class="tile t-pink cater" id="cater" aria-labelledby="cater-h">
+        <div>
+          <p class="label">For 40 to 200 hungry people</p>
+          <h2 class="h2" id="cater-h">Cater your party</h2>
+        </div>
+        <div class="cater-grid">
+          <div>
+            <p class="lead">We roll up, open the window and feed everyone. Birthdays, office lunches, backyard weddings, school fetes — anywhere the truck fits.</p>
+            <ul class="inc" style="margin-top:14px">
+              <li>Taco bar: pick three fillings, unlimited for two hours</li>
+              <li>Elote cups and churros add-ons</li>
+              <li>Vegan and no-gluten fillings on request</li>
+              <li>We bring bins and take the rubbish with us</li>
+            </ul>
+            <svg class="party" viewBox="0 0 320 170" aria-hidden="true">
+              <rect x="3" y="14" width="314" height="153" rx="16" fill="#FFF4CC" stroke="#111" stroke-width="3"/><circle cx="262" cy="52" r="16" fill="#FFD23F" stroke="#111" stroke-width="3"/>
+              <path d="M3 34q78 44 157 0t157 0" fill="none" stroke="#111" stroke-width="3"/>
+              <g stroke="#111" stroke-width="2.5" stroke-linejoin="round"><path d="M24 40l8 22 10-19z" fill="#FFD23F"/><path d="M58 51l6 22 12-18z" fill="#fff"/><path d="M94 55l4 23 13-16z" fill="#3BCEAC"/><path d="M130 48l2 23 14-13z" fill="#FFD23F"/><path d="M178 45l-1 23 15-12z" fill="#fff"/><path d="M214 54l-3 23 15-15z" fill="#3BCEAC"/><path d="M250 54l-5 22 14-17z" fill="#FFD23F"/><path d="M286 44l-8 21 12-19z" fill="#fff"/></g>
+              <path d="M18 152h284" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+              <use href="#truck-art" transform="translate(160 150) scale(2)"/>
+              <g fill="#111"><circle cx="40" cy="110" r="3"/><circle cx="62" cy="130" r="2.5"/><circle cx="270" cy="104" r="3"/><circle cx="288" cy="128" r="2.5"/></g>
+              <g fill="#FFD23F" stroke="#111" stroke-width="2"><rect x="46" y="92" width="8" height="8" transform="rotate(20 50 96)"/><rect x="256" y="122" width="8" height="8" transform="rotate(-25 260 126)"/></g>
+            </svg>
+          </div>
+          <form class="cf" data-demo-message="Demo only — no catering enquiry was sent. A real site would pass this to the truck.">
+            <div>
+              <div class="range-row"><label for="guests">How many guests?</label><output id="g-out" for="guests">80</output></div>
+              <input type="range" id="guests" name="guests" min="40" max="200" step="10" value="80">
+            </div>
+            <p class="est" aria-live="polite">Taco bar for <b id="g-n">80</b> guests ≈ <b id="g-cost">$1,760</b><small>Illustrative only — based on a sample $22 per head, before travel.</small></p>
+            <div class="two">
+              <label>Date<input type="date" name="date"></label>
+              <label>Suburb<input type="text" name="suburb" placeholder="e.g. Bulimba" autocomplete="address-level2"></label>
+            </div>
+            <label>Email<input type="email" name="email" placeholder="you@example.com" autocomplete="email"></label>
+            <button class="btn b-ink" type="submit">Send enquiry</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="tile hours" id="hours" aria-labelledby="hours-h">
+        <h2 class="h2" id="hours-h">Hours</h2>
+        <ol id="hours-list">
+          <li><b>Mon</b><span>Closed</span><small>Prep day at the kitchen</small></li>
+          <li><b>Tue</b><span>West End</span><small>11am – 2:30pm</small></li>
+          <li><b>Wed</b><span>Paddington</span><small>5pm – 8:30pm</small></li>
+          <li><b>Thu</b><span>Fortitude Valley</span><small>5pm – 11pm</small></li>
+          <li><b>Fri</b><span>Newstead</span><small>11:30am – 2pm, 5pm – 9pm</small></li>
+          <li><b>Sat</b><span>New Farm</span><small>10am – 3pm</small></li>
+          <li><b>Sun</b><span>Woolloongabba</span><small>11am – 4pm</small></li>
+        </ol>
+        <p class="note">Brisbane time — no daylight saving, so no surprises. Storms? We mark cancelled stops on the map by 9am.</p>
+      </section>
+
+      <section class="tile t-sea sold" id="sold" aria-labelledby="sold-h">
+        <h2 class="h2" id="sold-h"><span class="stamp">Sold out?</span> Here’s why</h2>
+        <p>Birria braises overnight, so we make one big pot a day. When it’s gone, it’s gone — we’d rather sell out than serve yesterday’s.</p>
+        <div class="nums"><div><b>40 kg</b>birria a day</div><div><b>1</b>pot, no reheats</div><div><b>0</b>freezers</div></div>
+      </section>
+
+      <section class="tile faq" aria-labelledby="faq-h">
+        <h2 class="h2" id="faq-h">Good to know</h2>
+        <details><summary>Are dogs welcome?</summary><p>Always. There’s a water bowl hanging off the back step.</p></details>
+        <details><summary>What if it rains?</summary><p>Light rain, the awning goes out and we keep cooking. Storm warnings, we pack up and mark the stop cancelled on the map.</p></details>
+        <details><summary>Can I pre-order?</summary><p>Not for single orders — the queue moves fast. For 10 or more, call ahead and we’ll prep extra.</p></details>
+        <details><summary>Where do you park exactly?</summary><p>Spots move a little with events and roadworks, so look for the giant lime on the roof — you can’t miss it.</p></details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="tile dark foot">
+    <p class="foot-name" data-brand>Lucky Lime Tacos</p>
+    <div>
+      <h2 class="label">Say hola</h2>
+      <ul><li><a href="tel:0491570156">0491 570 156</a></li><li><a href="mailto:hola@example.com">hola@example.com</a></li></ul>
+    </div>
+    <div>
+      <h2 class="label">Find us</h2>
+      <ul><li><a href="#map">Follow the weekly route</a></li><li><a href="#hours">Hours by day</a></li><li><a href="#top">Back to the top</a></li></ul>
+    </div>
+    <p class="small"><span data-brand>Lucky Lime Tacos</span> is a fictional business in a concept demo. Menu, prices and stops are samples · Brisbane, QLD.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+  var reduced = function(){ return (window.DemoKit && DemoKit.reducedMotion) || !!(mq && mq.matches); };
+  document.addEventListener("touchstart", function(){}, {passive:true});
+
+  /* ---------- the weekly route ---------- */
+  var STOPS = [
+    {day:"Monday",  s:"Mon", side:1, place:"Closed", spot:"Prep day back at the home kitchen (not open to the public)", time:"Closed", tip:"Monday is birria day — 40 kg goes in the pot to braise overnight. See you Tuesday in West End.", tx:"-22%", name:"Home kitchen"},
+    {day:"Tuesday", s:"Tue", place:"West End", spot:"Riverside lawn, near the ferry stop", time:"11am – 2:30pm", tip:"Our quietest stop — the best day to try the whole menu without a queue.", tx:"-50%", name:"West End"},
+    {day:"Wednesday", s:"Wed", place:"Paddington", spot:"Up on the ridge, by the lookout", time:"5pm – 8:30pm", tip:"Twilight shift. Arrive early if you want the sunset with your tacos — it gets breezy up there.", tx:"-26%", name:"Paddington"},
+    {day:"Thursday", s:"Thu", place:"Fortitude Valley", spot:"Laneway just off the mall", time:"5pm – 11pm", tip:"Our late shift. The kitchen closes 30 minutes before we do, and birria usually runs out first.", tx:"-50%", name:"Fortitude Valley"},
+    {day:"Friday", s:"Fri", place:"Newstead", spot:"The brewery-district green", time:"11:30am – 2pm, 5pm – 9pm", tip:"Two shifts today. Feeding ten or more? Call ahead and we’ll prep extra.", tx:"-84%", name:"Newstead"},
+    {day:"Saturday", s:"Sat", place:"New Farm", spot:"Park lawns by the river", time:"10am – 3pm", tip:"Our busiest stop. Come before 11:30am to beat the lunch rush — dogs very welcome.", tx:"-58%", name:"New Farm"},
+    {day:"Sunday", s:"Sun", side:1, place:"Woolloongabba", spot:"Sunday market strip", time:"11am – 4pm", tip:"On big game days parking vanishes near the stadium — walk, ride or catch the bus.", tx:"-50%", name:"Woolloongabba"}
+  ];
+  var svg = $("#mapsvg"), truck = $("#truck"), puffs = $("#puffs"), pinsG = $("#pins");
+  var segs = $$("#route .seg");
+  var cum = [0];
+  segs.forEach(function(p, i){ cum.push(cum[i] + p.getTotalLength()); });
+  var total = cum[cum.length - 1];
+  var todayIdx = (new Date().getDay() + 6) % 7;
+  var current = todayIdx, pos = cum[todayIdx], raf = 0, scale = 1, lastDir = 1;
+
+  function norm(d){ return ((d % total) + total) % total; }
+  function pointAt(d){
+    d = norm(d);
+    var k = 0;
+    while (k < segs.length - 1 && d > cum[k + 1]) k++;
+    return segs[k].getPointAtLength(Math.min(d - cum[k], cum[k + 1] - cum[k]));
+  }
+
+  // pins, labels, day buttons
+  var daysEl = $("#days"), labelsEl = $("#labels");
+  var dayBtns = [], labels = [], pins = [];
+  STOPS.forEach(function(st, i){
+    var p = segs[i].getPointAtLength(0);
+    var pin = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    pin.setAttribute("cx", p.x); pin.setAttribute("cy", p.y); pin.setAttribute("r", 8);
+    pin.setAttribute("class", "stop-pin");
+    if (i === 0) pin.setAttribute("opacity", "0");
+    pinsG.appendChild(pin); pins.push(pin);
+
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "day"; b.setAttribute("aria-pressed", "false");
+    b.innerHTML = '<span aria-hidden="true">' + st.s + '</span><span class="sr">' + st.day + (i === todayIdx ? " (today)" : "") + "</span>";
+    if (i === todayIdx) b.classList.add("today");
+    b.addEventListener("click", function(){ select(i, true); });
+    daysEl.appendChild(b); dayBtns.push(b);
+
+    var l = document.createElement("span");
+    l.className = "lbl" + (st.side ? " side" : ""); l.setAttribute("aria-hidden", "true");
+    l.style.setProperty("--x", (p.x / 640 * 100).toFixed(2) + "%"); l.style.setProperty("--y", ((p.y - 8) / 404 * 100).toFixed(2) + "%"); l.style.setProperty("--tx", st.tx);
+    l.innerHTML = '<span class="nm">' + st.name + "</span><i>" + st.s + "</i>";
+    l.addEventListener("click", function(){ select(i, true); dayBtns[i].focus({preventScroll:true}); });
+    labelsEl.appendChild(l); labels.push(l);
+  });
+
+  daysEl.addEventListener("keydown", function(e){
+    var k = e.key, n = null;
+    if (k === "ArrowRight" || k === "ArrowDown") n = (current + 1) % 7;
+    else if (k === "ArrowLeft" || k === "ArrowUp") n = (current + 6) % 7;
+    else if (k === "Home") n = 0; else if (k === "End") n = 6;
+    if (n === null) return;
+    e.preventDefault(); select(n, true); dayBtns[n].focus();
+  });
+
+  function updateScale(){
+    var w = svg.getBoundingClientRect().width || 640;
+    scale = Math.max(1, Math.min(1.7, 420 / w));
+  }
+
+  function place(d, dir, t){
+    lastDir = dir || 1;
+    var p = pointAt(d), q = pointAt(d + (dir || 1) * 4);
+    var left = q.x < p.x - 0.01;
+    var ang = Math.atan2(q.y - p.y, q.x - p.x) * 180 / Math.PI;
+    var a = left ? ang - 180 : ang;
+    while (a > 180) a -= 360; while (a < -180) a += 360;
+    a = Math.max(-20, Math.min(20, a));
+    var bob = (t > 0 && t < 1) ? -Math.abs(Math.sin(t * Math.PI * 7)) * 2.4 : 0;
+    truck.setAttribute("transform", "translate(" + p.x.toFixed(1) + " " + (p.y + bob).toFixed(1) + ") rotate(" + a.toFixed(1) + ") scale(" + ((left ? -1 : 1) * scale).toFixed(3) + " " + scale.toFixed(3) + ")");
+    return {p:p, left:left};
+  }
+
+  function puff(p, left){
+    var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    c.setAttribute("cx", (p.x + (left ? 32 : -32) * scale).toFixed(1));
+    c.setAttribute("cy", (p.y - 10 * scale).toFixed(1));
+    c.setAttribute("r", (5 + Math.random() * 3) * scale);
+    c.setAttribute("fill", "#fff"); c.setAttribute("stroke", "#111"); c.setAttribute("stroke-width", "2");
+    c.setAttribute("class", "puff");
+    c.addEventListener("animationend", function(){ c.remove(); });
+    puffs.appendChild(c);
+  }
+
+  function arrive(i){
+    pins.forEach(function(p, j){ p.classList.toggle("on", j === i); });
+    $$(".blob").forEach(function(b){ b.classList.toggle("on", +b.getAttribute("data-stop") === i && i !== 0); });
+  }
+
+  function drive(i, instant){
+    cancelAnimationFrame(raf);
+    var target = cum[i];
+    var fwd = norm(target - pos);
+    var dist = fwd <= total / 2 ? fwd : fwd - total;
+    if (instant || reduced() || Math.abs(dist) < 1){
+      pos = target; place(pos, dist < 0 ? -1 : 1, 1); arrive(i); return;
+    }
+    var from = pos, dir = dist < 0 ? -1 : 1;
+    var dur = Math.min(1600, 520 + Math.abs(dist) * 1.05);
+    var t0 = performance.now(), last = 0;
+    arrive(-1);
+    (function step(now){
+      var t = Math.min(1, (now - t0) / dur);
+      var e = t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      pos = from + dist * e;
+      var r = place(pos, dir, t);
+      if (now - last > 95 && t < .9){ puff(r.p, r.left); last = now; }
+      if (t < 1) raf = requestAnimationFrame(step);
+      else { pos = norm(target); arrive(i); }
+    })(t0);
+  }
+
+  function select(i, animate){
+    current = i;
+    var st = STOPS[i];
+    dayBtns.forEach(function(b, j){ b.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+    labels.forEach(function(l, j){ l.classList.toggle("on", j === i); });
+    $("#w-dow").textContent = st.day;
+    $("#w-today").hidden = i !== todayIdx;
+    $("#w-place").textContent = st.place;
+    $("#w-spot").textContent = st.spot;
+    $("#w-time").textContent = st.time;
+    $("#w-tip").textContent = st.tip;
+    drive(i, !animate);
+  }
+
+  updateScale();
+  // start one stop back and drive in when the map first comes into view
+  var startIdx = (todayIdx + 6) % 7;
+  pos = cum[startIdx];
+  place(pos, 1, 1);
+  select(todayIdx, false);
+  pos = cum[startIdx]; place(pos, 1, 1); arrive(-1);
+  var intro = false;
+  function runIntro(){ if (intro) return; intro = true; setTimeout(function(){ drive(current, false); }, 250); }
+  if (reduced()){ intro = true; drive(current, true); }
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(en){ if (en.some(function(x){ return x.isIntersecting; })){ runIntro(); io.disconnect(); } }, {threshold:.35});
+    io.observe($("#mapwrap"));
+  } else runIntro();
+  var rz;
+  window.addEventListener("resize", function(){ clearTimeout(rz); rz = setTimeout(function(){ updateScale(); place(pos, lastDir, 1); fitAll(); }, 120); });
+
+  /* ---------- hours: highlight today ---------- */
+  var hl = $$("#hours-list li");
+  if (hl[todayIdx]) hl[todayIdx].classList.add("today");
+
+  /* ---------- flip cards ---------- */
+  $$(".dish").forEach(function(d){
+    var front = $(".front", d), back = $(".back", d);
+    var openB = $(".front .flip", d), closeB = $(".back .flip", d);
+    function set(on, focus){
+      d.classList.toggle("flipped", on);
+      openB.setAttribute("aria-expanded", on ? "true" : "false");
+      front.inert = on; back.inert = !on;
+      front.setAttribute("aria-hidden", on ? "true" : "false");
+      back.setAttribute("aria-hidden", on ? "false" : "true");
+      if (focus) (on ? closeB : openB).focus({preventScroll:true});
+    }
+    set(false);
+    openB.addEventListener("click", function(e){ e.stopPropagation(); set(true, true); });
+    closeB.addEventListener("click", function(e){ e.stopPropagation(); set(false, true); });
+    d.addEventListener("click", function(e){ if (e.target.closest("a,button,input,select,textarea")) return; set(!d.classList.contains("flipped"), false); });
+  });
+
+  /* ---------- catering estimate ---------- */
+  var g = $("#guests");
+  function est(){
+    var n = +g.value;
+    $("#g-out").textContent = n; $("#g-n").textContent = n;
+    $("#g-cost").textContent = "$" + (n * 22).toLocaleString("en-AU");
+    g.style.setProperty("--p", ((n - g.min) / (g.max - g.min) * 100) + "%");
+  }
+  g.addEventListener("input", est); est();
+
+  /* ---------- ticker pause ---------- */
+  var tk = $("#ticker"), tb = $(".ticker-btn");
+  function setPause(on){
+    tk.classList.toggle("paused", on);
+    tb.setAttribute("aria-pressed", on ? "true" : "false");
+    tb.setAttribute("aria-label", on ? "Play the scrolling menu ticker" : "Pause the scrolling menu ticker");
+    $(".ic-pause", tb).style.display = on ? "none" : "";
+    $(".ic-play", tb).style.display = on ? "" : "none";
+  }
+  tb.addEventListener("click", function(){ setPause(!tk.classList.contains("paused")); });
+
+  /* ---------- fit the giant name to its tile (survives long "try it on" names) ---------- */
+  function fit(el, ratio, max, min){
+    var w = el.clientWidth; if (!w) return;
+    var s = Math.min(max, w * ratio);
+    el.classList.remove("squeezed");
+    el.style.fontSize = s + "px";
+    var guard = 0;
+    while (el.scrollWidth > w + 1 && s > min && guard++ < 80){ s -= 2; el.style.fontSize = s + "px"; }
+    if (el.scrollWidth > w + 1) el.classList.add("squeezed");
+  }
+  function fitAll(){ fit($(".brand-xl"), innerWidth >= 1100 ? .235 : .27, 150, 40); }
+  fitAll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+  window.addEventListener("hd:brandchange", function(){ requestAnimationFrame(fitAll); });
+})();
+</script>
+</body>
+</html>

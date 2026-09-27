@@ -1,0 +1,20 @@
+{
+  "id": "018",
+  "tech": [
+    "CSS Grid",
+    "SVG",
+    "SVG animation",
+    "IntersectionObserver",
+    "Date logic"
+  ],
+  "features": [
+    "story",
+    "booking"
+  ],
+  "interaction": "Drag a star-anise knob (a real range input, also arrow/Page keys, stage buttons or a Play button) across a 10pm→10am timeline; pot Nº 6's halftone broth deepens, flame and steam change, and each of six broth stages is explained in text.",
+  "fonts": [
+    "Be Vietnam Pro",
+    "Space Mono"
+  ],
+  "notes": "The group-table request ends in a demo toast; nothing is booked. The menu is browse-only, with sample prices."
+}

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="052">
+<meta name="demo:brand" content="Maison Wren">
+<title>Maison Wren — fashion-led hair salon, South Yarra</title>
+<meta name="description" content="Maison Wren is a fictional fashion-led hair salon in South Yarra, Melbourne, presented as a magazine issue with a colour try-on and booking request.">
+<meta name="theme-color" content="#F3C6CF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,600&family=Syne:wght@500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#0A0A0A;--paper:#FFFFFF;--blush:#F3C6CF;--red:#D1002F;--mute:#5E4A4E;--grey:#6B6B6B;
+--dd:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;--sy:"Syne","Helvetica Neue",Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--dd)}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.k{font:700 11.5px/1.35 var(--sy);letter-spacing:.2em;text-transform:uppercase}
+.it{font-style:italic}
+.dark{background:var(--ink);color:#fff}
+.bl{background:var(--blush)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:700 12.5px var(--sy);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover{background:var(--red);border-color:var(--red)}
+.btn.o{background:transparent;color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+.u{text-decoration:none;background:linear-gradient(var(--red),var(--red)) 0 100%/0 1.5px no-repeat;transition:background-size .4s}
+.u:hover{background-size:100% 1.5px}
+.folio{display:flex;justify-content:space-between;gap:16px;padding:18px clamp(16px,3vw,40px);font:700 11px var(--sy);letter-spacing:.2em;text-transform:uppercase;border-top:1px solid currentColor}
+.folio b{font-weight:700}
+.wrap{padding:0 clamp(16px,3vw,40px)}
+
+/* ---------- cover ---------- */
+.cover{position:relative;height:100vh;min-height:700px;max-height:1020px;background:var(--blush);overflow:hidden}
+.issue{position:absolute;z-index:3;top:16px;left:clamp(16px,3vw,40px);right:clamp(16px,3vw,40px);display:flex;justify-content:space-between;gap:12px}
+.mast{position:absolute;z-index:1;top:32px;left:0;right:0;padding:0 16px;text-align:center;text-transform:uppercase;font:900 clamp(40px,calc(138vw / var(--n,11)),196px)/.84 var(--dd);letter-spacing:-.025em;overflow-wrap:anywhere;animation:rise 1s cubic-bezier(.2,.7,.1,1) both}
+@keyframes rise{from{transform:translateY(22%);opacity:0}}
+.cover .pt{position:absolute;z-index:2;left:50%;top:1.5%;height:118%;aspect-ratio:600/760;transform:translateX(-47%)}
+.lines{position:absolute;z-index:3;top:30%;left:clamp(16px,3vw,40px);width:min(24vw,340px);display:grid;gap:26px}
+.lines.r{left:auto;right:clamp(16px,3vw,40px);text-align:right;width:min(22vw,300px)}
+.cl{display:block;text-decoration:none}
+.cl .big{display:block;font:italic 400 clamp(30px,3.3vw,50px)/1 var(--dd);letter-spacing:-.01em}
+.cl .big b{font-style:normal;font-weight:900}
+.cl .k{display:block;margin-top:8px}
+.cl:hover .big{color:var(--red)}
+.sticker{position:absolute;z-index:4;right:clamp(24px,21vw,330px);top:25%;width:118px;height:118px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font:italic 600 18px/1.05 var(--dd);padding:12px;box-shadow:0 10px 30px -12px rgba(0,0,0,.5)}
+.sticker small{display:block;font:700 9.5px var(--sy);letter-spacing:.16em;text-transform:uppercase;margin-top:6px}
+.barcode{position:absolute;z-index:3;left:clamp(16px,3vw,40px);bottom:22px;display:flex;align-items:flex-end;gap:10px}
+.barcode svg{width:92px;height:46px;background:#fff;padding:4px}
+.cover-cta{position:absolute;z-index:3;right:clamp(16px,3vw,40px);bottom:22px;display:flex;gap:10px}
+.cover-cta .btn.o{background:rgba(243,198,207,.9)}
+
+/* ---------- contents ---------- */
+.contents{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border-bottom:1px solid var(--ink)}
+.contents .l{padding:clamp(40px,6vw,90px) clamp(16px,3vw,40px);border-right:1px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.pgno{font:900 clamp(120px,16vw,240px)/.8 var(--dd);letter-spacing:-.04em}
+.contents h2{font:italic 400 clamp(44px,5vw,76px)/.95 var(--dd);letter-spacing:-.02em}
+.letter{font-size:18px;line-height:1.65;max-width:40ch}
+.letter::first-letter{float:left;font:900 74px/.8 var(--dd);margin:6px 10px 0 0;color:var(--red)}
+.toc{padding:clamp(28px,5vw,80px) clamp(16px,3vw,40px)}
+.toc li{border-top:1px solid var(--ink)}
+.toc li:last-child{border-bottom:1px solid var(--ink)}
+.toc a{display:grid;grid-template-columns:80px 1fr auto;gap:18px;align-items:baseline;padding:18px 0;text-decoration:none}
+.toc .n{font:900 34px/1 var(--dd)}
+.toc .t{font:400 clamp(24px,2.4vw,34px)/1.1 var(--dd)}
+.toc .t em{display:block;font:500 14px/1.4 var(--sy);font-style:normal;letter-spacing:.02em;color:var(--grey);margin-top:6px}
+.toc .ar{font:700 12px var(--sy);letter-spacing:.2em;opacity:0;transform:translateX(-8px);transition:.3s}
+.toc a:hover .ar,.toc a:focus-visible .ar{opacity:1;transform:none}
+.toc a:hover .t{color:var(--red)}
+
+/* ---------- services (black) ---------- */
+.svc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);position:relative}
+.svc::after{content:"";position:absolute;left:50%;top:40px;bottom:40px;width:1px;background:#333}
+.svc .l{position:relative;overflow:hidden;min-height:640px;padding:clamp(28px,4vw,56px) clamp(16px,3vw,40px)}
+.giant{position:absolute;left:-.04em;bottom:-.07em;font:900 clamp(200px,24vw,380px)/.8 var(--dd);letter-spacing:-.05em;color:#fff;margin:0}
+.svc .l p{max-width:30ch;color:#cfcfcf;font-size:18px;margin-top:14px}
+.svc .l .k{color:var(--blush)}
+.svc .r{padding:clamp(28px,4vw,56px) clamp(16px,3vw,40px) clamp(28px,4vw,56px) clamp(24px,4vw,64px)}
+.prices li{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid #2c2c2c}
+.prices .nm{font:400 clamp(22px,2vw,28px)/1.2 var(--dd)}
+.prices .nm small{display:block;font:500 13px/1.4 var(--sy);letter-spacing:.02em;color:#A3A3A3;margin-top:4px}
+.prices .dots{border-bottom:1px dotted #555;transform:translateY(-6px)}
+.prices .pr{font:italic 400 24px var(--dd);white-space:nowrap}
+.prices .pr small{font:700 10px var(--sy);letter-spacing:.18em;text-transform:uppercase;color:var(--blush);margin-right:6px;font-style:normal}
+.note{font:500 13px/1.5 var(--sy);color:#A3A3A3;margin-top:18px;letter-spacing:.02em}
+
+/* ---------- colour ---------- */
+.colour{padding:clamp(40px,6vw,96px) clamp(16px,3vw,40px) clamp(30px,4vw,60px)}
+.colour h2{font:italic 400 clamp(56px,9vw,150px)/.86 var(--dd);letter-spacing:-.035em;max-width:11ch}
+.colour h2 span{color:var(--red)}
+.ch{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);margin-top:clamp(28px,4vw,56px);align-items:end}
+.tq{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:end;border-top:2px solid var(--ink);padding-top:16px}
+.tq svg{width:70px;height:170px}
+.tq:first-child svg{width:100px;height:250px}
+.tq h3{font:900 clamp(30px,3vw,46px)/1 var(--dd);letter-spacing:-.02em;margin:8px 0 10px}
+.tq p{font-size:16px;color:#333}
+.tq .p{font:italic 400 20px var(--dd);margin-top:10px;color:var(--ink)}
+.tq .k{color:var(--red)}
+
+/* ---------- try-on ---------- */
+.try{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid var(--ink)}
+.try .l{position:relative;overflow:hidden;background:var(--blush);border-right:1px solid var(--ink);min-height:760px}
+.try .l .pt{position:absolute;left:50%;bottom:-6%;height:106%;aspect-ratio:600/760;transform:translateX(-50%)}
+.try .l .k{position:absolute;left:24px;top:22px;z-index:2}
+.try .l .cap{position:absolute;left:24px;bottom:22px;z-index:2;background:#fff;padding:10px 14px;font:italic 400 18px var(--dd);max-width:80%}
+.try .r{padding:clamp(28px,4vw,60px) clamp(16px,3vw,48px);display:flex;flex-direction:column;gap:22px;background:#fff}
+.try h2{font:italic 400 clamp(48px,6vw,96px)/.9 var(--dd);letter-spacing:-.03em}
+.try h2 b{font-style:normal;font-weight:900}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{padding:0;margin-bottom:12px}
+.sws{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.sw{position:relative;display:grid;justify-items:center;gap:8px;cursor:pointer;text-align:center}
+.sw input,.tch input{position:absolute;opacity:0;width:1px;height:1px}
+.sw i{display:block;width:100%;max-width:62px;aspect-ratio:1;border-radius:50%;background:linear-gradient(160deg,var(--c1),var(--c2));box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);transition:transform .3s}
+.sw span{font:700 10.5px/1.2 var(--sy);letter-spacing:.14em;text-transform:uppercase}
+.sw input:checked+i{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--ink);transform:scale(1.04)}
+.sw input:focus-visible+i{box-shadow:0 0 0 3px #fff,0 0 0 5px var(--red)}
+.tch{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.tch label{position:relative;display:grid;place-items:center;min-height:52px;padding:6px;border-right:1.5px solid var(--ink);cursor:pointer;font:700 12px var(--sy);letter-spacing:.16em;text-transform:uppercase;text-align:center;transition:background .25s,color .25s}
+.tch label:last-child{border-right:0}
+.tch label:has(input:checked){background:var(--ink);color:#fff}
+.tch label:has(input:focus-visible){outline:2px solid var(--red);outline-offset:2px}
+.desc{border-left:3px solid var(--red);padding:4px 0 4px 16px}
+.desc b{display:block;font:italic 600 26px/1.15 var(--dd)}
+.desc span{display:block;font-size:16px;color:#333;margin-top:6px}
+.desc small{display:block;font:700 11px var(--sy);letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:10px}
+.save{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.looks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:40px}
+.looks .empty{grid-column:1/-1;font:500 13.5px var(--sy);color:var(--grey);border:1px dashed #bbb;padding:14px;text-align:center}
+.look{position:relative;background:#fff;border:1px solid var(--ink);padding:10px 10px 12px;transform:rotate(var(--r,0deg));box-shadow:0 12px 20px -14px rgba(0,0,0,.5);animation:drop .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drop{from{transform:translateY(-18px) rotate(0);opacity:0}}
+.look svg{display:block;width:100%;height:88px;background:var(--blush)}
+.look b{display:block;font:italic 600 15px/1.2 var(--dd);margin-top:8px}
+.look small{display:block;font:700 9.5px var(--sy);letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-top:3px}
+.look button{position:absolute;top:-10px;right:-10px;width:28px;height:28px;border-radius:50%;border:0;background:var(--ink);color:#fff;cursor:pointer;font-size:16px;line-height:1}
+
+/* ---------- stylists ---------- */
+.chairs{padding:clamp(40px,6vw,96px) clamp(16px,3vw,40px)}
+.chairs .hd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:end;margin-bottom:clamp(24px,4vw,56px)}
+.chairs h2{font:900 clamp(64px,10vw,170px)/.8 var(--dd);letter-spacing:-.05em}
+.chairs h2 i{font-weight:400}
+.chairs .hd .lede{max-width:40ch;justify-self:end;font-size:18px}
+.st{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:clamp(14px,2vw,28px);align-items:end}
+.stc figure{background:var(--blush);aspect-ratio:4/5;display:grid;place-items:end center;overflow:hidden}
+.stc:nth-child(2) figure{background:#EFEFEF}.stc:nth-child(3) figure{background:#F7E3E7}.stc:nth-child(4) figure{background:#E8E8E8}
+.stc figure svg{width:92%;height:auto}
+.stc h3{font:italic 400 clamp(22px,2vw,32px)/1.1 var(--dd);margin-top:14px}
+.stc .k{color:var(--red);margin-top:6px;display:block}
+.stc p{font-size:15.5px;color:#333;margin-top:8px}
+.stc a{display:inline-block;margin-top:10px;font:700 11.5px var(--sy);letter-spacing:.18em;text-transform:uppercase}
+
+/* ---------- the edit (black) ---------- */
+.edit{padding:clamp(40px,6vw,96px) clamp(16px,3vw,40px) clamp(24px,3vw,40px)}
+.edit .top{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid #333;padding-bottom:20px}
+.edit h2{font:italic 400 clamp(48px,7vw,120px)/.9 var(--dd);letter-spacing:-.03em}
+.edit .top .k{color:var(--blush)}
+.tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.tr li{padding:28px clamp(12px,1.6vw,26px) 34px;border-right:1px solid #333}
+.tr li:last-child{border-right:0}
+.tr li:nth-child(even){padding-top:90px}
+.tr .n{font:900 clamp(64px,7vw,110px)/.8 var(--dd);color:transparent;-webkit-text-stroke:1.5px var(--blush)}
+.tr h3{font:400 clamp(24px,2.2vw,32px)/1.1 var(--dd);margin:16px 0 10px}
+.tr p{color:#cfcfcf;font-size:16px}
+.quote{padding:clamp(34px,5vw,70px) 0 clamp(20px,3vw,40px);border-top:1px solid #333;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
+.quote q{font:italic 400 clamp(34px,4.6vw,76px)/1.02 var(--dd);letter-spacing:-.02em;quotes:"“" "”"}
+.quote .k{color:var(--blush);display:block;margin-top:18px}
+.quote .mk{font:900 clamp(90px,10vw,160px)/.7 var(--dd);color:var(--red)}
+
+/* ---------- book ---------- */
+.book{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);padding:clamp(40px,6vw,96px) clamp(16px,3vw,40px)}
+.book h2{font:italic 400 clamp(52px,7vw,120px)/.88 var(--dd);letter-spacing:-.03em}
+.book h2 b{font-style:normal;font-weight:900;display:block}
+.hrs{margin-top:28px;border-top:1px solid var(--ink)}
+.hrs div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(10,10,10,.25);font-size:17px}
+.hrs dt{font:700 11.5px/2 var(--sy);letter-spacing:.18em;text-transform:uppercase}
+.card{position:relative;background:#fff;padding:clamp(20px,3vw,40px);outline:2px dashed var(--ink);outline-offset:-12px}
+.card .sc{position:absolute;top:-14px;left:36px;background:var(--blush);padding:0 8px;font-size:20px}
+.card h3{font:900 30px/1.1 var(--dd);margin-bottom:6px}
+.card>p{font-size:15.5px;color:#333;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:6px;margin-bottom:14px}
+.fld label,.fld .lab{font:700 11px var(--sy);letter-spacing:.18em;text-transform:uppercase}
+.fld input,.fld select{width:100%;min-height:48px;padding:10px 12px;border:0;border-bottom:1.5px solid var(--ink);border-radius:0;background:#FBF3F5;font:400 17px var(--dd)}
+.fld input:focus,.fld select:focus{outline:none;background:#F6E2E7;box-shadow:inset 0 -2px 0 var(--red)}
+.days{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.days label{position:relative;cursor:pointer}
+.days input{position:absolute;opacity:0;width:1px;height:1px}
+.days span{display:grid;place-items:center;min-height:58px;border:1.5px solid var(--ink);text-align:center;font:700 10.5px/1.25 var(--sy);letter-spacing:.12em;text-transform:uppercase}
+.days span b{display:block;font:900 20px/1 var(--dd);letter-spacing:0}
+.days input:checked+span{background:var(--ink);color:#fff}
+.days input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
+.att{display:flex;gap:12px;align-items:center;padding:12px;background:#FBF3F5;margin-bottom:16px;font-size:15.5px}
+.att svg{flex:none;width:44px;height:56px;background:var(--blush)}
+.att[hidden]{display:none}
+
+/* ---------- back cover ---------- */
+.back{background:var(--ink);color:#fff;padding:clamp(40px,6vw,80px) clamp(16px,3vw,40px) 30px}
+.back .mb{font:900 clamp(40px,calc(138vw / var(--n,11)),190px)/.84 var(--dd);text-transform:uppercase;letter-spacing:-.025em;text-align:center;overflow-wrap:anywhere;color:var(--blush)}
+.bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px;padding-top:20px;border-top:1px solid #333;font:500 14px/1.6 var(--sy);color:#cfcfcf}
+.bgrid a{color:#fff}
+
+@media (max-width:1200px){.sticker{top:auto;bottom:21%}}
+@media (max-width:1020px){
+.lines{top:auto;bottom:90px;width:34vw}
+.lines.r{display:none}
+.sticker{right:20px;top:auto;bottom:100px}
+.contents,.svc,.try,.book{grid-template-columns:1fr}
+.svc::after{display:none}
+.contents .l{border-right:0;border-bottom:1px solid var(--ink)}
+.try .l{border-right:0;border-bottom:1px solid var(--ink);min-height:0;aspect-ratio:1/1}
+.ch{grid-template-columns:1fr 1fr}
+.ch .tq:first-child{grid-column:1/-1}
+.st{grid-template-columns:1fr 1fr}
+.tr{grid-template-columns:1fr 1fr}
+.tr li:nth-child(even){padding-top:28px}
+.tr li:nth-child(2){border-right:0}
+}
+@media (max-width:900px){
+.cover{height:auto;min-height:0;max-height:none;padding-top:44px;display:flex;flex-direction:column}
+.issue .k:nth-child(2){display:none}
+.mast{position:relative;top:auto;padding:0 10px;font-size:clamp(34px,calc(134vw / var(--n,11)),120px)}
+.cover .pt{position:relative;left:auto;top:auto;height:auto;width:min(112%,680px);margin:-8% auto 0;transform:none;align-self:center}
+.lines,.lines.r{position:relative;inset:auto;width:auto;text-align:left;background:var(--ink);color:#fff;padding:26px 16px 30px;margin-top:-18%;gap:18px}
+.cl .big{font-size:34px}
+.lines.r{display:grid;margin-top:0;padding-top:0}
+.sticker{width:92px;height:92px;font-size:15px;right:14px;bottom:auto;top:40%}
+.barcode{display:none}
+.cover-cta{position:relative;inset:auto;background:var(--ink);padding:0 16px 26px;margin:0}
+.cover-cta .btn{flex:1;padding:0 12px}
+.cover-cta .btn.o{background:transparent;color:#fff;border-color:#fff}
+}
+@media (max-width:640px){
+body{font-size:16.5px}
+.toc a{grid-template-columns:52px 1fr;gap:12px}
+.toc .ar{display:none}
+.svc .l{min-height:420px}
+.giant{font-size:62vw}
+.ch{grid-template-columns:1fr}
+.tq svg,.tq:first-child svg{width:64px;height:160px}
+.try{display:flex;flex-direction:column;gap:18px;padding-bottom:28px}
+.try .r{display:contents}
+.try>*,.try .r>*{order:2;margin-left:16px;margin-right:16px}
+.try .r>div:first-child{order:0;margin-top:30px}
+.try .l{order:1;margin:0;aspect-ratio:1/.92}
+.try .l .cap{font-size:15px;padding:7px 10px;left:12px;bottom:12px}
+.sws{grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.sw span{font-size:8.5px;letter-spacing:.06em}
+.sw i{max-width:48px}
+.looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+.chairs .hd{grid-template-columns:1fr}
+.chairs .hd .lede{justify-self:start}
+.st{grid-template-columns:1fr 1fr;gap:18px 12px}
+.tr{grid-template-columns:1fr}
+.tr li{border-right:0;border-bottom:1px solid #333;padding:24px 0}
+.quote{grid-template-columns:1fr;gap:0}
+.f2{grid-template-columns:1fr}
+.days{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bgrid{grid-template-columns:1fr}
+.folio{font-size:10px;letter-spacing:.14em}
+.folio span:nth-child(2){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A2E14"/><stop offset=".3" stop-color="#B4501F"/><stop offset=".75" stop-color="#D86F34"/><stop offset="1" stop-color="#EE9A5E"/></linearGradient>
+<linearGradient id="gF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A2E14"/><stop offset=".3" stop-color="#B4501F"/><stop offset=".75" stop-color="#D86F34"/><stop offset="1" stop-color="#EE9A5E"/></linearGradient>
+<linearGradient id="gS" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<symbol id="pt" viewBox="0 0 600 760">
+<path d="M300 100C404 100 474 172 480 262C486 340 462 382 470 442C478 502 500 544 486 602C474 652 420 664 380 644L222 644C180 664 124 652 112 602C98 544 122 502 130 442C138 382 114 340 120 262C126 172 196 100 300 100Z" fill="url(#gB)" stroke="#0A0A0A" stroke-width="1.9"/>
+<g fill="none" stroke="#0A0A0A" stroke-opacity=".3" stroke-width="1.6" stroke-linecap="round"><path d="M300 106C220 112 160 172 156 250M300 106C380 112 440 172 446 250M150 300C140 360 162 400 152 460S128 560 140 612M452 300C462 360 440 400 450 460S472 560 462 612"/></g>
+<path d="M214 236C204 330 222 404 262 446C262 492 258 528 247 566C205 592 118 602 20 652L20 760L580 760L580 652C486 604 420 590 377 566C363 524 357 482 357 440C381 406 394 350 391 236C360 196 248 196 214 236Z" fill="#FCEDEB"/>
+<path d="M20 712C170 676 430 676 580 712L580 760L20 760Z" fill="#0A0A0A"/>
+<g fill="none" stroke="#0A0A0A" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M214 250C206 332 224 404 262 446C276 462 296 471 312 467C342 457 384 408 390 330M262 448C262 492 258 528 247 566C205 592 118 602 20 652M357 442C357 484 363 524 377 566C420 590 486 604 580 652M232 292C246 282 266 281 284 287M322 287C340 280 360 282 374 292M238 322C250 332 268 334 284 324M322 324C336 334 354 334 368 322M304 300C302 332 298 360 290 382C296 390 308 392 318 386M274 421C290 426 316 426 332 421M392 438L394 466"/><path stroke-width="1.6" d="M244 327l-4 7M252 331l-2 8M262 333v8M272 331l2 7M332 331l-2 7M342 333v8M352 332l2 8M361 328l4 7M262 606C282 598 300 598 316 608M330 610C346 600 364 600 384 606"/></g>
+<path d="M272 420C284 410 296 409 303 415C310 409 322 410 334 420C322 440 286 440 272 420Z" fill="#D1002F"/>
+<circle cx="394" cy="477" r="10" fill="#D1002F"/>
+<path d="M284 112C232 118 196 160 190 214C184 262 200 302 196 352C192 402 170 432 176 482C182 532 214 562 204 612C198 642 176 662 150 664C170 642 172 614 160 582C146 542 138 502 146 454C152 412 150 382 142 342C134 292 140 222 176 172C206 132 246 112 284 112ZM284 112C342 104 402 124 422 180C438 226 422 264 428 312C434 362 456 392 452 442C448 492 422 522 434 572C444 612 472 632 472 662C448 652 422 632 410 602C394 562 402 522 400 480C398 432 386 402 388 358C390 302 402 252 382 214C342 198 272 212 222 278C212 222 236 140 284 112Z" fill="url(#gF)" stroke="#0A0A0A" stroke-width="1.9" stroke-linejoin="round"/>
+<path d="M284 118C334 112 384 132 404 176C408 192 402 206 392 212C360 190 300 196 252 236C258 184 266 140 284 118Z" fill="url(#gS)"/>
+<g fill="none" stroke="#0A0A0A" stroke-opacity=".32" stroke-width="1.6" stroke-linecap="round"><path d="M270 120C226 136 204 180 204 236S186 340 184 400S196 520 188 590M300 118C360 124 398 170 402 230S414 340 420 400S414 520 430 590M296 132C330 134 360 150 372 176M372 206C330 200 278 214 238 256M360 170C320 168 276 190 250 226"/></g>
+</symbol>
+</defs>
+</svg>
+
+<header class="cover" id="top">
+<div class="issue"><span class="k">Nº 07 — Spring 2026</span><span class="k">South Yarra, Melbourne</span><span class="k">Complimentary</span></div>
+<h1 class="mast" id="mast" data-brand>Maison Wren</h1>
+<svg class="pt" aria-hidden="true"><use href="#pt"/></svg>
+<div class="lines">
+<a class="cl" href="#colour"><span class="big">The spring <b>colour</b> edit</span><span class="k">Balayage, gloss &amp; foils explained — p.08</span></a>
+<a class="cl" href="#try"><span class="big">Copper, softly</span><span class="k">Try six colours on our portrait — p.12</span></a>
+<a class="cl" href="#services"><span class="big">Gloss: the 20-minute shine</span><span class="k">Services &amp; sample prices — p.04</span></a>
+</div>
+<div class="lines r">
+<a class="cl" href="#chairs"><span class="big">Meet the chairs</span><span class="k">Four stylists, four specialties — p.16</span></a>
+<a class="cl" href="#edit"><span class="big">What we're asking for</span><span class="k">The spring edit — p.20</span></a>
+</div>
+<p class="sticker" aria-hidden="true">Colour<br>try-on<br>inside<small>p.12</small></p>
+<div class="barcode" aria-hidden="true"><svg viewBox="0 0 92 46"><path d="M4 4v38M7 4v38M9 4v38M13 4v38M18 4v38M20 4v38M24 4v38M27 4v38M31 4v38M33 4v38M38 4v38M42 4v38M44 4v38M49 4v38M53 4v38M55 4v38M58 4v38M63 4v38M65 4v38M69 4v38M73 4v38M76 4v38M80 4v38M84 4v38M86 4v38" stroke="#0A0A0A" stroke-width="1.6"/></svg><span class="k">Issue<br>Nº 07</span></div>
+<div class="cover-cta"><a class="btn o" href="#try">Try a colour</a><a class="btn" href="#book">Book a chair</a></div>
+</header>
+
+<main id="main">
+<section class="contents" id="contents" aria-labelledby="cH">
+<div class="l">
+<div><p class="k">In this issue</p><h2 id="cH">Contents</h2></div>
+<p class="letter">Welcome to our spring issue. This season is about colour that looks lived-in rather than done: softer roots, glossier lengths and copper that fades like a good tan. Turn to page twelve and try a shade on before you sit in the chair.</p>
+<p class="pgno" aria-hidden="true">03</p>
+</div>
+<nav class="toc" aria-label="Contents"><ol>
+<li><a href="#services"><span class="n">04</span><span class="t">Cut &amp; finish<em>Services and sample prices</em></span><span class="ar">Read →</span></a></li>
+<li><a href="#colour"><span class="n">08</span><span class="t">Colour, considered<em>Balayage, gloss and foils</em></span><span class="ar">Read →</span></a></li>
+<li><a href="#try"><span class="n">12</span><span class="t">The try-on<em>Six colours, three techniques, one portrait</em></span><span class="ar">Try →</span></a></li>
+<li><a href="#chairs"><span class="n">16</span><span class="t">The chairs<em>Meet the stylists</em></span><span class="ar">Meet →</span></a></li>
+<li><a href="#edit"><span class="n">20</span><span class="t">The edit<em>What we're asking for this spring</em></span><span class="ar">Read →</span></a></li>
+<li><a href="#book"><span class="n">24</span><span class="t">Book<em>Reserve your chair</em></span><span class="ar">Book →</span></a></li>
+</ol></nav>
+</section>
+
+<section class="dark" id="services" aria-labelledby="sH">
+<div class="svc">
+<div class="l"><p class="k">Cut &amp; finish — p.04</p><p>Precision cutting, restyles and blow-dries, finished by hand with the right products for your hair.</p><h2 class="giant" id="sH">Cut.</h2></div>
+<div class="r">
+<ul class="prices">
+<li><span class="nm">Precision cut &amp; finish<small>Consultation, wash, cut, blow-dry</small></span><span class="dots"></span><span class="pr"><small>from</small>$95</span></li>
+<li><span class="nm">Restyle<small>Long to short, or a new shape entirely</small></span><span class="dots"></span><span class="pr"><small>from</small>$140</span></li>
+<li><span class="nm">Blow-dry &amp; style<small>Smooth, bouncy or undone waves</small></span><span class="dots"></span><span class="pr">$65</span></li>
+<li><span class="nm">Fringe refresh<small>Between cuts, ten minutes</small></span><span class="dots"></span><span class="pr">$25</span></li>
+<li><span class="nm">Treatment ritual<small>Bond repair or deep hydration</small></span><span class="dots"></span><span class="pr">$55</span></li>
+<li><span class="nm">Bridal trial<small>Hair up or down, with notes to keep</small></span><span class="dots"></span><span class="pr">$180</span></li>
+</ul>
+<p class="note">Sample prices in AUD. Your stylist confirms the price after a consultation.</p>
+</div>
+</div>
+<p class="folio"><span>04</span><span><b data-brand-initials>MW</b> — Spring 2026</span><span>05</span></p>
+</section>
+
+<section class="colour" id="colour" aria-labelledby="coH">
+<p class="k">Colour — p.08</p>
+<h2 id="coH">Colour, <span>considered.</span></h2>
+<div class="ch">
+<div class="tq"><svg viewBox="0 0 90 240" aria-hidden="true"><defs><linearGradient id="t1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E1E17"/><stop offset=".4" stop-color="#3A271E"/><stop offset=".78" stop-color="#C98B4F"/><stop offset="1" stop-color="#EBC58A"/></linearGradient></defs><path d="M34 8C66 8 76 40 66 80S76 160 66 200C61 220 46 232 34 236C40 210 34 180 40 150S24 80 28 50C30 30 24 12 34 8Z" fill="url(#t1)" stroke="#0A0A0A" stroke-width="1.6"/><path d="M40 22C54 50 52 92 52 132S44 196 38 224M50 16C64 46 62 84 60 120M32 60C30 100 42 140 40 180" fill="none" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="1.4"/></svg>
+<div><p class="k">Hand-painted</p><h3>Balayage</h3><p>Colour painted through the mid-lengths and ends, so roots stay natural and it grows out without a line.</p><p class="p">from $320</p></div></div>
+<div class="tq"><svg viewBox="0 0 90 240" aria-hidden="true"><defs><linearGradient id="t2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4E3326"/><stop offset=".45" stop-color="#8A5A3C"/><stop offset=".55" stop-color="#E8C9A8"/><stop offset=".65" stop-color="#8A5A3C"/><stop offset="1" stop-color="#4E3326"/></linearGradient></defs><path d="M34 8C66 8 76 40 66 80S76 160 66 200C61 220 46 232 34 236C40 210 34 180 40 150S24 80 28 50C30 30 24 12 34 8Z" fill="url(#t2)" stroke="#0A0A0A" stroke-width="1.6"/><path d="M40 22C54 50 52 92 52 132S44 196 38 224M50 16C64 46 62 84 60 120M32 60C30 100 42 140 40 180" fill="none" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="1.4"/></svg>
+<div><p class="k">Shine</p><h3>Gloss</h3><p>A clear or tinted glaze that seals the cuticle for mirror shine. Twenty minutes at the basin.</p><p class="p">$95</p></div></div>
+<div class="tq"><svg viewBox="0 0 90 240" aria-hidden="true"><defs><linearGradient id="t3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5A3A28"/><stop offset=".2" stop-color="#5A3A28"/><stop offset=".2" stop-color="#E6C28A"/><stop offset=".32" stop-color="#E6C28A"/><stop offset=".32" stop-color="#5A3A28"/><stop offset=".55" stop-color="#5A3A28"/><stop offset=".55" stop-color="#E6C28A"/><stop offset=".67" stop-color="#E6C28A"/><stop offset=".67" stop-color="#5A3A28"/><stop offset="1" stop-color="#5A3A28"/></linearGradient></defs><path d="M34 8C66 8 76 40 66 80S76 160 66 200C61 220 46 232 34 236C40 210 34 180 40 150S24 80 28 50C30 30 24 12 34 8Z" fill="url(#t3)" stroke="#0A0A0A" stroke-width="1.6"/><path d="M40 22C54 50 52 92 52 132S44 196 38 224M50 16C64 46 62 84 60 120M32 60C30 100 42 140 40 180" fill="none" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="1.4"/></svg>
+<div><p class="k">Precise</p><h3>Foils</h3><p>Fine sections woven from the root for brighter, even dimension. Half head from $210.</p><p class="p">full head from $290</p></div></div>
+</div>
+</section>
+<p class="folio" style="border-bottom:0">08 <span><b data-brand-initials>MW</b> — Colour</span> 09</p>
+
+<section class="try" id="try" aria-labelledby="tH">
+<div class="l"><p class="k">The try-on — p.12</p><svg class="pt" role="img" aria-labelledby="ptT"><title id="ptT">Line-art portrait showing the chosen hair colour</title><use href="#pt"/></svg><p class="cap" id="cap">Copper · Balayage</p></div>
+<div class="r">
+<div><h2 id="tH">Try it <b>on.</b></h2><p style="margin-top:14px;max-width:44ch">Six colours, three ways to wear them. Save the looks you love and bring one to your consultation.</p></div>
+<fieldset><legend class="k">Colour</legend>
+<div class="sws" id="sws"></div>
+</fieldset>
+<fieldset><legend class="k">Technique</legend>
+<div class="tch"><label><input type="radio" name="tech" value="0">All-over</label><label><input type="radio" name="tech" value="1" checked>Balayage</label><label><input type="radio" name="tech" value="2">Face-frame</label></div>
+</fieldset>
+<div class="desc" id="desc" aria-live="polite"></div>
+<div class="save"><button class="btn" type="button" id="saveLook">Save this look</button><a class="u" href="#book" style="font:700 12px var(--sy);letter-spacing:.18em;text-transform:uppercase">Book with a look →</a></div>
+<div><p class="k" style="margin-bottom:12px">Your looks</p><div class="looks" id="looks" aria-live="polite"></div></div>
+</div>
+</section>
+<p class="folio">12 <span><b data-brand-initials>MW</b> — The try-on</span> 13</p>
+
+<section class="chairs" id="chairs" aria-labelledby="chH">
+<div class="hd"><div><p class="k">The chairs — p.16</p><h2 id="chH">The <i>chairs</i></h2></div><p class="lede">Four stylists, each with a specialty. Book with someone specific or ask for the first free chair.</p></div>
+<div class="st" id="st"></div>
+</section>
+<p class="folio">16 <span><b data-brand-initials>MW</b> — The chairs</span> 17</p>
+
+<section class="dark edit" id="edit" aria-labelledby="eH">
+<div class="top"><h2 id="eH">The edit</h2><p class="k">What we're asking for this spring — p.20</p></div>
+<ol class="tr">
+<li><p class="n" aria-hidden="true">01</p><h3>Expensive brunette</h3><p>Rich, glossy browns with barely-there dimension. Low maintenance, high shine.</p></li>
+<li><p class="n" aria-hidden="true">02</p><h3>Copper, softly</h3><p>Strawberry-to-cinnamon tones that fade gracefully between visits.</p></li>
+<li><p class="n" aria-hidden="true">03</p><h3>Glass hair</h3><p>A clear gloss after every colour appointment for a mirror finish.</p></li>
+<li><p class="n" aria-hidden="true">04</p><h3>The grown-out fringe</h3><p>Curtain fringes that fall just past the brow and suit most face shapes.</p></li>
+</ol>
+<div class="quote"><span class="mk" aria-hidden="true">“</span><div><q>Colour should look like it grew that way.</q><span class="k">Ines Marchetti, colour director</span></div></div>
+<p class="folio" style="padding-left:0;padding-right:0;border-color:#333">20 <span><b data-brand-initials>MW</b> — The edit</span> 21</p>
+</section>
+
+<section class="bl book" id="book" aria-labelledby="bH">
+<div>
+<p class="k">Book — p.24</p>
+<h2 id="bH">Reserve <b>your chair.</b></h2>
+<dl class="hrs">
+<div><dt>Tue–Wed</dt><dd>9 am – 6 pm</dd></div>
+<div><dt>Thu–Fri</dt><dd>9 am – 8 pm</dd></div>
+<div><dt>Sat</dt><dd>8 am – 4 pm</dd></div>
+<div><dt>Sun–Mon</dt><dd>Closed</dd></div>
+<div><dt>Salon</dt><dd>South Yarra, Melbourne</dd></div>
+<div><dt>Call</dt><dd><a href="tel:+61355500718">(03) 5550 0718</a></dd></div>
+</dl>
+</div>
+<form class="card" id="bookForm" data-kit-ignore>
+<span class="sc" aria-hidden="true">✂</span>
+<h3>Booking request</h3>
+<p>Pick a day and we'll hold the time while you confirm. This is a demo, so nothing is actually reserved.</p>
+<div class="f2">
+<div class="fld"><label for="bSvc">Service</label><select id="bSvc"><option>Precision cut &amp; finish</option><option>Balayage</option><option>Gloss</option><option>Foils</option><option>Blow-dry &amp; style</option><option>Bridal trial</option></select></div>
+<div class="fld"><label for="bSty">Stylist</label><select id="bSty"><option>First available</option><option>Ines Marchetti</option><option>Theo Park</option><option>Priya Nair</option><option>Lou Adeyemi</option></select></div>
+</div>
+<fieldset class="fld"><legend class="lab">Day</legend><div class="days" id="days"></div></fieldset>
+<div class="f2">
+<div class="fld"><label for="bTime">Time</label><select id="bTime"><option>Morning (9–12)</option><option>Midday (12–2)</option><option>Afternoon (2–5)</option><option>Evening (5–8, Thu &amp; Fri)</option></select></div>
+<div class="fld"><label for="bLook">Bring a saved look</label><select id="bLook"><option value="">No look saved yet</option></select></div>
+</div>
+<div class="att" id="att" hidden></div>
+<div class="f2">
+<div class="fld"><label for="bName">Name</label><input id="bName" autocomplete="name" required></div>
+<div class="fld"><label for="bMail">Email</label><input id="bMail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+</div>
+<button class="btn" type="submit">Request this booking</button>
+</form>
+</section>
+</main>
+
+<footer class="back">
+<p class="mb" data-brand>Maison Wren</p>
+<div class="bgrid">
+<p>A fashion-led hair salon in South Yarra, Melbourne.<br><a href="mailto:chair@example.com">chair@example.com</a> · <a href="tel:+61355500718">(03) 5550 0718</a></p>
+<p>Tue–Wed 9–6 · Thu–Fri 9–8 · Sat 8–4<br>Sun &amp; Mon closed</p>
+<p>Sample prices in AUD. Concept demo — a fictional salon; portraits are illustrations, not clients.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var NS="http://www.w3.org/2000/svg";
+function rm(){return (window.DemoKit&&DemoKit.reducedMotion)||matchMedia("(prefers-reduced-motion: reduce)").matches}
+
+/* masthead fits by character count — no measuring, so any renamed business still sits on one or two lines */
+function fit(name){var n=Math.max(9,Math.min(34,(name||"").length+1));document.documentElement.style.setProperty("--n",n)}
+fit($("#mast").textContent);addEventListener("hd:brandchange",function(e){fit(e.detail&&e.detail.name)});
+
+/* ---------- try-on data ---------- */
+var COL=[["Espresso","#2B1A14","#3E271D","#55392A","#74523E","Deep, glossy brown with a cool finish."],
+["Honey","#7A4E24","#B77B3B","#D9A25E","#F0CC92","Warm golden blonde that catches the light."],
+["Copper","#7A2E14","#B4501F","#D86F34","#EE9A5E","Bright cinnamon-copper, rich and warm."],
+["Platinum","#8E877A","#CBC4B6","#E6E0D3","#F8F5EE","Icy near-white — needs lightening and a toner."],
+["Rose gold","#8A4A48","#C07E78","#DDA59C","#F2CFC4","Blush pink over pale blonde, soft and playful."],
+["Midnight","#101830","#1E2C52","#2E4478","#5A77AE","Blue-black with an inky, blue sheen."]];
+var NAT=["#231611","#2E1E17","#3A271E","#4A3226"];
+var TECH=[["All-over","One colour from root to tip for the most impact.","Upkeep every 6–8 weeks · guide from $180"],
+["Balayage","Hand-painted through the lengths; your roots stay natural, so it grows out softly.","Upkeep every 12–16 weeks · guide from $320"],
+["Face-frame","Brightness placed only around the face — a lift without the commitment.","Upkeep every 8–12 weeks · guide from $190"]];
+function stops(c,t){var C=COL[c].slice(1,5);
+if(t===0)return{b:[[0,C[0]],[.3,C[1]],[.75,C[2]],[1,C[3]]],f:[[0,C[0]],[.3,C[1]],[.75,C[2]],[1,C[3]]]};
+if(t===1)return{b:[[0,NAT[1]],[.4,NAT[2]],[.78,C[2]],[1,C[3]]],f:[[0,NAT[1]],[.32,C[1]],[.66,C[2]],[1,C[3]]]};
+return{b:[[0,NAT[0]],[.5,NAT[1]],[.85,NAT[2]],[1,NAT[3]]],f:[[0,C[1]],[.25,C[2]],[.6,C[3]],[1,C[3]]]}}
+function hex(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
+var gB=$$("#gB stop"),gF=$$("#gF stop"),cur=null,raf=0,col=2,tech=1;
+function read(){return{b:gB.map(function(s){return[+s.getAttribute("offset"),hex(s.getAttribute("stop-color"))]}),f:gF.map(function(s){return[+s.getAttribute("offset"),hex(s.getAttribute("stop-color"))]})}}
+function paint(st,k){[["b",gB],["f",gF]].forEach(function(p){st[p[0]].forEach(function(s,i){p[1][i].setAttribute("offset",s[0].toFixed(3));p[1][i].setAttribute("stop-color","rgb("+s[1].map(Math.round).join(",")+")")})})}
+function morph(){var to=stops(col,tech),T={b:to.b.map(function(s){return[s[0],hex(s[1])]}),f:to.f.map(function(s){return[s[0],hex(s[1])]})},from=read(),t0=performance.now(),D=rm()?0:850;
+cancelAnimationFrame(raf);
+function step(now){var t=D?Math.min(1,(now-t0)/D):1,e=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,o={};
+["b","f"].forEach(function(k){o[k]=from[k].map(function(s,i){return[s[0]+(T[k][i][0]-s[0])*e,s[1].map(function(v,j){return v+(T[k][i][1][j]-v)*e})]})});
+paint(o);if(t<1)raf=requestAnimationFrame(step)}
+raf=requestAnimationFrame(step);
+var name=COL[col][0]+" · "+TECH[tech][0];$("#cap").textContent=name;
+$("#desc").innerHTML="<b>"+name+"</b><span>"+COL[col][5]+" "+TECH[tech][1]+"</span><small>"+TECH[tech][2]+" (sample)</small>"}
+var sws=$("#sws");
+COL.forEach(function(c,i){var l=document.createElement("label");l.className="sw";l.innerHTML='<input type="radio" name="col" value="'+i+'"'+(i===col?" checked":"")+'><i style="--c1:'+c[3]+';--c2:'+c[1]+'"></i><span>'+c[0]+"</span>";sws.appendChild(l)});
+document.addEventListener("change",function(e){if(e.target.name==="col"){col=+e.target.value;morph()}if(e.target.name==="tech"){tech=+e.target.value;morph()}});
+morph();
+
+/* ---------- saved looks ---------- */
+var looks=[],seq=0;
+function strand(l,id,w,h){var s=stops(l.c,l.t).f;return'<svg viewBox="0 0 90 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"'+(w?' width="'+w+'" height="'+h+'"':"")+'><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1">'+s.map(function(p){return'<stop offset="'+p[0]+'" stop-color="'+p[1]+'"/>'}).join("")+'</linearGradient></defs><path d="M34 8C66 8 76 40 66 80S76 160 66 200C61 220 46 232 34 236C40 210 34 180 40 150S24 80 28 50C30 30 24 12 34 8Z" fill="url(#'+id+')" stroke="#0A0A0A" stroke-width="2"/><path d="M40 22C54 50 52 92 52 132S44 196 38 224M50 16C64 46 62 84 60 120M32 60C30 100 42 140 40 180" fill="none" stroke="#0A0A0A" stroke-opacity=".22" stroke-width="1.4"/></svg>'}
+function drawLooks(){var box=$("#looks"),sel=$("#bLook"),keep=sel.value;box.innerHTML="";
+if(!looks.length){box.innerHTML='<p class="empty">No looks saved yet — choose a colour and technique, then “Save this look”.</p>'}
+looks.forEach(function(l,i){var d=document.createElement("div");d.className="look";d.style.setProperty("--r",(i%2?1.6:-1.4)+"deg");
+d.innerHTML=strand(l,"lk"+l.id)+"<b>"+l.name+"</b><small>Look "+String(l.id).padStart(2,"0")+"</small>";
+var x=document.createElement("button");x.type="button";x.textContent="×";x.setAttribute("aria-label","Remove look "+l.name);x.onclick=function(){looks.splice(i,1);drawLooks()};d.appendChild(x);box.appendChild(d)});
+sel.innerHTML=looks.length?'<option value="">Don\'t attach a look</option>'+looks.map(function(l){return'<option value="'+l.id+'">'+l.name+"</option>"}).join(""):'<option value="">No look saved yet</option>';
+if(looks.some(function(l){return String(l.id)===keep}))sel.value=keep;else if(looks.length)sel.value=looks[looks.length-1].id;att()}
+function att(){var v=$("#bLook").value,l=looks.filter(function(x){return String(x.id)===v})[0],a=$("#att");
+if(!l){a.hidden=true;return}a.hidden=false;a.innerHTML=strand(l,"at"+l.id,44,56)+"<span>Attached: <b>"+l.name+"</b> — your stylist sees this before you arrive.</span>"}
+$("#bLook").addEventListener("change",att);
+$("#saveLook").addEventListener("click",function(){var name=COL[col][0]+" · "+TECH[tech][0];
+if(looks.some(function(l){return l.name===name})){if(window.DemoKit)DemoKit.toast("That look is already saved.",1800);return}
+looks.push({id:++seq,c:col,t:tech,name:name});if(looks.length>4)looks.shift();drawLooks();if(window.DemoKit)DemoKit.toast("Saved “"+name+"” — it's ready to attach to a booking.",2200)});
+drawLooks();
+
+/* ---------- stylists (line-art heads) ---------- */
+var FACE='<path d="M86 100C82 152 90 196 107 215L104 250C80 262 40 266 4 292L4 300L236 300L236 292C200 266 160 262 136 250L133 215C150 196 158 152 154 100C150 70 90 70 86 100Z" fill="#FCEDEB"/><path d="M4 286C80 270 160 270 236 286L236 300L4 300Z" fill="#0A0A0A"/><g fill="none" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"><path d="M86 104C82 152 90 196 110 218C116 224 124 224 130 218C150 196 158 152 154 104M107 216L104 250C80 262 40 266 4 292M133 216L136 250C160 262 200 266 236 292M96 138C102 133 110 133 116 136M126 136C132 133 140 133 146 138M98 152C104 157 112 157 117 153M125 153C130 157 138 157 144 152M121 146C120 160 118 170 115 178C118 181 123 181 127 178"/></g><path d="M108 194C114 189 119 189 121 192C124 189 129 189 134 194C128 203 114 203 108 194Z" fill="#D1002F"/>';
+function curls(){var h='<ellipse cx="120" cy="128" rx="62" ry="74" stroke="none"/>',k=0;for(var t=150;t<=390;t+=17,k++){var a=t*Math.PI/180;h+='<circle cx="'+(120+66*Math.cos(a)).toFixed(1)+'" cy="'+(122+72*Math.sin(a)).toFixed(1)+'" r="'+(k%2?15:18)+'"/>'}[[56,182],[62,208],[72,230],[184,182],[178,208],[168,230]].forEach(function(p,i){h+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="'+(i%2?14:17)+'"/>'});return h}
+var HAIR=[
+['<circle cx="160" cy="70" r="22"/><path d="M120 56C158 56 170 90 160 126C156 106 146 90 120 88C96 88 86 104 80 126C70 90 84 56 120 56Z"/>',"#2B1A14",""],
+['<path d="M120 58C152 58 168 82 160 116C156 100 146 90 130 88C110 86 94 92 84 116C76 84 92 58 120 58Z"/>',"#0A0A0A",""],
+[curls(),"#6B2A12",""],
+['<path d="M120 54C170 54 180 108 176 168C175 198 170 212 158 218C162 188 160 150 150 118C140 98 100 98 90 118C80 150 78 188 82 218C70 212 65 198 64 168C60 108 70 54 120 54Z"/><path d="M90 118C98 96 142 96 150 118C140 110 100 110 90 118Z"/>',"#E6E0D3",""]];
+var STY=[["Ines Marchetti","Colour director","Balayage and lived-in brunettes; twelve years behind the chair in Melbourne and Milan."],["Theo Park","Precision cutting","Clean lines, sharp bobs and short cuts that grow out well."],["Priya Nair","Curls & texture","Curly cuts done dry, curl by curl, plus gloss for coils."],["Lou Adeyemi","Blondes & bridal","Platinum, toning and hair-up for weddings and events."]];
+$("#st").innerHTML=STY.map(function(s,i){var h=HAIR[i];return'<article class="stc"><figure><svg viewBox="0 0 240 300" role="img" aria-label="Line-art illustration of '+s[0]+'"><g fill="'+h[1]+'" stroke="#0A0A0A" stroke-width="2">'+h[0]+"</g>"+FACE+h[2]+'</svg></figure><h3>'+s[0]+'</h3><span class="k">'+s[1]+"</span><p>"+s[2]+'</p><a class="u" href="#book" data-sty="'+(i+1)+'">Book with '+s[0].split(" ")[0]+" →</a></article>"}).join("");
+$$("[data-sty]").forEach(function(a){a.addEventListener("click",function(){$("#bSty").selectedIndex=+a.dataset.sty})});
+
+/* ---------- booking days (next six open days, Tue–Sat) ---------- */
+var D=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],Mo=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],d=new Date(),h="",n=0;
+while(n<6){d.setDate(d.getDate()+1);if(d.getDay()===0||d.getDay()===1)continue;h+='<label><input type="radio" name="day" value="'+D[d.getDay()]+" "+d.getDate()+" "+Mo[d.getMonth()]+'"'+(n?"":" checked")+"><span>"+D[d.getDay()]+"<b>"+d.getDate()+"</b>"+Mo[d.getMonth()]+"</span></label>";n++}
+$("#days").innerHTML=h;
+$("#bookForm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,day=f.day.value,l=$("#bLook"),lk=l.value?" with “"+l.options[l.selectedIndex].text+"” attached":"";
+if(window.DemoKit)DemoKit.toast("Demo only — no appointment was booked. Request: "+$("#bSvc").value+", "+day+lk+".",4200)});
+})();
+</script>
+</body>
+</html>

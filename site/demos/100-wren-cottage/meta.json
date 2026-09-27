@@ -1,0 +1,8 @@
+{
+  "id": "100",
+  "tech": ["SVG", "Canvas 2D", "CSS Grid", "Pointer Events", "Keyboard shortcuts", "Date logic", "Form logic", "IntersectionObserver"],
+  "features": ["booking", "story"],
+  "interaction": "Tap one of the three lit windows on the illustrated dusk cottage to peek inside that room (an iris opens into an illustrated interior with bed, view and bathroom details), then pick a room and choose check-in and check-out nights on an availability calendar with sample nightly rates, booked nights and a two-night weekend minimum (mouse, touch or arrow keys + Enter), ending in a total and a demo toast.",
+  "fonts": ["Merriweather", "Source Sans 3"],
+  "notes": "Availability is generated deterministically for the demo. Fireflies, window glow, smoke and the peek iris are off under reduced motion. Rates and policies are samples."
+}

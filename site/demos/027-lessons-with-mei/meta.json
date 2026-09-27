@@ -1,0 +1,8 @@
+{
+  "id": "027",
+  "tech": ["SVG", "CSS Grid", "Form logic", "Date logic", "Keyboard shortcuts"],
+  "features": ["map", "booking", "bilingual"],
+  "interaction": "Tap a suburb on a radial pickup-zone map (or in the list) to see free pickup, a small travel fee or outside the area; then tap up to three free times in a seven-day timetable and send a lesson request that ends in a clear demo notice — nothing is booked.",
+  "fonts": ["Inter Tight", "Noto Sans SC"],
+  "notes": "Chinese appears only as language labels (普通话 / 粤语); the page is not a full bilingual translation."
+}

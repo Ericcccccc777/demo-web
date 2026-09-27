@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="049">
+<meta name="demo:brand" content="Built by Jas PT">
+<meta name="demo:badge" content="top-right">
+<title>Built by Jas PT — personal training, Perth</title>
+<meta name="description" content="A fictional independent personal trainer in Perth, WA, with an illustrative 12-week program generator.">
+<meta name="theme-color" content="#0E0F11">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--bg:#0E0F11;--panel:#131519;--card:#1C1F24;--card2:#23272E;--line:rgba(255,255,255,.08);--text:#FFFFFF;--muted:#A6ADB8;--faint:#8C94A1;
+--lime:#C6FF3D;--amber:#FFC53D;--cyan:#3DD6FF;--coral:#FF6B5B;--violet:#A78BFA;
+--ui:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--disp:"Unbounded","Inter",system-ui,sans-serif;--side:248px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:88px;color-scheme:dark}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.55 var(--ui);overflow-x:hidden}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+svg{display:block}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.muted{color:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:999px;background:var(--card2);border:1px solid var(--line);font:600 12px/1 var(--ui);letter-spacing:.02em;color:var(--muted)}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px rgba(198,255,61,.18)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:0 20px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:var(--text);font:600 14.5px/1 var(--ui);text-decoration:none;cursor:pointer;transition:transform .12s,background .2s,box-shadow .2s}
+.btn:hover{background:#2C313A}
+.btn:active{transform:scale(.98)}
+.btn.lime{background:var(--lime);color:#0E0F11;border-color:var(--lime)}
+.btn.lime:hover{box-shadow:0 0 0 4px rgba(198,255,61,.22);background:#D4FF6A}
+.btn svg{width:18px;height:18px}
+h1,h2,h3{font-family:var(--disp);font-weight:700;margin:0;letter-spacing:-.01em}
+.eyebrow{font:600 12px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 10px}
+
+/* ---------- shell ---------- */
+.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--panel);border-right:1px solid var(--line);padding:22px 16px 18px;display:flex;flex-direction:column;gap:22px;z-index:20}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.mark{flex:none;width:38px;height:38px;border-radius:11px;background:var(--lime);color:#0E0F11;display:grid;place-items:center;font:800 18px/1 var(--disp)}
+.bname{font:700 15px/1.15 var(--disp);overflow-wrap:anywhere;min-width:0}
+.side nav ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.side nav a{display:flex;align-items:center;gap:12px;min-height:42px;padding:0 12px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:500;transition:background .2s,color .2s}
+.side nav a svg{width:19px;height:19px;flex:none}
+.side nav a:hover{background:var(--card);color:var(--text)}
+.side nav a.on{background:var(--card2);color:var(--text)}
+.side nav a.on svg{color:var(--lime)}
+.side-cta{margin-top:auto;padding:16px;border-radius:16px;background:linear-gradient(160deg,#252A20,#1C1F24 60%);border:1px solid rgba(198,255,61,.2)}
+.side-cta p{margin:0 0 12px;font-size:14px}
+.side-cta b{display:block;font:700 15px/1.25 var(--disp);margin-bottom:4px}
+.side-cta .btn{width:100%}
+.shell{margin-left:var(--side);min-height:100vh}
+.bar{position:sticky;top:0;z-index:15;display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px;padding:0 28px;background:rgba(14,15,17,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar .brand{display:none}
+.crumbs{font-weight:600;font-size:15px}
+.crumbs span{color:var(--faint);font-weight:500}
+main{padding:22px 28px 40px;display:grid;gap:16px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;min-width:0}
+.card h2{font-size:clamp(20px,1.8vw,26px);line-height:1.2}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin:18px 2px 2px}
+.sec-h h2{font-size:clamp(22px,2.2vw,30px)}
+.sec-h p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+
+/* ---------- hero ---------- */
+.hero{grid-column:span 8;display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:20px;align-items:center;padding:30px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(198,255,61,.14),transparent 65%);pointer-events:none}
+.hero h1{font-size:clamp(30px,2.9vw,44px);line-height:1.08;margin:18px 0 14px}
+.hero-brand{display:none;margin:0 0 12px;font:700 15px/1.2 var(--disp);color:var(--lime);overflow-wrap:anywhere}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero .lead{margin:0;color:var(--muted);font-size:16px;max-width:48ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.rings{margin:0;display:grid;justify-items:center;gap:10px}
+.rings svg{width:min(100%,230px);height:auto}
+.rings figcaption{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:12.5px;color:var(--muted)}
+.rings figcaption span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c);margin-right:6px}
+.ring-arc{transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1)}
+.coach{grid-column:span 4;display:flex;flex-direction:column;gap:14px}
+.coach .top{display:flex;align-items:center;gap:14px}
+.av{flex:none;width:64px;height:64px}
+.coach h2{font-size:22px}
+.coach p{margin:0}
+.fit{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.fit li{font-size:13px;font-weight:500;padding:6px 10px;border-radius:999px;border:1px solid rgba(198,255,61,.28);color:#DDF5A6}
+.specs{margin:auto 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.specs div{background:var(--card2);border-radius:12px;padding:11px 12px}
+.specs dt{font-size:11.5px;color:var(--faint);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.specs dd{margin:4px 0 0;font:700 16px/1.2 var(--disp)}
+.tile{grid-column:span 4}
+.tile h3{font-size:16px;margin-bottom:12px}
+.tt{width:100%;border-collapse:collapse;font-size:14px}
+.tt th{text-align:left;font-weight:500;color:var(--muted);padding:7px 0;border-top:1px solid var(--line)}
+.tt td{text-align:right;padding:7px 0;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.tt td b{display:inline-block;padding:3px 7px;border-radius:6px;background:rgba(198,255,61,.12);color:var(--lime);font-weight:600;margin-left:4px}
+.where{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.where li{display:flex;align-items:center;gap:12px;padding:10px;border-radius:12px;background:var(--card2)}
+.where svg{width:22px;height:22px;color:var(--lime);flex:none}
+.where small{display:block;color:var(--faint);font-size:12.5px}
+.steps3{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+.steps3 li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;counter-increment:s}
+.steps3 li::before{content:counter(s);width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--card2);font:700 14px/1 var(--disp);color:var(--lime)}
+.steps3 b{display:block;font-weight:600}
+.steps3 span{color:var(--muted);font-size:14px}
+
+/* ---------- generator ---------- */
+.gen{padding:24px}
+.gen-h{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.gen-h h2{font-size:clamp(22px,2.2vw,30px);margin:12px 0 6px}
+.gen-h p{margin:0;max-width:62ch}
+.ill{flex:none;padding:7px 11px;border-radius:8px;border:1px dashed rgba(255,197,61,.6);color:var(--amber);font:700 11.5px/1 var(--ui);letter-spacing:.12em;text-transform:uppercase}
+.gen-grid{display:grid;grid-template-columns:280px minmax(0,1fr) 300px;grid-template-areas:"in cal side" "chart chart chart";gap:18px;align-items:start}
+.gen-in{grid-area:in;display:flex;flex-direction:column;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.gen-in fieldset{border:0;margin:0;padding:0;min-width:0}
+.gen-in legend{font:600 12px/1 var(--ui);letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:10px;padding:0}
+.opts{display:grid;gap:6px}
+.opts.c2{grid-template-columns:1fr 1fr}.opts.c4{grid-template-columns:repeat(4,1fr)}.opts.c3{grid-template-columns:repeat(3,1fr)}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt span{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 10px;border-radius:10px;background:var(--card2);border:1px solid var(--line);font-weight:600;font-size:14px;cursor:pointer;text-align:center;transition:background .15s,color .15s,border-color .15s}
+.opt span svg{width:17px;height:17px;flex:none}
+.opt input:checked+span{background:var(--lime);color:#0E0F11;border-color:var(--lime)}
+.opt input:focus-visible+span{outline:2px solid var(--lime);outline-offset:2px}
+.opt span:hover{border-color:rgba(255,255,255,.25)}
+.opts.c4 .num span{font:700 17px/1 var(--disp)}
+.gen-in .btn{min-height:52px}
+.note{margin:0;font-size:12.5px;line-height:1.5;color:var(--faint);padding:12px;border-radius:10px;background:rgba(255,197,61,.06);border:1px solid rgba(255,197,61,.18)}
+.note b{color:var(--amber);font-weight:600}
+.gen-cal{grid-area:cal;min-width:0}
+.sum{margin:0 0 12px;font-size:14px;color:var(--muted);min-height:2.9em}
+.sum b{color:var(--text);font-weight:600}
+.cal{width:100%;border-collapse:separate;border-spacing:4px;table-layout:fixed;margin:-4px}
+.cal th{font:600 11px/1 var(--ui);color:var(--faint);letter-spacing:.06em;text-transform:uppercase;padding:0 0 4px}
+.cal thead th:first-child{width:62px}
+.cal tbody th{text-align:left;font:700 12px/1.1 var(--disp);color:var(--muted);white-space:nowrap}
+.cal tbody th small{display:block;font:600 9.5px/1.2 var(--ui);letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.cal tbody tr.test th small{color:var(--cyan)}
+.cal td{padding:0;height:30px}
+.cell{display:grid;place-items:center;width:100%;height:30px;border-radius:7px;border:0;padding:0;font:700 11.5px/1 var(--ui);color:#0E0F11;background:var(--c,#262A31);cursor:pointer;transition:transform .12s,box-shadow .12s}
+.cell.rest{background:#1F2228;cursor:default;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+.cell:not(.rest):hover{transform:translateY(-1px)}
+.cell[aria-pressed=true]{box-shadow:0 0 0 2px var(--bg),0 0 0 4px #fff}
+.cell.dl{background:repeating-linear-gradient(135deg,var(--c) 0 5px,color-mix(in srgb,var(--c) 45%,#1C1F24) 5px 10px)}
+.cell.ts{background:transparent;color:var(--c);box-shadow:inset 0 0 0 2px var(--c)}
+.cell.ts[aria-pressed=true]{box-shadow:inset 0 0 0 2px var(--c),0 0 0 2px var(--bg),0 0 0 4px #fff}
+.cell.pop{animation:pop .45s cubic-bezier(.2,.9,.3,1.3) both;animation-delay:var(--d)}
+@keyframes pop{from{opacity:0;transform:scale(.4)}}
+.t-STR{--c:var(--lime)}.t-PWR{--c:var(--amber)}.t-CON{--c:var(--cyan)}.t-INT{--c:var(--coral)}.t-MOB{--c:var(--violet)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;padding:0;list-style:none;font-size:12.5px;color:var(--muted)}
+.legend li{display:flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:4px;background:var(--c)}
+.legend i.dl{background:repeating-linear-gradient(135deg,#8C94A1 0 3px,#2A2E36 3px 6px)}
+.legend i.ts{background:transparent;box-shadow:inset 0 0 0 2px #8C94A1}
+.gen-side{grid-area:side;display:flex;flex-direction:column;gap:12px;min-width:0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.stat dt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.stat dd{margin:6px 0 0;font:700 22px/1 var(--disp);font-variant-numeric:tabular-nums}
+.stat dd small{font:500 12px var(--ui);color:var(--muted);margin-left:4px}
+.mix{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}
+.mix .bar2{display:flex;height:12px;border-radius:6px;overflow:hidden;gap:2px;margin:10px 0}
+.mix .bar2 span{background:var(--c);transition:flex-grow .6s cubic-bezier(.2,.8,.2,1)}
+.mix ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;font-size:12.5px;color:var(--muted)}
+.mix li{display:flex;align-items:center;gap:6px}
+.mix li i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.mix li b{margin-left:auto;color:var(--text);font-variant-numeric:tabular-nums}
+.detail{flex:1;background:linear-gradient(170deg,#262B33,#1E2228);border:1px solid var(--line);border-radius:12px;padding:14px;position:relative;overflow:hidden}
+.detail::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c,var(--lime))}
+.detail .dk{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.detail h3{font-size:16px;margin:6px 0 8px}
+.detail ul{margin:0;padding:0 0 0 18px;font-size:13.5px;color:var(--muted);display:grid;gap:3px}
+.detail .mins{display:flex;gap:8px;margin-top:10px;font-size:12.5px;color:var(--faint)}
+.detail .mins b{color:var(--text)}
+.gen-chart{grid-area:chart;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;min-width:0}
+.ch-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ch-h h3{font-size:15px}
+.ch-legend{display:flex;gap:14px;font-size:12.5px;color:var(--muted)}
+.ch-legend span{display:flex;align-items:center;gap:6px}
+.ch-legend i{width:16px;height:3px;border-radius:2px;background:var(--lime)}
+.ch-legend i.int{background:repeating-linear-gradient(90deg,#fff 0 4px,transparent 4px 7px)}
+.chart{width:100%;height:auto;margin-top:6px;overflow:visible}
+.chart text{font:500 11px var(--ui);fill:#8C94A1}
+.chart .band text{fill:#FFC53D;font-weight:600}
+.chart .band.t text{fill:#3DD6FF}
+.vol-line{fill:none;stroke:var(--lime);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.int-line{fill:none;stroke:#fff;stroke-width:1.8;stroke-dasharray:5 5;opacity:.8}
+.draw{transition:stroke-dashoffset 1.3s cubic-bezier(.3,.7,.2,1)}
+.area{transition:opacity .8s .3s}
+.ch-note{margin:6px 0 0;font-size:12px;color:var(--faint)}
+
+/* ---------- programs / method / pricing ---------- */
+.prog{grid-column:span 4;display:flex;flex-direction:column;gap:12px}
+.prog .ph{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.prog .lvl{font-size:12px;font-weight:600;padding:5px 9px;border-radius:999px;background:var(--card2);color:var(--muted)}
+.prog h3{font-size:20px;line-height:1.2}
+.prog p{margin:0;color:var(--muted)}
+.prog .spark{width:100%;height:64px}
+.prog dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0}
+.prog dl div{background:var(--card2);border-radius:10px;padding:9px 10px}
+.prog dt{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.prog dd{margin:3px 0 0;font:700 14px/1.2 var(--disp)}
+.prog .btn{margin-top:auto}
+.meth{grid-column:span 3;display:flex;flex-direction:column;gap:10px}
+.meth svg{width:100%;height:70px}
+.meth h3{font-size:16px}
+.meth p{margin:0;color:var(--muted);font-size:14px}
+.price{grid-column:span 4;display:flex;flex-direction:column;gap:12px;position:relative}
+.price.hot{border-color:rgba(198,255,61,.45);background:linear-gradient(180deg,#232A1A,#1C1F24 45%)}
+.price .flag{position:absolute;top:18px;right:18px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0E0F11;background:var(--lime);padding:5px 8px;border-radius:6px}
+.price h3{font-size:17px}
+.price .amt{font:800 40px/1 var(--disp)}
+.price .amt small{font:500 14px var(--ui);color:var(--muted);margin-left:6px}
+.price ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+.price li{display:flex;gap:10px}
+.price li::before{content:"";flex:none;width:16px;height:16px;margin-top:2px;border-radius:5px;background:rgba(198,255,61,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5 7 11l5-6' fill='none' stroke='%23C6FF3D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.price .btn{margin-top:auto}
+.fine{font-size:12.5px;color:var(--faint);margin:0}
+.faq{grid-column:span 7;padding:8px 22px;align-self:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border:0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:58px;font-weight:600;font-size:15.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:26px;height:26px;border-radius:8px;background:var(--card2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3v10M3 8h10' stroke='%23C6FF3D' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 18px;color:var(--muted);max-width:62ch}
+.contact{grid-column:span 5;display:flex;flex-direction:column;gap:14px}
+.contact form{display:grid;gap:12px}
+.contact label{display:grid;gap:6px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.contact input,.contact select,.contact textarea{min-height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:var(--panel);padding:10px 12px;font-size:15px;color:var(--text)}
+.contact textarea{min-height:90px;resize:vertical}
+.contact input:focus-visible,.contact select:focus-visible,.contact textarea:focus-visible{outline:2px solid var(--lime);outline-offset:1px}
+.cd{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+.cd div{background:var(--card2);border-radius:10px;padding:10px 12px}
+.cd dt{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.cd dd{margin:3px 0 0;font-size:14px;font-weight:600}
+footer{padding:10px 28px 40px;color:var(--faint);font-size:13px}
+.f-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+.f-name{font:700 16px/1.2 var(--disp);color:var(--text);overflow-wrap:anywhere}
+.tabs{display:none}
+
+/* reveal */
+@media (prefers-reduced-motion:no-preference){.rv{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.cell.pop{animation:none}.draw,.area,.ring-arc,.mix .bar2 span{transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1360px){
+.gen-grid{grid-template-columns:280px minmax(0,1fr);grid-template-areas:"in cal" "side side" "chart chart"}
+.gen-side{display:grid;grid-template-columns:1fr 1fr 1.3fr;align-items:start}
+}
+@media (max-width:1100px){
+.side{display:none}
+.shell{margin-left:0}
+.bar .brand{display:flex}
+.bar .crumbs{display:none}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+.tabs{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;padding:8px 8px calc(8px + env(safe-area-inset-bottom));background:rgba(19,21,25,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:52px;border-radius:12px;text-decoration:none;color:var(--faint);font-size:11px;font-weight:600}
+.tabs a svg{width:21px;height:21px}
+.tabs a.on{color:var(--text)}
+.tabs a.on svg{color:var(--lime)}
+.tabs a.mid{color:#0E0F11;background:var(--lime);margin:0 4px}
+.tabs a.mid svg{color:#0E0F11}
+.hero{grid-column:span 12}.coach{grid-column:span 12}.tile{grid-column:span 6}.tile:last-child{grid-column:span 12}
+.prog{grid-column:span 6}.prog:last-child{grid-column:span 12}.meth{grid-column:span 6}.price{grid-column:span 12}.faq,.contact{grid-column:span 12}
+.coach{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+.coach .top,.coach>p,.coach>div:not(.top){grid-column:1}.specs{grid-column:2;grid-row:1/span 3;margin:0}
+}
+@media (max-width:760px){
+body{font-size:15px}
+.bar{height:60px;padding:0 16px;padding-right:max(16px,env(safe-area-inset-right))}
+.bar .brand .bname{display:none}
+.hero-brand{display:block}
+.mark{width:34px;height:34px;font-size:16px;border-radius:10px}
+main{padding:14px 12px 28px;gap:12px}
+.grid{gap:12px}
+.card{padding:18px;border-radius:16px}
+.hero{grid-template-columns:1fr;padding:22px 18px}
+.hero h1{font-size:30px}
+.rings{grid-template-columns:120px 1fr;justify-items:start;align-items:center;background:var(--panel);border-radius:14px;padding:12px;border:1px solid var(--line)}
+.rings svg{width:120px}
+.rings figcaption{justify-content:flex-start;flex-direction:column;gap:6px}
+.coach{grid-template-columns:1fr}.specs{grid-column:1;grid-row:auto}
+.tile,.tile:last-child,.prog,.prog:last-child,.meth{grid-column:span 12}
+.gen{padding:18px 14px}
+.gen-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"in" "cal" "side" "chart";gap:14px}
+.gen-side{grid-template-columns:1fr}
+.opts.c2{grid-template-columns:1fr 1fr}
+.cal{border-spacing:3px;margin:-3px}
+.cal thead th:first-child{width:44px}
+.cal tbody th{font-size:11px}
+.cal tbody th small{font-size:8.5px;letter-spacing:.02em}
+.cal td,.cell{height:26px}
+.cell{border-radius:6px;font-size:10.5px}
+.cd{grid-template-columns:1fr}
+footer{padding:6px 16px 24px}
+}
+@media (max-width:360px){.opts.c4{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 13h6l-1 8 8-10h-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="4" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="13" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="13" y="13" width="7" height="7" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.5" fill="currentColor"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-dumb" viewBox="0 0 24 24"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 4 5 5 5 10a5 5 0 0 1-10 0c0-3 2-4 2-7 2 1 3 3 3 5 1-2 1-5 0-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S4 15 4 9.5A4 4 0 0 1 12 8a4 4 0 0 1 8 1.5C20 15 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="currentColor"/></symbol>
+<symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 21v-6M12 3 6 12h3l-3 4h12l-3-4h3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+<symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 20h6M12 17v3" stroke="currentColor" stroke-width="1.8"/></symbol>
+</defs></svg>
+
+<aside class="side" aria-label="Sidebar">
+<a class="brand" href="#top"><span class="mark" data-brand-initials aria-hidden="true">J</span><span class="bname" data-brand>Built by Jas PT</span></a>
+<nav aria-label="Main"><ul>
+<li><a href="#top" data-s="top" class="on"><svg aria-hidden="true"><use href="#i-home"/></svg>Dashboard</a></li>
+<li><a href="#generator" data-s="generator"><svg aria-hidden="true"><use href="#i-bolt"/></svg>Program builder</a></li>
+<li><a href="#programs" data-s="programs"><svg aria-hidden="true"><use href="#i-grid"/></svg>Programs</a></li>
+<li><a href="#method" data-s="method"><svg aria-hidden="true"><use href="#i-chart"/></svg>Method</a></li>
+<li><a href="#pricing" data-s="pricing"><svg aria-hidden="true"><use href="#i-tag"/></svg>Pricing</a></li>
+<li><a href="#faq" data-s="faq"><svg aria-hidden="true"><use href="#i-help"/></svg>FAQ</a></li>
+<li><a href="#contact" data-s="contact"><svg aria-hidden="true"><use href="#i-chat"/></svg>Contact</a></li>
+</ul></nav>
+<div class="side-cta"><p><b>Free intro chat</b>20 minutes, no pressure — we’ll talk goals, time and any niggles.</p><a class="btn lime" href="#contact">Book a chat</a></div>
+</aside>
+
+<div class="shell">
+<header class="bar">
+<a class="brand" href="#top"><span class="mark" data-brand-initials aria-hidden="true">J</span><span class="bname" data-brand>Built by Jas PT</span></a>
+<div class="crumbs">Dashboard <span>/ Perth, WA</span></div>
+<span class="chip" id="today"><i></i>Perth, WA</span>
+</header>
+
+<main>
+<section class="grid" id="top" aria-label="Overview">
+<article class="card hero rv">
+<div>
+<p class="hero-brand" data-brand>Built by Jas PT</p>
+<span class="chip"><i></i>Independent personal training · Perth, WA</span>
+<h1>Every session <em>mapped</em> before you start.</h1>
+<p class="lead">Small-group, 1:1 and online coaching built in 12-week blocks. You see the whole plan — the build, the planned deload and the retest — before you lift a thing.</p>
+<div class="row"><a class="btn lime" href="#generator"><svg aria-hidden="true"><use href="#i-bolt"/></svg>Build your 12 weeks</a><a class="btn" href="#contact">Free intro chat</a></div>
+</div>
+<figure class="rings" aria-label="Example training week: two strength sessions, one interval session and one mobility session planned">
+<svg viewBox="0 0 200 200" aria-hidden="true">
+<g transform="rotate(-90 100 100)" fill="none" stroke-linecap="round">
+<circle cx="100" cy="100" r="84" stroke="#262A31" stroke-width="14"/><circle class="ring-arc" cx="100" cy="100" r="84" stroke="#C6FF3D" stroke-width="14" stroke-dasharray="527.8" stroke-dashoffset="527.8" data-to="0"/>
+<circle cx="100" cy="100" r="64" stroke="#262A31" stroke-width="14"/><circle class="ring-arc" cx="100" cy="100" r="64" stroke="#FF6B5B" stroke-width="14" stroke-dasharray="402.1" stroke-dashoffset="402.1" data-to="134"/>
+<circle cx="100" cy="100" r="44" stroke="#262A31" stroke-width="14"/><circle class="ring-arc" cx="100" cy="100" r="44" stroke="#A78BFA" stroke-width="14" stroke-dasharray="276.5" stroke-dashoffset="276.5" data-to="138"/>
+</g>
+<text x="100" y="98" text-anchor="middle" font-family="Unbounded,Inter,sans-serif" font-weight="800" font-size="26" fill="#fff">4</text>
+<text x="100" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#A6ADB8">sessions</text>
+</svg>
+<figcaption><span style="--c:#C6FF3D">Strength 2</span><span style="--c:#FF6B5B">Intervals 1</span><span style="--c:#A78BFA">Mobility 1</span><span>Example week</span></figcaption>
+</figure>
+</article>
+<article class="card coach rv">
+<div class="top">
+<svg class="av" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#23272E" stroke="#C6FF3D" stroke-width="3" stroke-dasharray="150 40" transform="rotate(-60 32 32)"/><circle cx="32" cy="25" r="10" fill="#8C94A1"/><path d="M14 50c3-10 10-14 18-14s15 4 18 14" fill="#8C94A1"/></svg>
+<div><h2>Coach Jas</h2><p class="muted">Independent PT · Leederville &amp; online</p></div>
+</div>
+<p>I write programs you can actually follow, then stand next to the rack while you do them. Plain language, planned rest, no gimmicks.</p>
+<div><p class="eyebrow" style="margin:4px 0 8px">Good fit if you’re</p><ul class="fit"><li>New to the barbell</li><li>Lifting and running</li><li>Short on time</li><li>Back after a break</li><li>Training for a season</li></ul></div>
+<dl class="specs">
+<div><dt>Session</dt><dd>55 min</dd></div>
+<div><dt>Groups</dt><dd>Max 4</dd></div>
+<div><dt>Check-ins</dt><dd>Weekly</dd></div>
+<div><dt>Blocks</dt><dd>12 weeks</dd></div>
+</dl>
+</article>
+<article class="card tile rv">
+<h3>Small-group times</h3>
+<table class="tt"><caption class="sr">Weekly small-group session times</caption>
+<tr><th scope="row">Mon · Wed · Fri</th><td>6:00 <b>18:00</b></td></tr>
+<tr><th scope="row">Tue · Thu</th><td>6:30</td></tr>
+<tr><th scope="row">Sat</th><td>7:00 <b>Outdoor</b></td></tr>
+</table>
+</article>
+<article class="card tile rv">
+<h3>Where we train</h3>
+<ul class="where">
+<li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Private studio<small>Leederville, WA</small></span></li>
+<li><svg aria-hidden="true"><use href="#i-tree"/></svg><span>Outdoor sessions<small>Local parks, Saturdays</small></span></li>
+<li><svg aria-hidden="true"><use href="#i-screen"/></svg><span>Online<small>Anywhere with a gym</small></span></li>
+</ul>
+</article>
+<article class="card tile rv">
+<h3>How it starts</h3>
+<ol class="steps3">
+<li><div><b>Intro chat</b><span>20 min, free — goals and time.</span></div></li>
+<li><div><b>Movement screen</b><span>How you squat, hinge, push and pull.</span></div></li>
+<li><div><b>Your 12 weeks</b><span>Written for you, then we start.</span></div></li>
+</ol>
+</article>
+</section>
+
+<section class="card gen rv" id="generator" aria-labelledby="genH">
+<div class="gen-h">
+<div><span class="chip"><i></i>Program builder</span><h2 id="genH">Generate a 12-week program</h2><p class="muted">Pick a goal, how many days you can train and your experience. The calendar, the session mix and the volume chart update as you choose.</p></div>
+<span class="ill">Illustrative</span>
+</div>
+<div class="gen-grid">
+<form class="gen-in" id="genForm" data-kit-ignore>
+<fieldset><legend>Goal</legend><div class="opts c2">
+<label class="opt"><input type="radio" name="goal" value="strength"><span><svg aria-hidden="true"><use href="#i-dumb"/></svg>Strength</span></label>
+<label class="opt"><input type="radio" name="goal" value="fatloss"><span><svg aria-hidden="true"><use href="#i-flame"/></svg>Fat loss</span></label>
+<label class="opt"><input type="radio" name="goal" value="fitness" checked><span><svg aria-hidden="true"><use href="#i-heart"/></svg>Fitness</span></label>
+<label class="opt"><input type="radio" name="goal" value="sport"><span><svg aria-hidden="true"><use href="#i-ball"/></svg>Sport</span></label>
+</div></fieldset>
+<fieldset><legend>Days per week</legend><div class="opts c4">
+<label class="opt num"><input type="radio" name="days" value="2"><span>2</span></label>
+<label class="opt num"><input type="radio" name="days" value="3"><span>3</span></label>
+<label class="opt num"><input type="radio" name="days" value="4" checked><span>4</span></label>
+<label class="opt num"><input type="radio" name="days" value="5"><span>5</span></label>
+</div></fieldset>
+<fieldset><legend>Experience</legend><div class="opts c3">
+<label class="opt"><input type="radio" name="exp" value="new"><span>New</span></label>
+<label class="opt"><input type="radio" name="exp" value="some" checked><span>Some</span></label>
+<label class="opt"><input type="radio" name="exp" value="exp"><span>Experienced</span></label>
+</div></fieldset>
+<button class="btn lime" type="submit"><svg aria-hidden="true"><use href="#i-bolt"/></svg>Generate my 12 weeks</button>
+<p class="note"><b>Illustrative plan only.</b> General information, not medical or professional advice. Check in with your GP before starting a new program, and stop if something hurts.</p>
+</form>
+<div class="gen-cal">
+<p class="sum" id="sum" aria-live="polite"></p>
+<table class="cal" id="cal"><caption class="sr">Twelve-week calendar. Rows are weeks, columns are days. Session days are buttons; arrow keys move between them.</caption>
+<thead><tr><th scope="col"><span class="sr">Week</span>Wk</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr></thead>
+<tbody id="calBody"></tbody>
+</table>
+<ul class="legend" id="legend"></ul>
+</div>
+<div class="gen-side">
+<dl class="stats">
+<div class="stat"><dt>Sessions</dt><dd id="stS">0</dd></div>
+<div class="stat"><dt>Training time</dt><dd id="stH">0<small>h</small></dd></div>
+<div class="stat"><dt>Deload</dt><dd id="stD">Wk 7</dd></div>
+<div class="stat"><dt>Retest</dt><dd>Wk 12</dd></div>
+</dl>
+<div class="mix"><span class="eyebrow" style="margin:0">Session mix</span><div class="bar2" id="mixBar" aria-hidden="true"></div><ul id="mixList"></ul></div>
+<div class="detail" id="detail" aria-live="polite"></div>
+</div>
+<div class="gen-chart">
+<div class="ch-h"><h3>Weekly load <span class="muted" style="font:500 12.5px var(--ui)">· illustrative index</span></h3><div class="ch-legend"><span><i></i>Volume</span><span><i class="int"></i>Intensity</span></div></div>
+<svg class="chart" id="chart" viewBox="0 0 720 220" role="img" aria-labelledby="chartDesc"><desc id="chartDesc">Illustrative weekly training volume and intensity across 12 weeks.</desc></svg>
+<p class="ch-note">Volume and intensity are an illustrative index (0–100) showing the shape of the block, not a prescription.</p>
+</div>
+</div>
+</section>
+
+<div class="sec-h" id="programs"><div><p class="eyebrow">Programs</p><h2>Three ways to start</h2><p>Each is a 12-week block with a planned deload and a retest. Tap “Load in builder” to see its calendar.</p></div></div>
+<section class="grid" aria-label="Programs">
+<article class="card prog rv">
+<div class="ph"><svg width="34" height="34" aria-hidden="true" style="color:var(--lime)"><use href="#i-dumb"/></svg><span class="lvl">Beginner</span></div>
+<h3>Strength Foundations</h3>
+<p>New to lifting, or back after a long break. Squat, hinge, push, pull and carry — learned properly, then loaded steadily.</p>
+<svg class="spark" viewBox="0 0 300 64" aria-hidden="true"><path d="M0 56L25 52L50 48L75 44L100 40L125 36L150 32L175 48L200 30L225 26L250 22L275 20L300 34" fill="none" stroke="#C6FF3D" stroke-width="2.5" stroke-linejoin="round"/></svg>
+<dl><div><dt>Weeks</dt><dd>12</dd></div><div><dt>Days</dt><dd>3</dd></div><div><dt>Deload</dt><dd>Wk 7</dd></div></dl>
+<button class="btn" type="button" data-preset="strength,3,new">Load in builder</button>
+</article>
+<article class="card prog rv">
+<div class="ph"><svg width="34" height="34" aria-hidden="true" style="color:var(--coral)"><use href="#i-heart"/></svg><span class="lvl">Intermediate</span></div>
+<h3>Hybrid Athlete</h3>
+<p>For lifters who also run, ride or play. Strength, intervals and easy aerobic work balanced so each helps the other.</p>
+<svg class="spark" viewBox="0 0 300 64" aria-hidden="true"><path d="M0 50L25 44L50 40L75 34L100 50L125 36L150 30L175 24L200 42L225 26L250 20L275 16L300 36" fill="none" stroke="#FF6B5B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+<dl><div><dt>Weeks</dt><dd>12</dd></div><div><dt>Days</dt><dd>4–5</dd></div><div><dt>Deload</dt><dd>Wk 4, 8</dd></div></dl>
+<button class="btn" type="button" data-preset="fitness,5,exp">Load in builder</button>
+</article>
+<article class="card prog rv">
+<div class="ph"><svg width="34" height="34" aria-hidden="true" style="color:var(--violet)"><use href="#i-chart"/></svg><span class="lvl">All levels</span></div>
+<h3>Return to Training</h3>
+<p>Coming back after time off. Mobility, control and gradual load — with clearance from your GP or physio where needed.</p>
+<svg class="spark" viewBox="0 0 300 64" aria-hidden="true"><path d="M0 58L25 56L50 53L75 50L100 47L125 44L150 41L175 52L200 40L225 37L250 34L275 31L300 42" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linejoin="round"/></svg>
+<dl><div><dt>Weeks</dt><dd>12</dd></div><div><dt>Days</dt><dd>2</dd></div><div><dt>Deload</dt><dd>Wk 7</dd></div></dl>
+<button class="btn" type="button" data-preset="fitness,2,new">Load in builder</button>
+</article>
+</section>
+
+<div class="sec-h" id="method"><div><p class="eyebrow">Method</p><h2>How I coach</h2></div></div>
+<section class="grid" aria-label="Coaching method">
+<article class="card meth rv"><svg viewBox="0 0 240 70" aria-hidden="true"><g fill="#C6FF3D"><rect x="6" y="50" width="30" height="20" rx="4" opacity=".35"/><rect x="44" y="42" width="30" height="28" rx="4" opacity=".5"/><rect x="82" y="34" width="30" height="36" rx="4" opacity=".65"/><rect x="120" y="24" width="30" height="46" rx="4" opacity=".8"/><rect x="158" y="14" width="30" height="56" rx="4"/><rect x="196" y="4" width="30" height="66" rx="4"/></g></svg><h3>Progressive overload</h3><p>Small, planned increases — a rep, a set or a few kilos — week by week. You’ll always know why today looks the way it does.</p></article>
+<article class="card meth rv"><svg viewBox="0 0 240 70" aria-hidden="true"><path d="M4 58L40 48L76 38L112 28L148 54L184 24L220 14L236 10" fill="none" stroke="#FFC53D" stroke-width="3" stroke-linejoin="round"/><circle cx="148" cy="54" r="6" fill="#131519" stroke="#FFC53D" stroke-width="3"/></svg><h3>Deloads on the calendar</h3><p>A lighter week is planned from day one, not taken when you’re already cooked. Recovery is part of the program.</p></article>
+<article class="card meth rv"><svg viewBox="0 0 240 70" aria-hidden="true"><rect x="60" y="6" width="120" height="58" rx="8" fill="none" stroke="#3DD6FF" stroke-width="3"/><path d="M112 24v22l18-11Z" fill="#3DD6FF"/><path d="M20 35h24M196 35h24" stroke="#3DD6FF" stroke-width="3" stroke-linecap="round" opacity=".4"/></svg><h3>Technique before load</h3><p>Your first two weeks are about owning the movements. Lifts are filmed and reviewed with you, frame by frame.</p></article>
+<article class="card meth rv"><svg viewBox="0 0 240 70" aria-hidden="true"><g fill="#262A31"><circle cx="24" cy="35" r="12"/><circle cx="56" cy="35" r="12"/><circle cx="88" cy="35" r="12"/><circle cx="120" cy="35" r="12"/><circle cx="152" cy="35" r="12"/><circle cx="184" cy="35" r="12"/></g><circle cx="216" cy="35" r="14" fill="#A78BFA"/><path d="M210 35l4 4 8-8" stroke="#131519" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3>Weekly check-ins</h3><p>Five minutes every Sunday: sleep, stress, soreness and wins. The next week adjusts to your real life.</p></article>
+</section>
+
+<div class="sec-h" id="pricing"><div><p class="eyebrow">Pricing</p><h2>Simple pricing</h2><p>Sample prices in AUD, including GST. Every option starts with a free 20-minute chat.</p></div></div>
+<section class="grid" aria-label="Pricing">
+<article class="card price rv"><h3>Online coaching</h3><div class="amt">$49<small>/ week</small></div><ul><li>Your 12-week plan in a simple tracker</li><li>Weekly video check-in</li><li>Form reviews from your phone videos</li></ul><a class="btn" href="#contact">Ask about online</a></article>
+<article class="card price hot rv"><span class="flag">Most flexible</span><h3>Small group</h3><div class="amt">$35<small>/ session</small></div><ul><li>Max 4 people, same coach every time</li><li>Leederville studio, times above</li><li>Your own program, trained together</li></ul><a class="btn lime" href="#contact">Join a group</a></article>
+<article class="card price rv"><h3>1:1 coaching</h3><div class="amt">$90<small>/ session</small></div><ul><li>Your plan, your times, full attention</li><li>Packs of 10 for $820</li><li>Studio, outdoors or at your gym</li></ul><a class="btn" href="#contact">Book 1:1</a></article>
+</section>
+
+<section class="grid" aria-label="Questions and contact">
+<div class="card faq rv" id="faq">
+<h2 style="margin:16px 0 6px">FAQ</h2>
+<details open><summary>Do I need to be fit to start?</summary><p>No. Week one is written around where you are now — the whole point of a 12-week block is that it starts sensibly and builds.</p></details>
+<details><summary>What’s a deload week?</summary><p>A planned lighter week, with less volume and intensity, so your body can absorb the work you’ve done. It’s on the calendar from day one.</p></details>
+<details><summary>Can I train with an injury or health condition?</summary><p>Talk to your GP or physio first. With their clearance I can adapt exercises and loads — but I don’t diagnose or treat injuries.</p></details>
+<details><summary>Is the generated plan my actual program?</summary><p>No — it’s an illustration of how I structure a block. Your real program is written after the intro chat and a movement screen.</p></details>
+<details><summary>What if I miss a week?</summary><p>Life happens. We shuffle the calendar rather than cramming sessions, and adjust at your Sunday check-in.</p></details>
+</div>
+<div class="card contact rv" id="contact">
+<p class="eyebrow" style="margin:6px 0 0">Contact</p>
+<h2>Book a free intro chat</h2>
+<form data-demo-message="Demo only — nothing was sent. On a real site Jas would reply to book your chat.">
+<label>Your name<input name="name" autocomplete="name" required></label>
+<label>Email<input name="email" type="email" autocomplete="email" required></label>
+<label>Main goal<select name="goal"><option>Get stronger</option><option>Lose some fat</option><option>Get fitter</option><option>Train for a sport</option><option>Come back after time off</option></select></label>
+<label>Anything I should know?<textarea name="msg" placeholder="Days you can train, any niggles, what you’ve tried before…"></textarea></label>
+<button class="btn lime" type="submit">Send</button>
+</form>
+<dl class="cd">
+<div><dt>Phone</dt><dd><a href="tel:+61491570157">0491 570 157</a></dd></div>
+<div><dt>Email</dt><dd><a href="mailto:jas@example.com">jas@example.com</a></dd></div>
+<div><dt>Studio</dt><dd>Leederville, WA</dd></div>
+<div><dt>Hours</dt><dd>Mon–Fri 5:30–19:30 · Sat 6:30–12:00</dd></div>
+</dl>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="f-in"><span class="f-name" data-brand>Built by Jas PT</span><span>General information only — not medical advice. Concept demo for a fictional business; prices are samples.</span></div>
+</footer>
+</div>
+
+<nav class="tabs" aria-label="Sections">
+<a href="#top" data-s="top" class="on"><svg aria-hidden="true"><use href="#i-home"/></svg>Home</a>
+<a href="#programs" data-s="programs"><svg aria-hidden="true"><use href="#i-grid"/></svg>Programs</a>
+<a href="#generator" data-s="generator" class="mid"><svg aria-hidden="true"><use href="#i-bolt"/></svg>Build</a>
+<a href="#pricing" data-s="pricing"><svg aria-hidden="true"><use href="#i-tag"/></svg>Pricing</a>
+<a href="#contact" data-s="contact"><svg aria-hidden="true"><use href="#i-chat"/></svg>Contact</a>
+</nav>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s);},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s));};
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var T={STR:{n:"Strength",l:"S"},PWR:{n:"Power & speed",l:"P"},CON:{n:"Conditioning",l:"C"},INT:{n:"Intervals",l:"I"},MOB:{n:"Mobility & core",l:"M"}};
+var PAT={
+strength:{2:["STR","STR"],3:["STR","STR","STR"],4:["STR","STR","CON","STR"],5:["STR","STR","CON","STR","MOB"]},
+fatloss:{2:["STR","INT"],3:["STR","INT","STR"],4:["STR","INT","STR","CON"],5:["STR","INT","STR","CON","INT"]},
+fitness:{2:["STR","CON"],3:["STR","INT","CON"],4:["STR","CON","INT","MOB"],5:["STR","CON","INT","STR","MOB"]},
+sport:{2:["PWR","STR"],3:["PWR","STR","CON"],4:["PWR","STR","INT","STR"],5:["PWR","STR","INT","STR","MOB"]}};
+var DAYS={2:[0,3],3:[0,2,4],4:[0,1,3,5],5:[0,1,2,4,5]},DN=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+var DELOAD={"new":[7],some:[7],exp:[4,8]},GOALN={strength:"Strength",fatloss:"Fat loss",fitness:"Fitness",sport:"Sport"},EXPN={"new":"new to training",some:"some experience",exp:"experienced"};
+function phase(w){return w<=4?"Foundation":w<=8?"Build":w<=11?"Peak":"Retest";}
+function sets(w,exp){var p=phase(w);if(p==="Foundation")return exp==="new"?"3 × 10":"3 × 8";if(p==="Build")return exp==="new"?"3 × 8":"4 × 6";return exp==="exp"?"5 × 3":"4 × 5";}
+function detailOf(t,w,occ,exp,dl,ts){
+var items,mins,title=T[t].n;
+if(t==="STR"){var A=occ%2===0;title+=A?" A":" B";items=A?["Back squat","Bench press","Seated cable row","Farmer carry 3 × 30 m"]:["Trap-bar deadlift","Overhead press","Chin-up (assisted if needed)","Split squat"];items=items.map(function(x,i){return i<3?x+" — "+(dl?"2 × 5, light":ts?"work up to a solid set of 5":sets(w,exp)):x;});mins=55;}
+else if(t==="PWR"){items=["Box jumps 4 × 3","Med-ball throws 4 × 4","Sprints 6 × 20 m, full rest","Trap-bar jumps 3 × 3"];if(dl)items=["Box jumps 3 × 2","Sprints 4 × 20 m, easy"];mins=45;}
+else if(t==="CON"){var m=Math.min(30+w*2,50);if(dl)m=25;items=["Zone 2 bike, row or run — "+m+" min","Conversational pace: you can talk in full sentences"];mins=m+10;}
+else if(t==="INT"){var n=Math.min(6+Math.floor(w/2),12);if(dl)n=4;items=[n+" × 1 min hard / 1 min easy","10 min warm-up, 5 min cool-down"];mins=20+n*2;}
+else {items=["Hips, ankles and upper back — 15 min","Core circuit: dead bugs, side planks, carries"];mins=30;}
+if(ts&&t!=="STR")items=["Benchmark: "+(t==="CON"?"2 km row, steady effort":t==="INT"?"best 1 km on the rower":t==="PWR"?"broad jump and 20 m sprint":"mobility screen re-check"),"Compare with week 1 at the review"];
+return {title:title,items:items,mins:mins};
+}
+var state={goal:"fitness",days:4,exp:"some"},plan=null,sel=null;
+function build(){
+var pat=PAT[state.goal][state.days],dd=DAYS[state.days],dls=DELOAD[state.exp],weeks=[],count={},mins=0,occ={};
+for(var w=1;w<=12;w++){var row=[null,null,null,null,null,null,null],dl=dls.indexOf(w)>-1,ts=w===12;occ={};
+dd.forEach(function(d,i){var t=pat[i];occ[t]=(occ[t]||0);var det=detailOf(t,w,occ[t],state.exp,dl,ts);occ[t]++;row[d]={t:t,dl:dl,ts:ts,det:det,w:w,d:d};count[t]=(count[t]||0)+1;mins+=det.mins;});
+weeks.push({w:w,dl:dl,ts:ts,row:row});}
+var base={"new":42,some:54,exp:64}[state.exp]*(.78+state.days*.07),vol=[],inten=[],prev=0;
+for(var k=1;k<=12;k++){var inPhase=(k-1)%4,v=base*(1+.055*(k-1))*(1+.03*inPhase);if(dls.indexOf(k)>-1)v=prev*.55;if(k===12)v=base*.7;vol.push(v);prev=v;
+var it=48+k*3.2+(state.exp==="exp"?8:state.exp==="some"?4:0);if(dls.indexOf(k)>-1)it-=18;if(k===12)it+=4;inten.push(Math.min(94,Math.round(it)));}
+var mx=Math.max.apply(null,vol),sc=mx>90?90/mx:1;vol=vol.map(function(v){return Math.round(v*sc);});
+plan={weeks:weeks,count:count,mins:mins,dls:dls,vol:vol,inten:inten};
+}
+var body=$("#calBody");
+function render(animate){
+build();
+var h="";
+plan.weeks.forEach(function(wk){h+='<tr class="'+(wk.dl?"dl":"")+(wk.ts?" test":"")+'"><th scope="row">'+wk.w+(wk.dl?"<small>Deload</small>":wk.ts?"<small>Retest</small>":"")+'</th>';
+wk.row.forEach(function(c,d){if(!c){h+='<td><span class="cell rest" aria-hidden="true"></span></td>';return;}
+var lab="Week "+wk.w+", "+DN[d]+": "+c.det.title+(c.dl?" (deload)":c.ts?" (retest)":"");
+h+='<td><button type="button" class="cell t-'+c.t+(c.dl?" dl":"")+(c.ts?" ts":"")+(animate?" pop":"")+'" style="--d:'+((wk.w-1)*45+d*18)+'ms" data-w="'+wk.w+'" data-d="'+d+'" aria-pressed="false" tabindex="-1" aria-label="'+lab+'">'+T[c.t].l+'</button></td>';});
+h+='</tr>';});
+body.innerHTML=h;
+var total=Object.keys(plan.count).reduce(function(s,k){return s+plan.count[k];},0);
+countTo($("#stS"),total,"");countTo($("#stH"),Math.round(plan.mins/6)/10,"<small>h</small>",1);
+$("#stD").textContent="Wk "+plan.dls.join(", ");
+$("#sum").innerHTML="<b>"+GOALN[state.goal]+" · "+state.days+" days a week · "+EXPN[state.exp]+".</b> "+total+" sessions over 12 weeks, deload in week "+plan.dls.join(" and ")+", retest in week 12.";
+var types=Object.keys(T).filter(function(k){return plan.count[k];});
+$("#legend").innerHTML=types.map(function(k){return '<li><i class="t-'+k+'" style="background:var(--c)"></i>'+T[k].n+'</li>';}).join("")+'<li><i class="dl"></i>Deload</li><li><i class="ts"></i>Retest</li><li><i style="background:#1F2228"></i>Rest</li>';
+$("#mixBar").innerHTML=types.map(function(k){return '<span class="t-'+k+'" style="flex-grow:'+plan.count[k]+'"></span>';}).join("");
+$("#mixList").innerHTML=types.map(function(k){return '<li><i class="t-'+k+'"></i>'+T[k].n+'<b>'+plan.count[k]+'</b></li>';}).join("");
+var first=$(".cell:not(.rest)",body);first.tabIndex=0;select(first,false);
+chart(animate);
+}
+function countTo(el,to,suffix,dec){if(reduce){el.innerHTML=to+suffix;return;}var from=parseFloat(el.textContent)||0,t0=performance.now();function step(t){var p=Math.min(1,(t-t0)/700),v=from+(to-from)*(1-Math.pow(1-p,3));el.innerHTML=(dec?v.toFixed(1):Math.round(v))+suffix;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+function select(btn,focus){
+if(!btn)return;$$(".cell[aria-pressed=true]",body).forEach(function(b){b.setAttribute("aria-pressed","false");b.tabIndex=-1;});
+btn.setAttribute("aria-pressed","true");btn.tabIndex=0;if(focus)btn.focus();sel=btn;
+var c=plan.weeks[btn.dataset.w-1].row[btn.dataset.d],det=c.det,box=$("#detail");
+box.className="detail t-"+c.t;
+box.innerHTML='<div class="dk">Week '+c.w+' · '+DN[c.d]+' · '+phase(c.w)+(c.dl?" · deload":"")+'</div><h3>'+det.title+'</h3><ul>'+det.items.map(function(x){return "<li>"+x+"</li>";}).join("")+'</ul><div class="mins"><span>About <b>'+det.mins+' min</b></span><span>·</span><span>'+(c.dl?"~60% of usual volume":c.ts?"Retest week":"Tap another day to compare")+'</span></div>';
+}
+body.addEventListener("click",function(e){var b=e.target.closest(".cell:not(.rest)");if(b)select(b,false);});
+body.addEventListener("keydown",function(e){
+var b=e.target.closest(".cell:not(.rest)");if(!b)return;var all=$$(".cell:not(.rest)",body),i=all.indexOf(b),n=null,w=+b.dataset.w,d=+b.dataset.d;
+if(e.key==="ArrowRight")n=all[i+1];else if(e.key==="ArrowLeft")n=all[i-1];else if(e.key==="Home")n=all[0];else if(e.key==="End")n=all[all.length-1];
+else if(e.key==="ArrowDown"||e.key==="ArrowUp"){var tw=w+(e.key==="ArrowDown"?1:-1);n=$('.cell[data-w="'+tw+'"][data-d="'+d+'"]',body);}
+if(n){e.preventDefault();select(n,true);}
+});
+/* chart */
+var svgNS="http://www.w3.org/2000/svg";
+function chart(animate){
+var c=$("#chart"),W=Math.round(Math.max(300,Math.min(1100,c.getBoundingClientRect().width||720))),H=W<520?190:220,L=30,R=8,Tp=18,B=26,iw=W-L-R,ih=H-Tp-B,x=function(i){return L+iw*(i/11);},y=function(v){return Tp+ih*(1-v/100);};
+var s='<desc id="chartDesc">Illustrative weekly training volume and intensity across 12 weeks.</desc><defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C6FF3D" stop-opacity=".35"/><stop offset="1" stop-color="#C6FF3D" stop-opacity="0"/></linearGradient></defs>';
+[0,25,50,75,100].forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="rgba(255,255,255,.07)"/><text x="'+(L-8)+'" y="'+(y(v)+4)+'" text-anchor="end">'+v+'</text>';});
+plan.dls.forEach(function(w){s+='<g class="band"><rect x="'+(x(w-1)-(W<520?11:18))+'" y="'+Tp+'" width="'+(W<520?22:36)+'" height="'+ih+'" rx="6" fill="rgba(255,197,61,.08)"/><text x="'+x(w-1)+'" y="'+(Tp+12)+'" text-anchor="middle">Deload</text></g>';});
+s+='<g class="band t"><rect x="'+(x(11)-(W<520?11:18))+'" y="'+Tp+'" width="'+(W<520?19:28)+'" height="'+ih+'" rx="6" fill="rgba(61,214,255,.08)"/><text x="'+(x(11)-4)+'" y="'+(Tp+12)+'" text-anchor="middle">Test</text></g>';
+for(var i=0;i<12;i++)s+='<text x="'+x(i)+'" y="'+(H-8)+'" text-anchor="middle">'+(W<520?'':'W')+(i+1)+'</text>';
+var d="",di="";plan.vol.forEach(function(v,i){d+=(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1);});plan.inten.forEach(function(v,i){di+=(i?"L":"M")+x(i).toFixed(1)+" "+y(v).toFixed(1);});
+s+='<path class="area" d="'+d+'L'+x(11)+' '+y(0)+'L'+x(0)+' '+y(0)+'Z" fill="url(#ag)"/><path class="int-line" d="'+di+'"/><path class="vol-line draw" id="volLine" d="'+d+'"/>';
+plan.vol.forEach(function(v,i){s+='<circle cx="'+x(i).toFixed(1)+'" cy="'+y(v).toFixed(1)+'" r="3.6" fill="#131519" stroke="#C6FF3D" stroke-width="2"/>';});
+c.setAttribute("viewBox","0 0 "+W+" "+H);c.innerHTML=s;
+var p=$("#volLine"),len=p.getTotalLength();
+if(animate&&!reduce){p.style.strokeDasharray=len;p.style.strokeDashoffset=len;var a=$(".area",c);a.style.opacity=0;p.getBoundingClientRect();requestAnimationFrame(function(){p.style.strokeDashoffset=0;a.style.opacity=1;});}
+}
+/* inputs */
+var form=$("#genForm");
+function readForm(){state.goal=form.goal.value;state.days=+form.days.value;state.exp=form.exp.value;}
+form.addEventListener("change",function(){readForm();render(true);});
+form.addEventListener("submit",function(e){e.preventDefault();readForm();render(true);var cal=$(".gen-cal");if(window.innerWidth<1100)cal.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});});
+$$("[data-preset]").forEach(function(b){b.addEventListener("click",function(){var p=b.dataset.preset.split(",");form.goal.value=p[0];form.days.value=p[1];form.exp.value=p[2];readForm();render(true);document.getElementById("generator").scrollIntoView({behavior:reduce?"auto":"smooth"});});});
+readForm();render(false);
+var rt,lastW=window.innerWidth;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){if(Math.abs(window.innerWidth-lastW)>40){lastW=window.innerWidth;chart(false);}},200);});
+/* hero rings */
+setTimeout(function(){$$(".ring-arc").forEach(function(r){r.style.strokeDashoffset=r.dataset.to;});},reduce?0:250);
+/* date chip */
+var dt=new Date(),DA=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+$("#today").innerHTML='<i></i>'+DA[dt.getDay()]+" "+dt.getDate()+" "+MO[dt.getMonth()]+" · Perth";
+/* reveal + active nav */
+var rv=$$(".rv");
+if("IntersectionObserver" in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{rootMargin:"0px 0px -6% 0px"});rv.forEach(function(el){io.observe(el);});}else rv.forEach(function(el){el.classList.add("in");});
+var secs=["top","generator","programs","method","pricing","faq","contact"].map(function(id){return document.getElementById(id);});
+function setOn(id){$$("[data-s]").forEach(function(a){a.classList.toggle("on",a.dataset.s===id);});}
+if("IntersectionObserver" in window){var so=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting)setOn(en.target.id);});},{rootMargin:"-40% 0px -55% 0px"});secs.forEach(function(s){so.observe(s);});}
+})();
+</script>
+</body>
+</html>

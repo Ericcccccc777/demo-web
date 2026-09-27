@@ -1,0 +1,8 @@
+{
+  "id": "014",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "RTL layout", "Bilingual toggle", "View Transitions", "Form logic", "Date logic"],
+  "features": ["bilingual", "quote", "ordering"],
+  "interaction": "Switch every string between English and Arabic (the layout mirrors to right-to-left), and step adults and kids up or down to lay a suggested family pack out on an animated top-down table with a running sample-price total.",
+  "fonts": ["Archivo", "Cairo"],
+  "notes": ""
+}

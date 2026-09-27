@@ -1,0 +1,8 @@
+{
+  "id": "038",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "CSS Grid", "Scroll-driven", "IntersectionObserver", "Form logic"],
+  "features": ["quote", "story"],
+  "interaction": "Drag the sun along its arc (or use the 6am–7pm slider or 'play the day'): the sky gradient, roof panels, lit windows, a battery gauge and a live generation area chart with a 'you are here' marker all follow; the estimator turns a quarterly bill, roof direction and daytime usage into a suggested system size and illustrative generation and savings ranges with every assumption listed.",
+  "fonts": ["Sora", "Inter"],
+  "notes": "Generation, battery and savings figures come from a simple illustrative model (clear-sky curve, fixed tariffs), not site data; no rebates or schemes are modelled."
+}

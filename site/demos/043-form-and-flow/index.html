@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="043">
+<meta name="demo:brand" content="Form &amp; Flow Reformer">
+<title>Form &amp; Flow Reformer — reformer pilates in Bondi</title>
+<meta name="description" content="Form &amp; Flow Reformer is a fictional boutique reformer pilates studio in Bondi with a sample timetable and reformer booking flow.">
+<meta name="theme-color" content="#E8E1D7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..600&family=Cormorant:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --stone:#E8E1D7;--sand:#D8CBB8;--sand-2:#E1D6C6;--esp:#3A2E27;--sage:#A3AD95;--sage-2:#C9CFBF;--white:#FFFFFF;--muted:#6B5D52;
+  --line:rgba(58,46,39,.12);--shadow:0 1px 2px rgba(58,46,39,.06),0 10px 30px -14px rgba(58,46,39,.28);
+  --ui:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --disp:"Cormorant","Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --spring:cubic-bezier(.2,1.05,.3,1);
+  --sab:env(safe-area-inset-bottom,0px);--sat:env(safe-area-inset-top,0px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--stone);color:var(--esp);font:400 16px/1.55 var(--ui);font-optical-sizing:auto}
+button{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2.5px solid var(--esp);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:90;background:var(--esp);color:#fff;padding:10px 16px;border-radius:999px;text-decoration:none}
+.skip:focus{top:calc(10px + var(--sat))}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:999px;border:1.5px solid var(--esp);background:transparent;font:500 15px/1.1 var(--ui);text-decoration:none;cursor:pointer;transition:transform .25s var(--spring),background .2s,color .2s,box-shadow .2s}
+.pill:hover{transform:translateY(-1px)}
+.pill.solid{background:var(--esp);color:#fff}
+.pill.solid:hover{box-shadow:0 10px 22px -10px rgba(58,46,39,.7)}
+.pill:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.eyebrow{margin:0 0 10px;font:500 12.5px/1.2 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{margin:0;font-weight:500}
+h2{font:italic 500 clamp(38px,4.4vw,54px)/1.02 var(--disp);letter-spacing:-.01em}
+h3{font:600 17px/1.3 var(--ui)}
+.fine{font-size:13px;color:var(--muted);margin:0}
+
+/* ---------- layout ---------- */
+.rail{padding:calc(14px + var(--sat)) 18px 0}
+.appbar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(10px + var(--sat)) 18px 10px;margin:calc(-14px - var(--sat)) -18px 0;background:rgba(232,225,215,.97);border-bottom:1px solid transparent;transition:border-color .2s}
+.appbar.scrolled{border-bottom-color:var(--line)}
+.wm{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.wm svg{flex:none;width:34px;height:34px}
+.wm-name{font:600 17px/1.15 var(--ui);letter-spacing:-.01em;overflow-wrap:anywhere}
+.appbar .pill{min-height:40px;padding:8px 14px;font-size:14px;flex:none}
+.hero{display:grid;grid-template-columns:1fr;gap:6px;padding:18px 0 8px}
+.hero h1{font:italic 500 clamp(50px,13vw,92px)/.92 var(--disp);letter-spacing:-.02em}
+.hero h1 small{display:block;margin-top:12px;font:500 15px/1.4 var(--ui);letter-spacing:0;font-style:normal;color:var(--muted)}
+.art{position:relative;margin:4px -6px 0}
+.art svg{display:block;width:100%;height:auto;max-height:190px}
+.draw{fill:none;stroke:var(--esp);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.draw.soft{stroke-width:1.2;opacity:.75}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0;padding:0;list-style:none}
+.facts li{padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.55);font-size:13.5px}
+.facts b{font-weight:600}
+.railnav{display:none}
+.feed{padding:12px 18px calc(128px + var(--sab))}
+.feed>section{margin-top:52px}
+.feed>section:first-child{margin-top:18px}
+
+/* ---------- schedule ---------- */
+.hello{margin:0;color:var(--muted);font-size:15px}
+.sched-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sched-head h2{font-size:clamp(42px,5vw,58px)}
+.days{position:relative;display:flex;gap:6px;margin:18px -18px 0;padding:6px 18px 10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.days-pill{position:absolute;left:0;top:6px;height:76px;width:60px;border-radius:999px;background:var(--esp);box-shadow:0 12px 24px -12px rgba(58,46,39,.8);transition:transform .45s var(--spring),width .45s var(--spring);pointer-events:none}
+.day{position:relative;z-index:1;flex:none;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:60px;height:76px;border:0;border-radius:999px;background:rgba(255,255,255,.5);cursor:pointer;transition:color .25s}
+.day .dw{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+.day .dd{font:600 22px/1.1 var(--ui);font-variant-numeric:tabular-nums}
+.day .dots{display:flex;gap:3px;height:4px;margin-top:3px}
+.day .dots i{width:4px;height:4px;border-radius:50%;background:var(--sage)}
+.day[aria-selected="true"]{color:#fff;background:transparent}
+.day[aria-selected="true"] .dw{color:#E9E1D6}
+.day[aria-selected="true"] .dots i{background:#D8CBB8}
+.filters{display:grid;gap:10px;margin-top:8px}
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -18px;padding:2px 18px 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:8px 16px;border-radius:999px;border:1px solid rgba(58,46,39,.2);background:transparent;font-size:14.5px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip[aria-pressed="true"]{background:var(--esp);border-color:var(--esp);color:#fff}
+.chip .sw{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:var(--c,var(--sand));box-shadow:inset 0 0 0 1px rgba(58,46,39,.25)}
+.count{margin:18px 0 10px;font-size:14px;color:var(--muted)}
+.classes{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tod{margin:10px 4px 0;font:500 12px/1.2 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.cls{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:4px 14px;align-items:center;padding:16px 16px 16px 18px;border-radius:28px;background:var(--white);box-shadow:var(--shadow);transition:transform .3s var(--spring),box-shadow .3s}
+.cls:hover{transform:translateY(-2px)}
+.cls.done{opacity:.55}
+.cls-time b{display:block;font:600 24px/1 var(--ui);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.cls-time span{font-size:13px;color:var(--muted)}
+.cls-name{margin:0;font:italic 500 25px/1.1 var(--disp)}
+.cls-meta{margin:3px 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:13.5px;color:var(--muted)}
+.lvl{display:inline-flex;align-items:center;min-height:24px;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:500;color:var(--esp)}
+.lvl-found{background:var(--sand)}.lvl-flow{background:var(--sage)}.lvl-burn{background:var(--esp);color:#fff}.lvl-pre{background:transparent;box-shadow:inset 0 0 0 1.3px var(--esp)}
+.cap{display:flex;align-items:center;gap:10px;font-size:13px}
+.bar{position:relative;flex:1 1 auto;max-width:170px;height:6px;border-radius:999px;background:var(--sand-2);overflow:hidden}
+.bar i{position:absolute;inset:0;border-radius:inherit;background:var(--esp);transform-origin:left;transform:scaleX(var(--f));transition:transform .8s var(--spring)}
+.cap.low .cap-t{font-weight:600}
+.cls .book{min-width:88px}
+.held{grid-column:2/-1;display:flex;align-items:center;gap:8px;margin-top:6px;padding:8px 12px;border-radius:999px;background:var(--sage-2);font-size:13.5px}
+.empty{padding:26px 20px;border-radius:28px;border:1.5px dashed rgba(58,46,39,.25);text-align:center;color:var(--muted)}
+.empty .pill{margin-top:12px}
+
+/* ---------- editorial blocks ---------- */
+.quote{font:italic 400 clamp(28px,3.2vw,40px)/1.18 var(--disp);margin:14px 0 26px;max-width:18em}
+.principles{display:grid;gap:12px}
+.pr{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:18px;border-radius:28px;background:rgba(255,255,255,.55)}
+.pr svg{width:52px;height:52px;padding:10px;border-radius:50%;background:var(--sand)}
+.pr p{margin:4px 0 0;font-size:15px;color:#4E4038}
+.method-art{margin:22px 0 0;border-radius:36px;background:var(--sand-2);overflow:hidden}
+.method-art svg{display:block;width:100%;height:auto}
+.team{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:20px -18px 0;padding:4px 18px 12px;scrollbar-width:none}
+.team::-webkit-scrollbar{display:none}
+.person{scroll-snap-align:start;padding:16px;border-radius:32px;background:var(--white);box-shadow:var(--shadow)}
+.person svg{display:block;width:100%;height:auto;border-radius:24px;background:var(--c,var(--sand-2))}
+.person h3{margin-top:14px;font:italic 500 28px/1 var(--disp)}
+.person .tags{margin:6px 0 8px;display:flex;flex-wrap:wrap;gap:6px}
+.person p{margin:0;font-size:14.5px;color:#4E4038}
+.offer{position:relative;overflow:hidden;padding:26px 22px;border-radius:36px;background:var(--sage);color:var(--esp)}
+.offer .big{font:italic 500 clamp(40px,6vw,64px)/1 var(--disp);margin:6px 0 8px}
+.offer p{margin:0 0 14px;max-width:30em}
+.offer .pill.solid{border-color:var(--esp)}
+.offer .ring{position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:1.5px solid rgba(58,46,39,.25)}
+.offer .ring+.ring{right:-30px;top:-30px;width:160px;height:160px}
+.passes{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.passes li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.6);font-size:15px}
+.passes b{font:600 17px/1 var(--ui);font-variant-numeric:tabular-nums}
+.studio-card{padding:22px;border-radius:36px;background:var(--white);box-shadow:var(--shadow)}
+.amen{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.amen li{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:18px;background:var(--stone);font-size:14px}
+.amen svg{flex:none;width:22px;height:22px}
+.info{display:grid;gap:14px;margin:18px 0 0;font-size:15px}
+.info div{display:grid;gap:2px}
+.info b{font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.info a{font-weight:500;text-underline-offset:3px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:12px 2px;cursor:pointer;list-style:none;font:500 16.5px/1.35 var(--ui)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:30px;height:30px;border-radius:50%;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M6 1v10M1 6h10' stroke='%233A2E27' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat center;transition:transform .3s var(--spring)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 16px;max-width:36em;color:#4E4038}
+.health{margin-top:18px;padding:14px 18px;border-radius:22px;background:rgba(255,255,255,.55);font-size:13.5px;color:#4E4038}
+.foot{padding:34px 18px calc(130px + var(--sab));border-top:1px solid var(--line)}
+.foot .fn{margin:0 0 6px;font:italic 500 34px/1 var(--disp);overflow-wrap:anywhere}
+.foot p{margin:4px 0;font-size:14px;color:var(--muted)}
+
+/* ---------- dock (phone / tablet) ---------- */
+.dock{position:fixed;left:50%;bottom:calc(max(12px,var(--sab)));transform:translateX(-50%);z-index:50;display:flex;gap:2px;padding:6px;border-radius:999px;background:rgba(58,46,39,.96);box-shadow:0 18px 40px -16px rgba(58,46,39,.8)}
+html:not(.hd-in-frame) .dock{bottom:calc(max(12px,var(--sab)) + 50px)}
+.dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:68px;min-height:52px;padding:4px 10px;border-radius:999px;color:#E9E1D6;text-decoration:none;font-size:11.5px;letter-spacing:.02em;transition:background .25s,color .25s}
+.dock svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.dock a[aria-current="true"]{background:var(--stone);color:var(--esp)}
+
+/* ---------- bottom sheet ---------- */
+.scrim{position:fixed;inset:0;z-index:70;background:rgba(40,31,26,.42);opacity:0;transition:opacity .3s}
+.scrim.on{opacity:1}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:80;max-height:calc(100vh - 36px - var(--sat));max-height:calc(100dvh - 36px - var(--sat));overflow-y:auto;overscroll-behavior:contain;padding:10px 18px 0;border-radius:32px 32px 0 0;background:var(--stone);box-shadow:0 -20px 60px -20px rgba(40,31,26,.5);transform:translateY(105%);transition:transform .5s var(--spring)}
+.sheet.on{transform:translateY(0)}
+.grab{width:44px;height:5px;border-radius:999px;background:rgba(58,46,39,.25);margin:0 auto 12px}
+.sheet-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.sheet-kicker{margin:0 0 4px;font-size:13.5px;color:var(--muted)}
+.sheet h2{font-size:clamp(32px,6vw,44px)}
+.sheet-sub{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.x{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--white);cursor:pointer;font-size:22px;line-height:1}
+.step{margin:18px 0 10px;font:500 12.5px/1.2 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.room{position:relative;padding:48px 36px 40px 18px;border-radius:30px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.room .front{position:absolute;left:50%;top:12px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;background:var(--sand);font-size:12px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.room .win{position:absolute;right:10px;top:48px;bottom:40px;width:12px;border-radius:999px;background:repeating-linear-gradient(var(--sage-2) 0 26px,transparent 26px 32px)}
+.room .win-t{position:absolute;right:-24px;top:50%;transform:translateY(-50%) rotate(90deg);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.room .door{position:absolute;left:18px;bottom:12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.room .door::before{content:"";display:inline-block;width:26px;height:10px;margin-right:8px;border:1.5px solid var(--muted);border-bottom:0;border-radius:12px 12px 0 0;vertical-align:-1px}
+.floor{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 10px}
+.ref{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 4px 8px;border:0;border-radius:22px;background:transparent;cursor:pointer;transition:background .2s,transform .3s var(--spring)}
+.ref svg{width:100%;max-width:38px;height:auto;display:block}
+.ref .n{font:600 13px/1 var(--ui);font-variant-numeric:tabular-nums}
+.ref .frame{fill:#fff;stroke:var(--esp);stroke-width:1.6}
+.ref .carr{fill:var(--sand-2);stroke:var(--esp);stroke-width:1.2}
+.ref .spr{stroke:var(--esp);stroke-width:1.2;fill:none}
+.ref .who{display:none;fill:var(--muted)}
+.ref:hover:not(:disabled){background:var(--stone);transform:translateY(-2px)}
+.ref:disabled{cursor:not-allowed}
+.ref:disabled .frame{fill:var(--sand-2);stroke:#A99A88}
+.ref:disabled .carr{fill:var(--sand);stroke:#A99A88}
+.ref:disabled .who{display:block}
+.ref:disabled .n{color:#8A7B6E;text-decoration:line-through}
+.ref[aria-pressed="true"]{background:var(--sage-2)}
+.ref[aria-pressed="true"] .carr{fill:var(--sage)}
+.ref[aria-pressed="true"] .frame{stroke-width:2.4}
+.ref .tick{position:absolute;right:4px;top:2px;width:20px;height:20px;border-radius:50%;background:var(--esp);display:none}
+.ref .tick::after{content:"";position:absolute;left:6px;top:4px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ref[aria-pressed="true"] .tick{display:block}
+.key{display:flex;flex-wrap:wrap;gap:8px 16px;margin:12px 2px 0;padding:0;list-style:none;font-size:13px;color:var(--muted)}
+.key i{display:inline-block;width:14px;height:14px;margin-right:6px;border-radius:5px;vertical-align:-2px;box-shadow:inset 0 0 0 1.4px var(--esp)}
+.sheet-foot{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px 18px;flex-wrap:wrap;margin:16px -18px 0;padding:14px 18px calc(16px + var(--sab));background:var(--stone);border-top:1px solid var(--line)}
+@media (max-width:1023px){html:not(.hd-in-frame) .sheet-foot{padding-bottom:calc(60px + var(--sab))}}
+.sheet-foot p{margin:0;font-size:14.5px}
+.sheet-foot .pill{min-width:200px}
+
+/* ---------- desktop: split app ---------- */
+@media (min-width:1024px){
+  html{scroll-padding-top:24px}
+  .app{display:grid;grid-template-columns:minmax(380px,41%) 1fr;min-height:100vh}
+  .rail{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:28px 40px 26px 48px;border-right:1px solid var(--line);overflow:hidden}
+  .appbar{position:static;margin:0;padding:0;background:none;border:0}
+  .hero{padding:24px 0 0;flex:1 1 auto;display:flex;flex-direction:column;justify-content:center}
+  .hero h1{font-size:clamp(64px,6.4vw,104px)}
+  .art{margin:0 -10px}
+  .art svg{max-height:34vh;max-width:none}
+  .railnav{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+  .railnav a{padding:8px 12px;border-radius:999px;text-decoration:none;font-size:13.5px;transition:background .2s}
+  .railnav a:hover{background:rgba(255,255,255,.6)}
+  .railnav a[aria-current="true"]{background:var(--esp);color:#fff}
+  .feed{padding:30px clamp(28px,4vw,64px) 60px;max-width:820px}
+  .days{margin:22px 0 0;padding:6px 0 10px;overflow:visible}
+  .day{flex:1 1 0;width:auto}
+  .chips{margin:0;padding:2px 0 4px;flex-wrap:wrap;overflow:visible}
+  .cls{grid-template-columns:78px minmax(0,1fr) auto;padding:18px 18px 18px 24px}
+  .principles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pr{grid-template-columns:1fr}
+  .team{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-columns:auto;overflow:visible;margin:20px 0 0;padding:0}
+  .offer{padding:34px 36px}
+  .foot{padding:34px clamp(28px,4vw,64px) 44px;max-width:820px}
+  .dock{display:none}
+  .sheet{left:50%;right:auto;width:min(680px,calc(100vw - 48px));transform:translate(-50%,105%);border-radius:36px 36px 0 0;padding:12px 28px 0}
+  .sheet-foot{margin:16px -28px 0;padding:16px 28px 22px}
+  .sheet.on{transform:translate(-50%,0)}
+  .room{padding:48px 48px 38px 26px}
+  .floor{gap:6px 18px}
+  .ref svg{max-width:42px}
+}
+@media (min-width:1024px) and (max-height:760px){.art svg{max-height:26vh}.hero h1{font-size:64px}}
+@media (min-width:640px) and (max-width:1023px){
+  .rail,.feed,.foot{padding-left:36px;padding-right:36px}
+  .appbar{margin-left:-36px;margin-right:-36px;padding-left:36px;padding-right:36px}
+  .hero{grid-template-columns:1fr 1fr;align-items:center}
+  .days{margin-left:-36px;margin-right:-36px;padding-left:36px;padding-right:36px}
+  .day{flex:1 0 64px}
+  .chips{margin-left:-36px;margin-right:-36px;padding-left:36px;padding-right:36px}
+  .team{grid-auto-columns:44%;margin-left:-36px;margin-right:-36px;padding-left:36px;padding-right:36px}
+  .principles{grid-template-columns:repeat(3,minmax(0,1fr))}.pr{grid-template-columns:1fr}
+  .sheet{left:50%;right:auto;width:min(640px,100vw);transform:translate(-50%,105%)}
+  .sheet.on{transform:translate(-50%,0)}
+}
+@media (max-width:639px){.cap{flex-wrap:wrap;gap:6px 10px}.bar{flex-basis:100%;max-width:none}}
+@media (max-width:370px){.dock a{min-width:58px;padding:4px 6px}.amen{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#schedule">Skip to the timetable</a>
+<div class="app">
+  <header class="rail" id="top">
+    <div class="appbar" id="appbar">
+      <a class="wm" href="#top" aria-label="Back to top">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#3A2E27"/><path d="M9 21c3-6 13-6 16 0M11 15c2-3.5 10-3.5 12 0" fill="none" stroke="#E8E1D7" stroke-width="1.6" stroke-linecap="round"/><circle cx="17" cy="24" r="1.6" fill="#A3AD95"/></svg>
+        <span class="wm-name" data-brand>Form &amp; Flow Reformer</span>
+      </a>
+      <a class="pill solid" href="#offer">Intro offer</a>
+    </div>
+    <div class="hero">
+      <p class="eyebrow">Reformer pilates · Bondi, NSW</p>
+      <h1>Slow is strong.<small>Twelve reformers, a north-lit room and teachers who know your name.</small></h1>
+      <figure class="art" aria-hidden="true">
+        <svg viewBox="0 0 520 290">
+          <circle cx="332" cy="128" r="104" fill="#D8CBB8" opacity=".75"/>
+          <circle cx="158" cy="176" r="27" fill="#A3AD95" opacity=".5"/>
+          <path class="draw soft" d="M36 214h444a10 10 0 0 1 0 20H36a10 10 0 0 1 0-20zM58 234v24M458 234v24M40 258h36M440 258h36" pathLength="1"/>
+          <path class="draw" d="M150 196h112a8 8 0 0 1 8 8v10H142v-10a8 8 0 0 1 8-8z" pathLength="1"/>
+          <path class="draw soft" d="M272 222l6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6 6-6 6 6h40M424 214v-58" pathLength="1"/>
+          <circle class="draw" cx="424" cy="150" r="7" pathLength="1"/>
+          <circle class="draw" cx="158" cy="179" r="12" pathLength="1"/>
+          <path class="draw" d="M170 189c26-5 56-6 82 1M170 198c22 3 44 5 68 3M252 190c24-30 50-52 86-62 26 2 58 12 78 22M258 196c26-26 50-44 90-58 22 4 46 10 66 18" pathLength="1"/>
+          <path class="draw soft" d="M414 150c4-6 10-8 14-8M416 157c4-5 9-7 13-7" pathLength="1"/>
+        </svg>
+      </figure>
+      <ul class="facts">
+        <li><b>12</b> reformers</li>
+        <li><b>45–50</b> min</li>
+        <li>All levels</li>
+      </ul>
+    </div>
+    <nav class="railnav" aria-label="Sections" id="railnav">
+      <a href="#schedule">Classes</a><a href="#method">Method</a><a href="#team">Instructors</a><a href="#offer">Intro offer</a><a href="#studio">Studio</a><a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <div>
+  <main class="feed" id="main">
+    <section id="schedule" aria-labelledby="h-sched">
+      <div class="sched-head">
+        <div>
+          <p class="hello" id="hello">Welcome in</p>
+          <h2 id="h-sched">Book a class</h2>
+        </div>
+      </div>
+      <div class="days" id="days" role="tablist" aria-label="Choose a day"><span class="days-pill" id="dayPill" aria-hidden="true"></span></div>
+      <div class="filters">
+        <div class="chips" role="group" aria-label="Level" id="lvlChips">
+          <button class="chip" type="button" data-lvl="all" aria-pressed="true">All levels</button>
+          <button class="chip" type="button" data-lvl="found" aria-pressed="false"><span class="sw" style="--c:#D8CBB8" aria-hidden="true"></span>Foundations</button>
+          <button class="chip" type="button" data-lvl="flow" aria-pressed="false"><span class="sw" style="--c:#A3AD95" aria-hidden="true"></span>Flow</button>
+          <button class="chip" type="button" data-lvl="burn" aria-pressed="false"><span class="sw" style="--c:#3A2E27" aria-hidden="true"></span>Burn</button>
+          <button class="chip" type="button" data-lvl="pre" aria-pressed="false"><span class="sw" style="--c:#fff" aria-hidden="true"></span>Prenatal</button>
+        </div>
+        <div class="chips" role="group" aria-label="Time of day" id="todChips">
+          <button class="chip" type="button" data-tod="any" aria-pressed="true">Any time</button>
+          <button class="chip" type="button" data-tod="am" aria-pressed="false">Morning</button>
+          <button class="chip" type="button" data-tod="mid" aria-pressed="false">Midday</button>
+          <button class="chip" type="button" data-tod="pm" aria-pressed="false">Evening</button>
+        </div>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+      <div id="panel" role="tabpanel" aria-labelledby="h-sched"><ol class="classes" id="classes"></ol></div>
+      <p class="fine" style="margin-top:14px">Sample timetable, times in Sydney time. Tap <b>Book</b> to pick your reformer — nothing is actually booked in this demo.</p>
+    </section>
+
+    <section id="method" aria-labelledby="h-method">
+      <p class="eyebrow">The method</p>
+      <h2 id="h-method">Springs, not weights.</h2>
+      <p class="quote">Slow counts, long lines and a small room — so your teacher sees every rep and changes your springs before you ask.</p>
+      <div class="principles">
+        <div class="pr"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="draw" d="M3 22l4-12 4 12 4-12 4 12 4-12 4 12" pathLength="1"/></svg><div><h3>Springs, not weights</h3><p>Resistance through the whole movement — muscles lengthen and strengthen together.</p></div></div>
+        <div class="pr"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="draw" d="M4 16c3-7 7-7 10 0s7 7 10 0 5-6 6-4" pathLength="1"/></svg><div><h3>Three counts out, three back</h3><p>Control is the workout. We'd rather you do eight slow reps than twenty fast ones.</p></div></div>
+        <div class="pr"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="#3A2E27"><circle cx="7" cy="9" r="2"/><circle cx="13" cy="9" r="2"/><circle cx="19" cy="9" r="2"/><circle cx="25" cy="9" r="2"/><circle cx="7" cy="16" r="2"/><circle cx="13" cy="16" r="2"/><circle cx="19" cy="16" r="2"/><circle cx="25" cy="16" r="2"/><circle cx="7" cy="23" r="2"/><circle cx="13" cy="23" r="2"/><circle cx="19" cy="23" r="2"/><circle cx="25" cy="23" r="2"/></g></svg><div><h3>Twelve reformers, max</h3><p>Every class is small enough for hands-on cues and a spring check.</p></div></div>
+      </div>
+      <figure class="method-art" aria-hidden="true">
+        <svg viewBox="0 0 640 260">
+          <circle cx="452" cy="112" r="92" fill="#C9CFBF"/>
+          <path class="draw soft" d="M60 206h520M110 206v26M530 206v26M92 232h36M512 232h36" pathLength="1"/>
+          <path class="draw" d="M206 190h176a8 8 0 0 1 8 8v8H198v-8a8 8 0 0 1 8-8z" pathLength="1"/>
+          <path class="draw" d="M296 188c-26-6-52-6-70-1 12 6 28 8 46 6" pathLength="1"/>
+          <path class="draw" d="M296 188c-2-28 6-52 26-72" pathLength="1"/>
+          <circle class="draw" cx="336" cy="100" r="13" pathLength="1"/>
+          <path class="draw" d="M320 118c8-40 44-70 92-72 22-1 40 4 54 12" pathLength="1"/>
+          <path class="draw" d="M318 126c-14 20-24 40-30 62" pathLength="1"/>
+          <path class="draw soft" d="M404 190l8-6 8 6 8-6 8 6 8-6 8 6M564 206v-58" pathLength="1"/><circle class="draw soft" cx="564" cy="142" r="6" pathLength="1"/>
+        </svg>
+      </figure>
+    </section>
+
+    <section id="team" aria-labelledby="h-team">
+      <p class="eyebrow">Instructors</p>
+      <h2 id="h-team">Small classes, known faces.</h2>
+      <div class="team" id="teamList"></div>
+    </section>
+
+    <section id="offer" aria-labelledby="h-offer">
+      <div class="offer">
+        <span class="ring" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+        <p class="eyebrow" style="color:#3A2E27">Intro offer · sample</p>
+        <h2 id="h-offer" class="big">Three classes, fourteen days, $69.</h2>
+        <p>For your first visit. Start with Foundations — we'll set your springs, show you the footbar and straps, and go from there.</p>
+        <button class="pill solid" type="button" id="startFound">Show me Foundations classes</button>
+        <ul class="passes" aria-label="Class passes, sample prices">
+          <li><span>Casual class</span><b>$38</b></li>
+          <li><span>5-class pass · 2 months</span><b>$180</b></li>
+          <li><span>10-class pass · 4 months</span><b>$340</b></li>
+          <li><span>Unlimited · monthly</span><b>$259</b></li>
+        </ul>
+      </div>
+      <p class="fine" style="margin-top:10px">Sample prices for this demo, in AUD.</p>
+    </section>
+
+    <section id="studio" aria-labelledby="h-studio">
+      <p class="eyebrow">The studio</p>
+      <h2 id="h-studio">One room, north light.</h2>
+      <div class="studio-card" style="margin-top:18px">
+        <p style="margin:0;font-size:16px">A single long room a few streets back from the beach, with twelve reformers facing the mirror and the morning sun coming through the north windows.</p>
+        <ul class="amen">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M5 21V9a4 4 0 0 1 8 0M9 14h.01M12 17h.01M6 17h.01M15 12h5" pathLength="1"/></svg>Two showers</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M4 7h16v11H4zM4 11h16M9 7V5h6v2" pathLength="1"/></svg>Lockers</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M4 8c5-4 11-4 16 0v10H4zM4 13h16" pathLength="1"/></svg>Towels</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M8 3h8l-1 5v13H9V8z" pathLength="1"/></svg>Filtered water</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M6 4c3 0 4 3 4 6v5c0 3 2 5 5 5h3M10 12h4" pathLength="1"/></svg>Grip socks required ($18)</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z" pathLength="1"/><circle class="draw" cx="12" cy="10" r="2.5" pathLength="1"/></svg>Bondi, NSW</li>
+        </ul>
+        <div class="info">
+          <div><b>Class times</b>Weekdays 6 am – 7:45 pm · weekends 7 am – 11:30 am</div>
+          <div><b>Getting here</b>Buses stop a short walk away. Street parking is limited — walking or riding is quickest.</div>
+          <div><b>Say hello</b><span><a href="tel:+61255503182">(02) 5550 3182</a> · <a href="mailto:hello@example.com">hello@example.com</a></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq" aria-labelledby="h-faq">
+      <p class="eyebrow">Good to know</p>
+      <h2 id="h-faq">Before your first class.</h2>
+      <div style="margin-top:14px">
+        <details><summary>I've never been on a reformer. Where do I start?</summary><p>Foundations. It's slower, the teacher explains the springs and straps, and you'll learn the five or six moves every other class builds on.</p></details>
+        <details><summary>What should I wear?</summary><p>Fitted clothes you can move in, and grip socks — the carriage moves, so bare feet and loose pants make it harder. Socks are for sale at the desk.</p></details>
+        <details><summary>I'm pregnant. Can I come?</summary><p>Our Prenatal classes are designed for pregnancy, usually from the second trimester with your health professional's OK. Tell your teacher how far along you are before class.</p></details>
+        <details><summary>What if I can't make it?</summary><p>Cancel up to 12 hours before class and the credit goes back on your pass (sample policy). Late cancels help someone on the waitlist, so please let us know.</p></details>
+      </div>
+      <p class="health"><b>General information only.</b> Pilates isn't a substitute for medical advice. If you're pregnant, injured or new to exercise, check with your health professional first — and tell your teacher before class.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="fn" data-brand>Form &amp; Flow Reformer</p>
+    <p>Bondi, NSW · (02) 5550 3182 · hello@example.com</p>
+    <p>A fictional studio made as a concept demo. Timetable, instructors and prices are samples.</p>
+  </footer>
+  </div>
+</div>
+
+<nav class="dock" aria-label="App sections" id="dock">
+  <a href="#schedule"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="4"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Classes</a>
+  <a href="#method"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16l4-8 4 8 4-8 4 8"/></svg>Method</a>
+  <a href="#team"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.5"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M16 5.5a3.5 3.5 0 0 1 0 7M18 14c2 .6 3 2.6 3 6"/></svg>Team</a>
+  <a href="#studio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Studio</a>
+</nav>
+
+<div class="scrim" id="scrim" hidden></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetT" hidden>
+  <div class="grab" aria-hidden="true"></div>
+  <div class="sheet-head">
+    <div>
+      <p class="sheet-kicker" id="sheetWhen"></p>
+      <h2 id="sheetT">Choose a reformer</h2>
+      <p class="sheet-sub" id="sheetSub"></p>
+    </div>
+    <button class="x" type="button" id="closeSheet" aria-label="Close">×</button>
+  </div>
+  <p class="step" id="floorLabel">Pick your reformer</p>
+  <div class="room">
+    <span class="front" aria-hidden="true">Mirror · teacher</span>
+    <div class="floor" id="floor" role="group" aria-labelledby="floorLabel" aria-describedby="floorHelp"></div>
+    <span class="win" aria-hidden="true"><span class="win-t">North windows</span></span>
+    <span class="door" aria-hidden="true">Entry</span>
+  </div>
+  <p class="sr" id="floorHelp">Twelve reformers in three rows of four, front row nearest the mirror. Arrow keys move between reformers.</p>
+  <ul class="key" aria-hidden="true"><li><i style="background:#fff"></i>Free</li><li><i style="background:#D8CBB8;box-shadow:inset 0 0 0 1.4px #A99A88"></i>Taken</li><li><i style="background:#A3AD95"></i>Your spot</li></ul>
+  <div class="sheet-foot">
+    <p id="pickTxt" aria-live="polite">No reformer chosen yet.</p>
+    <button class="pill solid" type="button" id="confirm" disabled>Hold this reformer</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var TZ = "Australia/Sydney";
+  var DW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  function now(){
+    try {
+      var p = {}; new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date()).forEach(function(x){ p[x.type] = x.value; });
+      return { y: +p.year, m: +p.month, d: +p.day, h: +p.hour % 24, mi: +p.minute };
+    } catch (e) { var d = new Date(); return { y: d.getFullYear(), m: d.getMonth() + 1, d: d.getDate(), h: d.getHours(), mi: d.getMinutes() }; }
+  }
+  var N = now();
+  $("#hello").textContent = (N.h < 12 ? "Good morning" : N.h < 17 ? "Good afternoon" : "Good evening") + " — here's the week in Bondi";
+
+  /* ---------------- sample timetable ---------------- */
+  var LEVEL = {
+    found: { name: "Foundations", titles: ["Spring Basics", "Alignment & Breath"], dur: 50, who: ["Mia", "Priya", "Elle"] },
+    flow:  { name: "Flow", titles: ["Long Lines", "Slow Flow"], dur: 50, who: ["Tahlia", "Mia", "Elle"] },
+    burn:  { name: "Burn", titles: ["Tempo Burn", "Jump & Sculpt"], dur: 45, who: ["Josh", "Tahlia"] },
+    pre:   { name: "Prenatal", titles: ["Gentle Strength"], dur: 45, who: ["Priya"] }
+  };
+  var WEEK = {
+    1: [["06:00", "burn"], ["07:15", "flow"], ["09:30", "found"], ["12:15", "burn"], ["17:30", "flow"], ["18:45", "found"]],
+    2: [["06:00", "flow"], ["07:15", "burn"], ["09:30", "found"], ["10:45", "pre"], ["12:15", "flow"], ["17:30", "burn"], ["18:45", "flow"]],
+    3: [["06:00", "burn"], ["07:15", "found"], ["09:30", "flow"], ["12:15", "burn"], ["17:30", "flow"], ["18:45", "found"]],
+    4: [["06:00", "flow"], ["07:15", "burn"], ["09:30", "found"], ["10:45", "pre"], ["12:15", "flow"], ["17:30", "burn"], ["18:45", "flow"]],
+    5: [["06:00", "burn"], ["07:15", "flow"], ["09:30", "found"], ["12:15", "flow"], ["17:30", "burn"]],
+    6: [["07:00", "burn"], ["08:15", "flow"], ["09:30", "pre"], ["10:45", "found"]],
+    0: [["08:00", "flow"], ["09:15", "found"], ["10:30", "flow"]]
+  };
+  function hash(s){ var x = 2166136261; for (var i = 0; i < s.length; i++) { x ^= s.charCodeAt(i); x = Math.imul(x, 16777619); } return x >>> 0; }
+  var base = Date.UTC(N.y, N.m - 1, N.d), DAYS = [], held = {};
+  for (var i = 0; i < 7; i++) {
+    var dt = new Date(base + i * 864e5), wd = dt.getUTCDay(), key = dt.toISOString().slice(0, 10);
+    var label = DW[wd] + " " + dt.getUTCDate() + " " + MON[dt.getUTCMonth()];
+    DAYS.push({ i: i, wd: wd, date: dt.getUTCDate(), label: label, classes: WEEK[wd].map(function(c){
+      var id = key + "T" + c[0], L = LEVEL[c[1]], hh = hash(id), H = +c[0].slice(0, 2), M = +c[0].slice(3);
+      var past = i === 0 && (H * 60 + M) <= (N.h * 60 + N.mi);
+      return { id: id, day: label, t: c[0], H: H, M: M, lvl: c[1], L: L, title: L.titles[hh % L.titles.length], who: L.who[(hh >>> 3) % L.who.length], taken: 3 + (hh >>> 7) % 10, past: past };
+    }) });
+  }
+  function time12(c){ var h = c.H % 12 || 12; return { t: h + ":" + (c.M < 10 ? "0" : "") + c.M, ap: c.H < 12 ? "am" : "pm" }; }
+  function tod(c){ return c.H < 11 ? "am" : c.H < 15 ? "mid" : "pm"; }
+  var TODN = { am: "Morning", mid: "Midday", pm: "Evening" };
+
+  var state = { day: 0, lvl: "all", tod: "any" };
+  var daysEl = $("#days"), pill = $("#dayPill");
+  daysEl.insertAdjacentHTML("beforeend", DAYS.map(function(d){
+    var dots = ""; for (var k = 0; k < d.classes.length; k++) dots += "<i></i>";
+    return '<button class="day" role="tab" type="button" id="day' + d.i + '" aria-selected="' + (d.i === 0) + '" aria-controls="panel" tabindex="' + (d.i === 0 ? 0 : -1) + '" aria-label="' + d.label + (d.i === 0 ? " (today)" : "") + ", " + d.classes.length + ' classes"><span class="dw">' + (d.i === 0 ? "Today" : DW[d.wd]) + '</span><span class="dd">' + d.date + '</span><span class="dots" aria-hidden="true">' + dots + "</span></button>";
+  }).join(""));
+  var dayBtns = $$(".day", daysEl);
+  function movePill(){
+    var b = dayBtns[state.day];
+    pill.style.width = b.offsetWidth + "px";
+    pill.style.transform = "translateX(" + b.offsetLeft + "px)";
+  }
+  function selectDay(i, focus){
+    state.day = i;
+    dayBtns.forEach(function(b, k){ b.setAttribute("aria-selected", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
+    $("#panel").setAttribute("aria-labelledby", "day" + i);
+    movePill();
+    if (focus) dayBtns[i].focus();
+    var b = dayBtns[i];
+    if (daysEl.scrollWidth > daysEl.clientWidth) daysEl.scrollTo({ left: b.offsetLeft - (daysEl.clientWidth - b.offsetWidth) / 2, behavior: reduced ? "auto" : "smooth" });
+    renderClasses();
+  }
+  dayBtns.forEach(function(b, i){ b.addEventListener("click", function(){ selectDay(i); }); });
+  daysEl.addEventListener("keydown", function(e){
+    var i = state.day, n = null;
+    if (e.key === "ArrowRight") n = Math.min(6, i + 1); else if (e.key === "ArrowLeft") n = Math.max(0, i - 1); else if (e.key === "Home") n = 0; else if (e.key === "End") n = 6;
+    if (n !== null) { e.preventDefault(); selectDay(n, true); }
+  });
+  function chipGroup(el, keyName){
+    el.addEventListener("click", function(e){
+      var b = e.target.closest(".chip"); if (!b) return;
+      $$(".chip", el).forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+      state[keyName] = b.getAttribute("data-" + keyName);
+      renderClasses();
+    });
+  }
+  chipGroup($("#lvlChips"), "lvl"); chipGroup($("#todChips"), "tod");
+
+  var list = $("#classes");
+  function spotsText(c){
+    var left = 12 - c.taken;
+    if (c.past) return "Class finished";
+    if (left <= 0) return "Full — waitlist open";
+    return left === 1 ? "1 reformer left" : left + " of 12 reformers left";
+  }
+  function renderClasses(){
+    var d = DAYS[state.day];
+    var items = d.classes.filter(function(c){ return (state.lvl === "all" || c.lvl === state.lvl) && (state.tod === "any" || tod(c) === state.tod); });
+    var open = items.filter(function(c){ return !c.past; }).length;
+    $("#count").textContent = items.length ? items.length + (items.length === 1 ? " class" : " classes") + " on " + d.label + (open < items.length ? " · " + open + " still to come" : "") : "No classes match on " + d.label;
+    if (!items.length) {
+      list.innerHTML = '<li class="empty">Nothing on that combination. Try another time of day, or a different day above.<br><button class="pill" type="button" id="resetF">Show all classes</button></li>';
+      $("#resetF").addEventListener("click", function(){ resetFilters(); });
+      return;
+    }
+    var html = "", lastTod = "";
+    items.forEach(function(c){
+      var t = tod(c);
+      if (t !== lastTod && state.tod === "any") { html += '<li class="tod" aria-hidden="true">' + TODN[t] + "</li>"; lastTod = t; }
+      var tt = time12(c), left = 12 - c.taken, full = left <= 0;
+      var h = held[c.id];
+      var btn = c.past ? '<button class="pill book" type="button" disabled>Finished</button>'
+        : full ? '<button class="pill book" type="button" data-wait="' + c.id + '" aria-label="Join the waitlist for ' + c.title + " at " + tt.t + " " + tt.ap + '">Waitlist</button>'
+        : '<button class="pill solid book" type="button" data-book="' + c.id + '" aria-label="' + (h ? "Change reformer for " : "Book ") + c.title + ", " + c.L.name + ", " + tt.t + " " + tt.ap + " with " + c.who + '">' + (h ? "Change" : "Book") + "</button>";
+      html += '<li class="cls' + (c.past ? " done" : "") + '">' +
+        '<div class="cls-time"><b>' + tt.t + "</b><span>" + tt.ap + "</span></div>" +
+        '<div class="cls-main"><p class="cls-name">' + c.title + '</p><p class="cls-meta"><span class="lvl lvl-' + c.lvl + '">' + c.L.name + "</span>" + c.L.dur + " min · with " + c.who + "</p>" +
+        '<div class="cap' + (left <= 2 ? " low" : "") + '"><span class="bar" aria-hidden="true"><i style="--f:' + (c.taken / 12).toFixed(3) + '"></i></span><span class="cap-t">' + spotsText(c) + "</span></div></div>" +
+        btn + (h ? '<p class="held">Reformer ' + h + " held for you — demo only, nothing booked.</p>" : "") + "</li>";
+    });
+    list.innerHTML = html;
+    if (!reduced) $$(".bar i", list).forEach(function(b){ var f = b.style.getPropertyValue("--f"); b.style.setProperty("--f", 0); requestAnimationFrame(function(){ requestAnimationFrame(function(){ b.style.setProperty("--f", f); }); }); });
+  }
+  function resetFilters(){
+    state.lvl = "all"; state.tod = "any";
+    $$("#lvlChips .chip").forEach(function(c){ c.setAttribute("aria-pressed", c.getAttribute("data-lvl") === "all" ? "true" : "false"); });
+    $$("#todChips .chip").forEach(function(c){ c.setAttribute("aria-pressed", c.getAttribute("data-tod") === "any" ? "true" : "false"); });
+    renderClasses();
+  }
+  function findClass(id){ for (var i = 0; i < DAYS.length; i++) for (var k = 0; k < DAYS[i].classes.length; k++) if (DAYS[i].classes[k].id === id) return DAYS[i].classes[k]; return null; }
+  list.addEventListener("click", function(e){
+    var b = e.target.closest("[data-book]"), w = e.target.closest("[data-wait]");
+    if (b) openSheet(findClass(b.getAttribute("data-book")), b);
+    if (w && window.DemoKit) DemoKit.toast("Demo only — no waitlist spot was held. A real studio would text you if a reformer frees up.");
+  });
+  $("#startFound").addEventListener("click", function(){
+    state.lvl = "found";
+    $$("#lvlChips .chip").forEach(function(c){ c.setAttribute("aria-pressed", c.getAttribute("data-lvl") === "found" ? "true" : "false"); });
+    renderClasses();
+    $("#schedule").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+    $("#h-sched").tabIndex = -1; $("#h-sched").focus({ preventScroll: true });
+  });
+
+  /* ---------------- the reformer sheet ---------------- */
+  var sheet = $("#sheet"), scrim = $("#scrim"), floor = $("#floor"), confirmBtn = $("#confirm");
+  var ROW = ["front row", "middle row", "back row"], COL = ["by the door", "centre-left", "centre-right", "by the windows"];
+  var current = null, picked = null, opener = null;
+  function refSVG(){
+    return '<svg viewBox="0 0 40 96" aria-hidden="true"><rect class="frame" x="5" y="3" width="30" height="90" rx="12"/><path class="spr" d="M12 12h16M14 76l3 4 3-4 3 4 3-4"/><rect class="carr" x="9" y="28" width="22" height="38" rx="7"/><path class="spr" d="M14 26v-5M26 26v-5"/><circle class="who" cx="20" cy="40" r="6"/><path class="who" d="M11 60c1-8 5-11 9-11s8 3 9 11z"/></svg>';
+  }
+  function openSheet(c, from){
+    if (!c) return;
+    current = c; picked = held[c.id] || null; opener = from;
+    var tt = time12(c);
+    $("#sheetWhen").textContent = c.day + " · " + tt.t + " " + tt.ap + " · " + c.L.dur + " min";
+    $("#sheetT").textContent = c.title;
+    $("#sheetSub").textContent = c.L.name + " with " + c.who + " · " + (12 - c.taken) + " of 12 free";
+    var taken = {}, h = hash(c.id + "floor"), order = [];
+    for (var n = 1; n <= 12; n++) order.push(n);
+    order.sort(function(a, b){ return (hash(c.id + a) % 97) - (hash(c.id + b) % 97); });
+    order.slice(0, c.taken).forEach(function(n){ taken[n] = true; });
+    if (picked) delete taken[picked];
+    var html = "";
+    for (var r = 0; r < 3; r++) for (var col = 0; col < 4; col++) {
+      var num = r * 4 + col + 1, t = !!taken[num], sel = picked === num;
+      html += '<button class="ref" type="button" data-n="' + num + '"' + (t ? " disabled" : "") + ' aria-pressed="' + sel + '" aria-label="Reformer ' + num + ", " + ROW[r] + ", " + COL[col] + (t ? " — taken" : " — free") + '">' + refSVG() + '<span class="n" aria-hidden="true">' + num + '</span><span class="tick" aria-hidden="true"></span></button>';
+    }
+    floor.innerHTML = html;
+    updatePick();
+    scrim.hidden = false; sheet.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ scrim.classList.add("on"); sheet.classList.add("on"); }); });
+    var first = $(".ref[aria-pressed='true']", floor) || $(".ref:not(:disabled)", floor);
+    setTimeout(function(){ (first || $("#closeSheet")).focus({ preventScroll: true }); }, reduced ? 0 : 60);
+  }
+  function closeSheet(){
+    scrim.classList.remove("on"); sheet.classList.remove("on");
+    document.documentElement.style.overflow = "";
+    var done = function(){ sheet.hidden = true; scrim.hidden = true; };
+    if (reduced) done(); else setTimeout(done, 420);
+    if (opener && document.body.contains(opener)) opener.focus({ preventScroll: true });
+    else { var again = current && $('[data-book="' + current.id + '"]'); if (again) again.focus({ preventScroll: true }); }
+  }
+  function updatePick(){
+    $$(".ref", floor).forEach(function(b){ b.setAttribute("aria-pressed", String(+b.getAttribute("data-n") === picked)); });
+    confirmBtn.disabled = !picked;
+    $("#pickTxt").textContent = picked ? "Reformer " + picked + " — " + ROW[Math.floor((picked - 1) / 4)] + ", " + COL[(picked - 1) % 4] + "." : "No reformer chosen yet.";
+    confirmBtn.textContent = picked ? "Hold reformer " + picked : "Hold this reformer";
+  }
+  floor.addEventListener("click", function(e){
+    var b = e.target.closest(".ref"); if (!b || b.disabled) return;
+    picked = +b.getAttribute("data-n"); updatePick();
+  });
+  floor.addEventListener("keydown", function(e){
+    var b = e.target.closest(".ref"); if (!b) return;
+    var n = +b.getAttribute("data-n"), dr = 0, dc = 0;
+    if (e.key === "ArrowRight") dc = 1; else if (e.key === "ArrowLeft") dc = -1; else if (e.key === "ArrowDown") dr = 1; else if (e.key === "ArrowUp") dr = -1; else return;
+    e.preventDefault();
+    var r = Math.floor((n - 1) / 4), c = (n - 1) % 4;
+    for (var step = 0; step < 12; step++) {
+      r += dr; c += dc;
+      if (r < 0 || r > 2 || c < 0 || c > 3) return;
+      var t = $('.ref[data-n="' + (r * 4 + c + 1) + '"]', floor);
+      if (t && !t.disabled) { t.focus(); return; }
+    }
+  });
+  confirmBtn.addEventListener("click", function(){
+    if (!current || !picked) return;
+    var first = !held[current.id];
+    held[current.id] = picked;
+    if (first) current.taken = Math.min(12, current.taken + 1);
+    var tt = time12(current), msg = "Demo only — no class was booked. Reformer " + picked + " would be held for " + current.title + ", " + current.day + " at " + tt.t + " " + tt.ap + ".";
+    renderClasses();
+    closeSheet();
+    if (window.DemoKit) DemoKit.toast(msg, 4600);
+  });
+  $("#closeSheet").addEventListener("click", closeSheet);
+  scrim.addEventListener("click", closeSheet);
+  sheet.addEventListener("keydown", function(e){
+    if (e.key === "Escape") { e.preventDefault(); closeSheet(); return; }
+    if (e.key !== "Tab") return;
+    var f = $$("button:not(:disabled), [href], [tabindex]:not([tabindex='-1'])", sheet).filter(function(x){ return x.offsetParent !== null; });
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  /* ---------------- instructors ---------------- */
+  var TEAM = [
+    { n: "Mia", tags: ["found", "flow"], c: "#E1D6C6", hair: "bun", line: "Loves a long spine and a slow count. Your first Foundations class is probably hers." },
+    { n: "Tahlia", tags: ["flow", "burn"], c: "#C9CFBF", hair: "long", line: "Will find muscles you forgot about, then make you laugh about it." },
+    { n: "Josh", tags: ["burn"], c: "#D8CBB8", hair: "short", line: "Tempo, jump board and very specific opinions on playlists." },
+    { n: "Priya", tags: ["pre", "found"], c: "#E4DED3", hair: "pony", line: "Gentle, precise and big on breath — she teaches every Prenatal class." }
+  ];
+  var HAIR = {
+    bun: "M78 58a26 28 0 0 1 44 0M100 22a9 9 0 1 1 0 18",
+    long: "M74 60c0-22 12-32 26-32s26 10 26 32M74 60c-2 20-4 30-8 40M126 60c2 20 4 30 8 40",
+    short: "M76 56c2-16 12-24 24-24s22 8 24 24c-8-6-16-8-24-8s-16 2-24 8",
+    pony: "M76 58c0-18 10-28 24-28s24 10 24 28M124 50c10 4 16 14 14 30"
+  };
+  $("#teamList").innerHTML = TEAM.map(function(p){
+    return '<article class="person"><svg viewBox="0 0 200 150" style="--c:' + p.c + '" aria-hidden="true"><circle cx="150" cy="40" r="22" fill="#fff" opacity=".5"/><path class="draw" d="M100 90a22 26 0 1 0 0-52 22 26 0 1 0 0 52M60 150c4-28 20-44 40-44s36 16 40 44M92 96v10M108 96v10" pathLength="1"/><path class="draw" d="' + HAIR[p.hair] + '" pathLength="1"/></svg><h3>' + p.n + '</h3><div class="tags">' + p.tags.map(function(t){ return '<span class="lvl lvl-' + t + '">' + LEVEL[t].name + "</span>"; }).join("") + "</div><p>" + p.line + "</p></article>";
+  }).join("");
+
+  /* ---------------- nav state, app bar, line drawing ---------------- */
+  var appbar = $("#appbar");
+  window.addEventListener("scroll", function(){ appbar.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });
+  var navLinks = $$("#dock a, #railnav a");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var id = "#" + en.target.id;
+        navLinks.forEach(function(a){ var on = a.getAttribute("href") === id || (id === "#offer" && a.getAttribute("href") === "#team" && a.parentNode.id === "dock") || (id === "#faq" && a.getAttribute("href") === "#studio" && a.parentNode.id === "dock"); a.setAttribute("aria-current", on ? "true" : "false"); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    $$(".feed > section").forEach(function(s){ io.observe(s); });
+  }
+  if (!reduced && document.body.animate) {
+    $$(".hero .draw").forEach(function(p, i){
+      p.style.strokeDasharray = "1"; p.style.strokeDashoffset = "1";
+      p.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 560, delay: i * 45, easing: "cubic-bezier(.45,0,.25,1)", fill: "forwards" });
+    });
+  }
+  window.addEventListener("resize", movePill);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(movePill);
+  window.addEventListener("hd:brandchange", function(){ setTimeout(movePill, 30); });
+
+  selectDay(0);
+  var firstOpen = DAYS[0].classes.filter(function(c){ return !c.past; }).length;
+  if (!firstOpen) selectDay(1);
+})();
+</script>
+</body>
+</html>

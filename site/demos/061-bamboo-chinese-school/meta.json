@@ -1,0 +1,8 @@
+{
+  "id": "061",
+  "tech": ["Web Audio", "SVG", "CSS Grid", "Bilingual toggle", "Keyboard shortcuts", "IntersectionObserver", "Form logic"],
+  "features": ["sound", "game", "bilingual", "booking"],
+  "interaction": "Tap one of four tone cards (mā 妈, má 麻, mǎ 马, mà 骂) to hear a synthesised voice glide along that tone's pitch contour while a red dot rides the line, then play a five-round quiz: hear a mystery tone, pick the matching contour and collect red stars. Hover or tap 学 好 中 文 on the practice sheet for pinyin, meaning, stroke count and example words, and switch every string on the page between English and 中文.",
+  "fonts": ["ZCOOL KuaiLe", "Noto Sans SC"],
+  "notes": "Sound is Web Audio synthesis (sawtooth through formant filters) that plays only after a tap; the Sound on/off toggle silences it immediately. The enrol form ends in a demo message. Teachers, fees and term dates are fictional samples. The page is about 90 KB because every string ships in both languages; pinyin uses the system font because the web-font macron glyphs render misplaced."
+}

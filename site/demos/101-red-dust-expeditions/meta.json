@@ -1,0 +1,8 @@
+{
+  "id": "101",
+  "tech": ["Canvas 2D", "SVG", "Generative art", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["map", "story", "booking"],
+  "interaction": "Day 1–5 buttons (or 'Drive the whole loop') send a 4WD along a dotted route on a generated topographic map while a rolling odometer counts the kilometres; each stop card shows the camp, distance, driving time, highlights and an illustrative elevation profile, and the itinerary, packing checklist and booking form (sample prices, live departures) all work, ending in a demo toast.",
+  "fonts": ["Alumni Sans", "Open Sans"],
+  "notes": "Fictional operator; the map, place names of camps, elevations, prices and departures are illustrative samples. No sacred sites are named or drawn. Booking ends in a demo state — nothing is sent."
+}

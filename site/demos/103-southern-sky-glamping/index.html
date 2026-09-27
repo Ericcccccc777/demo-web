@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en-AU" data-mode="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="103">
+<meta name="demo:brand" content="Southern Sky Glamping">
+<title>Southern Sky Glamping — eco glamping, Grampians VIC</title>
+<meta name="description" content="A fictional eco glamping retreat in the Grampians, Victoria, with a day/night switch and a Southern Cross game that shows how to find south.">
+<meta name="theme-color" content="#0B1026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--disp:"Philosopher","Palatino Linotype",Georgia,serif;--ui:"Lato","Helvetica Neue",Arial,sans-serif;--gut:clamp(16px,4vw,56px)}
+html[data-mode=night]{--bg:#0B1026;--bg2:#121A3E;--surf:#161E45;--text:#F7F3E3;--muted:#BFC3DA;--acc:#FF8C42;--onacc:#0B1026;--line:rgba(247,243,227,.16);--tentA:#FFB36B;--tentB:#FF8C42;--tentS:#3B2A2A;--chart:#0A0F2A;--chart2:#131B45;--star:#F7F3E3;--cl:#F7F3E3;--con:#FF8C42}
+html[data-mode=day]{--bg:#F4EBD9;--bg2:#EADFC6;--surf:#FFFBF2;--text:#1B2350;--muted:#4E5475;--acc:#B24A14;--onacc:#FFFFFF;--line:rgba(27,35,80,.18);--tentA:#F6EEDD;--tentB:#E6D8BE;--tentS:#1B2350;--chart:#F3E8D0;--chart2:#EADCBF;--star:#1B2350;--cl:#1B2350;--con:#B24A14}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17.5px/1.65 var(--ui);overflow-x:hidden;transition:background-color .8s,color .8s}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+svg,canvas{display:block}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{font-family:var(--disp);font-weight:700;margin:0;letter-spacing:.005em;line-height:1.05}
+h2{font-size:clamp(34px,4.4vw,60px)}
+.label{font:700 12.5px/1.2 var(--ui);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin:0 0 12px;transition:color .8s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--acc);background:var(--acc);color:var(--onacc);font:700 15px/1 var(--ui);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .15s}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--text)}
+.fine{font-size:14px;color:var(--muted)}
+
+/* header */
+.top{position:absolute;top:0;left:0;right:0;z-index:10}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:78px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand svg{flex:none;width:34px;height:34px}
+.brand span{font:700 21px/1.1 var(--disp);overflow-wrap:anywhere}
+.top nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 13px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.top nav a:hover{background:var(--line)}
+.tr{display:flex;align-items:center;gap:10px}
+.dn{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:4px 14px 4px 4px;border-radius:999px;border:1.5px solid var(--line);background:rgba(11,16,38,.35);cursor:pointer;font:700 14px/1 var(--ui)}
+html[data-mode=day] .dn{background:rgba(255,251,242,.6)}
+.dn .knob{position:relative;width:58px;height:32px;border-radius:999px;background:#1B2350;box-shadow:inset 0 0 0 1px rgba(247,243,227,.2);transition:background .6s}
+html[data-mode=day] .dn .knob{background:#8EC5E8}
+.dn .knob i{position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:#F7F3E3;box-shadow:inset -6px -3px 0 #C9C6D8;transition:transform .5s cubic-bezier(.4,1.4,.5,1),background .5s,box-shadow .5s}
+html[data-mode=day] .dn .knob i{transform:translateX(26px);background:#FFC04D;box-shadow:0 0 0 4px rgba(255,192,77,.35)}
+
+/* hero */
+.hero{position:relative;height:clamp(640px,100vh,940px);overflow:hidden;background:linear-gradient(#060A1C 0%,#0B1026 35%,#1B2350 78%,#34305E 100%);transition:background .8s}
+html[data-mode=day] .hero{background:linear-gradient(#7DB9E2 0%,#B9DDEF 55%,#F1E3C4 100%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;transition:opacity 1s}
+html[data-mode=day] .hero canvas{opacity:0}
+.land{position:absolute;left:0;right:0;bottom:0;height:58%}
+.land svg{width:100%;height:100%}
+.hero-copy{position:relative;z-index:3;text-align:center;padding-top:clamp(120px,17vh,170px);max-width:900px;margin:0 auto}
+.hero h1{font-size:clamp(44px,6.4vw,92px)}
+.hero .sub{margin:18px auto 0;max-width:46ch;font-size:clamp(17px,1.35vw,20px);color:var(--muted)}
+.hero .ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}
+.sunD{opacity:0;transition:opacity .9s}
+html[data-mode=day] .sunD{opacity:1}
+.glow{transition:opacity .8s}
+html[data-mode=day] .glow{opacity:0}
+.fl{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1.3s ease-in-out infinite alternate}
+.fl.b{animation-duration:.9s;animation-delay:-.4s}
+@keyframes flick{0%{transform:scale(1,1)}50%{transform:scale(.92,1.08)}100%{transform:scale(1.05,.94)}}
+html[data-mode=day] .fl{animation-play-state:paused;opacity:.35}
+.f-ridge{fill:#141A3A;transition:fill .8s}.f-hill{fill:#0F1430;transition:fill .8s}.f-tree{fill:#070A1C;transition:fill .8s}.f-ground{fill:#0A0E24;transition:fill .8s}.f-trunk{fill:#070A1C;transition:fill .8s}
+html[data-mode=day] .f-ridge{fill:#8A9A86}html[data-mode=day] .f-hill{fill:#6E8A5A}html[data-mode=day] .f-tree{fill:#4F6F4A}html[data-mode=day] .f-ground{fill:#C9B27B}html[data-mode=day] .f-trunk{fill:#DCD2C2}
+.t-fill{fill:url(#tg);transition:opacity .8s}
+.t-day{fill:#F4ECDD;opacity:0;transition:opacity .8s}
+html[data-mode=day] .t-day{opacity:1}
+.t-line{fill:none;stroke:#07091A;stroke-width:2.5;stroke-linejoin:round;transition:stroke .8s}
+html[data-mode=day] .t-line{stroke:#3A3A4A}
+
+/* sections */
+section{padding:clamp(64px,8vw,120px) 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end;margin-bottom:40px}
+.head>p{margin:0;color:var(--muted);max-width:48ch;justify-self:end}
+.tents{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tent{border:1.5px solid var(--line);border-radius:26px;padding:22px;background:var(--surf);display:flex;flex-direction:column;gap:12px;transition:background .8s,border-color .8s}
+.tent .art{height:150px;border-radius:18px;background:radial-gradient(120% 90% at 50% 100%,rgba(255,140,66,.18),transparent 60%),var(--bg2);display:grid;place-items:end center;padding-bottom:14px;transition:background .8s}
+.tent .art svg{width:170px;height:120px}
+.tent h3{font-size:28px}
+.tent p{margin:0;color:var(--muted);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.chips li{font-size:13.5px;font-weight:700;padding:5px 11px;border-radius:999px;border:1px solid var(--line)}
+.tent .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+.tent .pr{font:700 30px/1 var(--disp)}
+.tent .pr small{font:400 14px var(--ui);color:var(--muted);margin-left:4px}
+.incl{background:var(--bg2);transition:background .8s}
+.i-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 30px;list-style:none;margin:0;padding:0}
+.i-grid li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.i-grid svg{width:44px;height:44px;color:var(--acc);transition:color .8s}
+.i-grid b{display:block;font:700 19px/1.25 var(--disp)}
+.i-grid span{font-size:15px;color:var(--muted)}
+.night{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,80px);align-items:start}
+.sched{list-style:none;margin:0;padding:0;position:relative}
+.sched::before{content:"";position:absolute;left:78px;top:8px;bottom:8px;border-left:1.5px dashed var(--line)}
+.sched li{display:grid;grid-template-columns:64px 1fr;gap:30px;padding:0 0 26px;position:relative}
+.sched time{font:700 17px/1.3 var(--disp);color:var(--acc);text-align:right;transition:color .8s}
+.sched li::after{content:"";position:absolute;left:73px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--bg);transition:background .8s,box-shadow .8s}
+.sched b{display:block;font:700 20px/1.3 var(--disp)}
+.sched span{font-size:15.5px;color:var(--muted)}
+.walks{border:1.5px solid var(--line);border-radius:24px;padding:22px 24px;background:var(--surf);transition:background .8s}
+.walks h3{font-size:24px;margin-bottom:8px}
+.walks table{width:100%;border-collapse:collapse;font-size:15.5px}
+.walks td,.walks th{padding:10px 0;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.walks th{font-weight:700;padding-right:12px}
+.walks td{color:var(--muted)}
+.walks td:last-child{text-align:right;white-space:nowrap}
+
+/* star game */
+.gaze{background:linear-gradient(var(--bg),var(--bg2));transition:background .8s}
+.g-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(22px,3vw,44px);align-items:start}
+.win{position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:radial-gradient(120% 90% at 30% 20%,var(--chart2),var(--chart));box-shadow:0 30px 70px -40px rgba(0,0,0,.8),inset 0 0 0 1.5px var(--line);transition:background .8s}
+.win svg{position:absolute;inset:0;width:100%;height:100%}
+.g-star{fill:var(--star);transition:fill .8s}
+.g-glow{transition:opacity .8s}
+html[data-mode=day] .g-glow{opacity:0}
+.g-bg{fill:var(--star);opacity:.55;transition:fill .8s}
+.mw{transition:opacity .8s}
+html[data-mode=day] .mw{opacity:.35}
+.coal{transition:opacity .8s}
+html[data-mode=day] .coal{opacity:.18}
+.grat{stroke:var(--cl);opacity:0;transition:opacity .8s}
+html[data-mode=day] .grat{opacity:.14}
+.cline{stroke:var(--cl);stroke-width:2.2;stroke-linecap:round;transition:stroke .8s}
+.con{stroke:var(--con);stroke-width:2;stroke-dasharray:7 7;fill:none;transition:stroke .8s}
+.gnd{fill:#070A1C;transition:fill .8s}
+html[data-mode=day] .gnd{fill:#4F6F4A}
+.sb{position:absolute;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;border:0;background:transparent;cursor:pointer;padding:0}
+.sb::after{content:"";position:absolute;inset:6px;border-radius:50%;border:2px solid transparent;transition:border-color .2s,transform .2s}
+.sb:hover::after{border-color:var(--cl);opacity:.6}
+.sb:focus-visible{outline:none}
+.sb:focus-visible::after{border-color:var(--acc);border-width:3px}
+.sb.done::after{border-color:var(--acc);opacity:.9}
+.sb.nudge::after{border-color:var(--acc);animation:pulse 1.1s ease-in-out 3}
+@keyframes pulse{50%{transform:scale(1.35);opacity:.3}}
+.sb.no{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.lab{position:absolute;transform:translate(-50%,16px);font:700 13px/1.2 var(--ui);color:var(--text);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .4s;text-shadow:0 1px 6px var(--bg)}
+.lab.on{opacity:1}
+.win.zoomed .sb::after{opacity:0}
+.win.zoomed .lab:not(.big){opacity:0}
+.lab.big{font:700 15px/1.2 var(--disp);color:var(--acc);letter-spacing:.08em;text-transform:uppercase}
+.g-side{display:flex;flex-direction:column;gap:14px}
+.status{min-height:84px;margin:0;padding:16px 18px;border-radius:18px;background:var(--surf);border:1.5px solid var(--line);font-size:16.5px;transition:background .8s}
+.status b{display:block;font:700 13px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:6px}
+.g-btns{display:flex;flex-wrap:wrap;gap:8px}
+.how{list-style:none;margin:0;padding:0;counter-reset:h}
+.how li{counter-increment:h;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:15.5px;color:var(--muted);transition:color .4s}
+.how li::before{content:counter(h);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);font:700 14px/1 var(--disp);color:var(--text)}
+.how li.on{color:var(--text)}
+.how li.on::before{background:var(--acc);border-color:var(--acc);color:var(--onacc)}
+
+/* getting here */
+.route{width:100%;height:auto;margin-top:6px}
+.route text{font:700 14px var(--ui);fill:var(--text)}
+.route .sm{font:400 13px var(--ui);fill:var(--muted)}
+.gh{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,60px);align-items:center}
+.notes{list-style:none;margin:0;padding:0}
+.notes li{padding:12px 0;border-top:1px solid var(--line)}
+.notes b{display:block;font:700 18px/1.3 var(--disp)}
+.notes span{font-size:15.5px;color:var(--muted)}
+
+/* booking */
+.book{background:var(--bg2);transition:background .8s}
+.b-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,80px);align-items:start}
+form.bk{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:clamp(20px,3vw,34px);border-radius:26px;background:var(--surf);border:1.5px solid var(--line);transition:background .8s}
+form.bk label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+form.bk input,form.bk select{width:100%;min-height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);padding:10px 12px;font-size:16px;color-scheme:dark}
+html[data-mode=day] form.bk input,html[data-mode=day] form.bk select{color-scheme:light}
+form.bk .full{grid-column:1/-1}
+.est{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;padding:14px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)}
+.est b{font:700 34px/1 var(--disp)}
+.est span{font-size:15px;color:var(--muted)}
+footer{padding:clamp(48px,6vw,80px) 0 calc(36px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+.f-name{font:700 clamp(40px,7vw,100px)/1 var(--disp);margin:0;overflow-wrap:anywhere}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:26px;margin-top:30px}
+.f-grid h3{font:700 13px/1.2 var(--ui);letter-spacing:.14em;text-transform:uppercase;margin:0 0 8px;color:var(--acc)}
+.f-grid p{margin:0;font-size:15.5px;color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){.fl,.sb.nudge::after,.sb.no{animation:none}body,.hero,.btn{transition:none}}
+@media (max-width:1100px){.top nav{display:none}.i-grid{grid-template-columns:1fr 1fr}.g-grid{grid-template-columns:1fr}}
+@media (max-width:860px){.tents{grid-template-columns:1fr;max-width:560px}.night,.gh,.b-grid{grid-template-columns:1fr}.head{grid-template-columns:1fr}.head>p{justify-self:start}.f-grid{grid-template-columns:1fr 1fr}.f-grid>p{grid-column:1/-1}}
+@media (max-width:640px){
+body{font-size:16.5px}
+.top .wrap{min-height:66px}
+.brand span{font-size:18px}
+.dn{padding-right:10px;font-size:0;gap:0}
+.dn .t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tr .btn{display:none}
+.hero{height:auto;min-height:0}
+.hero-copy{padding:96px var(--gut) 0}
+.land{position:relative;height:300px;margin-top:10px}
+.hero h1{font-size:clamp(38px,11vw,50px)}
+.i-grid{grid-template-columns:1fr}
+.win{aspect-ratio:1/1.05;border-radius:18px}
+form.bk{grid-template-columns:1fr}
+.f-grid{grid-template-columns:1fr}
+.sched li{grid-template-columns:56px 1fr;gap:26px}
+.sched::before{left:70px}.sched li::after{left:65px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="#top"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 3 3 29h28Z" fill="#FF8C42"/><path d="M17 3v26M13 29l4-9 4 9" stroke="#0B1026" stroke-width="1.6" fill="none"/><circle cx="27" cy="7" r="1.6" fill="#F7F3E3"/><circle cx="30" cy="12" r="1" fill="#F7F3E3"/></svg><span data-brand>Southern Sky Glamping</span></a>
+<nav aria-label="Main"><ul><li><a href="#tents">Tents</a></li><li><a href="#included">Included</a></li><li><a href="#nights">Experiences</a></li><li><a href="#stars">Stargazing</a></li><li><a href="#here">Getting here</a></li></ul></nav>
+<div class="tr"><button class="dn" type="button" role="switch" aria-checked="true" id="dn" aria-label="Night sky"><span class="knob" aria-hidden="true"><i></i></span><span class="t" id="dnT">Night</span></button><a class="btn" href="#book">Book</a></div>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1" style="padding:0">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="hero-copy">
+<p class="label">Eco glamping · Grampians, Victoria</p>
+<h1 id="h1">Sleep under the Southern Cross.</h1>
+<p class="sub">Three canvas tents on a quiet bush block, a fire pit each, and a sky so dark you can see the Milky Way cast shadows.</p>
+<div class="ctas"><a class="btn" href="#tents">Choose a tent</a><a class="btn ghost" href="#stars">Find the Southern Cross</a></div>
+</div>
+<div class="land" aria-hidden="true"><svg viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" id="landSvg"></svg></div>
+</section>
+
+<section id="tents" aria-labelledby="tH">
+<div class="wrap">
+<div class="head"><div><p class="label">Three tents</p><h2 id="tH">Pick your canvas</h2></div><p>All three sit well apart on a 40-hectare bush block, each with its own deck, fire pit and a clear view south.</p></div>
+<div class="tents" id="tentList"></div>
+<p class="fine" style="margin-top:18px">Sample prices per night for two people, in AUD. Friday and Saturday nights add $40.</p>
+</div>
+</section>
+
+<section class="incl" id="included" aria-labelledby="iH">
+<div class="wrap">
+<div class="head"><div><p class="label">What’s included</p><h2 id="iH">Everything but the torch batteries</h2></div><p>Actually, we supply those too — red-light head torches keep your eyes adjusted to the dark.</p></div>
+<ul class="i-grid">
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 30V18h32v12M6 26h32M6 30v4M38 30v4M10 18v-4a3 3 0 0 1 3-3h7v7M24 18v-7h7a3 3 0 0 1 3 3v4" fill="none" stroke="currentColor" stroke-width="2"/></svg><div><b>Proper beds</b><span>Queen bed, cotton linen and wool blankets</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 8c3 5 8 7 8 13a8 8 0 0 1-16 0c0-3 2-5 3-7 1 3 2 4 4 5-1-4 0-8 1-11ZM10 38h24M14 34l16 4M30 34l-16 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><div><b>Your own fire pit</b><span>Split wood, kindling and a steel billy</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 16h28v6a14 14 0 0 1-28 0ZM36 18h3a3 3 0 0 1 0 6h-3M14 10c0-2 2-2 2-4M22 10c0-2 2-2 2-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><div><b>Breakfast hamper</b><span>Local sourdough, eggs, fruit and coffee</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 26 30 12l4 6-22 14ZM30 12l3-2 4 6-3 2M20 30l-4 10M22 29l6 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><div><b>Telescope loan</b><span>Borrow the camp scope and a star chart</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 6v6M22 12c-6 0-8 5-8 9h16c0-4-2-9-8-9ZM14 21v4M30 21v4M18 29l-2 8M26 29l2 8M22 29v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><div><b>Hot showers</b><span>Solar and gas, in a shared timber bathhouse</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="10" width="28" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 18h28M16 26h4M24 26h4" stroke="currentColor" stroke-width="2"/></svg><div><b>Camp kitchen</b><span>Fridge, gas burners, pots, pans and a long table</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 36h20M22 28v8" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="20" r="3" fill="currentColor"/></svg><div><b>Red-light torches</b><span>So your night vision survives the walk to the loo</span></div></li>
+<li><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 30h28M12 30V18l10-8 10 8v12M18 30v-7h8v7M32 8l-4 6h4l-4 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><div><b>Off-grid power</b><span>Solar lighting and USB charging in every tent</span></div></li>
+</ul>
+</div>
+</section>
+
+<section id="nights" aria-labelledby="nH">
+<div class="wrap night">
+<div><p class="label">Experiences</p><h2 id="nH">A night at camp</h2><p style="color:var(--muted);max-width:44ch;margin:18px 0 28px">No itinerary required — but here’s how a clear Saturday tends to go.</p>
+<ol class="sched">
+<li><time>6.40pm</time><div><b>Golden-hour wander</b><span>Kangaroos come out to graze on the flats below the tents.</span></div></li>
+<li><time>7.45pm</time><div><b>Fire, damper, stories</b><span>Light your fire pit or join the shared one near the kitchen.</span></div></li>
+<li><time>9.15pm</time><div><b>Telescope session</b><span>Saturdays, weather permitting: Saturn, star clusters and the Jewel Box.</span></div></li>
+<li><time>6.30am</time><div><b>Sunrise walk</b><span>Forty minutes up to the ridge lookout, back in time for the hamper.</span></div></li>
+</ol></div>
+<div class="walks"><h3>Bushwalks from your tent</h3>
+<table><caption class="sr">Walks starting at camp</caption>
+<tr><th scope="row">Creek loop</th><td>Easy, flat, great for kids</td><td>2 km</td></tr>
+<tr><th scope="row">Ridge lookout</th><td>Moderate, rocky steps near the top</td><td>4 km return</td></tr>
+<tr><th scope="row">Wildflower track</th><td>Easy, best Sept–Nov</td><td>3 km loop</td></tr>
+<tr><th scope="row">Guided dawn walk</th><td>Sat &amp; Sun, bring a warm layer</td><td>90 min</td></tr>
+</table>
+<p class="fine" style="margin:12px 0 0">Carry water, stay on marked tracks and check park alerts before you set out.</p></div>
+</div>
+</section>
+
+<section class="gaze" id="stars" aria-labelledby="sH">
+<div class="wrap">
+<div class="head"><div><p class="label">Stargazing</p><h2 id="sH">Find the Southern Cross</h2></div><p>Click or tap the stars in order — Tab and Enter work too. Draw the Cross and its two Pointers, and the sky will show you which way is south.</p></div>
+<div class="g-grid">
+<div>
+<div class="win" id="win"><svg id="sw" viewBox="-260 -148 470 264" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Star chart of Crux and the Pointers"></svg><div id="btns"></div></div>
+</div>
+<div class="g-side">
+<p class="status" id="status" role="status" aria-live="polite"><b>Step 1 of 6</b>Start at the top of the Cross: Gacrux, a slightly orange star.</p>
+<div class="g-btns"><button class="btn ghost" type="button" id="hintBtn">Show me the next star</button><button class="btn ghost" type="button" id="resetBtn">Start again</button></div>
+<h3 style="font-size:22px;margin-top:6px">Using the Cross to find south</h3>
+<ol class="how" id="how">
+<li>Find the long axis of the Cross, from Gacrux at the top to Acrux at the foot.</li>
+<li>Extend that line about four and a half times its own length.</li>
+<li>Draw a line at right angles through the middle of the two Pointers.</li>
+<li>Where the lines meet is roughly the South Celestial Pole — the point the whole sky turns around.</li>
+<li>Drop straight down to the horizon. You’re facing (roughly) south.</li>
+</ol>
+<p class="fine" style="margin:0">From the Grampians the Cross never sets — it wheels around the pole all night. General astronomy only: for navigation, carry a map and compass.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="here" aria-labelledby="gH">
+<div class="wrap gh">
+<div><p class="label">Getting here</p><h2 id="gH">Three hours from Melbourne</h2>
+<svg class="route" viewBox="0 0 640 170" aria-hidden="true">
+<path d="M60 120C140 118 170 70 250 76S380 120 450 96 560 48 606 52" fill="none" stroke="var(--acc)" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+<g fill="var(--text)"><circle cx="60" cy="120" r="7"/><circle cx="250" cy="76" r="7"/><circle cx="450" cy="96" r="7"/></g>
+<path d="M610 36l-12 22h24Z" fill="var(--acc)"/>
+<text x="60" y="150" text-anchor="middle">Melbourne</text><text class="sm" x="60" y="166" text-anchor="middle">start</text>
+<text x="250" y="54" text-anchor="middle">Ballarat</text><text class="sm" x="250" y="106" text-anchor="middle">~1 hr 30</text>
+<text x="450" y="126" text-anchor="middle">Ararat</text><text class="sm" x="450" y="142" text-anchor="middle">~2 hr 20</text>
+<text x="610" y="84" text-anchor="middle">Camp</text><text class="sm" x="610" y="100" text-anchor="middle">~3 hr</text>
+</svg>
+<p class="fine">Drive times are approximate via the Western Highway. Exact directions are sent with your booking.</p></div>
+<ul class="notes">
+<li><b>Last 4 km is gravel</b><span>Fine for any car in dry weather — take it slowly after rain.</span></li>
+<li><b>Arrive before dark</b><span>Check-in 2–6pm, so you can find your tent while it’s light.</span></li>
+<li><b>Supplies</b><span>Nearest fuel and groceries are about 20 minutes away in town.</span></li>
+<li><b>Reception</b><span>Patchy at the tents; Wi-Fi at the camp kitchen for emergencies.</span></li>
+</ul>
+</div>
+</section>
+
+<section class="book" id="book" aria-labelledby="bH">
+<div class="wrap b-grid">
+<div><p class="label">Book</p><h2 id="bH">Pick your nights</h2><p style="color:var(--muted);max-width:40ch;margin:18px 0 0">Choose a tent and dates for a sample price. New-moon weekends are darkest — and go first.</p>
+<p class="fine" style="margin-top:22px">Phone <a href="tel:+61355503294">(03) 5550 3294</a> · <a href="mailto:stay@example.com">stay@example.com</a></p></div>
+<form class="bk" id="bk" novalidate data-kit-ignore>
+<div><label for="bIn">Check in</label><input type="date" id="bIn" name="in" required></div>
+<div><label for="bN">Nights</label><select id="bN" name="n"><option value="1">1 night</option><option value="2" selected>2 nights</option><option value="3">3 nights</option><option value="4">4 nights</option><option value="5">5 nights</option></select></div>
+<div class="full"><label for="bT">Tent</label><select id="bT" name="t"></select></div>
+<div><label for="bG">Guests</label><select id="bG" name="g"><option>2 adults</option><option>2 adults + 1 child</option><option>2 adults + 2 children</option><option>1 adult</option></select></div>
+<div><label for="bNm">Your name</label><input id="bNm" name="name" autocomplete="name"></div>
+<div class="est" aria-live="polite"><span id="bSum">Choose a date</span><b id="bTot">$0</b></div>
+<button class="btn full" type="submit">Request these nights</button>
+<p class="fine full" style="margin:0">Sample prices · concept demo — nothing is booked or charged.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p class="f-name" data-brand>Southern Sky Glamping</p>
+<div class="f-grid">
+<p>We acknowledge the Djab Wurrung and Jardwadjali peoples, Traditional Owners of Gariwerd, and pay our respects to their Elders past and present.</p>
+<div><h3>Find us</h3><p>Grampians, Victoria<br><a href="tel:+61355503294">(03) 5550 3294</a><br><a href="mailto:stay@example.com">stay@example.com</a></p></div>
+<div><h3>Concept demo</h3><p>A fictional business. Sample prices; star positions are real, drawn for general interest.</p></div>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s);},$$=function(s){return [].slice.call(document.querySelectorAll(s));};
+var html=document.documentElement,reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function rng(seed){var s=seed>>>0;return function(){s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296;};}
+var TENTS=[
+{k:"bell",n:"Bell tent",p:210,d:"A round canvas bell tent with a queen bed, rugs and a little wood stove for cold nights.",c:["Sleeps 2","Wood stove","Shared bathhouse"],path:'<path class="t-fill" d="M14 104C20 80 44 50 80 22 116 50 140 80 146 104Z"/><path class="t-day" d="M14 104C20 80 44 50 80 22 116 50 140 80 146 104Z"/><path class="t-line" d="M14 104C20 80 44 50 80 22 116 50 140 80 146 104ZM80 22V10M66 104 80 66l14 38M14 104 2 112M146 104l12 8"/>'},
+{k:"safari",n:"Safari suite",p:340,d:"A raised safari tent with an ensuite, a deep-set deck and room for the kids on a daybed.",c:["Sleeps 2–4","Ensuite","Wood heater"],path:'<path class="t-fill" d="M8 60 38 30h92l22 30v44H8Z"/><path class="t-day" d="M8 60 38 30h92l22 30v44H8Z"/><path class="t-line" d="M8 60 38 30h92l22 30v44H8ZM8 60h144M60 104V72h36v32M38 30v30M130 30v30M0 110h160"/>'},
+{k:"dome",n:"Stargazer dome",p:390,d:"A geodesic dome with a clear roof panel above the bed and a telescope on the deck.",c:["Sleeps 2","Clear roof","Telescope"],path:'<path class="t-fill" d="M18 104a62 62 0 0 1 124 0Z"/><path class="t-day" d="M18 104a62 62 0 0 1 124 0Z"/><path class="t-line" d="M18 104a62 62 0 0 1 124 0ZM34 70h92M52 50l28 54 28-54M80 42v8M66 104l14-26 14 26"/><ellipse cx="80" cy="56" rx="22" ry="10" fill="#9FC7EA" opacity=".55"/>'}];
+var tl=$("#tentList"),sel=$("#bT");
+TENTS.forEach(function(t){var a=document.createElement("article");a.className="tent";a.innerHTML='<div class="art"><svg viewBox="-4 0 168 116" aria-hidden="true">'+t.path+'</svg></div><h3>'+t.n+'</h3><p>'+t.d+'</p><ul class="chips">'+t.c.map(function(c){return "<li>"+c+"</li>";}).join("")+'</ul><div class="row"><span class="pr">$'+t.p+'<small>/ night</small></span><button type="button" class="btn ghost" data-t="'+t.k+'">Choose</button></div>';tl.appendChild(a);
+var o=document.createElement("option");o.value=t.k;o.textContent=t.n+" — from $"+t.p+"/night";sel.appendChild(o);});
+$$("[data-t]").forEach(function(b){b.addEventListener("click",function(){sel.value=b.dataset.t;est();document.getElementById("book").scrollIntoView({behavior:reduce?"auto":"smooth"});});});
+
+/* ---------- landscape ---------- */
+(function(){var r=rng(11),s='<defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD29A"/><stop offset="1" stop-color="#FF8C42"/></linearGradient><radialGradient id="tglow"><stop offset="0" stop-color="#FF9A4D" stop-opacity=".55"/><stop offset="1" stop-color="#FF8C42" stop-opacity="0"/></radialGradient></defs>';
+s+='<circle class="sunD" cx="1180" cy="90" r="46" fill="#FFD36B"/><circle class="sunD" cx="1180" cy="90" r="80" fill="#FFE7A6" opacity=".35"/>';
+s+='<path class="f-ridge" d="M0 250 90 236 170 190 230 204 330 150 410 176 470 140 560 170 640 150 700 178 780 160 850 196 960 168 1030 186 1110 150 1190 170 1280 150 1360 186 1440 176V520H0Z"/>';
+s+='<path class="f-hill" d="M0 330C160 300 300 322 460 300S760 316 900 296 1200 318 1440 300V520H0Z"/>';
+function gum(x,base,h,k){var t='<path class="f-trunk" d="M'+(x-6*k)+' '+base+'C'+(x-4*k)+' '+(base-h*.4)+' '+(x-8*k)+' '+(base-h*.7)+' '+(x-2*k)+' '+(base-h*.9)+'L'+(x+4*k)+' '+(base-h*.9)+'C'+(x+2*k)+' '+(base-h*.6)+' '+(x+8*k)+' '+(base-h*.4)+' '+(x+7*k)+' '+base+'Z"/>';
+for(var i=0;i<6;i++){var cx=x+(r()-.5)*h*.55,cy=base-h*(.62+r()*.38);for(var j=0;j<9;j++){t+='<ellipse class="f-tree" cx="'+(cx+(r()-.5)*h*.22).toFixed(1)+'" cy="'+(cy+(r()-.5)*h*.1).toFixed(1)+'" rx="'+(h*(.05+r()*.05)).toFixed(1)+'" ry="'+(h*(.035+r()*.03)).toFixed(1)+'"/>';}}
+return t;}
+s+=gum(150,470,360,1.4)+gum(330,452,230,1)+gum(1250,466,380,1.5)+gum(1390,470,250,1.1)+gum(1030,436,190,.8)+gum(430,440,200,.85);
+s+='<path class="f-ground" d="M0 440C220 418 520 432 720 424S1180 416 1440 432V520H0Z"/>';
+[[540,420,.8],[760,410,.9],[980,414,.85]].forEach(function(p,i){var tt=TENTS[i];s+='<ellipse class="glow" cx="'+p[0]+'" cy="'+(p[1]+4)+'" rx="'+(150*p[2])+'" ry="'+(40*p[2])+'" fill="url(#tglow)"/><g transform="translate('+(p[0]-80*p[2])+' '+(p[1]-112*p[2])+') scale('+p[2]+')">'+tt.path+'</g>';});
+s+='<g transform="translate(660 440)"><ellipse class="glow" cx="0" cy="0" rx="70" ry="18" fill="url(#tglow)"/><path d="M-20 4 20-4M-20-4 20 4" stroke="#3B2A22" stroke-width="5" stroke-linecap="round"/><path class="fl" d="M0-2C-10-12-4-22 0-34 4-22 10-12 0-2Z" fill="#FF8C42"/><path class="fl b" d="M0-2C-5-8-2-14 0-20 2-14 5-8 0-2Z" fill="#FFD36B"/></g>';
+$("#landSvg").innerHTML=s;})();
+
+/* ---------- starfield ---------- */
+var cv=$("#sky"),ctx=cv.getContext("2d"),stars=[],mw=null,W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2),running=false,visible=true,raf=0;
+function build(){var b=cv.getBoundingClientRect();W=Math.round(b.width);H=Math.round(b.height);cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+var r=rng(5),n=Math.round(W*H/2300);stars=[];for(var i=0;i<n;i++){var y=Math.pow(r(),1.4)*H*.8;stars.push({x:r()*W,y:y,r:r()<.08?1.2+r()*1:.35+r()*.8,a:.35+r()*.6,ph:r()*6.28,sp:.6+r()*1.8});}
+mw=document.createElement("canvas");mw.width=W*dpr;mw.height=H*dpr;var m=mw.getContext("2d");m.setTransform(dpr,0,0,dpr,0,0);m.translate(W*.5,H*.34);m.rotate(-.42);
+for(var k=0;k<2600;k++){var gx=(r()-.5)*W*1.5,gy=(r()+r()+r()-1.5)*H*.09;m.fillStyle="rgba(230,226,255,"+(r()*.08).toFixed(3)+")";m.beginPath();m.arc(gx,gy,.6+r()*2.4,0,7);m.fill();}
+var g=m.createLinearGradient(0,-H*.14,0,H*.14);g.addColorStop(0,"rgba(0,0,0,0)");g.addColorStop(.5,"rgba(180,170,230,.07)");g.addColorStop(1,"rgba(0,0,0,0)");m.fillStyle=g;m.fillRect(-W,-H*.14,W*2,H*.28);
+draw(0);}
+function draw(t){ctx.clearRect(0,0,W,H);ctx.drawImage(mw,0,0,W,H);
+for(var i=0;i<stars.length;i++){var s=stars[i],a=reduce?s.a:s.a*(.72+.28*Math.sin(t*.001*s.sp+s.ph));ctx.globalAlpha=a;ctx.fillStyle="#F7F3E3";ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,7);ctx.fill();}ctx.globalAlpha=1;}
+function loop(t){if(!running)return;draw(t);raf=requestAnimationFrame(loop);}
+function sync(){var want=!reduce&&visible&&!document.hidden&&html.dataset.mode==="night";if(want&&!running){running=true;raf=requestAnimationFrame(loop);}else if(!want&&running){running=false;cancelAnimationFrame(raf);}}
+build();
+if("IntersectionObserver" in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting;sync();}).observe(cv);
+document.addEventListener("visibilitychange",sync);
+var rt;window.addEventListener("resize",function(){clearTimeout(rt);rt=setTimeout(function(){var b=cv.getBoundingClientRect();if(Math.abs(b.width-W)>30||Math.abs(b.height-H)>60)build();if(!busy)setVB(step>=6?V2():V1());},200);});
+
+/* ---------- day / night ---------- */
+var dn=$("#dn");
+function setMode(m,save){html.dataset.mode=m;dn.setAttribute("aria-checked",m==="night"?"true":"false");$("#dnT").textContent=m==="night"?"Night":"Day";
+var tc=document.querySelector('meta[name="theme-color"]');if(tc)tc.setAttribute("content",m==="night"?"#0B1026":"#F4EBD9");if(save){try{localStorage.setItem("ssg-mode",m);}catch(e){}}sync();}
+dn.addEventListener("click",function(){setMode(html.dataset.mode==="night"?"day":"night",true);});
+try{var sm=localStorage.getItem("ssg-mode");if(sm==="day"||sm==="night")setMode(sm,false);}catch(e){}
+sync();
+
+/* ---------- Southern Cross game ---------- */
+var S=[
+{n:"Gacrux",x:115.9,y:-75.1,m:1.64,d:"top of the Cross",h:"Start at the top of the Cross: Gacrux, a slightly orange star."},
+{n:"Acrux",x:105.1,y:30.2,m:.77,d:"foot of the Cross",h:"Now the foot of the Cross: Acrux, the brightest of the four."},
+{n:"Imai",x:146.5,y:-38.9,m:2.79,d:"right arm of the Cross",h:"Across the arms: start with Imai, the faintest star, on the right."},
+{n:"Mimosa",x:71.1,y:-36,m:1.25,d:"left arm of the Cross",h:"Then Mimosa, the bright blue-white star on the left arm."},
+{n:"Alpha Centauri",x:-168.2,y:5.4,m:-.27,d:"outer Pointer",h:"Now the Pointers. Find Alpha Centauri — the brightest star out to the left."},
+{n:"Hadar",x:-94.4,y:-20.5,m:.61,d:"inner Pointer",h:"Last one: Hadar, the inner Pointer, between Alpha Centauri and the Cross."}];
+var LINES=[[0,1],[2,3],[4,5]],I={x:54.6,y:521.3},MID={x:(S[4].x+S[5].x)/2,y:(S[4].y+S[5].y)/2},HOR=660;
+var sw=$("#sw"),win=$("#win"),bt=$("#btns"),step=0,vb=null,lines=[],labels=[],busy=false;
+(function(){var r=rng(21),s='<defs><radialGradient id="sg"><stop offset="0" stop-color="#F7F3E3" stop-opacity=".9"/><stop offset=".3" stop-color="#C9D4FF" stop-opacity=".35"/><stop offset="1" stop-color="#C9D4FF" stop-opacity="0"/></radialGradient><radialGradient id="cs"><stop offset="0" stop-color="#05081A" stop-opacity=".85"/><stop offset=".6" stop-color="#05081A" stop-opacity=".45"/><stop offset="1" stop-color="#05081A" stop-opacity="0"/></radialGradient><radialGradient id="mwg"><stop offset="0" stop-color="#B9B4F0" stop-opacity=".22"/><stop offset="1" stop-color="#B9B4F0" stop-opacity="0"/></radialGradient></defs>';
+s+='<g class="grat" fill="none" stroke-width=".8">';for(var g=-1200;g<=1200;g+=100)s+='<path d="M'+g+' -900V900"/><path d="M-1200 '+g+'H1200"/>';s+='</g>';
+s+='<g class="mw" transform="rotate(6.4 108 24)">';for(var k=0;k<14;k++)s+='<ellipse cx="'+(-700+k*110+(r()-.5)*40)+'" cy="'+(24+(r()-.5)*40)+'" rx="'+(160+r()*90)+'" ry="'+(70+r()*50)+'" fill="url(#mwg)"/>';s+='</g>';
+s+='<ellipse class="coal" cx="55.8" cy="17" rx="30" ry="24" fill="url(#cs)"/>';
+for(var i=0;i<260;i++){var x=-900+r()*1800,y=-560+r()*1260;s+='<circle class="g-bg" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+(.5+r()*r()*1.8).toFixed(2)+'"/>';}
+[[126,-13.8,3.59],[-52.2,-148.2,2.29],[66.9,131.1,2.69],[55.1,110.8,3.04],[113.1,-224.2,2.17],[201.5,-174.4,2.6],[203.7,59.8,3.13],[-108.7,-256.2,2.55]].forEach(function(c){s+='<circle class="g-star" cx="'+c[0]+'" cy="'+c[1]+'" r="'+Math.max(1.6,5-c[2]*1.1).toFixed(2)+'"/>';});
+s+='<g id="lineG"></g><g id="conG" fill="none"></g>';
+S.forEach(function(st){var rr=Math.max(2.4,5.6-st.m*1.3);s+='<circle class="g-glow" cx="'+st.x+'" cy="'+st.y+'" r="'+(rr*4.2).toFixed(1)+'" fill="url(#sg)"/><circle class="g-star" cx="'+st.x+'" cy="'+st.y+'" r="'+rr.toFixed(2)+'"'+(st.n==="Gacrux"?' style="fill:#FFD9B0"':'')+'/>';});
+s+='<path class="gnd" d="M-1400 '+HOR+'C-900 '+(HOR-30)+' -500 '+(HOR+10)+' -100 '+(HOR-14)+'S500 '+(HOR+6)+' 1400 '+(HOR-20)+'V1400H-1400Z"/>';
+for(var t=0;t<7;t++){var tx=-600+t*200+(r()-.5)*80,th=40+r()*50;s+='<path class="gnd" d="M'+(tx-3)+' '+(HOR+2)+'l2 -'+th+'h2l2 '+th+'Z"/><ellipse class="gnd" cx="'+tx+'" cy="'+(HOR-th-8)+'" rx="'+(18+r()*14)+'" ry="'+(12+r()*8)+'"/>';}
+sw.innerHTML=s;
+S.forEach(function(st,i){var b=document.createElement("button");b.type="button";b.className="sb";b.dataset.i=i;b.setAttribute("aria-label",st.n+", "+st.d);bt.appendChild(b);
+var l=document.createElement("span");l.className="lab";l.textContent=st.n;l.setAttribute("aria-hidden","true");bt.appendChild(l);labels.push(l);
+b.addEventListener("click",function(){pick(i,b);});});
+["scp","south","crux","ptr"].forEach(function(k){var l=document.createElement("span");l.className="lab big";l.dataset.k=k;l.textContent={scp:"South Celestial Pole",south:"South",crux:"Southern Cross",ptr:"Pointers"}[k];l.setAttribute("aria-hidden","true");bt.appendChild(l);});
+})();
+function aspect(){var b=win.getBoundingClientRect();return b.width/Math.max(1,b.height);}
+function fit(cx,cy,w,h){var a=aspect();if(w/h>a)h=w/a;else w=h*a;return {x:cx-w/2,y:cy-h/2,w:w,h:h};}
+function V1(){return aspect()<1.2?fit(-25,-22,380,300):fit(-30,-24,480,250);}
+function V2(){return aspect()<1.2?fit(-20,300,420,880):fit(-20,290,560,860);}
+function setVB(v){vb=v;sw.setAttribute("viewBox",v.x.toFixed(2)+" "+v.y.toFixed(2)+" "+v.w.toFixed(2)+" "+v.h.toFixed(2));placeAll();}
+function pos(el,x,y){el.style.left=((x-vb.x)/vb.w*100).toFixed(3)+"%";el.style.top=((y-vb.y)/vb.h*100).toFixed(3)+"%";}
+function placeAll(){if(!vb)return;var bs=bt.querySelectorAll(".sb");S.forEach(function(st,i){pos(bs[i],st.x,st.y);pos(labels[i],st.x,st.y);});
+var sc=bt.querySelector('[data-k="scp"]'),so=bt.querySelector('[data-k="south"]');pos(sc,I.x,I.y);sc.style.transform="translate(-50%,14px)";pos(so,I.x,HOR);so.style.transform="translate(12px,-150%)";
+var cx=bt.querySelector('[data-k="crux"]'),pt=bt.querySelector('[data-k="ptr"]');pos(cx,112,-80);cx.style.transform="translate(-50%,-150%)";pos(pt,-131,-8);pt.style.transform="translate(-50%,-190%)";}
+function status(t,h){$("#status").innerHTML="<b>"+t+"</b>"+h;}
+function line(a,b,cls,dur,done){var el=document.createElementNS("http://www.w3.org/2000/svg","line");el.setAttribute("class",cls);el.setAttribute("x1",a.x);el.setAttribute("y1",a.y);el.setAttribute("x2",a.x);el.setAttribute("y2",a.y);
+(cls==="cline"?$("#lineG"):$("#conG")).appendChild(el);lines.push(el);
+if(reduce||!dur){el.setAttribute("x2",b.x);el.setAttribute("y2",b.y);if(done)done();return;}
+var t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.setAttribute("x2",a.x+(b.x-a.x)*e);el.setAttribute("y2",a.y+(b.y-a.y)*e);if(p<1)requestAnimationFrame(f);else if(done)done();})(t0);}
+function pick(i,b){if(busy||step>=6)return;
+if(i!==step){b.classList.remove("no");void b.offsetWidth;b.classList.add("no");status("Step "+(step+1)+" of 6","Not quite — that’s "+S[i].n+". "+S[step].h);return;}
+b.classList.add("done");labels[i].classList.add("on");step++;
+if(step%2===0){var L=LINES[step/2-1];line(S[L[0]],S[L[1]],"cline",520);}
+if(step<6){status("Step "+(step+1)+" of 6",(step===2?"That’s the long axis of the Cross. ":step===4?"The Cross is complete. ":"")+S[step].h);var nb=bt.querySelectorAll(".sb")[step];if(document.activeElement===b)nb.focus();}
+else{status("Found them all","You drew the Southern Cross and the Pointers. Watch how they point the way south…");construct();}}
+function tweenVB(to,dur,done){if(reduce){setVB(to);done();return;}var from=vb,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/dur),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;setVB({x:from.x+(to.x-from.x)*e,y:from.y+(to.y-from.y)*e,w:from.w+(to.w-from.w)*e,h:from.h+(to.h-from.h)*e});if(p<1)requestAnimationFrame(f);else done();})(t0);}
+var how=$$("#how li");
+function hl(n){how.forEach(function(li,k){li.classList.toggle("on",k<n);});}
+function construct(){busy=true;hl(1);
+setTimeout(function(){win.classList.add("zoomed");tweenVB(V2(),1400,function(){hl(2);bt.querySelector('[data-k="crux"]').classList.add("on");bt.querySelector('[data-k="ptr"]').classList.add("on");
+line(S[1],I,"con",900,function(){hl(3);
+var dx=S[5].x-S[4].x,dy=S[5].y-S[4].y,len=Math.sqrt(dx*dx+dy*dy);line({x:MID.x-(-dy/len)*40,y:MID.y-(dx/len)*40},I,"con",900,function(){hl(4);
+var ring=document.createElementNS("http://www.w3.org/2000/svg","circle");ring.setAttribute("cx",I.x);ring.setAttribute("cy",I.y);ring.setAttribute("r","12");ring.setAttribute("class","con");ring.style.strokeDasharray="none";$("#conG").appendChild(ring);lines.push(ring);
+bt.querySelector('[data-k="scp"]').classList.add("on");
+line(I,{x:I.x,y:HOR},"con",700,function(){hl(5);bt.querySelector('[data-k="south"]').classList.add("on");busy=false;
+status("That way is south","Long axis × 4½, a right angle through the Pointers, then straight down: that’s south. Press “Start again” to replay.");});});});});},reduce?0:500);}
+function reset(){busy=false;step=0;win.classList.remove("zoomed");lines.forEach(function(l){l.remove();});lines=[];labels.forEach(function(l){l.classList.remove("on");});$$(".lab.big").forEach(function(l){l.classList.remove("on");});
+$$(".sb").forEach(function(b){b.classList.remove("done","nudge","no");});hl(0);setVB(V1());status("Step 1 of 6",S[0].h);}
+$("#resetBtn").addEventListener("click",reset);
+$("#hintBtn").addEventListener("click",function(){if(step>=6){status("All found","You’ve found every star. Press “Start again” to play again.");return;}var b=$$(".sb")[step];b.classList.remove("nudge");void b.offsetWidth;b.classList.add("nudge");b.focus();status("Step "+(step+1)+" of 6","Here it is — "+S[step].n+", the "+S[step].d+".");});
+setVB(V1());
+
+/* ---------- booking ---------- */
+var DA=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function fmt(d){return DA[d.getDay()]+" "+d.getDate()+" "+MO[d.getMonth()];}
+var bIn=$("#bIn"),today=new Date();today.setHours(12,0,0,0);var first=new Date(today);while(first.getDay()!==5||first-today<4*864e5)first.setDate(first.getDate()+1);
+bIn.min=iso(today);bIn.value=iso(first);
+function est(){var v=bIn.value,n=+$("#bN").value,t=TENTS.filter(function(x){return x.k===sel.value;})[0]||TENTS[0];if(!v){$("#bSum").textContent="Choose a check-in date";$("#bTot").textContent="$0";return;}
+var p=v.split("-"),d=new Date(+p[0],+p[1]-1,+p[2],12),out=new Date(d),tot=0,we=0;for(var i=0;i<n;i++){var dd=new Date(d);dd.setDate(d.getDate()+i);var w=dd.getDay();if(w===5||w===6){tot+=t.p+40;we++;}else tot+=t.p;}out.setDate(d.getDate()+n);
+$("#bSum").textContent=fmt(d)+" → "+fmt(out)+" · "+n+" night"+(n>1?"s":"")+" · "+t.n+(we?" (incl. "+we+" weekend night"+(we>1?"s":"")+")":"");$("#bTot").textContent="$"+tot;}
+["bIn","bN","bT"].forEach(function(id){$("#"+id).addEventListener("change",est);});est();
+$("#bk").addEventListener("submit",function(e){e.preventDefault();if(!bIn.value){bIn.focus();return;}if(window.DemoKit)DemoKit.toast("Demo only — no booking was made and nothing was charged. "+$("#bSum").textContent+".");});
+})();
+</script>
+</body>
+</html>

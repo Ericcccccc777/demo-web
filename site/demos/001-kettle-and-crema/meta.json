@@ -1,0 +1,8 @@
+{
+  "id": "001",
+  "tech": ["Canvas 2D", "Pointer Events", "Keyboard shortcuts", "Physics", "Date logic", "IntersectionObserver", "SVG", "CSS Grid"],
+  "features": ["game"],
+  "interaction": "Press and drag inside the cup (or hold Space and steer with the arrow keys) to pour steamed milk onto crema — wiggles fold into rosetta leaves, a quick pull-through makes a heart, and a text line scores the pour ('Nice pour — 72% milk…'); 'Show me a heart' auto-pours one and 'Reset cup' starts again.",
+  "fonts": ["Shippori Mincho", "Figtree"],
+  "notes": "Milk is simulated with area-preserving marbling maths (layers pushed outward by new milk, dragged by the stream) rather than a full fluid solver. Open/closed status is computed in Melbourne time."
+}

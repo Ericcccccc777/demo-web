@@ -1,0 +1,8 @@
+{
+  "id": "031",
+  "tech": ["SVG", "SVG animation", "Generative art", "CSS Grid", "IntersectionObserver", "Date logic"],
+  "features": ["story", "customiser"],
+  "interaction": "A four-way season control (Summer, Autumn, Winter, Spring) repaints the illustrated Fremantle garden — sky, sea, grass and canopy recolour, each plant blooms or fades by its real flowering season, leaves fall in autumn, rain in winter, bees in spring — and swaps the seasonal care tips and filters the plant list to what's flowering now.",
+  "fonts": ["Gloock", "Karla"],
+  "notes": ""
+}

@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="022">
+<meta name="demo:brand" content="Throttle Up Rider Training">
+<title>Throttle Up Rider Training — motorcycle courses, Gold Coast</title>
+<meta name="description" content="Throttle Up Rider Training is a fictional Gold Coast motorcycle school with pre-learner, pre-provisional, refresher and cornering courses — and a tachometer you can rev.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --ink:#0D0D0D;--orange:#FF5F1F;--paper:#F2F0EA;--paper2:#E7E4DB;--sheet:#FBFAF6;--grey:#3A3936;
+  --disp:"Bebas Neue",Impact,"Arial Narrow",sans-serif;
+  --mono:"Space Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:clamp(20px,4vw,56px);--focus:var(--ink);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.6 var(--mono)}
+h1,h2,h3,p,ul,ol,dl,dd,figure,fieldset{margin:0}
+ul,ol{padding:0;list-style:none}
+fieldset{border:0;padding:0;min-width:0}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[id]{scroll-margin-top:24px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.ink{background:var(--ink);color:var(--paper);--focus:var(--orange)}
+.orange{background:var(--orange);color:var(--ink);--focus:var(--ink)}
+
+/* ---------- top bar ---------- */
+.bar{display:flex;align-items:center;gap:18px;padding:10px var(--pad);background:var(--ink);color:var(--paper);border-bottom:3px solid var(--orange);--focus:var(--orange)}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.tu{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--orange);color:var(--ink);font:400 22px/1 var(--disp);letter-spacing:.04em;transform:rotate(-8deg)}
+.mark small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;line-height:1.3}
+.nav{margin-left:auto;display:flex;gap:4px}
+.nav a{padding:10px 12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:700}
+.nav a:hover{background:var(--paper);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px;border:3px solid currentColor;background:transparent;font:700 13px/1.1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 70%,calc(100% - 14px) 100%,0 100%);transition:transform .12s}
+.btn:active{transform:translateY(2px)}
+.btn-o{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+.btn-ink{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.bar .btn{min-height:44px;padding:10px 16px}
+
+/* ---------- cover ---------- */
+main{display:block}
+.cover{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);grid-template-rows:auto 1fr;grid-template-areas:"l r" "b r";min-height:min(880px,calc(100vh - 66px));background:var(--ink);color:var(--paper);--focus:var(--orange);overflow:hidden}
+.cover::before{content:"";position:absolute;inset:0 auto auto 0;width:58%;height:60%;background:radial-gradient(circle,rgba(242,240,234,.16) 1.4px,transparent 1.8px) 0 0/9px 9px;-webkit-mask:radial-gradient(ellipse at 0 0,#000,transparent 70%);mask:radial-gradient(ellipse at 0 0,#000,transparent 70%);pointer-events:none}
+.cv-l{grid-area:l;position:relative;padding:40px var(--pad) 0}
+.kicker{display:flex;flex-wrap:wrap;gap:8px}
+.kicker span{padding:6px 10px;border:2px solid var(--paper);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.kicker span:first-child{background:var(--paper);color:var(--ink)}
+.mast{margin:20px 0 0;font:400 150px/.84 var(--disp);letter-spacing:.01em;text-transform:uppercase;color:var(--paper);text-shadow:6px 6px 0 var(--orange);overflow-wrap:normal}
+.mast.squeezed{overflow-wrap:anywhere}
+.cv-b{grid-area:b;position:relative;padding:22px var(--pad) 48px}
+.deck{max-width:56ch;font-size:15px;color:#DAD7CF}
+.lines{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;margin:22px 0 26px}
+.lines a{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:2px solid rgba(242,240,234,.28);text-decoration:none}
+.lines a:hover strong{color:var(--orange)}
+.lines b{font:400 34px/.9 var(--disp);color:var(--orange)}
+.lines strong{display:block;font:400 26px/1 var(--disp);letter-spacing:.03em;font-weight:400;transition:color .15s}
+.lines span{font-size:12.5px;line-height:1.45;color:#CFCBC2}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cv-r{grid-area:r;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-left:-12%;padding:44px var(--pad) 48px 22%;background:var(--orange);color:var(--ink);--focus:var(--ink);clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)}
+.cv-r::after{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(13,13,13,.3) 1.6px,transparent 2px) 0 0/10px 10px;-webkit-mask:radial-gradient(ellipse at 100% 100%,#000,transparent 62%);mask:radial-gradient(ellipse at 100% 100%,#000,transparent 62%);pointer-events:none}
+.stk{position:absolute;z-index:2;display:inline-block;padding:7px 11px;font:700 11px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;transform:rotate(var(--r,-4deg))}
+.stk-issue{top:22px;right:22px;background:var(--ink);color:var(--paper);--r:5deg}
+.stk-price{bottom:26px;right:24px;display:grid;place-content:center;width:104px;height:104px;border-radius:50%;background:var(--paper);border:3px solid var(--ink);text-align:center;--r:-12deg}
+.stk-price b{display:block;font:400 30px/.9 var(--disp);letter-spacing:.02em}
+.stk-plates{top:78px;right:36px;background:var(--paper);border:3px solid var(--ink);--r:-6deg}
+.barcode{position:absolute;left:26%;bottom:22px;z-index:1;font-size:9px;letter-spacing:.2em}
+.won .stk-price,.won .barcode{display:none}
+.barcode i{display:block;width:128px;height:38px;margin-bottom:4px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 7px,transparent 7px 9px,var(--ink) 9px 10px,transparent 10px 13px,var(--ink) 13px 16px,transparent 16px 17px)}
+
+/* ---------- rev machine ---------- */
+.rev{position:relative;z-index:1;width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center}
+.tach{position:relative;width:100%;max-width:420px;aspect-ratio:1;border-radius:50%;filter:drop-shadow(10px 10px 0 rgba(13,13,13,.9))}
+.tach svg{display:block;width:100%;height:100%}
+.readout{position:absolute;left:50%;top:73.5%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:6px 12px;border:2px solid var(--paper);background:var(--ink);color:var(--paper)}
+.readout output{font:700 20px/1 var(--mono);min-width:6ch;text-align:right;font-variant-numeric:tabular-nums}
+.readout span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#CFCBC2}
+.shift{width:12px;height:12px;border-radius:50%;background:#3A3936;border:2px solid var(--paper);transition:background .15s,box-shadow .15s}
+.tach.red .shift{background:var(--orange);box-shadow:0 0 12px 3px rgba(255,95,31,.8)}
+.tach.red .readout output{color:var(--orange)}
+#redzone{transition:stroke-width .2s}
+.tach.red #redzone{stroke-width:28}
+.rev-ctl{display:flex;align-items:center;gap:24px;margin-top:26px;width:100%}
+.revbtn{--p:0;position:relative;flex:none;display:grid;place-content:center;width:132px;height:132px;padding:0;border:0;border-radius:50%;background:var(--ink);color:var(--paper);cursor:pointer;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;box-shadow:0 9px 0 rgba(13,13,13,.45);transition:transform .08s,box-shadow .08s}
+.revbtn::before{content:"";position:absolute;inset:7px;border-radius:50%;background:conic-gradient(var(--paper) calc(var(--p) * 1%),rgba(242,240,234,.16) 0);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 10px),#000 calc(100% - 9px));mask:radial-gradient(farthest-side,transparent calc(100% - 10px),#000 calc(100% - 9px))}
+.revbtn.red::before{background:conic-gradient(var(--orange) calc(var(--p) * 1%),rgba(242,240,234,.16) 0)}
+.revbtn.on{transform:translateY(6px);box-shadow:0 3px 0 rgba(13,13,13,.45)}
+.revbtn:focus-visible{outline:4px solid var(--ink);outline-offset:6px}
+.rb-t{font:400 54px/.86 var(--disp);letter-spacing:.05em;text-align:center}
+.rb-s{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;text-align:center}
+.rev-side{display:grid;gap:10px;min-width:0}
+.snd{display:inline-flex;align-items:center;gap:9px;justify-self:start;min-height:44px;padding:8px 14px;border:3px solid var(--ink);background:transparent;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.snd svg{width:20px;height:20px}
+.snd[aria-pressed="true"]{background:var(--ink);color:var(--orange)}
+.snd .w{display:none}.snd[aria-pressed="true"] .w{display:inline}.snd[aria-pressed="true"] .x{display:none}
+.hint{font-size:12.5px;line-height:1.5}
+.voucher{position:relative;width:100%;margin-top:22px;padding:16px 18px;background:var(--ink);color:var(--paper);border:3px dashed var(--paper);--focus:var(--orange)}
+.voucher::before,.voucher::after{content:"";position:absolute;top:50%;width:22px;height:22px;margin-top:-11px;border-radius:50%;background:var(--orange)}
+.voucher::before{left:-13px}.voucher::after{right:-13px}
+.v-k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.v-code{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:4px 0}
+.v-code b{font:400 44px/1 var(--disp);letter-spacing:.06em}
+.v-note{font-size:12px;color:#CFCBC2}
+.v-act{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.v-act button,.v-act a{min-height:42px;padding:9px 14px;border:2px solid var(--paper);background:transparent;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center}
+.v-act a{background:var(--orange);border-color:var(--orange);color:var(--ink)}
+
+/* ---------- sections ---------- */
+.sec{position:relative;padding:96px 0 104px;overflow-x:clip}
+.tear{position:absolute;left:0;top:-30px;width:100%;height:34px;transform:scaleY(-1);pointer-events:none;color:var(--paper)}
+.ink>.tear{color:var(--ink)}.orange>.tear{color:var(--orange)}.alt>.tear{color:var(--paper2)}
+.alt{background:var(--paper2)}
+.tag{display:inline-block;margin-bottom:16px;padding:6px 10px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transform:rotate(-2deg)}
+.ink .tag{background:var(--orange);color:var(--ink)}
+.orange .tag{background:var(--ink);color:var(--orange)}
+.hx{font:400 clamp(64px,8.6vw,132px)/.86 var(--disp);letter-spacing:.005em;text-transform:uppercase}
+.hx em{font-style:normal;background:linear-gradient(transparent 56%,var(--orange) 56% 86%,transparent 86%);padding:0 .06em}
+.ink .hx em{background:none;color:var(--orange)}
+.lede{max-width:62ch;margin-top:18px;font-size:15.5px}
+.head-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;margin-bottom:56px}
+
+.tickets{display:grid;grid-template-columns:1fr 1fr;gap:34px 30px}
+.ticket{position:relative;display:grid;grid-template-columns:78px minmax(0,1fr);background:var(--sheet);border:3px solid var(--ink);box-shadow:9px 9px 0 var(--ink);transform:rotate(-.6deg)}
+.ticket:nth-child(even){transform:rotate(.5deg)}
+.stub{display:grid;place-items:center;background:var(--ink);color:var(--orange);border-right:3px dashed var(--paper)}
+.stub span{font:400 60px/1 var(--disp);writing-mode:vertical-rl;transform:rotate(180deg)}
+.tk-body{padding:22px 26px 22px 24px}
+.ticket h3{font:400 46px/.92 var(--disp);letter-spacing:.01em;padding-right:96px}
+.tk-meta{margin:12px 0 14px;padding:7px 0;border-block:2px solid var(--ink);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.inc{display:grid;gap:6px;font-size:14px}
+.inc li{display:grid;grid-template-columns:18px 1fr}
+.inc li::before{content:"/";font-weight:700}
+.tk-book{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:14px;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:3px solid var(--orange)}
+.tk-book:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.price{position:absolute;top:-16px;right:-12px;display:grid;place-content:center;width:98px;height:98px;border-radius:50%;background:var(--orange);border:3px solid var(--ink);text-align:center;transform:rotate(10deg);box-shadow:4px 4px 0 var(--ink)}
+.price b{font:400 34px/.9 var(--disp)}
+.price small{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.gen{margin-top:48px;padding:14px 18px;border-left:6px solid var(--orange);background:var(--sheet);font-size:13px;max-width:92ch}
+
+.gear-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.fuel{display:flex;align-items:center;gap:12px;width:max-content;max-width:100%;margin-top:28px;padding:12px 16px;background:var(--ink);color:var(--paper);font:400 28px/1 var(--disp)}
+.cells{display:grid;grid-template-columns:repeat(8,22px);gap:5px}
+.cells i{height:28px;background:var(--grey);transform:skewX(-14deg);transition:background .2s}
+.cells i.on{background:var(--orange)}
+.fuel-t{margin-top:12px;font-weight:700;font-size:14px}
+.ready{display:inline-block;margin-top:16px;padding:10px 16px;background:var(--orange);border:3px solid var(--ink);font:400 30px/1 var(--disp);letter-spacing:.06em;transform:rotate(-4deg);box-shadow:5px 5px 0 var(--ink)}
+.note-pad{position:relative;padding:26px 28px 24px 70px;background:var(--sheet) repeating-linear-gradient(transparent 0 45px,#D8D4C8 45px 47px);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);transform:rotate(.8deg)}
+.note-pad::before{content:"";position:absolute;left:52px;top:0;bottom:0;width:2px;background:var(--orange)}
+.note-pad::after{content:"";position:absolute;left:14px;top:14px;bottom:14px;width:20px;background:radial-gradient(circle at 10px 50%,var(--paper2) 7px,var(--ink) 7.5px 9px,transparent 9.5px) 0 0/20px 92px repeat-y}
+.pad-h{font:400 30px/1 var(--disp);letter-spacing:.04em;margin-bottom:8px}
+.checks li{border-bottom:1px dashed #C9C4B6}
+.checks li:last-child{border:0}
+.checks label{position:relative;display:flex;gap:14px;align-items:flex-start;padding:11px 0;cursor:pointer}
+.checks input{position:absolute;left:0;top:11px;width:30px;height:30px;margin:0;opacity:0;cursor:pointer}
+.box{flex:none;display:grid;place-items:center;width:30px;height:30px;border:3px solid var(--ink);background:#fff;transform:rotate(-3deg);transition:background .15s}
+.checks input:checked+.box{background:var(--orange)}
+.checks input:checked+.box::after{content:"";width:13px;height:7px;margin-top:-3px;border-left:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(-45deg)}
+.checks input:focus-visible+.box{outline:3px solid var(--ink);outline-offset:3px}
+.checks b{display:block;font:400 25px/1 var(--disp);letter-spacing:.04em}
+.checks input:checked~span b{text-decoration:line-through 3px var(--orange)}
+.checks small{display:block;font-size:13px;line-height:1.45;margin-top:2px}
+
+.wx{background:var(--ink) repeating-linear-gradient(112deg,transparent 0 30px,rgba(242,240,234,.055) 30px 32px)}
+.tape{position:relative;margin:0 -40px 56px;padding:10px 0;background:repeating-linear-gradient(-45deg,var(--orange) 0 20px,var(--ink) 20px 40px);transform:rotate(-1.6deg);white-space:nowrap;overflow:hidden}
+.tape span{display:inline-block;margin-left:12%;padding:6px 14px;background:var(--ink);color:var(--orange);font:400 24px/1 var(--disp);letter-spacing:.2em}
+.wx-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
+.wx-card{position:relative;padding:26px 24px 24px;border:3px solid var(--paper);background:var(--ink)}
+.wx-card:nth-child(2){border-color:var(--orange);transform:translateY(22px)}
+.wx-card svg{width:58px;height:58px;margin-bottom:12px}
+.wx-card h3{font:400 40px/1 var(--disp);color:var(--orange);letter-spacing:.02em;margin-bottom:8px}
+.wx-card p{font-size:14px;color:#E1DED6}
+.wx-foot{margin-top:62px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:14px}
+.wx-foot b{padding:6px 10px;background:var(--orange);color:var(--ink);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+.crew-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.mate{position:relative;padding:18px 20px 22px;background:var(--sheet);border:3px solid var(--ink);box-shadow:7px 7px 0 var(--ink)}
+.mate:nth-child(odd){transform:rotate(-1deg)}.mate:nth-child(even){transform:rotate(.8deg) translateY(16px)}
+.helm{display:block;width:100%;height:auto;max-height:170px;margin:0 auto 6px}
+.mate h3{font:400 46px/.9 var(--disp);letter-spacing:.02em}
+.role{display:inline-block;margin:6px 0 12px;padding:3px 8px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.mate dl{display:grid;gap:6px;font-size:13px}
+.mate dt{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.mate dd{margin:0 0 4px;line-height:1.4}
+
+.book-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.contact{display:grid;gap:14px;margin-top:30px;max-width:420px}
+.contact div{display:grid;grid-template-columns:78px 1fr;gap:12px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.contact dt{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding-top:3px}
+.contact dd{margin:0;font-weight:700}
+.steps{display:grid;gap:12px;margin-top:34px;max-width:440px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center}
+.steps b{display:grid;place-items:center;width:44px;height:44px;background:var(--ink);color:var(--orange);font:400 28px/1 var(--disp);transform:rotate(-4deg)}
+.steps span{font-size:14px;font-weight:700}
+.coupon{position:relative;display:grid;gap:14px;padding:38px 30px 28px;background:var(--paper);border:3px dashed var(--ink);box-shadow:10px 10px 0 var(--ink);transform:rotate(-.6deg)}
+.cut{position:absolute;top:-17px;left:26px;display:flex;align-items:center;gap:8px;padding:0 8px;background:var(--orange);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.cut svg{width:26px;height:26px}
+.coupon h3{font:400 38px/1 var(--disp);letter-spacing:.03em}
+.coupon label,.coupon legend{display:grid;gap:6px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.coupon input:not([type=radio]),.coupon select{width:100%;min-height:48px;padding:10px 12px;border:3px solid var(--ink);border-radius:0;background:var(--sheet);font-size:15px;letter-spacing:0;text-transform:none;font-weight:400}
+.coupon .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bike{display:grid;gap:8px}
+.bike div{display:flex;gap:10px;flex-wrap:wrap}
+.bike label{display:flex;flex-direction:row;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border:3px solid var(--ink);background:var(--sheet);font-size:13px;letter-spacing:.02em;text-transform:none;cursor:pointer}
+.bike input{width:18px;height:18px;accent-color:var(--orange);margin:0}
+.fine{font-size:12px}
+
+.foot{position:relative;padding:80px 0 40px}
+.foot-name{font:400 clamp(64px,10vw,168px)/.84 var(--disp);text-transform:uppercase;color:var(--paper);text-shadow:5px 5px 0 var(--orange);overflow-wrap:anywhere}
+.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:34px;padding-top:18px;border-top:2px solid var(--grey);font-size:13px}
+.foot-row a{color:var(--paper)}
+.small{margin-top:18px;font-size:12px;color:#BDB9AF;max-width:90ch}
+
+/* slap-in stickers (decorative only) */
+.js .slap{opacity:0}
+.js .slap.in{animation:slap .5s cubic-bezier(.2,1.6,.4,1) forwards}
+@keyframes slap{from{opacity:0;transform:scale(1.5) rotate(calc(var(--r,-4deg) - 14deg))}to{opacity:1;transform:scale(1) rotate(var(--r,-4deg))}}
+.voucher.pop{animation:pop .45s cubic-bezier(.2,1.5,.4,1)}
+.ready.go{animation:slap .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{transform:scale(1.25) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav{display:none}
+  .bar .btn{margin-left:auto}
+  .crew-grid{grid-template-columns:1fr 1fr}
+  .mate:nth-child(even){transform:rotate(.8deg)}
+}
+@media (max-width:900px){
+  .cover{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;grid-template-areas:"l" "r" "b";min-height:0}
+  .cv-l{padding-top:26px}
+  .cv-r{margin:0;padding:58px var(--pad) 70px;clip-path:polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)}
+  .cv-b{padding-top:24px}
+  .stk-issue{top:52px;right:14px}
+  .stk-price,.stk-plates,.barcode{display:none}
+  .head-row,.gear-grid,.book-grid{grid-template-columns:minmax(0,1fr);gap:28px}
+  .tickets{grid-template-columns:minmax(0,1fr)}
+  .wx-grid{grid-template-columns:minmax(0,1fr)}
+  .wx-card:nth-child(2){transform:none}
+}
+@media (max-width:640px){
+  .sec{padding:72px 0 80px}
+  .mark small{display:none}
+  .kicker{gap:6px}
+  .kicker span{padding:5px 7px;font-size:10px;letter-spacing:.08em}
+  .mast{margin-top:14px}
+  .cv-l{padding-top:20px}
+  .cv-r{padding-top:50px;padding-bottom:62px}
+  .stk-issue{display:none}
+  .tach{max-width:262px}
+  .rev-ctl{flex-direction:row-reverse;justify-content:space-between;gap:14px;margin-top:18px}
+  .revbtn{width:118px;height:118px}
+  .rb-t{font-size:48px}
+  .lines{grid-template-columns:minmax(0,1fr)}
+  .ticket{grid-template-columns:56px minmax(0,1fr);transform:none!important}
+  .stub span{font-size:44px}
+  .tk-body{padding:18px 18px 18px 16px}
+  .ticket h3{font-size:38px;padding-right:74px}
+  .price{width:80px;height:80px;right:-6px;top:-14px}
+  .price b{font-size:28px}
+  .note-pad{padding:18px 16px 16px 54px;transform:none}
+  .note-pad::before{left:40px}
+  .note-pad::after{left:8px}
+  .crew-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .mate{padding:12px 12px 16px;transform:none!important}
+  .mate h3{font-size:36px}
+  .coupon{padding:34px 18px 22px;transform:none}
+  .coupon .two{grid-template-columns:minmax(0,1fr)}
+  .tape{margin:0 -30px 40px}
+  .cells{grid-template-columns:repeat(8,minmax(0,20px))}
+}
+@media (max-width:380px){
+  .crew-grid{grid-template-columns:minmax(0,1fr)}
+  .revbtn{width:104px;height:104px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .slap{opacity:1}
+  .js .slap.in,.voucher.pop,.ready.go{animation:none}
+  .revbtn,.btn,.cells i,.shift{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="tearA" viewBox="0 0 1440 40" preserveAspectRatio="none"><path fill="currentColor" d="M0 0H1440V5L1411 15L1397 3L1371 13L1355 10L1332 33L1298 20L1284 28L1263 12L1239 35L1214 9L1189 10L1170 14L1143 16L1120 6L1109 35L1079 9L1063 17L1041 18L1012 24L996 4L964 20L949 5L916 12L899 5L880 11L852 10L840 31L813 15L790 12L772 11L742 32L721 14L695 28L676 20L655 30L630 3L612 14L579 10L559 35L546 17L519 24L498 7L469 31L451 11L426 18L400 16L376 12L358 13L339 27L320 6L286 18L267 5L240 32L223 22L210 25L176 15L163 13L129 10L111 12L90 3L65 12L38 13L17 27L0 8Z"/></symbol>
+    <symbol id="tearB" viewBox="0 0 1440 40" preserveAspectRatio="none"><path fill="currentColor" d="M0 0H1440V10L1414 22L1395 19L1372 34L1356 5L1327 12L1305 11L1285 17L1267 15L1244 29L1215 7L1187 18L1170 17L1143 15L1129 15L1103 12L1087 6L1059 25L1042 21L1011 27L992 2L961 27L951 16L916 26L897 11L871 14L854 7L835 10L803 12L791 13L760 16L745 11L719 8L696 29L669 8L656 17L628 4L603 11L591 20L560 33L540 12L517 13L487 11L466 28L444 15L432 20L406 17L390 16L365 18L334 34L313 15L296 30L269 4L251 31L226 10L196 15L181 6L155 18L131 4L109 19L84 7L75 18L45 10L27 24L0 16Z"/></symbol>
+    <pattern id="htI" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.6" fill="#0D0D0D"/></pattern>
+    <pattern id="htP" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.3" fill="#F2F0EA"/></pattern>
+    <pattern id="chk" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#FF5F1F"/><rect x="8" y="8" width="8" height="8" fill="#FF5F1F"/></pattern>
+    <path id="shellP" d="M22 124C12 66 60 18 124 16c58-2 92 42 90 96l-2 32c-1 13-11 22-24 22H78c-30 0-51-14-56-42z"/>
+    <clipPath id="shellC"><use href="#shellP"/></clipPath>
+    <g id="visorG">
+      <path d="M114 58c38-7 82 6 96 38l2 24c-32-7-72-7-104 0-7-21-5-45 6-62z" fill="#0D0D0D" stroke="#0D0D0D" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M132 68c24-3 46 3 60 16" fill="none" stroke="#F2F0EA" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+      <rect x="178" y="138" width="24" height="9" rx="3" fill="#0D0D0D"/>
+      <path d="M44 168c34 10 112 10 150-2" fill="none" stroke="#0D0D0D" stroke-width="10" stroke-linecap="round"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="bar">
+  <a class="mark" href="#top"><span class="tu" data-brand-initials>TU</span><small>Issue 07 · Gold Coast rider training</small></a>
+  <nav class="nav" aria-label="Sections"><a href="#courses">Courses</a><a href="#gear">Gear</a><a href="#weather">Wet weather</a><a href="#crew">Crew</a></nav>
+  <a class="btn btn-o" href="#book">Book a course</a>
+</header>
+
+<main id="top">
+  <section class="cover" aria-labelledby="mast">
+    <div class="cv-l">
+      <p class="kicker"><span>Motorcycle rider training</span><span>Gold Coast, QLD</span></p>
+      <h1 class="mast" id="mast" data-brand>Throttle Up Rider Training</h1>
+    </div>
+    <div class="cv-b">
+      <p class="deck">Small-group motorcycle courses on a closed training pad in Nerang. Loan bikes, loan helmets, and instructors who’d rather you ride well than fast.</p>
+      <ol class="lines" aria-label="In this issue">
+        <li><a href="#c1"><b>01</b><span><strong>Pre-learner</strong>Your first day on two wheels</span></a></li>
+        <li><a href="#c2"><b>02</b><span><strong>Pre-provisional</strong>Learner to P-plates, properly</span></a></li>
+        <li><a href="#c3"><b>03</b><span><strong>Refresher</strong>Back on after a long break</span></a></li>
+        <li><a href="#c4"><b>04</b><span><strong>Cornering</strong>Look through, then lean in</span></a></li>
+      </ol>
+      <div class="cta"><a class="btn btn-o" href="#book">Book a course</a><a class="btn" href="#courses">Courses &amp; sample prices</a></div>
+    </div>
+    <div class="cv-r">
+      <span class="stk stk-issue slap">No. 07 · Spring</span>
+      <span class="stk stk-plates slap">L-plates welcome</span>
+      <div class="rev" id="rev">
+        <div class="tach" id="tach" role="meter" aria-label="Engine speed" aria-valuemin="0" aria-valuemax="14000" aria-valuenow="0" aria-valuetext="Engine off">
+          <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <defs><radialGradient id="face" cx="50%" cy="34%" r="72%"><stop offset="0" stop-color="#2A2927"/><stop offset="1" stop-color="#0D0D0D"/></radialGradient></defs>
+            <circle cx="200" cy="200" r="198" fill="#0D0D0D"/>
+            <circle cx="200" cy="200" r="186" fill="url(#face)" stroke="#F2F0EA" stroke-width="4"/>
+            <path d="M40 260a176 176 0 0 0 320 0" fill="url(#htP)" opacity=".28"/>
+            <path id="redzone" fill="none" stroke="#FF5F1F" stroke-width="20"/>
+            <g id="ticks" stroke-linecap="square"></g>
+            <g id="nums" font-family="'Bebas Neue',Impact,sans-serif" font-size="34" text-anchor="middle"></g>
+            <text x="200" y="146" text-anchor="middle" fill="#CFCBC2" font-family="'Space Mono',monospace" font-size="12" letter-spacing="2">×1000 R/MIN</text>
+            <g id="needle" transform="rotate(-120 200 200)">
+              <path d="M194 218L200 38l6 180z" fill="#FF5F1F" stroke="#0D0D0D" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="200" cy="200" r="21" fill="#0D0D0D" stroke="#FF5F1F" stroke-width="5"/>
+              <circle cx="200" cy="200" r="6" fill="#F2F0EA"/>
+            </g>
+          </svg>
+          <div class="readout"><i class="shift" aria-hidden="true"></i><output id="rpm" aria-hidden="true">0</output><span>r/min</span></div>
+        </div>
+        <div class="rev-ctl">
+          <button class="revbtn" id="revbtn" type="button" aria-describedby="rev-hint"><span class="rb-t">Rev</span><span class="rb-s">Hold</span></button>
+          <div class="rev-side">
+            <button class="snd" id="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h4l6-5v16l-6-5H3z" fill="currentColor"/><path class="w" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path class="x" d="M16.5 9.5l5 5m0-5l-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span id="snd-t">Sound off</span></button>
+            <p class="hint" id="rev-hint">Press and hold REV — or hold Space. Hit the red line to unlock a sample voucher.</p>
+          </div>
+        </div>
+        <div class="voucher" id="voucher" hidden>
+          <p class="v-k">Red line reached</p>
+          <p class="v-code"><span>Sample voucher</span><b>THROTTLE10</b></p>
+          <p class="v-note">10% off any course — demo code only, it can’t be redeemed.</p>
+          <div class="v-act"><button type="button" id="v-copy">Copy code</button><a href="#book" id="v-use">Add to my booking</a></div>
+        </div>
+        <p class="sr" id="rev-live" aria-live="polite"></p>
+      </div>
+      <span class="stk stk-price slap"><b>Sample</b>prices inside</span>
+      <div class="barcode" aria-hidden="true"><i></i>SAMPLE · NOT FOR SALE</div>
+    </div>
+  </section>
+
+  <section class="sec" id="courses" aria-labelledby="courses-h">
+    <svg class="tear" aria-hidden="true"><use href="#tearA" width="100%" height="100%"/></svg>
+    <div class="wrap">
+      <div class="head-row">
+        <div><p class="tag">/// Inside · 02</p><h2 class="hx" id="courses-h">Four ways to <em>throttle&nbsp;up</em></h2></div>
+        <p class="lede">Every course runs on our closed training pad in Nerang, with no more than six riders per instructor. Loan bikes are learner-approved 300s; loan helmets are cleaned between riders.</p>
+      </div>
+      <div class="tickets">
+        <article class="ticket" id="c1">
+          <div class="stub" aria-hidden="true"><span>01</span></div>
+          <div class="tk-body">
+            <h3>Pre-learner</h3>
+            <p class="tk-meta">1 day · 8am–3:30pm · Never ridden</p>
+            <ul class="inc"><li>Controls, clutch and throttle feel</li><li>Braking, slow riding and tight U-turns</li><li>Loan bike, helmet and gloves included</li></ul>
+            <a class="tk-book" href="#book" data-course="pre-learner">Book this course →</a>
+          </div>
+          <p class="price"><b>$249</b><small>Sample</small></p>
+        </article>
+        <article class="ticket" id="c2">
+          <div class="stub" aria-hidden="true"><span>02</span></div>
+          <div class="tk-body">
+            <h3>Pre-provisional</h3>
+            <p class="tk-meta">2 mornings · Sat &amp; Sun 7am–12pm · Learners</p>
+            <ul class="inc"><li>Road riding with radio coaching</li><li>Hazard spotting and lane position</li><li>A mock assessment with honest feedback</li></ul>
+            <a class="tk-book" href="#book" data-course="pre-provisional">Book this course →</a>
+          </div>
+          <p class="price"><b>$459</b><small>Sample</small></p>
+        </article>
+        <article class="ticket" id="c3">
+          <div class="stub" aria-hidden="true"><span>03</span></div>
+          <div class="tk-body">
+            <h3>Refresher</h3>
+            <p class="tk-meta">Half day · 4 hours · Back after a break</p>
+            <ul class="inc"><li>Your bike or one of ours</li><li>Emergency braking and swerving</li><li>One-on-one add-on if you’re nervous</li></ul>
+            <a class="tk-book" href="#book" data-course="refresher">Book this course →</a>
+          </div>
+          <p class="price"><b>$189</b><small>Sample</small></p>
+        </article>
+        <article class="ticket" id="c4">
+          <div class="stub" aria-hidden="true"><span>04</span></div>
+          <div class="tk-body">
+            <h3>Advanced cornering</h3>
+            <p class="tk-meta">1 day · Closed pad · P-plate or open licence</p>
+            <ul class="inc"><li>Vision, body position and line choice</li><li>Entry speed, taught slowly</li><li>Trail-braking basics on a marked loop</li></ul>
+            <a class="tk-book" href="#book" data-course="cornering">Book this course →</a>
+          </div>
+          <p class="price"><b>$329</b><small>Sample</small></p>
+        </article>
+      </div>
+      <p class="gen"><b>General information only.</b> Licence classes, age limits and the steps to a motorcycle licence are set by the Queensland Government and change from time to time — check the current rules before you book. We help you prepare; we can’t promise a licence outcome.</p>
+    </div>
+  </section>
+
+  <section class="sec alt" id="gear" aria-labelledby="gear-h">
+    <svg class="tear" aria-hidden="true"><use href="#tearB" width="100%" height="100%"/></svg>
+    <div class="wrap gear-grid">
+      <div>
+        <p class="tag">/// Checklist · 03</p>
+        <h2 class="hx" id="gear-h">Pack your <em>kit</em></h2>
+        <p class="lede">Tick off what you’ve got. Beginners borrow a helmet and gloves free; armoured jackets are $15 a day (sample price).</p>
+        <div class="fuel" aria-hidden="true"><span>E</span><div class="cells" id="cells"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>F</span></div>
+        <p class="fuel-t" id="fuel-t" aria-live="polite">0 of 8 packed — tank’s empty.</p>
+        <p class="ready" id="ready" hidden>Ready to ride</p>
+      </div>
+      <div class="note-pad" role="group" aria-labelledby="pad-h">
+        <p class="pad-h" id="pad-h">Bring on the day</p>
+        <ul class="checks" id="checks">
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Helmet</b><small>Approved and snug. Not sure? Borrow ours.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Gloves</b><small>Full-finger, with knuckle protection.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Jacket</b><small>Armoured and abrasion-resistant.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Long pants</b><small>Motorcycle jeans or heavy denim. No leggings.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Boots</b><small>Over the ankle, laces tucked away.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Earplugs</b><small>Wind noise is tiring. Foam ones are fine.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Water &amp; snacks</b><small>The pad gets hot by 10am.</small></span></label></li>
+          <li><label><input type="checkbox"><span class="box" aria-hidden="true"></span><span><b>Licence card</b><small>Your learner or full licence — the card, not a photo.</small></span></label></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec ink wx" id="weather" aria-labelledby="wx-h">
+    <svg class="tear" aria-hidden="true"><use href="#tearA" width="100%" height="100%"/></svg>
+    <div class="tape" aria-hidden="true"><span>Wet weather policy ✕ wet weather policy ✕ wet weather policy</span></div>
+    <div class="wrap">
+      <p class="tag">/// Notice · 04</p>
+      <h2 class="hx" id="wx-h">When it <em>pours</em></h2>
+      <div class="wx-grid">
+        <article class="wx-card">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 40a10 10 0 0 1 1-20 14 14 0 0 1 27 3 9 9 0 0 1-1 17z" fill="none" stroke="#F2F0EA" stroke-width="3.5" stroke-linejoin="round"/><path d="M22 48l-3 7M33 48l-3 7M44 48l-3 7" stroke="#FF5F1F" stroke-width="3.5" stroke-linecap="round"/></svg>
+          <h3>Light rain</h3>
+          <p>We ride. Wet-road practice is gold — drills slow down and we lend rain suits in sizes S to XXL.</p>
+        </article>
+        <article class="wx-card">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 38a10 10 0 0 1 1-20 14 14 0 0 1 27 3 9 9 0 0 1-1 17" fill="none" stroke="#F2F0EA" stroke-width="3.5" stroke-linejoin="round"/><path d="M34 34l-8 13h9l-6 12 14-17h-9l5-8z" fill="#FF5F1F"/></svg>
+          <h3>Storm warning</h3>
+          <p>A severe weather warning or lightning nearby and we stop. Your session moves to the next free weekend, no fee.</p>
+        </article>
+        <article class="wx-card">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="11" fill="#FF5F1F"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M49 15l-6 6M21 43l-6 6" stroke="#F2F0EA" stroke-width="3.5" stroke-linecap="round"/></svg>
+          <h3>Heatwave</h3>
+          <p>Summer sessions start at 6:30am and wrap by lunch, with a water station and a shade break every hour.</p>
+        </article>
+      </div>
+      <p class="wx-foot"><b>The call</b>We decide by 6am on the day and text everyone who’s booked. Check your phone before you leave home.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="crew" aria-labelledby="crew-h">
+    <svg class="tear" aria-hidden="true"><use href="#tearB" width="100%" height="100%"/></svg>
+    <div class="wrap">
+      <div class="head-row">
+        <div><p class="tag">/// The crew · 05</p><h2 class="hx" id="crew-h">Who’s on <em>the radio</em></h2></div>
+        <p class="lede">Four instructors, one rule: nobody gets yelled at. These are fictional people — so we drew their helmets instead of their faces.</p>
+      </div>
+      <div class="crew-grid">
+        <article class="mate">
+          <svg class="helm" viewBox="0 0 220 190" aria-hidden="true"><use href="#shellP" fill="#FF5F1F"/><g clip-path="url(#shellC)"><path d="M16 120C20 64 68 26 128 22" fill="none" stroke="#0D0D0D" stroke-width="24"/><path d="M40 124C46 78 84 50 132 44" fill="none" stroke="#F2F0EA" stroke-width="6"/><rect y="104" width="220" height="90" fill="url(#htI)" opacity=".45"/></g><use href="#shellP" fill="none" stroke="#0D0D0D" stroke-width="5"/><use href="#visorG"/></svg>
+          <h3>Dee</h3><p class="role">Lead instructor</p>
+          <dl><dt>Teaches</dt><dd>Pre-learner, cornering</dd><dt>Rides</dt><dd>A naked twin</dd><dt>Favourite drill</dt><dd>The slow, full-lock U-turn</dd></dl>
+        </article>
+        <article class="mate">
+          <svg class="helm" viewBox="0 0 220 190" aria-hidden="true"><use href="#shellP" fill="#0D0D0D"/><g clip-path="url(#shellC)"><rect y="92" width="220" height="32" fill="url(#chk)"/><path d="M40 70C58 40 90 28 120 28" fill="none" stroke="#F2F0EA" stroke-width="5" stroke-linecap="round" opacity=".5"/></g><use href="#shellP" fill="none" stroke="#0D0D0D" stroke-width="5"/><use href="#visorG"/></svg>
+          <h3>Marco</h3><p class="role">Road coach</p>
+          <dl><dt>Teaches</dt><dd>Pre-provisional</dd><dt>Rides</dt><dd>A sports tourer</dd><dt>Favourite drill</dt><dd>Head checks before every lane change</dd></dl>
+        </article>
+        <article class="mate">
+          <svg class="helm" viewBox="0 0 220 190" aria-hidden="true"><use href="#shellP" fill="#FBFAF6"/><g clip-path="url(#shellC)"><path d="M84 34h42l-20 34h28l-60 60 18-44H66z" fill="#FF5F1F" stroke="#0D0D0D" stroke-width="4" stroke-linejoin="round"/><rect y="120" width="220" height="70" fill="url(#htI)" opacity=".3"/></g><use href="#shellP" fill="none" stroke="#0D0D0D" stroke-width="5"/><use href="#visorG"/></svg>
+          <h3>Tash</h3><p class="role">Cornering coach</p>
+          <dl><dt>Teaches</dt><dd>Advanced cornering</dd><dt>Rides</dt><dd>A scrambler</dd><dt>Favourite drill</dt><dd>Look-through-the-turn cones</dd></dl>
+        </article>
+        <article class="mate">
+          <svg class="helm" viewBox="0 0 220 190" aria-hidden="true"><use href="#shellP" fill="#FF5F1F"/><g clip-path="url(#shellC)"><path d="M0 0h104L46 190H0z" fill="#0D0D0D"/><text x="22" y="132" font-family="'Bebas Neue',Impact,sans-serif" font-size="54" fill="#FF5F1F">07</text><rect x="100" y="120" width="120" height="70" fill="url(#htI)" opacity=".4"/></g><use href="#shellP" fill="none" stroke="#0D0D0D" stroke-width="5"/><use href="#visorG"/></svg>
+          <h3>Bilal</h3><p class="role">Refresher lead</p>
+          <dl><dt>Teaches</dt><dd>Refresher, wet-weather skills</dd><dt>Rides</dt><dd>A learner-approved 300, same as the loan bikes</dd><dt>Favourite drill</dt><dd>Emergency stops on a wet pad</dd></dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec orange" id="book" aria-labelledby="book-h">
+    <svg class="tear" aria-hidden="true"><use href="#tearA" width="100%" height="100%"/></svg>
+    <div class="wrap book-grid">
+      <div>
+        <p class="tag">/// Tear-off · 06</p>
+        <h2 class="hx" id="book-h">Book a spot</h2>
+        <p class="lede">Courses run most weekends, six riders per instructor. Fill in the coupon and we’ll call to confirm your date and bike size.</p>
+        <dl class="contact">
+          <div><dt>Call</dt><dd><a href="tel:0755502187">(07) 5550 2187</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:ride@example.com">ride@example.com</a></dd></div>
+          <div><dt>Pad</dt><dd>Nerang, Gold Coast QLD</dd></div>
+          <div><dt>Office</dt><dd>Tue–Fri 9am–5pm · weekends on the pad from 6:30am</dd></div>
+        </dl>
+        <ol class="steps" aria-label="How booking works">
+          <li><b>1</b><span>Send the coupon with the weekend that suits you.</span></li>
+          <li><b>2</b><span>We call to confirm the date, your bike size and any gear you need.</span></li>
+          <li><b>3</b><span>Pay on the day — card or cash. Reschedule free up to 48 hours before.</span></li>
+        </ol>
+      </div>
+      <form class="coupon" id="coupon">
+        <p class="cut" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="8" cy="8" r="5" fill="none" stroke="#0D0D0D" stroke-width="3"/><circle cx="8" cy="24" r="5" fill="none" stroke="#0D0D0D" stroke-width="3"/><path d="M12 11l18 14M12 21L30 7" stroke="#0D0D0D" stroke-width="3" stroke-linecap="round"/></svg>Cut here</p>
+        <h3>Rider booking coupon</h3>
+        <label>Course
+          <select name="course" id="f-course">
+            <option value="pre-learner">Pre-learner — 1 day — $249</option>
+            <option value="pre-provisional">Pre-provisional — 2 mornings — $459</option>
+            <option value="refresher">Refresher — half day — $189</option>
+            <option value="cornering">Advanced cornering — 1 day — $329</option>
+          </select>
+        </label>
+        <label>Weekend<select name="weekend" id="f-weekend"><option>Next available weekend</option></select></label>
+        <div class="two">
+          <label>Name<input name="name" autocomplete="name" placeholder="First and last name"></label>
+          <label>Mobile<input type="tel" name="mobile" autocomplete="tel" placeholder="0491 570 158"></label>
+        </div>
+        <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com"></label>
+        <fieldset class="bike"><legend>Bike</legend><div><label><input type="radio" name="bike" value="loan" checked>Borrow one of ours</label><label><input type="radio" name="bike" value="own">I’ll bring mine</label></div></fieldset>
+        <label>Voucher code<input name="voucher" id="f-voucher" placeholder="Rev the tach to find one"></label>
+        <button class="btn btn-ink" type="submit">Request my spot</button>
+        <p class="fine">Sample prices. This coupon is a demo — nothing is sent or booked.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot ink">
+  <svg class="tear" aria-hidden="true"><use href="#tearB" width="100%" height="100%"/></svg>
+  <div class="wrap">
+    <p class="foot-name" data-brand>Throttle Up Rider Training</p>
+    <div class="foot-row"><p>Nerang, Gold Coast QLD · <a href="tel:0755502187">(07) 5550 2187</a> · <a href="mailto:ride@example.com">ride@example.com</a></p><p><a href="#top">Back to the cover ↑</a></p></div>
+    <p class="small"><span data-brand>Throttle Up Rider Training</span> is a fictional business in a concept demo. People, prices and policies are samples. General information only — not official licensing advice.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var root = document.documentElement;
+  root.classList.add("js");
+  var mq = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : null;
+  var reduced = function(){ return (window.DemoKit && DemoKit.reducedMotion) || !!(mq && mq.matches); };
+  var toast = function(m){ if (window.DemoKit) DemoKit.toast(m); };
+  var NS = "http://www.w3.org/2000/svg";
+
+  /* ---------- build the tachometer ---------- */
+  var IDLE = 1100, MAX = 14000, RED = 11000, CUT = 11900;
+  function ang(v){ return -120 + 240 * v / MAX; }
+  function pt(a, r){ var t = a * Math.PI / 180; return [(200 + r * Math.sin(t)).toFixed(1), (200 - r * Math.cos(t)).toFixed(1)]; }
+  var ticks = $("#ticks"), nums = $("#nums");
+  for (var v = 0; v <= MAX; v += 500){
+    var a = ang(v), maj = v % 1000 === 0, p1 = pt(a, maj ? 144 : 158), p2 = pt(a, 176);
+    var l = document.createElementNS(NS, "line");
+    l.setAttribute("x1", p1[0]); l.setAttribute("y1", p1[1]); l.setAttribute("x2", p2[0]); l.setAttribute("y2", p2[1]);
+    l.setAttribute("stroke", v >= RED ? "#0D0D0D" : "#F2F0EA"); l.setAttribute("stroke-width", maj ? 5 : 2.5);
+    ticks.appendChild(l);
+    if (maj){
+      var tp = pt(a, 118), t = document.createElementNS(NS, "text");
+      t.setAttribute("x", tp[0]); t.setAttribute("y", (+tp[1] + 12).toFixed(1));
+      t.setAttribute("fill", v >= RED ? "#FF5F1F" : "#F2F0EA");
+      t.textContent = v / 1000; nums.appendChild(t);
+    }
+  }
+  var z1 = pt(ang(RED), 166), z2 = pt(ang(MAX), 166);
+  $("#redzone").setAttribute("d", "M" + z1.join(" ") + "A166 166 0 0 1 " + z2.join(" "));
+
+  /* ---------- engine ---------- */
+  var needle = $("#needle"), out = $("#rpm"), btn = $("#revbtn"), tach = $("#tach"), shaker = $("main");
+  var rpm = 0, shown = 0, thr = 0, held = false, raf = 0, last = 0, redT = 0, unlocked = false, ariaT = 0, keyHoldAt = 0;
+  function fmt(n){ return (Math.round(n / 50) * 50).toLocaleString("en-AU"); }
+  function render(){
+    needle.setAttribute("transform", "rotate(" + ang(shown).toFixed(2) + " 200 200)");
+    out.textContent = fmt(shown);
+    btn.style.setProperty("--p", Math.min(100, shown / MAX * 100).toFixed(1));
+    var red = shown >= RED;
+    tach.classList.toggle("red", red); btn.classList.toggle("red", red);
+  }
+  function aria(force){
+    var now = performance.now();
+    if (!force && now - ariaT < 300) return;
+    ariaT = now;
+    tach.setAttribute("aria-valuenow", Math.round(shown));
+    tach.setAttribute("aria-valuetext", shown < 50 ? "Engine off" : fmt(shown) + " rpm" + (shown >= RED ? ", red line" : ""));
+  }
+  function step(now){
+    var dt = Math.min(0.05, (now - last) / 1000 || 0.016); last = now;
+    thr += ((held ? 1 : 0) - thr) * Math.min(1, dt * (held ? 9 : 14));
+    var target = IDLE + thr * (MAX - IDLE);
+    rpm += (target - rpm) * Math.min(1, dt * (target > rpm ? 1.35 : 2.8));
+    if (held && rpm > CUT) rpm = CUT - 600 - Math.random() * 200;
+    if (held && rpm >= RED){ redT += dt; if (redT > 0.5 && !unlocked) unlock(); }
+    shown += (rpm - shown) * Math.min(1, dt * 20);
+    render(); aria(false); sound();
+    if (!reduced()){
+      var s = Math.max(0, (shown - 5000) / 9000); s = s * s * 2.2;
+      shaker.style.transform = s > 0.06 ? "translate(" + ((Math.random() * 2 - 1) * s).toFixed(2) + "px," + ((Math.random() * 2 - 1) * s).toFixed(2) + "px)" : "";
+    }
+    if (held || Math.abs(rpm - IDLE) > 3 || Math.abs(shown - rpm) > 3) raf = requestAnimationFrame(step);
+    else { raf = 0; rpm = shown = IDLE; render(); aria(true); shaker.style.transform = ""; soundIdle(); }
+  }
+  function kick(){ if (!raf){ last = performance.now(); raf = requestAnimationFrame(step); } }
+  function hold(on){
+    if (on === held) return;
+    held = on; btn.classList.toggle("on", on);
+    if (on){ if (rpm < IDLE) rpm = shown = IDLE * 0.7; redT = 0; soundWake(); }
+    kick();
+  }
+  btn.addEventListener("pointerdown", function(e){
+    if (e.button > 0) return;
+    e.preventDefault();
+    try { btn.setPointerCapture(e.pointerId); } catch (err) {}
+    btn.focus({preventScroll:true});
+    hold(true);
+  });
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach(function(t){ btn.addEventListener(t, function(){ hold(false); }); });
+  btn.addEventListener("contextmenu", function(e){ e.preventDefault(); });
+  btn.addEventListener("keydown", function(e){
+    if (e.key === " " || e.key === "Enter"){ e.preventDefault(); if (!e.repeat){ keyHoldAt = Date.now(); hold(true); } }
+  });
+  btn.addEventListener("keyup", function(e){ if (e.key === " " || e.key === "Enter"){ e.preventDefault(); hold(false); } });
+  btn.addEventListener("click", function(e){
+    // assistive tech "click" without pointer or key hold: give it a short blip
+    if (e.detail === 0 && Date.now() - keyHoldAt > 800 && !held){ hold(true); setTimeout(function(){ hold(false); }, 900); }
+  });
+  var revInView = false, spaceHeld = false;
+  if ("IntersectionObserver" in window){
+    new IntersectionObserver(function(en){ en.forEach(function(x){ revInView = x.intersectionRatio > 0.3; }); }, {threshold:[0, .3, .6]}).observe($("#tach"));
+  }
+  document.addEventListener("keydown", function(e){
+    if (e.key !== " " || e.repeat || spaceHeld) return;
+    var t = e.target;
+    if (t !== document.body && t !== root) return;
+    if (!revInView) return;
+    e.preventDefault(); spaceHeld = true; hold(true);
+  });
+  document.addEventListener("keyup", function(e){ if (e.key === " " && spaceHeld){ e.preventDefault(); spaceHeld = false; hold(false); } });
+  window.addEventListener("blur", function(){ spaceHeld = false; hold(false); });
+  document.addEventListener("visibilitychange", function(){ if (document.hidden){ spaceHeld = false; hold(false); } });
+
+  /* ---------- voucher ---------- */
+  var voucher = $("#voucher");
+  function unlock(){
+    unlocked = true;
+    voucher.hidden = false;
+    $(".cover").classList.add("won");
+    if (!reduced()) voucher.classList.add("pop");
+    $("#rev-live").textContent = "Red line! Sample voucher unlocked: THROTTLE10. Demo code only.";
+  }
+  $("#v-copy").addEventListener("click", function(){
+    var done = function(){ toast("Copied THROTTLE10 — a sample code, not redeemable."); };
+    var fail = function(){ toast("Couldn’t copy here — the sample code is THROTTLE10."); };
+    try { navigator.clipboard.writeText("THROTTLE10").then(done, fail); } catch (e) { fail(); }
+  });
+  $("#v-use").addEventListener("click", function(){ $("#f-voucher").value = "THROTTLE10"; });
+
+  /* ---------- engine sound (Web Audio, off by default) ---------- */
+  var AC = window.AudioContext || window.webkitAudioContext, ac = null, n = null, soundOn = false, idleTimer = 0;
+  var snd = $("#snd"), sndT = $("#snd-t");
+  function build(){
+    ac = new AC();
+    n = {};
+    n.master = ac.createGain(); n.master.gain.value = 0;
+    n.lp = ac.createBiquadFilter(); n.lp.type = "lowpass"; n.lp.frequency.value = 700; n.lp.Q.value = 3;
+    n.o1 = ac.createOscillator(); n.o1.type = "sawtooth"; n.o1.frequency.value = 40;
+    n.o2 = ac.createOscillator(); n.o2.type = "square"; n.o2.frequency.value = 20;
+    var g1 = ac.createGain(); g1.gain.value = 0.55;
+    var g2 = ac.createGain(); g2.gain.value = 0.25;
+    var len = ac.sampleRate, buf = ac.createBuffer(1, len, ac.sampleRate), d = buf.getChannelData(0);
+    for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+    n.noise = ac.createBufferSource(); n.noise.buffer = buf; n.noise.loop = true;
+    n.bp = ac.createBiquadFilter(); n.bp.type = "bandpass"; n.bp.frequency.value = 600; n.bp.Q.value = 0.8;
+    n.ng = ac.createGain(); n.ng.gain.value = 0.12;
+    n.am = ac.createGain(); n.am.gain.value = 0.75;
+    n.lfo = ac.createOscillator(); n.lfo.type = "square"; n.lfo.frequency.value = 20;
+    var lg = ac.createGain(); lg.gain.value = 0.25;
+    n.o1.connect(g1); g1.connect(n.lp);
+    n.o2.connect(g2); g2.connect(n.lp);
+    n.noise.connect(n.bp); n.bp.connect(n.ng); n.ng.connect(n.lp);
+    n.lfo.connect(lg); lg.connect(n.am.gain);
+    n.lp.connect(n.am); n.am.connect(n.master); n.master.connect(ac.destination);
+    n.o1.start(); n.o2.start(); n.noise.start(); n.lfo.start();
+  }
+  function sound(){
+    if (!soundOn || !n) return;
+    var t = ac.currentTime, f = 22 + shown / 60 * 2, k = Math.min(1, Math.max(0, (shown - IDLE) / (MAX - IDLE)));
+    n.o1.frequency.setTargetAtTime(f, t, 0.02);
+    n.o2.frequency.setTargetAtTime(f / 2, t, 0.02);
+    n.lfo.frequency.setTargetAtTime(f / 2, t, 0.02);
+    n.lp.frequency.setTargetAtTime(380 + shown * 0.2 + thr * 500, t, 0.04);
+    n.bp.frequency.setTargetAtTime(420 + shown * 0.1, t, 0.04);
+    n.ng.gain.setTargetAtTime(0.08 + thr * 0.3, t, 0.05);
+    n.master.gain.setTargetAtTime(0.05 + 0.13 * k + 0.03 * thr, t, 0.05);
+  }
+  function soundWake(){
+    if (!soundOn || !ac) return;
+    clearTimeout(idleTimer);
+    if (ac.state === "suspended") ac.resume();
+  }
+  function soundIdle(){
+    if (!soundOn || !n) return;
+    sound();
+    n.master.gain.setTargetAtTime(0.04, ac.currentTime, 0.2);
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(function(){
+      if (held || !n) return;
+      n.master.gain.setTargetAtTime(0, ac.currentTime, 0.25);
+      setTimeout(function(){ if (!held && ac && ac.state === "running") ac.suspend(); }, 1400);
+    }, 2600);
+  }
+  function setSound(on){
+    soundOn = on;
+    snd.setAttribute("aria-pressed", on ? "true" : "false");
+    sndT.textContent = on ? "Sound on" : "Sound off";
+  }
+  snd.addEventListener("click", function(){
+    if (!soundOn){
+      if (!AC){ toast("Sound isn’t available in this browser."); return; }
+      try { if (!ac) build(); ac.resume(); } catch (e) { toast("Sound isn’t available here."); return; }
+      setSound(true);
+      if (shown < IDLE){ rpm = shown = IDLE; render(); aria(true); }
+      soundIdle();
+    } else {
+      setSound(false);
+      clearTimeout(idleTimer);
+      if (n){ n.master.gain.setTargetAtTime(0, ac.currentTime, 0.04); setTimeout(function(){ if (ac && !soundOn) ac.suspend(); }, 250); }
+    }
+  });
+
+  /* ---------- gear checklist ---------- */
+  var boxes = $$("#checks input"), cells = $$("#cells i"), fuelT = $("#fuel-t"), ready = $("#ready");
+  function pack(){
+    var c = boxes.filter(function(b){ return b.checked; }).length;
+    cells.forEach(function(el, i){ el.classList.toggle("on", i < c); });
+    fuelT.textContent = c === 8 ? "8 of 8 packed — full tank. See you on the pad." : c + " of 8 packed" + (c === 0 ? " — tank’s empty." : ".");
+    var was = ready.hidden;
+    ready.hidden = c !== 8;
+    if (was && c === 8 && !reduced()){ ready.classList.remove("go"); void ready.offsetWidth; ready.classList.add("go"); }
+  }
+  boxes.forEach(function(b){ b.addEventListener("change", pack); });
+  pack();
+
+  /* ---------- booking coupon ---------- */
+  $$("[data-course]").forEach(function(a){ a.addEventListener("click", function(){ $("#f-course").value = a.getAttribute("data-course"); }); });
+  var DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var wk = $("#f-weekend"), d = new Date(); d.setHours(12, 0, 0, 0);
+  d.setDate(d.getDate() + (((6 - d.getDay()) + 7) % 7 || 7));
+  wk.innerHTML = "";
+  for (var i = 0; i < 6; i++){
+    var sun = new Date(d.getTime() + 864e5);
+    var o = document.createElement("option");
+    o.textContent = DAYS[d.getDay()] + " " + d.getDate() + " " + MON[d.getMonth()] + " – " + DAYS[sun.getDay()] + " " + sun.getDate() + " " + MON[sun.getMonth()];
+    wk.appendChild(o);
+    d.setDate(d.getDate() + 7);
+  }
+  $("#coupon").addEventListener("submit", function(e){
+    e.preventDefault();
+    var c = $("#f-course");
+    toast("Demo only — no booking was made for " + c.options[c.selectedIndex].text.split(" — ")[0] + " (" + wk.value + ").");
+  });
+
+  /* ---------- stickers slap in ---------- */
+  var slaps = $$(".slap");
+  if (reduced() || !("IntersectionObserver" in window)) slaps.forEach(function(s){ s.classList.add("in"); });
+  else {
+    var so = new IntersectionObserver(function(en){ en.forEach(function(x){ if (x.isIntersecting){ x.target.classList.add("in"); so.unobserve(x.target); } }); }, {threshold:.2});
+    slaps.forEach(function(s){ so.observe(s); });
+    setTimeout(function(){ slaps.forEach(function(s){ s.classList.add("in"); }); }, 2500);
+  }
+
+  /* ---------- masthead fits its column, whatever the name ---------- */
+  function fit(el, ratio, max, min){
+    var w = el.clientWidth; if (!w) return;
+    var s = Math.min(max, w * ratio);
+    el.classList.remove("squeezed"); el.style.fontSize = s + "px";
+    var g = 0;
+    while (el.scrollWidth > w + 1 && s > min && g++ < 90){ s -= 2; el.style.fontSize = s + "px"; }
+    if (el.scrollWidth > w + 1) el.classList.add("squeezed");
+  }
+  function fitAll(){ fit($("#mast"), 0.3, innerWidth < 640 ? 88 : 142, 44); }
+  fitAll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+  var rt; window.addEventListener("resize", function(){ clearTimeout(rt); rt = setTimeout(fitAll, 120); });
+  window.addEventListener("hd:brandchange", function(){ requestAnimationFrame(fitAll); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="093">
+<meta name="demo:brand" content="Spoke &amp; Chain Cycles">
+<title>Spoke &amp; Chain Cycles — bike shop and workshop, Canberra</title>
+<meta name="description" content="Spoke & Chain Cycles is a fictional bike shop and workshop in Braddon, Canberra: servicing, bike fits, new bikes and e-bikes.">
+<meta name="theme-color" content="#1F2328">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#1F2328;--ink2:#3A4048;--mute:#58606A;--line:#C5CBD3;--paper:#EDEFF2;--grid:#E2E5EA;--or:#FF6F00;--orInk:#A84800;
+--disp:"Exo 2","Arial Narrow",system-ui,sans-serif;--body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--wrap:1320px;--pad:clamp(16px,3.4vw,44px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+h1,h2,h3{font-family:var(--disp);margin:0;line-height:1.05;letter-spacing:-.005em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dark :focus-visible,.top :focus-visible{outline-color:var(--or)}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--or);color:var(--ink);padding:10px 14px;font:600 14px var(--body)}
+.skip:focus{top:10px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.k{font:600 11.5px/1.25 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.eyebrow{font:600 13px/1.3 var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--orInk)}
+.note{font-size:13px;color:var(--mute)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--ink);color:#fff;padding-top:env(safe-area-inset-top)}
+.top-in{max-width:calc(var(--wrap) + 2*var(--pad));margin:0 auto;padding:8px var(--pad);min-height:60px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none;min-width:0;flex:0 1 auto}
+.logo svg{flex:none}
+.logo-word{font:700 17px/1.1 var(--disp);letter-spacing:.07em;text-transform:uppercase;overflow-wrap:anywhere}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{color:#D3D8DF;text-decoration:none;font:500 14px/1 var(--body);padding:12px 11px;border-radius:3px}
+.nav a:hover{color:#fff;background:#2D333B}
+.menu-btn{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 18px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);
+font:600 14.5px/1 var(--disp);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;text-decoration:none;border-radius:2px;transition:background .18s,color .18s,border-color .18s;white-space:nowrap}
+.btn:hover{background:var(--ink);color:#fff}
+.btn-or{background:var(--or);border-color:var(--or);color:var(--ink)}
+.btn-or:hover{background:#FF8A2E;border-color:#FF8A2E;color:var(--ink)}
+.top .btn-or{margin-left:8px;gap:0}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#000}
+
+/* sheets */
+.sec{padding:30px var(--pad) 34px}
+.sheet{position:relative;max-width:var(--wrap);margin:0 auto;border:1.5px solid var(--ink);background:rgba(255,255,255,.62);padding:48px clamp(18px,3vw,40px) 36px}
+.sheet::before{content:"";position:absolute;inset:7px;border:1px solid var(--line);pointer-events:none}
+.tag{position:absolute;top:0;left:clamp(14px,2.4vw,32px);transform:translateY(-50%);background:var(--ink);color:#fff;font:600 12px/1 var(--disp);letter-spacing:.15em;text-transform:uppercase;padding:8px 11px;z-index:2}
+.tag b{color:var(--or);font-weight:700;margin-right:8px}
+.ticks{position:absolute;left:7px;right:7px;top:7px;height:7px;background:repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 12.5%);opacity:.55;pointer-events:none}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px 48px;align-items:end;margin-bottom:30px}
+.sec-head h2{font-size:clamp(30px,3.4vw,46px)}
+.sec-head p{color:var(--ink2);max-width:56ch}
+
+/* hero */
+.hero{padding-top:28px}
+.hero .sheet{display:grid;grid-template-columns:minmax(300px,372px) minmax(0,1fr);grid-template-rows:auto 1fr auto;
+grid-template-areas:"text draw" "bom draw" "bom tb";gap:0 34px;padding:40px clamp(18px,2.6vw,36px) 28px}
+.h-text{grid-area:text}
+.h-text h1{font-size:clamp(38px,4vw,56px);font-weight:700;margin:12px 0 16px;line-height:1.02}
+.h-text h1 em{font-style:normal;color:var(--ink);background:linear-gradient(transparent 62%,rgba(255,111,0,.55) 62% 90%,transparent 90%)}
+.h-text .lede{color:var(--ink2);max-width:38ch}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.draw{grid-area:draw;min-width:0;display:flex;flex-direction:column}
+#bike{display:block;width:100%;height:auto;max-height:calc(100vh - 380px);min-height:250px;touch-action:manipulation}
+.tool{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding-top:8px}
+.tool .hint{font-size:13.5px;color:var(--mute)}
+.asm{min-width:156px}
+.asm svg{transition:transform .5s}
+.asm[aria-pressed=true] svg{transform:rotate(180deg)}
+
+/* drawing */
+.ln{fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:stroke .2s}
+.thin{stroke-width:1;stroke:#6B737D}
+.fillw{fill:#fff}
+.chainln{stroke-width:3.2;stroke-dasharray:5 2.5}
+.part{transform:translate(calc(var(--ex)*1px),calc(var(--ey)*1px));transition:transform .95s cubic-bezier(.7,-.28,.25,1.22) var(--d,0s),opacity .25s;cursor:pointer;outline:none}
+.assembled .part{transform:none}
+.hit{fill:transparent;stroke:none}
+.has-hot .part{opacity:.3}
+.has-hot .part.hot{opacity:1}
+.part.hot .ln{stroke:var(--or)}
+.part.hot .fillw{fill:#FFF3E8}
+.co line{stroke:var(--ink);stroke-width:1;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
+.co circle{fill:#fff;stroke:var(--ink);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.co .dot{fill:var(--ink);stroke:none}
+.co text{font-family:var(--disp);font-weight:700;fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+.part.hot .co circle:not(.dot){fill:var(--or);stroke:var(--or)}
+.co{transition:opacity .25s}
+.assembled .co{opacity:0}
+.dims{opacity:0;transition:opacity .4s}
+.assembled .dims{opacity:1;transition-delay:.9s}
+.dims text{font:600 15px var(--disp);fill:var(--mute);letter-spacing:.08em}
+.dims .ln{stroke:#6B737D;stroke-width:1}
+
+/* parts list */
+.bom{grid-area:bom;margin-top:26px;align-self:start}
+.bom ol{list-style:none;margin:8px 0 0;padding:0;border-top:1.5px solid var(--ink)}
+.bom button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:38px minmax(0,1fr) auto;align-items:center;gap:6px;width:100%;min-height:36px;padding:4px 10px 4px 6px;border-bottom:1px solid var(--line);cursor:pointer;font:500 14.5px/1.2 var(--body);transition:background .15s}
+.bom button:hover{background:#fff}
+.bom .no{font:700 14px var(--disp);color:var(--mute)}
+.bom .sp{font-size:12.5px;color:var(--mute);text-align:right}
+.bom button[aria-pressed=true]{background:var(--ink);color:#fff}
+.bom button[aria-pressed=true] .no,.bom button[aria-pressed=true] .sp{color:var(--or)}
+.bom button:focus-visible{outline:3px solid var(--or);outline-offset:-3px}
+
+/* title block = part readout */
+.tb{grid-area:tb;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1.35fr) minmax(0,.95fr);border:1.5px solid var(--ink);background:#fff;margin-top:12px}
+.tb>div{padding:12px 14px;min-width:0;border-left:1px solid var(--ink)}
+.tb>div:first-child{border-left:0}
+.tb h3{font-size:24px;margin:4px 0 6px;display:flex;gap:10px;align-items:baseline}
+.tb h3 span{color:var(--orInk);font-size:18px}
+.tb ul{margin:0;padding:0 0 0 16px;font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.tb .tip{font-size:14px;line-height:1.5;margin-top:4px}
+.tb .cov{font:600 15px/1.25 var(--disp);margin:4px 0 8px}
+.tb .link{all:unset;cursor:pointer;font:600 13px/1.2 var(--body);color:var(--orInk);text-decoration:underline;text-underline-offset:3px;padding:6px 0;display:inline-block}
+.tb-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;border-top:1px solid var(--ink);padding:0!important;border-left:0!important}
+.tb-foot span{padding:7px 12px;border-left:1px solid var(--line);font:600 11.5px/1.3 var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tb-foot span:first-child{border-left:0}
+.tb-foot [data-brand]{color:var(--ink);overflow-wrap:anywhere;flex:1 1 180px}
+
+/* service */
+.svc-wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1.5px solid var(--ink);border-top:1.5px solid var(--ink)}
+.svc{border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:22px 20px 20px;display:flex;flex-direction:column;gap:12px;background:#fff;transition:background .2s,color .2s}
+.svc .lv{display:flex;justify-content:space-between;align-items:center}
+.svc .lv b{font:700 30px/1 var(--disp);color:var(--line)}
+.svc h3{font-size:25px}
+.svc .price{font:700 40px/1 var(--disp)}
+.svc .price small{font:500 13px var(--body);color:var(--mute);margin-left:6px}
+.svc .for{font-size:14px;color:var(--ink2)}
+.svc ul{list-style:none;padding:0;margin:0;display:grid;gap:7px;font-size:14px;line-height:1.4;flex:1}
+.svc li{padding-left:22px;position:relative}
+.svc li::before{content:"";position:absolute;left:3px;top:.38em;width:9px;height:5px;border-left:2px solid var(--or);border-bottom:2px solid var(--or);transform:rotate(-45deg)}
+.svc .time{font:600 12px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);border-top:1px dashed var(--line);padding-top:10px}
+.svc.on{background:var(--ink);color:#fff}
+.svc.on .for,.svc.on .price small,.svc.on .time{color:#C9D0D8}
+.svc.on .lv b{color:var(--or)}
+.svc .btn{width:100%}
+.svc.on .btn{background:var(--or);border-color:var(--or);color:var(--ink)}
+.book{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) auto;gap:16px 18px;align-items:end;margin-top:26px;padding:22px;border:1.5px dashed var(--ink);background:#fff}
+.book .sum{grid-column:1/-1;font:600 17px/1.35 var(--disp)}
+.book .sum b{color:var(--orInk)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.lab{display:block;font:600 11.5px/1.3 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:7px;padding:0}
+.days{display:flex;flex-wrap:wrap;gap:6px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:flex;align-items:center;min-height:42px;padding:0 12px;border:1.5px solid var(--line);font:600 14px/1 var(--disp);letter-spacing:.03em;background:#fff;white-space:nowrap}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+input[type=text],input[type=number],select{width:100%;min-height:44px;border:1.5px solid var(--ink);background:#fff;border-radius:2px;padding:0 12px;font:500 15px var(--body);color:var(--ink)}
+
+/* fit */
+.fit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px}
+.fit-in{display:grid;gap:22px;align-content:start}
+.rng{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:8px 14px;align-items:center}
+.rng .lab{grid-column:1/-1;margin:0}
+.rng input[type=number]{font:600 17px var(--disp);text-align:right;padding-right:8px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(90deg,var(--ink) var(--p,50%),var(--line) var(--p,50%))}
+input[type=range]::-moz-range-track{height:4px;background:var(--line)}
+input[type=range]::-moz-range-progress{height:4px;background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-9px;background:var(--or);border:2px solid var(--ink);border-radius:2px;transform:rotate(45deg)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--or);border:2px solid var(--ink);border-radius:2px;transform:rotate(45deg)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.seg button{all:unset;box-sizing:border-box;text-align:center;min-height:46px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;font:700 15px/1.1 var(--disp);letter-spacing:.06em;text-transform:uppercase;border-left:1.5px solid var(--ink);background:#fff}
+.seg button:first-child{border-left:0}
+.seg button small{font:500 11.5px var(--body);letter-spacing:0;text-transform:none;color:var(--mute);margin-top:3px}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.seg button[aria-pressed=true] small{color:#C9D0D8}
+.seg button:focus-visible{outline:3px solid var(--or);outline-offset:-4px}
+.fit-out{background:var(--ink);color:#fff;padding:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center;position:relative}
+.fit-out .k{color:#AEB6C0}
+.fit-out .big{font:700 clamp(44px,5vw,64px)/1 var(--disp);letter-spacing:-.01em;margin:6px 0 4px;color:#fff}
+.fit-out .big span{font-size:.45em;margin-left:4px;color:var(--or)}
+.fit-out .sz{font:600 18px var(--disp);color:var(--or)}
+.fit-out p{font-size:14px;color:#D6DBE1;margin-top:10px}
+.fit-out svg{width:100%;height:auto}
+.fit-out .note{grid-column:1/-1;color:#B8C0CA;border-top:1px solid #3A4149;padding-top:12px}
+
+/* bikes table */
+.bikes{width:100%;border-collapse:collapse;background:#fff;border:1.5px solid var(--ink)}
+.bikes th{font:600 11.5px/1.2 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:left;padding:12px 16px;border-bottom:1.5px solid var(--ink);background:var(--paper)}
+.bikes td{padding:16px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14.5px}
+.bikes tr:last-child td{border-bottom:0}
+.bikes .ty{display:flex;align-items:center;gap:16px;font:700 21px/1.1 var(--disp)}
+.bikes .ty svg{flex:none;width:92px;height:auto}
+.bikes .from{font:700 22px/1 var(--disp);white-space:nowrap}
+.bikes .from small{display:block;font:500 12px var(--body);color:var(--mute);margin-top:3px}
+
+/* e-bikes */
+.dark{background:var(--ink);color:#fff}
+.dark .sheet{background:#262B31;border-color:#59616B}
+.dark .sheet::before{border-color:#3A4149}
+.dark .tag{background:var(--or);color:var(--ink)}
+.dark .tag b{color:var(--ink)}
+.dark .sec-head p,.dark p{color:#D0D6DD}
+.dark .eyebrow{color:var(--or)}
+.eb{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:36px;align-items:center}
+.eb svg{width:100%;height:auto}
+.eb .ln{stroke:#E8ECF0}
+.eb .acc{stroke:var(--or)}
+.cmp{display:grid;grid-template-columns:1fr 1fr;border:1px solid #59616B}
+.cmp>div{padding:16px 18px;border-left:1px solid #59616B}
+.cmp>div:first-child{border-left:0}
+.cmp h3{font-size:20px;color:var(--or);margin-bottom:6px}
+.cmp p{font-size:14px}
+.care{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.care li{display:grid;grid-template-columns:34px 1fr;gap:8px;font-size:14.5px;color:#D0D6DD}
+.care b{font:700 14px var(--disp);color:var(--or)}
+
+/* notes */
+.notes{columns:2 360px;column-gap:44px;margin:0;padding:0;list-style:none;counter-reset:n}
+.notes li{break-inside:avoid;display:grid;grid-template-columns:44px 1fr;gap:6px;padding:14px 0;border-top:1px solid var(--line)}
+.notes li::before{counter-increment:n;content:counter(n,decimal-leading-zero);font:700 20px/1.2 var(--disp);color:var(--orInk)}
+.notes h3{font-size:19px;margin-bottom:4px}
+.notes p{font-size:14.5px;color:var(--ink2)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:0;border:1.5px solid var(--ink);background:#fff}
+.visit>div{padding:22px;border-left:1px solid var(--ink)}
+.visit>div:first-child{border-left:0}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:6px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{font-weight:600}
+.hours tr.today td:first-child::after{content:" · today";color:var(--orInk);font-weight:500}
+.open{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--disp);letter-spacing:.06em;text-transform:uppercase;margin:6px 0 14px}
+.open i{width:10px;height:10px;border-radius:50%;background:#8A929C}
+.open.is i{background:#1E9E5A;box-shadow:0 0 0 4px rgba(30,158,90,.18)}
+.visit h3{font-size:22px;margin:6px 0 10px}
+.visit p{font-size:14.5px;color:var(--ink2);margin-bottom:10px}
+.visit a.big-l{font:700 22px/1.2 var(--disp);text-decoration:none;display:inline-block;padding:4px 0;border-bottom:2px solid var(--or)}
+
+/* footer */
+footer{background:var(--ink);color:#C9D0D8;padding:40px var(--pad) calc(40px + env(safe-area-inset-bottom));margin-top:30px}
+.f-in{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px;align-items:end}
+.f-brand{font:700 clamp(30px,4.6vw,60px)/1 var(--disp);color:#fff;text-transform:uppercase;letter-spacing:.02em;overflow-wrap:anywhere}
+footer p{font-size:13.5px;line-height:1.55}
+
+/* responsive */
+@media (max-width:1180px){.nav a.opt{display:none}}
+@media (max-width:1023px){
+ .hero .sheet{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "draw" "bom" "tb";grid-template-rows:auto}
+ .draw{margin:22px 0 0}
+ #bike{max-height:none}
+ .bom ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;border:0}
+ .bom button{grid-template-columns:auto minmax(0,1fr);min-height:48px;border:1.5px solid var(--line);background:#fff;padding:4px 8px;font-size:13.5px}
+ .bom .sp{display:none}
+ .svc-wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .book{grid-template-columns:1fr 1fr}
+ .book .days-f{grid-column:1/-1}
+ .fit,.eb{grid-template-columns:minmax(0,1fr)}
+ .visit{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .visit>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--ink)}
+}
+@media (max-width:860px){
+ .nav{display:none}
+ .menu-btn{display:inline-flex;margin-left:auto;min-width:44px;padding:0 12px;border-color:#59616B;color:#fff}
+ .menu-btn:hover{background:#2D333B}
+ .top .btn-or{margin-left:0}
+ .nav.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:100%;background:var(--ink);padding:8px var(--pad) 16px;border-top:1px solid #3A4149}
+ .nav.open a{padding:14px 6px;font-size:16px;border-bottom:1px solid #2D333B}
+ .nav.open a.opt{display:block}
+ .sec-head{grid-template-columns:minmax(0,1fr)}
+ .tb{grid-template-columns:minmax(0,1fr)}
+ .tb>div{border-left:0;border-top:1px solid var(--ink)}
+ .tb>div:first-child{border-top:0}
+}
+@media (max-width:640px){
+ body{font-size:15.5px}
+ .top-in{gap:10px;min-height:56px}
+ .logo-word{font-size:14px;letter-spacing:.05em}
+ .top .btn-or{padding:0 12px;min-height:40px;font-size:13px}
+ .opt-t{display:none}
+ .sec{padding:24px 12px 26px}
+ .sheet{padding:40px 16px 26px}
+ .hero{padding-top:22px}
+ .hero .sheet{padding:34px 16px 20px}
+ .h-text h1{font-size:clamp(33px,9.6vw,40px)}
+ .h-text .lede{font-size:15px}
+ .acts .btn{flex:1 1 150px}
+ .draw{margin:18px -12px 0}
+ .tool{padding:8px 12px 0}
+ .tool .hint{flex:1 1 150px}
+ .svc-wrap{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border:0;gap:10px;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+ .svc-wrap::-webkit-scrollbar{display:none}
+ .svc{flex:0 0 82%;scroll-snap-align:center;border:1.5px solid var(--ink)}
+ .swipe{display:flex!important}
+ .book{grid-template-columns:minmax(0,1fr);padding:16px}
+ .fit-out{grid-template-columns:minmax(0,1fr);padding:20px}
+ .fit-out svg{max-width:300px;justify-self:center}
+ .bikes thead{display:none}
+ .bikes,.bikes tbody,.bikes tr,.bikes td{display:block;width:100%}
+ .bikes tr{padding:14px 16px;border-bottom:1.5px solid var(--ink)}
+ .bikes tr:last-child{border-bottom:0}
+ .bikes td{border:0;padding:4px 0}
+ .bikes td[data-l]::before{content:attr(data-l);display:block;font:600 11px/1.3 var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+ .bikes .ty svg{width:78px}
+ .cmp{grid-template-columns:minmax(0,1fr)}
+ .cmp>div{border-left:0;border-top:1px solid #59616B}
+ .cmp>div:first-child{border-top:0}
+ .visit{grid-template-columns:minmax(0,1fr)}
+ .visit>div{border-left:0;border-top:1px solid var(--ink)}
+ .visit>div:first-child{border-top:0}
+ .f-in{grid-template-columns:minmax(0,1fr)}
+}
+.swipe{display:none;align-items:center;gap:8px;font:600 12px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+ <div class="top-in">
+  <a class="logo" href="#parts"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12.5" fill="none" stroke="#FF6F00" stroke-width="3" stroke-dasharray="2.6 2.3"/><circle cx="15" cy="15" r="8" fill="none" stroke="#fff" stroke-width="1.6"/><circle cx="15" cy="15" r="2.4" fill="#FF6F00"/></svg><span class="logo-word" data-brand>Spoke &amp; Chain Cycles</span></a>
+  <nav class="nav" id="nav" aria-label="Main">
+   <a href="#parts">Parts</a><a href="#service">Service</a><a href="#fit">Bike fit</a><a href="#bikes">New bikes</a><a href="#ebikes">E-bikes</a><a class="opt" href="#tips">Commuting</a><a href="#visit">Visit</a>
+  </nav>
+  <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <a class="btn btn-or" href="#service">Book<span class="opt-t">&nbsp;a service</span></a>
+ </div>
+</header>
+
+<main id="main">
+<section class="sec hero" id="parts" aria-labelledby="h1">
+ <div class="sheet">
+  <span class="tag"><b>01/07</b>Exploded view · parts</span>
+  <div class="ticks" aria-hidden="true"></div>
+  <div class="h-text">
+   <p class="eyebrow">Bike shop &amp; workshop · Canberra</p>
+   <h1 id="h1">Take it apart. We'll put it back <em>better.</em></h1>
+   <p class="lede">Servicing, bike fits and new bikes for Canberra riders — road, gravel, commuter, kids and e-bikes. Pick any part to see what we check and how to look after it.</p>
+   <div class="acts"><a class="btn btn-or" href="#service">Book a service</a><a class="btn" href="#fit">Find my frame size</a></div>
+  </div>
+
+  <div class="draw">
+   <svg id="bike" viewBox="0 0 1040 700" role="img" aria-labelledby="bikeT">
+    <title id="bikeT">Line drawing of a bicycle exploded into nine numbered parts: frame, fork, front wheel, rear wheel, crankset, chain, rear derailleur, saddle and seatpost, bars and stem.</title>
+    <g class="dims" aria-hidden="true">
+     <path class="ln" d="M320 470V606M690 470V606M320 592H690M320 592l12-5v10zM690 592l-12-5v10z"/>
+     <text x="505" y="624" text-anchor="middle">WHEELBASE 1,020 MM</text>
+     <text x="36" y="70">ASSEMBLED · EXAMPLE 700C ALL-ROAD · SIZE M</text>
+    </g>
+    <g class="part" data-p="rwheel">
+     <circle class="ln" cx="320" cy="420" r="128"/><circle class="ln thin" cx="320" cy="420" r="118"/><circle class="ln" cx="320" cy="420" r="108"/>
+     <g class="spk" data-x="320" data-y="420"></g>
+     <circle class="ln thin" cx="320" cy="420" r="24"/><circle class="ln thin" cx="320" cy="420" r="19"/><circle class="ln thin" cx="320" cy="420" r="14"/>
+     <circle class="ln fillw" cx="320" cy="420" r="9"/><circle class="ln" cx="320" cy="420" r="3.5"/>
+    </g>
+    <g class="part" data-p="fwheel">
+     <circle class="ln" cx="690" cy="420" r="128"/><circle class="ln thin" cx="690" cy="420" r="118"/><circle class="ln" cx="690" cy="420" r="108"/>
+     <g class="spk" data-x="690" data-y="420"></g>
+     <circle class="ln thin" cx="690" cy="420" r="27" stroke-dasharray="7 4"/>
+     <circle class="ln fillw" cx="690" cy="420" r="10"/><circle class="ln" cx="690" cy="420" r="3.5"/>
+    </g>
+    <g class="part" data-p="frame">
+     <path class="ln thin" d="M485.8 438.4L433.8 248.4M428 258L638 249M485 446L655 306M480 444L320 424M435 268L323 422"/>
+     <path class="ln" d="M480 440L428 250M428 252L638 243M480 440L650 300M480 440L320 420M432 266L320 420"/>
+     <path class="ln fillw" d="M630 242L644 239L660 301L646 305Z"/>
+     <path class="ln fillw" d="M421 246h16v9h-16z"/>
+     <circle class="ln fillw" cx="480" cy="440" r="12"/><circle class="ln fillw" cx="320" cy="420" r="6"/>
+    </g>
+    <g class="part" data-p="fork">
+     <path class="ln" d="M634 212L652 300"/><path class="ln thin" d="M640 211L657 298"/>
+     <path class="ln fillw" d="M642 300L664 296L668 312L646 316Z"/>
+     <path class="ln" d="M648 314C654 352 668 394 686 420M664 312C668 350 680 392 694 418"/>
+     <circle class="ln fillw" cx="690" cy="420" r="6"/>
+    </g>
+    <g class="part" data-p="chain">
+     <path class="ln chainln" d="M480 398L320 396Q294 398 296 422Q298 444 322 447L328 470Q330 490 346 488L480 482A42 42 0 0 0 480 398"/>
+    </g>
+    <g class="part" data-p="mech">
+     <path class="ln thin" d="M344 440Q372 440 394 430"/>
+     <path class="ln fillw" d="M318 426L344 434L346 452L326 456Z"/>
+     <path class="ln fillw" d="M316 452Q320 444 330 450L346 484Q348 496 336 496Q326 496 324 488Z"/>
+     <circle class="ln fillw" cx="326" cy="458" r="7"/><circle class="ln fillw" cx="336" cy="485" r="7"/>
+    </g>
+    <g class="part" data-p="crank">
+     <circle class="ln" cx="480" cy="440" r="42" stroke-dasharray="3.4 2.4"/>
+     <circle class="ln fillw" cx="480" cy="440" r="37"/>
+     <path class="ln thin" d="M480 440V414M480 440l24.7-8M480 440l15.3 21M480 440l-15.3 21M480 440l-24.7-8"/>
+     <path class="ln fillw" d="M474 434L523 494L512 503L466 444Z"/>
+     <circle class="ln fillw" cx="480" cy="440" r="9"/>
+     <rect class="ln fillw" x="500" y="498" width="38" height="10" rx="2"/>
+    </g>
+    <g class="part" data-p="saddle">
+     <path class="ln" d="M424 250L416 206M432 250L424 206"/>
+     <path class="ln fillw" d="M410 204L432 202L432 212L412 214Z"/>
+     <path class="ln fillw" d="M366 198C388 186 432 184 468 191C478 193 477 202 466 203C442 206 420 211 396 211C378 211 362 207 366 198Z"/>
+     <path class="ln thin" d="M392 210L452 205"/>
+    </g>
+    <g class="part" data-p="bars">
+     <path class="ln thin" d="M630 212L641 210M629 207L640 205"/>
+     <path class="ln fillw" d="M626 202L672 192L676 206L630 216Z"/>
+     <path class="ln" d="M672 198C700 196 712 206 712 228C712 252 700 262 684 262C676 262 670 258 668 252"/>
+     <path class="ln thin" d="M673 205C695 204 704 212 704 228C704 245 696 254 684 255"/>
+     <path class="ln fillw" d="M699 203Q716 205 718 222L715 246Q709 251 705 245L707 223Q705 212 697 210Z"/>
+    </g>
+   </svg>
+   <div class="tool">
+    <button class="btn btn-ink asm" id="asm" type="button" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 9h14M9 2v14M5 5l-3 4 3 4M13 5l3 4-3 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span id="asmT">Assemble</span></button>
+    <p class="hint" id="hint">Hover or tap a part — or Tab through the parts list.</p>
+   </div>
+  </div>
+
+  <div class="bom">
+   <p class="k">Parts list · 9 items</p>
+   <ol id="bom"></ol>
+  </div>
+
+  <div class="tb" id="tb">
+   <div><p class="k">Part</p><h3><span id="tbNo">01</span><b id="tbName">Frame</b></h3><ul id="tbSpec"></ul></div>
+   <div><p class="k">Workshop tip</p><p class="tip" id="tbTip"></p></div>
+   <div><p class="k">Covered in</p><p class="cov" id="tbCov"></p><p class="note" id="tbInt"></p><button class="link" id="tbBook" type="button">Choose this service →</button></div>
+   <div class="tb-foot" aria-hidden="true"><span>Dwg SC-093-01</span><span>Scale 1:8</span><span>Example build · size M</span><span data-brand>Spoke &amp; Chain Cycles</span></div>
+  </div>
+  <p class="vh" id="live" aria-live="polite"></p>
+ </div>
+</section>
+
+<section class="sec" id="service" aria-labelledby="svcH">
+ <div class="sheet">
+  <span class="tag"><b>02/07</b>Workshop service</span>
+  <div class="sec-head">
+   <div><p class="eyebrow">Servicing · sample prices</p><h2 id="svcH">Pick a level. Drop it off. Ride it home.</h2></div>
+   <p>Every job starts on the stand with a full inspection and a written list of anything we'd fix. Nothing extra gets done without a call first, and most bikes are ready the same or next working day.</p>
+  </div>
+  <p class="swipe" aria-hidden="true">Swipe for all four levels <svg width="22" height="10" viewBox="0 0 22 10"><path d="M0 5h20M16 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></p>
+  <div class="svc-wrap" id="svcs">
+   <article class="svc" data-s="safety">
+    <div class="lv"><span class="k">Level 1</span><b>01</b></div>
+    <h3>Safety Check</h3>
+    <p class="price">$69<small>sample</small></p>
+    <p class="for">For bikes ridden weekly that just feel a bit off.</p>
+    <ul><li>Brake pads, cables and adjustment</li><li>Gear indexing, front and rear</li><li>Tyres checked for wear, cuts and pressure</li><li>Chain wear measured with a gauge</li><li>Bolts torqued to spec</li></ul>
+    <p class="time">About 45 min · while you wait</p>
+    <button class="btn" type="button" aria-pressed="false" data-pick="safety">Choose Safety Check</button>
+   </article>
+   <article class="svc" data-s="standard">
+    <div class="lv"><span class="k">Level 2</span><b>02</b></div>
+    <h3>Standard Service</h3>
+    <p class="price">$149<small>sample</small></p>
+    <p class="for">Our most booked level — once or twice a year for commuters.</p>
+    <ul><li>Everything in the Safety Check</li><li>Drivetrain degreased and re-lubed</li><li>Wheels trued on the bike</li><li>Headset and bottom bracket checked</li><li>Derailleur hanger aligned</li></ul>
+    <p class="time">Same or next working day</p>
+    <button class="btn" type="button" aria-pressed="false" data-pick="standard">Choose Standard Service</button>
+   </article>
+   <article class="svc" data-s="overhaul">
+    <div class="lv"><span class="k">Level 3</span><b>03</b></div>
+    <h3>Full Overhaul</h3>
+    <p class="price">$289<small>sample</small></p>
+    <p class="for">Stripped to the frame, cleaned, re-greased and rebuilt.</p>
+    <ul><li>Hub, headset and BB bearings serviced</li><li>New gear and brake cables fitted</li><li>Hydraulic brakes bled</li><li>Wheels trued and tensioned off the bike</li><li>Parts quoted before we fit them</li></ul>
+    <p class="time">2–3 working days</p>
+    <button class="btn" type="button" aria-pressed="false" data-pick="overhaul">Choose Full Overhaul</button>
+   </article>
+   <article class="svc" data-s="ebike">
+    <div class="lv"><span class="k">Level E</span><b>04</b></div>
+    <h3>E-bike Service</h3>
+    <p class="price">$189<small>sample</small></p>
+    <p class="for">Everything in the Standard, plus the electrics.</p>
+    <ul><li>Motor and battery diagnostics, where the maker's tool allows</li><li>Battery health report</li><li>Connectors, display and wiring checked</li><li>Pads and rotors rated for heavier bikes</li></ul>
+    <p class="time">Next working day</p>
+    <button class="btn" type="button" aria-pressed="false" data-pick="ebike">Choose E-bike Service</button>
+   </article>
+  </div>
+  <form class="book" id="book" novalidate>
+   <p class="sum" id="bkSum" aria-live="polite"></p>
+   <fieldset class="days-f"><legend>Drop-off day · before 10 am</legend><div class="days" id="days"></div></fieldset>
+   <label><span class="lab">Bike type</span><select id="bkBike"><option>Road</option><option>Gravel</option><option>Mountain</option><option>Commuter / hybrid</option><option>Kids</option><option>E-bike</option></select></label>
+   <label><span class="lab">First name</span><input type="text" id="bkName" autocomplete="given-name" placeholder="e.g. Priya"></label>
+   <button class="btn btn-or" type="submit">Request booking</button>
+  </form>
+  <p class="note" style="margin-top:12px">Sample prices in AUD for this concept demo. Parts and tubes are extra and always quoted before we fit them.</p>
+ </div>
+</section>
+
+<section class="sec" id="fit" aria-labelledby="fitH">
+ <div class="sheet">
+  <span class="tag"><b>03/07</b>Bike fit</span>
+  <div class="sec-head">
+   <div><p class="eyebrow">Frame size finder · illustrative</p><h2 id="fitH">Two measurements. One starting point.</h2></div>
+   <p>Stand against a wall in socks with a book snug between your legs, spine up, and measure floor to spine — that's your inseam. The finder gives a starting range; a proper fit ($120, sample price, about 75 minutes) sets saddle, reach and cleats on your own bike.</p>
+  </div>
+  <div class="fit">
+   <div class="fit-in">
+    <div class="rng"><label class="lab" for="hR">Height (cm)</label><input type="range" id="hR" min="120" max="205" value="172"><input type="number" id="hN" min="120" max="205" value="172" aria-label="Height in centimetres"></div>
+    <div class="rng"><label class="lab" for="iR">Inseam (cm)</label><input type="range" id="iR" min="55" max="100" value="80"><input type="number" id="iN" min="55" max="100" value="80" aria-label="Inseam in centimetres"></div>
+    <div><p class="lab" id="styL">Riding style</p><div class="seg" role="group" aria-labelledby="styL">
+     <button type="button" aria-pressed="true" data-sty="road">Road<small>drop bars</small></button>
+     <button type="button" aria-pressed="false" data-sty="mtb">MTB<small>trail &amp; dirt</small></button>
+     <button type="button" aria-pressed="false" data-sty="hyb">Hybrid<small>commuting</small></button>
+    </div></div>
+    <p class="note">General information only — not medical advice. Injuries, flexibility and how you like to ride all change the answer.</p>
+   </div>
+   <div class="fit-out">
+    <div id="fitRes" aria-live="polite">
+     <p class="k">Suggested frame size</p>
+     <p class="big" id="fBig">—</p>
+     <p class="sz" id="fSz"></p>
+     <p id="fTxt"></p>
+    </div>
+    <svg viewBox="0 0 300 230" aria-hidden="true">
+     <g class="ln" style="stroke:#E8ECF0"><circle cx="70" cy="168" r="50"/><circle cx="234" cy="168" r="50"/></g>
+     <path id="fFrame" class="ln" style="stroke:#E8ECF0" d=""/>
+     <path id="fSeat" class="ln" style="stroke:#FF6F00;stroke-width:3" d=""/>
+     <path id="fDim" class="ln" style="stroke:#FF6F00;stroke-width:1" d=""/>
+     <text id="fDimT" x="12" y="23" fill="#FF6F00" style="font:700 14px 'Exo 2',sans-serif" text-anchor="middle"></text>
+    </svg>
+    <p class="note">Illustrative sizes only — every maker measures frames differently. Always test ride before you buy.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="bikes" aria-labelledby="bikesH">
+ <div class="sheet">
+  <span class="tag"><b>04/07</b>New bikes</span>
+  <div class="sec-head">
+   <div><p class="eyebrow">Built, checked and fitted in-house</p><h2 id="bikesH">Four kinds of bike, one careful build.</h2></div>
+   <p>Every new bike is assembled on our stands, torqued, test-ridden and set to your measurements before it leaves — with a six-week tune once the cables have settled.</p>
+  </div>
+  <table class="bikes">
+   <thead><tr><th scope="col">Type</th><th scope="col">Built for</th><th scope="col">Key spec</th><th scope="col">Sizes</th><th scope="col">From</th></tr></thead>
+   <tbody>
+    <tr><td><span class="ty"><svg viewBox="0 0 92 56" aria-hidden="true"><g class="ln"><circle cx="20" cy="38" r="15"/><circle cx="72" cy="38" r="15"/><path d="M20 38H40L34 15H61L72 38M40 38L62 17M34 15L20 38M29 11H40M61 15L63 8H69Q74 8 74 13Q74 18 69 18"/></g></svg>Road</span></td><td data-l="Built for">Weekend bunch rides and long hilly loops out past Stromlo</td><td data-l="Key spec">Alloy or carbon frame, 2×12 gearing, 28–32 mm tyres, hydraulic discs</td><td data-l="Sizes">49–61 cm</td><td data-l="From"><span class="from">$1,890<small>sample price</small></span></td></tr>
+    <tr><td><span class="ty"><svg viewBox="0 0 92 56" aria-hidden="true"><g class="ln"><circle cx="20" cy="38" r="15"/><circle cx="20" cy="38" r="11"/><circle cx="72" cy="38" r="15"/><circle cx="72" cy="38" r="11"/><path d="M20 38H40L34 16H60L72 38M40 38L61 18M34 16L20 38M29 12H40M60 16L62 9H68Q74 9 74 15Q74 20 69 20"/></g></svg>Gravel</span></td><td data-l="Built for">Fire trails, dirt roads and commutes that take the long way</td><td data-l="Key spec">1×12 gearing, 40–45 mm tyres, rack and bottle mounts everywhere</td><td data-l="Sizes">XS–XL</td><td data-l="From"><span class="from">$2,290<small>sample price</small></span></td></tr>
+    <tr><td><span class="ty"><svg viewBox="0 0 92 56" aria-hidden="true"><g class="ln"><circle cx="20" cy="38" r="15"/><circle cx="72" cy="38" r="15"/><path d="M20 38H40L35 17H60L72 38M40 38L61 19M35 17L20 38M29 13H41M60 17L62 9H71M5 34A16 16 0 0 1 30 25M57 30A16 16 0 0 1 84 28M18 23H38M22 23L20 38"/></g></svg>Commuter</span></td><td data-l="Built for">Daily rides into Civic, Belconnen or Woden, rain or frost</td><td data-l="Key spec">Hub gears, dynamo lights, mudguards and a rear rack fitted</td><td data-l="Sizes">S–L · step-through too</td><td data-l="From"><span class="from">$1,150<small>sample price</small></span></td></tr>
+    <tr><td><span class="ty"><svg viewBox="0 0 92 56" aria-hidden="true"><g class="ln"><circle cx="26" cy="42" r="11"/><circle cx="64" cy="42" r="11"/><path d="M26 42H42L38 26H56L64 42M42 42L57 27M38 26L26 42M33 22H43M56 26L58 19H65"/></g></svg>Kids</span></td><td data-l="Built for">Balance bikes through to a first proper geared bike</td><td data-l="Key spec">12″ to 24″ wheels, brake levers sized for small hands</td><td data-l="Sizes">Roughly ages 3–12</td><td data-l="From"><span class="from">$329<small>sample price</small></span></td></tr>
+   </tbody>
+  </table>
+  <p class="note" style="margin-top:12px">Sample prices in AUD. Line drawings are generic — we don't show or name any maker's models in this demo.</p>
+ </div>
+</section>
+
+<section class="sec dark" id="ebikes" aria-labelledby="ebH">
+ <div class="sheet">
+  <span class="tag"><b>05/07</b>E-bikes</span>
+  <div class="eb">
+   <div>
+    <p class="eyebrow">Test rides Thursdays, 4–7 pm</p>
+    <h2 id="ebH" style="font-size:clamp(30px,3.4vw,46px);margin:10px 0 14px">Red Hill and Mount Ainslie, minus the dread.</h2>
+    <p>We sell, service and set up e-bikes for commuters and cargo families. Bring your helmet for a test ride — we'll set the saddle height and walk you through the assist levels before you roll out.</p>
+    <div class="cmp" style="margin-top:22px">
+     <div><h3>Mid-drive motor</h3><p>Sits at the cranks and works through your gears. Natural on steep climbs; wears chains faster, so budget for one a year.</p></div>
+     <div><h3>Hub motor</h3><p>Sits in the rear wheel. Simpler, quieter and cheaper to run — best for flatter commutes and bike paths.</p></div>
+    </div>
+    <ul class="care">
+     <li><b>01</b><span>Frosty night? Bring the battery inside and charge it at room temperature.</span></li>
+     <li><b>02</b><span>Parking it for a while? Leave the battery at 30–60% and top it up monthly.</span></li>
+     <li><b>03</b><span>Wash with a damp cloth — never a pressure hose near the motor or connectors.</span></li>
+    </ul>
+   </div>
+   <svg viewBox="0 0 520 400" aria-hidden="true">
+    <g class="ln"><circle cx="110" cy="290" r="88"/><circle cx="110" cy="290" r="76"/><circle cx="410" cy="290" r="88"/><circle cx="410" cy="290" r="76"/>
+    <path d="M110 290L250 300L215 140M215 142L362 146M250 300L366 184M362 146L372 182L410 290M110 290L220 160M210 132L222 132M204 118L218 138M362 146L352 110L392 102M100 170H200M120 170L110 290"/></g>
+    <g class="ln acc"><circle cx="250" cy="300" r="26"/><circle cx="250" cy="300" r="10"/><path d="M262 272L352 196L362 208L274 286Z"/><rect x="384" y="94" width="26" height="14" rx="3"/></g>
+    <g class="ln thin" style="stroke:#8D96A1"><path d="M312 232L372 262H470M250 330V372H152M397 94L430 58H486"/></g>
+    <g style="font:600 12.5px 'Exo 2',sans-serif;letter-spacing:.12em" fill="#E8ECF0"><text x="376" y="256">BATTERY</text><text x="376" y="276" fill="#AEB6C0">REMOVABLE</text><text x="30" y="366">MID-DRIVE</text><text x="30" y="386" fill="#AEB6C0">AT THE CRANKS</text><text x="410" y="52">DISPLAY</text></g>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="tips" aria-labelledby="tipsH">
+ <div class="sheet">
+  <span class="tag"><b>06/07</b>Commuter notes</span>
+  <div class="sec-head">
+   <div><p class="eyebrow">General notes · read before riding</p><h2 id="tipsH">Riding to work in Canberra</h2></div>
+   <p>Six notes from the workshop bench — for frosty mornings, swooping season and everything in between.</p>
+  </div>
+  <ol class="notes">
+   <li><div><h3>Frost on the paths</h3><p>Winter mornings often start below zero. Drop tyre pressure a little for grip and take bike-path corners wide and upright.</p></div></li>
+   <li><div><h3>Swooping season</h3><p>Magpies swoop roughly August to November. Walk past known nests or take the next street; don't stop and stare the bird down.</p></div></li>
+   <li><div><h3>Lights at both ends</h3><p>White up front and red at the back from dusk. A flashing rear light helps on grey afternoons too.</p></div></li>
+   <li><div><h3>Wind off the lake</h3><p>A calm morning around the lake can be a headwind by five. Pack a spare layer and plan for a slower ride home.</p></div></li>
+   <li><div><h3>Lock it like you mean it</h3><p>A D-lock through the frame and rear wheel, to something bolted down. Quick-release wheels can go walking — ask us about locking skewers.</p></div></li>
+   <li><div><h3>Ring early, pass wide</h3><p>Shared paths are busy with walkers, prams and dogs. A bell two seconds before you pass beats a surprised shout.</p></div></li>
+  </ol>
+ </div>
+</section>
+
+<section class="sec" id="visit" aria-labelledby="visitH">
+ <div class="sheet">
+  <span class="tag"><b>07/07</b>Visit the workshop</span>
+  <div class="visit">
+   <div><p class="k">Where</p><h2 id="visitH" style="font-size:30px;margin:6px 0 10px">Braddon, Canberra ACT</h2><p>Five minutes' ride from Civic, with bike parking out front and a track pump you can use whenever we're open.</p><p>Drop-offs before 10 am are usually ready the next working day.</p></div>
+   <div><p class="k">Workshop hours</p><p class="open" id="openNow"><i></i><span>Hours</span></p><table class="hours"><tbody id="hours"></tbody></table></div>
+   <div><p class="k">Talk to the workshop</p><h3>Book, ask, or check a quote</h3><p><a class="big-l" href="tel:+61255503471">(02) 5550 3471</a></p><p><a class="big-l" href="mailto:workshop@example.com">workshop@example.com</a></p><p class="note">Fictional contact details for this concept demo.</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="dark">
+ <div class="f-in">
+  <p class="f-brand" data-brand>Spoke &amp; Chain Cycles</p>
+  <div><p>Bike shop and workshop · Braddon, Canberra ACT. A fictional business created as a concept demo.</p><p>Sample prices in AUD. Frame sizes are illustrative and general information only. Drawings show an example build, not any maker's bike.</p></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var NS="http://www.w3.org/2000/svg";
+function rm(){return !!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)}
+function mk(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+var SVC={safety:["Safety Check",69],standard:["Standard Service",149],overhaul:["Full Overhaul",289],ebike:["E-bike Service",189]};
+var P=[
+ {id:"frame",n:"01",name:"Frame",short:"6061 alloy",ex:0,ey:0,d:.24,a:[536,248],l:[548,166],spec:["Double-butted 6061 alloy","Seat tube 540 mm (size M)","Threaded BSA bottom bracket"],tip:"After any crash, look for cracked paint around the head tube and bottom bracket — that's where frames complain first.",svc:"safety",every:"Looked over at every service"},
+ {id:"fork",n:"02",name:"Fork",short:"Carbon, 12 mm",ex:60,ey:10,d:.16,a:[656,306],l:[700,248],spec:["Carbon blades, alloy steerer","12 mm thru-axle","Tapered 1⅛–1½″ headset"],tip:"A clunk when you brake hard over bumps is usually a loose headset. Snug it early and the bearings last years longer.",svc:"standard",every:"Headset checked every 6 months"},
+ {id:"fwheel",n:"03",name:"Front wheel",short:"700×38c",ex:200,ey:20,d:0,a:[600,510],l:[590,582],spec:["700×38c tubeless-ready tyre","28-spoke alloy rim","160 mm disc rotor"],tip:"On a 38 mm commuter tyre, 50–60 psi is a comfortable start. After rain, pick glass out of the tread before it works through.",svc:"safety",every:"Pressure weekly · trued yearly"},
+ {id:"rwheel",n:"04",name:"Rear wheel",short:"11–34T cassette",ex:-170,ey:20,d:.04,a:[230,330],l:[208,262],spec:["11-speed 11–34T cassette","28-spoke alloy rim","Freehub on sealed bearings"],tip:"A wobble you can see past the frame is a wheel true — about fifteen minutes on our stand if the rim isn't damaged.",svc:"standard",every:"Trued at every Standard Service"},
+ {id:"crank",n:"05",name:"Crankset",short:"40T · 172.5 mm",ex:40,ey:110,d:.32,a:[523,503],l:[606,538],spec:["40T single chainring","172.5 mm crank arms","Threaded BSA bottom bracket"],tip:"A click once per pedal stroke is often a pedal thread or the bottom bracket — not the chain. Worth checking before it wears.",svc:"overhaul",every:"BB bearings every 1–2 years"},
+ {id:"chain",n:"06",name:"Chain",short:"11-speed",ex:-40,ey:175,d:.4,a:[400,397],l:[400,336],spec:["11-speed, 116 links","Quick link for easy removal","Wet lube through winter"],tip:"Replace it at 0.5% stretch. We'll measure it free while you wait — a new chain costs far less than a new cassette.",svc:"safety",every:"Measure every 1,000 km"},
+ {id:"mech",n:"07",name:"Rear derailleur",short:"11-speed clutch",ex:-200,ey:150,d:.48,a:[336,485],l:[262,470],spec:["11-speed with clutch","Replaceable hanger","Sealed jockey wheels"],tip:"Ghost shifting after a knock? The hanger is probably bent. We align it with a gauge in every Standard Service.",svc:"standard",every:"Hanger aligned every service"},
+ {id:"saddle",n:"08",name:"Saddle & post",short:"143 mm · 27.2",ex:-40,ey:-125,d:.56,a:[366,199],l:[292,200],spec:["143 mm saddle with cut-out","27.2 mm alloy seatpost","Two-bolt clamp"],tip:"Wrap a strip of tape at your seatpost height before you pack the bike for travel — you'll thank yourself in the carpark.",svc:"safety",every:"Clamp torque at every check"},
+ {id:"bars",n:"09",name:"Bars & stem",short:"42 cm flare",ex:75,ey:-125,d:.64,a:[712,232],l:[782,232],spec:["42 cm flared drop bar","90 mm stem, −6°","Hydraulic brake levers"],tip:"Grubby bar tape? A re-wrap takes twenty minutes and changes how the whole bike feels under your hands.",svc:"standard",every:"Bolts checked every service"}
+];
+var by={},svg=$("#bike"),bom=$("#bom"),live=$("#live");
+
+/* spokes */
+$$(".spk",svg).forEach(function(g){var cx=+g.dataset.x,cy=+g.dataset.y,d="";
+ for(var i=0;i<16;i++){var t=i*Math.PI/8,o=(i%2?1:-1)*.32;d+="M"+(cx+9*Math.cos(t)).toFixed(1)+" "+(cy+9*Math.sin(t)).toFixed(1)+"L"+(cx+107*Math.cos(t+o)).toFixed(1)+" "+(cy+107*Math.sin(t+o)).toFixed(1)}
+ mk("path",{"class":"ln thin",d:d},g)});
+
+/* parts: offsets, hit areas, callouts, list */
+P.forEach(function(p){
+ var g=svg.querySelector('[data-p="'+p.id+'"]');p.g=g;by[p.id]=p;
+ g.style.setProperty("--ex",p.ex);g.style.setProperty("--ey",p.ey);g.style.setProperty("--d",p.d+"s");
+ var b=g.getBBox();
+ g.insertBefore(mk("rect",{"class":"hit",x:b.x-10,y:b.y-10,width:b.width+20,height:b.height+20}),g.firstChild);
+ var co=mk("g",{"class":"co","aria-hidden":"true"},g);
+ mk("line",{x1:p.a[0],y1:p.a[1],x2:p.l[0],y2:p.l[1]},co);mk("circle",{"class":"dot",cx:p.a[0],cy:p.a[1],r:3},co);
+ mk("circle",{cx:p.l[0],cy:p.l[1],r:16},co);var t=mk("text",{x:p.l[0],y:p.l[1]},co);t.textContent=p.n;
+ var li=document.createElement("li");
+ li.innerHTML='<button type="button" aria-pressed="false" data-p="'+p.id+'"><span class="no">'+p.n+'</span><span>'+p.name+'</span><span class="sp">'+p.short+'</span></button>';
+ bom.appendChild(li)});
+
+function sizeCo(){var w=svg.getBoundingClientRect().width||1040,s=w/1040;
+ var r=Math.max(16,12.5/s),fs=Math.max(15,12.5/s),dr=Math.max(3,2.4/s);
+ $$(".co",svg).forEach(function(c){var cs=c.querySelectorAll("circle");cs[1].setAttribute("r",r.toFixed(1));cs[0].setAttribute("r",dr.toFixed(1));c.querySelector("text").setAttribute("font-size",fs.toFixed(1))});
+ $$(".dims text",svg).forEach(function(t){t.setAttribute("font-size",Math.max(15,10.5/s).toFixed(1))})}
+sizeCo();window.addEventListener("resize",sizeCo);
+
+var sel=null;
+function show(id){var p=by[id];svg.classList.add("has-hot");
+ P.forEach(function(q){q.g.classList.toggle("hot",q.id===id)});
+ $("#tbNo").textContent=p.n;$("#tbName").textContent=p.name;
+ $("#tbSpec").innerHTML=p.spec.map(function(s){return"<li>"+s+"</li>"}).join("");
+ $("#tbTip").textContent=p.tip;$("#tbCov").textContent=SVC[p.svc][0]+" · $"+SVC[p.svc][1];
+ $("#tbInt").textContent=p.every;$("#tbBook").textContent="Choose "+SVC[p.svc][0]+" →";$("#tbBook").dataset.svc=p.svc}
+function calm(){if(sel)show(sel);else{svg.classList.remove("has-hot");P.forEach(function(q){q.g.classList.remove("hot")})}}
+function select(id){sel=id;show(id);
+ $$("#bom button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.p===id))});
+ var p=by[id];live.textContent="Part "+p.n+", "+p.name+". "+p.spec.join(", ")+". Tip: "+p.tip}
+function reset(){var p=by.frame;show("frame");svg.classList.remove("has-hot");p.g.classList.remove("hot")}
+reset();
+svg.addEventListener("pointerover",function(e){if(e.pointerType==="touch")return;var g=e.target.closest&&e.target.closest(".part");if(g)show(g.dataset.p)});
+svg.addEventListener("pointerleave",calm);
+svg.addEventListener("click",function(e){var g=e.target.closest&&e.target.closest(".part");if(g)select(g.dataset.p)});
+bom.addEventListener("click",function(e){var b=e.target.closest("button");if(b)select(b.dataset.p)});
+bom.addEventListener("focusin",function(e){var b=e.target.closest("button");if(b)select(b.dataset.p)});
+bom.addEventListener("pointerover",function(e){var b=e.target.closest("button");if(b&&e.pointerType!=="touch")show(b.dataset.p)});
+bom.addEventListener("pointerleave",calm);
+
+/* assemble */
+var asm=$("#asm");
+asm.addEventListener("click",function(){var on=!svg.classList.contains("assembled");
+ svg.classList.toggle("assembled",on);asm.setAttribute("aria-pressed",String(on));
+ $("#asmT").textContent=on?"Explode view":"Assemble";
+ $("#hint").textContent=on?"Assembled — dimensions shown. Explode it again to pick parts.":"Hover or tap a part — or Tab through the parts list.";
+ live.textContent=on?"The parts snap together into a complete bike.":"The bike is exploded into nine parts."});
+
+/* service + booking */
+var cur="standard",days=$("#days");
+var WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function nowSyd(){var o={};try{new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",hourCycle:"h23"}).formatToParts(new Date()).forEach(function(x){o[x.type]=x.value})}catch(e){var d=new Date();o={year:d.getFullYear(),month:d.getMonth()+1,day:d.getDate(),hour:d.getHours(),minute:d.getMinutes()}}
+ return{y:+o.year,m:+o.month,d:+o.day,h:+o.hour%24,mi:+o.minute}}
+var N=nowSyd(),base=new Date(Date.UTC(N.y,N.m-1,N.d,12));
+function fmt(dt){return WD[dt.getUTCDay()]+" "+dt.getUTCDate()+" "+MO[dt.getUTCMonth()]}
+(function(){var c=0,i=1,html="";while(c<6&&i<20){var dt=new Date(base.getTime()+i*864e5),w=dt.getUTCDay();
+ if(w>=2&&w<=6){html+='<label class="chip"><input type="radio" name="day" value="'+fmt(dt)+'"'+(c===0?" checked":"")+'><span>'+fmt(dt)+"</span></label>";c++}i++}
+ days.innerHTML=html})();
+function sum(){var d=$('input[name="day"]:checked');
+ $("#bkSum").innerHTML="Selected: <b>"+SVC[cur][0]+" · $"+SVC[cur][1]+"</b> · drop-off "+(d?d.value:"—")+" · "+$("#bkBike").value}
+function pick(s){cur=s;$$(".svc").forEach(function(c){var on=c.dataset.s===s,b=c.querySelector("button");c.classList.toggle("on",on);b.setAttribute("aria-pressed",String(on));b.textContent=on?"Selected ✓":"Choose "+SVC[c.dataset.s][0]});
+ if(s==="ebike")$("#bkBike").value="E-bike";sum()}
+$("#svcs").addEventListener("click",function(e){var b=e.target.closest("button[data-pick]");if(b)pick(b.dataset.pick)});
+$("#book").addEventListener("change",sum);
+$("#tbBook").addEventListener("click",function(){pick(this.dataset.svc||"standard");var s=document.getElementById("service");s.scrollIntoView({behavior:rm()?"auto":"smooth"});setTimeout(function(){var b=$('.svc.on button');if(b)b.focus({preventScroll:true})},rm()?0:600)});
+$("#book").addEventListener("submit",function(e){e.preventDefault();var d=$('input[name="day"]:checked'),nm=$("#bkName").value.trim();
+ var msg="Demo only — no booking was made. "+(nm?nm+", a":"A")+" real workshop would confirm your "+SVC[cur][0]+" drop-off for "+(d?d.value:"your chosen day")+".";
+ $("#bkSum").innerHTML="Demo request ready: <b>"+SVC[cur][0]+"</b> · "+(d?d.value:"")+" · "+$("#bkBike").value+". Nothing was sent.";
+ if(window.DemoKit)DemoKit.toast(msg)});
+pick("standard");
+
+/* fit */
+var sty="road",hR=$("#hR"),hN=$("#hN"),iR=$("#iR"),iN=$("#iN");
+function band(v,cuts,names){for(var i=0;i<cuts.length;i++)if(v<cuts[i])return names[i];return names[names.length-1]}
+function fill(r){r.style.setProperty("--p",((r.value-r.min)/(r.max-r.min)*100)+"%")}
+function drawFit(cm){var L=40+(cm-40)*2.6,bb=[150,178],st=[bb[0]-L*.29,bb[1]-L*.957],ht=[224,st[1]+2],hb=[230,st[1]+30],rw=[70,168],fw=[234,168],f=function(p){return p[0].toFixed(1)+" "+p[1].toFixed(1)};
+ $("#fFrame").setAttribute("d","M"+f(rw)+"L"+f(bb)+"L"+f(hb)+"L"+f(ht)+"L"+f(st)+"L"+f(rw)+"M"+f(hb)+"L"+f(fw)+"M"+f(ht)+"l-4-14h22M"+f(st)+"l-3-14m-18 0h32");
+ $("#fSeat").setAttribute("d","M"+f(bb)+"L"+f(st));
+ var m=[(bb[0]+st[0])/2,(bb[1]+st[1])/2];$("#fDim").setAttribute("d","M12 30H110L"+f(m));$("#fDimT").setAttribute("x","12");$("#fDimT").setAttribute("text-anchor","start")}
+function fit(src){
+ if(src==="hR")hN.value=hR.value;if(src==="iR")iN.value=iR.value;
+ var h=Math.min(205,Math.max(120,+hN.value||172)),i=Math.min(100,Math.max(55,+iN.value||80));
+ if(src==="hN"&&hN.value!=="")hR.value=h;if(src==="iN"&&iN.value!=="")iR.value=i;fill(hR);fill(iR);
+ var big,sz,cm,unit="cm",lab;
+ if(sty==="road"){var c=i*.665;big=Math.round(c-1)+"–"+Math.round(c+1);sz=band(c,[49,52,55,58],["XS","S","M","L","XL"]);cm=c;lab="SEAT TUBE "+Math.round(c)+" CM"}
+ else if(sty==="mtb"){var n=i/2.54*.67-4;big=Math.round(n-1)+"–"+Math.round(n+1);unit="in";sz=band(n,[15,16.5,18.5,20.5],["XS","S","M","L","XL"]);cm=n*2.54;lab="SEAT TUBE "+Math.round(n)+"″"}
+ else{var y=i*.66;big=Math.round(y-1)+"–"+Math.round(y+1);sz=band(y,[46,51,56,60],["XS","S","M","L","XL"]);cm=y;lab="SEAT TUBE "+Math.round(y)+" CM"}
+ $("#fBig").innerHTML=big+"<span>"+(unit==="in"?"inch":"cm")+"</span>";
+ $("#fSz").textContent="Size "+sz+" · "+{road:"road",mtb:"mountain",hyb:"hybrid"}[sty]+" frame";
+ var r=i/h,t="Starting saddle height ≈ "+(i*.883).toFixed(1)+" cm, centre of the cranks to the top of the saddle.";
+ if(i<66)t+=" Under about 66 cm inseam, a kids' bike sized by wheel (20″ or 24″) may suit better — ask us.";
+ else if(r<.42)t+=" Your legs are short for your height, so reach matters more than seat tube — a fit session will help.";
+ else if(r>.5)t+=" Long legs for your height — you may prefer a shorter reach than the chart suggests.";
+ $("#fTxt").textContent=t;$("#fDimT").textContent=lab;drawFit(cm)}
+["hR","hN","iR","iN"].forEach(function(id){$("#"+id).addEventListener("input",function(){fit(id)})});
+$$(".seg button").forEach(function(b){b.addEventListener("click",function(){sty=b.dataset.sty;$$(".seg button").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});fit()})});
+fit();
+
+/* hours */
+var H=[["Monday",null],["Tuesday",[8,18]],["Wednesday",[8,18]],["Thursday",[8,19]],["Friday",[8,18]],["Saturday",[8,16]],["Sunday",[9,13]]];
+function hh(x){return x===12?"12 pm":x>12?(x-12)+" pm":x+" am"}
+var today=(base.getUTCDay()+6)%7;
+$("#hours").innerHTML=H.map(function(r,i){return'<tr'+(i===today?' class="today"':"")+"><td>"+r[0]+"</td><td>"+(r[1]?hh(r[1][0])+" – "+hh(r[1][1]):"Closed")+"</td></tr>"}).join("");
+(function(){var r=H[today][1],t=N.h+N.mi/60,o=$("#openNow");
+ if(r&&t>=r[0]&&t<r[1]){o.classList.add("is");o.lastChild.textContent="Open now · closes "+hh(r[1])}
+ else{var k=1;while(!H[(today+k)%7][1])k++;var nx=(r&&t<r[0])?"today "+hh(r[0]):(k===1?"tomorrow ":H[(today+k)%7][0].slice(0,3)+" ")+hh(H[(today+k)%7][1][0]);o.lastChild.textContent="Closed · opens "+nx}})();
+
+/* menu */
+var mb=$("#menuBtn"),nav=$("#nav");
+function menu(on){nav.classList.toggle("open",on);mb.setAttribute("aria-expanded",String(on));mb.textContent=on?"Close":"Menu"}
+mb.addEventListener("click",function(){menu(!nav.classList.contains("open"))});
+nav.addEventListener("click",function(e){if(e.target.closest("a"))menu(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){e.preventDefault();menu(false);mb.focus()}});
+})();
+</script>
+</body>
+</html>

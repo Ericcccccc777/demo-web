@@ -1,0 +1,8 @@
+{
+  "id": "065",
+  "tech": ["CSS Grid", "SVG", "Canvas 2D", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Date logic", "Form logic"],
+  "features": ["game", "story", "booking"],
+  "interaction": "Draw on a crayon-textured canvas (8 crayons, 3 sizes, undo, clear, arrow keys + Space for keyboard drawing) and press 'Stick it on the fridge' to pin your drawing into the fridge gallery with a magnet for this visit; a paper-plate clock of the day's routine highlights the current activity by your local time, and tapping any part of the day turns the hands to it.",
+  "fonts": ["Gochi Hand", "Varela Round"],
+  "notes": "Drawings live only in the page (nothing stored or uploaded; up to 6 of yours, each can be taken down). Weekend and after-hours visits get a 'closed' reading on the clock. Menu and fees are samples; subsidy text is general information; the tour slip ends in an on-page DEMO stamp and toast."
+}

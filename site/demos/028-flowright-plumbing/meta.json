@@ -1,0 +1,8 @@
+{
+  "id": "028",
+  "tech": ["SVG", "CSS Grid", "Pointer Events", "Keyboard shortcuts", "Form logic", "IntersectionObserver"],
+  "features": ["quote", "game", "map"],
+  "interaction": "Answer a four-step problem finder (what's wrong, is water running, where, how urgent) to get honest first steps with a mini diagram — e.g. where the water meter usually is — and a pre-filled enquiry; then drag a ratcheting spanner (or use Tighten/Loosen or arrow keys) to seal a dripping pipe joint while a playful litres-saved counter climbs.",
+  "fonts": ["Archivo", "Inter"],
+  "notes": "Drips stop animating under reduced motion (the gauges still update). The suburb checker uses a fixed list of Newcastle, Lake Macquarie and Maitland suburbs. Call-out fees are sample prices."
+}

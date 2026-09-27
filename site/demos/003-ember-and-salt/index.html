@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="003">
+<meta name="demo:brand" content="Ember &amp; Salt">
+<title>Ember &amp; Salt — wood-fired degustation, Surry Hills</title>
+<meta name="description" content="Ember &amp; Salt is a fictional eight-course, wood-fired degustation restaurant in Surry Hills, Sydney, open for dinner Wednesday to Saturday.">
+<meta name="theme-color" content="#121010">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --char:#121010;--smoke:#2A2522;--ember:#E4572E;--ash:#BDB3A8;--bone:#EFE7DC;
+  --ember-hot:#FF8A4C;--ember-deep:#A83A18;--ink:#1A1615;--line:rgba(189,179,168,.22);
+  --serif:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --pad:clamp(20px,5vw,80px);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;background:var(--char);color:var(--bone);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{margin:0;font-family:var(--serif);font-size:1.125rem;line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,svg,canvas{display:block}
+a{color:inherit}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
+:focus-visible{outline:2px solid var(--ember-hot);outline-offset:3px;border-radius:2px}
+.sc{font:500 .72rem/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--bone);color:var(--char);padding:10px 14px;font:600 .8rem var(--sans)}
+.skip:focus{top:12px}
+
+/* ---------- header ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;gap:clamp(14px,3vw,36px);
+  padding:max(14px,env(safe-area-inset-top)) max(var(--pad),env(safe-area-inset-right)) 18px max(var(--pad),env(safe-area-inset-left));
+  background:linear-gradient(to bottom,rgba(18,16,16,.94),rgba(18,16,16,.72) 55%,rgba(18,16,16,0))}
+.wm{font-style:italic;font-weight:400;font-size:1.55rem;line-height:1.05;text-decoration:none;color:var(--bone);overflow-wrap:anywhere;min-width:0;flex:0 1 auto}
+.top nav{margin-left:auto;display:flex;gap:clamp(18px,2.4vw,34px)}
+.top nav a{font:500 .7rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ash);text-decoration:none;padding:12px 0;transition:color .3s}
+.top nav a:hover{color:var(--bone)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 22px;border-radius:999px;border:1px solid transparent;
+  font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;
+  transition:background .3s,color .3s,border-color .3s,box-shadow .3s}
+.btn-ember{background:var(--ember);color:var(--char)}
+.btn-ember:hover{background:#EF6A40;box-shadow:0 0 34px rgba(228,87,46,.45)}
+.btn-line{border-color:rgba(239,231,220,.38);color:var(--bone);background:rgba(18,16,16,.35)}
+.btn-line:hover{border-color:var(--bone)}
+.top .btn{flex:none}
+
+/* ---------- course rail ---------- */
+.rail{position:fixed;right:max(10px,env(safe-area-inset-right));top:50%;transform:translateY(-50%);z-index:40;transition:opacity .5s,visibility .5s}
+.rail.off{opacity:0;visibility:hidden}
+.rail ol{list-style:none;margin:0;padding:0;position:relative}
+.rail ol::before,.rail ol::after{content:"";position:absolute;right:21px;top:20px;width:1px;background:rgba(189,179,168,.22)}
+.rail ol::before{bottom:20px}
+.rail ol::after{height:calc((100% - 40px)*var(--p,0));background:var(--ember);transition:height .6s var(--ease)}
+.rail button{position:relative;display:grid;place-items:center;width:44px;height:40px;background:none;border:0;padding:0;cursor:pointer;color:var(--ash)}
+.rail button::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--char);border:1px solid rgba(189,179,168,.7);transition:all .4s var(--ease);z-index:1}
+.rail button[aria-current]::before{width:11px;height:11px;background:var(--ember);border-color:var(--ember-hot);box-shadow:0 0 16px 3px rgba(228,87,46,.55)}
+.rail .lbl{position:absolute;right:46px;top:50%;transform:translate(8px,-50%);white-space:nowrap;font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--bone);background:rgba(18,16,16,.86);padding:7px 10px;border-radius:3px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s var(--ease)}
+.rail button:hover .lbl,.rail button:focus-visible .lbl{opacity:1;transform:translate(0,-50%)}
+
+/* ---------- shared screen ---------- */
+.screen{position:relative;min-height:100vh;min-height:100svh;scroll-snap-align:start;overflow:hidden;isolation:isolate}
+.screen::before{content:"";position:absolute;left:-20%;right:-20%;bottom:-38%;height:88%;z-index:-3;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 100%,rgba(228,87,46,calc(.34*var(--heat,.5))) 0,rgba(168,58,24,calc(.2*var(--heat,.5))) 32%,rgba(18,16,16,0) 66%)}
+.embers{position:absolute;left:0;bottom:0;width:100%;height:74%;z-index:-2;pointer-events:none}
+
+/* ---------- intro ---------- */
+.intro{display:grid;grid-template-rows:1fr auto;padding:120px var(--pad) 36px;--heat:.95}
+html:not(.hd-in-frame) .intro{padding-bottom:66px}
+.intro-in{align-self:center;justify-self:center;text-align:center;max-width:62rem;display:grid;justify-items:center;gap:22px}
+.kicker{color:var(--ash)}.kicker i{font-style:normal}
+.title{font-style:italic;font-weight:300;font-size:clamp(4.2rem,11.5vw,10.5rem);line-height:.9;letter-spacing:-.02em;color:var(--bone);
+  text-shadow:0 0 70px rgba(228,87,46,.38),0 2px 0 rgba(0,0,0,.4);overflow-wrap:anywhere;text-wrap:balance;max-width:100%}
+.title.long{font-size:clamp(3rem,7.4vw,6.6rem);line-height:.98}
+.lede{font-style:italic;font-weight:300;font-size:clamp(1.3rem,2vw,1.7rem);line-height:1.35;color:#D8CEC2;max-width:38ch;text-wrap:balance}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;color:var(--ash)}
+.facts span+span::before{content:"";display:inline-block;width:4px;height:4px;background:var(--ember);transform:rotate(45deg) translateY(-2px);margin-right:22px}
+.idx{list-style:none;padding:26px 0 0;margin:38px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+.idx a{display:grid;justify-items:center;gap:6px;text-decoration:none;padding:6px 2px;border-radius:4px;transition:background .3s}
+.idx a:hover{background:rgba(228,87,46,.08)}
+.idx b{font-weight:300;font-size:2.1rem;line-height:1;background:linear-gradient(to top,var(--ember-hot),var(--bone) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.idx span{font:500 .64rem/1.2 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ash);text-align:center}
+
+/* ---------- courses ---------- */
+.course{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;
+  padding:108px calc(var(--pad) + 70px) 84px var(--pad)}
+.numeral{--nw:calc((100vw - 2*var(--pad) - 70px)*7/12 - 30px);grid-column:1/span 7;grid-row:1;font-weight:300;font-size:min(66vh,calc(var(--nw)/var(--w,1)),38rem);line-height:.84;letter-spacing:-.03em;white-space:nowrap;padding-bottom:.04em;
+  background:linear-gradient(to top,rgba(255,138,76,.95) 0,rgba(228,87,46,.72) 22%,rgba(239,231,220,.16) 62%,rgba(239,231,220,.07));
+  -webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;justify-self:center}
+.dish{grid-column:8/span 5;grid-row:1;max-width:34rem}
+.course.flip .numeral{grid-column:6/span 7}
+.course.flip .dish{grid-column:1/span 5}
+.count{color:var(--ember-hot);margin-bottom:20px;display:flex;gap:12px;align-items:center}
+.count::after{content:"";height:1px;width:48px;background:currentColor;opacity:.6}
+.dish h2{font-style:italic;font-weight:300;font-size:clamp(2.6rem,5.1vw,4.9rem);line-height:.98;letter-spacing:-.012em;margin-bottom:24px;text-wrap:balance}
+.ingr{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:24px;color:var(--ash)}
+.ingr li{display:flex;align-items:center}
+.ingr li::before{content:"";width:4px;height:4px;background:var(--ember);transform:rotate(45deg);margin-right:10px;flex:none}
+.line{font-size:clamp(1.18rem,1.55vw,1.42rem);line-height:1.5;color:#DDD3C7;max-width:31ch;margin-bottom:28px}
+.pair{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:16px;font-style:italic;font-size:1.22rem;color:var(--bone)}
+.pair .sc{font-style:normal;color:var(--ash);font-size:.66rem}
+.js .reveal>*{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+.js .in .reveal>*{opacity:1;transform:none}
+.js .in .reveal>*:nth-child(2){transition-delay:.08s}.js .in .reveal>*:nth-child(3){transition-delay:.16s}
+.js .in .reveal>*:nth-child(4){transition-delay:.24s}.js .in .reveal>*:nth-child(5){transition-delay:.32s}
+.js .course .numeral{transform:translateY(40px);opacity:.25;transition:transform 1.6s var(--ease),opacity 1.6s var(--ease)}
+.js .course.in .numeral{transform:none;opacity:1}
+.next{position:absolute;left:var(--pad);bottom:28px;color:var(--ash);text-decoration:none;display:flex;gap:10px;align-items:center;opacity:.8}
+.next:hover{opacity:1;color:var(--bone)}
+
+/* ---------- after the courses ---------- */
+.band{position:relative;scroll-snap-align:start;padding:clamp(88px,11vw,150px) var(--pad);border-top:1px solid var(--line)}
+.eyebrow,.band .eyebrow{color:var(--ember-hot);margin-bottom:18px}
+.band h2{font-style:italic;font-weight:300;font-size:clamp(2.4rem,4.6vw,4.3rem);line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+.band p{color:#D6CCC0}
+.room{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:40px;align-items:center;background:linear-gradient(#121010,#171312)}
+.room-copy{grid-column:1/span 5;display:grid;gap:22px}
+.room figure{grid-column:7/span 6}
+.plan{width:100%;height:auto;overflow:visible}
+.plan text{font:600 11px var(--sans);letter-spacing:.2em;fill:var(--ash)}
+.legend{list-style:none;padding:0;display:grid;gap:10px;margin-top:6px}
+.legend li{display:flex;gap:14px;align-items:baseline;color:#D6CCC0;font-size:1.08rem}
+.legend b{font:600 .7rem/1 var(--sans);letter-spacing:.14em;color:var(--ember-hot);min-width:2.2em}
+.flick{animation:flick 5s ease-in-out infinite alternate}
+@keyframes flick{0%{opacity:.75}40%{opacity:1}70%{opacity:.85}100%{opacity:.95}}
+.fire{background:var(--smoke);--heat:.6}
+.fire-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;margin-bottom:clamp(48px,6vw,84px)}
+.fire-head>div{grid-column:1/span 7}
+.fire-head>p{grid-column:9/span 4;align-self:end;font-size:1.2rem}
+.day{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative;counter-reset:d}
+.day::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:linear-gradient(90deg,var(--ash),var(--ember) 40%,var(--ember-hot) 60%,rgba(189,179,168,.5))}
+.day li{position:relative;padding-top:38px}
+.day li::before{content:"";position:absolute;left:0;top:3px;width:13px;height:13px;border-radius:50%;background:var(--smoke);border:1px solid var(--ember-hot);box-shadow:0 0 0 4px var(--smoke)}
+.day li:nth-child(2)::before,.day li:nth-child(4)::before{background:var(--ember);box-shadow:0 0 0 4px var(--smoke),0 0 18px 4px rgba(228,87,46,.5)}
+.day time{display:block;color:var(--ash);margin-bottom:10px}
+.day h3{font-style:italic;font-weight:400;font-size:1.75rem;line-height:1.1;margin-bottom:8px;color:var(--bone)}
+.day p{font-size:1.05rem;line-height:1.5}
+.quote{margin:clamp(56px,7vw,96px) 0 0 auto;font-style:italic;font-weight:300;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.25;max-width:26ch;color:var(--bone)}
+.band .quote{color:var(--bone)}.quote .sc{display:block;font-style:normal;color:var(--ash);margin-top:18px}
+.visit{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:24px;align-items:start;background:#171312}
+.visit>header{grid-column:1/-1;margin-bottom:clamp(20px,3vw,40px)}
+.card{border:1px solid var(--line);border-radius:4px;padding:clamp(24px,3vw,40px);display:grid;gap:16px;align-content:start}
+.card h3{font-style:italic;font-weight:400;font-size:2rem;line-height:1.1}
+.diet{grid-column:1/span 4}
+.hours{grid-column:5/span 4;background:var(--bone);color:var(--char);border-color:var(--bone);box-shadow:0 30px 80px -30px rgba(228,87,46,.35)}
+.hours p,.hours dd{color:#3A3230}
+.hours .sc{color:var(--ember-deep)}
+.where{grid-column:9/span 4}
+.card ul{list-style:none;padding:0;display:grid;gap:8px}
+.card li{padding-left:18px;position:relative;color:#D6CCC0}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--ember);transform:rotate(45deg)}
+.hours dl{display:grid;gap:14px}
+.hours dt{font:600 .7rem/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ember-deep)}
+.hours dd{font-size:1.2rem;line-height:1.35}
+.price{border-top:1px solid rgba(18,16,16,.18);padding-top:14px;display:grid;gap:6px}
+.price div{display:flex;justify-content:space-between;gap:12px;font-size:1.12rem}
+.price small{font:500 .66rem/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#6A5F58}
+.where a{font-size:1.25rem;text-decoration:none;border-bottom:1px solid rgba(228,87,46,.5);justify-self:start;padding:4px 0}
+.where a:hover{border-color:var(--ember-hot)}
+.foot{scroll-snap-align:end;padding:48px var(--pad) calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline;justify-content:space-between;color:var(--ash)}
+.foot .wm2{font-style:italic;font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1;color:var(--bone);overflow-wrap:anywhere;min-width:0}
+.foot p{font-size:.98rem}
+
+/* ---------- reservation sheet ---------- */
+.sheet{position:fixed;inset:0;z-index:120;display:flex;justify-content:flex-end}
+.sheet[hidden]{display:none}
+.scrim{position:absolute;inset:0;background:rgba(8,6,6,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;transition:opacity .45s}
+.panel{position:relative;width:min(480px,100%);height:100%;background:var(--ink);border-left:1px solid rgba(228,87,46,.35);display:flex;flex-direction:column;
+  transform:translateX(104%);transition:transform .52s var(--ease);box-shadow:-40px 0 80px -30px rgba(0,0,0,.8)}
+.sheet.open .scrim{opacity:1}.sheet.open .panel{transform:none}
+.p-head{display:flex;align-items:flex-start;gap:16px;padding:max(22px,env(safe-area-inset-top)) 26px 18px;border-bottom:1px solid var(--line)}
+.p-head h2{font-style:italic;font-weight:300;font-size:2.3rem;line-height:1}
+.p-head .sc{color:var(--ember-hot);margin-bottom:8px}
+.x{margin-left:auto;flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--bone);font:300 1.6rem/1 var(--sans);cursor:pointer}
+.x:hover{border-color:var(--bone)}
+.p-body{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:8px 26px 26px}
+.p-body fieldset{border:0;padding:22px 0;margin:0;border-bottom:1px solid var(--line);min-width:0}
+.p-body legend{padding:0;margin-bottom:14px;color:var(--ash);font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;float:left;width:100%}
+.p-body legend b{color:var(--ember-hot);font-weight:600;margin-right:8px}
+.p-body legend+*{clear:both}
+.strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px 2px 10px;margin:0 -2px;scrollbar-width:thin;scrollbar-color:var(--smoke) transparent}
+.day-o{flex:none;scroll-snap-align:start;position:relative}
+.day-o input,.slot input,.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.day-o span{display:grid;justify-items:center;gap:3px;width:60px;padding:10px 0 11px;border-radius:30px;border:1px solid var(--line);transition:all .3s var(--ease)}
+.day-o .w{font:500 .62rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.day-o .n{font-size:1.6rem;line-height:1.05;color:var(--bone)}
+.day-o .m{font:500 .6rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ash)}
+.day-o:hover span{border-color:rgba(239,231,220,.5)}
+.day-o input:checked+span{background:var(--ember);border-color:var(--ember);box-shadow:0 4px 12px -6px rgba(228,87,46,.8)}
+.day-o input:checked+span *{color:var(--char)}
+.day-o input:focus-visible+span{outline:2px solid var(--bone);outline-offset:2px}
+.day-o.shut span{border-style:dashed;opacity:.5}
+.day-o.shut .n{text-decoration:line-through;text-decoration-thickness:1px}
+.day-o.shut input{cursor:not-allowed}
+.hint{font-size:.98rem;color:#B9AEA3;margin-top:6px;line-height:1.45}
+.stepper{display:flex;align-items:center;gap:6px;width:max-content;border:1px solid var(--line);border-radius:999px;padding:4px}
+.stepper button{width:44px;height:44px;border-radius:50%;border:0;background:rgba(239,231,220,.06);color:var(--bone);font:400 1.4rem/1 var(--sans);cursor:pointer}
+.stepper button:hover:not(:disabled){background:rgba(228,87,46,.25)}
+.stepper button:disabled{opacity:.3;cursor:not-allowed}
+.stepper output{min-width:6.6em;text-align:center;font-style:italic;font-size:1.45rem}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.slot{position:relative}
+.slot span{display:grid;gap:6px;padding:14px 16px;border-radius:6px;border:1px solid var(--line);transition:all .3s var(--ease)}
+.slot .t{font-size:1.5rem;line-height:1;color:var(--bone)}
+.slot .s{font:500 .64rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:8px;color:var(--ash)}
+.slot .s::before{content:"";width:7px;height:7px;border-radius:50%;background:#7CC49A}
+.slot.wait .s::before{background:transparent;border:1px solid var(--ash)}
+.slot:hover span{border-color:rgba(239,231,220,.5)}
+.slot input:checked+span{border-color:var(--ember);background:rgba(228,87,46,.14);box-shadow:inset 0 0 0 1px var(--ember)}
+.slot input:focus-visible+span{outline:2px solid var(--bone);outline-offset:2px}
+.slot input:disabled+span{opacity:.4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{position:relative}
+.chip span{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);font:500 .72rem/1 var(--sans);letter-spacing:.1em;color:#D6CCC0;transition:all .25s}
+.chip input:checked+span{background:var(--bone);color:var(--char);border-color:var(--bone)}
+.chip input:focus-visible+span{outline:2px solid var(--ember-hot);outline-offset:2px}
+.p-body label.tl{display:block;font:500 .7rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ash);margin-bottom:8px}
+textarea{width:100%;min-height:84px;resize:vertical;background:rgba(239,231,220,.04);border:1px solid var(--line);border-radius:6px;color:var(--bone);font:400 1.05rem/1.45 var(--serif);padding:12px 14px}
+textarea:focus{border-color:var(--ember-hot);outline:none}
+.sum{margin-top:22px;border-radius:6px;padding:20px;background:linear-gradient(160deg,#241E1C,#191413);border:1px solid rgba(228,87,46,.3);display:grid;gap:10px}
+.sum .when{font-style:italic;font-size:1.6rem;line-height:1.15}
+.sum .row{display:flex;justify-content:space-between;gap:12px;font-size:1.02rem;color:#D6CCC0;border-top:1px solid var(--line);padding-top:10px}
+.sum .row span:last-child{text-align:right}
+.sum .note{font:500 .64rem/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#A89E94}
+.err{color:#FF9D78;font:500 .82rem/1.4 var(--sans);min-height:1.2em;margin-top:12px}
+.p-foot{padding:16px 26px max(18px,env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--ink);display:grid;gap:8px}
+.p-foot .btn{width:100%;min-height:52px;font-size:.78rem}
+.p-foot small{font:500 .64rem/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#A89E94;text-align:center}
+.done{padding:40px 26px;display:grid;gap:18px;align-content:start}
+.done[hidden],.p-foot[hidden],.p-body[hidden]{display:none}
+.done:focus{outline:none}
+.done .seal{width:72px;height:72px}
+.done h3{font-style:italic;font-weight:300;font-size:2.2rem;line-height:1.08}
+.done p{color:#D6CCC0}
+.done .acts{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .top nav{display:none}
+  .room-copy{grid-column:1/-1}.room figure{grid-column:1/-1}
+  .fire-head>div,.fire-head>p{grid-column:1/-1}
+  .day{grid-template-columns:1fr 1fr;row-gap:36px}
+  .day::before{display:none}
+  .diet,.where{grid-column:1/span 6}.hours{grid-column:7/span 6;grid-row:2/span 2}
+}
+@media (max-width:720px){
+  html{scroll-padding-top:0}
+  .wm{font-size:1.3rem}
+  .top .btn{min-height:40px;padding:0 16px}
+  .intro,html:not(.hd-in-frame) .intro{padding:100px 20px 72px}
+  .intro-in{gap:18px}
+  .kicker span{display:block}.kicker i{display:none}.kicker span+i+span{margin-top:6px}
+  .facts{flex-direction:column;align-items:center;gap:8px}
+  .facts span+span::before{display:none}
+  .rail.intro-on{opacity:0;visibility:hidden}
+  .idx{grid-template-columns:repeat(4,1fr);row-gap:10px;margin-top:28px;padding-top:18px}
+  .idx b{font-size:1.7rem}
+  .course{display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:92px 62px 88px 22px}
+  .numeral{--nw:calc(100vw - 96px);font-size:min(30vh,calc(var(--nw)/var(--w,1)),15rem);margin:0 0 12px -.04em;line-height:.86}
+  .course.flip .numeral{align-self:flex-start;justify-self:auto}
+  .dish h2{margin-bottom:18px}
+  .ingr{margin-bottom:18px}
+  .line{margin-bottom:20px;font-size:1.14rem}
+  .next{display:none}
+  .rail{right:max(4px,env(safe-area-inset-right))}
+  .band{padding:88px 22px}
+  .day{grid-template-columns:1fr}
+  .diet,.hours,.where{grid-column:1/-1;grid-row:auto}
+  .panel{width:100%;border-left:0}
+  .p-head,.p-body{padding-left:20px;padding-right:20px}
+  .p-foot{padding-left:20px;padding-right:20px}
+  html:not(.hd-in-frame) .p-foot{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+  .foot{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+}
+@media (max-width:360px){.course{padding-right:54px}.top .btn{padding:0 12px;letter-spacing:.12em}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .js .reveal>*,.js .course .numeral{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#c1">Skip to the menu</a>
+<header class="top">
+  <a class="wm" href="#top" data-brand>Ember &amp; Salt</a>
+  <nav aria-label="Primary">
+    <a href="#c1">Menu</a><a href="#room">The room</a><a href="#fire">The fire</a><a href="#visit">Visit</a>
+  </nav>
+  <button class="btn btn-ember" type="button" data-reserve aria-haspopup="dialog">Reserve</button>
+</header>
+
+<nav class="rail off" aria-label="Courses">
+  <ol>
+    <li><button type="button" data-go="c1"><span class="lbl">I · Oyster</span><span class="vh">Course I, coal-kissed oyster</span></button></li>
+    <li><button type="button" data-go="c2"><span class="lbl">II · Leek</span><span class="vh">Course II, leek from the ashes</span></button></li>
+    <li><button type="button" data-go="c3"><span class="lbl">III · Flatbread</span><span class="vh">Course III, hearth flatbread</span></button></li>
+    <li><button type="button" data-go="c4"><span class="lbl">IV · Kingfish</span><span class="vh">Course IV, kingfish and burnt citrus</span></button></li>
+    <li><button type="button" data-go="c5"><span class="lbl">V · Carrot</span><span class="vh">Course V, ember-roasted carrot</span></button></li>
+    <li><button type="button" data-go="c6"><span class="lbl">VI · Murray cod</span><span class="vh">Course VI, Murray cod over ironbark</span></button></li>
+    <li><button type="button" data-go="c7"><span class="lbl">VII · Duck</span><span class="vh">Course VII, dry-aged duck</span></button></li>
+    <li><button type="button" data-go="c8"><span class="lbl">VIII · Custard</span><span class="vh">Course VIII, burnt honey custard</span></button></li>
+  </ol>
+</nav>
+
+<main id="main">
+  <section class="screen intro" id="top" aria-labelledby="brand-title">
+    <canvas class="embers" data-heat=".9" aria-hidden="true"></canvas>
+    <div class="intro-in">
+      <p class="kicker sc"><span>Wood-fired degustation</span><i> · </i><span>Surry Hills, Sydney</span></p>
+      <h1 class="title" id="brand-title" data-brand>Ember &amp; Salt</h1>
+      <p class="lede">Eight courses cooked over one ironbark fire. Dinner only, Wednesday to Saturday.</p>
+      <p class="facts sc"><span>Eight courses $165</span><span>Seatings 5:30 &amp; 8:15</span><span>Sample prices</span></p>
+      <div class="cta">
+        <a class="btn btn-line" href="#c1">Walk the menu</a>
+        <button class="btn btn-ember" type="button" data-reserve aria-haspopup="dialog">Reserve a seat</button>
+      </div>
+    </div>
+    <ol class="idx" aria-label="The eight courses">
+      <li><a href="#c1"><b>I</b><span>Oyster</span></a></li>
+      <li><a href="#c2"><b>II</b><span>Leek</span></a></li>
+      <li><a href="#c3"><b>III</b><span>Flatbread</span></a></li>
+      <li><a href="#c4"><b>IV</b><span>Kingfish</span></a></li>
+      <li><a href="#c5"><b>V</b><span>Carrot</span></a></li>
+      <li><a href="#c6"><b>VI</b><span>Murray cod</span></a></li>
+      <li><a href="#c7"><b>VII</b><span>Duck</span></a></li>
+      <li><a href="#c8"><b>VIII</b><span>Custard</span></a></li>
+    </ol>
+  </section>
+
+  <section class="screen course" id="c1" style="--heat:.35;--w:.30" aria-labelledby="c1-t">
+    <canvas class="embers" data-heat=".35" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">I</div>
+    <div class="dish reveal">
+      <p class="count sc">Course I of VIII · Snack</p>
+      <h2 id="c1-t">Coal-kissed oyster</h2>
+      <ul class="ingr sc"><li>Rock oyster</li><li>Finger lime</li><li>Kombu butter</li></ul>
+      <p class="line">Opened to order and set over the embers just long enough to warm the shell, then finished with a bead of kombu butter.</p>
+      <p class="pair"><span class="sc">Pairing</span>Blanc de blancs, Tasmania</p>
+    </div>
+  </section>
+
+  <section class="screen course flip" id="c2" style="--heat:.45;--w:.60" aria-labelledby="c2-t">
+    <canvas class="embers" data-heat=".45" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">II</div>
+    <div class="dish reveal">
+      <p class="count sc">Course II · Vegetable</p>
+      <h2 id="c2-t">Leek from the ashes</h2>
+      <ul class="ingr sc"><li>Leek</li><li>Hazelnut</li><li>Brown butter</li></ul>
+      <p class="line">Buried whole in last night’s coals until the outer layers turn to charcoal and the heart turns to silk. We peel it at the pass.</p>
+      <p class="pair"><span class="sc">Pairing</span>Chenin blanc, Swan Valley</p>
+    </div>
+  </section>
+
+  <section class="screen course" id="c3" style="--heat:.6;--w:.90" aria-labelledby="c3-t">
+    <canvas class="embers" data-heat=".6" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">III</div>
+    <div class="dish reveal">
+      <p class="count sc">Course III · Bread</p>
+      <h2 id="c3-t">Hearth flatbread</h2>
+      <ul class="ingr sc"><li>Heritage rye</li><li>Cultured cream</li><li>Smoked salt</li></ul>
+      <p class="line">Blistered on the bare bricks of the hearth floor and torn at the table, with cream we culture for three days and salt smoked over the fire.</p>
+      <p class="pair"><span class="sc">Pairing</span>Farmhouse cider, Adelaide Hills</p>
+    </div>
+  </section>
+
+  <section class="screen course flip" id="c4" style="--heat:.5;--w:.94" aria-labelledby="c4-t">
+    <canvas class="embers" data-heat=".5" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">IV</div>
+    <div class="dish reveal">
+      <p class="count sc">Course IV · Raw</p>
+      <h2 id="c4-t">Kingfish &amp; burnt citrus</h2>
+      <ul class="ingr sc"><li>Kingfish</li><li>Burnt mandarin</li><li>Kelp</li></ul>
+      <p class="line">Cured beneath a sheet of kelp, sliced thin and dressed with the juice of mandarins charred black in the coals.</p>
+      <p class="pair"><span class="sc">Pairing</span>Riesling, Clare Valley</p>
+    </div>
+  </section>
+
+  <section class="screen course" id="c5" style="--heat:.65;--w:.64" aria-labelledby="c5-t">
+    <canvas class="embers" data-heat=".65" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">V</div>
+    <div class="dish reveal">
+      <p class="count sc">Course V · Garden</p>
+      <h2 id="c5-t">Ember-roasted carrot</h2>
+      <ul class="ingr sc"><li>Heirloom carrot</li><li>Macadamia</li><li>Pepperberry</li></ul>
+      <p class="line">Roasted in the ash bed until sticky and collapsing, with macadamia cream and a crack of native pepperberry.</p>
+      <p class="pair"><span class="sc">Pairing</span>Skin-contact pinot gris, Mornington Peninsula</p>
+    </div>
+  </section>
+
+  <section class="screen course flip" id="c6" style="--heat:.82;--w:.94" aria-labelledby="c6-t">
+    <canvas class="embers" data-heat=".82" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">VI</div>
+    <div class="dish reveal">
+      <p class="count sc">Course VI · Fish</p>
+      <h2 id="c6-t">Murray cod over ironbark</h2>
+      <ul class="ingr sc"><li>Murray cod</li><li>Mussel</li><li>Saltbush</li></ul>
+      <p class="line">A thick cut of farmed cod grilled skin-side down until the skin shatters, with a mussel sauce and saltbush crisped in the embers.</p>
+      <p class="pair"><span class="sc">Pairing</span>Chardonnay, Yarra Valley</p>
+    </div>
+  </section>
+
+  <section class="screen course" id="c7" style="--heat:1;--w:1.24" aria-labelledby="c7-t">
+    <canvas class="embers" data-heat="1" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">VII</div>
+    <div class="dish reveal">
+      <p class="count sc">Course VII · Meat</p>
+      <h2 id="c7-t">Dry-aged duck</h2>
+      <ul class="ingr sc"><li>Duck</li><li>Davidson plum</li><li>Red gum smoke</li></ul>
+      <p class="line">Aged fourteen days on the bone, roasted at the edge of the flames and glazed with its own fat and Davidson plum.</p>
+      <p class="pair"><span class="sc">Pairing</span>Grenache, McLaren Vale</p>
+    </div>
+  </section>
+
+  <section class="screen course flip" id="c8" style="--heat:.4;--w:1.54" aria-labelledby="c8-t">
+    <canvas class="embers" data-heat=".4" aria-hidden="true"></canvas>
+    <div class="numeral" aria-hidden="true">VIII</div>
+    <div class="dish reveal">
+      <p class="count sc">Course VIII · Sweet</p>
+      <h2 id="c8-t">Burnt honey custard</h2>
+      <ul class="ingr sc"><li>Honey</li><li>Smoked cream</li><li>Wattleseed</li></ul>
+      <p class="line">Honey taken to the edge of bitter, set into a custard and caramelised at the table with an iron heated in the fire.</p>
+      <p class="pair"><span class="sc">Pairing</span>Botrytis semillon, Riverina</p>
+    </div>
+    <a class="next sc" href="#room">After the menu: the room ↓</a>
+  </section>
+
+  <section class="band room" id="room" aria-labelledby="room-t">
+    <div class="room-copy">
+      <p class="eyebrow sc">The room</p>
+      <h2 id="room-t">Twenty-eight seats, all turned towards one fire.</h2>
+      <p>A former print shop on a Surry Hills back lane, with the hearth built into the old loading-dock wall. Ten counter stools face the fire directly, so you can watch each course leave the coals.</p>
+      <ul class="legend">
+        <li><b>10</b>Counter stools, facing the hearth — best for one or two</li>
+        <li><b>5</b>Tables for two along the brick wall</li>
+        <li><b>1</b>Long table under the skylight for parties of seven or eight</li>
+      </ul>
+    </div>
+    <figure>
+      <svg class="plan" viewBox="0 0 640 440" role="img" aria-labelledby="plan-t">
+        <title id="plan-t">Floor plan: the hearth on the back wall, a curved counter of ten stools in front of it, five tables for two along the side walls and a long table for eight under the skylight near the entry.</title>
+        <defs>
+          <radialGradient id="glow" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#E4572E" stop-opacity=".55"/><stop offset=".45" stop-color="#E4572E" stop-opacity=".12"/><stop offset="1" stop-color="#E4572E" stop-opacity="0"/></radialGradient>
+          <clipPath id="walls"><rect x="16" y="16" width="608" height="408"/></clipPath>
+          <linearGradient id="hearth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8A4C"/><stop offset="1" stop-color="#A83A18"/></linearGradient>
+        </defs>
+        <ellipse cx="320" cy="16" rx="300" ry="230" fill="url(#glow)" class="flick" clip-path="url(#walls)"/>
+        <path d="M470 424H16V16H624V424H540" fill="none" stroke="#BDB3A8" stroke-opacity=".55" stroke-width="2"/>
+        <rect x="236" y="16" width="168" height="30" fill="url(#hearth)" class="flick"/>
+        <path d="M236 46h168" stroke="#EFE7DC" stroke-opacity=".6"/>
+        <text x="320" y="72" text-anchor="middle">HEARTH</text>
+        <path d="M170 92Q320 206 470 92" fill="none" stroke="#3A322E" stroke-width="20" stroke-linecap="round"/>
+        <path d="M170 92Q320 206 470 92" fill="none" stroke="#BDB3A8" stroke-opacity=".5" stroke-width="1"/>
+        <g fill="#121010" stroke="#E4572E" stroke-width="1.5">
+          <circle cx="182" cy="122" r="9"/><circle cx="212" cy="143" r="9"/><circle cx="243" cy="159" r="9"/><circle cx="275" cy="170" r="9"/><circle cx="307" cy="175" r="9"/>
+          <circle cx="333" cy="175" r="9"/><circle cx="365" cy="170" r="9"/><circle cx="397" cy="159" r="9"/><circle cx="428" cy="143" r="9"/><circle cx="458" cy="122" r="9"/>
+        </g>
+        <text x="320" y="214" text-anchor="middle">COUNTER · 10</text>
+        <g fill="none" stroke="#BDB3A8" stroke-opacity=".75" stroke-width="1.5">
+          <rect x="54" y="190" width="34" height="34"/><rect x="54" y="262" width="34" height="34"/><rect x="54" y="334" width="34" height="34"/>
+          <rect x="552" y="214" width="34" height="34"/><rect x="552" y="296" width="34" height="34"/>
+          <rect x="226" y="304" width="188" height="34"/>
+        </g>
+        <g fill="#121010" stroke="#BDB3A8" stroke-opacity=".75" stroke-width="1.5">
+          <circle cx="71" cy="176" r="7"/><circle cx="71" cy="238" r="7"/><circle cx="71" cy="248" r="7"/><circle cx="71" cy="310" r="7"/><circle cx="71" cy="320" r="7"/><circle cx="71" cy="382" r="7"/>
+          <circle cx="569" cy="200" r="7"/><circle cx="569" cy="262" r="7"/><circle cx="569" cy="282" r="7"/><circle cx="569" cy="344" r="7"/>
+          <circle cx="248" cy="290" r="7"/><circle cx="293" cy="290" r="7"/><circle cx="347" cy="290" r="7"/><circle cx="392" cy="290" r="7"/>
+          <circle cx="248" cy="352" r="7"/><circle cx="293" cy="352" r="7"/><circle cx="347" cy="352" r="7"/><circle cx="392" cy="352" r="7"/>
+        </g>
+        <rect x="206" y="268" width="228" height="106" fill="none" stroke="#BDB3A8" stroke-opacity=".35" stroke-dasharray="4 6"/>
+        <text x="320" y="394" text-anchor="middle">LONG TABLE · 8 · SKYLIGHT</text>
+        <text x="71" y="412" text-anchor="middle">FOR TWO</text>
+        <path d="M505 440v-26m-7 9 7-9 7 9" fill="none" stroke="#E4572E" stroke-width="1.5"/>
+        <text x="505" y="404" text-anchor="middle">ENTRY</text>
+      </svg>
+    </figure>
+  </section>
+
+  <section class="band fire" id="fire" aria-labelledby="fire-t">
+    <div class="fire-head">
+      <div>
+        <p class="eyebrow sc">The fire</p>
+        <h2 id="fire-t">Ironbark for heat, red gum for colour, vine cuttings for perfume.</h2>
+      </div>
+      <p>There is no gas line in this kitchen. Every course is cooked on, in, over or beside one brick hearth, and the menu moves with the fire through the night.</p>
+    </div>
+    <ol class="day">
+      <li><time class="sc">11:00 am</time><h3>Lit</h3><p>Kindling and split ironbark. The bricks take three hours to come up to heat.</p></li>
+      <li><time class="sc">2:00 pm</time><h3>Bread coals</h3><p>The hearth floor at its hottest. Flatbreads blister in under a minute.</p></li>
+      <li><time class="sc">5:00 pm</time><h3>Service fire</h3><p>Red gum goes on for a steadier coal. The first oysters go over at 5:30.</p></li>
+      <li><time class="sc">8:00 pm</time><h3>Second wind</h3><p>Fresh ironbark for the late seatings; the duck roasts at the edge of the flames.</p></li>
+      <li><time class="sc">11:30 pm</time><h3>Banked</h3><p>Ash raked over the coals. Tomorrow’s leeks go into the embers overnight.</p></li>
+    </ol>
+    <p class="quote">“We don’t cook to a clock. We cook to the colour of the coals.”<span class="sc">— written on the kitchen whiteboard</span></p>
+  </section>
+
+  <section class="band visit" id="visit" aria-labelledby="visit-t">
+    <header>
+      <p class="eyebrow sc">Before you come</p>
+      <h2 id="visit-t">Dietary notes, hours and how to find us.</h2>
+    </header>
+    <div class="card diet" id="dietary">
+      <h3>Dietary requirements</h3>
+      <p>With 48 hours’ notice we cook vegetarian, pescatarian, gluten-free and dairy-free versions of every course.</p>
+      <ul>
+        <li>Tell us in your booking notes, or call the restaurant.</li>
+        <li>We can’t safely cook for severe nut or shellfish allergies — our hearth, benches and tools are shared.</li>
+        <li>A fully vegan menu isn’t possible on this fire, and we’d rather tell you now.</li>
+      </ul>
+    </div>
+    <div class="card hours">
+      <h3>Hours</h3>
+      <dl>
+        <div><dt>Wednesday – Saturday</dt><dd>Dinner. Early seatings 5:30 &amp; 6:00 pm, late seatings 8:15 &amp; 8:45 pm.</dd></div>
+        <div><dt>Sunday – Tuesday</dt><dd>Closed — the hearth rests.</dd></div>
+        <div><dt>Allow</dt><dd>About two and a half hours for the full menu.</dd></div>
+      </dl>
+      <div class="price">
+        <div><span>Eight courses</span><span>$165</span></div>
+        <div><span>Wine pairing</span><span>$110</span></div>
+        <div><span>Zero-proof pairing</span><span>$70</span></div>
+        <small>Sample prices, per guest. Please give 48 hours’ notice to change or cancel.</small>
+      </div>
+      <button class="btn btn-ember" type="button" data-reserve aria-haspopup="dialog">Reserve a seat</button>
+    </div>
+    <div class="card where">
+      <h3>Find us</h3>
+      <p>Surry Hills, Sydney NSW — down a back lane, look for the woodpile by the door.</p>
+      <a href="tel:+61255504127">(02) 5550 4127</a>
+      <a href="mailto:table@example.com">table@example.com</a>
+      <p class="hint">Phone lines open Wednesday to Saturday from 2 pm.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="wm2" data-brand>Ember &amp; Salt</p>
+  <p>A fictional restaurant — a concept demo. Menu, prices and availability are samples.</p>
+</footer>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="scrim" data-close></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="rs-t">
+    <div class="p-head">
+      <div><p class="sc">Reservation</p><h2 id="rs-t">Reserve a seat</h2></div>
+      <button class="x" type="button" data-close aria-label="Close reservation">×</button>
+    </div>
+    <form class="p-body" id="rs" data-kit-ignore novalidate>
+      <fieldset>
+        <legend><b>1</b>Choose a night</legend>
+        <div class="strip" id="strip" role="radiogroup" aria-label="Next 14 days"></div>
+        <p class="hint" id="shut-why">We cook Wednesday to Saturday. Dashed days are closed — Sunday to Tuesday the hearth rests.</p>
+      </fieldset>
+      <fieldset>
+        <legend><b>2</b>Guests</legend>
+        <div class="stepper">
+          <button type="button" id="minus" aria-label="Fewer guests">−</button>
+          <output id="party" aria-live="polite">2 guests</output>
+          <button type="button" id="plus" aria-label="More guests">+</button>
+        </div>
+        <p class="hint" id="party-note">Counter or table — we seat you where the fire is best.</p>
+      </fieldset>
+      <fieldset>
+        <legend><b>3</b>Seating time</legend>
+        <div class="slots" id="slots" role="radiogroup" aria-label="Seating times"></div>
+        <p class="hint">Waitlist means the seating is full for your group. We’d contact you if a table opens up.</p>
+      </fieldset>
+      <fieldset>
+        <legend><b>4</b>Dietary notes</legend>
+        <div class="chips" id="chips">
+          <label class="chip"><input type="checkbox" value="Vegetarian"><span>Vegetarian</span></label>
+          <label class="chip"><input type="checkbox" value="Pescatarian"><span>Pescatarian</span></label>
+          <label class="chip"><input type="checkbox" value="Gluten-free"><span>Gluten-free</span></label>
+          <label class="chip"><input type="checkbox" value="Dairy-free"><span>Dairy-free</span></label>
+        </div>
+        <label class="tl" for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="notes" placeholder="e.g. one guest avoids raw fish; celebrating an anniversary"></textarea>
+      </fieldset>
+      <div class="sum" id="sum" aria-live="polite"></div>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+    <div class="done" id="done" hidden tabindex="-1">
+      <svg class="seal" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34" fill="none" stroke="#E4572E" stroke-width="1.5"/><circle cx="36" cy="36" r="27" fill="none" stroke="#BDB3A8" stroke-opacity=".4"/><path d="M36 18c6 9 10 13 10 21a10 10 0 0 1-20 0c0-5 3-8 5-11 1 4 3 5 5 6-1-6-1-10 0-16Z" fill="#E4572E"/></svg>
+      <p class="sc" style="color:#FF8A4C">Demo state</p>
+      <h3>Demo only — no reservation was made.</h3>
+      <p id="done-text"></p>
+      <div class="acts">
+        <button class="btn btn-line" type="button" id="again">Change details</button>
+        <button class="btn btn-ember" type="button" data-close>Close</button>
+      </div>
+    </div>
+    <div class="p-foot" id="pfoot">
+      <button class="btn btn-ember" type="submit" form="rs" id="confirm">Request this table</button>
+      <small>Demo only — this will not make a reservation</small>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var RM=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+  var root=document.documentElement;
+
+  /* ---------------- embers ---------------- */
+  var fires=[],raf=0,last=0;
+  function Fire(cv){this.cv=cv;this.x=cv.getContext('2d');this.heat=+cv.getAttribute('data-heat')||.5;this.ps=[];this.on=false;this.w=0;this.h=0}
+  Fire.prototype.fit=function(){
+    var r=this.cv.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);
+    this.w=r.width;this.h=r.height;if(!this.w||!this.h)return;
+    this.cv.width=Math.round(this.w*d);this.cv.height=Math.round(this.h*d);this.x.setTransform(d,0,0,d,0,0);
+    var n=Math.round(Math.min(110,this.w/11)*this.heat)+10;this.ps.length=0;
+    for(var i=0;i<n;i++)this.ps.push(this.seed({},true));
+  };
+  Fire.prototype.seed=function(p,any){
+    p.x=Math.random()*this.w;p.y=any?Math.random()*this.h:this.h+Math.random()*24;
+    p.vy=-(9+Math.random()*24)*(.55+this.heat*.6);p.vx=(Math.random()-.5)*7;p.r=.5+Math.random()*1.7;
+    p.t=any?Math.random()*5:0;p.life=5+Math.random()*7;p.ph=Math.random()*6.283;p.hot=Math.random()<.22;return p;
+  };
+  Fire.prototype.free=function(){this.cv.width=0;this.cv.height=0;this.ps.length=0;this.w=0};
+  Fire.prototype.draw=function(dt){
+    var x=this.x,w=this.w,h=this.h,ps=this.ps;if(!w)return;
+    x.globalCompositeOperation='source-over';x.clearRect(0,0,w,h);x.globalCompositeOperation='lighter';
+    for(var i=0;i<ps.length;i++){
+      var p=ps[i];p.t+=dt;p.x+=(p.vx+Math.sin(p.ph+p.t*1.1)*9)*dt;p.y+=p.vy*dt;
+      if(p.t>p.life||p.y<-12){this.seed(p,false);continue}
+      var k=Math.sin(Math.PI*Math.min(1,p.t/p.life))*(.3+.7*Math.max(0,p.y/h))*(.82+.18*Math.sin(p.t*2.4+p.ph));
+      x.fillStyle='rgba(228,87,46,'+(k*.16).toFixed(3)+')';x.beginPath();x.arc(p.x,p.y,p.r*5,0,6.283);x.fill();
+      x.fillStyle=p.hot?'rgba(255,214,168,'+k.toFixed(3)+')':'rgba(255,138,76,'+(k*.9).toFixed(3)+')';
+      x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+    }
+  };
+  Fire.prototype.still=function(){
+    var x=this.x,w=this.w,h=this.h;if(!w)return;x.globalCompositeOperation='source-over';x.clearRect(0,0,w,h);
+    var g=x.createRadialGradient(w/2,h*1.05,0,w/2,h*1.05,Math.max(w,h)*.7);
+    g.addColorStop(0,'rgba(255,138,76,'+(.26*this.heat).toFixed(3)+')');g.addColorStop(.5,'rgba(228,87,46,'+(.1*this.heat).toFixed(3)+')');g.addColorStop(1,'rgba(228,87,46,0)');
+    x.fillStyle=g;x.fillRect(0,0,w,h);
+    var m=x.createLinearGradient(0,0,0,h);m.addColorStop(0,'rgba(0,0,0,0)');m.addColorStop(.45,'rgba(0,0,0,1)');
+    x.globalCompositeOperation='destination-in';x.fillStyle=m;x.fillRect(0,0,w,h);x.globalCompositeOperation='source-over';
+    var s=7;for(var i=0;i<Math.round(26*this.heat)+6;i++){s=(s*9301+49297)%233280;var rx=s/233280;s=(s*9301+49297)%233280;var ry=s/233280;
+      x.fillStyle='rgba(255,170,110,'+(.25+ry*.45).toFixed(2)+')';x.beginPath();x.arc(rx*w,h-(ry*ry)*h*.8,.6+rx*1.2,0,6.283);x.fill()}
+  };
+  function tick(now){
+    var dt=Math.min(.05,(now-last)/1000||.016);last=now;var any=false;
+    for(var i=0;i<fires.length;i++)if(fires[i].on){fires[i].draw(dt);any=true}
+    raf=(any&&!document.hidden&&!RM.matches)?requestAnimationFrame(tick):0;
+  }
+  function kick(){
+    if(RM.matches){fires.forEach(function(f){if(f.on)f.still()});return}
+    if(!raf&&!document.hidden&&fires.some(function(f){return f.on})){last=performance.now();raf=requestAnimationFrame(tick)}
+  }
+  $$('canvas.embers').forEach(function(cv){var f=new Fire(cv);cv._f=f;fires.push(f)});
+  if('IntersectionObserver' in window){
+    var fio=new IntersectionObserver(function(es){
+      es.forEach(function(e){var f=e.target._f;if(e.isIntersecting){if(!f.w)f.fit();f.on=true}else{f.on=false;f.free()}});kick();
+    },{rootMargin:'60px 0px'});
+    fires.forEach(function(f){fio.observe(f.cv)});
+  }
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){fires.forEach(function(f){if(f.on)f.fit()});kick()},160)});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)kick()});
+  if(RM.addEventListener)RM.addEventListener('change',function(){if(raf){cancelAnimationFrame(raf);raf=0}kick()});
+
+  /* ---------------- rail + reveal ---------------- */
+  var rail=$('.rail'),rb=$$('.rail button'),courses=$$('.course'),intro=$('.intro');
+  function setCurrent(sec){
+    var i=courses.indexOf(sec);
+    rb.forEach(function(b,j){if(j===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+    rail.classList.toggle('off',i<0&&sec!==intro);
+    rail.classList.toggle('intro-on',sec===intro);
+    rail.querySelector('ol').style.setProperty('--p',i<0?0:i/7);
+  }
+  rb.forEach(function(b,i){
+    b.addEventListener('click',function(){var t=document.getElementById(b.getAttribute('data-go'));if(t)t.scrollIntoView({behavior:RM.matches?'auto':'smooth'})});
+    b.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowDown'?1:e.key==='ArrowUp'?-1:0;if(!d)return;e.preventDefault();
+      var n=rb[Math.max(0,Math.min(rb.length-1,i+d))];n.focus();n.click();
+    });
+  });
+  if('IntersectionObserver' in window){
+    var band=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setCurrent(e.target)})},{rootMargin:'-49% 0px -49% 0px'});
+    [intro].concat(courses,$$('.band'),[$('.foot')]).forEach(function(s){band.observe(s)});
+    var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rio.unobserve(e.target)}})},{threshold:.28});
+    courses.forEach(function(c){rio.observe(c)});
+  }else{courses.forEach(function(c){c.classList.add('in')})}
+
+  /* brand rename: long names get a calmer size */
+  function fitTitle(n){var t=$('#brand-title');if(t)t.classList.toggle('long',(n||t.textContent).length>16)}
+  window.addEventListener('hd:brandchange',function(e){fitTitle(e.detail&&e.detail.name)});
+
+  /* ---------------- reservation sheet ---------------- */
+  var sheet=$('#sheet'),panel=$('.panel',sheet),form=$('#rs'),done=$('#done'),pfoot=$('#pfoot'),opener=null;
+  var DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],LONG=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var TIMES=[['17:30','5:30 pm'],['18:00','6:00 pm'],['20:15','8:15 pm'],['20:45','8:45 pm']];
+  var st={date:null,party:2,time:null};
+  var bg=[$('.top'),$('#main'),$('.foot'),rail];
+
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  function fromIso(s){var p=s.split('-');return new Date(+p[0],+p[1]-1,+p[2],12)}
+  function nice(d){return DAYS[d.getDay()]+' '+d.getDate()+' '+MON[d.getMonth()]}
+  function seat(dateIso,ti,party){
+    var h=0;for(var i=0;i<dateIso.length;i++)h=(h*31+dateIso.charCodeAt(i))%9973;
+    h=(h+ti*17+party*7+ti*party*3)%10;
+    return h<(party>=7?6:party>=5?4:3)?'wait':'open';
+  }
+  function buildDates(){
+    var strip=$('#strip'),base=new Date(),html='',first=null;base.setHours(12,0,0,0);
+    for(var i=0;i<14;i++){
+      var d=new Date(base);d.setDate(base.getDate()+i);var open=d.getDay()>=3,v=iso(d);
+      if(open&&!first)first=v;
+      html+='<label class="day-o'+(open?'':' shut')+'"><input type="radio" name="night" value="'+v+'"'+(open?'':' disabled aria-describedby="shut-why"')+
+        ' aria-label="'+LONG[d.getDay()]+' '+d.getDate()+' '+MON[d.getMonth()]+(open?'':', closed')+'"><span><b class="w">'+(i===0?'Today':DAYS[d.getDay()])+
+        '</b><b class="n">'+d.getDate()+'</b><b class="m">'+(open?MON[d.getMonth()]:'Closed')+'</b></span></label>';
+    }
+    strip.innerHTML=html;
+    $$('input',strip).forEach(function(inp){inp.addEventListener('change',function(){st.date=inp.value;renderSlots();summary()})});
+    if(!st.date&&first){st.date=first}
+    var c=st.date&&$('input[value="'+st.date+'"]',strip);if(c)c.checked=true;
+  }
+  function renderSlots(){
+    var box=$('#slots'),html='';
+    TIMES.forEach(function(t,i){
+      var s=st.date?seat(st.date,i,st.party):'none';
+      html+='<label class="slot'+(s==='wait'?' wait':'')+'"><input type="radio" name="time" value="'+t[0]+'"'+(st.date?'':' disabled')+(st.time===t[0]?' checked':'')+
+        ' aria-label="'+t[1]+', '+(s==='wait'?'waitlist':s==='open'?'available':'choose a night first')+'"><span><b class="t">'+t[1]+'</b><b class="s">'+(s==='wait'?'Waitlist':s==='open'?'Available':'—')+'</b></span></label>';
+    });
+    box.innerHTML=html;
+    $$('input',box).forEach(function(inp){inp.addEventListener('change',function(){st.time=inp.value;summary()})});
+  }
+  function setParty(n){
+    st.party=Math.max(1,Math.min(8,n));
+    $('#party').textContent=st.party+(st.party===1?' guest':' guests');
+    $('#minus').disabled=st.party===1;$('#plus').disabled=st.party===8;
+    $('#party-note').textContent=st.party>=7?'Parties of seven or eight sit together at the long table under the skylight.':st.party===1?'Solo diners sit at the counter, facing the fire.':'Counter or table — we seat you where the fire is best.';
+    renderSlots();summary();
+  }
+  function diets(){return $$('#chips input:checked').map(function(i){return i.value})}
+  function slotLabel(){for(var i=0;i<TIMES.length;i++)if(TIMES[i][0]===st.time)return [TIMES[i][1],i];return null}
+  function summary(){
+    var s=$('#sum'),sl=slotLabel(),d=st.date?fromIso(st.date):null,dl=diets();
+    var wait=d&&sl&&seat(st.date,sl[1],st.party)==='wait';
+    s.innerHTML='<p class="note">Your table · summary</p><p class="when">'+(d?nice(d):'Choose a night')+(sl?' · '+sl[0]:'')+'</p>'+
+      '<div class="row"><span>Guests</span><span>'+st.party+'</span></div>'+
+      '<div class="row"><span>Status</span><span>'+(!sl?'Choose a seating':wait?'Waitlist':'Shown as available')+'</span></div>'+
+      '<div class="row"><span>Dietary</span><span>'+(dl.length?dl.join(', '):'None noted')+'</span></div>'+
+      '<div class="row"><span>Eight courses × '+st.party+'</span><span>$'+(165*st.party).toLocaleString('en-AU')+'</span></div>'+
+      '<p class="note">Sample prices · drinks and pairings extra</p>';
+    $('#confirm').textContent=wait?'Join the waitlist':'Request this table';
+    $('#err').textContent='';
+  }
+  function trap(e){
+    if(e.key==='Escape'){e.preventDefault();closeSheet();return}
+    if(e.key!=='Tab')return;
+    var f=$$('button:not([disabled]),input:not([disabled]),textarea,[tabindex="0"]',panel).filter(function(el){return el.offsetParent!==null});
+    if(!f.length)return;var a=f[0],z=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
+  }
+  function openSheet(e){
+    opener=e&&e.currentTarget||document.activeElement;
+    buildDates();renderSlots();setParty(st.party);showForm();
+    sheet.hidden=false;void sheet.offsetWidth;sheet.classList.add('open');root.classList.add('lock');
+    bg.forEach(function(el){if(el)el.inert=true});
+    setTimeout(function(){var c=$('#strip input:checked')||$('.x',panel);c.focus({preventScroll:true})},RM.matches?0:120);
+  }
+  function closeSheet(){
+    sheet.classList.remove('open');root.classList.remove('lock');
+    bg.forEach(function(el){if(el)el.inert=false});
+    setTimeout(function(){sheet.hidden=true},RM.matches?0:520);
+    if(opener&&opener.focus)opener.focus({preventScroll:true});
+  }
+  function showForm(){form.hidden=false;pfoot.hidden=false;done.hidden=true}
+  $$('[data-reserve]').forEach(function(b){b.addEventListener('click',openSheet)});
+  $$('[data-close]',sheet).forEach(function(b){b.addEventListener('click',closeSheet)});
+  panel.addEventListener('keydown',trap);
+  $('#minus').addEventListener('click',function(){setParty(st.party-1)});
+  $('#plus').addEventListener('click',function(){setParty(st.party+1)});
+  $('#chips').addEventListener('change',summary);
+  $('#again').addEventListener('click',function(){showForm();var c=$('#strip input:checked');if(c)c.focus()});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!st.date){$('#err').textContent='Choose a night first — Wednesday to Saturday.';var f=$('#strip input:not([disabled])');if(f)f.focus();return}
+    if(!st.time){$('#err').textContent='Choose one of the four seating times.';var t=$('#slots input');if(t)t.focus();return}
+    var sl=slotLabel(),wait=seat(st.date,sl[1],st.party)==='wait',dl=diets(),notes=$('#notes').value.trim();
+    $('#done-text').textContent='On a real site, this would send '+(wait?'a waitlist request':'a table request')+' for '+st.party+(st.party===1?' guest':' guests')+
+      ' on '+nice(fromIso(st.date))+' at '+sl[0]+(dl.length?' ('+dl.join(', ')+')':'')+(notes?', with your note,':'')+' to the restaurant, and they would reply to confirm. Nothing has been booked or held.';
+    form.hidden=true;pfoot.hidden=true;done.hidden=false;done.focus();
+    if(window.DemoKit)DemoKit.toast('Demo only — no reservation was made.');
+  });
+  setParty(2);
+})();
+</script>
+</body>
+</html>

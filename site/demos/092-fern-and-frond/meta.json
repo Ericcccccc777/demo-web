@@ -1,0 +1,8 @@
+{
+  "id": "092",
+  "tech": ["SVG", "SVG animation", "Generative art", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["customiser"],
+  "interaction": "Answer a four-step plant key — light (any, low to full sun), where it will sit (desk, floor, balcony), how much care you'll give and a pet-safe switch — and the 16 engraved specimen plates re-sort visually: matches stay hand-coloured and get a 'suits your room' stamp while the rest fade and shrink; tapping any plate opens a care card with light, place and care notes, a general pet-toxicity note and a four-week watering calendar adjusted for your light and the current Brisbane season, plus a delivery-zone checker by suburb.",
+  "fonts": ["Petrona", "Overpass"],
+  "notes": "Plant drawings are generated in code as engraving-style SVG (not botanically exact). Prices are samples; watering rhythms are rough starting points; pet-toxicity notes are general information only. The delivery map is stylised, not to scale. Holding a plant or a workshop seat is demo-only."
+}

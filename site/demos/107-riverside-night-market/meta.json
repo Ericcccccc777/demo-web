@@ -1,0 +1,8 @@
+{
+  "id": "107",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "Pointer Events", "Form logic", "Date logic", "IntersectionObserver"],
+  "features": ["map", "finder"],
+  "interaction": "On a stylised riverside park map with 24 stall pins, Food / Makers / Music / Vegan filters make matching pins glow; tapping a pin (or a list entry) opens what the stall sells, where it is and sample prices, and 'Add to my night' builds a reorderable list while a lantern-gold walking path draws between the stops in order, with an illustrative walking distance.",
+  "fonts": ["Titan One", "DM Sans"],
+  "notes": "Fictional market; stalls, prices, programme and line-up are samples. The walking distance is illustrative. The stallholder form ends in a demo state — nothing is sent. On phones the map rotates to a portrait layout."
+}

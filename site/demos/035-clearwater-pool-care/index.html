@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="035">
+<meta name="demo:brand" content="Clearwater Pool Care">
+<title>Clearwater Pool Care — pool service on the Gold Coast</title>
+<meta name="description" content="Clearwater Pool Care is a fictional Gold Coast pool service: weekly cleans, green-pool rescues, equipment repairs and water testing.">
+<meta name="theme-color" content="#0A6C8C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --turq:#29C5F6;--deep:#0A6C8C;--white:#FFFFFF;--sun:#FFD166;
+  --ink:#06384A;--ink2:#0B5670;--ink-w:#044257;--foam:#EAF7FC;--grout:#D5E6EE;
+  --f:'Lexend',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --g:clamp(16px,4vw,64px);--cope:clamp(12px,2vw,28px);--hh:64px;
+  --ease:cubic-bezier(.3,.7,.4,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px);background:#fff}
+body{margin:0;background:#fff;color:var(--ink);font:400 16px/1.6 var(--f);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+svg{display:block}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--sun);color:var(--ink);padding:10px 14px;border-radius:10px;font-weight:600}
+.skip:focus{top:10px}
+.tiles{background-color:#fff;background-image:linear-gradient(var(--grout) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--grout) 1.5px,transparent 1.5px);background-size:30px 30px;background-position:-1px -1px}
+
+/* header = top coping */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:14px;min-height:var(--hh);padding:8px var(--g);padding-top:max(8px,env(safe-area-inset-top));border-bottom:1.5px solid var(--grout);box-shadow:0 6px 18px -12px rgba(6,56,74,.4)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo svg{flex:none;width:36px;height:36px}
+.logo span{font-weight:800;font-size:16px;line-height:1.1;letter-spacing:-.01em;overflow-wrap:anywhere;min-width:0}
+.nav{display:none;gap:2px}
+.nav a{text-decoration:none;font-weight:400;font-size:15px;padding:10px 12px;border-radius:10px;color:var(--ink2)}
+.nav a:hover{background:var(--foam);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn.sun{background:var(--sun);color:var(--ink);box-shadow:0 3px 0 #D9A93A,0 10px 18px -8px rgba(6,56,74,.45)}
+.btn.deep{background:var(--ink);color:#fff;box-shadow:0 3px 0 #02202b}
+.btn.ghost{background:rgba(255,255,255,.7);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.top .btn{min-height:42px;padding:8px 16px;font-size:14px;flex:none}
+
+/* hero pool */
+.pool{padding:0 var(--cope) var(--cope)}
+.mosaic{padding:clamp(6px,.9vw,11px);background:#0E7CA0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Crect width='22' height='22' fill='%23e8f4f8'/%3E%3Crect x='1' y='1' width='9' height='9' fill='%230A6C8C'/%3E%3Crect x='12' y='1' width='9' height='9' fill='%231A9CC4'/%3E%3Crect x='1' y='12' width='9' height='9' fill='%231590B5'/%3E%3Crect x='12' y='12' width='9' height='9' fill='%230B5F7C'/%3E%3C/svg%3E") 0 0/11px 11px;border-radius:6px}
+.water{position:relative;min-height:calc(100svh - var(--hh) - var(--cope) - 22px);overflow:hidden;border-radius:3px;cursor:crosshair;touch-action:manipulation;
+  background:radial-gradient(120% 80% at 20% 10%,#5CD3F7 0%,transparent 55%),radial-gradient(90% 90% at 85% 90%,#0A6C8C 0%,transparent 70%),
+  repeating-radial-gradient(circle at 30% 40%,rgba(255,255,255,.08) 0 8px,transparent 8px 26px),linear-gradient(160deg,#3FCDF6,#1A9CC4 60%,#0B7697)}
+.water canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .8s ease}
+.gl .water canvas{opacity:1}
+.water::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 16px 24px -12px rgba(4,50,66,.55),inset 14px 0 22px -14px rgba(4,50,66,.4)}
+.floats{position:relative;z-index:1;display:grid;gap:22px;padding:28px clamp(14px,3vw,48px) 36px;min-height:inherit;align-content:center}
+.float{position:relative;filter:drop-shadow(16px 24px 14px rgba(4,50,66,.32))}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r0,0deg))}50%{transform:translateY(-7px) rotate(var(--r1,0deg))}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.lilo{--r0:-.6deg;--r1:.4deg;display:grid;grid-template-columns:1fr;max-width:640px}
+.lilo-pillow{position:relative;z-index:1;height:46px;margin:0 22px -12px;border-radius:24px;background:linear-gradient(180deg,#FFE7A8,#FFD166 55%,#F0B845);box-shadow:inset 0 5px 0 rgba(255,255,255,.6),inset 0 -6px 0 rgba(190,130,20,.22),0 6px 0 -2px rgba(190,130,20,.35)}
+.lilo-pillow::after{content:"";position:absolute;left:18px;right:18px;top:50%;height:2px;border-radius:2px;background:rgba(196,136,20,.35);box-shadow:0 1.5px 0 rgba(255,255,255,.5)}
+.lilo-body{position:relative;border-radius:34px;padding:30px 24px 26px;background:
+  repeating-linear-gradient(90deg,transparent 0 58px,rgba(196,136,20,.22) 58px 60px,rgba(255,255,255,.4) 60px 62px,transparent 62px 64px),
+  linear-gradient(180deg,#FFE08F,#FFD166 45%,#F6C24F);box-shadow:inset 0 5px 0 rgba(255,255,255,.55),inset 0 -8px 0 rgba(190,130,20,.2)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--turq);box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+.lilo h1{margin:12px 0 12px;font-weight:800;font-size:clamp(38px,6vw,74px);line-height:.98;letter-spacing:-.03em}
+.lilo h1 span{display:block;color:var(--ink2)}
+.lede{font-weight:300;font-size:clamp(16px,1.35vw,19px);line-height:1.55;max-width:46ch}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.side-floats{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ring{--r0:3deg;--r1:-4deg;width:clamp(150px,40vw,250px);flex:none}
+.ring text{font-weight:800;font-size:16px;letter-spacing:.1em;fill:var(--ink)}.ring text.rb{font-weight:600;font-size:12.5px;letter-spacing:.08em}
+.ball{width:clamp(56px,14vw,88px);aspect-ratio:1;border-radius:50%;flex:none;margin-right:6%;
+  background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.85) 0 7%,transparent 26%),radial-gradient(circle at 50% 50%,transparent 58%,rgba(4,50,66,.25) 100%),
+  conic-gradient(from 20deg,#29C5F6 0 60deg,#fff 60deg 120deg,#FFD166 120deg 180deg,#fff 180deg 240deg,#0A6C8C 240deg 300deg,#fff 300deg)}
+.ball-wrap{--r0:0deg;--r1:0deg}
+.noodle{--r0:-1.5deg;--r1:-.4deg;justify-self:start;display:flex;align-items:center;gap:10px;min-height:52px;padding:10px 22px;border-radius:999px;font-weight:600;font-size:14.5px;color:var(--ink);
+  background:linear-gradient(180deg,#9BE6FB 0%,#5CD3F7 35%,#29C5F6 70%,#1CA9D6 100%);box-shadow:inset 0 4px 0 rgba(255,255,255,.5),inset 0 -5px 0 rgba(10,108,140,.3)}
+.noodle b{font-weight:800}
+.touch{position:absolute;z-index:2;right:clamp(12px,2vw,28px);bottom:14px;display:flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border-radius:999px;background:rgba(255,255,255,.88);font-size:13px;font-weight:600;color:var(--ink);pointer-events:none}
+
+/* section scaffolding */
+.sec{padding:clamp(64px,9vw,120px) var(--g)}
+.sec-head{display:grid;gap:12px;max-width:760px;margin-bottom:clamp(28px,4vw,52px)}
+.kick{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.h2{font-weight:800;font-size:clamp(32px,5.2vw,62px);line-height:1.02;letter-spacing:-.025em}
+.sec-head p{font-weight:300;font-size:18px;max-width:58ch}
+.fine{font-size:13.5px;color:var(--ink2)}
+
+/* swim lanes */
+.lanes{background:linear-gradient(180deg,#34C9F5,#27BCEB);color:var(--ink);position:relative;overflow:hidden}
+.lanes::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='160'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' opacity='.55'%3E%3Cpath d='M10 30c20-14 34 10 56-4s30-12 48 2M130 70c22-10 30 12 54 0s28-8 46 4M20 120c18-8 32 8 50-2s34-10 52 6M150 140c14-10 26 6 40-2'/%3E%3Cpath d='M70 90c10-8 22 2 30-4M190 20c10-6 20 4 30-2'/%3E%3C/g%3E%3C/svg%3E") 0 0/240px 160px}
+.lanes .kick,.lanes .fine{color:var(--ink-w)}
+.lane-list{position:relative;display:grid}
+.lane{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 18px;padding:34px 0 30px}
+.lane+.lane::before{content:"";position:absolute;left:calc(-1 * var(--g));right:calc(-1 * var(--g));top:-7px;height:14px;border-radius:7px;
+  background:linear-gradient(180deg,rgba(255,255,255,.55),transparent 45%,rgba(4,50,66,.25)),repeating-linear-gradient(90deg,#FFD166 0 16px,#fff 16px 32px,#0A6C8C 32px 48px,#fff 48px 64px);box-shadow:0 5px 8px -3px rgba(4,50,66,.35)}
+.lane-no{grid-row:span 3;font-weight:800;font-size:clamp(56px,9vw,120px);line-height:.8;color:rgba(255,255,255,.92);text-shadow:0 3px 0 rgba(10,108,140,.35);min-width:.62em}
+.lane h3{font-weight:800;font-size:clamp(24px,3vw,34px);letter-spacing:-.02em;line-height:1.1}
+.lane p{max-width:52ch}
+.inc{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.inc li{font-size:14px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.8);color:var(--ink)}
+.price{grid-column:2;display:flex;align-items:baseline;gap:8px;margin-top:12px;font-size:14px;color:var(--ink-w)}
+.price b{font-weight:800;font-size:30px;color:var(--ink);letter-spacing:-.02em}
+.price small{font-size:14px}
+
+/* visit tiles */
+.visit{background:#fff}
+.visit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--grout);border:3px solid var(--grout);border-radius:10px;overflow:hidden}
+.vt{position:relative;background:linear-gradient(145deg,#fff 0%,#F1FAFD 100%);padding:22px 18px 20px;display:grid;gap:8px;align-content:start;min-height:180px;box-shadow:inset 3px 3px 0 #fff,inset -3px -3px 0 rgba(10,108,140,.05)}
+.vt::after{content:"";position:absolute;left:10px;top:10px;width:38%;height:26%;border-radius:40% 60% 50% 40%;background:linear-gradient(135deg,rgba(255,255,255,.9),transparent);pointer-events:none}
+.vt svg{width:52px;height:52px;position:relative;z-index:1}
+.vt b{font-weight:600;font-size:16px;line-height:1.25}
+.vt span{font-size:14px;color:var(--ink2);line-height:1.45}
+.vt i{position:absolute;right:16px;top:12px;font-style:normal;font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1;color:#1287AB;letter-spacing:-.03em}
+
+/* chemistry checker */
+.check{background:var(--foam)}
+.kit{display:grid;gap:22px}
+.panel{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 1px 0 var(--grout),0 18px 40px -26px rgba(6,56,74,.45)}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.chip{min-height:40px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--grout);background:#fff;font-size:14px;cursor:pointer}
+.chip:hover{border-color:var(--turq)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.sl{padding:18px 0 16px;border-bottom:1.5px dashed var(--grout)}
+.sl:last-child{border-bottom:0;padding-bottom:4px}
+.sl-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sl label{font-weight:600;font-size:16px}
+.sl label small{display:block;font-weight:400;font-size:13px;color:var(--ink2)}
+.val{display:flex;align-items:baseline;gap:8px}
+.val output{font-weight:800;font-size:28px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.val span{font-size:13px;color:var(--ink2)}
+.tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:#E3F6EC;color:#11633E}
+.tag.lo,.tag.hi{background:#FFF1CC;color:#7A4E00}
+.track{position:relative;margin-top:22px;padding-top:14px}
+.ideal{position:absolute;top:0;height:10px;border:2px solid var(--ink);border-bottom:0;border-radius:4px 4px 0 0}
+.ideal::after{content:"ideal";position:absolute;left:50%;top:-17px;transform:translateX(-50%);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:14px;border-radius:999px;background:var(--grad);box-shadow:inset 0 0 0 1px rgba(6,56,74,.15)}
+input[type=range]::-moz-range-track{height:14px;border-radius:999px;background:var(--grad)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-8px;border-radius:50%;background:#fff;border:3px solid var(--ink);box-shadow:0 3px 8px rgba(6,56,74,.35)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--ink)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(--sun),0 3px 8px rgba(6,56,74,.35)}
+.result{display:grid;gap:18px}
+.strip-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start}
+.strip{width:74px}
+.chart{display:grid;gap:16px}
+.chart-row b{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.sw span{position:relative;height:26px;border-radius:5px;box-shadow:inset 0 0 0 1px rgba(6,56,74,.12)}
+.sw span.on{box-shadow:0 0 0 3px var(--ink)}
+.sw-l{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:11px;color:var(--ink2);text-align:center;margin-top:3px;font-variant-numeric:tabular-nums}
+.status{border-radius:20px;padding:20px 18px;background:#FFF6DD;border:2px solid var(--sun);transition:background .5s var(--ease),border-color .5s var(--ease)}
+.status.ok{background:#E6F8FE;border-color:var(--turq)}
+.status h3{display:flex;align-items:center;gap:10px;font-weight:800;font-size:30px;letter-spacing:-.02em}
+.status h3 svg{flex:none}
+.advice{display:grid;gap:10px;margin-top:12px}
+.advice li{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:15px;line-height:1.5}
+.advice li::before{content:"";width:10px;height:10px;margin-top:7px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 2px #D9A93A}
+.advice li.good::before{background:var(--turq);box-shadow:0 0 0 2px var(--deep)}
+
+/* finder */
+.areas{background:#fff}
+.finder{display:grid;gap:26px}
+.map{background:var(--foam);border-radius:24px;padding:10px;max-width:420px;width:100%;justify-self:center}
+.map svg{width:100%;height:auto}
+.map .dot{fill:#fff;stroke:var(--deep);stroke-width:2;transition:r .3s var(--ease),fill .3s}
+.map .dot.day{fill:var(--sun)}
+.map .dot.hit{fill:var(--ink);stroke:var(--sun);stroke-width:4}
+.map text{font-size:11px;font-weight:600;fill:var(--ink)}
+#dots text.anch{font-size:10.5px;font-weight:600;fill:#0B5670}
+#dots text{font-size:13px;font-weight:800;paint-order:stroke;stroke:#EAF7FC;stroke-width:5px;stroke-linejoin:round}
+.field{display:grid;gap:6px}
+.field label,.legend{font-weight:600;font-size:14px}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 16px;border-radius:14px;border:2px solid var(--grout);background:#fff;font-size:16px}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:none;border-color:var(--turq);box-shadow:0 0 0 4px rgba(41,197,246,.25)}
+.find-row{display:flex;gap:10px}
+.find-row input{flex:1 1 auto;min-width:0}
+.answer{margin-top:14px;padding:16px 18px;border-radius:16px;background:var(--foam);font-size:16px;min-height:58px}
+.answer strong{font-weight:800}
+.days{display:grid;gap:12px;align-content:start}
+.days div{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:start}
+.days b{font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding-top:9px}
+.days ul{display:flex;flex-wrap:wrap;gap:6px}
+.days button{min-height:40px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--grout);background:#fff;font-size:14px;cursor:pointer}
+.days button:hover{border-color:var(--turq)}
+.days button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* book */
+.book{position:relative}
+.book-grid{display:grid;gap:24px}
+.form{background:#fff;border-radius:26px;padding:24px 18px;display:grid;gap:16px;box-shadow:0 0 0 3px var(--grout),0 24px 50px -30px rgba(6,56,74,.5)}
+.two{display:grid;gap:16px}
+.pick{display:flex;flex-wrap:wrap;gap:8px;border:0;padding:0;margin:0}
+.pick label{position:relative}
+.pick input{position:absolute;inset:0;opacity:0}
+.pick span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid var(--grout);font-size:15px;cursor:pointer;background:#fff}
+.pick input:checked+span{background:var(--turq);border-color:var(--turq);color:var(--ink);font-weight:600}
+.pick input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+.form-note{font-size:15px;min-height:1.5em}
+.faq{display:grid;gap:10px;align-content:start}
+.faq details{background:#fff;border-radius:18px;box-shadow:0 0 0 2px var(--grout)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:12px 18px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Cpath d='M6 11h10M11 6v10' stroke='%2306384A' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{padding:0 18px 16px;font-size:15px;color:var(--ink2)}
+.contact{display:grid;gap:4px;margin-top:8px;padding:18px;border-radius:18px;background:var(--ink);color:#fff;font-size:15px}
+.contact a{color:#fff;text-underline-offset:3px}
+.contact b{font-weight:800}
+
+.foot{background:var(--deep);color:#fff;padding:0 0 calc(76px + env(safe-area-inset-bottom))}
+.foot-cope{height:18px}
+.foot-in{display:grid;gap:18px;padding:44px var(--g) 0}
+.foot .foot-name{font-weight:800;font-size:clamp(30px,5vw,56px);line-height:1;letter-spacing:-.03em;overflow-wrap:anywhere}
+.foot p{font-size:14.5px;max-width:70ch}
+.foot-in{position:relative}
+.depth{justify-self:start;display:grid;place-items:center;width:84px;height:84px;background:#fff;color:var(--ink);font-weight:800;font-size:22px;letter-spacing:-.02em;border-radius:6px;box-shadow:0 0 0 4px rgba(255,255,255,.25)}
+.depth small{display:block;font-size:10px;letter-spacing:.14em;font-weight:600;margin-top:-10px}
+
+@media (prefers-reduced-motion:no-preference){
+  .float{animation:bob var(--bob,7s) ease-in-out infinite}
+  .ball{animation:spin 26s linear infinite}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+
+@media (min-width:720px){
+  .nav{display:flex}
+  .visit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .two{grid-template-columns:1fr 1fr}
+  .lane{grid-template-columns:auto minmax(0,1.1fr) minmax(0,.9fr);gap:8px 32px;align-items:start}
+  .lane-no{grid-row:span 2}
+  .lane .inc{grid-column:3;grid-row:1/span 2;margin-top:6px;align-content:flex-start}
+  .price{grid-column:2}
+}
+@media (min-width:1024px){
+  :root{--hh:72px}
+  .logo span{font-size:20px}
+  .floats{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-areas:"lilo side" "noodle side";gap:26px 40px;padding:48px clamp(32px,4vw,72px)}
+  .lilo{grid-area:lilo;align-self:end}
+  .lilo-body{padding:40px 40px 34px}
+  .side-floats{grid-area:side;flex-direction:column;align-items:flex-end;justify-content:center;gap:40px}
+  .ball{margin:0 16% 0 0}
+  .noodle{grid-area:noodle}
+  .kit{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:start}
+  .panel{padding:30px 30px}
+  .finder{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"map text" "map days";gap:26px 56px;align-items:start}
+  .map{grid-area:map;align-self:center}.f-text{grid-area:text}.days{grid-area:days}
+  .book-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:40px;align-items:start}
+  .form{padding:34px 32px}
+  .foot-in{grid-template-columns:auto 1fr auto;align-items:end;gap:28px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top tiles">
+  <a class="logo" href="#top"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="13" fill="none" stroke="#FFD166" stroke-width="8"/><circle cx="18" cy="18" r="13" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="10.2 10.2"/><circle cx="18" cy="18" r="17" fill="none" stroke="#0A6C8C" stroke-width="1.5"/><circle cx="18" cy="18" r="9" fill="#29C5F6" stroke="#0A6C8C" stroke-width="1.5"/></svg><span data-brand>Clearwater Pool Care</span></a>
+  <nav class="nav" aria-label="Main"><a href="#services">Services</a><a href="#check">Water check</a><a href="#areas">Areas</a><a href="#book">Contact</a></nav>
+  <a class="btn sun" href="#book">Book a visit</a>
+</header>
+
+<main id="main">
+  <section class="pool tiles" id="top" aria-labelledby="h1">
+    <div class="mosaic">
+      <div class="water" id="water">
+        <canvas id="gl" aria-hidden="true"></canvas>
+        <div class="floats">
+          <div class="float lilo" style="--bob:7.5s">
+            <div class="lilo-pillow" aria-hidden="true"></div>
+            <div class="lilo-body">
+              <p class="eyebrow">Pool care · Gold Coast, QLD</p>
+              <h1 id="h1">Clear water, <span>every single week.</span></h1>
+              <p class="lede">Weekly cleans, green-pool rescues, pump and chlorinator repairs — by the same tech every visit, with a photo report on your phone before we've left the driveway.</p>
+              <div class="ctas"><a class="btn deep" href="#book">Book a first visit</a><a class="btn ghost" href="#check">Check my water</a></div>
+            </div>
+          </div>
+          <div class="side-floats">
+            <div class="float ball-wrap" style="--bob:5.5s" aria-hidden="true"><div class="ball"></div></div>
+            <div class="float ring" style="--bob:8.5s">
+              <svg viewBox="0 0 240 240" role="img" aria-label="Weekly service from $69 a visit, sample price">
+                <defs><path id="rt" d="M51.5 120a68.5 68.5 0 0 1 137 0"/><path id="rb" d="M40.5 120a79.5 79.5 0 0 0 159 0"/><radialGradient id="rs" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#044257" stop-opacity=".28"/></radialGradient></defs>
+                <circle cx="120" cy="120" r="74" fill="none" stroke="#FFD166" stroke-width="52"/>
+                <circle cx="120" cy="120" r="74" fill="none" stroke="#fff" stroke-width="52" stroke-dasharray="58.1 58.1"/>
+                <circle cx="120" cy="120" r="74" fill="none" stroke="url(#rs)" stroke-width="52"/>
+                <circle cx="120" cy="120" r="100" fill="none" stroke="rgba(4,66,87,.35)" stroke-width="1.5"/><circle cx="120" cy="120" r="48" fill="none" stroke="rgba(4,66,87,.35)" stroke-width="1.5"/>
+                <text text-anchor="middle"><textPath href="#rt" startOffset="50%">WEEKLY SERVICE</textPath></text><text class="rb" text-anchor="middle"><textPath href="#rb" startOffset="50%">FROM $69 · SAMPLE PRICE</textPath></text>
+              </svg>
+            </div>
+          </div>
+          <p class="float noodle" style="--bob:6.5s"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.6 6-10A6 6 0 0 0 4 8c0 4.4 6 10 6 10z" fill="#06384A"/><circle cx="10" cy="8" r="2.2" fill="#FFD166"/></svg><span><b>Coomera to Coolangatta</b> · Mon–Fri, 7am–4pm</span></p>
+        </div>
+        <p class="touch" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="9" cy="9" r="2.5" fill="#06384A"/><circle cx="9" cy="9" r="5.5" fill="none" stroke="#06384A" stroke-width="1.4" opacity=".6"/><circle cx="9" cy="9" r="8.2" fill="none" stroke="#06384A" stroke-width="1.2" opacity=".3"/></svg>Touch the water</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec lanes" id="services" aria-labelledby="svc-h">
+    <div class="sec-head">
+      <p class="kick">Services</p>
+      <h2 class="h2" id="svc-h">Four lanes. One crew who knows your pool.</h2>
+      <p>Pick a lane or mix them — most customers start with a water test and settle into a weekly or fortnightly clean.</p>
+    </div>
+    <ol class="lane-list">
+      <li class="lane">
+        <span class="lane-no" aria-hidden="true">1</span>
+        <div><h3>Weekly service</h3><p>A full clean and chemical balance on the same day each week, so the water never gets the chance to turn.</p></div>
+        <ul class="inc" aria-label="Included"><li>Skim, brush &amp; vacuum</li><li>Empty skimmer &amp; pump baskets</li><li>Filter check &amp; backwash</li><li>Test &amp; dose</li><li>Salt cell check</li><li>Photo report</li></ul>
+        <p class="price"><span>from</span><b>$69</b><small>per visit · chemicals at cost</small></p>
+      </li>
+      <li class="lane">
+        <span class="lane-no" aria-hidden="true">2</span>
+        <div><h3>Green-pool rescue</h3><p>Back from holidays to a swamp? We shock it, floc it, vacuum to waste and deep-clean the filter, then come back until it's clear. How long it takes depends on how green — we'll tell you straight after the first look.</p></div>
+        <ul class="inc" aria-label="Included"><li>Shock &amp; flocculant</li><li>Vacuum to waste</li><li>Filter deep-clean</li><li>Up to 3 follow-up visits</li></ul>
+        <p class="price"><span>from</span><b>$249</b><small>depends on pool size</small></p>
+      </li>
+      <li class="lane">
+        <span class="lane-no" aria-hidden="true">3</span>
+        <div><h3>Equipment repair</h3><p>Noisy pumps, leaking filters, salt chlorinators that have given up. Common parts ride in the van, so most fixes happen on the first visit.</p></div>
+        <ul class="inc" aria-label="Covers"><li>Pumps &amp; motors</li><li>Sand &amp; cartridge filters</li><li>Salt chlorinators</li><li>Heaters &amp; timers</li></ul>
+        <p class="price"><span>call-out</span><b>$95</b><small>includes the first 30 min</small></p>
+      </li>
+      <li class="lane">
+        <span class="lane-no" aria-hidden="true">4</span>
+        <div><h3>Water testing</h3><p>A proper in-home test — pH, chlorine, alkalinity, calcium, stabiliser and salt — with a written dosing plan you can follow yourself.</p></div>
+        <ul class="inc" aria-label="Tests"><li>6-point test</li><li>Written dosing plan</li><li>Free with a first weekly visit</li></ul>
+        <p class="price"><span>one-off</span><b>$35</b><small>or free with a weekly plan</small></p>
+      </li>
+    </ol>
+    <p class="fine">Sample prices for a concept demo — a real business would quote on pool size and access.</p>
+  </section>
+
+  <section class="sec visit" aria-labelledby="visit-h">
+    <div class="sec-head">
+      <p class="kick">A weekly visit</p>
+      <h2 class="h2" id="visit-h">Forty-five minutes, six jobs, one photo.</h2>
+    </div>
+    <ol class="visit-grid">
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 36L26 16" stroke="#0A6C8C" stroke-width="3" stroke-linecap="round"/><rect x="24" y="4" width="16" height="16" rx="3" transform="rotate(45 32 12)" fill="#29C5F6" opacity=".35" stroke="#0A6C8C" stroke-width="2"/></svg><i>01</i><b>Skim the surface</b><span>Leaves, frangipani flowers, the odd drowned beetle.</span></li>
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="24" width="28" height="10" rx="3" fill="#FFD166" stroke="#0A6C8C" stroke-width="2"/><path d="M11 34v5M16 34v5M21 34v5M26 34v5M31 34v5" stroke="#0A6C8C" stroke-width="2"/><path d="M22 24V6" stroke="#0A6C8C" stroke-width="3" stroke-linecap="round"/></svg><i>02</i><b>Brush walls &amp; waterline</b><span>Stops algae getting a grip where the filter can't reach.</span></li>
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 32c10 0 10-20 22-20h6" fill="none" stroke="#0A6C8C" stroke-width="3" stroke-linecap="round"/><rect x="4" y="30" width="16" height="8" rx="3" fill="#29C5F6" stroke="#0A6C8C" stroke-width="2"/></svg><i>03</i><b>Vacuum the floor</b><span>Or vacuum to waste after a storm dumps a garden in.</span></li>
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M8 14h28l-4 22H12z" fill="#EAF7FC" stroke="#0A6C8C" stroke-width="2.4" stroke-linejoin="round"/><path d="M14 20l2 12M22 20v12M30 20l-2 12" stroke="#0A6C8C" stroke-width="1.6"/></svg><i>04</i><b>Empty the baskets</b><span>Skimmer and pump baskets, plus a pressure check on the filter.</span></li>
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="18" y="4" width="8" height="36" rx="2" fill="#fff" stroke="#0A6C8C" stroke-width="2"/><rect x="19.5" y="10" width="5" height="5" rx="1" fill="#F0A34A"/><rect x="19.5" y="18" width="5" height="5" rx="1" fill="#C98BC0"/><rect x="19.5" y="26" width="5" height="5" rx="1" fill="#5EA37E"/></svg><i>05</i><b>Test &amp; dose</b><span>Measured, not guessed — and written down for next time.</span></li>
+      <li class="vt"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="12" width="34" height="24" rx="5" fill="#29C5F6" opacity=".3" stroke="#0A6C8C" stroke-width="2.4"/><circle cx="22" cy="24" r="7" fill="#fff" stroke="#0A6C8C" stroke-width="2.4"/><path d="M15 12l3-5h8l3 5" fill="none" stroke="#0A6C8C" stroke-width="2.4"/></svg><i>06</i><b>Photo report</b><span>Before-and-after shots and readings, texted to you.</span></li>
+    </ol>
+  </section>
+
+  <section class="sec check" id="check" aria-labelledby="check-h">
+    <div class="sec-head">
+      <p class="kick">Water check</p>
+      <h2 class="h2" id="check-h">Balance the chemistry.</h2>
+      <p>Slide in the numbers from your own test kit (or pick a situation) and see what a strip would look like, what's off and the usual fix. It starts a little out of whack — can you get it to <strong>Balanced</strong>?</p>
+    </div>
+    <div class="kit">
+      <div class="panel">
+        <div class="presets" role="group" aria-label="Example situations">
+          <button class="chip" type="button" data-p="7.9,0.6,145">After a storm</button>
+          <button class="chip" type="button" data-p="7.1,4.5,70">Just shocked</button>
+          <button class="chip" type="button" data-p="7.8,0.2,110">Holiday house, 3 weeks empty</button>
+        </div>
+        <div class="sl">
+          <div class="sl-top"><label for="ph">pH<small>acid / alkaline · ideal 7.2–7.6</small></label><div class="val"><output id="ph-o" for="ph">7.9</output><span class="tag" id="ph-t">High</span></div></div>
+          <div class="track"><span class="ideal" style="left:28.6%;width:28.6%"></span><input id="ph" type="range" min="6.8" max="8.2" step="0.1" value="7.9" style="--grad:linear-gradient(90deg,#F2D14B,#F0A34A,#E96D4C,#D9435F,#B0306F)"></div>
+        </div>
+        <div class="sl">
+          <div class="sl-top"><label for="fc">Free chlorine<small>ppm · ideal 1–3</small></label><div class="val"><output id="fc-o" for="fc">0.6</output><span class="tag" id="fc-t">Low</span></div></div>
+          <div class="track"><span class="ideal" style="left:20%;width:40%"></span><input id="fc" type="range" min="0" max="5" step="0.1" value="0.6" style="--grad:linear-gradient(90deg,#FBF7F3,#E9C9DF,#C98BC0,#A0569C)"></div>
+        </div>
+        <div class="sl">
+          <div class="sl-top"><label for="ta">Total alkalinity<small>ppm · ideal 80–120</small></label><div class="val"><output id="ta-o" for="ta">145</output><span class="tag" id="ta-t">High</span></div></div>
+          <div class="track"><span class="ideal" style="left:25%;width:25%"></span><input id="ta" type="range" min="40" max="200" step="5" value="145" style="--grad:linear-gradient(90deg,#D6D55A,#9FC06A,#5EA37E,#2F7F86,#1F6A80)"></div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="panel strip-row">
+          <svg class="strip" viewBox="0 0 74 300" style="transform:rotate(-4deg)" role="img" aria-labelledby="strip-t"><title id="strip-t">Test strip illustration</title>
+            <rect x="21" y="6" width="32" height="288" rx="6" fill="#fff" stroke="#BFD8E2" stroke-width="2"/>
+            <rect x="21" y="236" width="32" height="58" rx="6" fill="#EAF7FC"/>
+            <rect id="pad-ph" x="25" y="22" width="24" height="24" rx="4" fill="#D9435F" stroke="rgba(6,56,74,.2)"/>
+            <rect id="pad-fc" x="25" y="72" width="24" height="24" rx="4" fill="#F4E4EC" stroke="rgba(6,56,74,.2)"/>
+            <rect id="pad-ta" x="25" y="122" width="24" height="24" rx="4" fill="#3F8D82" stroke="rgba(6,56,74,.2)"/>
+            <text x="37" y="270" text-anchor="middle" font-size="10" font-weight="600" fill="#0B5670">HOLD</text>
+          </svg>
+          <div class="chart" aria-hidden="true">
+            <div class="chart-row"><b>pH</b><div class="sw" id="sw-ph"></div><div class="sw-l"><span>6.8</span><span>7.2</span><span>7.5</span><span>7.8</span><span>8.2</span></div></div>
+            <div class="chart-row"><b>Free chlorine</b><div class="sw" id="sw-fc"></div><div class="sw-l"><span>0</span><span>1</span><span>2</span><span>3</span><span>5</span></div></div>
+            <div class="chart-row"><b>Alkalinity</b><div class="sw" id="sw-ta"></div><div class="sw-l"><span>40</span><span>80</span><span>120</span><span>160</span><span>200</span></div></div>
+          </div>
+        </div>
+        <div class="status" id="status" aria-live="polite">
+          <h3 id="st-h"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#FFD166"/><path d="M15 8v9M15 21v1" stroke="#06384A" stroke-width="3" stroke-linecap="round"/></svg><span>Adjust</span></h3>
+          <ul class="advice" id="advice"></ul>
+        </div>
+        <p class="fine">General information only — always follow the product label, add chemicals a little at a time and re-test. Strip colours are illustrative; real strips vary by brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec areas" id="areas" aria-labelledby="areas-h">
+    <div class="finder">
+      <div class="f-text">
+        <div class="sec-head" style="margin-bottom:22px">
+          <p class="kick">Service areas</p>
+          <h2 class="h2" id="areas-h">Do you come to my suburb?</h2>
+          <p>We run the coast in five loops, one per weekday — so your pool gets the same day and usually the same tech.</p>
+        </div>
+        <div class="field">
+          <label for="sub">Your suburb</label>
+          <div class="find-row"><input id="sub" list="subs" autocomplete="address-level2" placeholder="e.g. Burleigh Heads"><button class="btn deep" type="button" id="find-btn">Check</button></div>
+          <datalist id="subs"></datalist>
+        </div>
+        <p class="answer" id="answer" role="status" aria-live="polite">Type a suburb, or tap one below.</p>
+      </div>
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 300 520" id="map">
+          <defs><linearGradient id="sea" x1="0" x2="1"><stop offset="0" stop-color="#5CD3F7"/><stop offset="1" stop-color="#1A9CC4"/></linearGradient></defs>
+          <path d="M300 0H198c6 30 10 58 16 84c5 22 6 40 2 60c-3 16 0 36 4 58c6 34 6 70 10 104c4 34 10 66 20 98c8 26 18 50 28 76c4 14 7 26 8 40h14V0z" fill="url(#sea)"/>
+          <path d="M198 0c6 30 10 58 16 84c5 22 6 40 2 60c-3 16 0 36 4 58c6 34 6 70 10 104c4 34 10 66 20 98c8 26 18 50 28 76c4 14 7 26 8 40" fill="none" stroke="#FFD166" stroke-width="6" stroke-linecap="round"/>
+          <path d="M172 70c8 14 14 30 12 48s-10 34-8 52c2 14 8 24 14 30" fill="none" stroke="#5CD3F7" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+          <path d="M40 250c20-6 40 8 60 2s36-14 58-4c16 8 30 6 44-2" fill="none" stroke="#5CD3F7" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+          <g id="dots"></g>
+          <text x="258" y="40" font-size="12" fill="#fff" font-weight="600" text-anchor="middle">Coral</text><text x="258" y="54" font-size="12" fill="#fff" font-weight="600" text-anchor="middle">Sea</text>
+          <text x="16" y="508" font-size="10.5" fill="#0B5670">Stylised · not to scale</text>
+        </svg>
+      </div>
+      <div class="days" id="days"></div>
+    </div>
+  </section>
+
+  <section class="sec book tiles" id="book" aria-labelledby="book-h">
+    <div class="sec-head">
+      <p class="kick">Get in touch</p>
+      <h2 class="h2" id="book-h">Book a first visit.</h2>
+      <p>Tell us about the pool. We'll reply with a day that suits your loop and a quote — no lock-in contracts.</p>
+    </div>
+    <div class="book-grid">
+      <form class="form" id="form" novalidate data-kit-ignore>
+        <div class="two">
+          <div class="field"><label for="n">Name</label><input id="n" autocomplete="name" required placeholder="e.g. Priya"></div>
+          <div class="field"><label for="e">Email or mobile</label><input id="e" autocomplete="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="s2">Suburb</label><input id="s2" list="subs" required placeholder="e.g. Robina"></div>
+          <div class="field"><label for="svc">What do you need?</label><select id="svc"><option>Weekly service</option><option>Fortnightly service</option><option>Green-pool rescue</option><option>Equipment repair</option><option>One-off water test</option></select></div>
+        </div>
+        <fieldset class="pick"><legend class="legend" style="margin-bottom:8px">Pool type</legend>
+          <label><input type="radio" name="pt" value="Salt" checked><span>Salt</span></label>
+          <label><input type="radio" name="pt" value="Chlorine"><span>Chlorine</span></label>
+          <label><input type="radio" name="pt" value="Mineral"><span>Mineral</span></label>
+          <label><input type="radio" name="pt" value="Not sure"><span>Not sure</span></label>
+        </fieldset>
+        <div class="field"><label for="m">Anything else?</label><textarea id="m" rows="3" placeholder="Gate code, dog in the yard, the pump makes a grinding noise…"></textarea></div>
+        <div><button class="btn sun" type="submit">Request a visit</button></div>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+      <div class="faq">
+        <details open><summary>Do I need to be home?</summary><p>No. Leave the gate unlocked (or give us the code) and keep the dog inside. You'll get the photo report either way.</p></details>
+        <details><summary>What happens if it storms?</summary><p>If lightning's about we'll pause and come back the same day or first thing the next. Big storms often mean a free top-up visit to clear debris.</p></details>
+        <details><summary>Salt, chlorine or mineral?</summary><p>We service all three. Salt pools still need testing — the chlorinator makes chlorine, it doesn't balance the pH for you.</p></details>
+        <div class="contact"><b data-brand>Clearwater Pool Care</b><span>Gold Coast, QLD · Mon–Fri 7am–4pm</span><a href="tel:0755502188">(07) 5550 2188</a><a href="mailto:splash@example.com">splash@example.com</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-cope tiles" aria-hidden="true"></div>
+  <div class="foot-in">
+    <span class="depth" aria-hidden="true"><span>1.8 m<small>DEEP END</small></span></span>
+    <div><p class="foot-name" data-brand>Clearwater Pool Care</p><p style="margin-top:10px">Pool service from Coomera to Coolangatta.</p></div>
+    <p>Sample prices and general information only. A concept demo for a fictional business — no visits are booked.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------------- WebGL water ---------------- */
+var cv = document.getElementById('gl'), water = document.getElementById('water');
+var gl = null, prog = null, U = {}, drops = [], di = 0, t0 = performance.now(), run = false, vis = true, scale = 1, W = 0, H = 0;
+for (var i = 0; i < 12; i++) drops.push([0, 0, -99, 0]);
+var VS = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+var FS = [
+'#ifdef GL_FRAGMENT_PRECISION_HIGH','precision highp float;','#else','precision mediump float;','#endif',
+'uniform vec2 R;uniform float T;uniform vec4 D[12];',
+'vec2 h2(vec2 p){p=vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3)));return fract(sin(p)*43758.5453);}',
+'float cell(vec2 x,float t){vec2 n=floor(x),f=fract(x);float a=8.,b=8.;',
+' for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){vec2 g=vec2(float(i),float(j));vec2 o=h2(n+g);o=.5+.45*sin(t+6.2831*o);',
+'  vec2 r=g+o-f;float d=dot(r,r);if(d<a){b=a;a=d;}else if(d<b){b=d;}}',
+' return sqrt(b)-sqrt(a);}',
+'void main(){vec2 fc=gl_FragCoord.xy;vec2 uv=fc/R.y;float t=T;vec2 g=vec2(0.);float hs=0.;',
+' for(int k=0;k<12;k++){vec4 d=D[k];float age=t-d.z;if(d.w>0.&&age>0.&&age<4.5){',
+'  vec2 v=(fc-d.xy)/R.y;float dist=length(v)+1e-4;float x=dist-age*.3;',
+'  float env=exp(-x*x*70.)*exp(-age*.95)*d.w;hs+=sin(x*120.)*env;g+=(v/dist)*cos(x*120.)*env;}}',
+' vec2 p=uv+g*.022;',
+' p+=.007*vec2(sin(p.y*8.+t*.8),cos(p.x*7.-t*.6));',
+' float c1=cell(p*4.6+vec2(t*.05,t*.03),t*.5);',
+' float c2=cell(p*7.4-vec2(t*.04,-t*.02)+3.1,t*.65+1.7);',
+' float l1=exp(-c1*13.),l2=exp(-c2*15.);float ca=l1*.55+l2*.4+l1*l2*1.5;',
+' vec2 tp=p*9.;vec2 tf=abs(fract(tp)-.5);float gr=smoothstep(.465,.492,max(tf.x,tf.y));',
+' vec2 q=fc/R;float dep=clamp(q.x*.45+(1.-q.y)*.55,0.,1.);',
+' vec3 col=mix(vec3(.36,.85,.97),vec3(.05,.5,.66),dep*.8);',
+' col=mix(col,col*.84,gr*.55);',
+' col+=ca*vec3(.8,.97,1.)*.45;',
+' col+=vec3(1.)*clamp(hs,0.,1.)*.34-vec3(.08,.04,0.)*clamp(-hs,0.,1.);',
+' gl_FragColor=vec4(col,1.);}'].join('\n');
+function sh(type, src){ var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { gl.deleteShader(s); return null; } return s; }
+function initGL(){
+  try { gl = cv.getContext('webgl', {antialias: false, alpha: false, depth: false, stencil: false, powerPreference: 'low-power'}); } catch (e) { gl = null; }
+  if (!gl) return false;
+  var v = sh(gl.VERTEX_SHADER, VS), f = sh(gl.FRAGMENT_SHADER, FS); if (!v || !f) return false;
+  prog = gl.createProgram(); gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return false;
+  gl.useProgram(prog);
+  var b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  var loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  U.R = gl.getUniformLocation(prog, 'R'); U.T = gl.getUniformLocation(prog, 'T'); U.D = gl.getUniformLocation(prog, 'D');
+  cv.addEventListener('webglcontextlost', function(e){ e.preventDefault(); run = false; document.documentElement.classList.remove('gl'); });
+  return true;
+}
+function size(){
+  var r = water.getBoundingClientRect(); if (!r.width) return;
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  scale = dpr * (r.width > 900 ? .5 : .7);
+  W = Math.max(1, Math.round(r.width * scale)); H = Math.max(1, Math.round(r.height * scale));
+  if (cv.width !== W || cv.height !== H){ cv.width = W; cv.height = H; }
+  if (gl) gl.viewport(0, 0, W, H);
+  if (!run) frame(performance.now(), true);
+}
+function now(){ return ((performance.now() - t0) / 1000) % 900; }
+function frame(ts, once){
+  if (!gl) return;
+  var t = reduced ? 7.3 : now(), flat = [];
+  for (var i = 0; i < 12; i++) flat.push(drops[i][0], drops[i][1], drops[i][2], drops[i][3]);
+  gl.uniform2f(U.R, W, H); gl.uniform1f(U.T, t); gl.uniform4fv(U.D, flat);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+  if (!once && run) requestAnimationFrame(function(n){ frame(n); });
+}
+function start(){ if (run || reduced || !gl || !vis || document.hidden) return; run = true; requestAnimationFrame(function(n){ frame(n); }); }
+function stop(){ run = false; }
+function drop(e, strength){
+  if (!gl || reduced) return;
+  var r = cv.getBoundingClientRect();
+  drops[di] = [(e.clientX - r.left) * scale, (r.bottom - e.clientY) * scale, now(), strength]; di = (di + 1) % 12;
+}
+if (initGL()){
+  document.documentElement.classList.add('gl');
+  size();
+  if ('ResizeObserver' in window) new ResizeObserver(size).observe(water); else addEventListener('resize', size);
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis = es[0].isIntersecting; vis ? start() : stop(); }).observe(water);
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  var lx = -99, ly = -99, lt = 0;
+  water.addEventListener('pointerdown', function(e){ drop(e, 1.1); lx = e.clientX; ly = e.clientY; });
+  water.addEventListener('pointermove', function(e){
+    var n = performance.now(); if (n - lt < 70 || Math.hypot(e.clientX - lx, e.clientY - ly) < 26) return;
+    lt = n; lx = e.clientX; ly = e.clientY; drop(e, e.pointerType === 'mouse' ? .45 : .7);
+  });
+  start();
+}
+
+/* ---------------- chemistry checker ---------------- */
+var SW = {
+  ph: {cols: ['#F2D14B', '#F0A34A', '#E96D4C', '#D9435F', '#B0306F'], stops: [6.8, 7.2, 7.5, 7.8, 8.2], lo: 7.2, hi: 7.6},
+  fc: {cols: ['#FBF7F3', '#E9C9DF', '#D7A6CF', '#C98BC0', '#A0569C'], stops: [0, 1, 2, 3, 5], lo: 1, hi: 3},
+  ta: {cols: ['#D6D55A', '#9FC06A', '#5EA37E', '#2F7F86', '#1F6A80'], stops: [40, 80, 120, 160, 200], lo: 80, hi: 120}
+};
+function hex(h){ return [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)]; }
+function colourAt(k, v){
+  var s = SW[k], st = s.stops;
+  for (var i = 0; i < st.length - 1; i++) if (v <= st[i + 1]){
+    var f = (v - st[i]) / (st[i + 1] - st[i]), a = hex(s.cols[i]), b = hex(s.cols[i + 1]);
+    return 'rgb(' + a.map(function(x, j){ return Math.round(x + (b[j] - x) * f); }).join(',') + ')';
+  }
+  return s.cols[s.cols.length - 1];
+}
+['ph', 'fc', 'ta'].forEach(function(k){ var box = document.getElementById('sw-' + k); SW[k].cols.forEach(function(c){ var s = document.createElement('span'); s.style.background = c; box.appendChild(s); }); });
+var ADV = {
+  ph: {lo: 'pH is low — water can sting eyes and slowly eat metal fittings. Raise it gradually with a pH increaser, then re-test after a few hours.',
+       hi: 'pH is high — chlorine works much less well and scale can form. Lower it gradually with pool acid (follow the label), then re-test.',
+       ok: 'pH is in the comfortable range.'},
+  fc: {lo: 'Chlorine is too low to keep algae in check. Add liquid chlorine, or turn up the salt chlorinator’s output and check the cell.',
+       hi: 'Chlorine is high — hold off swimming, skip the next dose and let the sun bring it down, or reduce the chlorinator’s output.',
+       ok: 'Free chlorine is doing its job.'},
+  ta: {lo: 'Alkalinity is low, so pH will bounce around. Raise it with buffer (sodium bicarbonate) before fixing pH.',
+       hi: 'Alkalinity is high, so pH will keep creeping up. Bring it down slowly with acid over several days.',
+       ok: 'Alkalinity is keeping pH steady.'}
+};
+var inputs = {ph: document.getElementById('ph'), fc: document.getElementById('fc'), ta: document.getElementById('ta')};
+function fmt(k, v){ return k === 'ta' ? String(Math.round(v)) : v.toFixed(1); }
+function check(){
+  var bad = 0, list = document.getElementById('advice'); list.innerHTML = '';
+  ['ph', 'fc', 'ta'].forEach(function(k){
+    var v = parseFloat(inputs[k].value), s = SW[k], st = v < s.lo - 1e-6 ? 'lo' : v > s.hi + 1e-6 ? 'hi' : 'ok';
+    document.getElementById(k + '-o').textContent = fmt(k, v);
+    var tag = document.getElementById(k + '-t'); tag.textContent = st === 'ok' ? 'Ideal' : st === 'lo' ? 'Low' : 'High'; tag.className = 'tag ' + st;
+    inputs[k].setAttribute('aria-valuetext', fmt(k, v) + (k === 'ph' ? '' : ' ppm') + ', ' + tag.textContent);
+    document.getElementById('pad-' + k).setAttribute('fill', colourAt(k, v));
+    var near = 0, best = 1e9; s.stops.forEach(function(x, i){ if (Math.abs(x - v) < best){ best = Math.abs(x - v); near = i; } });
+    document.querySelectorAll('#sw-' + k + ' span').forEach(function(el, i){ el.classList.toggle('on', i === near); });
+    var li = document.createElement('li'); li.textContent = ADV[k][st]; if (st === 'ok') li.className = 'good'; else bad++;
+    list.appendChild(li);
+  });
+  var box = document.getElementById('status'), h = document.getElementById('st-h');
+  box.classList.toggle('ok', !bad);
+  h.innerHTML = bad
+    ? '<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#FFD166"/><path d="M15 8v9M15 21v1" stroke="#06384A" stroke-width="3" stroke-linecap="round"/></svg><span>Adjust — ' + bad + ' to fix</span>'
+    : '<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#29C5F6"/><path d="M9 15.5l4 4 8-9" fill="none" stroke="#06384A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Balanced — swim time</span>';
+}
+Object.keys(inputs).forEach(function(k){ inputs[k].addEventListener('input', function(){ document.querySelectorAll('.presets .chip').forEach(function(c){ c.setAttribute('aria-pressed', 'false'); }); check(); }); });
+document.querySelectorAll('.presets .chip').forEach(function(b){
+  b.setAttribute('aria-pressed', 'false');
+  b.addEventListener('click', function(){ var p = b.dataset.p.split(','); inputs.ph.value = p[0]; inputs.fc.value = p[1]; inputs.ta.value = p[2];
+    document.querySelectorAll('.presets .chip').forEach(function(c){ c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); }); check(); });
+});
+check();
+
+/* ---------------- suburb finder ---------------- */
+var RUNS = [
+  ['Mon', [['Coomera', 108, 40], ['Hope Island', 150, 62], ['Helensvale', 104, 100], ['Runaway Bay', 176, 116], ['Labrador', 170, 150]]],
+  ['Tue', [['Southport', 160, 182], ['Main Beach', 212, 172], ['Surfers Paradise', 214, 214], ['Nerang', 84, 222], ['Carrara', 138, 238]]],
+  ['Wed', [['Broadbeach', 218, 254], ['Mermaid Beach', 222, 288], ['Miami', 228, 322], ['Robina', 150, 318]]],
+  ['Thu', [['Burleigh Heads', 232, 356], ['Varsity Lakes', 164, 356], ['Mudgeeraba', 92, 344], ['Palm Beach', 240, 394], ['Elanora', 196, 408]]],
+  ['Fri', [['Currumbin', 248, 432], ['Tugun', 254, 458], ['Coolangatta', 266, 486], ['Tweed Heads', 240, 500]]]
+];
+var DAYN = {Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday'};
+var dots = document.getElementById('dots'), dl = document.getElementById('subs'), daysEl = document.getElementById('days'), all = [];
+var NS = 'http://www.w3.org/2000/svg';
+RUNS.forEach(function(run){
+  var row = document.createElement('div'), b = document.createElement('b'), ul = document.createElement('ul');
+  b.textContent = run[0]; row.appendChild(b); row.appendChild(ul); daysEl.appendChild(row);
+  run[1].forEach(function(s){
+    var c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', s[1]); c.setAttribute('cy', s[2]); c.setAttribute('r', 6); c.setAttribute('class', 'dot'); dots.appendChild(c);
+    var o = document.createElement('option'); o.value = s[0]; dl.appendChild(o);
+    var li = document.createElement('li'), btn = document.createElement('button'); btn.type = 'button'; btn.textContent = s[0]; btn.setAttribute('aria-pressed', 'false');
+    btn.addEventListener('click', function(){ document.getElementById('sub').value = s[0]; find(s[0]); });
+    li.appendChild(btn); ul.appendChild(li);
+    all.push({name: s[0], day: run[0], dot: c, btn: btn, x: s[1], y: s[2]});
+  });
+});
+['Southport', 'Surfers Paradise', 'Burleigh Heads', 'Coolangatta', 'Nerang'].forEach(function(n){ var a = all.filter(function(x){ return x.name === n; })[0], t = document.createElementNS(NS, 'text');
+  t.setAttribute('x', a.x - 11); t.setAttribute('y', a.y + 4); t.setAttribute('text-anchor', 'end'); t.setAttribute('class', 'anch'); t.textContent = n; dots.appendChild(t); a.anch = t; });
+var label = document.createElementNS(NS, 'text'); label.setAttribute('text-anchor', 'end'); dots.appendChild(label);
+function find(q){
+  var ans = document.getElementById('answer'), v = (q || '').trim().toLowerCase();
+  all.forEach(function(a){ a.dot.setAttribute('class', 'dot'); a.dot.setAttribute('r', 6); a.btn.setAttribute('aria-pressed', 'false'); });
+  label.textContent = ''; all.forEach(function(a){ if (a.anch) a.anch.style.opacity = 1; });
+  if (!v){ ans.textContent = 'Type a suburb, or tap one below.'; return; }
+  var hit = all.filter(function(a){ return a.name.toLowerCase() === v; })[0] || all.filter(function(a){ return a.name.toLowerCase().indexOf(v) === 0; })[0];
+  ans.innerHTML = '';
+  var st = document.createElement('strong');
+  if (hit){
+    all.forEach(function(a){ if (a.day === hit.day) a.dot.setAttribute('class', 'dot day'); });
+    hit.dot.setAttribute('class', 'dot hit'); hit.dot.setAttribute('r', 9); hit.btn.setAttribute('aria-pressed', 'true');
+    if (hit.anch) hit.anch.style.opacity = 0; label.textContent = hit.name; label.setAttribute('x', hit.x - 14); label.setAttribute('y', hit.y + 4);
+    st.textContent = 'Yes — ' + hit.name + ' is on our ' + DAYN[hit.day] + ' loop. ';
+    ans.appendChild(st); ans.appendChild(document.createTextNode('Yellow dots show the rest of that run.' + (hit.name === 'Tweed Heads' ? ' (We pop over the border for you.)' : '')));
+  } else {
+    st.textContent = 'Not on a regular loop yet. ';
+    ans.appendChild(st); ans.appendChild(document.createTextNode('Send an enquiry anyway — if we can’t get to ' + q.trim() + ' reliably, we’ll say so and point you to someone who can.'));
+  }
+}
+document.getElementById('find-btn').addEventListener('click', function(){ find(document.getElementById('sub').value); });
+document.getElementById('sub').addEventListener('change', function(e){ find(e.target.value); });
+document.getElementById('sub').addEventListener('keydown', function(e){ if (e.key === 'Enter'){ e.preventDefault(); find(e.target.value); } });
+
+/* ---------------- booking (demo state) ---------------- */
+document.getElementById('form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var note = document.getElementById('form-note'), miss = null;
+  ['n', 'e', 's2'].forEach(function(id){ var el = document.getElementById(id), ok = el.value.trim() !== ''; el.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !miss) miss = el; });
+  if (miss){ note.textContent = 'Please add your ' + miss.labels[0].textContent.toLowerCase() + '.'; miss.focus(); return; }
+  var sv = document.getElementById('svc').value, sb = document.getElementById('s2').value.trim();
+  note.innerHTML = ''; var b = document.createElement('strong'); b.textContent = 'Demo only — nothing was sent. ';
+  note.appendChild(b); note.appendChild(document.createTextNode(sv + ' in ' + sb + ': a real site would pass this to the business to reply with a day and a quote.'));
+  if (window.DemoKit) DemoKit.toast('Demo only — no visit was booked.');
+});
+})();
+</script>
+</body>
+</html>

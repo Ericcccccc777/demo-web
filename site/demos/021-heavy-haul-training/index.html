@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="021">
+<meta name="demo:brand" content="Heavy Haul Training">
+<title>Heavy Haul Training — truck licence courses, Dandenong</title>
+<meta name="description" content="Heavy Haul Training is a fictional heavy vehicle licence school in Dandenong, Victoria, offering LR, MR, HR, HC and MC courses.">
+<meta name="theme-color" content="#121212">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --y:#FFC400;--k:#121212;--st:#8A9199;--cc:#D9D6D0;--o:#FF6A13;--ink:#1D2024;--paper:#F4F2EC;
+  --sten:"Saira Stencil One",Impact,"Arial Narrow",sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --pad:clamp(16px,4vw,56px);
+  --hz:repeating-linear-gradient(-45deg,var(--y) 0 12px,var(--k) 12px 24px);
+  --rivets:radial-gradient(circle at 12px 12px,#eef1f3 0 1.5px,#5a6168 2.5px 3.6px,transparent 4.2px),radial-gradient(circle at calc(100% - 12px) 12px,#eef1f3 0 1.5px,#5a6168 2.5px 3.6px,transparent 4.2px),radial-gradient(circle at 12px calc(100% - 12px),#eef1f3 0 1.5px,#5a6168 2.5px 3.6px,transparent 4.2px),radial-gradient(circle at calc(100% - 12px) calc(100% - 12px),#eef1f3 0 1.5px,#5a6168 2.5px 3.6px,transparent 4.2px);
+  --brushed:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,rgba(0,0,0,.025) 1px 3px,transparent 3px 5px);
+  --chamfer:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--k);color:var(--ink);font:500 1.125rem/1.45 var(--cond);overflow-x:clip}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+svg{display:block}
+:focus-visible{outline:3px solid var(--o);outline-offset:2px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tag{display:flex;align-items:center;gap:10px;font:600 .9rem/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.tag::before{content:"";width:14px;height:14px;flex:none;background:var(--hz);background-size:34px 34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:0;cursor:pointer;text-decoration:none;
+  font:700 1.02rem/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;clip-path:var(--chamfer);transition:transform .15s,background .2s,color .2s}
+.btn:active{transform:translateY(2px)}
+.btn-y{background:var(--y);color:var(--k)}.btn-y:hover{background:#FFD23F}
+.btn-k{background:var(--k);color:var(--y)}.btn-k:hover{background:#2a2a2a}
+.btn-g{background:transparent;color:#ECEAE5;box-shadow:inset 0 0 0 2px #6a7076}.btn-g:hover{box-shadow:inset 0 0 0 2px var(--y);color:var(--y)}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:40;background:var(--k);color:var(--y);display:flex;align-items:center;gap:18px;
+  padding:10px max(var(--pad),env(safe-area-inset-right)) 10px max(var(--pad),env(safe-area-inset-left));padding-top:max(10px,env(safe-area-inset-top));min-height:66px}
+.hdr::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:var(--hz);background-size:34px 34px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.mark{flex:none;display:grid;place-items:center;width:42px;height:42px;background:var(--y);color:var(--k);font:1.3rem/1 var(--sten);clip-path:var(--chamfer)}
+.name{font:clamp(1.05rem,1.8vw,1.4rem)/1.05 var(--sten);text-transform:uppercase;letter-spacing:.02em;overflow-wrap:anywhere;min-width:0}
+.nav{margin-left:auto;display:flex;align-items:center;gap:clamp(12px,2vw,28px)}
+.nav a{font:600 1rem/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#E6E4DF;text-decoration:none;padding:12px 2px}
+.nav a:hover{color:var(--y)}
+.nav .btn{color:var(--k);padding:0 18px;min-height:44px}
+.menu{display:none;margin-left:auto;flex:none;min-height:44px;padding:0 14px;background:none;border:2px solid #4a4f55;color:var(--y);font:700 .95rem/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:36px;align-items:center;
+  padding:60px var(--pad) 72px;color:#ECEAE5;background:var(--k);isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 90%);-webkit-mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.hero-copy{grid-column:1/span 5;display:grid;gap:22px;align-content:center}
+.hero .tag{color:var(--y)}
+h1{font:clamp(3.4rem,7vw,7.2rem)/.86 var(--sten);color:var(--y);text-transform:uppercase;letter-spacing:.01em}
+.lead{font-size:clamp(1.15rem,1.5vw,1.35rem);line-height:1.4;color:#D6D4CF;max-width:32em}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts li{font:600 .92rem/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:9px 12px;border:1px solid #474c52;color:#E6E4DF}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* finder console */
+.console{grid-column:6/span 7;position:relative;padding:20px 18px 16px;border-radius:6px;color:var(--k);
+  background:var(--rivets),var(--brushed),linear-gradient(170deg,#a9b0b7,#8A9199 48%,#9aa1a8 72%,#7c838b);background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,no-repeat;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.28),0 30px 60px -28px rgba(0,0,0,.9)}
+.c-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 10px 12px}
+.c-bar h2{font:clamp(1.25rem,2vw,1.8rem)/1 var(--sten);text-transform:uppercase}
+.c-bar p{font:600 .82rem/1.2 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#1f2226}
+.stage{position:relative;aspect-ratio:2.45;background:radial-gradient(ellipse at 50% 120%,#2b2d30,#161718 70%);border-radius:4px;overflow:hidden;box-shadow:inset 0 3px 10px rgba(0,0,0,.7),0 0 0 2px #121212}
+.stage svg{position:absolute;inset:0;width:100%;height:100%}
+.stn{font-family:var(--sten)}
+.readout{position:absolute;left:12px;top:10px;display:flex;flex-wrap:wrap;gap:6px 16px;font:600 .85rem/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#C9CDD1}
+.readout b{color:var(--y);font-weight:700;text-transform:none}
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}
+.mini{position:relative;min-height:54px;border:0;border-radius:4px;cursor:pointer;font:clamp(1.3rem,2.2vw,1.7rem)/1 var(--sten);color:#2c3035;
+  background:var(--brushed),linear-gradient(#7b828a,#6a7178);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -2px 0 rgba(0,0,0,.3);transition:background .25s,color .25s,box-shadow .25s,transform .2s}
+.mini:hover{color:#121212}
+.mini[aria-pressed="true"]{background:var(--brushed),linear-gradient(#FFD23F,var(--y));color:var(--k);box-shadow:0 0 0 2px var(--k),0 0 26px 2px rgba(255,196,0,.55);transform:translateY(-2px)}
+.mini[aria-pressed="true"]::after{content:"";position:absolute;right:7px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--o);box-shadow:0 0 8px 2px rgba(255,106,19,.8)}
+.ctls{display:grid;grid-template-columns:1.5fr 1fr 1.35fr;gap:10px}
+.ctl{background:rgba(18,18,18,.92);color:#ECEAE5;border-radius:4px;padding:12px 14px 14px;border:0;margin:0;min-width:0}
+.ctl legend,.ctl .lbl{float:left;width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:10px;padding:0;font:600 .85rem/1.2 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#C9CDD1}
+.ctl legend+*,.ctl .lbl+*{clear:both}
+.ctl output{font:1.5rem/1 var(--sten);color:var(--y);letter-spacing:0;text-transform:none}
+.range{--fill:20%;width:100%;height:34px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer}
+.range::-webkit-slider-runnable-track{height:12px;border-radius:2px;background:linear-gradient(90deg,var(--y) 0 var(--fill),#3a3e43 var(--fill));box-shadow:inset 0 1px 2px rgba(0,0,0,.6)}
+.range::-moz-range-track{height:12px;border-radius:2px;background:#3a3e43}
+.range::-moz-range-progress{height:12px;background:var(--y)}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:34px;margin-top:-11px;border-radius:3px;border:2px solid var(--k);background:repeating-linear-gradient(90deg,var(--k) 0 2px,transparent 2px 5px) center/12px 16px no-repeat,var(--y);box-shadow:0 2px 6px rgba(0,0,0,.6)}
+.range::-moz-range-thumb{width:22px;height:30px;border-radius:3px;border:2px solid var(--k);background:var(--y)}
+.range:focus-visible{outline-offset:4px}
+.ticks{position:relative;height:18px;margin-top:4px;font:600 .75rem/1 var(--cond);color:#9ba1a7;letter-spacing:.04em}
+.ticks span{position:absolute;top:0;transform:translateX(-50%);left:calc(var(--p)*(100% - 26px) + 13px);white-space:nowrap}
+.ticks span::before{content:"";position:absolute;left:50%;top:-5px;width:1px;height:4px;background:#6a7076}
+.seg{display:flex;gap:3px;padding:3px;background:#2b2e32;border-radius:4px}
+.seg label{position:relative;flex:1;min-width:0}
+.seg input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.seg span{display:grid;place-items:center;min-height:42px;padding:0 6px;border-radius:2px;text-align:center;font:700 .95rem/1.05 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:#D0D3D7;transition:background .2s,color .2s}
+.seg input:checked+span{background:var(--y);color:var(--k)}
+.seg input:focus-visible+span{outline:2px solid #fff;outline-offset:1px}
+.seg input:disabled{cursor:not-allowed}.seg input:disabled+span{opacity:.45}
+.ctl small{display:block;margin-top:8px;font:500 .85rem/1.25 var(--cond);color:#9ba1a7;letter-spacing:.02em;text-transform:none}
+.result{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin-top:10px;padding:14px;background:var(--k);color:#ECEAE5;border-radius:4px;position:relative;overflow:hidden}
+.result::after{content:"";position:absolute;right:0;top:0;bottom:0;width:10px;background:var(--hz);background-size:34px 34px}
+.res-code{min-width:2.2em;padding:10px 12px 8px;background:var(--y);color:var(--k);font:clamp(2.3rem,4vw,3.2rem)/1 var(--sten);text-align:center;clip-path:var(--chamfer)}
+.res-code.car{background:#D9D6D0}
+.result h3{font:700 1.3rem/1.1 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--y);margin-bottom:4px}
+.result p{font-size:1.02rem;line-height:1.35;padding-right:12px}
+.result .req{color:#B9BEC4;margin-top:4px}
+.gen{margin:10px 6px 0;font:600 .86rem/1.3 var(--cond);color:#16181b}
+.flash{animation:clunk .35s cubic-bezier(.3,1.6,.5,1)}
+@keyframes clunk{0%{transform:scale(.96)}100%{transform:none}}
+
+/* licence plates */
+.sec{padding:clamp(64px,8vw,104px) var(--pad)}
+.sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:14px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head>*{grid-column:1/span 7}
+.sec-head h2{font:clamp(2.2rem,4.6vw,4.2rem)/.92 var(--sten);text-transform:uppercase}
+.sec-head>p:last-child:not(.tag){grid-column:9/span 4;grid-row:1/span 2;align-self:end;font-size:1.15rem}
+.licences{background:var(--cc) radial-gradient(circle at 20% 30%,rgba(0,0,0,.035) 0 1px,transparent 1.5px) 0 0/9px 9px;color:var(--k)}
+.plates{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.plate{position:relative;display:flex;flex-direction:column;gap:12px;padding:26px 20px 20px;border-radius:6px;color:#141618;
+  background:var(--rivets),var(--brushed),linear-gradient(165deg,#c3c8cd,#a7adb3 55%,#b5babf);background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,no-repeat;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.2),0 3px 0 #6f757b;transition:box-shadow .3s,transform .3s}
+.plate .code{display:flex;justify-content:space-between;align-items:flex-start;font:clamp(3rem,5vw,4.6rem)/.86 var(--sten);color:#1e2125}
+.lamp{width:16px;height:16px;border-radius:50%;margin-top:6px;background:radial-gradient(circle at 35% 35%,#8d5a3a,#4a2c1c);box-shadow:inset 0 0 0 2px #2a2d31}
+.plate h3{font:700 1.2rem/1.1 var(--cond);letter-spacing:.06em;text-transform:uppercase}
+.plate p{font-size:1.02rem;line-height:1.35}
+.plate dl{display:flex;gap:18px;margin-top:auto;padding-top:12px;border-top:2px dashed rgba(18,18,18,.4)}
+.plate dt{font:700 .75rem/1 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.plate dd{font:700 1.35rem/1.1 var(--cond)}
+.try{align-self:flex-start;min-height:42px;padding:0 14px;border:2px solid var(--k);background:transparent;color:var(--k);cursor:pointer;font:700 .88rem/1 var(--cond);letter-spacing:.1em;text-transform:uppercase}
+.try:hover{background:var(--k);color:var(--y)}
+.plate.on{background:var(--rivets),var(--brushed),linear-gradient(165deg,#FFD84D,var(--y) 60%,#F2B800);background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,no-repeat;
+  box-shadow:0 0 0 3px var(--k),0 0 44px 4px rgba(255,196,0,.5),0 3px 0 #6f757b;transform:translateY(-4px)}
+.plate.on .lamp{background:radial-gradient(circle at 35% 35%,#FFD1B0,var(--o) 60%);box-shadow:inset 0 0 0 2px #2a2d31,0 0 14px 4px rgba(255,106,19,.7)}
+.plate.on::before{content:"Your match";position:absolute;left:20px;top:-14px;padding:5px 10px;background:var(--k);color:var(--y);font:700 .78rem/1 var(--cond);letter-spacing:.14em;text-transform:uppercase}
+.note{margin-top:22px;font-size:1rem;color:#2a2e33;max-width:60em}
+.note b{font-weight:700}
+
+/* course steps */
+.courses{background:var(--k);color:#ECEAE5}
+.courses .tag{color:var(--y)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid #33373c}
+.steps li{padding:30px 30px 34px 0;display:grid;gap:12px;align-content:start}
+.steps li+li{padding-left:30px;border-left:2px solid #33373c}
+.steps .n{font:clamp(3.6rem,6vw,5.4rem)/.8 var(--sten);color:transparent;-webkit-text-stroke:1.5px var(--y)}
+.steps h3{font:700 1.55rem/1.1 var(--cond);letter-spacing:.04em;text-transform:uppercase;color:var(--y)}
+.steps p{color:#D0D0CC}
+.steps .meta{font:600 .9rem/1.3 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#9ba1a7;border-top:1px dashed #3d4146;padding-top:10px}
+.incl{margin-top:40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:18px;align-items:start;padding:28px;border-radius:6px;
+  background:var(--rivets),var(--brushed),linear-gradient(165deg,#2e3236,#24272a);background-repeat:no-repeat,no-repeat,no-repeat,no-repeat,repeat,no-repeat}
+.incl h3{grid-column:1/span 4;font:clamp(1.8rem,3vw,2.6rem)/.95 var(--sten);text-transform:uppercase;color:#ECEAE5}
+.incl ul{grid-column:5/span 8;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.incl li{display:flex;gap:12px;align-items:flex-start;color:#DADAD6}
+.incl li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;background:var(--y);clip-path:polygon(14% 52%,0 66%,38% 100%,100% 24%,86% 10%,38% 70%)}
+
+/* checklist */
+.check{background:var(--cc);color:var(--k)}
+.check-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:28px;align-items:start}
+.board{grid-column:1/span 7;position:relative;padding:40px 26px 18px;background:var(--paper);border-radius:4px;box-shadow:0 2px 0 #b8b4ab,0 20px 40px -24px rgba(0,0,0,.5)}
+.board::before{content:"Pre-start check";position:absolute;left:50%;top:-16px;transform:translateX(-50%);padding:9px 22px;border-radius:4px 4px 10px 10px;background:linear-gradient(#b9bec3,#7f868d);color:var(--k);font:700 .85rem/1 var(--cond);letter-spacing:.16em;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 4px rgba(0,0,0,.3)}
+.tick{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;padding:14px 4px;border-bottom:1px solid #D2CFC7;cursor:pointer;position:relative}
+.tick input{position:absolute;opacity:0;width:34px;height:34px;margin:0;cursor:pointer}
+.box{width:34px;height:34px;border:3px solid var(--k);background:#fff;display:grid;place-items:center;transition:background .15s}
+.box svg{width:22px;height:22px;opacity:0;transform:scale(.4);transition:opacity .15s,transform .25s cubic-bezier(.3,1.6,.5,1)}
+.tick input:checked+.box{background:var(--y)}
+.tick input:checked+.box svg{opacity:1;transform:none}
+.tick input:focus-visible+.box{outline:3px solid var(--o);outline-offset:2px}
+.tick .txt{font-size:1.14rem;line-height:1.3;padding-top:4px}
+.tick small{display:block;font-size:.98rem;color:#50565d;margin-top:3px}
+.gauge{grid-column:9/span 4;display:grid;gap:16px;justify-items:center;text-align:center;position:sticky;top:110px}
+.gauge svg{width:min(100%,270px);height:auto}
+.gauge-out{font:700 1.3rem/1.2 var(--cond);letter-spacing:.02em}
+.gauge-out span{display:block;font:500 1.05rem/1.35 var(--cond);color:#3b4046;margin-top:6px}
+#needle{transform-origin:100px 100px;transition:transform .7s cubic-bezier(.3,1.5,.5,1)}
+
+/* fleet */
+.fleet{background:#222529;color:#ECEAE5}
+.fleet .tag{color:var(--y)}
+.fleet-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.unit{grid-column:span 2;display:grid;gap:12px;padding:16px 16px 18px;background:#17191c;border-radius:6px;border-top:6px solid var(--y)}
+.unit.wide{grid-column:span 3}
+.unit svg{width:100%;height:auto;aspect-ratio:2.6;background:linear-gradient(#1d2023,#15171a);border-radius:3px}
+.unit.wide svg{aspect-ratio:3.4}
+.unit figcaption{display:grid;gap:4px}
+.unit b{font:1.45rem/1 var(--sten);color:var(--y);font-weight:400}
+.unit span{color:#C6CACF}
+
+/* enquiries */
+.enquire{position:relative;background:var(--y);color:var(--k)}
+.enquire::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:var(--hz);background-size:34px 34px}
+.enquire :focus-visible{outline-color:var(--k)}
+.enq{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:28px;row-gap:32px;align-items:start}
+.enq-copy{grid-column:1/span 5;display:grid;gap:20px}
+.enq-copy h2{font:clamp(2.2rem,4.2vw,3.8rem)/.92 var(--sten);text-transform:uppercase}
+.enq-copy dl{display:grid;gap:14px;border-top:3px solid var(--k);padding-top:18px}
+.enq-copy dt{font:700 .8rem/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.enq-copy dd a{font:700 1.5rem/1.1 var(--cond);text-decoration:none;border-bottom:3px solid var(--k)}
+.enq-form{grid-column:7/span 6;display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;padding:24px;background:var(--k);color:#ECEAE5;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
+.enq-form :focus-visible{outline-color:var(--y)}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font:700 .82rem/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--y)}
+.f input,.f select,.f textarea{width:100%;min-height:46px;padding:10px 12px;border:2px solid #4a4f55;border-radius:0;background:#1d2024;color:#ECEAE5;font:500 1.1rem/1.3 var(--cond)}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--y);outline:none}
+.enq-form .btn{grid-column:1/-1;justify-self:start}
+.enq-form p{grid-column:1/-1;font-size:.95rem;color:#aeb3b8}
+
+/* footer */
+.foot{background:var(--k);color:#B9BEC4;padding:44px var(--pad) calc(44px + env(safe-area-inset-bottom));display:grid;gap:18px;border-top:10px solid transparent;border-image:var(--hz) 10}
+.foot .fname{font:clamp(1.8rem,4vw,3rem)/1 var(--sten);color:var(--y);text-transform:uppercase;overflow-wrap:anywhere}
+.foot p{max-width:70em;font-size:1rem}
+
+/* responsive */
+@media (max-width:1100px){
+  .hero-copy,.console{grid-column:1/-1}
+  .plates{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sec-head>*,.sec-head>p:last-child:not(.tag){grid-column:1/-1;grid-row:auto}
+  .incl h3,.incl ul{grid-column:1/-1}
+  .board,.gauge{grid-column:1/-1}.gauge{position:static}
+  .enq-copy,.enq-form{grid-column:1/-1}
+  .unit,.unit.wide{grid-column:span 3}
+}
+@media (max-width:820px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;margin-top:8px;flex-direction:column;align-items:stretch;gap:0;background:#1a1b1d;padding:8px var(--pad) 16px;border-bottom:4px solid var(--y)}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid #2e3136;font-size:1.1rem}
+  .nav .btn{margin-top:12px}
+  .menu{display:inline-flex;align-items:center}
+  .ctls{grid-template-columns:1fr 1fr}
+  .ctl-mass{grid-column:1/-1}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li+li{padding:26px 0;border-left:0;border-bottom:2px solid #33373c}
+  .incl ul{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hero,.sec-head,.incl,.check-grid,.enq{grid-template-columns:minmax(0,1fr);column-gap:0}
+  .hero{padding:36px var(--pad) 48px;row-gap:28px}
+  .hero-copy{gap:18px}
+  .facts li{font-size:.8rem;padding:7px 9px}
+  .console{padding:16px 10px 12px;margin:0 calc(var(--pad)*-.5)}
+  .c-bar{margin:0 6px 10px}.c-bar p{display:none}
+  .stage{aspect-ratio:2.05}
+  .rail{gap:5px}
+  .mini{min-height:48px}
+  .ctls{grid-template-columns:1fr 1.45fr;gap:8px}
+  .ctl{padding:10px 10px 12px}
+  .seg span{font-size:.88rem;padding:0 3px}
+  .result{grid-template-columns:1fr;gap:10px}
+  .res-code{justify-self:start}
+  .plates{grid-template-columns:1fr 1fr;gap:12px}
+  .plate{padding:24px 14px 16px}
+  .plate:last-child{grid-column:1/-1}
+  .plate .code{font-size:3rem}
+  .plate dl{flex-wrap:wrap;gap:8px 16px}
+  .board{padding:36px 14px 12px}
+  .unit,.unit.wide{grid-column:1/-1}
+  .enq-form{grid-template-columns:1fr;padding:20px 16px}
+  .foot{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="hz" width="2.4" height="2.4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="1.2" height="2.4" fill="#FFC400"/><rect x="1.2" width="1.2" height="2.4" fill="#121212"/></pattern>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bfc5"/><stop offset=".55" stop-color="#8A9199"/><stop offset="1" stop-color="#6c737b"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b5566"/><stop offset="1" stop-color="#18242c"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <a class="logo" href="#top"><span class="mark" data-brand-initials aria-hidden="true">HH</span><span class="name" data-brand>Heavy Haul Training</span></a>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a href="#finder">Finder</a><a href="#licences">Licences</a><a href="#courses">Courses</a><a href="#fleet">Fleet</a>
+    <a class="btn btn-y" href="#enquire">Enquire</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="hero-copy">
+      <p class="tag">Heavy vehicle licences · Dandenong, VIC</p>
+      <h1 id="h1">Move up<br> a class.</h1>
+      <p class="lead">LR to MC training and assessment from our yard in Dandenong. Small groups, real trucks, and a straight answer about which licence your job actually needs.</p>
+      <ul class="facts"><li>Weekday &amp; Saturday starts</li><li>Manual &amp; auto trucks</li><li>1–3 learners per truck</li></ul>
+      <div class="btns"><a class="btn btn-y" href="#finder">Find my licence</a><a class="btn btn-g" href="#licences">Course prices</a></div>
+    </div>
+
+    <section class="console" id="finder" aria-labelledby="finder-t">
+      <div class="c-bar"><h2 id="finder-t">Which licence do I need?</h2><p>Slide the weight →</p></div>
+      <div class="stage">
+        <svg id="rig" viewBox="-160 -60 170 76" preserveAspectRatio="xMidYMax meet" role="img" aria-labelledby="rig-d">
+          <desc id="rig-d">A side-on drawing of the vehicle that matches your settings. It changes from a van to a rigid truck, a prime mover with a semi-trailer, and a B-double as the mass goes up.</desc>
+          <text id="wm" class="stn" x="0" y="-20" font-size="40" fill="#fff" opacity=".05" text-anchor="middle">LR</text>
+          <rect x="-700" y="0" width="1000" height="40" fill="#1f2022"/>
+          <rect x="-700" y="-.5" width="1000" height="1" fill="#FFC400" opacity=".7"/>
+          <line id="lane" x1="-700" y1="7" x2="300" y2="7" stroke="#ECEAE5" stroke-opacity=".5" stroke-width=".9" stroke-dasharray="7 7"/>
+          <g id="rig-g"></g>
+          <g id="dim" stroke="#8A9199" stroke-width="1" vector-effect="non-scaling-stroke" fill="none"><path id="dim-p" vector-effect="non-scaling-stroke" d=""/></g>
+        </svg>
+        <p class="readout" aria-hidden="true"><span>Length <b id="ro-len">6.4 m</b></span><span>Mass <b id="ro-mass">6.5 t</b></span></p>
+      </div>
+      <div class="rail" role="group" aria-label="Licence classes">
+        <button type="button" class="mini" data-set="LR" aria-pressed="false">LR</button>
+        <button type="button" class="mini" data-set="MR" aria-pressed="false">MR</button>
+        <button type="button" class="mini" data-set="HR" aria-pressed="false">HR</button>
+        <button type="button" class="mini" data-set="HC" aria-pressed="false">HC</button>
+        <button type="button" class="mini" data-set="MC" aria-pressed="false">MC</button>
+      </div>
+      <div class="ctls">
+        <div class="ctl ctl-mass">
+          <label class="lbl" for="mass"><span>Gross mass, tonnes</span><output id="mass-out" for="mass">6.5 t</output></label>
+          <input class="range" id="mass" type="range" min="0" max="1000" step="5" value="200">
+          <div class="ticks" aria-hidden="true"><span style="--p:.1">4.5</span><span style="--p:.28">8</span><span style="--p:.46">15.5</span><span style="--p:.64">32</span><span style="--p:.82">46 t</span></div>
+          <small>GVM for a single vehicle; GCM once you add trailers.</small>
+        </div>
+        <fieldset class="ctl">
+          <legend>Truck axles</legend>
+          <div class="seg"><label><input type="radio" name="axles" value="2" checked><span>2</span></label><label><input type="radio" name="axles" value="3"><span>3 +</span></label></div>
+          <small id="ax-note">Two axles: steer and drive.</small>
+        </fieldset>
+        <fieldset class="ctl">
+          <legend>Trailer</legend>
+          <div class="seg"><label><input type="radio" name="trailer" value="none" checked><span>None</span></label><label><input type="radio" name="trailer" value="semi"><span>Semi</span></label><label><input type="radio" name="trailer" value="two"><span>Two</span></label></div>
+          <small>Two = B-double or longer.</small>
+        </fieldset>
+      </div>
+      <div class="result" id="result" aria-live="polite" aria-atomic="true">
+        <div class="res-code" id="res-code">LR</div>
+        <div><h3 id="res-name">Light Rigid</h3><p id="res-desc"></p><p class="req" id="res-req"></p></div>
+      </div>
+      <p class="gen">General information only. Licence classes are national, but eligibility and testing rules come from your state road authority — check with them before you book.</p>
+    </section>
+  </section>
+
+  <section class="sec licences" id="licences" aria-labelledby="lic-t">
+    <div class="sec-head">
+      <p class="tag">Licence classes</p>
+      <h2 id="lic-t">Five plates. One of them is yours.</h2>
+      <p>Every course is one-on-one in the truck or with up to two other learners, and ends with your assessment in the same vehicle you trained in.</p>
+    </div>
+    <div class="plates">
+      <article class="plate" data-cls="LR"><div class="code">LR<span class="lamp" aria-hidden="true"></span></div><h3>Light Rigid</h3><p>Rigid vehicles over 4.5 t, up to 8 t GVM — large vans, small trucks, some minibuses.</p><dl><div><dt>Course</dt><dd>1 day</dd></div><div><dt>From</dt><dd>$790</dd></div></dl><button class="try" type="button" data-set="LR">Show in finder</button></article>
+      <article class="plate" data-cls="MR"><div class="code">MR<span class="lamp" aria-hidden="true"></span></div><h3>Medium Rigid</h3><p>Two-axle rigid trucks over 8 t GVM — the everyday delivery and removal truck.</p><dl><div><dt>Course</dt><dd>1–2 days</dd></div><div><dt>From</dt><dd>$890</dd></div></dl><button class="try" type="button" data-set="MR">Show in finder</button></article>
+      <article class="plate" data-cls="HR"><div class="code">HR<span class="lamp" aria-hidden="true"></span></div><h3>Heavy Rigid</h3><p>Rigid trucks with three or more axles over 8 t GVM — tippers, agitators, big pantechs.</p><dl><div><dt>Course</dt><dd>2 days</dd></div><div><dt>From</dt><dd>$1,190</dd></div></dl><button class="try" type="button" data-set="HR">Show in finder</button></article>
+      <article class="plate" data-cls="HC"><div class="code">HC<span class="lamp" aria-hidden="true"></span></div><h3>Heavy Combination</h3><p>A prime mover and one semi-trailer, or a rigid towing a trailer over 9 t GVM.</p><dl><div><dt>Course</dt><dd>3 days</dd></div><div><dt>From</dt><dd>$1,690</dd></div></dl><button class="try" type="button" data-set="HC">Show in finder</button></article>
+      <article class="plate" data-cls="MC"><div class="code">MC<span class="lamp" aria-hidden="true"></span></div><h3>Multi Combination</h3><p>B-doubles, road trains and every combination in between — the top of the ladder.</p><dl><div><dt>Course</dt><dd>4 days</dd></div><div><dt>From</dt><dd>$2,890</dd></div></dl><button class="try" type="button" data-set="MC">Show in finder</button></article>
+    </div>
+    <p class="note"><b>Sample prices</b>, including truck, fuel and your first assessment attempt. Course length depends on your pre-course drive. General information only — check licence requirements with your state road authority.</p>
+  </section>
+
+  <section class="sec courses" id="courses" aria-labelledby="crs-t">
+    <div class="sec-head">
+      <p class="tag">How a course runs</p>
+      <h2 id="crs-t">First drive to assessment day.</h2>
+      <p>No classroom marathons. Most of your time is spent behind the wheel on real Dandenong roads, with the theory taught where it happens.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="n" aria-hidden="true">01</span><h3>Pre-course drive</h3><p>An hour in the truck with an instructor. We see where you’re at and tell you honestly how many training days you’ll need.</p><p class="meta">60 min · $120, taken off your course</p></li>
+      <li><span class="n" aria-hidden="true">02</span><h3>Training days</h3><p>Pre-start checks, gear changes, left turns, reversing to a dock, and coupling for HC and MC — on the routes you’ll be assessed on.</p><p class="meta">6:30 am – 2:30 pm · max 3 learners per truck</p></li>
+      <li><span class="n" aria-hidden="true">03</span><h3>Assessment day</h3><p>A warm-up drive, then your practical assessment: pre-start inspection, about an hour on the road, and reversing or coupling tasks.</p><p class="meta">Same truck, same instructor · re-sits $260</p></li>
+    </ol>
+    <div class="incl">
+      <h3>What’s included</h3>
+      <ul>
+        <li>Truck, fuel and insurance for every session</li>
+        <li>Hi-vis vest and gloves to keep</li>
+        <li>Workbook: load restraint, fatigue and pre-starts</li>
+        <li>Your first assessment attempt</li>
+        <li>Coupling practice on our own yard for HC and MC</li>
+        <li>Tea, coffee and a heater in the crib room</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec check" id="check" aria-labelledby="chk-t">
+    <div class="sec-head">
+      <p class="tag">Is this for me?</p>
+      <h2 id="chk-t">Run the pre-start check.</h2>
+      <p>Tick what’s true. It isn’t a test — it shows what to sort out before you book.</p>
+    </div>
+    <div class="check-grid">
+      <div class="board">
+        <ul id="checks">
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I’ve held a car licence for at least 12 months.<small>Heavier classes usually need time on a lower licence first.</small></span></label></li>
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I can take one to four weekdays off.<small>Saturday starts are available for LR and MR.</small></span></label></li>
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I can be at the Dandenong yard by 6:30 am.</span></label></li>
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I know which class my job needs.<small>Not sure? Use the finder at the top of the page.</small></span></label></li>
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I can get a medical if my employer asks for one.</span></label></li>
+          <li><label class="tick"><input type="checkbox"><span class="box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6" fill="none" stroke="#121212" stroke-width="3.4"/></svg></span><span class="txt">I’ve decided between manual and automatic.<small>Automatic-only training can mean an automatic-only condition on your licence.</small></span></label></li>
+        </ul>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 200 200" aria-hidden="true" id="gauge-svg"></svg>
+        <p class="gauge-out" id="gauge-out" aria-live="polite">0 of 6 ticked<span>Tick what’s true for you.</span></p>
+        <a class="btn btn-k" href="#enquire">Book a pre-course drive</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec fleet" id="fleet" aria-labelledby="flt-t">
+    <div class="sec-head">
+      <p class="tag">The fleet</p>
+      <h2 id="flt-t">Train in the truck you’ll be assessed in.</h2>
+      <p>Five training units, all dual-controlled for the instructor and serviced in our own workshop.</p>
+    </div>
+    <div class="fleet-grid">
+      <figure class="unit"><svg data-cfg="A" data-m="6.5" aria-hidden="true"></svg><figcaption><b>Unit 03 · LR</b><span>6.5 t van · automatic</span></figcaption></figure>
+      <figure class="unit"><svg data-cfg="A" data-m="12" aria-hidden="true"></svg><figcaption><b>Unit 05 · MR</b><span>12 t pantech · 8-speed manual</span></figcaption></figure>
+      <figure class="unit"><svg data-cfg="B" data-m="22.5" aria-hidden="true"></svg><figcaption><b>Unit 07 · HR</b><span>22.5 t tandem pantech · 12-speed auto</span></figcaption></figure>
+      <figure class="unit wide"><svg data-cfg="C" data-m="38" aria-hidden="true"></svg><figcaption><b>Unit 11 · HC</b><span>Prime mover + 13.7 m box trailer · 18-speed manual</span></figcaption></figure>
+      <figure class="unit wide"><svg data-cfg="D" data-m="60" aria-hidden="true"></svg><figcaption><b>Unit 12 · MC</b><span>B-double set · 18-speed manual</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec enquire" id="enquire" aria-labelledby="enq-t">
+    <div class="enq">
+      <div class="enq-copy">
+        <p class="tag">Enquiries</p>
+        <h2 id="enq-t">Tell us what you drive now and what you want to drive next.</h2>
+        <p>We reply on weekdays, usually with a suggested pre-course drive time.</p>
+        <dl>
+          <div><dt>Yard office</dt><dd><a href="tel:+61355502718">(03) 5550 2718</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:enquiries@example.com">enquiries@example.com</a></dd></div>
+          <div><dt>Where</dt><dd>Dandenong, VIC — training yard with on-site parking</dd></div>
+          <div><dt>Office hours</dt><dd>Mon–Fri 7 am – 4 pm · Sat by appointment</dd></div>
+        </dl>
+      </div>
+      <form class="enq-form" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the Dandenong yard office.">
+        <div class="f"><label for="e-name">Name</label><input id="e-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="e-phone">Mobile</label><input id="e-phone" name="phone" type="tel" autocomplete="tel" placeholder="0491 570 156"></div>
+        <div class="f full"><label for="e-mail">Email</label><input id="e-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+        <div class="f"><label for="e-now">Licence you hold now</label><select id="e-now" name="now"><option>Car (C)</option><option>LR</option><option>MR</option><option>HR</option><option>HC</option></select></div>
+        <div class="f"><label for="e-want">Class you want</label><select id="e-want" name="want"><option>Not sure yet</option><option>LR</option><option>MR</option><option>HR</option><option>HC</option><option>MC</option></select></div>
+        <div class="f full"><label for="e-msg">Anything else?</label><textarea id="e-msg" name="msg" placeholder="e.g. new job starts in March, need HR with a tipper"></textarea></div>
+        <button class="btn btn-y" type="submit">Send enquiry</button>
+        <p>Demo form — nothing is sent. We never share your details.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="fname" data-brand>Heavy Haul Training</p>
+  <p>A fictional licence school — concept demo. Sample prices. General information only: heavy vehicle licence classes, eligibility and assessment rules are set by your state or territory road authority. Always check with them before booking.</p>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var RM=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+  function f(n){return Math.round(n*100)/100}
+
+  /* menu */
+  var menu=$('.menu'),nav=$('#nav');
+  menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o);menu.textContent=o?'Close':'Menu'});
+  $$('a',nav).forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'})});
+  nav.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){e.preventDefault();menu.click();menu.focus()}});
+
+  /* ---------- the rig renderer ---------- */
+  function wheel(x,k){k=k==null?1:k;if(k<.03)return '';return '<g transform="translate('+f(x)+' -5) scale('+f(k)+')"><circle r="5" fill="#0d0d0d"/><circle r="4.2" fill="none" stroke="#2c2c2c" stroke-width=".8"/><circle r="2.7" fill="#8A9199"/><circle r="1.1" fill="#26292c"/></g>'}
+  function trailer(x0,x1,deck){
+    var bx=x0+deck,w=x1-bx,s='<rect x="'+f(x0)+'" y="-13.2" width="'+f(x1-x0)+'" height="2.4" fill="#121212"/>';
+    s+='<rect x="'+f(bx)+'" y="-43" width="'+f(w)+'" height="29.6" rx=".6" fill="#D9D6D0"/>';
+    for(var x=bx+3.4;x<x1-1;x+=3.4)s+='<line x1="'+f(x)+'" y1="-41.6" x2="'+f(x)+'" y2="-14.8" stroke="#aca8a1" stroke-width=".35"/>';
+    s+='<rect x="'+f(bx)+'" y="-43" width="'+f(w)+'" height="1.6" fill="#8A9199"/><rect x="'+f(bx)+'" y="-15.4" width="'+f(w)+'" height="1.6" fill="#8A9199"/>';
+    s+='<rect x="'+f(bx+.8)+'" y="-20.5" width="6.5" height="3.6" fill="url(#hz)"/>';
+    s+='<rect x="'+f(x1-16)+'" y="-11" width="1.1" height="5" fill="#5f666e"/><rect x="'+f(x1-17)+'" y="-6.4" width="3.1" height="1" fill="#5f666e"/>';
+    s+='<rect x="'+f(x0+.2)+'" y="-11.4" width="33" height="1.4" fill="#2a2b2d"/>';
+    if(deck>1)s+='<rect x="'+f(x0+3)+'" y="-15" width="13" height="1.9" rx=".7" fill="#3a3c3f" opacity="'+f(Math.min(1,deck/20))+'"/>';
+    return s+wheel(x0+5.5)+wheel(x0+17)+wheel(x0+28.5);
+  }
+  function body(p){
+    var x1=-(p.cabL+1.2),x0=x1-p.bodyL,top=-p.bodyTop,bot=-p.bodyBot,h=p.bodyTop-p.bodyBot,s='<g opacity="'+f(p.bodyOn)+'">';
+    s+='<rect x="'+f(x0)+'" y="'+f(top)+'" width="'+f(p.bodyL)+'" height="'+f(h)+'" rx="'+f(1+2*p.van)+'" fill="url(#steel)"/>';
+    if(p.van>.01)s+='<rect x="'+f(x0)+'" y="'+f(top)+'" width="'+f(p.bodyL+2)+'" height="'+f(h)+'" rx="3" fill="#FFC400" opacity="'+f(p.van)+'"/>';
+    var n=Math.max(2,Math.floor(p.bodyL/5.5));
+    for(var i=1;i<n;i++){var x=x0+i*p.bodyL/n;s+='<line x1="'+f(x)+'" y1="'+f(top+1.6)+'" x2="'+f(x)+'" y2="'+f(bot-1)+'" stroke="#000" stroke-opacity="'+f(.2*(1-p.van))+'" stroke-width=".35"/>'}
+    s+='<rect x="'+f(x0)+'" y="'+f(top)+'" width="'+f(p.bodyL)+'" height="1.5" fill="#5f666e" opacity="'+f(1-p.van)+'"/>';
+    s+='<text x="'+f(x0+p.bodyL/2)+'" y="'+f((top+bot)/2+2)+'" class="stn" text-anchor="middle" font-size="'+f(Math.min(6,p.bodyL/7.5))+'" fill="#121212" opacity=".72">TRAINING</text>';
+    s+='<rect x="'+f(x0+.8)+'" y="'+f(bot-4.6)+'" width="5.5" height="3.2" fill="url(#hz)"/>';
+    return s+'</g>';
+  }
+  function cab(p){
+    var L=p.cabL,H=p.cabH,v=p.van,rake=.8+6.2*v,r=1.4+4*v,fy=-(H*.5+1.5*v);
+    var s='<path d="M'+f(-L)+' -8.4V'+f(-H+2)+'Q'+f(-L)+' '+f(-H)+' '+f(-L+2)+' '+f(-H)+'H'+f(-rake-r)+'Q'+f(-rake)+' '+f(-H)+' '+f(-rake+r*.35)+' '+f(-H+r)+'L0 '+f(fy)+'V-8.4Z" fill="#FFC400"/>';
+    if(v>.01)s+='<path d="M'+f(-rake+r*.35)+' '+f(-H+r)+'L'+f(-.6)+' '+f(fy+1.4)+'" stroke="#1d2a31" stroke-width="2" opacity="'+f(v)+'"/>';
+    s+='<path d="M'+f(-L)+' -8.4H0V-11.6H'+f(-L)+'Z" fill="url(#hz)"/>';
+    var wy0=-H+2.4,wy1=-H*.62;
+    s+='<path d="M'+f(-L*.62)+' '+f(wy0)+'H'+f(-rake-r*.9)+'L'+f(-1.8-2.4*v)+' '+f(wy1)+'H'+f(-L*.62)+'Z" fill="url(#glass)"/>';
+    s+='<path d="M'+f(-L*.58)+' '+f(wy0+1)+'h3.4l-3.4 3.4z" fill="#fff" opacity=".22"/>';
+    s+='<path d="M'+f(-L*.65)+' '+f(wy0-.6)+'V-12.2M'+f(-L*.65)+' -12.2H-2.4" fill="none" stroke="#121212" stroke-opacity=".35" stroke-width=".35"/>';
+    s+='<rect x="'+f(-L*.6)+'" y="'+f(wy1-2.6)+'" width="2.2" height=".7" fill="#121212" opacity=".55"/>';
+    s+='<rect x="-2.4" y="-10.4" width="3.2" height="2.6" rx=".6" fill="#121212"/><rect x="-1.1" y="-15" width="1.4" height="2" rx=".3" fill="#FFF4C8"/>';
+    var mx=-rake*.5,my=-H*(.8-.22*v);
+    s+='<path d="M'+f(mx+.2)+' '+f(my)+'h1.4v'+f(H*.18)+'h-1.4z" fill="#121212"/><path d="M'+f(mx-.8)+' '+f(my+1)+'h1" stroke="#121212" stroke-width=".4"/>';
+    if(v<.99){
+      s+='<g opacity="'+f(1-v)+'"><rect x="'+f(-L-1.8)+'" y="'+f(-H-3.5)+'" width="1.3" height="'+f(H-8)+'" rx=".4" fill="#9aa1a8"/>';
+      s+='<rect x="'+f(-L+3)+'" y="'+f(-H-.9)+'" width="1.6" height=".9" fill="#FF6A13"/><rect x="'+f(-L*.55)+'" y="'+f(-H-.9)+'" width="1.6" height=".9" fill="#FF6A13"/><rect x="'+f(-L*.25)+'" y="'+f(-H-.9)+'" width="1.6" height=".9" fill="#FF6A13"/></g>';
+    }
+    if(p.fifth>.01)s+='<path d="M'+f(-L+.6)+' '+f(-H)+'L'+f(-L*.32)+' '+f(-H)+'L'+f(-L+.6)+' '+f(-H-7.5)+'Z" fill="#E0AC00" opacity="'+f(p.fifth)+'"/>';
+    return s;
+  }
+  function rigLen(p){
+    var len=p.cabL+Math.max(p.chassisL,(p.bodyL+1.2)*p.bodyOn);
+    var l1=p.cabL+2.2+p.t1L;if(l1>len)len+=(l1-len)*p.t1;
+    var l2=p.cabL+2.2+p.t1L-17+p.t2L;if(l2>len)len+=(l2-len)*p.t2;
+    return len;
+  }
+  function rigSVG(p){
+    var o=[],L=p.cabL,chEnd=-(L+p.chassisL),x1=-(L+2.2),x0=x1-p.t1L;
+    if(p.t1>.01){
+      if(p.t2>.01){var y1=x0+17,y0=y1-p.t2L;o.push('<g transform="translate('+f(-(1-p.t2)*44)+' 0)" opacity="'+f(p.t2)+'">'+trailer(y0,y1,0)+'</g>')}
+      o.push('<g transform="translate('+f(-(1-p.t1)*44)+' 0)" opacity="'+f(p.t1)+'">'+trailer(x0,x1,20*p.t2)+'</g>');
+    }
+    o.push('<rect x="'+f(chEnd)+'" y="-11.4" width="'+f(-chEnd-3)+'" height="2.8" fill="#121212"/>');
+    if(p.bodyOn>.01)o.push(body(p));
+    if(p.fifth>.01)o.push('<rect x="'+f(chEnd+5)+'" y="-13.4" width="13" height="2.2" rx=".8" fill="#3a3c3f" opacity="'+f(p.fifth)+'"/>');
+    o.push(cab(p));
+    var rc=chEnd+Math.max(8.5,p.chassisL*.24);
+    o.push('<rect x="'+f(rc-7-5.8*p.ax2)+'" y="-11.6" width="'+f(14+11.6*p.ax2)+'" height="1.4" fill="#2a2b2d"/>');
+    o.push(wheel(-L*.42),wheel(rc+5.8*p.ax2),wheel(rc-5.8*p.ax2,p.ax2));
+    return o.join('');
+  }
+  var BASE={cabL:20,cabH:28,van:0,bodyL:48,bodyTop:36,bodyBot:11,bodyOn:1,chassisL:50,ax2:0,fifth:0,t1:0,t1L:137,t2:0,t2L:130};
+  function P(o){var r={};for(var k in BASE)r[k]=BASE[k];for(k in o)r[k]=o[k];return r}
+  function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+  function paramsFor(cfg,m){
+    if(cfg==='A'&&m<=8){var k=clamp((m-3)/5,0,1);return P({cabL:16.5,cabH:22+3.5*k,van:1,bodyL:30+16*k,bodyTop:22+3.5*k,bodyBot:8.6,chassisL:30+16*k})}
+    if(cfg==='A'){k=clamp((m-8)/7.5,0,1);return P({cabL:20,cabH:28,bodyL:48+10*k,bodyTop:35+2.5*k,chassisL:50+10*k})}
+    if(cfg==='B'){k=clamp((m-8)/24,0,1);return P({cabL:22,cabH:30,bodyL:62+14*k,bodyTop:38+1.5*k,chassisL:64+14*k,ax2:1})}
+    if(cfg==='C')return P({cabL:24,cabH:31,bodyL:40,bodyTop:30,bodyOn:0,chassisL:38,ax2:1,fifth:1,t1:1,t1L:137})
+    return P({cabL:24,cabH:31,bodyL:40,bodyTop:30,bodyOn:0,chassisL:38,ax2:1,fifth:1,t1:1,t1L:98,t2:1,t2L:130});
+  }
+  function fitBox(p,aspect,minW){
+    var len=rigLen(p),W=Math.max(minW,len+34),H=Math.max(58,W/aspect);W=Math.max(W,H*aspect);
+    return {len:len,vb:f(-len/2-W/2)+' '+f(15-H)+' '+f(W)+' '+f(H)};
+  }
+
+  /* ---------- finder state ---------- */
+  var CLS={
+    C:{n:'Car licence',d:'Up to 4.5 t GVM — most vans and utes. A normal car licence covers these, so you don’t need a heavy vehicle course.',r:'No heavy vehicle licence needed.'},
+    LR:{n:'Light Rigid',d:'A rigid vehicle over 4.5 t and up to 8 t GVM — large vans, small trucks, some minibuses. You can tow a trailer up to 9 t GVM.',r:'Usually needs a car licence held for at least 1 year.'},
+    MR:{n:'Medium Rigid',d:'A rigid truck with two axles and over 8 t GVM — the classic delivery or removal truck. You can tow a trailer up to 9 t GVM.',r:'Usually needs a car licence held for at least 1 year.'},
+    HR:{n:'Heavy Rigid',d:'A rigid truck with three or more axles and over 8 t GVM — tippers, agitators and big pantechs. You can tow a trailer up to 9 t GVM.',r:'Usually needs a car licence held for at least 2 years.'},
+    HC:{n:'Heavy Combination',d:'A prime mover towing one semi-trailer, or a rigid truck towing a trailer heavier than 9 t GVM.',r:'Usually needs an MR or HR licence held for at least 1 year.'},
+    MC:{n:'Multi Combination',d:'Any heavy combination, including B-doubles and road trains.',r:'Usually needs an HR or HC licence held for at least 1 year.'}
+  };
+  var BP=[[0,3],[100,4.5],[280,8],[460,15.5],[640,32],[820,46],[1000,70]];
+  function s2m(s){for(var i=1;i<BP.length;i++)if(s<=BP[i][0])return BP[i-1][1]+(BP[i][1]-BP[i-1][1])*(s-BP[i-1][0])/(BP[i][0]-BP[i-1][0]);return 70}
+  function m2s(m){for(var i=1;i<BP.length;i++)if(m<=BP[i][1])return BP[i-1][0]+(BP[i][0]-BP[i-1][0])*(m-BP[i-1][1])/(BP[i][1]-BP[i-1][1]);return 1000}
+  var cfg='A',m=6.5,lastCls='';
+  function classOf(){if(cfg==='D')return 'MC';if(cfg==='C')return 'HC';if(m<=4.5)return 'C';if(m<=8)return 'LR';return cfg==='B'?'HR':'MR'}
+  function autoCfg(){
+    if(cfg==='A'&&m>15.5)cfg='B';if(cfg==='B'&&m>32)cfg='C';if(cfg==='C'&&m>46)cfg='D';
+    if(cfg==='D'&&m<42)cfg='C';if(cfg==='C'&&m<20)cfg='B';if(cfg==='B'&&m<8)cfg='A';
+  }
+  var slider=$('#mass'),svg=$('#rig'),g=$('#rig-g'),lane=$('#lane'),dimP=$('#dim-p'),wm=$('#wm');
+  var cur=paramsFor(cfg,m),tgt=cur,raf=0,lastT=0,travel=0,aspect=2.45;
+  function draw(){
+    var p=cur,b=fitBox(p,aspect,150),vb=b.vb.split(' ').map(Number);
+    g.innerHTML=rigSVG(p);svg.setAttribute('viewBox',b.vb);
+    lane.setAttribute('stroke-dashoffset',f(travel%14));
+    dimP.setAttribute('d','M'+f(-b.len)+' 11.5H0M'+f(-b.len)+' 9.5v4M0 9.5v4');
+    wm.setAttribute('x',f(vb[0]+vb[2]/2));wm.setAttribute('y',f(vb[1]+Math.min(vb[3]*.42,34)));
+    wm.setAttribute('font-size',f(Math.min(vb[3]*.42,vb[2]*.2)));
+    $('#ro-len').textContent='≈ '+(b.len/10).toFixed(1)+' m';
+  }
+  function step(now){
+    var dt=Math.min(.05,(now-lastT)/1000||.016);lastT=now;var a=1-Math.exp(-dt*6.5),moving=false;
+    for(var k in tgt){var d=tgt[k]-cur[k];if(Math.abs(d)>.02){cur[k]+=d*a;moving=true}else cur[k]=tgt[k]}
+    if(moving)travel+=dt*30;draw();raf=moving?requestAnimationFrame(step):0;
+  }
+  function retarget(){
+    tgt=paramsFor(cfg,m);
+    if(RM.matches){cur=P(tgt);draw();return}
+    if(!raf){lastT=performance.now();raf=requestAnimationFrame(step)}
+  }
+  function fmtM(v){return (v<10?v.toFixed(1):Math.round(v))+' t'}
+  function update(){
+    var c=classOf(),info=CLS[c];
+    slider.value=Math.round(m2s(m));slider.style.setProperty('--fill',(slider.value/10)+'%');
+    slider.setAttribute('aria-valuetext',fmtM(m).replace(' t',' tonnes')+', '+info.n);
+    $('#mass-out').textContent=fmtM(m);$('#ro-mass').textContent=fmtM(m);
+    $$('input[name=axles]').forEach(function(r){r.checked=(r.value==='3')===(cfg!=='A');r.disabled=cfg==='C'||cfg==='D'});
+    $$('input[name=trailer]').forEach(function(r){r.checked=r.value===(cfg==='C'?'semi':cfg==='D'?'two':'none')});
+    $('#ax-note').textContent=cfg==='C'||cfg==='D'?'Our prime movers run three axles.':cfg==='B'?'Three or more axles: steer plus tandem drive.':'Two axles: steer and drive.';
+    $$('.mini').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-set')===c?'true':'false')});
+    $$('.plate').forEach(function(pl){pl.classList.toggle('on',pl.getAttribute('data-cls')===c)});
+    wm.textContent=c==='C'?'C':c;
+    if(c!==lastCls){
+      var rc=$('#res-code');rc.textContent=c;rc.classList.toggle('car',c==='C');
+      $('#res-name').textContent=info.n;$('#res-desc').textContent=info.d;$('#res-req').textContent=info.r;
+      if(lastCls&&!RM.matches){rc.classList.remove('flash');void rc.offsetWidth;rc.classList.add('flash')}
+      lastCls=c;
+    }
+    retarget();
+  }
+  slider.addEventListener('input',function(){m=s2m(+slider.value);autoCfg();update()});
+  $$('input[name=axles]').forEach(function(r){r.addEventListener('change',function(){
+    if(r.value==='3'){cfg='B';m=clamp(m,8.5,32)}else{cfg='A';m=Math.min(m,15.5)}update()})});
+  $$('input[name=trailer]').forEach(function(r){r.addEventListener('change',function(){
+    if(r.value==='semi'){cfg='C';m=clamp(m,20,46)}else if(r.value==='two'){cfg='D';m=clamp(m,42,70)}
+    else{cfg=m>15.5?'B':'A';m=Math.min(m,32)}update()})});
+  var PRESET={LR:['A',6.5],MR:['A',12],HR:['B',22],HC:['C',38],MC:['D',60]};
+  $$('[data-set]').forEach(function(b){b.addEventListener('click',function(){
+    var pr=PRESET[b.getAttribute('data-set')];cfg=pr[0];m=pr[1];update();
+    if(b.classList.contains('try')){var fi=$('#finder');fi.scrollIntoView({behavior:RM.matches?'auto':'smooth',block:'start'})}
+  })});
+  function measure(){var r=svg.getBoundingClientRect();if(r.width&&r.height)aspect=r.width/r.height;draw()}
+  if(window.ResizeObserver)new ResizeObserver(measure).observe(svg);else window.addEventListener('resize',measure);
+  update();measure();
+
+  /* ---------- fleet drawings (same renderer, static) ---------- */
+  $$('.unit svg').forEach(function(s){
+    var p=paramsFor(s.getAttribute('data-cfg'),+s.getAttribute('data-m')),wide=s.parentNode.classList.contains('wide');
+    var b=fitBox(p,wide?3.4:2.6,wide?0:100),vb=b.vb.split(' ').map(Number);
+    s.setAttribute('viewBox',b.vb);
+    s.innerHTML='<rect x="'+vb[0]+'" y="0" width="'+vb[2]+'" height="20" fill="#26292d"/><rect x="'+vb[0]+'" y="-.4" width="'+vb[2]+'" height=".8" fill="#FFC400" opacity=".6"/>'+rigSVG(p);
+  });
+
+  /* ---------- pre-start gauge ---------- */
+  var gs=$('#gauge-svg'),html='',i,t,c;
+  function pt(deg,r){var a=deg*Math.PI/180;return f(100+r*Math.cos(a))+' '+f(100+r*Math.sin(a))}
+  html+='<circle cx="100" cy="100" r="97" fill="#1b1d20"/><circle cx="100" cy="100" r="91" fill="#F4F2EC"/>';
+  [[150,250,'#FF6A13'],[250,330,'#FFC400'],[330,390,'#121212']].forEach(function(z){html+='<path d="M'+pt(z[0],62)+'A62 62 0 0 1 '+pt(z[1],62)+'" stroke="'+z[2]+'" stroke-width="8" fill="none"/>'});
+  for(i=0;i<=6;i++){t=150+40*i;var q=pt(t,78).split(' ');html+='<path d="M'+pt(t,49)+'L'+pt(t,56)+'" stroke="#121212" stroke-width="2.5"/><text x="'+q[0]+'" y="'+q[1]+'" dy="4.5" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="700" font-size="14" fill="#121212">'+i+'</text>'}
+  html+='<text x="100" y="141" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#50565d">PRE-START</text><text x="100" y="154" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="700" font-size="10" letter-spacing="2" fill="#50565d">READINESS</text>';
+  html+='<g id="needle" style="transform:rotate(150deg)"><path d="M90 97.6L154 100L90 102.4Z" fill="#121212"/><path d="M140 99.5L154 100L140 100.5Z" fill="#FF6A13"/></g><circle cx="100" cy="100" r="8" fill="#8A9199" stroke="#121212" stroke-width="2"/><circle cx="100" cy="100" r="2.5" fill="#121212"/>';
+  gs.innerHTML=html;
+  var MSG=['Tick what’s true for you.','Plenty to sort out first — call us and we’ll talk it through.','Plenty to sort out first — call us and we’ll talk it through.','Getting there — sort the unticked items, then book a pre-course drive.','Nearly there — sort the unticked items, then book a pre-course drive.','One thing left to sort, then you’re ready.','Ready to book — start with a pre-course drive.'];
+  $('#checks').addEventListener('change',function(){
+    c=$$('#checks input:checked').length;$('#needle').style.transform='rotate('+(150+40*c)+'deg)';
+    $('#gauge-out').innerHTML=c+' of 6 ticked<span>'+MSG[c]+'</span>';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "053",
+  "tech": ["SVG", "CSS Grid", "Form logic", "Date logic", "Clipboard"],
+  "features": ["customiser", "booking"],
+  "interaction": "Dial in a fade on a side-view head — clipper guard (skin to #4), fade height (low, mid, high) and length on top redraw the hair live — then 'Show my barber' prints a saved chair ticket you can open full-screen or copy.",
+  "fonts": ["Ultra", "Oswald"],
+  "notes": ""
+}

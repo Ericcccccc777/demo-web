@@ -1,0 +1,8 @@
+{
+  "id": "052",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["customiser", "booking"],
+  "interaction": "Choose one of six colours and a technique (all-over, balayage, face-frame) and the hair gradients on an SVG line-art portrait morph to match; save looks as tear-sheet cards and attach one to a booking request with the next six open days.",
+  "fonts": ["Bodoni Moda", "Syne"],
+  "notes": "Booking ends in a demo toast; saved looks are kept for the visit only (not stored)."
+}

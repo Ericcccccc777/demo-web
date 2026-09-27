@@ -1,0 +1,8 @@
+{
+  "id": "047",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "View Transitions", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["booking", "customiser"],
+  "interaction": "Choose the patient — Dog, Cat, Rabbit or Bird — from the hero or the header switcher, and the whole site re-themes with a view-transition morph: accent colour, the animated SVG character and its speech bubble, footprint trail, team scrubs, the re-sorted service cards and their wording, care tips, the new-client form and an illustrative 'human years' age slider.",
+  "fonts": ["Lilita One", "Nunito"],
+  "notes": "Browsers without the View Transitions API switch themes with CSS colour transitions instead. The new-client form ends in a demo toast; prices are samples and health content is general information only."
+}

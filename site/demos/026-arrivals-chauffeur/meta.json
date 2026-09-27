@@ -1,0 +1,8 @@
+{
+  "id": "026",
+  "tech": ["SVG", "SVG animation", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["quote", "map", "booking"],
+  "interaction": "Choose pickup and drop-off from eight Melbourne and Geelong locations (or tap a map pin), then vehicle, passengers and bags: the road route draws itself across an SVG map of Port Phillip with a car gliding along it, the illustrative fare flips into place, and 'Print my e-ticket' issues a boarding-pass style ticket stamped DEMO.",
+  "fonts": ["Cormorant", "Jost"],
+  "notes": "Routes follow a simplified road graph of straight segments between junctions; distances, times and fares are illustrative estimates. The e-ticket is a demo state — nothing is booked or sent."
+}

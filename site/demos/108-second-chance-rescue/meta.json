@@ -1,0 +1,8 @@
+{
+  "id": "108",
+  "tech": ["SVG", "CSS Grid", "Form logic"],
+  "features": ["finder"],
+  "interaction": "Filter nine hand-painted (SVG gouache) animals by species, size, energy and good-with-kids/cats and the cards shuffle into place (or shuffle the pack yourself); 'Meet me' opens a profile with painted personality sliders. A donation slider ($10–$500) fills six painted icons to show what a gift could provide (illustrative costs), and 'Donate' ends in a demo toast with no payment.",
+  "fonts": ["Amatic SC", "Mulish"],
+  "notes": "Fictional volunteer-run rescue; animals, events, fees and costs are samples. No charity registration or tax-deductibility is claimed. Donate, Ask about and Register interest end in demo toasts — nothing is sent or charged."
+}

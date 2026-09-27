@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="030">
+<meta name="demo:brand" content="Framework Builders">
+<title>Framework Builders — renovations &amp; extensions, Geelong</title>
+<meta name="description" content="Framework Builders is a fictional renovation and extension builder in Geelong, Victoria, presented as a set of blueprint drawing sheets (concept demo).">
+<meta name="theme-color" content="#1B3A6B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{--p:#1B3A6B;--t:#0E2143;--l:#EAF2FF;--g:#2C5091;--r:#FF5A5F;--rt:#FF8387;--d:#B9CEF0;--m:#9DB8E6;--f:'IBM Plex Sans Condensed','Arial Narrow',system-ui,sans-serif;--h:'Architects Daughter','Segoe Print','Comic Sans MS',cursive;--hb:62px}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hb) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--t) radial-gradient(120% 60% at 50% 0%,#16305C,var(--t) 70%);color:var(--l);font:400 17px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #FFD166;outline-offset:3px}
+[hidden]{display:none!important}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.cap{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--m)}
+.ann{font-family:var(--h);color:var(--rt);font-size:20px;line-height:1.3}
+/* header / drawing register */
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:18px;min-height:var(--hb);padding:8px clamp(14px,3vw,36px);padding-top:max(8px,env(safe-area-inset-top));background:rgba(14,33,67,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(234,242,255,.22)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:0 1 auto}
+.logo svg{flex:none;width:38px;height:38px}
+.logo span{font-weight:600;font-size:17px;letter-spacing:.1em;text-transform:uppercase;line-height:1.1;overflow-wrap:anywhere}
+.reg{margin-left:auto;position:relative}
+.reg ol{list-style:none;padding:0;display:flex;gap:2px}
+.reg a{display:flex;align-items:baseline;gap:6px;padding:10px 12px;text-decoration:none;font-size:14px;color:var(--d);border-bottom:2px solid transparent}
+.reg a b{font-weight:600;color:var(--l);letter-spacing:.04em}
+.reg a[aria-current]{color:var(--l);border-color:var(--r)}
+.reg a:hover{color:var(--l)}
+.regbtn{display:none}
+.call{flex:none;padding:9px 14px;border:1.5px solid var(--l);text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.06em}
+/* sheets */
+main{padding:28px clamp(10px,2.4vw,32px) 8px}
+.sheet{position:relative;max-width:1380px;margin:0 auto 36px;padding:18px;background-color:var(--p);background-image:linear-gradient(var(--g) 1px,transparent 1px),linear-gradient(90deg,var(--g) 1px,transparent 1px),linear-gradient(rgba(44,80,145,.42) 1px,transparent 1px),linear-gradient(90deg,rgba(44,80,145,.42) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px;background-position:-1px -1px;box-shadow:0 40px 60px -40px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.3)}
+.zx,.zy{position:absolute;display:flex;font-size:10.5px;color:var(--m);letter-spacing:.1em;pointer-events:none}
+.zx{top:1px;left:18px;right:18px;height:16px}.zx span,.zy span{flex:1;display:grid;place-items:center}
+.zy{left:3px;top:18px;bottom:18px;width:12px;flex-direction:column}
+.fr{position:relative;border:2px solid var(--l);box-shadow:inset 0 0 0 6px rgba(27,58,107,.55),inset 0 0 0 7px rgba(234,242,255,.4)}
+.in{padding:clamp(22px,3.2vw,48px) clamp(18px,3.2vw,48px) clamp(26px,3vw,44px)}
+.tb{display:grid;grid-template-columns:2.3fr 1.5fr 1.5fr .75fr .9fr .75fr 1fr;border-top:2px solid var(--l);background:rgba(14,33,67,.35)}
+.tb>div{padding:8px 12px 9px;border-left:1px solid rgba(234,242,255,.45);min-width:0;line-height:1.25}
+.tb>div:first-child{border-left:0;display:flex;align-items:center;gap:10px}
+.tb span{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin-bottom:3px}
+.tb b{font-weight:500;font-size:15px;overflow-wrap:anywhere}
+.tb .no b{font-size:30px;font-weight:600;letter-spacing:.02em;line-height:1}
+.tb svg{flex:none;width:34px;height:34px}
+.dt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.dt i{flex:none;width:40px;height:40px;border:2px solid var(--l);border-radius:50%;display:grid;place-items:center;font:600 15px var(--f);font-style:normal}
+.dt h2{font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;padding-bottom:4px;border-bottom:4px double var(--l)}
+.dt .cap{flex-basis:100%;padding-left:54px;margin-top:-4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border:2px solid var(--l);background:none;color:var(--l);font-weight:600;font-size:14.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:box-shadow .2s,transform .2s}
+.btn:hover{box-shadow:5px 5px 0 var(--r);transform:translate(-2px,-2px)}
+.btn.solid{background:var(--l);color:var(--p)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+/* A-01 */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:center}
+.hero h1{font-size:clamp(44px,5.1vw,80px);line-height:.94;font-weight:600;letter-spacing:-.005em;text-transform:uppercase;overflow-wrap:break-word;margin:14px 0 18px}
+.lede{font-size:clamp(17px,1.5vw,20px);color:var(--d);max-width:36ch}
+.notes{margin-top:26px;padding-top:14px;border-top:1px solid rgba(234,242,255,.4)}
+.notes ol{padding-left:22px;margin-top:6px;color:var(--d);font-size:15.5px}
+.notes li+li{margin-top:4px}
+.elev{position:relative}
+.elev svg{display:block;width:100%;height:auto;overflow:visible}
+.cap2{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
+.redraw{border:1.5px solid rgba(234,242,255,.6);background:none;color:var(--l);min-height:40px;padding:0 12px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.stamp{position:absolute;right:-6px;top:-14px;padding:6px 12px;border:3px double var(--r);color:var(--rt);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transform:rotate(-7deg);background:rgba(27,58,107,.75);line-height:1.2;text-align:center}
+.legend{display:none;margin-top:12px;padding-left:0;list-style:none;font-size:15px}
+.legend li{display:flex;gap:10px;align-items:baseline}
+.legend b{flex:none;width:24px;height:24px;border:1.5px solid var(--r);border-radius:50%;display:inline-grid;place-items:center;color:var(--rt);font-size:12.5px}
+svg .w{fill:none;stroke:var(--l);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+svg .w2{stroke-width:3.4}
+svg .w1{stroke-width:1.3;opacity:.85}
+svg .rd{fill:none;stroke:var(--r);stroke-width:2.4;stroke-linecap:round}
+svg .tx{fill:var(--d);font:500 19px var(--f);letter-spacing:.08em}
+svg .rt{fill:var(--rt);font:22px var(--h)}
+#elev .rt,#elev .tx{paint-order:stroke;stroke:#1B3A6B;stroke-width:7px;stroke-linejoin:round}
+svg .bub{fill:var(--p);stroke:var(--r);stroke-width:2.4}
+svg .bn{fill:var(--rt);font:600 20px var(--f);text-anchor:middle}
+/* A-02 plan explorer */
+.planwrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3.5vw,48px);align-items:start}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.seg{display:inline-flex;border:2px solid var(--l)}
+.seg button{min-height:44px;padding:0 18px;border:0;background:none;color:var(--l);font-weight:600;font-size:14px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--l);color:var(--p)}
+#areaTxt{font-size:14.5px;color:var(--d)}
+.plan{display:block;width:100%;height:auto;touch-action:manipulation}
+.plan .wl{fill:none;stroke:var(--l);stroke-linecap:square}
+.plan .ext{stroke-width:22}.plan .int{stroke-width:10}
+.plan .fx{fill:none;stroke:var(--l);stroke-width:3;opacity:.75}
+.plan .lbl{fill:var(--l);font:600 34px var(--f);letter-spacing:.1em;text-anchor:middle}
+.plan .ar{fill:var(--m);font:500 26px var(--f);text-anchor:middle}
+.plan .lbl,.plan .ar{paint-order:stroke;stroke:#1B3A6B;stroke-width:12px;stroke-linejoin:round}
+.room{cursor:pointer;outline:none}
+.room .hit{fill:rgba(234,242,255,0);stroke:none;transition:fill .2s}
+.room:hover .hit{fill:rgba(255,90,95,.13)}
+.room.on .hit{fill:rgba(255,90,95,.2);stroke:var(--r);stroke-width:7;stroke-dasharray:22 12}
+.room:focus-visible .hit{stroke:#FFD166;stroke-width:8;stroke-dasharray:none}
+.ao,.bo,.wkl,.deck,.beamt{transition:opacity .5s,stroke .3s}
+.plan .ao{opacity:0}
+.plan.after .ao{opacity:1;transition-delay:.55s}
+.plan.after .bo{opacity:0}
+.plan.after .wkl{stroke:var(--r);stroke-dasharray:18 14;opacity:0;transition:stroke .25s,stroke-dasharray .25s,opacity .5s .7s}
+.deck{transform:scaleY(0);transform-origin:50% 0;transform-box:fill-box;transition:transform .8s cubic-bezier(.6,0,.2,1) .4s}
+.plan.after .deck{transform:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chips button{min-height:44px;padding:0 14px;border:1.5px solid rgba(234,242,255,.6);background:none;color:var(--l);font-size:14.5px;font-weight:500;letter-spacing:.06em;cursor:pointer}
+.chips button[aria-pressed="true"]{border-color:var(--r);box-shadow:inset 0 0 0 1.5px var(--r);color:#fff;background:rgba(255,90,95,.12)}
+.card{border:2px solid var(--l);background:rgba(14,33,67,.55)}
+.card-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(234,242,255,.45)}
+.card-h h3{font-size:24px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.card-b{padding:14px 16px 16px}
+.card-b .ann{margin-bottom:10px;font-size:21px}
+.card h4{margin:12px 0 6px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--m)}
+.card ul{padding-left:18px;font-size:15.5px;color:var(--d)}
+.card li+li{margin-top:3px}
+.facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(234,242,255,.45)}
+.facts div{padding:10px 16px}.facts div+div{border-left:1px solid rgba(234,242,255,.45)}
+.facts b{display:block;font-size:18px;font-weight:600}
+.fine{margin-top:12px;font-size:13.5px;color:var(--m)}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:34px;border:2px solid var(--l)}
+.svc article{padding:16px 18px 18px}
+.svc article+article{border-left:1px solid rgba(234,242,255,.45)}
+.svc svg{width:70px;height:52px;margin-bottom:8px}
+.svc h3{font-size:19px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.svc p{font-size:15px;color:var(--d);margin-top:4px}
+.svc .cap{display:block;margin-top:10px;color:var(--l)}
+/* A-03 process */
+.seq{position:relative;display:grid;grid-template-columns:1.25fr 1.4fr 2.1fr 1.15fr 2.4fr 1.35fr;margin-top:10px}
+.seq li{position:relative;list-style:none;padding:0 14px 0 0}
+.seq .bar{position:relative;height:34px;margin:14px 0 12px;border-left:1.5px solid var(--l)}
+.seq .bar::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1.5px solid var(--l)}
+.seq .bar::after{content:"";position:absolute;left:-7px;top:10px;width:14px;height:14px;border-top:1.5px solid var(--l);transform:rotate(-45deg);transform-origin:center}
+.seq li:last-child .bar{border-right:1.5px solid var(--l)}
+.seq .dur{position:absolute;left:8px;top:-2px;font-size:13px;letter-spacing:.06em;color:var(--m);background:var(--p);padding:0 6px}
+.seq i{display:grid;place-items:center;width:36px;height:36px;border:2px solid var(--l);border-radius:50%;font-style:normal;font-weight:600}
+.seq h3{font-size:17px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;margin-top:10px}
+.seq p{font-size:15px;color:var(--d);margin-top:4px}
+.seq .ann{position:absolute;right:0;top:-34px;font-size:18px}
+/* A-04 projects */
+.projs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
+.proj svg{display:block;width:100%;height:auto;border:1px solid rgba(234,242,255,.35);background:rgba(14,33,67,.3)}
+.proj h3{display:flex;gap:10px;align-items:center;margin-top:12px;font-size:17px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
+.proj h3 i{flex:none;display:grid;place-items:center;width:30px;height:30px;border:1.5px solid var(--l);border-radius:50%;font-size:12px;font-style:normal}
+.proj p{font-size:15px;color:var(--d);margin-top:6px}
+.proj dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin-top:8px;font-size:14px}
+.proj dt{color:var(--m);letter-spacing:.1em;text-transform:uppercase;font-size:12px;padding-top:2px}
+/* A-05 schedule */
+.sched{width:100%;border-collapse:collapse;border:2px solid var(--l);font-size:15.5px}
+.sched th,.sched td{padding:10px 14px;border:1px solid rgba(234,242,255,.4);text-align:left;vertical-align:top}
+.sched thead th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--m);font-weight:500;background:rgba(14,33,67,.4)}
+.sched td:first-child{font-weight:600;white-space:nowrap;color:var(--m);letter-spacing:.06em}
+.sched .y{color:#8FE3B5;font-weight:600}
+.sched td:last-child{color:var(--d)}
+.two{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(20px,3vw,44px);align-items:start}
+.box{border:2px solid var(--l);padding:16px 18px}
+.box h3{font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.box ul{padding-left:18px;color:var(--d);font-size:15.5px}
+.box+.box{margin-top:18px}
+/* A-06 contact */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.form .full{grid-column:1/-1}
+.form label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--m);margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;min-height:46px;padding:10px 12px;border:0;border-bottom:2px solid var(--l);background:rgba(14,33,67,.5);color:var(--l);font-size:16px;border-radius:0}
+.form textarea{min-height:110px;resize:vertical;border:2px solid var(--l)}
+.form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--l) 50%),linear-gradient(-45deg,transparent 50%,var(--l) 50%);background-size:6px 6px;background-position:calc(100% - 18px) 55%,calc(100% - 12px) 55%;background-repeat:no-repeat}
+.form option{background:var(--p)}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:16px}
+.contact dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--m);padding-top:3px}
+.contact dd a{text-decoration-color:var(--r);text-underline-offset:4px}
+.area svg{display:block;width:100%;height:auto;margin-top:14px}
+footer{max-width:1380px;margin:0 auto;padding:22px clamp(14px,3vw,36px) calc(40px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--m)}
+footer b{color:var(--l);font-weight:600;letter-spacing:.1em;text-transform:uppercase;overflow-wrap:anywhere}
+@media (max-width:1100px){
+.tb{grid-template-columns:2fr 1.4fr 1.3fr .8fr 1fr}.tb .dr,.tb .dat{display:none}
+.svc{grid-template-columns:1fr 1fr}.svc article:nth-child(3){border-left:0}.svc article:nth-child(n+3){border-top:1px solid rgba(234,242,255,.45)}
+.projs{grid-template-columns:1fr 1fr}.proj:last-child{grid-column:1/-1;max-width:calc(50% - 16px)}
+.reg a{padding:10px 8px}.reg a span{display:none}
+}
+@media (max-width:860px){
+:root{--hb:58px}
+.call{display:none}
+.regbtn{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border:1.5px solid var(--l);background:none;color:var(--l);font-weight:600;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.regbtn svg{width:12px;height:12px;transition:transform .2s}
+.regbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.reg ol{display:none;position:absolute;right:0;top:calc(100% + 10px);flex-direction:column;min-width:230px;background:var(--t);border:2px solid var(--l);box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.reg ol.open{display:flex}
+.reg a{padding:12px 14px;border-bottom:1px solid rgba(234,242,255,.2)}.reg a span{display:inline}
+.reg a[aria-current]{border-left:4px solid var(--r);border-bottom-color:rgba(234,242,255,.2)}
+.hero,.planwrap,.two{grid-template-columns:1fr}
+.seq{grid-template-columns:1fr;gap:0;border-left:1.5px solid var(--l);margin-left:18px}
+.seq li{padding:0 0 22px 30px}
+.seq .bar{display:none}
+.seq i{position:absolute;left:-19px;top:0;background:var(--p)}
+.seq h3{margin-top:6px}
+.seq .dur{position:static;display:inline-block;margin-top:6px;padding:0;border:1px solid rgba(234,242,255,.4);padding:1px 8px}
+.seq .ann{position:static;display:block;margin-top:4px}
+.projs{grid-template-columns:1fr}.proj:last-child{max-width:none}
+.stamp{position:static;display:inline-block;margin:0 0 14px;transform:rotate(-3deg)}
+}
+@media (max-width:600px){
+body{font-size:16px}
+main{padding:14px 8px 4px}
+.sheet{padding:12px 10px;margin-bottom:22px;background-size:96px 96px,96px 96px,16px 16px,16px 16px}
+.zx{left:12px;right:12px;height:12px;top:0}.zy{display:none}
+.in{padding:22px 16px 26px}
+.tb{grid-template-columns:1fr auto auto}.tb>div:first-child,.tb .pj,.tb .dr,.tb .dat{display:none}.tb>.st{border-left:0}
+.tb .no b{font-size:24px}
+.logo span{font-size:14.5px;letter-spacing:.07em}
+.logo svg{width:32px;height:32px}
+.dt .cap{padding-left:0}
+.elev .rt,.elev .ldr{display:none}
+.legend{display:grid;gap:6px}
+.svc{grid-template-columns:1fr}.svc article+article{border-left:0;border-top:1px solid rgba(234,242,255,.45)}
+.form{grid-template-columns:1fr}
+.plan .lbl{font-size:50px}.plan .ar{display:none}
+.sched{font-size:14.5px}.sched th,.sched td{padding:8px 9px}.sched thead{display:none}
+.sched tr{display:grid;grid-template-columns:auto 1fr auto;border-bottom:1px solid rgba(234,242,255,.4)}
+.sched td{border:0}.sched td:last-child{grid-column:1/-1;padding-top:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="fb" viewBox="0 0 40 40"><rect x="1.5" y="1.5" width="37" height="37" fill="none" stroke="#EAF2FF" stroke-width="2"/><path d="M8 31V17L20 8l12 9v14M8 31h24M14 31V21h6v10M24 21h4v4h-4z" fill="none" stroke="#EAF2FF" stroke-width="2" stroke-linejoin="round"/><path d="M5 34.5h30" stroke="#FF5A5F" stroke-width="2"/></symbol></svg>
+
+<header class="top">
+<a class="logo" href="#a01"><svg aria-hidden="true"><use href="#fb"/></svg><span data-brand>Framework Builders</span></a>
+<nav class="reg" aria-label="Drawing register">
+<button class="regbtn" type="button" aria-expanded="false" aria-controls="regList">Sheet <span id="curSheet">A-01</span><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+<ol id="regList">
+<li><a href="#a01" aria-current="true"><b>A-01</b><span>About</span></a></li>
+<li><a href="#a02"><b>A-02</b><span>Services</span></a></li>
+<li><a href="#a03"><b>A-03</b><span>Process</span></a></li>
+<li><a href="#a04"><b>A-04</b><span>Projects</span></a></li>
+<li><a href="#a05"><b>A-05</b><span>Inclusions</span></a></li>
+<li><a href="#a06"><b>A-06</b><span>Contact</span></a></li>
+</ol>
+</nav>
+<a class="call" href="tel:0355501290">(03) 5550 1290</a>
+</header>
+
+<main>
+<!-- A-01 -->
+<section class="sheet" id="a01" aria-labelledby="h1">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in hero">
+<div>
+<p class="cap">Renovations &amp; extensions · Geelong, Bellarine &amp; Surf Coast</p>
+<h1 id="h1" data-brand>Framework Builders</h1>
+<p class="lede">We design-and-build extensions, kitchens, bathrooms and decks — and we draw every job properly before a single stud goes up.</p>
+<div class="btns"><a class="btn solid" href="#a06">Book a site visit</a><a class="btn" href="#a02">Explore a floor plan</a></div>
+<div class="notes"><p class="cap">General notes</p><ol>
+<li>One site lead from demolition to handover.</li>
+<li>Itemised quotes, so you can see where every dollar goes.</li>
+<li>We check structure and permit needs before we price.</li>
+</ol></div>
+</div>
+<figure class="elev">
+<p class="stamp" aria-hidden="true">Not for construction<br>concept demo</p>
+<svg id="elev" viewBox="0 0 1060 560" role="img" aria-labelledby="elevT">
+<title id="elevT">Rear elevation drawing: an existing weatherboard cottage with a new skillion-roof extension, sliding doors and a timber deck, with dimensions.</title>
+<g class="d" data-t="0" data-d=".5"><path class="w w2" d="M16 462H1044"/><path class="w w1" id="hatch"/></g>
+<g class="d" data-t=".25" data-d=".7"><path class="w w2" d="M110 420V262M530 420V262M84 272L320 120L556 272M110 420H530M130 420v42M230 420v42M330 420v42M430 420v42M518 420v42"/><path class="w" d="M112 262L320 134L528 262M78 268h30v10H78zM532 268h30v10h-30zM300 196h40l-20-26zM307 190h26M313 182h14"/></g>
+<g class="d" data-t=".8" data-d=".4"><path class="w" d="M150 296h84v96h-84zM150 344h84M144 392h96v6h-96zM406 296h84v96h-84zM406 344h84M400 392h96v6h-96zM290 300h58v120h-58zM300 312h38v46h-38zM300 368h38v44h-38zM280 420v14h78v-14M270 434v14h98v-14M262 448v14h114v-14"/></g>
+<g class="d" data-t="1" data-d=".8"><path class="w w1" id="boards"/></g>
+<g class="d" data-t="1.3" data-d=".6"><path class="w w2" d="M544 258L876 202M556 420V264M856 420V214M530 420H856M600 420v42M700 420v42M800 420v42"/><path class="w" d="M544 268L876 212M544 258v10M876 202v10M586 267L826 227V247L586 287ZM666 254v20M746 240v20M600 300h200v120H600zM700 300v120M640 366h30l-8-6M760 366h-30l8 6"/></g>
+<g class="d" data-t="1.6" data-d=".7"><path class="w w1" id="clad"/></g>
+<g class="d" data-t="1.8" data-d=".6"><path class="w w2" d="M856 420H986M856 430H986M870 430v32M930 430v32M982 430v32"/><path class="w" d="M860 330H986M860 408H986M860 330v90M986 330v90M986 420h16v14h16v14h16v14"/><path class="w w1" id="bal"/></g>
+<g class="d" data-t="2.1" data-d=".6"><path class="w w1" d="M1030 462V368M1030 404l-16-18M1030 394l14-16M1030 372c-40 4-58-30-40-54-18-26 10-58 38-46 14-28 58-20 60 10M40 462c-6-18 10-28 22-20 6-16 32-12 32 6 12-2 16 10 12 14M998 367a9 9 0 1 0 .1 0M998 385v44M998 429l-10 33M998 429l10 33M998 398l-13 20M998 398l13 18"/></g>
+<g class="d" data-t="2.3" data-d=".6"><path class="w w1" d="M110 470V512M530 470V512M856 470V544M110 510V544M104 518l12-12M524 518l12-12M850 518l12-12M104 540l12-12M850 540l12-12M110 512H856M110 534H856M44 462V120M34 462h60M34 120h270M38 468l12-12M38 126l12-12"/><text class="tx" x="320" y="504" text-anchor="middle">6 000</text><text class="tx" x="693" y="504" text-anchor="middle">4 600</text><text class="tx" x="483" y="528" text-anchor="middle">10 600 OVERALL</text><text class="tx" x="30" y="292" text-anchor="middle" transform="rotate(-90 30 292)">4 900</text><text class="tx" x="60" y="486">NGL</text></g>
+<g class="d" data-t="2.7" data-d=".6"><path class="rd ldr" d="M170 70c20 30 50 60 84 92M770 176c-6 18-14 30-26 46M930 300c-10 10-18 18-24 28"/><circle class="bub" cx="150" cy="58" r="16"/><text class="bn" x="150" y="65">1</text><circle class="bub" cx="786" cy="160" r="16"/><text class="bn" x="786" y="167">2</text><circle class="bub" cx="944" cy="286" r="16"/><text class="bn" x="944" y="293">3</text><text class="rt" x="172" y="64">existing cottage — restumped + repainted</text><text class="rt" x="808" y="152">new skillion wing</text><text class="rt" x="808" y="178">open-plan living inside</text><text class="rt" x="880" y="262" text-anchor="middle">merbau deck</text></g>
+</svg>
+<figcaption class="cap2"><span class="cap">① Elevation — rear (east) · Scale 1:100</span><button class="redraw" id="redraw" type="button">↻ Redraw</button></figcaption>
+<ol class="legend"><li><b>1</b>Existing cottage — restumped and repainted</li><li><b>2</b>New skillion wing: open-plan living behind wide sliders</li><li><b>3</b>Merbau deck with steps to the lawn</li></ol>
+</figure>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>About</b></div><div><span>Scale</span><b>1:100</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-01</b></div></div>
+</div>
+</section>
+
+<!-- A-02 -->
+<section class="sheet" id="a02" aria-labelledby="h-a02">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in">
+<div class="dt"><i>2</i><h2 id="h-a02">Services — typical floor plan</h2><p class="cap">Tap a room to see what we'd do · switch before / after</p></div>
+<div class="planwrap">
+<div>
+<div class="toolbar"><div class="seg" role="group" aria-label="Plan state"><button type="button" aria-pressed="true" data-s="before">Before</button><button type="button" aria-pressed="false" data-s="after">After</button></div><p id="areaTxt" aria-live="polite">Before · 96 m² inside, closed-in kitchen</p></div>
+<svg class="plan" id="plan" viewBox="0 0 1340 1180" role="group" aria-label="Floor plan. Rooms are selectable.">
+<g transform="translate(70 70)">
+<g class="deck"><rect x="360" y="800" width="840" height="240" fill="rgba(234,242,255,.05)" stroke="#EAF2FF" stroke-width="5"/><path class="fx" id="dboards"/><circle class="fx" cx="760" cy="930" r="58"/><path class="fx" d="M690 930h-26M830 930h26M760 860v-26M760 1000v26M920 1040v36h200v-36M920 1058h200"/></g>
+<path class="wl ext" d="M0 0H110M310 0H480M600 0H820M1060 0H1200M0 0V100M0 260V640M0 720V800M1200 0V100M1200 260V372M1200 448V560M1200 720V800"/>
+<path class="wl ext bo" d="M0 800H60M180 800H300M540 800H800M1000 800H1200"/>
+<path class="wl ext ao" d="M0 800H60M180 800H300M540 800H700M1120 800H1200"/>
+<path class="wl int" d="M0 360H300M380 360H480M560 360H700M780 360H1200M420 0V360M660 0V360M0 460H80M160 460H300M420 460H700M1000 460H1200M240 460V800"/>
+<path class="wl int wkl" d="M600 460V800"/>
+<path class="rd ao" stroke-dasharray="26 14" stroke-width="5" d="M600 470V790"/>
+<path class="fx" id="wins"/>
+<path class="fx" d="M300 360a80 80 0 0 1 80-80M300 360V280M480 360a80 80 0 0 1 80-80M480 360V280M700 360a80 80 0 0 1 80-80M700 360V280M80 460a80 80 0 0 0 80 80M80 460v80M1200 372a76 76 0 0 0-76 76M1200 372h-76M0 640a80 80 0 0 1 80 80M0 640h80"/>
+<path class="fx bo" d="M800 796H1000M800 804H1000"/><g class="bo"><rect x="360" y="812" width="840" height="228" fill="none" stroke="#EAF2FF" stroke-width="3" stroke-dasharray="16 14" opacity=".5"/><text class="lbl" x="780" y="940" opacity=".7">PROPOSED DECK</text></g>
+<g class="ao"><path class="fx" d="M700 794H915M905 806H1120M700 786v28M1120 786v28"/><rect class="fx" x="330" y="590" width="210" height="72"/><path class="fx" d="M360 690a14 14 0 1 0 .1 0M435 690a14 14 0 1 0 .1 0M510 690a14 14 0 1 0 .1 0"/></g>
+<path class="fx" d="M430 12h220v80H430zM446 26h188v52H446zM432 262h110v60H432zM487 292a22 16 0 1 0 .1 0M600 282h40v24h-40zM620 322a22 26 0 1 0 .1 0M12 470h80v58H12zM12 540h72v72H12zM12 622h72v72H12zM48 576a24 24 0 1 0 .1 0M250 470h60v270h-60zM250 740h340v50H250zM530 470h60v60h-60zM262 520a14 14 0 1 0 .1 0M262 570a14 14 0 1 0 .1 0M296 520a14 14 0 1 0 .1 0M296 570a14 14 0 1 0 .1 0M400 752h60v28h-60zM110 110h190v220H110zM122 120h76v40h-76zM212 120h76v40h-76zM840 110h190v220H840zM852 120h76v40h-76zM942 120h76v40h-76zM680 560h190v120H680zM950 540h230v70H950zM1110 610h70v150h-70zM1000 640h80v60h-80z"/>
+<text class="lbl" x="210" y="62">BED 1</text><text class="ar" x="210" y="94">15.1 m²</text>
+<text class="lbl" x="540" y="148">BATH</text><text class="ar" x="540" y="180">8.6 m²</text>
+<text class="lbl" x="930" y="62">BED 2</text><text class="ar" x="930" y="94">19.4 m²</text>
+<text class="lbl" x="600" y="424">HALL</text>
+<text class="lbl" x="150" y="760">LDRY</text><text class="ar" x="150" y="790">8.2 m²</text>
+<text class="lbl" x="420" y="560">KITCHEN</text><text class="ar bo" x="420" y="592">12.2 m²</text>
+<text class="lbl" x="900" y="740">LIVING</text><text class="ar bo" x="900" y="772">20.4 m²</text><text class="ar ao" x="780" y="772">open plan 32.6 m²</text>
+<text class="lbl ao" x="560" y="930">DECK</text><text class="ar ao" x="560" y="962">20.2 m²</text>
+<path class="fx" d="M0-38H1200M-6-32l12-12M594-32l12-12M1194-32l12-12M0-46v16M1200-46v16M-38 0V800M-44 6l12-12M-44 806l12-12M-46 0h16M-46 800h16"/><path class="fx ao" d="M1238 800v240M1232 806l12-12M1232 1046l12-12M1230 1040h16"/>
+<text class="ar" x="600" y="-50">12 000</text><text class="ar" x="-50" y="400" transform="rotate(-90 -50 400)">8 000</text><text class="ar ao" x="1262" y="920" transform="rotate(90 1262 920)">2 400</text>
+<g class="room" data-r="laundry" tabindex="0" role="button" aria-label="Laundry"><rect class="hit" x="0" y="460" width="240" height="340"/></g>
+<g class="room" data-r="kitchen" tabindex="0" role="button" aria-label="Kitchen"><rect class="hit" x="240" y="460" width="360" height="340"/></g>
+<g class="room" data-r="living" tabindex="0" role="button" aria-label="Living"><rect class="hit" x="600" y="460" width="600" height="340"/></g>
+<g class="room" data-r="bathroom" tabindex="0" role="button" aria-label="Bathroom"><rect class="hit" x="420" y="0" width="240" height="360"/></g>
+<g class="room" data-r="deck" tabindex="-1" role="button" aria-label="Deck (after only)"><rect class="hit" x="360" y="800" width="840" height="240"/></g>
+</g>
+</svg>
+</div>
+<div>
+<div class="chips" role="group" aria-label="Choose a room"><button type="button" data-r="kitchen" aria-pressed="true">Kitchen</button><button type="button" data-r="bathroom" aria-pressed="false">Bathroom</button><button type="button" data-r="living" aria-pressed="false">Living</button><button type="button" data-r="laundry" aria-pressed="false">Laundry</button><button type="button" data-r="deck" aria-pressed="false">Deck</button></div>
+<article class="card" id="card" aria-live="polite"></article>
+<p class="fine">Sample prices and timeframes. General information only — every house is different, so we confirm structure, permits and costs on site.</p>
+</div>
+</div>
+<div class="svc">
+<article><svg viewBox="0 0 70 52" aria-hidden="true"><path class="w" d="M4 48h62M8 48V24l16-12 16 12v24M40 48V30h26v18M40 30l26-6" /><path class="rd" d="M44 36h18v12"/></svg><h3>Extensions</h3><p>Rear and side additions, second living areas and new bedrooms, matched to the old house.</p><span class="cap">12–20 wks · from $180k</span></article>
+<article><svg viewBox="0 0 70 52" aria-hidden="true"><path class="w" d="M4 48h62M6 30h40v18H6zM12 14h28v8H12zM52 18h12v30H52zM20 30v18M26 34h14"/><path class="rd" d="M50 24h16"/></svg><h3>Kitchens</h3><p>Open-plan layouts, islands, pantries and all the plumbing, gas and power that moves with them.</p><span class="cap">6–10 wks · from $38k</span></article>
+<article><svg viewBox="0 0 70 52" aria-hidden="true"><path class="w" d="M4 48h62M8 28h30v12a8 8 0 0 1-8 8H16a8 8 0 0 1-8-8zM48 8v40M48 8h14v6M44 24h22"/><path class="rd" d="M52 18c0 4 4 6 4 10"/></svg><h3>Bathrooms</h3><p>Walk-in showers, wall-hung vanities and proper waterproofing, finished in three to five weeks.</p><span class="cap">3–5 wks · from $26k</span></article>
+<article><svg viewBox="0 0 70 52" aria-hidden="true"><path class="w" d="M4 48h62M6 30h52M6 34h52M10 34v14M54 34v14M6 14v16M58 14v16M6 14h52M14 14v16M22 14v16M30 14v16M38 14v16M46 14v16"/><path class="rd" d="M58 34l8 14"/></svg><h3>Decks</h3><p>Merbau or composite decks, steps and balustrades, sited for sun and shelter from the wind.</p><span class="cap">2–3 wks · from $18k</span></article>
+</div>
+<p class="fine">All prices are sample figures in AUD for this concept demo, including GST.</p>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>Services</b></div><div><span>Scale</span><b>1:100</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-02</b></div></div>
+</div>
+</section>
+
+<!-- A-03 -->
+<section class="sheet" id="a03" aria-labelledby="h-a03">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in">
+<div class="dt"><i>3</i><h2 id="h-a03">Process — construction sequence</h2><p class="cap">Widths are drawn to a typical kitchen-and-deck job</p></div>
+<ol class="seq">
+<li><div class="bar"><span class="dur">wk 0</span></div><i>1</i><h3>Site visit</h3><p>An hour at your place. We measure, look under the floor and talk budget honestly.</p></li>
+<li><div class="bar"><span class="dur">1–2 wks</span></div><i>2</i><h3>Concept + estimate</h3><p>A sketch plan and an itemised estimate, so you can decide before paying for drawings.</p></li>
+<li><div class="bar"><span class="dur">4–10 wks</span></div><i>3</i><h3>Design, engineering, permits</h3><p>Working drawings, engineer's details and any building permit, lodged and tracked by us.</p></li>
+<li><div class="bar"><span class="dur">1 wk</span></div><i>4</i><h3>Contract</h3><p>A written contract with a clear payment schedule and a start date.</p></li>
+<li><div class="bar"><span class="dur">6–16 wks</span></div><i>5</i><h3>Build</h3><p>One site lead, weekly photo updates, and a tidy site every afternoon.</p><span class="ann">you'll see us most here</span></li>
+<li><div class="bar"><span class="dur">+ 90 days</span></div><i>6</i><h3>Handover</h3><p>Walk-through, manuals and warranties, then a check-in at 90 days.</p></li>
+</ol>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>Process</b></div><div><span>Scale</span><b>NTS</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-03</b></div></div>
+</div>
+</section>
+
+<!-- A-04 -->
+<section class="sheet" id="a04" aria-labelledby="h-a04">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in">
+<div class="dt"><i>4</i><h2 id="h-a04">Projects — typical jobs</h2><p class="cap">Illustrative drawings of the work we do · not real client homes</p></div>
+<div class="projs">
+<article class="proj"><svg viewBox="0 0 400 260" role="img" aria-label="Elevation of a weatherboard house with a flat-roofed rear extension, dimensioned 7 200 and 4 800."><path class="w w2" d="M10 200H390M40 200V110M190 200V110M20 116L115 60L210 116M190 200h150V100H176M176 92h174"/><path class="w" d="M60 130h40v44H60zM130 130h40v44h-40zM214 124h100v76H214zM264 124v76M40 200v20M190 200v20M340 200v20M40 214h150M190 214h150M36 218l8-8M186 218l8-8M336 218l8-8"/><path class="w w1" d="M40 122h150M40 134h20M100 134h30M40 146h20M100 146h30M40 158h20M100 158h30M40 170h20M100 170h30M40 182h150M40 194h150"/><text class="tx" x="115" y="240" text-anchor="middle">7 200</text><text class="tx" x="265" y="240" text-anchor="middle">4 800</text><text class="rt" x="236" y="84">flat-roof box</text></svg>
+<h3><i>4.1</i>Belmont — rear extension</h3><p>A living room and third bedroom added behind a 1950s weatherboard.</p><dl><dt>Adds</dt><dd>34 m²</dd><dt>Build</dt><dd>about 16 weeks</dd></dl></article>
+<article class="proj"><svg viewBox="0 0 400 260" role="img" aria-label="Elevation of a kitchen wall opened to a deck with a pergola, dimensioned 5 400 and 2 400."><path class="w w2" d="M10 206H390M30 206V70H230V206M30 70L130 40L230 70"/><path class="w" d="M60 110h140v96H60zM130 110v96M230 170H370M230 178H370M250 178v28M310 178v28M364 178v28M230 96H376M244 96v74M304 96v74M364 96v74M230 90l10 6M290 90l10 6M350 90l10 6M30 222H230M230 222H370M26 226l8-8M226 226l8-8M366 226l8-8"/><path class="w w1" d="M232 102h140M232 108h140"/><text class="tx" x="130" y="248" text-anchor="middle">5 400</text><text class="tx" x="300" y="248" text-anchor="middle">2 400 deck</text><text class="rt" x="248" y="60">pergola over</text></svg>
+<h3><i>4.2</i>Ocean Grove — kitchen + deck</h3><p>Kitchen wall opened to a north-facing deck with a timber pergola.</p><dl><dt>Adds</dt><dd>22 m² deck</dd><dt>Build</dt><dd>about 10 weeks</dd></dl></article>
+<article class="proj"><svg viewBox="0 0 400 260" role="img" aria-label="Interior elevation of a bathroom wall with a vanity, mirror, shower niche and tiles, 2 400 high."><path class="w w2" d="M40 30H360V210H40zM10 210H390"/><path class="w" d="M70 140h120v34H70zM90 64h80v60H90zM250 50h70v160M250 110h70M268 120h36v24h-36zM80 174v12M180 174v12M372 30v180M366 36l12-12M366 216l12-12"/><path class="w w1" d="M40 60H240M40 90H80M180 90H240M40 120H80M180 120H240M40 150h30M190 150h50M40 180h30M190 180h50M80 30v30M120 30v30M160 30v30M200 30v30M40 196H240"/><text class="tx" x="388" y="124" transform="rotate(90 388 124)" text-anchor="middle">2 400</text><text class="rt" x="200" y="236">recessed niche</text></svg>
+<h3><i>4.3</i>Newtown — main bathroom</h3><p>Tub out, walk-in shower in, wall-hung vanity and a tiled niche.</p><dl><dt>Area</dt><dd>6.5 m²</dd><dt>Build</dt><dd>about 4 weeks</dd></dl></article>
+</div>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>Projects</b></div><div><span>Scale</span><b>1:100</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-04</b></div></div>
+</div>
+</section>
+
+<!-- A-05 -->
+<section class="sheet" id="a05" aria-labelledby="h-a05">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in">
+<div class="dt"><i>5</i><h2 id="h-a05">Inclusions — schedule</h2><p class="cap">What every quote covers, in writing</p></div>
+<div class="two">
+<table class="sched"><thead><tr><th scope="col">Code</th><th scope="col">Item</th><th scope="col">Incl.</th><th scope="col">Notes</th></tr></thead><tbody>
+<tr><td>INC-01</td><td>Site visit + measure</td><td class="y">Yes</td><td>No charge within Greater Geelong</td></tr>
+<tr><td>INC-02</td><td>Concept sketch + estimate</td><td class="y">Yes</td><td>Itemised by trade</td></tr>
+<tr><td>INC-03</td><td>Engineering coordination</td><td class="y">Yes</td><td>Engineer's fee shown as its own line</td></tr>
+<tr><td>INC-04</td><td>Permit applications</td><td class="y">Yes</td><td>Council and surveyor fees passed on at cost</td></tr>
+<tr><td>INC-05</td><td>Site protection + fencing</td><td class="y">Yes</td><td>Floors, paths and gardens covered</td></tr>
+<tr><td>INC-06</td><td>Waste removal</td><td class="y">Yes</td><td>Timber, metal and brick sorted for recycling</td></tr>
+<tr><td>INC-07</td><td>Weekly updates</td><td class="y">Yes</td><td>Photos and a short note every Friday</td></tr>
+<tr><td>INC-08</td><td>Handover clean + 90-day check</td><td class="y">Yes</td><td>We come back and fix the small things</td></tr>
+</tbody></table>
+<div>
+<div class="box"><h3>Not included</h3><ul><li>Appliances, unless listed in your quote</li><li>Landscaping beyond the deck footprint</li><li>Asbestos removal (quoted separately by a licensed remover)</li></ul></div>
+<div class="box"><h3>Good to know</h3><ul><li>Older Geelong homes often hide surprises under the floor — we allow for them in writing.</li><li>Variations are priced and signed before any extra work starts.</li></ul><p class="ann" style="margin-top:10px">no surprises, just drawings</p></div>
+</div>
+</div>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>Inclusions</b></div><div><span>Scale</span><b>NTS</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-05</b></div></div>
+</div>
+</section>
+
+<!-- A-06 -->
+<section class="sheet" id="a06" aria-labelledby="h-a06">
+<div class="zx" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="zy" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span></div>
+<div class="fr"><div class="in">
+<div class="dt"><i>6</i><h2 id="h-a06">Contact — request a site visit</h2><p class="cap">We reply within two working days</p></div>
+<div class="two">
+<form class="form" data-demo-message="Demo only — your request wasn't sent. On a real site it would reach the builder.">
+<div><label for="f-n">Name</label><input id="f-n" name="name" autocomplete="name" required></div>
+<div><label for="f-p">Phone</label><input id="f-p" name="phone" type="tel" autocomplete="tel"></div>
+<div><label for="f-e">Email</label><input id="f-e" name="email" type="email" autocomplete="email" required></div>
+<div><label for="f-s">Suburb</label><input id="f-s" name="suburb" placeholder="e.g. Belmont"></div>
+<div><label for="f-j">Job type</label><select id="f-j" name="job"><option>Extension</option><option selected>Kitchen</option><option>Bathroom</option><option>Deck</option><option>Not sure yet</option></select></div>
+<div><label for="f-b">Rough budget</label><select id="f-b" name="budget"><option>Under $30k</option><option selected>$30k – $80k</option><option>$80k – $200k</option><option>$200k +</option></select></div>
+<div class="full"><label for="f-m">Tell us about the house</label><textarea id="f-m" name="msg" placeholder="Age of the house, what bugs you about it, when you'd like to start"></textarea></div>
+<div class="full"><button class="btn solid" type="submit">Send request</button></div>
+</form>
+<div class="contact">
+<div class="box"><h3>Legend</h3><dl><dt>Phone</dt><dd><a href="tel:0355501290">(03) 5550 1290</a></dd><dt>Email</dt><dd><a href="mailto:office@example.com">office@example.com</a></dd><dt>Hours</dt><dd>Mon – Fri 7am – 4pm</dd><dt>Base</dt><dd>Geelong, VIC</dd></dl></div>
+<div class="box area"><h3>Service area</h3><svg viewBox="0 0 300 170" role="img" aria-label="Diagram of the service area: Greater Geelong, the Bellarine Peninsula and the Surf Coast."><circle class="w w1" cx="232" cy="104" r="50" stroke-dasharray="6 6"/><circle class="w w1" cx="70" cy="118" r="46" stroke-dasharray="6 6"/><circle class="w" cx="148" cy="66" r="54" fill="#1B3A6B"/><circle cx="148" cy="80" r="5" fill="#FF5A5F"/><text class="tx" x="148" y="64" text-anchor="middle" style="font-size:14px;letter-spacing:.06em">GEELONG</text><text class="tx" x="246" y="136" text-anchor="middle" style="font-size:12.5px;letter-spacing:.04em">BELLARINE</text><text class="tx" x="62" y="146" text-anchor="middle" style="font-size:12.5px;letter-spacing:.04em">SURF COAST</text></svg></div>
+</div>
+</div>
+</div>
+<div class="tb"><div><svg aria-hidden="true"><use href="#fb"/></svg><div><span>Builder</span><b data-brand>Framework Builders</b></div></div><div class="pj"><span>Project</span><b>Website drawing set</b></div><div class="st"><span>Sheet</span><b>Contact</b></div><div><span>Scale</span><b>NTS</b></div><div class="dat"><span>Date</span><b class="today">Sat 26 Sep</b></div><div class="dr"><span>Drawn</span><b>FB</b></div><div class="no"><span>Sheet no.</span><b>A-06</b></div></div>
+</div>
+</section>
+</main>
+
+<footer><b data-brand>Framework Builders</b><span>Renovations &amp; extensions · Geelong, VIC</span><span>A fictional business in a concept demo. Drawings are illustrative, sample prices, not for construction.</span></footer>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = matchMedia("(prefers-reduced-motion: reduce)");
+/* today's date in the title blocks */
+const d = new Date(), D = "Sun Mon Tue Wed Thu Fri Sat".split(" ")[d.getDay()] + " " + d.getDate() + " " + "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(" ")[d.getMonth()];
+$$(".today").forEach(b => b.textContent = D);
+
+/* ---- drawing register ---- */
+const regBtn = $(".regbtn"), regList = $("#regList"), links = $$("#regList a");
+const setReg = open => { regBtn.setAttribute("aria-expanded", open); regList.classList.toggle("open", open); };
+regBtn.addEventListener("click", () => setReg(regBtn.getAttribute("aria-expanded") !== "true"));
+links.forEach(a => a.addEventListener("click", () => setReg(false)));
+document.addEventListener("keydown", e => { if (e.key === "Escape" && regBtn.getAttribute("aria-expanded") === "true") { e.preventDefault(); setReg(false); regBtn.focus(); } });
+document.addEventListener("click", e => { if (!e.target.closest(".reg")) setReg(false); });
+const regIO = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  links.forEach(a => a.hash === "#" + e.target.id ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current"));
+  $("#curSheet").textContent = "A-0" + e.target.id.slice(2);
+}), { rootMargin: "-40% 0px -55% 0px" });
+$$(".sheet").forEach(s => regIO.observe(s));
+
+/* ---- elevation: generated linework ---- */
+const minus = (a, b, holes) => { let segs = [[a, b]]; holes.forEach(([h0, h1]) => { segs = segs.flatMap(([s0, s1]) => h1 <= s0 || h0 >= s1 ? [[s0, s1]] : [[s0, h0], [h1, s1]].filter(([p, q]) => q - p > 2)); }); return segs; };
+let p = "";
+for (let y = 274; y <= 414; y += 12) minus(110, 530, [[150, 234, 296, 398], [406, 490, 296, 398], [290, 348, 300, 420]].filter(h => y > h[2] && y < h[3]).map(h => [h[0], h[1]])).forEach(([a, b]) => p += `M${a} ${y}H${b}`);
+$("#boards").setAttribute("d", p);
+p = "";
+const roofU = x => 268 + (x - 544) * (212 - 268) / (876 - 544), clere = x => 267 + (x - 586) * (227 - 267) / (826 - 586);
+for (let x = 572; x <= 840; x += 16) {
+  const holes = [];
+  if (x > 600 && x < 800) holes.push([300, 420]);
+  if (x > 586 && x < 826) holes.push([clere(x) - 2, clere(x) + 22]);
+  minus(roofU(x) + 3, 420, holes).forEach(([a, b]) => p += `M${x} ${a.toFixed(1)}V${b.toFixed(1)}`);
+}
+$("#clad").setAttribute("d", p);
+p = ""; for (let x = 872; x <= 978; x += 12) p += `M${x} 332V408`; $("#bal").setAttribute("d", p);
+p = ""; for (let x = 34; x <= 1040; x += 28) p += `M${x} 464l-12 14`; $("#hatch").setAttribute("d", p);
+
+/* ---- elevation: draws itself (rAF-driven pen) when it enters the viewport ---- */
+const elev = $("#elev"), items = [];
+$$(".d", elev).forEach(g => {
+  const t = +g.dataset.t, du = +g.dataset.d;
+  $$("path,circle,rect", g).forEach((el, i) => items.push({ el, L: Math.ceil(el.getTotalLength()) + 2, at: t + i * .05, du }));
+  $$("text", g).forEach((el, i) => items.push({ el, txt: 1, at: t + du * .6 + i * .06, du: .35 }));
+});
+let raf = 0, t0 = 0;
+const paint = t => {
+  let done = true;
+  items.forEach(it => {
+    let k = Math.min(1, Math.max(0, (t - it.at) / it.du)); if (k < 1) done = false;
+    k = k * k * (3 - 2 * k);
+    if (it.txt) it.el.style.opacity = k; else { it.el.style.strokeDasharray = it.L + " " + it.L; it.el.style.strokeDashoffset = (it.L * (1 - k)).toFixed(1); }
+  });
+  return done;
+};
+const tick = now => { raf = 0; if (!t0) t0 = now; if (!paint((now - t0) / 1000)) raf = requestAnimationFrame(tick); else clearDash(); };
+const clearDash = () => items.forEach(it => { it.el.style.strokeDasharray = it.el.style.strokeDashoffset = it.el.style.opacity = ""; });
+function play() { cancelAnimationFrame(raf); t0 = 0; paint(0); raf = requestAnimationFrame(tick); }
+if (!RM.matches) {
+  paint(0);
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { o.disconnect(); play(); } }, { threshold: .2 }).observe(elev);
+}
+$("#redraw").addEventListener("click", () => { if (!RM.matches) play(); });
+
+/* ---- plan explorer ---- */
+p = "";
+const win = (x1, y1, x2, y2) => { const h = y1 === y2, o = 8; p += h ? `M${x1} ${y1 - o}H${x2}M${x1} ${y1 + o}H${x2}M${x1} ${y1 - 11}v22M${x2} ${y1 - 11}v22` : `M${x1 - o} ${y1}V${y2}M${x1 + o} ${y1}V${y2}M${x1 - 11} ${y1}h22M${x1 - 11} ${y2}h22`; };
+[[110, 0, 310, 0], [480, 0, 600, 0], [820, 0, 1060, 0], [0, 100, 0, 260], [1200, 100, 1200, 260], [1200, 560, 1200, 720], [60, 800, 180, 800], [300, 800, 540, 800]].forEach(w => win(...w));
+$("#wins").setAttribute("d", p);
+p = ""; for (let y = 830; y < 1040; y += 30) p += `M372 ${y}H1188`; $("#dboards").setAttribute("d", p);
+const ROOMS = {
+  kitchen: ["Kitchen", "open it up to the living", ["Remove the kitchen/living wall — new beam over if it's load-bearing", "Island bench with seats for three", "Sink moved under the rear window", "Induction cooktop with a ducted rangehood"], ["An engineer confirms the wall and sizes the beam", "Plumbing, gas and power usually move", "Plan for 2–3 weeks without a working kitchen"], "6–10 weeks", "from $38k"],
+  bathroom: ["Bathroom", "walk-in shower, less grout", ["Walk-in shower with a frameless screen", "Wall-hung vanity and a recessed niche", "Heated towel rail, fan ducted outside", "Keep the tub, or trade it for floor space"], ["Waterproofing and cure times set the pace", "Old homes may need new wall linings or subfloor", "Choose tiles early to avoid delays"], "3–5 weeks", "from $26k"],
+  living: ["Living", "light from the north, doors to the deck", ["Wide double-glazed sliders to the new deck", "One big room once the kitchen wall goes", "Built-in joinery around the TV", "Ceiling fans and zoned heating"], ["Bracing and beam sizes come from the engineer", "Shade the west side for summer afternoons", "Bigger room, bigger heating plan"], "with the kitchen", "priced together"],
+  laundry: ["Laundry", "more storage, better drying", ["Full-height cupboards and a hanging rail", "Benchtop over front-loaders", "External door to the drying court", "Or a Euro laundry behind bifold doors"], ["Floor waste and drainage falls", "Vent the dryer and room to outside", "Often done with the bathroom"], "1–2 weeks", "from $9k"],
+  deck: ["Deck", "20 m² of outdoor room", ["Merbau or composite boards", "Built-in bench and wide steps to the lawn", "Pergola or shade sail over the table", "Balustrade in timber or glass"], ["Height above ground decides the balustrade", "Permit needs depend on height, size and siting — we check first", "Footings, drainage and airflow underneath"], "2–3 weeks", "from $18k"]
+};
+const plan = $("#plan"), card = $("#card"), chips = $$(".chips button");
+let room = "kitchen", after = false;
+function show(r) {
+  room = r;
+  const R = ROOMS[r];
+  $$(".room", plan).forEach(g => g.classList.toggle("on", g.dataset.r === r));
+  chips.forEach(b => b.setAttribute("aria-pressed", b.dataset.r === r));
+  const noDeck = r === "deck" && !after;
+  card.innerHTML = `<div class="card-h"><h3>${R[0]}</h3><span class="cap">${after ? "After" : "Before"} · 1:100</span></div><div class="card-b"><p class="ann">${noDeck ? "no deck yet — switch to after" : R[1]}</p>${noDeck ? `<button class="btn" type="button" id="toAfter">Show the after plan</button>` : `<h4>Options</h4><ul>${R[2].map(x => `<li>${x}</li>`).join("")}</ul><h4>Considerations</h4><ul>${R[3].map(x => `<li>${x}</li>`).join("")}</ul>`}</div>${noDeck ? "" : `<div class="facts"><div><span class="cap">Typical time</span><b>${R[4]}</b></div><div><span class="cap">Sample price</span><b>${R[5]}</b></div></div>`}`;
+  const ta = $("#toAfter"); if (ta) ta.addEventListener("click", () => { setState(true); show("deck"); });
+}
+function setState(a) {
+  after = a;
+  plan.classList.toggle("after", a);
+  $$(".seg button").forEach(b => b.setAttribute("aria-pressed", (b.dataset.s === "after") === a));
+  const dk = $('.room[data-r="deck"]', plan); dk.setAttribute("tabindex", a ? "0" : "-1");
+  $("#areaTxt").textContent = a ? "After · 96 m² inside + 20.2 m² deck · open-plan kitchen/living 32.6 m²" : "Before · 96 m² inside, closed-in kitchen";
+  show(room);
+}
+$$(".seg button").forEach(b => b.addEventListener("click", () => setState(b.dataset.s === "after")));
+chips.forEach(b => b.addEventListener("click", () => { if (b.dataset.r === "deck" && !after) setState(true); show(b.dataset.r); }));
+$$(".room", plan).forEach(g => {
+  g.addEventListener("click", () => show(g.dataset.r));
+  g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(g.dataset.r); } });
+});
+show("kitchen");
+})();
+</script>
+</body>
+</html>

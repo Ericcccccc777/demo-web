@@ -1,0 +1,8 @@
+{
+  "id": "045",
+  "tech": ["SVG", "Form logic", "IntersectionObserver"],
+  "features": ["story", "accessibility"],
+  "interaction": "Answer 'How are you arriving today?' by choosing one of five words; the watercolour washes and page tint shift gently, a matching sentence appears and a 5-4-3-2-1 grounding exercise unfolds step by step beside a slow breathing guide. A Quick exit button swaps the page for a neutral recipe.",
+  "fonts": ["Literata", "Source Sans 3"],
+  "notes": "Lifeline 13 11 14 and 000 are real numbers and are deliberately left dialable (not intercepted by the demo kit). Quick exit stays inside the demo and shows a neutral stand-in page instead of leaving the site."
+}

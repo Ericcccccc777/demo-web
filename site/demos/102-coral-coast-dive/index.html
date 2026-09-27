@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="102">
+<meta name="demo:brand" content="Coral Coast Dive Co.">
+<title>Coral Coast Dive Co. — reef dive &amp; snorkel trips from Cairns</title>
+<meta name="description" content="A fictional Cairns dive operator: snorkel days, intro dives, certified reef dives, an advanced course and night dives, told as one descent.">
+<meta name="theme-color" content="#3ED6E0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kanit:wght@300;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --surf:#3ED6E0;--reef:#0B6E99;--deep:#041C32;--coral:#FF8C61;--abyss:#021327;
+  --st5:#22A9C8;--st18:#07507A;--ink:#041C32;--foam:#E8FBFD;
+  --display:'Kanit','Arial Narrow',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --gutter:clamp(16px,4vw,56px);--lane-l:0px;--lane-r:34px;--wl:128px;
+}
+@media (min-width:900px){:root{--lane-l:132px;--lane-r:0px;--wl:200px}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;font:400 16px/1.6 var(--body);color:var(--ink);background:var(--abyss);overflow-x:clip;-webkit-font-smoothing:antialiased}
+svg{display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#sea{position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:25;pointer-events:none}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--deep);color:#fff;padding:10px 14px;border-radius:10px}
+.skip:focus{top:12px}
+.wrap{width:100%;max-width:calc(1120px + var(--lane-l) + var(--lane-r) + 2 * var(--gutter));margin-inline:auto;
+  padding-left:calc(var(--gutter) + var(--lane-l));padding-right:calc(var(--gutter) + var(--lane-r))}
+
+/* header */
+.top{position:absolute;inset:0 0 auto;z-index:30}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:16px;padding-bottom:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--deep);min-width:0}
+.logo svg{flex:none;width:40px;height:40px}
+.logo span{font:600 19px/1.05 var(--display);letter-spacing:.01em;overflow-wrap:anywhere}
+.nav{display:flex;gap:4px;align-items:center;flex:none}
+.nav a{font:600 14px/1 var(--body);text-decoration:none;padding:12px 14px;border-radius:999px;color:var(--deep)}
+.nav a:hover{background:rgba(4,28,50,.08)}
+.nav .cta{background:var(--deep);color:#fff;padding:12px 18px}
+.nav .cta:hover{background:#0a2d4d}
+@media (max-width:760px){.nav a:not(.cta){display:none}.logo span{font-size:16px}}
+
+/* surface / hero */
+.surface{position:relative;overflow:hidden;color:var(--deep);
+  background:linear-gradient(180deg,#F6FEFF 0,#D3F6F9 calc(var(--wl) - 2px),var(--surf) var(--wl),#3AD1DC 100%)}
+.sun{position:absolute;top:-120px;left:38%;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,244,214,.95) 0,rgba(255,244,214,.35) 30%,rgba(255,244,214,0) 62%);pointer-events:none}
+.boat{position:absolute;top:calc(var(--wl) - 86px);right:9%;width:250px;color:var(--deep);animation:bob 5s ease-in-out infinite}
+.waves{position:absolute;left:0;top:calc(var(--wl) - 18px);width:200%;height:40px;animation:drift 16s linear infinite}
+.waves.b{top:calc(var(--wl) - 11px);opacity:.6;animation-duration:23s;animation-direction:reverse}
+@keyframes drift{to{transform:translateX(-50%)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(5px) rotate(1.2deg)}}
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(28px,4vw,64px);
+  align-items:start;padding-top:calc(var(--wl) + 40px);padding-bottom:40px}
+.kicker{font:600 12.5px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;margin:0 0 16px;display:flex;gap:10px;align-items:center}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+h1{font:600 clamp(46px,6.3vw,92px)/.92 var(--display);letter-spacing:-.015em;margin:0 0 22px;overflow-wrap:anywhere;text-wrap:balance}
+.lead{font:300 clamp(20px,1.9vw,25px)/1.36 var(--display);margin:0 0 26px;max-width:30ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:14px;font:600 15px/1 var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn.solid{background:var(--deep);color:#fff}
+.btn.ghost{background:rgba(255,255,255,.45);color:var(--deep);box-shadow:inset 0 0 0 1.5px rgba(4,28,50,.28)}
+.btn svg{width:16px;height:16px}
+.readouts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;font:600 13px/1.3 var(--body)}
+.readouts li{display:flex;gap:8px;align-items:center}
+.readouts b{font:600 12px/1 var(--display);letter-spacing:.08em;background:var(--deep);color:var(--surf);padding:5px 7px;border-radius:6px}
+.cue{position:relative;z-index:2;display:flex;align-items:center;gap:12px;padding-bottom:30px;font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
+.cue span{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1.5px currentColor}
+
+/* finder */
+.finder{background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.95);
+  border-radius:26px;padding:clamp(18px,2vw,28px);box-shadow:0 34px 70px -34px rgba(4,28,50,.55);scroll-margin-top:16px}
+.finder h2{font:600 30px/1.05 var(--display);margin:0}
+.finder .hint{margin:6px 0 18px;font-size:14px;line-height:1.45;color:#16405e}
+fieldset{border:0;margin:0 0 14px;padding:0;min-width:0}
+legend{font:600 11.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#0b3a5c;margin:0 0 9px;padding:0}
+.chips{display:grid;gap:8px;grid-template-columns:repeat(var(--n,2),minmax(0,1fr))}
+.chip{position:relative;display:block}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.chip span{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;height:100%;padding:8px 10px;border-radius:14px;
+  border:1.5px solid rgba(4,28,50,.2);background:rgba(255,255,255,.66);font:600 14px/1.2 var(--body);text-align:center;cursor:pointer;
+  transition:background-color .2s,border-color .2s,color .2s}
+.chip span:hover{border-color:var(--deep)}
+.chip input:checked+span{background:var(--deep);border-color:var(--deep);color:#fff}
+.chip input:focus-visible+span{outline:3px solid var(--coral);outline-offset:2px}
+.chip svg{width:20px;height:20px;flex:none}
+.result{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 16px;align-items:center;margin-top:6px;padding:16px 16px 14px;border-radius:18px;background:var(--deep);color:#fff}
+.rd{grid-row:span 2;font:300 54px/.85 var(--display);letter-spacing:-.03em;color:var(--surf);font-variant-numeric:tabular-nums}
+.rd small{font:600 16px var(--display);letter-spacing:0;margin-left:2px}
+.rt{font:600 18px/1.2 var(--display)}
+.rw{margin:0;font-size:13.5px;line-height:1.45;color:#d3ecf5}
+.descend{grid-column:1/-1;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:50px;border:0;border-radius:14px;
+  background:var(--coral);color:var(--deep);font:600 16px/1 var(--body);cursor:pointer;transition:transform .15s}
+.descend:hover{transform:translateY(-1px)}
+.descend svg{width:18px;height:18px}
+
+/* gauge */
+.gauge{position:fixed;z-index:40;left:22px;top:50%;transform:translateY(-50%);width:112px;height:min(76vh,660px);display:flex;flex-direction:column;
+  border-radius:26px;background:rgba(4,28,50,.66);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;padding:14px 10px 18px;
+  border:1px solid rgba(255,255,255,.16);box-shadow:0 22px 44px -22px rgba(0,0,0,.6)}
+.g-read{text-align:center;padding:2px 0 10px;border-bottom:1px solid rgba(255,255,255,.18);margin-bottom:14px}
+.g-lab{display:block;font:600 10px/1 var(--body);letter-spacing:.2em;color:#bfe3ee}
+.g-val{display:block;font:300 34px/1.05 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.g-val small{font:600 12px var(--display);margin-left:2px}
+.g-st{display:block;font:600 10.5px/1.25 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--surf);min-height:2.5em}
+.g-dir{display:inline-block;margin-left:2px;transition:transform .3s}
+.g-scale{position:relative;flex:1;margin:0 0 30px 14px}
+.g-scale::before,.g-scale::after{content:"";position:absolute;left:0;top:0;bottom:-1px;pointer-events:none}
+.g-scale::before{width:7px;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.5) 0 1px,transparent 1px calc(100% / 30))}
+.g-scale::after{width:14px;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.9) 0 2px,transparent 2px calc(100% / 6))}
+.g-fill{position:absolute;left:-7px;top:0;width:3px;height:calc(var(--p,0) * 100%);border-radius:3px;background:linear-gradient(var(--surf),var(--coral))}
+.g-diver{position:absolute;left:-14px;top:calc(var(--p,0) * 100%);width:30px;transform:translate(0,-50%) rotate(90deg);color:var(--coral);filter:drop-shadow(0 0 6px rgba(255,140,97,.6))}
+.g-mark{position:absolute;left:18px;right:-6px;top:calc(var(--d) / 30 * 100%);transform:translateY(-50%);display:flex;align-items:center;gap:6px;
+  min-height:32px;text-decoration:none;border-radius:8px;padding-left:2px}
+.g-mark .dot{width:10px;height:10px;border-radius:50%;border:2px solid #fff;flex:none;transition:background-color .2s,box-shadow .2s}
+.g-mark .ml{font:600 11px/1.05 var(--display);letter-spacing:.04em}
+.g-mark .ml em{display:block;font:400 10px/1.2 var(--body);font-style:normal;color:#cfe8f1}
+.g-mark[aria-current="location"] .dot{background:var(--surf);box-shadow:0 0 0 4px rgba(62,214,224,.25)}
+.g-mark.is-match .dot{background:var(--coral);border-color:var(--coral);box-shadow:0 0 0 5px rgba(255,140,97,.3)}
+.g-up{margin-top:auto;align-self:center;border:0;background:none;color:#cfe8f1;font:600 10px/1 var(--body);letter-spacing:.16em;cursor:pointer;padding:10px 6px;border-radius:8px}
+@media (max-width:899px){
+  .gauge{left:auto;right:5px;top:90px;bottom:calc(14px + env(safe-area-inset-bottom));transform:none;height:auto;width:30px;padding:9px 0 10px;border-radius:16px}
+  .g-lab,.g-st,.g-mark .ml,.g-up{display:none}
+  .g-read{padding:0 0 7px;margin-bottom:8px}
+  .g-val{font:600 11.5px/1 var(--display);letter-spacing:-.03em}
+  .g-val small{display:none}
+  .g-scale{margin:0 0 6px 8px}
+  .g-diver{left:-12px;width:24px}
+  .g-mark{left:-8px;right:-8px;min-height:40px;padding-left:5px}
+}
+
+/* descent */
+.descent{position:relative}
+.station{position:relative;background:var(--bg);color:var(--ink);padding:clamp(64px,9vh,112px) 0}
+.station.dark{color:#fff}
+.gap{position:relative;height:clamp(110px,20vh,210px);background:linear-gradient(180deg,var(--a),var(--b));color:var(--c,#fff)}
+.gap .wrap{position:relative;height:100%}
+.rope{position:absolute;top:0;bottom:0;left:calc(var(--gutter) + var(--lane-l) + 34px);border-left:2px dashed currentColor;opacity:.45}
+.gd{position:absolute;top:50%;left:calc(var(--gutter) + var(--lane-l) + 50px);transform:translateY(-50%);font:600 12px/1 var(--display);letter-spacing:.18em}
+.st-grid{display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr) minmax(220px,360px);gap:clamp(24px,3.4vw,52px);align-items:start}
+.depthcol{position:relative;min-height:190px}
+.depth-num{font:300 clamp(92px,11vw,170px)/.78 var(--display);letter-spacing:-.05em;font-variant-numeric:tabular-nums;margin:0}
+.depth-num small{font:600 .24em var(--display);letter-spacing:.02em;margin-left:.12em}
+.diver-spot{position:absolute;left:0;top:calc(100% + 6px);width:150px;height:70px}
+.st-eyebrow{font:600 12.5px/1.35 var(--body);letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}
+.station h2{font:600 clamp(32px,3.5vw,50px)/1.03 var(--display);letter-spacing:-.01em;margin:0 0 16px;text-wrap:balance}
+.station h2:focus{outline:none}
+.station p{margin:0 0 14px;max-width:60ch}
+.match-tag{display:none;align-items:center;gap:8px;margin:0 0 12px;padding:7px 12px;border-radius:999px;background:var(--coral);color:var(--deep);font:600 13px/1.2 var(--body)}
+.is-match .match-tag{display:inline-flex}
+.slate{margin:20px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-radius:18px;overflow:hidden;
+  background:rgba(255,255,255,.9);color:var(--deep);box-shadow:0 18px 40px -26px rgba(4,28,50,.6);transition:box-shadow .4s}
+.dark .slate{background:rgba(255,255,255,.07);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.slate div{padding:13px 16px;border-bottom:1px solid rgba(4,28,50,.1)}
+.slate div:nth-child(odd){border-right:1px solid rgba(4,28,50,.1)}
+.dark .slate div{border-color:rgba(255,255,255,.14)}
+.slate dt{font:600 10.5px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:#245775;margin-bottom:3px}
+.dark .slate dt{color:#a9d9ea}
+.slate dd{margin:0;font:600 15px/1.35 var(--display)}
+.is-match .slate{box-shadow:0 0 0 3px var(--coral),0 26px 60px -24px rgba(255,140,97,.7)}
+.st-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:600 14px/1 var(--body);text-decoration:none;padding:12px 0;border-bottom:2px solid currentColor}
+.art{position:relative;margin-top:10px}
+.art svg{width:100%;height:auto;overflow:visible}
+.note{font-size:13.5px;line-height:1.5;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);max-width:62ch}
+.swim{animation:swim 9s ease-in-out infinite}
+.swim.slow{animation-duration:13s}
+@keyframes swim{0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,8px)}}
+.flap{transform-origin:50% 50%;animation:flap 3.4s ease-in-out infinite}
+@keyframes flap{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.84)}}
+.fl{animation:fl 2.6s ease-in-out infinite;transform-box:fill-box}
+.fl.l{transform-origin:100% 20%}.fl.r{transform-origin:0 20%}
+@keyframes fl{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg)}}
+.fl.r{animation-name:flr}
+@keyframes flr{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg)}}
+.glow{animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+@media (max-width:899px){
+  .st-grid{grid-template-columns:minmax(0,1fr) minmax(120px,42%);gap:10px 14px}
+  .st-body{grid-column:1/-1;grid-row:2}
+  .depthcol{min-height:0}
+  .depth-num{font-size:clamp(84px,27vw,120px)}
+  .is-match .depthcol{padding-bottom:62px}
+  .diver-spot{top:auto;bottom:0;width:124px;height:56px}
+  .art{margin-top:0}
+  .slate{grid-template-columns:1fr}
+  .slate div:nth-child(odd){border-right:0}
+}
+
+/* diver */
+.diver{width:150px;pointer-events:none;color:var(--deep);z-index:36}
+.diver svg{width:100%;height:auto;overflow:visible}
+.diver .kick{transform-box:fill-box;transform-origin:0 50%;animation:kick .7s ease-in-out infinite alternate}
+@keyframes kick{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
+.diver .bb{animation:rise 2.2s ease-in infinite;opacity:0}
+.diver .bb:nth-child(2){animation-delay:.6s}.diver .bb:nth-child(3){animation-delay:1.2s}
+@keyframes rise{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(6px,-44px);opacity:0}}
+.diver.descending{position:fixed;top:30vh;right:max(46px,11vw);transform:rotate(74deg)}
+.diver.arrived{position:absolute;inset:0;animation:bob 4s ease-in-out infinite}
+.dark .diver{color:#dff7fb}
+
+/* deep sections */
+.deepsec{background:var(--deep);color:#fff;padding:clamp(72px,10vh,120px) 0}
+.deepsec.abyss{background:var(--abyss)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px 40px;margin-bottom:34px}
+.sec-head h2{font:600 clamp(34px,4vw,56px)/1 var(--display);margin:0;letter-spacing:-.01em}
+.sec-head p{margin:0;max-width:46ch;color:#cfe3ee}
+.eyebrow{font:600 12px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--surf);margin:0 0 12px}
+.week{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.day{border-radius:18px;padding:14px 12px 12px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);min-height:236px}
+.day h3{margin:0 0 8px;font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:#bfe3ee}
+.day h3 b{display:block;font:300 40px/1 var(--display);letter-spacing:-.03em;color:#fff;text-transform:none;margin-top:4px}
+.trip{margin-top:8px;padding:9px 10px;border-radius:12px;background:rgba(62,214,224,.13);font-size:12.5px;line-height:1.35;color:#e4f5fa}
+.trip b{display:block;font:600 13.5px/1.2 var(--display);color:#fff;margin-bottom:2px}
+.trip.night{background:rgba(255,140,97,.2);box-shadow:inset 3px 0 0 var(--coral)}
+.trip.off{background:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.small{font-size:13px;line-height:1.5;color:#b9d3df;margin:18px 0 0}
+@media (max-width:1060px){
+  .week{grid-template-columns:1fr}
+  .day{display:grid;grid-template-columns:78px minmax(0,1fr);gap:4px 12px;min-height:0;align-items:start}
+  .day h3{grid-row:span 3;margin:0}
+  .trip{margin-top:0}
+}
+.inc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px)}
+.inc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.inc-list li{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:18px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.inc-list svg{flex:none;width:34px;height:34px;color:var(--surf)}
+.inc-list b{display:block;font:600 16px/1.25 var(--display)}
+.inc-list span{font-size:13.5px;line-height:1.45;color:#c8dfe9}
+.bring{margin:0 0 24px;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.bring li{padding:8px 13px;border-radius:999px;background:rgba(62,214,224,.14);font:600 13px/1.2 var(--body)}
+details{border-top:1px solid rgba(255,255,255,.16)}
+details:last-of-type{border-bottom:1px solid rgba(255,255,255,.16)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:15px 2px;font:600 16px/1.35 var(--display);min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 26px/.8 var(--display);color:var(--surf);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 16px;color:#cfe1ea;font-size:14.5px}
+.info{margin-top:22px;font-size:13px;line-height:1.5;color:#b9d3df;padding-left:14px;border-left:3px solid var(--coral)}
+
+/* booking */
+.book{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.contact{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.contact a,.contact span{display:inline-flex;gap:10px;align-items:center;font:600 15px/1.3 var(--body);text-decoration:none;min-height:40px}
+.contact svg{width:18px;height:18px;color:var(--coral);flex:none}
+form.bk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:clamp(18px,2.4vw,30px);border-radius:24px;background:#082b49;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font:600 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;color:#bfe3ee}
+.fld input,.fld select{width:100%;min-height:48px;padding:10px 13px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);background:#041f37;color:#fff;font-size:16px}
+.fld input:focus-visible,.fld select:focus-visible{outline:3px solid var(--coral);outline-offset:1px;border-color:transparent}
+.est{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border-radius:14px;background:rgba(62,214,224,.12)}
+.est b{font:300 30px/1 var(--display)}
+.est span{font-size:13px;color:#cfe8f1}
+.bk .btn{grid-column:1/-1;justify-content:center;background:var(--coral);color:var(--deep);min-height:52px;font-size:16px}
+.out{grid-column:1/-1;margin:0;font-size:14px;color:#ffd9c9;min-height:1.4em}
+@media (max-width:899px){
+  .hero,.inc,.book{grid-template-columns:minmax(0,1fr)}
+  .boat{right:56px;width:150px;top:calc(var(--wl) - 50px)}
+  .sun{left:10%;width:300px;height:300px}
+  .inc-list{grid-template-columns:1fr}
+}
+@media (max-width:520px){form.bk{grid-template-columns:1fr}.chips.four{--n:2}}
+
+/* footer */
+footer{background:var(--abyss);color:#cfe3ee;padding:0 0 calc(40px + env(safe-area-inset-bottom))}
+.seabed{display:block;width:100%;height:90px;color:#062640}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 40px;padding-top:26px}
+.foot .fname{font:600 26px/1.05 var(--display);color:#fff;margin:0 0 6px;overflow-wrap:anywhere}
+.foot p{margin:0;font-size:13.5px;max-width:56ch}
+
+@media (prefers-reduced-motion:reduce){
+  #sea{display:none}
+  .gap{background:var(--b)}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#finder">Skip to the dive finder</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="dv" viewBox="0 -14 132 64">
+    <g><circle class="bb" cx="9" cy="6" r="2.6" fill="none" stroke="#fff" stroke-width="1.4"/><circle class="bb" cx="13" cy="2" r="1.8" fill="none" stroke="#fff" stroke-width="1.4"/><circle class="bb" cx="7" cy="0" r="2.2" fill="none" stroke="#fff" stroke-width="1.4"/></g>
+    <rect x="34" y="7" width="44" height="11" rx="5.5" fill="currentColor" opacity=".72"/>
+    <path d="M16 24c6-7 26-9 44-8l22 2c3 .3 5 2.4 5 5s-2 4.7-5 5l-24 2c-18 1.5-36 .5-42-6z" fill="currentColor"/>
+    <circle cx="13" cy="22" r="8" fill="currentColor"/>
+    <rect x="3" y="18" width="9" height="7" rx="2.5" fill="#3ED6E0"/>
+    <path d="M27 28l13 11" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+    <g class="kick"><path d="M82 19l24-4 2 5-24 5zM82 24l24 2-1 5-23-2z" fill="currentColor"/><path d="M104 13l24-9-4 12-17 4zM103 25l24 9-7 4-17-7z" fill="#FF8C61"/></g>
+  </symbol>
+  <symbol id="fish" viewBox="0 0 60 30"><path d="M3 15C11 5 28 3 40 11l15-8-4 12 4 12-15-8C28 27 11 25 3 15z" fill="currentColor"/><circle cx="12" cy="13" r="2" fill="#E8FBFD"/></symbol>
+</svg>
+<canvas id="sea" aria-hidden="true"></canvas>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Coral Coast Dive Co. home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#041C32"/><path d="M7 16q3.25-3 6.5 0t6.5 0 6.5 0 6.5 0" stroke="#3ED6E0" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M20 20v11m-4.5-4.5L20 31l4.5-4.5" stroke="#FF8C61" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-brand>Coral Coast Dive Co.</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#st-0">Trips</a><a href="#schedule">Boat schedule</a><a href="#included">What's included</a><a class="cta" href="#book">Book</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="gauge" id="gauge" aria-label="Depth gauge — jump to a dive">
+  <div class="g-read" aria-hidden="true">
+    <span class="g-lab">DEPTH</span>
+    <span class="g-val"><span id="gVal">0.0</span><small>m</small></span>
+    <span class="g-st"><span id="gSt">Surface</span> <span class="g-dir" id="gDir">↓</span></span>
+  </div>
+  <div class="g-scale">
+    <span class="g-fill"></span>
+    <svg class="g-diver" viewBox="0 -14 132 64" aria-hidden="true"><use href="#dv"/></svg>
+    <a class="g-mark" href="#st-0" data-to="0" style="--d:0"><span class="dot"></span><span class="ml">0 m<em>Snorkel</em></span><span class="sr">0 metres: snorkel tours</span></a>
+    <a class="g-mark" href="#st-5" data-to="5" style="--d:5"><span class="dot"></span><span class="ml">5 m<em>Intro dive</em></span><span class="sr">5 metres: intro dives</span></a>
+    <a class="g-mark" href="#st-12" data-to="12" style="--d:12"><span class="dot"></span><span class="ml">12 m<em>Certified</em></span><span class="sr">12 metres: certified dives</span></a>
+    <a class="g-mark" href="#st-18" data-to="18" style="--d:18"><span class="dot"></span><span class="ml">18 m<em>Advanced</em></span><span class="sr">18 metres: advanced course</span></a>
+    <a class="g-mark" href="#st-30" data-to="30" style="--d:30"><span class="dot"></span><span class="ml">30 m<em>Night dive</em></span><span class="sr">30 metres: night dive</span></a>
+  </div>
+  <button class="g-up" type="button" id="gUp">↑ SURFACE</button>
+</nav>
+
+<main>
+<section class="surface" id="top" data-sea>
+  <div class="sun" aria-hidden="true"></div>
+  <svg class="boat" viewBox="0 -10 250 104" aria-hidden="true">
+    <path d="M106 16V-8" stroke="currentColor" stroke-width="3"/>
+    <path d="M108-8h11v17h-11z" fill="#fff"/><path d="M119-8h15l-6 8.5 6 8.5h-15z" fill="#1d5fd1"/>
+    <path d="M70 30V17h68l12 13z" fill="#0b3a5c"/>
+    <path d="M40 60V36q0-6 6-6h104l28 30z" fill="#0b3a5c"/>
+    <path d="M52 38h18v10H52zM78 38h18v10H78zM104 38h18v10h-18zM130 38h16l8 10h-24z" fill="#3ED6E0"/>
+    <path d="M6 60h240l-18 30H24z" fill="currentColor"/>
+  </svg>
+  <svg class="waves" viewBox="0 0 1600 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20Q50 6 100 20T200 20T300 20T400 20T500 20T600 20T700 20T800 20T900 20T1000 20T1100 20T1200 20T1300 20T1400 20T1500 20T1600 20V40H0z" fill="#8DE8EE"/></svg>
+  <svg class="waves b" viewBox="0 0 1600 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20Q50 8 100 20T200 20T300 20T400 20T500 20T600 20T700 20T800 20T900 20T1000 20T1100 20T1200 20T1300 20T1400 20T1500 20T1600 20V40H0z" fill="#3ED6E0"/></svg>
+
+  <div class="hero wrap">
+    <div>
+      <p class="kicker">Reef dive &amp; snorkel trips · Cairns, QLD</p>
+      <h1 data-brand>Coral Coast Dive Co.</h1>
+      <p class="lead">Day boats to the outer reef — from your first float on the surface to a guided night dive. Go as deep as you're ready for.</p>
+      <div class="btns">
+        <a class="btn solid" href="#finder">Choose your dive <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11m-4.5-4.5L8 13l4.5-4.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></a>
+        <a class="btn ghost" href="#schedule">This week's boats</a>
+      </div>
+      <ul class="readouts">
+        <li><b>7.45 AM</b> departs Cairns waterfront</li>
+        <li><b>≤ 24</b> guests per boat</li>
+        <li><b>ALL GEAR</b> &amp; lunch included</li>
+      </ul>
+    </div>
+
+    <form class="finder" id="finder" data-kit-ignore aria-labelledby="fTitle">
+      <h2 id="fTitle">Choose your dive</h2>
+      <p class="hint">Three quick picks. We'll match a trip, then take you down to it.</p>
+      <fieldset>
+        <legend>In the water, I'd like to…</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="mode" value="snorkel"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10c0-2 1.6-3 3.5-3h9c2 0 3.5 1 3.5 3v2.5c0 1.8-1.5 3-3.5 3h-2l-2-2h-2l-2 2h-2C4.6 15.5 3 14.3 3 12.5zM20 4v9c0 3-2 5-5 5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>Snorkel</span></label>
+          <label class="chip"><input type="radio" name="mode" value="dive" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="5" width="8" height="16" rx="4" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M10 5V3h4v2M12 3c-3 0-5 1-6 3" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>Scuba dive</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Experience</legend>
+        <div class="chips four">
+          <label class="chip"><input type="radio" name="exp" value="new"><span>Never dived</span></label>
+          <label class="chip"><input type="radio" name="exp" value="snork" checked><span>Snorkelled before</span></label>
+          <label class="chip"><input type="radio" name="exp" value="ow"><span>Open Water certified</span></label>
+          <label class="chip"><input type="radio" name="exp" value="adv"><span>Advanced certified</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Days with us</legend>
+        <div class="chips" style="--n:3">
+          <label class="chip"><input type="radio" name="days" value="1" checked><span>1 day</span></label>
+          <label class="chip"><input type="radio" name="days" value="2"><span>2 days</span></label>
+          <label class="chip"><input type="radio" name="days" value="3"><span>3+ days</span></label>
+        </div>
+      </fieldset>
+      <div class="result" aria-live="polite">
+        <div class="rd"><span id="rDepth">5</span><small>m</small></div>
+        <div class="rt" id="rTitle">Intro dive</div>
+        <p class="rw" id="rWhy">No licence needed — an instructor stays within arm's reach.</p>
+        <button class="descend" type="button" id="descend"><span id="dLabel">Descend to 5 m</span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 2v13m-5-5 5 5 5-5" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </form>
+  </div>
+  <a class="cue wrap" href="#st-0"><span aria-hidden="true">↓</span>Start your descent · 0 m</a>
+</section>
+
+<div class="descent" id="descent" data-sea>
+  <section class="station" id="st-0" data-depth="0" data-name="Snorkel tours" style="--bg:#3ED6E0" aria-labelledby="h0">
+    <div class="wrap st-grid">
+      <div class="depthcol"><p class="depth-num" aria-hidden="true">0<small>m</small></p><div class="diver-spot"></div></div>
+      <div class="st-body">
+        <p class="st-eyebrow">Station 01 · Surface · All ages</p>
+        <p class="match-tag"></p>
+        <h2 id="h0" tabindex="-1">Snorkel the outer reef</h2>
+        <p>Float over coral gardens in water so clear the shadows look drawn on. It's a relaxed day: guided swims with our crew, a noodle or vest if you'd like one, and a lookout watching from the deck the whole time.</p>
+        <p>Often seen here: parrotfish grazing, giant clams, blue sea stars — no promises, it's the ocean.</p>
+        <dl class="slate">
+          <div><dt>In the water</dt><dd>2 guided swims, 60–75 min</dd></div>
+          <div><dt>Good for</dt><dd>First-timers &amp; families, 5+</dd></div>
+          <div><dt>Water</dt><dd>24–29 °C · stinger suits supplied</dd></div>
+          <div><dt>Sample price</dt><dd>$199 adult · $119 child</dd></div>
+        </dl>
+        <a class="st-link" href="#book" data-trip="0">Book a snorkel day →</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 300 220" style="color:#0B6E99">
+          <g class="swim"><use href="#fish" x="40" y="40" width="54" height="27"/><use href="#fish" x="104" y="22" width="44" height="22"/><use href="#fish" x="96" y="72" width="60" height="30"/><use href="#fish" x="164" y="50" width="40" height="20"/><use href="#fish" x="58" y="100" width="42" height="21"/></g>
+          <g class="swim slow" style="color:#FF8C61"><use href="#fish" x="176" y="120" width="70" height="35"/><use href="#fish" x="220" y="86" width="40" height="20"/></g>
+          <path d="M20 220c10-40 26-60 30-90M50 130c8 20 6 40 0 60M40 220c16-30 44-44 60-70M110 220c-4-30 6-56 20-70M130 150c-10 20-8 40 4 70" stroke="#0B6E99" stroke-width="7" fill="none" stroke-linecap="round" opacity=".5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <div class="gap" style="--a:#3ED6E0;--b:#22A9C8;--c:#041C32" aria-hidden="true"><div class="wrap"><span class="rope"></span><span class="gd">EQUALISE GENTLY · 3 M</span></div></div>
+
+  <section class="station" id="st-5" data-depth="5" data-name="Intro dives" style="--bg:#22A9C8" aria-labelledby="h5">
+    <div class="wrap st-grid">
+      <div class="depthcol"><p class="depth-num" aria-hidden="true">5<small>m</small></p><div class="diver-spot"></div></div>
+      <div class="st-body">
+        <p class="st-eyebrow">Station 02 · No licence needed · Ages 12+</p>
+        <p class="match-tag"></p>
+        <h2 id="h5" tabindex="-1">Your first breaths underwater, instructor at your elbow</h2>
+        <p>A shallow, supervised introduction for people who have never dived. You'll practise the basics kneeling on sand first, then kick slowly along the reef edge — usually around 5–6 m, never deeper than 12 m.</p>
+        <dl class="slate">
+          <div><dt>Dives</dt><dd>1 or 2 intro dives, ~30 min each</dd></div>
+          <div><dt>Group</dt><dd>Up to 4 divers per instructor</dd></div>
+          <div><dt>Before you go</dt><dd>Medical questionnaire on board</dd></div>
+          <div><dt>Sample price</dt><dd>$319 day + 1 dive · 2nd +$69</dd></div>
+        </dl>
+        <a class="st-link" href="#book" data-trip="5">Book an intro dive →</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 240 220"><g class="swim slow"><g transform="rotate(-22 120 110)" fill="#063452">
+          <path class="fl l" d="M84 80C58 58 28 52 6 64c22 6 46 18 72 38z"/><path class="fl r" d="M156 80c26-22 56-28 78-16-22 6-46 18-72 38z"/>
+          <path d="M94 150c-12 12-20 26-18 36 10-6 20-16 28-28zM146 150c12 12 20 26 18 36-10-6-20-16-28-28z"/>
+          <ellipse cx="120" cy="40" rx="15" ry="19"/><ellipse cx="120" cy="104" rx="48" ry="60"/>
+          <path d="M120 52v104M86 84l34 14 34-14M88 128l32-12 32 12" stroke="#3ED6E0" stroke-width="2.5" fill="none" opacity=".6"/>
+        </g></g></svg>
+      </div>
+    </div>
+  </section>
+  <div class="gap" style="--a:#22A9C8;--b:#0B6E99;--c:#fff" aria-hidden="true"><div class="wrap"><span class="rope"></span><span class="gd">CHECK YOUR BUDDY · 9 M</span></div></div>
+
+  <section class="station dark" id="st-12" data-depth="12" data-name="Certified dives" style="--bg:#0B6E99" aria-labelledby="h12">
+    <div class="wrap st-grid">
+      <div class="depthcol"><p class="depth-num" aria-hidden="true">12<small>m</small></p><div class="diver-spot"></div></div>
+      <div class="st-body">
+        <p class="st-eyebrow">Station 03 · Open Water and up</p>
+        <p class="match-tag"></p>
+        <h2 id="h12" tabindex="-1">Guided reef dives for certified divers</h2>
+        <p>Two or three dives across bommies, gullies and swim-throughs, chosen on the day for tide and visibility. Follow a guide, or dive with your own buddy once the crew has checked you in.</p>
+        <dl class="slate">
+          <div><dt>Dives</dt><dd>2–3 per day, up to 45 min</dd></div>
+          <div><dt>Bring</dt><dd>Certification card &amp; logbook</dd></div>
+          <div><dt>Gear</dt><dd>Full kit hire in the price</dd></div>
+          <div><dt>Sample price</dt><dd>$329 two dives · 3rd +$55</dd></div>
+        </dl>
+        <a class="st-link" href="#book" data-trip="12">Book certified dives →</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 260 190"><g class="swim"><g class="flap" fill="#BDEFF6"><path d="M130 34c16 0 26 12 34 22 30 8 60 18 92 34-26 4-58 10-86 20-12 14-26 26-40 28-14-2-28-14-40-28-28-10-60-16-86-20 32-16 62-26 92-34 8-10 18-22 34-22z"/></g>
+          <path d="M130 138v44" stroke="#BDEFF6" stroke-width="2.5" stroke-linecap="round"/><path d="M118 36c-6-10-4-20 3-20-1 7 0 13 3 19zM142 36c6-10 4-20-3-20 1 7 0 13-3 19z" fill="#BDEFF6"/>
+          <path d="M104 70q26 10 52 0" stroke="#0B6E99" stroke-width="3" fill="none" opacity=".5"/></g></svg>
+      </div>
+    </div>
+  </section>
+  <div class="gap" style="--a:#0B6E99;--b:#07507A;--c:#fff" aria-hidden="true"><div class="wrap"><span class="rope"></span><span class="gd">WATCH YOUR AIR · 15 M</span></div></div>
+
+  <section class="station dark" id="st-18" data-depth="18" data-name="Advanced course" style="--bg:#07507A" aria-labelledby="h18">
+    <div class="wrap st-grid">
+      <div class="depthcol"><p class="depth-num" aria-hidden="true">18<small>m</small></p><div class="diver-spot"></div></div>
+      <div class="st-body">
+        <p class="st-eyebrow">Station 04 · Two-day course · Ages 15+</p>
+        <p class="match-tag"></p>
+        <h2 id="h18" tabindex="-1">Advanced course: go deeper, navigate better</h2>
+        <p>Five adventure dives over two days — a deep dive, navigation, and three you choose (fish ID, buoyancy, a swim-through circuit). Theory is done online before you arrive, so the reef gets the time.</p>
+        <p>Whitetip reef sharks often rest under ledges around here. They're shy and not interested in divers.</p>
+        <dl class="slate">
+          <div><dt>Length</dt><dd>2 boat days, 5 dives</dd></div>
+          <div><dt>You need</dt><dd>Open Water certification</dd></div>
+          <div><dt>Includes</dt><dd>E-learning, gear, cert fee</dd></div>
+          <div><dt>Sample price</dt><dd>$749 per diver</dd></div>
+        </dl>
+        <a class="st-link" href="#book" data-trip="18">Book the course →</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 270 110"><g class="swim slow"><path d="M6 56c24-14 62-22 102-22l18-24c3-3 8-2 9 2l6 22c34 3 62 9 84 14l26-22c3-2 6 0 5 3l-12 30 13 28c1 3-2 5-5 3l-27-22c-22 6-58 12-96 12l-14 16c-3 3-8 1-7-3l2-13c-40-2-78-10-104-26z" fill="#8FC9DE"/>
+          <path d="M96 68c-4 12-14 24-28 30 6-10 10-22 12-30z" fill="#8FC9DE"/><path d="M126 12c3-3 8-2 9 2l3 10-11 2z" fill="#fff"/><path d="M231 28l14-11c3-2 6 0 5 3l-5 12z" fill="#fff"/>
+          <circle cx="30" cy="52" r="2.4" fill="#07507A"/><path d="M44 52v10M50 51v11M56 50v12" stroke="#07507A" stroke-width="1.6" opacity=".6"/></g></svg>
+      </div>
+    </div>
+  </section>
+  <div class="gap" style="--a:#07507A;--b:#041C32;--c:#fff" aria-hidden="true"><div class="wrap"><span class="rope"></span><span class="gd">TORCHES ON · 24 M</span></div></div>
+
+  <section class="station dark" id="st-30" data-depth="30" data-name="Night dive" style="--bg:#041C32" aria-labelledby="h30">
+    <div class="wrap st-grid">
+      <div class="depthcol"><p class="depth-num" aria-hidden="true">30<small>m</small></p><div class="diver-spot"></div></div>
+      <div class="st-body">
+        <p class="st-eyebrow">Station 05 · After dark · Certified divers</p>
+        <p class="match-tag"></p>
+        <h2 id="h30" tabindex="-1">Night dive: the reef changes shift</h2>
+        <p>Parrotfish tuck into their sleeping bubbles, crabs and shrimp come out, and coral polyps open to feed. The evening boat leaves in the late arvo light and you drop in after sunset with a guide.</p>
+        <dl class="slate">
+          <div><dt>Evening boat</dt><dd>4.30 pm – about 9.30 pm</dd></div>
+          <div><dt>Dives</dt><dd>1 sunset + 1 guided night dive</dd></div>
+          <div><dt>Includes</dt><dd>Torch, tank light, hot soup</dd></div>
+          <div><dt>Sample price</dt><dd>$219 per diver</dd></div>
+        </dl>
+        <p class="note" style="margin-top:18px">General information: night dives are for certified divers and follow your certification's depth limits — usually well above 18 m. The 30 m on our gauge marks the darkest water on this page, not a dive plan.</p>
+        <a class="st-link" href="#book" data-trip="30">Book the night boat →</a>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 300 240"><defs><linearGradient id="beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF3D1" stop-opacity=".5"/><stop offset="1" stop-color="#FFF3D1" stop-opacity="0"/></linearGradient></defs>
+          <path d="M14 18L300 128v112H150z" fill="url(#beam)"/>
+          <g class="swim slow" style="color:#5A7F99"><use href="#fish" x="170" y="150" width="84" height="42"/></g>
+          <g fill="#3ED6E0"><circle class="glow" cx="40" cy="120" r="2.2"/><circle class="glow" cx="80" cy="170" r="1.6" style="animation-delay:1s"/><circle class="glow" cx="120" cy="90" r="1.8" style="animation-delay:2.2s"/><circle class="glow" cx="60" cy="210" r="2.4" style="animation-delay:.5s"/><circle class="glow" cx="250" cy="60" r="1.6" style="animation-delay:1.6s"/><circle class="glow" cx="140" cy="200" r="1.4" style="animation-delay:2.8s"/><circle class="glow" cx="280" cy="30" r="2" style="animation-delay:3.2s"/></g>
+          <circle cx="14" cy="18" r="7" fill="#FFF3D1"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="deepsec" id="schedule" aria-labelledby="hs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Back on deck</p><h2 id="hs">Boat schedule · week of Mon 5 Oct</h2></div>
+      <p>Two boats: <b>Southerly</b> runs the reef day, <b>Nightjar</b> runs the evening night-dive trip. Sample schedule for this demo.</p>
+    </div>
+    <ol class="week">
+      <li class="day"><h3>Mon <b>5</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm · snorkel, intro &amp; certified</p></li>
+      <li class="day"><h3>Tue <b>6</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm</p><p class="trip night"><b>Night boat · Nightjar</b>4.30&nbsp;pm – 9.30&nbsp;pm</p></li>
+      <li class="day"><h3>Wed <b>7</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm</p><p class="trip"><b>Advanced course · day 1</b>on the reef day boat</p></li>
+      <li class="day"><h3>Thu <b>8</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm</p><p class="trip"><b>Advanced course · day 2</b>deep &amp; navigation dives</p><p class="trip night"><b>Night boat · Nightjar</b>4.30&nbsp;pm – 9.30&nbsp;pm</p></li>
+      <li class="day"><h3>Fri <b>9</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm</p></li>
+      <li class="day"><h3>Sat <b>10</b></h3><p class="trip"><b>Reef day · Southerly</b>7.45&nbsp;am – 4.30&nbsp;pm</p><p class="trip night"><b>Night boat · Nightjar</b>4.30&nbsp;pm – 9.30&nbsp;pm</p></li>
+      <li class="day"><h3>Sun <b>11</b></h3><p class="trip off"><b>No boats</b>Crew day &amp; gear servicing</p></li>
+    </ol>
+    <p class="small">Sample schedule. Trips run on the skipper's call — wind and swell decide the sites, and we'll move or refund a trip we cancel for weather.</p>
+  </div>
+</section>
+
+<section class="deepsec" id="included" style="background:#03182C" aria-labelledby="hi">
+  <div class="wrap inc">
+    <div>
+      <p class="eyebrow">Every trip</p>
+      <h2 id="hi" style="font:600 clamp(34px,4vw,56px)/1 var(--display);margin:0 0 26px">What's included</h2>
+      <ul class="inc-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 10c0-2 1.6-3 3.5-3h11c2 0 3.5 1 3.5 3v2.5c0 1.8-1.5 3-3.5 3h-2.5l-2-2h-2l-2 2H6.5C4.6 15.5 3 14.3 3 12.5z"/></svg><div><b>Mask, snorkel &amp; fins</b><span>Fitted on the way out, prescription masks on request.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 3h6l1 4 3 2-1 4-2-1v9h-3l-1-6-1 6H8v-9l-2 1-1-4 3-2z"/></svg><div><b>Wetsuit or stinger suit</b><span>Full-length stinger suits from November to May.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="3"/><path d="M9 7V3h6v4M9 17v4h6v-4M10 12h4"/></svg><div><b>Dive gear &amp; computer</b><span>BCD, regulator and a computer for every certified diver.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="13" r="6.5"/><path d="M3.5 4v6M20.5 4v16"/></svg><div><b>Lunch on board</b><span>Salads, wraps and fruit — tell us about dietary needs.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10h2a2 2 0 0 1 0 4h-2M8 3v2M11 3v2"/></svg><div><b>Tea, coffee &amp; snacks</b><span>Morning tea on the way out, cake on the way home.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/></svg><div><b>Marine park fees</b><span>Already in the sample prices — no surprises at the wharf.</span></div></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Pack this</p>
+      <ul class="bring"><li>Swimmers</li><li>Hat &amp; sunnies</li><li>Reef-friendly sunscreen</li><li>Towel</li><li>A warm layer</li><li>Cert card (divers)</li></ul>
+      <details><summary>I'm not a strong swimmer. Can I still come?</summary><p>Yes. Snorkellers can use a vest or noodle and join a guided swim. For intro dives you need to be comfortable in the water — we'll check in with you before you gear up.</p></details>
+      <details><summary>Do I need a medical?</summary><p>Everyone who scuba dives completes a medical questionnaire first. Some answers — asthma, heart conditions, recent surgery — need a doctor's sign-off before the trip, so read it early.</p></details>
+      <details><summary>What if I get seasick?</summary><p>The ride out is about 90 minutes. Sit outside near the back, look at the horizon, and take motion-sickness tablets before we leave if you usually need them.</p></details>
+      <details><summary>Can I fly after diving?</summary><p>Common guidance is to wait at least 18 hours after multiple dives before flying. Your instructor will talk you through it for your plans.</p></details>
+      <p class="info">General information only — not medical advice or dive training. Conditions, sightings and sites vary every day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="deepsec abyss" id="book" aria-labelledby="hb">
+  <div class="wrap book">
+    <div>
+      <p class="eyebrow">Book</p>
+      <h2 id="hb" style="font:600 clamp(34px,4vw,56px)/1 var(--display);margin:0 0 16px">Save your spot on the boat</h2>
+      <p style="color:#cfe3ee;max-width:44ch;margin:0">Pick a trip and a day from this week's sample schedule. We'll check the weather, the boat and your certification before anything is confirmed.</p>
+      <ul class="contact">
+        <li><a href="tel:+61755503142"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>(07) 5550 3142</a></li>
+        <li><a href="mailto:bookings@example.com"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>bookings@example.com</a></li>
+        <li><span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Cairns waterfront, Cairns QLD</span></li>
+      </ul>
+    </div>
+    <form class="bk" id="bk" data-kit-ignore novalidate>
+      <div class="fld full"><label for="bTrip">Trip</label>
+        <select id="bTrip"><option value="0">Snorkel day — $199</option><option value="5" selected>Intro dive day — $319</option><option value="12">Certified reef dives — $329</option><option value="18">Advanced course (2 days) — $749</option><option value="30">Night boat — $219</option></select></div>
+      <div class="fld"><label for="bDay">Day</label>
+        <select id="bDay"><option>Mon 5 Oct</option><option>Tue 6 Oct</option><option selected>Wed 7 Oct</option><option>Thu 8 Oct</option><option>Fri 9 Oct</option><option>Sat 10 Oct</option></select></div>
+      <div class="fld"><label for="bPax">Guests</label>
+        <select id="bPax"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+      <div class="fld"><label for="bName">Name</label><input id="bName" autocomplete="name" required></div>
+      <div class="fld"><label for="bEmail">Email</label><input id="bEmail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="est"><span>Sample total, AUD · gear &amp; park fees in</span><b id="bTotal">$638</b></div>
+      <button class="btn" type="submit">Check availability</button>
+      <p class="out" id="bOut" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="seabed" viewBox="0 0 800 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#041C32" d="M0 0h800v34c-30 8-44-10-66-4s-28 26-52 22-24-24-50-20-30 22-54 20-26-26-52-24-30 30-56 28-26-22-52-20-30 18-56 16-24-24-48-22-30 26-58 24-26-20-52-18-28 22-54 20-26-18-50-16-32 12-50 10z"/><path fill="#062640" d="M0 90V60c16-2 22-22 34-22s12 20 24 20 14-30 28-30 10 26 22 26 18-16 30-14 8 22 22 22 16-36 30-36 12 30 24 30 20-14 32-12 10 18 24 18 18-26 32-26 10 22 24 22 22-12 34-10 12 16 26 16 16-28 30-28 12 24 24 24 20-10 32-8 10 14 24 14 18-22 30-22 14 20 26 20 16-8 28-6 14 12 26 12 16-24 28-24 12 20 24 20 18-8 30-6 12 10 24 10V90z"/></svg>
+  <div class="wrap foot">
+    <div><p class="fname" data-brand>Coral Coast Dive Co.</p><p>Reef dive &amp; snorkel trips from Cairns, QLD. A fictional business made for a studio showcase — prices, boats and schedules are samples.</p></div>
+    <p>Boats most days, 7.45 am from the Cairns waterfront.<br>(07) 5550 3142 · bookings@example.com</p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+  function reduced() { return !!mq.matches; }
+  var TRIPS = { 0: ["Snorkel day", 199], 5: ["Intro dive", 319], 12: ["Certified reef dives", 329], 18: ["Advanced course", 749], 30: ["Night dive", 219] };
+
+  /* ---------- depth gauge ---------- */
+  var stations = $$(".station"), marks = $$(".g-mark"), gauge = $("#gauge");
+  var gVal = $("#gVal"), gSt = $("#gSt"), gDir = $("#gDir"), sched = $("#schedule");
+  var anchors = [], rawDepth = 0, lastY = window.scrollY, schedY = 1e9, ticking = false;
+  function measure() {
+    var off = innerHeight * 0.15;
+    anchors = stations.map(function (s) { return { y: s.getBoundingClientRect().top + scrollY - off, d: +s.dataset.depth, s: s }; });
+    schedY = sched.getBoundingClientRect().top + scrollY - innerHeight * 0.5;
+  }
+  function depthAt(y) {
+    if (!anchors.length || y <= anchors[0].y) return 0;
+    for (var i = 1; i < anchors.length; i++) {
+      var a = anchors[i - 1], b = anchors[i];
+      if (y < b.y) return a.d + (b.d - a.d) * (y - a.y) / Math.max(1, b.y - a.y);
+    }
+    return 30;
+  }
+  function update() {
+    ticking = false;
+    var y = window.scrollY;
+    rawDepth = depthAt(y);
+    var surfaced = y >= schedY, d = surfaced ? 0 : rawDepth, cur = null;
+    for (var i = 0; i < anchors.length; i++) if (y >= anchors[i].y - 60) cur = anchors[i];
+    gauge.style.setProperty("--p", (d / 30).toFixed(4));
+    gVal.textContent = d.toFixed(1);
+    gSt.textContent = surfaced ? "Surface interval" : cur ? cur.s.dataset.name : "Surface";
+    if (Math.abs(y - lastY) > 2) { gDir.textContent = y > lastY ? "↓" : "↑"; lastY = y; }
+    marks.forEach(function (m) {
+      if (!surfaced && cur && +m.dataset.to === cur.d) m.setAttribute("aria-current", "location");
+      else m.removeAttribute("aria-current");
+    });
+  }
+  function req() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener("scroll", req, { passive: true });
+  window.addEventListener("resize", function () { measure(); sizeSea(); req(); });
+  window.addEventListener("hd:brandchange", function () { setTimeout(function () { measure(); req(); }, 60); });
+  if ("ResizeObserver" in window) new ResizeObserver(function () { measure(); req(); }).observe(document.body);
+
+  /* ---------- smooth scripted scroll ---------- */
+  var anim = 0, onLand = null;
+  function stop() { if (anim) { cancelAnimationFrame(anim); anim = 0; } if (onLand) { var f = onLand; onLand = null; f(); } }
+  function glide(target, done) {
+    if (anim) { cancelAnimationFrame(anim); anim = 0; }
+    onLand = done || null;
+    target = Math.max(0, Math.min(target, document.documentElement.scrollHeight - innerHeight));
+    var start = window.scrollY, dist = target - start, t0 = 0;
+    var dur = Math.min(2600, Math.max(900, Math.abs(dist) * 0.5));
+    if (reduced() || Math.abs(dist) < 4) { window.scrollTo({ top: target, behavior: "instant" }); stop(); return; }
+    function step(ts) {
+      if (!t0) t0 = ts;
+      var k = Math.min(1, (ts - t0) / dur), e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+      window.scrollTo({ top: start + dist * e, behavior: "instant" });
+      if (k < 1) anim = requestAnimationFrame(step); else { anim = 0; stop(); }
+    }
+    anim = requestAnimationFrame(step);
+  }
+  ["wheel", "touchstart"].forEach(function (ev) { window.addEventListener(ev, function () { if (anim) { cancelAnimationFrame(anim); anim = 0; stop(); } }, { passive: true }); });
+  function anchorOf(el) {
+    measure();
+    for (var i = 0; i < anchors.length; i++) if (anchors[i].s === el) return anchors[i].y;
+    return el.getBoundingClientRect().top + scrollY - 12;
+  }
+  $$("section h2").forEach(function (h) { if (!h.hasAttribute("tabindex")) h.setAttribute("tabindex", "-1"); });
+  function go(el) {
+    glide(anchorOf(el), function () { var h = el.matches(".finder") ? el.querySelector("input:checked") : el.querySelector("h2"); if (h) h.focus({ preventScroll: true }); });
+  }
+  $$('a[href^="#"]:not(.skip)').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href").slice(1), el = id && document.getElementById(id);
+      if (!el) return;
+      e.preventDefault();
+      if (a.dataset.trip) { $("#bTrip").value = a.dataset.trip; total(); }
+      go(el);
+    });
+  });
+  $("#gUp").addEventListener("click", function () { glide(0); });
+
+  /* ---------- the finder ---------- */
+  var form = $("#finder");
+  var LAB = { snorkel: "Snorkel", dive: "Scuba", "new": "Never dived", snork: "Snorkelled before", ow: "Open Water", adv: "Advanced", 1: "1 day", 2: "2 days", 3: "3+ days" };
+  function pick() {
+    var mode = form.mode.value, exp = form.exp.value, days = +form.days.value, d, why;
+    if (mode === "snorkel") {
+      d = 0;
+      why = exp === "ow" || exp === "adv" ? "Staying on top today — easy. You can switch to scuba on board if the reef tempts you."
+        : days > 1 ? "A reef day on the surface. Curious by day two? Add an intro dive then." : "Mask on, float and look down. The crew stays close the whole time.";
+    } else if (exp === "new" || exp === "snork") {
+      d = 5;
+      why = exp === "new" ? "No licence needed — an instructor stays within arm's reach the whole dive." : "You're already at home in the water. This is the next step — no licence needed.";
+      if (days >= 3) why += " With 3+ days, ask about a full Open Water course.";
+    } else if (exp === "ow") {
+      if (days === 1) { d = 12; why = "Two or three guided reef dives in one day. Bring your card and logbook."; }
+      else { d = 18; why = "You've got the days for the two-day Advanced course" + (days >= 3 ? ", plus a spare day for fun dives." : "."); }
+    } else {
+      d = 30;
+      why = days === 1 ? "You're Advanced — finish on the evening boat with a guided night dive." : "Reef dives by day, then the evening boat for a guided night dive.";
+    }
+    return { d: d, why: why, sum: [LAB[mode], LAB[exp], LAB[days]].join(" · ") };
+  }
+  function show() {
+    var r = pick();
+    $("#rDepth").textContent = r.d;
+    $("#rTitle").textContent = TRIPS[r.d][0];
+    $("#rWhy").textContent = r.why;
+    $("#dLabel").textContent = r.d === 0 ? "Show me the snorkel day" : "Descend to " + r.d + " m";
+  }
+  form.addEventListener("change", show);
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
+
+  var diver = document.createElement("div");
+  diver.className = "diver";
+  diver.setAttribute("aria-hidden", "true");
+  diver.innerHTML = '<svg viewBox="0 -14 132 64"><use href="#dv"/></svg>';
+  $("#descend").addEventListener("click", function () {
+    var r = pick(), st = $("#st-" + r.d);
+    stations.forEach(function (s) { s.classList.toggle("is-match", s === st); });
+    marks.forEach(function (m) { m.classList.toggle("is-match", +m.dataset.to === r.d); });
+    $(".match-tag", st).textContent = "Your match · " + r.sum;
+    $("#bTrip").value = String(r.d); total();
+    if (!reduced()) { diver.className = "diver descending"; document.body.appendChild(diver); }
+    glide(anchorOf(st), function () {
+      diver.className = "diver arrived";
+      $(".diver-spot", st).appendChild(diver);
+      $("h2", st).focus({ preventScroll: true });
+    });
+  });
+
+  /* ---------- booking (demo) ---------- */
+  var bk = $("#bk"), bTrip = $("#bTrip"), bDay = $("#bDay"), bPax = $("#bPax"), out = $("#bOut");
+  function clash() {
+    var d = +bTrip.value, day = bDay.value;
+    if (d === 30 && !/Tue|Thu|Sat/.test(day)) return "In this sample week the night boat runs Tue, Thu and Sat.";
+    if (d === 18 && !/Wed/.test(day)) return "The sample Advanced course starts Wed 7 Oct and runs two days.";
+    return "";
+  }
+  function total() {
+    $("#bTotal").textContent = "$" + (TRIPS[+bTrip.value][1] * +bPax.value).toLocaleString("en-AU");
+    out.textContent = clash();
+  }
+  bk.addEventListener("change", total);
+  bk.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = $("#bName"), email = $("#bEmail");
+    if (!name.value.trim() || !/^\S+@\S+\.\S+$/.test(email.value.trim())) {
+      out.textContent = "Add a name and an email address first — it's a demo, so nothing will be sent.";
+      (name.value.trim() ? email : name).focus();
+      return;
+    }
+    var c = clash();
+    out.textContent = "Demo only: " + TRIPS[+bTrip.value][0] + ", " + bDay.value + ", " + bPax.value + (bPax.value === "1" ? " guest" : " guests") + ". No booking was made and nothing was sent." + (c ? " " + c : "");
+    if (window.DemoKit) DemoKit.toast("Demo only — no booking was made.");
+  });
+
+  /* ---------- light rays + drifting particles (paused off-screen / hidden / reduced motion) ---------- */
+  var cv = $("#sea"), ctx = cv.getContext("2d"), W = 0, H = 0, parts = [], raf = 0, running = false, seen = new Map(), lastSY = 0;
+  function sizeSea() {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    cv.style.width = W + "px"; cv.style.height = H + "px";
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = W < 700 ? 36 : 72;
+    parts = [];
+    for (var i = 0; i < n; i++) parts.push({ x: Math.random() * W, y: Math.random() * H, r: 0.5 + Math.random() * 1.7, vx: (Math.random() - 0.5) * 0.14, vy: 0.05 + Math.random() * 0.16, ph: Math.random() * 6.28, a: 0.2 + Math.random() * 0.5 });
+  }
+  function frame(ts) {
+    var t = ts / 1000, light = Math.max(0, 1 - rawDepth / 20);
+    ctx.clearRect(0, 0, W, H);
+    if (light > 0.01) {
+      ctx.globalCompositeOperation = "lighter";
+      for (var i = 0; i < 6; i++) {
+        var cx = W * (0.08 + i * 0.18) + Math.sin(t * 0.23 + i * 1.7) * W * 0.035, w = W * (0.035 + (i % 3) * 0.02);
+        var g = ctx.createLinearGradient(0, 0, 0, H * 0.9);
+        g.addColorStop(0, "rgba(255,255,255," + (0.14 * light).toFixed(3) + ")");
+        g.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.moveTo(cx - w * 0.5, 0); ctx.lineTo(cx + w * 0.5, 0);
+        ctx.lineTo(cx + w * 2.2 + W * 0.06, H * 0.9); ctx.lineTo(cx - w * 0.4 + W * 0.06, H * 0.9); ctx.closePath(); ctx.fill();
+      }
+      ctx.globalCompositeOperation = "source-over";
+    }
+    var dy = window.scrollY - lastSY, k = 0.35 + 0.65 * Math.min(1, rawDepth / 12);
+    lastSY = window.scrollY;
+    ctx.fillStyle = "#EFFFFF";
+    for (var j = 0; j < parts.length; j++) {
+      var p = parts[j];
+      p.x += p.vx + Math.sin(t * 0.7 + p.ph) * 0.12;
+      p.y += p.vy - Math.max(-40, Math.min(40, dy)) * 0.16 * p.r;
+      if (p.y > H + 6) { p.y = -6; p.x = Math.random() * W; } else if (p.y < -6) { p.y = H + 6; p.x = Math.random() * W; }
+      if (p.x > W + 6) p.x = -6; else if (p.x < -6) p.x = W + 6;
+      ctx.globalAlpha = p.a * k;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+    raf = requestAnimationFrame(frame);
+  }
+  function setRun() {
+    var any = false;
+    seen.forEach(function (v) { if (v) any = true; });
+    var want = any && !document.hidden && !reduced();
+    if (want && !running) { running = true; lastSY = window.scrollY; raf = requestAnimationFrame(frame); }
+    else if (!want && running) { running = false; cancelAnimationFrame(raf); ctx.clearRect(0, 0, W, H); }
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { seen.set(e.target, e.isIntersecting); }); setRun(); });
+    $$("[data-sea]").forEach(function (el) { io.observe(el); });
+  } else { seen.set(document, true); }
+  document.addEventListener("visibilitychange", setRun);
+  if (mq.addEventListener) mq.addEventListener("change", setRun);
+
+  sizeSea(); measure(); show(); total(); update();
+  window.addEventListener("load", function () { measure(); update(); });
+})();
+</script>
+</body>
+</html>

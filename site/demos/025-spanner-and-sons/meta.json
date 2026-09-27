@@ -1,0 +1,8 @@
+{
+  "id": "025",
+  "tech": ["SVG", "CSS 3D", "Web Audio", "Form logic", "Date logic", "IntersectionObserver", "Keyboard shortcuts"],
+  "features": ["sound", "booking", "accessibility"],
+  "interaction": "Pick a symptom in 'What's that noise?' to see an animated waveform of its sound shape, play an optional synthesised sample, read the likely suspects with an urgency gauge, then 'Book a check' to flip to a pre-filled job card.",
+  "fonts": ["Courier Prime", "Archivo Narrow"],
+  "notes": "Section tabs turn the page with a 3D leaf (a vertical flip on phones). Sound samples are rough synthesised approximations and play only after a click."
+}

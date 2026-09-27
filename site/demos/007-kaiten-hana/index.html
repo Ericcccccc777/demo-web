@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="007">
+<meta name="demo:brand" content="Kaiten Hana">
+<title>Kaiten Hana — sushi train in Fortitude Valley</title>
+<meta name="description" content="Kaiten Hana is a fictional sushi train in Fortitude Valley, Brisbane, told as a right-to-left hand scroll with a conveyor you can take plates from.">
+<meta name="theme-color" content="#1F2F5C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --indigo:#1F2F5C;--indigo-2:#2B3F76;--washi:#F3EEE3;--washi-2:#EAE2D1;--paper:#FCF9F2;
+  --verm:#D9472B;--verm-ink:#A93B22;--soy:#2B211C;--soy-2:#5E5249;--mist:#E8D39F;--mist-line:#C9A24E;
+  --hh:64px;--rod:58px;
+  --serif:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --kasumi:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60'%3E%3Cpath d='M30 32C30 20 44 16 58 19c8-9 28-9 36-2h236c16-7 38-5 42 7 20 0 24 20 6 23-6 9-26 9-36 3H70c-14 8-40 6-42-4-16 0-16-14 2-14z' fill='%23E8D39F' stroke='%23C9A24E' stroke-opacity='.55'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--soy);font:400 16px/1.6 var(--sans);background:var(--washi) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)'/%3E%3Cpath d='M-10 60c70-14 140 10 280-8M-10 170c90 12 170-10 280 6' stroke='%232B211C' stroke-opacity='.05' fill='none'/%3E%3C/svg%3E");overflow-x:hidden}
+button{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--verm);outline-offset:3px;border-radius:4px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--indigo);color:var(--washi);padding:10px 14px;border-radius:6px;text-decoration:none}
+.skip:focus{top:10px}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:30;min-height:var(--hh);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px clamp(16px,3vw,40px);background:#F3EEE3;border-bottom:1px solid rgba(31,47,92,.16)}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;flex:1 1 auto}
+.mark-name{font:900 21px/1.1 var(--serif);color:var(--indigo);letter-spacing:.02em;overflow-wrap:anywhere}
+.seal{flex:none;display:grid;place-items:center;width:34px;height:34px;background:var(--verm);color:#fff;font:700 20px/1 var(--serif);border-radius:3px;box-shadow:inset 0 0 0 2px var(--verm),inset 0 0 0 3.5px rgba(255,255,255,.75)}
+.chip{flex:none;display:flex;align-items:center;gap:10px;min-height:40px;padding:6px 14px 6px 8px;border:1px solid rgba(31,47,92,.28);border-radius:999px;background:var(--paper);cursor:pointer;font-size:14px}
+.chip:hover{border-color:var(--indigo)}
+.chip-stack{position:relative;width:26px;height:20px}
+.chip-stack i{position:absolute;left:0;width:26px;height:9px;border-radius:50%;background:var(--c,#cfc6b4);box-shadow:0 1.5px 0 rgba(43,33,28,.45)}
+.chip-stack i:nth-child(1){bottom:0}.chip-stack i:nth-child(2){bottom:5px}.chip-stack i:nth-child(3){bottom:10px}
+.chip b{font-weight:600;font-variant-numeric:tabular-nums}
+.chip .sep{opacity:.4}
+
+/* ---------- stage: the scroll ---------- */
+.stage{position:relative}
+.track{position:relative}
+.panel{position:relative;padding:64px 20px 72px}
+.vl{margin:0;font:400 19px/1 var(--serif);color:var(--indigo);writing-mode:vertical-rl;letter-spacing:.32em;white-space:nowrap}
+.vl::before{content:"";display:block;width:9px;height:9px;background:var(--verm);margin:0 auto 14px;border-radius:1px}
+.slip{position:absolute;right:16px;top:64px;display:flex;flex-direction:column;align-items:center}
+.eyebrow{margin:0 0 12px;font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--verm-ink)}
+h1,h2,h3{font-family:var(--serif);color:var(--indigo);margin:0;font-weight:700}
+h2{font-size:clamp(30px,3.3vw,46px);line-height:1.15;letter-spacing:.01em}
+h3{font-size:20px;line-height:1.3}
+.lede{font-size:17px;line-height:1.65;max-width:34em;color:var(--soy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 20px;border-radius:3px;border:1.5px solid var(--indigo);background:transparent;color:var(--indigo);font:600 15px/1.2 var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:var(--indigo);color:var(--washi)}
+.btn-v{background:#B8391F;border-color:#B8391F;color:#fff}
+.btn-v:hover{background:var(--indigo);border-color:var(--indigo)}
+.btn:disabled{opacity:.42;cursor:not-allowed;background:transparent;color:var(--indigo)}
+.fine{font-size:13px;color:var(--soy-2);margin:0}
+.kasumi{position:absolute;pointer-events:none;background:var(--kasumi) no-repeat center/contain;aspect-ratio:400/60}
+
+/* welcome */
+.hero-name{font:900 calc(clamp(58px,7.4vw,118px) * var(--bscale,1))/0.98 var(--serif);color:var(--indigo);margin:0 0 18px;letter-spacing:-.01em;overflow-wrap:anywhere}
+.hero-tag{font:700 clamp(22px,2.1vw,30px)/1.3 var(--serif);color:var(--verm-ink);margin:0 0 18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding:0;list-style:none;font-size:14px;color:var(--soy-2)}
+.facts li{display:flex;align-items:center;gap:8px}
+.facts li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verm)}
+.scene-art svg{display:block;width:100%;height:auto;overflow:visible}
+
+/* how */
+.steps{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:4px 14px;counter-increment:s}
+.steps li::before{content:counter(s);grid-row:span 2;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--verm);color:var(--verm-ink);font:700 18px/1 var(--serif)}
+.steps b{font:700 18px/1.3 var(--serif);color:var(--indigo)}
+.steps span{font-size:15px;color:var(--soy)}
+.manners{margin-top:26px;padding:16px 18px;border-left:3px solid var(--verm);background:rgba(255,255,255,.45);font-size:14.5px;max-width:34em}
+.manners strong{color:var(--indigo)}
+
+/* plate guide */
+.tiers{list-style:none;margin:24px 0 16px;padding:0;display:grid;gap:4px}
+.tier{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:14px;padding:8px 0;border-bottom:1px solid rgba(31,47,92,.14)}
+.tier svg{width:96px;height:auto;display:block}
+.tier b{display:block;font:700 19px/1.2 var(--serif);color:var(--indigo)}
+.tier span{font-size:14px;color:var(--soy-2)}
+.tier .price{font:700 26px/1 var(--serif);color:var(--indigo);font-variant-numeric:tabular-nums}
+
+/* conveyor */
+.belt-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.belt-head .hint{margin:10px 0 0;max-width:36em;font-size:15px}
+.belt-ctl{display:flex;gap:10px;flex-wrap:wrap}
+.belt-ctl .btn{min-height:42px;padding:8px 16px;font-size:14px}
+.belt{position:relative;height:196px;margin:26px 0 0;border-radius:4px;overflow:hidden;background:linear-gradient(#E3D8C3,#E3D8C3 22px,#9AA3B8 22px,#9AA3B8 26px,var(--indigo) 26px,var(--indigo) 150px,#16223F 150px,#16223F 156px,#6B4A33 156px,#7C573D 196px);touch-action:pan-y}
+.belt-slats{position:absolute;left:0;right:0;top:26px;height:124px;background:repeating-linear-gradient(90deg,rgba(243,238,227,.10) 0 2px,transparent 2px 46px);opacity:.9}
+.belt-slats::after{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:linear-gradient(rgba(0,0,0,.28),transparent)}
+.belt-lip{position:absolute;left:0;right:0;top:160px;height:30px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 13px)}
+.plate-layer{position:absolute;inset:0}
+.plate{position:absolute;left:0;top:34px;width:132px;height:118px;padding:0;margin:0;border:0;background:none;cursor:pointer;will-change:transform;border-radius:10px;-webkit-tap-highlight-color:transparent}
+.plate svg{display:block;width:132px;height:88px;transition:transform .18s ease}
+.plate:hover svg,.plate:focus-visible svg{transform:translateY(-6px)}
+.plate:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.plate .nm{display:block;margin-top:6px;font:500 12px/1.2 var(--sans);color:var(--washi);text-align:center;white-space:nowrap;letter-spacing:.01em}
+.plate .nm i{font-style:normal;color:#C9D0E2}
+.plate .nm i::before{content:" · "}
+.plate.gone{visibility:hidden}
+.noren{position:absolute;top:0;height:160px;width:96px;z-index:2;pointer-events:none}
+.noren.r{right:0}.noren.l{left:0}
+.noren svg{width:100%;height:100%;display:block}
+.belt-note{position:absolute;right:108px;top:3px;font:500 11px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#5E5249}
+.table{display:grid;grid-template-columns:1fr auto;gap:18px 40px;align-items:end;margin-top:24px}
+.stacks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:end}
+.stack{display:flex;flex-direction:column;align-items:center;gap:8px}
+.pile{position:relative;width:78px;height:96px}
+.pile i{position:absolute;left:0;width:78px;height:24px;border-radius:50%;background:var(--c);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18),0 2px 0 rgba(43,33,28,.55)}
+.pile i::after{content:"";position:absolute;inset:4px 12px 7px;border-radius:50%;background:rgba(252,249,242,.55)}
+.pile.empty::before{content:"";position:absolute;left:0;bottom:0;width:78px;height:24px;border-radius:50%;border:1.5px dashed rgba(31,47,92,.35)}
+.pile .more{position:absolute;left:50%;top:-4px;transform:translateX(-50%);font:600 12px/1 var(--sans);color:var(--indigo)}
+.stack-meta{text-align:center;font-size:13px;line-height:1.35}
+.stack-meta b{display:block;font:700 15px/1.2 var(--serif);color:var(--indigo)}
+.stack-meta span{font-variant-numeric:tabular-nums;color:var(--soy-2)}
+.bill{min-width:280px;padding:18px 20px;background:var(--paper);border:1px solid rgba(31,47,92,.2);border-radius:4px;box-shadow:0 10px 26px -18px rgba(43,33,28,.5)}
+.bill h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:19px}
+.bill h3 .fine{font-family:var(--sans);font-weight:400}
+.bill .sum{font:900 34px/1.1 var(--serif);color:var(--indigo);font-variant-numeric:tabular-nums;margin:6px 0 2px}
+.bill .count{font-size:14px;color:var(--soy-2);margin:0 0 14px}
+.bill-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bill-actions .btn{min-height:42px;padding:8px 10px;font-size:14px}
+.last{min-height:1.5em;margin:10px 0 0;font-size:13.5px;color:var(--soy-2)}
+.fly{position:fixed;left:0;top:0;z-index:80;pointer-events:none;will-change:transform}
+.fly svg{display:block;width:100%;height:auto}
+
+/* drinks */
+.menu{display:grid;gap:26px;margin-top:22px}
+.menu h3{font-size:18px;padding-bottom:8px;border-bottom:1.5px solid var(--indigo)}
+.menu ul{list-style:none;margin:0;padding:0}
+.menu li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:10px 0;border-bottom:1px dashed rgba(31,47,92,.22)}
+.menu li b{font-weight:600;font-size:15px}
+.menu li em{grid-column:1;font-style:normal;font-size:13.5px;color:var(--soy-2)}
+.menu li .p{grid-row:1;grid-column:2;font:700 16px/1.4 var(--serif);color:var(--indigo)}
+
+/* visit */
+.hours{width:100%;max-width:420px;border-collapse:collapse;margin:18px 0 8px;font-size:15px}
+.hours th,.hours td{text-align:left;padding:9px 0;border-bottom:1px solid rgba(31,47,92,.14)}
+.hours th{font-weight:600}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today th::after{content:"Today";margin-left:10px;padding:2px 7px;border-radius:2px;background:var(--verm-ink);color:#fff;font:600 11px/1.4 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.contact{display:grid;gap:6px;margin:18px 0;padding:0;list-style:none}
+.contact a{font-weight:600;color:var(--indigo);text-underline-offset:3px}
+.notes{display:grid;gap:12px;margin:0;padding:0;list-style:none;font-size:14.5px;max-width:30em}
+.notes b{color:var(--indigo)}
+
+/* rod (desktop minimap) */
+.rod{display:none}
+.hint-scroll{display:none}
+
+/* footer */
+.colophon{position:relative;padding:64px 20px 64px;text-align:center;background:var(--indigo);color:var(--washi)}
+.roller{position:absolute;left:0;right:0;top:0;height:18px;background:linear-gradient(#6B4A33,#A5774F 45%,#5A3C29);border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.colophon .fn{font:900 clamp(34px,5vw,56px)/1.05 var(--serif);margin:10px 0 6px;overflow-wrap:anywhere;color:var(--washi)}
+.colophon .ja{font:400 17px/1.6 var(--serif);letter-spacing:.2em;margin:0}
+.colophon p{margin:8px auto;max-width:40em;font-size:14px;color:#D9D4E4}
+.colophon .seal{margin:0 auto;width:40px;height:40px;font-size:24px}
+
+/* ---------- phone / vertical flow ---------- */
+@media (max-width:999px),(max-height:699px){
+  .vl{font-size:15px;letter-spacing:.24em}
+  .stage{overflow:hidden}
+  .panel+.panel{border-top:1px solid rgba(31,47,92,.12)}
+  .panel+.panel::before{content:"";position:absolute;right:-30px;top:-16px;width:200px;height:32px;background:var(--kasumi) no-repeat center/contain;pointer-events:none;opacity:.85}
+  .panel+.panel::after{content:"";position:absolute;left:-46px;top:-9px;width:130px;height:19px;background:var(--kasumi) no-repeat center/contain;pointer-events:none;opacity:.6}
+  .panel{padding-right:54px}
+  .slip{position:absolute;right:14px;top:66px}
+  .welcome{padding-top:36px}
+  .hero-name{font-size:calc(clamp(56px,11vw,92px) * var(--bscale,1))}
+  .welcome .scene-art{margin:26px -54px 0 -20px}
+  .how .scene-art{margin:28px -54px 0 -20px}
+  .belt{height:176px;margin:20px -54px 0 -20px;border-radius:0}
+  .plate{width:100px;height:110px;top:40px}
+  .plate svg{width:100px;height:67px}
+  .plate .nm{font-size:11px;margin-top:8px;white-space:normal;line-height:1.25}
+  .plate .nm i{display:block}.plate .nm i::before{content:none}
+  .noren{width:40px}
+  .belt-note{display:none}
+  .table{grid-template-columns:1fr}
+  .pile,.pile i,.pile.empty::before{width:56px}
+  .pile i{height:18px}.pile{height:80px}.pile.empty::before{height:18px}
+  .bill{min-width:0}
+  .drinks .scene-art{max-width:320px;margin:24px auto 0}
+  .visit .scene-art{max-width:300px;margin:28px auto 0}
+  .grid2{display:block}
+}
+@media (max-width:420px){
+  .mark-name{font-size:18px}
+  .chip{padding:5px 12px 5px 7px;gap:8px;font-size:13px}
+  .chip .lbl{display:none}
+  .stack-meta{font-size:12px}
+  .stacks{gap:4px}
+}
+
+/* ---------- desktop: horizontal emaki ---------- */
+@media (min-width:1000px) and (min-height:700px){
+  body{overflow-y:auto}
+  .mark{order:2;justify-content:flex-end}
+  .chip{order:1}
+  .stage{height:calc(100vh - var(--hh));height:calc(100svh - var(--hh))}
+  .scroll{height:100%;overflow-x:auto;overflow-y:hidden;direction:rtl;scrollbar-width:none;overscroll-behavior-x:contain}
+  .scroll::-webkit-scrollbar{display:none}
+  .track{display:flex;height:100%;width:max-content}
+  .panel{direction:ltr;flex:none;height:100%;padding:56px 108px calc(var(--rod) + 44px) 72px;display:flex;flex-direction:column;justify-content:center}
+  .panel::before{content:"";position:absolute;left:-70px;top:0;bottom:0;width:140px;z-index:3;pointer-events:none;background:var(--kasumi) no-repeat 0 36%/140px auto,var(--kasumi) no-repeat 30px 52%/110px auto,var(--kasumi) no-repeat 6px 74%/130px auto;opacity:.95}
+  .scroll{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl,170px),#000 calc(100% - var(--fr,0px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--fl,170px),#000 calc(100% - var(--fr,0px)),transparent 100%)}
+  .visit::before{display:none}
+  .slip{top:56px;right:36px}
+  .grid2{display:grid;grid-template-columns:var(--cols);gap:56px;align-items:center;direction:rtl}
+  .grid2>*{direction:ltr}
+  .welcome{width:max(1120px,min(1320px,calc(100vw - 150px)))}
+  .welcome .grid2{--cols:minmax(380px,.8fr) 1.2fr}
+  .how{width:1260px}.how .grid2{--cols:410px 1fr}
+  .guide{width:760px}
+  .conveyor{width:max(1320px,94vw)}
+  .drinks{width:1180px}.drinks .grid2{--cols:1fr 250px}
+  .drinks .menu{grid-template-columns:1fr 1fr;gap:44px}
+  .visit{width:980px}.visit .grid2{--cols:1fr 300px}
+  .rod{display:flex;position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:20;width:min(820px,calc(100vw - 520px));min-width:470px;height:var(--rod);align-items:center;flex-direction:column;justify-content:center;gap:6px;padding:6px 18px;background:rgba(252,249,242,.9);border:1px solid rgba(31,47,92,.18);border-radius:999px;box-shadow:0 12px 30px -20px rgba(31,47,92,.6)}
+  .rod ol{display:flex;direction:rtl;justify-content:space-between;width:100%;margin:0;padding:0;list-style:none}
+  .rod button{border:0;background:none;padding:4px 6px;border-radius:999px;font:500 12.5px/1.2 var(--sans);color:var(--soy-2);cursor:pointer;white-space:nowrap;min-height:28px}
+  .rod button[aria-current="true"]{color:var(--indigo);font-weight:600}
+  .rod button:hover{color:var(--indigo)}
+  .rod-line{position:relative;width:calc(100% - 20px);height:2px;background:rgba(31,47,92,.18);border-radius:2px}
+  .rod-bead{position:absolute;right:0;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--verm)}
+  .hint-scroll{display:flex;align-items:center;gap:10px;position:absolute;left:150px;bottom:calc(var(--rod) + 34px);font:500 13px/1.3 var(--sans);color:var(--soy-2)}
+  .hint-scroll svg{width:34px;height:12px;animation:nudge 1.6s ease-in-out 5}
+  .belt-head{padding-right:0}
+  .how .scene-art svg{max-height:calc(100vh - 300px)}
+  .welcome .scene-art svg{max-height:calc(100vh - 230px)}
+}
+@media (min-width:1000px) and (min-height:700px) and (max-height:860px){
+  .panel{padding-top:32px;padding-bottom:calc(var(--rod) + 30px)}
+  .belt{margin-top:16px}.table{margin-top:14px}
+  .pile{height:72px}
+  .steps{gap:12px;margin-top:18px}.manners{margin-top:16px}
+  .tiers{margin:14px 0 10px}.tier{padding:4px 0}
+  .menu{gap:16px}.menu li{padding:7px 0}
+  .hours th,.hours td{padding:6px 0}
+}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-8px)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conveyor">Skip to the conveyor</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="loop" d="M150 92H350A58 58 0 0 1 350 208H150A58 58 0 0 1 150 92Z"/>
+  </defs>
+</svg>
+
+<header class="top">
+  <a class="mark" href="#welcome" data-go="welcome" aria-label="Back to the start of the scroll">
+    <span class="seal" aria-hidden="true" lang="ja">花</span>
+    <span class="mark-name" data-brand>Kaiten Hana</span>
+  </a>
+  <button class="chip" id="chip" type="button" aria-describedby="chipDesc">
+    <span class="chip-stack" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="lbl">Your table</span>
+    <b id="chipCount">0 plates</b><span class="sep" aria-hidden="true">·</span><b id="chipTotal">$0.00</b>
+  </button>
+  <span class="sr" id="chipDesc">Jump to the conveyor and your table.</span>
+</header>
+
+<div class="stage">
+<main class="scroll" id="scroll">
+<div class="track">
+
+  <!-- 1 · welcome -->
+  <section class="panel welcome" id="welcome" aria-labelledby="h-welcome">
+    <div class="slip"><p class="vl" lang="ja" title="irasshaimase — welcome in">いらっしゃいませ</p></div>
+    <div class="grid2">
+      <div class="copy">
+        <p class="eyebrow">Sushi train · Fortitude Valley, Brisbane</p>
+        <h1 id="h-welcome" class="hero-name" data-brand>Kaiten Hana</h1>
+        <p class="hero-tag">The plates come to you.</p>
+        <p class="lede">Forty stools around one slow, looping belt. Take whatever catches your eye — the colour of the plate is its price — then stack the empties and we count them when you're done.</p>
+        <div class="hero-cta">
+          <button class="btn btn-v" type="button" data-go="conveyor">Take a seat at the belt</button>
+          <button class="btn" type="button" data-go="plates">Plate prices</button>
+        </div>
+        <ul class="facts">
+          <li>Tue–Sun from 11:30</li>
+          <li>Walk-ins at the counter</li>
+          <li>Booths for 6–10 on request</li>
+        </ul>
+      </div>
+      <figure class="scene-art" style="margin:0">
+        <svg viewBox="0 0 720 540" role="img" aria-labelledby="heroArtT">
+          <title id="heroArtT">Drawing of the restaurant seen from above with the roof lifted off: a looping conveyor, counter stools, two chefs in the middle and plates travelling around the belt.</title>
+          <polygon points="60,470 186,335 186,168 60,303" fill="#E2D6BF" stroke="#2B211C" stroke-opacity=".5"/>
+          <polygon points="186,335 686,335 686,168 186,168" fill="#ECE3D1" stroke="#2B211C" stroke-opacity=".5"/>
+          <g stroke="#2B211C" stroke-opacity=".35" fill="none">
+            <rect x="238" y="200" width="104" height="70" fill="#F7F1E4"/>
+            <path d="M238 212h104M238 224h104M238 236h104M238 248h104M238 260h104"/>
+            <path d="M84 300l78-84M84 318v-16"/>
+          </g>
+          <g transform="translate(420 180)">
+            <path d="M0 0v18" stroke="#2B211C"/>
+            <ellipse cx="0" cy="44" rx="17" ry="26" fill="#D9472B" stroke="#2B211C"/>
+            <path d="M-16 34h32M-17 44h34M-16 54h32" stroke="#A93B22" stroke-width="1.2"/>
+            <rect x="-9" y="15" width="18" height="6" fill="#2B211C"/><rect x="-9" y="67" width="18" height="6" fill="#2B211C"/>
+          </g>
+          <g transform="translate(520 196)">
+            <path d="M-6 0h140" stroke="#6B4A33" stroke-width="5" stroke-linecap="round"/>
+            <path d="M0 3h40v84H0zM44 3h40v84H44zM88 3h40v84H88z" fill="#1F2F5C" stroke="#2B211C"/>
+            <circle cx="64" cy="40" r="17" fill="#F3EEE3"/>
+            <text x="64" y="47.5" text-anchor="middle" font-family="Zen Old Mincho, serif" font-weight="700" font-size="20" fill="#1F2F5C" lang="ja">花</text>
+          </g>
+          <polygon points="60,470 560,470 686,335 186,335" fill="#F2EADB" stroke="#2B211C" stroke-opacity=".5"/>
+          <g stroke="#2B211C" stroke-opacity=".08"><path d="M110 470l126-135M160 470l126-135M210 470l126-135M260 470l126-135M310 470l126-135M360 470l126-135M410 470l126-135M460 470l126-135M510 470l126-135"/></g>
+          <g transform="matrix(1 0 .42 -.45 60 470)">
+            <path d="M150 62H350A88 88 0 0 1 350 238H150A88 88 0 0 1 150 62Z" fill="none" stroke="#6B4A33" stroke-width="26"/>
+            <path d="M150 49H350A101 101 0 0 1 350 251H150A101 101 0 0 1 150 49Z" fill="none" stroke="#2B211C" stroke-width="1.5" stroke-opacity=".6"/>
+            <use href="#loop" fill="none" stroke="#1F2F5C" stroke-width="22"/>
+            <use href="#loop" fill="none" stroke="#F3EEE3" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="2 9"/>
+            <path d="M150 122H350A28 28 0 0 1 350 178H150A28 28 0 0 1 150 122Z" fill="#E4D8C0" stroke="#2B211C" stroke-width="1.5"/>
+            <g fill="#D9472B" stroke="#2B211C" stroke-width="1.6">
+              <circle cx="165" cy="22" r="10"/><circle cx="210" cy="22" r="10"/><circle cx="255" cy="22" r="10"/><circle cx="300" cy="22" r="10"/><circle cx="345" cy="22" r="10"/>
+              <circle cx="165" cy="278" r="10"/><circle cx="210" cy="278" r="10"/><circle cx="255" cy="278" r="10"/><circle cx="300" cy="278" r="10"/><circle cx="345" cy="278" r="10"/>
+              <circle cx="42" cy="150" r="10"/><circle cx="72" cy="72" r="10"/><circle cx="72" cy="228" r="10"/>
+              <circle cx="458" cy="150" r="10"/><circle cx="428" cy="72" r="10"/><circle cx="428" cy="228" r="10"/>
+            </g>
+            <g id="heroPlates" stroke="#2B211C" stroke-width="1.4"></g>
+          </g>
+          <g transform="translate(328 404)">
+            <path d="M-12 0l2-30q10-7 20 0l2 30z" fill="#1F2F5C"/><path d="M-8 -30q8 6 16 0" stroke="#F3EEE3" stroke-width="2" fill="none"/>
+            <path d="M-9 -23l-11 9M9 -23l11 9" stroke="#1F2F5C" stroke-width="5" stroke-linecap="round"/>
+            <circle cy="-38" r="8" fill="#E7C29F" stroke="#2B211C"/><path d="M-9 -41q9-9 18 0v-3q-9-8-18 0z" fill="#fff" stroke="#2B211C"/>
+          </g>
+          <g transform="translate(430 404)">
+            <path d="M-12 0l2-30q10-7 20 0l2 30z" fill="#1F2F5C"/><path d="M-8 -30q8 6 16 0" stroke="#F3EEE3" stroke-width="2" fill="none"/>
+            <path d="M-9 -23l-12 6M9 -23l11 9" stroke="#1F2F5C" stroke-width="5" stroke-linecap="round"/>
+            <circle cy="-38" r="8" fill="#E7C29F" stroke="#2B211C"/><path d="M-9 -41q9-9 18 0v-3q-9-8-18 0z" fill="#fff" stroke="#2B211C"/>
+          </g>
+          <g transform="translate(300 461)"><path d="M-14 0q-2-20 14-24 16 4 14 24z" fill="#C99A2E" stroke="#2B211C"/><circle cy="-30" r="9" fill="#2B211C"/></g>
+          <g transform="translate(392 461)"><path d="M-14 0q-2-20 14-24 16 4 14 24z" fill="#3E6E8E" stroke="#2B211C"/><circle cy="-30" r="9" fill="#5E4033"/></g>
+          <g transform="translate(535 461)"><path d="M-14 0q-2-20 14-24 16 4 14 24z" fill="#8A5A7A" stroke="#2B211C"/><circle cy="-30" r="9" fill="#2B211C"/></g>
+          <path d="M-20 150c0-16 20-22 40-18 10-12 38-12 50-2h250c20-9 50-6 56 10 26 0 30 26 6 30-8 12-34 12-48 4H54c-18 10-54 8-56-4-22 0-22-20 2-20z" fill="#E8D39F" stroke="#C9A24E" stroke-opacity=".6"/>
+          <path d="M40 98c0-12 16-16 30-13 8-8 28-8 36-1h120c14-6 34-4 38 7 18 0 20 18 4 21-6 8-24 8-32 3H70c-12 7-38 6-40-3-16 0-16-14 10-14z" fill="#E8D39F" stroke="#C9A24E" stroke-opacity=".6"/>
+          <path d="M450 506c0-14 18-19 34-15 9-10 32-10 42-2h170c16-8 40-5 44 8 22 0 24 22 4 25-6 10-28 10-40 4H486c-15 9-44 7-46-3-18 0-18-17 10-17z" fill="#E8D39F" stroke="#C9A24E" stroke-opacity=".6"/>
+        </svg>
+      </figure>
+    </div>
+    <p class="hint-scroll" aria-hidden="true"><svg viewBox="0 0 34 12"><path d="M33 6H3m6-5L2 6l7 5" fill="none" stroke="#A93B22" stroke-width="1.6"/></svg>Scroll to unroll — it reads right to left</p>
+  </section>
+
+  <!-- 2 · how it works -->
+  <section class="panel how" id="how" aria-labelledby="h-how">
+    <div class="slip"><p class="vl" lang="ja" title="kaiten-zushi — conveyor-belt sushi">回転寿司</p></div>
+    <div class="grid2">
+      <div>
+        <p class="eyebrow">Scene 2 · How the train works</p>
+        <h2 id="h-how">Sit, reach, stack.</h2>
+        <ol class="steps">
+          <li><b>Sit anywhere at the counter.</b><span>Every stool faces the belt. Pickled ginger, soy and wasabi are within reach.</span></li>
+          <li><b>Take the whole plate.</b><span>Lift off anything that passes. The plate colour is the price; domed plates keep desserts fresh.</span></li>
+          <li><b>Ask for anything special.</b><span>Hand rolls, sashimi and hot bowls are made to order — just ask the chefs in the middle.</span></li>
+          <li><b>Stack your empties.</b><span>Keep plates in front of you. When you're done we count the colours and bring the bill.</span></li>
+        </ol>
+        <p class="manners"><strong>Counter manners.</strong> Once a plate leaves the belt it's yours — please don't put it back. Green tea is free: a spoon of powder in your cup, then hot water from the tap at your seat (it's very hot).</p>
+      </div>
+      <figure class="scene-art" style="margin:0">
+        <svg viewBox="0 118 560 246" role="img" aria-labelledby="howT">
+          <title id="howT">Side view of a counter seat: a stool, the counter with a stack of plates and a tea cup, the hot water tap, the belt carrying a plate, and a chef behind it. Numbers 1 to 4 match the steps.</title>
+          <path d="M20 350h520" stroke="#2B211C" stroke-width="1.5"/>
+          <g fill="none" stroke="#1F2F5C" stroke-width="2">
+            <ellipse cx="96" cy="232" rx="46" ry="11" fill="#D9472B" stroke="#2B211C"/>
+            <path d="M96 243v100M70 350h52M78 300h36"/>
+          </g>
+          <path d="M160 214h210v12H160z" fill="#7C573D" stroke="#2B211C"/>
+          <path d="M168 226h194v124H168z" fill="#E4D8C0" stroke="#2B211C" stroke-opacity=".6"/>
+          <path d="M180 240h170M180 262h170M180 284h170M180 306h170M180 328h170" stroke="#2B211C" stroke-opacity=".12"/>
+          <g stroke="#2B211C" stroke-width="1.3">
+            <ellipse cx="214" cy="210" rx="30" ry="7" fill="#C99A2E"/><ellipse cx="214" cy="202" rx="30" ry="7" fill="#2F5FA8"/><ellipse cx="214" cy="194" rx="30" ry="7" fill="#4F8A55"/>
+            <ellipse cx="214" cy="193" rx="18" ry="3.5" fill="#E4EEDC" stroke-opacity=".4"/>
+          </g>
+          <path d="M268 214v-26q0-6 6-6h16q6 0 6 6v26" fill="#F3EEE3" stroke="#2B211C" stroke-width="1.3"/>
+          <path d="M276 176q-4-8 2-14M288 176q-4-8 2-14" stroke="#1F2F5C" stroke-opacity=".5" fill="none" stroke-width="1.4"/>
+          <path d="M338 214v-44h22v10h-10v34" fill="#9AA3B8" stroke="#2B211C" stroke-width="1.3"/><circle cx="356" cy="165" r="5" fill="#D9472B" stroke="#2B211C"/>
+          <path d="M372 196h122v18H372z" fill="#1F2F5C" stroke="#2B211C"/>
+          <circle cx="384" cy="205" r="5" fill="#F3EEE3" opacity=".6"/><circle cx="482" cy="205" r="5" fill="#F3EEE3" opacity=".6"/>
+          <path d="M372 214h122v136H372z" fill="#D9CFBC" stroke="#2B211C" stroke-opacity=".6"/>
+          <g stroke="#2B211C" stroke-width="1.3">
+            <ellipse cx="433" cy="192" rx="34" ry="8" fill="#D9472B"/><ellipse cx="433" cy="191" rx="22" ry="4.5" fill="#F6E0D8" stroke-opacity=".4"/>
+            <path d="M414 188c0-7 8-10 19-10s19 3 19 10c-5 3-12 4-19 4s-14-1-19-4z" fill="#F6A676"/>
+            <path d="M422 181v8M430 179v10M438 179v10M446 181v8" stroke="#FFF0E4" stroke-width="2"/>
+          </g>
+          <g transform="translate(520 196)">
+            <path d="M-16 154v-120q0-14 16-18 16 4 16 18v120" fill="#1F2F5C" stroke="#2B211C"/>
+            <circle cy="-2" r="13" fill="#E7C29F" stroke="#2B211C"/><path d="M-14 -6q14-14 28 0v-4q-14-12-28 0z" fill="#fff" stroke="#2B211C"/>
+            <path d="M-12 40l-26 -24" stroke="#1F2F5C" stroke-width="8" stroke-linecap="round"/>
+          </g>
+          <g font-family="Zen Old Mincho, serif" font-weight="700" font-size="16" text-anchor="middle">
+            <circle cx="96" cy="196" r="15" fill="#F3EEE3" stroke="#D9472B" stroke-width="1.5"/><text x="96" y="202" fill="#A93B22">1</text>
+            <circle cx="433" cy="150" r="15" fill="#F3EEE3" stroke="#D9472B" stroke-width="1.5"/><text x="433" y="156" fill="#A93B22">2</text>
+            <circle cx="520" cy="152" r="15" fill="#F3EEE3" stroke="#D9472B" stroke-width="1.5"/><text x="520" y="158" fill="#A93B22">3</text>
+            <circle cx="214" cy="160" r="15" fill="#F3EEE3" stroke="#D9472B" stroke-width="1.5"/><text x="214" y="166" fill="#A93B22">4</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="15" font-weight="500" fill="#5E5249">
+            <text x="340" y="146" text-anchor="middle">hot water</text><text x="282" y="160" text-anchor="middle">tea</text>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3 · plate colours -->
+  <section class="panel guide" id="plates" aria-labelledby="h-plates">
+    <div class="slip"><p class="vl" lang="ja" title="o-sara — plates">お皿</p></div>
+    <p class="eyebrow">Scene 3 · Plate colours</p>
+    <h2 id="h-plates">The colour is the price.</h2>
+    <ul class="tiers" id="tiers"></ul>
+    <p class="fine">Sample prices for this demo. Green plates suit vegetarians: inari, tamago (egg) and edamame.</p>
+  </section>
+
+  <!-- 4 · the conveyor -->
+  <section class="panel conveyor" id="conveyor" aria-labelledby="h-conv">
+    <div class="slip"><p class="vl" lang="ja" title="sushi">寿司</p></div>
+    <div class="belt-head">
+      <div>
+        <p class="eyebrow">Scene 4 · The conveyor</p>
+        <h2 id="h-conv">Take a plate.</h2>
+        <p class="hint" id="beltHint">Click, tap or press Enter on any plate and it lands on your table below. The belt waits while you're choosing — arrow keys move between plates.</p>
+      </div>
+      <div class="belt-ctl">
+        <button class="btn" id="pauseBtn" type="button" aria-pressed="false">Pause belt</button>
+        <button class="btn" id="nudgeBtn" type="button">Next plates</button>
+      </div>
+    </div>
+    <div class="belt" id="belt" role="group" aria-label="Conveyor belt" aria-describedby="beltHint">
+      <div class="belt-slats" id="slats" aria-hidden="true"></div>
+      <div class="belt-lip" aria-hidden="true"></div>
+      <div class="plate-layer" id="plateLayer"></div>
+      <span class="belt-note" aria-hidden="true">From the kitchen</span>
+      <div class="noren r" aria-hidden="true"><svg viewBox="0 0 96 160" preserveAspectRatio="none"><rect width="96" height="10" fill="#6B4A33"/><path d="M2 10h28v130H2zM34 10h28v142H34zM66 10h28v134H66z" fill="#16223F"/><path d="M8 24v100M40 24v112M72 24v104" stroke="#F3EEE3" stroke-opacity=".18"/><circle cx="48" cy="62" r="13" fill="none" stroke="#F3EEE3" stroke-opacity=".7" stroke-width="2"/></svg></div>
+      <div class="noren l" aria-hidden="true"><svg viewBox="0 0 96 160" preserveAspectRatio="none"><rect width="96" height="10" fill="#6B4A33"/><path d="M2 10h28v134H2zM34 10h28v142H34zM66 10h28v130H66z" fill="#16223F"/><path d="M24 24v100M56 24v112M88 24v104" stroke="#F3EEE3" stroke-opacity=".18"/></svg></div>
+    </div>
+    <div class="table">
+      <div>
+        <h3 class="sr">Your table, stacked by plate colour</h3>
+        <ul class="stacks" id="stacks"></ul>
+        <p class="last" id="last" aria-live="polite">Nothing taken yet — your plates stack here by colour.</p>
+      </div>
+      <div class="bill" aria-labelledby="billH">
+        <h3 id="billH">Your table <span class="fine">Sample prices</span></h3>
+        <p class="sum" id="sum">$0.00</p>
+        <p class="count" id="count">0 plates</p>
+        <div class="bill-actions">
+          <button class="btn" id="undoBtn" type="button" disabled>Undo last</button>
+          <button class="btn" id="clearBtn" type="button" disabled>Clear table</button>
+          <button class="btn" id="staffBtn" type="button">Call staff</button>
+          <button class="btn btn-v" id="billBtn" type="button">Ask for the bill</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · sake & tea -->
+  <section class="panel drinks" id="drinks" aria-labelledby="h-drinks">
+    <div class="slip"><p class="vl" lang="ja" title="nihonshu, o-cha — sake and tea">日本酒・お茶</p></div>
+    <div class="grid2">
+      <div>
+        <p class="eyebrow">Scene 5 · Sake &amp; green tea</p>
+        <h2 id="h-drinks">Something to sip.</h2>
+        <div class="menu">
+          <div>
+            <h3>Tea</h3>
+            <ul>
+              <li><b>Green tea at your seat</b><span class="p">Free</span><em>Powdered green tea and a hot water tap at every stool. Refill as often as you like.</em></li>
+              <li><b>Hojicha, iced</b><span class="p">$4.50</span><em>Roasted green tea — nutty, low in caffeine.</em></li>
+              <li><b>Genmaicha pot for two</b><span class="p">$7.00</span><em>Green tea with toasted brown rice.</em></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Sake &amp; more</h3>
+            <ul>
+              <li><b>House junmai, 180 ml</b><span class="p">$14.00</span><em>Dry and clean — warm or chilled, your call.</em></li>
+              <li><b>Nigori, 300 ml bottle</b><span class="p">$22.00</span><em>Cloudy, softly sweet, served cold.</em></li>
+              <li><b>Umeshu on ice</b><span class="p">$11.00</span><em>Plum liqueur, sweet-tart.</em></li>
+              <li><b>Yuzu soda</b><span class="p">$6.00</span><em>House-made citrus syrup and soda water.</em></li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine" style="margin-top:14px">Sample prices. We serve alcohol responsibly and may ask for ID.</p>
+      </div>
+      <figure class="scene-art" style="margin:0">
+        <svg viewBox="0 0 250 300" role="img" aria-label="Ink drawing of a sake flask with a small cup, and a tall tea cup with steam.">
+          <g stroke="#2B211C" stroke-width="1.6">
+            <path d="M70 52q-2-14 12-14t12 14q0 18 16 44 16 30 10 70-4 30-38 30t-38-30q-6-40 10-70 16-26 16-44z" fill="#1F2F5C"/>
+            <path d="M48 118q34 12 68 0" stroke="#F3EEE3" stroke-width="6" fill="none"/>
+            <ellipse cx="82" cy="38" rx="12" ry="4" fill="#2B3F76"/>
+            <path d="M130 196q2 22 22 22t22-22z" fill="#F3EEE3"/><ellipse cx="152" cy="196" rx="22" ry="5" fill="#FCF9F2"/>
+            <path d="M160 240h70l-6 46q-1 8-9 8h-40q-8 0-9-8z" fill="#F3EEE3"/>
+            <path d="M163 258h64" stroke="#D9472B" stroke-width="5"/>
+            <ellipse cx="195" cy="240" rx="35" ry="7" fill="#9BB070"/>
+          </g>
+          <path d="M184 226q-8-14 2-26t0-26M204 226q-8-14 2-26t0-26" fill="none" stroke="#1F2F5C" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M20 290h220" stroke="#2B211C" stroke-width="1.2"/>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 6 · visit -->
+  <section class="panel visit" id="visit" aria-labelledby="h-visit">
+    <div class="slip"><p class="vl" lang="ja" title="eigyō jikan — opening hours">営業時間</p></div>
+    <div class="grid2">
+      <div>
+        <p class="eyebrow">Scene 6 · Visit</p>
+        <h2 id="h-visit">Find the counter.</h2>
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-days="Mon"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-days="Tue Wed Thu"><th scope="row">Tuesday – Thursday</th><td>11:30 – 21:00</td></tr>
+            <tr data-days="Fri Sat"><th scope="row">Friday – Saturday</th><td>11:30 – 22:00</td></tr>
+            <tr data-days="Sun"><th scope="row">Sunday</th><td>11:30 – 20:30</td></tr>
+          </tbody>
+        </table>
+        <ul class="contact">
+          <li>Fortitude Valley, Brisbane QLD — a short walk from the station</li>
+          <li><a href="tel:+61755502716">(07) 5550 2716</a> · <a href="mailto:kaitenhana@example.com">kaitenhana@example.com</a></li>
+        </ul>
+        <ul class="notes">
+          <li><b>Groups.</b> The counter is walk-in only. Booths for 6–10 people can be requested a day ahead.</li>
+          <li><b>Allergies.</b> Tell us before you take a plate. Our kitchen handles fish, shellfish, sesame, soy, gluten and egg.</li>
+          <li><b>Access.</b> Step-free entry and two counter seats at table height.</li>
+        </ul>
+      </div>
+      <figure class="scene-art" style="margin:0">
+        <svg viewBox="0 0 300 330" role="img" aria-label="The entrance: an indigo noren curtain with a flower crest, and a red paper lantern.">
+          <path d="M20 40h260" stroke="#6B4A33" stroke-width="8" stroke-linecap="round"/>
+          <g stroke="#2B211C" stroke-width="1.5">
+            <path d="M30 44h76v200H30zM112 44h76v214h-76zM194 44h76v200h-76z" fill="#1F2F5C"/>
+          </g>
+          <circle cx="150" cy="130" r="36" fill="#F3EEE3"/>
+          <text x="150" y="146" text-anchor="middle" font-family="Zen Old Mincho, serif" font-weight="900" font-size="44" fill="#1F2F5C" lang="ja">花</text>
+          <path d="M40 220h56M122 234h56M204 220h56" stroke="#F3EEE3" stroke-opacity=".3"/>
+          <g transform="translate(250 262)">
+            <path d="M0 -26v10" stroke="#2B211C"/>
+            <ellipse cx="0" cy="24" rx="22" ry="32" fill="#D9472B" stroke="#2B211C" stroke-width="1.5"/>
+            <path d="M-21 12h42M-22 24h44M-21 36h42" stroke="#A93B22"/>
+            <rect x="-11" y="-16" width="22" height="7" fill="#2B211C"/><rect x="-11" y="55" width="22" height="7" fill="#2B211C"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+</div>
+</main>
+<nav class="rod" id="rod" aria-label="Scroll scenes">
+  <ol>
+    <li><button type="button" data-go="welcome" aria-current="true">Welcome</button></li>
+    <li><button type="button" data-go="how">How it works</button></li>
+    <li><button type="button" data-go="plates">Plates</button></li>
+    <li><button type="button" data-go="conveyor">Conveyor</button></li>
+    <li><button type="button" data-go="drinks">Sake &amp; tea</button></li>
+    <li><button type="button" data-go="visit">Visit</button></li>
+  </ol>
+  <div class="rod-line" aria-hidden="true"><i class="rod-bead" id="bead"></i></div>
+</nav>
+</div>
+
+<footer class="colophon">
+  <div class="roller" aria-hidden="true"></div>
+  <span class="seal" aria-hidden="true" lang="ja">花</span>
+  <p class="fn" data-brand>Kaiten Hana</p>
+  <p class="ja" lang="ja">ごちそうさまでした</p>
+  <p>“Thank you for the meal.” Kaiten Hana is a fictional sushi train in Fortitude Valley, drawn as a concept demo. Prices are samples and nothing on this page takes real orders.</p>
+</footer>
+
+<div class="fly-layer" id="flyLayer" aria-hidden="true"></div>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var INK = "#2B211C", RICE = "#FCF9F2";
+
+  /* ---------------- menu data (sample prices) ---------------- */
+  var TIERS = {
+    green: { name: "Green", price: 4.5, c: "#4F8A55", well: "#E4EEDC" },
+    blue:  { name: "Blue",  price: 5.5, c: "#2F5FA8", well: "#E0E7F3" },
+    red:   { name: "Red",   price: 6.5, c: "#D9472B", well: "#F6E0D8" },
+    gold:  { name: "Gold",  price: 7.5, c: "#C99A2E", well: "#F4EBD2" },
+    black: { name: "Black", price: 9,   c: "#23201F", well: "#E9E4DC" }
+  };
+  var ORDER = ["green", "blue", "red", "gold", "black"];
+  var MENU = [
+    { id: "tamago",  name: "Tamago",          tier: "green" },
+    { id: "inari",   name: "Inari",           tier: "green" },
+    { id: "edamame", name: "Edamame",         tier: "green" },
+    { id: "salmon",  name: "Salmon nigiri",   tier: "blue" },
+    { id: "cali",    name: "California roll", tier: "blue" },
+    { id: "ebi",     name: "Ebi nigiri",      tier: "red" },
+    { id: "mochi",   name: "Mochi",           tier: "red" },
+    { id: "tuna",    name: "Tuna nigiri",     tier: "gold" },
+    { id: "aburi",   name: "Aburi salmon",    tier: "gold" },
+    { id: "scallop", name: "Seared scallop",  tier: "black" }
+  ];
+  var byId = {}; MENU.forEach(function(m){ byId[m.id] = m; });
+  function money(n){ return "$" + n.toFixed(2); }
+
+  /* ---------------- SVG sushi (drawn, not photos) ---------------- */
+  function rice(x, y){ return '<path d="M' + (x-17) + ' ' + y + 'c0-6 7-9 17-9s17 3 17 9c0 5-8 7-17 7s-17-2-17-7z" fill="' + RICE + '" stroke="' + INK + '" stroke-width="1.2"/>'; }
+  function slab(x, y, c){ return '<path d="M' + (x-20) + ' ' + (y-1) + 'c3-8 11-12 20-12s17 4 20 12c-6 4-13 5-20 5s-14-1-20-5z" fill="' + c + '" stroke="' + INK + '" stroke-width="1.2"/>'; }
+  function lines(x, y, c){ return '<path d="M' + (x-12) + ' ' + (y-9) + 'l5 7M' + (x-3) + ' ' + (y-11) + 'l5 9M' + (x+7) + ' ' + (y-10) + 'l4 8" stroke="' + c + '" stroke-width="2.2" stroke-linecap="round" fill="none"/>'; }
+  function nigiri(x, y, c, s){ return rice(x, y + 3) + slab(x, y, c) + (s ? lines(x, y, s) : ""); }
+  function shine(x, y, c){ return '<path d="M' + (x-10) + ' ' + (y-8) + 'c5-3 13-3 18 0" stroke="' + c + '" stroke-width="2" fill="none" stroke-linecap="round"/>'; }
+  function tamago(x, y){ return rice(x, y + 3) + '<path d="M' + (x-18) + ' ' + y + 'l3-11h30l3 11c-6 3-12 4-18 4s-12-1-18-4z" fill="#F4C84E" stroke="' + INK + '" stroke-width="1.2"/><path d="M' + (x-14) + ' ' + (y-10) + 'h28" stroke="#FBE39A" stroke-width="2"/><path d="M' + (x-4) + ' ' + (y-11.5) + 'h8l1 15.5h-10z" fill="#1F2A22"/>'; }
+  function inari(x, y){ return '<path d="M' + (x-17) + ' ' + (y+4) + 'c-2-9 1-17 7-19h20c6 2 9 10 7 19-6 4-28 4-34 0z" fill="#B97A3E" stroke="' + INK + '" stroke-width="1.2"/><ellipse cx="' + x + '" cy="' + (y-15) + '" rx="10" ry="3.2" fill="' + RICE + '" stroke="' + INK + '"/><path d="M' + (x-9) + ' ' + (y-6) + 'c4 2 14 2 18 0M' + (x-12) + ' ' + (y+1) + 'c6 2 18 2 24 0" stroke="#7E4A21" stroke-width="1.3" fill="none"/>'; }
+  function ebi(x, y){ return rice(x, y + 3) + '<path d="M' + (x+16) + ' ' + (y-5) + 'l9-7 2 12z" fill="#E0553A" stroke="' + INK + '" stroke-width="1.1"/><path d="M' + (x-21) + ' ' + (y-1) + 'c3-8 12-12 21-12s14 3 18 7c-4 6-10 9-18 9s-15-1-21-4z" fill="#F6A676" stroke="' + INK + '" stroke-width="1.2"/><path d="M' + (x-12) + ' ' + (y-9) + 'v8M' + (x-4) + ' ' + (y-10.5) + 'v10M' + (x+4) + ' ' + (y-10.5) + 'v10M' + (x+11) + ' ' + (y-8.5) + 'v8" stroke="#FFF0E4" stroke-width="2.2"/>'; }
+  function roll(x, y){ return '<path d="M' + (x-11) + ' ' + y + 'v6a11 5.5 0 0 0 22 0v-6" fill="#EDE5D6" stroke="' + INK + '" stroke-width="1.1"/><ellipse cx="' + x + '" cy="' + y + '" rx="11" ry="5.5" fill="' + RICE + '" stroke="' + INK + '" stroke-width="1.1"/><ellipse cx="' + x + '" cy="' + y + '" rx="5.8" ry="3" fill="#1F2A22"/><circle cx="' + (x-1.8) + '" cy="' + y + '" r="1.5" fill="#8DB85E"/><circle cx="' + (x+1.9) + '" cy="' + y + '" r="1.3" fill="#E4603F"/><path d="M' + (x-8.5) + ' ' + (y-1.5) + 'h.1M' + (x+8) + ' ' + (y+1) + 'h.1M' + (x-3) + ' ' + (y-4.2) + 'h.1M' + (x+4) + ' ' + (y+4) + 'h.1" stroke="#F08A2B" stroke-width="2.2" stroke-linecap="round"/>'; }
+  function pod(x, y, a){ return '<path transform="translate(' + x + ' ' + y + ') rotate(' + a + ')" d="M-13 0c0-4 4-6 7-4 2-3 6-3 8 0 2-3 6-3 8 0 3-2 6 0 6 3s-3 5-6 4c-2 2-6 2-8 0-2 2-6 2-8 0-3 2-7 1-7-3z" fill="#7DAE52" stroke="' + INK + '" stroke-width="1.1"/>'; }
+  function mochi(x, y, c){ return '<path d="M' + (x-11) + ' ' + y + 'c0-10 5-14 11-14s11 4 11 14c-4 3-18 3-22 0z" fill="' + c + '" stroke="' + INK + '" stroke-width="1.2"/><ellipse cx="' + (x-4) + '" cy="' + (y-9) + '" rx="3" ry="2" fill="#fff" opacity=".75"/>'; }
+  function sear(x, y){ return '<path d="M' + (x-9) + ' ' + (y-4) + 'h.1M' + (x+2) + ' ' + (y-9) + 'h.1M' + (x+11) + ' ' + (y-4) + 'h.1M' + (x-3) + ' ' + (y-6) + 'h.1" stroke="#6B2E17" stroke-width="3.2" stroke-linecap="round" opacity=".8"/>'; }
+  var ART = {
+    salmon: function(){ return nigiri(76, 43, "#F28A5B", "#FFD9C3") + nigiri(46, 48, "#F28A5B", "#FFD9C3"); },
+    tuna: function(){ return nigiri(76, 43, "#C4344A") + shine(76, 43, "#E8798A") + nigiri(46, 48, "#C4344A") + shine(46, 48, "#E8798A"); },
+    tamago: function(){ return tamago(76, 43) + tamago(46, 48); },
+    inari: function(){ return inari(75, 44) + inari(46, 49); },
+    ebi: function(){ return ebi(74, 43) + ebi(45, 48); },
+    cali: function(){ return roll(60, 42) + roll(42, 49) + roll(78, 49); },
+    edamame: function(){ return pod(50, 44, -10) + pod(72, 42, 12) + pod(62, 50, 4) + pod(44, 52, 16) + pod(80, 51, -8) + '<path d="M52 44h.1M66 47h.1M76 44h.1M48 51h.1" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>'; },
+    mochi: function(){ return mochi(60, 45, "#F6F0E4") + mochi(45, 52, "#F2B3C1") + mochi(75, 52, "#BCD394"); },
+    aburi: function(){ return nigiri(76, 43, "#EE8452") + sear(76, 43) + '<path d="M64 36l4-3 4 3 4-3 4 3 4-3 4 3" stroke="#FFF4DA" stroke-width="1.6" fill="none"/>' + nigiri(46, 48, "#EE8452") + sear(46, 48) + '<path d="M34 41l4-3 4 3 4-3 4 3 4-3 4 3" stroke="#FFF4DA" stroke-width="1.6" fill="none"/>'; },
+    scallop: function(){ var s = ""; [[76, 43], [46, 48]].forEach(function(p){ var x = p[0], y = p[1]; s += rice(x, y + 3) + '<path d="M' + (x-15) + ' ' + (y-3) + 'c0-6 7-10 15-10s15 4 15 10c0 4-7 6-15 6s-15-2-15-6z" fill="#F4E3C4" stroke="' + INK + '" stroke-width="1.2"/><path d="M' + (x-8) + ' ' + (y-7) + 'l3 2M' + (x+1) + ' ' + (y-9) + 'l3 2M' + (x+8) + ' ' + (y-6) + 'l2 2" stroke="#9A5A2B" stroke-width="2" stroke-linecap="round"/><circle cx="' + (x+4) + '" cy="' + (y-4) + '" r="2.2" fill="#F07B2C" stroke="' + INK + '" stroke-width=".8"/>'; }); return s; }
+  };
+  function plateSVG(tier){
+    var t = TIERS[tier];
+    return '<ellipse cx="60" cy="63" rx="50" ry="12" fill="' + INK + '" opacity=".22"/>' +
+      '<ellipse cx="60" cy="56" rx="52" ry="18" fill="' + t.c + '" stroke="' + INK + '" stroke-width="1.3"/>' +
+      '<ellipse cx="60" cy="54" rx="37" ry="11.5" fill="' + t.well + '" stroke="' + INK + '" stroke-opacity=".35"/>' +
+      '<path d="M17 50c8-6 20-9 30-10" stroke="#fff" stroke-opacity=".35" stroke-width="2.5" fill="none" stroke-linecap="round"/>';
+  }
+  function dishSVG(item, cls){ return '<svg class="' + (cls || "") + '" viewBox="0 0 120 80" aria-hidden="true" focusable="false">' + plateSVG(item.tier) + ART[item.id]() + '</svg>'; }
+
+  /* ---------------- plate guide ---------------- */
+  var examples = { green: ["tamago", "inari", "edamame"], blue: ["salmon", "cali"], red: ["ebi", "mochi"], gold: ["tuna", "aburi"], black: ["scallop"] };
+  $("#tiers").innerHTML = ORDER.map(function(k){
+    var t = TIERS[k], ex = examples[k];
+    return '<li class="tier">' + dishSVG(byId[ex[0]]) + '<div><b>' + t.name + ' plate</b><span>' + ex.map(function(id){ return byId[id].name; }).join(", ") + '</span></div><span class="price">' + money(t.price) + '</span></li>';
+  }).join("");
+
+  /* ---------------- hero: tiny plates circling the loop (SMIL) ---------------- */
+  var heroG = $("#heroPlates"), heroSvg = heroG.ownerSVGElement;
+  var tierCycle = ["blue", "green", "red", "gold", "blue", "black", "green", "red", "blue", "gold", "green", "blue", "red", "green"];
+  var hp = "";
+  tierCycle.forEach(function(k, i){
+    hp += '<ellipse rx="9" ry="9" fill="' + TIERS[k].c + '"><animateMotion dur="48s" repeatCount="indefinite" begin="-' + (i * 48 / tierCycle.length).toFixed(2) + 's"><mpath href="#loop"/></animateMotion></ellipse>';
+  });
+  heroG.innerHTML = hp;
+
+  /* ---------------- layout mode + the right-to-left scroll ---------------- */
+  var scroller = $("#scroll");
+  var mq = window.matchMedia("(min-width: 1000px) and (min-height: 700px)");
+  var H = mq.matches;
+  var panels = $$(".panel");
+  function pos(){ return Math.abs(scroller.scrollLeft); }
+  function maxPos(){ return Math.max(0, scroller.scrollWidth - scroller.clientWidth); }
+  function setPos(p){ scroller.scrollLeft = -p; }
+  var target = null, raf = 0;
+  function glide(){
+    var p = pos(), n = p + (target - p) * 0.16;
+    if (Math.abs(target - n) < 0.6) { setPos(target); raf = 0; target = null; return; }
+    setPos(n);
+    if (Math.abs(pos() - p) < 0.05) { raf = 0; target = null; return; }
+    raf = requestAnimationFrame(glide);
+  }
+  function goTo(p){
+    target = Math.max(0, Math.min(maxPos(), p));
+    if (reduced) { setPos(target); target = null; return; }
+    if (!raf) raf = requestAnimationFrame(glide);
+  }
+  window.addEventListener("wheel", function(e){
+    if (!H || e.ctrlKey || (e.target.closest && e.target.closest(".colophon"))) return;
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { target = null; return; }
+    var d = e.deltaY * (e.deltaMode === 1 ? 36 : e.deltaMode === 2 ? innerHeight : 1);
+    var from = target == null ? pos() : target, m = maxPos();
+    if (d < 0 && window.scrollY > 1) return;
+    if ((d > 0 && from >= m - 1) || (d < 0 && from <= 1)) return;
+    e.preventDefault();
+    goTo(from + d * 1.1);
+  }, { passive: false });
+
+  function panelPos(el){
+    var sr = scroller.getBoundingClientRect(), r = el.getBoundingClientRect();
+    return pos() + (sr.right - r.right);
+  }
+  function go(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (H) {
+      if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+      goTo(panelPos(el));
+    } else {
+      el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+    }
+    var h = el.querySelector("h1,h2");
+    if (h) { h.setAttribute("tabindex", "-1"); setTimeout(function(){ h.focus({ preventScroll: true }); }, reduced ? 0 : 450); }
+  }
+  document.addEventListener("click", function(e){
+    var b = e.target.closest("[data-go]");
+    if (!b) return;
+    e.preventDefault();
+    go(b.getAttribute("data-go"));
+  });
+  $("#chip").addEventListener("click", function(){ go("conveyor"); });
+
+  var rodBtns = $$("#rod button"), bead = $("#bead");
+  function onScroll(){
+    if (!H) return;
+    var m = maxPos(), p = pos();
+    bead.style.transform = "translateX(" + (m ? -(p / m) * (bead.parentNode.clientWidth - 8) : 0).toFixed(1) + "px)";
+    var mid = scroller.getBoundingClientRect().left + scroller.clientWidth * 0.62, cur = 0;
+    panels.forEach(function(el, i){ var r = el.getBoundingClientRect(); if (r.left <= mid && r.right >= mid) cur = i; });
+    rodBtns.forEach(function(b, i){ b.setAttribute("aria-current", i === cur ? "true" : "false"); });
+    scroller.style.setProperty("--fl", (m - p < 4 ? 0 : 170) + "px");
+    scroller.style.setProperty("--fr", (p < 4 ? 0 : 60) + "px");
+  }
+  scroller.addEventListener("scroll", onScroll, { passive: true });
+  document.addEventListener("keydown", function(e){
+    if (!H || e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+    var t = e.target, tag = t && t.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.closest && t.closest("#belt"))) return;
+    var step = scroller.clientWidth * 0.8;
+    if (e.key === "PageDown" || (e.key === "ArrowLeft" && (t === document.body || t === scroller))) { e.preventDefault(); goTo((target == null ? pos() : target) + (e.key === "PageDown" ? step : 160)); }
+    else if (e.key === "PageUp" || (e.key === "ArrowRight" && (t === document.body || t === scroller))) { e.preventDefault(); goTo((target == null ? pos() : target) - (e.key === "PageUp" ? step : 160)); }
+  });
+  function setMode(){ H = mq.matches; if (H) onScroll(); }
+  if (mq.addEventListener) mq.addEventListener("change", setMode);
+  window.addEventListener("resize", onScroll);
+
+  /* ---------------- the conveyor ---------------- */
+  var belt = $("#belt"), layer = $("#plateLayer"), slats = $("#slats");
+  var pauseBtn = $("#pauseBtn"), nudgeBtn = $("#nudgeBtn");
+  var S = 170, W = 0, L = 0, offset = 0, slots = [], last = 0, running = false, loopRaf = 0;
+  var hold = { hover: false, focus: false, user: false, off: true, hidden: document.hidden };
+  var seed = 7;
+  function rand(){ seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function pick(prevId){ var m; do { m = MENU[Math.floor(rand() * MENU.length)]; } while (m.id === prevId); return m; }
+
+  function makeBtn(slot){
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "plate"; b.tabIndex = -1;
+    b.addEventListener("click", function(){ take(slot); });
+    slot.btn = b; layer.appendChild(b);
+  }
+  function fill(slot, item){
+    slot.item = item;
+    var b = slot.btn;
+    b.disabled = true; slot.vis = false;
+    if (!item) { b.classList.add("gone"); b.setAttribute("aria-hidden", "true"); b.innerHTML = ""; return; }
+    b.classList.remove("gone"); b.removeAttribute("aria-hidden");
+    var t = TIERS[item.tier];
+    b.setAttribute("aria-label", item.name + ", " + t.name.toLowerCase() + " plate, " + money(t.price));
+    b.innerHTML = dishSVG(item) + '<span class="nm" aria-hidden="true">' + item.name + '<i>' + money(t.price) + '</i></span>';
+  }
+  function layout(){
+    var phone = belt.clientWidth < 700;
+    S = phone ? 114 : 172;
+    W = belt.clientWidth;
+    var n = Math.ceil((W + 2 * S) / S) + 1;
+    L = n * S;
+    while (slots.length < n) {
+      var s = { i: slots.length, item: null, btn: null, p: 0, vis: false };
+      makeBtn(s);
+      fill(s, slots.length % 6 === 4 ? null : pick(slots.length ? (slots[slots.length - 1].item || {}).id : null));
+      slots.push(s);
+    }
+    while (slots.length > n) { var x = slots.pop(); x.btn.remove(); }
+    place(true);
+  }
+  function place(force){
+    var plateW = S > 150 ? 132 : 100, edge = S > 150 ? 96 : 40;
+    var visible = [];
+    slots.forEach(function(s){
+      var p = (((s.i * S - offset) % L) + L) % L;
+      if (!force && p > s.p + S) onWrap(s);
+      s.p = p;
+      var x = p - S;
+      s.x = x;
+      s.btn.style.transform = "translate3d(" + x.toFixed(1) + "px,0,0)";
+      var vis = !!s.item && x > edge - plateW * 0.3 && x + plateW < W - edge + plateW * 0.3;
+      if (vis !== s.vis) { s.vis = vis; s.btn.disabled = !vis; }
+      if (vis) visible.push(s);
+    });
+    slats.style.backgroundPosition = (-offset % 46) + "px 0";
+    // roving tabindex: exactly one visible plate is tabbable
+    var cur = slots.filter(function(s){ return s.btn.tabIndex === 0; })[0];
+    if (!cur || !cur.vis) {
+      if (cur) cur.btn.tabIndex = -1;
+      visible.sort(function(a, b){ return b.x - a.x; });
+      if (visible[0]) visible[0].btn.tabIndex = 0;
+    }
+  }
+  function onWrap(s){
+    // the chef refills empty spots as they come back out of the kitchen
+    if (!s.item) fill(s, pick());
+    else if (rand() < 0.15) fill(s, pick(s.item.id));
+  }
+  function restock(){
+    // the chef sends a fresh plate out behind the kitchen curtain
+    var edge = S > 150 ? 96 : 40;
+    var next = slots.filter(function(s){ return !s.item && s.x > W - edge - 20; }).sort(function(a, b){ return a.x - b.x; })[0];
+    if (next) fill(next, pick());
+  }
+  function frame(t){
+    loopRaf = 0;
+    if (!running) return;
+    var dt = Math.min(0.05, (t - last) / 1000 || 0); last = t;
+    var few = slots.filter(function(s){ return s.vis; }).length < 2;
+    offset += dt * (S > 150 ? 40 : 32) * (few ? 3.2 : 1);
+    place(false);
+    loopRaf = requestAnimationFrame(frame);
+  }
+  function update(){
+    var should = !reduced && !hold.hover && !hold.focus && !hold.user && !hold.off && !hold.hidden;
+    if (should && !running) { running = true; last = performance.now(); loopRaf = requestAnimationFrame(frame); }
+    if (!should && running) { running = false; if (loopRaf) cancelAnimationFrame(loopRaf); loopRaf = 0; }
+  }
+  belt.addEventListener("pointerenter", function(e){ if (e.pointerType === "mouse") { hold.hover = true; update(); } });
+  belt.addEventListener("pointerleave", function(e){ if (e.pointerType === "mouse") { hold.hover = false; update(); } });
+  belt.addEventListener("focusin", function(e){ hold.focus = !!(e.target.matches && e.target.matches(":focus-visible")); update(); });
+  belt.addEventListener("focusout", function(e){ if (!belt.contains(e.relatedTarget)) { hold.focus = false; update(); } });
+  document.addEventListener("visibilitychange", function(){ hold.hidden = document.hidden; update(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function(es){ es.forEach(function(en){ hold.off = !en.isIntersecting; }); update(); }).observe(belt);
+    new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting && !reduced) heroSvg.unpauseAnimations(); else heroSvg.pauseAnimations(); }); }).observe(heroSvg);
+  } else { hold.off = false; }
+  if (reduced) { pauseBtn.hidden = true; heroSvg.pauseAnimations(); }
+  pauseBtn.addEventListener("click", function(){
+    hold.user = !hold.user;
+    pauseBtn.setAttribute("aria-pressed", String(hold.user));
+    pauseBtn.textContent = hold.user ? "Start belt" : "Pause belt";
+    update();
+  });
+  function nudge(dir){
+    var from = offset, to = offset + S * dir;
+    if (reduced || !belt.animate) { offset = to; place(false); return; }
+    var t0 = performance.now();
+    (function tick(t){ var k = Math.min(1, (t - t0) / 420); offset = from + (to - from) * (1 - Math.pow(1 - k, 3)); place(false); if (k < 1) requestAnimationFrame(tick); })(t0);
+  }
+  nudgeBtn.addEventListener("click", function(){ nudge(1); });
+
+  belt.addEventListener("keydown", function(e){
+    var keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+    if (keys.indexOf(e.key) < 0) return;
+    var vis = slots.filter(function(s){ return s.vis; }).sort(function(a, b){ return b.x - a.x; });
+    if (!vis.length) return;
+    e.preventDefault();
+    var i = vis.findIndex(function(s){ return s.btn === document.activeElement; });
+    var n = e.key === "Home" ? 0 : e.key === "End" ? vis.length - 1 : e.key === "ArrowLeft" ? Math.min(vis.length - 1, i + 1) : Math.max(0, i - 1);
+    focusSlot(vis[n]);
+  });
+  function focusSlot(s){ slots.forEach(function(x){ x.btn.tabIndex = -1; }); s.btn.tabIndex = 0; s.btn.focus({ preventScroll: true }); }
+
+  /* ---------------- your table ---------------- */
+  var stacksEl = $("#stacks"), table = { green: [], blue: [], red: [], gold: [], black: [] }, history = [];
+  stacksEl.innerHTML = ORDER.map(function(k){
+    return '<li class="stack" data-tier="' + k + '"><div class="pile empty" aria-hidden="true"></div><div class="stack-meta"><b>' + TIERS[k].name + '</b><span class="n">0 × ' + money(TIERS[k].price) + '</span></div></li>';
+  }).join("");
+  function renderStacks(bump){
+    var total = 0, count = 0;
+    ORDER.forEach(function(k){
+      var li = stacksEl.querySelector('[data-tier="' + k + '"]'), pile = li.querySelector(".pile"), n = table[k].length;
+      var show = Math.min(n, 9), html = "";
+      for (var i = 0; i < show; i++) html += '<i style="--c:' + TIERS[k].c + ';bottom:' + (i * 7) + 'px"></i>';
+      if (n > 9) html += '<span class="more">+' + (n - 9) + '</span>';
+      pile.innerHTML = html;
+      pile.classList.toggle("empty", n === 0);
+      li.querySelector(".n").textContent = n + " × " + money(TIERS[k].price);
+      total += n * TIERS[k].price; count += n;
+      if (bump === k && !reduced && pile.lastElementChild && pile.lastElementChild.animate) {
+        var top = n > 9 ? pile.children[8] : pile.lastElementChild;
+        top.animate([{ transform: "translateY(-10px)" }, { transform: "translateY(0)" }], { duration: 260, easing: "cubic-bezier(.3,1.6,.5,1)" });
+      }
+    });
+    var words = count === 1 ? "1 plate" : count + " plates";
+    $("#sum").textContent = money(total);
+    $("#count").textContent = words;
+    $("#chipCount").textContent = words;
+    $("#chipTotal").textContent = money(total);
+    var chipPlates = $$(".chip-stack i");
+    var recent = history.slice(-3).reverse();
+    chipPlates.forEach(function(el, i){ el.style.setProperty("--c", recent[2 - i] ? TIERS[recent[2 - i].tier].c : "#cfc6b4"); });
+    $("#undoBtn").disabled = !count; $("#clearBtn").disabled = !count;
+    return { total: total, words: words };
+  }
+  function take(slot){
+    var item = slot.item;
+    if (!item || !slot.vis) return;
+    var wasFocused = document.activeElement === slot.btn && slot.btn.matches(":focus-visible");
+    var from = slot.btn.querySelector("svg").getBoundingClientRect();
+    var pile = stacksEl.querySelector('[data-tier="' + item.tier + '"] .pile');
+    if (wasFocused) {
+      var vis = slots.filter(function(s){ return s.vis && s !== slot; }).sort(function(a, b){ return Math.abs(a.x - slot.x) - Math.abs(b.x - slot.x); });
+      if (vis[0]) focusSlot(vis[0]); else pauseBtn.focus();
+    }
+    fill(slot, null);
+    restock();
+    history.push(item);
+    table[item.tier].push(item);
+    function land(){
+      var r = renderStacks(item.tier);
+      $("#last").textContent = "Took " + item.name + " (" + TIERS[item.tier].name.toLowerCase() + ", " + money(TIERS[item.tier].price) + "). Table: " + r.words + ", " + money(r.total) + ".";
+    }
+    var pr = pile.getBoundingClientRect();
+    if (reduced || !document.body.animate || pr.bottom < 0 || pr.top > innerHeight || pr.right < 0 || pr.left > innerWidth) { land(); return; }
+    var fly = document.createElement("div");
+    fly.className = "fly"; fly.style.transformOrigin = "0 0";
+    fly.style.width = from.width + "px"; fly.style.transform = "translate(" + from.left + "px," + from.top + "px)";
+    fly.innerHTML = dishSVG(item);
+    $("#flyLayer").appendChild(fly);
+    var n = Math.min(table[item.tier].length - 1, 8);
+    var scale = pr.width / (from.width * 0.87);
+    var tx = pr.left + pr.width / 2 - from.width * scale / 2, ty = pr.bottom - n * 7 - pr.width * 0.155 - from.height * scale * 0.7;
+    var mx = (from.left + tx) / 2, my = Math.min(from.top, ty) - 90;
+    var a = fly.animate([
+      { transform: "translate(" + from.left + "px," + from.top + "px) scale(1) rotate(0deg)" },
+      { transform: "translate(" + mx + "px," + my + "px) scale(" + ((1 + scale) / 2) + ") rotate(-10deg)", offset: 0.45 },
+      { transform: "translate(" + tx + "px," + ty + "px) scale(" + scale + ") rotate(0deg)" }
+    ], { duration: 720, easing: "cubic-bezier(.35,.6,.3,1)" });
+    fly.querySelector("svg").animate([{ opacity: 1 }, { opacity: 1, offset: 0.7 }, { opacity: 0 }], { duration: 720 });
+    a.onfinish = function(){ fly.remove(); land(); };
+  }
+  $("#undoBtn").addEventListener("click", function(){
+    var it = history.pop(); if (!it) return;
+    table[it.tier].pop(); var r = renderStacks();
+    $("#last").textContent = "Undid " + it.name + ". Table: " + r.words + ", " + money(r.total) + ". (At the counter, plates stay off the belt!)";
+  });
+  $("#clearBtn").addEventListener("click", function(){
+    ORDER.forEach(function(k){ table[k] = []; }); history = [];
+    renderStacks(); $("#last").textContent = "Table cleared — start again whenever you like.";
+  });
+  $("#staffBtn").addEventListener("click", function(){ if (window.DemoKit) DemoKit.toast("Demo only — no staff were called. At your seat, press the call button above the tap."); });
+  $("#billBtn").addEventListener("click", function(){
+    var r = renderStacks();
+    if (window.DemoKit) DemoKit.toast(r.total ? "Demo only — nothing was charged. Staff would count your " + r.words + " (" + money(r.total) + ", sample prices)." : "Demo only — take a plate first, then ask for the bill.");
+  });
+
+  /* ---------------- hours: highlight today in Brisbane ---------------- */
+  try {
+    var wd = new Intl.DateTimeFormat("en-AU", { weekday: "short", timeZone: "Australia/Brisbane" }).format(new Date()).slice(0, 3);
+    $$(".hours tr").forEach(function(tr){ if ((tr.getAttribute("data-days") || "").indexOf(wd) > -1) tr.classList.add("today"); });
+  } catch (err) { /* no Intl time zones */ }
+
+  /* ---------------- brand rename: keep the big name in bounds ---------------- */
+  function fitBrand(e){
+    var name = (e && e.detail && e.detail.name) || "Kaiten Hana";
+    document.documentElement.style.setProperty("--bscale", name.length > 22 ? 0.52 : name.length > 14 ? 0.7 : 1);
+  }
+  window.addEventListener("hd:brandchange", fitBrand);
+
+  function init(){
+    layout(); renderStacks(); update(); onScroll();
+    var ro = window.ResizeObserver ? new ResizeObserver(function(){ var w = belt.clientWidth; if (Math.abs(w - W) > 1) layout(); }) : null;
+    if (ro) ro.observe(belt); else window.addEventListener("resize", layout);
+  }
+  init();
+})();
+</script>
+</body>
+</html>

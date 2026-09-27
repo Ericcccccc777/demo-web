@@ -1,0 +1,8 @@
+{
+  "id": "093",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "CSS Grid", "CSS Scroll Snap", "Form logic", "Date logic"],
+  "features": ["booking", "customiser"],
+  "interaction": "Hover, tap or Tab through the numbered parts list to highlight each part of an exploded bike drawing with its specs, a workshop tip and the service level that covers it; 'Assemble' snaps the nine parts together with wheelbase dimensions (and back); a frame-size finder turns height + inseam into an illustrative road / MTB / hybrid size range with a live frame diagram; service-level cards feed a drop-off booking form that ends in a demo toast.",
+  "fonts": ["Exo 2", "Inter"],
+  "notes": "Frame sizes use simple inseam rules of thumb and are labelled illustrative. Opening hours and drop-off days are computed in Canberra time."
+}

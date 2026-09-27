@@ -1,0 +1,3 @@
+# Preview build: no production domain configured in src/studio.json yet.
+User-agent: *
+Disallow: /

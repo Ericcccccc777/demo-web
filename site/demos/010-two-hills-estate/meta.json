@@ -1,0 +1,8 @@
+{
+  "id": "010",
+  "tech": ["SVG", "CSS Grid", "IntersectionObserver", "Form logic", "Date logic"],
+  "features": ["customiser", "booking", "story"],
+  "interaction": "Pick four of eight wines and watch them pour into glasses on a paper tasting mat, auto-ordered light to heavy with a one-line reason and tasting notes on focus, then request a seated tasting (day, time, 1–10 guests) that ends in a demo toast.",
+  "fonts": ["Fraunces", "Figtree"],
+  "notes": "Hill parallax and glass-pour animation are off under reduced motion. Event dates roll forward with the calendar; all prices are samples."
+}

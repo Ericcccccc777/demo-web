@@ -1,0 +1,8 @@
+{
+  "id": "007",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "IntersectionObserver", "Keyboard shortcuts"],
+  "features": ["ordering", "story"],
+  "interaction": "Take plates off a moving conveyor belt with click, tap or Enter — each one flies to your table, stacks by plate colour and updates a running total (sample prices); the belt pauses on hover, keyboard focus and when off-screen.",
+  "fonts": ["Zen Old Mincho", "Inter"],
+  "notes": "Desktop reads as a right-to-left hand scroll (wheel moves it sideways); phones and tablets get the same scenes in a vertical flow."
+}

@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="032">
+<meta name="demo:brand" content="Sparkle Squad Cleaning">
+<title>Sparkle Squad Cleaning — home cleaning in Hobart</title>
+<meta name="description" content="A fictional Hobart home-cleaning business: regular, deep, end-of-lease and holiday-rental cleans with an illustrative instant quote.">
+<meta name="theme-color" content="#CFF5E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@800;900&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --white:#FFFFFF;--mint:#CFF5E7;--mint2:#E9FBF4;--aqua:#2EC4B6;--aquaInk:#0B7268;--lemon:#FFE66D;--slate:#1F2D3D;--slate2:#4A5866;
+  --line:#D5EEE6;--r:28px;--sh:0 18px 50px -24px rgba(31,45,61,.28);
+  --fh:"Nunito","DM Sans",ui-rounded,system-ui,sans-serif;--fb:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,5vw,48px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--white);color:var(--slate);font:400 1.03rem/1.62 var(--fb);overflow-x:clip}
+svg{display:block}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--aquaInk);outline-offset:3px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:var(--slate);color:#fff;padding:10px 14px;border-radius:12px}
+.skip:focus{top:12px}
+.in{max-width:1180px;margin-inline:auto;padding-inline:var(--gut)}
+[data-brand]{overflow-wrap:anywhere}
+h1,h2,h3{font-family:var(--fh);font-weight:900;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;padding:6px 14px 6px 8px;border-radius:999px;background:var(--mint);font-weight:700;font-size:.86rem;color:var(--aquaInk)}
+.eyebrow i{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 18%,transparent 26%),conic-gradient(from 90deg,#8EE3D8,#FFE66D,#FFB3D9,#A9C6FF,#8EE3D8)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;font:700 1rem/1.1 var(--fb);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.95)}
+.btn--slate{background:var(--slate);color:#fff;box-shadow:0 10px 24px -12px rgba(31,45,61,.6)}
+.btn--aqua{background:var(--aqua);color:var(--slate)}
+.btn--mint{background:var(--mint);color:var(--slate)}
+.btn--ghost{background:#fff;color:var(--slate);box-shadow:inset 0 0 0 2px var(--line)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+.hd{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.hd .in{display:flex;align-items:center;gap:14px;min-height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo__mark{position:relative;width:34px;height:34px;flex:none}
+.logo__mark b{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0 16%,transparent 24%),conic-gradient(from 200deg,#7FDCD1,#FFE66D,#FFB8DC,#9FC2FF,#7FDCD1);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8)}
+.logo__mark b:nth-child(1){inset:0 8px 8px 0}.logo__mark b:nth-child(2){width:14px;height:14px;right:0;bottom:0}.logo__mark b:nth-child(3){width:8px;height:8px;right:2px;top:2px}
+.logo span{font:900 1.12rem/1.1 var(--fh);letter-spacing:-.01em;min-width:0}
+.nav{display:none;gap:2px}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;color:var(--slate2)}
+.nav a:hover{background:var(--mint2);color:var(--slate)}
+.hd .btn{min-height:44px;padding:10px 18px;flex:none}
+.hd .sm{display:none}
+@media(max-width:380px){.hd .lg{display:none}.hd .sm{display:inline}.hd .btn{padding:10px 16px}}
+@media(min-width:960px){.nav{display:flex}}
+
+/* hero */
+.hero{position:relative;overflow:clip;background:radial-gradient(120% 90% at 85% 10%,var(--mint2),#fff 60%);isolation:isolate}
+.hero__clean{position:relative;z-index:1;display:grid;gap:18px;align-items:center;padding-block:clamp(22px,5vw,56px) 26px}
+@media(min-width:900px){.hero__clean{grid-template-columns:1.12fr .88fr;gap:40px;min-height:min(700px,calc(100svh - 66px - 110px))}}
+.hero h1{font-size:clamp(2.55rem,8.6vw,5.3rem);line-height:.98}
+.hl{background:linear-gradient(transparent 58%,var(--lemon) 58%,var(--lemon) 92%,transparent 92%);padding-inline:.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media(min-width:900px){.hero h1{font-size:clamp(2.8rem,4.9vw,4.7rem)}}
+.lead{margin:18px 0 0;max-width:33em;color:var(--slate2);font-size:clamp(1.02rem,1.3vw,1.14rem)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.mini{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem;color:var(--slate2)}
+.mini li{display:flex;align-items:center;gap:7px}
+@media(max-width:599px){.mini{display:none}.art{width:min(84%,320px)}}
+.mini svg{width:18px;height:18px;color:var(--aquaInk)}
+.art{position:relative;width:min(100%,540px);margin-inline:auto}
+.art>svg{width:100%;height:auto}
+.bub{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 26%,rgba(255,255,255,.95) 0 9%,rgba(255,255,255,0) 17%),radial-gradient(circle at 68% 74%,rgba(255,255,255,.55) 0 5%,transparent 9%),conic-gradient(from 210deg,rgba(46,196,182,.55),rgba(255,230,109,.6),rgba(255,160,210,.5),rgba(140,175,255,.55),rgba(46,196,182,.55));-webkit-mask:radial-gradient(circle,rgba(0,0,0,.22) 52%,#000 71%);mask:radial-gradient(circle,rgba(0,0,0,.22) 52%,#000 71%);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9)}
+.float{animation:bob 6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,-14px)}}
+.hero .rise{position:absolute;bottom:-60px;opacity:0;pointer-events:none}
+.hero.is-clean .rise{animation:rise var(--d,9s) linear var(--delay,0s) infinite}
+@keyframes rise{0%{opacity:0;transform:translate(0,0) scale(.7)}10%{opacity:1}50%{transform:translate(var(--sway,24px),-50vh) scale(1)}100%{opacity:0;transform:translate(0,-105vh) scale(1.08)}}
+.twk{transform-box:fill-box;transform-origin:center;opacity:0}
+.hero.is-clean .twk{animation:twk 2.6s ease-in-out infinite}
+@keyframes twk{0%,100%{opacity:0;transform:scale(.3) rotate(0)}40%{opacity:1;transform:scale(1) rotate(20deg)}70%{opacity:.9;transform:scale(.8) rotate(35deg)}}
+
+/* fog */
+.fog{position:absolute;inset:0;z-index:2;width:100%;height:100%;touch-action:pan-y;cursor:grab;transition:opacity .9s ease}
+.fog:active{cursor:grabbing}
+.fog.gone{opacity:0;pointer-events:none}
+.sq{position:absolute;z-index:3;left:0;top:0;width:78px;height:78px;margin:-39px 0 0 -39px;pointer-events:none;opacity:0;transition:opacity .2s}
+.sq.on{opacity:1}
+.wipebar{position:sticky;z-index:4;bottom:calc(60px + env(safe-area-inset-bottom));margin:0 auto 26px;width:min(calc(100% - 2*var(--gut)),620px);display:flex;align-items:center;gap:12px;padding:10px 10px 10px 12px;border-radius:999px;background:rgba(255,255,255,.94);box-shadow:0 16px 40px -18px rgba(31,45,61,.45),inset 0 0 0 1.5px var(--line)}
+.meter{position:relative;width:44px;height:44px;flex:none}
+.meter b{position:absolute;inset:0;display:grid;place-items:center;font:800 .72rem/1 var(--fh);color:var(--aquaInk)}
+.meter svg{width:100%;height:100%;transform:rotate(-90deg)}
+.meter circle{fill:none;stroke-width:4.5}
+.meter .bg{stroke:var(--mint)}
+.meter .fg{stroke:var(--aqua);stroke-linecap:round;transition:stroke-dasharray .25s}
+.wipetxt{flex:1;min-width:0;margin:0;line-height:1.25;font-size:.92rem}
+.wipetxt b{display:block;font:800 1rem/1.2 var(--fh)}
+.wipebar .btn{min-height:44px;padding:10px 16px;font-size:.92rem;flex:none}
+.hero.is-clean .meter .fg{stroke:var(--aquaInk)}
+.hero.is-clean .wipebar{position:relative;bottom:auto}
+.burst{position:absolute;z-index:3;inset:0;pointer-events:none}
+.burst span{position:absolute;width:26px;height:26px;margin:-13px;background:var(--lemon);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:pop .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes pop{0%{transform:scale(0) rotate(0)}50%{transform:scale(1.2) rotate(45deg);opacity:1}100%{transform:scale(0) rotate(90deg);opacity:0}}
+.short-c{display:none}
+@media(max-width:560px){.short-c{display:inline}}
+.hd-in-frame .wipebar{bottom:calc(16px + env(safe-area-inset-bottom))}
+@media(max-width:380px){.wipetxt span{display:none}}
+@media(max-width:560px){.wipebar{gap:10px;padding:8px 8px 8px 10px}.wipebar .long{display:none}.wipetxt{font-size:.84rem}.wipetxt b{font-size:.94rem}.wipebar .btn{padding:10px 14px}}
+
+/* foam edge */
+.foam{position:relative;background:var(--mint)}
+.foam::before{content:"";position:absolute;left:0;right:0;top:-25px;height:26px;background:radial-gradient(circle at 14px 26px,var(--mint) 13px,transparent 13.5px) 0 0/28px 26px repeat-x,radial-gradient(circle at 22px 30px,var(--mint) 19px,transparent 19.5px) 9px 0/44px 26px repeat-x;pointer-events:none}
+
+/* sections */
+.sec{padding-block:clamp(64px,9vw,120px)}
+.sec__head{max-width:640px;margin-bottom:32px}
+.sec__head h2{font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.02}
+.sec__head p{margin:14px 0 0;color:var(--slate2)}
+.foam .sec__head p,.foam .note{color:#33424F}
+
+/* services */
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1*var(--gut)) 18px;padding:4px var(--gut) 8px;scroll-snap-type:x proximity}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;display:inline-flex;align-items:center;gap:9px;min-height:50px;padding:8px 18px 8px 10px;border-radius:999px;border:0;background:#fff;box-shadow:inset 0 0 0 2px rgba(31,45,61,.08);cursor:pointer;font-weight:700;scroll-snap-align:start;transition:background .2s,box-shadow .2s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.tab:active{transform:scale(.95)}
+.tab .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--mint2)}
+.tab .ic svg{width:20px;height:20px}
+.tab[aria-selected=true]{background:var(--slate);color:#fff;box-shadow:none}
+.tab[aria-selected=true] .ic{background:var(--aqua);color:var(--slate)}
+.panel{display:grid;gap:22px;background:#fff;border-radius:var(--r);padding:clamp(20px,3.4vw,40px);box-shadow:var(--sh)}
+.panel[hidden]{display:none}
+@media(min-width:860px){.panel{grid-template-columns:1fr 1.15fr;gap:44px}}
+.panel h3{font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.05}
+.panel p{margin:12px 0 0;color:var(--slate2)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0 0}
+.facts div{background:var(--mint2);border-radius:18px;padding:12px 14px}
+.facts dt{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--aquaInk)}
+.facts dd{margin:2px 0 0;font:800 1.15rem/1.2 var(--fh)}
+.panel .btn{margin-top:22px}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.check li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1.5px dashed var(--line)}
+.check li:last-child{border-bottom:0}
+.check svg{width:26px;height:26px;flex:none;margin-top:-1px}
+.check .c{fill:var(--mint)}
+.check .t{fill:none;stroke:var(--aquaInk);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:14;stroke-dashoffset:0}
+.js .check .t{stroke-dashoffset:14}
+.js .panel.show .check .t{animation:tick .45s ease-out forwards;animation-delay:calc(var(--i)*90ms + 150ms)}
+@keyframes tick{to{stroke-dashoffset:0}}
+.checkhead{font:800 1.05rem/1.2 var(--fh);margin:0 0 6px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.checkhead small{font:500 .85rem var(--fb);color:var(--slate2)}
+
+/* quote */
+.q{display:grid;gap:22px;align-items:start}
+@media(min-width:940px){.q{grid-template-columns:1.25fr .95fr;gap:32px}.q__out{position:sticky;top:90px}}
+.q__in{background:#fff;border-radius:var(--r);padding:clamp(18px,3vw,34px);box-shadow:var(--sh);display:grid;gap:26px}
+.grp{border:0;margin:0;padding:0;min-width:0}
+.grp legend,.lbl{padding:0;margin:0 0 10px;font:800 1.08rem/1.2 var(--fh);display:flex;gap:10px;align-items:baseline;justify-content:space-between;width:100%}
+.grp legend small,.lbl small{font:500 .84rem var(--fb);color:var(--slate2)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pill span{display:inline-flex;align-items:center;gap:6px;min-height:46px;padding:10px 16px;border-radius:999px;background:var(--mint2);font-weight:700;font-size:.95rem;transition:background .2s,color .2s,transform .25s cubic-bezier(.34,1.56,.64,1)}
+.pill span em{font-style:normal;font-weight:500;font-size:.84rem;color:var(--aquaInk)}
+.pill input:checked+span{background:var(--slate);color:#fff}
+.pill input:checked+span em{color:var(--lemon)}
+.pill input:focus-visible+span{outline:3px solid var(--aquaInk);outline-offset:2px}
+.pill input:disabled+span{opacity:.45;cursor:not-allowed}
+.pill input:active+span{transform:scale(.95)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:350px){.steps{grid-template-columns:1fr}}
+.stp{background:var(--mint2);border-radius:22px;padding:12px 14px}
+.stp .lbl{margin-bottom:6px;font-size:1rem}
+.stp__row{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.stp button{width:44px;height:44px;border-radius:50%;border:0;background:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 12px -6px rgba(31,45,61,.35);transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.stp button:active{transform:scale(.88)}
+.stp button:disabled{opacity:.4;cursor:not-allowed}
+.stp button svg{width:18px;height:18px}
+.stp output{font:900 2rem/1 var(--fh);min-width:1.4ch;text-align:center}
+.extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:600px){.extras{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ex{display:grid;justify-items:center;gap:6px;padding:14px 8px 12px;border-radius:20px;border:0;background:var(--mint2);cursor:pointer;text-align:center;font-weight:700;font-size:.92rem;transition:background .2s,transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+.ex:active{transform:scale(.95)}
+.ex svg{width:30px;height:30px}
+.ex small{font-weight:500;color:var(--aquaInk);font-size:.82rem}
+.ex[aria-pressed=true]{background:var(--lemon);box-shadow:inset 0 0 0 2px var(--slate)}
+.ex[aria-pressed=true] small{color:var(--slate)}
+.q__out{background:var(--slate);color:#fff;border-radius:var(--r);padding:clamp(20px,3vw,34px);display:grid;gap:18px;justify-items:center;text-align:center;overflow:hidden;position:relative}
+.pb{position:relative;width:min(260px,70vw);aspect-ratio:1;display:grid;place-items:center;align-content:center}
+.pb .bub{inset:0;animation:bob 7s ease-in-out infinite}
+.pb__n{position:relative;font:900 clamp(3.4rem,11vw,4.6rem)/1 var(--fh);letter-spacing:-.03em;font-variant-numeric:tabular-nums;display:flex;align-items:flex-start}
+.pb__n sup{font-size:.45em;margin-top:.25em;margin-right:2px}
+.pb__per{position:relative;font-weight:700;color:var(--mint);font-size:.95rem}
+.brk{list-style:none;margin:0;padding:0;width:100%;text-align:left;font-size:.93rem}
+.brk li{display:flex;justify-content:space-between;gap:12px;padding:8px 2px;border-bottom:1px dashed rgba(255,255,255,.2)}
+.brk li span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.brk .disc span:last-child{color:var(--lemon)}
+.q__out .btn{width:100%}
+.q__out .note{margin:0;font-size:.84rem;color:#C9D6DE}
+.q__meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:.86rem;color:var(--mint)}
+.q__meta span{padding:4px 10px;border-radius:999px;background:rgba(207,245,231,.12)}
+.mini-est{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-radius:18px;background:var(--slate);color:#fff;font-weight:700}
+.mini-est b{font:900 1.5rem/1 var(--fh)}
+@media(min-width:940px){.mini-est{display:none}}
+
+/* areas */
+.areas{display:grid;gap:26px;align-items:center}
+@media(min-width:860px){.areas{grid-template-columns:1fr 1fr;gap:48px}}
+.map{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:14px}
+.map svg{width:100%;height:auto}
+.map figcaption{font-size:.82rem;color:var(--slate2);padding:6px 8px 2px}
+.sub{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sub li{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:16px 18px;border-radius:22px;background:#fff;box-shadow:0 8px 24px -18px rgba(31,45,61,.35)}
+.sub i{grid-row:span 2;width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0 14%,transparent 22%),conic-gradient(from 200deg,#7FDCD1,#FFE66D,#FFB8DC,#9FC2FF,#7FDCD1)}
+.sub b{font:800 1.12rem/1.2 var(--fh)}
+.sub span{font-size:.92rem;color:var(--slate2)}
+.mapdot{transform-box:fill-box;transform-origin:center;animation:bob2 4s ease-in-out infinite}
+@keyframes bob2{50%{transform:translateY(-4px)}}
+
+/* faq */
+.faqs{display:grid;gap:12px;max-width:860px}
+.faqs details{background:var(--mint2);border-radius:24px;padding:0 20px;transition:background .2s}
+.faqs details[open]{background:var(--mint)}
+.faqs summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:64px;padding-block:14px;cursor:pointer;font:800 1.1rem/1.3 var(--fh)}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary i{flex:none;width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.faqs summary i svg{width:16px;height:16px}
+.faqs details[open] summary i{transform:rotate(45deg)}
+.faqs details p{margin:0;padding:0 0 20px;color:#33424F;max-width:62ch}
+
+/* contact band + footer */
+.band{display:grid;gap:18px;align-items:center;background:var(--lemon);border-radius:var(--r);padding:clamp(22px,4vw,44px);position:relative;overflow:hidden}
+@media(min-width:860px){.band{grid-template-columns:1.3fr 1fr}}
+.band h2{font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.02}
+.band p{margin:10px 0 0}
+.band .ctas{margin:0;justify-content:flex-start}
+.ft{padding-block:48px calc(36px + env(safe-area-inset-bottom));font-size:.94rem;color:var(--slate2)}
+.ft__grid{display:grid;gap:24px}
+@media(min-width:800px){.ft__grid{grid-template-columns:1.4fr 1fr 1fr}}
+.ft b{display:block;color:var(--slate);font-family:var(--fh);font-weight:900;font-size:1.1rem;margin-bottom:4px}
+.ft .demo{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.84rem}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .fog,.sq,.wipebar,.burst{display:none!important}
+  .float,.pb .bub,.mapdot,.hero .rise{animation:none!important}
+  .hero .rise{display:none}
+  .twk{opacity:1}.hero.is-clean .twk{animation:none}
+  .js .check .t{stroke-dashoffset:0}.js .panel.show .check .t{animation:none}
+  .btn,.tab,.pill span,.ex,.stp button,.faqs summary i{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 3.5v13M3.5 10h13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 20 20"><path d="M3.5 10h13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spray" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M9 9h5l1 3v8.5a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 7 20.5V12z"/><path d="M9 9V6h4l3 1.5V9M13 6l-1-2H8"/><path d="M19 4.5h1.5M19 7h2M19 9.5h1.5"/></symbol>
+    <symbol id="i-brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="11" width="18" height="5" rx="2"/><path d="M5 16v3M8 16v4M11 16v3M14 16v4M17 16v3M20 16v2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><circle cx="8" cy="15" r="4.5"/><path d="M11.2 11.8 20 3M16 7l2.5 2.5M18.5 4.5 21 7"/></symbol>
+    <symbol id="i-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="4" y="7" width="16" height="12" rx="2.5"/><path d="M9 7V5h6v2M4 12h16M8 19v1.5M16 19v1.5"/></symbol>
+    <symbol id="i-oven" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><rect x="4" y="4" width="22" height="22" rx="3"/><path d="M4 10h22"/><rect x="8" y="14" width="14" height="8" rx="1.5"/><circle cx="9" cy="7" r=".9" fill="currentColor"/><circle cx="13" cy="7" r=".9" fill="currentColor"/><circle cx="17" cy="7" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-window" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><rect x="5" y="4" width="20" height="22" rx="2"/><path d="M15 4v22M5 15h20M9 8l3-3M18 18l3-3"/></symbol>
+    <symbol id="i-fridge" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><rect x="7" y="3" width="16" height="24" rx="3"/><path d="M7 12h16M11 7v2M11 16v4"/></symbol>
+    <symbol id="i-balcony" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><path d="M3 14h24M4 14v12M26 14v12M3 26h24M9 14v12M15 14v12M21 14v12"/><path d="M8 14V6a7 7 0 0 1 14 0v8"/></symbol>
+    <symbol id="i-dot" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5l3 3 7-7"/></symbol>
+    <symbol id="i-star" viewBox="-10 -10 20 20"><path d="M0-10 2.4-2.4 10 0 2.4 2.4 0 10-2.4 2.4-10 0-2.4-2.4z"/></symbol>
+    <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFF0E2"/><stop offset=".62" stop-color="#F2FFFA"/></linearGradient>
+    <linearGradient id="g-sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ED3C6"/><stop offset="1" stop-color="#2EC4B6"/></linearGradient>
+    <clipPath id="c-glass"><rect x="64" y="44" width="392" height="312" rx="18"/></clipPath>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hd">
+  <div class="in">
+    <a class="logo" href="#top" aria-label="Home"><span class="logo__mark" aria-hidden="true"><b></b><b></b><b></b></span><span data-brand>Sparkle Squad Cleaning</span></a>
+    <nav class="nav" aria-label="Sections"><a href="#services">Services</a><a href="#quote">Quote</a><a href="#areas">Areas</a><a href="#faq">FAQ</a></nav>
+    <a class="btn btn--slate" href="#quote"><span class="lg">Instant quote</span><span class="sm">Quote</span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="in hero__clean" id="clean">
+    <div>
+      <p class="eyebrow"><i aria-hidden="true"></i>Home cleaning · Hobart, TAS</p>
+      <h1 id="h1">Spotless homes, <span class="hl">without lifting a finger.</span></h1>
+      <p class="lead">Regular cleans, deep cleans, end-of-lease and holiday-rental turnovers across Hobart, Sandy Bay, Glenorchy and Kingston — with an estimate you can see before anyone knocks.</p>
+      <div class="ctas"><a class="btn btn--slate" href="#quote">Get an instant quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--mint" href="#services">What's included</a></div>
+      <ul class="mini">
+        <li><svg aria-hidden="true"><use href="#i-dot"/></svg>Our own gear &amp; products</li>
+        <li><svg aria-hidden="true"><use href="#i-dot"/></svg>Same cleaner where we can</li>
+        <li><svg aria-hidden="true"><use href="#i-dot"/></svg>Mon–Sat, 7:30 am – 5:30 pm</li>
+      </ul>
+    </div>
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 440">
+        <ellipse cx="260" cy="420" rx="220" ry="12" fill="#1F2D3D" opacity=".07"/>
+        <rect x="40" y="20" width="440" height="360" rx="36" fill="#fff" stroke="#DDF4EC" stroke-width="3"/>
+        <g clip-path="url(#c-glass)">
+          <rect x="64" y="44" width="392" height="312" fill="url(#g-sky)"/>
+          <circle cx="372" cy="118" r="58" fill="#FFE66D" opacity=".25"/><circle cx="372" cy="118" r="38" fill="#FFE66D"/>
+          <g fill="#fff"><rect x="96" y="92" width="92" height="24" rx="12"/><rect x="118" y="78" width="46" height="26" rx="13"/><rect x="280" y="170" width="70" height="18" rx="9" opacity=".9"/></g>
+          <path d="M64 262c46-44 88-62 132-50s70 40 118 26 90-60 142-42v160H64z" fill="#9FE3D6"/>
+          <path d="M64 290c60-30 108-30 160-12s110 12 160-8 60-12 72-6v92H64z" fill="#6CD2C3"/>
+          <rect x="64" y="300" width="392" height="56" fill="url(#g-sea)"/>
+          <path d="M92 318h40M180 330h60M300 316h50M380 334h40" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          <g transform="translate(206 262)"><path d="M0 44h56l-8 12H8z" fill="#1F2D3D"/><path d="M28 0v42H6z" fill="#fff" stroke="#1F2D3D" stroke-width="2" stroke-linejoin="round"/><path d="M32 8v34h18z" fill="#FFE66D" stroke="#1F2D3D" stroke-width="2" stroke-linejoin="round"/></g>
+          <path d="M110 44 64 120v40L160 44zM190 44l-126 190v30L230 44z" fill="#fff" opacity=".45"/>
+          <path d="M340 356 456 190v-40L300 356z" fill="#fff" opacity=".35"/>
+        </g>
+        <rect x="255" y="44" width="10" height="312" fill="#fff"/><rect x="64" y="195" width="392" height="10" fill="#fff"/>
+        <rect x="64" y="44" width="392" height="312" rx="18" fill="none" stroke="#E6F7F1" stroke-width="3"/>
+        <rect x="22" y="370" width="476" height="24" rx="12" fill="#fff" stroke="#DDF4EC" stroke-width="3"/>
+        <g transform="translate(96 300)"><path d="M-22 44h44l-6 30h-32z" fill="#FFE66D" stroke="#1F2D3D" stroke-width="2.5" stroke-linejoin="round"/><path d="M0 44C-4 20-20 8-30-2M0 44C2 18 12 2 24-8M0 44c-2-18-2-34 2-50" fill="none" stroke="#1F7A5A" stroke-width="3" stroke-linecap="round"/><g fill="#2EC4B6" stroke="#1F7A5A" stroke-width="2"><ellipse cx="-28" cy="-4" rx="12" ry="7" transform="rotate(30 -28 -4)"/><ellipse cx="22" cy="-8" rx="12" ry="7" transform="rotate(-35 22 -8)"/><ellipse cx="2" cy="-6" rx="7" ry="13"/><ellipse cx="-14" cy="18" rx="10" ry="6" transform="rotate(25 -14 18)"/><ellipse cx="14" cy="14" rx="10" ry="6" transform="rotate(-25 14 14)"/></g></g>
+        <g transform="translate(418 312)"><rect x="-17" y="10" width="34" height="58" rx="8" fill="#2EC4B6" stroke="#1F2D3D" stroke-width="2.5"/><rect x="-10" y="26" width="20" height="24" rx="4" fill="#fff" opacity=".85"/><path d="M-7 10V0h16l10 5v5" fill="#fff" stroke="#1F2D3D" stroke-width="2.5" stroke-linejoin="round"/><path d="M9 0 5-6h-12" fill="none" stroke="#1F2D3D" stroke-width="2.5" stroke-linecap="round"/><path d="M-8 30v14" stroke="#2EC4B6" stroke-width="3" stroke-linecap="round"/></g>
+        <g fill="#FFE66D" stroke="#1F2D3D" stroke-width="1.5"><use class="twk" href="#i-star" x="84" y="36" width="34" height="34"/><use class="twk" href="#i-star" x="410" y="236" width="26" height="26" style="animation-delay:.8s"/><use class="twk" href="#i-star" x="224" y="70" width="22" height="22" style="animation-delay:1.5s"/><use class="twk" href="#i-star" x="456" y="30" width="30" height="30" style="animation-delay:.4s"/></g>
+      </svg>
+      <span class="bub float" style="width:22%;aspect-ratio:1;right:-2%;top:6%"></span>
+      <span class="bub float" style="width:12%;aspect-ratio:1;right:18%;top:-3%;animation-delay:-2s"></span>
+      <span class="bub float" style="width:15%;aspect-ratio:1;left:-3%;top:40%;animation-delay:-4s"></span>
+    </div>
+  </div>
+  <span class="bub rise" style="width:46px;height:46px;left:12%;--d:10s;--delay:.2s;--sway:30px"></span>
+  <span class="bub rise" style="width:28px;height:28px;left:38%;--d:8s;--delay:1.6s;--sway:-20px"></span>
+  <span class="bub rise" style="width:60px;height:60px;left:64%;--d:12s;--delay:.8s;--sway:40px"></span>
+  <span class="bub rise" style="width:20px;height:20px;left:82%;--d:7s;--delay:2.4s;--sway:-26px"></span>
+  <span class="bub rise" style="width:36px;height:36px;left:52%;--d:9s;--delay:4s;--sway:18px"></span>
+  <canvas class="fog" id="fog" aria-hidden="true"></canvas>
+  <svg class="sq" id="sq" viewBox="0 0 78 78" aria-hidden="true"><g transform="rotate(-20 39 39)"><rect x="8" y="30" width="62" height="12" rx="6" fill="#1F2D3D"/><rect x="10" y="40" width="58" height="5" rx="2.5" fill="#2EC4B6"/><rect x="34" y="4" width="10" height="28" rx="5" fill="#FFE66D" stroke="#1F2D3D" stroke-width="2"/></g></svg>
+  <div class="burst" id="burst" aria-hidden="true"></div>
+  <div class="wipebar" id="wipebar">
+    <div class="meter" aria-hidden="true"><b id="meterN">0%</b><svg viewBox="0 0 44 44"><circle class="bg" cx="22" cy="22" r="18"/><circle class="fg" id="meterFg" cx="22" cy="22" r="18" pathLength="100" stroke-dasharray="0 100"/></svg></div>
+    <p class="wipetxt" aria-hidden="true"><b id="wipeT">Okay — maybe one finger.</b><span id="wipeS">Wipe the steamy glass · 0% sparkling</span></p>
+    <button type="button" class="btn btn--aqua" id="skipBtn"><span class="long">Skip — clean it for me</span><span class="short-c">Clean it for me</span></button>
+    <button type="button" class="btn btn--ghost" id="againBtn" hidden>Steam it up again</button>
+  </div>
+  <p class="sr" id="wipeLive" aria-live="polite"></p>
+</section>
+
+<section class="sec foam" id="services" aria-labelledby="sv-h">
+  <div class="in">
+    <div class="sec__head"><p class="eyebrow"><i aria-hidden="true"></i>Services</p><h2 id="sv-h">Four kinds of clean, each with a checklist.</h2><p>Pick the one that fits. Every visit follows a written checklist, so you know exactly what's done before we leave.</p></div>
+    <div class="tabs" role="tablist" aria-label="Cleaning services">
+      <button class="tab" role="tab" id="t-regular" aria-controls="p-regular" aria-selected="true"><span class="ic"><svg aria-hidden="true"><use href="#i-spray"/></svg></span>Regular clean</button>
+      <button class="tab" role="tab" id="t-deep" aria-controls="p-deep" aria-selected="false" tabindex="-1"><span class="ic"><svg aria-hidden="true"><use href="#i-brush"/></svg></span>Deep clean</button>
+      <button class="tab" role="tab" id="t-lease" aria-controls="p-lease" aria-selected="false" tabindex="-1"><span class="ic"><svg aria-hidden="true"><use href="#i-key"/></svg></span>End-of-lease</button>
+      <button class="tab" role="tab" id="t-holiday" aria-controls="p-holiday" aria-selected="false" tabindex="-1"><span class="ic"><svg aria-hidden="true"><use href="#i-case"/></svg></span>Holiday-rental turnover</button>
+    </div>
+    <div class="panel" role="tabpanel" id="p-regular" aria-labelledby="t-regular" tabindex="0">
+      <div><h3>Regular clean</h3><p>Weekly, fortnightly or monthly visits that keep the whole house ticking over. We send the same cleaner wherever we can, and they learn how you like things.</p>
+        <dl class="facts"><div><dt>Time on site</dt><dd>2–3 hrs</dd></div><div><dt>From</dt><dd>$119 <small style="font:500 .78rem var(--fb)">sample</small></dd></div></dl>
+        <a class="btn btn--slate" href="#quote" data-svc="regular">Price a regular clean <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div><p class="checkhead">What's included <small>every visit</small></p><ul class="check">
+        <li style="--i:0"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Kitchen benches, splashback and cooktop wiped down</li>
+        <li style="--i:1"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Sinks, taps and appliance fronts polished</li>
+        <li style="--i:2"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Showers, toilets, vanities and mirrors cleaned</li>
+        <li style="--i:3"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Floors vacuumed and mopped, rugs vacuumed</li>
+        <li style="--i:4"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Dusting of reachable surfaces, sills and skirting</li>
+        <li style="--i:5"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Bins emptied, beds made (linen change on request)</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-deep" aria-labelledby="t-deep" tabindex="0" hidden>
+      <div><h3>Deep clean</h3><p>A top-to-bottom reset — once or twice a year, after renovations, or before the in-laws arrive for a long weekend.</p>
+        <dl class="facts"><div><dt>Time on site</dt><dd>4–7 hrs</dd></div><div><dt>From</dt><dd>$249 <small style="font:500 .78rem var(--fb)">sample</small></dd></div></dl>
+        <a class="btn btn--slate" href="#quote" data-svc="deep">Price a deep clean <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div><p class="checkhead">What's included <small>on top of a regular clean</small></p><ul class="check">
+        <li style="--i:0"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Skirting boards, doors, handles and light switches</li>
+        <li style="--i:1"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Inside empty cupboards and drawers</li>
+        <li style="--i:2"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Rangehood filters degreased</li>
+        <li style="--i:3"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Shower grout scrubbed, glass descaled</li>
+        <li style="--i:4"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Window sills and tracks vacuumed and wiped</li>
+        <li style="--i:5"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Cobwebs cleared from ceilings and corners</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-lease" aria-labelledby="t-lease" tabindex="0" hidden>
+      <div><h3>End-of-lease</h3><p>Moving out? We work through the kind of checklist property managers use for exit inspections. If something we cleaned is flagged, tell us within three days and we'll come back to fix it.</p>
+        <dl class="facts"><div><dt>Time on site</dt><dd>5–9 hrs</dd></div><div><dt>From</dt><dd>$329 <small style="font:500 .78rem var(--fb)">sample</small></dd></div></dl>
+        <a class="btn btn--slate" href="#quote" data-svc="lease">Price an end-of-lease clean <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div><p class="checkhead">What's included <small>empty home</small></p><ul class="check">
+        <li style="--i:0"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Oven, rangehood and cooktop degreased</li>
+        <li style="--i:1"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Inside every cupboard, wardrobe and drawer</li>
+        <li style="--i:2"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Walls spot-cleaned, marks lifted where they'll lift</li>
+        <li style="--i:3"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Windows inside, sills and tracks</li>
+        <li style="--i:4"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Bathrooms descaled, exhaust fans dusted</li>
+        <li style="--i:5"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Garage and outdoor areas swept</li></ul></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p-holiday" aria-labelledby="t-holiday" tabindex="0" hidden>
+      <div><h3>Holiday-rental turnover</h3><p>Between guests at your short-stay place, timed around check-out and check-in. You get a short photo report after every turnover.</p>
+        <dl class="facts"><div><dt>Time on site</dt><dd>2–3 hrs</dd></div><div><dt>From</dt><dd>$139 <small style="font:500 .78rem var(--fb)">sample</small></dd></div></dl>
+        <a class="btn btn--slate" href="#quote" data-svc="holiday">Price a turnover <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      <div><p class="checkhead">What's included <small>every turnover</small></p><ul class="check">
+        <li style="--i:0"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Beds stripped and remade with your fresh linen</li>
+        <li style="--i:1"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Towels swapped, used linen bagged or washed</li>
+        <li style="--i:2"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Kitchen and bathrooms cleaned to guest-ready</li>
+        <li style="--i:3"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Restock of supplies you leave for us</li>
+        <li style="--i:4"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Quick check for breakages, with photos</li>
+        <li style="--i:5"><svg aria-hidden="true" viewBox="0 0 26 26"><circle class="c" cx="13" cy="13" r="12"/><path class="t" d="M8 13.5l3.4 3.4L18.4 9.6"/></svg>Floors, bins and outdoor furniture wiped</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="quote" aria-labelledby="q-h">
+  <div class="in">
+    <div class="sec__head"><p class="eyebrow"><i aria-hidden="true"></i>Instant quote</p><h2 id="q-h">What would your place cost?</h2><p>Tap through the options. The estimate updates as you go — no email address needed.</p></div>
+    <div class="q">
+      <form class="q__in" id="qform" novalidate>
+        <div class="mini-est" aria-hidden="true"><span id="miniLbl">Estimate per visit</span><b id="miniN">$0</b></div>
+        <fieldset class="grp"><legend>Service</legend><div class="pills" id="svc">
+          <label class="pill"><input type="radio" name="svc" value="regular" checked><span>Regular</span></label>
+          <label class="pill"><input type="radio" name="svc" value="deep"><span>Deep clean</span></label>
+          <label class="pill"><input type="radio" name="svc" value="lease"><span>End-of-lease</span></label>
+          <label class="pill"><input type="radio" name="svc" value="holiday"><span>Holiday turnover</span></label>
+        </div></fieldset>
+        <div class="steps">
+          <div class="stp"><p class="lbl" id="bedL">Bedrooms</p><div class="stp__row"><button type="button" data-k="bed" data-d="-1" aria-label="Fewer bedrooms"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output id="bed" aria-labelledby="bedL">3</output><button type="button" data-k="bed" data-d="1" aria-label="More bedrooms"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></div></div>
+          <div class="stp"><p class="lbl" id="bathL">Bathrooms</p><div class="stp__row"><button type="button" data-k="bath" data-d="-1" aria-label="Fewer bathrooms"><svg aria-hidden="true"><use href="#i-minus"/></svg></button><output id="bath" aria-labelledby="bathL">2</output><button type="button" data-k="bath" data-d="1" aria-label="More bathrooms"><svg aria-hidden="true"><use href="#i-plus"/></svg></button></div></div>
+        </div>
+        <div class="grp" role="group" aria-labelledby="exL"><p class="lbl" id="exL">Extras <small>tap to add</small></p><div class="extras">
+          <button type="button" class="ex" data-ex="oven" aria-pressed="false"><svg aria-hidden="true"><use href="#i-oven"/></svg>Oven<small>+$59</small></button>
+          <button type="button" class="ex" data-ex="windows" aria-pressed="false"><svg aria-hidden="true"><use href="#i-window"/></svg>Windows<small>+$65</small></button>
+          <button type="button" class="ex" data-ex="fridge" aria-pressed="false"><svg aria-hidden="true"><use href="#i-fridge"/></svg>Fridge<small>+$39</small></button>
+          <button type="button" class="ex" data-ex="balcony" aria-pressed="false"><svg aria-hidden="true"><use href="#i-balcony"/></svg>Balcony<small>+$35</small></button>
+        </div></div>
+        <fieldset class="grp"><legend>How often? <small id="freqNote">regular discounts</small></legend><div class="pills" id="freq">
+          <label class="pill"><input type="radio" name="freq" value="0"><span>One-off</span></label>
+          <label class="pill"><input type="radio" name="freq" value="5"><span>Monthly <em>−5%</em></span></label>
+          <label class="pill"><input type="radio" name="freq" value="10" checked><span>Fortnightly <em>−10%</em></span></label>
+          <label class="pill"><input type="radio" name="freq" value="15"><span>Weekly <em>−15%</em></span></label>
+        </div></fieldset>
+      </form>
+      <aside class="q__out" aria-labelledby="est-h">
+        <h3 id="est-h" class="sr">Your estimate</h3>
+        <div class="pb"><span class="bub" aria-hidden="true"></span><div class="pb__n" aria-hidden="true"><sup>$</sup><span id="price">0</span></div><div class="pb__per" id="per">per visit</div></div>
+        <p class="sr" id="priceLive" aria-live="polite"></p>
+        <div class="q__meta"><span id="hrs">About 3 hrs</span><span id="team">1 cleaner</span></div>
+        <ul class="brk" id="brk"></ul>
+        <button type="button" class="btn btn--aqua" id="reqBtn">Request this quote <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="note">Illustrative estimate using sample prices. We confirm the real price after a quick video walkthrough or a few photos.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec foam" id="areas" aria-labelledby="ar-h">
+  <div class="in areas">
+    <div>
+      <div class="sec__head"><p class="eyebrow"><i aria-hidden="true"></i>Service areas</p><h2 id="ar-h">Along the western shore of the Derwent.</h2><p>Four home bases, and most suburbs in between. Outside these? Ask — Lindisfarne and Bellerive are sometimes on the list.</p></div>
+      <ul class="sub">
+        <li><i aria-hidden="true"></i><b>Glenorchy</b><span>Plus Moonah and Montrose · Mon, Wed, Fri</span></li>
+        <li><i aria-hidden="true"></i><b>Hobart</b><span>CBD, North &amp; West Hobart, Battery Point · Mon–Sat</span></li>
+        <li><i aria-hidden="true"></i><b>Sandy Bay</b><span>Plus Dynnyrne and Mount Nelson · Tue, Thu, Sat</span></li>
+        <li><i aria-hidden="true"></i><b>Kingston</b><span>Plus Blackmans Bay · Tue, Thu</span></li>
+      </ul>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 360 400" aria-hidden="true">
+        <rect width="360" height="400" rx="20" fill="#F4FCF9"/>
+        <path d="M172 0C186 50 205 102 230 150C255 198 282 245 310 290C324 312 340 330 360 352V0z" fill="#E2F6EF"/>
+        <path d="M120 0C135 55 148 105 170 150C192 195 215 245 240 290C262 330 282 368 300 400H360V352C340 330 324 312 310 290C282 245 255 198 230 150C205 102 186 50 172 0z" fill="#9FE3D6"/>
+        <path d="M146 30c10 36 22 70 40 104M262 300c18 30 38 56 60 82" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10" fill="none"/>
+        <text x="203" y="168" font-family="DM Sans, sans-serif" font-size="12" font-style="italic" font-weight="500" fill="#0B7268" transform="rotate(61 203 168)">River Derwent</text>
+        <g font-family="Nunito, sans-serif" font-weight="900" font-size="15" fill="#1F2D3D" text-anchor="end">
+          <g class="mapdot"><circle cx="104" cy="66" r="12" fill="#2EC4B6" stroke="#fff" stroke-width="4"/></g><text x="86" y="71">Glenorchy</text>
+          <g class="mapdot" style="animation-delay:-1s"><circle cx="146" cy="170" r="15" fill="#1F2D3D" stroke="#fff" stroke-width="4"/></g><text x="124" y="175">Hobart</text>
+          <g class="mapdot" style="animation-delay:-2s"><circle cx="180" cy="238" r="12" fill="#2EC4B6" stroke="#fff" stroke-width="4"/></g><text x="162" y="243">Sandy Bay</text>
+          <g class="mapdot" style="animation-delay:-3s"><circle cx="228" cy="344" r="12" fill="#2EC4B6" stroke="#fff" stroke-width="4"/></g><text x="210" y="349">Kingston</text>
+        </g>
+        <g transform="translate(318 44)"><circle r="18" fill="#fff" stroke="#D5EEE6" stroke-width="2"/><path d="M0-12 5 3H-5z" fill="#1F2D3D"/><text y="14" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="9" font-weight="700" fill="#1F2D3D">N</text></g>
+      </svg>
+      <figcaption>Simplified sketch, not to scale.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="in">
+    <div class="sec__head"><p class="eyebrow"><i aria-hidden="true"></i>FAQ</p><h2 id="faq-h">Good questions, straight answers.</h2></div>
+    <div class="faqs">
+      <details><summary>Do I need to be home? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>No. Most clients leave a key in a lockbox or give us a door code. We text when we arrive and again when we lock up.</p></details>
+      <details><summary>Do you bring your own products and equipment? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>Yes — vacuum, mops, microfibre cloths and low-fragrance, plant-based products. If you'd rather we used yours, just leave them out and say so.</p></details>
+      <details><summary>What if something's missed? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>Tell us within 48 hours and we'll come back and redo that spot at no charge.</p></details>
+      <details><summary>Can I skip or pause a regular clean? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>Yes. Give us 48 hours' notice and there's no fee — handy for holidays or when the in-laws are visiting.</p></details>
+      <details><summary>Is the online price final? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>It's an illustrative estimate. We confirm the actual price after a short video walkthrough or a few photos, before any work is booked.</p></details>
+      <details><summary>Do you clean carpets? <i aria-hidden="true"><svg><use href="#i-plus"/></svg></i></summary><p>We vacuum them every visit. Steam cleaning needs different equipment, so we quote it separately.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="in" aria-labelledby="band-h" style="padding-bottom:clamp(40px,6vw,80px)">
+  <div class="band">
+    <div><h2 id="band-h">Rather talk to a person?</h2><p>Call or email and we'll sort out a quick walkthrough. We answer between cleans, Monday to Saturday.</p></div>
+    <div class="ctas"><a class="btn btn--slate" href="tel:0355502718">(03) 5550 2718</a><a class="btn btn--ghost" href="mailto:hello@example.com">hello@example.com</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="in">
+    <div class="ft__grid">
+      <div><b data-brand>Sparkle Squad Cleaning</b>Home cleaning for Hobart, Sandy Bay, Glenorchy and Kingston, TAS.</div>
+      <div><b>Hours</b>Mon–Sat, 7:30 am – 5:30 pm<br>Closed Sundays and public holidays</div>
+      <div><b>Contact</b><a href="tel:0355502718">(03) 5550 2718</a><br><a href="mailto:hello@example.com">hello@example.com</a></div>
+    </div>
+    <p class="demo">A fictional business made as a design demo. Prices are samples and nothing can be booked.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.documentElement.classList.add("js");
+function toast(m){if(window.DemoKit)DemoKit.toast(m)}
+
+/* ================= fog wipe ================= */
+var hero=$("#top"),cv=$("#fog"),ctx=cv.getContext("2d"),sq=$("#sq"),W=0,H=0,dpr=1,CELL=22,gw=0,gh=0,grid=null,done=0,state="dirty",brush=null,R=36,drips=[],dripRaf=0,lastP=null,dist=0,auto=false;
+function seed(n){return function(){n=(n*16807)%2147483647;return(n-1)/2147483646}}
+function makeBrush(){
+  var b=document.createElement("canvas"),s=Math.ceil(R*2*dpr);b.width=b.height=s;var g=b.getContext("2d"),gr=g.createRadialGradient(s/2,s/2,0,s/2,s/2,s/2);
+  gr.addColorStop(0,"rgba(0,0,0,1)");gr.addColorStop(.62,"rgba(0,0,0,.95)");gr.addColorStop(1,"rgba(0,0,0,0)");g.fillStyle=gr;g.fillRect(0,0,s,s);brush=b;
+}
+function drawFog(){
+  var r=hero.getBoundingClientRect();W=Math.round(r.width);H=Math.round(r.height);dpr=Math.min(window.devicePixelRatio||1,2);
+  cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);R=W<600?30:44;makeBrush();
+  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.globalCompositeOperation="source-over";ctx.clearRect(0,0,W,H);
+  var rnd=seed(20260926),i,g=ctx.createLinearGradient(0,0,W*.4,H);
+  g.addColorStop(0,"rgba(230,241,238,.9)");g.addColorStop(1,"rgba(216,231,227,.94)");ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  for(i=0;i<46;i++){var x=rnd()*W,y=rnd()*H,rr=40+rnd()*170,rg=ctx.createRadialGradient(x,y,0,x,y,rr),light=rnd()>.45;
+    rg.addColorStop(0,light?"rgba(255,255,255,.34)":"rgba(186,206,201,.26)");rg.addColorStop(1,"rgba(255,255,255,0)");ctx.fillStyle=rg;ctx.fillRect(x-rr,y-rr,rr*2,rr*2)}
+  ctx.lineCap="round";
+  for(i=0;i<4;i++){ctx.strokeStyle="rgba(150,160,146,"+(.03+rnd()*.03)+")";ctx.lineWidth=26+rnd()*20;ctx.beginPath();var cx=rnd()*W,cy=rnd()*H,ra=30+rnd()*80,a0=rnd()*6;ctx.arc(cx,cy,ra,a0,a0+1.2+rnd()*1.6);ctx.stroke()}
+  var n=Math.round(W*H/2600);
+  for(i=0;i<n;i++){var dx=rnd()*W,dy=rnd()*H,dr=.8+Math.pow(rnd(),2.2)*5.2;
+    ctx.fillStyle="rgba(120,146,142,.16)";ctx.beginPath();ctx.arc(dx+dr*.25,dy+dr*.3,dr,0,6.283);ctx.fill();
+    ctx.fillStyle="rgba(250,255,254,.55)";ctx.beginPath();ctx.arc(dx,dy,dr*.86,0,6.283);ctx.fill();
+    if(dr>2.2){ctx.fillStyle="rgba(255,255,255,.95)";ctx.beginPath();ctx.arc(dx-dr*.32,dy-dr*.34,dr*.26,0,6.283);ctx.fill()}}
+  for(i=0;i<W*H/220;i++){ctx.fillStyle=rnd()>.5?"rgba(255,255,255,.3)":"rgba(110,125,120,.07)";ctx.fillRect(rnd()*W,rnd()*H,1,1)}
+  // finger-written hint
+  ctx.save();ctx.globalCompositeOperation="destination-out";
+  var ar=$(".art").getBoundingClientRect(),fx=ar.left-r.left+ar.width*.5,fy=ar.top-r.top+ar.height*.34,fs=W<600?46:66;
+  ctx.translate(fx,fy);ctx.rotate(-.07);ctx.font="900 "+fs+"px Nunito, 'DM Sans', sans-serif";ctx.textAlign="center";ctx.globalCompositeOperation="source-over";ctx.lineJoin="round";ctx.lineWidth=5;ctx.strokeStyle="rgba(84,108,104,.3)";ctx.strokeText("wipe me",0,0);ctx.globalCompositeOperation="destination-out";ctx.fillStyle="rgba(0,0,0,.84)";ctx.strokeStyle="rgba(0,0,0,.84)";ctx.fillText("wipe me",0,0);
+  [[-fs*1.05,fs*.1,16],[-fs*.18,fs*.12,28],[fs*1.02,fs*.1,20]].forEach(function(p){ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(p[0],p[1]);ctx.lineTo(p[0]+.8,p[1]+p[2]);ctx.stroke();ctx.beginPath();ctx.arc(p[0]+.8,p[1]+p[2]+2,3,0,6.283);ctx.fill()});
+  ctx.restore();
+  gw=Math.ceil(W/CELL);gh=Math.ceil(H/CELL);grid=new Uint8Array(gw*gh);done=0;
+  ctx.globalCompositeOperation="destination-out";
+}
+function markRect(x,y,w,h){for(var gy=Math.max(0,Math.floor(y/CELL));gy<Math.min(gh,Math.ceil((y+h)/CELL));gy++)for(var gx=Math.max(0,Math.floor(x/CELL));gx<Math.min(gw,Math.ceil((x+w)/CELL));gx++){var k=gy*gw+gx;if(!grid[k]){grid[k]=1;done++}}}
+function mark(x,y,rr){var r2=rr*rr;for(var gy=Math.max(0,Math.floor((y-rr)/CELL));gy<=Math.min(gh-1,Math.floor((y+rr)/CELL));gy++)for(var gx=Math.max(0,Math.floor((x-rr)/CELL));gx<=Math.min(gw-1,Math.floor((x+rr)/CELL));gx++){var cx=gx*CELL+CELL/2,cy=gy*CELL+CELL/2;if((cx-x)*(cx-x)+(cy-y)*(cy-y)<=r2){var k=gy*gw+gx;if(!grid[k]){grid[k]=1;done++}}}}
+function dab(x,y,s){var rr=R*(s||1);ctx.drawImage(brush,x-rr,y-rr,rr*2,rr*2);mark(x,y,rr*.8)}
+function stroke(a,b,s){var dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy),st=Math.max(1,R*(s||1)*.3),n=Math.ceil(d/st);for(var i=1;i<=n;i++)dab(a.x+dx*i/n,a.y+dy*i/n,s);return d}
+function pct(){return Math.round(done/(gw*gh)*100)}
+var lastMilestone=0;
+function progress(){
+  var p=Math.min(100,pct());$("#meterFg").setAttribute("stroke-dasharray",p+" 100");$("#meterN").textContent=p+"%";
+  $("#wipeS").textContent=p<50?"Wipe the steamy glass · "+p+"% sparkling":"Nearly there · "+p+"% sparkling";
+  var m=p>=25&&lastMilestone<25?25:0;if(m){lastMilestone=25;$("#wipeLive").textContent="25% sparkling."}
+  if(p>=52&&state==="dirty")finish(true);
+}
+function addDrip(x,y){drips.push({x:x,y:y,v:.6+Math.random()*.9,len:40+Math.random()*110,t:0,w:2.2+Math.random()*2.4});if(!dripRaf)dripRaf=requestAnimationFrame(runDrips)}
+function runDrips(){
+  dripRaf=0;if(state!=="dirty"){drips=[];return}
+  ctx.strokeStyle="rgba(0,0,0,.9)";ctx.lineCap="round";
+  drips=drips.filter(function(d){var ny=d.y+d.v;ctx.lineWidth=d.w;ctx.beginPath();ctx.moveTo(d.x,d.y);ctx.lineTo(d.x+(Math.random()-.5)*.6,ny);ctx.stroke();d.y=ny;d.t+=d.v;d.v*=.994;return d.t<d.len});
+  if(drips.length)dripRaf=requestAnimationFrame(runDrips);
+}
+function local(e){var r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}}
+cv.addEventListener("pointerdown",function(e){if(state!=="dirty"||auto)return;lastP=local(e);dab(lastP.x,lastP.y);progress();try{cv.setPointerCapture(e.pointerId)}catch(err){}});
+cv.addEventListener("pointermove",function(e){
+  if(state!=="dirty"||auto)return;
+  var p=local(e);
+  if(e.pointerType==="mouse"&&!lastP){lastP=p;return}
+  if(!lastP){lastP=p;return}
+  var d=stroke(lastP,p);dist+=d;if(dist>150){dist=0;addDrip(p.x+(Math.random()-.5)*R,p.y+R*.72)}
+  lastP=p;progress();
+});
+["pointerup","pointercancel"].forEach(function(t){cv.addEventListener(t,function(e){if(e.pointerType!=="mouse")lastP=null})});
+cv.addEventListener("pointerleave",function(){lastP=null});
+function sparkle(){
+  var b=$("#burst"),h="";for(var i=0;i<14;i++){var a=i/14*6.283,rr=18+Math.random()*30;h+='<span style="left:'+(50+Math.cos(a)*rr).toFixed(1)+'%;top:'+(45+Math.sin(a)*rr*.8).toFixed(1)+'%;animation-delay:'+(Math.random()*.35).toFixed(2)+'s;transform:scale(0)"></span>'}
+  b.innerHTML=h;setTimeout(function(){b.innerHTML=""},1500);
+}
+function finish(anim){
+  if(state==="clean")return;state="clean";auto=false;sq.classList.remove("on");
+  hero.classList.add("is-clean");cv.classList.add("gone");
+  $("#meterFg").setAttribute("stroke-dasharray","100 100");$("#meterN").textContent="✓";
+  $("#wipeT").textContent="Sparkling. That's the idea.";$("#wipeS").textContent="Now let's price your place — see the quote below.";
+  $("#wipeLive").textContent="The glass is clean.";
+  $("#skipBtn").hidden=true;$("#againBtn").hidden=false;
+  if(anim)sparkle();
+}
+function steamAgain(){
+  state="dirty";lastMilestone=0;hero.classList.remove("is-clean");drawFog();cv.classList.remove("gone");
+  $("#wipeT").textContent="Okay — maybe one finger.";progress();$("#skipBtn").hidden=false;$("#againBtn").hidden=true;$("#skipBtn").focus();
+}
+function autoWipe(){
+  if(state!=="dirty"||auto)return;auto=true;
+  var rows=Math.ceil(H/(R*2.1))+1,pts=[],i;
+  for(i=0;i<rows;i++){var y=(i+.5)*(H/rows);pts.push(i%2?{x:W+20,y:y}:{x:-20,y:y});pts.push(i%2?{x:-20,y:y}:{x:W+20,y:y})}
+  var seg=[],total=0;for(i=1;i<pts.length;i++){var d=Math.hypot(pts[i].x-pts[i-1].x,pts[i].y-pts[i-1].y);seg.push(d);total+=d}
+  var t0=performance.now(),dur=Math.min(2600,900+rows*260),prev=pts[0];sq.classList.add("on");
+  (function step(t){
+    if(state!=="dirty"){auto=false;return}
+    var p=Math.min(1,(t-t0)/dur),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2,target=e*total,acc=0,k=0;
+    while(k<seg.length-1&&acc+seg[k]<target){acc+=seg[k];k++}
+    var f=seg[k]?(target-acc)/seg[k]:1,a=pts[k],b=pts[k+1],cur={x:a.x+(b.x-a.x)*f,y:a.y+(b.y-a.y)*f};
+    stroke(prev,cur,1.25);prev=cur;sq.style.transform="translate("+cur.x.toFixed(1)+"px,"+cur.y.toFixed(1)+"px)";
+    $("#meterFg").setAttribute("stroke-dasharray",Math.round(p*100)+" 100");$("#meterN").textContent=Math.round(p*100)+"%";
+    if(p<1)requestAnimationFrame(step);else finish(true);
+  })(t0);
+}
+$("#skipBtn").addEventListener("click",autoWipe);
+$("#againBtn").addEventListener("click",steamAgain);
+$("#clean").addEventListener("focusin",function(){if(state==="dirty")finish(false)});
+if(RM){state="clean";hero.classList.add("is-clean");cv.hidden=true}
+else{
+  drawFog();progress();
+  if(window.ResizeObserver)new ResizeObserver(function(){if(state!=="dirty"||auto)return;var r=hero.getBoundingClientRect(),dw=Math.abs(r.width-W),dh=Math.abs(r.height-H);if(dw>2||(dh>2&&pct()<10)||dh>60){drawFog();progress()}}).observe(hero);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(state==="dirty"&&done<=grid.length*.2&&!lastP){drawFog();progress()}});
+}
+
+/* ================= service tabs ================= */
+var tabs=$$(".tab");
+function selTab(t,focus){
+  tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;var p=$("#"+x.getAttribute("aria-controls"));p.hidden=!on;p.classList.toggle("show",false)});
+  var p=$("#"+t.getAttribute("aria-controls"));void p.offsetWidth;p.classList.add("show");
+  if(focus)t.focus();t.scrollIntoView({block:"nearest",inline:"nearest",behavior:RM?"auto":"smooth"});
+}
+tabs.forEach(function(t,i){
+  t.addEventListener("click",function(){selTab(t)});
+  t.addEventListener("keydown",function(e){var k=e.key,j=-1;if(k==="ArrowRight")j=(i+1)%tabs.length;else if(k==="ArrowLeft")j=(i-1+tabs.length)%tabs.length;else if(k==="Home")j=0;else if(k==="End")j=tabs.length-1;if(j>-1){e.preventDefault();selTab(tabs[j],true)}});
+});
+if(window.IntersectionObserver){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var p=$(".panel:not([hidden])");if(p)p.classList.add("show");io.disconnect()}})},{threshold:.25});io.observe($("#services"))}else $("#p-regular").classList.add("show");
+$$("[data-svc]").forEach(function(a){a.addEventListener("click",function(){var v=a.getAttribute("data-svc");var r=$('#svc input[value="'+v+'"]');if(r){r.checked=true;calc()}})});
+
+/* ================= quote ================= */
+var SV={regular:{n:"Regular clean",b:119,bed:22,bath:28,h:2,rep:1},deep:{n:"Deep clean",b:249,bed:45,bath:55,h:4,rep:0},lease:{n:"End-of-lease clean",b:329,bed:65,bath:60,h:5,rep:0},holiday:{n:"Holiday-rental turnover",b:139,bed:25,bath:30,h:2,rep:1}};
+var EX={oven:["Oven",59,1],windows:["Windows (inside)",65,1],fridge:["Fridge",39,.5],balcony:["Balcony",35,.5]};
+var q={bed:3,bath:2},LIM={bed:[1,6],bath:[1,4]},shown=0,raf=0,liveT=0;
+function fmt(n){return"$"+Math.round(n).toLocaleString("en-AU")}
+function calc(){
+  var sv=$('#svc input:checked').value,S=SV[sv],fr=$$('#freq input');
+  fr.forEach(function(r){r.disabled=!S.rep&&r.value!=="0"});
+  if(!S.rep)$('#freq input[value="0"]').checked=true;
+  $("#freqNote").textContent=S.rep?"regular discounts":"one-off service only";
+  var disc=S.rep?+$('#freq input:checked').value:0;
+  var base=S.b+(q.bed-1)*S.bed+(q.bath-1)*S.bath,hrs=S.h+(q.bed-1)*.5+(q.bath-1)*.5,lines=[[S.n+", "+q.bed+" bed / "+q.bath+" bath",fmt(base)]],ex=0;
+  $$(".ex").forEach(function(b){if(b.getAttribute("aria-pressed")==="true"){var E=EX[b.getAttribute("data-ex")];ex+=E[1];hrs+=E[2];lines.push([E[0],"+"+fmt(E[1])])}});
+  var sub=base+ex,off=sub*disc/100,tot=sub-off;
+  if(disc)lines.push(["Regular-visit discount −"+disc+"%","−"+fmt(off)]);
+  $("#brk").innerHTML=lines.map(function(l,i){return'<li'+(i===lines.length-1&&disc?' class="disc"':'')+'><span>'+l[0]+'</span><span>'+l[1]+'</span></li>'}).join("");
+  var team=hrs>5?2:1;$("#hrs").textContent="About "+(Math.round(hrs/team*2)/2)+" hrs on site";$("#team").textContent=team+(team>1?" cleaners":" cleaner");
+  var per=S.rep&&disc?"per visit":"one-off";$("#per").textContent=per;$("#miniLbl").textContent="Estimate "+per;$("#miniN").textContent=fmt(tot);
+  $$(".stp button").forEach(function(b){var k=b.getAttribute("data-k"),d=+b.getAttribute("data-d");b.disabled=d<0?q[k]<=LIM[k][0]:q[k]>=LIM[k][1]});
+  $("#bed").textContent=q.bed;$("#bath").textContent=q.bath;
+  countTo(Math.round(tot));
+  clearTimeout(liveT);liveT=setTimeout(function(){$("#priceLive").textContent="Estimate "+fmt(tot)+" "+per+"."},500);
+  calc.total=tot;calc.per=per;calc.sv=S.n;
+}
+function countTo(v){
+  var el=$("#price");cancelAnimationFrame(raf);
+  if(RM){shown=v;el.textContent=v.toLocaleString("en-AU");return}
+  var from=shown,t0=performance.now();
+  (function tick(t){var p=Math.min(1,(t-t0)/650),e=1-Math.pow(1-p,3);shown=Math.round(from+(v-from)*e);el.textContent=shown.toLocaleString("en-AU");if(p<1)raf=requestAnimationFrame(tick)})(t0);
+}
+$("#qform").addEventListener("change",calc);
+$("#qform").addEventListener("submit",function(e){e.preventDefault()});
+$$(".stp button").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-k"),v=q[k]+(+b.getAttribute("data-d"));if(v<LIM[k][0]||v>LIM[k][1])return;q[k]=v;calc()})});
+$$(".ex").forEach(function(b){b.addEventListener("click",function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true");calc()})});
+$("#reqBtn").addEventListener("click",function(){toast("Demo only — no quote request was sent. "+calc.sv+", "+fmt(calc.total)+" "+calc.per+" (illustrative).")});
+calc();
+})();
+</script>
+</body>
+</html>

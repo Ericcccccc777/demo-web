@@ -1,0 +1,8 @@
+{
+  "id": "064",
+  "tech": ["CSS Grid", "SVG", "Pointer Events", "Drag & drop", "Keyboard shortcuts", "Form logic", "IntersectionObserver"],
+  "features": ["game", "booking"],
+  "interaction": "Drag or tap move forward, turn left, turn right and repeat ×2 blocks into a program (keys F/L/R/P also work), press Run and watch the robot step across a 6×6 grid to the star — three levels with walls and block limits, bumps when it hits a wall, confetti when it arrives.",
+  "fonts": ["Mali", "Space Mono"],
+  "notes": "Repeat blocks can't be nested (level 3 needs two of them). Confetti and robot easing are off under reduced motion. Programs, camp dates and prices are samples; the enrol form ends in a demo toast."
+}

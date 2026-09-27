@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="075">
+<meta name="demo:brand" content="Ctrl Alt Support">
+<meta name="demo:badge" content="bottom-right">
+<title>Ctrl Alt Support — IT support for small offices, Newcastle</title>
+<meta name="description" content="A fictional Newcastle IT support business for small offices, presented as a command-line terminal with a switch to a normal page.">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--bg:#0C0C0C;--fg:#33FF66;--acc:#FFB000;--grey:#6B6B6B;--dim:#9b9b9b;--glow:rgba(51,255,102,.4);--aglow:rgba(255,176,0,.38);--mono:"Fira Code",ui-monospace,Menlo,Consolas,monospace;--vt:"VT323",ui-monospace,Menlo,monospace;--dock:120px;color-scheme:dark}
+html[data-theme=amber]{--fg:#FFB000;--acc:#33FF66;--glow:rgba(255,176,0,.4);--aglow:rgba(51,255,102,.36)}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font:400 15px/1.6 var(--mono);font-variant-ligatures:none}
+::selection{background:var(--fg);color:var(--bg)}
+a{color:var(--acc)}
+p{margin:0}
+[hidden]{display:none!important}
+button{font:inherit}
+:focus-visible{outline:2px dashed var(--acc);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.dim{color:var(--dim)}
+.acc{color:var(--acc)}
+.warn{color:var(--acc)}
+
+/* CRT glass: scanlines, vignette and a slow refresh band (all decorative) */
+.crt{position:fixed;inset:0;z-index:40;pointer-events:none;background:radial-gradient(ellipse 120% 100% at 50% 45%,transparent 60%,rgba(0,0,0,.5) 100%)}
+.crt::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(0,0,0,.26) 0 1px,transparent 1px 3px);opacity:.6}
+.crt::after{content:"";position:absolute;left:0;right:0;top:-24%;height:24%;background:linear-gradient(180deg,transparent,rgba(51,255,102,.035),transparent);animation:roll 10s linear infinite}
+@keyframes roll{to{transform:translateY(520%)}}
+
+/* top status bar */
+.bar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;padding:6px max(18px,env(safe-area-inset-right)) 6px max(18px,env(safe-area-inset-left));background:rgba(12,12,12,.95);border-bottom:1px solid #242424;font-size:13px;color:var(--dim)}
+.bar-l{display:flex;align-items:center;gap:12px;min-width:0}
+.tag{flex:none;padding:1px 7px;background:var(--fg);color:var(--bg);font-weight:600}
+.brand{margin:0;min-width:0;font:400 27px/1 var(--vt);color:var(--fg);text-shadow:0 0 6px var(--glow);overflow-wrap:anywhere}
+.tty{white-space:nowrap}
+.bar-r{display:flex;align-items:center;gap:16px;flex:none}
+.clock{white-space:nowrap}
+.view-btn{min-height:40px;padding:0 14px;background:transparent;border:1px solid var(--acc);color:var(--acc);font:600 13px/1 var(--mono);cursor:pointer;transition:background .15s}
+.view-btn:hover{background:rgba(255,176,0,.12)}
+
+/* terminal screen */
+.screen{max-width:1200px;margin:0 auto;padding:24px 28px calc(var(--dock) + 30px);text-shadow:0 0 4px rgba(51,255,102,.22)}
+html[data-theme=amber] .screen{text-shadow:0 0 4px rgba(255,176,0,.22)}
+.boot{margin:0 0 18px;font:inherit;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--dim)}
+.boot .ok{color:var(--fg)}
+.boot .wn{color:var(--acc)}
+.boot .skip{display:inline-block;margin-top:6px;color:var(--grey)}
+.motd{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"ascii banner" "ascii tag" "ascii info" "ascii sw";column-gap:44px;align-items:start;padding:6px 0 24px;margin-bottom:20px;border-bottom:1px dashed #2e2e2e;animation:fadeIn .35s ease both}
+.ascii{grid-area:ascii;margin:4px 0 0;font:400 14px/1.22 var(--mono);color:var(--acc);text-shadow:0 0 6px var(--aglow);white-space:pre}
+.banner{grid-area:banner;margin:0 0 8px;font:400 clamp(46px,6.2vw,92px)/.86 var(--vt);color:var(--fg);letter-spacing:.01em;text-shadow:0 0 12px var(--glow),0 0 2px var(--fg);overflow-wrap:anywhere}
+.tagline{grid-area:tag;margin-bottom:14px;color:var(--acc)}
+.info{grid-area:info;display:grid;grid-template-columns:max-content 1fr;gap:2px 18px;margin:0}
+.info dt{color:var(--acc)}
+.info dd{margin:0;color:var(--fg);min-width:0}
+.info a{color:inherit;text-decoration:underline dotted}
+.sw{grid-area:sw;display:flex;margin-top:14px}
+.sw i{width:28px;height:14px}
+@keyframes fadeIn{from{opacity:0}}
+
+/* log output */
+.log{display:grid;gap:4px}
+.echo{margin-top:12px;color:var(--fg);overflow-wrap:anywhere}
+.ps1{color:var(--fg);font-weight:600}
+.ps1 i{font-style:normal;font-weight:400;color:var(--dim)}
+.ps1 b{font-weight:400;color:var(--acc)}
+.out{padding:2px 0 4px;overflow-wrap:anywhere}
+.out>*{animation:ln .22s steps(3) both;animation-delay:calc(var(--i,0) * 45ms)}
+@keyframes ln{from{opacity:0}}
+.out p{margin-bottom:4px}
+.o-h{margin:6px 0 8px!important;color:var(--acc);letter-spacing:.1em;text-transform:uppercase}
+.o-h::before{content:"== "}
+.o-h::after{content:" ==";color:var(--grey)}
+.cmdlink{padding:0 2px;background:none;border:0;color:var(--acc);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer;text-shadow:inherit}
+.cmdlink:hover{background:rgba(255,176,0,.14)}
+.o-t{width:100%;max-width:1000px;margin:4px 0 10px;border-collapse:collapse}
+.o-t th{padding:4px 18px 6px 0;border-bottom:1px dashed var(--grey);color:var(--acc);font-weight:400;text-align:left;white-space:nowrap}
+.o-t td{padding:6px 18px 6px 0;border-bottom:1px dotted #262626;vertical-align:top}
+.o-t td.pr{color:var(--acc);white-space:nowrap}
+.o-t .u{color:var(--dim)}
+.st-ok{color:var(--fg)}
+.st-mid{color:var(--acc)}
+.st-off{color:var(--dim)}
+.svc{display:grid;grid-template-columns:3ch 1fr;gap:0 12px;margin:0 0 12px}
+.svc .n{color:var(--dim)}
+.svc b{color:var(--acc);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.svc ul,.o-l{list-style:none;margin:4px 0 0;padding:0}
+.svc ul{display:flex;flex-wrap:wrap;gap:0 22px;color:var(--dim)}
+.svc li::before,.o-l li::before{content:"+ ";color:var(--grey)}
+.o-l li{padding-left:2ch;text-indent:-2ch}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:3px 18px;margin:0 0 8px}
+.kv dt{color:var(--acc)}
+.kv dd{margin:0;min-width:0}
+.q{color:var(--acc)}
+.art{margin:0;font:inherit;white-space:pre;color:var(--acc)}
+.demo-note{margin-top:6px!important;padding:6px 10px;border:1px dashed var(--acc);color:var(--acc);display:inline-block}
+
+/* prompt line + custom block cursor */
+.prompt{display:flex;align-items:baseline;gap:1ch;margin-top:14px;padding-bottom:4px;border-bottom:1px dashed transparent}
+.prompt.focus{border-bottom-color:#333}
+.prompt .fld{position:relative;flex:1;min-width:10ch}
+#cmd{display:block;width:100%;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--fg);font:inherit;font-variant-ligatures:none;caret-color:transparent;outline:none;text-shadow:inherit;-webkit-appearance:none;appearance:none}
+.cur{position:absolute;left:0;top:.08em;width:1ch;height:1.3em;background:var(--fg);mix-blend-mode:difference;pointer-events:none;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.prompt:not(.focus) .cur{background:transparent;box-shadow:inset 0 0 0 1px var(--fg);mix-blend-mode:normal;animation:none}
+
+/* dock: hint + command chips + fine print (the footer) */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:35;padding:22px max(18px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));background:linear-gradient(180deg,rgba(12,12,12,0),rgba(12,12,12,.97) 26px)}
+.dock-in{max-width:1200px;margin:0 auto;padding:0 10px}
+.hint{margin-bottom:9px;font-size:12.5px;color:var(--dim)}
+.hint kbd{padding:0 5px;border:1px solid #3a3a3a;border-radius:3px;font:inherit;color:var(--fg)}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{flex:none;min-height:40px;padding:0 14px;border:1px solid color-mix(in srgb,var(--fg) 45%,transparent);background:color-mix(in srgb,var(--fg) 7%,transparent);color:var(--fg);font:400 14px/1 var(--mono);cursor:pointer;transition:background .15s,border-color .15s}
+.chip::before{content:"$ ";color:var(--dim)}
+.chip:hover{background:color-mix(in srgb,var(--fg) 18%,transparent)}
+.chip.alt{border-color:color-mix(in srgb,var(--acc) 60%,transparent);color:var(--acc);background:color-mix(in srgb,var(--acc) 8%,transparent)}
+.chip.alt::before{content:"> "}
+.fine{margin-top:9px;font-size:11.5px;color:var(--dim)}
+
+/* normal view */
+body.is-normal .crt{display:none}
+body.is-normal .dock{position:static;background:none;padding-top:0}
+body.is-normal .hint,body.is-normal .chip-row{display:none}
+.normal{max-width:1120px;margin:0 auto;padding:12px 28px 24px;color:#dedede}
+.n-hero{padding:56px 0 60px;border-bottom:1px dashed #2e2e2e}
+.n-kicker{color:var(--acc);letter-spacing:.08em}
+.n-title{margin:14px 0 18px;max-width:15ch;font:400 clamp(52px,7.4vw,104px)/.9 var(--vt);color:var(--fg);text-shadow:0 0 12px var(--glow);outline:none}
+.n-lede{max-width:60ch;font-size:16.5px;line-height:1.7}
+.n-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.n-btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;background:var(--fg);color:var(--bg);font-weight:600;text-decoration:none;border:1px solid var(--fg)}
+.n-btn.ghost{background:transparent;color:var(--fg)}
+.n-btn:hover{box-shadow:0 0 16px var(--glow)}
+.n-nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:34px;font-size:14px}
+.n-nav a{color:var(--dim);text-decoration:none;padding:6px 0}
+.n-nav a::before{content:"# ";color:var(--grey)}
+.n-nav a:hover{color:var(--fg)}
+.n-sec{padding:60px 0;border-bottom:1px dashed #2e2e2e;scroll-margin-top:60px}
+.n-sec h3{margin:0 0 8px;font:400 clamp(40px,4.6vw,60px)/1 var(--vt);color:var(--fg);text-shadow:0 0 8px var(--glow)}
+.n-sub{margin-bottom:26px;color:var(--dim);max-width:62ch}
+.n-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.n-card{position:relative;padding:22px 22px 20px;background:#111;border:1px solid #2a2a2a}
+.n-card::before{content:attr(data-n);position:absolute;top:14px;right:16px;color:var(--grey);font-size:13px}
+.n-card h4{margin:0 0 8px;color:var(--acc);font:600 15px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.n-card p{font-size:14.5px;line-height:1.65}
+.n-card ul{list-style:none;margin:12px 0 0;padding:12px 0 0;border-top:1px dotted #333;font-size:13.5px;color:var(--dim)}
+.n-card li::before{content:"+ ";color:var(--fg)}
+.n-table{width:100%;border-collapse:collapse;font-size:14.5px}
+.n-table th{padding:10px 16px 10px 0;border-bottom:1px solid #333;color:var(--acc);font-weight:400;text-align:left}
+.n-table td{padding:12px 16px 12px 0;border-bottom:1px dotted #2c2c2c;vertical-align:top}
+.n-table td:nth-child(2){color:var(--fg);white-space:nowrap}
+.n-note{margin-top:16px;font-size:13.5px;color:var(--dim)}
+.n-two{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px}
+.n-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.n-list li{padding-left:2ch;text-indent:-2ch}
+.n-list li::before{content:"› ";color:var(--acc)}
+.n-faq details{border-bottom:1px dotted #2c2c2c}
+.n-faq summary{padding:16px 0;cursor:pointer;color:var(--fg);list-style:none}
+.n-faq summary::-webkit-details-marker{display:none}
+.n-faq summary::before{content:"[+] ";color:var(--acc)}
+.n-faq details[open] summary::before{content:"[-] "}
+.n-faq .a{padding:0 0 18px 4ch;max-width:70ch;font-size:14.5px;line-height:1.7}
+.n-kv{display:grid;grid-template-columns:max-content 1fr;gap:10px 22px;margin:0}
+.n-kv dt{color:var(--acc)}
+.n-kv dd{margin:0}
+.n-form{display:grid;gap:14px;padding:22px;background:#111;border:1px solid #2a2a2a}
+.n-form label{display:grid;gap:6px;font-size:13px;color:var(--dim)}
+.n-form input,.n-form select,.n-form textarea{width:100%;min-height:44px;padding:10px 12px;background:#0C0C0C;border:1px solid #3a3a3a;border-radius:0;color:#eee;font:400 15px/1.4 var(--mono)}
+.n-form textarea{min-height:90px;resize:vertical}
+.n-form input:focus-visible,.n-form select:focus-visible,.n-form textarea:focus-visible{outline:2px solid var(--acc);outline-offset:0}
+
+.fa{padding-left:2ch;margin-bottom:12px!important}
+.fine-short{display:none}
+@media (max-width:760px){
+ body{font-size:13.5px;line-height:1.55}
+ .o-t.help tr{grid-template-columns:9ch 1fr}
+ .fine-long{display:none}
+ .fine-short{display:inline}
+ .bar{min-height:50px;padding-inline:max(14px,env(safe-area-inset-left))}
+ .brand{font-size:23px}
+ .tty,.clock,.vb-long{display:none}
+ .screen{padding:18px 16px calc(var(--dock) + 24px)}
+ .motd{grid-template-columns:1fr auto;grid-template-areas:"banner ascii" "tag tag" "info info" "sw sw";column-gap:12px}
+ .ascii{font-size:8.6px;line-height:1.2;margin-top:2px}
+ .banner{font-size:46px}
+ .info{column-gap:12px}
+ .info .nx{display:none}
+ .o-t thead{display:none}
+ .o-t tr{display:grid;grid-template-columns:1fr auto;column-gap:12px;padding:8px 0;border-bottom:1px dotted #2a2a2a}
+ .o-t td{padding:0;border:0}
+ .o-t td.pr{text-align:right}
+ .o-t td:nth-child(n+3){grid-column:1/-1;color:var(--dim)}
+ .o-t.st td:nth-child(2){text-align:right}
+ .svc ul{display:block}
+ .dock{padding-top:18px}
+ .dock-in{padding:0}
+ .hint-x{display:none}
+ .chip-row{flex-wrap:nowrap;overflow-x:auto;gap:8px;margin:0 -16px;padding:0 16px 2px;scrollbar-width:none;-webkit-mask:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 22px),transparent);mask:linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 22px),transparent)}
+ .chip-row::-webkit-scrollbar{display:none}
+ .chip{min-height:42px;font-size:14px}
+ html:not(.hd-in-frame) .dock{padding-bottom:calc(58px + env(safe-area-inset-bottom))}
+ .normal{padding:8px 16px 16px}
+ .n-hero{padding:38px 0 44px}
+ .n-title{font-size:56px}
+ .n-two{grid-template-columns:1fr}
+ .n-grid{grid-template-columns:1fr}
+ .n-table thead{display:none}
+ .n-table tr{display:grid;grid-template-columns:1fr auto;column-gap:12px;padding:12px 0;border-bottom:1px dotted #2c2c2c}
+ .n-table td{padding:0;border:0}
+ .n-table td:nth-child(n+3){grid-column:1/-1;color:var(--dim);font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){
+ .crt::before,.crt::after{display:none}
+ .cur,.out>*,.motd{animation:none}
+ .chip,.view-btn{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="crt" aria-hidden="true"></div>
+<header class="bar">
+ <div class="bar-l"><span class="tag" aria-hidden="true">0</span><h1 class="brand"><span data-brand>Ctrl Alt Support</span><span class="sr"> — IT support for small offices in Newcastle, NSW</span></h1><span class="tty">tty1 · Newcastle NSW</span></div>
+ <div class="bar-r"><span class="clock" id="clock"></span><button class="view-btn" id="viewBtn" type="button"><span class="vb-long">Switch to </span><span class="vb-t">normal view</span></button></div>
+</header>
+<main id="main">
+ <section class="term" id="term" aria-label="Terminal">
+  <div class="screen" id="screen">
+   <pre class="boot" id="boot" aria-hidden="true"></pre>
+   <div class="motd" id="motd" hidden>
+<pre class="ascii" aria-hidden="true">.--------------------.
+|  .--------------.  |
+|  |  C:\&gt; fix_   |  |
+|  |              |  |
+|  |   ( ^_^ )    |  |
+|  '--------------'  |
+'---------.  .-------'
+          |  |
+     .----'  '----.
+     '------------'</pre>
+    <p class="banner" data-brand>Ctrl Alt Support</p>
+    <p class="tagline">IT support for small offices · Newcastle, NSW</p>
+    <dl class="info">
+     <dt class="nx">does</dt><dd class="nx">Managed IT, security basics, backups, Wi-Fi, on-site help</dd>
+     <dt>base</dt><dd>Hamilton, Newcastle NSW</dd>
+     <dt>hours</dt><dd>Mon–Fri 7:30am–5:30pm</dd>
+     <dt>callouts</dt><dd>Newcastle · Lake Macquarie · Maitland · Port Stephens</dd>
+     <dt>plans</dt><dd>from $59 per device / month (sample price)</dd>
+     <dt>phone</dt><dd><a href="tel:+61255507312">(02) 5550 7312</a></dd>
+    </dl>
+    <div class="sw" aria-hidden="true"><i style="background:#0C0C0C;box-shadow:inset 0 0 0 1px #333"></i><i style="background:#1d7a36"></i><i style="background:#33FF66"></i><i style="background:#8a6100"></i><i style="background:#FFB000"></i><i style="background:#6B6B6B"></i><i style="background:#b8b8b8"></i><i style="background:#f2f2f2"></i></div>
+   </div>
+   <div class="log" id="log" role="log" aria-live="polite" aria-label="Terminal output"></div>
+   <form class="prompt" id="pform" data-kit-ignore autocomplete="off" hidden>
+    <label class="ps1" for="cmd"><span id="ps1t" aria-hidden="true">ctrl-alt@support<i>:</i><b>~</b><i>$</i></span><span class="sr" id="ps1sr">Type a command</span></label>
+    <div class="fld"><input id="cmd" name="cmd" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-describedby="hintTxt"><span class="cur" id="cur" aria-hidden="true"></span></div>
+   </form>
+  </div>
+ </section>
+ <section class="normal" id="normal" hidden aria-labelledby="nTitle"></section>
+</main>
+<footer class="dock" id="dock">
+ <div class="dock-in">
+  <p class="hint" id="hintTxt">Type a command, or tap one below<span class="hint-x"> · <kbd>Tab</kbd> completes · <kbd>↑</kbd> <kbd>↓</kbd> history · <kbd>Esc</kbd> cancels</span></p>
+  <nav class="chip-row" id="chips" aria-label="Quick commands"></nav>
+  <p class="fine"><span class="fine-long"><span data-brand>Ctrl Alt Support</span> is a fictional business made for a design showcase</span><span class="fine-short">Fictional business</span> · sample prices · demo data</p>
+ </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement, $ = function (id) { return doc.getElementById(id); };
+  var RM = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+  var NARROW = window.matchMedia ? matchMedia("(max-width: 760px)") : { matches: false };
+  var FINE = window.matchMedia ? matchMedia("(pointer: fine)").matches : true;
+  var screenEl = $("screen"), bootEl = $("boot"), motd = $("motd"), log = $("log"), form = $("pform"), input = $("cmd"), cur = $("cur");
+  var ps1t = $("ps1t"), ps1sr = $("ps1sr"), dock = $("dock"), chipsEl = $("chips"), term = $("term"), normal = $("normal"), viewBtn = $("viewBtn"), clock = $("clock");
+  var PS1 = ps1t.innerHTML;
+
+  function brand() { return (window.DemoKit && DemoKit.brand) || "Ctrl Alt Support"; }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function mem(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* ---------- content (shared by the terminal and the normal view) ---------- */
+  var PHONE = "(02) 5550 7312", TEL = "tel:+61255507312", EMAIL = "help@example.com";
+  var AREA = "Newcastle · Lake Macquarie · Maitland · Port Stephens";
+  var SERVICES = [
+    { name: "Managed IT", line: "We keep an eye on your computers so you don't have to: updates, monitoring and a helpdesk that picks up.", inc: ["Weekly updates and patching", "Health monitoring with alerts", "Helpdesk by phone or email", "A plain-English report each quarter"] },
+    { name: "Cybersecurity basics", line: "The sensible 80%: strong sign-ins, safer email and a team that can spot a dodgy link.", inc: ["Two-step sign-in on every account", "A password manager for the whole team", "Phishing awareness session", "Encrypted laptops and screen locks"] },
+    { name: "Email & office setup", line: "Email on your own domain, shared calendars, and files that live somewhere sensible.", inc: ["Domain email and shared inboxes", "Shared calendars and files", "Moving mail from old accounts", "Matching email signatures"] },
+    { name: "Backups", line: "Copies of everything that matters — tested by actually restoring them.", inc: ["Automatic daily backups", "One copy kept off-site", "A restore test every month", "A one-page recovery plan"] },
+    { name: "Wi-Fi", line: "Signal in the back room, a separate guest network, and no more “try the other router”.", inc: ["Site survey with a coverage map", "Mesh access points installed", "Guest network kept separate", "A tidy comms cupboard"] },
+    { name: "Device setup", line: "New laptops, phones and printers, set up the same way every time.", inc: ["New-starter kits ready on day one", "Old devices wiped properly", "Printer and scanner setup", "An up-to-date device list"] },
+    { name: "On-site help", line: "When it needs a person in the room — anywhere from Lake Macquarie to Port Stephens.", inc: ["Same-day visits when we can", "Office moves and cabling", "After-hours work by arrangement", "Cables tidied before we leave"] }
+  ];
+  var PRICES = [
+    ["Remote help", "$45", "per 15 min", "Billed in 15-minute blocks"],
+    ["On-site callout", "$165", "first hour", "Then $40 per 15 minutes"],
+    ["Managed IT · Steady", "$59", "per device / month", "Monitoring, updates and the helpdesk"],
+    ["Managed IT · Sorted", "$95", "per person / month", "Steady, plus backups, security basics and a monthly visit"],
+    ["New-starter setup", "$220", "per device", "Laptop or desktop, ready on day one"],
+    ["Wi-Fi health check", "$390", "fixed", "Survey, coverage map and written fixes"],
+    ["Security basics workshop", "$490", "fixed", "Up to 12 staff, 90 minutes, on site"],
+    ["Backup setup", "from $350", "one-off", "Plus storage at cost"]
+  ];
+  var WAYS = ["Fixed quotes before we start — no surprise invoices.", "We write down what we did, in words you can read.", "We fix the cause, not just the symptom (then we fix the printer).", "Plans are month to month. Leave any time and we hand over every password and document."];
+  var FAQ = [
+    ["Do you lock us into a contract?", "No. Plans run month to month. Give us 30 days' notice and we'll hand over every password, licence and document."],
+    ["Can you help with just one thing?", "Yes. Remote help is billed in 15-minute blocks and there's no minimum plan."],
+    ["Do you sell hardware?", "We recommend what suits you, quote it before ordering and set it up. We don't take commissions from any brand."],
+    ["What if something breaks after hours?", "Plan clients get an after-hours number for genuine emergencies. Everything else is first in the queue at 7:30am."],
+    ["We're not technical. Is that a problem?", "Not at all — that's most of our clients. It's also why this site has a normal view."]
+  ];
+  function about() { return esc(brand()) + " is a small crew of technicians based in Hamilton, Newcastle. We look after offices of 2 to 30 people — accountants, physios, architects, real estate offices and the odd surf shop — who would rather not think about IT."; }
+
+  /* ---------- time (Newcastle = Sydney time zone) ---------- */
+  var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function parts() {
+    var d = new Date();
+    try {
+      var o = {};
+      new Intl.DateTimeFormat("en-US", { timeZone: "Australia/Sydney", weekday: "short", day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+        .formatToParts(d).forEach(function (p) { o[p.type] = p.value; });
+      return { wd: o.weekday, day: o.day, mon: MONS[+o.month - 1], h: ("0" + o.hour).slice(-2), m: o.minute };
+    } catch (e) {
+      return { wd: DAYS[d.getDay()], day: String(d.getDate()), mon: MONS[d.getMonth()], h: ("0" + d.getHours()).slice(-2), m: ("0" + d.getMinutes()).slice(-2) };
+    }
+  }
+  function stamp() { var p = parts(); return p.wd + " " + p.day + " " + p.mon + " " + p.h + ":" + p.m; }
+  function isOpen() { var p = parts(), t = +p.h * 60 + +p.m; return p.wd !== "Sat" && p.wd !== "Sun" && t >= 450 && t < 1050; }
+  function tick() { clock.textContent = stamp(); }
+
+  /* ---------- output helpers ---------- */
+  function P(h, c) { return "<p" + (c ? ' class="' + c + '"' : "") + ">" + h + "</p>"; }
+  function H(t) { return '<p class="o-h">' + t + "</p>"; }
+  function L(cmd, label) { return '<button type="button" class="cmdlink" data-run="' + cmd + '">' + (label || cmd) + "</button>"; }
+  function LI(x) { return "<li>" + x + "</li>"; }
+  function KV(rows) { return '<dl class="kv">' + rows.map(function (r) { return "<dt>" + r[0] + "</dt><dd>" + r[1] + "</dd>"; }).join("") + "</dl>"; }
+  function TABLE(head, rows, cls) {
+    return '<table class="o-t' + (cls ? " " + cls : "") + '">' + (head ? "<thead><tr>" + head.map(function (h) { return '<th scope="col">' + h + "</th>"; }).join("") + "</tr></thead>" : "") +
+      "<tbody>" + rows.map(function (r) { return "<tr>" + r.join("") + "</tr>"; }).join("") + "</tbody></table>";
+  }
+  function echo(text, ps) {
+    var p = doc.createElement("p");
+    p.className = "echo";
+    p.innerHTML = '<span class="ps1" aria-hidden="true">' + (ps || PS1) + "</span> " + esc(text);
+    log.appendChild(p);
+  }
+  function out(html) {
+    var d = doc.createElement("div");
+    d.className = "out";
+    d.innerHTML = html;
+    [].forEach.call(d.children, function (c, i) { c.style.setProperty("--i", i); });
+    log.appendChild(d);
+    return d;
+  }
+  function toBottom() {
+    requestAnimationFrame(function () { window.scrollTo({ top: doc.documentElement.scrollHeight, behavior: RM.matches ? "auto" : "smooth" }); });
+  }
+  function statusRows(links) {
+    var open = isOpen();
+    return [
+      ["helpdesk", open ? ["st-ok", "● online"] : ["st-off", "○ after hours"], open ? "answered by a person" : "leave a message — first in the queue at 7:30am"],
+      ["on-site techs", ["st-mid", "◐ 2 of 3 out"], "Charlestown and Maitland this morning"],
+      ["backup checks", ["st-ok", "● passed"], "nightly run finished 02:14"],
+      ["remote monitoring", ["st-ok", "● online"], "alerts reviewed every business day"],
+      ["kettle", ["st-ok", "● warm"], "recently descaled"],
+      ["office printer", ["st-mid", "◐ sulking"], "tray 2, as usual" + (links ? " — try " + L("printer") : "")]
+    ];
+  }
+
+  /* ---------- commands ---------- */
+  var CMDS = {
+    help: ["this list", function () {
+      var rows = Object.keys(CMDS).map(function (k) { return ["<td>" + L(k) + "</td>", '<td class="u">' + CMDS[k][0] + "</td>"]; });
+      out(H("Commands") + TABLE(null, rows, "help") +
+        P("Tab completes · ↑/↓ recalls history · Ctrl+L clears · Esc cancels a question.", "dim") +
+        P("Also try: " + ["date", "ls", "theme amber", "printer", "coffee"].map(function (c) { return L(c); }).join(" · "), "dim"));
+    }],
+    services: ["what we look after", function () {
+      var h = H("Services") + P("Seven things we look after for offices of 2 to 30 people. No jargon, no vendor lock-in.", "dim");
+      SERVICES.forEach(function (s, i) {
+        h += '<div class="svc"><span class="n">0' + (i + 1) + "</span><div><b>" + s.name + "</b><p>" + s.line + "</p><ul>" + s.inc.map(LI).join("") + "</ul></div></div>";
+      });
+      out(h + P("Next: " + L("pricing") + " for sample prices, or " + L("book") + " to request a callout.", "dim"));
+    }],
+    pricing: ["sample prices, no surprises", function () {
+      var rows = PRICES.map(function (r) { return ["<td>" + r[0] + "</td>", '<td class="pr">' + r[1] + ' <span class="u">' + r[2] + "</span></td>", '<td class="u">' + r[3] + "</td>"]; });
+      out(H("Pricing") + TABLE(["item", "price", "details"], rows) +
+        P('<span class="acc">Sample prices</span> · AUD including GST · plans are month to month.', "dim") +
+        P("Want a fixed quote? " + L("book") + " and we'll call you back.", "dim"));
+    }],
+    about: ["who we are", function () {
+      out(H("About") + P(about()) + P("How we work", "acc") + '<ul class="o-l">' + WAYS.map(LI).join("") + "</ul>" + P("See " + L("services") + " or " + L("contact") + ".", "dim"));
+    }],
+    contact: ["phone, email, hours, callout area", function () {
+      out(H("Contact") + KV([["phone", '<a href="' + TEL + '">' + PHONE + "</a>"], ["email", '<a href="mailto:' + EMAIL + '">' + EMAIL + "</a>"], ["hours", "Mon–Fri 7:30am–5:30pm · after hours by arrangement for plan clients"], ["base", "Hamilton, Newcastle NSW"], ["callouts", AREA]]) +
+        P("Type " + L("book") + " to request a callout from right here.", "dim"));
+    }],
+    status: ["helpdesk board (demo data)", function () {
+      var rows = statusRows(true).map(function (r) { return ["<td>" + r[0] + "</td>", '<td class="' + r[1][0] + '">' + r[1][1] + "</td>", '<td class="u">' + r[2] + "</td>"]; });
+      out(H("Status · " + stamp() + " Newcastle time") + TABLE(["service", "state", "note"], rows, "st") + P('<span class="acc">Demo data</span> — not a live system.', "dim"));
+    }],
+    whoami: ["who you are, apparently", function () {
+      out(P("guest") + P("uid=1001(guest) groups=busy-people,small-office,would-rather-be-working", "dim") +
+        P("You run, or work in, an office that needs its IT to just work. Good news: that's the whole job description here."));
+    }],
+    book: ["request a callout (4 questions)", function () { startBook(); }],
+    faq: ["common questions", function () {
+      var h = H("FAQ");
+      FAQ.forEach(function (f) { h += P('<span class="q">? ' + f[0] + "</span>") + P(f[1], "fa"); });
+      out(h);
+    }],
+    normal: ["switch to a normal web page", function () { setView(true); }],
+    clear: ["clear the screen", function () { log.innerHTML = ""; bootEl.innerHTML = ""; motd.hidden = true; }]
+  };
+  function hello() { out(P("G'day! Type " + L("help") + " to see what I can do.")); }
+  var EXTRA = {
+    date: function () { out(P(stamp() + " · Newcastle, NSW")); },
+    ls: function () { out(P('<span class="acc">services.txt  pricing.csv  about.md  contact.vcf  status.log  faq.txt</span>') + P("Tip: " + L("cat pricing.csv") + " works too — or just type " + L("pricing") + ".", "dim")); },
+    cat: function (a) {
+      var k = (a || "").split(".")[0].toLowerCase();
+      if (CMDS[k] && ["clear", "normal", "book"].indexOf(k) < 0) CMDS[k][1]();
+      else out(P("cat: " + esc(a || "") + ": no such file. Try " + L("ls") + ".", "dim"));
+    },
+    theme: function (a) {
+      var t = /amber/i.test(a) ? "amber" : /green/i.test(a) ? "green" : (root.getAttribute("data-theme") === "amber" ? "green" : "amber");
+      setTheme(t);
+      out(P("Phosphor set to " + t + ". " + L(t === "amber" ? "theme green" : "theme amber", "Switch back") + ".", "dim"));
+    },
+    coffee: function () { out('<pre class="art" aria-hidden="true">   ( (\n    ) )\n  .______.\n  |      |]\n  \\      /\n   `----\'</pre>' + P("Flat white on its way. (Not really — this is a website.)")); },
+    printer: function () { startPrinter(); },
+    reboot: function () { runBoot(true); },
+    sudo: function () { out(P("guest is not in the sudoers file. This incident will be reported to the kettle.", "warn")); },
+    exit: function () { setView(true); },
+    motd: function () { motd.hidden = false; out(P("Message of the day restored above.", "dim")); },
+    echo: function (a) { out(P(esc(a || ""))); },
+    ping: function () { out(P("PING support.hamilton: 64 bytes, time=12 ms") + P("1 packet sent, 1 received, 100% friendly", "dim")); },
+    hello: hello, hi: hello, hey: hello, gday: hello, "g'day": hello,
+    rm: function () { out(P("Nice try. We back that up every night.", "warn")); },
+    man: function () { CMDS.help[1](); }
+  };
+  var ALIAS = { "?": "help", menu: "help", price: "pricing", prices: "pricing", cost: "pricing", costs: "pricing", service: "services", phone: "contact", email: "contact", call: "contact", hours: "contact", who: "about", booking: "book", callout: "book", appointment: "book", quit: "exit", cls: "clear", gui: "normal", web: "normal" };
+  var NAMES = Object.keys(CMDS).concat(["date", "ls", "cat", "theme", "coffee", "printer", "reboot", "sudo", "exit", "motd", "echo", "ping", "hello"]);
+
+  function lev(a, b) {
+    var d = [], i, j;
+    for (i = 0; i <= a.length; i++) d[i] = [i];
+    for (j = 0; j <= b.length; j++) d[0][j] = j;
+    for (i = 1; i <= a.length; i++) for (j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    return d[a.length][b.length];
+  }
+  function unknown(c) {
+    var best = null, bd = 3;
+    NAMES.forEach(function (n) { var x = lev(c, n); if (x < bd) { bd = x; best = n; } });
+    out(P("command not found: " + esc(c), "warn") + P(best ? "Did you mean " + L(best) + "?" : "Type " + L("help") + " for the list.", "dim"));
+  }
+
+  var hist = [], hIdx = 0, ask = null;
+  function run(raw) {
+    var line = raw.trim();
+    echo(raw);
+    if (line) { hist.push(line); if (hist.length > 50) hist.shift(); }
+    hIdx = hist.length;
+    if (line) {
+      var m = line.match(/^(\S+)\s*(.*)$/), c = m[1].toLowerCase(), arg = m[2];
+      c = ALIAS[c] || c;
+      if (CMDS[c]) CMDS[c][1](arg);
+      else if (EXTRA[c]) EXTRA[c](arg);
+      else unknown(c);
+    }
+    toBottom();
+  }
+
+  /* ---------- questions: callout request + printer game ---------- */
+  function setAsk(a) {
+    ask = a;
+    if (a) { ps1t.innerHTML = "<b>" + esc(a.ps) + "</b><i>&gt;</i>"; ps1sr.textContent = a.sr; setChips(a.chips, true); }
+    else { ps1t.innerHTML = PS1; ps1sr.textContent = "Type a command"; setChips(); }
+    placeCursor();
+  }
+  function cancelAsk() { setAsk(null); out(P("Cancelled — nothing was sent.", "dim")); toBottom(); }
+  var BQ = [
+    { k: "name", ps: "book:name", q: "Your name?" },
+    { k: "biz", ps: "book:business", q: "Business name and suburb?" },
+    { k: "issue", ps: "book:issue", q: "What's playing up? A sentence is plenty." },
+    { k: "when", ps: "book:when", q: "How soon? [1] today if possible  [2] this week  [3] whenever suits", opts: ["Today if possible", "This week", "Whenever suits"] }
+  ];
+  function startBook() {
+    out(H("Request a callout") + P("Four quick questions. Type " + L("cancel") + " or press Esc to stop.", "dim"));
+    askBook({ i: 0, a: {} });
+  }
+  function askBook(st) {
+    var q = BQ[st.i];
+    out(P("? " + q.q, "q"));
+    setAsk({ ps: q.ps, sr: q.q, chips: q.opts ? ["1", "2", "3", "cancel"] : ["cancel"], handle: function (v) {
+      if (!v) { out(P("Say something — even “not sure” is fine.", "dim")); return; }
+      if (q.opts) {
+        var o = q.opts[parseInt(v, 10) - 1], lv = v.toLowerCase();
+        if (!o) o = q.opts.filter(function (x) { return x.toLowerCase().indexOf(lv) === 0; })[0];
+        if (!o) { out(P("Type 1, 2 or 3.", "dim")); return; }
+        st.a[q.k] = o;
+      } else st.a[q.k] = v.slice(0, 160);
+      st.i++;
+      if (st.i < BQ.length) askBook(st); else doneBook(st.a);
+    } });
+  }
+  function doneBook(a) {
+    setAsk(null);
+    out(H("Callout request · summary") + KV([["name", esc(a.name)], ["business", esc(a.biz)], ["issue", esc(a.issue)], ["when", esc(a.when)]]) +
+      '<p class="demo-note">Demo only — nothing was sent and no job was logged. On a real site this would open a ticket with the helpdesk.</p>');
+    if (window.DemoKit) DemoKit.toast("Demo only — no callout was booked.");
+  }
+  function startPrinter() {
+    out(P("The office printer says: PAPER JAM IN TRAY 2.", "warn") + P("There is no tray 2. What do you do?") +
+      '<ul class="o-l"><li>[1] Turn it off and on again</li><li>[2] Open every door and pull hard</li><li>[3] Call the helpdesk</li></ul>');
+    setAsk({ ps: "printer", sr: "Choose 1, 2 or 3", chips: ["1", "2", "3", "cancel"], handle: function (v) {
+      var r = { "1": "It prints one page, then jams again. A fair first move, though.", "2": "You are now holding a small piece of the printer. Maybe try 3?", "3": "Correct. We clear it, clean the rollers and set up scan-to-email so you need it less." }[v.charAt(0)];
+      if (!r) { out(P("Type 1, 2 or 3.", "dim")); return; }
+      out(P(r, v.charAt(0) === "3" ? "" : "warn"));
+      if (v.charAt(0) === "3") { setAsk(null); out(P("Need a hand for real? " + L("book"), "dim")); }
+    } });
+  }
+
+  function submit() {
+    var v = input.value;
+    input.value = "";
+    placeCursor();
+    if (!booted) finishBoot();
+    if (ask) {
+      echo(v, ps1t.innerHTML);
+      if (/^\s*(cancel|quit|exit)\s*$/i.test(v)) cancelAsk();
+      else { ask.handle(v.trim()); toBottom(); }
+      return;
+    }
+    run(v);
+  }
+
+  /* ---------- chips, typing and the prompt ---------- */
+  var CHIPS = ["help", "services", "pricing", "about", "contact", "status", "whoami", "book", "faq", "clear"];
+  function setChips(list, alt) {
+    chipsEl.innerHTML = (list || CHIPS).map(function (c) { return '<button type="button" class="chip' + (alt ? " alt" : "") + '" data-run="' + c + '">' + c + "</button>"; }).join("");
+  }
+  var typing = 0;
+  function typeRun(cmd) {
+    if (!booted) finishBoot();
+    var my = ++typing, i = 0;
+    if (FINE) input.focus({ preventScroll: true });
+    if (RM.matches) { input.value = cmd; submit(); return; }
+    input.value = "";
+    (function step() {
+      if (my !== typing) return;
+      input.value = cmd.slice(0, ++i);
+      placeCursor();
+      if (i < cmd.length) setTimeout(step, 24 + Math.random() * 30);
+      else setTimeout(function () { if (my === typing) submit(); }, 120);
+    })();
+  }
+  doc.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-run],[data-view]");
+    if (!b) return;
+    e.preventDefault();
+    if (b.hasAttribute("data-view")) setView(true); else typeRun(b.getAttribute("data-run"));
+  });
+
+  var chW = 0;
+  function measure() {
+    var s = doc.createElement("span");
+    s.textContent = "0000000000";
+    s.style.cssText = "position:absolute;visibility:hidden;white-space:pre;font:inherit";
+    input.parentNode.appendChild(s);
+    chW = s.getBoundingClientRect().width / 10;
+    s.remove();
+  }
+  function placeCursor() {
+    if (!chW) measure();
+    var pos = input.selectionStart == null ? input.value.length : input.selectionStart;
+    var x = Math.max(0, Math.min(pos * chW - input.scrollLeft, input.clientWidth - chW));
+    cur.style.transform = "translateX(" + (x || 0).toFixed(1) + "px)";
+  }
+  function endCaret() { var n = input.value.length; input.setSelectionRange(n, n); placeCursor(); }
+  ["input", "keyup", "click", "select"].forEach(function (t) { input.addEventListener(t, placeCursor); });
+  input.addEventListener("focus", function () { form.classList.add("focus"); placeCursor(); });
+  input.addEventListener("blur", function () { form.classList.remove("focus"); });
+  function complete() {
+    var v = input.value.replace(/^\s+/, ""), lv = v.toLowerCase();
+    if (/\s/.test(v)) return;
+    var m = NAMES.filter(function (n) { return n.indexOf(lv) === 0; });
+    if (m.length === 1) { input.value = m[0]; endCaret(); }
+    else if (m.length > 1) {
+      var cp = m.reduce(function (a, b) { var i = 0; while (i < a.length && a[i] === b[i]) i++; return a.slice(0, i); });
+      if (cp.length > lv.length) { input.value = cp; endCaret(); }
+      else { echo(v); out(P(m.join("   "), "dim")); toBottom(); }
+    }
+  }
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Tab" && !e.shiftKey && input.value.trim() && !ask) { e.preventDefault(); complete(); return; }
+    if (e.key === "ArrowUp" && hist.length && !ask) { e.preventDefault(); hIdx = Math.max(0, hIdx - 1); input.value = hist[hIdx]; endCaret(); }
+    else if (e.key === "ArrowDown" && hist.length && !ask) { e.preventDefault(); hIdx = Math.min(hist.length, hIdx + 1); input.value = hist[hIdx] || ""; endCaret(); }
+    else if (e.key === "Escape") {
+      if (ask) { e.preventDefault(); input.value = ""; echo("^C", ps1t.innerHTML); cancelAsk(); }
+      else if (input.value) { e.preventDefault(); input.value = ""; placeCursor(); }
+    } else if ((e.key === "l" || e.key === "L") && e.ctrlKey) { e.preventDefault(); CMDS.clear[1](); }
+    requestAnimationFrame(placeCursor);
+  });
+  form.addEventListener("submit", function (e) { e.preventDefault(); typing++; submit(); });
+  screenEl.addEventListener("click", function (e) {
+    if (!FINE || form.hidden || e.target.closest("a,button,input")) return;
+    if (window.getSelection && String(window.getSelection())) return;
+    input.focus({ preventScroll: true });
+  });
+
+  /* ---------- boot sequence (skippable) ---------- */
+  var OK = '[<span class="ok">  OK  </span>] ';
+  var BOOT = [
+    '<span class="dim">CTRL-ALT BIOS v2.6 · memory check 640K</span> <span class="ok">OK</span>',
+    OK + "Mounted /home/newcastle",
+    OK + "Started helpdesk.service — people, not bots",
+    OK + "Started backup-check.timer (3 copies, 1 off-site)",
+    OK + "Reached target wifi.target (back room included)",
+    '[<span class="wn"> WARN </span>] printer.service: paper jam in tray 2 — there is no tray 2',
+    OK + "Started kettle.service",
+    OK + "Reached target friendly-login.target",
+    '<span class="dim">Welcome, guest. Last login: today, from the internet.</span>'
+  ];
+  var booted = false, bootTimer = 0;
+  function runBoot(again) {
+    booted = false;
+    clearTimeout(bootTimer);
+    form.hidden = true;
+    motd.hidden = true;
+    if (again) log.innerHTML = "";
+    setAsk(null);
+    if (RM.matches) { finishBoot(again); return; }
+    var i = 0, hint = '\n<span class="skip">press any key or tap to skip</span>';
+    (function next() {
+      if (booted) return;
+      i++;
+      bootEl.innerHTML = BOOT.slice(0, i).join("\n") + (i < BOOT.length ? hint : "");
+      if (again) toBottom();
+      bootTimer = setTimeout(i < BOOT.length ? next : function () { finishBoot(again); }, i === 5 ? 220 : 70 + Math.random() * 55);
+    })();
+  }
+  function finishBoot(scroll) {
+    if (booted) return;
+    booted = true;
+    clearTimeout(bootTimer);
+    bootEl.innerHTML = NARROW.matches ? OK + '7 services up, <span class="wn">1 warning</span> (printer)' : BOOT.join("\n");
+    motd.hidden = false;
+    form.hidden = false;
+    out(P("Type " + L("help") + " to see what I can do, or tap a command below. Not a terminal person? " + '<button type="button" class="cmdlink" data-view="1">Switch to the normal view</button>.'));
+    measureDock();
+    chW = 0;
+    placeCursor();
+    if (FINE && !root.classList.contains("hd-in-frame")) input.focus({ preventScroll: true });
+    if (scroll) toBottom(); else nudge();
+  }
+  function nudge() {
+    if (!booted || term.hidden) return;
+    requestAnimationFrame(function () {
+      var r = form.getBoundingClientRect(), lim = innerHeight - dock.offsetHeight - 8;
+      if (r.bottom > lim) window.scrollBy(0, Math.min(r.bottom - lim, 260));
+    });
+  }
+  function skipper(e) {
+    if (booted || (e.type === "keydown" && /^(Tab|Shift|Control|Alt|Meta)$/.test(e.key))) return;
+    finishBoot();
+  }
+  doc.addEventListener("keydown", skipper);
+  doc.addEventListener("pointerdown", skipper);
+
+  /* ---------- normal view (same content as a regular page) ---------- */
+  var built = false;
+  function sec(id, title, sub, body) {
+    return '<section class="n-sec" id="n-' + id + '" aria-labelledby="nh-' + id + '"><h3 id="nh-' + id + '">' + title + "</h3>" + (sub ? '<p class="n-sub">' + sub + "</p>" : "") + body + "</section>";
+  }
+  function buildNormal() {
+    var h = '<div class="n-hero"><p class="n-kicker">IT support for small offices · Newcastle, NSW</p>' +
+      '<h2 class="n-title" id="nTitle" tabindex="-1">Computers that behave. People who pick up.</h2>' +
+      '<p class="n-lede">We look after the IT for offices of 2 to 30 people across Newcastle, Lake Macquarie, Maitland and Port Stephens — explained without jargon and quoted before we start.</p>' +
+      '<div class="n-cta"><a class="n-btn" href="#n-contact">Request a callout</a><a class="n-btn ghost" href="' + TEL + '">Call ' + PHONE + "</a></div>" +
+      '<nav class="n-nav" aria-label="Sections">' + ["services", "pricing", "about", "status", "faq", "contact"].map(function (s) { return '<a href="#n-' + s + '">' + s + "</a>"; }).join("") + "</nav></div>";
+    h += sec("services", "Services", "Seven things we look after, for offices that would rather not think about IT.",
+      '<div class="n-grid">' + SERVICES.map(function (s, i) { return '<article class="n-card" data-n="0' + (i + 1) + '"><h4>' + s.name + "</h4><p>" + s.line + "</p><ul>" + s.inc.map(LI).join("") + "</ul></article>"; }).join("") + "</div>");
+    h += sec("pricing", "Pricing", "Fixed quotes before we start. Plans are month to month.",
+      '<table class="n-table"><thead><tr><th scope="col">Item</th><th scope="col">Price</th><th scope="col">Details</th></tr></thead><tbody>' +
+      PRICES.map(function (r) { return "<tr><td>" + r[0] + "</td><td>" + r[1] + ' <span class="dim">' + r[2] + "</span></td><td>" + r[3] + "</td></tr>"; }).join("") +
+      '</tbody></table><p class="n-note"><span class="acc">Sample prices</span> for a fictional business · AUD including GST.</p>');
+    h += sec("about", "About", null, '<div class="n-two"><p class="n-lede">' + about() + '</p><ul class="n-list">' + WAYS.map(LI).join("") + "</ul></div>");
+    h += sec("status", "Status", "A snapshot of the helpdesk board at " + stamp() + ". Demo data — not a live system.",
+      '<table class="n-table"><thead><tr><th scope="col">Service</th><th scope="col">State</th><th scope="col">Note</th></tr></thead><tbody>' +
+      statusRows(false).map(function (r) { return "<tr><td>" + r[0] + '</td><td class="' + r[1][0] + '">' + r[1][1] + "</td><td>" + r[2] + "</td></tr>"; }).join("") + "</tbody></table>");
+    h += sec("faq", "FAQ", null, '<div class="n-faq">' + FAQ.map(function (f) { return "<details><summary>" + f[0] + '</summary><p class="a">' + f[1] + "</p></details>"; }).join("") + "</div>");
+    h += sec("contact", "Contact", null, '<div class="n-two"><dl class="n-kv"><dt>phone</dt><dd><a href="' + TEL + '">' + PHONE + '</a></dd><dt>email</dt><dd><a href="mailto:' + EMAIL + '">' + EMAIL + "</a></dd><dt>hours</dt><dd>Mon–Fri 7:30am–5:30pm<br>After hours by arrangement for plan clients</dd><dt>base</dt><dd>Hamilton, Newcastle NSW</dd><dt>callouts</dt><dd>" + AREA + "</dd></dl>" +
+      '<form class="n-form" data-demo-message="Demo only — no callout was booked. On a real site this would open a ticket with the helpdesk."><label>Your name<input name="name" autocomplete="name" required></label><label>Business and suburb<input name="biz" required></label><label>What\'s playing up?<textarea name="issue"></textarea></label><label>How soon?<select name="when"><option>Today if possible</option><option>This week</option><option>Whenever suits</option></select></label><button class="n-btn" type="submit">Request a callout</button></form></div>');
+    normal.innerHTML = h;
+    built = true;
+  }
+  function setView(n) {
+    if (n && !built) buildNormal();
+    if (!booted) finishBoot();
+    term.hidden = n;
+    normal.hidden = !n;
+    doc.body.classList.toggle("is-normal", n);
+    viewBtn.querySelector(".vb-long").textContent = n ? "Back to " : "Switch to ";
+    viewBtn.querySelector(".vb-t").textContent = n ? "terminal" : "normal view";
+    window.scrollTo(0, 0);
+    measureDock();
+    if (n) $("nTitle").focus({ preventScroll: true });
+    else if (FINE) input.focus({ preventScroll: true });
+  }
+  viewBtn.addEventListener("click", function () { setView(!doc.body.classList.contains("is-normal")); });
+  window.addEventListener("hd:brandchange", function () { if (built) buildNormal(); nudge(); });
+
+  /* ---------- theme, sizing, start ---------- */
+  function setTheme(t) { if (t === "amber") root.setAttribute("data-theme", "amber"); else root.removeAttribute("data-theme"); mem("cas-theme", t); }
+  function measureDock() { root.style.setProperty("--dock", dock.offsetHeight + "px"); }
+  window.addEventListener("resize", function () { chW = 0; placeCursor(); measureDock(); });
+  if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(function () { chW = 0; placeCursor(); measureDock(); });
+  if (mem("cas-theme") === "amber") setTheme("amber");
+  tick();
+  setInterval(tick, 30000);
+  setChips();
+  measureDock();
+  doc.addEventListener("DOMContentLoaded", function () { runBoot(false); });
+})();
+</script>
+</body>
+</html>

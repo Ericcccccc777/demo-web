@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="086">
+<meta name="demo:brand" content="RAWHEM">
+<title>RAWHEM — independent fashion label, Brunswick, Melbourne</title>
+<meta name="description" content="RAWHEM is a fictional independent fashion label from Brunswick, Melbourne: flat-cut, raw-hemmed clothes and an SS27 lookbook you can play with.">
+<meta name="theme-color" content="#ff2a1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Martian+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--w:#fff;--k:#000;--r:#ff2a1a;--d:'Dela Gothic One','Arial Black',Impact,sans-serif;--m:'Martian Mono',ui-monospace,Menlo,Consolas,monospace;--p:clamp(16px,3vw,44px);--b:2px solid #000}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--w);color:var(--k);font:400 13px/1.65 var(--m);letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--r);outline-offset:3px}
+.news :focus-visible,.look.vr :focus-visible{outline-color:var(--k)}
+.cap{font:600 10px/1.45 var(--m);letter-spacing:.14em;text-transform:uppercase}
+.small{font-size:11px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 18px;border:var(--b);border-radius:0;background:var(--w);color:var(--k);font:600 11px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .12s,box-shadow .12s,background .12s,color .12s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--k)}
+.btn:active{transform:none;box-shadow:none}
+.btn.k{background:var(--k);color:var(--w)}
+.btn.k:hover{box-shadow:3px 3px 0 var(--r)}
+
+/* header */
+.top{display:grid;grid-template-columns:auto minmax(0,1fr) auto;border-bottom:var(--b);min-height:62px;background:var(--w);position:relative;z-index:6}
+.mark{display:flex;align-items:center;padding:10px var(--p);border-right:var(--b);font:400 clamp(20px,2.2vw,30px)/1 var(--d);letter-spacing:-.02em;text-decoration:none;overflow-wrap:anywhere;max-width:46vw}
+.mark.long{font-size:clamp(14px,1.3vw,19px);line-height:1.1}
+.nav{display:flex;align-items:stretch;flex-wrap:wrap;padding:0 8px}
+.nav a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;font:600 11px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.nav a i{font-style:normal;color:var(--r)}
+.nav a:hover{background:var(--k);color:var(--w)}
+.top .sg{border:0;border-left:var(--b);background:var(--k);color:var(--w);padding:0 22px;font:600 11px/1 var(--m);letter-spacing:.1em;text-transform:uppercase;min-height:44px}
+.top .sg:hover{background:var(--r);color:var(--k)}
+
+/* hero / board */
+#hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:1fr auto;grid-template-areas:"copy board" "console board";min-height:min(calc(100vh - 62px),960px);border-bottom:var(--b)}
+.copy{grid-area:copy;position:relative;z-index:3;padding:clamp(20px,3vw,40px) var(--p) 18px;display:flex;flex-direction:column;gap:20px;border-right:var(--b)}
+.kick{display:flex;flex-wrap:wrap;gap:6px 14px}
+.kick span+span::before{content:"/";margin-right:14px;color:var(--r)}
+.h1{font:400 clamp(40px,5.1vw,86px)/.88 var(--d);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap}
+.h1 span{display:block}
+.h1 .l2{width:max-content;max-width:calc(100% + var(--p));margin-left:auto;margin-top:.08em;background:var(--k);color:var(--w);padding:.07em .14em .12em;transform:translateX(calc(var(--p) + 2px))}
+.intro{max-width:44ch;border-left:6px solid var(--r);padding-left:14px}
+.boardwrap{grid-area:board;position:relative;z-index:1;display:flex;flex-direction:column;padding:clamp(18px,2.4vw,34px) clamp(18px,2.4vw,34px) clamp(18px,2.4vw,34px) clamp(26px,3vw,48px)}
+.ss27{position:absolute;right:-.06em;bottom:-.17em;z-index:0;font:400 clamp(150px,24vw,420px)/.8 var(--d);letter-spacing:-.06em;color:var(--r);pointer-events:none;user-select:none;white-space:nowrap}
+.bhead{position:relative;z-index:1;display:flex;justify-content:space-between;gap:12px;padding-bottom:8px}
+.board{position:relative;z-index:1;flex:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--k);border-left:1.5px solid var(--k);min-height:440px;cursor:crosshair;touch-action:manipulation}
+.cell{position:relative;min-width:0;min-height:0;display:grid;place-items:center;border-right:1.5px solid var(--k);border-bottom:1.5px solid var(--k)}
+.cell::after{content:attr(data-id);position:absolute;right:5px;bottom:4px;font:400 9px/1 var(--m);opacity:.6}
+.cell svg{width:78%;height:78%;overflow:visible;fill:currentColor;transform:rotate(var(--rot,0deg)) scale(1.14)}
+.cell .tag{position:absolute;left:5px;top:5px;z-index:1;font:600 9px/1 var(--m);letter-spacing:.08em}
+.cell.s1{background:var(--k);color:var(--w)}
+.cell.s2{background:var(--r);color:var(--k)}
+.cell.s3{background:var(--w);color:var(--r)}
+.cell.s3 .tag{color:var(--k)}
+.cell.s4 svg{fill:var(--w);stroke:var(--k);stroke-width:1.6}
+.tape{position:absolute;z-index:2;left:clamp(8px,1.4vw,22px);top:56%;background:var(--k);color:var(--w);padding:7px 10px;transform:rotate(-90deg) translateX(-100%);transform-origin:0 0;white-space:nowrap}
+.console{grid-area:console;position:relative;z-index:3;margin:0 var(--p) var(--p);border:var(--b);background:var(--w);display:grid}
+.now{display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:var(--b)}
+.now svg{width:40px;height:48px;flex:none;fill:var(--r)}
+.now strong{display:block;font:400 clamp(16px,1.5vw,21px)/1.1 var(--d);text-transform:uppercase;letter-spacing:-.01em}
+.ctrl{display:grid;grid-template-columns:1fr 1fr auto;border-bottom:var(--b)}
+.ctrl .btn{border:0;border-right:var(--b);min-height:50px;padding:0 14px}
+.ctrl .btn:last-child{border-right:0}
+.ctrl .btn:hover{transform:none;box-shadow:none;background:var(--k);color:var(--w)}
+.ctrl .btn.k:hover{background:var(--r);color:var(--k)}
+.hint{padding:10px 14px;font-size:11px}
+.status{padding:10px 14px;border-top:var(--b);font-weight:600;font-size:11px}
+.log{list-style:none;padding:0 14px 12px;font-size:10px;line-height:1.7;min-height:3.4em}
+.log li::before{content:"→ ";color:var(--r)}
+.trail{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.tr{position:absolute;left:0;top:0;width:clamp(70px,7.5vw,118px);height:auto;aspect-ratio:100/120;fill:currentColor}
+.tr.k{color:var(--k)}.tr.r{color:var(--r)}.tr.o{fill:var(--w);stroke:var(--k);stroke-width:1.8}
+
+.order{margin-top:auto;display:grid;gap:8px}
+.order-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:var(--b);border-left:var(--b)}
+.order-list button{min-height:42px;padding:6px 8px;border:0;border-right:var(--b);border-bottom:var(--b);background:var(--w);font:600 9.5px/1.25 var(--m);letter-spacing:.05em;text-transform:uppercase;text-align:left}
+.order-list button:hover{background:var(--k);color:var(--w)}
+.order-list button[aria-pressed="true"]{background:var(--r);color:var(--k)}
+
+/* section scaffolding */
+.sec{position:relative;overflow:hidden;border-bottom:var(--b)}
+.mega{font:400 clamp(58px,12.4vw,210px)/.8 var(--d);letter-spacing:-.055em;text-transform:uppercase;white-space:nowrap;margin-left:-.04em}
+.sechead{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,360px);border-bottom:var(--b);overflow:hidden}
+.sechead .mega{align-self:end;padding-top:28px;transform:translateY(.09em)}
+.side{display:grid;gap:12px;align-content:end;justify-items:start;padding:20px var(--p) 20px 20px;border-left:var(--b)}
+
+/* collection */
+.looks{display:grid;grid-template-columns:repeat(12,minmax(0,1fr))}
+.look{position:relative;overflow:hidden;grid-column:span 4;min-height:clamp(400px,34vw,540px);padding:18px 20px 20px;border-right:var(--b);border-bottom:var(--b);display:flex;flex-direction:column;justify-content:flex-end;background:var(--w)}
+.look:nth-child(1),.look:nth-child(6){grid-column:span 5}
+.look:nth-child(3),.look:nth-child(4){grid-column:span 3}
+.look:nth-child(7),.look:nth-child(8){grid-column:span 6}
+.look .no{position:absolute;top:12px;left:14px;font:400 clamp(66px,8vw,136px)/.8 var(--d);letter-spacing:-.06em;color:var(--r)}
+.look .g{position:absolute;left:50%;top:7%;height:56%;width:auto;aspect-ratio:100/120;transform:translateX(-38%) rotate(var(--t,3deg));fill:currentColor}
+.look .info{position:relative;display:grid;gap:6px;max-width:46ch}
+.look h3{font:400 clamp(19px,1.9vw,28px)/1 var(--d);text-transform:uppercase;letter-spacing:-.02em}
+.look .desc{font-size:12px;line-height:1.55}
+.look .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:4px;padding-top:8px;border-top:2px solid currentColor;font:600 10px/1.4 var(--m);letter-spacing:.1em;text-transform:uppercase}
+.look .meta b{font:400 19px/1 var(--d);letter-spacing:0}
+.look.vk{background:var(--k);color:var(--w)}
+.look.vr{background:var(--r);color:var(--k)}
+.look.vr .no{color:var(--w)}
+.look.vx .g{fill:var(--r)}
+.look.vo .g{fill:var(--w);stroke:var(--k);stroke-width:1.2}
+.look.vo .no,.look.vx .no{color:transparent;-webkit-text-stroke:2px var(--k)}
+.look:nth-child(7) .g,.look:nth-child(8) .g{left:auto;right:6%;transform:rotate(var(--t,3deg))}
+
+/* stockists */
+.stock{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.stock-head{display:grid;align-content:space-between;gap:28px;padding:var(--p);border-right:var(--b)}
+.mega2{font:400 clamp(44px,6.6vw,116px)/.86 var(--d);letter-spacing:-.045em;text-transform:uppercase;overflow-wrap:anywhere}
+.chip{display:inline-block;vertical-align:top;margin-left:.3em;background:var(--k);color:var(--w);padding:5px 7px;font:600 10px/1 var(--m);letter-spacing:.12em;transform:translateY(.4em)}
+.rails{list-style:none;padding:0}
+.rails li{display:grid;grid-template-columns:minmax(120px,160px) minmax(0,1fr);gap:4px 22px;padding:20px var(--p);border-bottom:var(--b);transition:background .15s,color .15s}
+.rails li:hover{background:var(--k);color:var(--w)}
+.rails .when{grid-row:span 3;padding-top:4px}
+.rails h3{font:400 clamp(20px,2.1vw,30px)/1 var(--d);text-transform:uppercase;letter-spacing:-.02em}
+.rails .where{font-weight:600}
+.whole{padding:20px var(--p)}
+.whole a{font-weight:600}
+
+/* atelier */
+.atelier{background:var(--k);color:var(--w)}
+.atelier .mega{padding-top:22px;transform:translateY(.1em)}
+.at-grid{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);border-top:2px solid var(--w)}
+.at-copy{display:grid;gap:18px;align-content:start;padding:var(--p);border-right:2px solid var(--w)}
+.lead{font:400 clamp(21px,2.3vw,34px)/1.12 var(--d);text-transform:uppercase;letter-spacing:-.02em}
+.lead em{font-style:normal;background:var(--r);color:var(--k);padding:0 .14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--w)}
+.steps li{display:grid;gap:4px;padding:14px 14px 14px 0;border-bottom:1px solid var(--w);font-size:12px}
+.steps li:nth-child(odd){border-right:1px solid var(--w)}
+.steps li:nth-child(even){padding-left:14px}
+.steps b{font:400 32px/1 var(--d);color:var(--r)}
+.steps span{font:600 11px/1.2 var(--m);letter-spacing:.12em;text-transform:uppercase}
+.marker{display:grid;gap:12px;align-content:center;padding:var(--p)}
+.marker svg{width:100%;height:auto}
+.marker .pc{fill:none;stroke:var(--r);stroke-width:2}
+.marker text{font:600 11px var(--m);fill:#fff;letter-spacing:.06em}
+.marker .dim{stroke:#fff;stroke-width:1}
+
+/* care */
+.care{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.care-head{display:grid;gap:18px;align-content:start;padding:var(--p);border-right:var(--b)}
+.care-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.glyphs{list-style:none;padding:0;border-right:var(--b)}
+.glyphs li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:2px 16px;align-items:center;padding:14px 20px;border-bottom:var(--b)}
+.glyphs li:last-child{border-bottom:0}
+.glyphs svg{grid-row:span 2;width:52px;height:52px;fill:none;stroke:var(--k);stroke-width:2.5;stroke-linejoin:round}
+.glyphs svg text{fill:var(--k);stroke:none;font:600 13px var(--m)}
+.glyphs b{font:400 15px/1.15 var(--d);text-transform:uppercase}
+.glyphs span{font-size:11px;line-height:1.5}
+.faq details{border-bottom:var(--b)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:56px;padding:14px 20px;font:400 15px/1.2 var(--d);text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font:600 18px/1 var(--m);color:var(--r)}
+.faq details[open] summary{background:var(--k);color:var(--w)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:14px 20px 18px;font-size:12px}
+
+/* newsletter */
+.news{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:end;padding:var(--p);background:var(--r);color:var(--k)}
+.news h2{font:400 clamp(44px,7vw,124px)/.84 var(--d);letter-spacing:-.05em;text-transform:uppercase}
+.nform{display:grid;gap:10px}
+.nrow{display:flex;border:var(--b);background:var(--w)}
+.nrow input{flex:1;min-width:0;min-height:54px;padding:0 14px;border:0;background:transparent;font-size:13px}
+.nrow input:focus-visible{outline:3px solid var(--k);outline-offset:0}
+.nrow .btn{border:0;border-left:var(--b)}
+
+/* footer */
+.foot{background:var(--k);color:var(--w);padding:var(--p) var(--p) calc(var(--p) + env(safe-area-inset-bottom));overflow:hidden}
+.fmark{font:400 clamp(64px,16vw,270px)/.8 var(--d);letter-spacing:-.055em;text-transform:uppercase;overflow-wrap:anywhere;margin-bottom:30px}
+.fmark.long{font-size:clamp(38px,7vw,118px);line-height:.92;letter-spacing:-.04em}
+.fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:20px;border-top:2px solid var(--w);font-size:12px}
+.fcols .cap{color:var(--r);margin-bottom:8px}
+.fcols a{display:inline-flex;align-items:center;min-height:36px;text-underline-offset:3px}
+
+/* size guide dialog */
+.sizes{width:min(980px,calc(100vw - 20px));max-width:none;max-height:calc(100dvh - 20px);padding:0;border:3px solid var(--k);background:var(--w);color:var(--k);box-shadow:10px 10px 0 var(--r);overflow:auto}
+.sizes::backdrop{background:repeating-linear-gradient(-45deg,rgba(0,0,0,.5) 0 2px,rgba(255,255,255,.78) 2px 11px)}
+.sz-top{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;background:var(--w);border-bottom:var(--b)}
+.sz-top h2{padding:14px 18px;font:400 clamp(22px,3vw,40px)/1 var(--d);text-transform:uppercase;letter-spacing:-.03em}
+.sz-top h2 span{color:var(--r)}
+.sz-top .x{min-width:56px;border:0;border-left:var(--b);background:var(--k);color:var(--w);padding:0 18px;font:600 11px/1 var(--m);letter-spacing:.1em;text-transform:uppercase}
+.sz-note{padding:12px 18px;border-bottom:var(--b);font-size:12px}
+.sz-pick{display:flex;border-bottom:var(--b)}
+.sz-pick .cap{display:flex;align-items:center;padding:0 16px;border-right:var(--b)}
+.sz-pick button{flex:1;min-height:50px;border:0;border-right:var(--b);background:var(--w);font:400 20px/1 var(--d)}
+.sz-pick button:last-child{border-right:0}
+.sz-pick button[aria-pressed="true"]{background:var(--r);color:var(--k)}
+.sz-diag{display:grid;grid-template-columns:1fr 1fr;border-bottom:var(--b)}
+.sz-diag figure{padding:12px 16px;display:grid;gap:6px}
+.sz-diag figure+figure{border-left:var(--b)}
+.sz-diag svg{width:100%;height:auto;max-height:330px}
+.dg .out{fill:#fff;stroke:#000;stroke-width:.8}
+.dg .ln{stroke:var(--r);stroke-width:2;fill:none}
+.dg rect{fill:#000}
+.dg text{fill:#fff;font:600 11px var(--m)}
+.sz-tw{overflow-x:auto}
+.sz{width:100%;border-collapse:collapse;font-size:12px}
+.sz caption{text-align:left;padding:12px 18px 6px}
+.sz th,.sz td{padding:9px 12px;border-bottom:1px solid var(--k);text-align:right;white-space:nowrap}
+.sz th[scope=row]{text-align:left}
+.sz .sel{background:var(--k);color:var(--w)}
+.sz-read{padding:12px 18px 16px;font-weight:600;font-size:12px}
+
+/* phone */
+@media (max-width:760px){
+  .top{grid-template-columns:minmax(0,1fr) auto}
+  .mark{border-right:0;max-width:none;padding:12px 16px}
+  .nav{grid-column:1/-1;order:3;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:0;border-top:var(--b)}
+  .nav a{grid-column:span 2;justify-content:center;padding:0 4px;font-size:10px;letter-spacing:.06em;border-right:var(--b);border-bottom:var(--b)}
+  .nav a:nth-child(n+4){grid-column:span 3;border-bottom:0}
+  .nav a:nth-child(3),.nav a:nth-child(5){border-right:0}
+  #hero{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;grid-template-areas:"copy" "board" "console";min-height:0}
+  .copy{border-right:0;padding:22px 16px 20px;gap:16px}
+  .h1{font-size:clamp(42px,13.4vw,64px)}
+  .h1 .l2{transform:none;margin-right:-16px;max-width:calc(100% + 16px)}
+  .boardwrap{padding:0 16px 16px}
+  .board{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:calc((100vw - 32px) / 4.3);min-height:0}
+  .ss27{font-size:47vw;right:-.1em;bottom:auto;top:18%}
+  .tape,.order{display:none}
+  .console{margin:0 16px 16px}
+  .ctrl{grid-template-columns:1fr 1fr}
+  .ctrl .btn:nth-child(2){border-right:0}
+  .ctrl .btn:last-child{grid-column:1/-1;border-top:var(--b)}
+  .sechead,.stock,.at-grid,.care,.care-body,.news{grid-template-columns:minmax(0,1fr)}
+  .side{border-left:0;border-top:var(--b);padding:16px}
+  .looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .look,.look:nth-child(n){grid-column:span 1;min-height:350px;padding:12px}
+  .look:nth-child(1),.look:nth-child(6){grid-column:span 2;min-height:430px}
+  .look .g,.look:nth-child(n) .g{left:50%;right:auto;top:9%;height:46%;transform:translateX(-45%) rotate(var(--t,3deg))}
+  .look:nth-child(1) .g,.look:nth-child(6) .g{height:56%}
+  .look .no{font-size:64px}
+  .look .desc{font-size:11px}
+  .stock-head{border-right:0;border-bottom:var(--b);padding:22px 16px}
+  .rails li{grid-template-columns:minmax(0,1fr);padding:18px 16px}
+  .rails .when{grid-row:auto}
+  .whole{padding:18px 16px}
+  .at-copy{border-right:0;border-bottom:2px solid var(--w);padding:22px 16px}
+  .marker{padding:22px 16px}
+  .care-head{border-right:0;border-bottom:var(--b);padding:22px 16px}
+  .glyphs{border-right:0;border-bottom:var(--b)}
+  .glyphs li{padding:12px 16px}
+  .faq summary{padding:12px 16px}
+  .faq details p{padding:12px 16px 16px}
+  .news{padding:26px 16px 30px}
+  .nrow{flex-direction:column}
+  .nrow .btn{border-left:0;border-top:var(--b);min-height:50px}
+  .fcols{grid-template-columns:1fr 1fr}
+  .sz-diag{grid-template-columns:minmax(0,1fr)}
+  .sz-diag figure+figure{border-left:0;border-top:var(--b)}
+  .sz-pick .cap{display:none}
+}
+@media (max-width:360px){.fcols{grid-template-columns:minmax(0,1fr)}.ctrl .btn{padding:0 8px;letter-spacing:.04em}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="g1" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M36 4L50 24L64 4L70 9L88 15Q92 16 93 20L99 66L88 68L82 34V110L66 116L60 111L50 117L40 111L20 114L18 34L12 68L1 66L7 20Q8 16 12 15L30 9ZM49.4 27H50.6V106H49.4ZM26 70H38V71.6H26ZM62 70H74V71.6H62Z"/></symbol>
+<symbol id="g2" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M22 4H78L84 40L94 114L82 116L79 104L76 116L66 116L54 46H46L34 116L6 114L16 40ZM23 12H77V13.4H23ZM31.4 20H32.6V104H31.4ZM67.4 20H68.6V100H67.4Z"/></symbol>
+<symbol id="g3" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M38 4H42L44 18H56L58 4H62L64 24Q70 40 66 54L86 112L60 118L50 110L40 118L12 110L34 54Q30 40 36 24ZM35.5 53H64.5V54.4H35.5ZM41 69L42.2 68L72 99L70.8 100Z"/></symbol>
+<symbol id="g4" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M40 6L50 14L60 6L72 10L94 26L86 44L76 38L78 104Q64 110 50 104Q36 110 22 104L24 38L14 44L6 26L28 10ZM49.4 17H50.6V100H49.4ZM58 32H68V33.4H58Z"/></symbol>
+<symbol id="g5" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M26 8H74L78 16L92 104L70 110L62 100L54 112L8 104L22 16ZM24 18H76V19.4H24ZM60 22L61.4 22L50.4 106L49 106ZM34 30H35.2V98H34Z"/></symbol>
+<symbol id="g6" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M30 6H44L50 40L56 6H70L74 14Q70 26 74 36L80 92L60 104L50 92L40 104L20 92L26 36Q30 26 26 14ZM30 60H42V61.4H30ZM58 60H70V61.4H58ZM49 48H51V50H49ZM49 58H51V60H49ZM49 68H51V70H49ZM49 78H51V80H49Z"/></symbol>
+<symbol id="g7" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M38 4L50 14L62 4L78 8L96 58L86 62L76 36V60L84 116H58L52 70H48L42 116H16L24 60V36L14 62L4 58L22 8ZM24.6 57H75.4V58.6H24.6ZM49.4 17H50.6V55H49.4ZM56 26H66V27.4H56Z"/></symbol>
+<symbol id="g8" viewBox="0 0 100 120"><path fill-rule="evenodd" d="M36 8Q50 16 64 8L82 14Q94 20 96 40L98 78L86 80L82 46V76Q82 84 74 84H26Q18 84 18 76V46L14 80L2 78L4 40Q6 20 18 14ZM20 74H80V75.4H20ZM49.4 14H50.6V73H49.4ZM84 30H90V31.2H84Z"/></symbol>
+<marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#ff2a1a"/></marker>
+<pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2" height="8" fill="#fff" opacity=".55"/></pattern>
+</defs>
+</svg>
+
+<header class="top">
+  <a class="mark" href="#hero" data-brand>RAWHEM</a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#collection"><i>01</i>Collection</a>
+    <a href="#stockists"><i>02</i>Stockists</a>
+    <a href="#atelier"><i>03</i>Atelier</a>
+    <a href="#care"><i>04</i>Care</a>
+    <a href="#newsletter"><i>05</i>Newsletter</a>
+  </nav>
+  <button class="sg" type="button" data-size-open>Size guide</button>
+</header>
+
+<main>
+<section id="hero" aria-labelledby="h1">
+  <div class="copy">
+    <p class="cap kick"><span>SS27</span><span>Seam Allowance</span><span>8 looks</span></p>
+    <h1 class="h1" id="h1"><span>Cut flat.</span><span class="l2">Left raw.</span></h1>
+    <p class="intro">An independent label cutting heavy cotton and end-of-roll wool on one long table in Brunswick, Melbourne. Flat patterns, raw hems, one line of stitching where it matters.</p>
+    <div class="order"><p class="cap">Pick a look to cut</p><div class="order-list" role="group" aria-label="Choose the look to cut"><button type="button" data-look="0" aria-pressed="false">L.01 Drill Coat</button><button type="button" data-look="1" aria-pressed="false">L.02 Split-Hem Trouser</button><button type="button" data-look="2" aria-pressed="false">L.03 Bias Slip</button><button type="button" data-look="3" aria-pressed="false">L.04 Poplin Shirt</button><button type="button" data-look="4" aria-pressed="false">L.05 Wrap Kilt</button><button type="button" data-look="5" aria-pressed="false">L.06 Waistcoat</button><button type="button" data-look="6" aria-pressed="false">L.07 Boilersuit</button><button type="button" data-look="7" aria-pressed="false">L.08 Cropped Bomber</button></div></div>
+  </div>
+  <div class="boardwrap">
+    <p class="ss27" aria-hidden="true">SS27</p>
+    <div class="bhead"><p class="cap">Fig. 1 — The board</p><p class="cap">24 cells · A1–D6</p></div>
+    <div class="board" id="board" aria-hidden="true"></div>
+    <p class="cap tape" aria-hidden="true">Freeze a look → keep it</p>
+  </div>
+  <div class="console" id="console">
+    <div class="now">
+      <svg viewBox="0 0 100 120" aria-hidden="true"><use id="nowUse" href="#g1"/></svg>
+      <p><span class="cap">Now cutting</span><strong id="nowName">L.01 Drill Coat</strong></p>
+    </div>
+    <div class="ctrl">
+      <button class="btn" id="next" type="button">Next look →</button>
+      <button class="btn k" id="freeze" type="button">Freeze ■</button>
+      <button class="btn" id="clear" type="button">Clear</button>
+    </div>
+    <p class="hint" id="hint">Move your cursor across this panel to cut a trail of garments. Click to freeze a look into the grid.</p>
+    <p class="status" id="status" role="status" aria-live="polite">The board is empty.</p>
+    <ol class="log" id="log" aria-label="Recently frozen looks"></ol>
+  </div>
+  <div class="trail" id="trail" aria-hidden="true"></div>
+</section>
+
+<section id="collection" class="sec" aria-labelledby="col-h">
+  <div class="sechead">
+    <h2 class="mega" id="col-h">Collection</h2>
+    <div class="side">
+      <p class="cap">SS27 · Seam Allowance · 8 looks</p>
+      <p>Wool drill, cotton canvas, poplin and one bolt of silk-cotton from a mill that closed its doors. Unisex sizes 01–05.</p>
+      <button class="btn k" type="button" data-size-open>Size guide</button>
+      <p class="cap">Sample prices · AUD</p>
+    </div>
+  </div>
+  <div class="looks">
+    <article class="look vk" style="--t:-4deg"><p class="no" aria-hidden="true">01</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g1"/></svg>
+      <div class="info"><p class="cap">Look 01</p><h3>Drill Coat</h3><p class="desc">Boxy coat in wool drill. Dropped shoulder, no lining, the hem left raw at three different lengths.</p><p class="meta"><span>Wool drill · 01–05</span><b>$690</b></p></div></article>
+    <article class="look vx" style="--t:3deg"><p class="no" aria-hidden="true">02</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g2"/></svg>
+      <div class="info"><p class="cap">Look 02</p><h3>Split-Hem Trouser</h3><p class="desc">High waist, wide leg and a 12 cm split at the outer hem so it breaks cleanly over any shoe.</p><p class="meta"><span>Cotton canvas</span><b>$340</b></p></div></article>
+    <article class="look vr" style="--t:-2deg"><p class="no" aria-hidden="true">03</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g3"/></svg>
+      <div class="info"><p class="cap">Look 03</p><h3>Bias Slip</h3><p class="desc">Cut on the bias; the hem drops wherever the grain wants it to.</p><p class="meta"><span>Silk-cotton</span><b>$420</b></p></div></article>
+    <article class="look vo" style="--t:5deg"><p class="no" aria-hidden="true">04</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g4"/></svg>
+      <div class="info"><p class="cap">Look 04</p><h3>Poplin Shirt</h3><p class="desc">Oversized and collarless, with a shirt-tail made to wear in or out.</p><p class="meta"><span>Cotton poplin</span><b>$260</b></p></div></article>
+    <article class="look vk" style="--t:-3deg"><p class="no" aria-hidden="true">05</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g5"/></svg>
+      <div class="info"><p class="cap">Look 05</p><h3>Wrap Kilt</h3><p class="desc">One deep pleat, a hidden tab fastening and a mid-calf hem that swings unevenly on purpose.</p><p class="meta"><span>Wool drill</span><b>$310</b></p></div></article>
+    <article class="look" style="--t:2deg"><p class="no" aria-hidden="true">06</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g6"/></svg>
+      <div class="info"><p class="cap">Look 06</p><h3>Waistcoat</h3><p class="desc">Deep V, welt pockets and square buttons. Worn alone, or over the Poplin Shirt.</p><p class="meta"><span>Wool drill · 01–05</span><b>$280</b></p></div></article>
+    <article class="look vr" style="--t:-5deg"><p class="no" aria-hidden="true">07</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g7"/></svg>
+      <div class="info"><p class="cap">Look 07</p><h3>Boilersuit</h3><p class="desc">Heavy canvas, zip front, belted waist. Cropped at the ankle and raw at the cuff.</p><p class="meta"><span>Cotton canvas · 01–05</span><b>$480</b></p></div></article>
+    <article class="look vx" style="--t:4deg"><p class="no" aria-hidden="true">08</p><svg class="g" viewBox="0 0 100 120" aria-hidden="true"><use href="#g8"/></svg>
+      <div class="info"><p class="cap">Look 08</p><h3>Cropped Bomber</h3><p class="desc">Waist-length bomber with a rib cut from the same waxed cotton and left unfinished.</p><p class="meta"><span>Waxed cotton · 01–05</span><b>$520</b></p></div></article>
+  </div>
+</section>
+
+<section id="stockists" class="sec stock" aria-labelledby="st-h">
+  <div class="stock-head">
+    <h2 class="mega2" id="st-h">Stock&shy;ists<span class="chip">Sample</span></h2>
+    <p class="small">This label is fictional, so no real shops are listed. Below is how its rail schedule would read — every date is a sample.</p>
+  </div>
+  <div>
+    <ul class="rails">
+      <li><p class="cap when">Every week</p><h3>The atelier</h3><p class="where">Brunswick, Melbourne VIC</p><p>Sat 11am–4pm · Thu by appointment. Try everything on; we cut hems to your length while you wait.</p></li>
+      <li><p class="cap when">Sat 17 Oct</p><h3>SS27 trunk show</h3><p class="where">Brunswick, Melbourne VIC</p><p>10am–3pm. All eight looks on one rail, plus bags of offcuts for makers.</p></li>
+      <li><p class="cap when">Fri 6 – Sun 8 Nov</p><h3>Pop-up rail</h3><p class="where">Surry Hills, Sydney NSW</p><p>Venue goes to the newsletter first, a week before.</p></li>
+      <li><p class="cap when">Sat 28 Nov</p><h3>Pop-up rail</h3><p class="where">Fortitude Valley, Brisbane QLD</p><p>One day only, 10am–5pm.</p></li>
+    </ul>
+    <p class="whole small">Boutique buyers: SS27 line sheets on request — <a href="mailto:wholesale@example.com">wholesale@example.com</a></p>
+  </div>
+</section>
+
+<section id="atelier" class="sec atelier" aria-labelledby="at-h">
+  <h2 class="mega" id="at-h">Atelier</h2>
+  <div class="at-grid">
+    <div class="at-copy">
+      <p class="cap">Brunswick, Melbourne VIC</p>
+      <p class="lead">One long table, two industrial machines and one rule: <em>cut once, finish once.</em></p>
+      <p>Patterns are drafted flat so they nest on the cloth like a puzzle. Offcuts become pocket bags and hanging loops. Hems are left raw on purpose — they soften into a short fringe over the first few washes, then stop at a line of stitching.</p>
+      <ol class="steps">
+        <li><b>01</b><span>Draft</span>Flat patterns on brown paper, pinned to the wall.</li>
+        <li><b>02</b><span>Nest</span>Pieces laid edge to edge across the full width.</li>
+        <li><b>03</b><span>Cut</span>By hand, one layer at a time, on the long table.</li>
+        <li><b>04</b><span>Leave it</span>One stitch line in from every raw edge. Nothing more.</li>
+      </ol>
+    </div>
+    <figure class="marker">
+      <svg viewBox="0 0 600 262" role="img" aria-labelledby="mk-t">
+        <title id="mk-t">Cutting marker for the Drill Coat: back, two fronts, two sleeves, collar, facing and pockets nested edge to edge across 150 cm of cloth, with one small offcut kept for pocket bags.</title>
+        <rect x="40" y="36" width="540" height="200" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <path class="pc" d="M40 36H170V236H40Z"/>
+        <path class="pc" d="M170 36H265L275 136H170Z"/>
+        <path class="pc" d="M170 136H275L265 236H170Z"/>
+        <path class="pc" d="M265 36H400L410 136H275Z"/>
+        <path class="pc" d="M275 136H410L400 236H265Z"/>
+        <path class="pc" d="M400 36H580V81H404.5Z"/>
+        <path class="pc" d="M404.5 81H580V136H410Z"/>
+        <path class="pc" d="M410 136H495V236H400Z"/>
+        <path d="M495 136H580V236H495Z" fill="url(#hatch)" stroke="#ff2a1a" stroke-width="2"/>
+        <path class="dim" d="M105 58V104M220 50V74M338 50V74" marker-end="url(#ah)"/>
+        <path class="dim" d="M22 38V234M42 18H578" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <text x="105" y="140" text-anchor="middle">BACK ×1</text>
+        <text x="220" y="96" text-anchor="middle">FRONT L</text>
+        <text x="220" y="192" text-anchor="middle">FRONT R</text>
+        <text x="338" y="96" text-anchor="middle">SLEEVE</text>
+        <text x="338" y="192" text-anchor="middle">SLEEVE</text>
+        <text x="492" y="63" text-anchor="middle">COLLAR</text>
+        <text x="495" y="113" text-anchor="middle">FACING</text>
+        <text x="448" y="192" text-anchor="middle">POCKET ×2</text>
+        <rect x="503" y="168" width="70" height="36" fill="#000"/>
+        <text x="538" y="183" text-anchor="middle">OFFCUT</text>
+        <text x="538" y="198" text-anchor="middle">→ BAGS</text>
+        <text transform="translate(14 136) rotate(-90)" text-anchor="middle">150 CM</text>
+        <text x="310" y="11" text-anchor="middle">2.4 M · ONE COAT, EDGE TO EDGE</text>
+      </svg>
+      <figcaption class="cap">Fig. 2 — Marker for Look 01, the Drill Coat. The only offcut becomes pocket bags.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="care" class="sec care" aria-labelledby="ca-h">
+  <div class="care-head">
+    <h2 class="mega2" id="ca-h">Care</h2>
+    <p>Raw edges are a finish, not a fault. Treat them gently for the first few washes and they settle into a soft fringe.</p>
+  </div>
+  <div class="care-body">
+    <ul class="glyphs">
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 5C18 17 11 25 11 33a15 15 0 0 0 30 0c0-8-7-16-15-28Z"/><text x="26" y="39" text-anchor="middle">30</text></svg><b>Cold wash</b><span>30° max, inside out, with darks.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M22 13a4 4 0 1 1 4 4v4M26 21L6 38H46Z"/></svg><b>Hang to air</b><span>No tumble dryer — heat shrinks drill.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M7 19H45M7 27H45M7 35H45"/></svg><b>Dry flat</b><span>The Bias Slip and knit rib, always.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="13" cy="15" r="5"/><circle cx="13" cy="37" r="5"/><path d="M17 18L45 34M17 34L45 18"/><path d="M5 5L47 47" stroke="#ff2a1a"/></svg><b>Don't trim</b><span>Cutting the fringe restarts the fray.</span></li>
+      <li><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M9 43L39 13"/><path d="M36 12a3.5 3.5 0 1 1 5 5"/><path d="M42 15c8 7-5 13 3 21s-13 9-21 3"/></svg><b>Bring it back</b><span>Split seams re-stitched at the atelier.</span></li>
+    </ul>
+    <div class="faq">
+      <details open><summary>Will the raw hem keep fraying?</summary><p>No. It softens to a 3–5 mm fringe over the first few washes, then stops at a line of stitching set in from every edge. If it ever runs past that line, bring it in and we'll re-stitch it.</p></details>
+      <details><summary>Can you shorten a piece?</summary><p>Yes — raw hems make it simple. At the atelier we mark and cut to your length while you wait. Sample policy: free on SS27 pieces.</p></details>
+      <details><summary>Returns and exchanges?</summary><p>Sample policy for this demo: exchange or refund within 30 days if unworn with the tag on. Faulty items are always covered under Australian Consumer Law.</p></details>
+      <details><summary>Where is it made?</summary><p>Cut and sewn at the atelier in Brunswick from end-of-roll and deadstock cloth, so some looks stop when the bolt runs out.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="newsletter" class="sec news" aria-labelledby="nw-h">
+  <h2 id="nw-h">One email per drop.</h2>
+  <form class="nform" data-demo-message="Demo only — you haven't been subscribed. On a real site this would join the mailing list.">
+    <label class="cap" for="em">Email address</label>
+    <div class="nrow"><input id="em" name="email" type="email" required autocomplete="email" placeholder="you@example.com"><button class="btn k" type="submit">Subscribe →</button></div>
+    <p class="small">Drop dates, trunk shows and the offcut sale. Four emails a year, at most.</p>
+  </form>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="fmark" data-brand>RAWHEM</p>
+  <div class="fcols">
+    <div><p class="cap">Atelier</p><p>Brunswick, Melbourne VIC<br>Sat 11am–4pm<br>Thu by appointment</p></div>
+    <div><p class="cap">Contact</p><p><a href="tel:+61491570157">0491 570 157</a><br><a href="mailto:hello@example.com">hello@example.com</a></p></div>
+    <div><p class="cap">Index</p><p><a href="#collection">Collection</a> · <a href="#stockists">Stockists</a> · <a href="#atelier">Atelier</a> · <a href="#care">Care</a></p></div>
+    <div><p class="cap">Small print</p><p>A fictional label, made as a concept demo. Every garment is drawn in code. Prices are samples in AUD.</p></div>
+  </div>
+</footer>
+
+<dialog class="sizes" id="sizes" aria-labelledby="sz-t">
+  <div class="sz-top"><h2 id="sz-t">Size guide <span>SS27</span></h2><button class="x" type="button" data-close aria-label="Close size guide">Close ×</button></div>
+  <p class="sz-note">Unisex sizing. Garment measurements laid flat, in centimetres. Everything is cut boxy — size down for a closer fit.</p>
+  <div class="sz-pick" role="group" aria-label="Choose a size"><span class="cap">Size</span>
+    <button type="button" data-s="0" aria-pressed="false">01</button><button type="button" data-s="1" aria-pressed="false">02</button><button type="button" data-s="2" aria-pressed="true">03</button><button type="button" data-s="3" aria-pressed="false">04</button><button type="button" data-s="4" aria-pressed="false">05</button>
+  </div>
+  <div class="sz-diag">
+    <figure>
+      <svg class="dg" viewBox="0 0 260 290" aria-hidden="true">
+        <use class="out" href="#g1" width="100" height="120" transform="translate(30 30) scale(2)"/>
+        <path class="ln" d="M68 110H192M14 40V262M183 42L240 154" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <rect x="100" y="101" width="60" height="18"/><text id="vA" x="130" y="114" text-anchor="middle">A · 120</text>
+        <g transform="translate(14 151) rotate(-90)"><rect x="-30" y="-9" width="60" height="18"/><text id="vB" y="4" text-anchor="middle">B · 102</text></g>
+        <rect x="196" y="86" width="60" height="18"/><text id="vC" x="226" y="99" text-anchor="middle">C · 64</text>
+      </svg>
+      <figcaption class="cap">Tops &amp; coats — A chest · B length · C sleeve</figcaption>
+    </figure>
+    <figure>
+      <svg class="dg" viewBox="0 0 260 290" aria-hidden="true">
+        <use class="out" href="#g2" width="100" height="120" transform="translate(30 30) scale(2)"/>
+        <path class="ln" d="M74 24H186M136 126L113 258M42 276H98" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <rect x="100" y="15" width="60" height="18"/><text id="vD" x="130" y="28" text-anchor="middle">D · 84</text>
+        <rect x="96" y="183" width="60" height="18"/><text id="vE" x="126" y="196" text-anchor="middle">E · 80</text>
+        <rect x="40" y="267" width="60" height="18"/><text id="vF" x="70" y="280" text-anchor="middle">F · 32</text>
+      </svg>
+      <figcaption class="cap">Trousers &amp; suits — D waist · E inseam · F leg opening</figcaption>
+    </figure>
+  </div>
+  <div class="sz-tw">
+    <table class="sz">
+      <caption class="cap">All sizes, cm</caption>
+      <thead><tr><th scope="col">Measure</th><th scope="col">01</th><th scope="col">02</th><th scope="col">03</th><th scope="col">04</th><th scope="col">05</th></tr></thead>
+      <tbody id="szBody"></tbody>
+    </table>
+  </div>
+  <p class="sz-read" id="szRead" aria-live="polite"></p>
+</dialog>
+<script>
+(function(){
+  'use strict';
+  var SW='http://www.w3.org/2000/svg';
+  var LOOKS=[['01','Drill Coat'],['02','Split-Hem Trouser'],['03','Bias Slip'],['04','Poplin Shirt'],['05','Wrap Kilt'],['06','Waistcoat'],['07','Boilersuit'],['08','Cropped Bomber']];
+  var N=24, SCATTER=[7,2,16,11,20,4,13,22,0,9,18,5,14,23,1,10,19,6,15,3,12,21,8,17];
+  function $(id){return document.getElementById(id);}
+  function mm(q){return window.matchMedia?window.matchMedia(q).matches:false;}
+  var hero=$('hero'),board=$('board'),trail=$('trail'),statusEl=$('status'),logEl=$('log'),nowUse=$('nowUse'),nowName=$('nowName');
+  var reduce=mm('(prefers-reduced-motion: reduce)'), fine=mm('(hover: hover) and (pointer: fine)');
+  var cells=[],held=[],order=[],cur=0,cuts=0,tick=0,lx=-1e4,ly=-1e4,lastType='mouse';
+
+  for(var i=0;i<N;i++){var c=document.createElement('div');c.className='cell';board.appendChild(c);cells.push(c);held.push(-1);}
+  function cols(){var n=getComputedStyle(board).gridTemplateColumns.split(' ').length;return n>0?n:6;}
+  function cellName(i){var n=cols();return 'ABCDEFGH'.charAt(Math.floor(i/n))+(i%n+1);}
+  function labelCells(){cells.forEach(function(c,i){c.setAttribute('data-id',cellName(i));});}
+  labelCells();
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(labelCells,150);});
+
+  function lookName(k){return 'L.'+LOOKS[k][0]+' '+LOOKS[k][1];}
+  var pickLook=[].slice.call(document.querySelectorAll('[data-look]'));
+  function setNow(k){cur=(k%8+8)%8;nowUse.setAttribute('href','#g'+(cur+1));nowName.textContent=lookName(cur);pickLook.forEach(function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-look')===cur));});}
+  pickLook.forEach(function(b){b.addEventListener('click',function(){setNow(+b.getAttribute('data-look'));statusEl.textContent='Now cutting '+lookName(cur)+'. Click the board or press Freeze.';});});
+  function svgOf(k,cls){
+    var s=document.createElementNS(SW,'svg');s.setAttribute('viewBox','0 0 100 120');s.setAttribute('aria-hidden','true');
+    if(cls)s.setAttribute('class',cls);
+    var u=document.createElementNS(SW,'use');u.setAttribute('href','#g'+(k+1));s.appendChild(u);return s;
+  }
+
+  /* trail of cut-outs */
+  function spawn(x,y,k,spread){
+    var s=svgOf(k,'tr '+['k','r','k','o'][tick++%4]);
+    if(spread){x+=Math.random()*spread*2-spread;y+=Math.random()*spread*2-spread;}
+    var rot=Math.round(Math.random()*36-18),sc=.8+Math.random()*.45;
+    var from='translate('+x+'px,'+y+'px) translate(-50%,-50%) rotate('+rot+'deg) scale('+sc.toFixed(2)+')';
+    var to='translate('+x+'px,'+(y+26)+'px) translate(-50%,-50%) rotate('+(rot+10)+'deg) scale('+(sc*.82).toFixed(2)+')';
+    s.style.transform=from;trail.appendChild(s);
+    if(s.animate){
+      var a=s.animate([{transform:from,opacity:1},{transform:from,opacity:1,offset:.35},{transform:to,opacity:0}],{duration:1150,easing:'cubic-bezier(.3,.6,.4,1)',fill:'forwards'});
+      a.onfinish=function(){s.remove();};
+    } else setTimeout(function(){s.remove();},1100);
+    while(trail.childElementCount>30)trail.firstElementChild.remove();
+  }
+
+  /* freezing looks into the grid */
+  function nextEmpty(){for(var j=0;j<N;j++){if(held[SCATTER[j]]<0)return SCATTER[j];}return -1;}
+  function freeze(i,k,quiet){
+    var swapped=false;
+    if(i==null||i<0){i=nextEmpty();if(i<0){i=order.shift();swapped=true;}}
+    else if(held[i]>=0)swapped=true;
+    var p=order.indexOf(i);if(p>-1)order.splice(p,1);order.push(i);
+    held[i]=k;
+    var c=cells[i],style=[1,2,0,3,4][cuts%5],rot=((cuts*37)%15)-7;cuts++;
+    c.className='cell on s'+style;c.style.setProperty('--rot',rot+'deg');c.textContent='';
+    var t=document.createElement('span');t.className='tag';t.textContent='L.'+LOOKS[k][0];c.appendChild(t);c.appendChild(svgOf(k));
+    if(!quiet&&!reduce&&c.animate)c.animate([{transform:'scale(1.3)',opacity:.15},{transform:'scale(1)',opacity:1}],{duration:280,easing:'cubic-bezier(.2,1.5,.4,1)'});
+    var name=cellName(i),li=document.createElement('li');
+    li.textContent=name+' · '+lookName(k);logEl.insertBefore(li,logEl.firstChild);
+    while(logEl.children.length>3)logEl.lastChild.remove();
+    statusEl.textContent=(swapped?'Swapped in ':'Froze ')+lookName(k)+' at '+name+'. '+order.length+' of '+N+' cells cut.';
+  }
+
+  hero.addEventListener('pointerdown',function(e){lastType=e.pointerType||'mouse';});
+  hero.addEventListener('pointermove',function(e){
+    if(reduce||e.pointerType==='touch')return;
+    var r=hero.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,dx=x-lx,dy=y-ly;
+    if(dx*dx+dy*dy<4900)return;
+    lx=x;ly=y;setNow(cur+1);spawn(x,y,cur);
+  });
+  hero.addEventListener('pointerleave',function(){lx=ly=-1e4;});
+  hero.addEventListener('click',function(e){
+    if(e.target.closest('button,a,input,label,.console'))return;
+    var cell=e.target.closest('.cell'),i,br=board.getBoundingClientRect(),tap=lastType!=='mouse'||!fine;
+    if(cell)i=cells.indexOf(cell);
+    else{
+      var n=cols(),rows=Math.ceil(N/n);
+      var cx=Math.min(br.right-1,Math.max(br.left+1,e.clientX)),cy=Math.min(br.bottom-1,Math.max(br.top+1,e.clientY));
+      i=Math.min(N-1,Math.floor((cy-br.top)/(br.height/rows))*n+Math.floor((cx-br.left)/(br.width/n)));
+    }
+    if(tap&&!reduce){var r=hero.getBoundingClientRect();for(var j=1;j<=3;j++)spawn(e.clientX-r.left,e.clientY-r.top,(cur+j)%8,36);}
+    freeze(i,cur);
+    setNow(cur+1);
+  });
+
+  $('next').addEventListener('click',function(){
+    setNow(cur+1);
+    if(!reduce){var r=hero.getBoundingClientRect(),b=nowUse.parentNode.getBoundingClientRect();spawn(b.right-r.left+50,b.top-r.top-24,cur,16);}
+    statusEl.textContent='Next up: '+lookName(cur)+'. Press Freeze to pin it to the board.';
+  });
+  $('freeze').addEventListener('click',function(){freeze(-1,cur);setNow(cur+1);});
+  $('clear').addEventListener('click',function(){
+    cells.forEach(function(c,i){c.className='cell';c.textContent='';held[i]=-1;});
+    order=[];logEl.textContent='';statusEl.textContent='Board cleared. Move, click or press Freeze to start again.';
+  });
+
+  var hint=$('hint');
+  if(!fine)hint.textContent='Tap any cell to drop a look into it — or use Next look and Freeze.';
+  else if(reduce)hint.textContent='Click any cell to freeze the current look into it. The cursor trail is off while reduced motion is on.';
+
+  freeze(1,0,true);freeze(10,4,true);freeze(14,2,true);freeze(23,6,true);
+  setNow(1);
+  statusEl.textContent='4 of 24 cells cut. Your turn.';
+
+  /* size guide */
+  var dlg=$('sizes'),SZ={A:[108,114,120,126,132],B:[98,100,102,104,106],C:[60,62,64,66,68],D:[72,78,84,90,96],E:[76,78,80,82,84],F:[30,31,32,33,34]};
+  var NM={A:'Chest',B:'Length',C:'Sleeve',D:'Waist',E:'Inseam',F:'Leg opening'},keys=Object.keys(SZ),tb=$('szBody');
+  keys.forEach(function(k){
+    var tr=document.createElement('tr'),th=document.createElement('th');th.scope='row';th.textContent=k+' · '+NM[k];tr.appendChild(th);
+    SZ[k].forEach(function(v){var td=document.createElement('td');td.textContent=v;tr.appendChild(td);});tb.appendChild(tr);
+  });
+  var pickBtns=[].slice.call(document.querySelectorAll('.sz-pick button'));
+  function pick(s){
+    pickBtns.forEach(function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-s')===s));});
+    keys.forEach(function(k){$('v'+k).textContent=k+' · '+SZ[k][s];});
+    [].forEach.call(document.querySelectorAll('.sz tr'),function(tr){[].forEach.call(tr.children,function(c,ci){c.classList.toggle('sel',ci===s+1);});});
+    $('szRead').textContent='Size 0'+(s+1)+': chest '+SZ.A[s]+', length '+SZ.B[s]+', sleeve '+SZ.C[s]+', waist '+SZ.D[s]+', inseam '+SZ.E[s]+', leg opening '+SZ.F[s]+' cm.';
+  }
+  pickBtns.forEach(function(b){b.addEventListener('click',function(){pick(+b.getAttribute('data-s'));});});
+  pick(2);
+  function openSizes(){if(typeof dlg.showModal==='function'){if(!dlg.open)dlg.showModal();}else dlg.setAttribute('open','');}
+  function closeSizes(){if(typeof dlg.close==='function')dlg.close();else dlg.removeAttribute('open');}
+  [].forEach.call(document.querySelectorAll('[data-size-open]'),function(b){b.addEventListener('click',openSizes);});
+  dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.closest('[data-close]'))closeSizes();});
+  dlg.addEventListener('keydown',function(e){if(e.key==='Escape'){e.preventDefault();closeSizes();}});
+
+  /* long "Try it on" names get a calmer size */
+  window.addEventListener('hd:brandchange',function(e){
+    var long=((e.detail&&e.detail.name)||'').length>9;
+    [].forEach.call(document.querySelectorAll('.mark,.fmark'),function(el){el.classList.toggle('long',long);});
+  });
+})();
+</script>
+</body>
+</html>

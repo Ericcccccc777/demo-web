@@ -1,0 +1,8 @@
+{
+  "id": "060",
+  "tech": ["Web Audio", "SVG", "Pointer Events", "Keyboard shortcuts", "IntersectionObserver", "Form logic"],
+  "features": ["sound", "game"],
+  "interaction": "Play a two-octave piano (C4–C6) by click, tap or computer keys (A–K white, W E T Y U black, Z/X octave) with a Web Audio piano-like synth; every note is engraved on a staff above, 'Play Twinkle Twinkle' performs the tune on gold-lit keys, and 'Teach me the tune' lights the next key and checks each note you play. Volume and mute included; no sound until the first key press.",
+  "fonts": ["Libre Caslon Display", "Questrial"],
+  "notes": "Computer-key playing is active only while the practice room is on screen and never while typing in a form field."
+}

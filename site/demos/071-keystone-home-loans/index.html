@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="071">
+<meta name="demo:brand" content="Keystone Home Loans">
+<title>Keystone Home Loans — mortgage broker, Brisbane</title>
+<meta name="description" content="Keystone Home Loans is a fictional Brisbane mortgage broker with an illustrative repayment calculator for first home buyers, refinancers and investors.">
+<meta name="theme-color" content="#111127">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#111127;--indigo:#3A2E8C;--violet:#7B5CFF;--vio2:#A994FF;--vink:#4A33C8;--peach:#FFB199;--mute:#BAB8CF;--line:rgba(255,255,255,.14);
+--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:"Urbanist",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--ink)}
+body{margin:0;color:#fff;background:var(--ink);font:400 17px/1.6 var(--sans)}
+a{color:inherit}
+p{margin:0}
+:focus-visible{outline:2px solid var(--peach);outline-offset:3px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* gradient mesh */
+.mesh{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.mesh i{position:absolute;border-radius:50%;animation:drift 30s ease-in-out infinite alternate}
+.mesh i:nth-child(1){width:72vmax;height:72vmax;left:-26vmax;top:-34vmax;background:radial-gradient(closest-side,rgba(58,46,140,.95),rgba(58,46,140,0))}
+.mesh i:nth-child(2){width:60vmax;height:60vmax;right:-22vmax;top:-22vmax;background:radial-gradient(closest-side,rgba(123,92,255,.62),rgba(123,92,255,0));animation-duration:36s;animation-delay:-9s}
+.mesh i:nth-child(3){width:44vmax;height:44vmax;right:-10vmax;top:38vh;background:radial-gradient(closest-side,rgba(255,177,153,.34),rgba(255,177,153,0));animation-duration:42s;animation-delay:-15s}
+.mesh i:nth-child(4){width:54vmax;height:54vmax;left:-20vmax;bottom:-34vmax;background:radial-gradient(closest-side,rgba(123,92,255,.4),rgba(123,92,255,0));animation-duration:38s}
+.mesh::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 85% 60% at 50% 0%,#000,transparent);mask-image:radial-gradient(ellipse 85% 60% at 50% 0%,#000,transparent)}
+@keyframes drift{50%{transform:translate3d(5vw,4vh,0) scale(1.08)}100%{transform:translate3d(-4vw,7vh,0) scale(.95)}}
+.top,main,.foot{position:relative;z-index:1}
+/* header */
+.top{max-width:1320px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 21px/1.05 var(--sans);letter-spacing:-.01em;min-width:0}
+.logo span{overflow-wrap:anywhere}
+.logo svg{width:40px;height:40px;flex:none}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{color:var(--mute);text-decoration:none;font:500 15px/1 var(--sans);padding:12px 14px;border-radius:999px;transition:background .2s,color .2s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;background:#fff;color:var(--ink);font:700 15px/1 var(--sans);text-decoration:none;border:0;cursor:pointer;flex:none;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(123,92,255,.5)}
+.cta.ghost{background:rgba(255,255,255,.04);color:#fff;box-shadow:inset 0 0 0 1.5px var(--line)}
+.cta.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--vio2)}
+.cta svg{width:16px;height:16px}
+/* hero */
+.hero{max-width:1320px;margin:0 auto;padding:22px 40px 24px}
+.hero-head{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px 64px;align-items:end;margin-bottom:30px}
+.eyebrow{grid-column:1/-1;display:flex;align-items:center;gap:10px;font:500 12.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--vio2)}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--peach);animation:pulse 2.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,177,153,.55)}70%,100%{box-shadow:0 0 0 11px rgba(255,177,153,0)}}
+h1{font:800 clamp(40px,5vw,72px)/.98 var(--sans);letter-spacing:-.035em;margin:0}
+.grad{background:linear-gradient(95deg,#FFB199 0%,#D6A6F2 45%,#8F74FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--mute);font-size:18px;max-width:44ch;margin-bottom:20px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px}
+/* calculator */
+.glass{background:linear-gradient(155deg,rgba(255,255,255,.1),rgba(255,255,255,.035) 60%);border:1px solid var(--line);border-radius:28px;-webkit-backdrop-filter:blur(22px) saturate(140%);backdrop-filter:blur(22px) saturate(140%);box-shadow:0 30px 80px rgba(4,4,18,.5),inset 0 1px 0 rgba(255,255,255,.14)}
+.calc{display:grid;grid-template-columns:minmax(300px,370px) minmax(0,1fr);grid-template-areas:"in out" "in chart";gap:0 36px;padding:28px 30px 24px}
+.in{grid-area:in;display:grid;gap:16px;align-content:start;padding-right:32px;border-right:1px solid var(--line);margin:0}
+.field{display:grid;gap:6px;border:0;padding:0;margin:0;min-width:0}
+.field-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lab,.field-top label,legend{font:500 12px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding:0}
+legend{margin-bottom:8px}
+.num{display:inline-flex;align-items:center;gap:4px;font:500 20px/1 var(--mono);color:#fff}
+.num input{width:calc(9ch + 22px);font:inherit;color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:0 10px;text-align:right;min-height:42px}
+.num input.short{width:calc(5ch + 22px)}
+.num input:hover{border-color:rgba(255,255,255,.3)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:0;cursor:pointer;--p:50%;touch-action:pan-y}
+input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--peach),var(--violet) var(--p),rgba(255,255,255,.15) var(--p))}
+input[type=range]::-moz-range-track{height:6px;border-radius:6px;background:linear-gradient(90deg,var(--peach),var(--violet) var(--p),rgba(255,255,255,.15) var(--p))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;margin-top:-9px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 6px rgba(123,92,255,.35),0 4px 12px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:0;box-shadow:0 0 0 6px rgba(123,92,255,.35)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(--peach)}
+input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 4px var(--peach)}
+.seg{display:flex;gap:4px;padding:4px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.seg label{flex:1;position:relative;display:block;min-width:0}
+.seg input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer}
+.seg span{display:grid;place-items:center;min-height:40px;padding:4px 8px;border-radius:10px;font:600 14px/1.15 var(--sans);color:var(--mute);text-align:center;transition:background .2s,color .2s}
+.seg input:checked+span{background:#fff;color:var(--ink)}
+.seg input:focus-visible+span{outline:2px solid var(--peach);outline-offset:2px}
+.io-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:10px;font-size:15px;color:var(--mute)}
+.io-row[hidden]{display:none}
+select{font:500 15px/1 var(--sans);color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px;padding:0 10px;min-height:42px}
+select option{color:var(--ink)}
+.why{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;color:var(--mute);padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.22)}
+.why b{color:#fff;font-weight:600}
+.why svg{flex:none;width:18px;height:18px;margin-top:2px}
+.out{grid-area:out;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr) minmax(0,1fr);gap:8px 24px;align-items:end;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.big{font:800 clamp(50px,5.6vw,84px)/.95 var(--sans);letter-spacing:-.045em;font-variant-numeric:tabular-nums;margin-top:8px;white-space:nowrap}
+.big small{font:500 15px var(--mono);letter-spacing:0;color:var(--mute);margin-left:6px}
+.later{font:500 13px/1.4 var(--mono);color:var(--peach);margin-top:8px;min-height:1.4em}
+.stat b{display:block;font:500 clamp(19px,1.8vw,26px)/1.1 var(--mono);letter-spacing:-.02em;margin-top:8px;font-variant-numeric:tabular-nums}
+.split{display:flex;height:6px;border-radius:6px;overflow:hidden;margin-top:12px;background:var(--peach)}
+.split i{display:block;background:var(--violet);transition:width .5s}
+.tagline{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:8px;margin-top:10px;font:500 12px/1.3 var(--mono);padding:7px 11px;border-radius:999px;background:rgba(255,177,153,.1);color:var(--peach);border:1px solid rgba(255,177,153,.35)}
+.chartbox{grid-area:chart;position:relative;padding-top:16px;min-width:0}
+.chart-top{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap;margin-bottom:6px}
+.legend{display:flex;gap:16px;font:500 12px/1 var(--mono);color:var(--mute)}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:-1px;background:var(--c)}
+.chart{position:relative;border-radius:14px;touch-action:pan-y;cursor:crosshair}
+.chart:focus-visible{outline-offset:4px}
+.chart svg{display:block;width:100%;height:240px;overflow:visible}
+.axis{font:400 11px var(--mono);fill:rgba(255,255,255,.6)}
+.gl{stroke:rgba(255,255,255,.09)}
+.tip{position:absolute;top:0;left:0;pointer-events:none;background:rgba(17,17,39,.94);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font:500 12px/1.55 var(--mono);white-space:nowrap;opacity:0;transform:translateX(-50%);transition:opacity .15s;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.tip.on{opacity:1}
+.tip i{font-style:normal;color:var(--mute)}
+.readout{font:400 13px/1.5 var(--mono);color:var(--mute);margin-top:10px;min-height:3em}
+.hint{font:400 12px/1.4 var(--mono);color:var(--mute)}
+/* sections */
+.sec{max-width:1320px;margin:0 auto;padding:112px 40px 16px}
+.kick{font:500 12.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--vio2);margin-bottom:16px}
+h2{font:800 clamp(34px,4.2vw,58px)/1.02 var(--sans);letter-spacing:-.035em;margin:0 0 16px;max-width:17ch}
+.sub{color:var(--mute);max-width:58ch;font-size:18px;margin-bottom:44px}
+.lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.lane{position:relative;overflow:hidden;padding:30px 28px 28px;display:flex;flex-direction:column;gap:14px}
+.lane:nth-child(2){margin-top:40px}.lane:nth-child(3){margin-top:80px}
+.lane::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--peach),var(--violet))}
+.lane-top{display:flex;justify-content:space-between;align-items:flex-start}
+.lane .no{font:500 13px var(--mono);color:var(--mute)}
+.ico{width:60px;height:60px}
+.lane h3{font:700 28px/1.1 var(--sans);letter-spacing:-.02em;margin:0}
+.lane p{color:var(--mute)}
+.lane ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15.5px}
+.lane li{display:flex;gap:10px}
+.lane li::before{content:"";flex:none;width:6px;height:6px;border-radius:2px;background:var(--peach);margin-top:10px}
+.lane .cta{align-self:flex-start;margin-top:6px}
+.paid{background:#fff;color:var(--ink);border-radius:32px;padding:56px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:start}
+.paid .kick{color:var(--vink)}
+.paid h2{max-width:14ch}
+.paid p{color:#3b3a52;margin-bottom:14px}
+.pay{margin:0 0 18px;display:grid;gap:12px}
+.pay div{padding:16px 18px;border-radius:16px;background:#F3F1FF}
+.pay dt{font:700 17px/1.2 var(--sans);margin-bottom:4px}
+.pay dd{margin:0;color:#3b3a52}
+.gen{font:500 12.5px/1.5 var(--mono);color:#55546b!important}
+.eg{border-radius:24px;padding:28px;background:linear-gradient(150deg,#1b1840,#111127);color:#fff}
+.eg .lab{color:var(--mute)}
+.eg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 24px}
+.eg-grid b{display:block;font:800 clamp(28px,3vw,42px)/1 var(--sans);letter-spacing:-.03em;margin:8px 0 6px}
+.eg-grid small{font:400 12px/1.4 var(--mono);color:var(--mute)}
+.eg-grid div:first-child b{background:linear-gradient(95deg,#FFB199,#8F74FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.trail{display:flex;align-items:flex-end;gap:6px;height:120px;padding-bottom:22px;position:relative;border-bottom:1px solid var(--line)}
+.trail i{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--violet),rgba(123,92,255,.25));height:var(--h);position:relative}
+.trail i::after{content:attr(data-y);position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font:400 10px var(--mono);color:var(--mute)}
+.eg .small{font:400 12px/1.5 var(--mono);color:var(--mute);margin-top:30px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;position:relative}
+.steps::before{content:"";position:absolute;left:22px;right:0;top:22px;height:1px;background:linear-gradient(90deg,var(--peach),var(--violet) 60%,rgba(123,92,255,0))}
+.steps li{position:relative;padding-top:66px}
+.steps .n{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:500 14px var(--mono);background:var(--ink);border:1px solid rgba(255,255,255,.3);box-shadow:0 0 0 6px var(--ink)}
+.steps li:first-child .n{background:#fff;color:var(--ink)}
+.steps .t{display:block;font:500 12px/1.3 var(--mono);color:var(--peach);margin-bottom:8px}
+.steps h3{font:700 21px/1.2 var(--sans);margin:0 0 8px}
+.steps p{color:var(--mute);font-size:15.5px}
+.book{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:44px;padding:36px}
+.facts{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:14px}
+.facts li{display:grid;gap:2px}
+.scen{padding:16px 18px;border-radius:16px;border:1px dashed rgba(255,255,255,.22);background:rgba(255,255,255,.03)}
+.scen p{font:500 14px/1.5 var(--mono);margin-top:6px}
+.bform{display:grid;gap:20px;margin:0}
+.bform fieldset{border:0;padding:0;margin:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer}
+.chip span{display:grid;place-items:center;min-height:44px;min-width:70px;padding:6px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);font:500 13px/1.3 var(--mono);text-align:center;transition:background .2s,color .2s}
+.chip input:checked+span{background:#fff;color:var(--ink);border-color:#fff;box-shadow:0 0 0 3px rgba(123,92,255,.55)}
+.chip input:focus-visible+span{outline:2px solid var(--peach);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:grid;gap:6px;min-width:0}
+.fld input,.fld select{width:100%;font:400 16px/1.3 var(--sans);color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:0 14px;min-height:48px}
+.fld input:focus-visible,.fld select:focus-visible{outline:2px solid var(--peach);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--mute)}
+.check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--violet);flex:none}
+.res{padding:18px 20px;border-radius:16px;background:rgba(255,177,153,.1);border:1px solid rgba(255,177,153,.35)}
+.res p+p{margin-top:6px}
+.res .lab{color:var(--peach)}
+.small{font-size:13px;color:var(--mute)}
+.foot{max-width:1320px;margin:120px auto 0;padding:44px 40px 48px;border-top:1px solid var(--line);display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:32px;font-size:15px;color:var(--mute)}
+.foot .name{font:800 30px/1.05 var(--sans);letter-spacing:-.02em;color:#fff;margin-bottom:10px;overflow-wrap:anywhere}
+.foot .lab{margin-bottom:10px}
+@media (max-width:1080px){
+ .hero-head{grid-template-columns:1fr;gap:16px}
+ .calc{grid-template-columns:1fr;grid-template-areas:"out" "in" "chart";padding:24px}
+ .in{grid-template-columns:1fr 1fr;gap:18px 28px;padding:20px 0 4px;border-right:0}
+ .why{grid-column:1/-1}
+ .lanes{grid-template-columns:1fr 1fr}
+ .lane:nth-child(2){margin-top:0}.lane:nth-child(3){margin-top:0;grid-column:1/-1}
+ .paid{grid-template-columns:1fr;padding:40px}
+ .steps{grid-template-columns:1fr 1fr 1fr}
+ .steps::before{display:none}
+ .book{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+ body{font-size:16px}
+ .top{padding:14px 16px;gap:12px}
+ .logo{font-size:18px;gap:10px}
+ .logo svg{width:34px;height:34px}
+ .nav{display:none}
+ .top .cta{margin-left:auto;min-height:42px;padding:0 16px;font-size:14px}
+ .hero{padding:14px 16px 8px;display:flex;flex-direction:column}
+ .hero-head{display:contents}
+ .eyebrow{order:1;margin-bottom:14px}
+ h1{order:2;margin-bottom:22px}
+ .calc{order:3;padding:0 16px 18px;border-radius:24px}
+ .hero-head>div{order:4;margin-top:26px}
+ .out{position:sticky;top:0;z-index:3;margin:0 -16px;padding:16px 16px 14px;border-radius:24px 24px 0 0;background:#1c1942;box-shadow:0 10px 24px rgba(8,8,24,.45);grid-template-columns:1fr 1fr;gap:4px 16px}
+ .rep{grid-column:1/-1}
+ .big{font-size:50px}
+ .later:empty{display:none}
+ .tagline{margin-top:8px}
+ .in{grid-template-columns:1fr;gap:16px;padding-top:18px}
+ .chart svg{height:210px}
+ .lede{font-size:17px}
+ .sec{padding:84px 16px 8px}
+ .sub{font-size:17px;margin-bottom:32px}
+ .lanes{grid-template-columns:1fr}
+ .lane:nth-child(3){grid-column:auto}
+ .paid{padding:28px 20px;border-radius:24px;gap:32px}
+ .eg{padding:22px 18px}
+ .eg-grid{grid-template-columns:1fr 1fr}
+ .eg-grid div:first-child{grid-column:1/-1}
+ .steps{grid-template-columns:1fr;gap:26px}
+ .steps::before{display:block;left:22px;right:auto;top:22px;bottom:22px;width:1px;height:auto;background:linear-gradient(180deg,var(--peach),var(--violet))}
+ .steps li{padding:0 0 0 66px;min-height:44px}
+ .book{padding:20px 16px;gap:28px}
+ .row2{grid-template-columns:1fr}
+ .foot{grid-template-columns:1fr;padding:36px 16px 70px;margin-top:90px;gap:22px}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .mesh i,.pulse{animation:none}
+ *,*::before,*::after{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB199"/><stop offset="1" stop-color="#8F74FF"/></linearGradient></defs></svg>
+
+<header class="top">
+ <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)"/><path d="M9 32V22.5A11 11 0 0 1 16.2 12.2M23.8 12.2A11 11 0 0 1 31 22.5V32" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M14.5 32V24a5.5 5.5 0 0 1 11 0v8" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.6"/><path d="M15.6 8.5H24.4L22.6 16.5H17.4Z" fill="url(#lg)"/></svg><span data-brand>Keystone Home Loans</span></a>
+ <nav class="nav" aria-label="Sections"><a href="#calc">Calculator</a><a href="#who">Who we help</a><a href="#paid">How we’re paid</a><a href="#process">Process</a></nav>
+ <a class="cta" href="#book">Book a chat</a>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+ <div class="hero-head">
+  <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Mortgage broker · Brisbane, QLD</p>
+  <h1 id="h1">Run the numbers.<br><span class="grad">Then talk to a human.</span></h1>
+  <div>
+   <p class="lede">We’re a small Brisbane broking team comparing home loans across a panel of lenders — for first home buyers, refinancers and investors. Start with the maths; we’ll bring the fine print.</p>
+   <div class="hero-cta"><a class="cta" href="#book">Book a free chat</a><a class="cta ghost" href="#paid">How we’re paid</a></div>
+  </div>
+ </div>
+
+ <div class="calc glass" id="calc" role="region" aria-labelledby="calc-t">
+  <h2 class="sr" id="calc-t">Repayment calculator</h2>
+  <form class="in" id="cf" data-kit-ignore>
+   <div class="field">
+    <div class="field-top"><label for="amt">Loan amount</label><span class="num">$<input id="amt" inputmode="numeric" autocomplete="off" value="650,000"></span></div>
+    <input type="range" id="amt-r" min="50000" max="2500000" step="5000" value="650000" aria-label="Loan amount slider">
+   </div>
+   <div class="field">
+    <div class="field-top"><label for="rate">Interest rate p.a.</label><span class="num"><input id="rate" class="short" inputmode="decimal" autocomplete="off" value="6.09">%</span></div>
+    <input type="range" id="rate-r" min="1" max="12" step="0.01" value="6.09" aria-label="Interest rate slider">
+   </div>
+   <div class="field">
+    <div class="field-top"><label for="term-r">Loan term</label><output class="num" id="term-o" for="term-r">30 yrs</output></div>
+    <input type="range" id="term-r" min="5" max="30" step="1" value="30">
+   </div>
+   <fieldset class="field"><legend>Repayment frequency</legend>
+    <div class="seg"><label><input type="radio" name="freq" value="12" checked><span>Monthly</span></label><label><input type="radio" name="freq" value="26"><span>Fortnightly</span></label><label><input type="radio" name="freq" value="52"><span>Weekly</span></label></div>
+   </fieldset>
+   <fieldset class="field"><legend>Repayment type</legend>
+    <div class="seg"><label><input type="radio" name="type" value="pi" checked><span>Principal &amp; interest</span></label><label><input type="radio" name="type" value="io"><span>Interest-only</span></label></div>
+    <div class="io-row" id="io-row" hidden><label for="ioy">Interest-only for</label><select id="ioy"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option></select><span>then P&amp;I</span></div>
+   </fieldset>
+   <p class="why"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="#FFB199" stroke-width="1.5"/><path d="M9 8v5M9 5.2v.1" stroke="#FFB199" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>No borrowing-power figure, on purpose.</b> It hinges on your income, spending, debts and each lender’s own buffers, so a generic number would be a guess — we work it out with you.</span></p>
+  </form>
+
+  <div class="out" id="out">
+   <div class="rep"><p class="lab" id="rep-l">Monthly repayment</p><p class="big"><span id="rep">$0</span><small id="rep-u">/month</small></p><p class="later" id="later"></p></div>
+   <div class="stat"><p class="lab">Total interest</p><b id="tint">$0</b></div>
+   <div class="stat"><p class="lab">Total repaid</p><b id="tpaid">$0</b><div class="split" aria-hidden="true"><i id="split"></i></div></div>
+   <p class="tagline">Illustrative only, not a quote or advice.</p>
+  </div>
+
+  <div class="chartbox">
+   <div class="chart-top"><p class="lab">Where each year’s repayments go</p><div class="legend" aria-hidden="true"><span style="--c:#8F74FF">Principal</span><span style="--c:#FFB199">Interest</span></div></div>
+   <div class="chart" id="chart" tabindex="0" role="group" aria-label="Amortisation chart of principal and interest repaid each year. Use the left and right arrow keys to step through the years." aria-describedby="readout">
+    <svg id="csvg" aria-hidden="true">
+     <defs><linearGradient id="gP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8F74FF"/><stop offset="1" stop-color="#3A2E8C" stop-opacity=".45"/></linearGradient><linearGradient id="gI" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB199" stop-opacity=".95"/><stop offset="1" stop-color="#FFB199" stop-opacity=".22"/></linearGradient></defs>
+     <g id="grid"></g>
+     <path id="aI" fill="url(#gI)"/>
+     <path id="aP" fill="url(#gP)"/>
+     <path id="lT" fill="none" stroke="#FFD5C6" stroke-width="1.6"/>
+     <path id="lP" fill="none" stroke="#BBAAFF" stroke-width="1.6"/>
+     <g id="xl"></g>
+     <g id="cross" opacity="0"><line id="cxl" y1="6" stroke="rgba(255,255,255,.75)" stroke-dasharray="3 3"/><circle id="cdI" r="5.5" fill="#FFB199" stroke="#111127" stroke-width="2"/><circle id="cdP" r="5.5" fill="#8F74FF" stroke="#111127" stroke-width="2"/></g>
+    </svg>
+    <div class="tip" id="tip"></div>
+   </div>
+   <p class="readout" id="readout" aria-live="polite">Hover or drag across the chart — or focus it and use ← → — to read any year.</p>
+  </div>
+ </div>
+ <p class="sr" id="calc-live" aria-live="polite"></p>
+</section>
+
+<section class="sec" id="who" aria-labelledby="who-h">
+ <p class="kick">Who we help</p>
+ <h2 id="who-h">Three kinds of borrower, three different conversations.</h2>
+ <p class="sub">Tap “Try” on any of these to load a typical scenario into the calculator. They’re examples, not recommendations.</p>
+ <div class="lanes">
+  <article class="lane glass">
+   <div class="lane-top"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 30L32 10L56 30M14 25V54H50V25M27 54V40H37V54" fill="none" stroke="url(#lg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="no">01</span></div>
+   <h3>First home buyers</h3>
+   <p>Deposit maths, lenders mortgage insurance and the first-home schemes you might qualify for — in plain English, before you start inspecting.</p>
+   <ul><li>Deposit and upfront costs mapped out, stamp duty included</li><li>Scheme eligibility checked when you apply, because the rules change</li><li>Pre-approval timed to your house hunt</li></ul>
+   <button class="cta ghost" type="button" data-preset="560000,6.19,30,26,pi,5" data-name="first home buyer">Try a first-home example</button>
+  </article>
+  <article class="lane glass">
+   <div class="lane-top"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M12 24H50M42 16L50 24L42 32M52 42H14M22 34L14 42L22 50" fill="none" stroke="url(#lg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="no">02</span></div>
+   <h3>Refinancing</h3>
+   <p>Fixed term ending, rate creeping up, or debts to roll together. We compare your current loan with the panel and put the switching costs in writing.</p>
+   <ul><li>Side-by-side with the loan you have now</li><li>Break and discharge costs estimated upfront</li><li>Cash-back offers weighed against the rate, not instead of it</li></ul>
+   <button class="cta ghost" type="button" data-preset="480000,5.84,25,12,pi,5" data-name="refinance">Try a refinance example</button>
+  </article>
+  <article class="lane glass">
+   <div class="lane-top"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 54H56M14 54V36H24V54M28 54V26H38V54M42 54V14H52V54" fill="none" stroke="url(#lg)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="no">03</span></div>
+   <h3>Investors</h3>
+   <p>Interest-only or P&amp;I, offset or redraw, one loan or several. We structure lending around the plan you’ve made with your accountant — we don’t give tax advice.</p>
+   <ul><li>Structures for one property or a growing portfolio</li><li>Interest-only periods, and what happens when they end</li><li>Happy to work alongside your accountant</li></ul>
+   <button class="cta ghost" type="button" data-preset="720000,6.49,30,12,io,5" data-name="investor">Try an investor example</button>
+  </article>
+ </div>
+</section>
+
+<section class="sec" id="paid" aria-labelledby="paid-h">
+ <div class="paid">
+  <div>
+   <p class="kick">How brokers are paid</p>
+   <h2 id="paid-h">Straight answer: usually by the lender.</h2>
+   <p>For most home loans the lender you choose pays us, not you. It generally comes in two parts:</p>
+   <dl class="pay">
+    <div><dt>Upfront commission</dt><dd>A one-off payment when your loan settles — typically around 0.5–0.7% of the amount borrowed, less any money sitting in an offset account.</dd></div>
+    <div><dt>Trail commission</dt><dd>A smaller ongoing payment — typically around 0.1–0.2% a year of what you still owe. It stops when the loan is repaid or refinanced.</dd></div>
+   </dl>
+   <p>Rates differ between lenders, which is why brokers must act in your best interests: commission can’t be the reason for a recommendation. Before you apply you’ll get our credit guide and a written proposal showing what the lender would pay us on your loan.</p>
+   <p class="gen">General information only. Typical industry ranges, not a statement of this business’s rates.</p>
+  </div>
+  <div class="eg">
+   <p class="lab">Illustrative example · $600,000 loan</p>
+   <div class="eg-grid">
+    <div><span class="lab">You pay us</span><b>$0</b><small>for a standard home loan*</small></div>
+    <div><span class="lab">Upfront</span><b>≈$3,600</b><small>one-off · 0.6%</small></div>
+    <div><span class="lab">Trail, yr 1</span><b>≈$900</b><small>0.15% of balance</small></div>
+   </div>
+   <p class="lab">Trail by year, falling as the balance does</p>
+   <div class="trail" role="img" aria-label="Illustrative trail commission: about $900 in year one, easing to about $774 by year ten.">
+    <i style="--h:100%" data-y="1"></i><i style="--h:98.8%" data-y="2"></i><i style="--h:97.6%" data-y="3"></i><i style="--h:96.1%" data-y="4"></i><i style="--h:94.7%" data-y="5"></i><i style="--h:93.1%" data-y="6"></i><i style="--h:91.6%" data-y="7"></i><i style="--h:89.8%" data-y="8"></i><i style="--h:87.9%" data-y="9"></i><i style="--h:86%" data-y="10"></i>
+   </div>
+   <p class="small">*If a fee ever applies — say, for complex lending — you’ll see it in writing before anything goes ahead. Figures assume 6.09% over 30 years and are illustrative, not a quote.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="process" aria-labelledby="pro-h">
+ <p class="kick">The process</p>
+ <h2 id="pro-h">From first chat to keys, in five steps.</h2>
+ <p class="sub">Timelines depend on lenders and paperwork. These are typical, not promises.</p>
+ <ol class="steps">
+  <li><span class="n">01</span><span class="t">Week 0 · 30 min</span><h3>A free chat</h3><p>Your goals, your timeline and whatever’s keeping you up at night about all this.</p></li>
+  <li><span class="n">02</span><span class="t">Week 1</span><h3>Fact find</h3><p>Payslips, statements and ID. You get a checklist, so there’s no guessing what to gather.</p></li>
+  <li><span class="n">03</span><span class="t">Weeks 1–2</span><h3>Compare &amp; recommend</h3><p>We shortlist loans from our lender panel and explain in writing why we’d pick one.</p></li>
+  <li><span class="n">04</span><span class="t">Often 1–3 weeks</span><h3>Apply &amp; approval</h3><p>We lodge, chase the lender and translate the bank-speak while you get on with life.</p></li>
+  <li><span class="n">05</span><span class="t">Settlement, then yearly</span><h3>Settle, then check in</h3><p>After settlement we review your rate every year and flag when refinancing is worth a look.</p></li>
+ </ol>
+</section>
+
+<section class="sec" id="book" aria-labelledby="book-h">
+ <p class="kick">Book a chat</p>
+ <h2 id="book-h">Thirty minutes. No cost, no pressure.</h2>
+ <p class="sub">Bring your calculator numbers, a rough budget and your questions. We’ll tell you honestly if now isn’t the right time.</p>
+ <div class="book glass">
+  <div>
+   <ul class="facts">
+    <li><span class="lab">Where</span>Video call, phone, or our office in Newstead, Brisbane</li>
+    <li><span class="lab">Hours</span>Mon–Fri 8:30 am – 6 pm · Sat by appointment</li>
+    <li><span class="lab">Call</span><a href="tel:0755502184">(07) 5550 2184</a></li>
+    <li><span class="lab">Email</span><a href="mailto:chat@example.com">chat@example.com</a></li>
+   </ul>
+   <div class="scen"><span class="lab">Your calculator scenario</span><p id="scen">—</p></div>
+  </div>
+  <form class="bform" id="bf" data-kit-ignore>
+   <fieldset><legend>Pick a day</legend><div class="chips" id="days"></div></fieldset>
+   <fieldset><legend>Pick a time · Brisbane time</legend><div class="chips" id="times"></div></fieldset>
+   <fieldset><legend>How should we meet?</legend><div class="seg"><label><input type="radio" name="how" value="Video call" checked><span>Video</span></label><label><input type="radio" name="how" value="Phone call"><span>Phone</span></label><label><input type="radio" name="how" value="Newstead office"><span>Office</span></label></div></fieldset>
+   <div class="row2"><div class="fld"><label class="lab" for="bn">Name</label><input id="bn" name="name" autocomplete="name" required></div><div class="fld"><label class="lab" for="be">Email</label><input id="be" name="email" type="email" autocomplete="email" required></div></div>
+   <div class="fld"><label class="lab" for="bt">What’s it about?</label><select id="bt" name="topic"><option>Buying my first home</option><option>Refinancing</option><option>Investment property</option><option>Something else</option></select></div>
+   <label class="check"><input type="checkbox" id="bs" checked> Send my calculator scenario with the request</label>
+   <button class="cta" type="submit">Request this time</button>
+   <div class="res" id="res" tabindex="-1" hidden></div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div><p class="name" data-brand>Keystone Home Loans</p><p>Mortgage broking for Brisbane and South East Queensland. Newstead, Brisbane QLD.</p></div>
+ <div><p class="lab">Contact</p><p>(07) 5550 2184<br>chat@example.com<br>Mon–Fri 8:30 am – 6 pm</p></div>
+ <div><p class="lab">The fine print</p><p>General information only — it doesn’t consider your objectives, financial situation or needs. Calculator figures are illustrative, not a quote, offer or advice. A real broker shows its credit licence details here; this fictional business has none.</p></div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var doc=document,$=function(i){return doc.getElementById(i);};
+var mq=window.matchMedia("(prefers-reduced-motion: reduce)");
+var money=new Intl.NumberFormat("en-AU",{style:"currency",currency:"AUD",maximumFractionDigits:0});
+var num0=new Intl.NumberFormat("en-AU",{maximumFractionDigits:0});
+var S={amt:650000,rate:6.09,term:30,ppy:12,io:false,ioy:5};
+var UNIT={12:"month",26:"fortnight",52:"week"},FREQ={12:"Monthly",26:"Fortnightly",52:"Weekly"};
+var amt=$("amt"),amtR=$("amt-r"),rate=$("rate"),rateR=$("rate-r"),termR=$("term-r"),termO=$("term-o"),ioy=$("ioy"),ioRow=$("io-row");
+var chart=$("chart"),svg=$("csvg"),aP=$("aP"),aI=$("aI"),lT=$("lT"),lP=$("lP"),gridG=$("grid"),xl=$("xl"),cross=$("cross"),cxl=$("cxl"),cdP=$("cdP"),cdI=$("cdI"),tip=$("tip"),readout=$("readout");
+var W=640,H=240,PL=52,PR=12,PT=12,PB=26,shown=null,raf=0,sel=-1,liveT;
+
+function clamp(v,a,b){return Math.min(b,Math.max(a,v));}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+function fillR(r){r.style.setProperty("--p",((r.value-r.min)/(r.max-r.min)*100)+"%");}
+function kfmt(v,m){if(!v)return "$0";return m<10000?"$"+(v/1000).toFixed(1).replace(/\.0$/,"")+"k":"$"+Math.round(v/1000)+"k";}
+function niceMax(v){if(!(v>0))return 1;var raw=v/4,e=Math.pow(10,Math.floor(Math.log10(raw))),m=raw/e,s=[1,1.2,1.5,2,2.5,3,4,5,6,8,10];for(var i=0;i<s.length;i++){if(m<=s[i])return s[i]*e*4;}return 40*e;}
+
+/* ---- amortisation ---- */
+function calc(s){
+  var ppy=s.ppy,r=s.rate/100/ppy,N=s.term*ppy,nIO=s.io?Math.min(s.ioy,s.term-1)*ppy:0,nPI=N-nIO;
+  var pIO=s.amt*r,pPI=r>0?s.amt*r/(1-Math.pow(1+r,-nPI)):s.amt/nPI;
+  var bal=s.amt,rows=[],ti=0;
+  for(var y=0;y<s.term;y++){
+    var pr=0,it=0;
+    for(var k=0;k<ppy;k++){
+      var n=y*ppy+k,i=bal*r,p=n<nIO?0:(n===N-1?bal:Math.min(bal,pPI-i));
+      bal-=p;pr+=p;it+=i;
+    }
+    rows.push({p:pr,i:it,b:Math.max(0,bal)});ti+=it;
+  }
+  return {rows:rows,first:nIO?pIO:pPI,later:nIO?pPI:0,ti:ti,tp:ti+s.amt};
+}
+function resample(rows,n){
+  var out=[];
+  for(var j=0;j<n;j++){
+    var t=n===1?0:j/(n-1)*(rows.length-1),a=Math.floor(t),b=Math.min(rows.length-1,a+1),f=t-a,A=rows[a],B=rows[b];
+    out.push({p:A.p+(B.p-A.p)*f,i:A.i+(B.i-A.i)*f,b:A.b+(B.b-A.b)*f});
+  }
+  return out;
+}
+
+/* ---- chart ---- */
+function geom(){
+  W=Math.max(240,chart.clientWidth||640);H=svg.getBoundingClientRect().height||240;PL=W<420?42:52;
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);
+}
+function X(i,n){return PL+(n>1?i/(n-1):0)*(W-PL-PR);}
+function Y(v,m){return PT+(1-v/m)*(H-PT-PB);}
+function render(st){
+  var R=st.rows,n=R.length,m=st.max,y0=Y(0,m).toFixed(1),top=[],mid=[],i;
+  for(i=0;i<n;i++){var x=X(i,n).toFixed(1);top.push(x+" "+Y(R[i].p+R[i].i,m).toFixed(1));mid.push(x+" "+Y(R[i].p,m).toFixed(1));}
+  var x0=X(0,n).toFixed(1),x1=X(n-1,n).toFixed(1);
+  aP.setAttribute("d","M"+x0+" "+y0+"L"+mid.join("L")+"L"+x1+" "+y0+"Z");
+  aI.setAttribute("d","M"+top.join("L")+"L"+mid.slice().reverse().join("L")+"Z");
+  lT.setAttribute("d","M"+top.join("L"));
+  lP.setAttribute("d","M"+mid.join("L"));
+  var g="";
+  for(i=0;i<=4;i++){var v=m*i/4,y=Y(v,m).toFixed(1);g+='<line class="gl" x1="'+PL+'" x2="'+(W-PR)+'" y1="'+y+'" y2="'+y+'"/><text class="axis" x="'+(PL-8)+'" y="'+y+'" dy="4" text-anchor="end">'+kfmt(v,m)+"</text>";}
+  gridG.innerHTML=g;
+  var xs="",every=W<420?10:5;
+  for(i=0;i<n;i++){
+    var yr=i+1,last=yr===n&&(n%every===0||n%every>=every/2+1);
+    if(yr===1||yr%every===0||last)xs+='<text class="axis" x="'+X(i,n).toFixed(1)+'" y="'+(H-6)+'" text-anchor="'+(yr===1?"start":yr===n?"end":"middle")+'">'+(yr===1?"Year 1":yr)+"</text>";
+  }
+  xl.innerHTML=xs;
+}
+function setSel(i,speak){
+  if(!shown)return;
+  var R=shown.rows,n=R.length;sel=clamp(i,0,n-1);
+  var r=R[sel],x=X(sel,n),m=shown.max;
+  cross.setAttribute("opacity","1");
+  cxl.setAttribute("x1",x);cxl.setAttribute("x2",x);cxl.setAttribute("y2",H-PB);
+  cdP.setAttribute("cx",x);cdP.setAttribute("cy",Y(r.p,m));cdI.setAttribute("cx",x);cdI.setAttribute("cy",Y(r.p+r.i,m));
+  tip.innerHTML="<b>Year "+(sel+1)+"</b><br><i>Principal</i> "+money.format(r.p)+"<br><i>Interest</i> "+money.format(r.i)+"<br><i>Owing after</i> "+money.format(r.b);
+  var cw=chart.clientWidth,px=x/W*cw,tw=tip.offsetWidth||160,left=px+14;
+  if(left+tw>cw)left=px-14-tw;
+  tip.style.left=Math.max(0,left)+"px";tip.classList.add("on");
+  if(speak)readout.textContent="Year "+(sel+1)+": "+money.format(r.p)+" of principal and "+money.format(r.i)+" of interest repaid; "+money.format(r.b)+" still owing.";
+}
+function hideSel(){cross.setAttribute("opacity","0");tip.classList.remove("on");}
+function refreshSel(){if(sel>-1&&tip.classList.contains("on"))setSel(sel,false);}
+function idxAt(e){var b=chart.getBoundingClientRect(),x=(e.clientX-b.left)*(W/b.width);return Math.round((x-PL)/(W-PL-PR)*(shown.rows.length-1));}
+tip.style.transform="none";tip.style.top="6px";
+chart.addEventListener("pointermove",function(e){if(shown)setSel(idxAt(e),false);});
+chart.addEventListener("pointerdown",function(e){if(shown)setSel(idxAt(e),true);});
+chart.addEventListener("pointerup",function(){if(shown&&sel>-1)setSel(sel,true);});
+chart.addEventListener("pointerleave",function(e){if(e.pointerType==="mouse"&&doc.activeElement!==chart)hideSel();});
+chart.addEventListener("focus",function(){setSel(sel<0?0:sel,true);});
+chart.addEventListener("blur",hideSel);
+chart.addEventListener("keydown",function(e){
+  if(!shown)return;var n=shown.rows.length,i=sel<0?0:sel,k=e.key;
+  if(k==="ArrowRight"||k==="ArrowUp")i++;else if(k==="ArrowLeft"||k==="ArrowDown")i--;
+  else if(k==="Home")i=0;else if(k==="End")i=n-1;else if(k==="PageUp")i+=5;else if(k==="PageDown")i-=5;else return;
+  e.preventDefault();setSel(i,true);
+});
+
+/* ---- outputs ---- */
+function numbers(st){
+  $("rep").textContent=money.format(st.first);
+  $("tint").textContent=money.format(st.ti);
+  $("tpaid").textContent=money.format(st.tp);
+  $("split").style.width=(st.tp>0?clamp(st.amt/st.tp*100,0,100):0)+"%";
+}
+function scenText(res){
+  return money.format(S.amt)+" · "+S.rate.toFixed(2)+"% · "+S.term+" years · "+FREQ[S.ppy].toLowerCase()+" · "+(S.io?"interest-only for "+Math.min(S.ioy,S.term-1)+" yrs, then P&I":"principal & interest")+" → about "+money.format(res.first)+" per "+UNIT[S.ppy]+" (illustrative)";
+}
+function update(){
+  var res=calc(S),mx=0;
+  res.rows.forEach(function(r){mx=Math.max(mx,r.p+r.i);});
+  var to={rows:res.rows,max:niceMax(mx*1.08),first:res.first,ti:res.ti,tp:res.tp,amt:S.amt};
+  $("rep-l").textContent=FREQ[S.ppy]+" repayment"+(S.io?", interest-only":"");
+  $("rep-u").textContent="/"+UNIT[S.ppy];
+  $("later").textContent=S.io?"then "+money.format(res.later)+"/"+UNIT[S.ppy]+" from year "+(Math.min(S.ioy,S.term-1)+1):"";
+  $("scen").textContent=scenText(res);
+  clearTimeout(liveT);
+  liveT=setTimeout(function(){$("calc-live").textContent="Illustrative "+FREQ[S.ppy].toLowerCase()+" repayment "+money.format(res.first)+(S.io?" during the interest-only period, then "+money.format(res.later):"")+". Total interest "+money.format(res.ti)+" over "+S.term+" years.";},700);
+  cancelAnimationFrame(raf);
+  if(!shown||mq.matches){shown=to;render(to);numbers(to);refreshSel();return;}
+  var from=shown,fr=resample(from.rows,to.rows.length),t0=performance.now(),D=560;
+  (function step(now){
+    var k=clamp((now-t0)/D,0,1),e=1-Math.pow(1-k,3),L=function(a,b){return a+(b-a)*e;};
+    shown={rows:to.rows.map(function(r,j){var a=fr[j];return {p:L(a.p,r.p),i:L(a.i,r.i),b:L(a.b,r.b)};}),max:L(from.max,to.max),first:L(from.first,to.first),ti:L(from.ti,to.ti),tp:L(from.tp,to.tp),amt:L(from.amt,to.amt)};
+    render(shown);numbers(shown);refreshSel();
+    if(k<1)raf=requestAnimationFrame(step);else{shown=to;render(to);numbers(to);refreshSel();}
+  })(t0);
+}
+
+/* ---- inputs ---- */
+function syncAmt(v,typed){S.amt=v;if(!typed)amt.value=num0.format(v);amtR.value=v;fillR(amtR);amtR.setAttribute("aria-valuetext",money.format(v));}
+function syncRate(v,typed){S.rate=v;if(!typed)rate.value=v.toFixed(2);rateR.value=v;fillR(rateR);rateR.setAttribute("aria-valuetext",v.toFixed(2)+" per cent");}
+function fixIO(){[].forEach.call(ioy.options,function(o){o.disabled=+o.value>=S.term;});if(S.ioy>=S.term){S.ioy=S.term-1;ioy.value=String(S.ioy);}}
+function syncTerm(v){S.term=v;termR.value=v;termO.textContent=v+" yrs";fillR(termR);termR.setAttribute("aria-valuetext",v+" years");fixIO();}
+function parse(el){return parseFloat(el.value.replace(/[^0-9.]/g,""));}
+amtR.addEventListener("input",function(){syncAmt(+amtR.value);update();});
+amt.addEventListener("input",function(){var v=parse(amt);if(v>=50000&&v<=2500000){syncAmt(v,true);update();}});
+amt.addEventListener("change",function(){var v=parse(amt);if(!isFinite(v))v=S.amt;syncAmt(clamp(Math.round(v),50000,2500000));update();});
+rateR.addEventListener("input",function(){syncRate(+rateR.value);update();});
+rate.addEventListener("input",function(){var v=parse(rate);if(v>=1&&v<=12){syncRate(v,true);update();}});
+rate.addEventListener("change",function(){var v=parse(rate);if(!isFinite(v))v=S.rate;syncRate(clamp(Math.round(v*100)/100,1,12));update();});
+termR.addEventListener("input",function(){syncTerm(+termR.value);update();});
+[].forEach.call(doc.querySelectorAll("input[name=freq]"),function(r){r.addEventListener("change",function(){S.ppy=+r.value;update();});});
+[].forEach.call(doc.querySelectorAll("input[name=type]"),function(r){r.addEventListener("change",function(){S.io=r.value==="io";ioRow.hidden=!S.io;update();});});
+ioy.addEventListener("change",function(){S.ioy=+ioy.value;update();});
+$("cf").addEventListener("submit",function(e){e.preventDefault();});
+[].forEach.call(doc.querySelectorAll("[data-preset]"),function(b){
+  b.addEventListener("click",function(){
+    var p=b.getAttribute("data-preset").split(",");
+    syncAmt(+p[0]);syncRate(+p[1]);S.ppy=+p[3];S.io=p[4]==="io";S.ioy=+p[5];ioy.value=p[5];syncTerm(+p[2]);
+    doc.querySelector('input[name=freq][value="'+p[3]+'"]').checked=true;
+    doc.querySelector('input[name=type][value="'+p[4]+'"]').checked=true;
+    ioRow.hidden=!S.io;
+    $("calc").scrollIntoView({behavior:mq.matches?"auto":"smooth",block:"start"});
+    setTimeout(update,mq.matches?0:380);
+    $("calc-live").textContent="Loaded the "+b.getAttribute("data-name")+" example into the calculator.";
+  });
+});
+
+/* ---- booking ---- */
+var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var d=new Date(),days=[];
+while(days.length<6){d.setDate(d.getDate()+1);var w=d.getDay();if(w>0&&w<6)days.push([DN[w],d.getDate()+" "+MN[d.getMonth()]]);}
+$("days").innerHTML=days.map(function(t,i){return '<label class="chip"><input type="radio" name="day" value="'+t[0]+" "+t[1]+'"'+(i?"":" required")+"><span>"+t[0]+"<br>"+t[1]+"</span></label>";}).join("");
+$("times").innerHTML=["8:30 am","10:00 am","11:30 am","1:00 pm","2:30 pm","4:00 pm","5:30 pm"].map(function(t,i){return '<label class="chip"><input type="radio" name="time" value="'+t+'"'+(i?"":" required")+"><span>"+t+"</span></label>";}).join("");
+$("bf").addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=e.target,day=f.querySelector("input[name=day]:checked"),tm=f.querySelector("input[name=time]:checked"),how=f.querySelector("input[name=how]:checked"),res=$("res");
+  if(!day||!tm)return;
+  res.hidden=false;
+  res.innerHTML='<p class="lab">Request summary · demo</p><p><b>'+esc(day.value)+", "+esc(tm.value)+"</b> · "+esc(how.value)+" · "+esc($("bt").value)+"</p>"+($("bs").checked?'<p class="small">Scenario: '+esc($("scen").textContent)+"</p>":"")+'<p class="small">Nothing was booked or sent — this is a concept demo. A real site would confirm by email.</p>';
+  res.focus();
+  if(window.DemoKit)window.DemoKit.toast("Demo only — no appointment was booked and nothing was sent.");
+});
+
+/* ---- start ---- */
+fillR(amtR);fillR(rateR);fillR(termR);fixIO();geom();
+var r0=calc(S),m0=0;r0.rows.forEach(function(r){m0=Math.max(m0,r.p+r.i);});
+shown={rows:r0.rows.map(function(){return {p:0,i:0,b:S.amt};}),max:niceMax(m0*1.08),first:0,ti:0,tp:0,amt:S.amt};
+update();
+if(window.ResizeObserver){new ResizeObserver(function(){geom();if(shown){render(shown);refreshSel();}}).observe(chart);}
+else window.addEventListener("resize",function(){geom();if(shown){render(shown);refreshSel();}});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="050">
+<meta name="demo:brand" content="Tide Pool Day Spa">
+<title>Tide Pool Day Spa — massage, facials &amp; hot stone in Noosa</title>
+<meta name="description" content="A fictional coastal day spa in Noosaville, QLD, with an ambient sound mixer and a massage-pressure guide.">
+<meta name="theme-color" content="#EDE3D6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --sand:#EDE3D6;--sand2:#F6F0E8;--drift:#A8947C;--driftInk:#6B5A46;--foam:#CFE3DD;--foam2:#E3EFEB;--stone:#8C8A84;--stone2:#C9C4BC;--ink:#3B3A36;--ink2:#5A5852;
+  --glass:rgba(255,255,255,.36);--glassHi:rgba(255,255,255,.5);--edge:rgba(255,255,255,.62);
+  --fd:"Italiana","Times New Roman",serif;--fb:"Mulish",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,5vw,56px);--ease:cubic-bezier(.22,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;min-height:100vh;background:var(--sand);color:var(--ink);font:400 1.02rem/1.7 var(--fb);overflow-x:clip}
+a{color:inherit}
+svg{display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--driftInk);outline-offset:4px;border-radius:8px}
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:99;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px}
+.skip:focus{top:12px}
+.in{max-width:1200px;margin-inline:auto;padding-inline:var(--gut)}
+[data-brand]{overflow-wrap:anywhere}
+h1,h2,h3{font-family:var(--fd);font-weight:400;margin:0;letter-spacing:.01em;text-wrap:balance}
+.lbl{display:block;margin:0 0 12px;font:700 .74rem/1.4 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--driftInk)}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.15);backdrop-filter:blur(18px) saturate(1.15);border:1px solid var(--edge);box-shadow:0 34px 70px -40px rgba(59,58,54,.45),inset 0 1px 0 rgba(255,255,255,.7);border-radius:30px}
+@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){.glass{background:rgba(248,244,238,.92)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;font:700 .95rem/1.1 var(--fb);letter-spacing:.04em;transition:background .5s var(--ease),transform .5s var(--ease),box-shadow .5s var(--ease)}
+.btn--ink{background:var(--ink);color:var(--sand2)}
+.btn--ink:hover{background:#2a2926;transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(59,58,54,.7)}
+.btn--line{border-color:rgba(59,58,54,.35);background:rgba(255,255,255,.28)}
+.btn--line:hover{background:rgba(255,255,255,.55)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* stones layer */
+.stones{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.stones svg{position:absolute;filter:drop-shadow(0 26px 22px rgba(59,58,54,.16))}
+.st{animation:drift var(--d,60s) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes drift{from{transform:translate(0,0) rotate(0)}to{transform:translate(var(--x,24px),var(--y,-18px)) rotate(var(--r,4deg))}}
+.ripple{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.55);opacity:0}
+.js .ripple{animation:rip 9s var(--ease) infinite}
+@keyframes rip{0%{transform:scale(.3);opacity:0}20%{opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* header */
+.hd{position:sticky;top:0;z-index:20;background:rgba(237,227,214,.94);border-bottom:1px solid rgba(168,148,124,.25);padding-top:env(safe-area-inset-top)}
+.hd .in{display:flex;align-items:center;gap:16px;min-height:66px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:1 1 auto;min-width:0}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{font:400 1.45rem/1.05 var(--fd);letter-spacing:.03em;min-width:0}
+.nav{display:none;gap:4px}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-size:.92rem;font-weight:600;color:var(--ink2)}
+.nav a:hover{background:rgba(255,255,255,.45);color:var(--ink)}
+.hd .btn{min-height:44px;padding:10px 20px;flex:none}
+@media(min-width:980px){.nav{display:flex}}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(34px,7vw,90px) clamp(40px,7vw,100px)}
+.hero__grid{display:grid;gap:30px;align-items:start}
+@media(min-width:980px){.hero__grid{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}}
+.hero h1{font-size:clamp(3.5rem,11.5vw,7.2rem);line-height:.96;letter-spacing:.005em}
+.hero__tag{margin:22px 0 0;max-width:30em;font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--ink2)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hours{display:flex;flex-wrap:wrap;gap:6px 22px;margin:30px 0 0;padding:0;list-style:none;font-size:.9rem;color:var(--ink2)}
+.hours b{font-weight:700;color:var(--ink)}
+.float{animation:flt 16s ease-in-out infinite alternate}
+@keyframes flt{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+
+/* mixer */
+.mixer{padding:clamp(18px,3vw,30px);position:relative}
+.mx__head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.mx__head h2{font-size:clamp(2rem,4vw,2.6rem);line-height:1}
+.mx__head p{margin:6px 0 0;font-size:.9rem;color:var(--ink2);max-width:26em}
+.play{flex:none;width:76px;height:76px;border-radius:50%;border:0;cursor:pointer;background:var(--ink);color:var(--sand2);display:grid;place-items:center;align-content:center;gap:2px;font:700 .68rem/1 var(--fb);letter-spacing:.12em;text-transform:uppercase;box-shadow:0 18px 30px -16px rgba(59,58,54,.8);transition:transform .5s var(--ease),background .4s}
+.play:hover{transform:scale(1.05)}
+.play svg{width:22px;height:22px}
+.play .i-stop{display:none}
+.play.on{background:var(--driftInk)}
+.play.on .i-play{display:none}.play.on .i-stop{display:block}
+.scope{display:block;width:100%;height:46px;margin:14px 0 4px;border-radius:14px;background:rgba(255,255,255,.28)}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.presets span{align-self:center;font-size:.82rem;color:var(--ink2);margin-right:2px}
+.chip{min-height:40px;padding:8px 16px;border-radius:999px;border:1px solid rgba(59,58,54,.22);background:rgba(255,255,255,.34);cursor:pointer;font-weight:600;font-size:.86rem;transition:background .4s}
+.chip:hover{background:rgba(255,255,255,.62)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--sand2);border-color:var(--ink)}
+.chans{display:grid;gap:8px}
+.ch{--lvl:0;position:relative;display:grid;grid-template-columns:46px minmax(0,1fr) auto;grid-template-areas:"ic txt tog" "ic rng rng";align-items:center;gap:2px 14px;padding:10px 12px 8px;border-radius:22px;background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.6);transition:background .5s}
+.ch.on{background:rgba(255,255,255,.58)}
+.ch__ic{position:relative;grid-area:ic;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--foam);color:var(--ink)}
+.ch__ic::before{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--drift);opacity:calc(var(--lvl)*1.4);transform:scale(calc(1 + var(--lvl)*.5))}
+.ch__ic svg{width:24px;height:24px}
+.ch__t{grid-area:txt;min-width:0}
+.ch b{font-weight:700;font-size:.95rem;line-height:1.2}
+@media(min-width:1100px){.ch{grid-template-columns:46px minmax(0,.9fr) minmax(0,1.1fr) auto;grid-template-areas:"ic txt rng tog";padding:10px 12px}}
+.ch small{display:block;font-size:.76rem;color:var(--ink2);line-height:1.3}
+.tog{grid-area:tog;min-width:56px;min-height:40px;border-radius:999px;border:1px solid rgba(59,58,54,.25);background:rgba(255,255,255,.45);cursor:pointer;font:700 .74rem/1 var(--fb);letter-spacing:.1em;text-transform:uppercase;transition:background .4s,color .4s}
+.tog[aria-checked=true]{background:var(--ink);color:var(--sand2);border-color:var(--ink)}
+.rng{grid-area:rng;width:100%;height:28px;margin:0;background:none;-webkit-appearance:none;appearance:none;cursor:pointer}
+.rng::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--driftInk) var(--v,60%),rgba(59,58,54,.18) var(--v,60%))}
+.rng::-moz-range-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--driftInk) var(--v,60%),rgba(59,58,54,.18) var(--v,60%))}
+.rng::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:18px;margin-top:-7px;border-radius:50% 48% 52% 50%/58% 52% 48% 42%;background:#fff;border:1px solid rgba(59,58,54,.35);box-shadow:0 3px 8px rgba(59,58,54,.25)}
+.rng::-moz-range-thumb{width:22px;height:18px;border-radius:50%;background:#fff;border:1px solid rgba(59,58,54,.35)}
+.mx__status{margin:14px 0 0;font-size:.84rem;color:var(--ink2);min-height:1.4em}
+
+/* sections */
+.sec{position:relative;padding-block:clamp(60px,9vw,120px)}
+.sec__h{display:grid;gap:10px;margin-bottom:30px;max-width:720px}
+.sec__h h2{font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1}
+.sec__h p{margin:0;color:var(--ink2);max-width:38em}
+.rv{opacity:1}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.js .rv.seen{opacity:1;transform:none}
+
+/* pressure + treatments */
+.tr-wrap{display:grid;gap:26px;align-items:start}
+@media(min-width:980px){.tr-wrap{grid-template-columns:.8fr 1.2fr;gap:44px}.press{position:sticky;top:96px}}
+.press{padding:clamp(20px,3vw,32px)}
+.press h3{font-size:2rem;line-height:1.05}
+.press p{margin:8px 0 0;font-size:.93rem;color:var(--ink2)}
+.pr{margin:26px 0 6px}
+.pr input{width:100%;height:40px;margin:0;-webkit-appearance:none;appearance:none;background:none;cursor:pointer}
+.pr input::-webkit-slider-runnable-track{height:10px;border-radius:10px;background:linear-gradient(90deg,var(--foam),var(--stone2) 50%,var(--drift))}
+.pr input::-moz-range-track{height:10px;border-radius:10px;background:linear-gradient(90deg,var(--foam),var(--stone2) 50%,var(--drift))}
+.pr input::-webkit-slider-thumb{-webkit-appearance:none;width:38px;height:30px;margin-top:-10px;border-radius:52% 48% 46% 54%/60% 56% 44% 40%;background:radial-gradient(circle at 34% 30%,#fff,#DCD6CD 60%,#B9B2A7);border:1px solid rgba(59,58,54,.3);box-shadow:0 8px 14px -6px rgba(59,58,54,.5)}
+.pr input::-moz-range-thumb{width:38px;height:30px;border-radius:50%;background:#E2DCD3;border:1px solid rgba(59,58,54,.3)}
+.pr__marks{display:flex;justify-content:space-between;margin-top:6px}
+.pr__marks button{border:0;background:none;padding:8px 2px;min-width:40px;min-height:40px;cursor:pointer;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+.pr__marks button[aria-current=true]{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--drift)}
+.pr__now{margin:14px 0 0;font:400 1.6rem/1.2 var(--fd)}
+.note{margin:16px 0 0;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.4);font-size:.82rem;color:var(--ink2);line-height:1.55}
+.trl{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.tr{position:relative;display:grid;gap:4px 20px;padding:20px 22px;border-radius:26px}
+@media(min-width:620px){.tr{grid-template-columns:1fr auto}}
+.tr h3{font-size:clamp(1.6rem,3vw,2rem);line-height:1.1}
+.tr__meta{font-size:.86rem;font-weight:700;letter-spacing:.04em;color:var(--driftInk)}
+.tr p{margin:6px 0 0;font-size:.95rem;color:var(--ink2)}
+.tr__side{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+@media(min-width:620px){.tr__side{align-items:flex-end;text-align:right}}
+.pdots{display:flex;gap:5px;align-items:center}
+.pdots i{width:14px;height:11px;border-radius:50%;background:rgba(59,58,54,.14)}
+.pdots i.f{background:var(--driftInk)}
+.pdots small{margin-left:6px;font-size:.74rem;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.55);color:var(--ink2)}
+.tr.best{background:rgba(255,255,255,.62)}
+.tr.best .badge{background:var(--ink);color:var(--sand2)}
+.tr__book{font-size:.86rem;font-weight:700;text-underline-offset:4px;min-height:40px;display:inline-flex;align-items:center}
+
+/* packages */
+.pk{display:grid;gap:18px}
+@media(min-width:900px){.pk{grid-template-columns:repeat(3,1fr);align-items:start}.pk>article:nth-child(2){margin-top:60px}.pk>article:nth-child(3){margin-top:120px}}
+.pk article{padding:26px 24px;display:grid;gap:10px}
+.pk h3{font-size:2.1rem;line-height:1.05}
+.pk .price{font:400 2.4rem/1 var(--fd)}
+.pk .price small{font:600 .82rem var(--fb);color:var(--ink2);letter-spacing:.02em}
+.pk ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:.93rem}
+.pk li{display:flex;gap:10px}
+.pk li::before{content:"";flex:none;width:9px;height:7px;margin-top:.65em;border-radius:50%;background:var(--drift)}
+.pk .dur{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--driftInk)}
+
+/* etiquette */
+.et{padding:clamp(22px,4vw,48px);background:rgba(207,227,221,.45)}
+.et ol{margin:0;padding:0;list-style:none;display:grid;gap:18px 40px;counter-reset:e}
+@media(min-width:760px){.et ol{grid-template-columns:1fr 1fr}}
+.et li{counter-increment:e;display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+.et li::before{content:counter(e,decimal-leading-zero);grid-row:span 2;font:400 2.2rem/1 var(--fd);color:var(--driftInk)}
+.et b{font-weight:700}
+.et span{font-size:.93rem;color:var(--ink2)}
+
+/* vouchers */
+.vo{display:grid;gap:26px;align-items:center}
+@media(min-width:900px){.vo{grid-template-columns:1fr 1fr;gap:50px}}
+.vo__form{padding:clamp(20px,3vw,32px);display:grid;gap:16px}
+.amts{display:flex;flex-wrap:wrap;gap:8px}
+.fld{display:grid;gap:6px}
+.fld label,.fld .flab{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 16px;border-radius:16px;border:1px solid rgba(59,58,54,.22);background:rgba(255,255,255,.6);color:var(--ink)}
+.fld textarea{min-height:88px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--driftInk);box-shadow:0 0 0 3px rgba(107,90,70,.18)}
+.card{position:relative;aspect-ratio:1.6;max-width:520px;width:100%;margin-inline:auto;border-radius:28px;padding:clamp(18px,4vw,30px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(207,227,221,.55));border:1px solid var(--edge);box-shadow:0 40px 70px -40px rgba(59,58,54,.55)}
+.card__peb{position:absolute;right:-10%;bottom:-18%;width:62%;opacity:.9}
+.card__top{display:flex;justify-content:space-between;gap:12px;position:relative;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--driftInk)}
+.card__amt{position:relative;font:400 clamp(3rem,10vw,4.4rem)/1 var(--fd)}
+.card__to{position:relative;font:400 1.4rem/1.2 var(--fd);overflow-wrap:anywhere}
+.card__msg{position:relative;font-size:.85rem;color:var(--ink2);max-width:70%;overflow-wrap:anywhere}
+
+/* book */
+.bk{display:grid;gap:26px;align-items:start}
+@media(min-width:900px){.bk{grid-template-columns:.85fr 1.15fr;gap:50px}}
+.bk__form{padding:clamp(20px,3vw,34px);display:grid;gap:16px}
+.row2{display:grid;gap:16px}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.info dl{margin:22px 0 0;display:grid;gap:14px}
+.info dt{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--driftInk)}
+.info dd{margin:2px 0 0}
+
+.ft{padding-block:50px calc(40px + env(safe-area-inset-bottom));border-top:1px solid rgba(168,148,124,.3);font-size:.92rem;color:var(--ink2)}
+.ft__big{font:400 clamp(2.8rem,10vw,6rem)/1 var(--fd);color:var(--ink);margin:0 0 26px}
+.ft__grid{display:grid;gap:20px}
+@media(min-width:800px){.ft__grid{grid-template-columns:1.2fr 1fr 1fr}}
+.ft b{display:block;color:var(--ink);margin-bottom:2px}
+.ft .demo{margin-top:26px;font-size:.82rem}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .st,.float,.js .ripple{animation:none!important}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .btn,.play,.chip,.tog,.ch{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="gA" cx="34%" cy="28%" r="80%"><stop offset="0" stop-color="#F4F1EC"/><stop offset=".55" stop-color="#CFC9C0"/><stop offset="1" stop-color="#A9A39A"/></radialGradient>
+    <radialGradient id="gB" cx="36%" cy="30%" r="80%"><stop offset="0" stop-color="#EEF6F3"/><stop offset=".6" stop-color="#C3DCD5"/><stop offset="1" stop-color="#9DBDB4"/></radialGradient>
+    <radialGradient id="gC" cx="34%" cy="28%" r="80%"><stop offset="0" stop-color="#E8DDCF"/><stop offset=".6" stop-color="#B9A792"/><stop offset="1" stop-color="#94806B"/></radialGradient>
+    <radialGradient id="gD" cx="36%" cy="30%" r="80%"><stop offset="0" stop-color="#E6E4E0"/><stop offset=".6" stop-color="#A7A49E"/><stop offset="1" stop-color="#85827C"/></radialGradient>
+    <path id="p1" d="M100 12c42 0 86 26 88 78s-30 96-86 98S12 160 12 104 58 12 100 12z"/>
+    <path id="p2" d="M30 70C40 30 110 14 160 34s48 76 10 110-120 36-146 0S20 110 30 70z"/>
+    <path id="p3" d="M18 110c-6-34 30-62 86-66s86 14 88 46-38 64-90 66-78-12-84-46z"/>
+    <path id="p4" d="M104 10c46 4 80 54 78 102s-40 82-84 80-80-38-82-86S58 6 104 10z"/>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-rain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 14.5a4 4 0 0 1 .6-7.9A5.5 5.5 0 0 1 18 8a3.3 3.3 0 0 1 0 6.5z"/><path d="M8 17l-1 2.5M12 17l-1 2.5M16 17l-1 2.5"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 14c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 18c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M6 9.5C7 6 10 4.5 13 5.5c-1.8.8-2.4 2.3-1.8 3.8"/></symbol>
+    <symbol id="i-bird" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13c3 0 5-1 6.5-3.5C12 7 14 6 16 6.5l2 .5-2 1.2c.3 3.5-2.2 7.3-7 7.3H4zM9.5 15.5 8 19M12 15.3l-.6 3.7"/><circle cx="15.6" cy="8" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-chime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4h16M7 4v9M11 4v12M15 4v8M19 4v10"/><path d="M6 13h2M10 16h2M14 12h2M18 14h2"/><circle cx="12" cy="20" r="1.4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+<div class="stones" aria-hidden="true">
+  <svg class="st" viewBox="0 0 200 200" style="width:min(46vw,520px);left:-12vw;top:8vh;--d:64s;--x:30px;--y:-20px;--r:5deg"><use href="#p1" fill="url(#gA)"/></svg>
+  <svg class="st" viewBox="0 0 200 200" style="width:min(34vw,380px);right:-6vw;top:2vh;--d:58s;--x:-26px;--y:24px;--r:-6deg;--dl:-12s"><use href="#p2" fill="url(#gB)"/></svg>
+  <svg class="st" viewBox="0 0 200 200" style="width:min(30vw,330px);right:16vw;top:48vh;--d:72s;--x:18px;--y:-26px;--r:7deg;--dl:-30s"><use href="#p3" fill="url(#gC)"/></svg>
+  <svg class="st" viewBox="0 0 200 200" style="width:min(40vw,440px);left:20vw;bottom:-14vh;--d:66s;--x:-22px;--y:-16px;--r:-4deg;--dl:-8s"><use href="#p4" fill="url(#gD)"/></svg>
+  <svg class="st" viewBox="0 0 200 200" style="width:min(18vw,200px);left:44vw;top:18vh;--d:50s;--x:14px;--y:18px;--r:9deg;--dl:-20s"><use href="#p3" fill="url(#gB)"/></svg>
+  <svg class="st" viewBox="0 0 200 200" style="width:min(22vw,240px);right:-4vw;bottom:4vh;--d:60s;--x:-18px;--y:-12px;--r:-8deg;--dl:-40s"><use href="#p1" fill="url(#gC)"/></svg>
+  <span class="ripple" style="width:40vw;height:40vw;left:30vw;top:20vh"></span><span class="ripple" style="width:30vw;height:30vw;left:6vw;top:56vh;animation-delay:-4.5s"></span>
+</div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hd">
+  <div class="in">
+    <a class="logo" href="#top" aria-label="Home"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="#6B5A46" stroke-width="1.2"/><path d="M6 19c3 0 3-2 5.5-2s2.5 2 5.5 2 3-2 5.5-2 2.5 2 5.5 2" fill="none" stroke="#6B5A46" stroke-width="1.2" stroke-linecap="round"/><ellipse cx="17" cy="12.5" rx="5" ry="3.4" fill="#A8947C"/></svg><span data-brand>Tide Pool Day Spa</span></a>
+    <nav class="nav" aria-label="Sections"><a href="#treatments">Treatments</a><a href="#packages">Packages</a><a href="#etiquette">Etiquette</a><a href="#vouchers">Gift vouchers</a></nav>
+    <a class="btn btn--ink" href="#book">Book</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="in hero__grid">
+    <div>
+      <p class="lbl">Day spa · Noosaville, QLD</p>
+      <h1 id="h1"><span data-brand>Tide Pool Day Spa</span></h1>
+      <p class="hero__tag">Massage, facials and hot stone rituals in a quiet pool house by the Noosa River. Set the mood with the sounds below, then book yourself an unhurried hour.</p>
+      <div class="hero__cta"><a class="btn btn--ink" href="#book">Book a treatment <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--line" href="#treatments">Find your pressure</a></div>
+      <ul class="hours"><li><b>Tue–Sun</b> 9 am – 6 pm</li><li><b>Thu</b> until 8 pm</li><li><b>Mon</b> closed</li></ul>
+    </div>
+    <section class="glass mixer float" aria-labelledby="mx-h">
+      <div class="mx__head">
+        <div><p class="lbl" style="margin-bottom:6px">Ambient mixer</p><h2 id="mx-h">Set the mood</h2><p>Rain, waves, birdsong and chimes, made live in your browser. Nothing plays until you press play.</p></div>
+        <button type="button" class="play" id="play" aria-label="Play soundscape"><svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="i-stop" aria-hidden="true"><use href="#i-stop"/></svg><span id="playTxt">Play</span></button>
+      </div>
+      <canvas class="scope" id="scope" aria-hidden="true"></canvas>
+      <div class="presets" role="group" aria-label="Presets"><span>Try:</span>
+        <button type="button" class="chip" data-pre="morning" aria-pressed="false">Morning swim</button>
+        <button type="button" class="chip" data-pre="storm" aria-pressed="false">Summer storm</button>
+        <button type="button" class="chip" data-pre="dusk" aria-pressed="false">Deck at dusk</button>
+      </div>
+      <div class="chans">
+        <div class="ch" data-ch="rain"><span class="ch__ic" aria-hidden="true"><svg><use href="#i-rain"/></svg></span><div class="ch__t"><b id="n-rain">Rain</b><small>on the pool-house roof</small></div><button type="button" class="tog" role="switch" aria-checked="false"><span class="sr">Rain</span><span class="tog__t" aria-hidden="true">Off</span></button><input class="rng" type="range" min="0" max="100" value="60" aria-label="Rain volume"></div>
+        <div class="ch" data-ch="waves"><span class="ch__ic" aria-hidden="true"><svg><use href="#i-wave"/></svg></span><div class="ch__t"><b id="n-waves">Ocean waves</b><small>slow swell, soft wash</small></div><button type="button" class="tog" role="switch" aria-checked="false"><span class="sr">Ocean waves</span><span class="tog__t" aria-hidden="true">Off</span></button><input class="rng" type="range" min="0" max="100" value="60" aria-label="Ocean waves volume"></div>
+        <div class="ch" data-ch="birds"><span class="ch__ic" aria-hidden="true"><svg><use href="#i-bird"/></svg></span><div class="ch__t"><b id="n-birds">Birdsong</b><small>whistles and trills</small></div><button type="button" class="tog" role="switch" aria-checked="false"><span class="sr">Birdsong</span><span class="tog__t" aria-hidden="true">Off</span></button><input class="rng" type="range" min="0" max="100" value="50" aria-label="Birdsong volume"></div>
+        <div class="ch" data-ch="chimes"><span class="ch__ic" aria-hidden="true"><svg><use href="#i-chime"/></svg></span><div class="ch__t"><b id="n-chimes">Wind chimes</b><small>a breeze on the deck</small></div><button type="button" class="tog" role="switch" aria-checked="false"><span class="sr">Wind chimes</span><span class="tog__t" aria-hidden="true">Off</span></button><input class="rng" type="range" min="0" max="100" value="45" aria-label="Wind chimes volume"></div>
+      </div>
+      <p class="mx__status" id="mxStatus" aria-live="polite">Everything is off. Choose a preset or switch on a sound.</p>
+    </section>
+  </div>
+</section>
+
+<section class="sec" id="treatments" aria-labelledby="tr-h">
+  <div class="in">
+    <div class="sec__h rv"><span class="lbl">Treatments</span><h2 id="tr-h">Find your pressure</h2><p>Tell us how firm you like it and we'll move the best-matched treatments to the top. Every therapist checks in again before they start.</p></div>
+    <div class="tr-wrap">
+      <div class="glass press rv">
+        <h3>How firm?</h3>
+        <p>From a feather-light touch to deep, slow work.</p>
+        <div class="pr"><label class="sr" for="pressure">Preferred massage pressure</label><input id="pressure" type="range" min="1" max="5" step="1" value="3" aria-valuetext="Medium">
+          <div class="pr__marks" id="marks"><button type="button" data-v="1">Feather</button><button type="button" data-v="2">Light</button><button type="button" data-v="3" aria-current="true">Medium</button><button type="button" data-v="4">Firm</button><button type="button" data-v="5">Deep</button></div></div>
+        <p class="pr__now" id="prNow" aria-live="polite">Medium — flowing, even pressure.</p>
+        <p class="note">General information only. Tell us about injuries, pregnancy, allergies or health conditions when you book — your therapist may suggest a different treatment. Massage isn't a substitute for medical care.</p>
+      </div>
+      <ul class="trl" id="trl">
+        <li class="tr glass" data-p="3" data-i="0"><div><span class="tr__meta">60 min $150 · 90 min $205</span><h3>Tide Pool Signature Massage</h3><p>Long, flowing strokes with warm coconut-and-lime oil. You choose two focus areas at the start.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="3"></span><a class="tr__book" href="#book" data-t="Tide Pool Signature Massage">Book this</a></div></li>
+        <li class="tr glass" data-p="2" data-i="1"><div><span class="tr__meta">60 min $135</span><h3>Driftwood Relaxation Massage</h3><p>Slow, soothing and quiet. The one to book if you'd like to drift off halfway through.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="2"></span><a class="tr__book" href="#book" data-t="Driftwood Relaxation Massage">Book this</a></div></li>
+        <li class="tr glass" data-p="3.4" data-i="2"><div><span class="tr__meta">75 min $180</span><h3>Hot Stone Ritual</h3><p>Smooth basalt stones, warmed in water and worked along the back, legs and hands.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="3.4"></span><a class="tr__book" href="#book" data-t="Hot Stone Ritual">Book this</a></div></li>
+        <li class="tr glass" data-p="4.6" data-i="3"><div><span class="tr__meta">60 min $165</span><h3>Deep Tissue &amp; Stretch</h3><p>Slower, deeper work through the back, neck and shoulders, finished with assisted stretches.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="4.6"></span><a class="tr__book" href="#book" data-t="Deep Tissue &amp; Stretch">Book this</a></div></li>
+        <li class="tr glass" data-p="2.5" data-i="4"><div><span class="tr__meta">60 min $290 for two</span><h3>Couples by the Pool</h3><p>Side by side in the pool room, each with your own therapist — and your own pressure.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="2.5"></span><a class="tr__book" href="#book" data-t="Couples by the Pool">Book this</a></div></li>
+        <li class="tr glass" data-p="1.2" data-i="5"><div><span class="tr__meta">60 min $140</span><h3>Sea-Mineral Facial</h3><p>Cleanse, clay mask and a feather-light face and scalp massage. No extractions.</p></div><div class="tr__side"><span class="badge">—</span><span class="pdots" data-p="1.2"></span><a class="tr__book" href="#book" data-t="Sea-Mineral Facial">Book this</a></div></li>
+      </ul>
+    </div>
+    <p class="note" style="max-width:720px">Sample prices in AUD for this demo.</p>
+  </div>
+</section>
+
+<section class="sec" id="packages" aria-labelledby="pk-h">
+  <div class="in">
+    <div class="sec__h rv"><span class="lbl">Packages</span><h2 id="pk-h">Stay a little longer</h2><p>Bundles for a half day, a pair, or an afternoon of salt and stone. Robes, slippers and the pool room are yours between treatments.</p></div>
+    <div class="pk">
+      <article class="glass rv"><span class="dur">3 hours</span><h3>Half-Day Retreat</h3><p class="price">$395 <small>per person · sample</small></p><ul><li>Signature massage, 60 min</li><li>Sea-mineral facial</li><li>Warm foot soak on the deck</li><li>Light lunch and a pot of tea</li></ul></article>
+      <article class="glass rv"><span class="dur">2 hours</span><h3>Two by the Sea</h3><p class="price">$520 <small>for two · sample</small></p><ul><li>Couples massage, 60 min</li><li>Private pool-room soak</li><li>Fresh fruit plate and iced tea</li><li>Late check-out of the robes</li></ul></article>
+      <article class="glass rv"><span class="dur">2 hours</span><h3>Salt &amp; Stone</h3><p class="price">$295 <small>per person · sample</small></p><ul><li>Sea-salt body scrub</li><li>Hot stone ritual, 75 min</li><li>Slow scalp massage</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="etiquette" aria-labelledby="et-h">
+  <div class="in">
+    <div class="sec__h rv"><span class="lbl">Spa etiquette</span><h2 id="et-h">A few quiet agreements</h2></div>
+    <div class="glass et rv"><ol>
+      <li><b>Arrive fifteen minutes early</b><span>Time to change, settle in and fill out a short health form.</span></li>
+      <li><b>Phones on silent</b><span>The treatment wing and pool room are screen-free, so everyone can switch off.</span></li>
+      <li><b>Tell us what we should know</b><span>Injuries, pregnancy, allergies or recent surgery — it changes what we recommend.</span></li>
+      <li><b>Robes and slippers are provided</b><span>Bring swimwear if you'd like to use the pool room.</span></li>
+      <li><b>24 hours to move or cancel</b><span>Later changes may be charged, because your therapist's time is held for you.</span></li>
+      <li><b>Guests 16 and over</b><span>Under-18s need a parent or guardian with them.</span></li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="sec" id="vouchers" aria-labelledby="vo-h">
+  <div class="in vo">
+    <div>
+      <div class="sec__h rv"><span class="lbl">Gift vouchers</span><h2 id="vo-h">An hour, wrapped</h2><p>Choose an amount, add a name and a note. Vouchers are valid for three years and work for any treatment or package.</p></div>
+      <form class="glass vo__form" id="voForm" novalidate>
+        <div class="fld"><span class="flab" id="amtL">Amount</span><div class="amts" role="group" aria-labelledby="amtL">
+          <button type="button" class="chip" data-amt="100" aria-pressed="false">$100</button><button type="button" class="chip" data-amt="150" aria-pressed="true">$150</button><button type="button" class="chip" data-amt="250" aria-pressed="false">$250</button><button type="button" class="chip" data-amt="400" aria-pressed="false">$400</button></div></div>
+        <div class="row2"><div class="fld"><label for="voTo">For</label><input id="voTo" maxlength="40" placeholder="Their name"></div><div class="fld"><label for="voFrom">From</label><input id="voFrom" maxlength="40" placeholder="Your name"></div></div>
+        <div class="fld"><label for="voMsg">Note (optional)</label><input id="voMsg" maxlength="90" placeholder="Happy birthday — go and do nothing."></div>
+        <button class="btn btn--ink" type="submit">Send this voucher <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+    <div class="card rv" aria-label="Voucher preview" role="img" id="card">
+      <svg class="card__peb" viewBox="0 0 200 200" aria-hidden="true"><use href="#p2" fill="url(#gB)"/></svg>
+      <div class="card__top"><span data-brand>Tide Pool Day Spa</span><span>Gift voucher</span></div>
+      <div><div class="card__amt" id="cAmt">$150</div><div class="card__to" id="cTo">For someone lovely</div><div class="card__msg" id="cMsg">Valid for three years · any treatment</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book" aria-labelledby="bk-h">
+  <div class="in bk">
+    <div class="info rv">
+      <span class="lbl">Book</span><h2 id="bk-h" style="font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:1">Hold an hour for yourself</h2>
+      <p style="color:var(--ink2);margin:14px 0 0">Request a time and we'll confirm by email. Treatments run Tuesday to Sunday.</p>
+      <dl>
+        <div><dt>Where</dt><dd>Noosaville, QLD — by the river, parking on site</dd></div>
+        <div><dt>Hours</dt><dd>Tue–Sun 9 am – 6 pm · Thu until 8 pm · Mon closed</dd></div>
+        <div><dt>Call</dt><dd><a href="tel:0755503412">(07) 5550 3412</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+      </dl>
+    </div>
+    <form class="glass bk__form" id="bkForm" novalidate>
+      <div class="fld"><label for="bkT">Treatment</label><select id="bkT"><option>Tide Pool Signature Massage</option><option>Driftwood Relaxation Massage</option><option>Hot Stone Ritual</option><option>Deep Tissue &amp; Stretch</option><option>Couples by the Pool</option><option>Sea-Mineral Facial</option><option>Half-Day Retreat</option><option>Two by the Sea</option><option>Salt &amp; Stone</option></select></div>
+      <div class="row2"><div class="fld"><label for="bkD">Date</label><input id="bkD" type="date"></div><div class="fld"><label for="bkH">Time</label><select id="bkH"><option>9:00 am</option><option>10:30 am</option><option>12:00 pm</option><option selected>1:30 pm</option><option>3:00 pm</option><option>4:30 pm</option></select></div></div>
+      <div class="row2"><div class="fld"><label for="bkN">Name</label><input id="bkN" autocomplete="name"></div><div class="fld"><label for="bkE">Email</label><input id="bkE" type="email" autocomplete="email"></div></div>
+      <div class="fld"><label for="bkX">Anything we should know?</label><textarea id="bkX" placeholder="Injuries, pregnancy, pressure preferences…"></textarea></div>
+      <button class="btn btn--ink" type="submit">Request this booking <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="in">
+    <p class="ft__big" data-brand>Tide Pool Day Spa</p>
+    <div class="ft__grid">
+      <div><b>Noosaville, QLD</b>A pool house by the river. Parking on site.</div>
+      <div><b>Hours</b>Tue–Sun 9 am – 6 pm<br>Thu until 8 pm · Mon closed</div>
+      <div><b>Contact</b><a href="tel:0755503412">(07) 5550 3412</a><br><a href="mailto:hello@example.com">hello@example.com</a></div>
+    </div>
+    <p class="demo">A fictional business made as a design demo. Prices are samples, sounds are synthesised in your browser, and nothing can be booked.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+document.documentElement.classList.add("js");
+function toast(m){if(window.DemoKit)DemoKit.toast(m)}
+
+/* ---------- reveal ---------- */
+if(window.IntersectionObserver&&!RM){var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");rio.unobserve(e.target)}})},{rootMargin:"0px 0px -8% 0px"});$$(".rv").forEach(function(el){rio.observe(el)})}
+else $$(".rv").forEach(function(el){el.classList.add("seen")});
+
+/* ================= ambient mixer (Web Audio synthesis) ================= */
+var AC=window.AudioContext||window.webkitAudioContext,ac=null,master,an,white,ch={},playing=false,tickT=0,vizRaf=0,nextT={rain:0,birds:0,chimes:0};
+var NAMES={rain:"rain",waves:"ocean waves",birds:"birdsong",chimes:"wind chimes"},SCALE={rain:.9,waves:1,birds:.9,chimes:.85};
+var st={rain:{on:false,v:.6},waves:{on:false,v:.6},birds:{on:false,v:.5},chimes:{on:false,v:.45}};
+function status(t){$("#mxStatus").textContent=t}
+function init(){
+  if(ac)return true;
+  if(!AC){status("Sorry — this browser can't synthesise sound.");return false}
+  try{ac=new AC()}catch(e){status("Sound couldn't start in this browser.");return false}
+  master=ac.createGain();master.gain.value=0;
+  var comp=ac.createDynamicsCompressor();comp.threshold.value=-20;comp.knee.value=18;comp.ratio.value=3;
+  an=ac.createAnalyser();an.fftSize=1024;
+  master.connect(comp);comp.connect(an);an.connect(ac.destination);
+  var n=ac.sampleRate*3;white=ac.createBuffer(1,n,ac.sampleRate);var d=white.getChannelData(0);for(var i=0;i<n;i++)d[i]=Math.random()*2-1;
+  Object.keys(st).forEach(function(k){var g=ac.createGain();g.gain.value=0;var a=ac.createAnalyser();a.fftSize=256;g.connect(a);g.connect(master);ch[k]={g:g,a:a,buf:new Uint8Array(256)}});
+  // rain bed: filtered white noise
+  var rs=src(),hp=bq("highpass",900,.5),lp=bq("lowpass",7000,.4),rg=ac.createGain();rg.gain.value=.16;rs.connect(hp);hp.connect(lp);lp.connect(rg);rg.connect(ch.rain.g);
+  // waves: noise through a slowly swept low-pass, with a swelling gain; plus a hiss of foam
+  var ws=src(),wl=bq("lowpass",520,.8),wg=ac.createGain();wg.gain.value=.5;
+  var lfo=ac.createOscillator();lfo.frequency.value=.083;var lg=ac.createGain();lg.gain.value=.44;var lf=ac.createGain();lf.gain.value=360;
+  lfo.connect(lg);lg.connect(wg.gain);lfo.connect(lf);lf.connect(wl.frequency);ws.connect(wl);wl.connect(wg);wg.connect(ch.waves.g);
+  var fs=src(),fh=bq("bandpass",2600,.7),fg=ac.createGain();fg.gain.value=.03;var lg2=ac.createGain();lg2.gain.value=.028;lfo.connect(lg2);lg2.connect(fg.gain);fs.connect(fh);fh.connect(fg);fg.connect(ch.waves.g);
+  lfo.start();
+  return true;
+}
+function src(){var s=ac.createBufferSource();s.buffer=white;s.loop=true;s.start(0,Math.random()*2);return s}
+function bq(t,f,q){var b=ac.createBiquadFilter();b.type=t;b.frequency.value=f;b.Q.value=q;return b}
+function pan(dest,p){if(ac.createStereoPanner){var s=ac.createStereoPanner();s.pan.value=p;s.connect(dest);return s}return dest}
+function drop(t){var s=ac.createBufferSource();s.buffer=white;var f=bq("bandpass",1800+Math.random()*5200,6+Math.random()*6),g=ac.createGain(),v=.05+Math.random()*.12;
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+.003);g.gain.exponentialRampToValueAtTime(.0001,t+.035+Math.random()*.06);
+  s.connect(f);f.connect(g);g.connect(pan(ch.rain.g,Math.random()*1.6-.8));s.start(t,Math.random()*2.5,.12)}
+function chirp(t,f0,f1,dur,v,out){var o=ac.createOscillator(),g=ac.createGain(),vib=ac.createOscillator(),vg=ac.createGain();
+  o.type="sine";o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(f1,t+dur);vib.frequency.value=38+Math.random()*20;vg.gain.value=f0*.012;vib.connect(vg);vg.connect(o.frequency);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+dur*.25);g.gain.exponentialRampToValueAtTime(.0001,t+dur);
+  o.connect(g);g.connect(out);o.start(t);vib.start(t);o.stop(t+dur+.03);vib.stop(t+dur+.03)}
+function bird(t){var out=pan(ch.birds.g,Math.random()*1.4-.7),r=Math.random(),i;
+  if(r<.34){chirp(t,3900+Math.random()*500,2300,.34,.16,out);if(Math.random()<.5)chirp(t+.45,3900,2400,.3,.12,out)}
+  else if(r<.68){var n=5+Math.floor(Math.random()*6),b=2700+Math.random()*1300;for(i=0;i<n;i++)chirp(t+i*.075,b*1.18,b,.055,.1,out)}
+  else{chirp(t,2500,2650,.16,.14,out);chirp(t+.24,3350,3250,.22,.14,out);if(Math.random()<.5)chirp(t+.52,2500,2600,.14,.1,out)}}
+var PENTA=[1046.5,1174.7,1318.5,1568,1760,2093,2349.3];
+function strike(t,f,v,out){[[1,1,3.2],[2.76,.45,2],[5.4,.22,1.2],[8.93,.1,.7]].forEach(function(p){var o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f*p[0];
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v*p[1],t+.004);g.gain.exponentialRampToValueAtTime(.0001,t+p[2]);o.connect(g);g.connect(out);o.start(t);o.stop(t+p[2]+.05)})}
+function chimes(t){var out=pan(ch.chimes.g,Math.random()*1.2-.6),n=2+Math.floor(Math.random()*4),tt=t;for(var i=0;i<n;i++){strike(tt,PENTA[Math.floor(Math.random()*PENTA.length)],.05+Math.random()*.05,out);tt+=.14+Math.random()*.4}}
+function tick(){
+  if(!ac||!playing)return;var now=ac.currentTime,ahead=now+(document.hidden?1.6:.35);
+  if(st.rain.on){if(nextT.rain<now)nextT.rain=now+.02;while(nextT.rain<ahead){drop(nextT.rain);nextT.rain+=.025+Math.random()*.11}}
+  if(st.birds.on){if(nextT.birds<now)nextT.birds=now+.3+Math.random()*1.2;if(nextT.birds<ahead){bird(nextT.birds);nextT.birds+=1.1+Math.random()*3.4}}
+  if(st.chimes.on){if(nextT.chimes<now)nextT.chimes=now+.2+Math.random()*.8;if(nextT.chimes<ahead){chimes(nextT.chimes);nextT.chimes+=2.4+Math.random()*4.6}}
+}
+function level(k){if(!ac)return;var s=st[k],target=s.on?s.v*s.v*SCALE[k]:0;ch[k].g.gain.setTargetAtTime(target,ac.currentTime,.25)}
+function anyOn(){return Object.keys(st).some(function(k){return st[k].on&&st[k].v>0})}
+function describe(){var on=Object.keys(st).filter(function(k){return st[k].on});return on.length?on.map(function(k){return NAMES[k]}).join(", "):"nothing"}
+function play(){
+  if(!init())return;
+  if(!anyOn()){st.waves.on=true;if(st.waves.v<.2)st.waves.v=.6;syncUI();status("Starting with ocean waves — switch on more sounds below.")}
+  if(ac.state==="suspended")ac.resume();
+  playing=true;Object.keys(st).forEach(level);master.gain.cancelScheduledValues(ac.currentTime);master.gain.setTargetAtTime(.9,ac.currentTime,.4);
+  clearInterval(tickT);tickT=setInterval(tick,90);tick();startViz();syncUI();
+  if(!/Starting/.test($("#mxStatus").textContent))status("Playing: "+describe()+".");
+}
+function stop(){
+  playing=false;clearInterval(tickT);
+  if(ac){master.gain.cancelScheduledValues(ac.currentTime);master.gain.setTargetAtTime(0,ac.currentTime,.15);setTimeout(function(){if(!playing&&ac.state==="running")ac.suspend()},900)}
+  syncUI();status("Stopped. Your mix is kept — press play to hear it again.");
+}
+function syncUI(){
+  var p=$("#play");p.classList.toggle("on",playing);p.setAttribute("aria-label",playing?"Stop soundscape":"Play soundscape");$("#playTxt").textContent=playing?"Stop":"Play";
+  $$(".ch").forEach(function(c){var k=c.getAttribute("data-ch"),t=c.querySelector(".tog"),r=c.querySelector(".rng");c.classList.toggle("on",st[k].on);t.setAttribute("aria-checked",String(st[k].on));t.querySelector(".tog__t").textContent=st[k].on?"On":"Off";r.value=Math.round(st[k].v*100);r.style.setProperty("--v",r.value+"%")});
+}
+$("#play").addEventListener("click",function(){playing?stop():play()});
+$$(".ch").forEach(function(c){
+  var k=c.getAttribute("data-ch");
+  c.querySelector(".tog").addEventListener("click",function(){st[k].on=!st[k].on;$$(".presets .chip").forEach(function(b){b.setAttribute("aria-pressed","false")});
+    if(st[k].on&&!playing){play();status("Playing: "+describe()+".")}else{level(k);syncUI();status(playing?(anyOn()?"Playing: "+describe()+".":"All sounds are switched off."):NAMES[k].charAt(0).toUpperCase()+NAMES[k].slice(1)+(st[k].on?" on":" off")+" — press play to listen.")}});
+  var r=c.querySelector(".rng");r.addEventListener("input",function(){st[k].v=r.value/100;r.style.setProperty("--v",r.value+"%");level(k)});
+});
+var PRE={morning:{waves:.62,birds:.55},storm:{rain:.75,waves:.35,chimes:.25},dusk:{waves:.45,chimes:.5,birds:.2}};
+$$(".presets .chip").forEach(function(b){b.addEventListener("click",function(){
+  var p=PRE[b.getAttribute("data-pre")];Object.keys(st).forEach(function(k){st[k].on=k in p;if(k in p)st[k].v=p[k];level(k)});
+  $$(".presets .chip").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});
+  if(!playing)play();else{syncUI()}status(b.textContent+": "+describe()+".");
+})});
+// visuals: master waveform + per-channel level rings (only while playing, visible and on screen)
+var scope=$("#scope"),sx=scope.getContext("2d"),tbuf=new Uint8Array(1024),vis=true;
+if(window.IntersectionObserver)new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)startViz()}).observe($(".mixer"));
+document.addEventListener("visibilitychange",function(){if(!document.hidden)startViz()});
+function sizeScope(){var r=scope.getBoundingClientRect(),dp=Math.min(devicePixelRatio||1,2);scope.width=Math.max(1,Math.round(r.width*dp));scope.height=Math.max(1,Math.round(r.height*dp));sx.setTransform(dp,0,0,dp,0,0);drawIdle()}
+function drawIdle(){var w=scope.clientWidth,h=scope.clientHeight;sx.clearRect(0,0,w,h);sx.strokeStyle="rgba(107,90,70,.45)";sx.lineWidth=1.4;sx.beginPath();for(var x=0;x<=w;x+=4){var y=h/2+Math.sin(x/22)*2.2;x?sx.lineTo(x,y):sx.moveTo(x,y)}sx.stroke()}
+function startViz(){if(!vizRaf&&playing&&vis&&!document.hidden&&!RM)vizRaf=requestAnimationFrame(viz)}
+function viz(){
+  vizRaf=0;if(!playing||!vis||document.hidden){$$(".ch").forEach(function(c){c.style.setProperty("--lvl",0)});drawIdle();return}
+  var w=scope.clientWidth,h=scope.clientHeight;an.getByteTimeDomainData(tbuf);sx.clearRect(0,0,w,h);sx.strokeStyle="#6B5A46";sx.lineWidth=1.6;sx.beginPath();
+  for(var i=0;i<tbuf.length;i+=4){var x=i/(tbuf.length-1)*w,y=h/2+(tbuf[i]-128)/128*h*1.6;i?sx.lineTo(x,y):sx.moveTo(x,y)}sx.stroke();
+  Object.keys(ch).forEach(function(k){var c=ch[k];c.a.getByteTimeDomainData(c.buf);var sum=0;for(var j=0;j<c.buf.length;j++){var v=(c.buf[j]-128)/128;sum+=v*v}var rms=Math.min(1,Math.sqrt(sum/c.buf.length)*6);$('.ch[data-ch="'+k+'"]').style.setProperty("--lvl",rms.toFixed(3))});
+  vizRaf=requestAnimationFrame(viz);
+}
+sizeScope();window.addEventListener("resize",function(){clearTimeout(sizeScope.t);sizeScope.t=setTimeout(sizeScope,120)});
+syncUI();
+
+/* ================= pressure → treatment order ================= */
+var PL=["","Feather — barely-there, soothing touch.","Light — gentle and slow.","Medium — flowing, even pressure.","Firm — steady, deeper strokes.","Deep — slow, focused and firm."],PN=["","Feather","Light","Medium","Firm","Deep"];
+$$(".pdots").forEach(function(el){var p=+el.getAttribute("data-p"),h="";for(var i=1;i<=5;i++)h+='<i class="'+(i<=Math.round(p)?"f":"")+'"></i>';el.innerHTML=h+'<small>'+PN[Math.round(p)]+'</small>';el.setAttribute("aria-label","Pressure: "+PN[Math.round(p)]);el.setAttribute("role","img")});
+var list=$("#trl"),pin=$("#pressure");
+function order(v,anim){
+  var items=$$(".tr",list),first=new Map();items.forEach(function(el){first.set(el,el.getBoundingClientRect().top)});
+  var sorted=items.slice().sort(function(a,b){return Math.abs(+a.getAttribute("data-p")-v)-Math.abs(+b.getAttribute("data-p")-v)||(+a.getAttribute("data-i"))-(+b.getAttribute("data-i"))});
+  sorted.forEach(function(el,i){list.appendChild(el);var p=+el.getAttribute("data-p"),b=el.querySelector(".badge");el.classList.toggle("best",i===0);
+    b.textContent=i===0?"Best match":p<v-1?"Gentler":p>v+1?"Firmer":"Good match"});
+  if(anim&&!RM&&Element.prototype.animate)sorted.forEach(function(el){var dy=first.get(el)-el.getBoundingClientRect().top;if(Math.abs(dy)>1)el.animate([{transform:"translateY("+dy+"px)"},{transform:"none"}],{duration:700,easing:"cubic-bezier(.22,.7,.2,1)"})});
+  $("#prNow").textContent=PL[v];pin.setAttribute("aria-valuetext",PN[v]);
+  $$("#marks button").forEach(function(b){b.setAttribute("aria-current",String(+b.getAttribute("data-v")===v))});
+}
+pin.addEventListener("input",function(){order(+pin.value,true)});
+$$("#marks button").forEach(function(b){b.addEventListener("click",function(){pin.value=b.getAttribute("data-v");order(+pin.value,true)})});
+order(3,false);
+$$(".tr__book").forEach(function(a){a.addEventListener("click",function(){var t=a.getAttribute("data-t"),s=$("#bkT");Array.prototype.forEach.call(s.options,function(o,i){if(o.text===t)s.selectedIndex=i})})});
+
+/* ================= vouchers ================= */
+var amt=150;
+function card(){var to=$("#voTo").value.trim(),fr=$("#voFrom").value.trim(),m=$("#voMsg").value.trim();
+  $("#cAmt").textContent="$"+amt;$("#cTo").textContent=to?"For "+to+(fr?", from "+fr:""):"For someone lovely";$("#cMsg").textContent=m||"Valid for three years · any treatment";
+  $("#card").setAttribute("aria-label","Voucher preview: $"+amt+" "+$("#cTo").textContent)}
+$$(".amts .chip").forEach(function(b){b.addEventListener("click",function(){amt=+b.getAttribute("data-amt");$$(".amts .chip").forEach(function(x){x.setAttribute("aria-pressed",String(x===b))});card()})});
+["voTo","voFrom","voMsg"].forEach(function(id){$("#"+id).addEventListener("input",card)});
+$("#voForm").addEventListener("submit",function(e){e.preventDefault();toast("Demo only — no voucher was bought or sent. The $"+amt+" card above is a preview.")});
+card();
+
+/* ================= booking ================= */
+var dIn=$("#bkD"),t=new Date(),tz=function(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+dIn.min=tz(t);var nd=new Date(t);nd.setDate(t.getDate()+3);while(nd.getDay()===1)nd.setDate(nd.getDate()+1);dIn.value=tz(nd);
+$("#bkForm").addEventListener("submit",function(e){e.preventDefault();var d=new Date(dIn.value+"T12:00:00");
+  if(d.getDay&&d.getDay()===1){toast("We're closed on Mondays — try another day. (Demo only, nothing was booked.)");return}
+  var ds=isNaN(d)?"":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()]+" "+d.getDate()+" "+["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][d.getMonth()];
+  toast("Demo only — no booking was made. "+$("#bkT").value+(ds?", "+ds:"")+" at "+$("#bkH").value+".")});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="018">
+<meta name="demo:brand" content="Phở Sáu">
+<title>Phở Sáu — Vietnamese pho kitchen zine, Footscray</title>
+<meta name="description" content="Phở Sáu is a fictional Vietnamese pho kitchen in Footscray, VIC, told as a two-colour risograph zine with a scrubbable 12-hour broth.">
+<meta name="theme-color" content="#F5F1E8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+--paper:#F5F1E8;--pink:#FF48B0;--blue:#0078BF;--ink:#002078;--desk:#CCDCE0;
+--gut:clamp(10px,3vw,48px);--pad:clamp(22px,4.6vw,58px);
+--sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--mono:"Space Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 .12 0 0 0 0 .46 0 0 0 2 -1.2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;color:var(--ink);font:400 17px/1.55 var(--sans);background:var(--desk) radial-gradient(rgba(0,120,191,.2) 1px,transparent 1.45px) 0 0/7px 7px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px}
+svg{display:block}
+p{margin:0 0 1em}
+h1,h2,h3,h4{margin:0}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-80px;z-index:50;background:var(--ink);color:var(--paper);padding:12px 16px;font:700 13px var(--mono);text-decoration:none}
+.skip:focus{top:12px}
+.label{font:700 12px/1.45 var(--mono);letter-spacing:.12em;text-transform:uppercase;margin:0}
+
+.pl-p,.pl-b,.pl-t{mix-blend-mode:multiply}
+.pl-b{transform:translate(2.5px,1.5px);transition:transform .45s steps(3,end)}
+.js .spread:not(.inked) .pl-b{transform:translate(8px,-6px)}
+.reg{position:relative;color:var(--blue);mix-blend-mode:multiply}
+.reg::after{content:attr(data-t) / "";position:absolute;left:0;top:0;right:0;color:var(--pink);mix-blend-mode:multiply;transform:translate(-.045em,-.03em);pointer-events:none}
+
+.top{padding:max(12px,env(safe-area-inset-top)) var(--gut) 10px}
+.top-in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px}
+.brandlink{display:inline-flex;align-items:center;gap:10px;min-height:44px;min-width:0;text-decoration:none;font-weight:900;font-size:22px;line-height:1.05;letter-spacing:-.02em}
+.bname{overflow-wrap:anywhere}
+.mark{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--pink);color:var(--ink);font:700 17px/1 var(--mono);box-shadow:3px 2px 0 var(--blue)}
+.issue{margin:0;font:400 12px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.top nav{margin-left:auto}
+.top ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2px}
+.top nav a{display:inline-flex;align-items:center;gap:7px;min-height:42px;padding:0 10px;font:700 12px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+.top nav a b{background:var(--ink);color:var(--paper);padding:3px 4px}
+.top nav a:hover{background:rgba(255,72,176,.28)}
+
+.zine{padding:6px var(--gut) 8px}
+.spread{position:relative;max-width:1240px;margin:0 auto clamp(26px,5vw,60px);background:var(--paper);display:grid;grid-template-columns:1fr 1fr;isolation:isolate;border-radius:3px;box-shadow:0 1px 1px rgba(0,32,120,.14),0 24px 46px -26px rgba(0,32,120,.5)}
+.spread::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:6;mix-blend-mode:multiply;background:linear-gradient(90deg,transparent calc(50% - 48px),rgba(0,32,120,.05) calc(50% - 12px),rgba(0,32,120,.15) 50%,rgba(0,32,120,.04) calc(50% + 12px),transparent calc(50% + 48px)),var(--grain);background-size:100% 100%,240px 240px;opacity:.7}
+.staple{position:absolute;left:calc(50% - 3px);width:6px;height:44px;border-radius:2px;background:linear-gradient(90deg,#7c848c,#f3f5f7 45%,#98a0a7);box-shadow:1px 1px 0 rgba(0,0,0,.22);z-index:7}
+.page{position:relative;min-width:0;padding:var(--pad) var(--pad) calc(var(--pad) + 30px);container-type:inline-size}
+.folio{position:absolute;bottom:calc(var(--pad)*.5);font:700 12px/1 var(--mono);letter-spacing:.1em;display:flex;align-items:center;gap:8px}
+.folio::before,.folio::after{content:"";width:22px;height:2px;background:currentColor}
+.folio.l{left:var(--pad)}.folio.l::after{display:none}
+.folio.r{right:var(--pad)}.folio.r::before{display:none}
+
+.cover{display:flex;flex-direction:column}
+.mast{position:relative;display:grid;margin:12px 0 0;font-weight:900;font-size:clamp(64px,31cqi,158px);line-height:.9;letter-spacing:-.05em;overflow-wrap:anywhere;padding-top:.08em}
+.mast>span,.backname>span{grid-area:1/1;mix-blend-mode:multiply}
+.m-p{color:var(--pink)}
+.m-b{color:var(--blue);transform:translate(.03em,.02em)}
+.fit.len-m{font-size:clamp(46px,17cqi,104px);line-height:.94}
+.fit.len-l{font-size:clamp(38px,14cqi,86px);line-height:.98;letter-spacing:-.035em}
+.bowl-fig{position:relative;margin:auto 0 0;padding-top:10px}
+.bowl{width:100%;height:auto}
+.sticker{position:absolute;left:-6px;top:2%;width:clamp(92px,24cqi,122px);aspect-ratio:1;border-radius:50%;background:var(--pink);color:var(--ink);display:grid;place-content:center;text-align:center;transform:rotate(-12deg);mix-blend-mode:multiply;box-shadow:4px 3px 0 var(--blue)}
+.sticker b{font:700 clamp(34px,10cqi,46px)/.9 var(--mono);letter-spacing:-.04em}
+.sticker small{font:700 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.cover-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;padding-top:12px;border-top:3px solid var(--ink);font:700 12px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.stamp-free{border:2px solid var(--ink);padding:5px 8px;transform:rotate(-3deg)}
+
+.contents{display:flex;flex-direction:column}
+.lede{font-size:clamp(19px,4.5cqi,24px);line-height:1.42;margin:16px 0 22px}
+.lede strong{font-weight:800}
+.toc{list-style:none;margin:0 0 22px;padding:0;border-top:3px solid var(--ink)}
+.toc li{border-bottom:2px solid var(--ink)}
+.toc a{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;min-height:66px;padding:10px 0;text-decoration:none}
+.toc-n{font:700 clamp(30px,8.4cqi,44px)/1 var(--mono);letter-spacing:-.04em}
+.toc-t{font-weight:800;font-size:clamp(18px,4.3cqi,22px);line-height:1.15}
+.toc-t small{display:block;font-weight:400;font-size:14.5px;line-height:1.4;margin-top:3px}
+.toc a::after{content:"→";font:700 18px var(--mono);transition:transform .2s}
+.toc a:hover::after{transform:translateX(5px)}
+.toc a:hover .toc-t{text-decoration:underline 3px var(--pink);text-underline-offset:4px}
+.today{position:relative;border:2px solid var(--ink);padding:26px 18px 16px;margin-top:6px}
+.today .tag{position:absolute;top:-2px;left:-2px;background:var(--pink);color:var(--ink);font:700 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:6px 8px}
+.today-big{font-weight:800;font-size:22px;line-height:1.2;margin:0 0 4px}
+.today p:last-child{margin:0;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto;padding-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);font:700 13px/1.1 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;box-shadow:5px 4px 0 var(--pink);transition:transform .15s,box-shadow .15s;cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 6px 0 var(--pink)}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 1px 0 var(--pink)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:5px 4px 0 var(--blue)}
+.btn.ghost:hover{box-shadow:7px 6px 0 var(--blue)}
+
+.s-broth{grid-template-areas:"pot st" "scrub scrub"}
+.pot-page{grid-area:pot;padding-bottom:0}
+.st-page{grid-area:st;padding-bottom:8px}
+.h2{font-weight:900;font-size:clamp(40px,11cqi,74px);line-height:.94;letter-spacing:-.035em;margin:10px 0 10px}
+.h2 small{display:block;font:700 13px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-top:10px}
+.sub{max-width:40ch;font-size:16px}
+.pot{width:100%;height:auto;margin-top:4px}
+.pot text{font-family:var(--sans)}
+.clock{display:flex;align-items:baseline;gap:.14em;margin:6px 0 0;font-weight:900;font-size:clamp(66px,23cqi,124px);line-height:.9;letter-spacing:-.045em}
+.clock .ap{font:700 clamp(15px,5cqi,26px)/1 var(--mono);letter-spacing:.04em}
+.clock-sub{font:400 13px/1.45 var(--mono);margin:10px 0 20px}
+.stage{border-top:3px solid var(--ink);padding-top:16px}
+.stage-t{font-weight:800;font-size:clamp(26px,7cqi,36px);line-height:1.08;margin:10px 0 12px}
+.vi-tag{display:inline-block;background:var(--pink);color:var(--ink);font:600 15px/1.35 var(--sans);padding:2px 9px;margin-bottom:8px}
+.stage-p{font-size:17px;max-width:46ch}
+.ing{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.ing li{border:2px solid var(--ink);padding:3px 9px;font-size:14px;line-height:1.35}
+.ing li b{font-weight:800}
+.done-note{margin:14px 0 0;font-weight:800;font-size:18px}
+.done-note[hidden]{display:none}
+.meters{display:grid;gap:9px;margin:20px 0 0;padding-top:14px;border-top:2px dashed rgba(0,32,120,.4)}
+.meter{display:grid;grid-template-columns:62px auto 1fr;align-items:center;gap:12px;margin:0}
+.meter>span:first-child{font:700 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.bar{display:flex;gap:3px}
+.bar i{width:16px;height:12px;border:2px solid var(--ink);transition:background .2s}
+.bar i.on{background:var(--pink)}
+.meter .w{font-size:14px}
+.scrub{grid-area:scrub;position:relative;margin:0 var(--pad);padding:16px 0 calc(var(--pad) + 30px);border-top:3px solid var(--ink)}
+.scrub-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 16px}
+.scrub-head label{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.scrub-head span{font:400 12px var(--mono)}
+.track{position:relative;height:112px;margin-top:6px;--p:0}
+.rail{position:absolute;left:22px;right:22px;top:0;bottom:0}
+.band{position:absolute;top:34px;height:28px;left:calc(var(--a) / 720 * 100%);width:calc((var(--b) - var(--a)) / 720 * 100%);border-right:3px solid var(--paper);background:radial-gradient(var(--pink) 1.45px,transparent 1.8px) 0 0/5px 5px}
+.band:nth-child(even){background:radial-gradient(var(--blue) 1.3px,transparent 1.65px) 0 0/5px 5px}
+.band b{position:absolute;left:3px;top:5px;background:var(--paper);font:700 11px/1.5 var(--mono);padding:0 3px}
+.fillb{position:absolute;left:0;top:34px;height:28px;width:calc(var(--p) * 100%);background:var(--pink);mix-blend-mode:multiply;opacity:.6}
+.base{position:absolute;left:0;right:0;top:64px;height:3px;background:var(--ink)}
+.tick{position:absolute;top:64px;left:calc(var(--h) / 12 * 100%);width:2px;height:10px;margin-left:-1px;background:var(--ink)}
+.tick span{position:absolute;top:14px;left:50%;transform:translateX(-50%);font:400 11px/1 var(--mono);white-space:nowrap}
+.tick:first-child span{transform:none;left:0}
+.tick:last-child span{transform:none;left:auto;right:0}
+.tick.minor{height:6px}
+.track input{position:absolute;left:0;top:22px;width:100%;height:52px;margin:0;opacity:0;cursor:grab;-webkit-appearance:none;appearance:none;background:none;z-index:4}
+.track input::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:44px;height:52px}
+.track input::-moz-range-thumb{width:44px;height:52px;border:0}
+.track input:active{cursor:grabbing}
+.knob{position:absolute;top:26px;left:calc(22px + (100% - 44px) * var(--p));width:44px;height:44px;margin-left:-22px;z-index:3;pointer-events:none;border-radius:50%}
+.knob svg{width:44px;height:44px;overflow:visible}
+.knob::after{content:"";position:absolute;left:21px;top:40px;width:2px;height:14px;background:var(--ink)}
+.track input:focus-visible~.knob{outline:3px solid var(--ink);outline-offset:4px}
+.scrub-ctl{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:4px}
+.play .pi{width:0;height:0;border-left:11px solid currentColor;border-top:7px solid transparent;border-bottom:7px solid transparent}
+.play[aria-pressed=true] .pi{width:11px;height:14px;border:0;border-left:4px solid currentColor;border-right:4px solid currentColor}
+.jump{display:flex;flex-wrap:wrap;gap:6px}
+.jump button{min-height:42px;padding:0 11px;border:2px solid var(--ink);background:var(--paper);font:700 12px/1.1 var(--mono);letter-spacing:.03em;text-transform:uppercase;cursor:pointer}
+.jump button:hover{background:rgba(255,72,176,.3)}
+.jump button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.hint{margin:14px 0 0;font:400 12.5px/1.5 var(--mono)}
+.s-broth .folio{bottom:calc(var(--pad)*.5)}
+
+.pot .s1,.pot .s2,.pot .s3,.pot .s4,.pot .s5,.pot .s6,.pot .bones,.pot .foam,.pot .inpot,.pot .bag,.pot .stamp{opacity:0;transition:opacity .35s}
+.pot[data-stage="1"] .s1,.pot[data-stage="2"] .s2,.pot[data-stage="3"] .s3,.pot[data-stage="5"] .s5,.pot[data-stage="6"] .s6{opacity:1}
+.pot[data-stage="1"] .bones,.pot[data-stage="2"] .bones,.pot[data-stage="3"] .bones{opacity:1}
+.pot[data-stage="1"] .foam,.pot[data-stage="5"] .foam{opacity:1}
+.pot[data-stage="4"] .inpot,.pot[data-stage="5"] .inpot,.pot[data-stage="6"] .inpot{opacity:1}
+.pot[data-stage="4"] .bag,.pot[data-stage="5"]:not(.bag-out) .bag{opacity:1}
+.pot.done .stamp{opacity:1}
+.flames{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(var(--heat,1));transition:transform .45s}
+.flames use{transform-box:fill-box;transform-origin:50% 100%;animation:flick 1.1s ease-in-out infinite alternate}
+.flames g:nth-child(2n) use{animation-duration:1.4s;animation-delay:-.4s}
+.flames g:nth-child(3n) use{animation-duration:.9s;animation-delay:-.7s}
+@keyframes flick{from{transform:scale(1,1)}to{transform:scale(.9,1.12)}}
+.steam path{stroke-width:calc(2px + 4px * var(--steam,1));opacity:0;animation:rise 3.2s linear infinite;animation-delay:calc(var(--i) * -.64s)}
+@keyframes rise{0%{transform:translateY(10px);opacity:0}25%{opacity:calc(.2 + .8 * var(--steam,1))}100%{transform:translateY(-34px);opacity:0}}
+.ladle{transform-box:view-box;transform-origin:452px 56px;animation:skim 2.6s ease-in-out infinite alternate}
+@keyframes skim{from{transform:rotate(-5deg)}to{transform:rotate(6deg)}}
+.spread:not(.live) .steam path,.spread:not(.live) .flames use,.spread:not(.live) .ladle{animation-play-state:paused}
+.sky .sun,.sky .moon{transition:opacity .5s,transform .5s}
+.pot[data-sky=night] .sun{opacity:0;transform:translateY(20px)}
+.pot[data-sky=dawn] .sun{transform:translateY(12px)}
+.pot:not([data-sky=night]) .moon{opacity:0}
+
+.dishes{list-style:none;margin:14px 0 0;padding:0}
+.dish{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:2px dotted rgba(0,32,120,.45)}
+.dish:first-child{border-top:3px solid var(--ink)}
+.dish h4{font-weight:800;font-size:clamp(20px,5cqi,24px);line-height:1.15}
+.dish .d{grid-column:1;margin:2px 0 0;font-size:15px;line-height:1.45}
+.dish .px{grid-column:2;margin:0;grid-row:1 / span 2;text-align:right;font:700 15px/1.5 var(--mono);white-space:nowrap}
+.px span{display:block}
+.px small{font-weight:400;font-size:11.5px;letter-spacing:.04em}
+.tag{display:inline-block;margin-left:6px;padding:1px 6px;font:700 11px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;vertical-align:4px;border:2px solid var(--ink)}
+.tag.hot{background:var(--pink);border-color:var(--pink)}
+.menu-h3{font-weight:900;font-size:clamp(24px,6.4cqi,32px);line-height:1.05;letter-spacing:-.02em;margin:0 0 4px}
+.menu-h3 small{display:block;font:700 12px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.menu-block+.menu-block{margin-top:30px}
+.nums{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:3px solid var(--ink)}
+.nums p{margin:0;padding:16px 12px 16px 0;border-bottom:2px solid var(--ink);display:flex;align-items:center;gap:12px}
+.nums p:nth-child(odd){border-right:2px solid var(--ink)}
+.nums p:nth-child(even){padding-left:16px}
+.nums b{font:700 clamp(36px,10cqi,50px)/1 var(--mono);letter-spacing:-.04em}
+.nums span{font-size:14.5px;line-height:1.3}
+.menu-note{margin-top:26px;padding:14px 16px;border:2px dashed var(--ink);font-size:14.5px;line-height:1.5}
+.menu-note b{font-weight:800}
+.intro{font-size:16px;max-width:44ch}
+.spot{position:absolute;right:var(--pad);top:calc(var(--pad) - 6px);width:clamp(84px,24cqi,128px);height:auto}
+
+.plate{width:100%;height:auto;margin:8px 0 6px}
+.plate text{font:700 14px var(--mono)}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.legend li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;font-size:15.5px;line-height:1.45}
+.legend .n{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font:700 13px var(--mono)}
+.legend b{font-weight:800}
+.rules{list-style:none;margin:14px 0 0;padding:0}
+.rules li{display:grid;grid-template-columns:clamp(52px,14cqi,68px) 1fr;gap:14px;padding:14px 0;border-top:2px solid var(--ink)}
+.rn{font:700 clamp(30px,9cqi,40px)/1 var(--mono);letter-spacing:-.04em}
+.rules h3{font-weight:800;font-size:20px;line-height:1.2;margin:2px 0 4px}
+.rules p{margin:0;font-size:15.5px;line-height:1.5}
+.why{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin-top:22px;padding:18px 20px;border:3px solid var(--ink);background:radial-gradient(rgba(255,72,176,.42) 1.2px,transparent 1.6px) 0 0/6px 6px}
+.why .why-6{margin:0;background:none;box-shadow:none;font-weight:900;font-size:108px;line-height:.8;letter-spacing:-.06em}
+.why h3{font-weight:800;font-size:20px;margin:0 0 4px}
+.why p{margin:0;font-size:15.5px;background:var(--paper);box-shadow:0 0 0 4px var(--paper)}
+
+.hours{width:100%;border-collapse:collapse;margin:12px 0 18px}
+.hours th,.hours td{padding:8px 8px;border-bottom:2px dotted rgba(0,32,120,.45);text-align:left}
+.hours th{font:700 12.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;width:34%}
+.hours td{text-align:right;font:400 15px var(--mono)}
+.hours tr.now th,.hours tr.now td{background:rgba(255,72,176,.32)}
+.where{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 6px}
+.where h3{font:700 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;margin:0 0 4px}
+.where p{font-size:15.5px;margin:0}
+.where a{font-weight:600;overflow-wrap:anywhere}
+.group{margin-top:20px;border:3px solid var(--ink);padding:18px 18px 20px}
+.group h3{font-weight:900;font-size:24px;line-height:1.1;margin:0 0 4px}
+.group>p{font-size:15px;margin:0 0 6px}
+.field{display:grid;gap:5px;margin-top:12px;min-width:0}
+.field label{font:700 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.field input,.field select{width:100%;min-height:46px;border:2px solid var(--ink);border-radius:0;background:var(--paper);padding:0 12px;font-size:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.group .btn{margin-top:18px;width:100%}
+.back{display:flex;flex-direction:column;gap:18px}
+.backname{display:grid;margin:0;font-weight:900;font-size:clamp(56px,26cqi,132px);line-height:.88;letter-spacing:-.05em;overflow-wrap:anywhere}
+.backname .m-b{transform:translate(-.03em,.03em)}
+.anise-big{width:min(76%,330px);height:auto;margin:auto}
+.next{margin:0;border:2px solid var(--ink);padding:12px 14px;font-size:15px}
+.next b{display:block;font:700 12px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.bars{display:flex;flex-wrap:wrap;gap:0;margin:0}
+.bars i{width:34px;height:20px}
+.colophon{font:400 12.5px/1.6 var(--mono);margin:0;max-width:52ch}
+.foot{padding:0 var(--gut) calc(max(20px,env(safe-area-inset-bottom)) + 52px)}
+.foot-in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font:400 12px/1.5 var(--mono);letter-spacing:.03em}
+.foot-in b{font-family:var(--sans);font-weight:800;font-size:14px}
+
+@media (max-width:899px){
+.spread{grid-template-columns:1fr}
+.spread::before{background:var(--grain);background-size:240px 240px}
+.staple{display:none}
+.page{padding-inline:max(var(--pad),calc((100% - 640px) / 2))}
+.page+.page{border-top:2px dashed rgba(0,32,120,.3)}
+.s-broth{grid-template-areas:"pot" "scrub" "st"}
+.s-broth .page+.page{border-top:0}
+.scrub{margin:0 max(var(--pad),calc((100% - 640px) / 2));padding-bottom:20px;border-top:0}
+.st-page{padding-top:16px;padding-bottom:calc(var(--pad) + 30px)}
+.s-broth .folio.l{display:none}
+.cover{min-height:0}
+.back{padding-top:calc(var(--pad) + 6px)}
+}
+@media (max-width:640px){
+.issue{display:none}
+.top nav{margin-left:0;width:100%}
+.top ul{justify-content:space-between;width:100%}
+.top nav a{padding:0 6px;gap:5px}
+.band:nth-child(-n+3) b{display:none}
+.tick.minor span,.tick.odd span{display:none}
+.jump{display:grid;grid-template-columns:repeat(3,1fr);width:100%}
+.jump button{padding:0 6px}
+.play{width:100%}
+.where,.row2{grid-template-columns:1fr}
+.why{grid-template-columns:1fr;gap:6px}
+.why .why-6{font-size:84px}
+.dish{grid-template-columns:1fr auto}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation:none!important;transition:none!important}
+.js .spread:not(.inked) .pl-b{transform:translate(2.5px,1.5px)}
+.steam path{opacity:calc(.12 + .7 * var(--steam,1))}
+}
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true" focusable="false">
+<defs>
+<pattern id="p1" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle cx="3" cy="3" r="1.05" fill="#FF48B0"/></pattern>
+<pattern id="p2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle cx="3" cy="3" r="1.75" fill="#FF48B0"/></pattern>
+<pattern id="p3" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle cx="3" cy="3" r="2.45" fill="#FF48B0"/></pattern>
+<pattern id="b1" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle cx="3" cy="3" r="1.05" fill="#0078BF"/></pattern>
+<pattern id="b2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle cx="3" cy="3" r="1.75" fill="#0078BF"/></pattern>
+<pattern id="b3" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle cx="3" cy="3" r="2.45" fill="#0078BF"/></pattern>
+<pattern id="brP" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(15)"><circle id="brPc" cx="3" cy="3" r=".5" fill="#FF48B0"/></pattern>
+<pattern id="brB" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle id="brBc" cx="3" cy="3" r=".25" fill="#0078BF"/></pattern>
+<path id="anise" d="M0-20L2.7-6.5L14.1-14.1L6.5-2.7L20 0L6.5 2.7L14.1 14.1L2.7 6.5L0 20L-2.7 6.5L-14.1 14.1L-6.5 2.7L-20 0L-6.5-2.7L-14.1-14.1L-2.7-6.5Z" stroke-linejoin="round"/>
+<g id="leaf"><path d="M0 0C10-12 32-14 44 0C32 14 10 12 0 0Z"/><path d="M3 0H40" fill="none" stroke="#F5F1E8" stroke-width="1.6"/></g>
+<path id="saw" d="M0 0L8-5 12-4 20-9 24-7 32-12 36-10 44-13 48-11 56-13 60-11 68-12 72-10 80-10 84-8 92-6 100 0 92 5 84 7 80 9 72 9 68 11 60 10 56 12 48 10 44 12 36 9 32 11 24 6 20 8 12 3 8 4Z"/>
+<g id="bone"><rect x="-22" y="-4.5" width="44" height="9" rx="4.5"/><circle cx="-24" cy="-5" r="6.5"/><circle cx="-24" cy="5" r="6.5"/><circle cx="24" cy="-5" r="6.5"/><circle cx="24" cy="5" r="6.5"/></g>
+<path id="flame" d="M0 0c-10-8-8-26 0-40 8 14 10 32 0 40z"/>
+<path id="wedge" d="M0 0A30 30 0 0 0 60 0Z"/>
+</defs>
+</svg>
+<a class="skip" href="#main">Skip to the zine</a>
+
+<header class="top">
+<div class="top-in">
+<a class="brandlink" href="#cover"><span class="mark" aria-hidden="true">6</span><span class="bname" data-brand>Phở Sáu</span></a>
+<p class="issue">Zine Nº 06 · Footscray, VIC</p>
+<nav aria-label="Zine pages">
+<ul>
+<li><a href="#broth"><b>03</b>Broth</a></li>
+<li><a href="#menu"><b>05</b>Menu</a></li>
+<li><a href="#eat"><b>07</b>How to eat</a></li>
+<li><a href="#visit"><b>09</b>Visit</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="main" class="zine">
+
+<section class="spread s-cover" id="cover" aria-labelledby="mast">
+<i class="staple" style="top:96px" aria-hidden="true"></i><i class="staple" style="bottom:96px" aria-hidden="true"></i>
+<div class="page cover">
+<p class="label">Zine Nº 06 — Spring 2026 — Footscray, VIC</p>
+<h1 class="mast fit" id="mast"><span class="m-b" aria-hidden="true" data-brand>Phở Sáu</span><span class="m-p" data-brand>Phở Sáu</span></h1>
+<figure class="bowl-fig">
+<svg class="bowl" viewBox="0 0 480 400" aria-hidden="true" focusable="false">
+<defs><clipPath id="cb"><path d="M44 200C50 302 130 358 240 360C350 358 430 302 436 200Z"/></clipPath></defs>
+<g class="pl-p">
+<circle cx="262" cy="172" r="152" fill="url(#p1)"/>
+<path d="M178 352l8 26h108l8-26z" fill="#FF48B0"/>
+<path d="M44 200C50 302 130 358 240 360C350 358 430 302 436 200Z" fill="url(#p2)"/>
+<g clip-path="url(#cb)" fill="none" stroke="#FF48B0"><path d="M50 242C130 302 350 302 430 242" stroke-width="16"/><path d="M92 302C170 342 310 342 388 302" stroke-width="5"/></g>
+<ellipse cx="240" cy="204" rx="184" ry="44" fill="url(#p1)"/>
+<g fill="url(#p3)">
+<path d="M140 196c16-16 66-18 86-4 10 10-6 22-38 25-28 2-58-6-48-21z"/>
+<path d="M238 214c14-14 58-16 76-4 8 9-8 20-36 22-26 2-50-5-40-18z"/>
+<path d="M170 230c12-10 44-11 56-2 6 7-6 14-26 15-20 1-38-4-30-13z"/>
+</g>
+<g fill="none" stroke="#FF48B0" stroke-width="4"><circle cx="338" cy="190" r="7"/><circle cx="362" cy="214" r="6"/><circle cx="104" cy="216" r="6.5"/></g>
+<use href="#anise" transform="translate(214 200) scale(.62) rotate(14)" fill="#FF48B0" stroke="#FF48B0" stroke-width="2.5"/>
+<path d="M436 106l32 11M440 92l32 5" stroke="#FF48B0" stroke-width="9"/>
+</g>
+<g class="pl-b">
+<ellipse cx="240" cy="384" rx="160" ry="12" fill="url(#b2)"/>
+<g clip-path="url(#cb)"><rect x="326" y="190" width="120" height="180" fill="url(#b1)"/><rect x="378" y="190" width="70" height="180" fill="url(#b2)"/><rect x="410" y="190" width="40" height="180" fill="url(#b3)"/><rect x="36" y="190" width="34" height="180" fill="url(#b2)"/></g>
+<ellipse cx="240" cy="203" rx="186" ry="45" fill="url(#b1)"/>
+<ellipse cx="240" cy="200" rx="196" ry="52" fill="none" stroke="#0078BF" stroke-width="5"/>
+<g fill="#0078BF">
+<use href="#leaf" transform="translate(92 206) rotate(-24) scale(.9)"/>
+<use href="#leaf" transform="translate(318 236) rotate(196) scale(.8)"/>
+<use href="#leaf" transform="translate(376 206) rotate(160) scale(.95)"/>
+<use href="#leaf" transform="translate(126 238) rotate(8) scale(.7)"/>
+<use href="#leaf" transform="translate(264 188) rotate(-150) scale(.6)"/>
+</g>
+<g fill="none" stroke="#0078BF" stroke-width="2.6"><circle cx="252" cy="238" r="4.5"/><circle cx="160" cy="238" r="4"/><circle cx="332" cy="216" r="4"/><circle cx="196" cy="190" r="4"/></g>
+<g fill="none" stroke="#0078BF" stroke-width="9" stroke-linecap="round"><path d="M294 206C286 156 326 126 344 72"/><path d="M306 208C302 158 340 128 354 76"/><path d="M318 206C318 160 352 130 364 80"/></g>
+<g stroke="#0078BF" stroke-linecap="round" stroke-width="7"><path d="M246 38L472 118"/><path d="M258 60L474 98"/></g>
+<g transform="translate(30 172) rotate(-26)"><use href="#wedge" fill="url(#b2)" stroke="#0078BF" stroke-width="4"/></g>
+<g fill="none" stroke="#0078BF" stroke-width="4" stroke-linecap="round"><path d="M150 146c-12-16 12-28 0-44s12-28 0-44"/><path d="M196 136c-12-16 12-28 0-44s12-28 0-44"/></g>
+</g>
+<g fill="none" stroke="#F5F1E8" stroke-linecap="round">
+<g stroke-width="4.5"><path d="M294 206C286 156 326 126 344 72"/><path d="M306 208C302 158 340 128 354 76"/><path d="M318 206C318 160 352 130 364 80"/></g>
+<g stroke-width="3.5"><path d="M92 220q18-9 36 0t36 0 36 0"/><path d="M236 238q16-8 32 0t32 0 32 0"/><path d="M110 196q14-8 28 0t28 0"/><path d="M300 192q12-7 24 0t24 0"/></g>
+<g stroke-width="2"><path d="M152 200c20-6 44-6 64 2"/><path d="M248 218c18-6 40-6 58 2"/></g>
+<g transform="translate(30 172) rotate(-26)" stroke-width="2.5"><path d="M30 2V24M30 2L11 18M30 2L49 18"/></g>
+</g>
+</svg>
+<figcaption class="sr-only">A bowl of phở drawn in pink and blue halftone: rare beef, noodles lifted on chopsticks, basil, chilli and a lime wedge.</figcaption>
+<p class="sticker" aria-hidden="true"><b>12</b><small>giờ · hours</small></p>
+</figure>
+<div class="cover-foot"><span lang="vi">Phở · Bún · Cà phê</span><span class="stamp-free"><span lang="vi">Miễn phí</span> · Free</span></div>
+<span class="folio l">01</span>
+</div>
+
+<div class="page contents">
+<h2 class="label">Trong số này — In this issue</h2>
+<p class="lede">Beef bones go into pot Nº 6 at <strong>ten every night</strong>. Twelve hours later they’re phở, ladled over fresh rice noodles in Footscray from 10am. This issue follows one pot through one night.</p>
+<ol class="toc">
+<li><a href="#broth"><span class="toc-n reg" data-t="03">03</span><span class="toc-t">The 12-hour broth<small>Scrub through the night in pot Nº 6</small></span></a></li>
+<li><a href="#menu"><span class="toc-n reg" data-t="05">05</span><span class="toc-t"><span lang="vi">Thực đơn</span> — Menu<small>Phở, bún bò Huế, rolls &amp; iced coffee</small></span></a></li>
+<li><a href="#eat"><span class="toc-n reg" data-t="07">07</span><span class="toc-t"><span lang="vi">Cách ăn phở</span> — How to eat it<small>Herbs, lime, and where the sauce goes</small></span></a></li>
+<li><a href="#visit"><span class="toc-n reg" data-t="09">09</span><span class="toc-t"><span lang="vi">Ghé quán</span> — Visit<small>Hours, tables for six, finding us</small></span></a></li>
+</ol>
+<div class="today">
+<span class="tag">Open today?</span>
+<p class="today-big" id="today-big">Wed–Mon, from 10am</p>
+<p id="today-sub">Closed Tuesdays. Walk-ins for up to five; six or more, send a group request.</p>
+</div>
+<div class="btns">
+<a class="btn" href="#broth">Scrub the broth ↓</a>
+<a class="btn ghost" href="#menu">Straight to the menu</a>
+</div>
+<span class="folio r">02</span>
+</div>
+</section>
+
+<section class="spread s-broth" id="broth" aria-labelledby="t-broth">
+<i class="staple" style="top:96px" aria-hidden="true"></i><i class="staple" style="top:520px" aria-hidden="true"></i>
+<div class="page pot-page">
+<p class="label">Centrefold · pp. 03–04</p>
+<h2 class="h2 reg" id="t-broth" data-t="The 12-hour broth">The 12-hour broth</h2>
+<p class="sub">Every bowl starts the night before. Drag through the night below and watch pot Nº 6 darken, simmer down and steam up again.</p>
+<svg class="pot" id="pot" viewBox="0 0 520 470" role="img" aria-labelledby="pot-t" data-stage="1" data-sky="night" style="--heat:1;--steam:1">
+<title id="pot-t">Stockpot number six on the stove. Its broth colour, flame and steam follow the timeline.</title>
+<defs><clipPath id="cpot"><path d="M130 170V386q0 16 16 16h228q16 0 16-16V170z"/></clipPath></defs>
+<g class="sky" transform="translate(44 50)">
+<circle class="sun pl-p" r="24" fill="url(#p3)"/>
+<g class="moon"><circle r="21" fill="#0078BF" class="pl-b"/><circle cx="10" cy="-7" r="17" fill="#F5F1E8"/></g>
+</g>
+<g class="pl-p">
+<g class="flames" fill="#FF48B0"><g transform="translate(176 450)"><use href="#flame"/></g><g transform="translate(206 450)"><use href="#flame"/></g><g transform="translate(236 450)"><use href="#flame"/></g><g transform="translate(266 450)"><use href="#flame"/></g><g transform="translate(296 450)"><use href="#flame"/></g><g transform="translate(326 450)"><use href="#flame"/></g><g transform="translate(356 450)"><use href="#flame"/></g></g>
+<path d="M132 212c-32 0-36 36 0 36M388 212c32 0 36 36 0 36" fill="none" stroke="#FF48B0" stroke-width="10" stroke-linecap="round"/>
+<rect x="130" y="262" width="260" height="12" fill="#FF48B0" clip-path="url(#cpot)"/>
+<text x="262" y="392" text-anchor="middle" font-size="118" font-weight="900" fill="url(#p3)">6</text>
+<text x="262" y="252" text-anchor="middle" font-size="13" font-weight="800" fill="#FF48B0" letter-spacing="3" lang="vi">NỒI SỐ 6</text>
+<ellipse cx="260" cy="178" rx="117" ry="18" fill="url(#brP)"/>
+<g class="s2"><use href="#flame" x="40" y="452" fill="#FF48B0"/><use href="#flame" x="70" y="452" fill="#FF48B0"/><use href="#flame" x="100" y="452" fill="#FF48B0"/><circle cx="50" cy="384" r="22" fill="url(#p2)"/><path d="M78 392c2-12 14-14 20-8 4-8 16-6 16 4 6 2 6 12-2 14-8 6-26 6-34-10z" fill="url(#p1)"/></g>
+<g class="s3"><use href="#anise" transform="translate(52 384) scale(.55)" fill="#FF48B0" stroke="#FF48B0" stroke-width="2"/><use href="#anise" transform="translate(90 390) scale(.42) rotate(20)" fill="#FF48B0" stroke="#FF48B0" stroke-width="2"/></g>
+<g class="inpot"><circle cx="196" cy="180" r="11" fill="url(#p2)"/><path d="M322 178c2-8 10-9 14-5 3-5 11-4 11 3 4 1 4 8-1 9-6 4-18 4-24-7z" fill="url(#p1)"/></g>
+<g class="s6"><rect x="428" y="330" width="36" height="40" fill="url(#p2)"/><rect x="437" y="264" width="18" height="12" fill="#FF48B0"/></g>
+<g class="stamp" transform="translate(262 92) rotate(-7)"><rect x="-122" y="-38" width="244" height="76" fill="#F5F1E8" fill-opacity=".85" stroke="#FF48B0" stroke-width="4"/><rect x="-113" y="-29" width="226" height="58" fill="none" stroke="#FF48B0" stroke-width="1.5"/><text y="0" text-anchor="middle" font-size="25" font-weight="900" fill="#FF48B0" lang="vi">MỞ CỬA · 10:00</text><text y="20" text-anchor="middle" font-size="11" font-weight="800" fill="#FF48B0" letter-spacing="2.5">DOORS OPEN · BOWLS UP</text></g>
+</g>
+<g class="pl-b">
+<rect x="150" y="450" width="220" height="9" rx="4" fill="#0078BF"/>
+<path d="M146 404H374M160 404v46M360 404v46" stroke="#0078BF" stroke-width="5" stroke-linecap="round"/>
+<g clip-path="url(#cpot)"><rect x="130" y="160" width="20" height="250" fill="url(#b3)"/><rect x="150" y="160" width="28" height="250" fill="url(#b2)"/><rect x="178" y="160" width="46" height="250" fill="url(#b1)"/><rect x="318" y="160" width="34" height="250" fill="url(#b1)"/><rect x="352" y="160" width="20" height="250" fill="url(#b2)"/><rect x="372" y="160" width="20" height="250" fill="url(#b3)"/></g>
+<path d="M130 170V386q0 16 16 16h228q16 0 16-16V170" fill="none" stroke="#0078BF" stroke-width="4"/>
+<ellipse cx="260" cy="171" rx="124" ry="24" fill="url(#b3)"/>
+<ellipse cx="260" cy="179" rx="117" ry="18" fill="url(#brB)"/>
+<ellipse cx="260" cy="170" rx="130" ry="28" fill="none" stroke="#0078BF" stroke-width="6"/>
+<g class="steam" fill="none" stroke="#0078BF" stroke-linecap="round">
+<path style="--i:0" d="M200 146c-14-18 14-30 0-48s14-30 0-48"/><path style="--i:3" d="M232 140c-14-18 14-30 0-48s14-30 0-48"/><path style="--i:1" d="M264 146c-14-18 14-30 0-48s14-30 0-48"/><path style="--i:4" d="M296 140c-14-18 14-30 0-48s14-30 0-48"/><path style="--i:2" d="M328 146c-14-18 14-30 0-48s14-30 0-48"/>
+</g>
+<g class="bones"><use href="#bone" transform="translate(232 176) rotate(-10) scale(.8)" fill="#0078BF" stroke="#0078BF" stroke-width="7"/><use href="#bone" transform="translate(304 182) rotate(12) scale(.68)" fill="#0078BF" stroke="#0078BF" stroke-width="8"/></g>
+<g class="s2"><path d="M14 410H122M24 410v42M112 410v42" stroke="#0078BF" stroke-width="4"/><path d="M36 372c8-6 20-4 24 4-6 8-18 10-26 4zM44 396c8 0 16-4 18-10 4 8-6 18-18 10z" fill="url(#b3)"/><path d="M88 384c6-4 14-2 16 4-4 6-12 6-16-4z" fill="url(#b3)"/></g>
+<g class="s3"><ellipse cx="72" cy="402" rx="54" ry="13" fill="url(#b1)" stroke="#0078BF" stroke-width="4"/><path d="M18 402H-4" stroke="#0078BF" stroke-width="7" stroke-linecap="round"/><rect x="56" y="370" width="48" height="9" rx="4.5" transform="rotate(-14 80 374)" fill="#0078BF"/><g fill="#0078BF"><circle cx="112" cy="396" r="3"/><circle cx="36" cy="396" r="3"/><circle cx="104" cy="404" r="3"/><ellipse cx="66" cy="400" rx="7" ry="4"/></g></g>
+<g class="inpot"><path d="M190 172c6-4 12-2 14 4-5 5-11 4-14-4z" fill="url(#b3)"/><path d="M200 186c5 0 9-3 10-7 3 5-3 11-10 7z" fill="url(#b3)"/></g>
+<g class="bag"><path d="M228 164C250 130 330 150 392 214" fill="none" stroke="#0078BF" stroke-width="2" stroke-dasharray="4 3"/><path d="M212 178c-4-12 6-20 14-20s18 8 14 20c-4 8-24 8-28 0z" fill="#0078BF" stroke="#0078BF" stroke-width="6"/></g>
+<g class="s5"><g class="ladle"><path d="M320 178L452 56" stroke="#0078BF" stroke-width="7" stroke-linecap="round"/><ellipse cx="314" cy="182" rx="24" ry="8" fill="url(#b2)" stroke="#0078BF" stroke-width="3"/></g></g>
+<g class="foam" fill="#0078BF"><circle cx="176" cy="176" r="7"/><circle cx="188" cy="182" r="5"/><circle cx="166" cy="184" r="5"/><circle cx="340" cy="184" r="6"/><circle cx="352" cy="176" r="4.5"/><circle cx="276" cy="188" r="5"/></g>
+<g class="s6"><path d="M432 276h28v20q14 8 14 22v74q0 8-8 8h-40q-8 0-8-8v-74q0-14 14-22z" fill="url(#b1)" stroke="#0078BF" stroke-width="4"/><path d="M462 398c2 16 48 16 50 0z" fill="url(#b1)" stroke="#0078BF" stroke-width="3.5"/><path d="M470 396l5-10 8 3 1 7zM486 396l3-11 9 5-2 6zM498 397l4-7 6 4-1 3z" fill="#F5F1E8" stroke="#0078BF" stroke-width="2.5" stroke-linejoin="round"/></g>
+</g>
+<g fill="#F5F1E8">
+<g class="bones"><use href="#bone" transform="translate(232 176) rotate(-10) scale(.8)"/><use href="#bone" transform="translate(304 182) rotate(12) scale(.68)"/></g>
+<g class="bag"><path d="M212 178c-4-12 6-20 14-20s18 8 14 20c-4 8-24 8-28 0z"/></g>
+<g class="foam"><circle cx="176" cy="176" r="4.5"/><circle cx="188" cy="182" r="3"/><circle cx="166" cy="184" r="3"/><circle cx="340" cy="184" r="3.5"/><circle cx="352" cy="176" r="2.5"/><circle cx="276" cy="188" r="3"/></g>
+</g>
+<g class="bag pl-t"><path d="M214 172h24M226 158v-6" stroke="#0078BF" stroke-width="2"/><circle cx="222" cy="176" r="1.6" fill="#FF48B0"/><circle cx="232" cy="178" r="1.6" fill="#FF48B0"/></g>
+</svg>
+<span class="folio l">03</span>
+</div>
+
+<div class="page st-page">
+<p class="label" aria-hidden="true">Pot Nº 6 · kitchen clock</p>
+<p class="clock" aria-hidden="true"><span class="reg" id="clock-t" data-t="10:00">10:00</span><span class="ap" id="clock-ap">pm</span></p>
+<p class="clock-sub" id="clock-h" aria-hidden="true">Hour 0h of 12 · the pot is lit at 10pm</p>
+<div class="stage" id="stage" aria-live="polite" aria-atomic="true">
+<p class="label" id="st-n">Stage 01 / 06 · 10:00pm – 10:45pm</p>
+<h3 class="stage-t"><span class="vi-tag" lang="vi" id="st-vi">Chần xương</span><br><span id="st-en">Blanch the bones</span></h3>
+<p class="stage-p" id="st-p">Beef marrow and knuckle bones go into a hard boil for ten minutes, then out into the sink for a scrub. It looks wasteful. It’s the reason the broth ends up clear, not grey.</p>
+<ul class="ing" id="st-ing"><li><b lang="vi">Xương ống</b> marrow bones</li><li><b lang="vi">Xương bò</b> knuckle bones</li></ul>
+<p class="done-note" id="st-done" hidden>Bowls up — doors open at 10am.</p>
+</div>
+<div class="meters" aria-hidden="true">
+<p class="meter"><span>Heat</span><span class="bar" id="m-heat"><i></i><i></i><i></i><i></i><i></i></span><span class="w" id="w-heat">Rolling boil</span></p>
+<p class="meter"><span>Steam</span><span class="bar" id="m-steam"><i></i><i></i><i></i><i></i><i></i></span><span class="w" id="w-steam">Billowing</span></p>
+<p class="meter"><span>Colour</span><span class="bar" id="m-col"><i></i><i></i><i></i><i></i><i></i></span><span class="w" id="w-col">Clear</span></p>
+</div>
+</div>
+
+<div class="scrub">
+<div class="scrub-head"><label for="hrs">Drag the star anise through the night</label><span aria-hidden="true">10pm → 10am · 12 hours</span></div>
+<div class="track" id="track">
+<div class="rail" aria-hidden="true">
+<div class="bands"><span class="band" style="--a:0;--b:45"><b>01</b></span><span class="band" style="--a:45;--b:90"><b>02</b></span><span class="band" style="--a:90;--b:120"><b>03</b></span><span class="band" style="--a:120;--b:480"><b>04</b></span><span class="band" style="--a:480;--b:630"><b>05</b></span><span class="band" style="--a:630;--b:720"><b>06</b></span></div>
+<div class="fillb"></div>
+<div class="base"></div>
+<div id="ticks"></div>
+</div>
+<input type="range" id="hrs" min="0" max="720" step="15" value="0" aria-valuetext="10:00pm, hour 0 of 12: Blanch the bones">
+<span class="knob" aria-hidden="true"><svg viewBox="-24 -24 48 48"><use class="pl-p" href="#anise" fill="#FF48B0" stroke="#FF48B0" stroke-width="3"/><use class="pl-b" href="#anise" fill="none" stroke="#0078BF" stroke-width="2.5" transform="rotate(8)"/><circle r="4" fill="#002078"/></svg></span>
+</div>
+<div class="scrub-ctl">
+<button class="btn play" id="play" type="button" aria-pressed="false"><span class="pi" aria-hidden="true"></span><span id="play-l">Play the night</span></button>
+<div class="jump" role="group" aria-label="Jump to a stage">
+<button type="button" data-go="0" aria-pressed="true">01 Blanch</button><button type="button" data-go="1" aria-pressed="false">02 Char</button><button type="button" data-go="2" aria-pressed="false">03 Spices</button><button type="button" data-go="3" aria-pressed="false">04 Simmer</button><button type="button" data-go="4" aria-pressed="false">05 Skim</button><button type="button" data-go="5" aria-pressed="false">06 Season</button>
+</div>
+</div>
+<p class="hint">Tip: focus the timeline and use ← → for 15 minutes, Page Up / Page Down for an hour, Home / End for the ends.</p>
+</div>
+<span class="folio r">04</span>
+</section>
+
+<section class="spread s-menu" id="menu" aria-labelledby="t-menu">
+<i class="staple" style="top:96px" aria-hidden="true"></i><i class="staple" style="bottom:96px" aria-hidden="true"></i>
+<div class="page">
+<p class="label">pp. 05–06</p>
+<h2 class="h2 reg" id="t-menu" data-t="Thực đơn" lang="vi">Thực đơn</h2>
+<p class="intro"><b>Menu.</b> Every phở comes with a plate of herbs, bean sprouts, lime and chilli. <span lang="vi">Nhỏ</span> is small, <span lang="vi">lớn</span> is large. Prices in AUD.</p>
+<svg class="spot" viewBox="0 0 140 120" aria-hidden="true" focusable="false"><g class="pl-p"><path d="M22 92c26-30 80-40 108-16-32 6-70 20-108 16z" fill="#FF48B0"/><use href="#anise" transform="translate(98 34) scale(.95) rotate(10)" fill="url(#p3)" stroke="#FF48B0" stroke-width="1"/></g><g class="pl-b"><path d="M22 92c-8-4-12-14-8-22" fill="none" stroke="#0078BF" stroke-width="5" stroke-linecap="round"/><use href="#wedge" transform="translate(6 14) rotate(12) scale(.9)" fill="url(#b2)" stroke="#0078BF" stroke-width="4"/><use href="#anise" transform="translate(98 34) scale(.95) rotate(15)" fill="none" stroke="#0078BF" stroke-width="1.5"/></g></svg>
+<ul class="dishes">
+<li class="dish"><h4 lang="vi">Phở bò tái</h4><p class="px"><span><small>NHỎ</small> 17.50</span><span><small>LỚN</small> 20.50</span></p><p class="d">Rare beef sliced paper-thin; the broth cooks it on the way to your table.</p></li>
+<li class="dish"><h4 lang="vi">Phở bò chín</h4><p class="px"><span><small>NHỎ</small> 17.50</span><span><small>LỚN</small> 20.50</span></p><p class="d">Brisket simmered alongside the bones until it gives way.</p></li>
+<li class="dish"><h4><span lang="vi">Phở đặc biệt</span></h4><p class="px"><span><small>NHỎ</small> 19.50</span><span><small>LỚN</small> 23.00</span></p><p class="d">The lot: rare beef, brisket, beef balls, tendon and tripe.</p></li>
+<li class="dish"><h4 lang="vi">Phở gà</h4><p class="px"><span><small>NHỎ</small> 17.00</span><span><small>LỚN</small> 20.00</span></p><p class="d">Chicken broth from its own pot, poached chicken, ginger and spring onion.</p></li>
+<li class="dish"><h4><span lang="vi">Phở chay</span><span class="tag">veg</span></h4><p class="px"><span><small>NHỎ</small> 17.00</span><span><small>LỚN</small> 20.00</span></p><p class="d">Charred daikon and shiitake broth, fried tofu, bok choy. Vegan on request.</p></li>
+</ul>
+<div class="nums">
+<p><b class="reg" data-t="12">12</b><span>hours in the pot, every night</span></p>
+<p><b class="reg" data-t="6">6</b><span>stockpots on the back stove</span></p>
+<p><b class="reg" data-t="5">5</b><span>spices in the muslin bag</span></p>
+<p><b class="reg" data-t="2">2</b><span>strains before the doors open</span></p>
+</div>
+<span class="folio l">05</span>
+</div>
+<div class="page">
+<div class="menu-block">
+<h3 class="menu-h3"><span lang="vi">Không phải phở</span><small>Not phở</small></h3>
+<ul class="dishes">
+<li class="dish"><h4><span lang="vi">Bún bò Huế</span><span class="tag hot">cay</span></h4><p class="px"><span>21.00</span></p><p class="d">Spicy lemongrass beef broth from Huế, round rice noodles, pork hock.</p></li>
+<li class="dish"><h4><span lang="vi">Gỏi cuốn</span> <small class="mono">(2)</small></h4><p class="px"><span>9.50</span></p><p class="d">Fresh rice-paper rolls with prawn, pork and herbs; peanut–hoisin dip.</p></li>
+<li class="dish"><h4><span lang="vi">Chả giò</span> <small class="mono">(4)</small></h4><p class="px"><span>10.00</span></p><p class="d">Crisp fried spring rolls with lettuce and herbs to wrap them in.</p></li>
+<li class="dish"><h4><span lang="vi">Quẩy</span> <small class="mono">(2)</small></h4><p class="px"><span>4.00</span></p><p class="d">Fried dough sticks. Tear, dunk, repeat.</p></li>
+</ul>
+</div>
+<div class="menu-block">
+<h3 class="menu-h3"><span lang="vi">Đồ uống</span><small>Drinks</small></h3>
+<ul class="dishes">
+<li class="dish"><h4 lang="vi">Cà phê sữa đá</h4><p class="px"><span>6.50</span></p><p class="d">Coffee dripped through a phin over condensed milk, then over ice.</p></li>
+<li class="dish"><h4 lang="vi">Cà phê đen đá</h4><p class="px"><span>5.50</span></p><p class="d">The same, black and bitter.</p></li>
+<li class="dish"><h4 lang="vi">Nước chanh</h4><p class="px"><span>6.00</span></p><p class="d">Fresh lime soda, sweet or salty.</p></li>
+<li class="dish"><h4 lang="vi">Trà đá</h4><p class="px"><span>free</span></p><p class="d">Iced jasmine tea, refilled without asking.</p></li>
+</ul>
+</div>
+<p class="menu-note"><b>Sample prices</b> for this demo. Extras: noodles 3.00 · rare beef 5.00 · a bowl of broth 6.00. Fish sauce, peanuts, soy, wheat and shellfish are all in our kitchen; tell us about allergies when you order.</p>
+<span class="folio r">06</span>
+</div>
+</section>
+
+<section class="spread s-eat" id="eat" aria-labelledby="t-eat">
+<i class="staple" style="top:96px" aria-hidden="true"></i><i class="staple" style="bottom:96px" aria-hidden="true"></i>
+<div class="page">
+<p class="label">pp. 07–08</p>
+<h2 class="h2 reg" id="t-eat" data-t="Cách ăn phở"><span lang="vi">Cách ăn phở</span><small>How to eat phở · the herb plate</small></h2>
+<svg class="plate" viewBox="0 0 480 360" role="img" aria-labelledby="pl-t">
+<title id="pl-t">The herb plate: Thai basil, sawtooth coriander, bean sprouts, lime wedges and sliced chilli, numbered 1 to 5.</title>
+<g class="pl-p"><ellipse cx="240" cy="182" rx="210" ry="148" fill="none" stroke="url(#p1)" stroke-width="34"/>
+<g fill="#FF48B0"><ellipse cx="108" cy="66" rx="4" ry="6"/><ellipse cx="102" cy="56" rx="3.4" ry="5"/><ellipse cx="112" cy="52" rx="3" ry="4.4"/><ellipse cx="186" cy="58" rx="4" ry="6"/><ellipse cx="181" cy="48" rx="3.2" ry="4.6"/><ellipse cx="191" cy="44" rx="2.8" ry="4"/></g>
+<g fill="none" stroke="#FF48B0" stroke-width="4.5"><circle cx="244" cy="266" r="6.5"/><circle cx="266" cy="276" r="6.5"/><circle cx="282" cy="262" r="6.5"/><circle cx="256" cy="288" r="6.5"/><circle cx="234" cy="282" r="6.5"/><circle cx="276" cy="292" r="6.5"/></g>
+<path d="M322 294c16-12 52-12 72 4-20 3-52 8-72-4z" fill="#FF48B0"/></g>
+<g class="pl-b"><ellipse cx="240" cy="182" rx="229" ry="166" fill="none" stroke="#0078BF" stroke-width="3"/><ellipse cx="240" cy="182" rx="192" ry="131" fill="none" stroke="#0078BF" stroke-width="2"/>
+<g fill="none" stroke="#0078BF" stroke-width="3.2" stroke-linecap="round"><path d="M206 196C180 160 150 118 110 70"/><path d="M212 192C204 150 196 108 186 58"/></g>
+<g fill="#0078BF"><use href="#leaf" transform="translate(186 170) rotate(-78) scale(0.95)"/><use href="#leaf" transform="translate(186 170) rotate(-178) scale(0.9)"/><use href="#leaf" transform="translate(164 140) rotate(-78) scale(0.88)"/><use href="#leaf" transform="translate(164 140) rotate(-178) scale(0.85)"/><use href="#leaf" transform="translate(142 112) rotate(-80) scale(0.78)"/><use href="#leaf" transform="translate(142 112) rotate(-176) scale(0.74)"/><use href="#leaf" transform="translate(124 90) rotate(-100) scale(0.6)"/><use href="#leaf" transform="translate(208 166) rotate(-51) scale(0.9)"/><use href="#leaf" transform="translate(206 150) rotate(-151) scale(0.86)"/><use href="#leaf" transform="translate(202 128) rotate(-51) scale(0.8)"/><use href="#leaf" transform="translate(198 110) rotate(-151) scale(0.74)"/><use href="#leaf" transform="translate(192 84) rotate(-60) scale(0.6)"/></g>
+<g fill="url(#b2)" stroke="#0078BF" stroke-width="1.3"><use href="#saw" transform="translate(296 200) rotate(-96) scale(1.05)"/><use href="#saw" transform="translate(300 198) rotate(-76) scale(1.05)"/><use href="#saw" transform="translate(304 198) rotate(-56) scale(1.05)"/><use href="#saw" transform="translate(308 200) rotate(-36) scale(1.05)"/><use href="#saw" transform="translate(312 204) rotate(-16) scale(1.05)"/></g>
+<g fill="none" stroke="#0078BF" stroke-width="8.5" stroke-linecap="round"><path d="M92 236c16 8 34 10 52 4"/><path d="M104 254c18 4 38 2 54-6"/><path d="M90 266c20 2 40-2 56-14"/><path d="M120 222c12 12 30 18 50 16"/><path d="M140 276c16-4 32-14 40-28"/><path d="M104 286c18 0 36-6 50-18"/><path d="M154 230c16 4 32 14 38 28"/><path d="M126 248c20-2 40 4 54 16"/><path d="M168 252c10 8 18 20 20 34"/></g>
+<g stroke="#0078BF" stroke-width="4"><use href="#wedge" transform="translate(352 200) rotate(14) scale(1.15)" fill="url(#b2)"/><use href="#wedge" transform="translate(390 238) rotate(-18) scale(1.1)" fill="url(#b2)"/><use href="#wedge" transform="translate(400 186) rotate(196) scale(1.05)" fill="url(#b1)"/></g>
+<ellipse cx="260" cy="277" rx="48" ry="23" fill="url(#b1)" stroke="#0078BF" stroke-width="3"/>
+<path d="M322 294c-6-2-10-9-8-16" fill="none" stroke="#0078BF" stroke-width="4.5" stroke-linecap="round"/></g>
+<g fill="none" stroke="#F5F1E8" stroke-linecap="round"><g stroke-width="4.4"><path d="M92 236c16 8 34 10 52 4"/><path d="M104 254c18 4 38 2 54-6"/><path d="M90 266c20 2 40-2 56-14"/><path d="M120 222c12 12 30 18 50 16"/><path d="M140 276c16-4 32-14 40-28"/><path d="M104 286c18 0 36-6 50-18"/><path d="M154 230c16 4 32 14 38 28"/><path d="M126 248c20-2 40 4 54 16"/><path d="M168 252c10 8 18 20 20 34"/></g><g stroke-width="2.4"><path d="M30 2V24M30 2L11 18M30 2L49 18" transform="translate(352 200) rotate(14) scale(1.15)"/><path d="M30 2V24M30 2L11 18M30 2L49 18" transform="translate(390 238) rotate(-18) scale(1.1)"/><path d="M30 2V24M30 2L11 18M30 2L49 18" transform="translate(400 186) rotate(196) scale(1.05)"/></g><g stroke-width="1.4"><path d="M6 0H100" transform="translate(296 200) rotate(-96) scale(1.05)"/><path d="M6 0H100" transform="translate(300 198) rotate(-76) scale(1.05)"/><path d="M6 0H100" transform="translate(304 198) rotate(-56) scale(1.05)"/><path d="M6 0H100" transform="translate(308 200) rotate(-36) scale(1.05)"/><path d="M6 0H100" transform="translate(312 204) rotate(-16) scale(1.05)"/></g></g>
+<g class="pl-t" fill="#FF48B0"><ellipse cx="92" cy="236" rx="4.6" ry="3.5"/><ellipse cx="104" cy="254" rx="4.6" ry="3.5"/><ellipse cx="90" cy="266" rx="4.6" ry="3.5"/><ellipse cx="120" cy="222" rx="4.6" ry="3.5"/><ellipse cx="180" cy="248" rx="4.6" ry="3.5"/><ellipse cx="104" cy="286" rx="4.6" ry="3.5"/><ellipse cx="192" cy="258" rx="4.6" ry="3.5"/><ellipse cx="126" cy="248" rx="4.6" ry="3.5"/><ellipse cx="188" cy="286" rx="4.6" ry="3.5"/></g>
+<g font-size="14" text-anchor="middle"><g fill="#002078"><circle cx="76" cy="104" r="14"/><circle cx="424" cy="86" r="14"/><circle cx="66" cy="292" r="14"/><circle cx="448" cy="252" r="14"/><circle cx="206" cy="322" r="14"/></g><g fill="#F5F1E8"><text x="76" y="109">1</text><text x="424" y="91">2</text><text x="66" y="297">3</text><text x="448" y="257">4</text><text x="206" y="327">5</text></g></g>
+</svg>
+<ol class="legend">
+<li><span class="n" aria-hidden="true">1</span><span><b lang="vi">Húng quế</b> · Thai basil. Tear the leaves in over the bowl.</span></li>
+<li><span class="n" aria-hidden="true">2</span><span><b lang="vi">Ngò gai</b> · Sawtooth coriander. Louder than coriander; start with one leaf.</span></li>
+<li><span class="n" aria-hidden="true">3</span><span><b lang="vi">Giá</b> · Bean sprouts. Raw for crunch, or push them under to soften.</span></li>
+<li><span class="n" aria-hidden="true">4</span><span><b lang="vi">Chanh</b> · Lime. One wedge, taste, then decide on the second.</span></li>
+<li><span class="n" aria-hidden="true">5</span><span><b lang="vi">Ớt</b> · Bird’s-eye chilli. Properly hot; two slices is a fine start.</span></li>
+</ol>
+<span class="folio l">07</span>
+</div>
+<div class="page">
+<h3 class="menu-h3">The cook’s five rules<small>Pinned above the pass</small></h3>
+<ol class="rules">
+<li><span class="rn reg" data-t="01" aria-hidden="true">01</span><div><h3>Broth first</h3><p>Before herbs, before sauce: one spoonful of the broth on its own. Twelve hours went into it.</p></div></li>
+<li><span class="rn reg" data-t="02" aria-hidden="true">02</span><div><h3>Tear, don’t pile</h3><p>Add herbs a few at a time so they stay bright instead of stewing on top.</p></div></li>
+<li><span class="rn reg" data-t="03" aria-hidden="true">03</span><div><h3>Sauce on the side</h3><p>Hoisin and chilli sauce go in the little dish, for dipping the beef — not into the bowl.</p></div></li>
+<li><span class="rn reg" data-t="04" aria-hidden="true">04</span><div><h3>Chopsticks and spoon</h3><p>One in each hand. Lift noodles onto the spoon, add a little broth, then eat.</p></div></li>
+<li><span class="rn reg" data-t="05" aria-hidden="true">05</span><div><h3>Slurp</h3><p>Encouraged, honestly. Hot noodles need the air.</p></div></li>
+</ol>
+<div class="why">
+<p class="why-6 reg" data-t="6" aria-hidden="true">6</p>
+<div><h3>Why “Sáu”?</h3><p><span lang="vi">Sáu</span> is Vietnamese for six. Six stockpots live on our back stove, lit an hour apart, so one is always reaching hour twelve. This issue follows pot Nº 6.</p></div>
+</div>
+<span class="folio r">08</span>
+</div>
+</section>
+
+<section class="spread s-visit" id="visit" aria-labelledby="t-visit">
+<i class="staple" style="top:96px" aria-hidden="true"></i><i class="staple" style="bottom:96px" aria-hidden="true"></i>
+<div class="page">
+<p class="label">pp. 09–10</p>
+<h2 class="h2 reg" id="t-visit" data-t="Ghé quán"><span lang="vi">Ghé quán</span><small>Visit · hours &amp; groups</small></h2>
+<table class="hours" id="hours">
+<caption class="sr-only">Opening hours</caption>
+<tbody>
+<tr data-d="1"><th scope="row">Mon</th><td>10am – 9pm</td></tr>
+<tr data-d="2"><th scope="row">Tue</th><td>Closed · <span lang="vi">nghỉ</span></td></tr>
+<tr data-d="3"><th scope="row">Wed</th><td>10am – 9pm</td></tr>
+<tr data-d="4"><th scope="row">Thu</th><td>10am – 9pm</td></tr>
+<tr data-d="5"><th scope="row">Fri</th><td>10am – 10pm</td></tr>
+<tr data-d="6"><th scope="row">Sat</th><td>9am – 10pm</td></tr>
+<tr data-d="0"><th scope="row">Sun</th><td>9am – 9pm</td></tr>
+</tbody>
+</table>
+<div class="where">
+<div><h3>Where</h3><p>Footscray, VIC — a short walk from the station. Look for the pink door and the steam.</p></div>
+<div><h3>Talk to us</h3><p><a href="tel:+61355504166">(03) 5550 4166</a><br><a href="mailto:xinchao@example.com">xinchao@example.com</a></p></div>
+</div>
+<form class="group" data-demo-message="Demo only — no table was requested. On a real site this would reach the kitchen.">
+<h3>Six or more?</h3>
+<p>Tables for six are kind of our thing. Tell us you’re coming and we’ll push the tables together.</p>
+<div class="field"><label for="g-name">Name</label><input id="g-name" name="name" autocomplete="name" required></div>
+<div class="row2">
+<div class="field"><label for="g-n">People</label><select id="g-n" name="people"><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>12</option><option>14</option><option>16+</option></select></div>
+<div class="field"><label for="g-day">Day</label><select id="g-day" name="day"><option>Next Saturday</option></select></div>
+</div>
+<div class="field"><label for="g-time">Time</label><select id="g-time" name="time"><option>11:30am</option><option>12:30pm</option><option>6:00pm</option><option>7:00pm</option><option>8:00pm</option></select></div>
+<button class="btn" type="submit">Send group request</button>
+</form>
+<span class="folio l">09</span>
+</div>
+<div class="page back">
+<p class="label">Back cover</p>
+<p class="backname fit"><span class="m-b" aria-hidden="true" data-brand>Phở Sáu</span><span class="m-p" data-brand>Phở Sáu</span></p>
+<svg class="anise-big" viewBox="-60 -60 120 120" aria-hidden="true" focusable="false"><g class="pl-p"><use href="#anise" transform="scale(2.5)" fill="url(#p3)" stroke="#FF48B0" stroke-width=".8"/></g><g class="pl-b"><use href="#anise" transform="scale(2.5) rotate(5)" fill="none" stroke="#0078BF" stroke-width="1.3"/><circle r="6" fill="#0078BF"/></g></svg>
+<p class="next"><b>Next issue · Nº 07</b>Bún bò Huế and the lemongrass pot. Out in summer.</p>
+<div class="bars" aria-hidden="true"><i style="background:#FF48B0"></i><i style="background:radial-gradient(#FF48B0 1.6px,transparent 2px) 0 0/5px 5px"></i><i style="background:radial-gradient(#FF48B0 .9px,transparent 1.3px) 0 0/5px 5px"></i><i style="background:#0078BF"></i><i style="background:radial-gradient(#0078BF 1.6px,transparent 2px) 0 0/5px 5px"></i><i style="background:radial-gradient(#0078BF .9px,transparent 1.3px) 0 0/5px 5px"></i><i style="background:#002078"></i></div>
+<p class="colophon">Zine Nº 06, spring 2026. Printed in two inks — fluoro pink and medium blue — where they overlap, navy. Set in Be Vietnam Pro and Space Mono. Take one home; it’s free.</p>
+<p class="colophon"><b>Concept demo.</b> This kitchen is fictional and every price is a sample.</p>
+<span class="folio r">10</span>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="foot-in">
+<span><b data-brand>Phở Sáu</b> · Footscray, VIC · a fictional business</span>
+<span>Concept demo · Sample prices · <a href="#cover">Back to the cover ↑</a></span>
+</div>
+</footer>
+
+<script>
+(function () {
+"use strict";
+var d = document, root = d.documentElement;
+root.classList.add("js");
+var RM = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+function reduced() { return !!((window.DemoKit && DemoKit.reducedMotion) || RM.matches); }
+function $(id) { return d.getElementById(id); }
+
+function fit() {
+d.querySelectorAll(".fit").forEach(function (el) {
+var s = el.querySelector("[data-brand]:not([aria-hidden])");
+var n = Array.from((s ? s.textContent : el.textContent).trim()).length;
+el.classList.toggle("len-m", n > 9 && n <= 16);
+el.classList.toggle("len-l", n > 16);
+});
+}
+fit();
+window.addEventListener("hd:brandchange", fit);
+
+var spreads = d.querySelectorAll(".spread");
+if ("IntersectionObserver" in window && !reduced()) {
+var io = new IntersectionObserver(function (es) {
+es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("inked"); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+spreads.forEach(function (s) { io.observe(s); });
+} else spreads.forEach(function (s) { s.classList.add("inked"); });
+
+var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var OPEN = ["9am – 9pm", "10am – 9pm", null, "10am – 9pm", "10am – 9pm", "10am – 10pm", "9am – 10pm"];
+function fmt(dt) { return DAYS[dt.getDay()] + " " + dt.getDate() + " " + MON[dt.getMonth()]; }
+var now = new Date(), dow = now.getDay();
+var row = d.querySelector('#hours tr[data-d="' + dow + '"]');
+if (row) row.classList.add("now");
+if (OPEN[dow]) {
+$("today-big").textContent = "Today, " + fmt(now) + ": " + OPEN[dow];
+$("today-sub").textContent = "Today’s broth went on at 10pm last night. Walk-ins for up to five; six or more, send a group request.";
+} else {
+$("today-big").textContent = "Today, " + fmt(now) + ": closed";
+$("today-sub").textContent = "Tuesdays the pots rest (the stove doesn’t). Back tomorrow from 10am.";
+}
+var sel = $("g-day");
+sel.innerHTML = "";
+for (var i = 1, added = 0; added < 10 && i < 20; i++) {
+var dt = new Date(now.getFullYear(), now.getMonth(), now.getDate() + i);
+if (dt.getDay() === 2) continue;
+var o = d.createElement("option");
+o.textContent = fmt(dt);
+sel.appendChild(o);
+added++;
+}
+
+var ST = [
+{ a: 0, b: 45, vi: "Chần xương", en: "Blanch the bones", heat: 5, steam: 5, sw: "Billowing",
+p: "Beef marrow and knuckle bones go into a hard boil for ten minutes, then out into the sink for a scrub. It looks wasteful. It’s the reason the broth ends up clear, not grey.",
+ing: [["Xương ống", "marrow bones"], ["Xương bò", "knuckle bones"]] },
+{ a: 45, b: 90, vi: "Nướng hành, gừng", en: "Char the onion & ginger", heat: 4, steam: 3, sw: "Charred smoke",
+p: "Whole brown onions and a fist of ginger sit right in the flame until the skins blister black. We peel off the worst of it; the sweetness and the smoke stay behind.",
+ing: [["Hành tây", "brown onions"], ["Gừng", "ginger"]] },
+{ a: 90, b: 120, vi: "Rang gia vị", en: "Toast the spices", heat: 3, steam: 2, sw: "Toasty wisps",
+p: "Star anise, cinnamon bark, cloves, black cardamom and coriander seed hit a dry pan just until the kitchen smells like phở — about two minutes — then into a muslin bag.",
+ing: [["Hồi", "star anise"], ["Quế", "cinnamon"], ["Đinh hương", "cloves"], ["Thảo quả", "black cardamom"], ["Hạt ngò", "coriander seed"]] },
+{ a: 120, b: 480, vi: "Ninh lửa nhỏ", en: "The long simmer", heat: 1, steam: 3, sw: "Lazy wisps",
+p: "Everything goes back into the pot with clean water and the flame drops until the surface barely trembles. A rolling boil would cloud it, so the night cook watches the flame, not the clock.",
+ing: [["Xương", "bones, back in"], ["Hành, gừng", "charred aromatics"], ["Túi gia vị", "spice bag"]] },
+{ a: 480, b: 630, vi: "Hớt bọt", en: "Skim, skim, skim", heat: 1, steam: 4, sw: "Steady",
+p: "As the bones give up the last of their marrow, fat and foam rise. Every half hour: ladle, skim, repeat. The spice bag comes out at hour nine, before the cloves turn bitter.",
+ing: [["", "skim every 30 min"], ["", "spice bag out at hour 9"]] },
+{ a: 630, b: 720, vi: "Nêm nếm", en: "Season & strain", heat: 2, steam: 4, sw: "Steady",
+p: "Fish sauce, rock sugar and a little salt go in a spoonful at a time, tasting between each. Then the broth is strained twice and held just off the boil for the ten o’clock doors.",
+ing: [["Nước mắm", "fish sauce"], ["Đường phèn", "rock sugar"], ["Muối", "salt"]] }
+];
+var HEATW = ["", "Barely a tremble", "Gentle", "Dry pan, medium", "Open flame", "Rolling boil"];
+var COLW = ["Clear", "Pale gold", "Gold", "Amber", "Deep amber"];
+var range = $("hrs"), track = $("track"), pot = $("pot"), brP = $("brPc"), brB = $("brBc");
+var play = $("play"), playL = $("play-l"), chips = d.querySelectorAll(".jump button");
+
+var tk = $("ticks"), html = "";
+for (var h = 0; h <= 12; h++) {
+var clockH = (22 + h) % 24, lab = (clockH % 12 || 12) + (clockH < 12 ? "am" : "pm");
+html += '<span class="tick' + (h % 2 ? " odd minor" : "") + '" style="--h:' + h + '"><span>' + lab + "</span></span>";
+}
+tk.innerHTML = html;
+
+function clockOf(m) {
+var tot = (1320 + Math.round(m)) % 1440, hh = Math.floor(tot / 60), mm = tot % 60;
+return { t: (hh % 12 || 12) + ":" + (mm < 10 ? "0" : "") + mm, ap: hh < 12 ? "am" : "pm" };
+}
+function hrs(m) { m = Math.round(m); var a = Math.floor(m / 60), r = m % 60; return a + "h" + (r ? " " + r + "m" : ""); }
+function stageAt(m) { for (var i = ST.length - 1; i > 0; i--) if (m >= ST[i].a) return i; return 0; }
+function bar(id, n) { d.querySelectorAll("#" + id + " i").forEach(function (el, k) { el.classList.toggle("on", k < n); }); }
+
+var cur = -1, t = +range.value || 0;
+function paintStage(i) {
+var s = ST[i], a = clockOf(s.a), b = clockOf(s.b);
+$("st-n").textContent = "Stage 0" + (i + 1) + " / 06 · " + a.t + a.ap + " – " + b.t + b.ap;
+$("st-vi").textContent = s.vi;
+$("st-en").textContent = s.en;
+$("st-p").textContent = s.p;
+var ul = $("st-ing");
+ul.innerHTML = "";
+s.ing.forEach(function (x) {
+var li = d.createElement("li");
+if (x[0]) { var bb = d.createElement("b"); bb.lang = "vi"; bb.textContent = x[0]; li.appendChild(bb); li.appendChild(d.createTextNode(" " + x[1])); }
+else li.textContent = x[1];
+ul.appendChild(li);
+});
+bar("m-heat", s.heat); $("w-heat").textContent = HEATW[s.heat];
+bar("m-steam", s.steam); $("w-steam").textContent = s.sw;
+chips.forEach(function (c, k) { c.setAttribute("aria-pressed", String(k === i)); });
+}
+function render(m) {
+m = Math.max(0, Math.min(720, +m || 0));
+var p = m / 720;
+track.style.setProperty("--p", p.toFixed(4));
+var c = clockOf(m);
+$("clock-t").textContent = c.t; $("clock-t").setAttribute("data-t", c.t); $("clock-ap").textContent = c.ap;
+$("clock-h").textContent = "Hour " + hrs(m) + " of 12 · the pot was lit at 10pm";
+var k = Math.pow(p, 0.8);
+brP.setAttribute("r", (0.5 + k * 1.95).toFixed(2));
+brB.setAttribute("r", (0.25 + k * 1.8).toFixed(2));
+var i = stageAt(m), s = ST[i];
+pot.setAttribute("data-stage", i + 1);
+pot.style.setProperty("--heat", (0.3 + s.heat * 0.14).toFixed(2));
+pot.style.setProperty("--steam", (s.steam / 5).toFixed(2));
+pot.setAttribute("data-sky", m < 480 ? "night" : m < 600 ? "dawn" : "day");
+pot.classList.toggle("bag-out", m >= 540);
+var done = m >= 720;
+pot.classList.toggle("done", done);
+var ci = Math.min(4, Math.floor(p * 5));
+bar("m-col", ci + 1); $("w-col").textContent = COLW[ci];
+range.setAttribute("aria-valuetext", c.t + c.ap + ", hour " + hrs(m) + " of 12: " + s.en + (done ? ", doors open" : ""));
+if (i !== cur) { cur = i; paintStage(i); }
+var dn = $("st-done");
+if (dn.hidden === done) dn.hidden = !done;
+if (!playing) playL.textContent = done ? "Replay the night" : "Play the night";
+}
+
+var playing = false, raf = 0, last = 0, timer = 0;
+function setPlay(on) {
+playing = on;
+play.setAttribute("aria-pressed", String(on));
+cancelAnimationFrame(raf); clearInterval(timer);
+if (on) {
+playL.textContent = "Pause";
+if (t >= 720) { t = 0; range.value = 0; render(0); }
+if (reduced()) timer = setInterval(stepStage, 1500);
+else { last = performance.now(); raf = requestAnimationFrame(tick); }
+} else playL.textContent = t >= 720 ? "Replay the night" : "Play the night";
+}
+function tick(now) {
+if (!playing) return;
+var dt = Math.max(0, Math.min(80, now - last)); last = now;
+t = Math.min(720, t + dt * 720 / 16000);
+range.value = Math.round(t / 15) * 15;
+render(t);
+if (t >= 720) setPlay(false); else raf = requestAnimationFrame(tick);
+}
+function stepStage() {
+var i = stageAt(t);
+t = i < ST.length - 1 ? ST[i + 1].a : 720;
+range.value = t; render(t);
+if (t >= 720) setPlay(false);
+}
+play.addEventListener("click", function () { setPlay(!playing); });
+range.addEventListener("input", function () { if (playing) setPlay(false); t = +range.value; render(t); });
+range.addEventListener("keydown", function (e) {
+if (e.key === "PageUp" || e.key === "PageDown") {
+e.preventDefault();
+if (playing) setPlay(false);
+t = Math.max(0, Math.min(720, Math.round(t / 15) * 15 + (e.key === "PageUp" ? 60 : -60)));
+range.value = t; render(t);
+}
+});
+chips.forEach(function (c) {
+c.addEventListener("click", function () {
+if (playing) setPlay(false);
+t = ST[+c.getAttribute("data-go")].a;
+range.value = t; render(t);
+});
+});
+
+var broth = $("broth");
+if ("IntersectionObserver" in window) {
+new IntersectionObserver(function (es) {
+es.forEach(function (e) {
+broth.classList.toggle("live", e.isIntersecting);
+if (!e.isIntersecting && playing) setPlay(false);
+});
+}, { threshold: 0.05 }).observe(broth);
+} else broth.classList.add("live");
+d.addEventListener("visibilitychange", function () { if (d.hidden && playing) setPlay(false); });
+
+render(t);
+})();
+</script>
+</body>
+</html>

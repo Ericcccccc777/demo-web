@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="064">
+<meta name="demo:brand" content="Byte Size Coders">
+<title>Byte Size Coders — kids coding club, Canberra</title>
+<meta name="description" content="Byte Size Coders is a fictional after-school and holiday coding club for kids aged 7–15 in Canberra, with a playable robot block-coding puzzle.">
+<meta name="theme-color" content="#FFAB19">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --ink:#1B2140;--ink-2:#4A5173;--bg:#FFFFFF;--dot:#E3E8F2;
+  --blue:#4C97FF;--blue-d:#3373CC;--purple:#9966FF;--purple-d:#774DCB;--lilac:#B794FF;--orange:#FFAB19;--orange-d:#CF8B17;--green:#59C059;--green-d:#389438;--pink:#FF6680;--pink-d:#E0445F;
+  --round:"Mali","Comic Sans MS","Chalkboard SE",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --spring:cubic-bezier(.34,1.56,.64,1);--gut:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);background-image:radial-gradient(var(--dot) 1.3px,transparent 1.5px);background-size:24px 24px;color:var(--ink);font:500 17px/1.55 var(--round);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--round);font-weight:700;margin:0;line-height:1.1}
+p{margin:0}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+[hidden]{display:none!important}
+.mono{font-family:var(--mono)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---- the block look ---- */
+.blk{--c:var(--blue);--cd:var(--blue-d);position:relative;background:var(--c);border:2px solid var(--cd);border-radius:12px;color:var(--ink)}
+.blk::before{content:"";position:absolute;left:26px;top:-2px;width:34px;height:10px;background:var(--bg);border:2px solid var(--cd);border-top:0;border-radius:0 0 9px 9px;z-index:1}
+.blk::after{content:"";position:absolute;left:26px;bottom:-10px;width:34px;height:10px;background:var(--c);border:2px solid var(--cd);border-top:0;border-radius:0 0 9px 9px;z-index:2}
+.blk.hat::before{display:none}
+.blk.end::after{display:none}
+.or{--c:var(--orange);--cd:var(--orange-d)}.gr{--c:var(--green);--cd:var(--green-d)}.pu{--c:var(--purple);--cd:var(--purple-d)}.li{--c:var(--lilac);--cd:var(--purple-d)}.pk{--c:var(--pink);--cd:var(--pink-d)}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:2px solid #EEF1F7}
+.top .in{display:flex;align-items:center;gap:14px;min-height:66px;padding:0 var(--gut);max-width:1400px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-width:0}
+.logo svg{width:40px;height:40px;flex:none}
+.logo span{font:700 21px/1.1 var(--round);overflow-wrap:anywhere;min-width:0}
+.top nav{display:flex;gap:4px}
+.top nav a{font-weight:700;font-size:15px;text-decoration:none;padding:8px 12px;border-radius:999px}
+.top nav a:hover{background:#F1F4FA}
+.pill{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;white-space:nowrap;flex:none;font-weight:700;text-decoration:none;border:2px solid var(--cd);background:var(--c);color:var(--ink);cursor:pointer;box-shadow:0 3px 0 var(--cd);transition:transform .2s var(--spring),box-shadow .2s}
+.pill:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--cd)}
+.pill:active{transform:translateY(2px);box-shadow:0 1px 0 var(--cd)}
+.top .sm{display:none}
+@media (max-width:980px){.top nav{display:none}}
+@media (max-width:600px){.top .lg{display:none}.top .sm{display:inline}}
+@media (max-width:520px){.logo span{font-size:18px}.top .pill{padding:0 14px;font-size:15px}}
+
+/* layout: category column + workspace */
+.layout{display:grid;grid-template-columns:140px minmax(0,1fr);gap:28px;max-width:1400px;margin:0 auto;padding:28px var(--gut) 60px}
+.cats{position:sticky;top:96px;align-self:start;display:grid;gap:6px;list-style:none;margin:0;padding:0}
+.cats a{display:grid;justify-items:center;gap:4px;padding:10px 4px;text-decoration:none;border-radius:12px;font-size:13.5px;font-weight:700;text-align:center;line-height:1.2}
+.cats a:hover,.cats a.on{background:#F1F4FA}
+.cats i{width:30px;height:30px;border-radius:50%;background:var(--c);border:2px solid var(--cd)}
+.stack{display:grid;gap:0}
+.stack>.blk{margin-top:-2px}
+.stack>.blk+.blk{margin-top:-2px}
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:0;padding-top:0}
+  .cats{position:sticky;top:66px;z-index:30;display:flex;gap:6px;overflow-x:auto;margin:0 calc(-1*var(--gut)) 18px;padding:10px var(--gut);background:rgba(255,255,255,.95);border-bottom:2px solid #EEF1F7;scrollbar-width:none}
+  .cats::-webkit-scrollbar{display:none}
+  .cats li{flex:none}
+  .cats a{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border:2px solid #E6EAF2;border-radius:999px;min-height:44px;font-size:14px}
+  .cats i{width:22px;height:22px}
+}
+
+/* hero hat block */
+.hero{padding:34px clamp(22px,4vw,48px) 40px;border-radius:40px 16px 16px 16px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:center;margin-top:36px}
+.blk.hat.hero::before{display:block;left:-2px;top:-36px;width:230px;height:64px;border:2px solid var(--cd);border-bottom:0;border-radius:115px 115px 0 0/64px 64px 0 0;background:var(--c);z-index:0;clip-path:inset(0 0 calc(100% - 38px) 0)}
+.hero>*{position:relative;z-index:1}
+.when{display:inline-flex;align-items:center;gap:8px;font:700 15px/1.2 var(--mono);background:rgba(255,255,255,.55);padding:6px 12px;border-radius:999px}
+.when svg{width:18px;height:18px}
+.hero h1{font-size:clamp(44px,6.4vw,84px);line-height:.98;margin-top:14px;overflow-wrap:anywhere}
+.hero .lede{font-size:clamp(17px,1.5vw,19px);margin-top:14px;max-width:34ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .ctas .pill{min-height:50px;font-size:16.5px;background:#fff;--cd:var(--ink)}
+.hero .ctas .pill.b{background:var(--blue);--cd:var(--blue-d)}
+.hero-art{width:100%;height:auto;display:block}
+@media (max-width:760px){.hero{grid-template-columns:minmax(0,1fr);border-radius:32px 14px 14px 14px;padding-top:26px}.blk.hat.hero::before{width:160px;height:50px;top:-28px;clip-path:inset(0 0 calc(100% - 30px) 0)}.hero-art{max-width:320px;margin:0 auto}}
+
+/* c-blocks (sections) */
+.cb{padding:0 0 22px 28px;border-radius:14px}
+.cb-h{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:16px 18px 16px 0}
+.cb-h .lbl{font:700 14px/1.2 var(--mono);background:rgba(255,255,255,.55);padding:6px 10px;border-radius:8px}
+.cb-h h2{font-size:clamp(28px,3.4vw,42px)}
+.mouth{background:#fff;border:2px solid var(--cd);border-right:0;border-radius:12px 0 0 12px;margin-right:0;padding:clamp(16px,2.4vw,26px);position:relative}
+.mouth::before{content:"";position:absolute;left:24px;top:-2px;width:34px;height:10px;background:var(--c);border:2px solid var(--cd);border-top:0;border-radius:0 0 9px 9px}
+.cb.pu .cb-h h2{font-size:clamp(30px,3.4vw,42px)}
+
+/* programs */
+.progs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+.prog{padding:14px 16px 16px;border-radius:12px}
+.prog h3{font-size:22px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.prog h3 small{font:700 12.5px/1.2 var(--mono);background:rgba(255,255,255,.6);padding:4px 8px;border-radius:6px;white-space:nowrap}
+.prog p{font-size:15.5px;margin-top:6px}
+.prog .when2{margin-top:10px;font:700 13px/1.4 var(--mono)}
+.prog .price{font:700 20px/1 var(--round)}
+.prog.hl{box-shadow:0 0 0 4px #fff,0 0 0 7px var(--ink);transform:translateY(-3px)}
+.prog{transition:box-shadow .3s,transform .3s var(--spring)}
+.fine{font-size:14px;color:var(--ink-2);margin-top:16px}
+@media (max-width:760px){.progs{grid-template-columns:minmax(0,1fr)}}
+
+/* ages operator */
+.ages{padding:22px 22px 22px 28px;border-radius:12px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px}
+.ages .kw{font:700 20px/1.2 var(--round)}
+.rep{display:inline-flex;align-items:center;gap:4px;background:#fff;border:2px solid var(--cd);border-radius:999px;padding:3px}
+.rep button{width:44px;height:44px;border-radius:50%;border:0;background:#EEF7EE;font:700 22px/1 var(--round);cursor:pointer}
+.rep output{min-width:56px;text-align:center;font:700 26px/1 var(--mono)}
+.ages .out{flex:1 1 280px;background:#fff;border-radius:22px;padding:12px 18px;font-size:16px;min-height:52px}
+.ages .out b{font-weight:700}
+
+/* camps */
+.camps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.camp{border-radius:26px 12px 12px 12px;padding:18px 16px 16px}
+.camp::before{display:none}
+.camp .dt{font:700 14px/1.3 var(--mono)}
+.camp h3{font-size:22px;margin-top:6px}
+.camp p{font-size:15px;margin-top:6px}
+.camp .meta{margin-top:10px;font:700 13px/1.4 var(--mono)}
+@media (max-width:980px){.camps{grid-template-columns:minmax(0,1fr)}}
+
+/* how classes work */
+.seq{display:grid;gap:0;max-width:640px}
+.seq .blk{padding:12px 16px;display:flex;align-items:center;gap:14px;border-radius:10px}
+.seq .blk+.blk{margin-top:-2px}
+.seq .t{font:700 13px/1 var(--mono);background:rgba(255,255,255,.6);padding:6px 8px;border-radius:6px;white-space:nowrap}
+.seq b{font-size:18px}
+.seq span.d{font-size:15px}
+.seq .txt{display:grid}
+.howg{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:start}
+.notes{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+@media (max-width:1100px){.howg{grid-template-columns:minmax(0,1fr)}.notes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.notes div{border:2px dashed #D5DBE8;border-radius:14px;padding:12px 14px;font-size:15px}
+.notes b{display:block;font-size:17px}
+@media (max-width:760px){.notes{grid-template-columns:minmax(0,1fr)}}
+
+/* enrol */
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fld{display:grid;gap:6px;font:700 13.5px/1.2 var(--mono)}
+.fld input,.fld select{width:100%;min-height:50px;border:2px solid #CDD4E3;border-radius:12px;padding:0 14px;font:500 16px var(--round);background:#fff}
+.fld input:focus,.fld select:focus{border-color:var(--pink-d);outline:none;box-shadow:0 0 0 3px rgba(255,102,128,.25)}
+.form .pill{grid-column:1/-1;justify-content:center;min-height:54px;font-size:17px}
+.faq{margin-top:22px;display:grid;gap:10px}
+.faq details{border:2px solid #E3E8F2;border-radius:14px;padding:0 16px;background:#fff}
+.faq summary{cursor:pointer;min-height:52px;display:flex;align-items:center;font-weight:700;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"▸";margin-right:10px;transition:transform .2s;color:var(--pink-d)}
+.faq details[open] summary::before{transform:rotate(90deg)}
+.faq details p{padding:0 0 14px;font-size:15.5px;color:var(--ink-2)}
+@media (max-width:760px){.form{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- puzzle ---- */
+.pz{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,380px);gap:18px;align-items:start}
+.pal,.prg,.stage{background:#fff;border:2px solid #E3E8F2;border-radius:16px;padding:14px}
+.pz h3{font:700 13px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px}
+.pal .list{display:grid;gap:14px}
+.pb{display:flex;align-items:center;gap:8px;width:100%;min-height:48px;padding:10px 12px;text-align:left;font:700 15.5px/1.1 var(--round);cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;transition:transform .15s var(--spring)}
+.pb:hover{transform:translateX(3px)}
+.pb svg{width:20px;height:20px;flex:none}
+.pb.rp{padding-bottom:26px;border-radius:12px}
+.pb.rp .cap{position:absolute;left:14px;right:10px;bottom:6px;height:14px;background:#fff;border:2px solid var(--cd);border-right:0;border-radius:6px 0 0 6px}
+.keys{margin-top:14px;font:400 12.5px/1.5 var(--mono);color:var(--ink-2)}
+.keys kbd{font:700 12px/1 var(--mono);border:1.5px solid #CDD4E3;border-bottom-width:3px;border-radius:5px;padding:2px 5px;background:#F7F9FC}
+.prg{min-height:320px}
+.prg .runhat{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:10px 14px;border-radius:24px 10px 10px 10px;font:700 16px/1 var(--round);cursor:pointer;text-align:left}
+.prg .runhat svg{width:22px;height:22px}
+.plist{list-style:none;margin:0;padding:0 0 4px;display:grid;gap:0;min-height:60px;position:relative}
+.plist>li{margin-top:-2px}
+.pi{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 12px;min-height:46px;font:700 15px/1.1 var(--round)}
+.pi .x{margin-left:auto;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.65);cursor:pointer;font:700 16px/1 var(--round);flex:none}
+.pi .x:hover{background:#fff}
+.pi.run{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--ink);z-index:3}
+.crep{padding:0 0 12px 18px;border-radius:12px}
+.crep .ch{display:flex;align-items:center;gap:8px;padding:9px 8px 9px 0;font:700 15px/1.1 var(--round)}
+.crep .ch .x{margin-left:auto}
+.crep .inner{list-style:none;margin:0 0 0 0;padding:6px 0 10px 10px;background:#fff;border:2px dashed var(--cd);border-right:0;border-radius:10px 0 0 10px;min-height:52px;display:grid}
+.crep .inner>li{margin-top:-2px}
+.crep.tgt .inner{border-style:solid;background:#FFF8EA}
+.crep .inner .hint{font:400 13px/1.3 var(--mono);color:var(--ink-2);padding:8px 6px}
+.crep.run{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--ink)}
+.drop-line{height:4px;border-radius:2px;background:var(--ink);margin:3px 0}
+.empty{font:400 13.5px/1.5 var(--mono);color:var(--ink-2);padding:16px 4px}
+.pmeta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;font:700 13px/1.2 var(--mono);color:var(--ink-2)}
+.tgtbar{display:none;align-items:center;gap:8px;margin-top:10px;padding:8px 10px;border-radius:10px;background:#FFF3DC;font:400 13px/1.3 var(--mono)}
+.tgtbar.on{display:flex}
+.tgtbar button{margin-left:auto;border:0;background:var(--ink);color:#fff;border-radius:8px;min-height:36px;padding:0 12px;font:700 13px/1 var(--mono);cursor:pointer}
+.ghost{position:fixed;z-index:100;pointer-events:none;opacity:.92;transform:rotate(-3deg);box-shadow:0 12px 24px rgba(27,33,64,.25)}
+.stage .lv{display:flex;gap:6px;margin-bottom:12px}
+.stage .lv button{flex:1;min-height:44px;border-radius:10px;border:2px solid #E3E8F2;background:#fff;font:700 14px/1 var(--mono);cursor:pointer}
+.stage .lv button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.stage .lv button.done::after{content:" ★";color:var(--orange)}
+.board{position:relative;width:100%;aspect-ratio:1;border-radius:14px;background:#F4F7FD;border:2px solid #DCE3F0;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,1fr);overflow:hidden}
+.cell{border-right:1px solid #E3E8F2;border-bottom:1px solid #E3E8F2}
+.cell:nth-child(6n){border-right:0}
+.wall{background:#C9D1E0;background-image:linear-gradient(#B7C1D4 2px,transparent 2px),linear-gradient(90deg,#B7C1D4 2px,transparent 2px);background-size:100% 50%,50% 50%;box-shadow:inset 0 -4px 0 rgba(0,0,0,.08)}
+.star,.bot{position:absolute;left:0;top:0;width:calc(100%/6);height:calc(100%/6);display:grid;place-items:center;pointer-events:none}
+.star svg{width:70%;height:70%}
+@media (prefers-reduced-motion:no-preference){.star svg{animation:twinkle 2.4s ease-in-out infinite}}
+@keyframes twinkle{50%{transform:scale(1.12) rotate(8deg)}}
+.bot{transition:transform .42s var(--spring)}
+.bot .body{width:78%;height:78%;transition:transform .42s var(--spring)}
+.bot.bump .body{animation:bump .4s}
+@keyframes bump{30%{transform:rotate(var(--r)) translateX(14%)}60%{transform:rotate(var(--r)) translateX(-6%)}}
+.status{margin-top:12px;min-height:3.2em;font-size:15.5px;line-height:1.4}
+.status b{font-weight:700}
+.status.ok{color:#1F6E2A}
+.status.bad{color:#B0283F}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ctl .pill{min-height:46px;font-size:15px;padding:0 16px}
+.ctl .pill.w{background:#fff;--cd:#CDD4E3;box-shadow:0 3px 0 #CDD4E3}
+.ctl .pill.g{--c:var(--green);--cd:var(--green-d)}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;width:10px;height:14px;border-radius:2px;animation:fly 1.3s cubic-bezier(.2,.6,.3,1) forwards}
+@keyframes fly{from{transform:translate(0,0) rotate(0);opacity:1}to{transform:translate(var(--dx),var(--dy)) rotate(var(--rot));opacity:0}}
+@media (max-width:1180px){.pz{grid-template-columns:190px minmax(0,1fr)}.stage{grid-column:1/-1;grid-row:1;display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:0 20px}.stage .lv{grid-column:1/-1}.stage .side{align-self:start}}
+@media (max-width:360px){.pal .list{grid-template-columns:minmax(0,1fr)!important}}
+@media (max-width:760px){.pz{grid-template-columns:minmax(0,1fr)}.stage{display:block}.pal .list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 10px}.pb{font-size:14px;padding:9px 8px;gap:6px;white-space:nowrap}.pb svg{width:18px;height:18px}.prg{min-height:0}}
+
+/* footer */
+.foot{margin-top:10px;padding:0 var(--gut) 48px;max-width:1400px;margin-inline:auto}
+.foot .blk{padding:22px 24px;border-radius:14px}
+.foot .nm{font:700 clamp(30px,4vw,48px)/1.05 var(--round);overflow-wrap:anywhere}
+.foot .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px;font-size:15.5px}
+.foot .grid b{display:block;font:700 12.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.foot small{display:block;margin-top:16px;font-size:13.5px;color:var(--ink-2)}
+@media (max-width:760px){.foot .grid{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <a class="logo" href="#main">
+      <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="2" y="6" width="22" height="12" rx="3" fill="#4C97FF" stroke="#3373CC" stroke-width="2"/><rect x="8" y="16" width="22" height="12" rx="3" fill="#FFAB19" stroke="#CF8B17" stroke-width="2"/><rect x="14" y="26" width="22" height="10" rx="3" fill="#FF6680" stroke="#E0445F" stroke-width="2"/></svg>
+      <span data-brand>Byte Size Coders</span>
+    </a>
+    <nav aria-label="Main"><a href="#puzzle">Robot puzzle</a><a href="#programs">Programs</a><a href="#ages">Ages</a><a href="#camps">Holiday camps</a><a href="#how">How it works</a></nav>
+    <a class="pill pk" href="#enrol"><span class="lg">Book a free trial</span><span class="sm">Free trial</span></a>
+  </div>
+</header>
+
+<div class="layout">
+  <ul class="cats" aria-label="Jump to">
+    <li><a href="#puzzle" style="--c:#FFAB19;--cd:#CF8B17"><i aria-hidden="true"></i>Puzzle</a></li>
+    <li><a href="#programs" style="--c:#4C97FF;--cd:#3373CC"><i aria-hidden="true"></i>Programs</a></li>
+    <li><a href="#ages" style="--c:#59C059;--cd:#389438"><i aria-hidden="true"></i>Ages</a></li>
+    <li><a href="#camps" style="--c:#9966FF;--cd:#774DCB"><i aria-hidden="true"></i>Camps</a></li>
+    <li><a href="#how" style="--c:#FFD18A;--cd:#CF8B17"><i aria-hidden="true"></i>How it works</a></li>
+    <li><a href="#enrol" style="--c:#FF6680;--cd:#E0445F"><i aria-hidden="true"></i>Enrol</a></li>
+  </ul>
+
+  <main class="stack" id="main">
+    <section class="blk or hat hero" aria-labelledby="h1">
+      <div>
+        <p class="when"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18" stroke="#1B2140" stroke-width="2.4" stroke-linecap="round"/><path d="M6 4h11l-2.5 4L17 12H6z" fill="#59C059" stroke="#1B2140" stroke-width="1.6" stroke-linejoin="round"/></svg>when school’s out</p>
+        <h1 id="h1" data-brand>Byte Size Coders</h1>
+        <p class="lede">After-school and holiday coding for ages 7–15 in Canberra. Small groups, real projects and a lot of “aha!”.</p>
+        <div class="ctas"><a class="pill b" href="#puzzle">Try the robot puzzle</a><a class="pill" href="#programs">See term programs</a></div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 420 300" aria-hidden="true" focusable="false">
+        <g stroke-width="3" stroke-linejoin="round">
+          <rect x="40" y="40" width="200" height="46" rx="10" fill="#4C97FF" stroke="#3373CC"/>
+          <text x="60" y="70" font-family="Mali,sans-serif" font-weight="700" font-size="18" fill="#1B2140">move forward</text>
+          <path d="M40,96 h200 a10,10 0 0 1 10,10 v18 h-176 v36 h176 v14 a10,10 0 0 1 -10,10 h-200z" fill="#FFE3A6" stroke="#CF8B17"/>
+          <text x="58" y="118" font-family="Mali,sans-serif" font-weight="700" font-size="17" fill="#1B2140">repeat 2</text>
+          <rect x="74" y="126" width="150" height="34" rx="8" fill="#B794FF" stroke="#774DCB"/>
+          <text x="90" y="149" font-family="Mali,sans-serif" font-weight="700" font-size="16" fill="#1B2140">turn right ↻</text>
+          <rect x="40" y="194" width="170" height="44" rx="10" fill="#59C059" stroke="#389438"/>
+          <text x="58" y="222" font-family="Mali,sans-serif" font-weight="700" font-size="17" fill="#1B2140">say “Got it!”</text>
+        </g>
+        <g transform="translate(300 150)">
+          <path d="M-4,-72 v-16" stroke="#1B2140" stroke-width="4" stroke-linecap="round"/><circle cx="-4" cy="-92" r="8" fill="#FF6680" stroke="#1B2140" stroke-width="3"/>
+          <rect x="-50" y="-74" width="92" height="70" rx="18" fill="#fff" stroke="#1B2140" stroke-width="4"/>
+          <rect x="-38" y="-62" width="68" height="44" rx="10" fill="#1B2140"/>
+          <circle cx="-20" cy="-40" r="7" fill="#59C059"/><circle cx="12" cy="-40" r="7" fill="#59C059"/>
+          <path d="M-14,-26 q12,8 24,0" stroke="#59C059" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <rect x="-40" y="2" width="72" height="54" rx="14" fill="#4C97FF" stroke="#1B2140" stroke-width="4"/>
+          <rect x="-24" y="16" width="40" height="10" rx="5" fill="#fff"/>
+          <circle cx="-26" cy="66" r="12" fill="#1B2140"/><circle cx="18" cy="66" r="12" fill="#1B2140"/>
+        </g>
+        <g transform="translate(372 64)"><path d="M0,-20 L6,-6 L21,-6 L9,3 L13,18 L0,9 L-13,18 L-9,3 L-21,-6 L-6,-6Z" fill="#FFAB19" stroke="#1B2140" stroke-width="3" stroke-linejoin="round"/></g>
+      </svg>
+    </section>
+
+    <section class="blk gr cb" id="puzzle" aria-labelledby="pz-h">
+      <div class="cb-h"><span class="lbl">▶ when you’re ready</span><h2 id="pz-h">Program the robot to reach the star</h2></div>
+      <div class="mouth">
+        <div class="pz" id="pz">
+          <div class="pal">
+            <h3 id="pal-h">Blocks</h3>
+            <div class="list" role="group" aria-labelledby="pal-h">
+              <button class="blk pb" type="button" data-b="fwd"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2140" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg>move forward</button>
+              <button class="blk li pb" type="button" data-b="left"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2140" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M9 5 4 10l5 5"/><path d="M4 10h9a6 6 0 0 1 6 6v3"/></svg>turn left</button>
+              <button class="blk li pb" type="button" data-b="right"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2140" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m15 5 5 5-5 5"/><path d="M20 10h-9a6 6 0 0 0-6 6v3"/></svg>turn right</button>
+              <button class="blk or pb rp" type="button" data-b="rep"><svg viewBox="0 0 24 24" fill="none" stroke="#1B2140" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 4v5h-5"/></svg>repeat ×2<span class="cap" aria-hidden="true"></span></button>
+            </div>
+            <p class="keys">Tap a block to add it, or drag it into the program. Keys: <kbd>F</kbd> <kbd>L</kbd> <kbd>R</kbd> <kbd>P</kbd> · <kbd>Enter</kbd> runs · <kbd>⌫</kbd> removes the last block.</p>
+          </div>
+          <div class="prg" id="prg">
+            <h3>Your program</h3>
+            <button class="blk gr hat runhat" type="button" id="runHat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18" stroke="#1B2140" stroke-width="2.4" stroke-linecap="round"/><path d="M6 4h11l-2.5 4L17 12H6z" fill="#fff" stroke="#1B2140" stroke-width="1.6" stroke-linejoin="round"/></svg>when ▶ Run is clicked</button>
+            <ol class="plist" id="plist" aria-label="Program blocks" aria-live="polite"></ol>
+            <div class="tgtbar" id="tgtbar"><span>Adding blocks inside <b>repeat ×2</b></span><button type="button" id="tgtDone">Done</button></div>
+            <p class="pmeta"><span id="count">0 / 6 blocks</span><button class="pill w" type="button" id="clear" style="--c:#fff;--cd:#CDD4E3;min-height:40px;font-size:14px">Clear</button></p>
+          </div>
+          <div class="stage" id="stage">
+            <div class="lv" role="group" aria-label="Level"><button type="button" data-l="0" aria-pressed="true">Level 1</button><button type="button" data-l="1" aria-pressed="false">Level 2</button><button type="button" data-l="2" aria-pressed="false">Level 3</button></div>
+            <div class="board" id="board" role="img" aria-label="Puzzle board"></div>
+            <div class="side">
+              <p class="status" id="status" aria-live="polite"></p>
+              <div class="ctl"><button class="pill g" type="button" id="run">▶ Run</button><button class="pill w" type="button" id="reset">↺ Reset robot</button><button class="pill or" type="button" id="next" hidden>Next level →</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blk cb" id="programs" aria-labelledby="pr-h">
+      <div class="cb-h"><span class="lbl">↻ repeat for each term · 9 weeks</span><h2 id="pr-h">Term programs</h2></div>
+      <div class="mouth">
+        <div class="progs" id="progs">
+          <article class="blk prog" data-a="7-9"><h3>Visual Coders <small>ages 7–9</small></h3><p>Snap-together blocks to make animations, stories and their first games.</p><p class="when2">Mon 3:45–5pm · Belconnen</p><p class="price">$295 a term</p></article>
+          <article class="blk or prog" data-a="9-13"><h3>Robot Makers <small>ages 9–13</small></h3><p>Build small robots, wire up sensors and program them to follow lines and dodge walls.</p><p class="when2">Tue 3:45–5:15pm · Tuggeranong</p><p class="price">$345 a term, kits included</p></article>
+          <article class="blk li prog" data-a="10-14"><h3>Game Designers <small>ages 10–14</small></h3><p>Design levels, draw pixel art, add sound — then code a game friends can actually play.</p><p class="when2">Thu 4–5:30pm · Woden</p><p class="price">$325 a term</p></article>
+          <article class="blk gr prog end" data-a="11-15"><h3>Python Pathfinders <small>ages 11–15</small></h3><p>Move from blocks to typed code: text adventures, turtle drawings and simple data projects.</p><p class="when2">Wed 4–5:30pm · Gungahlin</p><p class="price">$325 a term</p></article>
+        </div>
+        <p class="fine"><b>Sample prices.</b> Laptops provided in every class. Sibling discounts and payment plans on request.</p>
+      </div>
+    </section>
+
+    <section class="blk gr ages" id="ages" aria-labelledby="ag-h">
+      <h2 id="ag-h" class="kw">if age is</h2>
+      <div class="rep" role="group" aria-label="Child’s age"><button type="button" id="aMinus" aria-label="Younger">−</button><output id="age" aria-live="polite">9</output><button type="button" id="aPlus" aria-label="Older">+</button></div>
+      <span class="kw">then suggest</span>
+      <p class="out" id="ageOut" aria-live="polite"></p>
+    </section>
+
+    <section class="blk pu cb" id="camps" aria-labelledby="cp-h">
+      <div class="cb-h"><span class="lbl" style="background:rgba(255,255,255,.7)">⚑ when holidays start</span><h2 id="cp-h">Holiday camps · summer 2027</h2></div>
+      <div class="mouth">
+        <div class="camps">
+          <article class="blk li camp"><p class="dt">Mon 4 – Fri 8 Jan</p><h3>Game Jam Week</h3><p>Teams plan, build and playtest a game in five days, then show it off to families on Friday arvo.</p><p class="meta">9am–3pm · ages 9–14 · $420</p></article>
+          <article class="blk or camp"><p class="dt">Mon 11 – Fri 15 Jan</p><h3>Robot Rescue</h3><p>Program robots through obstacle courses and a “rescue mission” finale in the gym.</p><p class="meta">9am–3pm · ages 8–12 · $450</p></article>
+          <article class="blk pk camp"><p class="dt">Mon 18 – Fri 22 Jan</p><h3>Code Your Own Comic</h3><p>Draw characters, animate panels and code choose-your-path stories. Great first taste of coding.</p><p class="meta">9am–3pm · ages 7–10 · $380</p></article>
+        </div>
+        <p class="fine">Sample prices. Autumn holiday camps are announced in early March. Bring lunch, a water bottle and a hat for outdoor breaks.</p>
+      </div>
+    </section>
+
+    <section class="blk or cb" id="how" aria-labelledby="how-h" style="--c:#FFD18A">
+      <div class="cb-h"><span class="lbl">≡ each class runs</span><h2 id="how-h">How classes work</h2></div>
+      <div class="mouth">
+        <div class="howg"><ol class="seq" style="list-style:none;margin:0;padding:0">
+          <li class="blk or"><span class="t">5 min</span><span class="txt"><b>Arrive &amp; snack</b><span class="d">Bags down, fruit break, catch up with friends.</span></span></li>
+          <li class="blk"><span class="t">10 min</span><span class="txt"><b>Warm-up puzzle</b><span class="d">A quick challenge — a bit like the robot one above.</span></span></li>
+          <li class="blk gr"><span class="t">45 min</span><span class="txt"><b>Build time</b><span class="d">Project work, with one coach for every eight kids.</span></span></li>
+          <li class="blk li"><span class="t">10 min</span><span class="txt"><b>Show &amp; tell</b><span class="d">Everyone demos something, even if it’s half-finished.</span></span></li>
+          <li class="blk pk end"><span class="t">home</span><span class="txt"><b>Take-home challenge</b><span class="d">Optional, and never marked.</span></span></li>
+        </ol>
+        <div class="notes">
+          <div><b>No experience needed</b>We start from wherever your child is.</div>
+          <div><b>Laptops provided</b>Nothing to buy, nothing to install at home.</div>
+          <div><b>Free trial class</b>Try one session before you enrol for the term.</div>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="blk pk cb end" id="enrol" aria-labelledby="en-h">
+      <div class="cb-h"><span class="lbl">✎ define</span><h2 id="en-h">Enrol or book a free trial</h2></div>
+      <div class="mouth">
+        <form class="form" id="form" novalidate>
+          <label class="fld">Child’s first name<input name="child" autocomplete="off"></label>
+          <label class="fld">Age<select name="age" id="fAge"></select></label>
+          <label class="fld">Program<select name="prog"><option>Visual Coders (7–9)</option><option>Robot Makers (9–13)</option><option>Game Designers (10–14)</option><option>Python Pathfinders (11–15)</option><option>A holiday camp</option></select></label>
+          <label class="fld">Start with<select name="start"><option>A free trial class</option><option>The full term</option></select></label>
+          <label class="fld">Parent or carer email<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="fld">Mobile<input name="tel" type="tel" autocomplete="tel" placeholder="0491 570 159"></label>
+          <button class="pill pk" type="submit">Send enrolment request</button>
+        </form>
+        <div class="faq">
+          <details><summary>Does my child need to know how to code?</summary><p>Not at all. Most kids start in Visual Coders or Robot Makers with no experience, and coaches pitch each challenge to where they are.</p></details>
+          <details><summary>What if we miss a class?</summary><p>Each class has a short recap sheet, and kids can drop into another session that week if there’s a spare seat.</p></details>
+          <details><summary>Where exactly are classes held?</summary><p>In community rooms in Belconnen, Tuggeranong, Woden and Gungahlin. The exact room is in your welcome email.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="blk hat" style="--c:#F1F4FA;--cd:#DCE3F0">
+    <p class="nm" data-brand>Byte Size Coders</p>
+    <div class="grid">
+      <p><b>Say hello</b><a href="tel:0255507713">(02) 5550 7713</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p><b>Where</b>Belconnen · Gungahlin · Tuggeranong · Woden<br>Canberra, ACT</p>
+      <p><b>Office hours</b>Mon–Fri 9am–5pm<br>Replies within school terms</p>
+    </div>
+    <small>A concept demo for a fictional coding club. Programs, dates and prices are samples and general information only — nothing on this page books or sends anything.</small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var d=document;
+  var mq=matchMedia("(prefers-reduced-motion: reduce)");
+  function reduced(){return window.DemoKit?DemoKit.reducedMotion:mq.matches}
+  function $(s,c){return (c||d).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+
+  /* ================= puzzle ================= */
+  var LV=[
+    {name:"Hello, robot",hint:"Four steps to the right. Try it with a repeat block too!",s:[0,4,0],g:[4,4],w:[[5,4],[1,3],[2,5],[4,2]],max:6},
+    {name:"Round the corner",hint:"Go along the bottom, then turn and head up to the star.",s:[0,5,0],g:[3,2],w:[[4,5],[2,4],[0,3],[1,3],[4,3],[4,2],[2,1]],max:8},
+    {name:"Staircase",hint:"Step, turn, step, turn… a repeat block saves a lot of blocks here.",s:[0,5,0],g:[4,1],w:[[2,5],[3,5],[3,4],[4,4],[4,3],[5,3],[5,2],[5,1],[0,3],[1,2]],max:12}
+  ];
+  var DIRS=[[1,0],[0,1],[-1,0],[0,-1]];
+  var NAMES={fwd:"move forward",left:"turn left",right:"turn right",rep:"repeat ×2"};
+  var CLS={fwd:"",left:"li",right:"li",rep:"or"};
+  var lvl=0, prog=[], target=-1, running=false, done=[false,false,false], bot={x:0,y:0,d:0}, uid=0;
+  var board=$("#board"), plist=$("#plist"), status=$("#status"), countEl=$("#count"), tgtbar=$("#tgtbar"), nextBtn=$("#next");
+  var botEl, starEl;
+
+  function count(){return prog.reduce(function(n,it){return n+1+(it.t==="rep"?it.body.length:0)},0)}
+  function drawBoard(){
+    var L=LV[lvl], html="";
+    for(var y=0;y<6;y++)for(var x=0;x<6;x++){var w=L.w.some(function(c){return c[0]===x&&c[1]===y});html+='<div class="cell'+(w?" wall":"")+'"></div>'}
+    board.innerHTML=html+'<div class="star" id="star"><svg viewBox="-24 -24 48 48" aria-hidden="true"><path d="M0,-20 L6,-6 L21,-6 L9,3 L13,18 L0,9 L-13,18 L-9,3 L-21,-6 L-6,-6Z" fill="#FFAB19" stroke="#1B2140" stroke-width="3" stroke-linejoin="round"/></svg></div>'+
+      '<div class="bot" id="bot"><svg class="body" viewBox="-30 -30 60 60" aria-hidden="true"><rect x="-22" y="-20" width="40" height="40" rx="10" fill="#4C97FF" stroke="#1B2140" stroke-width="3.5"/><rect x="-12" y="-12" width="24" height="24" rx="6" fill="#1B2140"/><circle cx="2" cy="-5" r="3.6" fill="#59C059"/><circle cx="2" cy="6" r="3.6" fill="#59C059"/><path d="M18,-8 L28,0 L18,8Z" fill="#FF6680" stroke="#1B2140" stroke-width="3" stroke-linejoin="round"/></svg></div><div class="confetti" id="conf"></div>';
+    starEl=$("#star"); botEl=$("#bot");
+    starEl.style.transform="translate("+L.g[0]*100+"%,"+L.g[1]*100+"%)";
+    board.setAttribute("aria-label","Level "+(lvl+1)+": "+L.name+". A 6 by 6 grid. The robot starts in column "+(L.s[0]+1)+", row "+(L.s[1]+1)+" facing right; the star is in column "+(L.g[0]+1)+", row "+(L.g[1]+1)+". Grey squares are walls.");
+    placeBot(L.s[0],L.s[1],L.s[2],true);
+  }
+  function placeBot(x,y,dir,instant){
+    bot.x=x;bot.y=y;bot.d=dir;
+    if(instant||reduced()){botEl.style.transition="none";botEl.querySelector(".body").style.transition="none"}
+    botEl.style.transform="translate("+x*100+"%,"+y*100+"%)";
+    botEl.querySelector(".body").style.transform="rotate("+(bot.rot=dir*90)+"deg)";
+    botEl.style.setProperty("--r",bot.rot+"deg");
+    if(instant||reduced()){void botEl.offsetWidth;botEl.style.transition="";botEl.querySelector(".body").style.transition=""}
+  }
+  function setStatus(t,cls){status.innerHTML=t;status.className="status"+(cls?" "+cls:"")}
+  function intro(){var L=LV[lvl];setStatus("<b>Level "+(lvl+1)+" · "+L.name+".</b> "+L.hint+" Use up to "+L.max+" blocks.")}
+
+  function blockHTML(it,idx,inner){
+    return '<div class="blk pi '+CLS[it.t]+'" data-id="'+it.id+'"><span>'+NAMES[it.t]+'</span><button type="button" class="x" data-rm="'+it.id+'" aria-label="Remove '+NAMES[it.t]+(inner?" from repeat":"")+'">×</button></div>';
+  }
+  function renderProg(){
+    if(!prog.length){plist.innerHTML='<li class="empty">No blocks yet — tap or drag some in from the left.</li>'}
+    else plist.innerHTML=prog.map(function(it,i){
+      if(it.t!=="rep") return '<li>'+blockHTML(it,i)+'</li>';
+      return '<li><div class="blk or crep'+(target===i?" tgt":"")+'" data-id="'+it.id+'" data-rep="'+i+'"><div class="ch"><span>repeat ×2</span><button type="button" class="x" data-rm="'+it.id+'" aria-label="Remove repeat block">×</button></div><ol class="inner" data-in="'+i+'">'+
+        (it.body.length?it.body.map(function(b){return '<li>'+blockHTML(b,0,true)+'</li>'}).join(""):'<li class="hint">'+(target===i?"Tap blocks to add them in here":"Drop blocks in here")+'</li>')+'</ol></div></li>';
+    }).join("");
+    var n=count(), max=LV[lvl].max;
+    countEl.textContent=n+" / "+max+" blocks"; countEl.style.color=n>max?"#B0283F":"";
+    tgtbar.classList.toggle("on",target>=0&&prog[target]&&prog[target].t==="rep");
+  }
+  function add(t,where,pos){
+    if(running) return;
+    if(count()>=LV[lvl].max){setStatus("That’s the most blocks this level allows (<b>"+LV[lvl].max+"</b>). Try a <b>repeat</b> block to do more with less.","bad");return}
+    var it={t:t,id:++uid};
+    if(t==="rep") it.body=[];
+    var inRep=(where!=null?where:target);
+    if(inRep>=0&&prog[inRep]&&prog[inRep].t==="rep"&&t!=="rep"){var b=prog[inRep].body;b.splice(pos!=null?pos:b.length,0,it)}
+    else{prog.splice(pos!=null&&where==null?pos:(pos!=null&&where===-1?pos:prog.length),0,it);if(t==="rep")target=prog.indexOf(it);}
+    renderProg();
+  }
+  function removeId(id){
+    if(running) return;
+    prog=prog.filter(function(it){if(it.t==="rep")it.body=it.body.filter(function(b){return b.id!==id});return it.id!==id});
+    if(target>=prog.length||target>=0&&prog[target].t!=="rep") target=-1;
+    renderProg();
+  }
+  plist.addEventListener("click",function(e){
+    var rm=e.target.closest("[data-rm]"); if(rm){removeId(+rm.dataset.rm);return}
+    var rp=e.target.closest("[data-rep]"); if(rp){target=+rp.dataset.rep;renderProg()}
+  });
+  $("#tgtDone").addEventListener("click",function(){target=-1;renderProg()});
+  $("#clear").addEventListener("click",function(){if(running)return;prog=[];target=-1;renderProg();reset()});
+
+  /* palette: tap to add, drag to place */
+  var drag=null;
+  $$(".pb").forEach(function(b){
+    b.addEventListener("pointerdown",function(e){if(e.button!==0)return;drag={t:b.dataset.b,src:b,x:e.clientX,y:e.clientY,moved:false,id:e.pointerId}});
+    b.addEventListener("click",function(e){if(b._dragged){b._dragged=false;return}add(b.dataset.b)});
+  });
+  function dropInfo(x,y){
+    var r=$("#prg").getBoundingClientRect();
+    if(x<r.left||x>r.right||y<r.top||y>r.bottom+20) return null;
+    var reps=$$(".crep",plist);
+    for(var i=0;i<reps.length;i++){var rr=reps[i].querySelector(".inner").getBoundingClientRect();if(x>=rr.left-10&&y>=rr.top-6&&y<=rr.bottom+6&&drag.t!=="rep"){var idx=+reps[i].dataset.rep,items=$$(".inner>li>.pi",reps[i]),p=items.length;for(var k=0;k<items.length;k++){var ir=items[k].getBoundingClientRect();if(y<ir.top+ir.height/2){p=k;break}}return {where:idx,pos:p}}}
+    var tops=$$("#plist>li"),pos=prog.length;
+    for(var j=0;j<tops.length;j++){var tr=tops[j].getBoundingClientRect();if(y<tr.top+tr.height/2){pos=j;break}}
+    return {where:-1,pos:pos};
+  }
+  var ghost=null;
+  d.addEventListener("pointermove",function(e){
+    if(!drag) return;
+    if(!drag.moved&&Math.hypot(e.clientX-drag.x,e.clientY-drag.y)<7) return;
+    if(!drag.moved){drag.moved=true;ghost=drag.src.cloneNode(true);ghost.classList.add("ghost");ghost.style.width=drag.src.offsetWidth+"px";d.body.appendChild(ghost);try{drag.src.setPointerCapture(drag.id)}catch(x){}}
+    ghost.style.left=(e.clientX-24)+"px";ghost.style.top=(e.clientY-20)+"px";
+    $$(".drop-line").forEach(function(l){l.remove()});
+    var info=dropInfo(e.clientX,e.clientY);
+    if(info){var line=d.createElement("li");line.className="drop-line";
+      if(info.where>=0){var inner=$$('.inner')[$$(".crep",plist).findIndex(function(c){return +c.dataset.rep===info.where})];var kids=$$(":scope>li",inner);inner.insertBefore(line,kids[info.pos]||null)}
+      else{var tops=$$("#plist>li:not(.drop-line)");plist.insertBefore(line,tops[info.pos]||null)}}
+  });
+  function endDrag(e){
+    if(!drag) return;
+    $$(".drop-line").forEach(function(l){l.remove()});
+    if(drag.moved){var src=drag.src;src._dragged=true;setTimeout(function(){src._dragged=false},80);var info=dropInfo(e.clientX,e.clientY);if(info&&!running){if(prog.length===0&&plist.querySelector(".empty"))info.pos=0;add(drag.t,info.where,info.pos)}if(ghost){ghost.remove();ghost=null}}
+    drag=null;
+  }
+  d.addEventListener("pointerup",endDrag); d.addEventListener("pointercancel",endDrag);
+
+  /* keyboard shortcuts inside the puzzle */
+  $("#pz").addEventListener("keydown",function(e){
+    if(e.target.matches("input,select,textarea")||e.metaKey||e.ctrlKey||e.altKey) return;
+    var k=e.key.toLowerCase(), map={f:"fwd",l:"left",r:"right",p:"rep"};
+    if(map[k]){e.preventDefault();add(map[k])}
+    else if(k==="enter"&&!e.target.matches("button")){e.preventDefault();run()}
+    else if(k==="backspace"||k==="delete"){e.preventDefault();var last=prog[prog.length-1];if(last){if(last.t==="rep"&&last.body.length)removeId(last.body[last.body.length-1].id);else removeId(last.id)}}
+  });
+
+  /* run */
+  function steps(){var out=[];prog.forEach(function(it){if(it.t==="rep"){for(var r=0;r<2;r++)it.body.forEach(function(b){out.push({t:b.t,id:b.id,rep:it.id})})}else out.push({t:it.t,id:it.id})});return out}
+  function wall(x,y){return x<0||y<0||x>5||y>5||LV[lvl].w.some(function(c){return c[0]===x&&c[1]===y})}
+  function hl(s){$$(".pi.run,.crep.run",plist).forEach(function(el){el.classList.remove("run")});if(!s)return;var el=plist.querySelector('.pi[data-id="'+s.id+'"]');if(el)el.classList.add("run");if(s.rep){var r=plist.querySelector('.crep[data-id="'+s.rep+'"]');if(r)r.classList.add("run")}}
+  function reset(){if(running)return;var L=LV[lvl];placeBot(L.s[0],L.s[1],L.s[2],false);hl(null);nextBtn.hidden=true;intro()}
+  function run(){
+    if(running) return;
+    var st=steps(), L=LV[lvl];
+    if(!st.length){setStatus("Add some blocks first — try <b>move forward</b>.","bad");return}
+    if(count()>L.max){setStatus("Too many blocks: this level allows <b>"+L.max+"</b>. Can a <b>repeat</b> do some of the work?","bad");return}
+    running=true; placeBot(L.s[0],L.s[1],L.s[2],true); nextBtn.hidden=true;
+    var br=board.getBoundingClientRect(); if(br.top<60||br.bottom>innerHeight) board.scrollIntoView({block:"center",behavior:reduced()?"auto":"smooth"});
+    setStatus("Running…");
+    var i=0, delay=reduced()?260:520;
+    (function next(){
+      if(i>=st.length){running=false;hl(null);setStatus("The robot stopped after "+st.length+" steps, but the star is still waiting. Add more blocks, or <b>Reset</b> and try again.","bad");return}
+      var s=st[i++]; hl(s);
+      if(s.t==="left"){bot.d=(bot.d+3)%4;bot.rot-=90}
+      else if(s.t==="right"){bot.d=(bot.d+1)%4;bot.rot+=90}
+      else{
+        var nx=bot.x+DIRS[bot.d][0], ny=bot.y+DIRS[bot.d][1];
+        if(wall(nx,ny)){botEl.style.setProperty("--r",bot.rot+"deg");botEl.classList.remove("bump");void botEl.offsetWidth;botEl.classList.add("bump");running=false;setStatus("<b>Bonk!</b> Step "+i+" ran into "+(nx<0||ny<0||nx>5||ny>5?"the edge":"a wall")+". Try turning a step earlier — then press <b>Reset</b> and run again.","bad");return}
+        bot.x=nx;bot.y=ny;
+      }
+      botEl.style.transform="translate("+bot.x*100+"%,"+bot.y*100+"%)";
+      botEl.querySelector(".body").style.transform="rotate("+bot.rot+"deg)";
+      if(bot.x===L.g[0]&&bot.y===L.g[1]){setTimeout(function(){win(count())},delay*.6);return}
+      setTimeout(next,delay);
+    })();
+  }
+  function win(n){
+    running=false; hl(null); done[lvl]=true;
+    $$(".lv button").forEach(function(b,i){b.classList.toggle("done",done[i])});
+    var last=lvl===LV.length-1;
+    setStatus("<b>You did it!</b> Star reached with "+n+" block"+(n===1?"":"s")+". "+(last?"That’s all three levels — you’re ready for a real class.":"Ready for the next one?"),"ok");
+    nextBtn.hidden=last;
+    if(!reduced()){
+      var c=$("#conf"), cols=["#4C97FF","#9966FF","#FFAB19","#59C059","#FF6680"], L=LV[lvl], sx=(L.g[0]+.5)/6*100, sy=(L.g[1]+.5)/6*100;
+      for(var k=0;k<36;k++){var p=d.createElement("i");p.style.left=sx+"%";p.style.top=sy+"%";p.style.background=cols[k%5];p.style.setProperty("--dx",(Math.random()*260-130)+"px");p.style.setProperty("--dy",(Math.random()*-200-20)+"px");p.style.setProperty("--rot",(Math.random()*540-270)+"deg");p.style.animationDelay=(Math.random()*.15)+"s";c.appendChild(p)}
+      setTimeout(function(){c.innerHTML=""},1700);
+    }
+  }
+  $("#run").addEventListener("click",run); $("#runHat").addEventListener("click",run);
+  $("#reset").addEventListener("click",reset);
+  function setLevel(i){if(running)return;lvl=i;prog=[];target=-1;$$(".lv button").forEach(function(b){b.setAttribute("aria-pressed",+b.dataset.l===i)});drawBoard();renderProg();intro();nextBtn.hidden=true}
+  $$(".lv button").forEach(function(b){b.addEventListener("click",function(){setLevel(+b.dataset.l)})});
+  nextBtn.addEventListener("click",function(){setLevel(Math.min(2,lvl+1))});
+  drawBoard(); renderProg(); intro();
+
+  /* ================= ages ================= */
+  var age=9, ageOut=$("#ageOut");
+  function ages(){
+    $("#age").textContent=age; $("#aMinus").disabled=age<=7; $("#aPlus").disabled=age>=15;
+    var fits=$$(".prog").filter(function(p){var r=p.dataset.a.split("-");var on=age>=+r[0]&&age<=+r[1];p.classList.toggle("hl",on);return on}).map(function(p){return p.querySelector("h3").firstChild.textContent.trim()});
+    ageOut.innerHTML=age<9&&fits.length?"<b>"+fits.join("</b> — and at "+age+", a holiday camp like <b>Code Your Own Comic</b>"):"<b>"+fits.join("</b> or <b>")+"</b>"+(age>=13?" — and they’re welcome to help coach younger groups at camps.":" — they’re highlighted above.");
+  }
+  $("#aMinus").addEventListener("click",function(){age=Math.max(7,age-1);ages()});
+  $("#aPlus").addEventListener("click",function(){age=Math.min(15,age+1);ages()});
+  ages();
+
+  /* ================= enrol ================= */
+  var fa=$("#fAge"); for(var a=7;a<=15;a++){var o=d.createElement("option");o.textContent=a;if(a===9)o.selected=true;fa.appendChild(o)}
+  $("#form").addEventListener("submit",function(e){e.preventDefault();var f=e.target;if(window.DemoKit)DemoKit.toast("Demo only — no enrolment was made. "+(f.child.value.trim()?f.child.value.trim()+"’s":"Your")+" request for "+f.prog.value+" would go to the club on a real site.",5200)});
+
+  /* category highlight */
+  if("IntersectionObserver" in window){
+    var links=$$(".cats a");
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting)links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id)})})},{rootMargin:"-40% 0px -55% 0px"});
+    $$("main>section[id]").forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>

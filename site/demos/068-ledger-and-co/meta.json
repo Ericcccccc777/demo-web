@@ -1,0 +1,8 @@
+{
+  "id": "068",
+  "tech": ["CSS Grid", "SVG", "SVG animation", "IntersectionObserver", "Form logic", "Date logic", "Keyboard shortcuts"],
+  "features": ["quote"],
+  "interaction": "A CSS-built adding machine: type or tap an amount, choose + GST (add 10%) or − GST (take out 1/11) and press Print — a paper tape strikes out amount, GST and total line by line, keeps the last five calculations and can be torn off; a mechanical-counter countdown circles the next quarterly BAS due date for self-lodgers.",
+  "fonts": ["Libre Baskerville", "Cutive Mono"],
+  "notes": "Calculator figures are illustrative and rounded to the cent; BAS dates are the standard quarterly self-lodger dates computed from the visitor's clock (agent lodgement program dates are not modelled). Enquiry form is demo-only."
+}

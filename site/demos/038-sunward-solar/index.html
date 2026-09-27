@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="038">
+<meta name="demo:brand" content="Sunward Solar">
+<title>Sunward Solar — Solar &amp; batteries in Townsville</title>
+<meta name="description" content="Sunward Solar is a fictional solar and battery installer in Townsville, QLD, with an interactive sun-and-savings explorer.">
+<meta name="theme-color" content="#BFE6FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--sun:#FFB400;--sun-2:#FFCB45;--sky:#BFE6FF;--haze:#FFF3D6;--navy:#0B2A4A;--panel:#1D4F91;--ink2:#46607C;--line:rgba(11,42,74,.12);--card:#FFFFFF;--tint:#F3F9FF;
+--f1:Sora,system-ui,-apple-system,"Segoe UI",sans-serif;--f2:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--pad:clamp(16px,4vw,56px);--r:28px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#fff;color:var(--navy);font:400 16px/1.6 var(--f2);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--panel);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--f1);letter-spacing:-.02em;margin:0;color:var(--navy)}
+h2{font-size:clamp(30px,3.4vw,48px);line-height:1.08;text-wrap:balance}
+h3{font-size:20px;line-height:1.25}
+.kick{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;font:600 13px/1 var(--f2);letter-spacing:.14em;text-transform:uppercase;color:var(--panel)}
+.kick::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(255,180,0,.22)}
+.lede{margin:14px 0 0;max-width:60ch;font-size:18px;color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;border:0;cursor:pointer;font:600 16px/1 var(--f2);text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.sun{background:var(--sun);color:var(--navy);box-shadow:0 10px 24px -10px rgba(255,160,0,.9)}
+.btn.sun:hover{background:var(--sun-2)}
+.btn.line{background:rgba(255,255,255,.6);color:var(--navy);box-shadow:inset 0 0 0 1.5px rgba(11,42,74,.25)}
+.btn.line:hover{background:#fff}
+.btn svg{width:18px;height:18px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.82);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:24px;min-height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex:1 1 auto}
+.logo svg{flex:none;width:36px;height:36px}
+.wm{font:700 20px/1.15 var(--f1);letter-spacing:-.02em;overflow-wrap:anywhere;min-width:0}
+.nav{display:flex;gap:22px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink2);padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--navy);border-color:var(--sun)}
+.top .btn{min-height:44px;padding:0 18px;font-size:15px;flex:none}
+
+/* hero */
+.hero{position:relative;padding:16px 16px 0}
+.sky{position:relative;overflow:hidden;border-radius:34px;--s1:#BFE6FF;--s2:#FFF3D6;--gh:78px;--br:1;--sp:0;background:linear-gradient(180deg,var(--s1),var(--s2) 92%);display:grid;grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);align-items:end;min-height:min(640px,calc(100svh - 110px));padding:0 clamp(20px,4vw,64px);transition:color .4s}
+.sky::after{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--gh);background:linear-gradient(#97CB83 0 3px,#8CC478 3px);filter:brightness(var(--br)) sepia(var(--sp))}
+.copy{align-self:center;padding:56px 0 calc(var(--gh) + 70px);position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:7px 14px 7px 10px;border-radius:999px;background:rgba(255,255,255,.66);font:600 13.5px/1 var(--f2);color:var(--navy)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:#2FB36B;box-shadow:0 0 0 3px rgba(47,179,107,.25)}
+h1{font-size:clamp(40px,4.9vw,72px);line-height:1;letter-spacing:-.035em;text-wrap:balance;transition:color .4s}
+.copy p.sub{margin:18px 0 26px;max-width:40ch;font-size:18px;color:var(--ink2);transition:color .4s}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.dusk h1,.dusk .copy p.sub{color:#fff}
+.dusk .copy p.sub{color:#E4ECF7}
+.clouds{position:absolute;left:0;top:0;width:100%;height:300px;pointer-events:none;opacity:var(--co,.9)}
+.clouds g g{transition:transform .3s}
+.scene-wrap{position:relative;align-self:stretch;min-height:420px}
+.scene{position:absolute;inset:auto 0 calc(var(--gh) - 2px) 0;width:100%;height:auto;display:block;overflow:hidden;z-index:1}
+@media (min-width:901px){.scene-wrap{margin-right:calc(-1*clamp(20px,4vw,64px))}}
+.arcp{fill:none;stroke:rgba(11,42,74,.28);stroke-width:2;stroke-dasharray:2 10;stroke-linecap:round}
+.dusk .arcp{stroke:rgba(255,255,255,.4)}
+.hr{fill:rgba(11,42,74,.55);font:600 12px var(--f2);text-anchor:middle}
+.dusk .hr{fill:rgba(255,255,255,.75)}
+#sunG{cursor:grab;touch-action:none}
+#sunG:active{cursor:grabbing}
+.grab{fill:transparent;stroke:transparent;stroke-width:44;cursor:pointer}
+.land{transition:filter .3s}
+.pnl{transition:fill .25s}
+
+/* console */
+.console{position:relative;z-index:3;max-width:1180px;margin:-58px auto 0;background:#fff;border-radius:var(--r);box-shadow:0 40px 80px -40px rgba(11,42,74,.45),0 0 0 1px rgba(11,42,74,.06);display:grid;grid-template-columns:1fr .85fr 1.35fr;gap:0}
+.console>div{padding:24px 26px}
+.console>div+div{border-left:1px solid var(--line)}
+.lab{margin:0 0 6px;font:600 12.5px/1.2 var(--f2);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.timebox{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.time{font:700 38px/1 var(--f1);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.play{flex:none;display:inline-grid;place-items:center;width:48px;height:48px;padding:0;border-radius:50%;border:0;background:var(--sun);color:var(--navy);cursor:pointer;box-shadow:0 8px 18px -8px rgba(255,150,0,.9)}
+.play:hover{background:var(--sun-2)}
+.play:hover{background:#E6F2FF}
+.play svg{width:20px;height:20px}
+.play[aria-pressed=true] .pi{display:none}.play[aria-pressed=false] .pa{display:none}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:36px;margin:14px 0 2px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:10px;border-radius:999px;background:linear-gradient(90deg,#FFB48C,#BFE6FF 25%,#FFE27A 50%,#BFE6FF 75%,#FFB07A)}
+input[type=range]::-moz-range-track{height:10px;border-radius:999px;background:linear-gradient(90deg,#FFB48C,#BFE6FF 25%,#FFE27A 50%,#BFE6FF 75%,#FFB07A)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-10px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#FFF4C2,#FFB400 70%);border:3px solid #fff;box-shadow:0 4px 12px rgba(255,150,0,.5)}
+input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#FFB400;border:3px solid #fff;box-shadow:0 4px 12px rgba(255,150,0,.5)}
+input[type=range]:focus-visible{outline:none}
+input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 4px var(--panel)}
+.ticks{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink2)}
+.tt{position:relative;display:block;height:18px}
+.tt span{position:absolute;top:0;left:calc(15px + var(--p)*(100% - 30px));transform:translateX(-50%);white-space:nowrap}
+.tt span:first-child{transform:translateX(-15px)}.tt span:last-child{transform:translateX(calc(-100% + 15px))}
+.hint{margin:12px 0 0;font-size:13.5px;color:var(--ink2)}
+.hint b{color:var(--navy)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.stat b{display:block;font:700 24px/1.15 var(--f1);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat span{font-size:13px;color:var(--ink2)}
+.bar{height:6px;margin-top:6px;border-radius:3px;background:#E7EEF6;overflow:hidden}
+.bar i{display:block;height:100%;width:50%;background:#2FB36B;border-radius:inherit;transition:width .25s}
+.status{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line);font-size:14.5px;line-height:1.45;color:var(--navy)}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.gl{stroke:var(--line);stroke-width:1}
+.ax{fill:var(--ink2);font:500 11px var(--f2)}
+.fullc{fill:none;stroke:rgba(11,42,74,.3);stroke-width:1.6;stroke-dasharray:4 5}
+.usec{fill:none;stroke:var(--panel);stroke-width:2;stroke-dasharray:1 5;stroke-linecap:round}
+.area{fill:url(#areaG)}
+.areal{fill:none;stroke:#F29B00;stroke-width:2.6;stroke-linejoin:round}
+.mk line{stroke:var(--navy);stroke-width:1.2;stroke-dasharray:3 3}
+.mk circle{fill:#fff;stroke:var(--navy);stroke-width:3}
+.mk text{fill:var(--navy);font:600 12px var(--f2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:4px;font-size:12.5px;color:var(--ink2)}
+.legend i{display:inline-block;width:18px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.ctitle{margin-bottom:4px}
+.ctitle .lab{margin:0}
+.ctitle small{font-size:12.5px;color:var(--ink2)}
+
+/* sections */
+section.blk{padding:clamp(60px,7vw,100px) 0}
+.tinted{background:linear-gradient(180deg,#fff,var(--tint) 30%,var(--tint) 70%,#fff)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:24px 56px;align-items:end;margin-bottom:44px}
+.head .lede{margin:0}
+.sys{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:var(--card);border-radius:var(--r);padding:28px;box-shadow:0 24px 50px -32px rgba(11,42,74,.4),0 0 0 1px var(--line);display:flex;flex-direction:column}
+.card .mini{height:92px;margin:-4px 0 18px;border-radius:18px;background:linear-gradient(180deg,#DFF1FF,#FFF6E0);display:grid;place-items:center}
+.card .mini svg{height:74px;width:auto}
+.kw{margin:0;font:700 44px/1 var(--f1);letter-spacing:-.04em}
+.kw small{font-size:18px;letter-spacing:0;margin-left:4px;color:var(--ink2)}
+.card h3{margin:10px 0 8px}
+.card ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px;font-size:15px;color:var(--ink2)}
+.card li{display:flex;gap:10px}
+.card li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:radial-gradient(circle,var(--sun) 35%,rgba(255,180,0,.2) 38%)}
+.price{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.price b{font:700 26px/1 var(--f1)}
+.price span{font-size:13px;color:var(--ink2)}
+.card.feat{background:var(--navy);color:#fff}
+.card.feat h3,.card.feat .kw{color:#fff}
+.card.feat .kw small,.card.feat ul,.card.feat .price span{color:#C9D8EA}
+.card.feat .price{border-color:rgba(255,255,255,.18)}
+.card.feat .mini{background:linear-gradient(180deg,#24507F,#123560)}
+.note{margin:22px 0 0;font-size:14px;color:var(--ink2)}
+.bat{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.opts{display:grid;gap:14px;margin-top:28px}
+.opt{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:18px 20px;border-radius:22px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+.cell{width:34px;height:52px;border-radius:8px;border:3px solid var(--navy);position:relative}
+.cell::before{content:"";position:absolute;left:9px;right:9px;top:-8px;height:5px;border-radius:2px 2px 0 0;background:var(--navy)}
+.cell i{position:absolute;left:3px;right:3px;bottom:3px;border-radius:3px;background:#2FB36B}
+.opt h3{font-size:18px}
+.opt p{margin:2px 0 0;font-size:14.5px;color:var(--ink2)}
+.opt b{font:700 20px/1 var(--f1);white-space:nowrap}
+.batfig{margin:0;background:#fff;border-radius:var(--r);padding:24px;box-shadow:0 30px 60px -36px rgba(11,42,74,.5),0 0 0 1px var(--line)}
+.batfig svg{width:100%;height:auto;display:block}
+.batfig figcaption{margin-top:12px;font-size:14px;color:var(--ink2)}
+.flow{background:#fff;border-radius:var(--r);box-shadow:0 0 0 1px var(--line);padding:clamp(20px,3vw,36px)}
+.flow svg{width:100%;height:auto;display:block}
+.fl{fill:none;stroke:var(--sun);stroke-width:4;stroke-linecap:round;stroke-dasharray:2 12;animation:flow 1.2s linear infinite}
+.fl.b{stroke:var(--panel)}
+@keyframes flow{to{stroke-dashoffset:-28}}
+.paused .fl{animation-play-state:paused}
+.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.steps4 div{padding-top:14px;border-top:3px solid var(--sun)}
+.steps4 b{display:block;font:600 17px/1.3 var(--f1)}
+.steps4 p{margin:6px 0 0;font-size:14.5px;color:var(--ink2)}
+
+/* estimator */
+.est{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:32px;overflow:hidden;box-shadow:0 40px 80px -44px rgba(11,42,74,.55),0 0 0 1px var(--line)}
+.est form{padding:clamp(24px,3.4vw,44px);background:#fff;display:grid;gap:26px;align-content:start}
+.q{margin:0;padding:0;border:0;min-width:0}
+.q legend,.q>label{display:block;margin-bottom:10px;font:600 16px/1.3 var(--f1)}
+.billrow{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.billrow output{font:700 30px/1 var(--f1);letter-spacing:-.03em}
+.billrow output small{font:500 14px var(--f2);color:var(--ink2);letter-spacing:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer;width:100%;height:100%}
+.chips span{display:flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:14px;background:var(--tint);box-shadow:inset 0 0 0 1.5px transparent;font-size:15px;font-weight:500}
+.chips input:checked+span{background:#FFF4D6;box-shadow:inset 0 0 0 2px var(--sun)}
+.chips input:focus-visible+span{outline:3px solid var(--panel);outline-offset:2px}
+.chips svg{width:18px;height:18px}
+.tog{display:flex;align-items:center;gap:12px;font-size:15.5px;font-weight:500;cursor:pointer}
+.tog input{width:22px;height:22px;accent-color:var(--panel)}
+.res{padding:clamp(24px,3.4vw,44px);background:var(--navy);color:#fff;display:flex;flex-direction:column;gap:18px}
+.res h3{color:#fff;font-size:15px;font-family:var(--f2);font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.big{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.big b{font:700 clamp(46px,5vw,64px)/1 var(--f1);letter-spacing:-.04em;color:var(--sun)}
+.big span{font-size:16px;color:#C9D8EA}
+.rows{display:grid;gap:12px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14);font-size:15px;color:#DCE6F2}
+.row b{font:600 17px/1.3 var(--f1);color:#fff;text-align:right}
+.bills{display:grid;gap:8px;font-size:13px;color:#C9D8EA}
+.bills div{display:grid;grid-template-columns:118px 1fr;gap:10px;align-items:center}
+.bills i{display:block;height:12px;border-radius:6px;background:#5E7FA6;transition:width .4s cubic-bezier(.2,.8,.2,1)}
+.bills i.after{background:linear-gradient(90deg,var(--sun),#FFD66B)}
+details.asm{border-radius:16px;background:rgba(255,255,255,.07);padding:0 16px}
+details.asm summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font-weight:600;font-size:15px;list-style:none}
+details.asm summary::after{content:"+";margin-left:auto;font-size:20px}
+details.asm[open] summary::after{content:"–"}
+details.asm ul{margin:0 0 14px;padding-left:18px;font-size:14px;color:#DCE6F2;display:grid;gap:6px}
+.gi{font-size:13px;color:#C9D8EA}
+.res .btn{align-self:flex-start}
+
+/* process */
+.proc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:p;position:relative}
+.proc::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:3px;background:repeating-linear-gradient(90deg,var(--sun) 0 8px,transparent 8px 16px)}
+.proc li{position:relative;counter-increment:p}
+.proc li::before{content:counter(p);position:relative;display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:var(--sun);font:700 20px/1 var(--f1);box-shadow:0 0 0 6px #fff}
+.proc b{display:block;margin-top:16px;font:600 18px/1.3 var(--f1)}
+.proc em{display:inline-block;margin:6px 0 8px;padding:3px 10px;border-radius:999px;background:var(--tint);font-style:normal;font-size:12.5px;font-weight:600;color:var(--panel)}
+.proc p{margin:0;font-size:14.5px;color:var(--ink2)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:16px;min-height:64px;font:600 18px/1.35 var(--f1)}
+.faq summary::-webkit-details-marker,details.asm summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;margin-left:auto;width:30px;height:30px;border-radius:50%;background:var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M10 13l5 5 5-5' fill='none' stroke='%230B2A4A' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") center/100% no-repeat;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(180deg)}
+.faq details p{margin:0 0 20px;max-width:62ch;color:var(--ink2)}
+
+/* contact + footer */
+.band{margin:0 16px;border-radius:34px;background:radial-gradient(60% 120% at 90% 0%,#FFD86A,rgba(255,216,106,0) 60%),var(--sun);padding:clamp(40px,6vw,72px) 0}
+.band .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.band h2{font-size:clamp(30px,3.6vw,50px)}
+.band p{margin:12px 0 0;font-size:17px;color:#23364A}
+.ways{display:grid;gap:12px}
+.ways a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:0 22px;border-radius:20px;background:rgba(255,255,255,.72);text-decoration:none;font:600 19px/1.2 var(--f1)}
+.ways a span{font:500 13px var(--f2);color:#3B4F63}
+.ways a:hover{background:#fff}
+.areas{margin:14px 0 0;font-size:14.5px;color:#23364A}
+.foot{padding:48px 0 40px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;align-items:flex-end}
+.fname{font:700 26px/1.1 var(--f1);letter-spacing:-.02em;overflow-wrap:anywhere}
+.foot p{margin:6px 0 0;max-width:60ch;font-size:14px;color:var(--ink2)}
+
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){.rv{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 22%}}}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+
+@media (max-width:1100px){.nav{display:none}.console{grid-template-columns:1fr 1fr}.console>.chart{grid-column:1/-1;border-left:0!important;border-top:1px solid var(--line)}.proc{grid-template-columns:repeat(3,1fr)}.proc::before{display:none}}
+@media (max-width:900px){
+ .sky{grid-template-columns:1fr;min-height:0}
+ .copy{padding:44px 0 8px}
+ .scene-wrap{min-height:0;padding-bottom:calc(var(--gh) - 2px)}
+ .scene{position:relative;inset:auto}
+ .console{margin-top:-40px}
+ .sky{--gh:54px}
+ .head,.bat,.faq,.band .wrap{grid-template-columns:1fr}
+ .sys{grid-template-columns:1fr}
+ .est{grid-template-columns:1fr}
+ .steps4{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+ .hero{padding:10px 10px 0}
+ .sky{border-radius:26px;padding:0 18px;--gh:46px}
+ .hr{display:none}
+ .top .wrap{min-height:62px;gap:12px}
+ .wm{font-size:18px}
+ .top .btn{min-height:42px;padding:0 14px;font-size:14px}
+ .copy p.sub{font-size:17px}
+ .console{grid-template-columns:1fr;margin:-34px 10px 0;border-radius:24px}
+ .console>div{padding:20px}
+ .console>div+div{border-left:0;border-top:1px solid var(--line)}
+ .time{font-size:34px}
+ .proc{grid-template-columns:1fr;gap:22px}
+ .proc li{display:grid;grid-template-columns:50px 1fr;column-gap:16px}
+ .proc li>*{grid-column:2}
+ .proc li::before{grid-row:1/span 3}
+ .proc b{margin-top:0}
+ .steps4{grid-template-columns:1fr}
+ .opt{grid-template-columns:auto 1fr;}
+ .opt>b{grid-column:2}
+ .band{margin:0 10px;border-radius:26px}
+ .bills div{grid-template-columns:96px 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .fl{animation:none}
+ .land,.pnl,.bar i,.bills i{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="8" fill="#FFB400"/><g stroke="#FFB400" stroke-width="2.6" stroke-linecap="round"><path d="M18 2.5v4M18 29.5v4M2.5 18h4M29.5 18h4M7 7l2.8 2.8M26.2 26.2 29 29M29 7l-2.8 2.8M9.8 26.2 7 29"/></g><path d="M11 22.5h14l-2 5H13z" fill="#1D4F91"/></svg><span class="wm" data-brand>Sunward Solar</span></a>
+  <nav class="nav" aria-label="Sections"><a href="#systems">Systems</a><a href="#batteries">Batteries</a><a href="#how">How it works</a><a href="#estimate">Estimator</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+  <a class="btn sun" href="#estimate">Get an estimate</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero" aria-labelledby="h1">
+ <div class="sky" id="sky">
+  <svg class="clouds" id="clouds" viewBox="0 0 1400 300" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><g fill="#fff"><g class="c1"><ellipse cx="780" cy="92" rx="70" ry="24"/><ellipse cx="820" cy="76" rx="44" ry="30"/><ellipse cx="860" cy="94" rx="58" ry="20"/></g><g class="c2"><ellipse cx="1180" cy="150" rx="84" ry="22"/><ellipse cx="1150" cy="136" rx="40" ry="26"/><ellipse cx="1210" cy="132" rx="46" ry="30"/></g><g class="c3"><ellipse cx="560" cy="200" rx="50" ry="14"/><ellipse cx="584" cy="190" rx="30" ry="18"/></g></g></svg>
+  <div class="copy">
+   <p class="eyebrow"><i></i>Solar &amp; batteries · Townsville, QLD</p>
+   <h1 id="h1">Put the Townsville sun to work.</h1>
+   <p class="sub">Solar and batteries designed around your roof, your routine and North Queensland weather. Drag the sun across the sky to watch a 6.6&nbsp;kW system follow the day.</p>
+   <div class="cta"><a class="btn sun" href="#estimate">Estimate my savings</a><a class="btn line" href="#systems">See systems</a></div>
+  </div>
+  <div class="scene-wrap">
+   <svg class="scene" id="scene" viewBox="0 0 800 472" aria-hidden="true">
+    <defs>
+     <radialGradient id="sunC" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#FFF7CF"/><stop offset=".55" stop-color="#FFD24A"/><stop offset="1" stop-color="#FFA800"/></radialGradient>
+     <radialGradient id="halo"><stop offset="0" stop-color="#FFE38A" stop-opacity=".75"/><stop offset="1" stop-color="#FFE38A" stop-opacity="0"/></radialGradient>
+     <linearGradient id="glint" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset=".58" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+     <pattern id="lat" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9 9 0M0 0l9 9" stroke="#D8C6A4" stroke-width="1.1"/></pattern>
+     <pattern id="cor" width="6" height="10" patternUnits="userSpaceOnUse"><path d="M3 0v10" stroke="#B7C3CF" stroke-width="1.4"/></pattern>
+     <pattern id="wb" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 7.5h10" stroke="#E7DECE" stroke-width="1"/></pattern>
+     <pattern id="cells" width="12.5" height="14" patternUnits="userSpaceOnUse"><path d="M12.5 0v14M0 14h12.5" stroke="rgba(255,255,255,.3)" stroke-width=".8"/></pattern>
+     <pattern id="tankc" width="7" height="10" patternUnits="userSpaceOnUse"><path d="M3.5 0v10" stroke="#9FB2C2" stroke-width="1.6"/></pattern>
+     <clipPath id="pclip"></clipPath>
+    </defs>
+    <path class="arcp" d="M40 470A360 330 0 0 1 760 470"/>
+    <g id="hrs"></g>
+    <path class="grab" id="grab" d="M40 470A360 330 0 0 1 760 470"/>
+    <g id="sunG" role="presentation"><circle r="78" fill="url(#halo)"/><g id="rays" stroke="#FFC21A" stroke-width="4" stroke-linecap="round"></g><circle r="31" fill="url(#sunC)"/></g>
+    <g class="land" id="land">
+     <path d="M0 470C80 424 170 418 250 440S420 404 520 414 700 430 800 402V520H0z" fill="#CFE7DA"/>
+     <path d="M0 470C120 448 220 452 320 462S560 446 800 456V520H0z" fill="#B7DCC3"/>
+     <g id="tree"><path d="M136 470c2-30 0-58-6-82M132 420c-10-10-22-14-34-14M131 408c12-12 26-16 40-14" fill="none" stroke="#6B4A36" stroke-width="7" stroke-linecap="round"/><ellipse cx="132" cy="382" rx="92" ry="30" fill="#4E9A5B"/><ellipse cx="96" cy="372" rx="46" ry="20" fill="#5DAE69"/><ellipse cx="170" cy="370" rx="50" ry="21" fill="#5DAE69"/><g fill="#E84B3C"><circle cx="70" cy="372" r="4"/><circle cx="98" cy="360" r="4.5"/><circle cx="124" cy="366" r="4"/><circle cx="150" cy="356" r="4.5"/><circle cx="182" cy="362" r="4"/><circle cx="206" cy="376" r="4"/><circle cx="112" cy="386" r="3.5"/><circle cx="160" cy="388" r="3.5"/><circle cx="84" cy="390" r="3"/><circle cx="196" cy="392" r="3"/></g></g>
+     <g id="tank"><rect x="580" y="400" width="56" height="70" rx="6" fill="#C6D3DE"/><rect x="580" y="400" width="56" height="70" rx="6" fill="url(#tankc)"/><ellipse cx="608" cy="400" rx="28" ry="7" fill="#DCE5EC"/><path d="M596 470v-6h24v6" fill="#9FB2C2"/></g>
+     <g id="house">
+      <g fill="#8F7A5E"><rect x="272" y="398" width="8" height="72"/><rect x="330" y="398" width="8" height="72"/><rect x="390" y="398" width="8" height="72"/><rect x="450" y="398" width="8" height="72"/><rect x="510" y="398" width="8" height="72"/></g>
+      <rect x="276" y="402" width="238" height="68" fill="url(#lat)" opacity=".9"/>
+      <rect x="300" y="428" width="26" height="30" rx="3" fill="#E9EEF3" stroke="#9FB2C2"/><rect x="306" y="436" width="14" height="4" rx="1" fill="#1D4F91"/>
+      <rect x="470" y="418" width="30" height="46" rx="5" fill="#FAFCFE" stroke="#9FB2C2"/><rect x="476" y="426" width="18" height="32" rx="3" fill="#E4EBF1"/><rect id="batFill" x="476" y="440" width="18" height="18" rx="3" fill="#2FB36B"/>
+      <rect x="258" y="330" width="284" height="72" fill="#FFFDF7"/><rect x="258" y="330" width="284" height="72" fill="url(#wb)"/>
+      <g id="wins"><rect x="284" y="342" width="40" height="30" rx="2"/><rect x="380" y="340" width="40" height="44" rx="2"/><rect x="476" y="342" width="40" height="30" rx="2"/></g>
+      <g fill="none" stroke="#0B2A4A" stroke-width="2"><rect x="284" y="342" width="40" height="30" rx="2"/><rect x="380" y="340" width="40" height="44" rx="2"/><rect x="476" y="342" width="40" height="30" rx="2"/><path d="M304 342v30M284 357h40M400 340v44M496 342v30M476 357h40"/></g>
+      <path d="M250 376h300" stroke="#0B2A4A" stroke-width="3"/>
+      <g stroke="#0B2A4A" stroke-width="1.6" opacity=".75"><path d="M256 378v22M266 378v22M276 378v22M286 378v22M296 378v22M306 378v22M316 378v22M326 378v22M336 378v22M346 378v22M356 378v22M366 378v22M376 378v22M424 378v22M434 378v22M444 378v22M454 378v22M464 378v22M474 378v22M484 378v22M494 378v22M504 378v22M514 378v22M524 378v22M534 378v22M544 378v22"/></g>
+      <rect x="246" y="398" width="308" height="6" rx="2" fill="#0B2A4A"/>
+      <g fill="#FFFDF7" stroke="#0B2A4A" stroke-width="2"><rect x="248" y="330" width="8" height="70"/><rect x="544" y="330" width="8" height="70"/><rect x="396" y="330" width="8" height="46"/></g>
+      <path d="M226 334 318 250h164l92 84z" fill="#D5DDE5"/><path d="M226 334 318 250h164l92 84z" fill="url(#cor)" opacity=".8"/>
+      <path d="M226 334 318 250h164l92 84z" fill="none" stroke="#0B2A4A" stroke-width="2.4" stroke-linejoin="round"/>
+      <g id="pnls"></g>
+      <rect id="glintR" x="300" y="262" width="120" height="62" fill="url(#glint)" opacity=".5" clip-path="url(#pclip)"/>
+      <rect x="222" y="332" width="356" height="7" rx="3" fill="#0B2A4A"/>
+     </g>
+    </g>
+   </svg>
+  </div>
+ </div>
+
+ <div class="console" id="console">
+  <div>
+   <div class="timebox"><div><p class="lab" id="tLab">Time of day</p><div class="time" id="time" aria-hidden="true">11:00 am</div></div><button class="play" id="play" type="button" aria-pressed="false"><svg class="pi" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 4l10 6-10 6z" fill="currentColor"/></svg><svg class="pa" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 4h3.5v12H5zM11.5 4H15v12h-3.5z" fill="currentColor"/></svg><span class="sr" id="playT">Play the day</span></button></div>
+   <input type="range" id="t" min="360" max="1140" step="5" value="660" aria-labelledby="tLab" aria-valuetext="11:00 am">
+   <div class="ticks tt" aria-hidden="true"><span style="--p:0">6am</span><span style="--p:.2308">9am</span><span style="--p:.4615">Noon</span><span style="--p:.6923">3pm</span><span style="--p:1">7pm</span></div>
+   <p class="hint"><b>Drag the sun</b> across the sky, slide the time, or press play.</p>
+  </div>
+  <div>
+   <div class="stats">
+    <div class="stat"><b id="sNow">4.2 kW</b><span>generating now</span></div>
+    <div class="stat"><b id="sDay">11.8 kWh</b><span>so far today</span></div>
+    <div class="stat"><b id="sUse">0.8 kW</b><span>home is using</span></div>
+    <div class="stat"><b id="sBat">52%</b><span>battery</span><div class="bar"><i id="sBatBar"></i></div></div>
+   </div>
+   <p class="status" id="status" aria-live="polite">Peak sun. Run the dishwasher, pool pump and washing now.</p>
+  </div>
+  <div class="chart">
+   <div class="ctitle"><p class="lab">Today’s generation</p><small>Illustrative clear day · 6.6 kW system · 10 kWh battery</small></div>
+   <svg viewBox="0 0 520 206" role="img" aria-labelledby="chartDesc"><title id="chartDesc">Area chart of solar generation from 6 am to 7 pm, peaking around 4.7 kilowatts at midday, with a marker at the selected time.</title>
+    <defs><linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB400" stop-opacity=".55"/><stop offset="1" stop-color="#FFB400" stop-opacity=".05"/></linearGradient></defs>
+    <g id="grid"></g>
+    <path class="fullc" id="fullc"/><path class="area" id="area"/><path class="areal" id="areal"/><path class="usec" id="usec"/>
+    <g class="mk" id="mk"><line y1="18" y2="172"/><circle r="6"/><text id="mkT" y="12">You are here</text></g>
+   </svg>
+   <div class="legend"><span><i style="background:#F29B00"></i>Solar output</span><span><i style="background:#1D4F91;height:3px"></i>Typical home use</span><span><i style="background:rgba(11,42,74,.35);height:2px"></i>Rest of the day</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="systems" aria-labelledby="sysT">
+ <div class="wrap">
+  <div class="head rv"><div><p class="kick">Systems</p><h2 id="sysT">Three sizes that suit most Townsville roofs.</h2></div><p class="lede">Every system is designed for your roof and switchboard, with panels laid out to dodge shade and cyclone-rated racking chosen for your site.</p></div>
+  <div class="sys">
+   <article class="card rv"><div class="mini"><svg viewBox="0 0 160 80" aria-hidden="true"><path d="M8 72 50 30h60l42 42z" fill="#D5DDE5" stroke="#0B2A4A" stroke-width="2"/><g fill="#1D4F91"><rect x="54" y="40" width="16" height="12" rx="1.5"/><rect x="72" y="40" width="16" height="12" rx="1.5"/><rect x="90" y="40" width="16" height="12" rx="1.5"/><rect x="54" y="55" width="16" height="12" rx="1.5"/><rect x="72" y="55" width="16" height="12" rx="1.5"/><rect x="90" y="55" width="16" height="12" rx="1.5"/></g></svg></div><p class="kw">6.6<small>kW</small></p><h3>Everyday</h3><ul><li>About 15 panels and a 5 kW inverter</li><li>Suits 1–3 people, bills under about $450 a quarter</li><li>Monitoring app so you can see every watt</li></ul><div class="price"><span>Sample price, installed</span><b>$6,900</b></div></article>
+   <article class="card feat rv"><div class="mini"><svg viewBox="0 0 160 80" aria-hidden="true"><path d="M8 72 50 30h60l42 42z" fill="#3A5E86" stroke="#9FC3E8" stroke-width="2"/><g fill="#FFB400"><rect x="40" y="40" width="16" height="12" rx="1.5"/><rect x="58" y="40" width="16" height="12" rx="1.5"/><rect x="76" y="40" width="16" height="12" rx="1.5"/><rect x="94" y="40" width="16" height="12" rx="1.5"/><rect x="31" y="55" width="16" height="12" rx="1.5"/><rect x="49" y="55" width="16" height="12" rx="1.5"/><rect x="67" y="55" width="16" height="12" rx="1.5"/><rect x="85" y="55" width="16" height="12" rx="1.5"/><rect x="103" y="55" width="16" height="12" rx="1.5"/></g></svg></div><p class="kw">10<small>kW</small></p><h3>Family</h3><ul><li>About 23 panels and an 8 kW inverter</li><li>Suits pools, aircon and 4+ people</li><li>Battery-ready wiring included</li></ul><div class="price"><span>Sample price, installed</span><b>$9,800</b></div></article>
+   <article class="card rv"><div class="mini"><svg viewBox="0 0 160 80" aria-hidden="true"><path d="M8 72 50 30h60l42 42z" fill="#D5DDE5" stroke="#0B2A4A" stroke-width="2"/><g fill="#1D4F91"><rect x="36" y="38" width="14" height="10" rx="1.5"/><rect x="52" y="38" width="14" height="10" rx="1.5"/><rect x="68" y="38" width="14" height="10" rx="1.5"/><rect x="84" y="38" width="14" height="10" rx="1.5"/><rect x="100" y="38" width="14" height="10" rx="1.5"/><rect x="26" y="51" width="14" height="10" rx="1.5"/><rect x="42" y="51" width="14" height="10" rx="1.5"/><rect x="58" y="51" width="14" height="10" rx="1.5"/><rect x="74" y="51" width="14" height="10" rx="1.5"/><rect x="90" y="51" width="14" height="10" rx="1.5"/><rect x="106" y="51" width="14" height="10" rx="1.5"/><rect x="122" y="51" width="14" height="10" rx="1.5"/></g></svg></div><p class="kw">13.2<small>kW</small></p><h3>Big roof</h3><ul><li>About 30 panels, three-phase ready</li><li>For home offices, sheds and EV charging</li><li>Split across two roof faces if needed</li></ul><div class="price"><span>Sample price, installed</span><b>$12,900</b></div></article>
+  </div>
+  <p class="note">Sample prices for a fictional business, including GST. Your price depends on roof type, height, switchboard and wind region — we confirm it in a written quote.</p>
+ </div>
+</section>
+
+<section class="blk tinted" id="batteries" aria-labelledby="batT">
+ <div class="wrap bat">
+  <div class="rv">
+   <p class="kick">Batteries</p>
+   <h2 id="batT">Keep the midday sun for dinner time.</h2>
+   <p class="lede">Most homes make their surplus at noon and need it at 6 pm. A battery soaks up the difference so your evening runs on your own sunshine.</p>
+   <div class="opts">
+    <div class="opt"><span class="cell" aria-hidden="true"><i style="height:62%"></i></span><div><h3>10 kWh</h3><p>Covers a typical evening: lights, cooking, TV and a few hours of aircon.</p></div><b>from $8,900</b></div>
+    <div class="opt"><span class="cell" aria-hidden="true"><i style="height:86%"></i></span><div><h3>13.5 kWh</h3><p>Evenings plus overnight, and backup for chosen circuits in an outage.</p></div><b>from $11,900</b></div>
+   </div>
+   <p class="note">Sample prices, installed, including GST.</p>
+  </div>
+  <figure class="batfig rv"><svg id="batSvg" viewBox="0 0 520 250" role="img" aria-labelledby="batD"><title id="batD">Chart: solar output peaks at midday above home use; the surplus is stored and used again in the evening.</title></svg><div class="legend" aria-hidden="true"><span><i style="background:#FFB400;opacity:.6;height:10px"></i>Surplus → battery</span><span><i style="background:#1D4F91;opacity:.4;height:10px"></i>Evening use ← battery</span><span><i style="background:#F29B00"></i>Solar output</span><span><i style="background:#1D4F91;height:3px"></i>Home use</span></div><figcaption>Illustrative day: the yellow surplus above home use charges the battery, and the blue evening use is drawn back out.</figcaption></figure>
+ </div>
+</section>
+
+<section class="blk" id="how" aria-labelledby="howT">
+ <div class="wrap">
+  <div class="head rv"><div><p class="kick">How it works</p><h2 id="howT">From your roof to your kettle.</h2></div><p class="lede">Your home always uses its own solar first. Only the leftovers charge the battery or head out to the grid.</p></div>
+  <div class="flow rv" id="flow">
+   <svg viewBox="0 0 1000 250" aria-hidden="true">
+    <path class="fl" d="M140 125H330"/><path class="fl" d="M430 125H570"/><path class="fl" d="M670 125H810"/><path class="fl" d="M620 170V220H810"/><path class="fl b" d="M620 80V30H810"/>
+    <g transform="translate(90 125)"><circle r="44" fill="#FFF4D6"/><circle r="22" fill="#FFB400"/><g stroke="#FFB400" stroke-width="4" stroke-linecap="round"><path d="M0-36v-6M0 36v6M-36 0h-6M36 0h6M-26-26l-4-4M26 26l4 4M26-26l4-4M-26 26l-4 4"/></g></g>
+    <g transform="translate(380 125)"><rect x="-52" y="-38" width="104" height="76" rx="10" fill="#1D4F91"/><path d="M-52-12h104M-52 14h104M-17-38v76M17-38v76" stroke="#6E9BD6" stroke-width="2"/></g>
+    <g transform="translate(620 125)"><rect x="-44" y="-44" width="88" height="88" rx="16" fill="#fff" stroke="#0B2A4A" stroke-width="3"/><path d="M-22 6c8-18 16 18 24 0s16 18 24 0" fill="none" stroke="#0B2A4A" stroke-width="3" stroke-linecap="round"/><text y="-16" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#0B2A4A">INVERTER</text></g>
+    <g transform="translate(860 125)"><path d="M-40 10 0-28 40 10v34h-80z" fill="#fff" stroke="#0B2A4A" stroke-width="3" stroke-linejoin="round"/><rect x="-10" y="18" width="20" height="26" fill="#FFB400"/></g>
+    <g transform="translate(860 30)"><rect x="-24" y="-22" width="48" height="44" rx="8" fill="#fff" stroke="#0B2A4A" stroke-width="3"/><rect x="-14" y="-4" width="28" height="18" rx="3" fill="#2FB36B"/></g>
+    <g transform="translate(860 220)"><path d="M-18 24 0-26 18 24M-12 6h24M-8-8h16" fill="none" stroke="#0B2A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g font-family="Inter,sans-serif" font-size="15" font-weight="600" fill="#0B2A4A"><text x="90" y="200" text-anchor="middle">Sun</text><text x="380" y="200" text-anchor="middle">Panels</text><text x="920" y="130">Home</text><text x="895" y="36">Battery</text><text x="895" y="226">Grid</text></g>
+   </svg>
+  </div>
+  <div class="steps4">
+   <div class="rv"><b>Panels make DC power</b><p>Sunlight knocks electrons loose in the cells — no moving parts, no noise.</p></div>
+   <div class="rv"><b>The inverter converts it</b><p>DC becomes the AC your appliances use, and the app logs every kilowatt-hour.</p></div>
+   <div class="rv"><b>Your home goes first</b><p>Whatever’s running right now — fridge, pool pump, aircon — uses solar before anything else.</p></div>
+   <div class="rv"><b>Leftovers are stored or sold</b><p>Surplus charges your battery, then flows to the grid for a feed-in credit from your retailer.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="blk tinted" id="estimate" aria-labelledby="estT">
+ <div class="wrap">
+  <div class="head rv"><div><p class="kick">Estimator</p><h2 id="estT">What could solar do for your bill?</h2></div><p class="lede">Three questions, an illustrative answer and every assumption laid out. It takes about twenty seconds.</p></div>
+  <div class="est rv">
+   <form id="estF" data-kit-ignore>
+    <div class="q"><div class="billrow"><label for="bill">Your last quarterly power bill</label><output id="billO" for="bill">$480 <small>/ quarter</small></output></div><input type="range" id="bill" min="150" max="1200" step="10" value="480" aria-valuetext="$480 a quarter"><div class="ticks" aria-hidden="true"><span>$150</span><span>$1,200</span></div></div>
+    <fieldset class="q"><legend>Which way does your best roof face?</legend><div class="chips">
+     <label><input type="radio" name="dir" value="n" checked><span><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 3l2.4 6H6.6z" fill="#FFB400" transform="rotate(0 9 9)"/></svg>North</span></label>
+     <label><input type="radio" name="dir" value="nw"><span><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 3l2.4 6H6.6z" fill="#FFB400" transform="rotate(45 9 9)"/></svg>North-east / north-west</span></label>
+     <label><input type="radio" name="dir" value="ew"><span><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 3l2.4 6H6.6z" fill="#FFB400" transform="rotate(90 9 9)"/></svg>East / west</span></label>
+     <label><input type="radio" name="dir" value="s"><span><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M9 3l2.4 6H6.6z" fill="#FFB400" transform="rotate(180 9 9)"/></svg>South</span></label></div></fieldset>
+    <fieldset class="q"><legend>Is someone home during the day?</legend><div class="chips">
+     <label><input type="radio" name="day" value="low"><span>Rarely</span></label>
+     <label><input type="radio" name="day" value="med" checked><span>Some days</span></label>
+     <label><input type="radio" name="day" value="high"><span>Most days</span></label></div></fieldset>
+    <label class="tog"><input type="checkbox" id="batC"> Include a 10 kWh battery</label>
+   </form>
+   <div class="res"><p class="sr" id="estLive" aria-live="polite"></p>
+    <h3>Suggested system</h3>
+    <div class="big"><b id="rSize">6.6 kW</b><span id="rPanels">about 15 panels</span></div>
+    <div class="rows">
+     <div class="row"><span>Illustrative generation</span><b id="rGen">9,500–11,400 kWh a year</b></div>
+     <div class="row"><span>Illustrative bill savings</span><b id="rSave">$1,150–$1,480 a year</b></div>
+    </div>
+    <div class="bills" aria-hidden="true"><div><span>Bill today</span><i id="bNow" style="width:100%"></i></div><div><span>With solar (mid)</span><i class="after" id="bAfter" style="width:40%"></i></div></div>
+    <details class="asm"><summary>The assumptions behind these numbers</summary><ul>
+     <li>About 85% of your bill is usage at 32c/kWh; the rest is supply charges. Both are illustrative — yours depend on your retailer and plan.</li>
+     <li>Feed-in credit of 7c/kWh for exported power (illustrative).</li>
+     <li>North-facing panels in Townsville average about 4.4 kWh per kW per day; north-east/west ≈ 96%, east/west ≈ 87%, south ≈ 72% of that.</li>
+     <li>Share of solar used at home: 25%, 40% or 55% depending on daytime occupancy, plus 25 points with a battery (max 85%).</li>
+     <li>System sized at about 1.25× your daily use, rounded up to a standard size. No shading, panel ageing, rebates or incentives included.</li>
+    </ul></details>
+    <p class="gi">General information only — not financial advice. Real figures need a roof check and a written quote.</p>
+    <a class="btn sun" href="#contact" id="bookRoof">Book a roof check</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="process" aria-labelledby="procT">
+ <div class="wrap">
+  <div class="head rv"><div><p class="kick">Installation</p><h2 id="procT">Five steps, no surprises.</h2></div><p class="lede">One local crew from first chat to switch-on. You’ll always know what happens next and who’s turning up.</p></div>
+  <ol class="proc">
+   <li class="rv"><b>Quick chat</b><em>15 min · phone or video</em><p>Your bills, your roof and your plans — pool, EV, kids home all day.</p></li>
+   <li class="rv"><b>Roof check</b><em>45 min on site</em><p>We measure, check shade through the day and look over your switchboard.</p></li>
+   <li class="rv"><b>Design &amp; quote</b><em>within a few days</em><p>A panel layout drawn on your roof, with expected output and cost in writing.</p></li>
+   <li class="rv"><b>Install day</b><em>usually one day</em><p>Panels, inverter and any battery fitted, tested and tidied up.</p></li>
+   <li class="rv"><b>Switch-on</b><em>after network approval</em><p>We connect, test again and show you how to read the monitoring app.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="blk tinted" id="faq" aria-labelledby="faqT">
+ <div class="wrap faq">
+  <div class="rv"><p class="kick">FAQ</p><h2 id="faqT">Good questions we hear every week.</h2><p class="lede">Still wondering? Call us — a real person in Townsville answers.</p></div>
+  <div class="rv">
+   <details><summary>Do panels still work on cloudy days?</summary><p>Yes, just less. Thick wet-season cloud can halve a day’s output or more, but the long, clear dry season more than makes up for it across the year.</p></details>
+   <details><summary>What about cyclones?</summary><p>Mounting has to suit your site’s wind region. We design racking and fixings for North Queensland cyclone loads and check your roof structure before we quote.</p></details>
+   <details><summary>Will solar keep the power on in a blackout?</summary><p>Not on its own — for line workers’ safety, grid-connected systems switch off during an outage. Some batteries can run chosen circuits in a blackout; ask us about backup.</p></details>
+   <details><summary>How long does an install take?</summary><p>Most homes are done in a day. Two-storey homes, tile roofs and battery installs can take a second day.</p></details>
+   <details><summary>Is my roof suitable?</summary><p>North-facing is best in Townsville, but east–west roofs work well too and spread generation across the day. Shade from trees or a neighbour’s second storey matters more than direction.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="contact" aria-labelledby="conT" style="padding-top:clamp(48px,6vw,80px)">
+ <div class="band">
+  <div class="wrap">
+   <div><h2 id="conT">Talk to a local installer.</h2><p>Weekdays 7:30 am – 5 pm, Saturdays by appointment.</p><p class="areas">Townsville, Kirwan, Annandale, Douglas, Bushland Beach, Condon and surrounds.</p></div>
+   <div class="ways"><a href="tel:+61755502318">(07) 5550 2318 <span>Call</span></a><a href="mailto:hello@example.com">hello@example.com <span>Email</span></a></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div class="wrap">
+  <div><div class="fname" data-brand>Sunward Solar</div><p>Solar and batteries · Townsville, QLD. A fictional business created for a design showcase — prices are samples and all figures are illustrative, general information only.</p></div>
+  <a class="btn line" href="#top">Back to the sky ↑</a>
+ </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+const d=document,$=(s,r)=>(r||d).querySelector(s),$$=(s,r)=>[...(r||d).querySelectorAll(s)];
+const rm=()=>window.DemoKit?DemoKit.reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches;
+const T0=360,T1=1140,ST=5,N=(T1-T0)/ST+1,PMAX=4.7,CAP=10;
+const genAt=m=>{const x=(m-T0)/(T1-T0);return x<=0||x>=1?0:PMAX*Math.pow(Math.sin(Math.PI*x),1.6)};
+const useAt=m=>{const h=m/60;return .45+.9*Math.exp(-(((h-7.5)/.9)**2))+1.6*Math.exp(-(((h-18.8)/1.4)**2))+.25*Math.exp(-(((h-13)/2.5)**2))};
+const G=[],U=[],S=[],C=[];
+{let s=2.5,c=0;for(let i=0;i<N;i++){const m=T0+i*ST,g=genAt(m),u=useAt(m);if(i){const dt=ST/60;c+=g*dt;s=Math.min(CAP,Math.max(1,s+(g-u)*dt))}G.push(g);U.push(u);S.push(s/CAP);C.push(c)}}
+const fmt=m=>{let h=Math.floor(m/60);const mi=m%60,ap=h>=12?'pm':'am';h=h%12||12;return`${h}:${String(mi).padStart(2,'0')} ${ap}`};
+const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+const mix=(a,b,t)=>{const A=hex(a),B=hex(b);return'#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('')};
+const lum=h=>{const c=hex(h).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+const SKY=[[360,'#3E4F80','#FFB48C',.7,.35],[420,'#8DC0EC','#FFDDB5',.9,.14],[540,'#AEDCFF','#FFF0D2',1,0],[750,'#BFE6FF','#FFF3D6',1,0],[960,'#B3DAF7','#FFE7C4',1,.02],[1080,'#6E82B6','#FFB07A',.84,.24],[1140,'#2F3A62','#EE8A6A',.62,.36]];
+function skyAt(m){for(let i=1;i<SKY.length;i++){if(m<=SKY[i][0]){const a=SKY[i-1],b=SKY[i],t=(m-a[0])/(b[0]-a[0]);return[mix(a[1],b[1],t),mix(a[2],b[2],t),a[3]+(b[3]-a[3])*t,a[4]+(b[4]-a[4])*t]}}return SKY[SKY.length-1].slice(1)}
+
+/* scene setup */
+const sky=$('#sky'),sunG=$('#sunG'),svg=$('#scene');
+let rays='';for(let i=0;i<12;i++){const a=i*30*Math.PI/180;rays+=`<path d="M${(Math.cos(a)*40).toFixed(1)} ${(Math.sin(a)*40).toFixed(1)}L${(Math.cos(a)*52).toFixed(1)} ${(Math.sin(a)*52).toFixed(1)}"/>`}
+$('#rays').innerHTML=rays;
+const arcPt=m=>{const th=Math.PI*(m-T0)/(T1-T0);return[400-360*Math.cos(th),470-330*Math.sin(th)]};
+$('#hrs').innerHTML=[[540,'9am'],[720,'Noon'],[900,'3pm'],[1080,'6pm']].map(([m,l])=>{const[x,y]=arcPt(m);return`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4" fill="rgba(11,42,74,.35)"/><text class="hr" x="${x.toFixed(1)}" y="${(y-14).toFixed(1)}">${l}</text>`}).join('');
+let ph='';const PX=[300,351,402,453],PY=[262,294];
+PY.forEach(y=>PX.forEach(x=>{ph+=`<rect class="pnl" x="${x}" y="${y}" width="48" height="29" rx="2"/><rect x="${x}" y="${y}" width="48" height="29" rx="2" fill="url(#cells)"/><rect x="${x}" y="${y}" width="48" height="29" rx="2" fill="none" stroke="#0B2A4A" stroke-width="1.6"/>`}));
+$('#pnls').innerHTML=ph;
+$('#pclip').innerHTML=PY.map(y=>PX.map(x=>`<rect x="${x}" y="${y}" width="48" height="29" rx="2"/>`).join('')).join('');
+const pnls=$$('.pnl'),wins=$$('#wins rect'),glint=$('#glintR'),land=$('#land'),batFill=$('#batFill');
+
+/* chart */
+const cx=m=>40+(m-T0)/(T1-T0)*460,cy=k=>172-k/6*150;
+$('#grid').innerHTML=[0,2,4,6].map(k=>`<line class="gl" x1="40" x2="500" y1="${cy(k)}" y2="${cy(k)}"/><text class="ax" x="32" y="${cy(k)+4}" text-anchor="end">${k}${k?'':' kW'}</text>`).join('')+[[360,'6am'],[540,'9am'],[720,'Noon'],[900,'3pm'],[1080,'6pm']].map(([m,l])=>`<text class="ax" x="${cx(m)}" y="194" text-anchor="middle">${l}</text>`).join('');
+const pts=(arr,to)=>{let p='';for(let i=0;i<=to;i++)p+=(i?'L':'M')+cx(T0+i*ST).toFixed(1)+' '+cy(arr[i]).toFixed(1);return p};
+$('#fullc').setAttribute('d',pts(G,N-1));$('#usec').setAttribute('d',pts(U,N-1));
+
+/* state */
+const range=$('#t');let cur=660,band=-1;
+const MSG=[[420,'Sunrise — the panels are only just waking up.'],[570,'Morning ramp-up. The battery starts refilling once breakfast is done.'],[870,'Peak sun. Run the dishwasher, pool pump and washing now.'],[990,'Afternoon. The battery tops off and spare power heads to the grid.'],[1080,'The sun’s dropping — output falls away quickly after four.'],[1141,'Evening. The battery covers dinner, the aircon and the telly.']];
+function render(m){
+ m=Math.max(T0,Math.min(T1,m));cur=m;
+ const i=Math.round((m-T0)/ST),g=G[i],I=g/PMAX,[s1,s2,br,sp]=skyAt(m);
+ sky.style.setProperty('--s1',s1);sky.style.setProperty('--s2',s2);
+ sky.classList.toggle('dusk',lum(s1)<.2);
+ const drift=(m-720)/780;[['c1',60],['c2',90],['c3',40]].forEach(([c,k])=>{const g=$('#clouds .'+c);if(g)g.setAttribute('transform',`translate(${(drift*k).toFixed(1)} 0)`)});sky.style.setProperty('--co',(.35+.6*br*(1-sp)).toFixed(2));
+ const[x,y]=arcPt(m);sunG.setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)}) scale(${(.82+.18*Math.min(1,I*1.4)).toFixed(3)})`);
+ land.style.filter=`brightness(${br.toFixed(3)}) sepia(${sp.toFixed(3)})`;sky.style.setProperty('--br',br.toFixed(3));sky.style.setProperty('--sp',sp.toFixed(3));
+ const pc=mix('#10284A','#3E86E6',Math.min(1,I*1.1));pnls.forEach(p=>p.setAttribute('fill',pc));
+ glint.setAttribute('opacity',(I*.8).toFixed(2));glint.setAttribute('x',(440-(x-40)/720*200).toFixed(1));
+ const w=Math.max(0,Math.min(1,(m-1050)/70))+Math.max(0,Math.min(1,(410-m)/50));
+ wins.forEach(r=>r.setAttribute('fill',mix('#CFE3F2','#FFCF5C',Math.min(1,w))));
+ const soc=S[i];batFill.setAttribute('height',(30*soc).toFixed(1));batFill.setAttribute('y',(458-30*soc).toFixed(1));
+ $('#time').textContent=fmt(m);range.value=m;range.setAttribute('aria-valuetext',`${fmt(m)}, generating ${g.toFixed(1)} kilowatts`);
+ $('#sNow').textContent=g.toFixed(1)+' kW';$('#sDay').textContent=C[i].toFixed(1)+' kWh';$('#sUse').textContent=U[i].toFixed(1)+' kW';
+ $('#sBat').textContent=Math.round(soc*100)+'%';$('#sBatBar').style.width=Math.round(soc*100)+'%';
+ const p=pts(G,i);$('#areal').setAttribute('d',p);$('#area').setAttribute('d',i?`${p}L${cx(m).toFixed(1)} 172L40 172Z`:'');
+ const mk=$('#mk'),mx=cx(m);mk.querySelector('line').setAttribute('x1',mx);mk.querySelector('line').setAttribute('x2',mx);
+ const c=mk.querySelector('circle');c.setAttribute('cx',mx);c.setAttribute('cy',cy(g));
+ const t=$('#mkT');t.setAttribute('x',mx);t.setAttribute('text-anchor',mx>420?'end':mx<110?'start':'middle');t.textContent=`You are here · ${g.toFixed(1)} kW`;
+ const b=MSG.findIndex(q=>m<q[0]);if(b!==band){band=b;$('#status').textContent=MSG[b][1]}
+}
+
+/* drag the sun */
+let drag=false,introOn=!rm();
+function toTime(e){const pt=new DOMPoint(e.clientX,e.clientY).matrixTransform(svg.getScreenCTM().inverse());let th=Math.atan2((470-pt.y)/330,(400-pt.x)/360);if(th<0)th=pt.x<400?0:Math.PI;th=Math.max(0,Math.min(Math.PI,th));return Math.round((T0+th/Math.PI*(T1-T0))/ST)*ST}
+const down=e=>{drag=true;introOn=false;stop();e.currentTarget.setPointerCapture&&e.currentTarget.setPointerCapture(e.pointerId);render(toTime(e));e.preventDefault()};
+[sunG,$('#grab')].forEach(el=>{el.addEventListener('pointerdown',down);el.addEventListener('pointermove',e=>{if(drag)render(toTime(e))});el.addEventListener('pointerup',()=>drag=false);el.addEventListener('pointercancel',()=>drag=false)});
+range.addEventListener('input',()=>{introOn=false;stop();render(+range.value)});
+
+/* play the day */
+const play=$('#play');let raf=0,last=0,vis=true;
+function stop(){if(raf)cancelAnimationFrame(raf);raf=0;play.setAttribute('aria-pressed','false');$('#playT').textContent='Play the day'}
+function step(ts){if(!last)last=ts;const dt=ts-last;last=ts;let m=cur+dt*(T1-T0)/9000;if(m>=T1){render(T1);stop();return}render(Math.round(m*10)/10|0);cur=m;raf=requestAnimationFrame(step)}
+play.addEventListener('click',()=>{introOn=false;if(raf){stop();return}if(rm()){render(cur>=T1-5?T0:Math.min(T1,Math.round(cur/60+1)*60));return}if(cur>=T1-5)cur=T0;last=0;play.setAttribute('aria-pressed','true');$('#playT').textContent='Pause';raf=requestAnimationFrame(step)});
+d.addEventListener('visibilitychange',()=>{if(d.hidden)stop()});
+
+/* battery chart */
+(function(){
+ const bx=m=>30+(m-T0)/(T1-T0)*470,by=k=>210-k/5*180;
+ let top='',bot='',ev='';
+ for(let i=0;i<N;i++){const m=T0+i*ST;top+=(i?'L':'M')+bx(m).toFixed(1)+' '+by(Math.max(G[i],U[i])).toFixed(1)}
+ for(let i=N-1;i>=0;i--){const m=T0+i*ST;bot+='L'+bx(m).toFixed(1)+' '+by(U[i]).toFixed(1)}
+ let e1=-1;for(let i=0;i<N;i++){if(T0+i*ST>=960&&G[i]<U[i]){e1=i;break}}
+ for(let i=e1;i<N;i++){const m=T0+i*ST;ev+=(i===e1?'M':'L')+bx(m).toFixed(1)+' '+by(U[i]).toFixed(1)}
+ ev+=`L${bx(T1)} 210L${bx(T0+e1*ST).toFixed(1)} 210Z`;
+ const g=pts2(G),u=pts2(U);
+ function pts2(a){let p='';for(let i=0;i<N;i++)p+=(i?'L':'M')+bx(T0+i*ST).toFixed(1)+' '+by(a[i]).toFixed(1);return p}
+ $('#batSvg').innerHTML=`<line x1="30" x2="500" y1="210" y2="210" stroke="rgba(11,42,74,.25)"/><path d="${top}${bot}Z" fill="#FFB400" opacity=".35"/><path d="${ev}" fill="#1D4F91" opacity=".28"/><path d="${g}" fill="none" stroke="#F29B00" stroke-width="3"/><path d="${u}" fill="none" stroke="#1D4F91" stroke-width="2.5" stroke-dasharray="2 5" stroke-linecap="round"/><g font-family="Inter,sans-serif" font-size="11" fill="#46607C" text-anchor="middle"><text x="${bx(360)}" y="230">6am</text><text x="${bx(720)}" y="230">Noon</text><text x="${bx(1080)}" y="230">6pm</text></g>`;
+})();
+
+/* estimator */
+const bill=$('#bill'),money=n=>'$'+Math.round(n).toLocaleString('en-AU'),kwh=n=>Math.round(n/100)*100;
+function est(){
+ const b=+bill.value,dir=($('input[name=dir]:checked')||{}).value||'n',day=($('input[name=day]:checked')||{}).value||'med',bat=$('#batC').checked;
+ $('#billO').innerHTML=`${money(b)} <small>/ quarter</small>`;bill.setAttribute('aria-valuetext',`${money(b)} a quarter`);
+ const perDay=b*.85/.32/91,yd=4.4*{n:1,nw:.96,ew:.87,s:.72}[dir];
+ const need=perDay*1.25/yd,size=[3.3,5,6.6,8,10,13.2].find(x=>x>=need)||13.2;
+ const gen=size*yd*365,share=Math.min(.85,{low:.25,med:.4,high:.55}[day]+(bat?.25:0));
+ const save=Math.min(gen*share*.32+gen*(1-share)*.07,b*4*.95),lo=save*.85,hi=Math.min(save*1.1,b*4*.97);
+ $('#rSize').textContent=size+' kW';$('#rPanels').textContent=`about ${Math.round(size*1000/440)} panels${bat?' + 10 kWh battery':''}`;
+ $('#rGen').textContent=`${kwh(gen*.9).toLocaleString('en-AU')}–${kwh(gen*1.08).toLocaleString('en-AU')} kWh a year`;
+ $('#rSave').textContent=`${money(Math.round(lo/10)*10)}–${money(Math.round(hi/10)*10)} a year`;
+ const after=Math.max(0,b*4-(lo+hi)/2);$('#bAfter').style.width=Math.max(4,after/(b*4)*100).toFixed(1)+'%';
+ clearTimeout(est.t);est.t=setTimeout(()=>{$('#estLive').textContent=`Suggested ${size} kilowatt system. Illustrative savings ${$('#rSave').textContent}.`},500);
+}
+$('#estF').addEventListener('input',est);$('#estF').addEventListener('submit',e=>e.preventDefault());est();
+$('#bookRoof').addEventListener('click',()=>{if(window.DemoKit)DemoKit.toast('Demo only — no roof check was booked. The contact details below are fictional.')});
+
+/* reveals + flow pause */
+if('IntersectionObserver'in window){
+ const f=$('#flow');new IntersectionObserver(es=>es.forEach(e=>f.classList.toggle('paused',!e.isIntersecting))).observe(f);
+ new IntersectionObserver(es=>es.forEach(e=>{vis=e.isIntersecting;if(!vis&&raf)stop()})).observe($('#hero'));
+}
+
+/* first light */
+if(rm())render(660);
+else{render(420);const t0=performance.now(),D=1100;const ease=x=>1-Math.pow(1-x,3);const intro=ts=>{if(!introOn)return;const k=Math.min(1,(ts-t0)/D);render(Math.round((420+240*ease(k))/ST)*ST);if(k<1)requestAnimationFrame(intro);else introOn=false};requestAnimationFrame(intro);setTimeout(()=>{if(introOn){introOn=false;render(660)}},1600)}
+})();
+</script>
+</body>
+</html>

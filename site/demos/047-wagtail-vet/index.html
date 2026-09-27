@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en-AU" data-pet="dog">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="047">
+<meta name="demo:brand" content="Wagtail Vet Clinic">
+<title>Wagtail Vet Clinic — friendly local vets in Toowoomba</title>
+<meta name="description" content="A fictional family vet clinic in Toowoomba, QLD, for dogs, cats, rabbits and birds: health checks, vaccinations, desexing, dental care and new-patient visits.">
+<meta name="theme-color" content="#FF8A3D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--cream:#FFF6EC;--choc:#4A2E1F;--muted:#6E5446;--white:#FFFDF9;--acc:#FF8A3D;--deep:#A8481A;--soft:#FFE3CC;--gut:clamp(16px,4vw,56px);--h:"Lilita One","Arial Rounded MT Bold","Trebuchet MS",sans-serif;--b:"Nunito","Avenir Next",system-ui,sans-serif;--ease:cubic-bezier(.34,1.56,.64,1)}
+[data-pet=cat]{--acc:#1AA7A1;--deep:#0B6A66;--soft:#CDEFEC}
+[data-pet=rabbit]{--acc:#9C8ADE;--deep:#5A48A0;--soft:#E8E3FA}
+[data-pet=bird]{--acc:#F2B705;--deep:#7A5A00;--soft:#FFF0BF}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--cream);color:var(--choc);font:400 18px/1.6 var(--b);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+svg{display:block}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-70px;z-index:60;padding:12px 18px;border-radius:14px;background:var(--choc);color:var(--cream);font-weight:800;text-decoration:none}
+.skip:focus{top:12px}
+.tx{transition:background-color .5s,color .5s,border-color .5s,box-shadow .5s,fill .5s,stroke .5s}
+.wrap{width:min(100% - 2*var(--gut),1260px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border:0;border-radius:18px;background:var(--deep);color:#fff;font:800 18px/1.1 var(--b);text-decoration:none;box-shadow:0 6px 0 var(--choc);transition:transform .25s var(--ease),box-shadow .25s,background-color .5s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--choc)}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--choc)}
+.btn.lt{background:var(--white);color:var(--choc);box-shadow:0 6px 0 rgba(74,46,31,.18)}
+/* header */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,246,236,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid rgba(74,46,31,.07)}
+.top-in{display:flex;align-items:center;gap:14px 24px;width:min(100% - 2*var(--gut),1260px);margin-inline:auto;padding:10px 0}
+.logo{display:flex;align-items:center;gap:12px;min-width:0;margin-right:auto;text-decoration:none}
+.lm{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:var(--acc);color:var(--choc)}
+.lm svg{width:30px;height:30px}
+.lw{font:400 25px/1.02 var(--h);letter-spacing:.01em;overflow-wrap:anywhere}
+.nav{display:flex;gap:2px}
+.nav a{padding:10px 12px;border-radius:12px;font-weight:700;font-size:16px;text-decoration:none}
+.nav a:hover{background:var(--soft)}
+.mini{display:flex;align-items:center;gap:4px;padding:4px;border-radius:18px;background:var(--white);box-shadow:inset 0 0 0 2px rgba(74,46,31,.08)}
+.mini button{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:14px;background:transparent;color:var(--muted)}
+.mini svg{width:30px;height:30px}
+.mini button[aria-pressed=true]{background:var(--acc);color:var(--choc)}
+@media (max-width:1180px){.nav{display:none}}
+@media (max-width:420px){.lw{font-size:21px}.lm{width:42px;height:42px}.mini button{width:40px;height:40px}.mini svg{width:26px;height:26px}.top-in{gap:10px}}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:24px 56px;align-items:center;padding:clamp(22px,3.6vw,52px) 0 clamp(36px,5vw,70px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--white);font-weight:800;font-size:15px;box-shadow:0 4px 0 rgba(74,46,31,.08)}
+.eyebrow i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--soft)}
+.eyebrow svg{width:16px;height:16px;fill:var(--deep)}
+h1{margin-top:20px;font:400 clamp(54px,6.6vw,100px)/.95 var(--h);letter-spacing:.005em}
+h1 em{font-style:normal;color:var(--deep)}
+.lede{max-width:34em;min-height:3.2em;margin-top:18px;font-size:clamp(18px,1.5vw,21px);font-weight:600;color:var(--muted)}
+.pets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.pb{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:2px 14px;min-height:104px;padding:14px 18px;border:3px solid transparent;border-radius:28px;background:var(--white);box-shadow:0 7px 0 rgba(74,46,31,.12);text-align:left;transition:transform .3s var(--ease),box-shadow .3s,background-color .5s,border-color .5s}
+.pb svg{grid-row:span 2;width:58px;height:58px;color:var(--muted);transition:color .5s,transform .45s var(--ease)}
+.pb b{align-self:end;font:400 30px/1 var(--h)}
+.pb span{align-self:start;font-size:15px;font-weight:600;line-height:1.3;color:var(--muted)}
+.pb:hover{transform:translateY(-3px)}
+.pb:hover svg{transform:rotate(-8deg) scale(1.06)}
+.pb[aria-pressed=true]{background:var(--soft);border-color:var(--acc);box-shadow:0 7px 0 var(--acc)}
+.pb[aria-pressed=true] svg{color:var(--deep)}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:28px;font-weight:700}
+.hero-meta a{text-decoration-thickness:2px;text-underline-offset:4px}
+.openb{display:inline-flex;align-items:center;gap:8px}
+.openb::before{content:"";width:10px;height:10px;border-radius:50%;background:#2E9B55;box-shadow:0 0 0 4px rgba(46,155,85,.18)}
+.openb.shut::before{background:#B5543A;box-shadow:0 0 0 4px rgba(181,84,58,.18)}
+.stage{position:relative;justify-self:center;width:100%;max-width:560px;aspect-ratio:1}
+.stage>svg{width:100%;height:100%;overflow:visible}
+.pet-svg{view-transition-name:pet}
+.blob{fill:var(--acc);transition:d .8s cubic-bezier(.5,0,.2,1),fill .5s}
+[data-pet=dog] .blob{d:path("M180 40C262 40 330 96 330 180C330 266 266 332 178 332C92 332 30 262 30 182C30 100 98 40 180 40Z")}
+[data-pet=cat] .blob{d:path("M170 34C258 28 326 96 326 184C326 272 256 330 166 328C80 326 30 258 32 176C34 96 86 40 170 34Z")}
+[data-pet=rabbit] .blob{d:path("M188 46C266 52 322 116 322 192C322 272 252 330 172 330C92 330 34 264 36 184C38 100 110 40 188 46Z")}
+[data-pet=bird] .blob{d:path("M176 38C262 42 326 110 322 190C318 276 244 330 160 326C80 322 28 250 34 168C40 88 96 34 176 38Z")}
+.ring{fill:none;stroke:var(--choc);stroke-width:2;stroke-dasharray:3 12;opacity:.3;transform-origin:180px 186px;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pet{display:none}
+[data-pet=dog] .p-dog,[data-pet=cat] .p-cat,[data-pet=rabbit] .p-rabbit,[data-pet=bird] .p-bird{display:inline}
+.bubble{position:absolute;left:-4%;top:-5%;max-width:42%;padding:14px 18px;border-radius:24px;background:var(--white);box-shadow:0 6px 0 rgba(74,46,31,.12);font-weight:800;font-size:clamp(15px,1.3vw,18px);line-height:1.3}
+.bubble::after{content:"";position:absolute;right:16%;bottom:-16px;border:10px solid transparent;border-top:12px solid var(--white);border-bottom:0}
+.idtag{position:absolute;right:2%;bottom:8%;display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:999px;background:var(--choc);color:var(--cream);font-weight:700;font-size:15px;box-shadow:0 6px 0 rgba(74,46,31,.18)}
+.idtag i{width:22px;height:22px;border-radius:50%;background:#F6C343;box-shadow:inset 0 0 0 3px #D9A21B}
+/* character idle loops */
+.wag{transform-origin:244px 300px;animation:wag .9s ease-in-out infinite alternate}
+@keyframes wag{from{transform:rotate(-12deg)}to{transform:rotate(16deg)}}
+.flop{transform-origin:128px 90px;animation:flop 3.4s ease-in-out infinite}
+@keyframes flop{0%,70%,100%{transform:none}80%{transform:rotate(-9deg)}90%{transform:rotate(4deg)}}
+.blink{animation:blink 5s infinite}
+.p-dog .blink{transform-origin:180px 124px}.p-cat .blink{transform-origin:180px 144px}.p-rabbit .blink{transform-origin:180px 146px}.p-bird .blink{transform-origin:160px 112px}
+@keyframes blink{0%,94%,100%{transform:none}97%{transform:scaleY(.1)}}
+.swish{transform-origin:236px 318px;animation:swish 2.8s ease-in-out infinite alternate}
+@keyframes swish{from{transform:rotate(-8deg)}to{transform:rotate(10deg)}}
+.twitch{transform-origin:180px 168px;animation:twitch 2.6s infinite}
+@keyframes twitch{0%,78%,100%{transform:none}83%{transform:scale(1.18,.84)}88%{transform:scale(.94,1.06)}93%{transform:scale(1.12,.9)}}
+.eartw{transform-origin:206px 112px;animation:eartw 4.2s ease-in-out infinite}
+@keyframes eartw{0%,60%,100%{transform:none}70%{transform:rotate(10deg)}80%{transform:rotate(-4deg)}}
+.bob{animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,60%,100%{transform:none}70%{transform:translate(-3px,5px)}80%{transform:translate(0,-2px)}}
+.flap{transform-origin:206px 176px;animation:flap 3s ease-in-out infinite}
+@keyframes flap{0%,74%,100%{transform:none}80%{transform:rotate(-14deg)}86%{transform:rotate(6deg)}92%{transform:rotate(-8deg)}}
+.pause .wag,.pause .flop,.pause .blink,.pause .swish,.pause .twitch,.pause .eartw,.pause .bob,.pause .flap,.pause .ring{animation-play-state:paused}
+.trail{display:flex;gap:clamp(18px,4vw,54px);justify-content:center;padding:6px 0 0;opacity:.28}
+.trail svg{width:26px;height:26px;fill:var(--choc);stroke:var(--choc)}
+.trail svg:nth-child(odd){transform:translateY(12px) rotate(-12deg)}
+.trail svg:nth-child(even){transform:rotate(10deg)}
+/* sections */
+.sec{padding:clamp(64px,8vw,112px) 0}
+.kick{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--soft);color:var(--deep);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+h2{margin-top:14px;font:400 clamp(38px,4.6vw,64px)/1 var(--h)}
+h2 em{font-style:normal;color:var(--deep)}
+.sub{max-width:40em;margin-top:14px;font-size:clamp(17px,1.4vw,19px);color:var(--muted)}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:clamp(28px,3.4vw,44px)}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.sv.feat,.sv.wide{grid-column:span 2}
+.sv.feat{background:linear-gradient(135deg,var(--white) 55%,var(--soft))}
+.sv.feat h3{font-size:clamp(22px,2vw,27px)}
+.sv.feat .ic{width:68px;height:68px}
+.sv{position:relative;display:flex;flex-direction:column;padding:26px 24px 24px;border-radius:28px;background:var(--white);box-shadow:0 8px 0 var(--soft);transition:transform .3s var(--ease),box-shadow .5s}
+.sv:hover{transform:translateY(-4px)}
+.ic{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:var(--soft);color:var(--deep);transition:background-color .5s,color .5s}
+.ic svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{margin-top:16px;font:800 21px/1.2 var(--b)}
+.sv p{flex:1;margin-top:8px;font-size:16px;line-height:1.5;color:var(--muted)}
+.sv .pr{margin-top:14px;font-weight:800;color:var(--deep)}
+.start{position:absolute;top:20px;right:20px;padding:6px 11px;border-radius:999px;background:var(--deep);color:#fff;font-weight:800;font-size:13px}
+.note{margin-top:22px;font-size:14px;color:var(--muted)}
+.band{background:var(--white)}
+/* tips + age */
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,56px);align-items:start}
+.tips{display:grid;gap:16px;margin-top:26px}
+.tip{display:grid;grid-template-columns:52px minmax(0,1fr);gap:16px;align-items:start;padding:20px 22px;border-radius:24px;background:var(--cream);box-shadow:0 6px 0 var(--soft)}
+.tip b{display:grid;place-items:center;height:52px;border-radius:16px;background:var(--acc);font:400 26px/1 var(--h);color:var(--choc);transition:background-color .5s}
+.tip h3{font:800 19px/1.25 var(--b)}
+.tip p{margin-top:4px;font-size:16px;color:var(--muted)}
+.age{padding:clamp(24px,3vw,34px);border-radius:32px;background:var(--choc);color:var(--cream)}
+.age h3{font:400 clamp(28px,2.6vw,36px)/1.05 var(--h)}
+.age label{display:block;margin-top:18px;font-weight:700}
+.age input[type=range]{width:100%;height:44px;margin-top:4px;accent-color:var(--acc);background:transparent}
+.agerow{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-weight:700}
+.agebig{margin-top:14px;font:400 clamp(58px,6vw,84px)/.9 var(--h);color:var(--acc);transition:color .5s}
+.agebig small{font:800 18px/1 var(--b);color:var(--cream)}
+.stage-lbl{display:inline-block;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(255,246,236,.14);font-weight:800;font-size:15px}
+.agetip{margin-top:12px;font-size:16px;color:#F1DCCB}
+.age .fine{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(255,246,236,.3);font-size:13px;color:#E6CDBA}
+/* team */
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.mate{padding:18px 18px 22px;border-radius:28px;background:var(--white);box-shadow:0 8px 0 var(--soft);text-align:center}
+.mate svg{width:min(100%,150px);height:auto;margin:0 auto}
+.scrub{fill:var(--acc);transition:fill .5s}
+.mate h3{margin-top:10px;font:800 19px/1.2 var(--b)}
+.mate .role{font-weight:700;font-size:15px;color:var(--deep)}
+.mate p{margin-top:8px;font-size:15px;color:var(--muted)}
+/* after hours */
+.after{background:var(--choc);color:var(--cream)}
+.after .kick{background:rgba(255,246,236,.12);color:var(--cream)}
+.after .sub{color:#F1DCCB}
+.agrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start}
+.signs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.signs li{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:20px;background:rgba(255,246,236,.08);font-weight:700;font-size:16px;line-height:1.35}
+.signs li::before{content:"";flex:none;width:12px;height:12px;margin-top:5px;border-radius:50%;background:var(--acc);transition:background-color .5s}
+.after .btn{margin-top:26px;background:var(--cream);color:var(--choc);box-shadow:0 6px 0 rgba(0,0,0,.35)}
+.hours{margin-top:22px;border-collapse:collapse;width:100%;max-width:420px;font-size:16px}
+.hours th,.hours td{padding:8px 0;border-bottom:1px solid rgba(255,246,236,.16);text-align:left;font-weight:700}
+.hours td{text-align:right;font-weight:600}
+.after .fine{margin-top:18px;font-size:14px;color:#E6CDBA}
+/* new client */
+.ngrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,64px);align-items:start}
+.bring{display:grid;gap:10px;margin-top:22px}
+.bring li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.bring svg{flex:none;width:26px;height:26px;margin-top:1px;fill:var(--acc);transition:fill .5s}
+.formc{padding:clamp(22px,3vw,36px);border-radius:32px;background:var(--white);box-shadow:0 10px 0 var(--soft)}
+.formc h3{font:400 30px/1.05 var(--h)}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;margin-top:20px}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-weight:800;font-size:15px}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:10px 14px;border:2px solid rgba(74,46,31,.18);border-radius:16px;background:var(--cream);font-size:17px}
+.f textarea{min-height:92px;resize:vertical}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:3px solid var(--acc);outline-offset:1px;border-color:var(--deep)}
+.formc .row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-top:22px}
+.formc .row p{flex:1 1 220px;font-size:14px;color:var(--muted)}
+/* footer */
+.foot{padding:48px 0 60px;border-top:2px solid rgba(74,46,31,.08)}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 40px}
+.foot .fb{max-width:16ch;font:400 clamp(40px,5vw,68px)/.95 var(--h);overflow-wrap:anywhere}
+.foot p{color:var(--muted);font-size:15px}
+.foot .fine{margin-top:8px;font-size:13px}
+@media (max-width:1060px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}.team{grid-template-columns:repeat(2,minmax(0,1fr))}.split,.agrid,.ngrid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr)}.stage{max-width:420px;margin-top:44px}.bubble{top:-9%;left:0}}
+@media (max-width:620px){.svc,.signs,.fields{grid-template-columns:minmax(0,1fr)}.sv.feat,.sv.wide{grid-column:auto}.pets{gap:12px}.pb{grid-template-columns:minmax(0,1fr);justify-items:start;min-height:0;padding:14px 16px 16px;gap:6px}.pb svg{grid-row:auto;width:46px;height:46px}.pb b{font-size:26px}.pb span{font-size:14px}.team{gap:14px}.mate{padding:14px 12px 18px}.mate p{font-size:14px}.bubble{max-width:62%;font-size:15px;padding:12px 14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.45s}
+::view-transition-old(pet){animation:petout .3s ease-in both}
+::view-transition-new(pet){animation:petin .6s var(--ease) both}
+@keyframes petout{to{transform:translateY(24px) scale(.85);opacity:0}}
+@keyframes petin{from{transform:translateY(34px) scale(.75);opacity:0}}
+::view-transition-group(*){animation-duration:.5s;animation-timing-function:cubic-bezier(.3,.8,.3,1)}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-dog" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 9c9 0 14 7 14 16s-6 15-14 15-14-6-14-15 5-16 14-16z"/><path d="M13 13c-6 1-8 11-5 17 2 3 5 2 6-1M35 13c6 1 8 11 5 17-2 3-5 2-6-1"/><path d="M21 29h6l-3 3zM24 32v3"/></g><circle cx="19" cy="22" r="2.2" fill="currentColor"/><circle cx="29" cy="22" r="2.2" fill="currentColor"/></symbol>
+<symbol id="i-cat" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 26c0-6 2-10 5-12l-1-9 8 6h6l8-6-1 9c3 2 5 6 5 12 0 8-7 13-15 13S9 34 9 26z"/><path d="M22 29h4l-2 2zM8 29l-5-1M8 33l-5 1M40 29l5-1M40 33l5 1"/></g><circle cx="18.5" cy="24" r="2.2" fill="currentColor"/><circle cx="29.5" cy="24" r="2.2" fill="currentColor"/></symbol>
+<symbol id="i-rabbit" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 20c8 0 13 5 13 12s-6 11-13 11-13-4-13-11 5-12 13-12z"/><path d="M19 21c-3-6-4-14-1-17 4 1 5 9 5 16M29 21c3-6 4-14 1-17-4 1-5 9-5 16"/><path d="M22 33h4l-2 2z"/></g><circle cx="19" cy="29" r="2" fill="currentColor"/><circle cx="29" cy="29" r="2" fill="currentColor"/></symbol>
+<symbol id="i-bird" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M27 9c8 0 13 6 13 14 0 11-8 18-18 18-5 0-9-2-11-5 8-1 12-6 12-12 0-9 1-15 4-15z"/><path d="M15 15l-7 3 6 3M33 34l4 7M27 36l1 6"/></g><circle cx="27" cy="17" r="2.2" fill="currentColor"/></symbol>
+<symbol id="t-dog" viewBox="-14 -16 28 30"><path d="M0 2c-6 0-9 4-9 8s4 5 9 5 9-1 9-5-3-8-9-8z"/><circle cx="-9" cy="-4" r="3.6"/><circle cx="-3.5" cy="-10" r="3.6"/><circle cx="3.5" cy="-10" r="3.6"/><circle cx="9" cy="-4" r="3.6"/></symbol>
+<symbol id="t-cat" viewBox="-14 -16 28 30"><path d="M0 1c-5 0-8 4-8 7s3 5 8 5 8-2 8-5-3-7-8-7z"/><circle cx="-8" cy="-4" r="3"/><circle cx="-3" cy="-9" r="3"/><circle cx="3" cy="-9" r="3"/><circle cx="8" cy="-4" r="3"/></symbol>
+<symbol id="t-rabbit" viewBox="-14 -18 28 34"><ellipse cx="0" cy="4" rx="5" ry="11"/><circle cx="-5" cy="-10" r="2.6"/><circle cx="-1.8" cy="-13" r="2.6"/><circle cx="1.8" cy="-13" r="2.6"/><circle cx="5" cy="-10" r="2.6"/></symbol>
+<symbol id="t-bird" viewBox="-14 -16 28 30"><path d="M0 12V0M0 0l-8-12M0 0l8-12M0 0v-14" fill="none" stroke-width="3.2" stroke-linecap="round"/></symbol>
+<symbol id="s-check" viewBox="0 0 32 32"><path d="M8 4v8a6 6 0 0 0 12 0V4M8 4H6M20 4h2M14 18v4a6 6 0 0 0 12 0v-3"/><circle cx="26" cy="16" r="3"/></symbol>
+<symbol id="s-desex" viewBox="0 0 32 32"><path d="M16 27s-11-6-11-14a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 8-11 14-11 14z"/><path d="M16 12v8M12 16h8"/></symbol>
+<symbol id="s-dental" viewBox="0 0 32 32"><path d="M9 5c3-1 5 1 7 1s4-2 7-1c4 1 5 6 3 10-2 3-2 6-3 10-1 3-4 2-4-1 0-3-1-5-3-5s-3 2-3 5c0 3-3 4-4 1-1-4-1-7-3-10-2-4-1-9 3-10z"/></symbol>
+<symbol id="s-pack" viewBox="0 0 32 32"><path d="M5 12h22v5H5zM7 17h18v11H7zM16 12v16M16 12c-2-5-8-7-8-3s6 3 8 3c2 0 8 1 8-3s-6-2-8 3"/></symbol>
+<symbol id="s-chip" viewBox="0 0 32 32"><rect x="9" y="9" width="14" height="14" rx="2"/><path d="M13 9V5M19 9V5M13 27v-4M19 27v-4M9 13H5M9 19H5M27 13h-4M27 19h-4"/></symbol>
+<symbol id="s-para" viewBox="0 0 32 32"><path d="M16 4l10 4v7c0 7-4 11-10 13C10 26 6 22 6 15V8z"/><path d="M11 16l4 4 6-8"/></symbol>
+<symbol id="s-nails" viewBox="0 0 32 32"><circle cx="9" cy="23" r="4"/><circle cx="23" cy="23" r="4"/><path d="M11 20L24 5M21 20L8 5"/></symbol>
+<symbol id="paw" viewBox="-14 -16 28 30"><path d="M0 2c-6 0-9 4-9 8s4 5 9 5 9-1 9-5-3-8-9-8z"/><circle cx="-9" cy="-4" r="3.6"/><circle cx="-3.5" cy="-10" r="3.6"/><circle cx="3.5" cy="-10" r="3.6"/><circle cx="9" cy="-4" r="3.6"/></symbol>
+</defs></svg>
+<a class="skip" href="#services">Skip to services</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#top"><span class="lm tx" aria-hidden="true"><svg viewBox="0 0 28 30" fill="currentColor"><use href="#paw"/></svg></span><span class="lw" data-brand>Wagtail Vet Clinic</span></a>
+    <nav class="nav" aria-label="Sections"><a href="#services">Services</a><a href="#tips">Care tips</a><a href="#team">Our team</a><a href="#after">After hours</a><a href="#new">New clients</a></nav>
+    <div class="mini" role="group" aria-label="Choose the patient">
+      <button type="button" data-pet="dog" aria-pressed="true" aria-label="Dog"><svg aria-hidden="true"><use href="#i-dog"/></svg></button>
+      <button type="button" data-pet="cat" aria-pressed="false" aria-label="Cat"><svg aria-hidden="true"><use href="#i-cat"/></svg></button>
+      <button type="button" data-pet="rabbit" aria-pressed="false" aria-label="Rabbit"><svg aria-hidden="true"><use href="#i-rabbit"/></svg></button>
+      <button type="button" data-pet="bird" aria-pressed="false" aria-label="Bird"><svg aria-hidden="true"><use href="#i-bird"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="wrap hero" id="top" aria-labelledby="h1">
+  <div>
+    <p class="eyebrow"><i><svg viewBox="0 0 28 30" aria-hidden="true"><use href="#paw"/></svg></i>Friendly local vets · Toowoomba, QLD</p>
+    <h1 id="h1">Who's the <em>patient?</em></h1>
+    <p class="lede" id="lede">Dogs of every shape and size — from first puppy shots to grey-muzzle check-ups.</p>
+    <div class="pets" role="group" aria-label="Choose the patient">
+      <button class="pb" type="button" data-pet="dog" aria-pressed="true"><svg aria-hidden="true"><use href="#i-dog"/></svg><b>Dog</b><span>Puppies to golden oldies</span></button>
+      <button class="pb" type="button" data-pet="cat" aria-pressed="false"><svg aria-hidden="true"><use href="#i-cat"/></svg><b>Cat</b><span>Calm, cat-friendly visits</span></button>
+      <button class="pb" type="button" data-pet="rabbit" aria-pressed="false"><svg aria-hidden="true"><use href="#i-rabbit"/></svg><b>Rabbit</b><span>Teeth, tummies, vaccines</span></button>
+      <button class="pb" type="button" data-pet="bird" aria-pressed="false"><svg aria-hidden="true"><use href="#i-bird"/></svg><b>Bird</b><span>Budgies to cockatoos</span></button>
+    </div>
+    <p class="hero-meta"><span class="openb" id="openb">Open today 8am–6pm</span><a href="tel:+61755502981">Call (07) 5550 2981</a><a href="#new">New client? Start here</a></p>
+  </div>
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 360 360" class="pet-svg" role="img" aria-labelledby="petT">
+      <title id="petT">Illustration of Biscuit the dog</title>
+      <path class="blob" d="M180 40C262 40 330 96 330 180C330 266 266 332 178 332C92 332 30 262 30 182C30 100 98 40 180 40Z"/>
+      <circle class="ring" cx="180" cy="186" r="170"/>
+      <g stroke="#4A2E1F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <g class="pet p-dog">
+        <g class="wag"><path d="M244 300c36-2 60-28 58-62" fill="none" stroke-width="30"/><path d="M244 300c36-2 60-28 58-62" fill="none" stroke="#D9924A" stroke-width="17"/></g>
+        <path d="M104 338c-12-78 16-136 76-146 60 10 88 68 76 146z" fill="#D9924A"/>
+        <path d="M148 338c-8-50 6-94 32-104 26 10 40 54 32 104z" fill="#FFE9D0" stroke="none"/>
+        <path d="M124 338c0-13 10-20 22-20s21 7 21 20zM193 338c0-13 9-20 21-20s22 7 22 20z" fill="#FFE9D0"/>
+        <path d="M132 204c30 18 66 18 96 0" fill="none" stroke="#1AA7A1" stroke-width="16"/>
+        <circle cx="180" cy="228" r="11" fill="#F6C343" stroke-width="4"/>
+        <path d="M180 56c46 0 74 32 74 76 0 46-32 78-74 78s-74-32-74-78c0-44 28-76 74-76z" fill="#D9924A"/>
+        <g class="flop"><path d="M128 84c-32 2-48 50-34 84 7 16 28 14 34-4 7-22 6-54 12-72z" fill="#8A5230"/></g>
+        <path d="M232 84c32 2 48 50 34 84-7 16-28 14-34-4-7-22-6-54-12-72z" fill="#8A5230"/>
+        <ellipse cx="180" cy="166" rx="42" ry="32" fill="#FFE9D0" stroke="none"/>
+        <path d="M170 146h20c7 0 9 7 4 11l-9 7c-3 2-7 2-10 0l-9-7c-5-4-3-11 4-11z" fill="#4A2E1F" stroke-width="3"/>
+        <path d="M180 166v8M162 178c8 10 28 10 36 0" fill="none" stroke-width="5"/>
+        <path d="M172 184h16v9a8 8 0 0 1-16 0z" fill="#F48FA0" stroke-width="4"/>
+        <g class="blink" stroke="none" fill="#4A2E1F"><circle cx="150" cy="124" r="9"/><circle cx="210" cy="124" r="9"/><circle cx="153" cy="120" r="3" fill="#fff"/><circle cx="213" cy="120" r="3" fill="#fff"/></g>
+        <path d="M138 102q12-8 24 0M198 102q12-8 24 0" fill="none" stroke-width="4"/>
+        <ellipse cx="134" cy="156" rx="11" ry="7" fill="#F4A08E" stroke="none" opacity=".55"/><ellipse cx="226" cy="156" rx="11" ry="7" fill="#F4A08E" stroke="none" opacity=".55"/>
+      </g>
+      <g class="pet p-cat">
+        <g class="swish"><path d="M236 320c46 4 72-26 64-64-5-26-28-36-46-26" fill="none" stroke-width="28"/><path d="M236 320c46 4 72-26 64-64-5-26-28-36-46-26" fill="none" stroke="#8E9BB0" stroke-width="15"/></g>
+        <path d="M110 338c-6-66 14-120 70-134 56 14 76 68 70 134z" fill="#8E9BB0"/>
+        <path d="M150 338c-4-46 6-88 30-98 24 10 34 52 30 98z" fill="#E8ECF2" stroke="none"/>
+        <path d="M122 338c0-13 10-20 22-20s21 7 21 20zM195 338c0-13 9-20 21-20s22 7 22 20z" fill="#E8ECF2"/>
+        <path d="M122 262c10 4 18 4 24 0M214 262c6 4 14 4 24 0M130 292c8 3 14 3 18 0" fill="none" stroke="#6D7A90" stroke-width="5"/>
+        <path d="M100 150c0-30 12-50 28-60l-6-56 46 34c4-1 8-1 12-1s8 0 12 1l46-34-6 56c16 10 28 30 28 60 0 42-34 68-80 68s-80-26-80-68z" fill="#8E9BB0"/>
+        <path d="M130 82l-3-32 26 22zM230 82l3-32-26 22z" fill="#F4A5B5" stroke="none"/>
+        <path d="M168 84l4 18M180 80v20M192 84l-4 18" fill="none" stroke="#6D7A90" stroke-width="5"/>
+        <g class="blink"><path d="M136 144q14-17 30 0q-15 14-30 0zM194 144q15-17 30 0q-15 14-30 0z" fill="#A8D86A" stroke-width="4"/><ellipse cx="151" cy="144" rx="3" ry="7" fill="#4A2E1F" stroke="none"/><ellipse cx="209" cy="144" rx="3" ry="7" fill="#4A2E1F" stroke="none"/></g>
+        <path d="M172 164h16l-8 9z" fill="#F48FA0" stroke-width="3"/>
+        <path d="M180 173v6M168 184c6 6 12 4 12-5 0 9 6 11 12 5" fill="none" stroke-width="4"/>
+        <path d="M122 168l-38-6M122 178l-38 5M238 168l38-6M238 178l38 5" fill="none" stroke-width="3"/>
+      </g>
+      <g class="pet p-rabbit">
+        <path d="M100 338c-8-72 28-122 80-124 52 2 88 52 80 124z" fill="#FFF7EE"/>
+        <ellipse cx="180" cy="290" rx="44" ry="42" fill="#F2E6D8" stroke="none"/>
+        <path d="M106 338c0-16 18-25 40-23 10 1 17 8 17 23zM197 338c0-15 7-22 17-23 22-2 40 7 40 23z" fill="#FFF7EE"/>
+        <path d="M150 116c-18-40-20-88-1-100 19 8 24 58 19 98z" fill="#FFF7EE"/><path d="M154 102c-9-30-9-64 2-74 8 9 10 46 6 72z" fill="#F7B7C4" stroke="none"/>
+        <g class="eartw"><path d="M204 112c10-42 26-82 48-86 13 13-8 56-30 90z" fill="#FFF7EE"/><path d="M212 104c8-30 20-58 34-64 5 9-8 38-24 62z" fill="#F7B7C4" stroke="none"/></g>
+        <circle cx="180" cy="154" r="54" fill="#FFF7EE"/>
+        <ellipse cx="208" cy="142" rx="20" ry="17" fill="#E6D9CA" stroke="none"/>
+        <ellipse cx="146" cy="172" rx="12" ry="7" fill="#F7C0C9" stroke="none" opacity=".7"/><ellipse cx="214" cy="172" rx="12" ry="7" fill="#F7C0C9" stroke="none" opacity=".7"/>
+        <g class="blink" stroke="none" fill="#4A2E1F"><circle cx="158" cy="146" r="8.5"/><circle cx="202" cy="146" r="8.5"/><circle cx="161" cy="143" r="2.8" fill="#fff"/><circle cx="205" cy="143" r="2.8" fill="#fff"/></g>
+        <g class="twitch"><path d="M172 164h16l-8 8z" fill="#F48FA0" stroke-width="3"/></g>
+        <path d="M180 172v5M168 181q12 8 12-4q0 12 12 4" fill="none" stroke-width="4"/>
+        <path d="M174 185h12v9a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2z" fill="#fff" stroke-width="3"/><path d="M180 185v11" stroke-width="2"/>
+      </g>
+      <g class="pet p-bird">
+        <path d="M44 268h276" stroke-width="26"/><path d="M44 268h276" stroke="#9A6B42" stroke-width="14"/>
+        <path d="M58 266c-14-18-4-38 12-40 4 16-2 32-12 40zM300 266c14-18 4-38-12-40-4 16 2 32 12 40z" fill="#7CC254" stroke-width="4"/>
+        <path d="M200 244l36 88 20-8-32-88z" fill="#2F8FA0" stroke-width="5"/>
+        <path d="M150 256c-34-26-40-90-4-120 40-26 92-2 98 48 4 38-14 66-46 80-16 6-34 4-48-8z" fill="#7CC254"/>
+        <path d="M156 246c-20-20-22-60-2-80 8 30 24 56 40 76-12 10-26 12-38 4z" fill="#9FD877" stroke="none"/>
+        <g class="flap"><path d="M204 164c36 6 52 44 42 90-24-10-46-44-42-90z" fill="#5FA83F"/><path d="M212 186q10-4 18 4M216 204q10-4 18 4M222 222q8-3 14 4" fill="none" stroke-width="4"/></g>
+        <path d="M184 256c-2 10 4 16 10 12M208 254c-2 10 4 16 10 12" fill="none" stroke="#8C8C8C" stroke-width="5"/>
+        <g class="bob">
+          <circle cx="170" cy="118" r="48" fill="#FFE36E"/>
+          <path d="M196 84q12 6 16 18M204 104q8 6 10 16M186 76q12 2 18 10" fill="none" stroke-width="4"/>
+          <circle cx="146" cy="148" r="8" fill="#6B7FD7" stroke="none"/>
+          <circle cx="160" cy="166" r="3.5" fill="#4A2E1F" stroke="none"/><circle cx="174" cy="170" r="3.5" fill="#4A2E1F" stroke="none"/><circle cx="188" cy="167" r="3.5" fill="#4A2E1F" stroke="none"/>
+          <path d="M126 116c-12 4-14 20-2 26 3-8 8-12 14-14z" fill="#F2B24C" stroke-width="4"/>
+          <path d="M126 110q9-7 18 0" fill="none" stroke="#6FA8DC" stroke-width="7"/>
+          <g class="blink"><circle cx="160" cy="112" r="11" fill="#fff" stroke-width="3"/><circle cx="160" cy="112" r="6.5" fill="#4A2E1F" stroke="none"/><circle cx="162" cy="110" r="2" fill="#fff" stroke="none"/></g>
+        </g>
+      </g>
+      </g>
+    </svg>
+    <p class="bubble" id="bubble">I was told there'd be treats.</p>
+    <p class="idtag"><i aria-hidden="true"></i><span id="idtag">Biscuit · 4 · kelpie cross</span></p>
+  </div>
+</section>
+<div class="trail" id="trail" aria-hidden="true"></div>
+
+<section class="sec" id="services" aria-labelledby="sv-h">
+  <div class="wrap">
+    <div class="head">
+      <div><p class="kick">Services</p><h2 id="sv-h">Care for <em id="svNoun">dogs</em></h2><p class="sub" id="svSub">Sorted for dogs, most-needed first. Pick another patient above and the list re-sorts itself.</p></div>
+    </div>
+    <ul class="svc" id="svc"></ul>
+    <p class="note">Sample prices in AUD, including GST. We always give you an estimate before any procedure.</p>
+  </div>
+</section>
+
+<section class="sec band" id="tips" aria-labelledby="tips-h">
+  <div class="wrap split">
+    <div>
+      <p class="kick">Care tips</p>
+      <h2 id="tips-h">Three things every <em id="tipNoun">dog</em> owner should know</h2>
+      <ol class="tips" id="tipList"></ol>
+      <p class="note">General information only — every animal is different. If you're worried, call us.</p>
+    </div>
+    <div class="age" id="age">
+      <h3>How old is that in human years?</h3>
+      <label for="ageIn" id="ageLbl">Your dog's age</label>
+      <input type="range" id="ageIn" min="0.5" max="18" step="0.5" value="4">
+      <p class="agerow"><span id="ageVal">4 years</span><span id="ageNote">medium-sized dog</span></p>
+      <p class="agebig" aria-live="polite"><span id="ageOut">32</span> <small>human years</small></p>
+      <p class="stage-lbl" id="ageStage">Adult</p>
+      <p class="agetip" id="ageTip">Yearly check-ups and vaccines keep adults on track.</p>
+      <p class="fine">Illustrative only. Pets age at different rates depending on breed and size — this is a conversation starter, not a diagnosis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="team" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="head"><div><p class="kick">Our team</p><h2 id="team-h">The people behind the <em>treat jar</em></h2></div><p class="sub">Four vets and nurses who'd happily talk about your pet all day.</p></div>
+    <ul class="team" id="teamList"></ul>
+  </div>
+</section>
+
+<section class="sec after" id="after" aria-labelledby="after-h">
+  <div class="wrap agrid">
+    <div>
+      <p class="kick">After hours</p>
+      <h2 id="after-h">Worried at 2am?</h2>
+      <p class="sub">When we're closed, call our number and the recorded message gives the current after-hours emergency hospital details. If it's life-threatening, go straight there.</p>
+      <a class="btn" href="tel:+61755502981">Call (07) 5550 2981</a>
+      <table class="hours"><caption class="sr">Clinic hours</caption><tbody><tr><th scope="row">Monday–Friday</th><td>8am–6pm</td></tr><tr><th scope="row">Saturday</th><td>8am–12pm</td></tr><tr><th scope="row">Sunday &amp; public holidays</th><td>Closed</td></tr></tbody></table>
+    </div>
+    <div>
+      <h3 class="sr">Signs that can't wait until morning</h3>
+      <ul class="signs"><li>Trouble breathing or blue-grey gums</li><li>Collapse, seizures or can't stand</li><li>Swollen, tight belly or retching with nothing coming up</li><li>Possible poisoning, snake bite or tick paralysis</li><li>Heavy bleeding or a major injury</li><li>Rabbits: not eating or no droppings for 12 hours</li></ul>
+      <p class="fine">General information only. If you're unsure, call — it's always OK to ask.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="new" aria-labelledby="new-h">
+  <div class="wrap ngrid">
+    <div>
+      <p class="kick">New clients</p>
+      <h2 id="new-h">First visit? <em>We'll make it easy.</em></h2>
+      <p class="sub">Send us a few details and we'll call to book a longer first appointment, so there's time for questions.</p>
+      <ul class="bring">
+        <li><svg viewBox="0 0 28 30" aria-hidden="true"><use href="#paw"/></svg>Any past vaccination or health records</li>
+        <li><svg viewBox="0 0 28 30" aria-hidden="true"><use href="#paw"/></svg>A list of food, treats and medications</li>
+        <li><svg viewBox="0 0 28 30" aria-hidden="true"><use href="#paw"/></svg>Dogs on a lead; cats, rabbits and birds in a secure carrier</li>
+        <li><svg viewBox="0 0 28 30" aria-hidden="true"><use href="#paw"/></svg>A towel over the carrier for nervous patients</li>
+      </ul>
+    </div>
+    <form class="formc" id="newForm" data-demo-message="Demo only — no appointment request was sent. A real clinic would call you back to book.">
+      <h3>Tell us about <span id="formNoun">your dog</span></h3>
+      <div class="fields">
+        <div class="f"><label for="n-name">Your name</label><input id="n-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="n-tel">Mobile</label><input id="n-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="0491 570 158" required></div>
+        <div class="f"><label for="n-pet">Pet's name</label><input id="n-pet" name="pet" placeholder="Biscuit" required></div>
+        <div class="f"><label for="n-kind">Species</label><select id="n-kind" name="kind"><option value="dog">Dog</option><option value="cat">Cat</option><option value="rabbit">Rabbit</option><option value="bird">Bird</option><option value="other">Something else</option></select></div>
+        <div class="f"><label for="n-why">Reason for visit</label><select id="n-why" name="why"><option>Check-up and vaccines</option><option>Desexing</option><option>Dental</option><option>Something's not right</option><option>New pet check</option><option>Other</option></select></div>
+        <div class="f"><label for="n-day">Preferred day</label><select id="n-day" name="day"><option>Any weekday</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday morning</option></select></div>
+        <div class="f full"><label for="n-notes">Anything we should know?</label><textarea id="n-notes" name="notes" placeholder="e.g. Nervous in the car, allergic to chicken"></textarea></div>
+      </div>
+      <div class="row"><button class="btn" type="submit">Request a first visit</button><p>We'll confirm by phone. No payment is taken online.</p></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap fgrid">
+    <div><p class="fb" data-brand>Wagtail Vet Clinic</p><p class="fine">Toowoomba, QLD · (07) 5550 2981 · hello@example.com</p></div>
+    <div><p>Mon–Fri 8am–6pm · Sat 8am–12pm</p><p class="fine">A concept demo for a fictional vet clinic. Sample prices; general information only, not veterinary advice.</p></div>
+  </div>
+</footer>
+<p class="sr" id="live" aria-live="polite"></p>
+
+<script>
+(()=>{
+'use strict';
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const root=document.documentElement,mq=matchMedia('(prefers-reduced-motion: reduce)'),calm=()=>mq.matches;
+const P={
+ dog:{one:'dog',many:'dogs',pet:'Biscuit',tag:'Biscuit · 4 · kelpie cross',say:'I was told there’d be treats.',lede:'Dogs of every shape and size — from first puppy shots to grey-muzzle check-ups.',alt:'Biscuit the dog, wagging',max:18,def:4,note:'medium-sized dog',f:y=>y<=1?15*y:y<=2?15+9*(y-1):24+5*(y-2)},
+ cat:{one:'cat',many:'cats',pet:'Mochi',tag:'Mochi · 9 · domestic shorthair',say:'Fine. Five minutes. No thermometer.',lede:'Calm, cat-friendly visits with a separate cat waiting room and no barking neighbours.',alt:'Mochi the cat, swishing her tail',max:22,def:9,note:'indoor cat',f:y=>y<=1?15*y:y<=2?15+9*(y-1):24+4*(y-2)},
+ rabbit:{one:'rabbit',many:'rabbits',pet:'Clover',tag:'Clover · 2 · mini lop',say:'Teeth check? I’ve been chewing everything.',lede:'Rabbit-savvy vets who know teeth, tummies and the calicivirus vaccine.',alt:'Clover the rabbit, twitching her nose',max:12,def:2,note:'medium rabbit',f:y=>y<=1?20*y:y<=2?20+8*(y-1):28+6*(y-2)},
+ bird:{one:'bird',many:'birds',pet:'Kiwi',tag:'Kiwi · 3 · budgie',say:'Hello! Hello! Check-up time!',lede:'Budgies to cockatoos — health checks, beak and nail care, wing trims and diet advice.',alt:'Kiwi the budgie, bobbing on a perch',max:12,def:3,note:'budgie',f:y=>y<=1?16*y:16+7*(y-1)}
+};
+const SV={
+ check:{dog:['Health checks & vaccines','Nose-to-tail exam, C5 booster and a heartworm chat.','from $95'],cat:['Health checks & vaccines','Full exam and F3 vaccine, with FIV advice for outdoor cats.','from $95'],rabbit:['Check-ups & calicivirus vaccine','Weight, teeth, gut sounds and the RHDV vaccine every rabbit needs.','from $90'],bird:['Bird health checks','Weight, crop, feathers, droppings, beak and nails — birds hide illness well.','from $85']},
+ desex:{dog:['Desexing','Day surgery with pain relief, a cone to go home in and a free post-op check.','from $420'],cat:['Desexing','Day surgery with pain relief and a free post-op check. Best around five months.','from $260'],rabbit:['Rabbit desexing','Rabbit-safe anaesthetic. Lowers cancer risk in does and calms bucks.','from $320']},
+ dental:{dog:['Dental care','Scale and polish under anaesthetic, with X-rays when needed.','from $380'],cat:['Dental care','Cats hide mouth pain well — we check for painful resorptive lesions.','from $360'],rabbit:['Rabbit dental checks','Rabbit teeth grow for life. We scope the molars and trim spurs if needed.','from $75'],bird:['Beak checks','Overgrown or flaky beaks can point to diet or liver problems.','from $45']},
+ pack:{dog:['Puppy pack','Two vaccine visits, microchip check, worming plan and puppy preschool.','$245'],cat:['Kitten pack','Vaccines, microchip, worming and flea plan, plus a desexing booking.','$225'],rabbit:['Bunny starter check','Diet, housing, vaccine and desexing advice for new rabbits.','$95'],bird:['New bird check','A baseline check in the first week home, before problems start.','$85']},
+ para:{dog:['Tick, flea & worm plans','A year-round plan that suits your dog and the local tick season.','from $25/month'],cat:['Flea & worm plans','Cat-safe treatments only — some dog products are toxic to cats.','from $20/month'],rabbit:['Mite & flea checks','Rabbit-safe treatments only — some dog and cat products are toxic to rabbits.','from $35'],bird:['Mite & worm checks','Feather and droppings checks, with bird-safe treatments.','from $35']},
+ chip:{dog:['Microchipping','Quick, done at any visit, and we update the registry for you.','$60'],cat:['Microchipping','Quick, done at any visit, and we update the registry for you.','$60'],rabbit:['Microchipping','Recommended for house rabbits — easiest alongside desexing.','$60'],bird:['Leg bands & ID','Microchips for larger parrots, leg-band checks for small birds.','from $30']},
+ nails:{dog:['Nail trims','With treats and patience — a quick job most dogs forgive.','$25'],cat:['Nail trims','Quiet room, towel wrap, done in minutes.','$25'],rabbit:['Nail & grooming trims','Nails and scent glands every six to eight weeks.','$30'],bird:['Wing & nail trims','Safe trims to stop snagging; wing trims only when advised.','$30']}
+};
+const ORDER={dog:['check','pack','dental','desex','para','chip','nails'],cat:['check','pack','desex','dental','para','nails','chip'],rabbit:['dental','check','desex','pack','para','nails','chip'],bird:['check','nails','pack','dental','para','chip']};
+const TIPS={
+ dog:[['Check for ticks after walks','Run your fingers over the head, neck, ears and between the toes.'],['Do the hot pavement test','If you can’t hold your hand on it for five seconds, it’s too hot for paws.'],['Keep the toxic stuff out of reach','Chocolate, grapes, onions and xylitol gum are all dangerous for dogs.']],
+ cat:[['No lilies in the house','Even a little pollen or vase water can cause kidney failure in cats.'],['Give indoor cats height and play','Shelves, scratching posts and ten minutes of play a day keep weight in check.'],['Litter tray changes matter','Straining, crying or peeing in odd places — call us the same day.']],
+ rabbit:[['Hay is most of the menu','About 80% hay keeps teeth worn down and the gut moving.'],['No droppings is an emergency','Not eating or no poos for 12 hours needs a vet straight away.'],['Vaccinate and mozzie-proof','Keep calicivirus vaccines current and screen hutches from insects.']],
+ bird:[['Watch the non-stick pans','Overheated non-stick coatings give off fumes that can kill birds.'],['Fluffed up means see us','A bird sitting fluffed on the cage floor is often more unwell than it looks.'],['Seeds alone aren’t enough','Add pellets and fresh greens for vitamins most seed mixes lack.']]
+};
+const ICON={check:'s-check',desex:'s-desex',dental:'s-dental',pack:'s-pack',chip:'s-chip',para:'s-para',nails:'s-nails'};
+const svc=$('#svc');
+svc.innerHTML=Object.keys(SV).map(k=>`<li class="sv" data-k="${k}" style="view-transition-name:sv-${k}"><span class="ic" aria-hidden="true"><svg><use href="#${ICON[k]}"/></svg></span><h3></h3><p></p><span class="pr"></span></li>`).join('');
+/* team */
+const TEAM=[['Dr Amara Nwosu','Principal vet','Soft spot for grumpy old cats and anxious first-timers.','#8D5524','#2B1B14','curl'],['Dr Tom Lindqvist','Vet · rabbits & birds','Keeps two budgies, Salt and Pepper, who run the house.','#F1C8A6','#B8622F','short'],['Mei Chen','Head nurse','Runs our puppy preschool nights and the treat budget.','#E8B894','#1E1A18','bob'],['Riley Evans','Nurse & reception','Remembers every dog’s name before the owner’s.','#C68A5E','#5A3A24','bun']];
+const HAIR={curl:'<path d="M34 48c-4-20 10-32 26-32s30 12 26 32c-4-8-10-12-16-12-4 4-16 4-20 0-6 0-12 4-16 12z" fill="H"/><circle cx="38" cy="36" r="8" fill="H"/><circle cx="50" cy="26" r="9" fill="H"/><circle cx="66" cy="25" r="9" fill="H"/><circle cx="80" cy="34" r="8" fill="H"/>',short:'<path d="M34 50c-2-22 10-34 26-34s30 10 26 34c-4-10-12-16-26-16-8 0-20 4-26 16z" fill="H"/><path d="M44 76c4 10 28 10 32 0" stroke="H" stroke-width="6" fill="none"/>',bob:'<path d="M30 70c-6-34 8-54 30-54s36 20 30 54c-4 2-8 2-10 0 2-14-2-28-20-30-18 2-22 16-20 30-2 2-6 2-10 0z" fill="H"/>',bun:'<circle cx="60" cy="14" r="10" fill="H"/><path d="M34 50c-2-22 10-34 26-34s30 12 26 34c-6-10-16-16-26-16s-20 6-26 16z" fill="H"/>'};
+$('#teamList').innerHTML=TEAM.map(t=>`<li class="mate"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="58" fill="#FFF6EC"/><path class="scrub" d="M18 120c2-22 18-34 42-34s40 12 42 34z"/><path d="M50 86l10 12 10-12" fill="none" stroke="#FFFDF9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="70" width="16" height="16" rx="6" fill="${t[3]}"/><ellipse cx="60" cy="54" rx="24" ry="27" fill="${t[3]}"/>${HAIR[t[5]].replace(/H/g,t[4])}<circle cx="51" cy="56" r="3" fill="#2A1A12"/><circle cx="69" cy="56" r="3" fill="#2A1A12"/><path d="M52 67c5 5 11 5 16 0" fill="none" stroke="#2A1A12" stroke-width="3" stroke-linecap="round"/></svg><h3>${t[0]}</h3><p class="role">${t[1]}</p><p>${t[2]}</p></li>`).join('');
+/* trail */
+const trail=$('#trail');trail.innerHTML=Array.from({length:7},()=>'<svg viewBox="0 0 28 30"><use href="#t-dog"/></svg>').join('');
+/* opening status (Brisbane time, no DST) */
+(()=>{let d=new Date();try{const p={};new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Brisbane',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(d).forEach(x=>p[x.type]=x.value);const wd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday.slice(0,3)),h=(+p.hour%24)+(+p.minute)/60;const o=wd>=1&&wd<=5?[8,18]:wd===6?[8,12]:null;const el=$('#openb');if(!o){el.textContent='Closed today · open Monday 8am';el.classList.add('shut');}else if(h<o[0]){el.textContent=`Opens today at 8am`;}else if(h<o[1]){el.textContent=`Open now · until ${o[1]===18?'6pm':'12pm'}`;}else{el.textContent=wd===6?'Closed · open Monday 8am':wd===5?'Closed · open Saturday 8am':'Closed · open tomorrow 8am';el.classList.add('shut');}}catch(e){}})();
+/* age explainer */
+const ageIn=$('#ageIn');
+function age(){const p=P[cur],y=+ageIn.value,h=Math.round(p.f(y));$('#ageVal').textContent=`${y%1?y:y|0} ${y===1?'year':'years'}`;$('#ageOut').textContent=h;const st=h<20?['Junior','Growing fast — vaccines, desexing and good habits now pay off later.']:h<45?['Adult','Yearly check-ups and vaccines keep adults on track.']:h<62?['Mature','Time for a blood test with the yearly check-up.']:['Senior','We suggest check-ups every six months for seniors.'];$('#ageStage').textContent=st[0];$('#ageTip').textContent=st[1];ageIn.setAttribute('aria-valuetext',`${y} years, about ${h} in human years`);}
+ageIn.addEventListener('input',age);
+/* apply a pet */
+let cur='dog';
+function render(p){
+  const d=P[p];cur=p;root.dataset.pet=p;
+  $$('[data-pet]').forEach(b=>{if(b.tagName==='BUTTON')b.setAttribute('aria-pressed',String(b.dataset.pet===p));});
+  $('#lede').textContent=d.lede;$('#bubble').textContent=d.say;$('#idtag').textContent=d.tag;$('#petT').textContent=`Illustration of ${d.alt}`;
+  $('#svNoun').textContent=d.many;$('#svSub').textContent=`Sorted for ${d.many}, most-needed first. Pick another patient above and the list re-sorts itself.`;
+  const ord=ORDER[p];
+  $$('.sv',svc).forEach(li=>{const k=li.dataset.k,t=SV[k][p],i=ord.indexOf(k);li.hidden=!t||i<0;if(!t)return;li.style.order=i;li.querySelector('h3').textContent=t[0];li.querySelector('p').textContent=t[1];li.querySelector('.pr').textContent=t[2];const s=li.querySelector('.start');if(s)s.remove();li.classList.toggle('feat',i===0);li.classList.toggle('wide',ord.length%2===0&&i===ord.length-1);if(i===0)li.insertAdjacentHTML('beforeend','<span class="start">Start here</span>');});
+  $('#tipNoun').textContent=d.one;$('#tipList').innerHTML=TIPS[p].map((t,i)=>`<li class="tip"><b aria-hidden="true">${i+1}</b><div><h3>${t[0]}</h3><p>${t[1]}</p></div></li>`).join('');
+  $('#ageLbl').textContent=`Your ${d.one}'s age`;ageIn.max=d.max;ageIn.value=d.def;$('#ageNote').textContent=d.note;age();
+  $('#formNoun').textContent=`your ${d.one}`;$('#n-kind').value=p;$('#n-pet').placeholder=d.pet;
+  $$('use',trail).forEach(u=>u.setAttribute('href','#t-'+p));
+  document.querySelector('meta[name=theme-color]').setAttribute('content',getComputedStyle(root).getPropertyValue('--acc').trim()||'#FF8A3D');
+}
+function choose(p){
+  if(!P[p]||p===cur)return;
+  const go=()=>render(p);
+  if(document.startViewTransition&&!calm()){try{document.startViewTransition(go);}catch(e){go();}}else go();
+  $('#live').textContent=`Now showing care for ${P[p].many}.`;
+}
+$$('button[data-pet]').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.pet)));
+$('#n-kind').addEventListener('change',e=>{if(P[e.target.value])choose(e.target.value);});
+/* pause idle loops off-screen */
+if('IntersectionObserver' in window)new IntersectionObserver(es=>es.forEach(en=>$('#stage').classList.toggle('pause',!en.isIntersecting))).observe($('#stage'));
+render('dog');
+})();
+</script>
+</body>
+</html>

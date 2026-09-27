@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="079">
+<meta name="demo:brand" content="Inès Moreau">
+<title>Inès Moreau — paintings, Hobart</title>
+<meta name="description" content="Online viewing room for Inès Moreau, a fictional Hobart painter: walk three rooms of estuary and kelp-forest paintings, look closer, and enquire about a work.">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Libre+Bodoni:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--wall:#FAFAF8;--floor:#E7E2DA;--ink:#1A1A1A;--grey:#65615A;--line:#DAD4CA;--dot:#C0452A;
+--serif:"Libre Bodoni","Bodoni 72",Didot,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--cl:44vh;--floorH:21vh;--hh:64px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--wall);color:var(--ink);font:400 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+/* header */
+.hdr{position:fixed;z-index:60;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:var(--hh);padding:calc(10px + env(safe-area-inset-top)) clamp(18px,3.2vw,44px) 10px;background:rgba(250,250,248,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:box-shadow .3s}
+.hdr.lined{box-shadow:0 1px 0 var(--line)}
+.mark{min-width:0;font:400 23px/1.1 var(--serif);letter-spacing:-.01em;text-decoration:none;overflow-wrap:anywhere}
+.nav{display:flex;align-items:center;gap:clamp(16px,2.2vw,30px)}
+.nav a{padding:8px 0;border-bottom:1px solid transparent;font:500 11.5px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase;text-decoration:none}
+.nav a:hover{border-color:var(--ink)}
+.menu{display:none}
+/* the walk */
+.walk{position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.track{position:relative;display:flex;width:max-content;height:100%;will-change:transform}
+.track::after{content:"";position:absolute;z-index:0;left:0;right:0;bottom:0;height:var(--floorH);background:radial-gradient(60vw 40% at 30% 0,rgba(255,255,255,.45),transparent 70%),linear-gradient(180deg,#D9D2C7 0,#E4DED5 7%,#E7E2DA 45%,#E2DCD2 100%);box-shadow:inset 0 1px 0 #CBC3B6,inset 0 8px 12px -8px rgba(60,48,36,.22)}
+.panel{position:relative;z-index:1;flex:none;display:flex;align-items:flex-start;gap:clamp(56px,6.5vw,120px);height:100%;padding:0 clamp(56px,6.5vw,120px)}
+.foyer{width:100vw;justify-content:space-between}
+.f-text{flex:1 1 auto;min-width:0;max-width:600px;margin-top:max(calc(var(--hh) + 3vh),calc(var(--cl) - 29vh))}
+.kick{margin:0 0 18px;font:500 11.5px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+h1{margin:0;font:400 clamp(52px,min(10.5vh,6.6vw),112px)/.92 var(--serif);letter-spacing:-.035em;overflow-wrap:anywhere}
+.show{margin:18px 0 0;font:italic 400 clamp(22px,3vh,30px)/1.2 var(--serif)}
+.f-text p.lede{margin:18px 0 0;max-width:44ch;font-size:15px;line-height:1.62;color:#3A3732}
+.hint{display:inline-flex;align-items:center;gap:12px;margin-top:22px;font:500 11.5px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.hint i{position:relative;display:block;width:54px;height:1px;background:var(--ink);overflow:hidden}
+.hint i::after{content:"";position:absolute;inset:0;background:var(--wall);animation:sweep 2.4s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}50%,100%{transform:translateX(100%)}}
+.wtext{flex:none;width:clamp(250px,23vw,350px);margin-top:calc(var(--cl) - 20vh)}
+.rno{font:500 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+.wtext h2{margin:16px 0 18px;font:400 clamp(46px,7vh,78px)/.94 var(--serif);letter-spacing:-.025em}
+.wtext p{margin:0;max-width:34ch;font-size:14.5px;line-height:1.62;color:#3A3732}
+.door{flex:none;position:relative;z-index:1;width:clamp(120px,11vw,190px);height:100%}
+.door::before{content:"";position:absolute;left:22%;right:22%;top:24vh;bottom:var(--floorH);background:linear-gradient(90deg,#E9E6E0,#F3F2EE 34%,#F0EEE9);box-shadow:inset 12px 0 18px -12px rgba(40,30,20,.28),inset -1px 0 0 rgba(0,0,0,.05)}
+.door span{position:absolute;left:0;right:0;top:calc(24vh - 30px);text-align:center;font:500 10.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+/* a hung painting */
+.hang{position:relative;flex:none;display:flex;align-items:flex-end;gap:24px;margin:calc(var(--cl) - var(--h) / 2) 0 0}
+.hang::before{content:"";position:absolute;z-index:-1;left:calc(var(--h) * var(--ar) / 2);top:calc(var(--h) * -.62);width:calc(var(--h) * var(--ar) + 30vh);height:calc(var(--h) * 1.3);transform:translateX(-50%);background:radial-gradient(50% 58% at 50% 0,rgba(255,238,210,.8),rgba(255,238,210,0) 72%);pointer-events:none}
+.work{position:relative;display:block;flex:none;height:var(--h);aspect-ratio:var(--ar);padding:0;border:0;background:#E6E0D5;cursor:zoom-in;box-shadow:0 1px 1px rgba(30,24,18,.14),0 16px 24px -14px rgba(30,24,18,.4),14px 30px 46px -28px rgba(30,24,18,.38);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.work canvas{display:block;width:100%;height:100%}
+.work::after{content:"Look closer";position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);font:500 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--grey);opacity:0;transition:opacity .3s;white-space:nowrap}
+.work:hover{transform:translateY(-4px);box-shadow:0 1px 1px rgba(30,24,18,.14),0 24px 34px -16px rgba(30,24,18,.42),18px 38px 56px -30px rgba(30,24,18,.4)}
+.work:hover::after,.work:focus-visible::after{opacity:1}
+.work:focus-visible{outline:2px solid var(--ink);outline-offset:8px}
+.work.away{visibility:hidden}
+.label{flex:none;width:156px;padding-bottom:2px;font:400 12px/1.5 var(--sans);color:var(--grey)}
+.label .no{display:block;margin-bottom:10px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+.label .t{display:block;margin-bottom:5px;font:italic 400 17px/1.22 var(--serif);color:var(--ink)}
+.label .p{display:block;margin-top:9px;color:var(--ink)}
+.bench{position:absolute;z-index:2;left:50%;bottom:calc(var(--floorH) * .36);width:clamp(180px,16vw,280px);height:12px;transform:translateX(-50%);background:linear-gradient(#4A443D,#302C27);border-radius:2px;box-shadow:0 22px 16px -10px rgba(40,30,20,.28)}
+.bench::before,.bench::after{content:"";position:absolute;top:12px;width:10px;height:calc(var(--floorH) * .16);background:#2A2622}
+.bench::before{left:14px}.bench::after{right:14px}
+.exit{width:min(64vw,900px)}
+.exit .wtext{width:min(46vw,560px)}
+.exit h2{font-size:clamp(40px,6vh,68px)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 20px;border:1px solid var(--ink);border-radius:0;background:transparent;font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--wall)}
+.btn.dark{background:var(--ink);color:var(--wall)}
+.btn.dark:hover{background:#3A3632}
+.btn.quiet{border-color:var(--line)}
+/* walk controls */
+.hud{position:absolute;z-index:5;left:50%;bottom:max(16px,calc(var(--floorH) * .2));transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:7px;border-radius:999px;background:rgba(250,250,248,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 34px -16px rgba(40,30,20,.35)}
+.nb{display:grid;place-items:center;flex:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--wall);font:400 18px/1 var(--sans)}
+.nb:hover{border-color:var(--ink)}
+.plan{position:relative;display:flex;gap:3px;width:clamp(300px,30vw,440px);height:44px}
+.plan button{flex:var(--f,1) 1 0;min-width:max-content;display:flex;align-items:flex-end;padding:0 0 7px 8px;border:1px solid var(--ink);background:transparent;font:500 10px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-align:left}
+.plan button[aria-current=true]{background:var(--ink);color:var(--wall)}
+.you{position:absolute;top:13px;left:0;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--dot);box-shadow:0 0 0 4px rgba(192,69,42,.18);pointer-events:none}
+/* catalogue sections */
+.sec{position:relative;padding:clamp(72px,11vh,128px) clamp(20px,6vw,96px);border-top:1px solid var(--line);scroll-margin-top:40px}
+.sec-grid{display:grid;grid-template-columns:minmax(150px,1fr) minmax(0,3fr);gap:24px clamp(24px,5vw,80px);max-width:1240px;margin:0 auto}
+.sec-l{font:500 11.5px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.sec h2{margin:0 0 26px;font:400 clamp(36px,4.6vw,60px)/1 var(--serif);letter-spacing:-.025em}
+.sec h2 em,.stmt em{font-style:italic}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px)}
+.stmt{margin:0;font:italic 400 clamp(24px,2.5vw,34px)/1.28 var(--serif);letter-spacing:-.012em}
+.prose p{margin:0 0 14px;color:#34312C}
+.steps{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;border-top:1px solid var(--line)}
+.steps li{padding-top:16px}
+.steps b{display:block;margin-bottom:6px;font:400 22px/1.1 var(--serif)}
+.steps span{font-size:14px;color:#46423C}
+.ex{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.ex li{display:grid;grid-template-columns:70px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.3fr);gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+.ex .y{font-variant-numeric:tabular-nums;color:var(--grey)}
+.ex .ti{font:italic 400 21px/1.2 var(--serif)}
+.ex .ty,.ex .ve{font-size:14px;color:#46423C}
+.note{margin:14px 0 0;font-size:12.5px;color:var(--grey)}
+.slots{padding:26px;border:1px solid var(--line);background:#fff}
+.slots h3,.enq-side h3{margin:0 0 4px;font:400 24px/1.2 var(--serif)}
+.fs{margin:18px 0 0;padding:0;border:0;min-width:0}
+.fs legend{padding:0;margin-bottom:10px;font:500 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{min-height:44px;padding:0 16px;border:1px solid var(--line);background:var(--wall);font:500 13.5px/1 var(--sans)}
+.pill:hover{border-color:var(--ink)}
+.pill[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--wall)}
+.pill:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+.sum{min-height:1.6em;margin:18px 0 14px;font-size:14px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label,.fld .lb{font:500 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.fld input,.fld select,.fld textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid #BDB6AB;border-radius:0;background:#fff;font-size:15px}
+.fld textarea{min-height:120px;resize:vertical}
+.chk{display:flex;align-items:center;gap:10px;font-size:14px}
+.chk input{width:20px;height:20px;accent-color:var(--ink)}
+.enq-side{font-size:14px;color:#3A3732}
+.enq-side p{margin:0 0 14px}
+.status{grid-column:1/-1;min-height:1.5em;margin:0;font-size:14px}
+.foot{padding:clamp(56px,9vh,96px) clamp(20px,6vw,96px) calc(40px + env(safe-area-inset-bottom));background:var(--floor)}
+.foot .big{margin:0 0 30px;font:400 clamp(44px,8vw,120px)/.92 var(--serif);letter-spacing:-.035em;overflow-wrap:anywhere}
+.foot-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1240px;font-size:14px}
+.foot-g p{margin:0 0 6px}
+.foot .fine{max-width:1240px;margin:34px 0 0;padding-top:16px;border-top:1px solid #CFC7BA;font-size:12.5px;color:#57534C}
+/* viewer */
+.viewer{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:var(--ink);overflow:auto}
+.viewer::backdrop{background:rgba(250,250,248,.965)}
+.viewer[open]{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,370px);gap:clamp(28px,4vw,72px);padding:clamp(28px,7vh,72px) clamp(24px,5vw,80px)}
+.v-art{position:relative;display:grid;place-items:center;min-height:0;min-width:0}
+.v-frame{position:relative;transform-origin:0 0;box-shadow:0 2px 2px rgba(30,24,18,.12),0 30px 50px -24px rgba(30,24,18,.45),24px 50px 80px -40px rgba(30,24,18,.35)}
+.v-frame canvas{display:block}
+.v-tag{position:absolute;left:12px;top:12px;padding:7px 10px;background:rgba(26,26,26,.86);color:#FAFAF8;font:500 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.v-info{align-self:center;min-width:0}
+.v-room{margin:0 0 14px;font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.v-title{margin:0;font:italic 400 clamp(30px,3vw,42px)/1.08 var(--serif);letter-spacing:-.015em}
+.v-meta{margin:12px 0 0;font-size:14px;color:#46423C}
+.v-note{margin:18px 0 0;font-size:15px;line-height:1.62}
+.v-price{margin:16px 0 0;font-size:14px}
+.v-price span{color:var(--grey)}
+.v-study{margin:18px 0 0;padding:14px 16px;border-left:2px solid var(--dot);background:#F2EFEA;font-size:13.5px;line-height:1.55}
+.v-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.v-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--grey)}
+.v-nav button{min-height:44px;padding:0 4px;border:0;background:none;font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.v-x{position:fixed;z-index:3;top:calc(14px + env(safe-area-inset-top));right:14px;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:var(--wall);font:300 26px/1 var(--sans)}
+.v-x:hover{border-color:var(--ink)}
+.v-in{animation:rise .5s .12s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.viewer[open]{grid-template-rows:minmax(0,1fr)}
+.viewer.closing .v-info,.viewer.closing .v-x{opacity:0;transition:opacity .2s}
+/* vertical walk: phones, tablets in portrait, short windows */
+@media (max-width:899px),(max-height:559px){
+:root{--hh:58px}
+.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 18px 14px;background:rgba(250,250,248,.98);box-shadow:0 1px 0 var(--line)}
+.nav.open{display:flex}
+.nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}
+.menu{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid var(--ink);background:none;font:500 11.5px/1 var(--sans);letter-spacing:.15em;text-transform:uppercase}
+.stage{position:static;height:auto;overflow:visible}
+.track{display:block;width:auto;transform:none!important;overflow-x:clip}
+.track::after{display:none}
+.panel,.foyer,.exit{display:flex;flex-direction:column;align-items:stretch;gap:44px;width:auto;height:auto;padding:40px 20px 0}
+.panel::after{content:"";display:block;height:52px;margin:6px -20px 0;background:linear-gradient(180deg,#DDD6CB,#E7E2DA 30%);box-shadow:inset 0 1px 0 #CBC3B6}
+.foyer{padding-top:calc(var(--hh) + 34px)}
+.f-text,.wtext,.exit .wtext{width:auto;max-width:none;margin:0}
+h1{font-size:clamp(46px,13vw,84px)}
+.hint{display:none}
+.door{display:none}
+.hang{flex-direction:column;align-items:flex-start;gap:14px;margin:0;width:100%}
+.hang::before{left:50%;top:-40px;width:100%;height:60%;opacity:.7}
+.work{width:min(100%,var(--pw));height:auto;aspect-ratio:var(--ar)}
+.work::after{display:none}
+.label{width:auto}
+.label .no{margin-bottom:6px}
+.bench{display:none}
+.hud{position:sticky;top:var(--hh);left:auto;bottom:auto;transform:none;z-index:40;display:block;padding:10px 16px;border-radius:0;background:rgba(250,250,248,.94);box-shadow:0 1px 0 var(--line)}
+.nb,.you{display:none}
+.plan{width:auto;height:auto;gap:6px;overflow-x:auto;scrollbar-width:none}
+.plan button{flex:none;min-height:40px;align-items:center;padding:0 14px;border-color:var(--line)}
+.plan button[aria-current=true]{border-color:var(--ink)}
+.panel{scroll-margin-top:calc(var(--hh) + 60px)}
+.sec-grid,.two{grid-template-columns:minmax(0,1fr)}
+.steps{grid-template-columns:minmax(0,1fr)}
+.ex li{grid-template-columns:56px minmax(0,1fr);gap:4px 12px}
+.ex .ty,.ex .ve{grid-column:2}
+.form{grid-template-columns:minmax(0,1fr)}
+.foot-g{grid-template-columns:minmax(0,1fr)}
+.viewer[open]{display:block;padding:calc(70px + env(safe-area-inset-top)) 18px 40px}
+.v-art{display:block;margin-bottom:26px}
+.v-frame{margin:0 auto}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hint i::after{display:none}}
+</style>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <a class="mark" href="#top" data-brand>Inès Moreau</a>
+  <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav class="nav" id="nav" aria-label="Sections">
+    <a href="#walk">Rooms</a><a href="#about">About</a><a href="#exhibitions">Exhibitions</a><a href="#visits">Studio visits</a><a href="#enquire">Enquire</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="walk" id="walk">
+    <div class="stage" id="stage">
+      <div class="hud" id="hud">
+        <button class="nb" type="button" id="prevBtn" aria-label="Walk back">←</button>
+        <div class="plan" id="plan" role="group" aria-label="Floor plan: jump to a room">
+          <button type="button" data-go="0">Foyer</button>
+          <button type="button" data-go="1">I · Tide</button>
+          <button type="button" data-go="2">II · Kelp forest</button>
+          <button type="button" data-go="3">III · Salt</button>
+          <span class="you" id="you" aria-hidden="true"></span>
+        </div>
+        <button class="nb" type="button" id="nextBtn" aria-label="Walk on">→</button>
+        <p class="sr" id="walkLive" aria-live="polite"></p>
+      </div>
+      <div class="track" id="track">
+        <section class="panel foyer" data-room="0" aria-label="Foyer">
+          <div class="f-text">
+            <p class="kick">Online viewing room · Hobart, Tasmania</p>
+            <h1 data-brand>Inès Moreau</h1>
+            <p class="show">Low Water — paintings of the Derwent and the Channel, 2024–26</p>
+            <p class="lede">Nine oil paintings about the hour after the tide goes out: silver mudflats, kelp moving in green light, salt drying on the marsh. Walk the three rooms, then click any painting to look closer.</p>
+            <p class="hint" aria-hidden="true">Scroll to walk the rooms <i></i></p>
+          </div>
+        </section>
+        <div class="door" aria-hidden="true"><span>Room I</span></div>
+        <section class="panel room" data-room="1" aria-labelledby="r1">
+          <div class="wtext"><p class="rno">Room I</p><h2 id="r1">Tide</h2>
+            <p>Most mornings Inès walks the foreshore at Blackmans Bay and marks where the waterline sits at six. These paintings start from those pencil notes: flat water, silver light, the moment before the tide turns.</p></div>
+        </section>
+        <div class="door" aria-hidden="true"><span>Room II</span></div>
+        <section class="panel room" data-room="2" aria-labelledby="r2">
+          <div class="wtext"><p class="rno">Room II</p><h2 id="r2"><em>Kelp</em> forest</h2>
+            <p>Giant kelp has largely gone from Tasmania's east coast. This room is partly a record of what's still there: painted from memory and a waterproof notebook after swims off the Tasman Peninsula.</p></div>
+          <div class="bench" aria-hidden="true"></div>
+        </section>
+        <div class="door" aria-hidden="true"><span>Room III</span></div>
+        <section class="panel room" data-room="3" aria-labelledby="r3">
+          <div class="wtext"><p class="rno">Room III</p><h2 id="r3">Salt</h2>
+            <p>Saltmarsh at Ralphs Bay and sea fog in the Channel. The quietest paintings in the show, and the whitest: built up in thin layers, then scraped back until the linen shows through.</p></div>
+        </section>
+        <section class="panel exit" data-room="3" aria-label="End of the rooms">
+          <div class="wtext"><p class="rno">End of the rooms</p><h2>Thank you for <em>walking through.</em></h2>
+            <p>Nine paintings, 2024–26, all oil on linen. Everything on the walls is available; prices shown are sample prices for this demo.</p>
+            <div class="links"><a class="btn dark" href="#enquire">Enquire about a work</a><a class="btn" href="#visits">Visit the studio</a><button class="btn quiet" type="button" data-go="0">Back to the foyer</button></div></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec" id="about" aria-labelledby="aboutH">
+    <div class="sec-grid">
+      <p class="sec-l">About</p>
+      <div>
+        <h2 id="aboutH">Painter, swimmer, <em>early riser.</em></h2>
+        <div class="two">
+          <p class="stmt">“I paint the hour when the tide has gone out and hasn't decided to come back. Nothing is happening, and everything is.”</p>
+          <div class="prose">
+            <p>Inès Moreau grew up in Lyon and moved to Hobart in 2014. She works from a first-floor studio in North Hobart on large linen canvases, usually several at once, and leaves each one alone for a week between layers.</p>
+            <p>Her paintings are not views of particular places so much as weather reports: how cold, how still, how much light was on the water. Titles give the place and, sometimes, the time.</p>
+            <p>Alongside the studio she teaches a small Saturday painting class for adults (six people, all materials supplied) each term.</p>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><b>Walk</b><span>Same stretch of shore, same hour, for weeks. Pencil notes, no photos.</span></li>
+          <li><b>Layer</b><span>Thin, fast layers of oil with plenty of drying time. Up to fourteen per painting.</span></li>
+          <li><b>Scrape</b><span>A palette knife takes most of it back off. What survives is the painting.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="exhibitions" aria-labelledby="exH">
+    <div class="sec-grid">
+      <p class="sec-l">Exhibitions</p>
+      <div>
+        <h2 id="exH">Selected <em>exhibitions</em></h2>
+        <ol class="ex">
+          <li><span class="y">2026</span><span class="ti">Low Water</span><span class="ty">Solo exhibition</span><span class="ve">Carrick Lane Gallery, Hobart</span></li>
+          <li><span class="y">2025</span><span class="ti">Salt Lines</span><span class="ty">Group exhibition</span><span class="ve">Old Cannery Space, Launceston</span></li>
+          <li><span class="y">2024</span><span class="ti">Tidal Notes</span><span class="ty">Two-person show</span><span class="ve">Weir Street Studio, Cygnet</span></li>
+          <li><span class="y">2023</span><span class="ti">Small Works, Big Weather</span><span class="ty">Group exhibition</span><span class="ve">Harbour Rooms, Hobart</span></li>
+          <li><span class="y">2022</span><span class="ti">Bruny Island studio residency</span><span class="ty">Self-directed, 6 weeks</span><span class="ve">Bruny Island, TAS</span></li>
+        </ol>
+        <p class="note">Sample exhibition history for a fictional artist: the venues are made up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visits" aria-labelledby="visH">
+    <div class="sec-grid">
+      <p class="sec-l">Studio visits</p>
+      <div class="two">
+        <div class="prose">
+          <h2 id="visH">Come and see the <em>paint up close.</em></h2>
+          <p>The studio is in North Hobart, up one flight of stairs above a picture framer. On the first Saturday of each month it's open from 10 am to 3 pm, with half-hour visits so there's room to stand back from the big canvases.</p>
+          <p>Other days are by appointment. If stairs are a problem, say so: works can be brought down to the framer's ground-floor room.</p>
+          <p class="note">The kettle is always on. Calm dogs are welcome; wet paint isn't dog-proof.</p>
+        </div>
+        <div class="slots" id="slots">
+          <h3>Open studio</h3>
+          <p class="note" style="margin-top:0">First Saturdays · 30-minute visits</p>
+          <fieldset class="fs"><legend>Choose a Saturday</legend><div class="pills" id="days"></div></fieldset>
+          <fieldset class="fs"><legend>Choose a time</legend><div class="pills" id="times"></div></fieldset>
+          <p class="sum" id="slotSum" aria-live="polite">Pick a Saturday and a time.</p>
+          <button class="btn dark" type="button" id="slotBtn">Request this visit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="enquire" aria-labelledby="enqH">
+    <div class="sec-grid">
+      <p class="sec-l">Enquire</p>
+      <div>
+        <h2 id="enqH">Enquire about <em>a work</em></h2>
+        <div class="two">
+          <form class="form" id="enqForm" novalidate>
+            <div class="fld full"><label for="fWork">Painting</label><select id="fWork" name="work"></select></div>
+            <div class="fld"><label for="fName">Your name</label><input id="fName" name="name" autocomplete="name" required></div>
+            <div class="fld"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+            <div class="fld full"><label for="fWhere">Where would it hang? (optional)</label><input id="fWhere" name="where" placeholder="Hallway, 3 m wall, lots of morning light"></div>
+            <div class="fld full"><label for="fMsg">Message</label><textarea id="fMsg" name="msg" required></textarea></div>
+            <label class="chk full"><input type="checkbox" id="fSee" name="see"> I'd like to see it in person first</label>
+            <div class="fld full"><button class="btn dark" type="submit">Send enquiry</button></div>
+            <p class="status" id="enqStatus" role="status"></p>
+          </form>
+          <div class="enq-side">
+            <h3>Before you ask</h3>
+            <p>Works leave the studio crated from Hobart. Freight within Australia is quoted at cost; most paintings arrive in about a week.</p>
+            <p>Commissions open twice a year, for two or three paintings each time. A commission starts with a walk together, not a colour swatch.</p>
+            <p>Prices on the labels are sample prices in AUD, including GST.</p>
+            <p><a href="mailto:ines.moreau@example.com">ines.moreau@example.com</a><br><a href="tel:+61355504127">(03) 5550 4127</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="big" data-brand>Inès Moreau</p>
+  <div class="foot-g">
+    <div><p>Studio: North Hobart, TAS</p><p>Open studio first Saturdays, 10 am – 3 pm</p></div>
+    <div><p><a href="mailto:ines.moreau@example.com">ines.moreau@example.com</a></p><p><a href="tel:+61355504127">(03) 5550 4127</a></p></div>
+    <div><p><a href="#walk">Walk the rooms again</a></p><p><a href="#enquire">Enquire about a work</a></p></div>
+  </div>
+  <p class="fine">Concept demo. Inès Moreau is a fictional artist; the paintings are generative images drawn in your browser for this demo; venues, prices and contact details are samples.</p>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-labelledby="vTitle">
+  <div class="v-art" id="vArt"><div class="v-frame" id="vFrame"><canvas id="vCv" role="img" aria-label=""></canvas><span class="v-tag" id="vTag" hidden></span></div></div>
+  <div class="v-info" id="vInfo">
+    <p class="v-room" id="vRoom"></p>
+    <h2 class="v-title" id="vTitle"></h2>
+    <p class="v-meta" id="vMeta"></p>
+    <p class="v-note" id="vNote"></p>
+    <p class="v-price" id="vPrice"></p>
+    <div class="v-study" id="vStudy" hidden></div>
+    <div class="v-btns">
+      <button class="btn" type="button" id="vRegen">↻ Regenerate study</button>
+      <button class="btn" type="button" id="vBack" hidden>Back to the painting</button>
+      <button class="btn dark" type="button" id="vEnq">Enquire about this work</button>
+    </div>
+    <div class="v-nav"><button type="button" id="vPrev">← Previous</button><span id="vCount"></span><button type="button" id="vNext">Next →</button></div>
+  </div>
+  <button class="v-x" type="button" id="vX" aria-label="Close and return to the wall">×</button>
+  <p class="sr" id="vLive" aria-live="polite"></p>
+</dialog>
+<script>
+"use strict";
+/* ---------- the works (fictional; images are generated) ---------- */
+const WORKS = [
+  { room: 0, pal: "tide", no: "Foyer", t: "Low Water", y: 2026, size: [137, 167], price: 8200, seed: 1207, hz: 0.47,
+    note: "The title work. Painted over eleven weeks from pencil notes made at dead low tide, when the Derwent goes quiet and the mudflats hold the sky." },
+  { room: 1, pal: "tide", no: "I.1", t: "Slack water, Blackmans Bay", y: 2025, size: [76, 102], price: 3900, seed: 3301, hz: 0.4,
+    note: "The ten minutes when the tide can't decide. Scraped back twice with a palette knife, which is where the silver comes from." },
+  { room: 1, pal: "tide", no: "I.2", t: "Derwent, 6.10 am", y: 2024, size: [122, 91], price: 4800, seed: 5521, hz: 0.56,
+    note: "Winter light coming over the eastern shore. The pale band is fog lifting off the river, laid in with an almost dry brush." },
+  { room: 1, pal: "tide", no: "I.3", t: "Ebb (grey study)", y: 2025, size: [46, 46], price: 1400, seed: 812, hz: 0.5,
+    note: "A small, fast painting made in one sitting, mostly to find out how many greys a grey morning has. Quite a few." },
+  { room: 2, pal: "kelp", no: "II.1", t: "Holdfast", y: 2025, size: [150, 110], price: 6400, seed: 4410,
+    note: "Named for the root-like grip that kelp keeps on the reef. The darkest painting in the show, and the slowest to dry." },
+  { room: 2, pal: "kelp", no: "II.2", t: "Canopy, green hour", y: 2026, size: [76, 61], price: 2600, seed: 9083,
+    note: "Looking up through the fronds towards the surface. The bronze is burnt sienna knocked back with a little green." },
+  { room: 3, pal: "salt", no: "III.1", t: "Saltmarsh, Ralphs Bay", y: 2026, size: [91, 122], price: 4800, seed: 2718, hz: 0.34,
+    note: "Samphire, standing water and a very flat light. The crust along the bottom edge is built up in three layers with a stiff brush." },
+  { room: 3, pal: "salt", no: "III.2", t: "Crust", y: 2026, size: [50, 50], price: 1600, seed: 6040, hz: 0.27,
+    note: "A square of dried salt at close range. The pink comes from the samphire turning red in autumn." },
+  { room: 3, pal: "salt", no: "III.3", t: "White weather", y: 2026, size: [61, 76], price: 2600, seed: 3907, hz: 0.44,
+    note: "Sea fog over the Channel near Snug, when the far shore disappears. Almost all titanium white, which is harder than it sounds." }
+];
+const ROOMS = ["Foyer", "Room I — Tide", "Room II — Kelp forest", "Room III — Salt"];
+const DESC = {
+  tide: "an abstract estuary: a pale sky over silver-blue water laid in brushy horizontal bands",
+  kelp: "an abstract underwater scene: bronze and olive kelp fronds rising through green light",
+  salt: "an abstract saltmarsh: white, grey and pale pink layers under a high horizon"
+};
+const PAL = {
+  tide: { top: "#C2CDD2", low: "#E8E5DC", glow: "#F3EBD9", deep: "#33505E", mid: "#6B8894", light: "#B0C1C4", acc: "#B98547", hi: "#F8F5EC", land: "#56676C", linen: "#D8D1C2", pink: "#E3CFC4" },
+  kelp: { top: "#86A38B", low: "#34574A", glow: "#C3D29E", deep: "#0E1E18", mid: "#2A4636", light: "#62803F", acc: "#A67C34", hi: "#E0E8C0", land: "#1A2C24", linen: "#CBC3AE", pink: "#B8A06A" },
+  salt: { top: "#E2E1DE", low: "#F4F1EB", glow: "#F2DAD2", deep: "#8C9BA5", mid: "#C8CDCF", light: "#F7F5F0", acc: "#C39C72", hi: "#FFFFFF", land: "#A6AFB3", linen: "#E0D9CB", pink: "#E7B8AE" }
+};
+
+/* ---------- a seeded painter: same seed, same painting, at any size ---------- */
+function mulberry32(a) { return function () { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const rgbOf = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+function tint(a, b, t, R, j) {
+  const A = rgbOf(a), B = rgbOf(b), k = (R() - 0.5) * j * 255;
+  return "rgb(" + A.map((v, i) => Math.round(Math.min(255, Math.max(0, v + (B[i] - v) * t + k)))).join(",") + ")";
+}
+/* one loaded brush: six bristles, each with its own pressure, length and wobble */
+function brush(ctx, R, x, y, len, wid, ang, col, a, wob) {
+  const n = 6, dx = Math.cos(ang), dy = Math.sin(ang), px = -dy, py = dx;
+  ctx.strokeStyle = col;
+  for (let b = 0; b < n; b++) {
+    const off = (b / (n - 1) - 0.5) * wid + (R() - 0.5) * wid * 0.3;
+    const l = len * (0.72 + R() * 0.32), bend = (R() - 0.5) * wob, st = (R() - 0.5) * len * 0.08;
+    const sx = x + px * off + dx * st, sy = y + py * off + dy * st;
+    ctx.globalAlpha = a * (0.35 + R() * 0.65);
+    ctx.lineWidth = Math.max(0.5, (wid / n) * (0.8 + R() * 1.3));
+    ctx.beginPath(); ctx.moveTo(sx, sy);
+    ctx.quadraticCurveTo(sx + dx * l * 0.5 + px * bend, sy + dy * l * 0.5 + py * bend, sx + dx * l, sy + dy * l);
+    ctx.stroke();
+  }
+}
+let grainCv = null;
+function grain() {
+  if (grainCv) return grainCv;
+  grainCv = document.createElement("canvas"); grainCv.width = grainCv.height = 96;
+  const g = grainCv.getContext("2d"), R = mulberry32(7);
+  g.fillStyle = "rgba(0,0,0,.35)";
+  for (let y = 0; y < 96; y += 3) g.fillRect(0, y, 96, 1);
+  g.fillStyle = "rgba(0,0,0,.2)";
+  for (let x = 0; x < 96; x += 3) g.fillRect(x, 0, 1, 96);
+  for (let i = 0; i < 1600; i++) { g.fillStyle = R() < 0.5 ? "rgba(0,0,0,.55)" : "rgba(255,255,255,.7)"; g.fillRect((R() * 96) | 0, (R() * 96) | 0, 1, 1); }
+  return grainCv;
+}
+function* paint(ctx, W, H, seed, pal, hz0) {
+  const R = mulberry32(seed), P = PAL[pal], rr = (a, b) => a + (b - a) * R(), S = Math.min(W, H);
+  let low = 0.1;
+  ctx.globalCompositeOperation = "source-over"; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.globalAlpha = 1;
+  ctx.fillStyle = P.linen; ctx.fillRect(0, 0, W, H);
+  let g;
+  if (pal === "kelp") {
+    g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, P.top); g.addColorStop(0.38, P.low); g.addColorStop(1, P.deep);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    yield;
+    for (let i = 0; i < 16; i++) brush(ctx, R, rr(-0.1, 1.1) * W, rr(0, 0.12) * H, rr(0.3, 0.8) * W, rr(0.01, 0.03) * H, rr(-0.05, 0.05), tint(P.top, P.hi, rr(0.2, 0.6), R, 0.05), rr(0.2, 0.45), S * 0.01);
+    for (let i = 0; i < 7; i++) brush(ctx, R, rr(-0.1, 1.1) * W, -H * 0.05, H * rr(0.6, 1.1), W * rr(0.05, 0.13), Math.PI / 2 + rr(-0.3, 0.3), P.glow, rr(0.07, 0.15), W * 0.02);
+    yield;
+    const frond = (x0, amp, freq, ph, h0, wid, cA, cB, al) => {
+      let x = x0, y = H * 1.02;
+      for (let s = 0; s < 14; s++) {
+        const t = s / 14, ny = H * 1.02 - (h0 * (s + 1)) / 14, nx = x0 + Math.sin(ph + t * freq) * amp * (0.3 + t);
+        const ang = Math.atan2(ny - y, nx - x), len = Math.hypot(nx - x, ny - y);
+        brush(ctx, R, x, y, len * 1.12, wid * (1 - t * 0.55), ang, tint(cA, cB, t, R, 0.07), al, wid * 0.4);
+        if (s > 2 && s % 2 === 0) { const side = s % 4 === 0 ? 1 : -1; brush(ctx, R, nx, ny, wid * rr(2.4, 4), wid * 0.7, ang + side * rr(0.5, 0.95), tint(cA, P.glow, 0.35, R, 0.05), al * 0.8, wid * 0.6); }
+        x = nx; y = ny;
+      }
+    };
+    for (let i = 0; i < 12; i++) { frond(rr(-0.05, 1.05) * W, W * rr(0.02, 0.07), rr(2, 5), rr(0, 6.28), H * rr(0.5, 1.05), W * rr(0.012, 0.022), P.mid, P.light, rr(0.28, 0.5)); if (i % 3 === 2) yield; }
+    ctx.globalAlpha = 0.16; ctx.fillStyle = P.low; ctx.fillRect(0, 0, W, H);
+    for (let i = 0; i < 6; i++) { frond(rr(0.02, 0.98) * W, W * rr(0.03, 0.08), rr(2, 4), rr(0, 6.28), H * rr(0.75, 1.12), W * rr(0.024, 0.038), P.acc, P.light, rr(0.55, 0.85)); yield; }
+    for (let i = 0; i < 26; i++) brush(ctx, R, rr(-0.1, 1) * W, H * rr(0.88, 1.02), W * rr(0.06, 0.2), H * rr(0.02, 0.05), rr(-0.3, 0.3), tint(P.deep, P.land, R(), R, 0.05), rr(0.5, 0.85), S * 0.02);
+    yield;
+    ctx.fillStyle = P.hi;
+    for (let i = 0; i < 80; i++) { ctx.globalAlpha = rr(0.12, 0.5); const r = S * rr(0.0015, 0.0045); ctx.beginPath(); ctx.arc(R() * W, R() * H * 0.92, r, 0, 6.283); ctx.fill(); }
+  } else {
+    const salt = pal === "salt", hz = H * (hz0 + rr(-0.04, 0.04));
+    low = hz / H + 0.06;
+    g = ctx.createLinearGradient(0, 0, 0, hz); g.addColorStop(0, P.top); g.addColorStop(0.72, P.low); g.addColorStop(1, P.glow);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, hz + 1);
+    g = ctx.createLinearGradient(0, hz, 0, H);
+    if (salt) { g.addColorStop(0, P.deep); g.addColorStop(0.06, P.mid); g.addColorStop(0.3, P.light); g.addColorStop(1, P.low); }
+    else { g.addColorStop(0, P.light); g.addColorStop(0.32, P.mid); g.addColorStop(1, P.deep); }
+    ctx.fillStyle = g; ctx.fillRect(0, hz, W, H - hz);
+    yield;
+    for (let i = 0; i < 34; i++) {
+      const y = rr(-0.05, 1.02) * hz, t = Math.max(0, y / hz);
+      brush(ctx, R, rr(-0.25, 0.8) * W, y, rr(0.35, 0.9) * W, rr(0.03, 0.08) * H, rr(-0.025, 0.025), tint(P.top, R() < (salt ? 0.45 : 0.15) ? P.pink : P.glow, t * 0.9, R, 0.06), rr(0.18, 0.4), S * 0.02);
+      if (i % 7 === 6) yield;
+    }
+    if (R() < 0.75) {
+      const fromLeft = R() < 0.5, span = rr(0.25, 0.6);
+      for (let i = 0; i < 12; i++) {
+        const u = R() * span, x = fromLeft ? u * W : W - u * W - W * 0.1;
+        brush(ctx, R, x - W * 0.05, hz - H * rr(0, 0.02) * (1 - u / span), W * rr(0.08, 0.2), H * rr(0.006, 0.016), rr(-0.02, 0.02), tint(P.land, P.top, rr(0, 0.35), R, 0.04), rr(0.45, 0.75), S * 0.004);
+      }
+    }
+    for (let i = 0; i < 7; i++) brush(ctx, R, rr(-0.1, 0.7) * W, hz + H * rr(-0.006, 0.01), W * rr(0.3, 0.7), H * rr(0.003, 0.008), 0, P.hi, rr(0.4, 0.8), 0);
+    yield;
+    const bands = 6 + Math.floor(R() * 3);
+    for (let b = 0; b < bands; b++) {
+      const y0 = hz + (H - hz) * Math.pow(b / bands, 1.45), y1 = hz + (H - hz) * Math.pow((b + 1) / bands, 1.45), n = 14 + Math.floor(R() * 10);
+      for (let i = 0; i < n; i++) {
+        const y = rr(y0, y1), t = (y - hz) / (H - hz);
+        const c = salt ? tint(P.light, R() < 0.3 ? P.pink : P.mid, Math.min(1, 0.25 + t * 0.6 + rr(-0.2, 0.2)), R, 0.05)
+                       : tint(P.light, P.deep, Math.min(1, Math.max(0, t * 1.1 + rr(-0.15, 0.15))), R, 0.08);
+        brush(ctx, R, rr(-0.25, 0.95) * W, y, rr(0.18, 0.55) * W * (0.6 + t), (0.006 + t * 0.05) * H, rr(-0.02, 0.02), c, rr(0.35, 0.75), S * 0.012);
+      }
+      yield;
+    }
+    const lx = rr(0.15, 0.85) * W;
+    for (let i = 0; i < 46; i++) {
+      const t = Math.pow(R(), 1.6), y = hz + (H - hz) * t * 0.92 + H * 0.004, spread = W * (0.05 + t * 0.3);
+      brush(ctx, R, lx + (R() - 0.5) * spread * 2 - W * 0.02, y, W * (0.008 + t * 0.05) * rr(0.5, 1.4), H * (0.0015 + t * 0.006), rr(-0.03, 0.03), tint(P.hi, P.light, rr(0, 0.5), R, 0.03), rr(0.2, 0.55), S * 0.003);
+      if (i % 22 === 21) yield;
+    }
+    if (salt) {
+      for (let i = 0; i < 22; i++) {
+        let x = rr(-0.1, 1) * W, y = rr(hz + (H - hz) * 0.15, H * 0.98), a = rr(-0.3, 0.3);
+        ctx.strokeStyle = P.land; ctx.lineWidth = Math.max(0.5, S * 0.0018); ctx.globalAlpha = rr(0.15, 0.35);
+        ctx.beginPath(); ctx.moveTo(x, y);
+        for (let k = 0; k < 7; k++) { a += rr(-0.9, 0.9); x += Math.cos(a) * W * 0.04; y += Math.sin(a) * H * 0.012; ctx.lineTo(x, y); }
+        ctx.stroke();
+      }
+      for (let c = 0; c < 8; c++) {
+        const cx = rr(0, 1) * W, cy = rr(hz + (H - hz) * 0.35, H);
+        for (let i = 0; i < 18; i++) brush(ctx, R, cx + rr(-0.08, 0.08) * W, cy + rr(-0.04, 0.04) * H, S * rr(0.01, 0.035), S * rr(0.006, 0.016), rr(0, 3.14), tint(R() < 0.5 ? P.acc : P.pink, P.hi, rr(0, 0.6), R, 0.05), rr(0.45, 0.85), S * 0.004);
+        if (c % 3 === 2) yield;
+      }
+      for (let i = 0; i < 5; i++) brush(ctx, R, rr(0, 0.8) * W, rr(hz + (H - hz) * 0.2, H * 0.9), W * rr(0.12, 0.3), H * rr(0.01, 0.025), rr(-0.02, 0.02), tint(P.deep, P.top, rr(0.2, 0.5), R, 0.04), rr(0.25, 0.45), 0);
+    } else {
+      const ty = H * rr(0.8, 0.93);
+      for (let i = 0; i < 14; i++) brush(ctx, R, rr(-0.2, 0.7) * W, ty + H * rr(-0.02, 0.02), W * rr(0.2, 0.5), H * rr(0.006, 0.02), rr(-0.04, 0.02), tint(P.acc, P.linen, rr(0, 0.4), R, 0.05), rr(0.35, 0.7), S * 0.01);
+    }
+    yield;
+  }
+  for (let i = 0; i < 14; i++) {
+    const x = R() * W, y = rr(low, 0.95) * H, len = S * rr(0.02, 0.07), wid = S * rr(0.008, 0.02), a = rr(-0.2, 0.2);
+    brush(ctx, R, x + S * 0.003, y + S * 0.003, len, wid, a, "rgba(20,16,12,1)", 0.09, S * 0.004);
+    brush(ctx, R, x, y, len, wid, a, tint(pal === "kelp" ? P.glow : P.hi, P.light, rr(0, 0.45), R, 0.03), 0.5, S * 0.004);
+  }
+  ctx.globalAlpha = 0.08; ctx.fillStyle = ctx.createPattern(grain(), "repeat"); ctx.fillRect(0, 0, W, H);
+  const v = ctx.createRadialGradient(W / 2, H / 2, S * 0.3, W / 2, H / 2, Math.hypot(W, H) * 0.62);
+  v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, pal === "salt" ? "rgba(70,56,44,.12)" : "rgba(16,16,14,.2)");
+  ctx.globalAlpha = 1; ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+  ctx.globalAlpha = 0.55; ctx.strokeStyle = P.linen; ctx.lineWidth = S * 0.006; ctx.strokeRect(0, 0, W, H);
+  ctx.globalAlpha = 1;
+}
+(() => {
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const RM = () => (window.DemoKit ? DemoKit.reducedMotion : matchMedia("(prefers-reduced-motion: reduce)").matches);
+const isH = () => matchMedia("(min-width: 900px) and (min-height: 560px)").matches;
+const fmt = n => n.toLocaleString("en-AU");
+const walk = $("#walk"), track = $("#track"), you = $("#you"), hdr = $("#hdr"), viewer = $("#viewer"), vCv = $("#vCv"), vFrame = $("#vFrame"), vArt = $("#vArt");
+const planBtns = $$("#plan button"), secs = $$(".track > section.panel");
+const toast = m => { if (window.DemoKit) DemoKit.toast(m); };
+
+/* ---------- hang the works ---------- */
+const btns = WORKS.map((w, i) => {
+  w.ar = w.size[1] / w.size[0];
+  const fig = document.createElement("figure");
+  fig.className = "hang";
+  fig.style.cssText = `--h:${(9 + w.size[0] * 0.28).toFixed(1)}vh;--ar:${w.ar.toFixed(4)};--pw:${Math.min(100, 40 + w.size[1] * 0.36).toFixed(1)}%`;
+  fig.innerHTML = `<button type="button" class="work" data-i="${i}" aria-label="Look closer: ${w.t}, ${w.y}"><canvas aria-hidden="true"></canvas></button>` +
+    `<figcaption class="label"><span class="no">${w.no}</span><span class="t">${w.t}</span>${w.y}<br>Oil on linen<br>${w.size[0]} × ${w.size[1]} cm<span class="p">A$${fmt(w.price)}</span></figcaption>`;
+  $(`.track > section.panel[data-room="${w.room}"]`).appendChild(fig);
+  return fig.firstElementChild;
+});
+
+/* ---------- painting into canvases ---------- */
+let job = 0;
+function paintInto(c, cw, ch, seed, pal, hz, progressive) {
+  const d = Math.min(window.devicePixelRatio || 1, 2);
+  c.width = Math.max(1, Math.round(cw * d)); c.height = Math.max(1, Math.round(ch * d));
+  const mine = c === vCv ? ++job : 0;
+  const gen = paint(c.getContext("2d"), c.width, c.height, seed, pal, hz == null ? 0.45 : hz);
+  if (!progressive || RM()) { while (!gen.next().done); return; }
+  const step = () => {
+    if (mine !== job) return;
+    for (let k = 0; k < 2; k++) if (gen.next().done) return;
+    requestAnimationFrame(step);
+  };
+  step();
+}
+const done = new WeakMap();
+function ensure(b) {
+  const w = WORKS[+b.dataset.i], cw = b.clientWidth, ch = b.clientHeight;
+  if (!cw || !ch || done.get(b) === cw + "x" + ch) return;
+  done.set(b, cw + "x" + ch);
+  paintInto(b.firstElementChild, cw, ch, w.seed, w.pal, w.hz, false);
+}
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) ensure(e.target); }), { rootMargin: "60% 100% 60% 100%" });
+btns.forEach(b => io.observe(b));
+
+/* ---------- the walk: vertical scroll becomes a horizontal stroll ---------- */
+let H = false, maxX = 0, walkTop = 0, trackW = 1, x = 0, stops = [], segs = [], room = -1, ticking = false;
+function measure() {
+  H = isH();
+  if (!H) { walk.style.height = ""; track.style.transform = ""; x = 0; setRoomFromScroll(); return; }
+  trackW = track.scrollWidth; maxX = Math.max(0, trackW - innerWidth);
+  walk.style.height = maxX + innerHeight + "px";
+  walkTop = walk.getBoundingClientRect().top + scrollY;
+  const starts = [0, 0, 0, 0];
+  secs.forEach(s => { const r = +s.dataset.room; if (r && !starts[r]) starts[r] = s.offsetLeft; });
+  segs = starts.map((s, r) => [r ? s : 0, r < 3 ? starts[r + 1] : trackW]);
+  planBtns.forEach((b, r) => b.style.setProperty("--f", Math.max(1, Math.round(segs[r][1] - segs[r][0]))));
+  stops = $$(".track .wtext, .track .work").map(el => { const b = el.getBoundingClientRect(); return b.left + x + b.width / 2; }).sort((a, b) => a - b);
+  update();
+}
+function setRoom(r) {
+  if (r === room) return;
+  room = r;
+  planBtns.forEach((b, i) => b.setAttribute("aria-current", String(i === r)));
+  $("#walkLive").textContent = ROOMS[r];
+  const pb = planBtns[r]; if (!H && pb) { const p = pb.parentElement; p.scrollLeft = pb.offsetLeft - 16; }
+}
+function update() {
+  hdr.classList.toggle("lined", scrollY > 8);
+  if (!H) return;
+  x = Math.min(maxX, Math.max(0, scrollY - walkTop));
+  track.style.transform = `translate3d(${-x}px,0,0)`;
+  const cx = x + innerWidth / 2;
+  let r = 0; for (let k = 1; k < 4; k++) if (cx >= segs[k][0]) r = k;
+  setRoom(r);
+  const b = planBtns[r], s = segs[r], f = Math.min(1, Math.max(0, (cx - s[0]) / Math.max(1, s[1] - s[0])));
+  you.style.transform = `translateX(${b.offsetLeft + f * b.offsetWidth}px)`;
+}
+function setRoomFromScroll() {
+  let r = 0;
+  secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * 0.45) r = +s.dataset.room; });
+  setRoom(r);
+}
+addEventListener("scroll", () => {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => { ticking = false; update(); if (!H) setRoomFromScroll(); });
+}, { passive: true });
+const behave = () => (RM() ? "auto" : "smooth");
+function toX(tx) { window.scrollTo({ top: walkTop + Math.min(maxX, Math.max(0, tx)), behavior: behave() }); }
+function goRoom(r) {
+  if (H) toX(r ? segs[r][0] - innerWidth * 0.06 : 0);
+  else secs.find(s => +s.dataset.room === r).scrollIntoView({ behavior: behave(), block: "start" });
+}
+function go(dir) {
+  const cx = x + innerWidth / 2;
+  const t = dir > 0 ? stops.find(s => s > cx + 12) : stops.slice().reverse().find(s => s < cx - 12);
+  if (t == null) { if (dir > 0) $("#about").scrollIntoView({ behavior: behave() }); else toX(0); return; }
+  toX(t - innerWidth / 2);
+}
+document.addEventListener("click", e => { const g = e.target.closest("[data-go]"); if (g) goRoom(+g.dataset.go); });
+$("#prevBtn").addEventListener("click", () => go(-1));
+$("#nextBtn").addEventListener("click", () => go(1));
+document.addEventListener("keydown", e => {
+  if (viewer.open || e.defaultPrevented || e.altKey || e.metaKey || e.ctrlKey || !H) return;
+  if (/INPUT|SELECT|TEXTAREA/.test((document.activeElement || {}).tagName || "")) return;
+  if (scrollY < walkTop - innerHeight * 0.5 || scrollY > walkTop + maxX + innerHeight * 0.3) return;
+  if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+  else if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+});
+walk.addEventListener("wheel", e => {
+  if (!H || Math.abs(e.deltaX) <= Math.abs(e.deltaY) || Math.abs(e.deltaX) < 2) return;
+  e.preventDefault(); window.scrollBy(0, e.deltaX);
+}, { passive: false });
+let rz;
+addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => { measure(); btns.forEach(b => { const r = b.getBoundingClientRect(); if (r.right > -innerWidth && r.left < innerWidth * 2 && r.bottom > -innerHeight && r.top < innerHeight * 2) ensure(b); }); }, 180); });
+addEventListener("hd:brandchange", () => requestAnimationFrame(measure));
+if (window.ResizeObserver) new ResizeObserver(() => requestAnimationFrame(measure)).observe(track);
+
+/* ---------- look closer (FLIP) + regenerate a study ---------- */
+let cur = null, studies = 0;
+const vLive = t => { const l = $("#vLive"); l.textContent = ""; setTimeout(() => (l.textContent = t), 40); };
+function fitSize(ar) {
+  let mw = vArt.clientWidth, mh = vArt.clientHeight;
+  if (!isH()) { mw = Math.min(mw || innerWidth - 36, innerWidth - 36); mh = innerHeight * 0.56; }
+  const w = Math.max(80, Math.min(mw, mh * ar));
+  return [Math.floor(w), Math.floor(w / ar)];
+}
+function sizeCv(w) { const [cw, ch] = fitSize(w.ar); vCv.style.width = cw + "px"; vCv.style.height = ch + "px"; return [cw, ch]; }
+function fillInfo() {
+  const w = WORKS[cur.i];
+  $("#vRoom").textContent = `${ROOMS[w.room]} · ${w.no}`;
+  $("#vTitle").textContent = w.t;
+  $("#vMeta").textContent = `${w.y} · Oil on linen · ${w.size[0]} × ${w.size[1]} cm`;
+  $("#vNote").textContent = w.note;
+  $("#vPrice").innerHTML = `A$${fmt(w.price)} <span>· sample price, incl. GST</span>`;
+  $("#vCount").textContent = `${cur.i + 1} / ${WORKS.length}`;
+  $("#vTag").hidden = $("#vStudy").hidden = $("#vBack").hidden = true;
+  vCv.setAttribute("aria-label", `${w.t}, ${w.y}: ${DESC[w.pal]}.`);
+}
+function flip(from, to, reverse, ms) {
+  const a = from.getBoundingClientRect(), b = to.getBoundingClientRect();
+  if (!a.width || !b.width) return null;
+  const inv = `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})`;
+  return to.animate(reverse ? [{ transform: "none" }, { transform: inv }] : [{ transform: inv }, { transform: "none" }], { duration: ms, easing: reverse ? "cubic-bezier(.4,0,.2,1)" : "cubic-bezier(.2,.8,.2,1)" });
+}
+function openViewer(i) {
+  const b = btns[i], w = WORKS[i];
+  ensure(b);
+  cur = { i, seed: w.seed, from: b };
+  fillInfo();
+  viewer.showModal();
+  const [cw, ch] = sizeCv(w);
+  const d = Math.min(window.devicePixelRatio || 1, 2);
+  vCv.width = Math.round(cw * d); vCv.height = Math.round(ch * d);
+  vCv.getContext("2d").drawImage(b.firstElementChild, 0, 0, vCv.width, vCv.height);
+  b.classList.add("away");
+  const info = $("#vInfo");
+  if (!RM()) { flip(b, vFrame, false, 620); info.classList.remove("v-in"); void info.offsetWidth; info.classList.add("v-in"); }
+  $("#vX").focus({ preventScroll: true });
+  setTimeout(() => { if (cur && cur.i === i && cur.seed === w.seed) paintInto(vCv, cw, ch, w.seed, w.pal, w.hz, false); }, RM() ? 0 : 640);
+}
+function closeViewer(then) {
+  if (!viewer.open || !cur) return;
+  const b = cur.from;
+  const finish = () => {
+    viewer.classList.remove("closing"); viewer.close(); b.classList.remove("away"); cur = null;
+    if (then) then(); else { b.focus({ preventScroll: true }); const r = b.getBoundingClientRect(); if (r.right < 0 || r.left > innerWidth || r.bottom < 0 || r.top > innerHeight) bring(b); }
+  };
+  const r = b.getBoundingClientRect(), vis = r.right > 0 && r.left < innerWidth && r.bottom > 0 && r.top < innerHeight;
+  if (RM() || then || !vis) { finish(); return; }
+  viewer.classList.add("closing");
+  const a = flip(b, vFrame, true, 440);
+  if (a) a.onfinish = finish; else finish();
+}
+function bring(b) {
+  if (H) { const r = b.getBoundingClientRect(); toX(r.left + x + r.width / 2 - innerWidth / 2); }
+  else b.scrollIntoView({ behavior: behave(), block: "center" });
+}
+function showWork(i) {
+  const w = WORKS[i];
+  cur.from.classList.remove("away");
+  ensure(btns[i]);
+  cur = { i, seed: w.seed, from: btns[i] };
+  btns[i].classList.add("away");
+  fillInfo();
+  const [cw, ch] = sizeCv(w);
+  paintInto(vCv, cw, ch, w.seed, w.pal, w.hz, false);
+  if (!RM()) vFrame.animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }], { duration: 380, easing: "ease-out" });
+  vLive(`${w.t}, ${w.y}. ${i + 1} of ${WORKS.length}.`);
+}
+function regenerate() {
+  const w = WORKS[cur.i];
+  studies += 1;
+  cur.seed = 10000 + Math.floor(Math.random() * 89999);
+  const tag = $("#vTag"), st = $("#vStudy");
+  tag.textContent = `Generative study · seed ${cur.seed}`; tag.hidden = false;
+  st.innerHTML = `<strong>Study ${studies}.</strong> A new variation drawn by code from the palette and structure of <em>${w.t}</em>. It's a sketch made for this demo, not a painting by the artist and not for sale.`;
+  st.hidden = false; $("#vBack").hidden = false;
+  vCv.setAttribute("aria-label", `Generative study, seed ${cur.seed}: ${DESC[w.pal]}.`);
+  paintInto(vCv, vCv.clientWidth, vCv.clientHeight, cur.seed, w.pal, w.hz == null ? null : Math.min(0.62, Math.max(0.28, w.hz + (Math.random() - 0.5) * 0.14)), true);
+  vLive(`Generative study ${studies} is being drawn, seed ${cur.seed}. It is a code-made variation, not a work for sale.`);
+}
+function backToOriginal() {
+  const w = WORKS[cur.i];
+  fillInfo(); cur.seed = w.seed;
+  paintInto(vCv, vCv.clientWidth, vCv.clientHeight, w.seed, w.pal, w.hz, false);
+  vLive(`Back to ${w.t}.`);
+  $("#vRegen").focus();
+}
+btns.forEach((b, i) => b.addEventListener("click", () => openViewer(i)));
+$("#vX").addEventListener("click", () => closeViewer());
+$("#vRegen").addEventListener("click", regenerate);
+$("#vBack").addEventListener("click", backToOriginal);
+$("#vPrev").addEventListener("click", () => showWork((cur.i - 1 + WORKS.length) % WORKS.length));
+$("#vNext").addEventListener("click", () => showWork((cur.i + 1) % WORKS.length));
+$("#vEnq").addEventListener("click", () => {
+  const i = cur.i;
+  closeViewer(() => { $("#fWork").value = String(i); $("#enquire").scrollIntoView({ behavior: behave() }); $("#fWork").focus({ preventScroll: true }); });
+});
+viewer.addEventListener("cancel", e => { e.preventDefault(); closeViewer(); });
+viewer.addEventListener("keydown", e => {
+  if (e.key === "Escape") { e.preventDefault(); closeViewer(); }
+  else if (e.key === "ArrowRight" && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); showWork((cur.i + 1) % WORKS.length); }
+  else if (e.key === "ArrowLeft" && !/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); showWork((cur.i - 1 + WORKS.length) % WORKS.length); }
+});
+viewer.addEventListener("click", e => { if (e.target === viewer || e.target === vArt) closeViewer(); });
+
+/* ---------- studio visits: first Saturdays ---------- */
+const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const TIMES = ["10 am", "10.30 am", "11 am", "11.30 am", "1 pm", "1.30 pm", "2 pm", "2.30 pm"];
+function firstSaturdays(n) {
+  const now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate()), out = [];
+  let y = now.getFullYear(), m = now.getMonth();
+  while (out.length < n) {
+    const first = new Date(y, m, 1), sat = new Date(y, m, 1 + ((6 - first.getDay() + 7) % 7));
+    if (sat >= today) out.push(sat);
+    if (++m > 11) { m = 0; y++; }
+  }
+  return out;
+}
+const sats = firstSaturdays(3), label = d => `${DAYS[d.getDay()]} ${d.getDate()} ${MON[d.getMonth()]}`;
+let pickDay = -1, pickTime = -1;
+function taken(di, ti) { return ((di * 7 + ti * 3 + sats[di].getDate()) % 5) === 0; }
+function renderSlots() {
+  $("#days").innerHTML = sats.map((d, i) => `<button type="button" class="pill" data-day="${i}" aria-pressed="${i === pickDay}">${label(d)}</button>`).join("");
+  $("#times").innerHTML = TIMES.map((t, i) => {
+    const off = pickDay >= 0 && taken(pickDay, i);
+    return `<button type="button" class="pill" data-time="${i}" aria-pressed="${i === pickTime}"${off ? ' disabled aria-label="' + t + ', already requested"' : ""}${pickDay < 0 ? " disabled" : ""}>${t}</button>`;
+  }).join("");
+  $("#slotSum").textContent = pickDay < 0 ? "Pick a Saturday and a time." : pickTime < 0 ? `${label(sats[pickDay])}: now choose a time.` : `${label(sats[pickDay])} at ${TIMES[pickTime]} · 30-minute visit, North Hobart studio.`;
+}
+$("#slots").addEventListener("click", e => {
+  const d = e.target.closest("[data-day]"), t = e.target.closest("[data-time]");
+  if (d) { pickDay = +d.dataset.day; if (pickTime >= 0 && taken(pickDay, pickTime)) pickTime = -1; renderSlots(); $(`[data-day="${pickDay}"]`).focus(); }
+  else if (t && !t.disabled) { pickTime = +t.dataset.time; renderSlots(); $(`[data-time="${pickTime}"]`).focus(); }
+});
+$("#slotBtn").addEventListener("click", () => {
+  if (pickDay < 0 || pickTime < 0) { $("#slotSum").textContent = "Choose a Saturday and a time first."; return; }
+  $("#slotSum").textContent = `Demo only: nothing was booked. On the real site Inès would confirm ${label(sats[pickDay])} at ${TIMES[pickTime]} by email.`;
+  toast("Demo only — no studio visit was booked.");
+});
+renderSlots();
+
+/* ---------- enquiry ---------- */
+const sel = $("#fWork");
+sel.innerHTML = WORKS.map((w, i) => `<option value="${i}">${w.no} · ${w.t} (${w.y}) · A$${fmt(w.price)}</option>`).join("") + '<option value="c">A commission</option><option value="o">Something else</option>';
+$("#enqForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const st = $("#enqStatus"), nm = $("#fName"), em = $("#fEmail"), msg = $("#fMsg");
+  const bad = [nm, em, msg].find(el => !el.value.trim() || !el.checkValidity());
+  if (bad) { st.textContent = bad === em ? "Please check the email address." : bad === nm ? "Please add your name." : "Please add a short message."; bad.focus(); return; }
+  const v = sel.value, what = v === "c" ? "a commission" : v === "o" ? "your question" : `‘${WORKS[+v].t}’`;
+  st.textContent = `Demo only: your enquiry about ${what} wasn't sent. On the real site it would go straight to Inès.`;
+  toast("Demo only — no enquiry was sent.");
+});
+
+/* ---------- small things ---------- */
+const menuBtn = $("#menuBtn"), nav = $("#nav");
+menuBtn.addEventListener("click", () => { const on = !nav.classList.contains("open"); nav.classList.toggle("open", on); menuBtn.setAttribute("aria-expanded", String(on)); });
+nav.addEventListener("click", e => { if (e.target.closest("a")) { nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); } });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("open") && !viewer.open) { e.preventDefault(); nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); menuBtn.focus(); } });
+measure();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+addEventListener("load", measure);
+})();
+</script>
+</body>
+</html>

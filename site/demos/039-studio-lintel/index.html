@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="039">
+<meta name="demo:brand" content="Studio Lintel Architects">
+<title>Studio Lintel Architects — residential architecture, Brisbane</title>
+<meta name="description" content="Studio Lintel Architects is a fictional practice of five designing houses and alterations in Brisbane, Queensland.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --w:#FFFFFF;--k:#000000;--g:#8C8C8C;--r:#FF0000;
+  --m:clamp(16px,3.34vw,48px);--gap:clamp(10px,1.67vw,24px);
+  --sans:"Schibsted Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--w);color:var(--k);font:400 1.0625rem/1.5 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
+ol,ul{list-style:none;padding:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+svg{display:block}
+:focus-visible{outline:2px solid var(--k);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:.8125rem;line-height:1.45;letter-spacing:0}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-inline:max(var(--m),env(safe-area-inset-left)) max(var(--m),env(safe-area-inset-right))}
+
+/* header */
+.top{padding-top:max(20px,env(safe-area-inset-top));padding-bottom:18px;align-items:baseline;border-bottom:1px solid var(--k);row-gap:10px;position:relative;z-index:5;background:var(--w)}
+.brand{grid-column:1/span 3;font-weight:700;font-size:1.0625rem;line-height:1.2;text-decoration:none;overflow-wrap:anywhere;min-width:0}
+.desc{grid-column:4/span 3}
+.nav{grid-column:7/span 4;display:flex;flex-wrap:wrap;gap:4px 22px}
+.nav a{text-decoration:none;padding:6px 0}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.gridbtn{grid-column:11/span 2;justify-self:end;display:inline-flex;align-items:center;gap:10px;min-height:40px;padding:0 0 0 12px;background:none;border:0;cursor:pointer;font-family:var(--mono);font-size:.8125rem}
+.gridbtn i{width:14px;height:14px;border:1px solid var(--k);position:relative;flex:none}
+.gridbtn[aria-pressed="true"] i{border-color:var(--r);background:repeating-linear-gradient(90deg,var(--r) 0 1px,transparent 1px 4px)}
+.gl-short{display:none}
+.gridbtn kbd{font:inherit;border:1px solid var(--k);padding:0 5px;line-height:1.5}
+
+/* hero */
+.hero{padding-top:clamp(36px,4.4vw,64px);padding-bottom:clamp(8px,1.5vw,20px);row-gap:clamp(24px,2.8vw,40px);align-items:end}
+#index{padding-top:clamp(40px,4.4vw,64px)}
+#index .sec-h{margin-bottom:clamp(20px,2.4vw,32px)}
+h1{grid-column:1/span 9;font-weight:500;font-size:clamp(2.6rem,6.4vw,6.4rem);line-height:.96;letter-spacing:-.045em;text-wrap:balance}
+.count{grid-column:10/span 3;justify-self:end;text-align:right}
+.count b{display:block;font-weight:500;font-size:clamp(5.5rem,13vw,12.5rem);line-height:.78;letter-spacing:-.06em;color:var(--g)}
+.count span{display:block;margin-top:12px}
+.intro-a{grid-column:1/span 3}
+.intro-b{grid-column:4/span 4;font-size:1.1875rem;line-height:1.45}
+.intro-c{grid-column:8/span 3}
+.intro-d{grid-column:11/span 2;justify-self:end}
+.arrow{text-decoration:none;border-bottom:1px solid var(--k);padding-bottom:2px}
+
+/* section heads */
+.sec{padding-top:clamp(56px,8vw,120px)}
+.sec-h{border-top:1px solid var(--k);padding-top:14px;margin-bottom:clamp(28px,4vw,56px);align-items:baseline;row-gap:12px}
+.sec-h .no{grid-column:1/span 1}
+.sec-h h2{grid-column:2/span 5;font-weight:500;font-size:clamp(1.9rem,3.6vw,3.3rem);line-height:1;letter-spacing:-.035em}
+.sec-h p{grid-column:8/span 5}
+
+/* index */
+.idx{position:relative}
+.idx-head,.row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);align-items:baseline}
+.idx-head{padding-bottom:10px;border-bottom:1px solid var(--k)}
+.c-no{grid-column:1/span 1}.c-name{grid-column:2/span 4}.c-sub{grid-column:6/span 2}.c-type{grid-column:8/span 2}.c-year{grid-column:10/span 1}.c-st{grid-column:11/span 2}
+.row{border-bottom:1px solid var(--k);cursor:pointer;position:relative;isolation:isolate}
+.row>*{padding:14px 0 13px}
+.row .c-no,.row .c-sub,.row .c-type,.row .c-year,.row .c-st{font-family:var(--mono);font-size:.8125rem}
+.proj{display:block;width:100%;text-align:left;background:none;border:0;padding:0;cursor:pointer;font-weight:500;font-size:clamp(1.25rem,1.9vw,1.75rem);line-height:1.1;letter-spacing:-.025em}
+.proj:focus-visible{outline:none}
+.row:has(.proj:focus-visible){outline:2px solid var(--k);outline-offset:-2px}
+.row::before{content:"";position:absolute;inset:0 calc(var(--m)*-1);background:var(--k);opacity:0;z-index:-1}
+.row:hover,.row.hot{color:var(--w)}
+.row:hover::before,.row.hot::before{opacity:1}
+.row .st-dot{display:inline-block;width:7px;height:7px;border:1px solid currentColor;margin-right:8px;vertical-align:1px}
+.row .st-dot.full{background:currentColor}
+.hint{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 24px}
+.inline{border-bottom:1px solid var(--k);padding:16px 0 22px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);row-gap:14px}
+.inline[hidden]{display:none}
+.inline .fig{grid-column:1/-1;border:1px solid var(--k);aspect-ratio:4/3}
+.inline p{grid-column:1/-1}
+.inline button{grid-column:1/-1;justify-self:start}
+.fig svg{width:100%;height:100%}
+.float{position:fixed;left:0;top:0;z-index:40;width:clamp(260px,24vw,360px);pointer-events:none;background:var(--w);border:1px solid var(--k);
+  clip-path:inset(0 0 100% 0);transition:clip-path .16s linear;will-change:transform}
+.float.on{clip-path:inset(0)}
+.float .fig{aspect-ratio:4/3;border-bottom:1px solid var(--k)}
+.float p{padding:8px 10px;display:flex;justify-content:space-between;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 18px;background:var(--k);color:var(--w);border:1px solid var(--k);cursor:pointer;text-decoration:none;font:500 .95rem/1 var(--sans)}
+.btn:hover{background:var(--w);color:var(--k)}
+.btn.line{background:var(--w);color:var(--k)}
+.btn.line:hover{background:var(--k);color:var(--w)}
+
+/* practice */
+.prac{row-gap:28px}
+.prac-lead{grid-column:2/span 7;font-weight:500;font-size:clamp(1.4rem,2.3vw,2.1rem);line-height:1.18;letter-spacing:-.025em}
+.prac-body{grid-column:2/span 5;display:grid;gap:14px}
+.facts{grid-column:8/span 5;border-top:1px solid var(--k)}
+.facts div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:var(--gap);border-bottom:1px solid var(--k);padding:10px 0}
+.facts dt{grid-column:1/span 2}
+.facts dd{grid-column:3/span 3}
+.people{grid-column:2/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:var(--gap);row-gap:18px;margin-top:12px}
+.people li{border-top:1px solid var(--k);padding-top:10px;display:grid;gap:2px}
+.people b{font-weight:500}
+
+/* approach */
+.prin{border-top:1px solid var(--k);padding:18px 0 26px;align-items:start;row-gap:10px;padding-inline:0}
+.prin .n{grid-column:1/span 3;font-weight:500;font-size:clamp(5rem,11vw,11rem);line-height:.74;letter-spacing:-.07em;color:var(--g)}
+.prin h3{grid-column:5/span 3;font-weight:500;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.05;letter-spacing:-.03em}
+.prin p{grid-column:8/span 4;max-width:34em}
+.prin:hover .n{color:var(--k)}
+
+/* contact */
+.contact{padding-bottom:clamp(56px,8vw,120px);row-gap:28px}
+.c-info{grid-column:2/span 4;display:grid;gap:18px;align-content:start}
+.c-info a{font-weight:500;font-size:clamp(1.3rem,2vw,1.75rem);letter-spacing:-.02em;text-decoration:none;border-bottom:1px solid var(--k);justify-self:start;line-height:1.3}
+.form{grid-column:7/span 6;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:var(--gap);row-gap:22px}
+.fld{grid-column:span 3;display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld input,.fld select,.fld textarea{width:100%;border:0;border-bottom:1px solid var(--k);border-radius:0;background:transparent;padding:8px 0;font:400 1.0625rem/1.4 var(--sans);color:var(--k);min-height:42px}
+.fld textarea{min-height:88px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-bottom-width:2px}
+fieldset.fld{border:0;padding:0;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chips span{display:inline-flex;align-items:center;min-height:40px;padding:0 12px;border:1px solid var(--k);font-family:var(--mono);font-size:.8125rem}
+.chips input:checked+span{background:var(--k);color:var(--w)}
+.chips input:focus-visible+span{outline:2px solid var(--k);outline-offset:2px}
+.form .btn{grid-column:1/span 3;justify-self:start}
+.form .mono{grid-column:1/-1}
+
+/* footer */
+.foot{border-top:1px solid var(--k);padding-top:18px;padding-bottom:calc(28px + env(safe-area-inset-bottom));row-gap:18px;align-items:end}
+.fname{grid-column:1/span 9;font-weight:500;font-size:clamp(2.2rem,6.4vw,6.2rem);line-height:.92;letter-spacing:-.05em;overflow-wrap:anywhere;min-width:0}
+.foot .mono{grid-column:10/span 3}
+
+/* detail panel */
+.panel{position:fixed;inset:0;z-index:60;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-inline:var(--m);visibility:hidden;pointer-events:none}
+.panel.open{visibility:visible;pointer-events:auto}
+.scrim{position:absolute;inset:0;background:rgba(255,255,255,.72);opacity:0;transition:opacity .28s}
+.panel.open .scrim{opacity:1}
+.pin{grid-column:7/-1;position:relative;margin-left:calc(var(--gap)*-1);margin-right:calc(var(--m)*-1);padding:max(18px,env(safe-area-inset-top)) var(--m) 40px var(--gap);background:var(--w);border-left:1px solid var(--k);
+  overflow-y:auto;overscroll-behavior:contain;transform:translateX(102%);transition:transform .28s cubic-bezier(.2,.7,0,1);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:var(--gap);row-gap:22px;align-content:start}
+.panel.open .pin{transform:none}
+.pbar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--k);padding-bottom:12px}
+.pbar div{display:flex;gap:6px}
+.pbar button{min-height:40px;min-width:40px;padding:0 12px;border:1px solid var(--k);background:var(--w);cursor:pointer;font-family:var(--mono);font-size:.8125rem}
+.pbar button:hover{background:var(--k);color:var(--w)}
+.pin h2{grid-column:1/-1;font-weight:500;font-size:clamp(2.2rem,4.2vw,4rem);line-height:.95;letter-spacing:-.045em}
+.pmeta{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gap);border-top:1px solid var(--k);padding-top:10px}
+.pmeta dt{color:var(--k);opacity:.62}
+.pin figure{grid-column:1/-1}
+.pin .fig{border:1px solid var(--k);aspect-ratio:4/3}
+.pin figcaption{margin-top:8px}
+.ptext{grid-column:1/span 5;font-size:1.125rem;line-height:1.55}
+
+/* the grid overlay */
+.gridlay{position:fixed;inset:0;z-index:90;pointer-events:none;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);
+  padding-inline:max(var(--m),env(safe-area-inset-left)) max(var(--m),env(safe-area-inset-right));visibility:hidden}
+.gridlay span{position:relative;border-left:1px solid var(--r);border-right:1px solid var(--r);transform:scaleY(0);transform-origin:top;transition:transform .42s cubic-bezier(.2,.7,0,1)}
+.gridlay span::before{content:attr(data-n);position:absolute;top:max(4px,env(safe-area-inset-top));left:4px;font:500 10px/1 var(--mono);color:var(--r)}
+.gridlay::before,.gridlay::after{content:"";position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--r)}
+.gridlay::before{left:0}.gridlay::after{right:0}
+.grid-on .gridlay{visibility:visible}
+.grid-on .gridlay span{transform:none}
+
+/* responsive */
+@media (max-width:1100px){
+  .brand{grid-column:1/span 4}.desc{grid-column:5/span 4}.nav{grid-column:1/span 10;grid-row:2}.gridbtn{grid-column:11/span 2;grid-row:1}
+  .c-name{grid-column:2/span 5}.c-sub{grid-column:7/span 2}.c-type{grid-column:9/span 2}.c-year{display:none}.c-st{grid-column:11/span 2}
+  .people{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .brand{grid-column:1/span 8}.desc{display:none}.gridbtn{grid-column:9/span 4}.nav{grid-column:1/-1}
+  .gridbtn kbd,.gl-long{display:none}.gl-short{display:inline}
+  h1{grid-column:1/-1}
+  .count{grid-column:1/-1;justify-self:start;text-align:left;display:flex;align-items:flex-end;gap:14px}
+  .count span{margin:0 0 6px}
+  .intro-a,.intro-b,.intro-c{grid-column:1/-1}.intro-d{grid-column:1/-1;justify-self:start}
+  .sec-h .no{grid-column:1/span 2}.sec-h h2{grid-column:3/-1}.sec-h p{grid-column:3/-1}
+  .idx-head{display:none}
+  .row{border-bottom:1px solid var(--k);row-gap:0}
+  .row>*{padding:0}
+  .row .c-no{grid-column:1/span 2;grid-row:1/span 2;padding-top:16px}
+  .row .c-name{grid-column:3/-1;padding-top:14px}
+  .row .c-sub,.row .c-type,.row .c-st{grid-row:2;padding:6px 0 14px}
+  .row .c-sub{grid-column:3/span 4}.row .c-type{grid-column:7/span 6}.row .c-st{display:none}
+  .row::before{inset:0 calc(var(--m)*-1)}
+  .inline{padding-left:0}
+  .inline .fig,.inline p,.inline button{grid-column:3/-1}
+  .prac-lead,.prac-body,.facts,.people{grid-column:1/-1}
+  .people{grid-template-columns:1fr 1fr}
+  .prin .n{grid-column:1/span 4}.prin h3{grid-column:5/-1}.prin p{grid-column:5/-1}
+  .c-info,.form{grid-column:1/-1}
+  .fname{grid-column:1/-1}.foot .mono{grid-column:1/-1}
+  .pin{grid-column:1/-1;margin-left:calc(var(--m)*-1);padding-left:var(--m);border-left:0;padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+  .ptext{grid-column:1/-1}
+  .pmeta{grid-template-columns:1fr 1fr;row-gap:10px}
+}
+@media (max-width:420px){.fld{grid-column:1/-1}.people{grid-template-columns:1fr}.form .btn{grid-column:1/-1}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="gridlay" aria-hidden="true"><span data-n="1"></span><span data-n="2"></span><span data-n="3"></span><span data-n="4"></span><span data-n="5"></span><span data-n="6"></span><span data-n="7"></span><span data-n="8"></span><span data-n="9"></span><span data-n="10"></span><span data-n="11"></span><span data-n="12"></span></div>
+
+<header class="top g12">
+  <a class="brand" href="#top" data-brand>Studio Lintel Architects</a>
+  <p class="desc mono">Residential architecture<br>Brisbane, Queensland</p>
+  <nav class="nav mono" aria-label="Primary"><a href="#index">Index</a><a href="#practice">Practice</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
+  <button class="gridbtn" type="button" aria-pressed="false" id="gridbtn"><i aria-hidden="true"></i><span class="gl-long">Show grid</span><span class="gl-short">Grid</span><kbd aria-hidden="true">G</kbd></button>
+</header>
+
+<main id="top">
+  <section class="hero g12" aria-labelledby="h1">
+    <h1 id="h1">Houses and alterations for the subtropics.</h1>
+    <p class="count"><b>12</b><span class="mono">projects in the index,<br>2021 – 2026</span></p>
+    <p class="intro-a mono">Practice of five<br>Woolloongabba, Brisbane</p>
+    <p class="intro-b">We design new houses, alterations and small buildings within fifteen kilometres of the city — rooms shaped by sun, breeze and the way people actually live in them.</p>
+    <p class="intro-c mono">New houses<br>Alterations &amp; additions<br>Raise &amp; build-under<br>Garden structures</p>
+    <p class="intro-d mono"><a class="arrow" href="#contact">Start a project ↓</a></p>
+  </section>
+
+  <section class="sec g12" id="index" aria-labelledby="idx-t">
+    <div class="sec-h g12" style="grid-column:1/-1;padding-inline:0">
+      <p class="no mono">(1)</p>
+      <h2 id="idx-t">Index</h2>
+      <p class="mono" id="idx-hint">Hover or focus a row to preview its study. Select a project to open it. Press G for the grid.</p>
+    </div>
+    <div class="idx" role="table" aria-label="Project index" aria-describedby="idx-hint" style="grid-column:1/-1">
+      <div class="idx-head mono" role="row">
+        <span class="c-no" role="columnheader">No.</span><span class="c-name" role="columnheader">Project</span><span class="c-sub" role="columnheader">Suburb</span><span class="c-type" role="columnheader">Type</span><span class="c-year" role="columnheader">Year</span><span class="c-st" role="columnheader">Status</span>
+      </div>
+      <div role="rowgroup" id="rows">
+        <div class="row" role="row" data-i="0"><span class="c-no" role="rowheader">01</span><span class="c-name" role="cell"><button class="proj" type="button">Tallowwood House</button></span><span class="c-sub" role="cell">Paddington</span><span class="c-type" role="cell">New house</span><span class="c-year" role="cell">2025</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="1"><span class="c-no" role="rowheader">02</span><span class="c-name" role="cell"><button class="proj" type="button">Breezeway Cottage</button></span><span class="c-sub" role="cell">Red Hill</span><span class="c-type" role="cell">Alteration &amp; addition</span><span class="c-year" role="cell">2024</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="2"><span class="c-no" role="rowheader">03</span><span class="c-name" role="cell"><button class="proj" type="button">Stair Hall</button></span><span class="c-sub" role="cell">New Farm</span><span class="c-type" role="cell">Apartment alteration</span><span class="c-year" role="cell">2024</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="3"><span class="c-no" role="rowheader">04</span><span class="c-name" role="cell"><button class="proj" type="button">Verandah Room</button></span><span class="c-sub" role="cell">Ashgrove</span><span class="c-type" role="cell">Alteration</span><span class="c-year" role="cell">2023</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="4"><span class="c-no" role="rowheader">05</span><span class="c-name" role="cell"><button class="proj" type="button">Light Well House</button></span><span class="c-sub" role="cell">West End</span><span class="c-type" role="cell">New house</span><span class="c-year" role="cell">2025</span><span class="c-st" role="cell"><i class="st-dot"></i>Under construction</span></div>
+        <div class="row" role="row" data-i="5"><span class="c-no" role="rowheader">06</span><span class="c-name" role="cell"><button class="proj" type="button">Batten Screen Studio</button></span><span class="c-sub" role="cell">Bulimba</span><span class="c-type" role="cell">Backyard studio</span><span class="c-year" role="cell">2023</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="6"><span class="c-no" role="rowheader">07</span><span class="c-name" role="cell"><button class="proj" type="button">Terrace Steps</button></span><span class="c-sub" role="cell">Toowong</span><span class="c-type" role="cell">New house</span><span class="c-year" role="cell">2026</span><span class="c-st" role="cell"><i class="st-dot"></i>In design</span></div>
+        <div class="row" role="row" data-i="7"><span class="c-no" role="rowheader">08</span><span class="c-name" role="cell"><button class="proj" type="button">Courtyard Pair</button></span><span class="c-sub" role="cell">Annerley</span><span class="c-type" role="cell">Dual occupancy</span><span class="c-year" role="cell">2026</span><span class="c-st" role="cell"><i class="st-dot"></i>In documentation</span></div>
+        <div class="row" role="row" data-i="8"><span class="c-no" role="rowheader">09</span><span class="c-name" role="cell"><button class="proj" type="button">Kitchen Lantern</button></span><span class="c-sub" role="cell">Wilston</span><span class="c-type" role="cell">Alteration</span><span class="c-year" role="cell">2022</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="9"><span class="c-no" role="rowheader">10</span><span class="c-name" role="cell"><button class="proj" type="button">Undercroft Library</button></span><span class="c-sub" role="cell">Coorparoo</span><span class="c-type" role="cell">Raise &amp; build-under</span><span class="c-year" role="cell">2022</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+        <div class="row" role="row" data-i="10"><span class="c-no" role="rowheader">11</span><span class="c-name" role="cell"><button class="proj" type="button">Pavilion for Two</button></span><span class="c-sub" role="cell">Graceville</span><span class="c-type" role="cell">New house</span><span class="c-year" role="cell">2026</span><span class="c-st" role="cell"><i class="st-dot"></i>In design</span></div>
+        <div class="row" role="row" data-i="11"><span class="c-no" role="rowheader">12</span><span class="c-name" role="cell"><button class="proj" type="button">Shade House</button></span><span class="c-sub" role="cell">Yeronga</span><span class="c-type" role="cell">Garden pavilion</span><span class="c-year" role="cell">2021</span><span class="c-st" role="cell"><i class="st-dot full"></i>Completed</span></div>
+      </div>
+    </div>
+    <p class="hint mono" style="grid-column:1/-1"><span>■ Completed</span><span>□ In progress</span><span>Studies are abstract compositions — not photographs or renders.</span></p>
+  </section>
+
+  <section class="sec g12" id="practice" aria-labelledby="prac-t">
+    <div class="sec-h g12" style="grid-column:1/-1;padding-inline:0">
+      <p class="no mono">(2)</p><h2 id="prac-t">Practice</h2>
+    </div>
+    <div class="prac g12" style="grid-column:1/-1;padding-inline:0">
+      <p class="prac-lead">Studio Lintel is five people in a converted joinery workshop. We take on a small number of projects each year, so the people who draw a building also see it built.</p>
+      <div class="prac-body">
+        <p>Most of our work is for families improving a house they already love: Queenslanders that need their verandahs back, post-war houses with dark middles, cottages on lots too small for the brief. We also design a handful of new houses and the occasional small public building.</p>
+        <p>We work from first sketch to handover — site study, design, documentation, approvals and contract administration — and we stay on call once you move in.</p>
+      </div>
+      <dl class="facts mono">
+        <div><dt>Studio</dt><dd>Woolloongabba, Brisbane QLD</dd></div>
+        <div><dt>Team</dt><dd>Five: three architects, a graduate and a studio manager</dd></div>
+        <div><dt>Work</dt><dd>New houses, alterations, raise &amp; build-under, garden structures</dd></div>
+        <div><dt>Area</dt><dd>Mostly within 15 km of the Brisbane CBD</dd></div>
+        <div><dt>Services</dt><dd>Feasibility, design, documentation, approvals, contract administration</dd></div>
+      </dl>
+      <ul class="people mono">
+        <li><b>Imogen Tallis</b>Director</li>
+        <li><b>Sam Okafor</b>Architect</li>
+        <li><b>Mei Lin Chau</b>Architect</li>
+        <li><b>Daniel Reyes</b>Graduate of architecture</li>
+        <li><b>Priya Nair</b>Studio manager</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec g12" id="approach" aria-labelledby="app-t">
+    <div class="sec-h g12" style="grid-column:1/-1;padding-inline:0">
+      <p class="no mono">(3)</p><h2 id="app-t">Approach</h2><p class="mono">Five principles we test every drawing against.</p>
+    </div>
+    <ol style="grid-column:1/-1">
+      <li class="prin g12"><span class="n" aria-hidden="true">1</span><h3>Start with the sun.</h3><p>Every project begins with a sun study of the site: where winter light reaches, where the western sun needs stopping. The plan follows from that, not the other way round.</p></li>
+      <li class="prin g12"><span class="n" aria-hidden="true">2</span><h3>Keep the lintel low.</h3><p>Door heads and window heads set close to the eye make rooms feel sheltered, so a single tall opening feels generous. We draw the heights of openings as carefully as their widths.</p></li>
+      <li class="prin g12"><span class="n" aria-hidden="true">3</span><h3>Build less, better.</h3><p>Most briefs get smaller in our studio. Fewer square metres, built from better materials, usually cost less to run and are more pleasant to live in.</p></li>
+      <li class="prin g12"><span class="n" aria-hidden="true">4</span><h3>Let the house breathe.</h3><p>A Brisbane house should work with the windows open for much of the year. Cross-ventilation, deep eaves and shaded outdoor rooms come before the air-conditioning plan.</p></li>
+      <li class="prin g12"><span class="n" aria-hidden="true">5</span><h3>Leave room for change.</h3><p>Families grow and shrink. We plan structure and services so a house can be adapted later without starting again.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec contact g12" id="contact" aria-labelledby="con-t">
+    <div class="sec-h g12" style="grid-column:1/-1;padding-inline:0">
+      <p class="no mono">(4)</p><h2 id="con-t">Contact</h2><p class="mono">Tell us about the site, the brief and your timing. Studio visits by appointment, Monday to Friday.</p>
+    </div>
+    <div class="c-info">
+      <a href="tel:+61755503196">(07) 5550 3196</a>
+      <a href="mailto:studio@example.com">studio@example.com</a>
+      <p class="mono">Woolloongabba, Brisbane QLD<br>Monday – Friday, 8.30 am – 5.30 pm</p>
+    </div>
+    <form class="form" data-demo-message="Demo only — no enquiry was sent. On a real site this would reach the studio.">
+      <div class="fld"><label class="mono" for="f-name">Name</label><input id="f-name" name="name" autocomplete="name"></div>
+      <div class="fld"><label class="mono" for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <div class="fld"><label class="mono" for="f-sub">Suburb of the site</label><input id="f-sub" name="suburb" placeholder="e.g. Camp Hill"></div>
+      <div class="fld"><label class="mono" for="f-bud">Construction budget</label><select id="f-bud" name="budget"><option>Not sure yet</option><option>Under $300k</option><option>$300k – $600k</option><option>$600k – $1.2m</option><option>Over $1.2m</option></select></div>
+      <fieldset class="fld full"><legend class="mono">Project</legend>
+        <div class="chips"><label><input type="radio" name="kind" value="New house" checked><span>New house</span></label><label><input type="radio" name="kind" value="Alteration"><span>Alteration</span></label><label><input type="radio" name="kind" value="Raise"><span>Raise &amp; build-under</span></label><label><input type="radio" name="kind" value="Other"><span>Other</span></label></div>
+      </fieldset>
+      <div class="fld full"><label class="mono" for="f-msg">The brief, in a few lines</label><textarea id="f-msg" name="msg"></textarea></div>
+      <button class="btn" type="submit">Send enquiry →</button>
+      <p class="mono">Demo form — nothing is sent.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="foot g12">
+  <p class="fname" data-brand>Studio Lintel Architects</p>
+  <p class="mono">A fictional practice — concept demo. Project studies are abstract drawings, not photographs of real buildings.</p>
+</footer>
+
+<div class="float" id="float" aria-hidden="true"><div class="fig"></div><p class="mono"><span class="fl-n"></span><span class="fl-s"></span></p></div>
+
+<div class="panel" id="panel">
+  <div class="scrim" data-close></div>
+  <div class="pin" role="dialog" aria-modal="true" aria-labelledby="pn-name" tabindex="-1">
+    <div class="pbar"><span class="mono" id="pn-no">No. 01</span><div><button type="button" id="pn-prev" aria-label="Previous project">←</button><button type="button" id="pn-next" aria-label="Next project">→</button><button type="button" data-close>Close</button></div></div>
+    <h2 id="pn-name">Project</h2>
+    <dl class="pmeta mono" id="pn-meta"></dl>
+    <figure><div class="fig" id="pn-fig"></div><figcaption class="mono" id="pn-cap"></figcaption></figure>
+    <p class="ptext" id="pn-text"></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var RM=window.matchMedia?matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+  var FINE=window.matchMedia?matchMedia('(hover: hover) and (pointer: fine) and (min-width: 821px)'):{matches:true};
+
+  /* ---------- project studies: planes, stairs, shafts, screens ---------- */
+  var T=[
+    'A narrow house on a steep Paddington lot, built between two tall neighbours. The plan is a single run of rooms stepping down the slope, held by three blade walls of recycled brick that carry the roof and block the western sun. Between the walls, full-height timber doors open the living rooms to a deep side garden. The roof is one thin plane, lifted clear of the walls on a steel lintel so a band of sky runs the length of the house. Materials are few: brick, spotted gum, galvanised steel and concrete floors that hold the winter sun.',
+    'A 1920s worker’s cottage with a new pavilion at the back of the lot. Rather than extend the old house, we separated the two with an open breezeway: a covered deck that catches the south-easterly and becomes the family’s main room for half the year. The cottage keeps its bedrooms and front verandah; the pavilion holds the kitchen and living room. One pitched roof ties them together and shades the breezeway. Hoop pine boards lifted from the old kitchen were relaid in the new one, so the two buildings share a floor. From the street, you would hardly know the work was done.',
+    'Two flats in a 1930s brick apartment building joined into one home over two levels. The work is mostly one element: a stair of folded steel plate that climbs through a new opening in the floor, lit from above by a skylight cut into the old roof. We kept the plaster walls and repaired the timber windows, so the stair is the only new thing you notice. It is also a bookcase, a seat and the home’s main source of daylight. The steel was made off-site in four pieces and lifted in through a window, which set the timeline for the whole project.',
+    'A Queenslander whose verandahs had been enclosed with fibro and louvres decades ago. We opened them up again, then added a verandah room on the northern side that can be fully closed in winter and fully open in summer. Timber shutters slide in front of the glazing, so the room moves between screened porch, sunroom and sleep-out. Balustrade battens, posts and brackets were matched to the originals from a survey of what remained. Inside, the old hall was widened to bring air through from front to back. The owners’ brief was short: make the verandahs work again.',
+    'A new house on a seven-metre-wide lot between a warehouse and a terrace. With no side windows possible, the house brings light in from the middle: a two-storey light well splits the plan into front and back halves, with a small courtyard at its base. Bedrooms face the light well rather than the street. Concrete walls carry the house on both boundaries and keep out the warehouse noise, while the upper floor is lighter timber framing. The structure is complete and the builder is now working through the interior.',
+    'A backyard studio for a ceramicist, built on the footprint of an old garage. It is a simple timber room with a concrete floor and a deep sink, wrapped on three sides by a screen of hardwood battens that filter the afternoon sun and give privacy from the lane. The battens sit closer together at eye level and further apart above, so the light inside changes through the day. A deep eave carries rain away from the doors and gives a sheltered place to work outside. The screen was built by the client’s family over several weekends, from our drawings.',
+    'A new house for a Toowong block that falls eleven metres from the street. Instead of a tall building on stilts, the house steps down the site in three terraces, each with a garden on the roof of the level below. Retaining walls do double duty as the house’s structure. The top level holds the entry and carport, the living spaces sit in the middle, and the bedrooms are at the bottom, nearest the trees. We are developing the design with the owners and a structural engineer before lodging a development application.',
+    'Two small houses on one lot, arranged around a shared courtyard and a large existing jacaranda. Each house is an L-shaped plan that wraps half of the courtyard, so both get northern light and a view of the tree without looking into each other’s rooms. Parking sits at the street edge under a light steel canopy. The houses are the same size but not the same: one is a single level for the owners’ parents, the other has a loft for a home office. Documentation is under way, with builder selection to follow.',
+    'A dark kitchen at the centre of a post-war house, with no outside walls to put windows in. We raised a section of the roof into a timber lantern with clerestory glazing on all four sides, so daylight falls straight into the middle of the house. At night the lantern glows over the garden. The kitchen joinery was built around the new light: a long bench under the brightest part, open shelving where the sun moves across the wall in the afternoon. The rest of the house was barely touched, which kept the budget where it mattered.',
+    'The Queenslander was raised 1.2 metres and a new ground floor built beneath it. Instead of more bedrooms, the owners asked for a library and a room for their piano. The undercroft is lined with timber shelving between the original stumps, which were kept, cleaned and left exposed. A new stair connects the library directly to the verandah above. Masonry walls and concrete floors keep the room cool, and louvred windows let the breeze through on still summer evenings. Upstairs, the house was repaired rather than renovated.',
+    'A small house for a couple planning to stay in the suburb for good. The design is a single pavilion: a thin roof and a raised floor, with a masonry core that holds the bathroom, laundry and storage. Everything else is open, divided by sliding panels. The house is sized to the couple rather than the lot — 110 square metres on a 600-square-metre block — leaving most of the land for the garden they already have. We are testing the design against a budget with a builder before finalising the drawings.',
+    'A garden structure for a family who wanted an outdoor room they could use at midday. The shade house is a steel frame with a hardwood lattice roof and a planted edge; over two summers, climbing plants have covered most of the lattice. A long concrete bench runs along one side and doubles as a potting table. The structure was designed to be built in stages, with footings and frame by a builder and the timber lattice added later by the owners themselves.'
+  ];
+  /* r rect, o outline, p polygon, s stairs, b battens, h hatch, c circle, e ellipse, l line — colours k black, g grey, w white */
+  var C=[
+    [['r',0,236,400,64,'g'],['r',52,58,34,178,'k'],['r',118,96,24,140,'k'],['r',172,74,118,162,'k'],['r',200,126,34,110,'w'],['r',36,40,300,12,'k'],['b',300,74,70,162,10,2,'k'],['l',0,236,400,236,1,'k']],
+    [['p','28 140 200 58 372 140','g'],['r',40,140,128,110,'k'],['r',232,140,128,110,'k'],['h',168,150,64,92,8,1.5,'k'],['r',70,172,30,44,'w'],['r',300,172,30,44,'w'],['r',0,250,400,3,'k']],
+    [['r',176,18,208,264,'g'],['s',18,282,9,30,26,'k'],['p','300 0 360 0 230 282 170 282','w',.82],['r',0,282,400,18,'k']],
+    [['p','40 44 360 44 392 72 8 72','g'],['r',8,72,384,8,'k'],['r',30,80,6,170,'k'],['r',140,80,6,170,'k'],['r',254,80,6,170,'k'],['r',364,80,6,170,'k'],['r',8,186,384,5,'k'],['b',8,191,384,48,40,1.4,'k'],['r',0,250,400,8,'k'],['h',0,262,400,38,5,1,'k']],
+    [['r',60,36,280,226,'k'],['r',182,36,36,226,'w'],['p','218 36 240 36 318 262 280 262','g'],['p','182 36 218 36 218 262 150 262','w',.35],['r',0,262,400,4,'k']],
+    [['r',96,62,238,188,'g'],['r',28,32,330,10,'k'],['b',40,42,196,208,28,2.2,'k'],['r',0,250,400,6,'k'],['r',250,120,60,130,'k']],
+    [['p','0 300 0 262 400 92 400 300','g'],['r',24,198,150,58,'k'],['r',40,212,118,18,'w'],['r',144,140,150,60,'k'],['r',160,154,118,18,'w'],['r',264,82,136,68,'k'],['r',280,96,104,18,'w'],['r',14,190,176,8,'k'],['r',134,132,176,8,'k'],['r',254,74,146,8,'k'],['c',58,282,18,'k'],['c',90,290,12,'k']],
+    [['c',200,150,52,'g'],['r',40,40,152,40,'k'],['r',40,40,40,220,'k'],['r',208,220,152,40,'k'],['r',320,40,40,220,'k'],['o',96,92,208,116,1,'k'],['r',150,40,24,40,'w'],['r',226,220,24,40,'w'],['l',40,280,360,280,1,'k']],
+    [['r',40,140,320,120,'k'],['r',148,76,104,64,'k'],['r',148,92,104,24,'w'],['p','160 116 240 116 300 260 100 260','w',.3],['r',0,260,400,4,'k'],['l',120,76,280,76,1,'k']],
+    [['p','40 92 200 30 360 92','k'],['r',60,92,280,80,'g'],['b',60,140,280,32,40,1.4,'k'],['r',66,172,6,90,'k'],['r',196,172,6,90,'k'],['r',328,172,6,90,'k'],['r',92,180,96,76,'k'],['h',92,182,96,72,7,2,'w'],['r',208,180,112,76,'k'],['h',208,182,112,72,7,2,'w'],['r',0,262,400,4,'k']],
+    [['c',86,70,34,'g'],['r',60,120,300,10,'k'],['r',84,218,276,10,'k'],['r',178,130,74,88,'g'],['r',98,130,3,88,'k'],['r',334,130,3,88,'k'],['l',0,262,400,262,1,'k'],['r',150,228,120,34,'w'],['h',150,238,120,20,3,1,'k']],
+    [['r',0,232,400,68,'g'],['e',200,258,150,18,'k'],['r',56,54,288,8,'k'],['b',56,62,288,26,24,1.2,'k'],['h',56,62,288,26,3,1.2,'k'],['r',56,54,7,178,'k'],['r',337,54,7,178,'k'],['c',84,80,20,'g'],['c',116,72,15,'g'],['c',312,82,22,'g'],['r',110,196,180,8,'k'],['r',122,204,6,28,'k'],['r',272,204,6,28,'k']]
+  ];
+  var COL={k:'#000',g:'#8C8C8C',w:'#fff'};
+  var cache={};
+  function study(i){
+    if(cache[i])return cache[i];
+    var s='<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#fff"/>';
+    C[i].forEach(function(e){
+      var t=e[0],c=COL[e[e.length-1]]||'#000',x,y,n,k,d;
+      if(t==='r')s+='<rect x="'+e[1]+'" y="'+e[2]+'" width="'+e[3]+'" height="'+e[4]+'" fill="'+c+'"/>';
+      else if(t==='p')s+='<polygon points="'+e[1]+'" fill="'+COL[e[2]]+'"'+(e.length>3&&typeof e[3]==='number'?' opacity="'+e[3]+'"':'')+'/>';
+      else if(t==='o')s+='<rect x="'+e[1]+'" y="'+e[2]+'" width="'+e[3]+'" height="'+e[4]+'" fill="none" stroke="'+c+'" stroke-width="'+e[5]+'"/>';
+      else if(t==='c')s+='<circle cx="'+e[1]+'" cy="'+e[2]+'" r="'+e[3]+'" fill="'+c+'"/>';
+      else if(t==='e')s+='<ellipse cx="'+e[1]+'" cy="'+e[2]+'" rx="'+e[3]+'" ry="'+e[4]+'" fill="'+c+'"/>';
+      else if(t==='l')s+='<line x1="'+e[1]+'" y1="'+e[2]+'" x2="'+e[3]+'" y2="'+e[4]+'" stroke="'+c+'" stroke-width="'+e[5]+'"/>';
+      else if(t==='s'){x=e[1];y=e[2];d='M'+x+' '+y;for(k=0;k<e[3];k++){y-=e[5];d+='V'+y;x+=e[4];d+='H'+x}s+='<path d="'+d+'V'+e[2]+'Z" fill="'+c+'"/>'}
+      else if(t==='b'){n=e[5];for(k=0;k<=n;k++){x=e[1]+k*e[3]/n;s+='<line x1="'+x.toFixed(1)+'" y1="'+e[2]+'" x2="'+x.toFixed(1)+'" y2="'+(e[2]+e[4])+'" stroke="'+c+'" stroke-width="'+e[6]+'"/>'}}
+      else if(t==='h'){n=e[5];for(k=0;k<=n;k++){y=e[2]+k*e[4]/n;s+='<line x1="'+e[1]+'" y1="'+y.toFixed(1)+'" x2="'+(e[1]+e[3])+'" y2="'+y.toFixed(1)+'" stroke="'+c+'" stroke-width="'+e[6]+'"/>'}}
+    });
+    return (cache[i]=s+'</svg>');
+  }
+
+  /* ---------- rows, floating preview, inline preview ---------- */
+  var rows=$$('.row'),fl=$('#float'),flFig=$('.fig',fl),mx=0,my=0,fx=0,fy=0,raf=0,shown=-1;
+  function data(i){var r=rows[i];return {no:r.children[0].textContent,name:$('.proj',r).textContent,sub:r.children[2].textContent,type:r.children[3].textContent,year:r.children[4].textContent,st:r.children[5].textContent}}
+  function showFloat(i){
+    if(shown!==i){var d=data(i);flFig.innerHTML=study(i);$('.fl-n',fl).textContent=d.no+' '+d.name;$('.fl-s',fl).textContent=d.year;shown=i}
+    fl.classList.add('on');
+  }
+  function hideFloat(){fl.classList.remove('on');rows.forEach(function(r){r.classList.remove('hot')})}
+  function place(){
+    var w=fl.offsetWidth,h=fl.offsetHeight,tx=mx+28,ty=my+24;
+    if(tx+w>innerWidth-12)tx=mx-w-28;if(ty+h>innerHeight-12)ty=innerHeight-h-12;if(ty<12)ty=12;
+    return [tx,ty];
+  }
+  function follow(){
+    var t=place();fx+=(t[0]-fx)*.22;fy+=(t[1]-fy)*.22;
+    if(RM.matches){fx=t[0];fy=t[1]}
+    fl.style.transform='translate('+fx.toFixed(1)+'px,'+fy.toFixed(1)+'px)';
+    raf=(Math.abs(t[0]-fx)>.5||Math.abs(t[1]-fy)>.5)?requestAnimationFrame(follow):0;
+  }
+  function kick(){if(!raf)raf=requestAnimationFrame(follow)}
+  rows.forEach(function(r,i){
+    var b=$('.proj',r);
+    r.addEventListener('pointerenter',function(e){if(!FINE.matches||e.pointerType==='touch')return;mx=e.clientX;my=e.clientY;if(!fl.classList.contains('on')){var t=place();fx=t[0];fy=t[1]}showFloat(i);kick()});
+    r.addEventListener('pointermove',function(e){if(!FINE.matches||e.pointerType==='touch')return;mx=e.clientX;my=e.clientY;kick()});
+    r.addEventListener('pointerleave',function(e){if(e.pointerType!=='touch')hideFloat()});
+    r.addEventListener('click',function(e){if(e.target!==b)b.click()});
+    b.addEventListener('focus',function(){
+      if(!FINE.matches)return;var rc=r.getBoundingClientRect();
+      mx=Math.min(innerWidth*.62,rc.left+rc.width*.55);my=rc.top;var t=place();fx=t[0];fy=t[1];
+      rows.forEach(function(o){o.classList.toggle('hot',o===r)});showFloat(i);kick();
+    });
+    b.addEventListener('blur',function(){if(FINE.matches)hideFloat()});
+    b.addEventListener('click',function(){if(FINE.matches){hideFloat();openPanel(i,b)}else toggleInline(i)});
+  });
+  window.addEventListener('scroll',function(){if(fl.classList.contains('on')&&!document.activeElement.classList.contains('proj'))hideFloat()},{passive:true});
+  function setMode(){
+    rows.forEach(function(r,i){
+      var b=$('.proj',r);
+      if(FINE.matches){b.removeAttribute('aria-expanded');b.removeAttribute('aria-controls');b.setAttribute('aria-haspopup','dialog');var x=document.getElementById('inl-'+i);if(x)x.remove()}
+      else{b.removeAttribute('aria-haspopup');b.setAttribute('aria-expanded',document.getElementById('inl-'+i)&&!document.getElementById('inl-'+i).hidden?'true':'false');b.setAttribute('aria-controls','inl-'+i)}
+    });
+  }
+  function toggleInline(i){
+    var r=rows[i],b=$('.proj',r),x=document.getElementById('inl-'+i);
+    if(!x){
+      x=document.createElement('div');x.className='inline';x.id='inl-'+i;x.setAttribute('role','row');x.hidden=true;
+      x.innerHTML='<div class="fig" role="cell">'+study(i)+'</div><p role="cell">'+T[i].split('. ')[0]+'.</p><button class="btn line" type="button">Open project '+data(i).no+' →</button>';
+      r.after(x);$('button',x).addEventListener('click',function(){openPanel(i,$('button',x))});
+    }
+    var open=x.hidden;x.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');
+  }
+  if(FINE.addEventListener)FINE.addEventListener('change',setMode);
+  setMode();
+
+  /* ---------- detail panel ---------- */
+  var panel=$('#panel'),pin=$('.pin',panel),cur=0,opener=null;
+  var bgEls=[$('.top'),$('main'),$('.foot')];
+  function fill(i){
+    var d=data(i);cur=i;
+    $('#pn-no').textContent='No. '+d.no+' / 12';$('#pn-name').textContent=d.name;
+    $('#pn-meta').innerHTML='<div><dt>Suburb</dt><dd>'+d.sub+'</dd></div><div><dt>Type</dt><dd>'+d.type+'</dd></div><div><dt>Year</dt><dd>'+d.year+'</dd></div><div><dt>Status</dt><dd>'+d.st+'</dd></div>';
+    $('#pn-fig').innerHTML=study(i);$('#pn-cap').textContent='Fig. '+d.no+' — abstract study of '+d.name+'. Not a photograph or render.';
+    $('#pn-text').textContent=T[i];pin.scrollTop=0;
+  }
+  function openPanel(i,from){
+    opener=from||document.activeElement;fill(i);panel.classList.add('open');
+    bgEls.forEach(function(el){el.inert=true});document.documentElement.style.overflow='hidden';
+    setTimeout(function(){$('[data-close]',pin).focus({preventScroll:true})},RM.matches?0:60);
+  }
+  function closePanel(){
+    panel.classList.remove('open');bgEls.forEach(function(el){el.inert=false});document.documentElement.style.overflow='';
+    if(opener&&opener.focus)opener.focus({preventScroll:true});
+  }
+  $$('[data-close]',panel).forEach(function(b){b.addEventListener('click',closePanel)});
+  $('#pn-prev').addEventListener('click',function(){fill((cur+11)%12)});
+  $('#pn-next').addEventListener('click',function(){fill((cur+1)%12)});
+  pin.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){e.preventDefault();closePanel();return}
+    if(e.key==='ArrowLeft'&&e.target.tagName!=='INPUT'){fill((cur+11)%12)}
+    if(e.key==='ArrowRight'&&e.target.tagName!=='INPUT'){fill((cur+1)%12)}
+    if(e.key==='Tab'){var f=$$('button',pin),a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}
+  });
+
+  /* ---------- the grid ---------- */
+  var gb=$('#gridbtn');
+  function setGrid(on){
+    document.documentElement.classList.toggle('grid-on',on);gb.setAttribute('aria-pressed',on?'true':'false');
+  }
+  $$('.gridlay span').forEach(function(s,i){s.style.transitionDelay=(i*14)+'ms'});
+  gb.addEventListener('click',function(){setGrid(gb.getAttribute('aria-pressed')!=='true')});
+  document.addEventListener('keydown',function(e){
+    if((e.key==='g'||e.key==='G')&&!e.metaKey&&!e.ctrlKey&&!e.altKey){
+      var t=e.target;if(t&&(/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)||t.isContentEditable))return;
+      setGrid(gb.getAttribute('aria-pressed')!=='true');
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="074">
+<meta name="demo:brand" content="Next Move Consulting">
+<title>Next Move Consulting — small-business strategy, Sydney</title>
+<meta name="description" content="A fictional Sydney consultant for small businesses, presented as a ten-slide keynote: the problem, services, a four-step process, a labelled sample scenario, sample pricing and a booking form.">
+<meta name="theme-color" content="#111114">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,400..900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--blue:#2F5BFF;--blue-lite:#8aa4ff;--surround:#111114;--hud:#a2a2ab;--hud-hi:#f4f4f6;--line:rgba(255,255,255,.13);--ht:60px;--hb:72px;
+  --display:"Anybody","Arial Narrow",Arial,sans-serif;--text:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;height:100vh;height:100dvh;overflow:hidden;background:var(--surround);color:var(--hud-hi);font:400 16px/1.5 var(--text);-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+button:disabled{cursor:default;opacity:.3}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.t-blue :focus-visible{outline-color:#fff}
+.sr{position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+kbd{display:inline-block;font:600 11px/1 var(--text);border:1px solid currentColor;border-radius:5px;padding:3px 5px;opacity:.8}
+.only-stack{display:none}
+
+/* ---------- presenter chrome ---------- */
+.hud-top{position:fixed;z-index:30;inset:0 0 auto;height:calc(var(--ht) + env(safe-area-inset-top));padding:env(safe-area-inset-top) max(24px,env(safe-area-inset-right)) 0 max(24px,env(safe-area-inset-left));display:flex;align-items:center;gap:16px;background:var(--surround)}
+.logo{display:flex;align-items:center;gap:11px;min-width:0;min-height:44px;text-decoration:none;border-radius:8px}
+.logo svg{width:26px;height:26px;flex:none}
+.logo-word{font:760 15px/1.1 var(--display);font-stretch:128%;letter-spacing:.01em;max-width:30ch;overflow-wrap:anywhere}
+.hud-sec{flex:1;min-width:0;margin:0;text-align:center;font:500 12px/1.3 var(--text);letter-spacing:.16em;text-transform:uppercase;color:var(--hud)}
+.hud-sec b{color:var(--blue-lite);font-weight:600;margin-right:10px}
+.hud-actions{display:flex;align-items:center;gap:8px;flex:none;margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;font:500 13.5px/1 var(--text);white-space:nowrap;text-decoration:none;transition:background-color .2s,border-color .2s,color .2s}
+.btn:hover{border-color:rgba(255,255,255,.45)}
+.btn svg{width:16px;height:16px;flex:none}
+.btn[aria-expanded="true"]{background:#fff;color:#000}
+.btn-blue{background:var(--blue);border-color:var(--blue);color:#fff;font-weight:600}
+.btn-blue:hover{background:#4c72ff;border-color:#4c72ff}
+.mini-count,.mini-progress{display:none}
+
+.hud-bottom{position:fixed;z-index:30;inset:auto 0 0;height:calc(var(--hb) + env(safe-area-inset-bottom));padding:18px max(24px,env(safe-area-inset-right)) env(safe-area-inset-bottom) max(24px,env(safe-area-inset-left));display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;background:var(--surround)}
+.progress{position:absolute;top:0;left:max(24px,env(safe-area-inset-left));right:max(24px,env(safe-area-inset-right));display:flex;gap:4px;margin:0;padding:0;list-style:none}
+.progress li{flex:1}
+.progress button{display:block;width:100%;height:16px;padding:0;border:0;background:none;position:relative}
+.progress button::before{content:"";position:absolute;left:0;right:0;top:6px;height:3px;border-radius:2px;background:rgba(255,255,255,.16);transition:background-color .3s,height .2s,top .2s}
+.progress button.done::before{background:var(--blue)}
+.progress button[aria-current]::before{background:#fff}
+.progress button:hover::before{top:5px;height:5px}
+.hb-note{margin:0;font:500 12px/1.3 var(--text);color:var(--hud)}
+.hb-nav{display:flex;align-items:center;gap:6px}
+.nav-btn{width:44px;height:40px;display:grid;place-items:center;border-radius:999px;border:1px solid var(--line);background:none;transition:background-color .2s,border-color .2s}
+.nav-btn:not(:disabled):hover{background:#fff;color:#000;border-color:#fff}
+.nav-btn svg{width:18px;height:18px}
+.count{margin:0 10px;font:600 14px/1 var(--text);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.count span{color:var(--hud);font-weight:500}
+.presenter{display:flex;align-items:center;justify-content:flex-end;gap:14px;min-width:0}
+.next-up,.clock{margin:0;font:500 12.5px/1.25 var(--text);color:var(--hud);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.next-up b,.clock time{color:var(--hud-hi);font-weight:600}
+.clock time{font-variant-numeric:tabular-nums;font-size:15px;letter-spacing:.04em;margin-left:4px}
+.tbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;display:grid;place-items:center;flex:none}
+.tbtn:hover{border-color:rgba(255,255,255,.45)}
+.tbtn::before{content:"";width:9px;height:11px;border-left:3px solid currentColor;border-right:3px solid currentColor}
+.tbtn.paused::before{width:0;height:0;border:0;border-left:10px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
+.tbtn.reset::before{display:none}
+.tbtn svg{width:16px;height:16px}
+
+/* ---------- stage + slides ---------- */
+.deck{position:fixed;inset:calc(var(--ht) + env(safe-area-inset-top)) 0 calc(var(--hb) + env(safe-area-inset-bottom));display:grid;place-items:center;outline:none}
+.stage{--sw:min(100vw - 56px, (100vh - var(--ht) - var(--hb) - 26px) * 16 / 9);position:relative;width:var(--sw);aspect-ratio:16/9;overflow:hidden;border-radius:14px;background:#000;box-shadow:0 0 0 1px var(--line),0 40px 100px -24px rgba(0,0,0,.8);container-type:inline-size;touch-action:pan-y pinch-zoom;cursor:e-resize;
+  --mega:8.4cqw;--xl:6cqw;--h3:2.2cqw;--lead:1.9cqw;--body:max(12.5px,1.26cqw);--small:max(10.5px,.95cqw);--px:5.8cqw;--py:4.4cqw;--gap:3cqw;--r:1.1cqw}
+@supports (height:100dvh){.stage{--sw:min(100vw - 56px, (100dvh - var(--ht) - var(--hb) - 26px) * 16 / 9)}}
+.slide{position:absolute;inset:0;visibility:hidden;overflow:hidden;display:flex;flex-direction:column;padding:var(--py) var(--px) calc(var(--py) * .78);background:#000;color:#fff}
+.slide.is-active{visibility:visible;z-index:2}
+.slide.is-leaving{visibility:visible;z-index:1}
+.t-white{background:#fff;color:#000}
+.t-blue{background:var(--blue);color:#fff}
+.kicker{display:flex;align-items:center;gap:.9em;margin:0 0 1.3em;font:600 var(--small)/1.2 var(--text);letter-spacing:.16em;text-transform:uppercase}
+.kicker::before{content:"";flex:none;width:.75em;height:.75em;background:var(--blue)}
+.t-blue .kicker::before{background:#fff}
+.mega{margin:0;font:820 var(--mega)/.9 var(--display);font-stretch:150%;letter-spacing:-.02em;max-width:72%;overflow-wrap:normal}
+.xl{margin:0;font:760 var(--xl)/.96 var(--display);font-stretch:116%;letter-spacing:-.025em;text-wrap:balance}
+.xl em{font-style:normal;color:var(--blue)}
+.t-blue .xl em{color:#000}
+.lead{margin:0;font:400 var(--lead)/1.36 var(--text);letter-spacing:-.012em;max-width:38ch}
+.body{margin:0;font-size:var(--body);line-height:1.58;max-width:54ch}
+.dim{opacity:.72}
+.s-foot{margin-top:auto;padding-top:1.3em;display:flex;justify-content:space-between;align-items:flex-end;gap:2em;font:600 var(--small)/1.25 var(--text);letter-spacing:.14em;text-transform:uppercase;opacity:.62}
+.t-blue .s-foot{opacity:1}
+[data-draw]{stroke-dasharray:1;stroke-dashoffset:0}
+
+/* 01 title */
+.s-title .mega{margin-top:auto}
+.knight{position:absolute;top:var(--py);right:var(--px);width:21cqw;height:auto}
+.title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:4cqw;margin-top:2.6cqw}
+.title-row .lead{color:#d6d6dc;max-width:34ch}
+.hint{margin:0;font:500 var(--small)/1.7 var(--text);color:#b9b9c1;text-align:right;white-space:nowrap}
+.hint kbd{margin:0 .15em;font-size:1em;padding:.2em .45em}
+/* 02 problem */
+.split{flex:1;min-height:0;display:grid;grid-template-columns:1.05fr 1fr;gap:var(--gap)}
+.split-l{display:flex;flex-direction:column;min-width:0}
+.s-problem .xl{max-width:11ch}
+.s-problem .split-l .lead{margin-top:auto;font-size:var(--lead)}
+.chart{margin:0;align-self:center}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart figcaption{margin-top:.8em;font-size:var(--small);color:#555;letter-spacing:.02em}
+.chart text{font-family:var(--text)}
+/* 03 services */
+.s-services .xl{max-width:16ch}
+.svc-grid{list-style:none;margin:auto 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #fff}
+.svc{padding:1.9cqw 1.7cqw 0;border-left:1px solid rgba(255,255,255,.4);min-width:0}
+.svc:first-child{border-left:0;padding-left:0}
+.svc svg{width:3.4cqw;height:3.4cqw;min-width:30px;min-height:30px;margin-bottom:1.5cqw;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3,.price h3,.case-grid h3{margin:0 0 .55em;font:760 var(--h3)/1.05 var(--display);font-stretch:112%;letter-spacing:-.01em}
+.svc p{margin:0 0 1.1em;font-size:var(--body);line-height:1.52}
+.meta{font:600 var(--small)/1.2 var(--text)!important;letter-spacing:.12em;text-transform:uppercase}
+/* 04-07 process */
+.step-grid{flex:1;min-height:0;display:grid;grid-template-columns:25cqw minmax(0,1fr) 26cqw;gap:var(--gap);align-items:center}
+.step-num{margin:-.08em 0 0;font:900 12.5cqw/.8 var(--display);font-stretch:128%;letter-spacing:-.04em;color:var(--blue)}
+.step-copy .xl{font-size:calc(var(--xl) * .88);font-stretch:104%}
+.step-copy{display:flex;flex-direction:column;gap:1.1cqw;min-width:0}
+.step-copy .lead{color:#fff}
+.step-copy .body{color:#c9c9cf}
+.get{margin:.6cqw 0 0;padding-top:1cqw;border-top:1px solid rgba(255,255,255,.25);font-size:var(--body);line-height:1.5;max-width:44ch}
+.get b{display:block;font:600 var(--small)/1.2 var(--text);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-lite);margin-bottom:.45em}
+.step-fig{margin:0}
+.step-fig svg{display:block;width:100%;height:auto;overflow:visible}
+.step-fig text{font-family:var(--text);fill:#b9b9c1}
+.track{list-style:none;margin:2cqw 0 0;padding:1.3cqw 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4cqw;border-top:1px solid rgba(255,255,255,.18);font:600 var(--small)/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;color:#8d8d96}
+.track li{display:flex;align-items:center;gap:.8em}
+.track li::before{content:"";width:.8em;height:.8em;border-radius:50%;border:2px solid currentColor;flex:none}
+.track .done{color:#d6d6dc}
+.track .done::before{background:currentColor}
+.track .on{color:#fff}
+.track .on::before{background:var(--blue);border-color:var(--blue);box-shadow:0 0 0 .35em rgba(47,91,255,.3)}
+/* 08 scenario */
+.chip{display:inline-flex;align-self:flex-start;margin:0 0 1.4cqw;padding:.55em 1em;border-radius:999px;background:#000;color:#fff;font:600 var(--small)/1.2 var(--text);letter-spacing:.1em;text-transform:uppercase}
+.chip::before{content:"";width:.6em;height:.6em;border-radius:50%;background:var(--blue);margin:.15em .7em 0 0;flex:none}
+.s-case .xl{max-width:19ch;font-size:calc(var(--xl) * .86)}
+.case-grid{margin-top:auto;display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:var(--gap);border-top:2px solid #000;padding-top:1.8cqw}
+.case-grid ul,.case-grid ol{margin:0;padding:0;list-style:none;font-size:var(--body);line-height:1.45}
+.case-grid li{padding:.55em 0;border-bottom:1px solid #e3e3e8;display:flex;gap:.8em}
+.case-grid ol{counter-reset:m}
+.case-grid ol li::before{counter-increment:m;content:counter(m);font:800 1em/1.35 var(--display);color:var(--blue);flex:none}
+.case-grid ul li::before{content:"";width:.5em;height:.5em;margin-top:.5em;background:#000;flex:none}
+.figs{display:grid;gap:1.3cqw}
+.fig{margin:0}
+.fig b{display:block;font:820 4.2cqw/1 var(--display);font-stretch:130%;letter-spacing:-.03em;color:var(--blue)}
+.fig span{font-size:var(--body);color:#333}
+.fine{margin:1.3cqw 0 0;font-size:var(--small);line-height:1.45;color:#555;max-width:90ch}
+/* 09 pricing */
+.price-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--gap)}
+.price-head .xl{max-width:14ch}
+.price-head .body{max-width:30ch;color:#c4c4cc}
+.price-grid{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw}
+.price{position:relative;padding:1.9cqw 1.9cqw 1.6cqw;border:1px solid rgba(255,255,255,.22);border-radius:var(--r);min-width:0}
+.price.is-feature{border:2px solid var(--blue);background:linear-gradient(180deg,rgba(47,91,255,.16),rgba(47,91,255,0) 70%)}
+.flag{position:absolute;top:0;right:1.6cqw;transform:translateY(-50%);margin:0;padding:.45em .8em;border-radius:999px;background:var(--blue);font:600 var(--small)/1 var(--text);letter-spacing:.1em;text-transform:uppercase}
+.amt{margin:.2em 0 0;font:820 4.3cqw/1 var(--display);font-stretch:125%;letter-spacing:-.03em}
+.amt small{font:500 var(--body)/1 var(--text);letter-spacing:0;margin-left:.3em;color:#c4c4cc}
+.per{margin:.5em 0 1.1em;font-size:var(--small);letter-spacing:.1em;text-transform:uppercase;color:var(--blue-lite);font-weight:600}
+.price ul{margin:0;padding:0;list-style:none;font-size:var(--body);line-height:1.4;color:#dcdce2}
+.price li{padding:.42em 0 .42em 1.4em;border-top:1px solid rgba(255,255,255,.12);position:relative}
+.price li::before{content:"";position:absolute;left:0;top:.95em;width:.7em;height:2px;background:var(--blue)}
+/* 10 book */
+.book-grid{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.02fr;gap:calc(var(--gap) * 1.3)}
+.book-l{display:flex;flex-direction:column;min-width:0}
+.book-l .xl{max-width:11ch}
+.book-l .lead{margin-top:1.4cqw}
+.contact{list-style:none;margin:auto 0 0;padding:0;font-size:var(--body);line-height:1.4}
+.contact li{display:grid;grid-template-columns:6.5em 1fr;gap:1em;padding:.55em 0;border-top:1px solid rgba(255,255,255,.35)}
+.contact span{font:600 var(--small)/1.6 var(--text);letter-spacing:.12em;text-transform:uppercase}
+.contact a{font-weight:600;text-underline-offset:3px}
+.book-form{align-self:center;background:#fff;color:#000;border-radius:calc(var(--r) * 1.3);padding:2.1cqw 2.3cqw;display:grid;gap:1.05cqw;box-shadow:0 2cqw 5cqw -1cqw rgba(0,10,60,.45);cursor:auto}
+.form-title{margin:0;font:760 var(--h3)/1.1 var(--display);font-stretch:112%}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1cqw}
+.field label,.slots legend{display:block;margin-bottom:.5em;padding:0;font:600 var(--small)/1.2 var(--text);letter-spacing:.1em;text-transform:uppercase;color:#3a3a42}
+.field input,.field select{display:block;width:100%;height:max(36px,3.2cqw);padding:0 .9em;border:1.5px solid #c9ccd6;border-radius:.6cqw;background:#fff;color:#000;font-size:var(--body)}
+.field input::placeholder{color:#6b6b75}
+.field input:focus,.field select:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(47,91,255,.25)}
+.slots{margin:0;padding:0;border:0;display:grid;grid-template-columns:1fr 1fr;gap:.7cqw}
+.slots legend{grid-column:1/-1;float:left;width:100%}
+.slot{position:relative;display:block}
+.slot input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.slot span{display:block;padding:.62em .9em;border:1.5px solid #c9ccd6;border-radius:.6cqw;font-size:var(--body);line-height:1.3;transition:background-color .15s,border-color .15s,color .15s}
+.slot input:checked+span{background:#000;border-color:#000;color:#fff}
+.slot input:focus-visible+span{outline:3px solid var(--blue);outline-offset:2px}
+.submit{display:flex;align-items:center;justify-content:space-between;gap:1em;height:max(42px,3.6cqw);padding:0 1.4em;border:0;border-radius:999px;background:var(--blue);color:#fff;font-weight:600;font-size:var(--body);transition:background-color .2s}
+.submit:hover{background:#1f45e0}
+.submit svg{width:1.3em;height:1.3em}
+.book-out{margin:0;min-height:1.4em;font-size:var(--small);line-height:1.45;color:#44444c}
+.book-out.on{color:#000;font-weight:600}
+
+/* ---------- overview ---------- */
+.ov{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:max(28px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(28px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));border:0;background:rgba(10,10,12,.97);color:#fff;overflow:auto}
+.ov::backdrop{background:rgba(0,0,0,.6)}
+.ov-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px 22px;max-width:1320px;margin:0 auto 26px}
+.ov-head h2{margin:0;font:820 clamp(30px,4vw,52px)/1 var(--display);font-stretch:135%;letter-spacing:-.02em}
+.ov-head p{margin:0;color:var(--hud);font-size:14px}
+.ov-head .btn{margin-left:auto}
+.ov-grid{list-style:none;margin:0 auto;padding:0;max-width:1320px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.ov-card{display:flex;flex-direction:column;justify-content:space-between;width:100%;aspect-ratio:16/9;padding:9% 8%;border:1px solid rgba(255,255,255,.16);border-radius:10px;text-align:left;container-type:inline-size;overflow:hidden;transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
+.ov-card:hover{transform:translateY(-4px)}
+.ov-card[aria-current]{box-shadow:0 0 0 3px #fff,0 0 0 7px var(--blue)}
+.ov-card.t-black{background:#000}
+.ov-num{font:600 max(10px,5.6cqw)/1.2 var(--text);letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.ov-title{font:780 max(12px,9.5cqw)/1 var(--display);font-stretch:112%;letter-spacing:-.015em;overflow-wrap:anywhere}
+
+/* ---------- phone / portrait: stacked cards with scroll snap ---------- */
+@media (max-width:760px),(max-height:560px),(orientation:portrait) and (max-width:1100px){
+  :root{--ht:62px}
+  html{scroll-snap-type:y proximity;scroll-padding-top:calc(var(--ht) + env(safe-area-inset-top) + 12px)}
+  body{height:auto;overflow:visible}
+  .only-stack{display:inline}.only-deck{display:none}
+  .hud-top{gap:10px;padding-left:max(14px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}
+  .hud-sec,.hud-bottom,.hud-book,.btn-txt,#ovBtn kbd{display:none}
+  .logo-word{font-size:14px;max-width:none}
+  #ovBtn{width:44px;height:44px;padding:0}
+  .mini-count{display:block;font:600 13px/1 var(--text);font-variant-numeric:tabular-nums;color:var(--hud);letter-spacing:.06em}
+  .mini-count b{color:#fff}
+  .mini-progress{display:block;position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.12)}
+  .mini-progress i{display:block;height:100%;width:calc(var(--p,.1) * 100%);background:var(--blue);transition:width .3s}
+  .deck{position:static;display:block;place-items:normal;padding:calc(var(--ht) + env(safe-area-inset-top) + 12px) max(12px,env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+  .stage{width:auto;aspect-ratio:auto;overflow:visible;border-radius:0;background:none;box-shadow:none;container-type:normal;cursor:auto;display:flex;flex-direction:column;gap:12px;
+    --mega:clamp(44px,12.6vw,84px);--xl:clamp(34px,9.8vw,62px);--h3:22px;--lead:clamp(17px,4.5vw,21px);--body:15.5px;--small:11.5px;--px:clamp(20px,5.4vw,40px);--py:26px;--gap:22px;--r:16px}
+  .slide{position:relative;inset:auto;min-width:0;visibility:visible;min-height:min(720px,calc(100vh - var(--ht) - 24px));min-height:min(720px,calc(100svh - var(--ht) - env(safe-area-inset-top) - 24px));border-radius:24px;scroll-snap-align:start;padding-bottom:22px}
+  .slide.t-black,.slide.s-step,.slide.s-pricing{box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+  .mega{max-width:100%}
+  .s-title .mega{margin-top:auto}
+  .knight{position:relative;top:auto;right:auto;width:62%;max-width:300px;align-self:flex-end;margin:4px 0 -8px}
+  .title-row{flex-direction:column;align-items:flex-start;gap:18px}
+  .hint{text-align:left;white-space:normal}
+  .split,.book-grid,.case-grid,.price-grid{display:flex;flex-direction:column;gap:22px}
+  .s-problem .split-l .lead{margin-top:18px}
+  .svc-grid{grid-template-columns:1fr;border-top:0;margin-top:24px}
+  .svc{border-left:0;border-top:1px solid rgba(255,255,255,.45);padding:18px 0 4px;display:grid;grid-template-columns:44px 1fr;column-gap:14px}
+  .svc svg{grid-row:1/4;width:34px;height:34px;margin:2px 0 0}
+  .svc p{margin-bottom:10px}
+  .step-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+  .step-num{font-size:clamp(84px,26vw,150px);grid-row:1;grid-column:1 / -1}
+  .step-copy{grid-column:1 / -1;gap:12px}
+  .step-fig{grid-column:1 / -1;margin-top:14px}
+  .track{margin-top:22px;padding-top:16px;grid-template-columns:1fr 1fr;gap:10px}
+  .case-grid{padding-top:18px}
+  .fig b{font-size:44px}
+  .s-case .xl{font-size:var(--xl)}
+  .price-head{flex-direction:column;align-items:flex-start;gap:14px}
+  .price-grid{margin-top:26px;gap:18px}
+  .price{padding:22px 20px 18px}
+  .amt{font-size:46px}
+  .flag{right:16px}
+  .book-grid{gap:26px}
+  .contact{margin-top:22px}
+  .book-form{padding:22px 18px;gap:14px}
+  .row2{grid-template-columns:1fr;gap:14px}
+  .slots{gap:8px}
+  .slot span{min-height:44px;display:flex;align-items:center}
+  .field input,.field select{height:46px;border-radius:10px;font-size:16px}
+  .submit{height:50px}
+  .ov-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .ov-num{font-size:10.5px}.ov-title{font-size:max(14px,10cqw)}
+}
+@media (orientation:portrait) and (min-width:600px) and (max-width:1100px){
+  .svc-grid{grid-template-columns:1fr 1fr;column-gap:28px}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .ov-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<header class="hud-top">
+  <a class="logo" href="#slide-1" data-go="0" aria-label="Back to the title slide">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="13" y="2.5" width="9" height="9" fill="#2F5BFF"/><path d="M5.5 22V7h6" stroke="#fff" stroke-width="3" fill="none"/></svg>
+    <span class="logo-word" data-brand>Next Move Consulting</span>
+  </a>
+  <p class="hud-sec" aria-hidden="true"><b id="secN">01</b><span id="secName">Title</span></p>
+  <div class="hud-actions">
+    <span class="mini-count" aria-hidden="true"><b id="miniN">01</b> / 10</span>
+    <button class="btn" id="ovBtn" type="button" aria-expanded="false" aria-controls="overview" aria-keyshortcuts="O" aria-label="Slide overview (O)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 1.5h5v5h-5zM9.5 1.5h5v5h-5zM1.5 9.5h5v5h-5zM9.5 9.5h5v5h-5z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span class="btn-txt">Overview</span><kbd>O</kbd></button>
+    <button class="btn btn-blue hud-book" type="button" data-go="9">Book a chat</button>
+  </div>
+  <span class="mini-progress" aria-hidden="true"><i></i></span>
+</header>
+
+<main class="deck" id="deck" tabindex="-1" aria-label="Ten-slide introduction">
+  <div class="stage" id="stage">
+
+    <section class="slide t-black s-title is-active" data-label="Title" data-title="Next Move Consulting" aria-roledescription="slide" aria-label="1 of 10: Title">
+      <p class="kicker">Small-business strategy · Sydney, NSW</p>
+      <svg class="knight" viewBox="0 0 300 300" aria-hidden="true">
+        <path d="M0 60H300M0 120H300M0 180H300M0 240H300M60 0V300M120 0V300M180 0V300M240 0V300" stroke="rgba(255,255,255,.17)" fill="none"/>
+        <rect x=".5" y=".5" width="299" height="299" fill="none" stroke="rgba(255,255,255,.17)"/>
+        <path d="M90 138V22" stroke="rgba(255,255,255,.4)" stroke-width="3" stroke-dasharray="1 11" stroke-linecap="round" fill="none"/>
+        <rect x="120" y="120" width="60" height="60" fill="#2F5BFF"/>
+        <path data-draw pathLength="1" d="M90 270V150H112" stroke="#fff" stroke-width="10" fill="none"/>
+        <path d="M110 136l20 14-20 14z" fill="#fff"/>
+        <circle cx="90" cy="270" r="12" fill="#fff"/>
+      </svg>
+      <h1 class="mega" data-brand>Next Move Consulting</h1>
+      <div class="title-row">
+        <p class="lead" data-anim>For owners who are flat out, fully booked and still not getting ahead. Ten slides, about four minutes.</p>
+        <p class="hint" data-anim><span class="only-deck"><kbd>→</kbd> <kbd>Space</kbd> or click to begin<br><kbd>O</kbd> for the overview · swipe on touch</span><span class="only-stack">Scroll to flip through, or use the grid button up top to jump to any slide.</span></p>
+      </div>
+    </section>
+
+    <section class="slide t-white s-problem" data-label="The problem" data-title="Busy isn’t the same as growing" aria-roledescription="slide" aria-label="2 of 10: The problem">
+      <div class="split">
+        <div class="split-l">
+          <p class="kicker">The problem</p>
+          <h2 class="xl" data-anim>Busy isn’t the same as <em>growing.</em></h2>
+          <p class="lead" data-anim>More jobs, more hours, more staff — and somehow the same amount left over at the end of every quarter. Sound familiar?</p>
+        </div>
+        <figure class="chart" data-anim>
+          <svg viewBox="0 0 520 310" role="img" aria-labelledby="chT"><title id="chT">Illustrative chart: hours worked climb every year while profit stays flat.</title>
+            <path d="M40 60H500M40 130H500M40 200H500" stroke="#e6e6ec" fill="none"/>
+            <path d="M40 270H500" stroke="#000" stroke-width="1.5"/>
+            <g font-size="13" fill="#555" text-anchor="middle"><text x="62" y="296">Year 1</text><text x="170" y="296">Year 2</text><text x="280" y="296">Year 3</text><text x="390" y="296">Year 4</text><text x="496" y="296" text-anchor="end">Year 5</text></g>
+            <path data-draw pathLength="1" d="M60 214C110 205 130 190 170 178S250 150 280 138 350 112 390 100 460 72 490 62" fill="none" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+            <path data-draw pathLength="1" d="M60 236C110 232 130 240 170 236S250 228 280 234 350 240 390 232 460 236 490 233" fill="none" stroke="#2F5BFF" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="490" cy="62" r="7"/><circle cx="490" cy="233" r="7" fill="#2F5BFF"/>
+            <text x="476" y="40" text-anchor="end" font-size="17" font-weight="600">Hours worked</text>
+            <text x="476" y="212" text-anchor="end" font-size="17" font-weight="600" fill="#2F5BFF">Profit</text>
+          </svg>
+          <figcaption>Illustrative only — a common pattern, not client data.</figcaption>
+        </figure>
+      </div>
+      <div class="s-foot"><span>The problem</span><span>02</span></div>
+    </section>
+
+    <section class="slide t-blue s-services" data-label="Services" data-title="Four ways to get unstuck" aria-roledescription="slide" aria-label="3 of 10: Services">
+      <p class="kicker">What we do</p>
+      <h2 class="xl" data-anim>Four ways to get <em>unstuck.</em></h2>
+      <ul class="svc-grid">
+        <li class="svc" data-anim><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 29l9-9 6 6 13-14"/><path d="M25 12h8v8"/></svg><h3>Strategy sprints</h3><p>Two focused weeks on one big question: grow, niche down or hold steady and fix the basics.</p><p class="meta">2 weeks · fixed fee</p></li>
+        <li class="svc" data-anim><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5h13v13L18 33 5 20z"/><circle cx="26.5" cy="11.5" r="2.4"/></svg><h3>Pricing reviews</h3><p>Every price checked against your real costs and your local market, line by line.</p><p class="meta">About 10 days</p></li>
+        <li class="svc" data-anim><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="5" width="11" height="11" rx="1"/><rect x="24" y="24" width="11" height="11" rx="1"/><path d="M16 10.5h8.5a4 4 0 014 4V24"/></svg><h3>Operations</h3><p>Fewer double-handles in quoting, rostering, stock and the admin that eats your evenings.</p><p class="meta">4–6 weeks</p></li>
+        <li class="svc" data-anim><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="13" r="6"/><path d="M4 34c1.3-6.5 5.6-10 11-10s9.7 3.5 11 10"/><path d="M31 9v10M26 14h10"/></svg><h3>Hiring plans</h3><p>Who to hire next, what they do on day one, and what the business can afford to pay.</p><p class="meta">2 weeks</p></li>
+      </ul>
+      <div class="s-foot"><span>Services</span><span>03</span></div>
+    </section>
+
+    <section class="slide s-step" data-group="process" data-label="Step 1 · Listen" data-title="Listen" aria-roledescription="slide" aria-label="4 of 10: Process step 1, Listen">
+      <p class="kicker">How we work · step 1 of 4</p>
+      <div class="step-grid">
+        <p class="step-num" aria-hidden="true" data-anim>01</p>
+        <div class="step-copy">
+          <h2 class="xl" data-anim>Listen.</h2>
+          <p class="lead" data-anim>We start on your floor, not in a boardroom.</p>
+          <p class="body" data-anim>Half a day with you and the team in a normal week — the phones, the quoting, the end-of-day wrap-up. We watch where the hours actually go.</p>
+          <p class="get" data-anim><b>You get</b>A one-page map of where your week goes.</p>
+        </div>
+        <figure class="step-fig" data-anim>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Sketch of a working day from 7 am to 5 pm: mostly on the tools, an hour on the phones and two and a half hours on quotes and admin.">
+            <text x="0" y="12" font-size="11" letter-spacing="1.6">A TYPICAL DAY, 7 AM – 5 PM</text>
+            <rect x="0" y="34" width="61" height="46" fill="#fff"/><rect x="64" y="34" width="29" height="46" fill="#5a5a63"/><rect x="96" y="34" width="77" height="46" fill="#fff"/><rect x="176" y="34" width="29" height="46" fill="#2F5BFF"/><rect x="208" y="34" width="61" height="46" fill="#fff"/><rect x="272" y="34" width="48" height="46" fill="#2F5BFF"/>
+            <path d="M0 88v6M160 88v6M320 88v6" stroke="#8d8d96"/>
+            <text x="0" y="110" font-size="11">7 am</text><text x="160" y="110" font-size="11" text-anchor="middle">12 pm</text><text x="320" y="110" font-size="11" text-anchor="end">5 pm</text>
+            <rect x="0" y="134" width="12" height="12" fill="#fff"/><text x="20" y="145" font-size="12">On the tools</text>
+            <rect x="0" y="158" width="12" height="12" fill="#5a5a63"/><text x="20" y="169" font-size="12">Phones and messages</text>
+            <rect x="0" y="182" width="12" height="12" fill="#2F5BFF"/><text x="20" y="193" font-size="12" style="fill:#fff">Quotes and admin: 2.5 hrs</text>
+          </svg>
+        </figure>
+      </div>
+      <ol class="track" aria-hidden="true"><li class="on">Listen</li><li>Measure</li><li>Decide</li><li>Back you</li></ol>
+    </section>
+
+    <section class="slide s-step" data-group="process" data-label="Step 2 · Measure" data-title="Measure" aria-roledescription="slide" aria-label="5 of 10: Process step 2, Measure">
+      <p class="kicker">How we work · step 2 of 4</p>
+      <div class="step-grid">
+        <p class="step-num" aria-hidden="true" data-anim>02</p>
+        <div class="step-copy">
+          <h2 class="xl" data-anim>Measure.</h2>
+          <p class="lead" data-anim>Numbers before opinions.</p>
+          <p class="body" data-anim>Twelve months of sales, costs and hours, sorted by product and customer. There is usually a surprise — often the job you love that quietly loses money.</p>
+          <p class="get" data-anim><b>You get</b>Margin by product, customer and hour, in plain English.</p>
+        </div>
+        <figure class="step-fig" data-anim>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Sketch of a bar chart of margin by job type: five job types make money, one loses money.">
+            <text x="0" y="12" font-size="11" letter-spacing="1.6">MARGIN BY JOB TYPE</text>
+            <rect x="8" y="64" width="36" height="66" fill="#fff"/><rect x="60" y="37" width="36" height="93" fill="#fff"/><rect x="112" y="88" width="36" height="42" fill="#fff"/><rect x="164" y="52" width="36" height="78" fill="#fff"/><rect x="216" y="130" width="36" height="27" fill="#2F5BFF"/><rect x="268" y="76" width="36" height="54" fill="#fff"/>
+            <path d="M0 130H320" stroke="#fff" stroke-width="1.5"/>
+            <g font-size="11" text-anchor="middle"><text x="26" y="150">A</text><text x="78" y="150">B</text><text x="130" y="150">C</text><text x="182" y="150">D</text><text x="286" y="150">F</text></g>
+            <text x="234" y="178" font-size="12" text-anchor="middle" style="fill:#8aa4ff">the one you love</text>
+            <text x="234" y="194" font-size="11" text-anchor="middle">E · loses 9%</text>
+          </svg>
+        </figure>
+      </div>
+      <ol class="track" aria-hidden="true"><li class="done">Listen</li><li class="on">Measure</li><li>Decide</li><li>Back you</li></ol>
+    </section>
+
+    <section class="slide s-step" data-group="process" data-label="Step 3 · Decide" data-title="Decide" aria-roledescription="slide" aria-label="6 of 10: Process step 3, Decide">
+      <p class="kicker">How we work · step 3 of 4</p>
+      <div class="step-grid">
+        <p class="step-num" aria-hidden="true" data-anim>03</p>
+        <div class="step-copy">
+          <h2 class="xl" data-anim>Decide.</h2>
+          <p class="lead" data-anim>Three moves, not thirty.</p>
+          <p class="body" data-anim>We agree three changes for the next 90 days. Each gets an owner, a date and one number that tells you it’s working.</p>
+          <p class="get" data-anim><b>You get</b>A 90-day plan short enough for the fridge door.</p>
+        </div>
+        <figure class="step-fig" data-anim>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Sketch: thirty small dots for ideas, three of them picked out in blue and numbered one to three.">
+            <defs><pattern id="dotp" width="32" height="40" patternUnits="userSpaceOnUse"><circle cx="16" cy="20" r="6" fill="none" stroke="#5a5a63" stroke-width="2"/></pattern></defs>
+            <text x="0" y="12" font-size="11" letter-spacing="1.6">30 IDEAS ON THE TABLE</text>
+            <rect x="0" y="30" width="320" height="120" fill="url(#dotp)"/>
+            <g font-size="14" font-weight="700" text-anchor="middle"><circle cx="80" cy="50" r="14" fill="#2F5BFF"/><text x="80" y="55" style="fill:#fff">1</text><circle cx="208" cy="90" r="14" fill="#2F5BFF"/><text x="208" y="95" style="fill:#fff">2</text><circle cx="144" cy="130" r="14" fill="#2F5BFF"/><text x="144" y="135" style="fill:#fff">3</text></g>
+            <text x="0" y="186" font-size="11" letter-spacing="1.6" style="fill:#8aa4ff">THREE MOVES · 90 DAYS</text>
+          </svg>
+        </figure>
+      </div>
+      <ol class="track" aria-hidden="true"><li class="done">Listen</li><li class="done">Measure</li><li class="on">Decide</li><li>Back you</li></ol>
+    </section>
+
+    <section class="slide s-step" data-group="process" data-label="Step 4 · Back you" data-title="Back you" aria-roledescription="slide" aria-label="7 of 10: Process step 4, Back you">
+      <p class="kicker">How we work · step 4 of 4</p>
+      <div class="step-grid">
+        <p class="step-num" aria-hidden="true" data-anim>04</p>
+        <div class="step-copy">
+          <h2 class="xl" data-anim>Back you.</h2>
+          <p class="lead" data-anim>Then we stay in your corner.</p>
+          <p class="body" data-anim>Thirty-minute check-ins every second week. We adjust the plan, unblock what’s stuck and tell you straight when something isn’t worth it.</p>
+          <p class="get" data-anim><b>You get</b>Five numbers to watch, and someone to call.</p>
+        </div>
+        <figure class="step-fig" data-anim>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Sketch of a twelve-week timeline with a check-in every second week; the first three are ticked off.">
+            <text x="0" y="12" font-size="11" letter-spacing="1.6">12 WEEKS · CHECK-IN EVERY SECOND WEEK</text>
+            <path d="M10 96H310" stroke="#5a5a63" stroke-width="3"/>
+            <path data-draw pathLength="1" d="M10 96H160" stroke="#2F5BFF" stroke-width="3"/>
+            <g fill="#2F5BFF"><circle cx="60" cy="96" r="13"/><circle cx="110" cy="96" r="13"/><circle cx="160" cy="96" r="13"/></g>
+            <g fill="#000" stroke="#fff" stroke-width="2.5"><circle cx="210" cy="96" r="12"/><circle cx="260" cy="96" r="12"/><circle cx="310" cy="96" r="12"/></g>
+            <path d="M54 96l4.5 4.5 8-9M104 96l4.5 4.5 8-9M154 96l4.5 4.5 8-9" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <g font-size="11" text-anchor="middle"><text x="60" y="134">wk 2</text><text x="110" y="134">wk 4</text><text x="160" y="134">wk 6</text><text x="210" y="134">wk 8</text><text x="260" y="134">wk 10</text><text x="306" y="134">wk 12</text></g>
+            <text x="0" y="180" font-size="12">Adjust · unblock · drop what isn’t working</text>
+          </svg>
+        </figure>
+      </div>
+      <ol class="track" aria-hidden="true"><li class="done">Listen</li><li class="done">Measure</li><li class="done">Decide</li><li class="on">Back you</li></ol>
+    </section>
+
+    <section class="slide t-white s-case" data-label="Sample scenario" data-title="Two vans, booked solid" aria-roledescription="slide" aria-label="8 of 10: Sample scenario">
+      <p class="kicker">A sample scenario</p>
+      <p class="chip">Sample scenario · fictional business · illustrative figures</p>
+      <h2 class="xl" data-anim>Two vans, booked solid, still short at <em>BAS time.</em></h2>
+      <div class="case-grid">
+        <div data-anim><h3>What we’d look for</h3><ul><li>A call-out fee nobody has changed in four years</li><li>Quotes written at night, after the kids are in bed</li><li>Small jobs priced like big ones</li></ul></div>
+        <div data-anim><h3>Three moves</h3><ol><li>Raise the call-out fee and publish it</li><li>Template the ten most common quotes</li><li>A minimum charge for jobs under an hour</li></ol></div>
+        <div class="figs" data-anim><h3>What could change</h3><p class="fig"><b>6 → 2 hrs</b><span>a week spent quoting (illustrative)</span></p><p class="fig"><b>+8 pts</b><span>gross margin on small jobs (illustrative)</span></p></div>
+      </div>
+      <p class="fine">A made-up two-van plumbing business in the Hills District, used to show how the process works. General information only — every business is different and no result is promised.</p>
+    </section>
+
+    <section class="slide s-pricing" data-label="Pricing" data-title="Fixed fees, agreed first" aria-roledescription="slide" aria-label="9 of 10: Pricing">
+      <p class="kicker">Pricing</p>
+      <div class="price-head">
+        <h2 class="xl" data-anim>Fixed fees. Agreed <em>before</em> we start.</h2>
+        <p class="body" data-anim>Sample prices in AUD, including GST. Operations projects and hiring plans are quoted after a first chat.</p>
+      </div>
+      <div class="price-grid">
+        <article class="price" data-anim><h3>Pricing review</h3><p class="amt">$1,450</p><p class="per">Fixed · about 10 days</p><ul><li>Costs and margins on up to 40 lines</li><li>A scan of what nearby competitors charge</li><li>A new price list, ready to publish</li></ul></article>
+        <article class="price is-feature" data-anim><p class="flag">Steps 01–03</p><h3>Strategy sprint</h3><p class="amt">$3,900</p><p class="per">Fixed · 4 weeks</p><ul><li>Half a day on your floor</li><li>Twelve months of numbers, untangled</li><li>Your 90-day plan: three moves</li></ul></article>
+        <article class="price" data-anim><h3>In your corner</h3><p class="amt">$1,200<small>/ month</small></p><p class="per">3-month minimum</p><ul><li>Check-ins every second week</li><li>A five-number dashboard</li><li>Calls and emails between sessions</li></ul></article>
+      </div>
+      <div class="s-foot"><span>Sample prices</span><span>09</span></div>
+    </section>
+
+    <section class="slide t-blue s-book" data-label="Book a chat" data-title="Start with a 30-minute chat" aria-roledescription="slide" aria-label="10 of 10: Book a chat">
+      <div class="book-grid">
+        <div class="book-l">
+          <p class="kicker">Your next move</p>
+          <h2 class="xl" data-anim>Start with a <span style="white-space:nowrap">30-minute</span> chat.</h2>
+          <p class="lead" data-anim>Free, no slides, no hard sell. By video, or in person in Surry Hills.</p>
+          <ul class="contact" data-anim>
+            <li><span>Call</span><a href="tel:+61255504127">(02) 5550 4127</a></li>
+            <li><span>Email</span><a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><span>Hours</span>Mon–Fri, 8 am – 5 pm</li>
+            <li><span>Based</span>Surry Hills, Sydney NSW · video calls Australia-wide</li>
+          </ul>
+        </div>
+        <form class="book-form" id="bookForm" aria-labelledby="formT">
+          <p class="form-title" id="formT">Request a first chat</p>
+          <div class="row2">
+            <div class="field"><label for="fName">Your name</label><input id="fName" name="name" autocomplete="given-name" required placeholder="e.g. Sam"></div>
+            <div class="field"><label for="fBiz">Business and suburb</label><input id="fBiz" name="biz" placeholder="e.g. Bakery, Marrickville"></div>
+          </div>
+          <div class="field"><label for="fTopic">What’s eating your week?</label>
+            <select id="fTopic" name="topic"><option>Pricing and margins</option><option>Cash flow</option><option>Rostering and staff</option><option>Wearing too many hats</option><option>Not sure yet — that’s fine</option></select></div>
+          <fieldset class="slots"><legend>Pick a time (Sydney time)</legend>
+            <label class="slot"><input type="radio" name="slot" value="0" checked><span>Tue 29 Sep · 9:00 am</span></label>
+            <label class="slot"><input type="radio" name="slot" value="1"><span>Wed 30 Sep · 2:00 pm</span></label>
+            <label class="slot"><input type="radio" name="slot" value="2"><span>Thu 1 Oct · 11:30 am</span></label>
+            <label class="slot"><input type="radio" name="slot" value="3"><span>Fri 2 Oct · 8:30 am</span></label>
+          </fieldset>
+          <button class="submit" type="submit">Request this time<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <p class="book-out" id="bookOut" role="status" aria-live="polite">Demo form — nothing is sent anywhere.</p>
+        </form>
+      </div>
+      <div class="s-foot"><span><span data-brand>Next Move Consulting</span> · a fictional business · concept demo</span><span>10</span></div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="hud-bottom">
+  <ol class="progress" id="progress" aria-label="Jump to a slide"></ol>
+  <p class="hb-note">Fictional business · concept demo</p>
+  <div class="hb-nav">
+    <button class="nav-btn" id="prevBtn" type="button" aria-label="Previous slide"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <p class="count"><b id="curN">01</b><span> / 10</span></p>
+    <button class="nav-btn" id="nextBtn" type="button" aria-label="Next slide"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div class="presenter">
+    <p class="next-up">Next: <b id="nextName">The problem</b></p>
+    <p class="clock">Elapsed <time id="timer" datetime="PT0S">00:00</time></p>
+    <button class="tbtn" id="timerBtn" type="button" aria-pressed="false" aria-label="Pause timer"></button>
+    <button class="tbtn reset" id="timerReset" type="button" aria-label="Reset timer"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.6 8.2A6 6 0 1 1 4 11.5M4 4v4.4h4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+</footer>
+
+<dialog class="ov" id="overview" aria-labelledby="ovTitle">
+  <div class="ov-head">
+    <h2 id="ovTitle">All slides</h2>
+    <p>Pick any slide to jump there. <kbd>Esc</kbd> or <kbd>O</kbd> closes.</p>
+    <button class="btn" type="button" id="ovClose">Close</button>
+  </div>
+  <ol class="ov-grid" id="ovGrid"></ol>
+</dialog>
+<p class="sr" id="live" aria-live="polite"></p>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var deck = $("#deck"), stage = $("#stage"), slides = $$(".slide", stage), N = slides.length;
+  var stackMQ = matchMedia("(max-width: 760px), (max-height: 560px), (orientation: portrait) and (max-width: 1100px)");
+  var rmMQ = matchMedia("(prefers-reduced-motion: reduce)");
+  var isStack = function () { return stackMQ.matches; };
+  var reduced = function () { return window.DemoKit ? DemoKit.reducedMotion : rmMQ.matches; };
+  var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+  var mega = $(".s-title .mega"), live = $("#live"), ov = $("#overview"), ovGrid = $("#ovGrid"), ovBtn = $("#ovBtn");
+  var cur = 0, seq = 0, running = [], chosen = false;
+
+  /* progress segments double as a scrubber */
+  var prog = $("#progress");
+  slides.forEach(function (s, i) {
+    var li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button"; b.dataset.go = i; b.setAttribute("aria-label", "Slide " + (i + 1) + ": " + s.dataset.label);
+    li.appendChild(b); prog.appendChild(li);
+  });
+  var segs = $$("button", prog);
+
+  function titleOf(i) { return i === 0 ? mega.textContent : slides[i].dataset.title; }
+  function setHash(i) {
+    var h = "#slide-" + (i + 1);
+    if (location.hash === h) return;
+    try { history.replaceState(null, "", h); } catch (e) { /* sandboxed frame: skip */ }
+  }
+  function readHash() {
+    var m = /^#slide-(\d{1,2})$/.exec(location.hash);
+    if (!m) return null;
+    var i = +m[1] - 1;
+    return i >= 0 && i < N ? i : null;
+  }
+  function ui() {
+    $("#curN").textContent = pad(cur + 1);
+    $("#miniN").textContent = pad(cur + 1);
+    $("#secN").textContent = pad(cur + 1);
+    $("#secName").textContent = slides[cur].dataset.label;
+    $("#nextName").textContent = cur < N - 1 ? slides[cur + 1].dataset.label : "End — thanks for watching";
+    document.documentElement.style.setProperty("--p", ((cur + 1) / N).toFixed(3));
+    segs.forEach(function (b, i) {
+      b.classList.toggle("done", i < cur);
+      if (i === cur) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+    });
+    $("#prevBtn").disabled = cur === 0;
+    $("#nextBtn").disabled = cur === N - 1;
+  }
+  function setInert() {
+    var stack = isStack();
+    slides.forEach(function (s, i) {
+      var off = !stack && i !== cur;
+      s.inert = off;
+      if (off) s.setAttribute("aria-hidden", "true"); else s.removeAttribute("aria-hidden");
+    });
+  }
+  function play(s) {
+    if (reduced()) return;
+    $$("[data-anim]", s).forEach(function (el, k) {
+      el.animate([{ opacity: 0, transform: "translateY(22px)" }, { opacity: 1, transform: "none" }],
+        { duration: 700, delay: 140 + k * 70, easing: "cubic-bezier(.2,.7,.2,1)", fill: "backwards" });
+    });
+    $$("[data-draw]", s).forEach(function (p, k) {
+      p.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+        { duration: 1100, delay: 320 + k * 260, easing: "cubic-bezier(.45,0,.2,1)", fill: "backwards" });
+    });
+  }
+
+  function go(i, opt) {
+    opt = opt || {};
+    i = Math.max(0, Math.min(N - 1, i));
+    if (isStack()) {
+      cur = i; ui(); setHash(i);
+      slides[i].scrollIntoView({ behavior: reduced() || opt.instant ? "auto" : "smooth", block: "start" });
+      return;
+    }
+    if (i === cur) return;
+    var from = slides[cur], to = slides[i], dir = i > cur ? 1 : -1, token = ++seq;
+    running.forEach(function (a) { a.finish(); });
+    running = [];
+    slides.forEach(function (s) { s.classList.remove("is-leaving", "is-active"); });
+    to.classList.add("is-active");
+    if (!reduced()) {
+      from.classList.add("is-leaving");
+      var ease = "cubic-bezier(.72,0,.18,1)";
+      if (from.dataset.group && from.dataset.group === to.dataset.group) {
+        /* same section: dissolve in place, like a magic move */
+        running = [to.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 480, easing: "ease-out" })];
+      } else {
+        /* new section: push */
+        running = [
+          from.animate([{ transform: "translateX(0)", opacity: 1 }, { transform: "translateX(" + (-dir * 100) + "%)", opacity: 0.35 }], { duration: 680, easing: ease }),
+          to.animate([{ transform: "translateX(" + (dir * 100) + "%)" }, { transform: "translateX(0)" }], { duration: 680, easing: ease })
+        ];
+      }
+      Promise.all(running.map(function (a) { return a.finished; })).then(function () {
+        if (token === seq) from.classList.remove("is-leaving");
+      }, function () {});
+      play(to);
+    }
+    cur = i; setInert(); ui(); setHash(i);
+    live.textContent = "Slide " + (i + 1) + " of " + N + ": " + titleOf(i);
+  }
+
+  /* keyboard: arrows, Space, PageUp/Down, Home/End, O for overview */
+  document.addEventListener("keydown", function (e) {
+    if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target, k = e.key;
+    var typing = t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+    if (ov.open) {
+      if (k === "Escape" || (!typing && (k === "o" || k === "O"))) { e.preventDefault(); ov.close(); }
+      return;
+    }
+    if (typing) return;
+    if (k === "o" || k === "O") { e.preventDefault(); openOverview(); return; }
+    if (isStack()) return;
+    var onControl = t && t.closest && t.closest("button, a, summary");
+    if (k === "ArrowRight" || k === "ArrowDown" || k === "PageDown" || (k === " " && !e.shiftKey && !onControl)) { e.preventDefault(); go(cur + 1); }
+    else if (k === "ArrowLeft" || k === "ArrowUp" || k === "PageUp" || (k === " " && e.shiftKey && !onControl)) { e.preventDefault(); go(cur - 1); }
+    else if (k === "Home") { e.preventDefault(); go(0); }
+    else if (k === "End") { e.preventDefault(); go(N - 1); }
+  });
+
+  /* click to advance (left edge goes back), swipe on touch */
+  var down = null, swiped = false;
+  stage.addEventListener("pointerdown", function (e) { down = { x: e.clientX, y: e.clientY, type: e.pointerType }; swiped = false; });
+  stage.addEventListener("pointerup", function (e) {
+    if (!down || isStack()) { down = null; return; }
+    var dx = e.clientX - down.x, dy = e.clientY - down.y;
+    if (down.type !== "mouse" && Math.abs(dx) > 44 && Math.abs(dx) > Math.abs(dy) * 1.3) { swiped = true; go(cur + (dx < 0 ? 1 : -1)); }
+    down = null;
+  });
+  stage.addEventListener("click", function (e) {
+    if (isStack() || swiped) { swiped = false; return; }
+    if (e.target.closest("a, button, input, select, textarea, label, form, [data-go]")) return;
+    if (window.getSelection && String(window.getSelection()).length) return;
+    var r = stage.getBoundingClientRect();
+    go(e.clientX - r.left < r.width * 0.22 ? cur - 1 : cur + 1);
+  });
+  stage.addEventListener("pointermove", function (e) {
+    if (e.pointerType !== "mouse" || isStack()) return;
+    var r = stage.getBoundingClientRect();
+    stage.style.cursor = e.clientX - r.left < r.width * 0.22 ? "w-resize" : "e-resize";
+  });
+  $("#prevBtn").addEventListener("click", function () { go(cur - 1); });
+  $("#nextBtn").addEventListener("click", function () { go(cur + 1); });
+
+  /* anything with data-go jumps (logo, Book a chat, progress, overview cards) */
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-go]");
+    if (!b) return;
+    e.preventDefault();
+    var fromOv = ov.contains(b);
+    if (fromOv) { chosen = true; ov.close(); }
+    go(+b.dataset.go, { instant: fromOv });
+    if (fromOv) deck.focus({ preventScroll: true });
+  });
+
+  /* overview */
+  function openOverview() {
+    if (ov.open) return;
+    ovGrid.textContent = "";
+    slides.forEach(function (s, i) {
+      var li = document.createElement("li"), b = document.createElement("button");
+      var theme = (s.className.match(/t-(white|blue)/) || ["t-black"])[0];
+      b.type = "button"; b.className = "ov-card " + theme; b.dataset.go = i;
+      if (i === cur) b.setAttribute("aria-current", "true");
+      var n = document.createElement("span"); n.className = "ov-num"; n.textContent = pad(i + 1) + " · " + s.dataset.label;
+      var t = document.createElement("span"); t.className = "ov-title"; t.textContent = titleOf(i);
+      b.appendChild(n); b.appendChild(t); li.appendChild(b); ovGrid.appendChild(li);
+    });
+    ov.showModal();
+    ovBtn.setAttribute("aria-expanded", "true");
+    var c = $("[aria-current]", ovGrid); if (c) c.focus();
+    if (!reduced()) $$(".ov-card", ovGrid).forEach(function (c, k) {
+      c.animate([{ opacity: 0, transform: "translateY(14px) scale(.96)" }, { opacity: 1, transform: "none" }], { duration: 380, delay: k * 30, easing: "cubic-bezier(.2,.7,.2,1)", fill: "backwards" });
+    });
+  }
+  ovBtn.addEventListener("click", function () { if (ov.open) ov.close(); else openOverview(); });
+  $("#ovClose").addEventListener("click", function () { ov.close(); });
+  ov.addEventListener("cancel", function (e) { e.preventDefault(); ov.close(); });
+  ov.addEventListener("close", function () {
+    ovBtn.setAttribute("aria-expanded", "false");
+    if (!chosen) ovBtn.focus();
+    chosen = false;
+  });
+  ov.addEventListener("keydown", function (e) {
+    var cards = $$(".ov-card", ovGrid), k = cards.indexOf(document.activeElement);
+    if (k < 0) return;
+    var cols = getComputedStyle(ovGrid).gridTemplateColumns.split(" ").length;
+    var d = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: cols, ArrowUp: -cols }[e.key];
+    if (!d) return;
+    e.preventDefault(); e.stopPropagation();
+    cards[Math.max(0, Math.min(cards.length - 1, k + d))].focus();
+  });
+
+  /* presenter timer */
+  var tEl = $("#timer"), tBtn = $("#timerBtn"), t0 = Date.now(), acc = 0, paused = false;
+  function elapsed() { return paused ? acc : acc + Date.now() - t0; }
+  function tick() {
+    var s = Math.floor(elapsed() / 1000);
+    tEl.textContent = pad(Math.floor(s / 60)) + ":" + pad(s % 60);
+    tEl.setAttribute("datetime", "PT" + s + "S");
+  }
+  setInterval(function () { if (!document.hidden && !paused) tick(); }, 500);
+  tBtn.addEventListener("click", function () {
+    if (paused) { t0 = Date.now(); paused = false; } else { acc = elapsed(); paused = true; }
+    tBtn.setAttribute("aria-pressed", String(paused));
+    tBtn.setAttribute("aria-label", paused ? "Resume timer" : "Pause timer");
+    tBtn.classList.toggle("paused", paused);
+    tick();
+  });
+  $("#timerReset").addEventListener("click", function () { acc = 0; t0 = Date.now(); tick(); });
+
+  /* booking: real-looking slots for the next working days, honest demo ending */
+  var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var TIMES = ["9:00 am", "2:00 pm", "11:30 am", "8:30 am"];
+  var d = new Date(); d.setHours(12, 0, 0, 0);
+  $$(".slot span").forEach(function (sp, k) {
+    do { d.setDate(d.getDate() + 1); } while (d.getDay() === 0 || d.getDay() === 6);
+    sp.textContent = DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " · " + TIMES[k];
+  });
+  var form = $("#bookForm"), out = $("#bookOut");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = (form.elements.name.value.trim().split(/\s+/)[0] || "").slice(0, 24);
+    var slot = $(".slot input:checked + span", form);
+    out.textContent = "Thanks" + (name ? ", " + name : "") + ". On the real site this would request " + (slot ? slot.textContent : "that time") + " — in this demo nothing was booked or sent.";
+    out.classList.add("on");
+    if (window.DemoKit) DemoKit.toast("Demo only — no call was booked and nothing was sent.");
+  });
+
+  /* title keeps its size and squeezes its width axis to fit any business name */
+  var fitting = 0;
+  function fitNow() {
+    var slide = mega.closest(".slide"), w = 150;
+    mega.style.overflowWrap = "normal";
+    mega.style.fontStretch = w + "%";
+    var over = function () { return mega.scrollWidth > mega.clientWidth + 1 || (!isStack() && slide.scrollHeight > slide.clientHeight + 1); };
+    while (over() && w > 62) { w -= 6; mega.style.fontStretch = w + "%"; }
+    if (over()) mega.style.overflowWrap = "anywhere";
+  }
+  function fit() { cancelAnimationFrame(fitting); fitting = requestAnimationFrame(fitNow); }
+  window.addEventListener("hd:brandchange", fitNow);
+  window.addEventListener("resize", fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+
+  /* phone / portrait: cards, scroll snap, the hash follows your scroll */
+  var io = new IntersectionObserver(function (entries) {
+    if (!isStack()) return;
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      cur = slides.indexOf(en.target); ui(); setHash(cur);
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  slides.forEach(function (s) { io.observe(s); });
+  var drawn = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting && isStack()) {
+        $$("[data-draw]", en.target).forEach(function (p) {
+          if (!reduced()) p.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 1200, easing: "cubic-bezier(.45,0,.2,1)" });
+        });
+        drawn.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  $$(".chart, .knight, .step-fig").forEach(function (f) { drawn.observe(f); });
+
+  function modeChange() {
+    slides.forEach(function (s, i) { s.classList.toggle("is-active", i === cur); s.classList.remove("is-leaving"); });
+    setInert(); ui(); fit();
+    if (isStack()) slides[cur].scrollIntoView({ block: "start" });
+  }
+  if (stackMQ.addEventListener) stackMQ.addEventListener("change", modeChange);
+  window.addEventListener("hashchange", function () { var i = readHash(); if (i !== null && i !== cur) go(i); });
+
+  /* start at the deep-linked slide, e.g. #slide-4 */
+  var start = readHash();
+  cur = start === null ? 0 : start;
+  slides.forEach(function (s, i) { s.classList.toggle("is-active", i === cur); });
+  setInert(); ui();
+  if (isStack()) { if (cur > 0) slides[cur].scrollIntoView({ block: "start" }); }
+  else play(slides[cur]);
+});
+</script>
+</body>
+</html>

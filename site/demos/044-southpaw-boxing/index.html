@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="044">
+<meta name="demo:brand" content="Southpaw Boxing Club">
+<title>Southpaw Boxing Club — community boxing gym, Footscray</title>
+<meta name="description" content="A fictional community boxing gym in Footscray with a working round timer, a punchable heavy bag and a weekly class schedule.">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+/* Southpaw Boxing Club — a fight-night poster you can train with: bone paper, black ink, blood-red overprint,
+   torn edges, stamped type. Motion is punchy: impact shakes, spring overshoot, stamp-in. */
+:root{--ink:#0C0C0C;--red:#D7263D;--red-d:#A8192D;--red-l:#FF4D63;--bone:#EFE8D8;--bone2:#E6DDC8;--gold:#E9B44C;--mute:#5B5348;
+--disp:"Anton",Impact,"Arial Narrow Bold",sans-serif;--sans:"Barlow","Helvetica Neue",Arial,sans-serif;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+--grain-l:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .94 0 0 0 0 .91 0 0 0 0 .85 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+--dots:radial-gradient(circle,rgba(12,12,12,.24) 1.2px,transparent 1.7px) 0 0/7px 7px;
+--rip:polygon(0 100%,0 30%,2.3% 25%,3.9% 55%,5.8% 55%,7.2% 10%,8.6% 70%,11.4% 30%,13.9% 85%,15.9% 85%,18.9% 40%,20.4% 25%,22.9% 70%,26.2% 25%,29.4% 70%,30.7% 30%,32.1% 60%,35.3% 55%,36.8% 55%,39.7% 10%,42.4% 30%,45.2% 85%,47.2% 60%,49.8% 40%,51.5% 60%,54.9% 85%,57.4% 10%,59.2% 10%,60.9% 10%,63.4% 70%,66.8% 85%,69.2% 30%,70.7% 85%,72.1% 55%,74.7% 10%,78.1% 10%,80.8% 60%,82.2% 40%,85.5% 10%,88% 70%,91.3% 25%,93.1% 10%,95.2% 40%,97.9% 55%,100% 45%,100% 100%);
+--vrip:polygon(100% 0,0 0,58% 0,66% 2.7%,0 4.5%,58% 6.6%,18% 10%,0 12.1%,34% 15.1%,58% 18.1%,26% 21.6%,50% 23.3%,34% 24.8%,18% 27.3%,26% 30.4%,18% 33.6%,50% 37%,26% 39.9%,66% 43.2%,26% 46.6%,0 48.7%,0 53.8%,58% 57.2%,50% 58.9%,18% 61.2%,0 64.8%,50% 66.4%,50% 69.8%,18% 71.9%,0 73.6%,58% 76.1%,50% 78.7%,26% 81%,18% 82.8%,34% 85.8%,0 87.6%,34% 89.1%,0 92.1%,26% 93.8%,50% 97.3%,0 99%,40% 100%,100% 100%);
+--burst:polygon(50% 0,58% 13%,72% 5%,74% 20%,89% 19%,84% 34%,99% 39%,88% 50%,99% 61%,84% 66%,89% 81%,74% 80%,72% 95%,58% 87%,50% 100%,42% 87%,28% 95%,26% 80%,11% 81%,16% 66%,1% 61%,12% 50%,1% 39%,16% 34%,11% 19%,26% 20%,28% 5%,42% 13%)}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html.lock{overflow:hidden}
+body{margin:0;background:var(--bone);color:var(--ink);font:400 17px/1.6 var(--sans)}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+svg{display:block}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.big{font:400 clamp(56px,9vw,128px)/.86 var(--disp);text-transform:uppercase;letter-spacing:.005em}
+.kick{font:800 13px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.lead{font-size:clamp(17px,1.5vw,19px);max-width:52ch}
+.fine{font-size:14px;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:3px solid var(--ink);background:var(--bone);color:var(--ink);font:400 19px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:5px 5px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn.red{background:var(--red);color:var(--bone)}
+.btn.gold{background:var(--gold)}
+.btn.dark{background:var(--ink);color:var(--bone);border-color:var(--bone);box-shadow:5px 5px 0 var(--red)}
+.btn.dark:hover{box-shadow:7px 7px 0 var(--red)}
+.btn[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--ink)}
+.rip-t{position:relative}
+main>section{overflow-x:clip}
+.rip-t::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:22px;background:inherit;clip-path:var(--rip)}
+
+/* header */
+.top{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:18px;padding:10px clamp(14px,3vw,40px);padding-top:max(10px,env(safe-area-inset-top));background:var(--ink);color:var(--bone)}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0;text-decoration:none;font:400 22px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase}
+.logo span{overflow-wrap:anywhere;min-width:0}
+.logo svg{flex:none;width:26px;height:26px;color:var(--red)}
+.top nav{display:none}
+.top .btn{min-height:42px;padding:0 14px;font-size:16px;white-space:nowrap;box-shadow:3px 3px 0 var(--bone);border-color:var(--bone)}
+.qt{font:400 16px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:13px 6px;color:var(--gold)}
+@media (max-width:400px){.logo{font-size:19px}.top{gap:10px}.top .btn{padding:0 10px}.qt{padding:13px 2px}}
+@media (min-width:980px){.qt{display:none}.top nav{display:flex;gap:26px}.top nav a{font:400 17px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:12px 0}.top nav a:hover{color:var(--gold)}}
+
+/* hero poster */
+.hero{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:calc(100svh - 62px);background:var(--grain),var(--bone)}
+.poster{padding:clamp(26px,3.6vw,56px) clamp(16px,4vw,56px) clamp(34px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,1.6vw,22px);position:relative;overflow:hidden}
+.poster::after{content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;background:var(--dots);border-radius:50%;opacity:.7;pointer-events:none}
+.strap{align-self:flex-start;transform:rotate(-2deg);background:var(--ink);color:var(--gold);font:400 clamp(15px,1.4vw,18px)/1 var(--disp);letter-spacing:.14em;text-transform:uppercase;padding:10px 14px 9px}
+.bill{display:grid;justify-items:start;font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.84}
+.fighter{font-size:clamp(60px,8.6vw,148px);max-width:100%;overflow-wrap:anywhere;letter-spacing:.005em;animation:stamp .5s cubic-bezier(.2,1.6,.4,1) both}
+.vs{display:grid;place-items:center;width:clamp(60px,5.6vw,88px);aspect-ratio:1;margin:.12em 0 .06em .1em;font-size:clamp(26px,3vw,42px);line-height:1;color:var(--bone);background:var(--red);clip-path:var(--burst);transform:rotate(-10deg);animation:stamp .45s .25s cubic-bezier(.2,1.6,.4,1) both}
+.opp{font-size:clamp(50px,7vw,118px);color:var(--red);max-width:100%;overflow-wrap:anywhere;animation:stamp .5s .45s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes stamp{from{transform:scale(1.35) rotate(-3deg);opacity:0}}
+.blurb{max-width:46ch;font-size:clamp(17px,1.4vw,19px)}
+.under{display:flex;flex-wrap:wrap;gap:8px}
+.under li{font:800 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:9px 11px;border:2px solid var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:14px 18px;margin-top:6px}
+
+/* ring side + heavy bag */
+.ring{position:relative;display:grid;grid-template-rows:1fr auto;justify-items:center;padding:0 clamp(16px,3vw,40px) 26px;background:radial-gradient(60% 40% at 50% 12%,rgba(239,232,216,.16),transparent 70%),var(--grain-l),var(--ink);color:var(--bone)}
+.ring::before{content:"";position:absolute;top:0;bottom:0;right:calc(100% - 1px);width:24px;background:var(--ink);clip-path:var(--vrip)}
+.bagbtn{position:relative;width:min(100%,300px);height:100%;min-height:420px;max-height:620px;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.bagbtn svg{width:100%;height:100%;overflow:visible}
+.bagbtn:focus-visible{outline-offset:-6px}
+.hitme{position:absolute;top:30%;right:-6px;display:grid;place-items:center;width:84px;aspect-ratio:1;background:var(--gold);color:var(--ink);clip-path:var(--burst);font:400 17px/1 var(--disp);text-transform:uppercase;transform:rotate(12deg);pointer-events:none;transition:transform .3s,opacity .3s}
+.ring.hot .hitme{opacity:0;transform:rotate(40deg) scale(.4)}
+.stats{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:14px 20px;width:min(100%,460px)}
+.st-l{font:800 11.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#B9B0A0}
+.st-n{display:block;font:400 46px/1 var(--disp);color:var(--bone);margin-top:6px}
+.st-n.pop{animation:pop .22s cubic-bezier(.2,1.8,.4,1)}
+@keyframes pop{from{transform:scale(1.45);color:var(--gold)}}
+.meter{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;height:22px;margin-top:8px}
+.meter i{background:#2A2A2A;transform:skewX(-12deg);transition:background .15s}
+.meter i.on{background:var(--red)}
+.meter i.on:nth-child(n+8){background:var(--gold)}
+.calls{grid-column:1/-1;min-height:1.3em;font:400 clamp(16px,1.5vw,20px)/1.3 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--gold);text-align:center}
+.bag-foot{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 16px;margin-top:10px;font-size:14px;color:#CFC6B4;text-align:center}
+.snd{min-height:40px;padding:0 12px;font-size:15px;box-shadow:3px 3px 0 var(--red)}
+.fxring{fill:none;stroke:var(--gold);stroke-width:5;transform-box:fill-box;transform-origin:center;animation:ringo .45s ease-out forwards}
+@keyframes ringo{from{transform:scale(.2);opacity:1}to{transform:scale(1.9);opacity:0}}
+.fxtxt{font:400 34px var(--disp);fill:var(--gold);paint-order:stroke;stroke:var(--ink);stroke-width:5px;text-transform:uppercase;animation:rise .6s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes rise{0%{opacity:0;transform:translateY(8px)}20%{opacity:1}100%{opacity:0;transform:translateY(-34px)}}
+.ko{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.ko b{display:grid;place-items:center;width:min(78%,300px);aspect-ratio:1;background:var(--gold);color:var(--ink);clip-path:var(--burst);font:400 clamp(44px,6vw,72px)/.9 var(--disp);text-transform:uppercase;text-align:center;animation:ko 1.3s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes ko{0%{transform:scale(.2) rotate(-30deg);opacity:0}15%{transform:scale(1.1) rotate(4deg);opacity:1}75%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(1.2);opacity:0}}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .ring{padding-top:34px}
+  .ring::before{left:0;right:0;top:auto;bottom:calc(100% - 1px);width:auto;height:22px;clip-path:var(--rip)}
+  .bagbtn{height:min(96vw,470px);min-height:0}
+}
+
+/* round timer */
+.clock{padding:clamp(70px,9vw,120px) 0;background:var(--dots),var(--red)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;margin-bottom:clamp(22px,3vw,36px)}
+.sec-head .kick{background:var(--ink);color:var(--bone);padding:9px 12px;transform:rotate(1.5deg)}
+.board{position:relative;background:var(--grain-l),var(--ink);color:var(--bone);padding:clamp(20px,3.4vw,44px);box-shadow:10px 10px 0 rgba(12,12,12,.35);display:grid;gap:18px}
+.tb-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.phase{font:400 clamp(26px,3vw,40px)/1 var(--disp);text-transform:uppercase;letter-spacing:.04em;color:var(--red-l)}
+.rcount{font:800 14px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#CFC6B4}
+.digits{font:400 clamp(110px,24vw,300px)/.9 var(--disp);letter-spacing:.01em;color:var(--red);font-variant-numeric:tabular-nums;text-align:center}
+.board.rest .digits{color:var(--bone)}
+.board.rest .phase{color:var(--bone)}
+.board.warn .digits{color:var(--gold)}
+.board.warn .phase{color:var(--gold)}
+.bar{height:10px;background:#262626}
+.bar i{display:block;height:100%;width:0;background:var(--red);transition:width .2s linear}
+.board.rest .bar i{background:var(--bone)}
+.dots{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.dots li{width:26px;height:26px;display:grid;place-items:center;border:2px solid #555;font:400 14px/1 var(--disp);color:#8D8676}
+.dots li.done{background:var(--red);border-color:var(--red);color:var(--bone)}
+.dots li.now{border-color:var(--gold);color:var(--gold)}
+.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px}
+.controls .btn{min-width:120px}
+.controls .go{min-width:170px}
+.setup{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 22px;padding-top:16px;border-top:1px solid #2E2E2E;font-size:15px}
+.setup label,.setup .lb{font:800 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#CFC6B4}
+.setup select{min-height:44px;padding:0 12px;background:var(--ink);color:var(--bone);border:2px solid #555;font:600 16px var(--sans)}
+.stepper{display:inline-flex;align-items:center;border:2px solid #555}
+.stepper button{width:44px;height:42px;border:0;background:none;color:var(--bone);font:400 22px/1 var(--disp);cursor:pointer}
+.stepper output{min-width:36px;text-align:center;font:400 22px/1 var(--disp)}
+.setup :disabled{opacity:.4;cursor:not-allowed}
+.board.full{position:fixed;inset:0;z-index:100;align-content:center;box-shadow:none;padding:max(20px,env(safe-area-inset-top)) 20px max(20px,env(safe-area-inset-bottom));overflow:auto}
+.board:fullscreen{align-content:center;overflow:auto}
+.board.full .digits,.board:fullscreen .digits{font-size:min(44vw,52vh)}
+.board.full .setup,.board:fullscreen .setup{display:none}
+
+/* fight card */
+.fc{padding:clamp(70px,9vw,120px) 0;background:var(--grain),var(--bone)}
+.frame{border:5px solid var(--ink);outline:2px solid var(--ink);outline-offset:6px;padding:clamp(20px,3.4vw,44px);margin:8px}
+.frame .kick{color:var(--red-d)}
+.frame .big{margin:10px 0 12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 8px}
+.tab{min-width:64px;min-height:46px;padding:0 12px;border:3px solid var(--ink);background:none;font:400 20px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.tab[aria-selected=true]{background:var(--ink);color:var(--gold)}
+.bouts{border-top:3px solid var(--ink)}
+.bout{display:grid;grid-template-columns:110px minmax(0,1fr) 56px minmax(0,1fr);grid-template-areas:"t c v o" "t m m m";align-items:center;gap:2px 16px;padding:16px 0;border-bottom:2px dashed rgba(12,12,12,.35);animation:slam .35s cubic-bezier(.2,1.4,.4,1) both}
+.bout:nth-child(2){animation-delay:.05s}.bout:nth-child(3){animation-delay:.1s}.bout:nth-child(4){animation-delay:.15s}.bout:nth-child(5){animation-delay:.2s}
+@keyframes slam{from{opacity:0;transform:translateX(-18px)}}
+.bt{grid-area:t;font:400 24px/1 var(--disp);color:var(--red-d)}
+.bc{grid-area:c;font:400 clamp(24px,2.6vw,36px)/1 var(--disp);text-transform:uppercase}
+.bv{grid-area:v;justify-self:center;display:grid;place-items:center;width:46px;aspect-ratio:1;background:var(--red);color:var(--bone);clip-path:var(--burst);font:400 16px/1 var(--disp)}
+.bo{grid-area:o;font:400 clamp(24px,2.6vw,36px)/1 var(--disp);text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.bm{grid-area:m;font-size:15px;color:var(--mute)}
+.bm b{color:var(--ink);font-weight:800}
+.main-ev{display:inline-block;margin-left:8px;padding:3px 7px;background:var(--gold);color:var(--ink);font:800 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;vertical-align:1px}
+.frame .fine{margin-top:16px}
+@media (max-width:700px){.bout{grid-template-columns:auto minmax(0,1fr);grid-template-areas:"t t" "c c" "v o" "m m";gap:6px 10px}.bv{width:40px;justify-self:start}.bo{-webkit-text-stroke:1.2px var(--ink)}}
+
+/* coaches */
+.corner{padding:clamp(70px,9vw,120px) 0;background:var(--grain-l),var(--ink);color:var(--bone)}
+.corner .lead{color:#D8D0C0;margin-top:12px}
+.corner .big{color:var(--bone)}
+.coaches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:clamp(28px,4vw,48px)}
+.coach{background:var(--bone);color:var(--ink);border:3px solid var(--bone);box-shadow:6px 6px 0 var(--red);display:grid;align-content:start}
+.coach:nth-child(even){transform:translateY(22px)}
+.por{width:100%;height:auto;aspect-ratio:200/210;background:var(--ink)}
+.cb{padding:16px 16px 18px;display:grid;gap:6px}
+.coach h3{font:400 38px/1 var(--disp);text-transform:uppercase}
+.role{font:800 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--red-d)}
+.tape{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14.5px;padding:10px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:4px}
+.tape dt{font-weight:800}
+.q{font-size:15px;font-style:italic}
+.corner .fine{color:#B9B0A0;margin-top:48px}
+@media (max-width:1000px){.coaches{grid-template-columns:1fr 1fr}.coach:nth-child(even){transform:none}}
+@media (max-width:560px){.coaches{grid-template-columns:1fr}.coach{grid-template-columns:128px 1fr}.por{height:100%;aspect-ratio:auto;min-height:190px}}
+
+/* tickets + kids */
+.tix{padding:clamp(70px,9vw,120px) 0 clamp(40px,5vw,60px);background:var(--grain),var(--bone)}
+.tickets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:clamp(28px,4vw,44px)}
+.tk{position:relative;display:grid;align-content:start;gap:10px;padding:0 20px 22px;background:#F6F0E3;border:3px solid var(--ink);transform:rotate(-1.2deg);transition:transform .2s}
+.tk:nth-child(even){transform:rotate(1deg)}
+.tk:hover{transform:rotate(0) translateY(-4px)}
+.tk-top{margin:0 -20px;padding:9px 20px;border-bottom:3px dashed var(--ink);font:400 16px/1 var(--disp);letter-spacing:.18em;text-transform:uppercase;background:var(--ink);color:var(--gold)}
+.tk.hot{background:var(--gold)}
+.tk.hot .tk-top{background:var(--red);color:var(--bone)}
+.tk h3{font:400 30px/1 var(--disp);text-transform:uppercase;margin-top:6px}
+.price{font:400 64px/1 var(--disp);letter-spacing:-.01em}
+.price small{font:800 14px/1 var(--sans);letter-spacing:.06em;margin-left:4px}
+.tk ul{display:grid;gap:6px;font-size:15px}
+.tk li{padding-left:22px;position:relative}
+.tk li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;background:var(--red);clip-path:var(--burst)}
+.tix .fine{margin-top:26px}
+@media (max-width:1000px){.tickets{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.tickets{grid-template-columns:1fr}}
+.kids{padding:clamp(30px,5vw,60px) 0 clamp(80px,9vw,120px);background:var(--grain),var(--bone)}
+.kids-in{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;background:var(--dots),var(--red);color:var(--bone);padding:clamp(24px,4vw,56px);box-shadow:10px 10px 0 var(--ink)}
+.kids .big{color:var(--ink)}
+.kids .lead{margin:14px 0 18px;color:var(--bone);font-size:clamp(20px,1.8vw,22px);font-weight:800;line-height:1.45}
+.kfacts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kfacts li{background:var(--ink);padding:12px 14px;font-size:15px}
+.kfacts b{display:block;font:400 22px/1.1 var(--disp);letter-spacing:.03em;text-transform:uppercase;color:var(--gold)}
+.kid-art{width:100%;max-width:360px;justify-self:center}
+@media (max-width:820px){.kids-in{grid-template-columns:1fr}.kid-art{max-width:240px;order:-1}}
+@media (max-width:420px){.kfacts{grid-template-columns:1fr}}
+
+/* trial */
+.trial{padding:clamp(70px,9vw,120px) 0;background:var(--grain),var(--gold)}
+.trial-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.trial .lead{margin:16px 0 20px}
+.bring{display:grid;gap:8px;font-weight:600}
+.bring li{display:flex;gap:10px;align-items:baseline}
+.bring li::before{content:"";flex:none;width:14px;height:14px;background:var(--ink);clip-path:var(--burst);transform:translateY(2px)}
+.tform{background:var(--bone);border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:clamp(20px,3vw,34px);display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:5px;min-width:0}
+.fld label,.fld legend{font:800 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:0}
+.fld input,.fld select,.fld textarea{width:100%;min-height:48px;padding:10px 12px;border:3px solid var(--ink);border-radius:0;background:#FBF7EE;color:var(--ink);font:600 16px/1.3 var(--sans);-webkit-appearance:none;appearance:none}
+.fld select{background:#FBF7EE url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230C0C0C' stroke-width='2.4'/%3E%3C/svg%3E") right 12px center no-repeat;padding-right:34px}
+.fld textarea{min-height:84px;resize:vertical}
+.fld [aria-invalid=true]{border-color:var(--red-d);background-color:#FBE9EA}
+.exp{border:0;margin:0;padding:0;min-width:0}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.seg label{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:3px solid var(--ink);font:600 15px var(--sans);letter-spacing:0;text-transform:none;cursor:pointer}
+.seg input{position:absolute;opacity:0}
+.seg label:has(input:checked){background:var(--ink);color:var(--gold)}
+.seg label:has(input:focus-visible){outline:3px solid var(--red);outline-offset:2px}
+.ferr{min-height:1.3em;color:var(--red-d);font-weight:800;font-size:15px}
+.done{border:3px solid var(--ink);background:var(--ink);color:var(--bone);padding:18px;display:grid;gap:6px;animation:thunk .4s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes thunk{from{transform:translateY(-14px) rotate(-2deg);opacity:0}}
+.done b{font:400 28px/1 var(--disp);text-transform:uppercase;color:var(--gold)}
+@media (max-width:860px){.trial-in{grid-template-columns:1fr}}
+@media (max-width:420px){.two{grid-template-columns:1fr}}
+
+/* footer */
+.foot{padding:clamp(60px,8vw,96px) 0 calc(70px + env(safe-area-inset-bottom));background:var(--grain-l),var(--ink);color:var(--bone)}
+.f-brand{font:400 clamp(48px,9vw,120px)/.86 var(--disp);text-transform:uppercase;overflow-wrap:anywhere;color:var(--bone)}
+.f-brand::after{content:"";display:block;width:120px;height:10px;margin-top:18px;background:var(--red)}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin:36px 0 30px}
+.fcols h2{font:400 22px/1 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.fcols p,.fcols dl{font-size:16px;color:#E4DCCB}
+.fcols dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px}
+.fcols a{display:inline-block;padding:5px 0;text-underline-offset:4px;text-decoration-color:var(--red)}
+.fnote{font-size:14px;color:#B9B0A0;max-width:80ch;border-top:1px solid #333;padding-top:18px}
+@media (max-width:760px){.fcols{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<svg class="sr" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="st" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1l3.1 7 7.6.7-5.8 5 1.8 7.4L12 17.3 5.3 21.1l1.8-7.4-5.8-5 7.6-.7z"/></symbol>
+    <pattern id="ht" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="#0C0C0C" opacity=".28"/></pattern>
+    <symbol id="pb" viewBox="0 0 200 210"><circle cx="100" cy="96" r="90" style="fill:var(--bd)"/><circle cx="100" cy="96" r="90" fill="url(#ht)"/><path d="M26 210C30 168 62 150 100 150S170 168 174 210Z" fill="#0C0C0C"/><path d="M87 118h26v34H87z" fill="#EFE8D8" stroke="#0C0C0C" stroke-width="3.5"/><ellipse cx="100" cy="94" rx="31" ry="37" fill="#EFE8D8" stroke="#0C0C0C" stroke-width="3.5"/><path d="M85 93h9M106 93h9M86 85l9 2M114 85l-9 2M100 97v10l-4 2M92 117q8 3 16 0" stroke="#0C0C0C" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="gl" viewBox="0 0 200 210"><g stroke="#0C0C0C" stroke-width="3.5" fill="currentColor"><path d="M42 152c-5-25 8-42 27-42 17 0 26 12 24 29-2 15-13 25-27 25-12 0-21-4-24-12z"/><path d="M158 152c5-25-8-42-27-42-17 0-26 12-24 29 2 15 13 25 27 25 12 0 21-4 24-12z"/></g><path d="M47 163l21 8M153 163l-21 8" stroke="#EFE8D8" stroke-width="5"/><path d="M60 122q8-6 18-2M140 122q-8-6-18-2" stroke="#EFE8D8" stroke-width="3" fill="none" opacity=".6"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <a class="logo" href="#top"><svg aria-hidden="true"><use href="#st"/></svg><span data-brand>Southpaw Boxing Club</span></a>
+  <nav aria-label="Sections"><a href="#clock">Timer</a><a href="#card">Fight card</a><a href="#coaches">Coaches</a><a href="#join">Memberships</a><a href="#kids">Kids</a></nav>
+  <a class="qt" href="#clock">Timer</a>
+  <a class="btn red" href="#trial">Trial class</a>
+</header>
+
+<main>
+  <section class="hero" id="top" aria-labelledby="bill">
+    <div class="poster">
+      <p class="strap">Main event · Mon–Sat · Footscray, VIC</p>
+      <h1 class="bill" id="bill"><span class="fighter" data-brand>Southpaw Boxing Club</span><span class="vs" aria-hidden="true">VS</span><span class="sr"> versus </span><span class="opp">Your excuses</span></h1>
+      <p class="blurb">A community boxing gym for people who've never thrown a punch and people who've thrown thousands. Technique first, fitness follows, and nobody spars unless they ask to.</p>
+      <ul class="under"><li>Beginners welcome</li><li>Gloves to borrow</li><li>Classes from 6am</li></ul>
+      <div class="cta"><a class="btn red" href="#trial">Book a trial class</a><a class="btn" href="#clock">Round timer</a></div>
+    </div>
+    <div class="ring" id="ring">
+      <button class="bagbtn" id="bag" type="button" aria-describedby="bagHint">
+        <span class="sr">Punch the heavy bag</span>
+        <svg viewBox="0 0 300 640" aria-hidden="true">
+          <defs>
+            <linearGradient id="lea" x1="0" x2="1"><stop offset="0" stop-color="#4e0a14"/><stop offset=".32" stop-color="#C21F36"/><stop offset=".5" stop-color="#E23B51"/><stop offset="1" stop-color="#3f0810"/></linearGradient>
+            <linearGradient id="cap" x1="0" x2="1"><stop offset="0" stop-color="#050505"/><stop offset=".45" stop-color="#303030"/><stop offset="1" stop-color="#050505"/></linearGradient>
+          </defs>
+          <rect x="104" y="-40" width="92" height="52" fill="#262626"/><path d="M150 12v14" stroke="#8a8a8a" stroke-width="6"/>
+          <g id="swing">
+            <path d="M150 28L94 150M150 28L206 150M150 28L126 150M150 28L174 150" stroke="#9a9a9a" stroke-width="4" stroke-dasharray="7 4" stroke-linecap="round" fill="none"/>
+            <circle cx="150" cy="28" r="7" fill="none" stroke="#b5b5b5" stroke-width="4"/>
+            <g id="body">
+              <rect x="84" y="140" width="132" height="440" rx="26" fill="url(#lea)"/>
+              <rect x="84" y="140" width="132" height="36" rx="17" fill="url(#cap)"/>
+              <rect x="84" y="546" width="132" height="34" rx="17" fill="url(#cap)"/>
+              <path d="M86 250H214M86 470H214" stroke="#0C0C0C" stroke-opacity=".4" stroke-width="2" stroke-dasharray="5 4"/>
+              <rect x="84" y="334" width="132" height="56" fill="#0C0C0C"/>
+              <g style="color:#E9B44C"><use href="#st" x="99" y="349" width="26" height="26"/><use href="#st" x="137" y="349" width="26" height="26"/><use href="#st" x="175" y="349" width="26" height="26"/></g>
+              <rect x="110" y="182" width="11" height="356" rx="5.5" fill="#fff" opacity=".13"/>
+            </g>
+          </g>
+          <g id="fx"></g>
+        </svg>
+        <span class="hitme" aria-hidden="true">Hit it</span>
+        <span class="ko" id="ko" aria-hidden="true"></span>
+      </button>
+      <div>
+        <div class="stats">
+          <div><span class="st-l">Combo</span><strong class="st-n" id="combo">0</strong></div>
+          <div><span class="st-l" id="powL">Power</span><div class="meter" id="meter" role="progressbar" aria-labelledby="powL" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div><span class="st-l">Punches</span><strong class="st-n" id="total">0</strong></div>
+          <p class="calls" id="calls" aria-hidden="true"></p>
+        </div>
+        <div class="bag-foot"><p id="bagHint">Click, tap or press Space on the bag. Quick combos charge the power meter.</p><button class="btn dark snd" type="button" aria-pressed="false" data-sound>Sound off</button></div>
+        <p class="sr" id="bagLive" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="clock rip-t" id="clock" aria-labelledby="clock-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="big" id="clock-h">The clock</h2><p class="kick">Same bell as the gym floor</p></div>
+      <div class="board" id="board">
+        <div class="tb-top"><span class="phase" id="phase">Get ready</span><span class="rcount" id="rcount">Round 1 of 3</span></div>
+        <p class="digits" id="digits" role="timer" aria-label="Time left in this round">3:00</p>
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+        <ol class="dots" id="dots" aria-hidden="true"></ol>
+        <div class="controls">
+          <button class="btn red go" id="tGo" type="button">Start</button>
+          <button class="btn dark" id="tReset" type="button">Reset</button>
+          <button class="btn dark" type="button" aria-pressed="false" data-sound>Sound off</button>
+          <button class="btn dark" id="tFull" type="button">Full screen</button>
+        </div>
+        <div class="setup">
+          <label for="fmt">Format</label>
+          <select id="fmt"><option value="180,60">Pro · 3:00 rounds, 1:00 rest</option><option value="120,60">Amateur · 2:00 / 1:00</option><option value="60,30">Conditioning · 1:00 / 0:30</option></select>
+          <span class="lb" id="rndL">Rounds</span>
+          <span class="stepper"><button type="button" id="rMinus" aria-label="Fewer rounds">−</button><output id="rounds" aria-labelledby="rndL">3</output><button type="button" id="rPlus" aria-label="More rounds">+</button></span>
+        </div>
+        <p class="sr" id="tLive" aria-live="assertive"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="fc" id="card" aria-labelledby="card-h">
+    <div class="wrap">
+      <div class="frame">
+        <p class="kick">This week at the club</p>
+        <h2 class="big" id="card-h">Fight card</h2>
+        <p class="lead">Every class is a bout. Pick a day — the card is the same every week.</p>
+        <div class="tabs" role="tablist" aria-label="Day of the week" id="tabs"></div>
+        <ol class="bouts" id="bouts" role="tabpanel" tabindex="0" aria-labelledby="tab-0"></ol>
+        <p class="fine">Classes run 60 minutes unless noted. Sparring is opt-in, coached and always in headgear.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="corner rip-t" id="coaches" aria-labelledby="co-h">
+    <div class="wrap">
+      <h2 class="big" id="co-h">In your corner</h2>
+      <p class="lead">Four coaches, four styles, one rule: hands up.</p>
+      <ul class="coaches">
+        <li class="coach"><svg class="por" viewBox="0 0 200 210" style="--bd:#D7263D;color:#E9B44C" aria-hidden="true"><use href="#pb"/><g fill="#0C0C0C"><circle cx="77" cy="67" r="13"/><circle cx="92" cy="58" r="14"/><circle cx="109" cy="58" r="14"/><circle cx="123" cy="67" r="13"/><circle cx="131" cy="80" r="8"/><circle cx="69" cy="80" r="8"/></g><path d="M69 79q31-11 62 0v8q-31-10-62 0z" fill="#D7263D" stroke="#0C0C0C" stroke-width="2"/><use href="#gl"/></svg>
+          <div class="cb"><h3>Tui</h3><p class="role">Head coach · southpaw</p><dl class="tape"><dt>Specialty</dt><dd>Footwork and defence</dd><dt>Coaches</dt><dd>Fundamentals, technical sparring</dd></dl><p class="q">“Hands up, chin down, feet under you.”</p></div></li>
+        <li class="coach"><svg class="por" viewBox="0 0 200 210" style="--bd:#E9B44C;color:#D7263D" aria-hidden="true"><use href="#pb"/><path d="M68 92C64 58 136 58 132 92C124 70 88 66 68 92Z" fill="#0C0C0C"/><circle cx="100" cy="50" r="15" fill="#0C0C0C"/><use href="#gl"/></svg>
+          <div class="cb"><h3>Marisol</h3><p class="role">Coach · orthodox</p><dl class="tape"><dt>Specialty</dt><dd>Pad work and combinations</dd><dt>Coaches</dt><dd>Pad work, women's boxing</dd></dl><p class="q">“Throw it like you mean it, then throw it again.”</p></div></li>
+        <li class="coach"><svg class="por" viewBox="0 0 200 210" style="--bd:#D7263D;color:#EFE8D8" aria-hidden="true"><use href="#pb"/><path d="M70 84C72 60 128 60 130 84C122 72 78 72 70 84Z" fill="#0C0C0C"/><path d="M71 100c2 26 16 35 29 35s27-9 29-35c-6 12-15 17-29 17s-23-5-29-17z" fill="#0C0C0C"/><use href="#gl"/></svg>
+          <div class="cb"><h3>Dimitri</h3><p class="role">Coach · southpaw</p><dl class="tape"><dt>Specialty</dt><dd>Conditioning and bag work</dd><dt>Coaches</dt><dd>Conditioning, bag rounds, open gym</dd></dl><p class="q">“The last round is the one that counts.”</p></div></li>
+        <li class="coach"><svg class="por" viewBox="0 0 200 210" style="--bd:#EFE8D8;color:#D7263D" aria-hidden="true"><use href="#pb"/><path d="M68 92C64 56 136 56 132 92C128 76 110 70 96 72C86 74 76 80 68 92Z" fill="#0C0C0C"/><path d="M130 76c20 6 24 32 12 48-2-17-8-29-16-35z" fill="#0C0C0C"/><use href="#gl"/></svg>
+          <div class="cb"><h3>Hana</h3><p class="role">Kids coach · orthodox</p><dl class="tape"><dt>Specialty</dt><dd>Coordination games</dd><dt>Coaches</dt><dd>Kids 5–7 and 8–12</dd></dl><p class="q">“Good feet, good manners, good fun.”</p></div></li>
+      </ul>
+      <p class="fine">Coaches are fictional characters drawn for this concept site.</p>
+    </div>
+  </section>
+
+  <section class="tix" id="join" aria-labelledby="join-h">
+    <div class="wrap">
+      <h2 class="big" id="join-h">Pick your ticket</h2>
+      <ul class="tickets">
+        <li class="tk"><p class="tk-top">Admit one</p><h3>Walk-up</h3><p class="price">$28<small>/ class</small></p><ul><li>Any adult class</li><li>Gloves and wraps to borrow</li></ul></li>
+        <li class="tk hot"><p class="tk-top">Unlimited</p><h3>Contender</h3><p class="price">$49<small>/ week</small></p><ul><li>Every class, every day</li><li>Open gym Fri and Sat</li><li>Pause for holidays</li></ul></li>
+        <li class="tk"><p class="tk-top">Admit ten</p><h3>10-round pass</h3><p class="price">$240</p><ul><li>Ten classes over three months</li><li>Share it with a mate</li></ul></li>
+        <li class="tk"><p class="tk-top">Juniors</p><h3>Kids term</h3><p class="price">$190<small>/ term</small></p><ul><li>Ten weeks, one class a week</li><li>Kids gloves provided</li></ul></li>
+      </ul>
+      <p class="fine">Sample prices in AUD. Trial class $15, gloves and wraps included.</p>
+    </div>
+  </section>
+
+  <section class="kids" id="kids" aria-labelledby="kids-h">
+    <div class="wrap">
+      <div class="kids-in">
+        <div>
+          <h2 class="big" id="kids-h">Kids boxing</h2>
+          <p class="lead">Non-contact classes built on footwork, balance, focus and respect. Kids hit pads and bags, never each other.</p>
+          <ul class="kfacts"><li><b>Ages 5–7</b>Saturday 9:00am</li><li><b>Ages 8–12</b>Mon &amp; Wed 4:30pm</li><li><b>No sparring</b>Pads, bags and games only</li><li><b>Parents</b>Welcome on the bench</li></ul>
+        </div>
+        <svg class="kid-art" viewBox="0 0 300 260" aria-hidden="true"><path d="M150 10v30" stroke="#0C0C0C" stroke-width="8"/><circle cx="150" cy="46" r="10" fill="none" stroke="#0C0C0C" stroke-width="6"/><path d="M146 50C120 80 104 96 98 118M154 50c26 30 42 46 48 68" stroke="#EFE8D8" stroke-width="4" fill="none"/><g stroke="#0C0C0C" stroke-width="5" stroke-linejoin="round"><path d="M60 150c-6-38 14-60 42-60 26 0 40 18 36 44-3 22-18 38-42 38-18 0-32-7-36-22z" fill="#E9B44C"/><path d="M132 118c14-2 22 10 16 22-5 10-16 12-24 6" fill="#E9B44C"/><path d="M240 150c6-38-14-60-42-60-26 0-40 18-36 44 3 22 18 38 42 38 18 0 32-7 36-22z" fill="#0C0C0C"/><path d="M168 118c-14-2-22 10-16 22 5 10 16 12 24 6" fill="#0C0C0C" stroke="#EFE8D8" stroke-width="3"/></g><path d="M78 108q14-10 30-6M222 108q-14-10-30-6" stroke="#EFE8D8" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/><path d="M64 170l40 16v34l-44-14zM236 170l-40 16v34l44-14z" fill="#EFE8D8" stroke="#0C0C0C" stroke-width="5"/><g style="color:#EFE8D8"><use href="#st" x="18" y="40" width="34" height="34"/><use href="#st" x="246" y="30" width="26" height="26"/><use href="#st" x="232" y="214" width="30" height="30"/></g></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="trial rip-t" id="trial" aria-labelledby="trial-h">
+    <div class="wrap trial-in">
+      <div>
+        <h2 class="big" id="trial-h">Book a trial class</h2>
+        <p class="lead">One class to see if it's for you. A coach will wrap your hands, show you a stance and keep you well away from anyone's fists.</p>
+        <ul class="bring"><li>Trainers and something you can move in</li><li>A water bottle and a towel</li><li>Gloves and wraps are on us to borrow</li></ul>
+      </div>
+      <form class="tform" id="tform" novalidate>
+        <div class="two">
+          <div class="fld"><label for="n">Name</label><input id="n" autocomplete="name" required></div>
+          <div class="fld"><label for="e">Email</label><input id="e" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label for="c">Class</label><select id="c"><option>Fundamentals</option><option>Bag rounds</option><option>Women's boxing</option><option>Kids 5–7</option><option>Kids 8–12</option></select></div>
+          <div class="fld"><label for="d">Day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+        </div>
+        <fieldset class="fld exp"><legend>Boxing so far</legend><div class="seg"><label><input type="radio" name="x" value="new" checked>Brand new</label><label><input type="radio" name="x" value="some">A bit</label><label><input type="radio" name="x" value="lots">Plenty</label></div></fieldset>
+        <div class="fld"><label for="i">Injuries or anything we should know</label><textarea id="i" placeholder="Old shoulder injury, asthma, first time exercising in a while…"></textarea></div>
+        <p class="ferr" id="ferr" role="alert"></p>
+        <button class="btn red" type="submit">Request my trial</button>
+        <div class="done" id="done" hidden tabindex="-1"><b>Stamped: demo</b><p id="doneTxt">No trial class was booked — this is a concept site. A real gym would text you to confirm.</p></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot rip-t">
+  <div class="wrap">
+    <p class="f-brand" data-brand>Southpaw Boxing Club</p>
+    <div class="fcols">
+      <div><h2>Find us</h2><p>Warehouse gym off the main street,<br>Footscray, VIC. Street parking and a short walk from the station.</p></div>
+      <div><h2>Hours</h2><dl><dt>Mon–Thu</dt><dd>6am–8:30pm</dd><dt>Fri</dt><dd>6am–7pm</dd><dt>Sat</dt><dd>8am–12pm</dd><dt>Sun</dt><dd>Rest day</dd></dl></div>
+      <div><h2>Talk to us</h2><p><a href="tel:+61355503826">(03) 5550 3826</a><br><a href="mailto:hello@example.com">hello@example.com</a></p></div>
+    </div>
+    <p class="fnote">General information only. Boxing is a physical, contact sport — check with your GP before starting if you have health concerns. A fictional gym made as a design concept; sample prices.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function rm() { return window.DemoKit ? DemoKit.reducedMotion : mq.matches; }
+  function toast(m) { if (window.DemoKit) DemoKit.toast(m); }
+  var NS = 'http://www.w3.org/2000/svg';
+
+  /* ---------- sound (off until asked) ---------- */
+  var ac = null, master = null, snd = false;
+  function setSound(on) {
+    if (on && !ac) {
+      try { ac = new (window.AudioContext || window.webkitAudioContext)(); master = ac.createGain(); master.gain.value = .35; master.connect(ac.destination); } catch (e) { on = false; }
+    }
+    snd = on;
+    if (ac) { if (on && ac.state === 'suspended') ac.resume(); if (!on) ac.suspend(); }
+    $$('[data-sound]').forEach(function (b) { b.setAttribute('aria-pressed', String(on)); b.textContent = on ? 'Sound on' : 'Sound off'; });
+    if (on) bell(1);
+  }
+  $$('[data-sound]').forEach(function (b) { b.addEventListener('click', function () { setSound(!snd); }); });
+  function ding(t) {
+    [1, 2.01, 2.76, 4.07, 5.43].forEach(function (r, i) {
+      var o = ac.createOscillator(), g = ac.createGain();
+      o.frequency.value = 640 * r;
+      g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime([.5, .25, .18, .1, .06][i], t + .005);
+      g.gain.exponentialRampToValueAtTime(.0001, t + [2.2, 1.5, 1.1, .7, .5][i]);
+      o.connect(g); g.connect(master); o.start(t); o.stop(t + 2.3);
+    });
+  }
+  function bell(n) { if (!snd || !ac) return; var t = ac.currentTime + .02; for (var i = 0; i < n; i++) ding(t + i * .42); }
+  function noise(dur, gain, freq, t) {
+    var b = ac.createBuffer(1, Math.floor(ac.sampleRate * dur), ac.sampleRate), d = b.getChannelData(0);
+    for (var i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / d.length, 3);
+    var s = ac.createBufferSource(), f = ac.createBiquadFilter(), g = ac.createGain();
+    s.buffer = b; f.type = 'lowpass'; f.frequency.value = freq; g.gain.value = gain;
+    s.connect(f); f.connect(g); g.connect(master); s.start(t);
+  }
+  function clap() { if (!snd || !ac) return; var t = ac.currentTime; noise(.05, .9, 3500, t); noise(.05, .9, 3500, t + .16); }
+  function thud(p) {
+    if (!snd || !ac) return;
+    var t = ac.currentTime, o = ac.createOscillator(), g = ac.createGain();
+    o.frequency.setValueAtTime(120, t); o.frequency.exponentialRampToValueAtTime(45, t + .15);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(.9 * p, t + .006); g.gain.exponentialRampToValueAtTime(.0001, t + .2);
+    o.connect(g); g.connect(master); o.start(t); o.stop(t + .22); noise(.07, .7 * p, 1600, t);
+  }
+
+  /* ---------- heavy bag ---------- */
+  var bag = $('#bag'), ring = $('#ring'), svg = $('svg', bag), swing = $('#swing'), body = $('#body'), fx = $('#fx');
+  var th = 0, om = 0, sq = 0, sv = 0, pow = 0, raf = 0, last = 0, hx = 150, hy = 360, visible = true;
+  var combo = 0, best = 0, total = 0, lastHit = 0, side = 1, coolT = 0;
+  var CALLS = ['Jab', 'Cross', 'Lead hook', 'Rear hook', 'Uppercut', 'Uppercut'];
+  function meter() {
+    var n = Math.ceil(pow / 10);
+    $$('#meter i').forEach(function (s, i) { s.classList.toggle('on', i < n); });
+    $('#meter').setAttribute('aria-valuenow', String(Math.round(pow)));
+  }
+  function frame(now) {
+    var dt = Math.min(.033, (now - last) / 1000); last = now;
+    var a = -36 * th - 2.1 * om; om += a * dt; th += om * dt;
+    var sa = -520 * sq - 20 * sv; sv += sa * dt; sq += sv * dt;
+    pow = Math.max(0, pow - 16 * dt);
+    swing.setAttribute('transform', 'rotate(' + th.toFixed(2) + ' 150 28)');
+    var sx = 1 - sq * .7, sy = 1 + sq * .25;
+    body.setAttribute('transform', 'translate(' + hx + ' ' + hy + ') scale(' + sx.toFixed(3) + ' ' + sy.toFixed(3) + ') translate(' + (-hx) + ' ' + (-hy) + ')');
+    meter();
+    if (Math.abs(th) < .04 && Math.abs(om) < .05 && Math.abs(sq) < .0008 && Math.abs(sv) < .002 && pow <= 0) { raf = 0; return; }
+    raf = requestAnimationFrame(frame);
+  }
+  function run() { if (!raf && visible && !document.hidden) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+  function effect(x, y, label) {
+    if (rm()) return;
+    var c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', 26); c.setAttribute('class', 'fxring'); fx.appendChild(c);
+    var t = document.createElementNS(NS, 'text'); t.setAttribute('x', x + (x < 150 ? -88 : 30)); t.setAttribute('y', y - 18); t.setAttribute('class', 'fxtxt'); t.textContent = label; fx.appendChild(t);
+    setTimeout(function () { c.remove(); t.remove(); }, 650);
+  }
+  function punch(x, y) {
+    var now = performance.now(), gap = now - lastHit; lastHit = now;
+    combo = gap < 900 ? combo + 1 : 1; best = Math.max(best, combo); total++;
+    var p = Math.min(1, .55 + (gap < 450 ? .45 : gap < 900 ? .25 : 0) + Math.random() * .1);
+    var fromLeft = x < 150, dir = fromLeft ? -1 : 1;
+    om += dir * (28 + 34 * p); sv -= .5 * p; hx = x; hy = y;
+    pow = Math.min(100, pow + 6 + (gap < 450 ? 9 : gap < 900 ? 4 : 0));
+    var call = CALLS[(combo - 1) % 6];
+    effect(x, y, call);
+    ring.classList.add('hot');
+    var cEl = $('#combo'), tEl = $('#total');
+    cEl.textContent = combo; tEl.textContent = total;
+    [cEl, tEl].forEach(function (el) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); });
+    var seq = []; for (var i = Math.max(1, combo - 2); i <= combo; i++) seq.push(i + ' ' + CALLS[(i - 1) % 6]);
+    $('#calls').textContent = seq.join(' · ');
+    clearTimeout(coolT); coolT = setTimeout(function () { $('#calls').textContent = combo > 2 ? 'Combo of ' + combo + '. Best: ' + best : ''; }, 1100);
+    thud(p);
+    if (combo === 5 || combo === 10 || combo === 20) $('#bagLive').textContent = combo + '-punch combo!';
+    if (pow >= 100) {
+      pow = 0; bell(3);
+      var ko = $('#ko'); ko.innerHTML = '<b>Knock<br>out!</b>';
+      $('#bagLive').textContent = 'Knockout! Power meter full.';
+      setTimeout(function () { ko.innerHTML = ''; }, 1400);
+    }
+    if (rm()) { th = 0; om = 0; sq = 0; sv = 0; meter(); return; }
+    run();
+  }
+  function toSvg(cx, cy) {
+    var pt = svg.createSVGPoint(); pt.x = cx; pt.y = cy;
+    var m = svg.getScreenCTM(); if (!m) return { x: 150, y: 360 };
+    var p = pt.matrixTransform(m.inverse()); return { x: Math.max(92, Math.min(208, p.x)), y: Math.max(190, Math.min(540, p.y)) };
+  }
+  var keyHit = false;
+  bag.addEventListener('pointerdown', function (e) { if (e.button > 0) return; var p = toSvg(e.clientX, e.clientY); punch(p.x, p.y); });
+  bag.addEventListener('keydown', function (e) {
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); if (e.repeat) return; keyHit = true; side = -side; punch(150 + side * 40, 260 + Math.random() * 200); }
+  });
+  bag.addEventListener('click', function (e) { if (e.detail === 0 && !keyHit) { side = -side; punch(150 + side * 40, 330); } keyHit = false; });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      visible = es[0].isIntersecting;
+      if (!visible && raf) { cancelAnimationFrame(raf); raf = 0; th = om = sq = sv = 0; swing.removeAttribute('transform'); body.removeAttribute('transform'); }
+    }).observe(bag);
+  }
+
+  /* ---------- round timer ---------- */
+  var board = $('#board'), digits = $('#digits'), goBtn = $('#tGo');
+  var cfg = { r: 180, s: 60, n: 3 }, st = { ph: 'ready', rd: 1, left: 180000, end: 0, run: false, warned: false }, iv = 0, lock = null;
+  function mmss(ms) { var s = Math.max(0, Math.ceil(ms / 1000)); return Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + s % 60; }
+  function say(t) { $('#tLive').textContent = t; }
+  function wake(on) {
+    try {
+      if (on && 'wakeLock' in navigator && !lock) navigator.wakeLock.request('screen').then(function (l) { lock = l; }).catch(function () {});
+      if (!on && lock) { lock.release(); lock = null; }
+    } catch (e) { /* ignore */ }
+  }
+  function render() {
+    var dur = (st.ph === 'rest' ? cfg.s : cfg.r) * 1000;
+    digits.textContent = mmss(st.left);
+    $('#phase').textContent = st.ph === 'ready' ? 'Get ready' : st.ph === 'rest' ? 'Rest' : st.ph === 'done' ? 'Final bell' : (st.run ? 'Box!' : 'Paused');
+    $('#rcount').textContent = st.ph === 'done' ? cfg.n + ' rounds done' : 'Round ' + st.rd + ' of ' + cfg.n;
+    $('#barFill').style.width = (st.ph === 'ready' ? 0 : st.ph === 'done' ? 100 : 100 * (1 - st.left / dur)).toFixed(1) + '%';
+    board.classList.toggle('rest', st.ph === 'rest');
+    board.classList.toggle('warn', st.ph === 'round' && st.left <= 10000);
+    goBtn.textContent = st.run ? 'Pause' : st.ph === 'ready' ? 'Start' : st.ph === 'done' ? 'Go again' : 'Resume';
+    var dots = $('#dots');
+    if (dots.children.length !== cfg.n) { dots.innerHTML = ''; for (var i = 1; i <= cfg.n; i++) dots.insertAdjacentHTML('beforeend', '<li>' + i + '</li>'); }
+    $$('li', dots).forEach(function (li, i) { li.className = (i + 1 < st.rd || st.ph === 'done') ? 'done' : (i + 1 === st.rd && st.ph !== 'ready') ? 'now' : ''; });
+    $$('.setup select,.setup button').forEach(function (c) { c.disabled = st.run || (st.ph !== 'ready' && st.ph !== 'done'); });
+  }
+  function advance() {
+    var over = -st.left;
+    if (st.ph === 'round') {
+      if (st.rd >= cfg.n) { st.ph = 'done'; st.run = false; st.left = 0; clearInterval(iv); bell(3); say('Final bell. That is ' + cfg.n + ' rounds done.'); wake(false); return; }
+      st.ph = 'rest'; st.left = cfg.s * 1000 - over; bell(3); say('Rest. ' + mmss(cfg.s * 1000) + '.');
+    } else { st.ph = 'round'; st.rd++; st.left = cfg.r * 1000 - over; st.warned = false; bell(1); say('Round ' + st.rd + '. Box!'); }
+    st.end = Date.now() + st.left;
+  }
+  function tick() {
+    if (!st.run) return;
+    st.left = st.end - Date.now();
+    while (st.run && st.left <= 0) advance();
+    if (st.run && st.ph === 'round' && st.left <= 10000 && !st.warned) { st.warned = true; clap(); say('Ten seconds.'); }
+    render();
+  }
+  function go() {
+    if (st.run) { st.left = Math.max(0, st.end - Date.now()); st.run = false; clearInterval(iv); wake(false); say('Paused.'); render(); return; }
+    if (st.ph === 'done') reset();
+    if (st.ph === 'ready') { st.ph = 'round'; st.rd = 1; st.left = cfg.r * 1000; st.warned = false; bell(1); say('Round 1. Box!'); }
+    st.run = true; st.end = Date.now() + st.left; clearInterval(iv); iv = setInterval(tick, 200); wake(true); render();
+  }
+  function reset() { clearInterval(iv); st = { ph: 'ready', rd: 1, left: cfg.r * 1000, end: 0, run: false, warned: false }; wake(false); render(); }
+  goBtn.addEventListener('click', go);
+  $('#tReset').addEventListener('click', function () { reset(); say('Timer reset.'); });
+  $('#fmt').addEventListener('change', function () { var v = this.value.split(','); cfg.r = +v[0]; cfg.s = +v[1]; reset(); });
+  function rounds(d) { cfg.n = Math.max(1, Math.min(12, cfg.n + d)); $('#rounds').textContent = cfg.n; reset(); }
+  $('#rMinus').addEventListener('click', function () { rounds(-1); });
+  $('#rPlus').addEventListener('click', function () { rounds(1); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) tick(); });
+  var fullBtn = $('#tFull');
+  function fake(on) { board.classList.toggle('full', on); document.documentElement.classList.toggle('lock', on); fullBtn.textContent = on ? 'Exit full screen' : 'Full screen'; }
+  fullBtn.addEventListener('click', function () {
+    if (document.fullscreenElement) { document.exitFullscreen(); return; }
+    if (board.classList.contains('full')) { fake(false); return; }
+    if (board.requestFullscreen) board.requestFullscreen().catch(function () { fake(true); }); else fake(true);
+  });
+  document.addEventListener('fullscreenchange', function () { fullBtn.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && board.classList.contains('full')) { e.preventDefault(); fake(false); fullBtn.focus(); } });
+  render();
+
+  /* ---------- fight card ---------- */
+  var DAY = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], FULL = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var CARD = [
+    [['6:00am', 'Fundamentals', 'The snooze button', 'All levels', 'Tui'], ['12:15pm', 'Bag rounds', 'Your inbox', 'All levels · 45 min', 'Dimitri'], ['4:30pm', 'Kids 8–12', 'Screen time', 'Non-contact', 'Hana'], ['6:30pm', 'Pad work', 'Monday', 'Intermediate', 'Marisol', 1], ['7:30pm', 'Conditioning', 'The stairs', 'All levels · 45 min', 'Dimitri']],
+    [['6:00am', 'Bag rounds', 'Cold mornings', 'All levels', 'Dimitri'], ['6:00pm', 'Fundamentals', 'Two left feet', 'All levels', 'Tui', 1], ['7:00pm', 'Technical sparring', 'Flinching', 'Advanced · opt-in', 'Tui']],
+    [['6:00am', 'Fundamentals', 'The snooze button', 'All levels', 'Tui'], ['12:15pm', 'Bag rounds', 'Desk posture', 'All levels · 45 min', 'Dimitri'], ['4:30pm', 'Kids 8–12', 'Sugar rush', 'Non-contact', 'Hana'], ['6:30pm', 'Pad work', 'Hump day', 'Intermediate', 'Marisol', 1]],
+    [['6:00am', 'Conditioning', 'Leg day', 'All levels · 45 min', 'Dimitri'], ['6:00pm', "Women's boxing", 'Self-doubt', 'All levels', 'Marisol', 1], ['7:00pm', 'Fundamentals', 'The couch', 'All levels', 'Tui']],
+    [['6:00am', 'Bag rounds', 'The weekend', 'All levels · 45 min', 'Dimitri'], ['12:15pm', 'Fundamentals', 'Long lunches', 'All levels', 'Tui'], ['5:30pm', 'Open gym', 'Your excuses', 'Members · 90 min', 'Dimitri', 1]],
+    [['8:00am', 'Fundamentals', 'Sleeping in', 'All levels', 'Tui'], ['9:00am', 'Kids 5–7', 'Wiggles', 'Non-contact · 45 min', 'Hana'], ['10:00am', 'Saturday rounds', 'The whole week', 'All levels · partner drills', 'Marisol', 1]]
+  ];
+  var tabs = $('#tabs'), bouts = $('#bouts');
+  DAY.forEach(function (d, i) { tabs.insertAdjacentHTML('beforeend', '<button class="tab" role="tab" id="tab-' + i + '" aria-controls="bouts" aria-selected="false" tabindex="-1" type="button"><span aria-hidden="true">' + d + '</span><span class="sr">' + FULL[i] + '</span></button>'); });
+  function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function show(i, focus) {
+    $$('.tab', tabs).forEach(function (t, k) { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+    bouts.setAttribute('aria-labelledby', 'tab-' + i);
+    bouts.innerHTML = CARD[i].map(function (b) {
+      return '<li class="bout"><span class="bt">' + b[0] + '</span><span class="bc">' + esc(b[1]) + (b[5] ? '<span class="main-ev">Main event</span>' : '') + '</span><span class="bv" aria-hidden="true">VS</span><span class="bo"><span class="sr">versus </span>' + esc(b[2]) + '</span><span class="bm">' + esc(b[3]) + ' · <b>Coach ' + b[4] + '</b></span></li>';
+    }).join('');
+    if (focus) $$('.tab', tabs)[i].focus();
+  }
+  tabs.addEventListener('click', function (e) { var t = e.target.closest('.tab'); if (t) show($$('.tab', tabs).indexOf(t)); });
+  tabs.addEventListener('keydown', function (e) {
+    var i = $$('.tab', tabs).indexOf(document.activeElement); if (i < 0) return;
+    var n = e.key === 'ArrowRight' ? (i + 1) % 6 : e.key === 'ArrowLeft' ? (i + 5) % 6 : e.key === 'Home' ? 0 : e.key === 'End' ? 5 : -1;
+    if (n > -1) { e.preventDefault(); show(n, true); }
+  });
+  var today = new Date().getDay(); show(today === 0 ? 0 : today - 1);
+
+  /* ---------- trial class (demo) ---------- */
+  var form = $('#tform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = null;
+    ['#n', '#e'].forEach(function (s) { var f = $(s), ok = f.value.trim() && f.checkValidity(); f.setAttribute('aria-invalid', ok ? 'false' : 'true'); if (!ok && !bad) bad = f; });
+    if (bad) { $('#ferr').textContent = 'We need a name and a working email to hold your spot.'; bad.focus(); return; }
+    $('#ferr').textContent = '';
+    var done = $('#done');
+    $('#doneTxt').textContent = 'No trial class was booked for ' + $('#n').value.trim() + ' (' + $('#c').value + ', ' + $('#d').value + ') — this is a concept site. A real gym would text you to confirm.';
+    done.hidden = false; done.focus();
+    toast('Demo only — no trial class was booked.');
+  });
+  $$('#n,#e').forEach(function (f) { f.addEventListener('input', function () { if (f.getAttribute('aria-invalid') === 'true' && f.value.trim() && f.checkValidity()) f.setAttribute('aria-invalid', 'false'); }); });
+})();
+</script>
+</body>
+</html>

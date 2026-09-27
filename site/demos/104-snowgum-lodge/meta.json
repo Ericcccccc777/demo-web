@@ -1,0 +1,8 @@
+{
+  "id": "104",
+  "tech": ["Canvas 2D", "SVG", "CSS 3D", "CSS Grid", "IntersectionObserver", "Web Audio", "Form logic", "Date logic"],
+  "features": ["booking", "story", "sound"],
+  "interaction": "A split-flap lobby board flips letter by letter to show sample lift and run status (open, on hold, closed), snow depth, temperature, wind and a lodge message; 'Update board' flips in a different kind of morning and changes the snowfall behind it, 'Plain table' shows the same data as a static table, and optional clatter sound can be switched on. Below, a stay pass prices sample dates by season tier and ends in a demo stamp and toast.",
+  "fonts": ["Fjalla One", "Cabin"],
+  "notes": "Fictional lodge; board data, lift and run names, season dates and prices are samples. Booking requests end in a demo stamp and toast — nothing is booked. Reduced motion turns the snowfall off and shows the board as a plain table."
+}

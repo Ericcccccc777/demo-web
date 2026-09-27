@@ -1,0 +1,8 @@
+{
+  "id": "006",
+  "tech": ["SVG", "SVG animation", "Pointer Events", "Drag & drop", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["customiser", "ordering"],
+  "interaction": "Drag eight toppings from enamel bowls onto an SVG pizza (or tap a bowl to scatter them), split it half & half so each side keeps its own toppings, switch size and base while the sample price updates, then send it into the oven for a short bake that ends in a demo toast.",
+  "fonts": ["DM Serif Display", "Work Sans"],
+  "notes": ""
+}

@@ -1,0 +1,711 @@
+{
+  "_readme": "All hub copy, English and Chinese. {name}, {count}, {industries}, {typefaces}, {avg_kb} are filled in by tools/build.py from real data. Edit, then run: python3 tools/build.py",
+  "en": {
+    "lang": "en-AU",
+    "title": "{name} — Websites for small businesses across Australia",
+    "description": "A web studio for Australian small businesses and sole traders. Open {count} working website demos — cafés, driving schools, trades, clinics, creatives — try your business name on them, then start a project.",
+    "skip": "Skip to content",
+    "nav": {
+      "box": "The box",
+      "services": "Services",
+      "process": "How it works",
+      "faq": "FAQ",
+      "cta": "Start a project",
+      "lang_switch": "中文",
+      "lang_switch_label": "阅读中文版",
+      "menu": "Menu"
+    },
+    "hero": {
+      "eyebrow": "Web studio for small businesses · Australia",
+      "title_html": "One box.<br><em>{count} websites.</em>",
+      "lede": "Open any drawer and step inside. Each one is a working website we designed and built by hand — for cafés, driving schools, tradies, clinics, creatives and more. Find the feel that fits your business, then let's make yours.",
+      "tryon_label": "What's your business called?",
+      "tryon_placeholder": "e.g. Rosie's Bakery",
+      "tryon_button": "Try it on",
+      "tryon_hint": "Your name appears on every demo you open. It stays in your browser — nothing is sent.",
+      "tryon_done": "Done — open any drawer to see “{brand}” on it.",
+      "tryon_cleared": "Name cleared — demos show their own names again.",
+      "open_box": "Open the box",
+      "start": "Start a project",
+      "box_caption": "No. 001–{last}",
+      "box_label": "A preview wall of all {count} demos",
+      "box_hover": "hover a drawer"
+    },
+    "proof": {
+      "label": "The box, measured",
+      "demos": "working demos",
+      "industries": "industries",
+      "typefaces": "typefaces",
+      "avg": "KB average page weight",
+      "stock": "stock photos — every visual is drawn in code"
+    },
+    "box": {
+      "eyebrow": "The box",
+      "title": "Open a drawer.",
+      "intro": "Each drawer holds a complete little website for a made-up business. Filter by your industry, a mood you like or a feature you need — then step inside and use it.",
+      "note": "Concepts for fictional businesses. Names, prices and details inside are illustrative.",
+      "all": "All",
+      "industry_label": "Industry",
+      "mood_label": "Mood",
+      "mood_any": "Any mood",
+      "feature_label": "Feature",
+      "feature_any": "Any feature",
+      "search_label": "Search the box",
+      "search_placeholder": "Search — try “booking” or “bakery”",
+      "shuffle": "Surprise me",
+      "saved": "Saved",
+      "view_label": "View",
+      "view_cabinet": "Cabinet",
+      "view_index": "Index",
+      "count_all": "Showing all {n} drawers",
+      "count_some": "Showing {n} of {total} drawers",
+      "empty_title": "No drawer matches that.",
+      "empty_body": "Try fewer filters — or let the box choose for you.",
+      "clear": "Clear filters",
+      "save": "Save",
+      "saved_state": "Saved",
+      "save_label": "Save {name}",
+      "open_label": "Open {name}",
+      "col_no": "No.",
+      "col_name": "Name",
+      "col_type": "Business",
+      "col_style": "Style",
+      "col_interaction": "Try this"
+    },
+    "viewer": {
+      "desktop": "Desktop",
+      "tablet": "Tablet",
+      "phone": "Phone",
+      "device_label": "Preview size",
+      "brand_label": "Your name",
+      "brand_placeholder": "Your business",
+      "save": "Save",
+      "saved": "Saved",
+      "newtab": "New tab",
+      "about": "About",
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next",
+      "play": "Play the box",
+      "pause": "Pause",
+      "want": "I want something like this",
+      "loading": "Opening No. {no}…",
+      "concept": "Concept demo · fictional business",
+      "style": "Style",
+      "interaction": "Try this",
+      "built": "Built with",
+      "weight": "Page weight",
+      "fonts": "Typefaces",
+      "language": "Language",
+      "position": "{i} of {n}",
+      "frame_title": "{name} — concept demo",
+      "want_short": "I want this"
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Built around how small businesses actually run.",
+      "intro": "No jargon, no bloated packages. We start with what your customers need to do — book, order, call, find you — and build around that.",
+      "examples": "See examples",
+      "items": [
+        {
+          "title": "One-page sites",
+          "body": "For sole traders and new ventures. Everything a customer needs on one fast page: what you do, where, when, and how to reach you.",
+          "good": "Tradies, freelancers, pop-ups",
+          "link": "?mood=minimal"
+        },
+        {
+          "title": "Small business websites",
+          "body": "A handful of well-made pages — services, prices, gallery, about, contact. Clear for first-time visitors, easy to keep up to date.",
+          "good": "Clinics, salons, cafés, studios",
+          "link": "?industry=health"
+        },
+        {
+          "title": "Bookings & enquiries",
+          "body": "Lesson slots, appointments, tables and quotes. We connect a booking tool you trust, or build a simple enquiry flow that lands in your inbox.",
+          "good": "Driving schools, trainers, beauty",
+          "link": "?feature=booking"
+        },
+        {
+          "title": "Menus, ordering & small shops",
+          "body": "Menus that are easy to change, order-ahead and small product ranges — connected to proven platforms rather than home-made checkouts.",
+          "good": "Restaurants, bakeries, makers",
+          "link": "?feature=ordering"
+        },
+        {
+          "title": "Bilingual sites · 双语网站",
+          "body": "English and Chinese side by side, each written for its readers rather than machine-translated. Right-to-left languages too.",
+          "good": "Businesses serving more than one community",
+          "link": "?feature=bilingual"
+        },
+        {
+          "title": "Care after launch",
+          "body": "Domain and hosting set up in your name, small updates when you need them, and a plain-English guide for changing the basics yourself.",
+          "good": "Everyone who'd rather be running their business",
+          "link": "#contact"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "From a chat to a live site in four steps.",
+      "steps": [
+        {
+          "title": "Tell us about your business",
+          "body": "A short call, email or WeChat. What you do, who your customers are, and what you want them to do on your site."
+        },
+        {
+          "title": "Pick a few drawers",
+          "body": "Save the demos that feel right. It's the fastest way to show us your taste — no design vocabulary needed."
+        },
+        {
+          "title": "See it, shape it",
+          "body": "We design with your real words and photos, then share a working preview you can click through on your phone. You tell us what to change."
+        },
+        {
+          "title": "Launch & look after",
+          "body": "We set up your domain and hosting in your name, test on real devices, and show you how to make simple updates."
+        }
+      ],
+      "note": "Timelines and pricing depend on scope — you'll get a written quote before any work starts."
+    },
+    "included": {
+      "eyebrow": "Every site, as standard",
+      "title": "The unglamorous things, done properly.",
+      "items": [
+        {
+          "title": "Designed for phones first",
+          "body": "Most customers will find you on a phone. Every layout is designed for small screens, not squeezed onto them."
+        },
+        {
+          "title": "Fast by default",
+          "body": "Hand-written code, no page-builder bloat. The average demo in this box weighs {avg_kb} KB."
+        },
+        {
+          "title": "Easy to read, easy to use",
+          "body": "Readable contrast, keyboard access and a sensible structure — the basics of accessibility, built in."
+        },
+        {
+          "title": "Ready for search",
+          "body": "Proper titles, descriptions and page structure so search engines understand your business. Nobody can promise rankings — we won't either."
+        },
+        {
+          "title": "Yours to keep",
+          "body": "Your domain, hosting and words belong to you. If you ever move on, everything goes with you."
+        },
+        {
+          "title": "Honest by design",
+          "body": "No fake reviews, no invented numbers. We help you show real proof — photos, credentials and customer words you have permission to use."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Good questions.",
+      "items": [
+        {
+          "q": "Are the businesses in the box real?",
+          "a": "No. Every drawer is a concept for a made-up business, designed to show range. Names, prices, reviews and contact details inside the demos are illustrative. Your site will be built around your real business."
+        },
+        {
+          "q": "Can I have a site like one of the demos?",
+          "a": "Yes — any drawer can be a starting point. We adapt the layout and style to your brand, your words and your photos, so it ends up yours rather than a copy."
+        },
+        {
+          "q": "How much does a website cost?",
+          "a": "It depends on the number of pages and features, such as bookings, ordering or two languages. Tell us what you need and we'll send a clear written quote."
+        },
+        {
+          "q": "Do I need to know anything technical?",
+          "a": "No. We ask plain questions about your business. You bring your logo if you have one, photos, services and prices — we handle the rest."
+        },
+        {
+          "q": "Can I update the site myself?",
+          "a": "If you'd like to. For businesses that change menus or prices often we set up a simple way to edit them; otherwise we can make updates for you. We'll recommend what suits you."
+        },
+        {
+          "q": "Do you work outside my city?",
+          "a": "Yes. We work with businesses across Australia by phone, video call, email and WeChat."
+        },
+        {
+          "q": "Can you build in English and Chinese?",
+          "a": "Yes. We write each language for its readers rather than translating word for word, and can add other languages too."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Start a project",
+      "title": "Tell us about your business.",
+      "intro": "A few answers are enough. We'll turn them into a short brief you can email to us — or copy into WeChat, WhatsApp or a text.",
+      "your_name": "Your name",
+      "business": "Business name",
+      "type": "What kind of business?",
+      "type_placeholder": "Choose one",
+      "type_other": "Something else",
+      "where": "Suburb or city",
+      "needs": "What do you need?",
+      "needs_items": [
+        "A new website",
+        "A redesign",
+        "Online bookings",
+        "Menu or ordering",
+        "English + 中文",
+        "Domain & hosting help",
+        "Not sure yet"
+      ],
+      "liked": "Drawers you liked",
+      "liked_empty": "None yet — tap ♥ on any drawer and it will appear here.",
+      "liked_add": "Browse the box",
+      "remove": "Remove {name}",
+      "when": "When would you like to launch?",
+      "when_items": [
+        "As soon as possible",
+        "In the next 1–2 months",
+        "Just exploring"
+      ],
+      "reach": "Best way to reach you",
+      "reach_items": [
+        "Email",
+        "Phone",
+        "WeChat",
+        "WhatsApp"
+      ],
+      "reach_detail": "Your email, number or ID",
+      "message": "Anything else?",
+      "message_placeholder": "Your customers, your favourite websites, deadlines…",
+      "brief_title": "Your brief",
+      "brief_empty": "Start typing — your brief builds itself here.",
+      "email_button": "Email this brief",
+      "email_unavailable": "Email not connected yet",
+      "copy_button": "Copy brief",
+      "copied": "Copied — paste it into WeChat, WhatsApp or a text.",
+      "copy_failed": "Couldn't copy automatically — select the brief and copy it.",
+      "emailed": "Your email app should now be open with the brief filled in. We receive it when you press Send.",
+      "subject": "Website enquiry — {business}",
+      "channels_title": "Or reach us directly",
+      "channels_preview": "Preview build: direct contact details will appear here once they're connected. You can still copy your brief.",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "wechat": "WeChat",
+      "instagram": "Instagram",
+      "privacy": "This form doesn't send or store anything on a server. Your answers stay in this page until you choose to email or copy them."
+    },
+    "brief_labels": {
+      "heading": "Website enquiry",
+      "name": "Name",
+      "business": "Business",
+      "type": "Type",
+      "where": "Location",
+      "needs": "Needs",
+      "liked": "Drawers I liked",
+      "when": "Launch",
+      "reach": "Contact me by",
+      "message": "Notes",
+      "sent_from": "Sent from the {name} website"
+    },
+    "footer": {
+      "tagline": "Websites for small businesses across Australia.",
+      "disclaimer": "All demos are concept designs for fictional businesses. Names, prices, reviews and details inside them are illustrative.",
+      "abn": "ABN",
+      "top": "Back to top",
+      "made": "Designed and built by hand."
+    },
+    "industries": {
+      "food": "Food & Drink",
+      "driving": "Driving & Transport",
+      "trades": "Trades & Home",
+      "health": "Health & Wellness",
+      "beauty": "Beauty & Grooming",
+      "education": "Education & Kids",
+      "professional": "Professional Services",
+      "creative": "Creative & Personal",
+      "retail": "Retail & Makers",
+      "travel": "Travel & Stays",
+      "community": "Community & Events"
+    },
+    "moods": {
+      "minimal": "Minimal",
+      "bold": "Bold",
+      "playful": "Playful",
+      "luxe": "Luxe",
+      "retro": "Retro",
+      "editorial": "Editorial",
+      "techy": "Techy",
+      "natural": "Natural",
+      "handmade": "Handmade"
+    },
+    "features": {
+      "booking": "Bookings",
+      "ordering": "Ordering",
+      "menu": "Menus & prices",
+      "quote": "Quotes & calculators",
+      "customiser": "Customisers",
+      "finder": "Finders & quizzes",
+      "map": "Maps",
+      "game": "Play",
+      "story": "Scroll stories",
+      "sound": "Sound",
+      "bilingual": "Bilingual",
+      "accessibility": "Accessibility"
+    },
+    "langs": {
+      "en": "English",
+      "en+zh": "English + 中文",
+      "en+ar": "English + العربية"
+    }
+  },
+  "zh": {
+    "lang": "zh-CN",
+    "title": "{name} 百屉 — 为澳洲小生意做网站",
+    "description": "面向澳洲小生意与个体经营者的网站工作室。打开 {count} 个可以真正操作的网站 demo——咖啡馆、驾校、装修、诊所、手艺人——换上你的店名试试，然后开始你的项目。",
+    "skip": "跳到正文",
+    "nav": {
+      "box": "盒子",
+      "services": "服务",
+      "process": "流程",
+      "faq": "常见问题",
+      "cta": "开始项目",
+      "lang_switch": "English",
+      "lang_switch_label": "Read in English",
+      "menu": "菜单"
+    },
+    "hero": {
+      "eyebrow": "澳洲小生意的网站工作室",
+      "title_html": "一个盒子，<br>装着 <em>{count} 个网站</em>。",
+      "lede": "打开任何一个抽屉，走进去看看。每一个都是我们亲手设计、能真正上手操作的网站——咖啡馆、驾校、装修师傅、诊所、手艺人……找到最像你生意的那种感觉，然后我们为你做一个。",
+      "tryon_label": "你的店叫什么？",
+      "tryon_placeholder": "例如：Rosie's Bakery",
+      "tryon_button": "试穿一下",
+      "tryon_hint": "打开任何一个 demo，都会换上你的店名。只保存在你自己的浏览器里，不会发送出去。",
+      "tryon_done": "好了——打开任意抽屉，就能看到“{brand}”。",
+      "tryon_cleared": "已清除——demo 会显示它们原本的名字。",
+      "open_box": "打开盒子",
+      "start": "开始项目",
+      "box_caption": "No. 001–{last}",
+      "box_label": "全部 {count} 个 demo 的预览墙",
+      "box_hover": "把鼠标移到抽屉上"
+    },
+    "proof": {
+      "label": "这个盒子的实测数据",
+      "demos": "个可操作的网站",
+      "industries": "个行业",
+      "typefaces": "种字体",
+      "avg": "KB 平均页面体积",
+      "stock": "张图库照片——所有画面都由代码绘制"
+    },
+    "box": {
+      "eyebrow": "盒子",
+      "title": "打开一个抽屉。",
+      "intro": "每个抽屉里，都是为一家虚构小店做的完整小网站。按行业、喜欢的风格或需要的功能筛选，然后走进去用一用。一百零八个网站，一百零八种性格。",
+      "note": "以下均为虚构商家的概念设计，里面的名称、价格与细节仅作示意。",
+      "all": "全部",
+      "industry_label": "行业",
+      "mood_label": "风格",
+      "mood_any": "任意风格",
+      "feature_label": "功能",
+      "feature_any": "任意功能",
+      "search_label": "在盒子里搜索",
+      "search_placeholder": "搜索——试试“预约”或“bakery”",
+      "shuffle": "随便开一个",
+      "saved": "收藏",
+      "view_label": "视图",
+      "view_cabinet": "柜子",
+      "view_index": "目录",
+      "count_all": "共 {n} 个抽屉",
+      "count_some": "显示 {n} / {total} 个抽屉",
+      "empty_title": "没有符合条件的抽屉。",
+      "empty_body": "少选几个条件试试——或者让盒子替你挑一个。",
+      "clear": "清除筛选",
+      "save": "收藏",
+      "saved_state": "已收藏",
+      "save_label": "收藏 {name}",
+      "open_label": "打开 {name}",
+      "col_no": "编号",
+      "col_name": "名称",
+      "col_type": "生意类型",
+      "col_style": "风格",
+      "col_interaction": "可以试试"
+    },
+    "viewer": {
+      "desktop": "电脑",
+      "tablet": "平板",
+      "phone": "手机",
+      "device_label": "预览尺寸",
+      "brand_label": "你的店名",
+      "brand_placeholder": "你的店名",
+      "save": "收藏",
+      "saved": "已收藏",
+      "newtab": "新标签打开",
+      "about": "说明",
+      "close": "关闭",
+      "prev": "上一个",
+      "next": "下一个",
+      "play": "自动巡览",
+      "pause": "暂停",
+      "want": "我想要这种感觉",
+      "loading": "正在打开 No. {no}…",
+      "concept": "概念 demo · 虚构商家",
+      "style": "风格",
+      "interaction": "可以试试",
+      "built": "技术",
+      "weight": "页面体积",
+      "fonts": "字体",
+      "language": "语言",
+      "position": "第 {i} / {n} 个",
+      "frame_title": "{name}——概念 demo",
+      "want_short": "我想要这种"
+    },
+    "services": {
+      "eyebrow": "服务",
+      "title": "按小生意真实的运转方式来做。",
+      "intro": "不讲术语，不堆套餐。先想清楚你的客人需要做什么——预约、点单、打电话、找到你——再围绕它来设计。",
+      "examples": "看看例子",
+      "items": [
+        {
+          "title": "单页网站",
+          "body": "适合个体经营和刚起步的生意。客人需要的一切都在一页里：做什么、在哪、什么时候营业、怎么联系你。",
+          "good": "装修师傅、自由职业者、快闪店",
+          "link": "?mood=minimal"
+        },
+        {
+          "title": "小生意官网",
+          "body": "几页精心做好的页面：服务、价格、作品、关于、联系。第一次来的人看得懂，你自己也好维护。",
+          "good": "诊所、美容美发、咖啡馆、工作室",
+          "link": "?industry=health"
+        },
+        {
+          "title": "预约与咨询",
+          "body": "练车时段、预约、订位、报价。接入你信得过的预约工具，或者做一个直接进你邮箱的咨询流程。",
+          "good": "驾校、健身教练、美业",
+          "link": "?feature=booking"
+        },
+        {
+          "title": "菜单、点单与小网店",
+          "body": "容易修改的菜单、提前点单、少量商品——接入成熟的平台，而不是自己拼凑结账系统。",
+          "good": "餐厅、面包店、手作品牌",
+          "link": "?feature=ordering"
+        },
+        {
+          "title": "中英双语网站",
+          "body": "中文和英文分别为各自的读者来写，而不是机器翻译。阿拉伯语等从右到左的语言也可以。",
+          "good": "服务不止一个社群的生意",
+          "link": "?feature=bilingual"
+        },
+        {
+          "title": "上线后的照顾",
+          "body": "域名和主机注册在你名下，需要时帮你做小改动，再附一份看得懂的说明，基础内容你自己也能改。",
+          "good": "所有更想专心做生意的人",
+          "link": "#contact"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "流程",
+      "title": "从一次聊天到网站上线，四步。",
+      "steps": [
+        {
+          "title": "聊聊你的生意",
+          "body": "打个电话、发封邮件或加个微信。你做什么、客人是谁、希望他们在网站上做什么。"
+        },
+        {
+          "title": "挑几个抽屉",
+          "body": "把感觉对的 demo 收藏起来。这是告诉我们你喜好最快的方法，不需要懂设计术语。"
+        },
+        {
+          "title": "看得见，改得动",
+          "body": "我们用你真实的文字和照片来设计，然后发给你一个能在手机上点来点去的预览。哪里要改，你说。"
+        },
+        {
+          "title": "上线与照顾",
+          "body": "域名和主机注册在你名下，在真机上逐一检查，再教你怎么自己做简单的更新。"
+        }
+      ],
+      "note": "工期和价格取决于需求范围——开工之前，你会先收到一份书面报价。"
+    },
+    "included": {
+      "eyebrow": "每个网站的标配",
+      "title": "不显眼的地方，也要做好。",
+      "items": [
+        {
+          "title": "手机优先",
+          "body": "大多数客人是在手机上找到你的。每个版面都先为小屏幕设计，而不是硬塞进去。"
+        },
+        {
+          "title": "天生就快",
+          "body": "手写代码，没有建站工具的臃肿。这个盒子里的 demo 平均只有 {avg_kb} KB。"
+        },
+        {
+          "title": "好读，好用",
+          "body": "足够的对比度、键盘可操作、清楚的结构——无障碍的基本功，默认就有。"
+        },
+        {
+          "title": "为搜索准备好",
+          "body": "规范的标题、描述和页面结构，让搜索引擎看懂你的生意。没有人能保证排名，我们也不会这样承诺。"
+        },
+        {
+          "title": "一切归你",
+          "body": "域名、主机和内容都属于你。哪天想换人维护，所有东西都跟着你走。"
+        },
+        {
+          "title": "诚实地展示",
+          "body": "不编评价，不造数字。我们帮你展示真实的证据——照片、资质，以及获得许可的客户原话。"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "你可能想问。",
+      "items": [
+        {
+          "q": "盒子里的商家是真的吗？",
+          "a": "不是。每个抽屉都是为虚构商家做的概念设计，用来展示不同的风格。demo 里的名称、价格、评价和联系方式都只是示意。你的网站会围绕你真实的生意来做。"
+        },
+        {
+          "q": "我能要一个和某个 demo 一样的网站吗？",
+          "a": "可以——任何一个抽屉都可以作为起点。我们会按你的品牌、文字和照片来调整版式和风格，最后是属于你的网站，而不是一份复制品。"
+        },
+        {
+          "q": "做一个网站要多少钱？",
+          "a": "取决于页数和功能，比如预约、点单或双语。告诉我们你的需求，我们会给你一份清楚的书面报价。"
+        },
+        {
+          "q": "我需要懂技术吗？",
+          "a": "不需要。我们只问关于你生意的简单问题。你准备好 logo（如果有）、照片、服务项目和价格，其余交给我们。"
+        },
+        {
+          "q": "网站以后我能自己改吗？",
+          "a": "如果你愿意的话。菜单或价格经常变的生意，我们会设置一个简单的修改方式；不常改的，也可以由我们帮你更新。我们会按你的情况给建议。"
+        },
+        {
+          "q": "不在同一个城市也能合作吗？",
+          "a": "可以。我们通过电话、视频、邮件和微信，服务全澳各地的生意。"
+        },
+        {
+          "q": "能做中英文网站吗？",
+          "a": "可以。我们为每种语言的读者分别来写，而不是逐字翻译；也可以加其他语言。"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "开始项目",
+      "title": "说说你的生意。",
+      "intro": "回答几个问题就够了。我们会把它整理成一份简短的需求单，你可以用邮件发给我们，或者复制到微信、WhatsApp、短信里。",
+      "your_name": "你的称呼",
+      "business": "店名 / 公司名",
+      "type": "生意类型",
+      "type_placeholder": "请选择",
+      "type_other": "其他",
+      "where": "所在区 / 城市",
+      "needs": "需要什么？",
+      "needs_items": [
+        "新网站",
+        "旧网站改版",
+        "在线预约",
+        "菜单或点单",
+        "中英双语",
+        "域名和主机",
+        "还没想好"
+      ],
+      "liked": "喜欢的抽屉",
+      "liked_empty": "还没有——在任何抽屉上点 ♥，就会出现在这里。",
+      "liked_add": "去盒子里逛逛",
+      "remove": "移除 {name}",
+      "when": "希望什么时候上线？",
+      "when_items": [
+        "越快越好",
+        "1–2 个月内",
+        "先了解看看"
+      ],
+      "reach": "怎么联系你最方便？",
+      "reach_items": [
+        "邮件",
+        "电话",
+        "微信",
+        "WhatsApp"
+      ],
+      "reach_detail": "你的邮箱、电话或微信号",
+      "message": "还有什么想说的？",
+      "message_placeholder": "你的客人是谁、喜欢的网站、时间要求……",
+      "brief_title": "你的需求单",
+      "brief_empty": "开始填写——需求单会在这里自动生成。",
+      "email_button": "用邮件发送需求单",
+      "email_unavailable": "邮箱尚未接通",
+      "copy_button": "复制需求单",
+      "copied": "已复制——可以粘贴到微信、WhatsApp 或短信里。",
+      "copy_failed": "无法自动复制——请手动选中需求单复制。",
+      "emailed": "你的邮件程序应该已经打开，需求单已经填好。你按下发送后，我们才会收到。",
+      "subject": "网站咨询——{business}",
+      "channels_title": "或者直接联系我们",
+      "channels_preview": "预览版：联系方式接通后会显示在这里。你仍然可以先复制需求单。",
+      "email": "邮箱",
+      "phone": "电话",
+      "whatsapp": "WhatsApp",
+      "wechat": "微信",
+      "instagram": "Instagram",
+      "privacy": "这个表单不会把任何内容发送或保存到服务器。在你选择发邮件或复制之前，你填写的内容只留在这个页面里。"
+    },
+    "brief_labels": {
+      "heading": "网站咨询",
+      "name": "称呼",
+      "business": "店名",
+      "type": "类型",
+      "where": "地点",
+      "needs": "需要",
+      "liked": "喜欢的抽屉",
+      "when": "上线时间",
+      "reach": "联系方式",
+      "message": "备注",
+      "sent_from": "来自 {name} 网站"
+    },
+    "footer": {
+      "tagline": "为澳洲小生意做网站。",
+      "disclaimer": "盒子里的所有 demo 都是虚构商家的概念设计，其中的名称、价格、评价和细节仅作示意。",
+      "abn": "ABN",
+      "top": "回到顶部",
+      "made": "亲手设计，亲手搭建。"
+    },
+    "industries": {
+      "food": "餐饮",
+      "driving": "驾校与出行",
+      "trades": "装修与家政",
+      "health": "健康与养生",
+      "beauty": "美业",
+      "education": "教育与儿童",
+      "professional": "专业服务",
+      "creative": "创意与个人",
+      "retail": "零售与手作",
+      "travel": "旅游与住宿",
+      "community": "社区与活动"
+    },
+    "moods": {
+      "minimal": "极简",
+      "bold": "大胆",
+      "playful": "俏皮",
+      "luxe": "高级",
+      "retro": "复古",
+      "editorial": "编辑感",
+      "techy": "科技",
+      "natural": "自然",
+      "handmade": "手作"
+    },
+    "features": {
+      "booking": "预约",
+      "ordering": "点单",
+      "menu": "菜单价目",
+      "quote": "报价与计算",
+      "customiser": "定制器",
+      "finder": "查找与测验",
+      "map": "地图",
+      "game": "小游戏",
+      "story": "滚动叙事",
+      "sound": "声音",
+      "bilingual": "双语",
+      "accessibility": "无障碍"
+    },
+    "langs": {
+      "en": "英文",
+      "en+zh": "中英双语",
+      "en+ar": "英语 + 阿拉伯语"
+    }
+  }
+}

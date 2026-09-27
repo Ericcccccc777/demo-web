@@ -1,0 +1,8 @@
+{
+  "id": "049",
+  "tech": ["SVG", "CSS Grid", "Form logic", "Keyboard shortcuts", "IntersectionObserver"],
+  "features": ["customiser"],
+  "interaction": "Choose a goal (strength, fat loss, fitness or sport), 2–5 training days and an experience level to generate an illustrative 12-week calendar of colour-coded sessions with planned deload and retest weeks, a session-mix breakdown and an animated volume/intensity chart; tap or arrow-key through any day to see that session's detail.",
+  "fonts": ["Unbounded", "Inter"],
+  "notes": "The generated plan is an illustration of program structure (labelled as such), not a prescription."
+}

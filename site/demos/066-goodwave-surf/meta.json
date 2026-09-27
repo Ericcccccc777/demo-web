@@ -1,0 +1,8 @@
+{
+  "id": "066",
+  "tech": ["CSS Grid", "CSS Scroll Snap", "SVG", "SVG animation", "Canvas 2D", "IntersectionObserver", "Keyboard shortcuts", "Date logic", "Form logic"],
+  "features": ["finder", "booking"],
+  "interaction": "Pick a day (Mon–Sun) of the sample forecast or drag the swell dial: animated canvas waves change height and period, a surfer rides them (or the board is left on the sand), and the widget recommends Beginner-friendly, Intermediate or Stay on the sand with wind and tide icons, highlighting the matching lesson boards; the booking ticket updates an illustrative total live.",
+  "fonts": ["Shrikhand", "Rubik"],
+  "notes": "Forecast data is a fixed sample week (clearly labelled), not live. Reduced motion draws a static wave that still updates height. Packing list ticks aren't saved. Booking ends in an on-page DEMO stamp and toast; nothing is sent or charged."
+}

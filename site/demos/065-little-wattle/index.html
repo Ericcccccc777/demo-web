@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="065">
+<meta name="demo:brand" content="Little Wattle Early Learning">
+<title>Little Wattle Early Learning — long day care &amp; kindy in Ipswich</title>
+<meta name="description" content="A fictional early learning centre in Brassall, Ipswich QLD: three rooms for 6 weeks to 5 years, a daily rhythm clock, a sample menu and tours.">
+<meta name="theme-color" content="#E4EDDD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Varela+Round&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--paper:#FFFDF7;--wattle:#F6C21C;--gum:#7FA37B;--sky:#9ED8F5;--red:#E4572E;--ink:#2E2B25;--ink2:#575246;--redink:#AE3C1A;--gumink:#3B6437;--wall:#F3E7C9;--hole:#E6EEE0;
+--hand:"Gochi Hand","Chalkboard SE","Comic Sans MS",cursive;--round:"Varela Round","Arial Rounded MT Bold",Nunito,system-ui,sans-serif;
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .13 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+--scrib:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 16' preserveAspectRatio='none'%3E%3Cpath d='M4 9c46-7 96 3 146-2s104 1 146-4M10 13c70-5 140 0 200-3' fill='none' stroke='%23000' stroke-width='4.5' stroke-linecap='round'/%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:14px}
+body{margin:0;color:var(--ink);font:17px/1.6 var(--round);background:linear-gradient(90deg,rgba(130,95,30,.08) 1px,transparent 1px) 0 0/72px 72px,linear-gradient(rgba(130,95,30,.08) 1px,transparent 1px) 0 0/72px 72px,var(--wall)}
+h1,h2,h3{font-family:var(--hand);font-weight:400;line-height:1.02;margin:0;overflow-wrap:break-word}
+p{margin:0 0 .75em}
+a{color:var(--redink)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px dashed var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:9;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px}
+.skip:focus{top:12px}
+/* ---------- the fridge ---------- */
+.fridge{max-width:1320px;margin:14px auto 30px;padding:6px;background:#AEBFA7;border-radius:36px;box-shadow:0 40px 70px -40px rgba(80,60,10,.55),inset 0 2px 0 rgba(255,255,255,.35)}
+.freezer,.door{position:relative;background:linear-gradient(90deg,#D6E2CD,#E6EEDF 9%,#EEF4E9 40%,#E9F0E3 76%,#D6E2CD);box-shadow:inset 0 2px 0 rgba(255,255,255,.8),inset 0 -2px 0 rgba(60,80,50,.13)}
+.freezer{border-radius:30px 30px 10px 10px;padding:14px 34px 32px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+.freezer::after{content:"";position:absolute;left:36px;bottom:11px;width:min(250px,40%);height:12px;border-radius:9px;background:linear-gradient(#FDFEFB,#CDD7C7 55%,#A7B5A0);box-shadow:0 5px 7px -3px rgba(40,50,30,.4)}
+.door{margin-top:7px;border-radius:10px 10px 30px 30px;padding:56px 78px 72px 48px;overflow-x:clip}
+.door::before{content:"";position:absolute;right:26px;top:48px;width:15px;height:270px;border-radius:9px;background:linear-gradient(90deg,#A7B5A0,#FDFEFB 45%,#C8D3C1);box-shadow:5px 5px 9px -4px rgba(40,50,30,.4)}
+.logo{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;flex:1 1 260px;min-width:0}
+.logo svg{width:50px;height:50px;flex:none}
+.logo b{font:400 2rem/1 var(--hand);overflow-wrap:anywhere}
+.nav{display:flex;gap:2px;flex-wrap:wrap}
+.nav a{font:400 1.3rem/1 var(--hand);color:var(--ink);text-decoration:none;padding:11px 12px;border-radius:12px;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.7)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 22px;font:400 1.35rem/1 var(--hand);color:var(--ink);background:var(--wattle);border:2.5px solid var(--ink);border-radius:14px 18px 13px 17px/17px 13px 18px 14px;box-shadow:0 4px 0 var(--ink);text-decoration:none;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn.alt{background:var(--paper)}.btn.gum{background:var(--gum)}
+/* ---------- papers & magnets ---------- */
+.pin{position:relative;transform:rotate(var(--r,0deg))}
+.paper{position:relative;background:var(--grain),var(--paper);border-radius:3px 6px 4px 7px;padding:36px 32px 28px;box-shadow:0 1px 2px rgba(40,40,20,.14),0 16px 28px -14px rgba(40,60,30,.5)}
+.mag{position:absolute;z-index:3;top:-16px;left:calc(50% - 17px);width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 36% 30%,rgba(255,255,255,.8) 0 4px,transparent 5px),radial-gradient(circle at 50% 42%,var(--c,var(--red)) 55%,color-mix(in srgb,var(--c,var(--red)) 68%,#000) 100%);box-shadow:0 6px 7px -2px rgba(0,0,0,.4),inset 0 -3px 3px rgba(0,0,0,.16)}
+.mag.l{left:26px}.mag.r{left:auto;right:26px}
+.mag.flower{width:44px;height:44px;background:none;box-shadow:none;top:-22px;filter:drop-shadow(0 5px 3px rgba(0,0,0,.3))}
+.in .mag{animation:clack .6s cubic-bezier(.3,1.7,.5,1) both}
+@keyframes clack{from{transform:translateY(-16px) scale(1.3)}}
+.abc{position:absolute;z-index:3;top:-34px;left:30px;display:flex;gap:5px;pointer-events:none}
+.abc span{font:400 50px/1 var(--round);color:var(--c);transform:rotate(var(--t));text-shadow:0 3px 0 color-mix(in srgb,var(--c) 66%,#000),0 7px 7px rgba(0,0,0,.28)}
+.tape{position:relative;display:inline-block;padding:9px 26px 7px;background:rgba(252,246,222,.93);box-shadow:0 2px 5px rgba(0,0,0,.13);clip-path:polygon(0 12%,3% 0,7% 9%,11% 1%,100% 0,97% 14%,100% 30%,97% 50%,100% 72%,97% 88%,100% 100%,8% 100%,4% 91%,0 100%,2% 70%,0 45%,3% 26%);transform:rotate(var(--r,-1.5deg))}
+.tape h2{font-size:clamp(2rem,3.4vw,2.8rem)}
+.u::after{content:"";display:block;height:12px;width:min(240px,86%);margin-top:4px;background:var(--uc,var(--wattle));-webkit-mask:var(--scrib) 0 0/100% 100% no-repeat;mask:var(--scrib) 0 0/100% 100% no-repeat}
+h2.u{font-size:clamp(2.1rem,3.5vw,3rem)}
+.kick{font:400 .82rem/1.3 var(--round);letter-spacing:.09em;text-transform:uppercase;color:var(--gumink);margin:0 0 10px}
+.small{font-size:.9rem;color:var(--ink2)}
+section{margin-top:84px}
+.crayon{filter:url(#crayon)}
+/* ---------- hero ---------- */
+.top{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:0}
+.welcome .paper{padding:70px 48px 0;overflow:hidden}
+.welcome h1{font-size:clamp(3.3rem,6.2vw,6rem);margin:0 0 18px;max-width:11ch}
+.lead{font-size:1.14rem;max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin:22px 0 6px}
+.scene{display:block;width:calc(100% + 96px);height:auto;margin:6px -48px 0}
+.hours{position:absolute;z-index:2;right:-22px;top:-40px;width:212px;padding:14px 16px 12px;background:linear-gradient(#FBE58E,#F9DC6E);font:1.2rem/1.2 var(--hand);transform:rotate(4deg);box-shadow:0 12px 18px -10px rgba(60,50,10,.5)}
+.hours b{display:block;font-weight:400;font-size:1.5rem;color:var(--redink)}
+/* ---------- doodle pad ---------- */
+.pad .paper{padding:34px 26px 24px}
+.pad h2{font-size:clamp(2rem,3vw,2.6rem)}
+.pad .hint{font-size:.95rem;color:var(--ink2);margin:8px 0 14px}
+.cwrap{position:relative;aspect-ratio:3/2;border-radius:6px;background:var(--grain),#FFFEFA;box-shadow:inset 0 0 0 2px rgba(46,43,37,.14);touch-action:none}
+#pad{display:block;width:100%;height:100%;border-radius:6px;cursor:crosshair;touch-action:none}
+.kcur{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border:2.5px solid var(--ink);border-radius:50%;pointer-events:none;display:none}
+.kcur.on{display:block}.kcur.down{background:var(--kc)}
+.tools{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 12px;margin-top:12px}
+.box{position:relative;display:flex;gap:1px;padding:0 10px;height:92px;align-items:flex-end}
+.box::after{content:"crayons";position:absolute;z-index:2;left:0;right:0;bottom:0;height:38px;background:var(--wattle);border:2.5px solid var(--ink);border-radius:5px 5px 11px 11px;font:1.15rem/33px var(--hand);text-align:center;pointer-events:none}
+.cr{position:relative;width:30px;height:84px;border:0;padding:0;background:none;cursor:pointer;transform:translateY(12px);transition:transform .22s cubic-bezier(.3,1.5,.5,1)}
+.cr i{position:absolute;left:7px;right:7px;top:16px;bottom:0;background:var(--c);border-radius:2px 2px 0 0;box-shadow:inset 0 8px 0 rgba(255,255,255,.3),inset 0 -30px 0 rgba(0,0,0,.12)}
+.cr i::before{content:"";position:absolute;left:1px;right:1px;top:-14px;height:15px;background:var(--c);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.cr[aria-pressed=true]{transform:translateY(-6px)}
+.cr:hover{transform:translateY(0)}.cr[aria-pressed=true]:hover{transform:translateY(-6px)}
+.cr:focus-visible{outline-offset:-2px}
+.sizes{display:flex;gap:4px}
+.sz{width:44px;height:44px;border-radius:50%;border:2.5px solid transparent;background:rgba(46,43,37,.07);display:grid;place-items:center;cursor:pointer}
+.sz::before{content:"";width:var(--d);height:var(--d);border-radius:50%;background:var(--ink)}
+.sz[aria-pressed=true]{border-color:var(--ink);background:#fff}
+.tool{min-height:44px;padding:8px 12px;border:2.5px solid var(--ink);background:var(--paper);border-radius:12px 14px 12px 15px;font:1.2rem/1 var(--hand);cursor:pointer}
+.tool:disabled{opacity:.4;cursor:default}
+.side{display:grid;gap:6px}.ur{display:flex;gap:6px}.lg{font:1.3rem/1.2 var(--hand);padding:0;margin-bottom:2px}
+.stickrow{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px;margin-top:16px}
+.stickrow label{flex:1 1 150px;font:1.15rem var(--hand)}
+.field input,.stickrow input,.field select,.field textarea{display:block;width:100%;font:1rem var(--round);color:var(--ink);padding:9px 2px;border:0;border-bottom:2.5px dotted rgba(46,43,37,.5);background:transparent;border-radius:0}
+.field input:focus,.stickrow input:focus,.field select:focus,.field textarea:focus{border-bottom:2.5px solid var(--redink)}
+.status{min-height:1.6em;margin:10px 0 0;font:1.2rem/1.3 var(--hand);color:var(--gumink)}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-6px)}50%{transform:translateX(6px)}75%{transform:translateX(-3px)}}
+</style>
+<style>
+/* ---------- gallery ---------- */
+.gal-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px}
+.gal-head p{margin:0}
+.gallery{display:flex;flex-wrap:wrap;gap:40px 34px;align-items:flex-start;margin-top:40px;padding:0;list-style:none}
+.art{width:200px}
+.art .paper{padding:12px 12px 8px}
+.art svg,.art img{display:block;width:100%;height:auto;aspect-ratio:3/2;border-radius:2px}
+.art figure{margin:0}
+.art figcaption{font:1.18rem/1.2 var(--hand);text-align:center;margin-top:6px}
+.art .x{position:absolute;z-index:4;right:-12px;top:-12px;width:40px;height:40px;border-radius:50%;border:2.5px solid var(--ink);background:var(--paper);font:1.3rem/1 var(--round);cursor:pointer}
+.art.new .paper{animation:land .7s cubic-bezier(.25,1.4,.5,1) both}
+@keyframes land{0%{transform:translateY(-60px) rotate(-14deg) scale(1.18);opacity:0}45%{opacity:1}}
+.spare .paper{background:transparent;box-shadow:none;border:3px dashed rgba(46,43,37,.3);border-radius:10px;min-height:170px;display:grid;place-items:center;text-align:center;font:1.3rem/1.25 var(--hand)}
+.spare a{display:inline-block;margin-top:8px;padding:6px 8px}
+/* ---------- rooms ---------- */
+.rooms{display:grid;grid-template-columns:.85fr 1fr 1fr 1fr;gap:40px 34px;align-items:start}
+.sticky{padding:26px 22px 22px;background:linear-gradient(#FBE58E,#F8DA67);box-shadow:0 14px 20px -12px rgba(60,50,10,.55);border-radius:2px}
+.sticky h2{font-size:clamp(2rem,3vw,2.7rem);margin-bottom:12px}
+.room .paper{background:var(--grain),var(--rc);border-radius:26px 34px 22px 38px/34px 22px 38px 26px;padding:30px 26px 24px}
+.room svg{width:84px;height:84px;display:block;margin:-6px 0 4px -6px}
+.room h3{font-size:2.5rem}
+.ages{font:1.4rem/1.2 var(--hand);margin:2px 0 10px}
+.tags{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.tags li{background:rgba(255,253,247,.62);border-radius:99px;padding:3px 12px;font-size:.88rem}
+/* ---------- day clock ---------- */
+.day{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.plate{position:relative;max-width:500px;width:100%;margin:0 auto}
+.plate svg{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 18px rgba(40,60,30,.32))}
+.seg{cursor:pointer;transition:opacity .3s}
+.fade .seg{opacity:.32}.fade .seg.on{opacity:1}
+.rhythm{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:2px}
+.rhythm button{width:100%;display:grid;grid-template-columns:16px 150px 1fr auto;gap:12px;align-items:center;text-align:left;min-height:44px;padding:7px 12px;border:0;border-radius:12px;background:none;cursor:pointer}
+.rhythm button:hover{background:rgba(246,194,28,.16)}
+.rhythm button[aria-pressed=true]{background:rgba(246,194,28,.38)}
+.rhythm .dot{width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 2px rgba(46,43,37,.25)}
+.rhythm .t{font-size:.9rem;color:var(--ink2);white-space:nowrap}
+.rhythm .n{font:1.35rem/1.1 var(--hand)}
+.rhythm .now{font:1.1rem/1 var(--hand);color:#fff;background:var(--redink);border-radius:99px;padding:4px 10px 3px}
+.readout{margin-top:16px;padding:16px 18px;border:2.5px dashed rgba(46,43,37,.3);border-radius:16px}
+.readout .big{font:1.9rem/1.1 var(--hand);margin:0 0 6px}
+.readout p{margin:0}
+.readout .tool{margin-top:12px}
+/* ---------- meals & crew ---------- */
+.row2{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:56px;align-items:start}
+.note .paper{padding:52px 30px 26px 76px;background:linear-gradient(90deg,transparent 58px,rgba(228,87,46,.5) 58px 60px,transparent 60px),repeating-linear-gradient(transparent 0 33px,rgba(70,150,200,.28) 33px 34px) 0 30px,var(--paper)}
+.note .paper::before{content:"";position:absolute;left:0;right:0;top:10px;height:16px;background:radial-gradient(circle,var(--hole) 5px,transparent 5.5px) 6px 0/30px 16px repeat-x}
+.menu{list-style:none;margin:14px 0;padding:0}
+.menu li{display:grid;grid-template-columns:52px 1fr;line-height:34px}
+.menu b{font:400 1.35rem/34px var(--hand);color:var(--redink)}
+.teas{font-size:.95rem;line-height:1.55}
+.crew{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 22px;margin-top:34px}
+.pol .paper{padding:12px 12px 16px;background:#fff}
+.pol svg{display:block;width:100%;height:auto;background:#F4F0E4}
+.pol h3{font-size:1.75rem;margin-top:10px}
+.pol .role{font-size:.85rem;color:var(--gumink);margin:2px 0 6px}
+.pol p{font-size:.9rem;line-height:1.45;margin:0}
+/* ---------- fees & tour ---------- */
+.row3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
+.notice .paper{padding:0 0 26px;overflow:hidden}
+.notice .band{background:var(--sky);padding:40px 30px 16px;margin-bottom:18px}
+.notice .in-pad{padding:0 30px}
+table{width:100%;border-collapse:collapse;margin:0 0 14px}
+th,td{text-align:left;padding:10px 6px;border-bottom:2px dotted rgba(46,43,37,.28);vertical-align:baseline}
+th{font:400 1.2rem var(--hand);color:var(--ink2)}
+td.fee{font:1.7rem/1 var(--hand);white-space:nowrap}
+.gi{background:rgba(158,216,245,.3);padding:12px 14px;border-radius:12px;font-size:.92rem}
+.slip .paper{padding:40px 34px 30px}
+.tear{position:relative;border-top:2.5px dashed rgba(46,43,37,.45);margin:18px -34px 22px}
+.tear::before{content:"\2702";position:absolute;left:22px;top:-17px;font-size:24px;line-height:1;background:var(--paper);padding:2px 6px;color:var(--ink2)}
+.field{margin-bottom:14px}
+.field label,.field legend{display:block;font:1.3rem/1.2 var(--hand);padding:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+fieldset{border:0;margin:0 0 14px;padding:0;min-width:0}
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.slot{position:relative}
+.slot input{position:absolute;opacity:0;width:1px;height:1px}
+.slot span{display:block;padding:10px 8px;border:2.5px solid rgba(46,43,37,.3);border-radius:12px 15px 12px 14px;font:1.15rem/1.2 var(--hand);text-align:center;cursor:pointer;background:rgba(255,255,255,.5)}
+.slot input:checked+span{background:var(--wattle);border-color:var(--ink)}
+.slot input:focus-visible+span{outline:3px dashed var(--ink);outline-offset:2px}
+.stamp{position:absolute;right:26px;top:34%;z-index:3;border:4px solid var(--redink);color:var(--redink);font:2.1rem/1 var(--hand);padding:10px 16px 8px;border-radius:12px;background:rgba(255,253,247,.8);transform:rotate(-13deg) scale(1.6);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.3,1.6,.5,1),opacity .2s}
+.done .stamp{opacity:.92;transform:rotate(-13deg) scale(1)}
+.contact{margin-top:34px;max-width:330px;margin-left:auto;margin-right:auto}
+.contact p{margin:0 0 4px;font-size:.98rem}
+.contact a{display:inline-block;padding:6px 0}
+/* ---------- footer ---------- */
+.plinth{margin-top:7px;border-radius:10px 10px 30px 30px;background:#3A4838;color:#F2EFE4;padding:0 48px 30px}
+.plinth .grille{height:26px;margin:0 -48px 26px;border-radius:10px 10px 0 0;background:repeating-linear-gradient(90deg,#2B362A 0 8px,#4A5A47 8px 14px)}
+.plinth .fb{font:2rem/1.05 var(--hand);overflow-wrap:anywhere;margin:0 0 8px;color:var(--wattle)}
+.fcols{display:flex;flex-wrap:wrap;gap:12px 44px;align-items:flex-end;justify-content:space-between}
+.fcols p{margin:0 0 4px;font-size:.92rem}
+.plinth a{color:#FBE58E}
+.fine{font-size:.8rem;color:#C8CEBF;margin-top:14px}
+/* ---------- responsive ---------- */
+@media (max-width:1120px){.door{padding:56px 60px 64px 36px}.rooms{grid-template-columns:1fr 1fr}.crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.top,.day,.row2,.row3{grid-template-columns:minmax(0,1fr)}.hours{right:10px}.welcome{margin-bottom:26px}.pad{max-width:560px;width:100%;margin:0 auto}.plate{max-width:420px}}
+@media (max-width:600px){
+body{font-size:16px}
+.fridge{margin:8px 6px 18px;padding:5px;border-radius:26px}
+.freezer{padding:14px 14px 30px;border-radius:22px 22px 8px 8px}
+.freezer::after{left:18px;width:120px;bottom:10px}
+.logo{flex:1 1 0}.logo svg{width:40px;height:40px}.logo b{font-size:1.55rem}
+.freezer .btn{min-height:44px;padding:8px 14px;font-size:1.2rem}
+.nav{order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -6px;padding-bottom:2px}
+.nav a{padding:11px 10px;font-size:1.2rem}
+.door{padding:46px 16px 56px;border-radius:8px 8px 22px 22px}
+.door::before{display:none}
+section{margin-top:64px}
+.welcome .paper{padding:58px 22px 0}
+.welcome h1{font-size:3.25rem}
+.scene{width:calc(100% + 44px);margin:4px -22px 0}
+.abc{left:16px;top:-30px}.abc span{font-size:42px}
+.hours{position:relative;right:auto;top:auto;bottom:auto;margin:-18px 10px 0 auto;width:200px;transform:rotate(3deg)}
+.pad .paper{padding:30px 16px 20px}
+.box{padding:0 6px}.cr{width:30px}
+.gallery{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;margin:26px -16px 0;padding:24px 16px 18px;gap:22px}
+.gallery>li{flex:0 0 64%;scroll-snap-align:center}.art{width:auto}
+.rooms{display:flex;flex-direction:column;gap:34px}
+.crew{gap:24px 14px}.pol h3{font-size:1.5rem}
+.rhythm button{grid-template-columns:14px 1fr auto;gap:10px}.rhythm .t{grid-column:2;grid-row:2;margin-top:-4px}
+.note .paper{padding:48px 18px 22px 62px;background-position:0 0,0 26px,0 0}
+.note .paper{background:linear-gradient(90deg,transparent 46px,rgba(228,87,46,.5) 46px 48px,transparent 48px),repeating-linear-gradient(transparent 0 33px,rgba(70,150,200,.28) 33px 34px) 0 30px,var(--paper)}
+.menu li{grid-template-columns:46px 1fr;line-height:1.35;padding:6px 0}.menu b{line-height:1.35}
+.notice .band,.notice .in-pad{padding-left:20px;padding-right:20px}
+.slip .paper{padding:36px 18px 24px}.tear{margin:18px -18px 22px}.duo{grid-template-columns:1fr}
+.plinth{padding:0 20px 26px}.plinth .grille{margin:0 -20px 22px}
+}
+@media (max-width:360px){.welcome h1{font-size:2.8rem}.cr{width:27px}.sz{width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<filter id="crayon" x="-8%" y="-8%" width="116%" height="116%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="4" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.4 0 0 0 -1.05" result="g"/><feComposite in="SourceGraphic" in2="g" operator="in" result="t"/><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="9" result="w"/><feDisplacementMap in="t" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G"/></filter>
+<symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11.5 12 4l8.5 7.5M6 10v10h12V10M10 20v-6h4v6"/></symbol>
+<symbol id="i-blocks" viewBox="0 0 24 24"><path d="M3 13h8v8H3zM13 13h8v8h-8zM8 3h8v8H8z"/></symbol>
+<symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 7.5C9 5.5 4 6.5 4 12c0 5 3.8 9 6 9 1 0 1.4-.6 2-.6s1 .6 2 .6c2.2 0 6-4 6-9 0-5.5-5-6.5-8-4.5zM12 7.5c0-2 1-3.6 3-4.5"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+<symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11h18c0 5-4 9-9 9s-9-4-9-9zM9 8c0-1.8 1.4-2.2 1.4-4M14 8c0-1.8 1.4-2.2 1.4-4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.2 8.2 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+<symbol id="i-brush" viewBox="0 0 24 24"><path d="M20 3 10.5 12.5M8.5 13.5c-3 0-4.3 2-4.3 4 0 1.5-1 2.5-2.2 3 3 .6 8.2.2 8.4-4 .1-1.6-.7-2.6-1.9-3z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S3 14.5 3 8.8C3 6 5 4 7.5 4c1.9 0 3.4 1 4.5 2.6C13.1 5 14.6 4 16.5 4 19 4 21 6 21 8.8 21 14.5 12 20 12 20z"/></symbol>
+<symbol id="wattle" viewBox="0 0 60 60"><g class="crayon"><path d="M12 54C24 40 31 27 45 9" fill="none" stroke="#5E8A59" stroke-width="4" stroke-linecap="round"/><path d="M21 43c-8-2-12-8-12-15 7 2 11 8 12 15zM33 27c8 0 13-4 16-10-8 0-13 4-16 10z" fill="#7FA37B"/><g fill="#F6C21C"><circle cx="45" cy="10" r="6.5"/><circle cx="34" cy="17" r="6"/><circle cx="45" cy="25" r="5.5"/><circle cx="25" cy="31" r="6"/><circle cx="37" cy="37" r="5"/></g></g></symbol>
+</defs></svg>
+<div class="fridge">
+<header class="freezer">
+  <a class="logo" href="#main"><svg aria-hidden="true"><use href="#wattle"/></svg><b data-brand>Little Wattle Early Learning</b></a>
+  <nav class="nav" aria-label="Sections"><a href="#rooms">Rooms</a><a href="#day">Our day</a><a href="#meals">Meals</a><a href="#crew">Educators</a><a href="#fees">Fees</a><a href="#draw">Draw</a></nav>
+  <a class="btn" href="#tour">Book a tour</a>
+</header>
+<main class="door" id="main">
+<div class="top">
+  <div class="pin welcome" style="--r:-1deg">
+    <div class="abc" aria-hidden="true"><span style="--c:#E4572E;--t:-8deg">H</span><span style="--c:#F6C21C;--t:5deg">E</span><span style="--c:#7FA37B;--t:-4deg">L</span><span style="--c:#4FA6D6;--t:9deg">L</span><span style="--c:#E4572E;--t:-6deg">O</span></div>
+    <div class="paper">
+      <p class="kick">Long day care &amp; kindy · Brassall, Ipswich QLD</p>
+      <h1 data-brand>Little Wattle Early Learning</h1>
+      <p class="lead">A small, sunny centre for children from 6 weeks to 5 years — with a veggie patch, a mud kitchen and a fridge door that's always full.</p>
+      <div class="cta"><a class="btn" href="#tour">Book a tour</a><a class="btn alt" href="#day">See our day</a></div>
+      <svg class="scene" viewBox="0 0 560 200" aria-hidden="true"><g class="crayon" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M494 18v-10M494 82v10M456 50h-10M532 50h10M468 24l-7-7M520 76l7 7M520 24l7-7M468 76l-7 7" stroke="#F6C21C" stroke-width="5"/>
+        <circle cx="494" cy="50" r="24" stroke="#F2A81C" stroke-width="6" fill="#F6C21C" fill-opacity=".55"/>
+        <path d="M478 42l30-8M476 52l36-10M480 62l28-8" stroke="#F6C21C" stroke-width="4"/>
+        <path d="M196 34q8-8 16 0q8-8 16 0M238 52q6-6 12 0q6-6 12 0" stroke="#2F4B8C" stroke-width="3"/>
+        <path d="M60 96C56 66 88 44 112 52c18-18 58-6 58 22 18 16 2 44-22 38-16 14-50 14-64 0-20 2-30-10-24-16z" fill="#7FA37B" fill-opacity=".8" stroke="#5E8A59" stroke-width="4"/>
+        <path d="M112 186c2-34-4-64 2-92M112 132c-14-10-22-20-26-32M113 118c16-10 26-20 30-32" stroke="#8A5A3B" stroke-width="7"/>
+        <g fill="#F6C21C" stroke="#E0A814" stroke-width="2"><circle cx="80" cy="80" r="8"/><circle cx="98" cy="62" r="7"/><circle cx="124" cy="56" r="8"/><circle cx="148" cy="66" r="7"/><circle cx="162" cy="88" r="8"/><circle cx="138" cy="94" r="7"/><circle cx="104" cy="96" r="8"/><circle cx="84" cy="104" r="6"/><circle cx="120" cy="78" r="6"/></g>
+        <path d="M276 118l72-52 72 52z" fill="#E4572E" fill-opacity=".85" stroke="#C94420" stroke-width="4"/>
+        <path d="M290 116v70h116v-70" stroke="#2F4B8C" stroke-width="5"/>
+        <path d="M336 186v-44h26v44z" fill="#F6C21C" stroke="#C99A10" stroke-width="3"/>
+        <path d="M302 128h22v20h-22zM374 128h22v20h-22z" fill="#9ED8F5" stroke="#2F4B8C" stroke-width="3"/>
+        <path d="M313 128v20M385 128v20" stroke="#2F4B8C" stroke-width="2"/>
+        <circle cx="448" cy="130" r="10" fill="#F6D2A8" stroke="#8A5A3B" stroke-width="3"/><circle cx="486" cy="122" r="11" fill="#C98E62" stroke="#6B4A2F" stroke-width="3"/>
+        <path d="M448 140v26l-8 18M448 166l8 18M448 148l-12 10M486 133v30l-9 21M486 163l9 21M486 142l14 12" stroke="#E4572E" stroke-width="4"/>
+        <path d="M448 148l19 8 19-14" stroke="#4FA6D6" stroke-width="4"/>
+        <path d="M-10 186C60 176 110 192 180 182S300 176 380 184s120-6 190-2" stroke="#7FA37B" stroke-width="10"/>
+        <path d="M30 181l6-14 4 14M210 184l5-12 5 12M258 181l6-15 4 15M520 180l5-13 5 13" stroke="#5E8A59" stroke-width="4"/>
+      </g></svg>
+    </div>
+    <p class="hours"><b>Open Mon–Fri</b>6:30am – 6:00pm<br>3 rooms · 49 places</p>
+  </div>
+  <div class="pin pad" id="draw" role="region" aria-labelledby="draw-h" style="--r:1.2deg">
+    <i class="mag" style="--c:#4FA6D6"></i>
+    <div class="paper" id="padpaper">
+      <h2 id="draw-h">Draw us something</h2>
+      <p class="hint" id="draw-hint">Pick a crayon and scribble, then stick it on our fridge. It stays for this visit only — nothing is uploaded.<span class="sr"> Keyboard: arrow keys move the crayon, Space puts it down or lifts it.</span></p>
+      <div class="cwrap"><canvas id="pad" tabindex="0" aria-label="Drawing pad" aria-describedby="draw-hint"></canvas><span class="kcur" id="kcur"></span></div>
+      <div class="tools">
+        <div class="box" role="group" aria-label="Crayon colour" id="crayons"></div>
+        <div class="side">
+          <div class="sizes" role="group" aria-label="Crayon size"><button type="button" class="sz" style="--d:6px" data-w="8" aria-pressed="false" aria-label="Thin"></button><button type="button" class="sz" style="--d:12px" data-w="16" aria-pressed="true" aria-label="Medium"></button><button type="button" class="sz" style="--d:20px" data-w="30" aria-pressed="false" aria-label="Chunky"></button></div>
+          <div class="ur"><button type="button" class="tool" id="undo" disabled>Undo</button><button type="button" class="tool" id="clear" disabled>Clear</button></div>
+        </div>
+      </div>
+      <div class="stickrow"><label for="artist">Artist's name <span class="small">(optional)</span><input id="artist" maxlength="18" autocomplete="off" placeholder="e.g. Mia, 4"></label><button type="button" class="btn gum" id="stick">Stick it on the fridge</button></div>
+      <p class="status" id="padmsg" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<section id="gallery" aria-labelledby="gal-h">
+  <div class="gal-head"><div class="tape"><h2 id="gal-h">On the fridge this week</h2></div><p class="small">Art from the Sprouts and Gumnuts rooms — and anything you stick up.</p></div>
+  <ul class="gallery" id="gal">
+    <li class="pin art" style="--r:-3deg"><i class="mag" style="--c:#F6C21C"></i><figure class="paper"><svg viewBox="0 0 160 120" role="img" aria-label="Crayon rainbow between two clouds"><g class="crayon" fill="none" stroke-width="9" stroke-linecap="round"><path d="M20 100a60 60 0 0 1 120 0" stroke="#E4572E"/><path d="M31 100a49 49 0 0 1 98 0" stroke="#F6C21C"/><path d="M42 100a38 38 0 0 1 76 0" stroke="#7FA37B"/><path d="M53 100a27 27 0 0 1 54 0" stroke="#4FA6D6"/><path d="M6 104c0-10 14-12 18-6 4-8 18-6 18 4 6 0 8 10 0 10H10c-5 0-6-6-4-8zM118 104c0-10 14-12 18-6 4-8 18-6 18 4 6 0 8 10 0 10h-32c-5 0-6-6-4-8z" stroke="#9ED8F5" stroke-width="4" fill="#fff"/></g></svg><figcaption>Rainbow — Ava, 4</figcaption></figure></li>
+    <li class="pin art" style="--r:2.5deg"><i class="mag" style="--c:#7FA37B"></i><figure class="paper"><svg viewBox="0 0 160 120" role="img" aria-label="Crayon ladybird with black spots"><g class="crayon" stroke-linecap="round"><path d="M44 58l-16-8M44 72H24M48 86l-14 12M116 58l16-8M116 72h20M112 86l14 12M72 22l-8-12M88 22l8-12" stroke="#2E2B25" stroke-width="4"/><circle cx="80" cy="30" r="14" fill="#2F2B3A"/><circle cx="80" cy="70" r="38" fill="#E4572E" stroke="#B43A18" stroke-width="4"/><path d="M80 34v74" stroke="#2E2B25" stroke-width="4"/><g fill="#2E2B25"><circle cx="62" cy="56" r="7"/><circle cx="100" cy="58" r="6"/><circle cx="60" cy="86" r="6"/><circle cx="98" cy="88" r="7"/></g></g></svg><figcaption>Ladybird — Noah, 3</figcaption></figure></li>
+    <li class="pin art" style="--r:-1.5deg"><i class="mag" style="--c:#E4572E"></i><figure class="paper"><svg viewBox="0 0 160 120" role="img" aria-label="Crayon drawing of a child and grandmother holding hands under the sun"><g class="crayon" fill="none" stroke-linecap="round" stroke-width="4"><circle cx="134" cy="22" r="13" fill="#F6C21C" stroke="#F2A81C"/><path d="M0 112c40-8 100-6 160-2" stroke="#7FA37B" stroke-width="7"/><circle cx="54" cy="40" r="13" fill="#E9D8C8" stroke="#8A5A3B"/><path d="M42 34c2-10 22-12 24 0" stroke="#B9B2AA" stroke-width="6"/><path d="M54 53l-18 44h36zM48 97l-4 12M60 97l4 12" stroke="#8E5BA6" fill="#C8A6D8"/><circle cx="102" cy="62" r="10" fill="#F6D2A8" stroke="#8A5A3B"/><path d="M102 72v22l-7 14M102 94l7 14M102 80l12-4M66 70l36 8" stroke="#4FA6D6"/></g></svg><figcaption>Me &amp; Nan — Leo, 5</figcaption></figure></li>
+    <li class="pin art spare" id="spare" style="--r:1deg"><div class="paper"><div>Always room<br>for one more<br><a href="#draw">Draw one ↑</a></div></div></li>
+  </ul>
+</section>
+
+<section id="rooms" aria-labelledby="rooms-h" class="rooms">
+  <div class="pin" style="--r:-2deg"><div class="sticky"><h2 id="rooms-h">Three rooms, one big backyard</h2><p>Each room has its own space and routine, and everyone meets outside under the wattle tree.</p><p class="small" style="color:var(--ink)">Group sizes follow Queensland's educator-to-child ratios.</p></div></div>
+  <article class="pin room" style="--r:1.5deg;--rc:#9ED8F5"><i class="mag" style="--c:#E4572E"></i><div class="paper">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M22 78h40" stroke="#8A5A3B" stroke-width="5"/><path d="M42 76V46" stroke="#2F6A34" stroke-width="5"/><path d="M42 50C28 52 16 42 16 28c14-2 26 8 26 22z" fill="#3F7A45"/><path d="M42 44c2-12 12-20 26-18 0 12-12 20-26 18z" fill="#5E9A58"/></g></svg>
+    <h3>Seedlings</h3><p class="ages">6 weeks – 2 years</p>
+    <p>Up to 12 babies with 3 educators. A calm sleep room with cots, a sunny floor for rolling and crawling, and your baby's routine from home followed as closely as we can.</p>
+    <ul class="tags"><li>Cot room</li><li>Bottles from home</li><li>Daily diary</li></ul></div></article>
+  <article class="pin room" style="--r:-1deg;--rc:#F6C21C"><i class="mag" style="--c:#4FA6D6"></i><div class="paper">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M18 78h48" stroke="#8A5A3B" stroke-width="5"/><path d="M42 76V26" stroke="#2F6A34" stroke-width="5"/><path d="M42 58C28 60 14 50 14 36c14-2 28 8 28 22z" fill="#3F7A45"/><path d="M42 46c2-12 14-20 28-18 0 12-14 20-28 18z" fill="#5E9A58"/><path d="M42 30c-8-6-10-16-4-24 8 4 10 16 4 24z" fill="#3F7A45"/></g></svg>
+    <h3>Sprouts</h3><p class="ages">2 – 3 years</p>
+    <p>Up to 15 toddlers with 3 educators. Big-body play, the mud kitchen, first friendships and toilet learning at their own pace.</p>
+    <ul class="tags"><li>Mud kitchen</li><li>Toilet learning</li><li>Rest beds</li></ul></div></article>
+  <article class="pin room" style="--r:2deg;--rc:#9DBF98"><i class="mag" style="--c:#F6C21C"></i><div class="paper">
+    <svg viewBox="0 0 84 84" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M10 20c22 4 44 2 64-12" stroke="#6A4326" stroke-width="4" fill="none"/><path d="M26 24v10M46 22v12M64 14v12" stroke="#6A4326" stroke-width="3"/><g fill="#A8744A" stroke="#6A4326" stroke-width="3"><path d="M15 36h22c0 16-5 26-11 26s-11-10-11-26zM35 38h22c0 16-5 26-11 26s-11-10-11-26zM53 30h22c0 16-5 26-11 26s-11-10-11-26z"/></g><path d="M17 42h18M37 44h18M55 36h18" stroke="#6A4326" stroke-width="2.5"/></g></svg>
+    <h3>Gumnuts</h3><p class="ages">3 – 5 years · kindy</p>
+    <p>Up to 22 children with 2 educators, one an early childhood teacher. A play-based kindy program for the year before Prep, with plenty of outdoor time.</p>
+    <ul class="tags"><li>Kindy program</li><li>Ready for Prep</li><li>Library walks</li></ul></div></article>
+</section>
+
+<section id="day" aria-labelledby="day-h" class="day">
+  <div class="pin plate" style="--r:-2deg"><i class="mag flower" aria-hidden="true"><svg viewBox="0 0 60 60" width="44" height="44"><use href="#wattle"/></svg></i>
+    <svg id="clock" viewBox="-200 -200 400 400" aria-hidden="true"></svg></div>
+  <div class="pin" style="--r:.8deg"><i class="mag l" style="--c:#7FA37B"></i><i class="mag r" style="--c:#E4572E"></i><div class="paper">
+    <h2 class="u" id="day-h">A day at the centre</h2>
+    <p class="small" style="margin-top:10px">Our paper-plate clock shows a typical day. The highlighted slice is what's happening right now by your clock — tap any part of the day to turn the hands.</p>
+    <ol class="rhythm" id="rhythm"></ol>
+    <div class="readout" aria-live="polite"><p class="big" id="rd-big">A typical day</p><p id="rd-text">Times bend a little around the children.</p><button type="button" class="tool" id="rd-now" hidden>Back to now</button></div>
+  </div></div>
+</section>
+
+<div class="row2">
+<section id="meals" aria-labelledby="meals-h" class="pin note" style="--r:-1.2deg"><i class="mag" style="--c:#E4572E"></i><div class="paper">
+  <h2 class="u" id="meals-h" style="--uc:#E4572E">What's cooking</h2>
+  <p class="small" style="margin-top:6px">Sample menu · week 2 of our 4-week rotation</p>
+  <ul class="menu"><li><b>Mon</b>Chicken &amp; sweet corn risotto</li><li><b>Tue</b>Beef &amp; lentil bolognese</li><li><b>Wed</b>Pumpkin &amp; chickpea curry with rice</li><li><b>Thu</b>Fish pie with peas &amp; corn</li><li><b>Fri</b>Pizza scrolls &amp; the salad bar</li></ul>
+  <p class="teas"><strong>Morning tea:</strong> fruit platter with cheese &amp; crackers or banana bread.<br><strong>Afternoon tea:</strong> veggie sticks &amp; hummus, pikelets or yoghurt.</p>
+  <p class="teas">Cooked on site each morning by Dee, our cook. Nut-free centre; allergy, cultural and vegetarian plans on request. Breakfast for early arrivals until 8am.</p>
+</div></section>
+<section id="crew" aria-labelledby="crew-h">
+  <div class="tape" style="--r:1.5deg"><h2 id="crew-h">The grown-ups</h2></div>
+  <p class="small" style="margin-top:12px">Portraits by the Gumnuts. Each room keeps the same familiar faces every day.</p>
+  <div class="crew">
+    <article class="pin pol" style="--r:-2.5deg"><i class="mag" style="--c:#F6C21C"></i><div class="paper"><svg viewBox="0 0 120 120" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M28 66c0-24 14-38 32-38s32 14 32 38c0 10-4 20-8 26H36c-5-6-8-16-8-26z" fill="#2B2320"/><circle cx="60" cy="24" r="12" fill="#2B2320"/><path d="M28 120c2-18 14-26 32-26s30 8 32 26" fill="#E4572E"/><circle cx="60" cy="64" r="28" fill="#C98E62"/><path d="M33 58c4-18 15-24 27-24s23 6 27 24c-9-7-18-10-27-10s-18 3-27 10z" fill="#2B2320"/><g fill="#2E2B25"><circle cx="50" cy="64" r="3.5"/><circle cx="70" cy="64" r="3.5"/></g><path d="M49 77q11 9 22 0" fill="none" stroke="#2E2B25" stroke-width="3"/></g></svg><h3>Priya</h3><p class="role">Centre director</p><p>Keeps the veggie patch alive and the spare-socks box full.</p></div></article>
+    <article class="pin pol" style="--r:2deg"><i class="mag" style="--c:#4FA6D6"></i><div class="paper"><svg viewBox="0 0 120 120" aria-hidden="true"><g class="crayon" stroke-linecap="round"><g fill="#35251A"><circle cx="34" cy="54" r="11"/><circle cx="40" cy="38" r="12"/><circle cx="58" cy="30" r="13"/><circle cx="76" cy="36" r="12"/><circle cx="86" cy="52" r="11"/></g><path d="M28 120c2-18 14-26 32-26s30 8 32 26" fill="#7FA37B"/><circle cx="60" cy="64" r="28" fill="#8D5A3B"/><g fill="#1E1A16"><circle cx="50" cy="64" r="3.5"/><circle cx="70" cy="64" r="3.5"/></g><path d="M48 76q12 10 24 0" fill="none" stroke="#1E1A16" stroke-width="3"/><circle cx="86" cy="44" r="6" fill="#E4572E"/></g></svg><h3>Mele</h3><p class="role">Seedlings room leader</p><p>Sings Tongan lullabies at rest time; fluent in baby.</p></div></article>
+    <article class="pin pol" style="--r:-1deg"><i class="mag" style="--c:#E4572E"></i><div class="paper"><svg viewBox="0 0 120 120" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M30 74c-4-30 10-46 30-46s34 16 30 46c-6 4-10-8-10-8H40s-4 12-10 8z" fill="#C8642E"/><path d="M28 120c2-18 14-26 32-26s30 8 32 26" fill="#4FA6D6"/><circle cx="60" cy="64" r="28" fill="#F2CBA6"/><path d="M32 58c2-16 14-24 28-24s26 8 28 24c-8-8-18-12-28-10-8 2-18 6-28 10z" fill="#C8642E"/><g fill="#2E2B25"><circle cx="50" cy="64" r="3.5"/><circle cx="70" cy="64" r="3.5"/></g><g fill="#C8642E"><circle cx="44" cy="72" r="1.6"/><circle cx="48" cy="75" r="1.6"/><circle cx="72" cy="74" r="1.6"/><circle cx="76" cy="71" r="1.6"/></g><path d="M50 78q10 8 20 0" fill="none" stroke="#2E2B25" stroke-width="3"/></g></svg><h3>Jess</h3><p class="role">Sprouts room leader</p><p>Head chef of the mud kitchen. Hasn't met a puddle she didn't like.</p></div></article>
+    <article class="pin pol" style="--r:2.5deg"><i class="mag" style="--c:#7FA37B"></i><div class="paper"><svg viewBox="0 0 120 120" aria-hidden="true"><g class="crayon" stroke-linecap="round"><path d="M28 120c2-18 14-26 32-26s30 8 32 26" fill="#F6C21C"/><circle cx="60" cy="62" r="28" fill="#E0B08A"/><path d="M32 54c2-16 14-24 28-24s26 8 28 24c-8-4-18-6-28-6s-20 2-28 6z" fill="#6B4A2F"/><path d="M35 70c2 16 12 22 25 22s23-6 25-22c-6 6-14 8-25 8s-19-2-25-8z" fill="#6B4A2F"/><g fill="none" stroke="#2E2B25" stroke-width="2.5"><circle cx="49" cy="62" r="7"/><circle cx="71" cy="62" r="7"/><path d="M56 62h8"/></g><g fill="#2E2B25"><circle cx="49" cy="62" r="2.5"/><circle cx="71" cy="62" r="2.5"/></g><path d="M52 80q8 5 16 0" fill="none" stroke="#2E2B25" stroke-width="3"/></g></svg><h3>Tom</h3><p class="role">Gumnuts leader · kindy teacher</p><p>Runs kindy with a ukulele and a very big book of bugs.</p></div></article>
+  </div>
+</section>
+</div>
+
+<div class="row3">
+<section id="fees" aria-labelledby="fees-h" class="pin notice" style="--r:1deg"><i class="mag l" style="--c:#F6C21C"></i><i class="mag r" style="--c:#7FA37B"></i><div class="paper">
+  <div class="band"><p class="kick" style="color:var(--ink)">A note for families</p><h2 id="fees-h" style="font-size:clamp(2rem,3.2vw,2.8rem)">Fees &amp; the Child Care Subsidy</h2></div>
+  <div class="in-pad">
+  <table><thead><tr><th scope="col">Room</th><th scope="col">Ages</th><th scope="col">Per day</th></tr></thead>
+  <tbody><tr><td>Seedlings</td><td>6 wks – 2 yrs</td><td class="fee">$142</td></tr><tr><td>Sprouts</td><td>2 – 3 yrs</td><td class="fee">$136</td></tr><tr><td>Gumnuts</td><td>3 – 5 yrs</td><td class="fee">$128</td></tr></tbody></table>
+  <p class="small">Sample prices for a full day (6:30am–6:00pm). Meals, nappies, sunscreen, bedding and incursions are included.</p>
+  <p><strong>What's the Child Care Subsidy?</strong> The Australian Government's Child Care Subsidy (CCS) can help with the cost of approved care. It's paid to the centre and taken off your fees, so you pay the gap. How much you get depends on things like your family's income and circumstances.</p>
+  <p class="gi"><strong>General information only.</strong> Your subsidy and gap fee depend on your own situation — we're happy to walk you through an example on your tour.</p>
+  </div>
+</div></section>
+
+<section id="tour" aria-labelledby="tour-h">
+  <form class="pin slip" id="tourform" style="--r:-1deg" novalidate><i class="mag" style="--c:#4FA6D6"></i><div class="paper">
+    <p class="kick">Permission slip</p>
+    <h2 class="u" id="tour-h" style="--uc:#9ED8F5">Come for a tour</h2>
+    <p class="small" style="margin-top:8px">Tours take about 30 minutes, and little ones are very welcome to come along.</p>
+    <div class="tear" aria-hidden="true"></div>
+    <div class="duo"><div class="field"><label for="t-name">Your name</label><input id="t-name" name="name" autocomplete="name" required></div>
+    <div class="field"><label for="t-email">Email</label><input id="t-email" name="email" type="email" autocomplete="email" required></div></div>
+    <div class="duo"><div class="field"><label for="t-age">Your child's age</label><select id="t-age" name="age"><option>Under 1</option><option>1 – 2 years</option><option>2 – 3 years</option><option>3 – 4 years</option><option>4 – 5 years</option><option>Expecting!</option></select></div>
+    <div class="field"><label for="t-days">Days you're after</label><select id="t-days" name="days"><option>Not sure yet</option><option>2 days a week</option><option>3 days a week</option><option>4 – 5 days a week</option></select></div></div>
+    <fieldset><legend class="lg">Pick a tour time</legend><div class="slots" id="slots"></div></fieldset>
+    <button class="btn" type="submit">Send my slip</button>
+    <p class="status" id="tourmsg" aria-live="polite"></p>
+    <p class="stamp" aria-hidden="true">DEMO ONLY</p>
+  </div></form>
+  <div class="pin contact" style="--r:2deg"><div class="sticky"><p style="font:1.5rem/1.1 var(--hand);margin-bottom:8px">Rather call or email?</p><p><a href="tel:+61755500147">(07) 5550 0147</a></p><p><a href="mailto:hello@example.com">hello@example.com</a></p><p>Brassall, Ipswich QLD</p><p>Mon–Fri 6:30am–6:00pm · closed public holidays</p></div></div>
+</section>
+</div>
+</main>
+<footer class="plinth">
+  <div class="grille" aria-hidden="true"></div>
+  <div class="fcols"><div><p class="fb" data-brand>Little Wattle Early Learning</p><p>Long day care &amp; kindy for 6 weeks – 5 years · Brassall, Ipswich QLD</p><p>Mon–Fri 6:30am – 6:00pm · <a href="tel:+61755500147">(07) 5550 0147</a> · <a href="mailto:hello@example.com">hello@example.com</a></p></div>
+  <p><a href="#main">Back to the top ↑</a></p></div>
+  <p class="fine">A fictional centre created for a design showcase. Sample prices and menu. Childcare and subsidy details are general information only.</p>
+</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var mq=window.matchMedia?matchMedia("(prefers-reduced-motion: reduce)"):{matches:false};
+function reduced(){return mq.matches}
+function toast(m){if(window.DemoKit)DemoKit.toast(m)}
+var IO="IntersectionObserver" in window;
+
+/* magnets clack as each paper comes into view */
+if(IO){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.25});$$(".pin").forEach(function(p){io.observe(p)})}
+
+/* ---------------- doodle pad ---------------- */
+var CRAYONS=[["Waratah red","#E4572E"],["Wattle yellow","#F6C21C"],["Gum leaf green","#7FA37B"],["Sky blue","#6CC0EA"],["Galah pink","#EC7FA0"],["Lilly pilly purple","#8E5BA6"],["Gumnut brown","#8A5A3B"],["Night blue","#2F4B8C"]];
+var cv=$("#pad"),ctx=cv.getContext("2d"),wrap=cv.parentNode,kcur=$("#kcur"),msg=$("#padmsg"),box=$("#crayons");
+var LW=900,LH=600,dpr=1,sx=1,sy=1,strokes=[],cleared=null,cur=null,colour=CRAYONS[0][1],width=16,seed=1,kx=LW/2,ky=LH/2,kdown=false;
+function say(t){msg.textContent=t}
+CRAYONS.forEach(function(c,i){var b=document.createElement("button");b.type="button";b.className="cr";b.style.setProperty("--c",c[1]);b.setAttribute("aria-label",c[0]);b.setAttribute("aria-pressed",i?"false":"true");b.innerHTML="<i></i>";
+  b.addEventListener("click",function(){colour=c[1];kcur.style.setProperty("--kc",colour);$$(".cr",box).forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")})});box.appendChild(b)});
+kcur.style.setProperty("--kc",colour);
+$$(".sz").forEach(function(b){b.addEventListener("click",function(){width=+b.getAttribute("data-w");$$(".sz").forEach(function(x){x.setAttribute("aria-pressed",x===b?"true":"false")})})});
+function rgb(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)]}
+var tiles={};
+function tile(h){if(tiles[h])return tiles[h];var t=document.createElement("canvas");t.width=t.height=96;var g=t.getContext("2d"),d=g.createImageData(96,96),c=rgb(h),s=7;
+  for(var i=0;i<d.data.length;i+=4){s=(s*16807)%2147483647;var v=s/2147483647;d.data[i]=c[0];d.data[i+1]=c[1];d.data[i+2]=c[2];d.data[i+3]=v<.17?0:v<.42?118:232}
+  g.putImageData(d,0,0);return tiles[h]=t}
+function pat(c,h,u){var p=c.createPattern(tile(h),"repeat");try{p.setTransform(new DOMMatrix([u,0,0,u,0,0]))}catch(e){}return p}
+function rng(s){s=(s>>>0)||1;return function(){s=(s*16807)%2147483647;return s/2147483647}}
+/* one crayon segment: waxy body, a thinner off-centre streak, ragged specks along the edge */
+function seg(c,p,a,b,w,r){c.strokeStyle=p;c.fillStyle=p;c.lineCap="round";c.lineJoin="round";
+  c.lineWidth=w;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x+.01,b.y);c.stroke();
+  var o=(r()-.5)*w*.4;c.lineWidth=w*.5;c.beginPath();c.moveTo(a.x+o,a.y-o);c.lineTo(b.x+o+.01,b.y-o);c.stroke();
+  var d=Math.hypot(b.x-a.x,b.y-a.y),n=Math.ceil(d/2.5)+2;
+  for(var i=0;i<n;i++){var t=r(),an=r()*6.2832,rr=w*.5+r()*3-1;c.fillRect(a.x+(b.x-a.x)*t+Math.cos(an)*rr-1,a.y+(b.y-a.y)*t+Math.sin(an)*rr-1,2.2,2.2)}}
+function paintAll(c,list,u){var P={};list.forEach(function(s){var p=P[s.c]||(P[s.c]=pat(c,s.c,u)),r=rng(s.seed),q=s.pts;for(var i=0;i<q.length;i++)seg(c,p,q[i?i-1:0],q[i],s.w,r)})}
+function unit(){return 1.4*dpr/sx}
+function redraw(){ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.setTransform(sx,0,0,sy,0,0);paintAll(ctx,strokes,unit())}
+function size(){var w=wrap.clientWidth,h=wrap.clientHeight;if(!w||!h)return;dpr=Math.min(window.devicePixelRatio||1,2);var W=Math.round(w*dpr),H=Math.round(h*dpr);if(W===cv.width&&H===cv.height)return;cv.width=W;cv.height=H;sx=W/LW;sy=H/LH;if(cur){cur.p=pat(ctx,cur.c,unit())}redraw()}
+if("ResizeObserver" in window)new ResizeObserver(size).observe(wrap);else addEventListener("resize",size);
+size();
+var undoB=$("#undo"),clearB=$("#clear");
+function sync(){undoB.disabled=!strokes.length&&!cleared;clearB.disabled=!strokes.length}
+function start(p){cur={c:colour,w:width,seed:(seed++*7919)%2147483647+11,pts:[p]};cur.r=rng(cur.seed);cur.p=pat(ctx,colour,unit());strokes.push(cur);cleared=null;seg(ctx,cur.p,p,p,cur.w,cur.r);sync()}
+function add(p){if(!cur)return;var q=cur.pts[cur.pts.length-1];if(Math.hypot(p.x-q.x,p.y-q.y)<1.5)return;cur.pts.push(p);seg(ctx,cur.p,q,p,cur.w,cur.r)}
+function end(){if(cur){delete cur.r;delete cur.p;cur=null}}
+function pt(e){var r=cv.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*LW,y:(e.clientY-r.top)/r.height*LH}}
+cv.addEventListener("pointerdown",function(e){if(e.button>0)return;e.preventDefault();kdown=false;end();try{cv.setPointerCapture(e.pointerId)}catch(_){}kcur.classList.remove("on");start(pt(e))});
+cv.addEventListener("pointermove",function(e){if(!cur||kdown)return;var l=e.getCoalescedEvents?e.getCoalescedEvents():[];(l.length?l:[e]).forEach(function(v){add(pt(v))})});
+["pointerup","pointercancel"].forEach(function(t){cv.addEventListener(t,function(){if(!kdown)end()})});
+function place(){kcur.style.left=kx/LW*100+"%";kcur.style.top=ky/LH*100+"%";kcur.classList.toggle("down",kdown)}
+cv.addEventListener("focus",function(){try{if(cv.matches(":focus-visible")){kcur.classList.add("on");place();say("Keyboard: arrow keys move the crayon, Space puts it down or lifts it.")}}catch(_){}});
+cv.addEventListener("blur",function(){kcur.classList.remove("on");if(kdown){kdown=false;end()}});
+cv.addEventListener("keydown",function(e){var st=e.shiftKey?45:15,dx=0,dy=0,k=e.key;
+  if(k===" "||k==="Enter"){e.preventDefault();kdown=!kdown;if(kdown)start({x:kx,y:ky});else end();say(kdown?"Crayon down — draw with the arrow keys.":"Crayon lifted.");kcur.classList.add("on");place();return}
+  if(k==="ArrowLeft")dx=-st;else if(k==="ArrowRight")dx=st;else if(k==="ArrowUp")dy=-st;else if(k==="ArrowDown")dy=st;else return;
+  e.preventDefault();kx=Math.max(0,Math.min(LW,kx+dx));ky=Math.max(0,Math.min(LH,ky+dy));if(kdown)add({x:kx,y:ky});kcur.classList.add("on");place()});
+undoB.addEventListener("click",function(){end();kdown=false;if(strokes.length)strokes.pop();else if(cleared){strokes=cleared;cleared=null;say("Drawing brought back.")}redraw();sync()});
+clearB.addEventListener("click",function(){end();kdown=false;if(!strokes.length)return;cleared=strokes;strokes=[];redraw();sync();say("Pad cleared — Undo brings it back.")});
+var gal=$("#gal"),n=0,MAGS=["#E4572E","#F6C21C","#7FA37B","#4FA6D6","#EC7FA0"];
+$("#stick").addEventListener("click",function(){end();kdown=false;
+  if(!strokes.length){say("Draw something first — even a squiggle counts!");var pp=$("#padpaper");pp.classList.remove("shake");void pp.offsetWidth;pp.classList.add("shake");return}
+  var o=document.createElement("canvas");o.width=600;o.height=400;var c=o.getContext("2d");c.fillStyle="#FFFDF7";c.fillRect(0,0,600,400);c.setTransform(600/LW,0,0,400/LH,0,0);paintAll(c,strokes,1.4*LW/600);
+  var url;try{url=o.toDataURL("image/png")}catch(err){say("Sorry — this browser couldn't copy the drawing.");return}
+  n++;var name=($("#artist").value||"").trim().slice(0,18),who=name||"a visitor";
+  var li=document.createElement("li");li.className="pin art mine new in";li.style.setProperty("--r",((n%2?1:-1)*(1.2+Math.random()*2.4)).toFixed(1)+"deg");
+  li.innerHTML='<i class="mag" style="--c:'+MAGS[n%MAGS.length]+'"></i><figure class="paper"><img alt=""><figcaption></figcaption></figure><button type="button" class="x">×</button>';
+  var img=li.querySelector("img");img.src=url;img.alt="Crayon drawing by "+who;
+  li.querySelector("figcaption").textContent="by "+who+" · just now";
+  var x=li.querySelector(".x");x.setAttribute("aria-label","Take down the drawing by "+who);
+  x.addEventListener("click",function(){li.remove();say("Drawing taken down.");$("#stick").focus()});
+  gal.insertBefore(li,gal.firstChild);
+  var mine=$$(".mine",gal);if(mine.length>6)mine[mine.length-1].remove();
+  strokes=[];cleared=null;redraw();sync();
+  say("Stuck on the fridge! It's up in “On the fridge this week” until you leave this page.");
+  setTimeout(function(){li.scrollIntoView({block:"nearest",inline:"nearest",behavior:reduced()?"auto":"smooth"})},60);
+  setTimeout(function(){li.classList.remove("new")},1000)});
+
+/* ---------------- daily rhythm clock ---------------- */
+var DAY=[["Arrival",6.5,8.5,"#9ED8F5","house","Hellos at the gate, breakfast for early birds until 8am, and quiet play while friends arrive."],
+["Play & mat time",8.5,9.5,"#F6C21C","blocks","Songs and a chat on the mat, then the play spaces open: blocks, home corner and sensory tubs."],
+["Morning tea",9.5,10,"#EF8A6A","apple","Fruit platter and something from the oven. Everyone pours their own water."],
+["Outdoor play",10,11.5,"#7FA37B","sun","Sandpit, bikes, the veggie patch and the mud kitchen. Hats on, sunscreen on."],
+["Lunch",11.5,12.25,"#F9D66A","bowl","A hot lunch cooked in our kitchen that morning, eaten together at little tables."],
+["Rest",12.25,14.5,"#B9DDF2","moon","Sleep or quiet rest with soft music. Non-sleepers move to books and puzzles after 40 minutes."],
+["Craft & afternoon tea",14.5,15.5,"#E4572E","brush","Paint, collage and playdough, then afternoon tea at 3pm."],
+["Pick-up",15.5,18,"#A9C6A3","heart","Stories, a late snack and outdoor play until families arrive. We close at 6pm."]];
+function fmt(h){var H=Math.floor(h),m=Math.round((h-H)*60);if(m===60){H++;m=0}return(H%12||12)+":"+(m<10?"0":"")+m+(H%24>=12?"pm":"am")}
+var NS="http://www.w3.org/2000/svg",clock=$("#clock");
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function xy(r,a){var t=a*Math.PI/180;return[r*Math.sin(t),-r*Math.cos(t)]}
+function P(q){return q[0].toFixed(1)+" "+q[1].toFixed(1)}
+var d="";for(var i=0;i<=120;i++)d+=(i?"L":"M")+P(xy(i%2?186:194,i*3));
+el("path",{d:d+"Z",fill:"#FFFDF7",stroke:"#D8CFBB","stroke-width":"2"},clock);
+el("circle",{r:158,fill:"#F8F3E7",stroke:"#E4DBC7","stroke-width":"3"},clock);
+var segG=el("g",{"class":"crayon"},clock),icG=el("g",{fill:"none",stroke:"#2E2B25","stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round"},clock),segs=[];
+DAY.forEach(function(s,i){var a1=(s[1]%12)*30,a2=a1+(s[2]-s[1])*30,R=150,r=56,L=a2-a1>180?1:0;
+  var p=el("path",{"class":"seg",d:"M"+P(xy(R,a1))+"A"+R+" "+R+" 0 "+L+" 1 "+P(xy(R,a2))+"L"+P(xy(r,a2))+"A"+r+" "+r+" 0 "+L+" 0 "+P(xy(r,a1))+"Z",fill:s[3],stroke:"#FFFDF7","stroke-width":"3"},segG);
+  p.addEventListener("click",function(){select(i)});segs.push(p);
+  var m=xy(106,(a1+a2)/2);el("use",{href:"#i-"+s[4],x:(m[0]-12).toFixed(1),y:(m[1]-12).toFixed(1),width:24,height:24},icG)});
+for(i=1;i<=12;i++){var q=xy(174,i*30);el("text",{x:q[0].toFixed(1),y:(q[1]+7).toFixed(1),"text-anchor":"middle",fill:"#6A6454","font-size":"22","font-family":"Gochi Hand, cursive"},clock).textContent=i}
+var hands=el("g",{},clock),mh=el("g",{},hands),hh=el("g",{},hands);
+el("path",{d:"M-6 16L0-140L6 16Z",fill:"#F6C21C",stroke:"#2E2B25","stroke-width":"3","stroke-linejoin":"round"},mh);
+el("path",{d:"M-9 14L0-98L9 14Z",fill:"#E4572E",stroke:"#2E2B25","stroke-width":"3","stroke-linejoin":"round"},hh);
+el("circle",{r:11,fill:"#C9A247",stroke:"#8A6A1F","stroke-width":"3"},hands);el("circle",{r:3.5,cx:-3,cy:-3,fill:"#F3DC8A"},hands);
+var ang={h:0,m:0},anim=0;
+function setHands(){hh.setAttribute("transform","rotate("+ang.h.toFixed(2)+")");mh.setAttribute("transform","rotate("+ang.m.toFixed(2)+")")}
+function turnTo(t,animate){var th=(t%12)*30,tm=(t%1)*360,h0=ang.h,m0=ang.m,h1=h0+((th-h0)%360+540)%360-180,m1=m0+((tm-m0)%360+540)%360-180;
+  cancelAnimationFrame(anim);if(!animate||reduced()){ang.h=h1;ang.m=m1;setHands();return}
+  var t0=performance.now();(function step(now){var k=Math.min(1,Math.max(0,(now-t0)/900)),c=1.5,e=1+(c+1)*Math.pow(k-1,3)+c*Math.pow(k-1,2);ang.h=h0+(h1-h0)*e;ang.m=m0+(m1-m0)*e;setHands();if(k<1)anim=requestAnimationFrame(step)})(t0)}
+var list=$("#rhythm"),big=$("#rd-big"),txt=$("#rd-text"),nowB=$("#rd-now"),sel=-1,btns=[];
+DAY.forEach(function(s,i){var li=document.createElement("li"),b=document.createElement("button");b.type="button";b.setAttribute("aria-pressed","false");
+  b.innerHTML='<span class="dot" style="--c:'+s[3]+'"></span><span class="t">'+fmt(s[1])+" – "+fmt(s[2])+'</span><span class="n"></span><span class="nw"></span>';
+  b.querySelector(".n").textContent=s[0];b.addEventListener("click",function(){select(i===sel?-1:i)});li.appendChild(b);list.appendChild(li);btns.push(b)});
+function info(){var d=new Date(),h=d.getHours()+d.getMinutes()/60,w=d.getDay();return{h:h,we:w===0||w===6,wd:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][w],idx:DAY.findIndex(function(s){return h>=s[1]&&h<s[2]})}}
+function render(animate){var I=info(),idx=sel>=0?sel:I.idx;
+  segs.forEach(function(p,i){p.classList.toggle("on",i===idx)});clock.classList.toggle("fade",idx>=0);
+  btns.forEach(function(b,i){b.setAttribute("aria-pressed",String(i===sel));b.querySelector(".nw").innerHTML=i===I.idx&&!I.we?'<span class="now">now</span>':""});
+  if(sel>=0){var s=DAY[sel];big.textContent=s[0];txt.textContent=fmt(s[1])+" – "+fmt(s[2])+" · "+s[5];nowB.hidden=false;turnTo(s[1],animate);return}
+  nowB.hidden=true;turnTo(I.h,animate);var t=fmt(I.h);
+  if(I.idx<0){big.textContent="We're closed right now";txt.textContent="It's "+t+" where you are, so the centre is quiet. Doors open at 6:30am, Monday to Friday — tap any part of the day to have a look."}
+  else if(I.we){big.textContent="It's the weekend";txt.textContent="It's "+I.wd+", "+t+" where you are, and we're closed on weekends. On a weekday this would be "+DAY[I.idx][0].toLowerCase()+": "+DAY[I.idx][5]}
+  else{big.textContent="Right now: "+DAY[I.idx][0];txt.textContent="It's "+t+" where you are. "+DAY[I.idx][5]}}
+function select(i){sel=i;render(true)}
+nowB.addEventListener("click",function(){select(-1);btns[0].focus()});
+setHands();render(false);ang.h=0;ang.m=0;setHands();
+var turned=false;function firstTurn(){if(!turned){turned=true;render(true)}}
+if(IO){var cio=new IntersectionObserver(function(es){if(es[0].isIntersecting){firstTurn();cio.disconnect()}},{threshold:.4});cio.observe(clock)}else firstTurn();
+setTimeout(function(){if(!turned&&!IO)firstTurn()},100);
+setInterval(function(){if(!document.hidden&&turned)render(false)},30000);
+
+/* ---------------- tour slip ---------------- */
+var slots=$("#slots"),MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],d0=new Date(),made=0;
+for(i=1;i<22&&made<4;i++){var dd=new Date(d0.getFullYear(),d0.getMonth(),d0.getDate()+i),w=dd.getDay(),tm=w===2||w===4?"9:30am":w===3?"4:00pm":"";if(!tm)continue;made++;
+  var v=DN[w]+" "+dd.getDate()+" "+MON[dd.getMonth()],lab=document.createElement("label");lab.className="slot";lab.innerHTML='<input type="radio" name="slot" required><span>'+v+"<br>"+tm+"</span>";lab.firstChild.value=v+", "+tm;slots.appendChild(lab)}
+var form=$("#tourform"),tmsg=$("#tourmsg");
+form.addEventListener("submit",function(e){e.preventDefault();
+  if(!form.checkValidity()){var bad=form.querySelector(":invalid");tmsg.textContent=bad&&bad.name==="slot"?"Pick a tour time first.":"Please add your name and a valid email.";if(bad)bad.focus();return}
+  var s=form.querySelector("input[name=slot]:checked").value;form.classList.add("done");
+  tmsg.textContent="Demo only — no tour was booked. A real centre would email you to confirm "+s+".";toast("Demo only — no tour was booked.")});
+})();
+</script>
+</body>
+</html>

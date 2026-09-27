@@ -1,0 +1,8 @@
+{
+  "id": "003",
+  "tech": ["CSS Scroll Snap", "Canvas 2D", "IntersectionObserver", "SVG", "CSS Grid", "Form logic", "Date logic"],
+  "features": ["booking", "story"],
+  "interaction": "Scroll-snap through eight full-screen courses (each with its own ember canvas and a keyboard-friendly progress rail), then reserve in a side sheet: a 14-day date strip open Wed–Sat only, a 1–8 guest stepper, four seating times with deterministic available/waitlist states, dietary notes and a live summary that ends in a clear demo-only state.",
+  "fonts": ["Cormorant Garamond", "Hanken Grotesk"],
+  "notes": ""
+}

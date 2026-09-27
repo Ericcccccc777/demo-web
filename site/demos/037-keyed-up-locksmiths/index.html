@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="037">
+<meta name="demo:brand" content="Keyed Up Locksmiths">
+<meta name="demo:badge" content="bottom-right">
+<title>Keyed Up Locksmiths — locks, keys &amp; safes, Adelaide</title>
+<meta name="description" content="Keyed Up Locksmiths is a fictional Adelaide locksmith for lockouts, rekeying, safes, car keys and master-key systems — a concept demo.">
+<meta name="theme-color" content="#2B2F33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{
+  --gun:#2B2F33; --gun-2:#1F2226; --gun-3:#16181B; --brass:#B8914B; --brass-l:#D6B475; --teal:#0E4C4F; --teal-2:#0A3A3C;
+  --led:#FF3B3B; --steel:#C4CACE; --ink:#E4E7E9; --ink-2:#AEB5BA; --line:rgba(255,255,255,.12);
+  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --d:520px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
+body{margin:0;background:var(--gun);color:var(--ink);font:400 15px/1.65 var(--mono);-webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),linear-gradient(180deg,#30353A,#26292D)}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{list-style:none;padding:0}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass-l);outline-offset:3px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+
+/* ---------- header ---------- */
+.bar{position:sticky;top:0;z-index:40;background:rgba(22,24,27,.92);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:22px;min-height:64px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;flex:1 1 220px}
+.badge{flex:none;width:38px;height:38px;border-radius:50%;background:conic-gradient(from 30deg,#8d959b,#e1e5e8,#7b8389,#cdd2d5,#6f777d,#e9ecee,#8d959b);display:grid;place-items:center;box-shadow:inset 0 0 0 3px rgba(0,0,0,.25)}
+.wm{font:900 26px/1 var(--disp);letter-spacing:.04em;text-transform:uppercase;overflow-wrap:anywhere}
+.bar nav{display:flex;gap:4px}
+.bar nav a{text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;color:var(--ink-2)}
+.bar nav a:hover{color:var(--ink)}
+.call{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:14px;padding:10px 16px;border:1px solid rgba(255,59,59,.5);border-radius:6px;background:rgba(255,59,59,.08);white-space:nowrap}
+.call .led{width:8px;height:8px;border-radius:50%;background:var(--led);box-shadow:0 0 8px 2px rgba(255,59,59,.7);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35;box-shadow:none}}
+
+/* ---------- hero / vault ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);grid-template-areas:"copy vault" "panel vault";grid-template-rows:auto 1fr;column-gap:56px;padding-top:44px;padding-bottom:64px}
+.copy{grid-area:copy}
+.kick{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-l)}
+h1{margin-top:14px;font:900 clamp(48px,4.9vw,72px)/.92 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+h1 em{white-space:nowrap}
+h1 em{font-style:normal;color:var(--brass-l)}
+.sub{margin-top:18px;color:var(--ink-2);max-width:34em}
+.panel{grid-area:panel;margin-top:26px;align-self:start;background:linear-gradient(180deg,#1C1F22,#15171A);border:1px solid #3A4046;border-radius:14px;padding:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 40px rgba(0,0,0,.35);position:relative}
+.panel::before,.panel::after{content:"";position:absolute;top:10px;width:7px;height:7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e8ecee,#6c747a);box-shadow:0 1px 1px rgba(0,0,0,.6)}
+.panel::before{left:10px}.panel::after{right:10px}
+.readout{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:#0B0C0E;border-radius:10px;padding:14px 18px;border:1px solid #2A2E33;box-shadow:inset 0 2px 10px rgba(0,0,0,.8)}
+.seg{display:flex;gap:6px;transform:skewX(-7deg)}
+.seg svg{width:44px;height:74px}
+.seg path{fill:#361616;transition:fill .08s}
+.seg path.on{fill:var(--led);filter:drop-shadow(0 0 4px rgba(255,59,59,.85))}
+.rmeta{display:grid;gap:4px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#8A9196}
+.rmeta b{font-size:20px;color:var(--led);letter-spacing:.06em;text-shadow:0 0 8px rgba(255,59,59,.6);font-weight:600}
+.combo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.combo li{position:relative;border:1px solid #3A4046;border-radius:8px;padding:9px 10px 8px;text-align:center;font-weight:600;font-size:18px;letter-spacing:.06em;color:#8A9196;background:#1A1D20;transition:all .3s}
+.combo li small{display:block;font-size:10px;letter-spacing:.16em;color:#6E767C;font-weight:500}
+.combo li.cur{border-color:var(--brass);color:var(--brass-l);box-shadow:0 0 0 1px var(--brass) inset}
+.combo li.done{border-color:#1C8A8F;color:#7FE3E6;background:rgba(14,76,79,.45);box-shadow:0 0 14px rgba(40,190,196,.25)}
+.combo li.done small{color:#7FE3E6}
+.status{margin-top:12px;min-height:3.1em;font-size:14px;color:var(--ink)}
+.btns{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.b{appearance:none;border:0;border-radius:8px;min-height:46px;padding:0 20px;font-weight:600;font-size:14px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .12s,box-shadow .12s,filter .2s}
+.b.brass{background:linear-gradient(180deg,#E2C488,#B8914B 55%,#98763A);color:#1B1408;box-shadow:0 3px 0 #6E5426,inset 0 1px 0 rgba(255,255,255,.5)}
+.b.brass:hover{filter:brightness(1.07)}
+.b:disabled{opacity:.45;cursor:default;filter:grayscale(.6)}
+.b.brass:active{transform:translateY(2px);box-shadow:0 1px 0 #6E5426}
+.b.steel{background:linear-gradient(180deg,#4A5157,#363B40);color:var(--ink);box-shadow:0 3px 0 #1a1d20,inset 0 1px 0 rgba(255,255,255,.12)}
+.b.steel:active{transform:translateY(2px);box-shadow:0 1px 0 #1a1d20}
+.keys{margin-top:12px;font-size:12px;color:#8A9196}
+.keys kbd{font:600 11px var(--mono);border:1px solid #4a5157;border-bottom-width:2px;border-radius:4px;padding:1px 5px;color:var(--ink)}
+.skip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14px;font-weight:600;color:var(--brass-l);text-underline-offset:4px}
+
+.vault{grid-area:vault;align-self:start;position:relative;border-radius:28px;min-width:0;transition:height .7s cubic-bezier(.3,.7,.2,1)}
+.face{position:relative;z-index:2;padding:48px 40px;border-radius:28px;display:grid;place-items:center;min-height:calc(var(--d) + 120px);
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px),linear-gradient(160deg,#5A6167,#3A4046 45%,#2E3338);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.18),inset 0 -3px 0 rgba(0,0,0,.35),0 30px 60px rgba(0,0,0,.45);transition:opacity .6s ease,visibility 0s linear .6s}
+.face .rv{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f2f4f5,#8b9399 55%,#4b5258);box-shadow:0 2px 2px rgba(0,0,0,.55)}
+.stage{position:relative;width:calc(var(--d) + 56px);height:calc(var(--d) + 56px);max-width:100%}
+.recess{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#0c0d0f 60%,#1b1e21 71%);box-shadow:inset 0 10px 30px rgba(0,0,0,.9),0 1px 0 rgba(255,255,255,.2)}
+.hinge{position:absolute;left:-8px;top:50%;width:34px;height:64%;transform:translateY(-50%);display:flex;flex-direction:column;justify-content:space-between}
+.hinge i{height:31%;border-radius:10px;background:linear-gradient(90deg,#50575d,#dfe3e6 40%,#8a9298 70%,#40464b);box-shadow:0 6px 12px rgba(0,0,0,.5)}
+.door{position:absolute;z-index:1;left:28px;top:28px;width:var(--d);height:var(--d);border-radius:50%;transform-origin:-6% 50%;
+  transition:transform 1.3s cubic-bezier(.45,.05,.2,1),opacity .6s ease}
+.door .rim{position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 12deg,#8d959b,#e3e7ea 8%,#7b8389 17%,#cdd2d5 27%,#6f777d 37%,#eef1f2 49%,#858d93 60%,#d3d8db 71%,#6f777d 82%,#e1e5e8 92%,#8d959b);
+  box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 0 0 2px rgba(255,255,255,.35),inset 0 0 0 7px rgba(0,0,0,.18)}
+.door .inner{position:absolute;inset:11%;border-radius:50%;background:repeating-radial-gradient(circle,#3a4046 0 2px,#33393e 2px 5px);box-shadow:inset 0 6px 16px rgba(0,0,0,.7),0 0 0 3px #22262a,0 0 0 5px rgba(255,255,255,.25)}
+.ticks{position:absolute;inset:14%;width:72%;height:72%;color:var(--brass)}
+.door .rivets i{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#9aa2a8 50%,#50575d);box-shadow:0 2px 2px rgba(0,0,0,.45);transform:rotate(var(--a)) translateX(calc(var(--d) * .455)) rotate(calc(var(--a) * -1))}
+.bolts i{position:absolute;left:50%;top:50%;width:62px;height:22px;margin:-11px 0 0 -31px;border-radius:11px;
+  background:linear-gradient(180deg,#f3f5f6,#9aa2a8 45%,#5e656b 80%,#8e969c);box-shadow:0 4px 8px rgba(0,0,0,.5);
+  transform:rotate(var(--a)) translateX(calc(var(--d) * .5 + 6px));transition:transform .55s cubic-bezier(.5,-0.4,.3,1.4);transition-delay:var(--dl,0s);z-index:-1}
+.unbolt .bolts i{transform:rotate(var(--a)) translateX(calc(var(--d) * .5 - 34px))}
+.index{position:absolute;left:50%;top:calc(50% - var(--d) * .25 - 20px);width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-top:13px solid var(--led);margin-left:-9px;filter:drop-shadow(0 0 5px rgba(255,59,59,.9));z-index:3}
+.dial{position:absolute;left:50%;top:50%;width:calc(var(--d) * .5);height:calc(var(--d) * .5);margin:calc(var(--d) * -.25) 0 0 calc(var(--d) * -.25);border-radius:50%;cursor:grab;touch-action:none;outline:none}
+.dial:active{cursor:grabbing}
+.dial:focus-visible{box-shadow:0 0 0 4px var(--gun-3),0 0 0 7px var(--brass-l)}
+.spin{position:absolute;inset:0;border-radius:50%;will-change:transform}
+.spin.snap{transition:transform .16s cubic-bezier(.3,1.6,.5,1)}
+.knurl{position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(#23272b 0 2.25deg,#5d646a 2.25deg 4.5deg);box-shadow:0 12px 26px rgba(0,0,0,.65),0 0 0 3px #1c1f22}
+.dface{position:absolute;inset:7%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#3d444a,#1f2327 70%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.1),inset 0 -6px 14px rgba(0,0,0,.6)}
+.dface svg{position:absolute;inset:0;width:100%;height:100%}
+.knob{position:absolute;inset:34%;border-radius:50%;background:conic-gradient(from 40deg,#a58240,#f1d9a2,#9a773a,#e2c486,#8e6c33,#f1d9a2,#a58240);box-shadow:0 6px 12px rgba(0,0,0,.6),inset 0 0 0 3px rgba(0,0,0,.2);display:grid;place-items:center}
+.knob::after{content:"";width:34%;height:34%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff5dc,#b8914b 70%);box-shadow:inset 0 0 0 2px rgba(0,0,0,.25)}
+.vault.opening .door{transform:perspective(1800px) rotateY(-82deg)}
+.recess::after{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(214,180,117,.55),rgba(27,124,128,.75) 35%,rgba(14,76,79,.9) 60%,rgba(7,41,43,0) 100%);opacity:0;transition:opacity .9s ease .3s}
+.vault.opening .recess::after{opacity:1}
+.vault.open .face{opacity:0;visibility:hidden;pointer-events:none;position:absolute;inset:0 0 auto 0}
+.fchip{position:absolute;left:44px;top:14px;z-index:3;display:flex;align-items:center;gap:10px;padding:7px 12px;border-radius:8px;background:#0B0C0E;border:1px solid #2A2E33;font-size:12px;letter-spacing:.1em;color:#8A9196;box-shadow:inset 0 1px 6px rgba(0,0,0,.8)}
+.fchip b{font-size:20px;color:var(--led);text-shadow:0 0 8px rgba(255,59,59,.6);font-weight:600;letter-spacing:.04em;min-width:2ch}
+.ftip{position:absolute;right:46px;bottom:14px;z-index:3;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#C9CED1;opacity:.8}
+.vault.open .door{opacity:0}
+
+/* interior: deposit boxes */
+.interior{position:absolute;inset:0;z-index:1;border-radius:28px;overflow:hidden;background:
+  radial-gradient(ellipse at 50% 0,rgba(214,180,117,.18),transparent 60%),
+  repeating-linear-gradient(0deg,transparent 0 119px,rgba(0,0,0,.18) 119px 120px),
+  repeating-linear-gradient(90deg,transparent 0 159px,rgba(0,0,0,.18) 159px 160px),linear-gradient(180deg,#105659,#0A3A3C);
+  padding:34px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),inset 0 20px 60px rgba(0,0,0,.5)}
+.vault.open .interior{position:relative}
+.ihead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.interior h2{font:900 clamp(34px,3.2vw,48px)/.95 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.interior h2 small{display:block;font:600 12px var(--mono);letter-spacing:.2em;color:#7FE3E6;margin-bottom:8px}
+.boxes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.box{position:relative;border-radius:10px;padding:18px 18px 16px 18px;color:#15181B;
+  background:repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 1px,transparent 1px 3px),linear-gradient(150deg,#D9DEE1,#A7AFB5);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 0 rgba(0,0,0,.2),0 8px 18px rgba(0,0,0,.35);display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:start}
+.plate-no{grid-row:span 2;width:46px;height:46px;border-radius:6px;display:grid;place-items:center;font:900 22px var(--disp);color:#2A1E08;background:linear-gradient(160deg,#EBD19B,#B8914B 60%,#8E6C33);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 2px 3px rgba(0,0,0,.35)}
+.box h3{font:900 25px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em;padding-top:2px}
+.box p{font-size:13px;line-height:1.55;color:#262B30;grid-column:2}
+.box .pr{grid-column:1/-1;margin-top:10px;padding-top:9px;border-top:1px solid rgba(0,0,0,.18);display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;color:#1B1F23}
+.box .pr span:last-child{text-align:right}
+.box .kh{position:absolute;right:14px;top:14px;width:12px;height:18px;opacity:.55}
+.relock{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-size:12px;color:#BFEFF1}
+
+/* ---------- sections below ---------- */
+.sec{padding:96px 0;border-top:1px solid var(--line)}
+.sec h2{font:900 clamp(40px,4.6vw,72px)/.92 var(--disp);text-transform:uppercase;letter-spacing:.01em}
+.sec h2 small{display:block;font:600 12px var(--mono);letter-spacing:.22em;color:var(--brass-l);margin-bottom:12px}
+.lead{margin-top:16px;color:var(--ink-2);max-width:40em}
+.area{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:40px}
+.radar{width:100%;max-width:560px;height:auto;justify-self:center}
+.zones{display:grid;gap:14px}
+.zone{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:18px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.14)}
+.zone b{font:900 34px/1 var(--disp);color:var(--brass-l)}
+.zone h3{font:900 24px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.zone p{font-size:13px;color:var(--ink-2);margin-top:6px}
+.zone .eta{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--led);letter-spacing:.06em}
+.fees{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;margin-top:40px;align-items:start}
+.board{background:#0B0C0E;border:1px solid #2A2E33;border-radius:14px;padding:10px 24px;box-shadow:inset 0 2px 14px rgba(0,0,0,.8)}
+.board li{display:grid;grid-template-columns:auto minmax(12px,1fr) auto;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px dashed #2E3338}
+.board li:last-child{border-bottom:0}
+.board i{border-bottom:1px dotted #4A5157;transform:translateY(-4px)}
+.board .pv{color:var(--led);font-weight:600;text-shadow:0 0 8px rgba(255,59,59,.45);white-space:nowrap}
+.steps{counter-reset:s;display:grid;gap:16px}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:900 40px/1 var(--disp);color:var(--brass)}
+.steps h3{font:900 22px/1.05 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.steps p{font-size:13px;color:var(--ink-2);margin-top:4px}
+.note{margin-top:14px;font-size:12px;color:#8A9196}
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;margin-top:40px}
+.cards{display:grid;gap:12px;align-content:start}
+.cards a,.cards div{display:block;padding:18px 20px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.16);text-decoration:none}
+.cards small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-l);margin-bottom:6px}
+.cards strong{font:900 30px/1.05 var(--disp);letter-spacing:.03em}
+form.job{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:24px;border-radius:14px;background:linear-gradient(180deg,#1C1F22,#15171A);border:1px solid #3A4046}
+form.job label{display:grid;gap:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+form.job .full{grid-column:1/-1}
+form.job input,form.job select,form.job textarea{width:100%;min-height:46px;border-radius:8px;border:1px solid #454C52;background:#0E1012;padding:10px 12px;font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink)}
+form.job textarea{min-height:96px;resize:vertical}
+form.job .b{justify-self:start}
+footer{border-top:1px solid var(--line);padding:40px 0 56px;background:var(--gun-3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px;flex-wrap:wrap}
+footer p{font-size:13px;color:#8A9196;max-width:36em}
+footer .f-name{font:900 clamp(34px,4vw,56px)/.95 var(--disp);text-transform:uppercase;letter-spacing:.02em;overflow-wrap:anywhere;max-width:100%;color:var(--ink);margin-bottom:12px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  :root{--d:440px}
+  .bar nav{display:none}
+}
+@media (max-width:980px){
+  :root{--d:min(84vw,420px)}
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "vault" "panel";padding-top:28px}
+  .vault{margin-top:24px}
+  .panel{margin-top:18px}
+  .area,.fees,.contact{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){
+  :root{--d:min(86vw,350px)}
+  .wrap{padding:0 16px}
+  .bar .wrap{gap:10px;min-height:58px}
+  .wm{font-size:22px}
+  .badge{width:32px;height:32px}
+  .call{padding:9px 12px;font-size:13px}
+  .call .num{display:none}
+  h1{font-size:50px}
+  .face{padding:58px 0 44px;min-height:0;border-radius:22px}
+  .fchip{left:44px;top:12px}
+  .ftip{left:0;right:0;text-align:center;bottom:14px}
+  h1 em{white-space:normal}
+  .stage{width:calc(var(--d) + 20px);height:calc(var(--d) + 20px)}
+  .door{left:10px;top:10px}
+  .bolts i{width:44px;height:16px;margin:-8px 0 0 -22px}
+  .unbolt .bolts i{transform:rotate(var(--a)) translateX(calc(var(--d) * .5 - 26px))}
+  .hinge{left:-6px;width:20px}
+  .interior{padding:20px 16px}
+  .boxes{grid-template-columns:minmax(0,1fr)}
+  .box h3{font-size:23px}
+  .seg svg{width:36px;height:60px}
+  .sec{padding:64px 0}
+  form.job{grid-template-columns:minmax(0,1fr);padding:18px}
+  .board{padding:4px 16px}
+  .board li{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+  .board i{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+}
+@media (min-width:601px) and (max-width:1100px){:root{--d:min(420px,38vw)}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18"><circle cx="6" cy="9" r="4" fill="none" stroke="#1B1E21" stroke-width="2.2"/><path d="M10 9h7M14 9v3M16.5 9v2.4" stroke="#1B1E21" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="wm" data-brand>Keyed Up Locksmiths</span></a>
+    <nav aria-label="Sections"><a href="#services">Services</a><a href="#area">Area</a><a href="#fees">Fees</a><a href="#contact">Contact</a></nav>
+    <a class="call" href="tel:+61855507310"><span class="led" aria-hidden="true"></span>24/7<span class="num"> · (08) 5550 7310</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="copy">
+      <p class="kick">Adelaide · Locks · Keys · Safes</p>
+      <h1>Locked out? <em>We'll get you in.</em></h1>
+      <p class="sub">Emergency lockouts, rekeys, safes and car keys across metro Adelaide. Our services are in the vault — crack the combination, or skip straight in.</p>
+    </div>
+
+    <div class="vault locked" id="vault">
+      <section class="interior" id="services" aria-labelledby="svcT" inert>
+        <div class="ihead">
+          <h2 id="svcT"><small>Inside the vault</small>Six ways we help</h2>
+        </div>
+        <div class="boxes">
+          <article class="box"><span class="plate-no">01</span><h3>Emergency lockouts</h3><p>Locked out of home, office or car? We open most doors without damage — and check you're the owner first.</p><p class="pr"><span>24/7</span><span>after hours from $180</span></p></article>
+          <article class="box"><span class="plate-no">02</span><h3>Rekeys &amp; lock changes</h3><p>Just moved in or lost a key? Rekey cylinders so old keys stop working, or upgrade to proper deadlocks.</p><p class="pr"><span>Same day</span><span>from $35 per cylinder</span></p></article>
+          <article class="box"><span class="plate-no">03</span><h3>Safes</h3><p>Supply, bolt-down and servicing of home and business safes — plus opening when the code is lost.</p><p class="pr"><span>By appointment</span><span>opening: quote on inspection</span></p></article>
+          <article class="box"><span class="plate-no">04</span><h3>Car keys</h3><p>Spare and replacement transponder keys and remotes, cut and programmed on site for most makes.</p><p class="pr"><span>Mobile van</span><span>from $150</span></p></article>
+          <article class="box"><span class="plate-no">05</span><h3>Master-key systems</h3><p>One key for the manager, the right doors for everyone else — designed, installed and documented.</p><p class="pr"><span>Commercial</span><span>quoted per site</span></p></article>
+          <article class="box"><span class="plate-no">06</span><h3>Security audits</h3><p>A walk-through of your doors, windows and locks, then a written list of fixes — most important first.</p><p class="pr"><span>60–90 min</span><span>from $120</span></p></article>
+        </div>
+        <div class="relock"><span>Sample prices in AUD, incl. GST.</span><button class="b steel" type="button" id="relock">Close the vault</button></div>
+      </section>
+
+      <div class="face" id="face">
+        <span class="rv" style="left:18px;top:18px" aria-hidden="true"></span><span class="rv" style="right:18px;top:18px" aria-hidden="true"></span>
+        <span class="rv" style="left:18px;bottom:18px" aria-hidden="true"></span><span class="rv" style="right:18px;bottom:18px" aria-hidden="true"></span>
+        <p class="fchip" aria-hidden="true"><b id="chipNum">00</b><span id="chipStep">R 12 · 1/3</span></p>
+        <p class="ftip" aria-hidden="true">Drag · press centre to set</p>
+        <div class="stage">
+          <div class="recess" aria-hidden="true"></div>
+          <div class="door" id="door">
+            <div class="bolts" id="bolts" aria-hidden="true"></div>
+            <div class="rim" aria-hidden="true"></div>
+            <div class="rivets" id="rivets" aria-hidden="true"></div>
+            <div class="inner" aria-hidden="true"></div>
+            <svg class="ticks" id="ticks" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+            <div class="index" aria-hidden="true"></div>
+            <div class="dial" id="dial" tabindex="0" role="slider" aria-label="Combination dial" aria-valuemin="0" aria-valuemax="39" aria-valuenow="0" aria-valuetext="0" aria-describedby="keysHint">
+              <div class="spin" id="spin">
+                <div class="knurl"></div>
+                <div class="dface"><svg id="dialsvg" viewBox="-100 -100 200 200" aria-hidden="true"></svg></div>
+                <div class="knob"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hinge" aria-hidden="true"><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" aria-labelledby="panelT">
+      <h2 class="vh" id="panelT">Crack the combination</h2>
+      <div class="readout">
+        <div class="seg" id="seg" aria-hidden="true"></div>
+        <div class="rmeta"><span>Dial reading</span><b id="dirOut">— ready</b><span id="stepOut">Step 1 of 3</span></div>
+      </div>
+      <ol class="combo" id="combo" aria-label="Combination">
+        <li class="cur"><small>Right to</small>R 12</li>
+        <li><small>Left to</small>L 34</li>
+        <li><small>Right to</small>R 7</li>
+      </ol>
+      <p class="status" id="status" aria-live="polite">Turn the dial right (clockwise) to 12, then lock it in.</p>
+      <div class="btns">
+        <button class="b brass" type="button" id="lockBtn">Lock in number</button>
+        <button class="b steel" type="button" id="clearBtn">Clear</button>
+      </div>
+      <p class="keys" id="keysHint">Drag the dial and press its brass centre to set each number — or focus it and use <kbd>←</kbd> <kbd>→</kbd> to turn and <kbd>Enter</kbd> to lock in.</p>
+      <a class="skip" href="#services" id="skip">Skip the puzzle — open the vault →</a>
+    </div>
+  </div>
+
+  <section class="sec" id="area" aria-labelledby="areaT">
+    <div class="wrap">
+      <h2 id="areaT"><small>Service area</small>Metro Adelaide,<br>door to door</h2>
+      <p class="lead">Our vans work outward from the CBD. Arrival windows below are typical estimates for this fictional business — traffic, weather and the job before yours all play a part.</p>
+      <div class="area">
+        <svg class="radar" viewBox="0 0 400 400" role="img" aria-labelledby="radarT">
+          <title id="radarT">Coverage rings around the Adelaide CBD: inner suburbs, metro, and the Hills and outer suburbs</title>
+          <defs><radialGradient id="rg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#0E4C4F" stop-opacity=".9"/><stop offset="1" stop-color="#0E4C4F" stop-opacity=".15"/></radialGradient></defs>
+          <circle cx="200" cy="200" r="190" fill="url(#rg)" stroke="#3A4046"/>
+          <g fill="none" stroke="#B8914B" stroke-opacity=".6">
+            <circle cx="200" cy="200" r="64"/><circle cx="200" cy="200" r="126" stroke-dasharray="3 5"/><circle cx="200" cy="200" r="186" stroke-dasharray="1 6"/>
+          </g>
+          <g stroke="#FFFFFF" stroke-opacity=".08"><path d="M200 10V390M10 200H390M66 66l268 268M334 66 66 334"/></g>
+          <g id="sweep" opacity=".9"><path d="M200 200 L200 12 A188 188 0 0 1 333 67 Z" fill="#7FE3E6" fill-opacity=".12"/></g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#E4E7E9">
+            <circle cx="200" cy="200" r="5" fill="#FF3B3B"/><text x="210" y="196">CBD</text>
+            <circle cx="222" cy="168" r="3" fill="#7FE3E6"/><text x="228" y="165">North Adelaide</text>
+            <circle cx="244" cy="206" r="3" fill="#7FE3E6"/><text x="250" y="210">Norwood</text>
+            <circle cx="196" cy="240" r="3" fill="#7FE3E6"/><text x="150" y="252">Unley</text>
+            <circle cx="160" cy="176" r="3" fill="#7FE3E6"/><text x="104" y="172">Thebarton</text>
+            <circle cx="86" cy="238" r="3" fill="#D6B475"/><text x="40" y="256">Glenelg</text>
+            <circle cx="120" cy="300" r="3" fill="#D6B475"/><text x="80" y="316">Marion</text>
+            <circle cx="120" cy="98" r="3" fill="#D6B475"/><text x="70" y="90">Port Adelaide</text>
+            <circle cx="236" cy="86" r="3" fill="#D6B475"/><text x="242" y="84">Mawson Lakes</text>
+            <circle cx="300" cy="140" r="3" fill="#D6B475"/><text x="306" y="138">Modbury</text>
+            <circle cx="336" cy="262" r="3" fill="#E4E7E9"/><text x="290" y="290">Stirling</text>
+            <circle cx="190" cy="370" r="3" fill="#E4E7E9"/><text x="198" y="374">Noarlunga</text>
+            <circle cx="232" cy="28" r="3" fill="#E4E7E9"/><text x="240" y="32">Salisbury</text>
+          </g>
+        </svg>
+        <ol class="zones">
+          <li class="zone"><b>A</b><div><h3>CBD &amp; inner suburbs</h3><p>North Adelaide, Norwood, Unley, Prospect, Thebarton and nearby.</p><span class="eta">Typically 30–45 min</span></div></li>
+          <li class="zone"><b>B</b><div><h3>Metro</h3><p>Glenelg, Marion, Port Adelaide, Mawson Lakes, Modbury, Campbelltown.</p><span class="eta">Typically 45–75 min</span></div></li>
+          <li class="zone"><b>C</b><div><h3>Hills &amp; outer suburbs</h3><p>Stirling, Salisbury, Noarlunga and beyond — booked ahead where we can.</p><span class="eta">By arrangement</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="fees" aria-labelledby="feesT">
+    <div class="wrap">
+      <h2 id="feesT"><small>Fees &amp; how it works</small>A price before<br>we pick a lock</h2>
+      <div class="fees">
+        <div>
+          <ul class="board">
+            <li><span>Call-out, business hours</span><i aria-hidden="true"></i><span class="pv">$95</span></li>
+            <li><span>After-hours &amp; weekend call-out</span><i aria-hidden="true"></i><span class="pv">$180</span></li>
+            <li><span>House or unit lockout, labour</span><i aria-hidden="true"></i><span class="pv">from $120</span></li>
+            <li><span>Rekey, per cylinder</span><i aria-hidden="true"></i><span class="pv">$35</span></li>
+            <li><span>Deadlock, supplied &amp; fitted</span><i aria-hidden="true"></i><span class="pv">from $189</span></li>
+            <li><span>Car key, cut &amp; programmed</span><i aria-hidden="true"></i><span class="pv">from $150</span></li>
+            <li><span>Safe opening</span><i aria-hidden="true"></i><span class="pv">on inspection</span></li>
+          </ul>
+          <p class="note">Sample prices in AUD, including GST, for a fictional business.</p>
+        </div>
+        <ol class="steps">
+          <li><div><h3>Call or send the job</h3><p>Tell us the suburb, the lock and what's happened. Photos help.</p></div></li>
+          <li><div><h3>Agree the price</h3><p>You get the call-out and labour price before anyone drives over.</p></div></li>
+          <li><div><h3>Proof, then the door</h3><p>For lockouts we ask for ID or proof you live there or own the car. It protects you.</p></div></li>
+          <li><div><h3>Pay and go</h3><p>Card on completion, invoice by email, spare keys labelled.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="ctT">
+    <div class="wrap">
+      <h2 id="ctT"><small>Contact</small>Stuck right now?</h2>
+      <div class="contact">
+        <div class="cards">
+          <a href="tel:+61855507310"><small>24/7 lockouts</small><strong>(08) 5550 7310</strong></a>
+          <a href="mailto:jobs@example.com"><small>Non-urgent jobs &amp; quotes</small><strong>jobs@example.com</strong></a>
+          <div><small>Workshop</small><strong>Adelaide, SA</strong><p class="note">Workshop counter Mon–Fri, 8am–5pm. Mobile vans across the metro area.</p></div>
+        </div>
+        <form class="job" data-demo-message="Demo only — no job was sent. On a real site this would reach the locksmith.">
+          <label>Your name<input name="n" autocomplete="name"></label>
+          <label>Suburb<input name="s" autocomplete="address-level2"></label>
+          <label class="full">What do you need?<select name="t"><option>Lockout — house or unit</option><option>Lockout — car</option><option>Rekey or lock change</option><option>Safe</option><option>Car key or remote</option><option>Master-key system</option><option>Security audit</option></select></label>
+          <label class="full">Details<textarea name="d" placeholder="e.g. Front door deadlock, key snapped in the lock"></textarea></label>
+          <button class="b brass" type="submit">Send job details</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="f-name" data-brand>Keyed Up Locksmiths</p>
+      <p>Locks, keys and safes · Adelaide, SA. A concept demo for a fictional business — sample prices, fictional contact details.</p>
+    </div>
+    <a class="skip" href="#top">Back to the vault ↑</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var NS = "http://www.w3.org/2000/svg";
+  function mk(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+
+  /* ---------- build the door hardware ---------- */
+  var bolts = $("bolts"), rivets = $("rivets");
+  for (var i = 0; i < 8; i++) { var b = document.createElement("i"); b.style.setProperty("--a", (i * 45 + 22.5) + "deg"); b.style.setProperty("--dl", (i * .05) + "s"); bolts.appendChild(b); }
+  for (i = 0; i < 24; i++) { var r = document.createElement("i"); r.style.setProperty("--a", (i * 15) + "deg"); rivets.appendChild(r); }
+  var ticks = $("ticks");
+  for (i = 0; i < 120; i++) {
+    var a = i * 3 * Math.PI / 180, long = i % 10 === 0, mid = i % 5 === 0, r1 = 96, r0 = long ? 84 : mid ? 88 : 91;
+    mk("line", { x1: Math.sin(a) * r0, y1: -Math.cos(a) * r0, x2: Math.sin(a) * r1, y2: -Math.cos(a) * r1, stroke: "currentColor", "stroke-width": long ? 1.6 : .8, opacity: long ? 1 : .7 }, ticks);
+  }
+  var ds = $("dialsvg");
+  for (i = 0; i < 40; i++) {
+    var ang = i * 9 * Math.PI / 180, major = i % 5 === 0, rr0 = major ? 70 : 76;
+    mk("line", { x1: Math.sin(ang) * rr0, y1: -Math.cos(ang) * rr0, x2: Math.sin(ang) * 86, y2: -Math.cos(ang) * 86, stroke: major ? "#D6B475" : "#8A9196", "stroke-width": major ? 2.4 : 1.2 }, ds);
+    if (major) {
+      var t = mk("text", { x: Math.sin(ang) * 55, y: -Math.cos(ang) * 55 + 5, "text-anchor": "middle", "font-size": 15, "font-weight": 600, fill: "#E9D3A4", "font-family": "IBM Plex Mono, monospace", transform: "rotate(" + (i * 9) + " " + (Math.sin(ang) * 55) + " " + (-Math.cos(ang) * 55) + ")" }, ds);
+      t.textContent = String(i);
+    }
+  }
+
+  /* ---------- seven-segment readout ---------- */
+  var SEGS = { a: "M10 4H50L44 10H16Z", b: "M52 6V46L46 42V12Z", c: "M52 54V94L46 88V58Z", d: "M10 96H50L44 90H16Z", e: "M8 54V94L14 88V58Z", f: "M8 6V46L14 42V12Z", g: "M10 50L16 45H44L50 50L44 55H16Z" };
+  var DIG = ["abcdef", "bc", "abged", "abgcd", "fgbc", "afgcd", "afgedc", "abc", "abcdefg", "abcdfg"];
+  var segEl = $("seg"), digits = [];
+  for (i = 0; i < 2; i++) {
+    var sv = mk("svg", { viewBox: "0 0 60 100" }, segEl), map = {};
+    for (var k in SEGS) map[k] = mk("path", { d: SEGS[k] }, sv);
+    digits.push(map);
+  }
+  function showNum(n) {
+    var s = (n < 10 ? "0" : "") + n;
+    for (var d = 0; d < 2; d++) { var on = DIG[+s[d]]; for (var k in digits[d]) digits[d][k].classList.toggle("on", on.indexOf(k) !== -1); }
+  }
+
+  /* ---------- dial mechanics ---------- */
+  var dial = $("dial"), spin = $("spin"), vault = $("vault");
+  var STEP = 9, N = 40, rot = 0, lastDir = 0, moved = false, reading = 0, stepIx = 0, opened = false;
+  var SEQ = [{ dir: 1, n: 12, txt: "right (clockwise) to 12" }, { dir: -1, n: 34, txt: "left (anticlockwise) to 34" }, { dir: 1, n: 7, txt: "right (clockwise) to 7" }];
+  function mod(a, m) { return ((a % m) + m) % m; }
+  function setRot(v, snap) {
+    rot = v;
+    spin.classList.toggle("snap", !!snap);
+    spin.style.transform = "rotate(" + rot.toFixed(2) + "deg)";
+    var nr = mod(Math.round(-rot / STEP), N);
+    if (nr !== reading) { reading = nr; showNum(reading); }
+    dial.setAttribute("aria-valuenow", String(reading));
+    dial.setAttribute("aria-valuetext", reading + (lastDir ? (lastDir > 0 ? ", turning right" : ", turning left") : ""));
+    $("dirOut").textContent = opened ? "✓ Open" : lastDir > 0 ? "↻ Right" : lastDir < 0 ? "↺ Left" : "— ready";
+    $("chipNum").textContent = (reading < 10 ? "0" : "") + reading;
+  }
+  function turn(steps) {
+    if (opened) return;
+    lastDir = steps > 0 ? 1 : -1; moved = true;
+    setRot(Math.round(rot / STEP) * STEP + steps * STEP, true);
+  }
+  var drag = null;
+  function angleOf(e) { var r = dial.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; }
+  dial.addEventListener("pointerdown", function (e) {
+    if (opened) return;
+    e.preventDefault(); dial.focus({ preventScroll: true });
+    try { dial.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    var rct = dial.getBoundingClientRect(), dx = e.clientX - (rct.left + rct.width / 2), dy = e.clientY - (rct.top + rct.height / 2);
+    drag = { a: angleOf(e), sum: 0, centre: Math.sqrt(dx * dx + dy * dy) < rct.width * .2 };
+  });
+  dial.addEventListener("pointermove", function (e) {
+    if (!drag) return;
+    var a = angleOf(e), d = a - drag.a;
+    if (d > 180) d -= 360; if (d < -180) d += 360;
+    drag.a = a;
+    if (drag.centre) { drag.sum += Math.abs(d); if (drag.sum < 6) return; drag.centre = false; }
+    if (Math.abs(d) > .05) { lastDir = d > 0 ? 1 : -1; moved = true; }
+    setRot(rot + d, false);
+  });
+  function endDrag(e) {
+    if (!drag) return;
+    var tap = drag.centre && e && e.type === "pointerup";
+    drag = null; setRot(Math.round(rot / STEP) * STEP, true);
+    if (tap) lockIn();
+  }
+  dial.addEventListener("pointerup", endDrag);
+  dial.addEventListener("pointercancel", endDrag);
+  dial.addEventListener("keydown", function (e) {
+    var k = e.key;
+    if (k === "ArrowRight" || k === "ArrowDown") { e.preventDefault(); turn(1); }
+    else if (k === "ArrowLeft" || k === "ArrowUp") { e.preventDefault(); turn(-1); }
+    else if (k === "PageDown") { e.preventDefault(); turn(5); }
+    else if (k === "PageUp") { e.preventDefault(); turn(-5); }
+    else if (k === "Enter" || k === " ") { e.preventDefault(); lockIn(); }
+  });
+  dial.addEventListener("wheel", function (e) { if (opened) return; e.preventDefault(); turn(e.deltaY > 0 ? 1 : -1); }, { passive: false });
+
+  var combo = $("combo").children;
+  function paint() {
+    for (var j = 0; j < combo.length; j++) { combo[j].classList.toggle("done", j < stepIx); combo[j].classList.toggle("cur", j === stepIx && !opened); }
+    $("stepOut").textContent = (opened || stepIx > 2) ? "Vault open" : "Step " + (stepIx + 1) + " of 3";
+    $("lockBtn").disabled = $("clearBtn").disabled = opened;
+    $("dirOut").textContent = opened ? "✓ Open" : lastDir > 0 ? "↻ Right" : lastDir < 0 ? "↺ Left" : "— ready";
+    $("chipStep").textContent = (opened || stepIx > 2) ? "OPEN" : (SEQ[stepIx].dir > 0 ? "R " : "L ") + SEQ[stepIx].n + " · " + (stepIx + 1) + "/3";
+  }
+  function say(t) { $("status").textContent = t; }
+  function lockIn() {
+    if (opened) return;
+    var s = SEQ[stepIx];
+    if (!moved) { say("Turn the dial first — " + s.txt + "."); return; }
+    var dirOk = lastDir === s.dir, numOk = reading === s.n;
+    if (numOk && dirOk) {
+      stepIx++; moved = false; lastDir = 0;
+      paint();
+      if (stepIx === 3) { say("Combination accepted. Bolts retracting…"); openVault(false); }
+      else say(s.n + " locked in. Now turn " + SEQ[stepIx].txt + ".");
+    } else if (numOk) {
+      say("Right number, wrong way — " + s.n + " needs a " + (s.dir > 0 ? "right (clockwise)" : "left (anticlockwise)") + " turn. Go past it and come back.");
+    } else {
+      say("That's " + reading + (lastDir > 0 ? " turning right" : " turning left") + ". Step " + (stepIx + 1) + " needs " + (s.dir > 0 ? "R " : "L ") + s.n + ".");
+    }
+    setRot(rot, false);
+  }
+  $("lockBtn").addEventListener("click", lockIn);
+  $("clearBtn").addEventListener("click", function () { if (opened) return; stepIx = 0; moved = false; lastDir = 0; paint(); setRot(0, true); say("Cleared. Turn the dial " + SEQ[0].txt + ", then lock it in."); });
+
+  /* ---------- open / close ---------- */
+  var face = $("face"), interior = $("services"), timers = [];
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function openVault(skipped) {
+    if (opened) return;
+    opened = true; stepIx = 3; paint();
+    timers.forEach(clearTimeout); timers = [];
+    var h0 = vault.offsetHeight;
+    interior.removeAttribute("inert");
+    if (skipped) say("Puzzle skipped — the vault is open. Our services are inside.");
+    function reveal() {
+      vault.classList.add("open");
+      vault.classList.remove("locked");
+      var h1 = interior.offsetHeight;
+      if (!reduced) {
+        vault.style.height = h0 + "px"; void vault.offsetHeight; vault.style.height = h1 + "px";
+        later(function () { vault.style.height = ""; }, 800);
+      }
+      if (!skipped) say("Open. Six services inside — have a look around.");
+    }
+    if (reduced) { vault.classList.add("unbolt", "opening"); reveal(); return; }
+    vault.classList.add("unbolt");
+    later(function () { vault.classList.add("opening"); }, 650);
+    later(reveal, 1500);
+  }
+  function closeVault() {
+    timers.forEach(clearTimeout); timers = [];
+    opened = false; stepIx = 0; moved = false; lastDir = 0;
+    vault.classList.remove("open", "opening", "unbolt"); vault.classList.add("locked");
+    vault.style.height = "";
+    interior.setAttribute("inert", "");
+    setRot(0, true); paint();
+    say("Locked again. Turn the dial " + SEQ[0].txt + ", then lock it in.");
+    dial.focus({ preventScroll: true });
+    vault.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+  }
+  $("skip").addEventListener("click", function (e) {
+    e.preventDefault();
+    openVault(true);
+    setTimeout(function () { interior.setAttribute("tabindex", "-1"); interior.focus({ preventScroll: true }); vault.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); }, reduced ? 0 : 900);
+  });
+  $("relock").addEventListener("click", closeVault);
+  document.querySelectorAll('a[href="#services"]').forEach(function (a) { if (a.id !== "skip") a.addEventListener("click", function () { if (!opened) openVault(true); }); });
+
+  showNum(0); setRot(0, false); paint();
+  window.KU = { enter: function (seq) { seq.forEach(function (s) { var cur = mod(Math.round(-rot / STEP), N), diff = s.dir > 0 ? mod(cur - s.n, N) || N : mod(s.n - cur, N) || N; for (var q = 0; q < diff; q++) turn(s.dir); lockIn(); }); } };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "id": "035",
+  "tech": ["WebGL", "SVG", "CSS Grid", "Pointer Events", "IntersectionObserver", "Form logic"],
+  "features": ["game", "finder", "map", "booking"],
+  "interaction": "Touch the WebGL pool surface to send ripples through the caustics, then slide pH, free chlorine and alkalinity until the water reads Balanced — the test-strip pads change colour and plain advice updates as you go; a suburb finder shows which weekday loop covers you.",
+  "fonts": ["Lexend"],
+  "notes": "Reduced motion (or no WebGL) shows a single still frame / CSS-gradient water with no ripples."
+}

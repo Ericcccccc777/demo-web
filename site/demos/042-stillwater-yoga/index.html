@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="042">
+<meta name="demo:brand" content="Stillwater Yoga">
+<title>Stillwater Yoga — slow classes in Byron Bay</title>
+<meta name="description" content="A fictional yoga studio in Byron Bay, NSW, with vinyasa, yin, restorative and hatha classes, a weekly timetable and a one-minute guided breath.">
+<meta name="theme-color" content="#F6EEE6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--sand:#F6EEE6;--peach:#F9C9A8;--rose:#E8A0A8;--lav:#B8A9D9;--plum:#2E2140;--plum2:#54456A;--hatha:#E7D4BD;--line:rgba(46,33,64,.12);
+--serif:"Marcellus","Cormorant Garamond",Georgia,serif;--sans:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--g:20px}
+@media (min-width:760px){:root{--g:40px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--sand)}
+body{margin:0;color:var(--plum);font:400 17px/1.75 var(--sans);
+  background:linear-gradient(180deg,#F6EEE6 0,#F7E6DA 16%,#F8DCCB 30%,#F5D2CF 46%,#EFD0DA 60%,#E6D6EE 76%,#DDD3EF 100%)}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+button,select{font:inherit;color:inherit}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+section{scroll-margin-top:24px}
+.col{max-width:720px;margin:0 auto;padding:0 var(--g)}
+.wide{max-width:940px}
+
+/* top bar */
+.top{position:relative;z-index:5}
+.top-in{max-width:1200px;margin:0 auto;padding:18px var(--g);display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{font:400 23px/1.2 var(--serif);text-decoration:none;letter-spacing:.01em;margin-right:auto;overflow-wrap:anywhere;min-width:0}
+.nav{display:flex;gap:4px;order:3;width:100%;overflow-x:auto;scrollbar-width:none;margin:0 calc(-1 * var(--g));padding:0 var(--g)}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:none;text-decoration:none;font:600 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:14px 10px;color:var(--plum2);border-radius:999px}
+.nav a:hover{color:var(--plum);background:rgba(255,255,255,.5)}
+@media (max-width:899px){.nav{-webkit-mask:linear-gradient(90deg,#000 80%,transparent);mask:linear-gradient(90deg,#000 80%,transparent);padding-right:48px}}
+@media (min-width:900px){.nav{order:0;width:auto;margin:0;padding:0}}
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;background:var(--plum);color:var(--sand);text-decoration:none;font:700 14px/1 var(--sans);letter-spacing:.06em;border:0;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease}
+.pill:hover{box-shadow:0 10px 26px -10px rgba(46,33,64,.6);transform:translateY(-1px)}
+.pill.ghost{background:transparent;color:var(--plum);box-shadow:inset 0 0 0 1.5px rgba(46,33,64,.35)}
+.pill.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--plum)}
+
+/* hero + orb */
+.hero{text-align:center;padding:clamp(20px,5vw,48px) var(--g) clamp(56px,8vw,96px);position:relative;overflow-x:clip}
+.kicker{font:700 12.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--plum2)}
+h1{font:400 clamp(36px,5vw,64px)/1.12 var(--serif);margin-top:14px;letter-spacing:-.005em;text-wrap:balance}
+.stage{--o:min(62vw,300px);position:relative;width:calc(var(--o) * 1.42);height:calc(var(--o) * 1.42);max-width:100%;margin:clamp(12px,3vw,26px) auto 0;display:grid;place-items:center}
+.halo{position:absolute;width:var(--o);height:var(--o);border-radius:50%;background:radial-gradient(circle,rgba(249,201,168,.75),rgba(232,160,168,.35) 45%,rgba(184,169,217,0) 70%);filter:blur(18px);transform:scale(1.25);transition:transform var(--d,4s) cubic-bezier(.45,.05,.55,.95),opacity 1s}
+.ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none}
+.ring circle{fill:none;stroke-width:.6}
+.ring .track{stroke:rgba(46,33,64,.1)}
+.ring .prog{stroke-width:1}
+.ring .prog{stroke:var(--plum);stroke-linecap:round;stroke-dasharray:300;stroke-dashoffset:300;opacity:0;transition:opacity .6s}
+.running .ring .prog{opacity:.55}
+.orb{position:relative;width:var(--o);height:var(--o);border-radius:50%;display:grid;place-content:center;gap:2px;
+  background:radial-gradient(circle at 34% 28%,#FFF8F1 0,#FCE2CC 18%,#F9C9A8 34%,#EFAFAE 56%,#D3A6CB 76%,#B8A9D9 96%);
+  box-shadow:inset -18px -26px 60px rgba(46,33,64,.14),inset 14px 18px 40px rgba(255,255,255,.55),0 40px 80px -30px rgba(120,90,150,.55);
+  transform:scale(var(--s,1));transition:transform var(--d,4s) cubic-bezier(.45,.05,.55,.95)}
+.idle .orb{animation:drift 7s ease-in-out infinite alternate}
+.paused .orb{animation-play-state:paused}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.035)}}
+.cue{font:400 clamp(20px,2.2vw,26px)/1.2 var(--serif);max-width:12ch;margin:0 auto}
+.count{font:400 clamp(34px,4vw,46px)/1 var(--serif);min-height:1em;font-variant-numeric:tabular-nums;opacity:.85}
+.cycle{margin-top:6px;font-size:15px;color:var(--plum2);min-height:1.6em}
+.dots{display:inline-flex;gap:8px;vertical-align:middle;margin-left:10px}
+.dots i{width:8px;height:8px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--plum2);transition:background .6s}
+.dots i.on{background:var(--plum)}
+.ctl{display:flex;justify-content:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.ctl [hidden]{display:none}
+.hero-note{margin-top:18px;font-size:14px;color:var(--plum2)}
+
+/* sections */
+.sec{padding:clamp(64px,9vw,120px) 0}
+.eyebrow{font:700 12px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--plum2)}
+h2{font:400 clamp(30px,3.6vw,44px)/1.15 var(--serif);margin-top:14px;text-wrap:balance}
+.intro{margin-top:16px;color:var(--plum2);max-width:56ch}
+.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(46,33,64,.22),transparent);max-width:720px;margin:0 auto}
+
+/* styles */
+.styles{margin-top:40px;display:grid}
+.style{display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.style:last-child{border-bottom:1px solid var(--line)}
+.style svg{width:64px;height:64px}
+.style h3{font:400 27px/1.2 var(--serif);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.style p{margin-top:6px}
+.meta{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px 20px;font-size:14px;color:var(--plum2)}
+.pace{display:inline-flex;gap:4px;margin-left:6px;vertical-align:1px}
+.pace i{width:7px;height:7px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--plum2)}
+.pace i.f{background:var(--plum2)}
+
+/* timetable */
+.tt-panel{margin-top:34px;background:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.7);border-radius:32px;padding:clamp(18px,3vw,32px);box-shadow:0 30px 60px -40px rgba(46,33,64,.35)}
+.filters{display:grid;gap:14px}
+@media (min-width:760px){.filters{grid-template-columns:1fr auto;align-items:end}}
+.flab{display:block;font:700 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--plum2);margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border-radius:999px;border:0;background:rgba(255,255,255,.7);box-shadow:inset 0 0 0 1.5px var(--line);font:600 14px/1 var(--sans);cursor:pointer;transition:background .3s,box-shadow .3s}
+.chip i{width:10px;height:10px;border-radius:50%}
+.chip[aria-pressed="true"]{background:var(--plum);color:var(--sand);box-shadow:none}
+.lvl{min-height:44px;border-radius:999px;border:0;box-shadow:inset 0 0 0 1.5px var(--line);background:rgba(255,255,255,.7);padding:0 40px 0 16px;font-weight:600;font-size:14px;appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--plum) 50%),linear-gradient(135deg,var(--plum) 50%,transparent 50%);background-position:calc(100% - 20px) 19px,calc(100% - 15px) 19px;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+.days{display:flex;gap:6px;margin:22px calc(-1 * clamp(18px,3vw,32px)) 0;padding:0 clamp(18px,3vw,32px) 4px;overflow-x:auto;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.day{flex:1 0 64px;display:grid;justify-items:center;gap:2px;padding:10px 6px;border:0;border-radius:18px;background:transparent;cursor:pointer;color:var(--plum2);transition:background .3s,color .3s}
+.day b{font:400 22px/1.1 var(--serif);color:var(--plum)}
+.day span{font:700 11px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.day small{font-size:11px;line-height:1;min-height:11px}
+.day[aria-selected="true"]{background:var(--plum);color:#E9DDF0}
+.day[aria-selected="true"] b{color:var(--sand)}
+.count-line{margin:18px 2px 6px;font-size:14.5px;color:var(--plum2)}
+.list{display:grid;gap:10px}
+.cls{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"time body" "book book";gap:10px 18px;padding:18px;border-radius:22px;background:rgba(255,255,255,.72);align-items:center;animation:rise .6s ease both}
+@media (min-width:640px){.cls{grid-template-columns:96px minmax(0,1fr) auto;grid-template-areas:"time body book";padding:16px 18px 16px 22px}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+.cls-time{grid-area:time;font:400 26px/1 var(--serif)}
+.cls-time small{display:block;font:700 11.5px/1.5 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--plum2);margin-top:4px}
+.cls-body{grid-area:body;min-width:0}
+.cls-body h3{font:400 21px/1.25 var(--serif)}
+.cls-body p{font-size:14.5px;color:var(--plum2);line-height:1.5;margin-top:3px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--plum)}
+.tag i{width:9px;height:9px;border-radius:50%}
+.bookb{grid-area:book;min-height:44px;padding:0 20px;border-radius:999px;border:0;background:transparent;box-shadow:inset 0 0 0 1.5px rgba(46,33,64,.4);font:700 14px/1 var(--sans);cursor:pointer;transition:background .3s,color .3s}
+.bookb:hover{background:var(--plum);color:var(--sand)}
+.bookb[disabled]{opacity:.5;cursor:default;background:transparent;color:var(--plum)}
+@media (max-width:639px){.bookb{width:100%}}
+.cls.done{opacity:.62}
+.empty{padding:28px;text-align:center;border-radius:22px;background:rgba(255,255,255,.6)}
+.empty p{margin-bottom:14px}
+.v{background:var(--peach)}.y{background:var(--lav)}.r{background:var(--rose)}.h{background:#D9B98F}
+
+/* teachers */
+.teachers{margin-top:40px;display:grid;gap:28px}
+@media (min-width:640px){.teachers{grid-template-columns:1fr 1fr;gap:36px 28px}}
+.t-card svg{display:block;width:100%;height:auto;aspect-ratio:4/5;border-radius:200px 200px 24px 24px}
+.t-card h3{font:400 26px/1.2 var(--serif);margin-top:16px}
+.t-card .teach{font:700 12px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--plum2);margin-top:4px}
+.t-card p{margin-top:8px;font-size:16px}
+
+/* retreats */
+.retreats{margin-top:40px;display:grid;gap:18px}
+.retreat{border-radius:32px;padding:clamp(24px,4vw,36px);background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.75);position:relative;overflow:hidden}
+.retreat::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(249,201,168,.8),rgba(249,201,168,0) 70%)}
+.retreat.lav::after{background:radial-gradient(circle,rgba(184,169,217,.8),rgba(184,169,217,0) 70%)}
+.when{font:700 12.5px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--plum2);position:relative;z-index:1}
+.retreat h3{font:400 30px/1.2 var(--serif);margin-top:8px;position:relative;z-index:1}
+.retreat p{margin-top:10px;position:relative;z-index:1}
+.retreat ul{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1}
+.retreat li{font-size:14px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.7)}
+.rprice{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}
+.rprice b{font:400 26px/1 var(--serif)}
+.rprice b small{font:600 13px/1 var(--sans);color:var(--plum2);margin-left:6px}
+
+/* first class */
+.firsts{margin-top:34px;counter-reset:f;display:grid;gap:4px}
+.firsts li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.firsts li::before{counter-increment:f;content:counter(f);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:400 19px/1 var(--serif);background:rgba(255,255,255,.7)}
+.firsts b{font-weight:700}
+.gen{margin-top:26px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.55);font-size:14.5px;line-height:1.6}
+
+/* pricing */
+.prices{margin-top:34px;display:grid;gap:12px}
+.price{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:baseline;padding:22px 24px;border-radius:24px;background:rgba(255,255,255,.55)}
+.price h3{font:400 22px/1.25 var(--serif)}
+.price p{grid-column:1/-1;font-size:14.5px;color:var(--plum2);line-height:1.55}
+.price b{font:400 30px/1 var(--serif)}
+.price.feature{background:var(--plum);color:var(--sand)}
+.price.feature p{color:#DCCFE6}
+.sample{margin-top:14px;font-size:13.5px;color:var(--plum2)}
+
+/* footer */
+.foot{background:var(--plum);color:#EFE4EC;padding:clamp(56px,8vw,90px) 0 calc(44px + env(safe-area-inset-bottom));text-align:center;margin-top:clamp(40px,6vw,80px)}
+.foot .col{display:grid;gap:18px;justify-items:center}
+.foot .fbrand{font:400 clamp(32px,4.4vw,48px)/1.15 var(--serif);overflow-wrap:anywhere;max-width:100%}
+.foot p{font-size:15.5px;max-width:52ch}
+.foot a{text-decoration:none;border-bottom:1px solid rgba(239,228,236,.4)}
+.foot a:hover{border-bottom-color:currentColor}
+.foot .legal{font-size:13px;color:#CDBBD6;border-top:1px solid rgba(239,228,236,.18);padding-top:18px;margin-top:6px}
+.foot :focus-visible{outline-color:var(--peach)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .orb,.halo{transition:none!important}
+  .idle .orb{animation:none}
+  .ring .prog{transition:opacity .01s!important}
+  .cls{animation:none}
+  .pill{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="top-in">
+  <a class="brand" href="#breathe" data-brand>Stillwater Yoga</a>
+  <nav class="nav" aria-label="Sections"><a href="#classes">Classes</a><a href="#timetable">Timetable</a><a href="#teachers">Teachers</a><a href="#retreats">Retreats</a><a href="#pricing">Pricing</a></nav>
+  <a class="pill" href="#timetable">Book a class</a>
+ </div>
+</header>
+
+<main>
+ <section class="hero" id="breathe" aria-labelledby="h1">
+  <p class="kicker">Slow yoga · Byron Bay</p>
+  <h1 id="h1">Take one breath<br>before you browse.</h1>
+  <div class="stage idle" id="stage">
+   <div class="halo" aria-hidden="true"></div>
+   <svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="47.7"/><circle class="prog" id="prog" cx="50" cy="50" r="47.7" pathLength="300"/></svg>
+   <div class="orb" id="orb"><span class="cue" id="cue">In for four, hold, out for six</span><span class="count" id="count" aria-hidden="true"></span></div>
+  </div>
+  <p class="cycle" id="cycle">Three slow breaths · about 42 seconds<span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></p>
+  <div class="ctl">
+   <button class="pill" type="button" id="begin">Begin</button>
+   <button class="pill ghost" type="button" id="stop" hidden>Stop</button>
+   <a class="pill ghost" href="#timetable" id="toTT" hidden>See the timetable</a>
+  </div>
+  <p class="sr" aria-live="polite" id="live"></p>
+ </section>
+
+ <div class="rule"></div>
+
+ <section class="sec" id="classes" aria-labelledby="cl-t">
+  <div class="col">
+   <p class="eyebrow">The classes</p>
+   <h2 id="cl-t">Four speeds, from sunrise to lights out</h2>
+   <p class="intro">Every class is 45 to 90 minutes, capped at 18 mats, and taught with the windows open when the weather's kind.</p>
+   <div class="styles">
+    <article class="style"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#fff" fill-opacity=".55"/><circle cx="32" cy="22" r="9" fill="#F9C9A8"/><path d="M8 44h48" stroke="#2E2140" stroke-width="1.5"/></svg>
+     <div><h3>Vinyasa</h3><p>Breath-linked movement that builds warmth. Sequences change weekly so you never go on autopilot.</p><p class="meta"><span>Pace<span class="pace"><i class="f"></i><i class="f"></i><i class="f"></i></span></span><span>Good for: energy, strength, busy heads</span></p></div></article>
+    <article class="style"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#fff" fill-opacity=".55"/><circle cx="32" cy="32" r="9" fill="#D9B98F"/><path d="M8 44h48" stroke="#2E2140" stroke-width="1.5"/></svg>
+     <div><h3>Hatha</h3><p>Steady holds and clear alignment cues. The best place to learn the shapes before you flow through them.</p><p class="meta"><span>Pace<span class="pace"><i class="f"></i><i class="f"></i><i></i></span></span><span>Good for: foundations, posture, new students</span></p></div></article>
+    <article class="style"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#fff" fill-opacity=".55"/><path d="M23 44a9 9 0 0 1 18 0z" fill="#B8A9D9"/><path d="M8 44h48" stroke="#2E2140" stroke-width="1.5"/></svg>
+     <div><h3>Yin</h3><p>Long, floor-based holds of three to five minutes. Quiet, a little intense, and very good for hips.</p><p class="meta"><span>Pace<span class="pace"><i class="f"></i><i></i><i></i></span></span><span>Good for: flexibility, patience, evenings</span></p></div></article>
+    <article class="style"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#fff" fill-opacity=".55"/><path d="M27 44a5 5 0 0 1 10 0z" fill="#E8A0A8"/><path d="M8 44h48" stroke="#2E2140" stroke-width="1.5"/><path d="M14 50h36M20 55h24" stroke="#2E2140" stroke-opacity=".35" stroke-width="1.5"/></svg>
+     <div><h3>Restorative</h3><p>Fully supported shapes on bolsters and blankets. You mostly lie still. People fall asleep; that's allowed.</p><p class="meta"><span>Pace<span class="pace"><i></i><i></i><i></i></span></span><span>Good for: rest, recovery, big weeks</span></p></div></article>
+   </div>
+  </div>
+ </section>
+
+ <section class="sec" id="timetable" aria-labelledby="tt-t" style="padding-top:0">
+  <div class="col wide">
+   <p class="eyebrow">Timetable</p>
+   <h2 id="tt-t">This week on the mat</h2>
+   <p class="intro">Filter by style or level, pick a day, and hold a mat. Class times are Byron Bay time.</p>
+   <div class="tt-panel">
+    <div class="filters">
+     <div><span class="flab" id="st-l">Style</span><div class="chips" role="group" aria-labelledby="st-l" id="chips"></div></div>
+     <div><label class="flab" for="lvl">Level</label><select class="lvl" id="lvl"><option value="all">All levels</option><option value="beginner">New to yoga</option><option value="open">Open level</option><option value="strong">Experienced</option></select></div>
+    </div>
+    <div class="days" role="tablist" aria-label="Day" id="days"></div>
+    <p class="count-line" id="countLine" aria-live="polite"></p>
+    <div class="list" role="tabpanel" id="ttPanel" tabindex="0" aria-labelledby="countLine"></div>
+   </div>
+  </div>
+ </section>
+
+ <div class="rule"></div>
+
+ <section class="sec" id="teachers" aria-labelledby="te-t">
+  <div class="col">
+   <p class="eyebrow">Teachers</p>
+   <h2 id="te-t">Four people who never rush you</h2>
+   <div class="teachers" id="teacherGrid"></div>
+  </div>
+ </section>
+
+ <section class="sec" id="retreats" aria-labelledby="re-t" style="padding-top:0">
+  <div class="col">
+   <p class="eyebrow">Retreats &amp; courses</p>
+   <h2 id="re-t">Longer, slower, further out</h2>
+   <div class="retreats">
+    <article class="retreat"><p class="when">Fri 13 – Sun 15 Nov · Hinterland</p><h3>The Hinterland Weekend</h3><p>Two nights in a timber house above the valley with twelve guests. Morning vinyasa, evening yin, vegetarian meals and one slow walk to a swimming hole.</p>
+     <ul><li>2 nights, twin share</li><li>All meals</li><li>Maya &amp; Ines</li><li>12 places</li></ul>
+     <div class="rprice"><b>$690<small>per person</small></b><a class="pill ghost" href="mailto:retreats@example.com">Ask about places</a></div></article>
+    <article class="retreat lav"><p class="when">Sat 9 – Sat 30 Jan · 5:45am</p><h3>Sunrise on the Headland</h3><p>Four Saturday mornings practising outdoors as the light comes up, then a swim for anyone who wants one. Bring a towel and something warm.</p>
+     <ul><li>4 mornings</li><li>75 minutes each</li><li>Mats provided</li><li>Weather permitting</li></ul>
+     <div class="rprice"><b>$120<small>for the course</small></b><a class="pill ghost" href="mailto:retreats@example.com">Ask about places</a></div></article>
+   </div>
+  </div>
+ </section>
+
+ <div class="rule"></div>
+
+ <section class="sec" id="first" aria-labelledby="fi-t">
+  <div class="col">
+   <p class="eyebrow">Your first class</p>
+   <h2 id="fi-t">What to expect when you walk in</h2>
+   <ol class="firsts">
+    <li><p><b>Arrive ten minutes early.</b> The door opens fifteen minutes before class, and the kettle's usually on.</p></li>
+    <li><p><b>Leave your mat at home.</b> Mats, blocks, bolsters and blankets are all here. Bring water and a layer for the end.</p></li>
+    <li><p><b>Tell your teacher what's going on.</b> Injuries, pregnancy, a rough week — quietly, before class, is perfect.</p></li>
+    <li><p><b>Take the easier version.</b> Every pose has one, and resting in child's pose is always allowed.</p></li>
+    <li><p><b>No mirrors, no phones, no audience.</b> Nobody is watching you — they're all busy breathing.</p></li>
+   </ol>
+   <p class="gen"><b>General information only.</b> Yoga here is a wellbeing practice, not medical advice or treatment. If you have an injury or health condition, check with your GP or physio before you start.</p>
+  </div>
+ </section>
+
+ <section class="sec" id="pricing" aria-labelledby="pr-t" style="padding-top:0">
+  <div class="col">
+   <p class="eyebrow">Pricing</p>
+   <h2 id="pr-t">Simple passes, no lock-in</h2>
+   <div class="prices">
+    <div class="price feature"><h3>First two weeks</h3><b>$49</b><p>Unlimited classes for new students — the easiest way to find your speed.</p></div>
+    <div class="price"><h3>Casual class</h3><b>$28</b><p>Drop in to any class, including the Sunday community class if you'd like to pay more than the donation.</p></div>
+    <div class="price"><h3>10-class pass</h3><b>$240</b><p>Valid for six months and shareable with one other person.</p></div>
+    <div class="price"><h3>Monthly unlimited</h3><b>$169</b><p>Rolls monthly. Pause or cancel with 30 days' notice at the desk.</p></div>
+   </div>
+   <p class="sample">Sample prices in AUD. Concession rates for students and pensioners — ask at the desk.</p>
+  </div>
+ </section>
+</main>
+
+<footer class="foot">
+ <div class="col">
+  <p class="fbrand" data-brand>Stillwater Yoga</p>
+  <p>Byron Bay, NSW · <a href="tel:0255502184">(02) 5550 2184</a> · <a href="mailto:hello@example.com">hello@example.com</a><br>The studio opens 15 minutes before each class.</p>
+  <p class="legal">A concept demo for a fictional studio. Teachers, classes and prices are invented, the phone number is from the fictional range, and nothing here books a real class.</p>
+ </div>
+</footer>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const mq = matchMedia("(prefers-reduced-motion: reduce)");
+const toast = m => { if (window.DemoKit) DemoKit.toast(m); };
+
+/* ---------------- guided breath ---------------- */
+const stage = $("#stage"), orb = $("#orb"), halo = $(".halo"), prog = $("#prog"), cue = $("#cue"), count = $("#count"), cycle = $("#cycle"), live = $("#live");
+const beginB = $("#begin"), stopB = $("#stop"), toTT = $("#toTT"), dots = $$(".dots i");
+const PH = [
+  { label: "Breathe in", secs: 4, s: 1.32, col: "#E0896F" },
+  { label: "Hold", secs: 4, s: 1.32, col: "#C97A93" },
+  { label: "Breathe out", secs: 6, s: 1, col: "#7E6BB0" }
+];
+let run = null;
+function setOrb(scale, secs) {
+  orb.style.setProperty("--d", secs + "s"); halo.style.setProperty("--d", secs + "s");
+  orb.style.setProperty("--s", scale);
+  halo.style.transform = `scale(${1.25 * scale})`;
+}
+function ring(secs, col) {
+  prog.style.transition = "none"; prog.style.strokeDashoffset = "300"; prog.style.stroke = col;
+  void prog.getBoundingClientRect();
+  if (mq.matches) { prog.style.strokeDashoffset = "0"; return; }
+  prog.style.transition = `stroke-dashoffset ${secs}s linear, opacity .6s`;
+  prog.style.strokeDashoffset = "0";
+}
+function phase() {
+  const p = PH[run.ph];
+  if (!mq.matches) setOrb(p.s, p.secs);
+  ring(p.secs, p.col);
+  cue.textContent = p.label;
+  live.textContent = `${p.label} for ${p.secs}.`;
+  let left = p.secs;
+  count.textContent = left;
+  clearInterval(run.tick);
+  run.tick = setInterval(() => { left--; if (left > 0) count.textContent = left; }, 1000);
+  run.to = setTimeout(next, p.secs * 1000);
+}
+function next() {
+  run.ph++;
+  if (run.ph === PH.length) {
+    dots[run.cy - 1].classList.add("on");
+    run.ph = 0; run.cy++;
+    if (run.cy > 3) return finish();
+    cycle.firstChild.textContent = `Breath ${run.cy} of 3`;
+  }
+  phase();
+}
+function clear() { if (run) { clearTimeout(run.to); clearInterval(run.tick); } run = null; stage.classList.remove("running"); }
+function begin() {
+  clear();
+  dots.forEach(d => d.classList.remove("on"));
+  run = { ph: 0, cy: 1 };
+  stage.classList.remove("idle"); stage.classList.add("running");
+  cycle.firstChild.textContent = "Breath 1 of 3";
+  beginB.hidden = true; toTT.hidden = true; stopB.hidden = false; stopB.focus();
+  phase();
+}
+function settle(msg, sub) {
+  setOrb(1, mq.matches ? 0 : 1.6);
+  prog.style.strokeDashoffset = "300";
+  cue.textContent = msg; count.textContent = "";
+  cycle.firstChild.textContent = sub;
+  stopB.hidden = true; beginB.hidden = false; beginB.textContent = "Again";
+  setTimeout(() => { if (!run) stage.classList.add("idle"); }, 1700);
+}
+function finish() {
+  clear();
+  settle("Welcome in.", "Three breaths, done. The timetable is just below.");
+  toTT.hidden = false;
+  live.textContent = "Three breaths complete. Welcome in.";
+  beginB.focus();
+}
+function stop() {
+  clear();
+  settle("That's fine — stop whenever.", "Paused. Start again any time.");
+  live.textContent = "Stopped.";
+  beginB.focus();
+}
+beginB.addEventListener("click", begin);
+stopB.addEventListener("click", stop);
+document.addEventListener("keydown", e => { if (e.key === "Escape" && run) { e.preventDefault(); stop(); } });
+if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(en => stage.classList.toggle("paused", !en.isIntersecting))).observe(stage);
+
+/* ---------------- timetable ---------------- */
+const STY = { v: ["vinyasa", "Vinyasa"], h: ["hatha", "Hatha"], y: ["yin", "Yin"], r: ["restorative", "Restorative"] };
+const LVL = { b: ["beginner", "New to yoga"], o: ["open", "Open level"], s: ["strong", "Experienced"] };
+const WEEK = {
+  1: "6:00am|60|Vinyasa Flow|v|o|Maya;9:30am|75|Hatha Foundations|h|b|Tom;12:15pm|45|Lunchtime Yin|y|o|Ines;5:30pm|60|Vinyasa Flow|v|o|Maya;7:15pm|75|Restore & Rest|r|o|Ruth",
+  2: "6:00am|60|Steady Hatha|h|o|Tom;9:30am|60|Gentle Restorative|r|b|Ruth;5:30pm|75|Strong Vinyasa|v|s|Maya;7:15pm|75|Yin & Breath|y|o|Ines",
+  3: "6:00am|60|Vinyasa Flow|v|o|Maya;9:30am|75|Hatha Foundations|h|b|Tom;12:15pm|45|Lunchtime Yin|y|o|Ines;6:00pm|60|Beginners' Vinyasa|v|b|Maya;7:30pm|75|Restore & Rest|r|o|Ruth",
+  4: "6:00am|60|Steady Hatha|h|o|Tom;9:30am|75|Yin & Breath|y|o|Ines;5:30pm|60|Vinyasa Flow|v|o|Maya;7:15pm|60|Gentle Restorative|r|b|Ruth",
+  5: "6:00am|75|Strong Vinyasa|v|s|Maya;9:30am|75|Hatha Foundations|h|b|Tom;5:30pm|90|Sunset Yin|y|o|Ines",
+  6: "7:00am|75|Sunrise Flow|v|o|Maya;9:00am|60|Beginners' Hatha|h|b|Tom;4:30pm|90|Yin & Sound|y|o|Ines",
+  0: "8:00am|60|Slow Flow|v|b|Maya;10:00am|60|Community Class (by donation)|h|o|Tom;5:00pm|75|Restore & Rest|r|o|Ruth"
+};
+const DN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const parse = s => s.split(";").map(r => { const [t, dur, name, st, lv, who] = r.split("|"); return { t, dur, name, st, lv, who }; });
+const mins = t => { const m = t.match(/(\d+):(\d+)(am|pm)/); let h = +m[1] % 12; if (m[3] === "pm") h += 12; return h * 60 + +m[2]; };
+let today = { y: 2026, m: 8, d: 27, dow: 0, now: 0 };
+try {
+  const p = new Intl.DateTimeFormat("en-AU", { timeZone: "Australia/Sydney", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+  const g = k => Number(p.find(q => q.type === k).value);
+  const dt = new Date(Date.UTC(g("year"), g("month") - 1, g("day")));
+  today = { y: g("year"), m: g("month") - 1, d: g("day"), dow: dt.getUTCDay(), now: g("hour") * 60 + g("minute") };
+} catch (e) { /* fall back to fixed date */ }
+const days = [...Array(7)].map((_, i) => { const dt = new Date(Date.UTC(today.y, today.m, today.d + i)); return { i, dow: dt.getUTCDay(), date: dt.getUTCDate(), mon: MO[dt.getUTCMonth()] }; });
+const state = { day: 0, styles: new Set(), lvl: "all" };
+
+$("#chips").innerHTML = Object.values(STY).map(([k, n]) => `<button type="button" class="chip" data-st="${k}" aria-pressed="false"><i class="${k[0]}" aria-hidden="true"></i>${n}</button>`).join("");
+$("#days").innerHTML = days.map(d => `<button type="button" class="day" role="tab" id="tab${d.i}" aria-controls="ttPanel" aria-selected="${d.i === 0}" tabindex="${d.i === 0 ? 0 : -1}"><span>${DN[d.dow].slice(0, 3)}</span><b>${d.date}</b><small>${d.i === 0 ? "Today" : d.mon}</small></button>`).join("");
+const tabs = $$(".day");
+
+function render() {
+  const d = days[state.day], list = parse(WEEK[d.dow]);
+  const shown = list.filter(c => (!state.styles.size || state.styles.has(STY[c.st][0])) && (state.lvl === "all" || LVL[c.lv][0] === state.lvl));
+  const dayName = state.day === 0 ? "today" : DN[d.dow];
+  $("#ttPanel").setAttribute("aria-labelledby", "tab" + state.day);
+  $("#countLine").textContent = shown.length ? `${shown.length} ${shown.length === 1 ? "class" : "classes"} ${state.day === 0 ? "today" : "on " + dayName} (${DN[d.dow].slice(0, 3)} ${d.date} ${d.mon})` : `No classes match on ${dayName}.`;
+  if (!shown.length) {
+    $("#ttPanel").innerHTML = `<div class="empty"><p>Nothing fits those filters ${state.day === 0 ? "today" : "that day"}. Try another day, or see everything.</p><button class="pill ghost" type="button" id="clr">Show all classes</button></div>`;
+    $("#clr").addEventListener("click", () => { state.styles.clear(); state.lvl = "all"; $("#lvl").value = "all"; $$(".chip").forEach(c => c.setAttribute("aria-pressed", "false")); render(); });
+    return;
+  }
+  $("#ttPanel").innerHTML = shown.map((c, i) => {
+    const [tm, ap] = [c.t.replace(/am|pm/, ""), c.t.slice(-2)];
+    const done = state.day === 0 && mins(c.t) <= today.now;
+    const [sk, sn] = STY[c.st];
+    return `<article class="cls${done ? " done" : ""}" style="animation-delay:${i * 60}ms"><div class="cls-time">${tm}<small>${ap} · ${c.dur} min</small></div><div class="cls-body"><h3>${c.name.replace("&", "&amp;")}</h3><p><span class="tag"><i class="${sk[0]}" aria-hidden="true"></i>${sn}</span><span>${LVL[c.lv][1]}</span><span>with ${c.who}</span></p></div><button type="button" class="bookb" data-c="${c.name.replace(/"/g, "")}|${DN[d.dow]} ${d.date} ${d.mon}|${c.t}"${done ? " disabled" : ""}>${done ? "Started" : "Book"}<span class="sr"> ${c.name}, ${DN[d.dow]} ${c.t}</span></button></article>`;
+  }).join("");
+}
+$("#chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  const k = b.dataset.st, on = !state.styles.has(k);
+  on ? state.styles.add(k) : state.styles.delete(k);
+  b.setAttribute("aria-pressed", String(on));
+  render();
+});
+$("#lvl").addEventListener("change", e => { state.lvl = e.target.value; render(); });
+function selectDay(i, focus) {
+  state.day = i;
+  tabs.forEach((t, j) => { t.setAttribute("aria-selected", String(j === i)); t.tabIndex = j === i ? 0 : -1; });
+  if (focus) tabs[i].focus();
+  tabs[i].scrollIntoView({ block: "nearest", inline: "nearest" });
+  render();
+}
+tabs.forEach((t, i) => {
+  t.addEventListener("click", () => selectDay(i));
+  t.addEventListener("keydown", e => {
+    const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (k) { e.preventDefault(); selectDay((i + k + 7) % 7, true); }
+    else if (e.key === "Home") { e.preventDefault(); selectDay(0, true); }
+    else if (e.key === "End") { e.preventDefault(); selectDay(6, true); }
+  });
+});
+$("#ttPanel").addEventListener("click", e => {
+  const b = e.target.closest(".bookb"); if (!b || b.disabled) return;
+  const [name, day, t] = b.dataset.c.split("|");
+  toast(`Demo only — no mat was booked for ${name}, ${day} at ${t}. The real site would hold your spot.`);
+});
+render();
+
+/* ---------------- teachers (drawn portraits) ---------------- */
+const T = [
+  ["Maya", "Vinyasa", "Teaches flow like a conversation with your breath. Early riser by choice; her 6am classes start with the doors open to the garden.", "#F9C9A8", "#E8A0A8", .34],
+  ["Tom", "Hatha", "Patient with alignment and allergic to rushing. Tom runs the four-week foundations course at the start of every month.", "#E7D4BD", "#D9B98F", .5],
+  ["Ines", "Yin", "Long holds, quiet music and very good bolster placement. Her Friday Sunset Yin is the slowest hour of the week.", "#B8A9D9", "#E8A0A8", .64],
+  ["Ruth", "Restorative", "Found yoga during a hard year and now teaches the kind of class she needed then: warm, dim and completely unhurried.", "#E8A0A8", "#B8A9D9", .78]
+];
+$("#teacherGrid").innerHTML = T.map(([n, st, bio, a, b, sun], i) => `<article class="t-card"><svg viewBox="0 0 200 250" aria-hidden="true"><defs><linearGradient id="tg${i}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="200" height="250" fill="url(#tg${i})"/><circle cx="${i % 2 ? 128 : 76}" cy="${250 * sun}" r="30" fill="#FFF6EE" opacity=".9"/><path d="M0 ${250 * .72}C50 ${250 * .69} 150 ${250 * .75} 200 ${250 * .71}V250H0Z" fill="#2E2140" opacity=".16"/><path d="M0 ${250 * .8}C60 ${250 * .78} 140 ${250 * .83} 200 ${250 * .79}V250H0Z" fill="#2E2140" opacity=".12"/><text x="100" y="${250 * .93}" text-anchor="middle" font-family="Marcellus,Georgia,serif" font-size="22" fill="#2E2140" opacity=".55">${n[0]}</text></svg><h3>${n}</h3><p class="teach">${st}</p><p>${bio}</p></article>`).join("");
+})();
+</script>
+</body>
+</html>

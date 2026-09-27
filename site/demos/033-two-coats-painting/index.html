@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="demo:id" content="033">
+<meta name="demo:brand" content="Two Coats Painting">
+<title>Two Coats Painting — house painters, Sunshine Coast</title>
+<meta name="description" content="Concept site for Two Coats Painting, a fictional interior and exterior painting business on the Sunshine Coast, QLD, with a room colour visualiser.">
+<meta name="theme-color" content="#F7F5F0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="../_kit/kit.js" defer></script>
+<style>
+:root{--ink:#111;--paper:#F7F5F0;--terra:#E4572E;--mari:#F3A712;--navy:#29335C;--sage:#A8C686;--line:rgba(17,17,17,.9);
+  --sans:"Familjen Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;--pad:clamp(16px,4vw,56px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.5 var(--sans);overflow-x:hidden}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.f-navy :focus-visible,.foot :focus-visible{outline-color:#fff}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--ink);color:#fff;padding:10px 14px}
+.skip:focus{top:12px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--mono)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:12px 22px;border:2px solid var(--ink);background:transparent;cursor:pointer;
+  font:600 16px/1 var(--sans);letter-spacing:.01em;text-decoration:none;transition:background .2s,color .2s,transform .2s}
+.btn::after{content:"→";font-family:var(--mono);transition:transform .2s}
+.btn:hover::after{transform:translateX(4px)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#2c2c2c}
+.btn-line:hover{background:var(--ink);color:#fff}
+.f-navy .btn{border-color:#fff}
+.f-navy .btn-line:hover{background:#fff;color:var(--navy)}
+
+/* header */
+.top{position:relative;z-index:5;border-bottom:1px solid var(--line);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 21px/1.05 var(--sans);letter-spacing:-.02em;min-width:0}
+.logo span:last-child{overflow-wrap:anywhere}
+.mark{position:relative;width:34px;height:34px;flex:none}
+.mark i{position:absolute;width:22px;height:30px;border:2px solid var(--ink);top:2px}
+.mark i:first-child{left:0;background:var(--terra)}
+.mark i:last-child{left:10px;top:4px;background:var(--mari);mix-blend-mode:multiply}
+.nav{display:none;gap:4px}
+.nav a{padding:10px 12px;font:500 15px/1 var(--sans);text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.top .btn{min-height:44px;padding:10px 16px;font-size:15px;flex:none;gap:0}
+.top .btn::after{margin-left:10px}
+@media(max-width:374px){.xs-hide{display:none}.top .btn{text-transform:capitalize}}
+.subnav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:10px var(--pad);border-bottom:1px solid var(--line);background:var(--paper)}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{flex:none;display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 12px;border:1.5px solid var(--ink);text-decoration:none;font:500 14px/1 var(--sans);white-space:nowrap}
+.subnav a i{width:12px;height:12px;border:1px solid var(--ink)}
+@media(min-width:1100px){.nav{display:flex}.subnav{display:none}}
+
+/* colour fields */
+.field{position:relative;background:var(--f,var(--paper));color:var(--t,var(--ink));padding:clamp(72px,9vw,136px) 0 clamp(64px,8vw,120px);overflow:hidden}
+.f-terra{--f:var(--terra)}.f-mari{--f:var(--mari)}.f-navy{--f:var(--navy);--t:#fff}.f-sage{--f:var(--sage)}.f-paper{--f:var(--paper)}.f-stone{--f:#ECE8DF}
+.chip{position:absolute;top:0;right:var(--pad);width:clamp(150px,15vw,216px);background:#fff;color:var(--ink);border:1px solid rgba(0,0,0,.12);border-top:0;box-shadow:0 10px 24px -14px rgba(0,0,0,.35);margin:0;z-index:2}
+.chip i{display:block;height:clamp(36px,4vw,64px);background:var(--f);border-bottom:1px solid rgba(0,0,0,.1)}
+.chip b{display:block;padding:9px 12px 0;font:600 15px/1.15 var(--sans);letter-spacing:-.01em}
+.chip span{display:block;padding:2px 12px 10px;font:400 11.5px/1.3 var(--mono);letter-spacing:.02em;color:#444}
+@media(max-width:899px){.chip{display:grid;grid-template-columns:40px auto;width:auto;min-width:150px}.chip i{grid-row:1/3;height:auto;border-bottom:0;border-right:1px solid rgba(0,0,0,.1)}.chip b{padding:7px 10px 0;font-size:14px}.chip span{padding:1px 10px 7px;font-size:11px}.field{padding-top:88px}.hero{padding-top:32px}}
+.num{margin:0 0 14px;font:500 14px/1 var(--mono);letter-spacing:.08em}
+.num::after{content:"";display:inline-block;width:56px;height:1px;background:currentColor;margin-left:12px;vertical-align:middle}
+h2.big{margin:0;font:700 clamp(58px,10vw,156px)/.84 var(--sans);letter-spacing:-.055em;overflow-wrap:anywhere}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+@media(min-width:900px){.grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}.ca{grid-column:1/span 5}.ca6{grid-column:1/span 6}.cb{grid-column:7/span 6}.end{align-self:end}}
+.lead{font:500 clamp(21px,2vw,28px)/1.3 var(--sans);letter-spacing:-.015em;margin:0 0 30px;max-width:30ch}
+.incl{list-style:none;margin:0;padding:0;border-bottom:1px solid currentColor}
+.incl li{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0 15px;border-top:1px solid currentColor}
+.incl b{font:600 18px/1.25 var(--sans)}
+.incl span{font-size:16.5px;line-height:1.45}
+@media(min-width:620px){.incl li{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:20px}}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:26px 0 0}
+.price strong{font:700 clamp(40px,4.4vw,64px)/1 var(--sans);letter-spacing:-.04em}
+.price span{font:400 13px/1.3 var(--mono)}
+
+/* hero */
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(56px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:center}
+.eyebrow{margin:0 0 18px;font:500 13px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.hero h1{margin:0;font:700 clamp(62px,10.4vw,168px)/.84 var(--sans);letter-spacing:-.06em}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero .lede{max-width:34ch;margin:26px 0 30px;font:400 clamp(19px,1.5vw,22px)/1.45 var(--sans)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hfacts{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.hfacts li{padding:12px 12px 0 0;font:400 14px/1.35 var(--sans)}
+.hfacts b{display:block;font:500 12px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px}}
+
+/* fan deck */
+.fan-wrap{position:relative}
+.fan{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;scrollbar-width:thin}
+.strip{position:relative;flex:0 0 104px;height:300px;scroll-snap-align:start;display:flex;flex-direction:column;border:1px solid rgba(0,0,0,.18);background:#fff;padding:0;cursor:pointer;text-align:left;
+  box-shadow:0 12px 26px -16px rgba(0,0,0,.5);transition:transform .6s cubic-bezier(.2,.9,.25,1.12),box-shadow .3s}
+.strip .lab{padding:9px 9px 8px;background:#fff;min-height:64px}
+.strip .lab b{display:block;font:600 13.5px/1.1 var(--sans);letter-spacing:-.01em}
+.strip .lab small{display:block;margin-top:4px;font:400 11px/1 var(--mono);color:#444}
+.strip .sh{flex:1;background:var(--c)}
+.strip .sh:nth-child(2){background:color-mix(in oklab,var(--c) 38%,#fff)}
+.strip .sh:nth-child(3){background:color-mix(in oklab,var(--c) 68%,#fff)}
+.strip .sh:nth-child(5){background:color-mix(in oklab,var(--c) 78%,#000)}
+.strip .rv{display:none}
+.strip[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.fan-hint{margin:0;font:400 12px/1.3 var(--mono);color:#444}
+.fan-cap{margin:12px 0 0;min-height:3em;font:400 15px/1.4 var(--sans);max-width:44ch}
+.fan-cap b{font-weight:600}
+@media(min-width:900px){
+  .fan-wrap{height:600px;perspective:1700px}
+  .fan{position:absolute;left:50%;bottom:78px;width:0;height:0;overflow:visible;padding:0;display:block;transform:rotateX(16deg) rotateY(-10deg);transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .strip{position:absolute;left:-52px;bottom:-34px;width:104px;height:456px;transform-origin:52px 422px;
+    transform:rotate(calc((var(--i) - 4) * 6deg)) translateZ(calc(var(--i) * 2px))}
+  .strip .rv{display:block;position:absolute;left:44px;bottom:26px;width:16px;height:16px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#9a9a9a 55%,#555);box-shadow:0 1px 2px rgba(0,0,0,.4);z-index:2}
+  .fan-wrap:hover .fan,.fan:focus-within,.fan.open{transform:rotateX(8deg) rotateY(-4deg)}
+  .fan-wrap:hover .strip,.fan:focus-within .strip,.fan.open .strip{transform:rotate(calc((var(--i) - 4) * 10.5deg)) translateZ(calc(var(--i) * 2px))}
+  .fan .strip[aria-pressed="true"]{transform:rotate(calc((var(--i) - 4) * 10.5deg)) translateY(-46px) translateZ(40px);box-shadow:0 30px 40px -20px rgba(0,0,0,.55)}
+  .fan-hint{position:absolute;left:0;right:0;bottom:22px;text-align:center}
+  .fan-cap{position:absolute;left:0;right:0;bottom:-40px;text-align:center;margin:0 auto}
+}
+
+/* interior */
+.roller-art{position:absolute;left:-60px;bottom:40px;width:min(44vw,600px);pointer-events:none}
+@media(max-width:899px){.roller-art{position:relative;left:auto;right:auto;bottom:auto;width:86%;margin:36px 0 -40px auto;display:block}}
+/* exterior */
+.house{width:100%;height:auto;display:block}
+/* roofs */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.tile{position:relative;aspect-ratio:4/5;border:2px solid #fff;overflow:hidden}
+.tile span{position:absolute;left:0;bottom:0;background:#fff;color:var(--ink);font:500 12px/1 var(--mono);padding:8px 10px;letter-spacing:.04em}
+.tile.roof{background:repeating-linear-gradient(90deg,#8E979B 0 10px,#B5BDC0 10px 16px,#E0E4E5 16px 19px,#B5BDC0 19px 24px,#8E979B 24px 30px)}
+.tile.roof::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.25),transparent 45%,rgba(0,0,0,.25))}
+.tile.deck{background:repeating-linear-gradient(0deg,#6E4630 0 3px,#A8714D 3px 30px,#B8805A 30px 34px,#9B6644 34px 60px);}
+.tile.deck::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 48%,rgba(0,0,0,.35) 48% 49%,transparent 49%),linear-gradient(90deg,rgba(255,255,255,.12),transparent 60%)}
+.tile.deck::after{content:"";position:absolute;inset:0 50% 0 0;background:linear-gradient(180deg,rgba(214,158,100,.55),rgba(214,158,100,.2));mix-blend-mode:soft-light}
+/* consult */
+.pots{display:flex;gap:clamp(12px,2vw,26px);align-items:flex-end;margin:48px 0 0;max-width:520px}
+.pot{flex:1;max-width:150px;display:flex;flex-direction:column;align-items:center}
+.pot i{display:block;width:100%;aspect-ratio:1/1.1;background:linear-gradient(90deg,rgba(0,0,0,.12),transparent 30%,rgba(255,255,255,.25) 60%,rgba(0,0,0,.1)),var(--c);border:2px solid var(--ink);border-radius:6px 6px 10px 10px;position:relative}
+.pot i::before{content:"";position:absolute;left:-4%;right:-4%;top:-16px;height:16px;background:linear-gradient(#e8e8e8,#bdbdbd);border:2px solid var(--ink);border-radius:5px 5px 2px 2px}
+.pot i::after{content:"";position:absolute;left:14%;right:14%;top:34%;height:32%;background:#fff;border:1px solid rgba(0,0,0,.2)}
+.pot small{margin-top:10px;font:400 12px/1.3 var(--mono);text-align:center}
+
+/* visualiser */
+.vis-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px 40px;margin-bottom:28px}
+.vis-head p{margin:0;max-width:44ch}
+.vis{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+@media(min-width:1000px){.vis{grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:28px;align-items:start}}
+.room-box{border:2px solid var(--ink);background:#fff;position:relative}
+.room{display:block;width:100%;height:auto}
+.readout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:2px solid var(--ink)}
+.readout div{display:flex;gap:10px;align-items:center;padding:10px 12px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);min-width:0}
+.readout div:nth-child(2n){border-right:0}
+.readout div:nth-last-child(-n+2){border-bottom:0}
+.readout i{flex:none;width:28px;height:28px;border:1px solid rgba(0,0,0,.25);background:var(--c)}
+.readout span{font:400 11.5px/1.25 var(--mono);min-width:0}
+.readout b{display:block;font:600 14px/1.2 var(--sans)}
+.readout em{font-style:normal}
+@media(max-width:699px){
+  .room-box{position:sticky;top:0;z-index:4;box-shadow:0 12px 22px -14px rgba(0,0,0,.45)}
+  .readout{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .readout div{flex-direction:column;align-items:flex-start;gap:4px;padding:6px 8px;border-bottom:0!important;border-right:1px solid var(--ink)!important}
+  .readout div:last-child{border-right:0!important}
+  .readout i{width:100%;height:12px}
+  .readout em{display:none}
+  .readout b{font-size:12.5px}
+}
+@media(min-width:700px){.readout{grid-template-columns:repeat(4,minmax(0,1fr))}.readout div{border-bottom:0}.readout div:nth-child(2n){border-right:1px solid var(--ink)}.readout div:last-child{border-right:0}}
+.panel{display:grid;gap:18px}
+.ctl h3{margin:0 0 8px;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:2px solid var(--ink)}
+.seg button{min-height:48px;border:0;border-right:1px solid var(--ink);background:#fff;cursor:pointer;font:600 15px/1 var(--sans);padding:6px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.seg button:last-child{border-right:0}
+.seg button i{width:18px;height:6px;background:var(--c,#ccc);border:1px solid rgba(0,0,0,.3)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tabs button{min-height:40px;padding:8px 12px;border:1.5px solid var(--ink);background:transparent;cursor:pointer;font:500 14.5px/1 var(--sans)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.sw{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.sw button{position:relative;display:flex;flex-direction:column;min-height:96px;padding:0;border:1px solid rgba(0,0,0,.2);background:#fff;cursor:pointer;text-align:left;transition:transform .15s}
+.sw button:hover{transform:translateY(-2px)}
+.sw button i{flex:1;min-height:52px;background:var(--c)}
+.sw button b{display:block;padding:6px 8px 0;font:600 13px/1.1 var(--sans)}
+.sw button small{display:block;padding:2px 8px 7px;font:400 10.5px/1.2 var(--mono);color:#444}
+.sw button[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+.sw button[aria-pressed="true"]::after{content:"✓";position:absolute;top:6px;right:6px;width:22px;height:22px;display:grid;place-items:center;background:#fff;border:1.5px solid var(--ink);font:600 13px/1 var(--sans)}
+.warn{margin:0;padding:12px 14px;border:2px solid var(--ink);font:400 15px/1.4 var(--sans);display:flex;gap:10px;align-items:flex-start;background:#fff}
+.warn svg{flex:none;width:22px;height:22px;margin-top:1px}
+.warn.bad{background:#FFE9A8}
+.save-row{display:flex;gap:10px;flex-wrap:wrap}
+.save-row .btn{flex:1 1 auto}
+.saved{margin-top:40px;border-top:2px solid var(--ink);padding-top:18px}
+.saved-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;align-items:baseline;margin-bottom:16px}
+.saved-head h3{margin:0;font:700 28px/1 var(--sans);letter-spacing:-.03em}
+.saved-head p{margin:0;font:400 14px/1.4 var(--mono)}
+.schemes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.scheme{border:2px solid var(--ink);background:#fff;display:grid;grid-template-columns:64px minmax(0,1fr);animation:drop .45s cubic-bezier(.2,.9,.25,1.2)}
+@keyframes drop{from{transform:translateY(-14px) rotate(-1.5deg);opacity:0}}
+.sc-sw{display:grid;grid-template-rows:repeat(4,1fr);border-right:2px solid var(--ink)}
+.sc-sw i{border-bottom:1px solid rgba(0,0,0,.12)}
+.sc-body{padding:12px 12px 10px;min-width:0}
+.sc-body b{font:700 17px/1.1 var(--sans)}
+.sc-body ul{list-style:none;margin:8px 0 10px;padding:0}
+.sc-body li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:6px;padding:3px 0;border-top:1px solid rgba(0,0,0,.1);font:500 14px/1.25 var(--sans)}
+.sc-body li span{font:400 11px/1.6 var(--mono);color:#555;text-transform:uppercase;letter-spacing:.04em}
+.sc-body li small{display:block;font:400 11px/1.3 var(--mono);color:#555}
+.sc-act{display:flex;flex-wrap:wrap;gap:6px}
+.sc-act button{min-height:40px;padding:6px 10px;border:1.5px solid var(--ink);background:#fff;cursor:pointer;font:500 13.5px/1 var(--sans)}
+.sc-act button:hover{background:var(--ink);color:#fff}
+
+/* process */
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:2px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:0 14px;padding:18px 0;border-bottom:1px solid var(--ink)}
+.steps .n{font:700 44px/.9 var(--sans);letter-spacing:-.05em}
+.steps h3{margin:0 0 6px;font:600 21px/1.15 var(--sans)}
+.steps p{margin:0;font-size:16.5px}
+.steps .bar{display:block;grid-column:1/-1;height:10px;margin-bottom:14px;background:var(--c)}
+@media(min-width:900px){.steps{grid-template-columns:repeat(5,minmax(0,1fr));border-top:0}.steps li{display:block;padding:0 18px 0 0;border-bottom:0}.steps .bar{height:120px;margin-bottom:16px;border:1px solid rgba(0,0,0,.1)}.steps .n{display:block;margin-bottom:12px}}
+
+/* quote */
+.quote-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+@media(min-width:1000px){.quote-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}}
+.contact{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--ink)}
+.contact li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px;padding:12px 0;border-bottom:1px solid var(--ink);font-size:16.5px}
+.contact li>span:first-child{font:500 12px/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.form{background:#fff;color:var(--ink);border:2px solid var(--ink);padding:clamp(18px,3vw,32px);box-shadow:12px 12px 0 var(--ink)}
+.form h3{margin:0 0 4px;font:700 30px/1.05 var(--sans);letter-spacing:-.03em}
+.form>p{margin:0 0 18px;font-size:15.5px}
+.row{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:14px}
+@media(min-width:640px){.row.two{grid-template-columns:1fr 1fr}}
+.fl{display:grid;gap:6px}
+.fl>span,.fs legend{font:500 12px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.fl input,.fl select,.fl textarea{width:100%;min-height:48px;border:1.5px solid var(--ink);border-radius:0;background:var(--paper);padding:10px 12px;font:400 17px/1.3 var(--sans)}
+.fl textarea{min-height:110px;resize:vertical}
+.fs{border:0;padding:0;margin:0 0 14px;min-width:0}
+.fs legend{margin-bottom:8px;padding:0}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{position:relative}
+.checks input{position:absolute;opacity:0;width:1px;height:1px}
+.checks span{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;border:1.5px solid var(--ink);cursor:pointer;font:500 15px/1 var(--sans);background:#fff}
+.checks span::before{content:"";width:12px;height:12px;border:1.5px solid var(--ink)}
+.checks input:checked+span{background:var(--ink);color:#fff}
+.checks input:checked+span::before{background:var(--mari);border-color:var(--mari)}
+.checks input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+.good{margin-top:30px}
+.good h3{margin:0 0 8px;font:600 20px/1.2 var(--sans)}
+.good dl{margin:0}
+.good dt{font-weight:600;margin-top:12px}
+.good dd{margin:2px 0 0;font-size:16.5px}
+.note{font:400 12.5px/1.45 var(--mono);margin:18px 0 0}
+
+/* footer */
+.foot{background:var(--ink);color:#fff;padding:56px 0 calc(64px + env(safe-area-inset-bottom))}
+.foot-name{margin:0 0 18px;font:700 clamp(46px,8vw,120px)/.88 var(--sans);letter-spacing:-.05em;overflow-wrap:anywhere}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;border-top:1px solid rgba(255,255,255,.5);padding-top:20px;font-size:15.5px}
+@media(min-width:800px){.foot-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.foot small{font:400 12px/1.5 var(--mono);color:#cfcfcf}
+.foot-chips{display:flex;gap:0;margin-top:26px;height:14px}
+.foot-chips i{flex:1}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#main"><span class="mark" aria-hidden="true"><i></i><i></i></span><span data-brand>Two Coats Painting</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#interior">Interior</a><a href="#exterior">Exterior</a><a href="#roofs">Roofs &amp; decks</a><a href="#consult">Colour consult</a><a href="#visualiser">Visualiser</a><a href="#process">Process</a>
+    </nav>
+    <a class="btn btn-ink" href="#quote"><span class="xs-hide">Get a&nbsp;</span>quote</a>
+  </div>
+  <nav class="subnav" aria-label="Sections">
+    <a href="#visualiser"><i style="background:#BFD9CE"></i>Visualiser</a><a href="#interior"><i style="background:var(--terra)"></i>Interior</a><a href="#exterior"><i style="background:var(--mari)"></i>Exterior</a><a href="#roofs"><i style="background:var(--navy)"></i>Roofs &amp; decks</a><a href="#consult"><i style="background:var(--sage)"></i>Colour consult</a><a href="#process"><i style="background:#ECE8DF"></i>Process</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="field f-paper hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">House painters · Sunshine Coast, QLD</p>
+        <h1 id="hero-h">Two coats,<br><em>every</em> time.</h1>
+        <p class="lede">Interior and exterior painting from Caloundra to Noosa and up into the hinterland. We prep like it matters, cut in by hand, and never stop at one coat.</p>
+        <div class="cta"><a class="btn btn-ink" href="#visualiser">Repaint a room</a><a class="btn btn-line" href="#quote">Get a quote</a></div>
+        <ul class="hfacts">
+          <li><b>Interior</b>Walls, ceilings, doors and trims</li>
+          <li><b>Exterior</b>Weatherboard, render, eaves</li>
+          <li><b>Roofs &amp; decks</b>Metal roofs, timber decks</li>
+        </ul>
+      </div>
+      <div class="fan-wrap">
+        <div class="fan" id="fan" role="group" aria-label="Fan deck of house colours — choose one to read about it"></div>
+        <p class="fan-hint" id="fan-hint">Hover or tab to spread the fan · choose a chip</p>
+        <p class="fan-cap" id="fan-cap" aria-live="polite">Every colour on this site is a (fictional) Two Coats house colour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-terra" id="interior" aria-labelledby="int-h">
+    <p class="chip"><i></i><b>Terracotta Tile</b><span>TC-417 · LRV 24</span></p>
+    <div class="wrap grid">
+      <div class="ca"><p class="num">01</p><h2 class="big" id="int-h">Interior</h2></div>
+      <div class="cb">
+        <p class="lead">Bedrooms, living rooms, whole houses. Furniture moved and covered, floors protected, every room left tidy at the end of each day.</p>
+        <ul class="incl">
+          <li><b>Walls &amp; ceilings</b><span>Patched, sanded, cut in by brush and rolled twice.</span></li>
+          <li><b>Doors, frames &amp; skirting</b><span>Degreased, sanded and finished in hard-wearing enamel.</span></li>
+          <li><b>Bathrooms &amp; laundries</b><span>Mould-resistant paint for rooms that steam up.</span></li>
+          <li><b>Feature walls</b><span>Deep colours may need a third coat — we’ll say so before we start.</span></li>
+          <li><b>Low-odour options</b><span>Low-VOC paints for nurseries and anyone working from home.</span></li>
+        </ul>
+        <p class="price"><span>From</span><strong>$690</strong><span>a bedroom, walls &amp; ceiling<br>Sample price — every job is quoted</span></p>
+      </div>
+    </div>
+    <svg class="roller-art" viewBox="0 0 560 300" aria-hidden="true"><path d="M0,120H350V210H0Z" fill="#C9431F"/><path d="M0,120H350V132H0Z" fill="#B63A19" opacity=".7"/><rect x="330" y="104" width="44" height="122" rx="14" fill="#C9431F" stroke="#111" stroke-width="4"/><path d="M352,104V74H470V180H500" fill="none" stroke="#111" stroke-width="8" stroke-linejoin="round"/><rect x="494" y="170" width="44" height="130" rx="16" fill="#111"/><path d="M344,112V218" stroke="#fff" stroke-width="4" opacity=".35"/></svg>
+  </section>
+
+  <section class="field f-mari" id="exterior" aria-labelledby="ext-h">
+    <p class="chip"><i></i><b>Marigold Hour</b><span>TC-514 · LRV 47</span></p>
+    <div class="wrap grid">
+      <div class="ca6"><p class="num">02</p><h2 class="big" id="ext-h">Exterior</h2>
+        <p class="lead" style="margin-top:28px">Salt air, afternoon storms and a lot of sun. Outside, the prep is the job — the paint is the easy part.</p>
+        <ul class="incl">
+          <li><b>Weatherboard &amp; cladding</b><span>Washed, scraped, sanded back to sound paint, primed where bare.</span></li>
+          <li><b>Render &amp; masonry</b><span>Cracks filled, sealed and finished in a breathable exterior coat.</span></li>
+          <li><b>Eaves, gutters &amp; fascias</b><span>The bits people forget, done properly at height.</span></li>
+          <li><b>Fences &amp; gates</b><span>Timber or rendered, front or back.</span></li>
+        </ul>
+        <p class="price"><span>From</span><strong>$6,800</strong><span>single-storey weatherboard<br>Sample price — every job is quoted</span></p>
+      </div>
+      <div class="cb end">
+        <svg class="house" viewBox="0 0 600 440" role="img" aria-label="Illustration: a raised Queenslander house with a verandah, painted cream with white trim and a green door">
+          <defs><pattern id="lat" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#F1EDE2"/><rect width="9" height="9" fill="#8E3B2E"/></pattern>
+          <pattern id="wb" width="10" height="11" patternUnits="userSpaceOnUse"><rect width="10" height="11" fill="#EEE0BD"/><rect y="9" width="10" height="2" fill="#C9B88E"/></pattern>
+          <pattern id="iron" width="9" height="10" patternUnits="userSpaceOnUse"><rect width="9" height="10" fill="#9BA4A6"/><rect width="3" height="10" fill="#C5CCCD"/></pattern></defs>
+          <path d="M0,428H600" stroke="#111" stroke-width="3"/>
+          <path d="M40,168L300,52L560,168Z" fill="url(#iron)" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="84" y="168" width="432" height="150" fill="url(#wb)" stroke="#111" stroke-width="3"/>
+          <rect x="84" y="318" width="432" height="110" fill="url(#lat)" stroke="#111" stroke-width="3"/>
+          <g fill="#F1EDE2" stroke="#111" stroke-width="3"><rect x="84" y="318" width="14" height="110"/><rect x="200" y="318" width="14" height="110"/><rect x="386" y="318" width="14" height="110"/><rect x="502" y="318" width="14" height="110"/></g>
+          <path d="M60,196Q300,150 540,196L540,212Q300,168 60,212Z" fill="#9BA4A6" stroke="#111" stroke-width="3"/>
+          <g fill="#F1EDE2" stroke="#111" stroke-width="3"><rect x="120" y="206" width="56" height="74"/><rect x="424" y="206" width="56" height="74"/></g>
+          <g fill="#BFE3F2" stroke="#111" stroke-width="2"><rect x="128" y="214" width="40" height="58"/><rect x="432" y="214" width="40" height="58"/></g>
+          <path d="M148,214V272M452,214V272" stroke="#111" stroke-width="2"/>
+          <rect x="274" y="206" width="52" height="112" fill="#F1EDE2" stroke="#111" stroke-width="3"/>
+          <rect x="282" y="214" width="36" height="104" fill="#2E4A3B" stroke="#111" stroke-width="2"/>
+          <circle cx="311" cy="268" r="3" fill="#D8B45C"/>
+          <g stroke="#111" stroke-width="3" fill="#F1EDE2"><rect x="70" y="208" width="10" height="110"/><rect x="520" y="208" width="10" height="110"/><rect x="236" y="208" width="10" height="110"/><rect x="354" y="208" width="10" height="110"/></g>
+          <path d="M70,286H530M70,316H530" stroke="#111" stroke-width="3"/>
+          <path d="M92,286V316M104,286V316M116,286V316M128,286V316M140,286V316M152,286V316M164,286V316M176,286V316M188,286V316M200,286V316M212,286V316M224,286V316M378,286V316M390,286V316M402,286V316M414,286V316M426,286V316M438,286V316M450,286V316M462,286V316M474,286V316M486,286V316M498,286V316M510,286V316" stroke="#111" stroke-width="2"/>
+          <path d="M252,318H348L372,428H228Z" fill="#F1EDE2" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M246,340H354M241,362H359M236,384H364M231,406H369" stroke="#111" stroke-width="2.5"/>
+          <path d="M470,428C470,380 488,356 500,340M500,340C486,332 468,334 458,344M500,340C508,326 526,322 540,328M500,340C516,344 530,356 534,370M500,340C494,326 482,318 468,318" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-navy" id="roofs" aria-labelledby="roof-h">
+    <p class="chip"><i></i><b>Deep Moreton</b><span>TC-139 · LRV 4</span></p>
+    <div class="wrap grid">
+      <div class="ca"><p class="num">03</p><h2 class="big" id="roof-h">Roofs &amp; decks</h2>
+        <div class="tiles" style="margin-top:34px"><div class="tile roof"><span>Corrugated iron</span></div><div class="tile deck"><span>Spotted gum deck</span></div></div>
+      </div>
+      <div class="cb">
+        <p class="lead">The two surfaces that cop the most weather. We treat them like it.</p>
+        <ul class="incl">
+          <li><b>Metal roof repaints</b><span>Pressure-cleaned, rust treated, primed, then two full coats of roof paint.</span></li>
+          <li><b>Roof colour changes</b><span>Going lighter? A cooler roof colour can take the edge off summer upstairs.</span></li>
+          <li><b>Deck oiling &amp; staining</b><span>Sanded, cleaned and oiled with two coats — ready to walk on the next day.</span></li>
+          <li><b>Stairs, rails &amp; pergolas</b><span>Timber or steel, matched to your deck or trim.</span></li>
+        </ul>
+        <p class="price"><span>Deck oiling from</span><strong>$38/m²</strong><span>Sample price — roofs quoted after a look</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-sage" id="consult" aria-labelledby="con-h">
+    <p class="chip"><i></i><b>Hinterland Sage</b><span>TC-331 · LRV 51</span></p>
+    <div class="wrap grid">
+      <div class="ca6"><p class="num">04</p><h2 class="big" id="con-h">Colour consult</h2>
+        <div class="pots" aria-hidden="true"><div class="pot" style="--c:#BFD9CE"><i></i><small>Seafoam<br>TC-118</small></div><div class="pot" style="--c:#D3DAD0"><i></i><small>Mist Ridge<br>TC-309</small></div><div class="pot" style="--c:#EADFCB"><i></i><small>Macadamia<br>TC-302</small></div></div></div>
+      <div class="cb">
+        <p class="lead">Stuck between Seafoam and Mist Ridge? We bring the fan deck to you.</p>
+        <p>We look at your rooms in morning and afternoon light, talk through what stays (floors, benchtops, the couch), and paint A4 sample boards you can move around the house for a week. You’ll finish with a written scheme: walls, trims, doors and ceilings.</p>
+        <p class="price"><span>One visit</span><strong>$180</strong><span>credited to your painting job<br>Sample price</span></p>
+        <div class="cta" style="margin-top:20px"><a class="btn btn-ink" href="#visualiser">Try colours at home first</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-paper" id="visualiser" aria-labelledby="vis-h">
+    <p class="chip" style="--f:#BFD9CE"><i></i><b>Seafoam</b><span>TC-118 · LRV 65</span></p>
+    <div class="wrap">
+      <p class="num">05</p>
+      <div class="vis-head"><h2 class="big" id="vis-h">Repaint the room</h2><p>Pick a surface, then a colour — the roller does the rest. It’s a rough guide: screens aren’t paint, so we always test on your walls.</p></div>
+      <div class="vis">
+        <div class="room-box">
+          <svg class="room" id="room" viewBox="0 0 800 520" role="img" aria-labelledby="room-t">
+            <title id="room-t">A living room with a window, a panelled door, a linen sofa and timber floors. The current colours are listed below the picture.</title>
+            <defs>
+              <g id="s-walls"><rect x="110" y="80" width="580" height="330"/><path d="M0,0L110,80V410L0,520Z"/><path d="M800,0L690,80V410L800,520Z"/></g>
+              <g id="s-ceiling"><path d="M0,0H800L690,80H110Z"/><path d="M110,80H690V90H110Z"/></g>
+              <g id="s-trim"><path fill-rule="evenodd" d="M138,128h170v196h-170z M151,141v170h144v-170z"/><rect x="221" y="141" width="4" height="170"/><rect x="151" y="224" width="144" height="4"/><rect x="128" y="318" width="190" height="11"/><path fill-rule="evenodd" d="M583,168h94v242h-94z M595,180v230h70v-230z"/><rect x="110" y="394" width="473" height="16"/><rect x="677" y="394" width="13" height="16"/><path d="M110,394V410L0,520V495Z"/><path d="M690,394V410L800,520V495Z"/></g>
+              <g id="s-door"><rect x="595" y="180" width="70" height="230"/></g>
+              <clipPath id="c-walls"><rect x="0" y="0" width="0" height="520"/></clipPath>
+              <clipPath id="c-ceiling"><rect x="0" y="0" width="0" height="520"/></clipPath>
+              <clipPath id="c-trim"><rect x="0" y="0" width="0" height="520"/></clipPath>
+              <clipPath id="c-door"><rect x="0" y="0" width="800" height="0"/></clipPath>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FD0E6"/><stop offset=".62" stop-color="#E4F3F8"/><stop offset=".62" stop-color="#5C9DB5"/><stop offset="1" stop-color="#3F7F98"/></linearGradient>
+              <radialGradient id="glow" cx="224" cy="230" r="300" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+              <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6DD" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DD" stop-opacity=".05"/></linearGradient>
+            </defs>
+            <use href="#s-walls" id="b-walls" fill="#BFD9CE"/><use href="#s-walls" id="t-walls" fill="#BFD9CE" clip-path="url(#c-walls)"/>
+            <rect x="110" y="80" width="580" height="330" fill="url(#glow)"/>
+            <path d="M0,0L110,80V410L0,520Z" fill="#000" opacity=".1"/><path d="M800,0L690,80V410L800,520Z" fill="#000" opacity=".05"/>
+            <use href="#s-ceiling" id="b-ceiling" fill="#F4F1EA"/><use href="#s-ceiling" id="t-ceiling" fill="#F4F1EA" clip-path="url(#c-ceiling)"/>
+            <path d="M0,0H800L690,80H110Z" fill="#000" opacity=".05"/>
+            <path d="M0,520L110,410H690L800,520Z" fill="#C79E74"/>
+            <path d="M110,410L-73,520M146,410L-13,520M182,410L47,520M219,410L108,520M255,410L168,520M291,410L228,520M327,410L288,520M364,410L349,520M400,410L400,520M436,410L451,520M473,410L512,520M509,410L572,520M545,410L632,520M581,410L692,520M618,410L753,520M654,410L813,520M690,410L873,520" stroke="#8D6440" stroke-width="1.4" opacity=".45"/>
+            <path d="M160,410H330L420,520H176Z" fill="url(#beam)"/>
+            <rect x="151" y="141" width="144" height="170" fill="url(#sky)"/>
+            <path d="M151,246C180,236 206,230 236,238C260,244 280,236 295,230V246Z" fill="#6E9E6A" opacity=".75"/>
+            <use href="#s-trim" id="b-trim" fill="#F4F1EA"/><use href="#s-trim" id="t-trim" fill="#F4F1EA" clip-path="url(#c-trim)"/>
+            <use href="#s-door" id="b-door" fill="#29335C"/><use href="#s-door" id="t-door" fill="#29335C" clip-path="url(#c-door)"/>
+            <g fill="none" stroke="#000" stroke-opacity=".28" stroke-width="2"><rect x="604" y="192" width="52" height="92"/><rect x="604" y="298" width="52" height="98"/></g>
+            <g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"><path d="M606,282V194H654M606,394V300H654"/></g>
+            <circle cx="656" cy="298" r="4.5" fill="#C9A548" stroke="#6b5520" stroke-width="1"/>
+            <path d="M110,80V410M690,80V410M0,0L110,80M800,0L690,80M110,410L0,520M690,410L800,520" stroke="#000" stroke-opacity=".16" stroke-width="1.5"/>
+            <g><rect x="404" y="164" width="84" height="104" fill="#F7F5F0" stroke="#1d1d1d" stroke-width="4"/><circle cx="446" cy="202" r="19" fill="#F3A712"/><path d="M412,236C428,226 438,244 454,236C468,229 474,240 480,236V260H412Z" fill="#29335C"/><path d="M412,248C428,240 440,254 456,248C468,244 474,252 480,250" fill="none" stroke="#A8C686" stroke-width="3"/></g>
+            <path d="M268,470L318,428H590L640,470Z" fill="#E9DFCC"/><path d="M280,462L324,433H584L628,462Z" fill="none" stroke="#C9B89A" stroke-width="3"/>
+            <g><rect x="336" y="290" width="220" height="64" rx="12" fill="#DCCDB1"/><rect x="324" y="342" width="244" height="46" rx="10" fill="#E6D9C0"/><rect x="314" y="316" width="32" height="80" rx="12" fill="#D6C5A6"/><rect x="546" y="316" width="32" height="80" rx="12" fill="#D6C5A6"/><rect x="320" y="386" width="252" height="14" rx="5" fill="#BBA682"/><rect x="334" y="398" width="7" height="16" fill="#5a4a38"/><rect x="552" y="398" width="7" height="16" fill="#5a4a38"/><path d="M446,346V386" stroke="#C7B696" stroke-width="2"/><rect x="354" y="302" width="56" height="44" rx="10" fill="#E4572E" transform="rotate(-6 382 324)"/><rect x="482" y="302" width="56" height="44" rx="10" fill="#A8C686" transform="rotate(5 510 324)"/></g>
+            <g><path d="M60,512L66,452H112L118,512Z" fill="#E9DFCC" stroke="#1d1d1d" stroke-width="2"/><path d="M88,452C84,410 70,380 50,360M88,452C92,400 108,370 132,352M88,452C88,410 90,380 96,344" fill="none" stroke="#3F5B35" stroke-width="3"/><g fill="#5E8A4E"><ellipse cx="50" cy="356" rx="22" ry="11" transform="rotate(-30 50 356)"/><ellipse cx="132" cy="348" rx="22" ry="11" transform="rotate(25 132 348)"/><ellipse cx="96" cy="338" rx="12" ry="22"/><ellipse cx="70" cy="398" rx="20" ry="10" transform="rotate(-20 70 398)"/><ellipse cx="112" cy="392" rx="20" ry="10" transform="rotate(20 112 392)"/></g></g>
+            <g id="roller" opacity="0" style="pointer-events:none"><g id="roller-in" transform="scale(1.35)"><path d="M0,-46V-56H36V30" fill="none" stroke="#1e1e1e" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><rect x="27" y="26" width="18" height="64" rx="8" fill="#111"/><path d="M31,34V82" stroke="#fff" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/><rect id="sleeve" x="-15" y="-46" width="30" height="92" rx="11" fill="#BFD9CE" stroke="#111" stroke-width="2.5"/><path d="M-15,-24h30M-15,0h30M-15,24h30" stroke="#000" stroke-opacity=".1" stroke-width="2"/><path d="M-7,-36V36" stroke="#fff" stroke-opacity=".5" stroke-width="3.5" stroke-linecap="round"/></g></g>
+          </svg>
+          <div class="readout" id="readout"></div>
+        </div>
+        <div class="panel">
+          <div class="ctl"><h3 id="surf-l">1 · Surface</h3><div class="seg" id="surfaces" role="group" aria-labelledby="surf-l"></div></div>
+          <div class="ctl"><h3 id="pal-l">2 · Palette</h3><div class="tabs" id="palettes" role="group" aria-labelledby="pal-l"></div></div>
+          <div class="ctl"><h3 id="sw-l">3 · Colour for <span id="sw-for">walls</span></h3><div class="sw" id="swatches" role="group" aria-labelledby="sw-l"></div></div>
+          <p class="warn" id="warn" role="status"></p>
+          <p class="sr" id="say" aria-live="polite"></p>
+          <div class="save-row"><button class="btn btn-ink" type="button" id="save">Save this scheme</button><button class="btn btn-line" type="button" id="random">Surprise me</button></div>
+        </div>
+      </div>
+      <div class="saved" aria-labelledby="saved-h">
+        <div class="saved-head"><h3 id="saved-h">Saved schemes</h3><p id="saved-note">Nothing saved yet — build a room you like, then save it.</p></div>
+        <ol class="schemes" id="schemes"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="field f-stone" id="process" aria-labelledby="pro-h">
+    <p class="chip"><i></i><b>Driftwood</b><span>TC-112 · LRV 53</span></p>
+    <div class="wrap">
+      <p class="num">06</p><h2 class="big" id="pro-h">How a job runs</h2>
+      <ol class="steps">
+        <li><span class="bar" style="--c:#29335C"></span><span class="n">1</span><div><h3>Walk-through</h3><p>We visit, measure, look at the prep and give you a written, itemised quote.</p></div></li>
+        <li><span class="bar" style="--c:#A8C686"></span><span class="n">2</span><div><h3>Colours</h3><p>Use the visualiser, book a consult, or tell us the codes you already love.</p></div></li>
+        <li><span class="bar" style="--c:#F3A712"></span><span class="n">3</span><div><h3>Prep</h3><p>Wash, scrape, fill, sand and prime. Most of the finish is decided here.</p></div></li>
+        <li><span class="bar" style="--c:#E4572E"></span><span class="n">4</span><div><h3>Two coats</h3><p>Cut in by brush, rolled twice, with drying time between. No shortcuts.</p></div></li>
+        <li><span class="bar" style="--c:#F4F1EA"></span><span class="n">5</span><div><h3>Walk-through, again</h3><p>We check every wall with you, touch up anything missed and leave it tidy.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="field f-terra" id="quote" aria-labelledby="quo-h">
+    <p class="chip"><i></i><b>Terracotta Tile</b><span>TC-417 · LRV 24</span></p>
+    <div class="wrap quote-grid">
+      <div>
+        <p class="num">07</p><h2 class="big" id="quo-h">Get a quote</h2>
+        <ul class="contact">
+          <li><span>Phone</span><span><a href="tel:0755502718">(07) 5550 2718</a></span></li>
+          <li><span>Mobile</span><span><a href="tel:0491570157">0491 570 157</a></span></li>
+          <li><span>Email</span><span><a href="mailto:quotes@example.com">quotes@example.com</a></span></li>
+          <li><span>On site</span><span>Mon–Fri, 7am–3.30pm</span></li>
+          <li><span>We cover</span><span>Caloundra, Kawana, Mooloolaba, Maroochydore, Buderim, Coolum Beach, Peregian, Noosa, Nambour, Maleny and Montville</span></li>
+        </ul>
+        <div class="good">
+          <h3>Good to know</h3>
+          <dl>
+            <dt>Do I need to move furniture?</dt><dd>Just the fragile things. We move and cover the rest.</dd>
+            <dt>How long does a bedroom take?</dt><dd>Usually a day, including prep and both coats.</dd>
+            <dt>When do I pay?</dt><dd>On completion for most jobs; bigger exteriors are staged.</dd>
+          </dl>
+        </div>
+      </div>
+      <form class="form" id="qform" data-demo-message="Demo only — no quote request was sent. On a real site this would reach the painters." novalidate>
+        <h3>Tell us about the job</h3>
+        <p>We’ll reply with a time to come and look. No obligation.</p>
+        <div class="row two"><label class="fl"><span>Name</span><input name="name" autocomplete="name" required></label><label class="fl"><span>Suburb</span><input name="suburb" list="subs" autocomplete="address-level2"></label></div>
+        <datalist id="subs"><option value="Caloundra"><option value="Mooloolaba"><option value="Maroochydore"><option value="Buderim"><option value="Coolum Beach"><option value="Peregian Beach"><option value="Noosa Heads"><option value="Nambour"><option value="Maleny"><option value="Montville"></datalist>
+        <div class="row two"><label class="fl"><span>Email</span><input name="email" type="email" autocomplete="email"></label><label class="fl"><span>Phone (optional)</span><input name="phone" type="tel" autocomplete="tel"></label></div>
+        <fieldset class="fs"><legend>What needs painting?</legend>
+          <div class="checks"><label><input type="checkbox" name="job" value="Interior"><span>Interior</span></label><label><input type="checkbox" name="job" value="Exterior"><span>Exterior</span></label><label><input type="checkbox" name="job" value="Roof"><span>Roof</span></label><label><input type="checkbox" name="job" value="Deck"><span>Deck</span></label><label><input type="checkbox" name="job" value="Colour consult" id="job-consult"><span>Colour consult</span></label></div>
+        </fieldset>
+        <div class="row two"><label class="fl"><span>Size</span><select name="size"><option>1–2 rooms</option><option>3–4 rooms</option><option>Whole house</option><option>Not sure yet</option></select></label><label class="fl"><span>Timing</span><select name="when"><option>As soon as possible</option><option>Next month</option><option>In 2–3 months</option><option>Just planning</option></select></label></div>
+        <label class="fl"><span>Notes &amp; colours</span><textarea name="notes" id="notes" placeholder="Two bedrooms and a hallway. Saved a scheme in the visualiser…"></textarea></label>
+        <div class="cta" style="margin-top:18px"><button class="btn btn-ink" type="submit">Request a quote</button></div>
+        <p class="note">Sample prices on this page are illustrations for a concept demo. Colour names and codes are fictional.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot-name" data-brand>Two Coats Painting</p>
+    <div class="foot-grid">
+      <p>Interior, exterior, roof and deck painting across the Sunshine Coast, QLD.</p>
+      <p><a href="tel:0755502718">(07) 5550 2718</a> · <a href="mailto:quotes@example.com">quotes@example.com</a></p>
+      <p><small>A concept demo for a fictional business. No real paint brands, colour codes or jobs are shown.</small></p>
+    </div>
+    <div class="foot-chips" aria-hidden="true"><i style="background:#E4572E"></i><i style="background:#F3A712"></i><i style="background:#29335C;outline:1px solid #555"></i><i style="background:#A8C686"></i><i style="background:#F7F5F0"></i></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduce = function(){ return (window.DemoKit && DemoKit.reducedMotion) || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches); };
+  function lum(hex){ var n = parseInt(hex.slice(1), 16); return [n >> 16, (n >> 8) & 255, n & 255].map(function(v){ v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }).reduce(function(a, v, i){ return a + v * [.2126, .7152, .0722][i]; }, 0); }
+  function ratio(a, b){ var x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); }
+  var lrv = function(hex){ return Math.round(lum(hex) * 100); };
+
+  /* ---------- fan deck ---------- */
+  var FAN = [["Deep Moreton","TC-139","#29335C","front doors, feature walls, outdoor furniture"],["Brunswick Green","TC-533","#2E4A3B","Queenslander doors and window sashes"],["Hinterland Sage","TC-331","#A8C686","bedrooms, garden walls, kitchen cabinetry"],["Seafoam","TC-118","#BFD9CE","living rooms, bathrooms, beach houses"],["Shallows","TC-124","#7FB1C4","kids’ rooms, laundries, a bold ceiling"],["Heritage Cream","TC-508","#EEE0BD","weatherboard exteriors with white trim"],["Marigold Hour","TC-514","#F3A712","front doors, studios, one brave hallway"],["Terracotta Tile","TC-417","#E4572E","feature walls, rendered courtyards, pots"],["Lattice Red","TC-527","#8E3B2E","lattice, fretwork and heritage trims"]];
+  var fan = $("#fan"), cap = $("#fan-cap");
+  fan.innerHTML = FAN.map(function(c, i){
+    return '<button type="button" class="strip" style="--c:' + c[2] + ';--i:' + i + '" aria-pressed="false" data-i="' + i + '"><span class="lab"><b>' + c[0] + '</b><small>' + c[1] + '</small></span><span class="sh"></span><span class="sh"></span><span class="sh"></span><span class="sh"></span><span class="rv"></span></button>';
+  }).join("");
+  fan.addEventListener("click", function(e){
+    var b = e.target.closest(".strip"); if (!b) return;
+    var on = b.getAttribute("aria-pressed") !== "true";
+    $$(".strip", fan).forEach(function(s){ s.setAttribute("aria-pressed", "false"); });
+    if (on){
+      b.setAttribute("aria-pressed", "true");
+      var c = FAN[+b.dataset.i];
+      cap.innerHTML = "<b>" + c[0] + " · " + c[1] + "</b> · LRV " + lrv(c[2]) + ". Try it on " + c[3] + ".";
+      fan.classList.add("open");
+    } else { cap.textContent = "Every colour on this site is a (fictional) Two Coats house colour."; fan.classList.remove("open"); }
+  });
+  if (matchMedia("(max-width: 899px)").matches) $("#fan-hint").textContent = "Swipe the fan deck · tap a chip";
+
+  /* ---------- visualiser ---------- */
+  var PAL = {
+    coastal: { name: "Coastal", sw: [["Salt Spray White","TC-101","#F4F1EA"],["Driftwood","TC-112","#CBBFAE"],["Seafoam","TC-118","#BFD9CE"],["Shallows","TC-124","#7FB1C4"],["Deep Moreton","TC-139","#29335C"],["Sandbar","TC-145","#E6D3AE"]] },
+    hinterland: { name: "Hinterland", sw: [["Macadamia Shell","TC-302","#EADFCB"],["Mist Ridge","TC-309","#D3DAD0"],["Hinterland Sage","TC-331","#A8C686"],["Rainforest Floor","TC-347","#4D5D3B"],["Ironbark","TC-362","#4A403A"],["Terracotta Tile","TC-417","#E4572E"]] },
+    qld: { name: "Classic Queenslander", sw: [["Verandah White","TC-501","#F1EDE2"],["Heritage Cream","TC-508","#EEE0BD"],["Marigold Hour","TC-514","#F3A712"],["Lattice Red","TC-527","#8E3B2E"],["Brunswick Green","TC-533","#2E4A3B"],["Tin Roof","TC-540","#9BA4A6"]] }
+  };
+  var LABEL = { walls: "Walls", trim: "Trim", door: "Door", ceiling: "Ceiling" };
+  var BOX = { walls: { x: 0, y: 0, w: 800, h: 520, d: "x" }, ceiling: { x: 0, y: 0, w: 800, h: 90, d: "x" }, trim: { x: 0, y: 128, w: 800, h: 392, d: "x" }, door: { x: 595, y: 180, w: 70, h: 230, d: "y" } };
+  var cur = { walls: PAL.coastal.sw[2], trim: PAL.coastal.sw[0], door: PAL.coastal.sw[4], ceiling: PAL.coastal.sw[0] };
+  var surface = "walls", palette = "coastal";
+
+  function renderSurfaces(){
+    $("#surfaces").innerHTML = Object.keys(LABEL).map(function(k){
+      return '<button type="button" data-s="' + k + '" aria-pressed="' + (k === surface) + '" style="--c:' + cur[k][2] + '"><i aria-hidden="true"></i>' + LABEL[k] + "</button>";
+    }).join("");
+  }
+  function renderPalettes(){
+    $("#palettes").innerHTML = Object.keys(PAL).map(function(k){ return '<button type="button" data-p="' + k + '" aria-pressed="' + (k === palette) + '">' + PAL[k].name + "</button>"; }).join("");
+  }
+  function renderSwatches(){
+    $("#sw-for").textContent = LABEL[surface].toLowerCase();
+    $("#swatches").innerHTML = PAL[palette].sw.map(function(s, i){
+      var on = cur[surface][1] === s[1];
+      return '<button type="button" data-i="' + i + '" aria-pressed="' + on + '" style="--c:' + s[2] + '" aria-label="' + s[0] + ", " + s[1] + '"><i aria-hidden="true"></i><b>' + s[0] + "</b><small>" + s[1] + " · LRV " + lrv(s[2]) + "</small></button>";
+    }).join("");
+  }
+  function renderReadout(){
+    $("#readout").innerHTML = Object.keys(LABEL).map(function(k){ return '<div style="--c:' + cur[k][2] + '"><i aria-hidden="true"></i><span><b>' + LABEL[k] + "</b><em>" + cur[k][0] + " · " + cur[k][1] + "</em></span></div>"; }).join("");
+  }
+  function check(){
+    var r = ratio(cur.walls[2], cur.trim[2]), w = $("#warn");
+    var icon = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2"><path d="M12 3 2.5 20h19Z"/><path d="M12 9.5v5M12 17.2v.1"/></svg>';
+    var ok = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#111" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>';
+    if (cur.walls[1] === cur.trim[1]){ w.className = "warn bad"; w.innerHTML = icon + "<span><b>Walls and trim are the same colour.</b> Architraves and skirting will disappear — fine if that’s the look, but most rooms want a trim that stands out.</span>"; }
+    else if (r < 1.2){ w.className = "warn bad"; w.innerHTML = icon + "<span><b>Heads up: trim and walls are too similar</b> (" + r.toFixed(2) + ":1). The window frame and skirting will blur into the wall. Try a lighter or darker trim.</span>"; }
+    else if (r < 1.6){ w.className = "warn"; w.innerHTML = ok + "<span><b>Soft contrast</b> (" + r.toFixed(2) + ":1). Trim reads gently against the walls — calm and tone-on-tone.</span>"; }
+    else { w.className = "warn"; w.innerHTML = ok + "<span><b>Trim stands out</b> (" + r.toFixed(1) + ":1). " + (r > 6 ? "Bold and graphic — great for a heritage look." : "Crisp, well-defined edges.") + "</span>"; }
+  }
+
+  var anim = {}, roller = $("#roller"), rollerIn = $("#roller-in"), sleeve = $("#sleeve");
+  function finish(k){ var a = anim[k]; if (!a) return; cancelAnimationFrame(a.raf); $("#b-" + k).setAttribute("fill", a.to); resetClip(k); anim[k] = null; roller.setAttribute("opacity", "0"); }
+  function resetClip(k){ var r = $("#c-" + k + " rect"); if (BOX[k].d === "x") r.setAttribute("width", "0"); else r.setAttribute("height", "0"); }
+  function paint(k, sw){
+    if (cur[k][1] === sw[1]) return;
+    finish(k);
+    cur[k] = sw;
+    var to = sw[2];
+    $("#t-" + k).setAttribute("fill", to);
+    if (reduce()){ $("#b-" + k).setAttribute("fill", to); }
+    else {
+      var bx = BOX[k], rect = $("#c-" + k + " rect"), t0 = performance.now(), dur = k === "door" ? 800 : 1000;
+      rect.setAttribute("x", bx.d === "x" ? bx.x : 0); rect.setAttribute("y", bx.d === "x" ? 0 : bx.y);
+      if (bx.d === "x"){ rect.setAttribute("height", 520); } else { rect.setAttribute("width", 800); }
+      sleeve.setAttribute("fill", to); roller.setAttribute("opacity", "1");
+      rollerIn.setAttribute("transform", bx.d === "x" ? "scale(1.35)" : "rotate(-90) scale(.8)");
+      anim[k] = { to: to };
+      var step = function(t){
+        var p = Math.min(1, (t - t0) / dur), e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        if (bx.d === "x"){ rect.setAttribute("width", bx.w * e); roller.setAttribute("transform", "translate(" + (bx.x + bx.w * e) + "," + (bx.y + bx.h * (.5 + .28 * Math.sin(p * Math.PI * 5))) + ")"); }
+        else { rect.setAttribute("height", bx.h * e); roller.setAttribute("transform", "translate(" + (bx.x + bx.w * (.5 + .2 * Math.sin(p * Math.PI * 4))) + "," + (bx.y + bx.h * e) + ")"); }
+        if (p < 1) anim[k].raf = requestAnimationFrame(step); else finish(k);
+      };
+      anim[k].raf = requestAnimationFrame(step);
+    }
+    renderSurfaces(); renderSwatches(); renderReadout(); check();
+    $("#say").textContent = LABEL[k] + " painted " + sw[0] + ", " + sw[1] + ".";
+    var sb = $('#surfaces [data-s="' + k + '"]'); if (sb && document.activeElement && document.activeElement.closest && document.activeElement.closest("#surfaces")) sb.focus();
+  }
+  $("#surfaces").addEventListener("click", function(e){ var b = e.target.closest("button"); if (!b) return; surface = b.dataset.s; renderSurfaces(); renderSwatches(); $('#surfaces [data-s="' + surface + '"]').focus(); });
+  $("#palettes").addEventListener("click", function(e){ var b = e.target.closest("button"); if (!b) return; palette = b.dataset.p; renderPalettes(); renderSwatches(); $('#palettes [data-p="' + palette + '"]').focus(); });
+  $("#swatches").addEventListener("click", function(e){ var b = e.target.closest("button"); if (!b) return; var i = +b.dataset.i; paint(surface, PAL[palette].sw[i]); var nb = $('#swatches [data-i="' + i + '"]'); if (nb) nb.focus(); });
+  $("#random").addEventListener("click", function(){
+    var keys = Object.keys(PAL), p = PAL[keys[Math.floor(Math.random() * keys.length)]].sw, pick = function(){ return p[Math.floor(Math.random() * p.length)]; };
+    var lights = p.filter(function(s){ return lum(s[2]) > .6; });
+    paint("walls", pick()); paint("trim", lights[Math.floor(Math.random() * lights.length)] || p[0]); paint("door", pick());
+  });
+
+  /* ---------- saved schemes ---------- */
+  var KEY = "twocoats-schemes", schemes = [];
+  function load(){ try { var v = JSON.parse(localStorage.getItem(KEY) || "[]"); return Array.isArray(v) ? v : []; } catch (e) { return schemes; } }
+  schemes = load();
+  function store(){ try { localStorage.setItem(KEY, JSON.stringify(schemes)); } catch (e) { /* storage unavailable */ } }
+  function renderSchemes(){
+    $("#saved-note").textContent = schemes.length ? schemes.length + " saved on this device · load one to keep tweaking" : "Nothing saved yet — build a room you like, then save it.";
+    $("#schemes").innerHTML = schemes.map(function(s){
+      return '<li class="scheme" data-id="' + s.id + '"><div class="sc-sw" aria-hidden="true">' + ["walls","trim","door","ceiling"].map(function(k){ return '<i style="background:' + s.c[k][2] + '"></i>'; }).join("") + '</div><div class="sc-body"><b>Scheme ' + s.id + "</b><ul>" + ["walls","trim","door","ceiling"].map(function(k){ return "<li><span>" + LABEL[k] + "</span><div>" + s.c[k][0] + "<small>" + s.c[k][1] + " · LRV " + lrv(s.c[k][2]) + "</small></div></li>"; }).join("") + '</ul><div class="sc-act"><button type="button" data-a="load">Load</button><button type="button" data-a="quote">Add to quote</button><button type="button" data-a="del" aria-label="Remove scheme ' + s.id + '">Remove</button></div></div></li>';
+    }).join("");
+  }
+  $("#save").addEventListener("click", function(){
+    schemes = load();
+    var id = schemes.reduce(function(m, x){ return Math.max(m, x.id); }, 0) + 1;
+    schemes.unshift({ id: id, c: JSON.parse(JSON.stringify(cur)) });
+    if (schemes.length > 6) schemes.pop();
+    store(); renderSchemes();
+    if (window.DemoKit) DemoKit.toast("Scheme " + id + " saved in this browser only — nothing was sent.");
+  });
+  $("#schemes").addEventListener("click", function(e){
+    var b = e.target.closest("button"); if (!b) return;
+    var id = +b.closest(".scheme").dataset.id, s = schemes.filter(function(x){ return x.id === id; })[0]; if (!s) return;
+    if (b.dataset.a === "del"){ schemes = schemes.filter(function(x){ return x.id !== id; }); store(); renderSchemes(); $("#save").focus(); }
+    else if (b.dataset.a === "load"){ ["walls","trim","door","ceiling"].forEach(function(k){ paint(k, s.c[k]); }); $("#room").scrollIntoView({ behavior: reduce() ? "auto" : "smooth", block: "center" }); }
+    else {
+      var n = $("#notes"), line = "Colours (scheme " + id + "): " + ["walls","trim","door","ceiling"].map(function(k){ return LABEL[k] + " " + s.c[k][0] + " " + s.c[k][1]; }).join("; ") + ".";
+      n.value = (n.value ? n.value.replace(/\s+$/, "") + "\n" : "") + line;
+      var ci = $('input[value="Interior"]'); ci.checked = true;
+      $("#quote").scrollIntoView({ behavior: reduce() ? "auto" : "smooth" });
+      setTimeout(function(){ n.focus({ preventScroll: true }); }, reduce() ? 0 : 500);
+      if (window.DemoKit) DemoKit.toast("Scheme " + id + " added to your quote notes.");
+    }
+  });
+
+  renderSurfaces(); renderPalettes(); renderSwatches(); renderReadout(); check(); renderSchemes();
+})();
+</script>
+</body>
+</html>

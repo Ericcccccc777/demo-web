@@ -1,0 +1,8 @@
+{
+  "id": "081",
+  "tech": ["SVG", "SVG animation", "Web Audio", "Keyboard shortcuts", "Form logic"],
+  "features": ["game", "sound"],
+  "interaction": "The author's name types itself onto a sheet in an SVG typewriter; visitors then type their own first line (physical keyboard, or a Start typing button on phones) and each letter strikes with jitter and ink variation while a type bar swings and keys dip; Return feeds a new line, the bell dings near the margin, the ribbon can switch to red, optional Web Audio key clicks are off by default, and Pull the page tears the sheet onto a pile.",
+  "fonts": ["Special Elite", "Gelasio"],
+  "notes": "Typed pages live only in the browser tab — nothing is saved or sent."
+}

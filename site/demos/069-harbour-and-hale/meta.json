@@ -1,0 +1,8 @@
+{
+  "id": "069",
+  "tech": ["SVG", "CSS Grid", "IntersectionObserver", "Keyboard shortcuts", "Pointer Events"],
+  "features": ["story"],
+  "interaction": "Choose 'I'm buying' or 'I'm selling', then step through six NSW conveyancing stages (click a numeral, use ←/→, Previous/Next or swipe): a gold progress line fills along the rail and each stage shows what you do, what the firm does, typical documents and a key figure labelled NSW, such as the 5-business-day cooling-off.",
+  "fonts": ["EB Garamond", "Lato"],
+  "notes": "General information only, not legal advice; figures are typical NSW residential practice. Marble is drawn with layered CSS gradients plus SVG turbulence veins. Fees are sample prices and the enquiry form ends in a demo toast."
+}

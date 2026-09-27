@@ -1,0 +1,8 @@
+{
+  "id": "090",
+  "tech": ["CSS Grid", "CSS 3D", "SVG", "Keyboard shortcuts", "CSS Scroll Snap", "Form logic", "Date logic"],
+  "features": ["game", "ordering"],
+  "interaction": "Pull a staff pick off a keyboard-navigable bookshelf and it lifts out while a 3D copy turns on the reading desk to show its cover and staff note; unwrap brown-paper 'blind date' parcels to reveal the book and reserve it (demo toast).",
+  "fonts": ["Sorts Mill Goudy", "Nunito Sans"],
+  "notes": "Books, authors, staff notes and events are fictional; prices are samples. Reserve, RSVP, book-club and gift-card actions end in demo toasts — nothing is ordered."
+}

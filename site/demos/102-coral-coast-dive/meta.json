@@ -1,0 +1,8 @@
+{
+  "id": "102",
+  "tech": ["Canvas 2D", "SVG", "SVG animation", "CSS Grid", "IntersectionObserver", "Form logic"],
+  "features": ["story", "booking"],
+  "interaction": "Scroll down through five dive stations while a side depth gauge reads 0–30 m and the water darkens from turquoise to navy; the 'Choose your dive' finder (snorkel or scuba, experience, days) matches a trip, and 'Descend' glides a diver down the page to that station, highlights it and pre-fills a demo booking form with a sample total.",
+  "fonts": ["Kanit", "Inter"],
+  "notes": "Fictional operator; prices and the boat schedule are samples and dive content is general information. The 30 m night-dive station is a page marker, not a dive plan. Booking ends in a demo state — nothing is sent."
+}
