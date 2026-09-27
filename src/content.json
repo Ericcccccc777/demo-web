@@ -7,7 +7,7 @@
     "skip": "Skip to content",
     "nav": {
       "box": "The box",
-      "services": "Services",
+      "services": "Our services",
       "process": "How it works",
       "faq": "FAQ",
       "cta": "Start a project",
@@ -143,7 +143,8 @@
           "good": "Everyone who'd rather be running their business",
           "link": "#contact"
         }
-      ]
+      ],
+      "more": "Explore all services — websites, apps & business tools"
     },
     "process": {
       "eyebrow": "How it works",
@@ -212,7 +213,7 @@
         },
         {
           "q": "How much does a website cost?",
-          "a": "It depends on the number of pages and features, such as bookings, ordering or two languages. Tell us what you need and we'll send a clear written quote."
+          "a": "Every project is quoted to its scope and your budget. We explain the deliverables, payment stages and ongoing costs in writing before work starts. Fair pricing, with changes agreed before additional work begins."
         },
         {
           "q": "Do I need to know anything technical?",
@@ -250,7 +251,9 @@
         "Menu or ordering",
         "English + 中文",
         "Domain & hosting help",
-        "Not sure yet"
+        "Not sure yet",
+        "Custom app",
+        "Business tools"
       ],
       "liked": "Drawers you liked",
       "liked_empty": "None yet — tap ♥ on any drawer and it will appear here.",
@@ -304,7 +307,7 @@
       "sent_from": "Sent from the {name} website"
     },
     "footer": {
-      "tagline": "Websites for small businesses across Australia.",
+      "tagline": "Websites, apps & digital tools for small businesses.",
       "disclaimer": "All demos are concept designs for fictional businesses. Names, prices, reviews and details inside them are illustrative.",
       "abn": "ABN",
       "top": "Back to top",
@@ -356,12 +359,12 @@
   },
   "zh": {
     "lang": "zh-CN",
-    "title": "{name} 百屉 — 为澳洲小生意做网站",
+    "title": "百屉工作室 / {name} — 为澳洲小生意做网站",
     "description": "面向澳洲小生意与个体经营者的网站工作室。打开 {count} 个可以真正操作的网站 demo——咖啡馆、驾校、装修、诊所、手艺人——换上你的店名试试，然后开始你的项目。",
     "skip": "跳到正文",
     "nav": {
       "box": "盒子",
-      "services": "服务",
+      "services": "业务范围",
       "process": "流程",
       "faq": "常见问题",
       "cta": "开始项目",
@@ -497,7 +500,8 @@
           "good": "所有更想专心做生意的人",
           "link": "#contact"
         }
-      ]
+      ],
+      "more": "了解全部服务：网站、App 与业务工具"
     },
     "process": {
       "eyebrow": "流程",
@@ -566,7 +570,7 @@
         },
         {
           "q": "做一个网站要多少钱？",
-          "a": "取决于页数和功能，比如预约、点单或双语。告诉我们你的需求，我们会给你一份清楚的书面报价。"
+          "a": "根据需求范围和预算单独报价。开工前书面说明交付内容、付款节点与后续费用；新增需求先确认，再开展额外工作。认真做事，实在报价。"
         },
         {
           "q": "我需要懂技术吗？",
@@ -604,7 +608,9 @@
         "菜单或点单",
         "中英双语",
         "域名和主机",
-        "还没想好"
+        "还没想好",
+        "App 定制",
+        "业务工具"
       ],
       "liked": "喜欢的抽屉",
       "liked_empty": "还没有——在任何抽屉上点 ♥，就会出现在这里。",
@@ -658,7 +664,7 @@
       "sent_from": "来自 {name} 网站"
     },
     "footer": {
-      "tagline": "为澳洲小生意做网站。",
+      "tagline": "为小生意定制网站、App 与数字工具。",
       "disclaimer": "盒子里的所有 demo 都是虚构商家的概念设计，其中的名称、价格、评价和细节仅作示意。",
       "abn": "ABN",
       "top": "回到顶部",

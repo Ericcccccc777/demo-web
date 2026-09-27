@@ -1,11 +1,11 @@
 {
   "_readme": "Single source of truth for studio facts. null = not provided yet: the site hides that item or shows an honest 'not connected yet' state. Edit, then run: python3 tools/build.py",
-  "name": "Hundred Drawers",
-  "name_is_placeholder": true,
-  "name_zh": "百屉",
+  "name": "Hundred Drawers Studio",
+  "name_is_placeholder": false,
+  "name_zh": "百屉工作室",
   "tagline": {
-    "en": "Websites for small businesses across Australia",
-    "zh": "为澳洲小生意做网站"
+    "en": "Websites, apps & digital tools for small businesses",
+    "zh": "为小生意定制网站、App 与数字工具"
   },
   "email": null,
   "phone": null,

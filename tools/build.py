@@ -18,6 +18,7 @@ import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
+from services_page import render_services
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -191,10 +192,45 @@ def hero_box(demos, c, p, sprite):
             f'<span class="tile-tip" hidden></span></div>')
 
 
+def page_chrome(lang, studio, c, services_page=False):
+    """One header and footer for the showcase and services, in both languages."""
+    home = "../" if services_page else ""
+    services_url = "./" if services_page else "services/"
+    other = ("../../services/" if lang == "zh" else "../zh/services/") if services_page else ("../" if lang == "zh" else "zh/")
+    other_lang = "en-AU" if lang == "zh" else "zh-CN"
+    name = studio.get("name_zh", studio["name"]) if lang == "zh" else studio["name"]
+    brand = esc(name)
+    if lang == "en" and name.endswith(" Studio"):
+        brand = esc(name[:-7]) + '<span class="brand-suffix"> Studio</span>'
+    links = (f'<a href="{home}#box">{esc(c["nav"]["box"])}</a>'
+             f'<a href="{services_url}"' + (' aria-current="page"' if services_page else '') + f'>{esc(c["nav"]["services"])}</a>'
+             f'<a href="#process">{esc(c["nav"]["process"])}</a><a href="#faq">{esc(c["nav"]["faq"])}</a>')
+    header = f'''<header class="top" id="top">
+  <div class="top-inner wrap">
+    <a class="brand" href="{home or '#top'}" aria-label="{esc(name)}">{LOGO}<span class="brand-name">{brand}</span></a>
+    <nav class="top-nav" aria-label="{esc(c['nav']['menu'])}">{links}</nav>
+    <div class="top-actions">
+      <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
+      <a class="btn btn-accent btn-small" href="{home}#contact">{esc(c['nav']['cta'])}</a>
+    </div>
+  </div>
+</header>'''
+    abn = f' · {esc(c["footer"]["abn"])} {esc(studio["abn"])}' if studio.get("abn") else ""
+    footer = f'''<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand"><a class="brand" href="{home or '#top'}">{LOGO}<span class="brand-name">{esc(name)}</span></a><p>{esc(c['footer']['tagline'])}</p></div>
+    <nav class="foot-nav" aria-label="{'页尾导航' if lang == 'zh' else 'Footer'}">{links}<a href="{home}#contact">{esc(c['nav']['cta'])}</a><a href="{other}" hreflang="{other_lang}" lang="{other_lang}">{esc(c['nav']['lang_switch'])}</a></nav>
+    <p class="foot-disclaimer">{esc(c['footer']['disclaimer'])}</p>
+    <p class="foot-legal">© {date.today().year} {esc(studio['name'])}{abn} · {esc(c['footer']['made'])} <a href="#top">{esc(c['footer']['top'])} ↑</a></p>
+  </div>
+</footer>'''
+    return header, footer
+
+
 def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     c = content[lang]
+    header, footer = page_chrome(lang, studio, c)
     p = "" if lang == "en" else "../"
-    other = "zh/" if lang == "en" else "../"
     name = studio["name"]
     count = stats["count"]
     vals = dict(name=name, count=count, industries=stats["industries"], typefaces=stats["typefaces"], avg_kb=stats["avg_kb"])
@@ -271,8 +307,6 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         "brief": c["brief_labels"], "features": c["features"], "moods": c["moods"], "industries": c["industries"],
     }
     config_json = json.dumps(config, ensure_ascii=False).replace("</", "<\\/")
-    abn = f' · {esc(c["footer"]["abn"])} {esc(studio["abn"])}' if studio.get("abn") else ""
-    year = date.today().year
 
     return f"""<!doctype html>
 <html lang="{c['lang']}" class="no-js" data-page-lang="{lang}">
@@ -299,18 +333,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 </head>
 <body>
 <a class="skip" href="#main">{esc(c['skip'])}</a>
-<header class="top" id="top">
-  <div class="top-inner wrap">
-    <a class="brand" href="#top" aria-label="{esc(name)}">{LOGO}<span class="brand-name">{esc(name)}</span></a>
-    <nav class="top-nav" aria-label="{esc(c['nav']['menu'])}">
-      <a href="#box">{esc(c['nav']['box'])}</a><a href="#services">{esc(c['nav']['services'])}</a><a href="#process">{esc(c['nav']['process'])}</a><a href="#faq">{esc(c['nav']['faq'])}</a>
-    </nav>
-    <div class="top-actions">
-      <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{'zh-CN' if lang == 'en' else 'en-AU'}" lang="{'zh-CN' if lang == 'en' else 'en-AU'}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
-      <a class="btn btn-accent btn-small" href="#contact">{esc(c['nav']['cta'])}</a>
-    </div>
-  </div>
-</header>
+{header}
 <main id="main">
 <section class="hero wrap" aria-labelledby="hero-title">
   <div class="hero-copy">
@@ -328,6 +351,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     <div class="hero-ctas">
       <a class="btn btn-ink" href="#box">{esc(c['hero']['open_box'])} <span aria-hidden="true">↓</span></a>
       <a class="text-link" href="#contact">{esc(c['hero']['start'])} {ARROW}</a>
+      <a class="text-link" href="services/">{esc(c['nav']['services'])} {ARROW}</a>
     </div>
   </div>
   {hero_box(demos, c, p, sprite)}
@@ -389,6 +413,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     <p class="section-intro">{esc(c['services']['intro'])}</p>
   </div>
   <ol class="svc-list">{services}</ol>
+  <p class="services-more"><a class="btn btn-line" href="services/">{esc(c['services']['more'])} {ARROW}</a></p>
 </section>
 
 <section class="process" id="process" aria-labelledby="process-title">
@@ -467,19 +492,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap foot-inner">
-    <div class="foot-brand">
-      <a class="brand" href="#top">{LOGO}<span class="brand-name">{esc(name)}</span></a>
-      <p>{esc(c['footer']['tagline'])}</p>
-    </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <a href="#box">{esc(c['nav']['box'])}</a><a href="#services">{esc(c['nav']['services'])}</a><a href="#process">{esc(c['nav']['process'])}</a><a href="#faq">{esc(c['nav']['faq'])}</a><a href="#contact">{esc(c['nav']['cta'])}</a><a href="{other}" hreflang="{'zh-CN' if lang == 'en' else 'en-AU'}" lang="{'zh-CN' if lang == 'en' else 'en-AU'}">{esc(c['nav']['lang_switch'])}</a>
-    </nav>
-    <p class="foot-disclaimer">{esc(c['footer']['disclaimer'])}</p>
-    <p class="foot-legal">© {year} {esc(name)}{abn} · {esc(c['footer']['made'])} <a href="#top">{esc(c['footer']['top'])} ↑</a></p>
-  </div>
-</footer>
+{footer}
 
 <dialog class="viewer" id="viewer" aria-labelledby="v-name">
   <div class="v-bar">
@@ -576,6 +589,7 @@ def main(argv=None):
 
     studio = load("studio.json")
     content = load("content.json")
+    services_content = load("services.json")
     CONTENT.update(content)
     catalogue = load("demos.json")
     scans = {d["id"]: scan_demo(d) for d in catalogue}
@@ -606,6 +620,13 @@ def main(argv=None):
     (SITE / "index.html").write_text(render("en", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
     (SITE / "zh" / "index.html").write_text(render("zh", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
 
+    for lang, relative in (("en", "services"), ("zh", "zh/services")):
+        target = SITE / relative
+        target.mkdir(parents=True, exist_ok=True)
+        header, footer = page_chrome(lang, studio, content[lang], services_page=True)
+        (target / "index.html").write_text(
+            render_services(lang, studio, content[lang], services_content[lang], asset_v, header, footer), encoding="utf-8")
+
     (SITE / "404.html").write_text(render_404(studio, asset_v), encoding="utf-8")
     site_url = (studio.get("site_url") or "").rstrip("/")
     if site_url:
@@ -615,15 +636,16 @@ def main(argv=None):
             '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "".join(
                 f'  <url><loc>{site_url}{path}</loc><lastmod>{today}</lastmod>'
-                f'<xhtml:link rel="alternate" hreflang="en-AU" href="{site_url}/"/>'
-                f'<xhtml:link rel="alternate" hreflang="zh-CN" href="{site_url}/zh/"/></url>\n'
-                for path in ("/", "/zh/")) + "</urlset>\n")
+                f'<xhtml:link rel="alternate" hreflang="en-AU" href="{site_url}{en_path}"/>'
+                f'<xhtml:link rel="alternate" hreflang="zh-CN" href="{site_url}{zh_path}"/></url>\n'
+                for en_path, zh_path in (("/", "/zh/"), ("/services/", "/zh/services/"))
+                for path in (en_path, zh_path)) + "</urlset>\n")
     else:
         (SITE / "robots.txt").write_text("# Preview build: no production domain configured in src/studio.json yet.\nUser-agent: *\nDisallow: /\n")
         if (SITE / "sitemap.xml").exists():
             (SITE / "sitemap.xml").unlink()
 
-    report = {"built": ["site/index.html", "site/zh/index.html", "site/robots.txt"], "stats": stats,
+    report = {"built": ["site/index.html", "site/zh/index.html", "site/services/index.html", "site/zh/services/index.html", "site/robots.txt"], "stats": stats,
               "typeface_list": typefaces, "missing_demos": missing,
               "problems": {i: s["problems"] for i, s in scans.items() if s["exists"] and s["problems"]},
               "warnings": {i: s["warnings"] for i, s in scans.items() if s["exists"] and s["warnings"]},

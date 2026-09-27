@@ -1,0 +1,362 @@
+{
+  "en": {
+    "title": "Websites, apps & digital services",
+    "description": "Custom websites, website redesigns, mobile apps and practical business tools for independent businesses. A two-person studio, clear scope and fair, upfront quotes.",
+    "eyebrow": "Websites · Apps · Business tools",
+    "headline": [
+      "Good ideas.",
+      "Built for business."
+    ],
+    "intro": "A two-person studio for independent businesses. From your first website to a custom app, we turn what your business needs into something clear, useful and easy to use. You work directly with the people building it.",
+    "cta": "Tell us what you need",
+    "work": "Explore website examples",
+    "caption": "Based around your business. Available across Australia and for overseas projects.",
+    "index_label": "What we can help with",
+    "index_note": "Start with one useful improvement. Build from there.",
+    "values_label": "How we work",
+    "values": [
+      "Direct communication",
+      "English & Chinese",
+      "Written quotes",
+      "Support after launch"
+    ],
+    "scope_eyebrow": "Our services",
+    "scope_title": "The right build for your next step.",
+    "scope_intro": "A fresh start, a better version of what you have, or a tool that makes the day easier. We help you choose a sensible scope for your needs and budget.",
+    "items": [
+      {
+        "id": "websites",
+        "short": "Custom websites",
+        "title": "Custom websites",
+        "body": "A website built around your business, your customers and the action you want them to take. From a focused landing page to a complete small-business website.",
+        "points": [
+          "Brand-led design that works across phones, tablets and desktops",
+          "Services, menus, projects and contact information organised clearly",
+          "Content editing and search basics planned into the build"
+        ],
+        "for": "New businesses, local shops, independent professionals"
+      },
+      {
+        "id": "upgrades",
+        "short": "Website upgrades",
+        "title": "Website redesigns & upgrades",
+        "body": "Keep what works and improve what gets in the way. We review your existing website before recommending a focused update or a fuller redesign.",
+        "points": [
+          "Clearer mobile layouts, navigation and enquiry paths",
+          "Refreshed content, visuals and page structure",
+          "Migration and existing page addresses considered before launch"
+        ],
+        "for": "Established businesses, rebrands, outgrown websites"
+      },
+      {
+        "id": "connections",
+        "short": "Bookings & online shops",
+        "title": "Bookings, ordering & online shops",
+        "body": "Make it easier for customers to book, enquire or buy. We connect suitable, established services and shape the website around the way you already run your business.",
+        "points": [
+          "Appointments, table bookings and enquiry forms",
+          "Product catalogues, menus and hosted checkout connections",
+          "Tool compatibility and ongoing platform fees agreed upfront"
+        ],
+        "for": "Salons, restaurants, classes, small retailers"
+      },
+      {
+        "id": "apps",
+        "short": "Custom apps",
+        "title": "Custom apps & prototypes",
+        "body": "A focused app for a specific business need. We begin with the customer journey and a testable prototype, then agree the first version and the best platform to build on.",
+        "points": [
+          "Customer apps, membership journeys and booking experiences",
+          "iOS, Android or a web app, chosen after a feasibility review",
+          "Development, testing, release support and maintenance scoped separately"
+        ],
+        "for": "Businesses with repeat-use needs, new product ideas"
+      },
+      {
+        "id": "tools",
+        "short": "Business tools",
+        "title": "Web apps & business tools",
+        "body": "Bring a repetitive process into one practical workspace. We can plan and build focused tools for your team, or connect systems that currently leave you doing the same work twice.",
+        "points": [
+          "Customer portals, quote tools and internal dashboards",
+          "Forms, data workflows and integrations with existing services",
+          "Access, data handling and handover planned from the start"
+        ],
+        "for": "Service teams, growing businesses, manual workflows"
+      },
+      {
+        "id": "care",
+        "short": "Bilingual & ongoing care",
+        "title": "Bilingual websites & ongoing care",
+        "body": "Keep your website useful as your business changes. We help with English and Chinese content, updates and the practical work of looking after a live site.",
+        "points": [
+          "English and Chinese page structure and content support",
+          "Hosting setup, content updates and agreed maintenance",
+          "Account ownership, editing guidance and a clear handover"
+        ],
+        "for": "Bilingual businesses, existing websites, ongoing support"
+      }
+    ],
+    "process": {
+      "eyebrow": "How it works",
+      "title": "A clear plan. A build you can follow.",
+      "note": "Features, delivery milestones and responsibilities are agreed before development begins. Larger app projects are split into manageable phases.",
+      "items": [
+        {
+          "title": "Understand the job",
+          "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+        },
+        {
+          "title": "Agree the scope",
+          "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+        },
+        {
+          "title": "Design, build, review",
+          "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+        },
+        {
+          "title": "Launch & hand over",
+          "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Our approach to pricing",
+      "title": "Fair pricing. Clearly scoped.",
+      "intro": "We shape the proposal around what your business actually needs and what you are comfortable investing. Every project is quoted individually, with the costs explained before you commit.",
+      "items": [
+        {
+          "title": "A written quote before work starts",
+          "body": "You can see what is included, what will be delivered and how payments are staged. The agreed scope sets the price."
+        },
+        {
+          "title": "A sensible first version",
+          "body": "We can prioritise the essentials and plan the rest for later. A smaller, useful launch is often a good place to begin."
+        },
+        {
+          "title": "Ongoing costs made clear",
+          "body": "Hosting, domains, third-party subscriptions, maintenance and any applicable taxes are identified in the proposal."
+        },
+        {
+          "title": "Changes agreed together",
+          "body": "If the brief changes, we explain the effect on cost and timing and get your agreement before doing additional work."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "A few practical questions",
+      "title": "Before we begin.",
+      "items": [
+        {
+          "q": "Can you improve my current website?",
+          "a": "Yes. We first review the platform, account access, content and the changes you need. We then recommend an update, redesign or migration based on what is practical."
+        },
+        {
+          "q": "Do I need an app as well as a website?",
+          "a": "Not always. We look at how often people will use it and what they need to do. An existing tool or a mobile-friendly website may be enough; a custom app makes sense when it solves a clear, repeat-use problem."
+        },
+        {
+          "q": "How much will my project cost?",
+          "a": "The scope, number of screens or pages, integrations and content requirements determine the quote. Tell us your priorities and budget, and we will explain the options and costs before you decide."
+        },
+        {
+          "q": "Who owns the website and accounts?",
+          "a": "Your domain and service accounts should be registered in your name. Ownership of project-specific design and code, and any third-party licences, is set out in the agreement, along with the handover arrangements."
+        },
+        {
+          "q": "Can you help after launch?",
+          "a": "Yes. Updates, hosting support and maintenance can be included in an agreed support arrangement or quoted as separate work. We explain the coverage and response expectations before you choose."
+        },
+        {
+          "q": "Can we work together from another city or country?",
+          "a": "Yes. We can work remotely in English and Chinese. For overseas projects, we confirm the working hours, currency, payment stages and delivery arrangements in the proposal."
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "Your next step",
+      "title": "Start with what your business needs.",
+      "body": "Share your business, your current website if you have one, and what you would like to improve. An idea, a short list or an example you like is enough to start a project brief."
+    }
+  },
+  "zh": {
+    "title": "业务范围 · 网站、App 与数字工具",
+    "description": "为独立商家和小企业提供网站定制、旧站升级、App 定制、预约与电商接入、业务工具和中英双语支持。两人工作室，直接沟通，范围清楚，实在报价。",
+    "eyebrow": "网站定制 · App 开发 · 业务工具",
+    "headline": [
+      "让想法落地，",
+      "让生意更顺。"
+    ],
+    "intro": "我们是一家两人工作室，为独立商家和小企业设计、开发网站与应用。从第一版官网到定制 App，围绕你的生意，把需求做成清楚、实用的体验。直接和负责设计、开发的人沟通。",
+    "cta": "说说你的需求",
+    "work": "看看网站示例",
+    "caption": "服务澳洲商家，也接受海外项目。支持中文与英文沟通。",
+    "index_label": "我们能帮你做什么",
+    "index_note": "从一个实用的改进开始，按需要逐步完善。",
+    "values_label": "我们的合作方式",
+    "values": [
+      "直接沟通",
+      "中英双语",
+      "书面报价",
+      "上线后支持"
+    ],
+    "scope_eyebrow": "业务范围",
+    "scope_title": "为生意的下一步，做好准备。",
+    "scope_intro": "从零开始、完善已有网站，或做一个省事的工具。我们结合你的实际需求和预算，一起确定合适的方案与交付范围。",
+    "items": [
+      {
+        "id": "websites",
+        "short": "网站定制",
+        "title": "网站设计与定制",
+        "body": "围绕你的品牌、顾客和业务目标搭建网站。从一页式介绍到完整的小企业官网，让访客了解你，也知道下一步怎样联系、预约或购买。",
+        "points": [
+          "适配手机、平板和电脑的品牌设计",
+          "清楚组织服务、菜单、作品与联系信息",
+          "按需要规划内容编辑方式与搜索基础"
+        ],
+        "for": "新开商家、本地店铺、独立专业人士"
+      },
+      {
+        "id": "upgrades",
+        "short": "旧站升级",
+        "title": "网站改版与升级",
+        "body": "先了解现有网站，再判断哪些值得保留、哪些需要改善。从局部调整到整体改版，让内容、体验与现在的生意保持一致。",
+        "points": [
+          "改善手机布局、导航与咨询路径",
+          "更新品牌视觉、文案及页面结构",
+          "上线前规划内容迁移与原有页面地址衔接"
+        ],
+        "for": "已有官网、品牌升级、业务扩展"
+      },
+      {
+        "id": "connections",
+        "short": "预约与电商",
+        "title": "预约、点单与电商接入",
+        "body": "让顾客更方便地预约、咨询和购买。结合你现有的经营方式，选择并接入合适的成熟服务，把网站与实际业务连接起来。",
+        "points": [
+          "服务预约、餐厅订位与咨询表单",
+          "商品展示、在线菜单及支付平台接入",
+          "提前确认工具兼容性与后续平台费用"
+        ],
+        "for": "美业、餐饮、课程、小型零售"
+      },
+      {
+        "id": "apps",
+        "short": "App 定制",
+        "title": "App 定制与产品原型",
+        "body": "围绕明确的使用场景，把想法变成可以体验的产品。先梳理流程、制作原型，再评估平台与开发范围，分阶段完成第一版。",
+        "points": [
+          "顾客服务、会员与预约类应用",
+          "评估后选择 iOS、Android 或网页应用",
+          "分别明确开发、测试、发布支持与维护范围"
+        ],
+        "for": "有持续使用需求的商家、新产品想法"
+      },
+      {
+        "id": "tools",
+        "short": "业务工具",
+        "title": "网页应用与内部工具",
+        "body": "把重复处理的工作整理到一个实用的工具里。可以是给客户使用的服务入口，也可以是团队内部的业务页面，或已有系统之间的连接。",
+        "points": [
+          "客户门户、报价工具与内部管理页面",
+          "表单、数据流程及现有服务集成",
+          "提前规划权限、数据处理与交接方式"
+        ],
+        "for": "服务团队、成长型企业、重复手工作业"
+      },
+      {
+        "id": "care",
+        "short": "双语与维护",
+        "title": "双语内容与持续维护",
+        "body": "让网站随着生意一起更新。我们协助中英文内容组织、日常修改，以及网站上线后的管理，让后续维护有清楚的安排。",
+        "points": [
+          "中英文页面结构与内容支持",
+          "主机配置、内容更新及约定范围的维护",
+          "账户归属、编辑说明与完整交接"
+        ],
+        "for": "双语商家、已有网站、长期更新需求"
+      }
+    ],
+    "process": {
+      "eyebrow": "合作流程",
+      "title": "每一步，都说清楚。",
+      "note": "开发前确认功能、交付节点和双方责任。较大的 App 项目会拆分阶段，逐步交付。",
+      "items": [
+        {
+          "title": "了解需求",
+          "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+        },
+        {
+          "title": "确认方案与报价",
+          "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+        },
+        {
+          "title": "设计、开发与确认",
+          "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+        },
+        {
+          "title": "上线与交接",
+          "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "关于费用",
+      "title": "认真做事，实在报价。",
+      "intro": "结合实际需求和预算制定方案，每个项目单独报价。先明确范围，再说明费用，让你在决定之前了解交付内容与后续成本。",
+      "items": [
+        {
+          "title": "开工前，先有书面报价",
+          "body": "包含什么、交付什么、怎样分阶段付款，提前写清楚。费用以双方确认的范围为准。"
+        },
+        {
+          "title": "优先做好真正需要的部分",
+          "body": "可以先完成必要功能，把后续想法留到下一阶段。按业务需要投入，也照顾起步时的预算。"
+        },
+        {
+          "title": "后续费用，提前说明",
+          "body": "域名、主机、第三方订阅、维护以及适用税费，会在方案与报价中说明，方便你评估整体成本。"
+        },
+        {
+          "title": "新增需求，确认后再做",
+          "body": "需求变化时，先说明对费用和时间的影响，经你同意后再开展额外工作。"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "合作前，你可能想了解。",
+      "items": [
+        {
+          "q": "可以在我现有的网站上修改吗？",
+          "a": "可以先评估。我们会了解当前平台、账户权限、内容与修改需求，再判断适合局部升级、整体改版还是迁移到其他方案。"
+        },
+        {
+          "q": "有网站以后，还需要做 App 吗？",
+          "a": "不一定。我们会先看使用频率和实际场景。现成工具或手机友好的网站可能已经够用；当有明确、持续的使用需求时，再考虑定制 App。"
+        },
+        {
+          "q": "做一个项目大概多少钱？",
+          "a": "报价取决于页面或界面数量、功能、系统接入及内容准备情况。告诉我们你的重点和预算，我们会说明可选方案及对应费用，方便你决定。"
+        },
+        {
+          "q": "网站和账户最后归谁？",
+          "a": "域名和服务账户应注册在你名下。项目专属设计与代码的归属、第三方许可和交接条件，会在合作协议中写清楚。"
+        },
+        {
+          "q": "上线后还可以找你们修改吗？",
+          "a": "可以。日常更新、主机支持与维护，可以按约定的服务安排执行，也可以另行报价。服务范围和响应安排会提前说明。"
+        },
+        {
+          "q": "不在同一个城市，或人在海外，可以合作吗？",
+          "a": "可以远程合作，支持中文与英文沟通。海外项目会在方案中确认沟通时段、结算币种、付款节点与交付安排。"
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "开始一个项目",
+      "title": "先说说，你想解决什么。",
+      "body": "告诉我们你的生意、现有网址，以及希望改善的地方。一个想法、一份简单清单，或一个喜欢的示例，都可以作为整理需求的起点。"
+    }
+  }
+}

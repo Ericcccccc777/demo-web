@@ -86,6 +86,8 @@ html.viewer-open { overflow: hidden; }
 .top-actions { display: flex; align-items: center; gap: 10px; }
 .lang-switch { white-space: nowrap; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-2); text-decoration: none; font-size: 14.5px; }
 .lang-switch:hover { background: var(--paper-2); }
+.top-nav a[aria-current="page"] { background: var(--paper-2); color: var(--ink); }
+@media (max-width: 1100px) { .brand-suffix { display: none; } }
 @media (max-width: 900px) { .top-nav { display: none; } .top-actions { margin-left: auto; } }
 @media (max-width: 440px) {
   :root { --top-h: 60px; }
@@ -258,6 +260,47 @@ section { scroll-margin-top: calc(var(--top-h) + 8px); }
 .svc .text-link { transform: translateY(8px); }
 @media (max-width: 980px) { .svc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .svc-list { grid-template-columns: 1fr; } }
+
+/* ---------- service page: the same paper, type, rules and numbered drawers ---------- */
+.services-more { margin: 24px 0 0; }
+.services-more .btn { white-space: normal; text-align: center; }
+.scope-hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+.scope-hero h1 { font-size: clamp(54px, 6.8vw, 108px); }
+.scope-caption { margin: 24px 0 0; color: var(--muted); font-size: 14px; max-width: 38em; }
+.scope-index { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: clamp(22px, 3vw, 40px); box-shadow: 0 1px 0 #fff inset, var(--lift); }
+.scope-index ol { list-style: none; padding: 0; margin: 24px 0; border-top: 1px solid var(--line-2); }
+.scope-index li { border-bottom: 1px solid var(--line); }
+.scope-index a { display: grid; grid-template-columns: 26px minmax(0, 1fr) 18px; gap: 14px; align-items: center; padding: 18px 0; text-decoration: none; font-size: clamp(17px, 1.5vw, 21px); }
+.scope-index a:hover { color: var(--accent); }
+.scope-index .arr { color: var(--muted); }
+.scope-index-note { font-size: 14px; color: var(--muted); margin: 0; }
+.scope-values { border-block: 1px solid var(--line); }
+.scope-values ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin-block: 0; padding-block: 24px; gap: 16px; }
+.scope-values li { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; }
+.scope-values li::before { content: ""; width: 6px; height: 6px; flex: none; background: var(--accent); border-radius: 2px; }
+.scope-services { border-top: 0; }
+.scope-services .svc { gap: 16px; padding-bottom: 42px; scroll-margin-top: calc(var(--top-h) + 20px); }
+.scope-services .svc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 6vw, 100px); }
+.scope-services .svc h3 { line-height: 1.2; }
+.scope-points { list-style: none; padding: 0; margin: 0; color: var(--ink-2); font-size: 15px; }
+.scope-points li { position: relative; padding: 6px 0 6px 17px; }
+.scope-points li::before { content: ""; position: absolute; width: 4px; height: 4px; background: var(--muted); border-radius: 50%; top: 16px; left: 0; }
+.scope-pricing { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(24px, 5vw, 88px); padding-block: clamp(80px, 10vw, 140px) clamp(40px, 6vw, 80px); }
+.pricing-points { list-style: none; padding: 0; margin: 0; }
+.pricing-points li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 20px; border-top: 1px solid var(--line); padding-block: 24px; }
+.pricing-points .svc-no { padding-top: 5px; }
+.pricing-points h3 { font-size: 19px; margin: 0 0 8px; font-weight: 600; }
+.pricing-points p { color: var(--ink-2); margin: 0; }
+.scope-contact .section-head { margin-bottom: 24px; }
+.scope-contact .section-intro { max-width: 44em; }
+.services-page .top { border-bottom-color: var(--line); }
+@media (max-width: 1099px) { .scope-hero { grid-template-columns: 1fr; } .scope-index { max-width: 720px; width: 100%; } }
+@media (max-width: 860px) { .scope-pricing { grid-template-columns: 1fr; } }
+@media (max-width: 620px) {
+  .scope-services .svc-list { grid-template-columns: 1fr; }
+  .scope-values ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scope-values li { font-size: 13px; gap: 8px; }
+}
 
 /* ---------- process (dark pause) ---------- */
 .process { background: var(--night); color: var(--on-night); padding-block: clamp(80px, 10vw, 140px); }
