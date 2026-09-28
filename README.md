@@ -1,8 +1,9 @@
-# 工作室展示站（百屉 Hundred Drawers — 工作名）
+# emvalue
 
 一个“盒子”里装着 108 个风格迥异、可以真正操作的小网站。访客可以在主站里沉浸式打开它们（电脑 / 平板 / 手机三种框）、换上自己的店名试穿，再把喜欢的风格连同需求发给工作室。
 
 - 英文主站：`site/index.html`；中文版：`site/zh/index.html`
+- 业务范围：`site/services/index.html`；中文版：`site/zh/services/index.html`，源文案为 `src/services.json`
 - 108 个 demo：`site/demos/NNN-slug/`（每个都是独立单文件网站，附 `meta.json` 说明实际用到的技术）
 - 共享小工具：`site/demos/_kit/kit.js`（店名试穿、诚实的 demo 提示、独立访问时的角标）
 - 内容源：`src/studio.json`（工作室信息）、`src/content.json`（主站中英文文案）、`src/demos.json`（108 个 demo 的目录与设计说明）
@@ -22,6 +23,7 @@ macOS 上也可以直接双击 `preview.command`。
 | 想改什么 | 改哪里 | 然后 |
 |---|---|---|
 | 工作室名称、邮箱、电话、WhatsApp、微信、Instagram、ABN、正式域名 | `src/studio.json`（`null` 表示未提供，页面会隐藏或如实显示“待接通”） | `python3 tools/build.py` |
+| 业务范围页中英文文案 | `src/services.json` | `python3 tools/build.py` |
 | 主站中英文文案（服务、流程、FAQ、按钮文字） | `src/content.json` | `python3 tools/build.py` |
 | demo 的名称、行业、风格标签 | `src/demos.json` | `python3 tools/build.py` |
 | 某个 demo 的页面本身 | `site/demos/NNN-slug/index.html` | `node tools/qa.mjs --ids NNN`，再 `node tools/qa.mjs --ids NNN --thumbs --no-shots` 更新缩略图 |

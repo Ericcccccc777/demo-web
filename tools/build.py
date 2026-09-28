@@ -198,7 +198,7 @@ def page_chrome(lang, studio, c, services_page=False):
     services_url = "./" if services_page else "services/"
     other = ("../../services/" if lang == "zh" else "../zh/services/") if services_page else ("../" if lang == "zh" else "zh/")
     other_lang = "en-AU" if lang == "zh" else "zh-CN"
-    name = studio.get("name_zh", studio["name"]) if lang == "zh" else studio["name"]
+    name = (studio.get("name_zh") or studio["name"]) if lang == "zh" else studio["name"]
     brand = esc(name)
     if lang == "en" and name.endswith(" Studio"):
         brand = esc(name[:-7]) + '<span class="brand-suffix"> Studio</span>'

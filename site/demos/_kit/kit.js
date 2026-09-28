@@ -6,7 +6,7 @@
  */
 (function () {
   "use strict";
-  var STUDIO = "Hundred Drawers Studio";
+  var STUDIO = "emvalue";
   var HUB = "../../index.html";
   var MAX = 32;
 
