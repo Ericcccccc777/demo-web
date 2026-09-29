@@ -44,6 +44,12 @@ sh tools/checkpoint.sh "<ids>" "<说明>"   # 质检 → 缩略图 → 重建 �
 
 只需要 Python 3.9+、Node 22+ 和 Google Chrome，不需要安装任何 npm 包。质检截图和报告写到 `evidence/`（不进版本库）。
 
+## 在线预览
+
+预览地址：https://ericcccccc777.github.io/demo-web/ （中文版在 `/zh/`），由 GitHub Pages 免费托管。
+
+改好内容、运行 `python3 tools/build.py`，再把改动推送到 `main`。只要 `site/` 有变化，就会自动重新发布，大约一两分钟后生效。发布设置见 `.github/workflows/pages.yml`，进度可以在仓库的 Actions 页面查看。预览地址没有配置 `site_url`，所以保持 `noindex`，搜索引擎不会收录。
+
 ## 上线
 
 纯静态网站，把 `site/` 整个文件夹上传到任意静态托管即可（Netlify / Cloudflare Pages / Vercel / GitHub Pages / 任何主机的网站根目录）。上线前：

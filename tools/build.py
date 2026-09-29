@@ -554,22 +554,31 @@ def render_404(studio, asset_v):
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
+<script>
+  /* This page is served at whatever URL was missing, so resolve its links from the site root:
+     the first path segment on a GitHub Pages project site (/repo/), otherwise "/".
+     Local files are written after <base> so the browser never prefetches them from the wrong folder. */
+  (function () {{
+    var m = /[.]github[.]io$/.test(location.hostname) && location.pathname.match(/^[/][^/]+[/]/);
+    document.write('<base href="' + (m ? m[0] : "/") + '">' +
+      '<link rel="icon" href="favicon.svg" type="image/svg+xml">' +
+      '<link rel="stylesheet" href="assets/hub.css?v={asset_v['css']}">');
+  }})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — {name}</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Instrument+Serif&display=swap">
-<link rel="stylesheet" href="/assets/hub.css?v={asset_v['css']}">
 </head>
 <body>
 <main id="main" class="wrap" style="min-height:100vh;display:grid;align-content:center;gap:18px;padding-block:64px">
-  <a class="brand" href="/">{LOGO}<span class="brand-name">{name}</span></a>
+  <a class="brand" href="./">{LOGO}<span class="brand-name">{name}</span></a>
   <p class="eyebrow">404 · Empty drawer</p>
   <h1 style="font:400 clamp(48px,8vw,112px)/.95 var(--serif);margin:0;letter-spacing:-.02em">This drawer is empty.</h1>
   <p class="lede" lang="zh-CN">这个抽屉是空的——页面不存在或已移动。</p>
-  <p style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0"><a class="btn btn-ink" href="/#box">Open the box</a><a class="btn btn-line" href="/zh/#box" lang="zh-CN">打开盒子（中文）</a></p>
+  <p style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0"><a class="btn btn-ink" href="./#box">Open the box</a><a class="btn btn-line" href="zh/#box" lang="zh-CN">打开盒子（中文）</a></p>
 </main>
 </body>
 </html>
