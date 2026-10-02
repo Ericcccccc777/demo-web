@@ -672,6 +672,7 @@ def main(argv=None):
             raise ValueError("EMVALUE_SITE_URL must be a public https:// site URL, without credentials, query or fragment")
     content = load("content.json")
     services_content = load("services.json")
+    promotion_content = load("promotion.json")
     pages = load("pages.json")
     CONTENT.update(content)
     catalogue = load("demos.json")
@@ -704,7 +705,7 @@ def main(argv=None):
     (SITE / "index.html").write_text(render("en", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
     (SITE / "zh" / "index.html").write_text(render("zh", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
 
-    service_pages = {"services": services_content}
+    service_pages = {"services": services_content, "services/xiaohongshu": promotion_content}
     service_paths = []
     for slug, page_content in service_pages.items():
         for lang in ("en", "zh"):

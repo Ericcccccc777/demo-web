@@ -1,16 +1,16 @@
 {
   "en": {
-    "title": "Websites, apps & digital services",
-    "description": "Custom websites, website redesigns, mobile apps and practical business tools for independent businesses. A two-person studio, clear scope and fair, upfront quotes.",
-    "eyebrow": "Websites · Apps · Business tools",
+    "title": "Websites, apps & local promotion",
+    "description": "Custom websites, apps and business tools for small businesses, plus Xiaohongshu creator campaigns in Melbourne. Clear scope, direct communication and written quotes.",
+    "eyebrow": "Websites & apps · Business tools · Local promotion",
     "headline": [
       "Good ideas.",
       "Built for business."
     ],
-    "intro": "A two-person studio for independent businesses. From your first website to a custom app, we turn what your business needs into something clear, useful and easy to use. You work directly with the people building it.",
+    "intro": "A two-person studio for independent businesses. We design and build websites, apps and business tools, and coordinate Xiaohongshu campaigns for Melbourne businesses. You work directly with the people responsible for your project.",
     "cta": "Tell us what you need",
     "work": "Explore website examples",
-    "caption": "Based around your business. Available across Australia and for overseas projects.",
+    "caption": "Website and app projects across Australia and overseas. Xiaohongshu creator campaigns currently focus on Melbourne.",
     "index_label": "What we can help with",
     "index_note": "Start with one useful improvement. Build from there.",
     "values_label": "How we work",
@@ -21,8 +21,8 @@
       "Support after launch"
     ],
     "scope_eyebrow": "Our services",
-    "scope_title": "The right build for your next step.",
-    "scope_intro": "A fresh start, a better version of what you have, or a tool that makes the day easier. We help you choose a sensible scope for your needs and budget.",
+    "scope_title": "Practical support for your next step.",
+    "scope_intro": "From websites and apps to Melbourne Xiaohongshu campaigns, we help you choose a sensible scope for your needs and budget.",
     "items": [
       {
         "id": "websites",
@@ -95,10 +95,24 @@
           "Account ownership, editing guidance and a clear handover"
         ],
         "for": "Bilingual businesses, existing websites, ongoing support"
+      },
+      {
+        "id": "xiaohongshu",
+        "short": "Melbourne Xiaohongshu campaigns",
+        "title": "Melbourne Xiaohongshu creator campaigns",
+        "body": "Early promotion support for small businesses and emerging brands, covering Melbourne creator sourcing, content coordination, scheduling and reviews before publication.",
+        "points": [
+          "Creator sourcing, liaison and scheduling",
+          "Script, video and accompanying copy review",
+          "Scope, creator fees and deliverables agreed upfront"
+        ],
+        "for": "Melbourne businesses, openings, product launches",
+        "href": "xiaohongshu/",
+        "link_label": "Explore Xiaohongshu campaigns"
       }
     ],
     "process": {
-      "eyebrow": "How it works",
+      "eyebrow": "Website & app project process",
       "title": "A clear plan. A build you can follow.",
       "note": "Features, delivery milestones and responsibilities are agreed before development begins. Larger app projects are split into manageable phases.",
       "items": [
@@ -169,7 +183,7 @@
         },
         {
           "q": "Can we work together from another city or country?",
-          "a": "Yes. We can work remotely in English and Chinese. For overseas projects, we confirm the working hours, currency, payment stages and delivery arrangements in the proposal."
+          "a": "Website and app projects can be delivered remotely in English and Chinese. We confirm working hours, currency, payment stages and delivery arrangements for overseas projects. Xiaohongshu creator campaigns currently focus on Melbourne businesses."
         }
       ]
     },
@@ -180,17 +194,17 @@
     }
   },
   "zh": {
-    "title": "业务范围 · 网站、App 与数字工具",
-    "description": "为独立商家和小企业提供网站定制、旧站升级、App 定制、预约与电商接入、业务工具和中英双语支持。两人工作室，直接沟通，范围清楚，实在报价。",
-    "eyebrow": "网站定制 · App 开发 · 业务工具",
+    "title": "业务范围 · 网站、App 与本地推广",
+    "description": "为小企业提供网站定制、旧站升级、App 与业务工具开发，并为墨尔本商家提供小红书博主对接、内容协调及审核服务。范围清楚，书面报价。",
+    "eyebrow": "网站与应用 · 业务工具 · 本地推广",
     "headline": [
       "让想法落地，",
       "让生意更顺。"
     ],
-    "intro": "我们是一家两人工作室，为独立商家和小企业设计、开发网站与应用。从第一版官网到定制 App，围绕你的生意，把需求做成清楚、实用的体验。直接和负责设计、开发的人沟通。",
+    "intro": "我们是一家两人工作室，为独立商家和小企业设计、开发网站与应用，并为墨尔本商家提供小红书推广支持。围绕你的业务需求，确定清楚、实用的方案，直接和负责项目的人沟通。",
     "cta": "说说你的需求",
     "work": "看看网站示例",
-    "caption": "服务澳洲商家，也接受海外项目。支持中文与英文沟通。",
+    "caption": "网站与应用服务面向澳洲及海外；小红书博主推广目前聚焦墨尔本。支持中英文沟通。",
     "index_label": "我们能帮你做什么",
     "index_note": "从一个实用的改进开始，按需要逐步完善。",
     "values_label": "我们的合作方式",
@@ -202,7 +216,7 @@
     ],
     "scope_eyebrow": "业务范围",
     "scope_title": "为生意的下一步，做好准备。",
-    "scope_intro": "从零开始、完善已有网站，或做一个省事的工具。我们结合你的实际需求和预算，一起确定合适的方案与交付范围。",
+    "scope_intro": "从网站与应用，到墨尔本小红书博主推广。我们结合你的实际需求和预算，一起确定合适的方案与交付范围。",
     "items": [
       {
         "id": "websites",
@@ -275,10 +289,24 @@
           "账户归属、编辑说明与完整交接"
         ],
         "for": "双语商家、已有网站、长期更新需求"
+      },
+      {
+        "id": "xiaohongshu",
+        "short": "墨尔本小红书推广",
+        "title": "墨尔本小红书博主合作与推广",
+        "body": "为小企业与初创品牌提供前期推广支持，协助对接墨尔本小红书博主，统筹内容沟通、合作档期及发布前审核。",
+        "points": [
+          "博主筛选、合作沟通与档期协调",
+          "脚本、视频及配套文案审核",
+          "服务范围、博主费用与交付安排提前确认"
+        ],
+        "for": "墨尔本本地商家、开业宣传、新品推广",
+        "href": "xiaohongshu/",
+        "link_label": "了解小红书推广服务"
       }
     ],
     "process": {
-      "eyebrow": "合作流程",
+      "eyebrow": "网站与应用项目流程",
       "title": "每一步，都说清楚。",
       "note": "开发前确认功能、交付节点和双方责任。较大的 App 项目会拆分阶段，逐步交付。",
       "items": [
@@ -349,7 +377,7 @@
         },
         {
           "q": "不在同一个城市，或人在海外，可以合作吗？",
-          "a": "可以远程合作，支持中文与英文沟通。海外项目会在方案中确认沟通时段、结算币种、付款节点与交付安排。"
+          "a": "网站与应用项目可以远程合作，支持中文与英文沟通。海外项目会确认沟通时段、结算币种、付款节点与交付安排；小红书博主推广目前聚焦墨尔本本地业务。"
         }
       ]
     },

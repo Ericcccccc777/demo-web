@@ -1,0 +1,294 @@
+{
+  "en": {
+    "title": "Xiaohongshu creator campaigns in Melbourne",
+    "description": "Xiaohongshu promotion support for Melbourne small businesses and emerging brands. Creator sourcing, content coordination, scheduling, script and video review, with scope and fees agreed upfront.",
+    "eyebrow": "Xiaohongshu · Melbourne",
+    "headline": [
+      "Local creators.",
+      "Melbourne campaigns."
+    ],
+    "intro": "We help Melbourne small businesses, independent shops and emerging brands connect with suitable Xiaohongshu creators. From content discussions and scheduling to reviews before publication, we coordinate the practical work of an early promotional campaign.",
+    "cta": "Discuss a campaign",
+    "work": "Explore the service",
+    "secondary_url": "#scope",
+    "back_label": "Back to all services",
+    "caption": "For openings, product launches and early brand promotion. Creators, availability, deliverables and fees are confirmed after discussing your brief.",
+    "index_label": "Campaign support",
+    "index_note": "A practical campaign shaped around your audience, budget and current stage.",
+    "values_label": "Our approach",
+    "values": [
+      "Local creator sourcing",
+      "Content coordination",
+      "Clear scheduling",
+      "Review before publication"
+    ],
+    "scope_eyebrow": "Service scope",
+    "scope_title": "From finding creators to reviewing content.",
+    "scope_intro": "Choose the support your campaign needs. Creator numbers, content formats, review rounds and delivery dates are agreed in writing before work starts.",
+    "items": [
+      {
+        "id": "creators",
+        "short": "Creator sourcing",
+        "title": "Creator sourcing & liaison",
+        "body": "We consider your business, audience, preferred content style and budget when identifying Melbourne Xiaohongshu creators and discussing potential collaborations.",
+        "points": [
+          "Clarify campaign goals and audience fit",
+          "Discuss creator fees, formats and deliverables",
+          "Present available options for your consideration"
+        ],
+        "for": "First campaigns, openings, product launches"
+      },
+      {
+        "id": "coordination",
+        "short": "Content & scheduling",
+        "title": "Content planning & scheduling",
+        "body": "We organise the brief and coordinate communication, production preparation and publication dates between your business and the creators.",
+        "points": [
+          "Agree themes, product details and key information",
+          "Coordinate visits, shoots and publication schedules",
+          "Follow up on materials and approval milestones"
+        ],
+        "for": "Store visits, product features, brand stories"
+      },
+      {
+        "id": "scripts",
+        "short": "Script review",
+        "title": "Script review & feedback",
+        "body": "We review the agreed script or outline before production, checking brand messaging, factual information and offer details, then coordinate feedback.",
+        "points": [
+          "Check names, locations, prices and offer dates",
+          "Review alignment with the agreed campaign brief",
+          "Consolidate your feedback and discuss revisions"
+        ],
+        "for": "Campaigns needing an agreed content direction"
+      },
+      {
+        "id": "videos",
+        "short": "Video review & publishing",
+        "title": "Video review & publication follow-up",
+        "body": "We review agreed video drafts and accompanying copy, coordinate revisions and final approval, and follow up on publication within the agreed scope.",
+        "points": [
+          "Check visuals, subtitles and copy against the brief",
+          "Coordinate client approval and agreed review rounds",
+          "Collect publication links and agreed reporting data"
+        ],
+        "for": "Campaigns needing coordinated review and delivery"
+      }
+    ],
+    "process": {
+      "eyebrow": "How it works",
+      "title": "A clear brief. An organised campaign.",
+      "note": "Creator participation and dates are subject to confirmation. Your business confirms factual details and the final content before publication.",
+      "items": [
+        {
+          "title": "Understand the brief",
+          "body": "Discuss your business, goals, budget and timing, and assess the fit with available creators."
+        },
+        {
+          "title": "Agree the scope",
+          "body": "Confirm the work, creator arrangements, fees, review rounds and milestones in writing."
+        },
+        {
+          "title": "Coordinate production",
+          "body": "Manage script discussions, scheduling and video reviews, and consolidate feedback for revisions."
+        },
+        {
+          "title": "Follow up on publication",
+          "body": "Coordinate the agreed publishing plan and gather links and reporting within the agreed scope."
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "Working arrangements",
+      "title": "Defined scope. Transparent fees.",
+      "intro": "Each campaign is discussed and quoted individually, with support matched to your current needs.",
+      "items": [
+        {
+          "title": "Costs explained separately",
+          "body": "The proposal identifies our planning and coordination fee, creator fees and any additional filming, editing or advertising costs."
+        },
+        {
+          "title": "Deliverables agreed upfront",
+          "body": "We confirm formats, quantities, review rounds, dates and arrangements for delays or cancellations. Additional work is agreed separately."
+        },
+        {
+          "title": "Content rights made clear",
+          "body": "Reposting, re-editing and paid advertising use require agreed permissions. Commercial content must be appropriately disclosed and based on truthful information and experiences."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Practical questions",
+      "title": "Before we begin.",
+      "items": [
+        {
+          "q": "Can we book only part of the service?",
+          "a": "Yes. Creator sourcing, scheduling, script review and video review can be combined to suit the project. Responsibilities and deliverables are confirmed in the proposal."
+        },
+        {
+          "q": "Do you film and edit the videos?",
+          "a": "This service focuses on liaison, planning, coordination and review. Filming and editing are handled by the agreed creator or production provider. Any additional production support is scoped and quoted separately."
+        },
+        {
+          "q": "Do you guarantee views or sales?",
+          "a": "We do not promise a fixed number of views, followers or sales. We deliver the agreed planning and coordination work and gather available data to inform future decisions."
+        },
+        {
+          "q": "Can this be combined with a website project?",
+          "a": "Yes. A campaign can work alongside a website, campaign page or booking and enquiry flow, subject to platform rules and business needs. Promotion can also be commissioned separately."
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "Campaign enquiries",
+      "title": "Tell us what you are planning.",
+      "body": "Share your business type, Melbourne location, campaign goal, approximate budget and preferred timing. We will discuss suitable support and prepare a proposal."
+    }
+  },
+  "zh": {
+    "title": "墨尔本小红书博主合作与推广",
+    "description": "为墨尔本小企业、独立商家与初创品牌提供小红书前期推广支持，包括博主筛选与对接、内容策划、档期协调、脚本及视频审核。具体方案与费用沟通确认。",
+    "eyebrow": "小红书 · 墨尔本本地推广",
+    "headline": [
+      "连接本地博主，",
+      "推进品牌推广。"
+    ],
+    "intro": "面向墨尔本小企业、独立商家与初创品牌，协助对接合适的小红书博主，统筹内容沟通、合作档期与发布前审核，让前期推广有明确的方向、分工和执行安排。",
+    "cta": "咨询推广合作",
+    "work": "查看服务内容",
+    "secondary_url": "#scope",
+    "back_label": "返回业务范围",
+    "caption": "适用于开业宣传、新品推出及品牌前期推广。具体人选、档期、服务范围与费用，经沟通后确认。",
+    "index_label": "推广服务内容",
+    "index_note": "围绕目标客群与实际预算，制定适合当前阶段的合作安排。",
+    "values_label": "服务原则",
+    "values": [
+      "本地博主对接",
+      "内容统一沟通",
+      "档期有序协调",
+      "发布前审核"
+    ],
+    "scope_eyebrow": "服务范围",
+    "scope_title": "从博主对接，到内容确认。",
+    "scope_intro": "根据项目需要提供以下支持。博主数量、内容形式、审核轮次与交付时间，在合作前书面确认。",
+    "items": [
+      {
+        "id": "creators",
+        "short": "博主筛选与对接",
+        "title": "博主筛选与合作对接",
+        "body": "结合业务类型、目标客群、内容风格与预算，筛选合适的墨尔本小红书博主，并协助沟通合作意向与条件。",
+        "points": [
+          "梳理推广目标与受众方向",
+          "沟通博主报价、内容形式及交付要求",
+          "确认可合作人选，供商家选择"
+        ],
+        "for": "首次推广、开业宣传、新品推出"
+      },
+      {
+        "id": "coordination",
+        "short": "内容与档期协调",
+        "title": "内容策划与档期协调",
+        "body": "整理推广重点与内容要求，协调商家和博主的沟通、拍摄准备及发布时间。",
+        "points": [
+          "明确主题、产品卖点与必要信息",
+          "协调到店、拍摄及发布档期",
+          "跟进所需资料与关键确认节点"
+        ],
+        "for": "探店体验、产品介绍、品牌故事"
+      },
+      {
+        "id": "scripts",
+        "short": "脚本审核",
+        "title": "脚本审核与反馈",
+        "body": "在拍摄前审核约定的脚本或内容大纲，核对品牌表达、事实信息与活动条件，并整理修改意见。",
+        "points": [
+          "核对名称、地址、价格与活动有效期",
+          "检查内容是否符合已确认的推广方向",
+          "汇总商家意见，与博主沟通调整"
+        ],
+        "for": "需要提前确认内容方向的合作"
+      },
+      {
+        "id": "videos",
+        "short": "视频审核与发布跟进",
+        "title": "视频审核与发布跟进",
+        "body": "审核约定的视频初稿及配套文案，协调修改和最终确认，并按合作范围跟进发布。",
+        "points": [
+          "检查画面、字幕、文案与脚本的一致性",
+          "协调商家确认及约定轮次内的修改",
+          "跟进发布链接与约定的数据反馈"
+        ],
+        "for": "需要统一审核与发布协调的项目"
+      }
+    ],
+    "process": {
+      "eyebrow": "合作流程",
+      "title": "明确需求，分步执行。",
+      "note": "博主人选与档期以实际确认为准；发布前由商家确认业务信息与最终内容。",
+      "items": [
+        {
+          "title": "了解需求",
+          "body": "沟通业务、推广目标、预算与期望时间，确认是否适合现有博主资源。"
+        },
+        {
+          "title": "确认合作方案",
+          "body": "书面确认服务范围、博主安排、费用、审核轮次与交付节点。"
+        },
+        {
+          "title": "协调内容制作",
+          "body": "对接脚本、拍摄及视频审核，集中沟通反馈并跟进调整。"
+        },
+        {
+          "title": "跟进发布与反馈",
+          "body": "按确认的计划协调发布，整理链接及约定范围内的效果反馈。"
+        }
+      ]
+    },
+    "pricing": {
+      "eyebrow": "合作安排",
+      "title": "范围清楚，费用透明。",
+      "intro": "每个项目单独沟通与报价，可按当前阶段选择所需的支持。",
+      "items": [
+        {
+          "title": "分别说明费用",
+          "body": "策划协调服务费、博主合作费，以及可能涉及的拍摄、剪辑或投放费用，在报价中说明。"
+        },
+        {
+          "title": "提前确认交付",
+          "body": "明确内容数量、形式、修改轮次、发布时间及延期或取消的处理方式。额外工作另行确认。"
+        },
+        {
+          "title": "明确内容使用范围",
+          "body": "转载、二次剪辑及广告使用授权需另行约定。商业合作按平台要求标识，内容以真实信息与体验为基础。"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "常见问题",
+      "title": "合作前的几个问题。",
+      "items": [
+        {
+          "q": "可以只委托部分服务吗？",
+          "a": "可以。博主对接、档期协调、脚本审核与视频审核可根据项目需要组合，具体分工与交付范围在报价中确认。"
+        },
+        {
+          "q": "你们会负责拍摄和剪辑吗？",
+          "a": "本服务以合作对接、内容沟通、协调与审核为主。拍摄及剪辑由约定的博主或制作方执行；如需额外制作支持，将单独确认安排和费用。"
+        },
+        {
+          "q": "能保证播放量或销售效果吗？",
+          "a": "不承诺固定播放量、涨粉量或销售额。我们按约定提供策划与执行支持，并整理能够获取的数据，供后续调整参考。"
+        },
+        {
+          "q": "可以与网站项目一起合作吗？",
+          "a": "可以。推广内容可与网站、活动页面或预约咨询入口配合，具体接入方式根据平台规则和业务需要确认，也可以单独委托推广服务。"
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "推广合作咨询",
+      "title": "从你的业务与目标开始。",
+      "body": "告诉我们你的业务类型、墨尔本所在区域、推广目标、预算范围及期望时间。我们会进一步沟通合适的服务安排与报价。"
+    }
+  }
+}
