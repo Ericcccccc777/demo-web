@@ -1,0 +1,105 @@
+{
+  "status": "Code prepared; Netlify account/site and delivery are not configured.",
+  "notification_email": "emvalue.studio@gmail.com",
+  "steps": [
+    "Commit and push the latest website, source files, build tools and netlify.toml to the repository first. In Netlify, choose Add new project > Import an existing project > GitHub, grant access to Ericcccccc777/demo-web, and select main. Leave the base directory empty, use python3 tools/build.py --check as the build command, and site as the publish directory. Confirm with Publish. The existing GitHub Pages deployment is only a static preview and cannot receive these form submissions.",
+    "In Netlify Forms, enable form detection, then deploy. Verify both project-enquiry-en and project-enquiry-zh are detected.",
+    "In Forms > Submission notifications, add email notifications to emvalue.studio@gmail.com for all forms, or add one for each language. The field named email supplies the Reply-To address.",
+    "Set EMVALUE_FORMS_ENABLED=true for the intended Netlify deployment and redeploy. This enables the submit button and updates the privacy notice. Leave it off for previews without configured Forms.",
+    "Submit a real enquiry in each language using an email you control. Confirm the record exists under verified submissions, the full brief and selected references are present, Gmail receives the notification (including checking spam), and replying addresses the enquirer. A page success message alone does not prove Gmail delivery.",
+    "Connect the chosen domain and confirm HTTPS. Set EMVALUE_SITE_URL to the final https:// URL, without a trailing slash; redeploy to generate canonical links, bilingual sitemap and indexable robots directives. The Netlify subdomain also works for an initial launch.",
+    "Before sharing the site, confirm it is publicly accessible. New credit-based teams may start projects private; use the project visibility settings to make it public, then test without a Netlify login.",
+    "Add Instagram and Xiaohongshu profile URLs in src/studio.json when ready. Pending icons intentionally do not link to unrelated profiles.",
+    "Confirm privacy wording matches the team’s actual handling practices. Identify the actual legal service provider and applicable registration details in the written proposal before paid projects. Have project-specific terms reviewed as appropriate."
+  ],
+  "environment": {
+    "EMVALUE_FORMS_ENABLED": "false by default; true only after provider configuration",
+    "EMVALUE_SITE_URL": "unset until canonical public URL chosen"
+  },
+  "services_not_needed_for_current_scope": [
+    "Supabase database",
+    "custom SMTP server",
+    "Gmail password or API key in front-end code"
+  ],
+  "sources": [
+    {
+      "url": "https://docs.netlify.com/manage/forms/setup/",
+      "purpose": "form detection and URL-encoded AJAX submissions"
+    },
+    {
+      "url": "https://docs.netlify.com/manage/forms/notifications/",
+      "purpose": "Gmail notification destination and Reply-To field"
+    },
+    {
+      "url": "https://docs.netlify.com/manage/forms/spam-filters/",
+      "purpose": "honeypot and spam filtering"
+    },
+    {
+      "url": "https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/more-guidance/guide-to-developing-an-app-privacy-policy",
+      "purpose": "privacy content and collection transparency"
+    },
+    {
+      "url": "https://www.accc.gov.au/consumers/buying-products-and-services/contracts",
+      "purpose": "clear agreements and non-excludable rights"
+    },
+    {
+      "url": "https://struo.dev/about",
+      "purpose": "comparison: small-team introduction"
+    },
+    {
+      "url": "https://purrpixel.com.au/",
+      "purpose": "comparison: scope, ownership, support FAQs and legal navigation"
+    },
+    {
+      "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/how-credits-work/",
+      "purpose": "current credit-based allowances and production deployment billing"
+    },
+    {
+      "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/billing-faq-for-credit-based-plans/",
+      "purpose": "bandwidth, request and deployment credit rates"
+    },
+    {
+      "url": "https://docs.netlify.com/manage/forms/usage-and-billing/",
+      "purpose": "Forms free and unlimited on credit-based plans"
+    },
+    {
+      "url": "https://docs.netlify.com/build/caching/caching-overview/",
+      "purpose": "browser caching and CDN cache behavior"
+    },
+    {
+      "url": "https://docs.netlify.com/start/quickstarts/deploy-from-repository/",
+      "purpose": "GitHub import flow, deployment settings and private-by-default project visibility"
+    }
+  ],
+  "credit_saving": {
+    "pricing_checked_on": "2026-10-02",
+    "plan_scope": "Current credit-based plans for new accounts; legacy plans differ.",
+    "free_monthly_credits": 300,
+    "rates": {
+      "production_deploy": 15,
+      "bandwidth_per_GB": 20,
+      "web_requests_per_10000": 2,
+      "form_submission": 0
+    },
+    "prepared_in_code": [
+      "Static output; no custom server functions or database needed for current scope.",
+      "WebP gallery thumbnails are lazy loaded; demo iframe is loaded only when opened.",
+      "Versioned shared CSS, JavaScript, logo, thumbnails, sprite and favicon receive long browser caching on Netlify. HTML retains default revalidation.",
+      "Gallery, viewer loading image and saved references reuse the same versioned thumbnail URL."
+    ],
+    "operations": [
+      "Develop and check locally, then batch finished changes into fewer production deployments. Every successful production deployment costs 15 credits.",
+      "Deploy Previews and branch deploys do not incur the production deployment charge; their traffic still consumes bandwidth and request credits.",
+      "Check usage in Netlify. The Free allowance is shared across projects; exhausted credits pause projects until reset or upgrade.",
+      "If later upgrading to a paid plan, leave auto recharge disabled unless extra spending is intentional. This controls spending, not credit consumption.",
+      "After deployment, verify Cache-Control headers on the listed assets, form detection, and actual Gmail notification delivery. The local static server does not test Netlify edge behavior."
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/Ericcccccc777/demo-web",
+    "production_branch": "main",
+    "base_directory": "",
+    "build_command": "python3 tools/build.py --check",
+    "publish_directory": "site"
+  }
+}
