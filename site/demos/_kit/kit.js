@@ -126,7 +126,7 @@
     var link = doc.createElement("a");
     link.href = HUB + (demoId ? "#demo-" + demoId : "");
     link.innerHTML = '<span class="dot" aria-hidden="true"></span>';
-    link.appendChild(doc.createTextNode("Concept demo · " + STUDIO));
+    link.appendChild(doc.createTextNode((root.lang.indexOf("zh") === 0 ? "概念作品 · " : "Concept design · ") + STUDIO));
     link.setAttribute("aria-label", "Concept demo for a fictional business, made by " + STUDIO + ". Back to the box.");
     var close = doc.createElement("button");
     close.className = "x";

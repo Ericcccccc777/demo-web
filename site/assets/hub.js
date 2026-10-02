@@ -294,12 +294,9 @@
     $("#v-meta").textContent = d.type + " · " + d.city;
     $("#vp-style").textContent = d.style;
     $("#vp-interaction").textContent = d.interaction;
-    $("#vp-tech").textContent = d.tech || "—";
-    $("#vp-kb").textContent = d.kb + " KB";
-    $("#vp-fonts").textContent = d.fonts || "—";
     $("#vp-lang").textContent = d.lang;
     $("#v-newtab").href = src + (brand ? "?brand=" + encodeURIComponent(brand) : "");
-    $("#v-poster").src = cfg.prefix + "assets/thumbs/" + id + ".webp";
+    $("#v-poster").src = $(".drawer-img", byId[id]).src;
     $("#v-loading-text").textContent = fmt(cfg.viewer.loading, { no: id });
     $("#v-pos").textContent = fmt(cfg.viewer.position, { i: order.indexOf(id) + 1, n: order.length });
     $("#v-save").setAttribute("aria-pressed", String(isSaved(id)));
@@ -461,7 +458,7 @@
       var d = byId[id].dataset;
       var li = document.createElement("li");
       var img = document.createElement("img");
-      img.src = cfg.prefix + "assets/thumbs/" + id + ".webp";
+      img.src = $(".drawer-img", byId[id]).src;
       img.alt = "";
       img.width = 56; img.height = 35;
       img.loading = "lazy";
@@ -487,20 +484,21 @@
 
   function composeBrief() {
     var L = cfg.brief;
-    var v = { name: val("name"), business: val("business"), type: val("type"), where: val("where"), needs: checked("needs"),
+    var v = { name: val("name"), email: val("email"), business: val("business"), type: val("type"), where: val("where"), needs: checked("needs"),
       when: checked("when")[0] || "", reach: checked("reach")[0] || "", detail: val("reach_detail"), message: val("message") };
-    var any = v.name || v.business || v.type || v.where || v.needs.length || v.when || v.reach || v.detail || v.message || saved.length;
+    var any = v.name || v.email || v.business || v.type || v.where || v.needs.length || v.when || v.reach || v.detail || v.message || saved.length;
     if (!any) return null;
     var out = [L.heading + (v.business ? " — " + v.business : ""), ""];
     function add(label, value) { if (value) out.push(label + ": " + value); }
     add(L.name, v.name);
+    add(L.email, v.email);
     add(L.business, v.business);
     add(L.type, v.type);
     add(L.where, v.where);
     add(L.needs, v.needs.join(", "));
     if (saved.length) {
       out.push(L.liked + ":");
-      var base = /^https?:$/.test(location.protocol) ? location.origin + location.pathname.replace(/[^/]*$/, "") + cfg.prefix : "";
+      var base = /^https?:$/.test(location.protocol) ? new URL(cfg.prefix || "./", location.href).href.split(/[?#]/)[0] : "";
       saved.forEach(function (id) {
         var d = byId[id].dataset;
         out.push("  · No. " + id + " " + d.name + (base ? " — " + base + "demos/" + d.folder + "/" : ""));
@@ -519,18 +517,70 @@
     var b = composeBrief();
     briefText.textContent = b ? b.text : cfg.contact.brief_empty;
     briefText.classList.toggle("is-empty", !b);
+    $("#f-brief").value = b ? b.text : "";
+    $("#f-designs").value = saved.map(function (id) { return id + " " + byId[id].dataset.name; }).join(", ");
+    if (submitEl) {
+      var unchanged = lastSubmission && enquiryPayload() === lastSubmission;
+      submitEl.disabled = !cfg.forms_enabled || !window.EmvalueEnquiry || sending || !!unchanged;
+      submitEl.textContent = cfg.contact[sending ? "submitting" : unchanged ? "submitted" : "submit"];
+      // A changed draft must not retain the previous enquiry's success message.
+      if (!sending && lastSubmission && !unchanged && submissionStatus.dataset.state === "success") {
+        submissionStatus.hidden = true;
+      }
+    }
     if (emailEl && emailEl.tagName === "A" && cfg.studio.email) {
       var subject = fmt(cfg.contact.subject, { business: (b && b.business) || cfg.studio.name });
       var body = b ? b.text : "";
-      if (body.length > 1800) body = body.slice(0, 1800) + "\n…";
       emailEl.href = "mailto:" + encodeURIComponent(cfg.studio.email).replace(/%40/g, "@") +
         "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      // Never silently discard enquiry text. Long URLs vary by email client; offer the full copy fallback.
+      $("#brief-email-hint").textContent = emailEl.href.length > 6000 ? cfg.contact.email_long : cfg.contact.email_hint;
     }
   }
+  var submitEl = $("#brief-submit"), submissionStatus = $("#submission-status");
+  var sending = false, lastSubmission = "";
+  function enquiryPayload() { return window.EmvalueEnquiry.encode(new FormData(form)); }
+  function submissionMessage(message, state) {
+    submissionStatus.textContent = message;
+    submissionStatus.dataset.state = state;
+    submissionStatus.hidden = false;
+    if (state !== "sending") submissionStatus.focus({ preventScroll: true });
+  }
   if (form) {
+    if (cfg.forms_enabled && window.EmvalueEnquiry) $("#submission-note").hidden = true;
     form.addEventListener("input", updateBrief);
     form.addEventListener("change", updateBrief);
-    form.addEventListener("submit", function (e) { e.preventDefault(); });
+    form.elements.name.addEventListener("input", function () { this.setCustomValidity(""); });
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      if (sending) return;
+      if (!cfg.forms_enabled || !window.EmvalueEnquiry) { submissionMessage(cfg.contact.pending, "error"); return; }
+      form.elements.name.setCustomValidity(val("name") ? "" : cfg.contact.required_name);
+      if (!form.reportValidity()) return;
+      if (val("bot-field")) { submissionMessage(cfg.contact.failure, "error"); return; }
+      updateBrief();
+      var payload = enquiryPayload();
+      if (payload === lastSubmission) return;
+      sending = true;
+      form.setAttribute("aria-busy", "true");
+      updateBrief();
+      submissionMessage(cfg.contact.submitting, "sending");
+      // Hold the submitted fields stable until receipt is confirmed or an error is shown.
+      var fields = $$("input, select, textarea, .liked button", form);
+      fields.forEach(function (field) { field.disabled = true; });
+      try {
+        await window.EmvalueEnquiry.send(form.action, payload);
+        lastSubmission = payload;
+        submissionMessage(cfg.contact.success, "success");
+      } catch (error) {
+        submissionMessage(cfg.contact.failure, "error");
+      } finally {
+        fields.forEach(function (field) { field.disabled = false; });
+        sending = false;
+        form.removeAttribute("aria-busy");
+        updateBrief();
+      }
+    });
     if (emailEl && emailEl.tagName === "A") {
       emailEl.addEventListener("click", function () {
         setTimeout(function () { status.textContent = cfg.contact.emailed; }, 300);

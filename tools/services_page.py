@@ -2,12 +2,15 @@
 import html
 
 
-def render_services(lang, studio, c, s, asset_v, header, footer):
+def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"):
     e = lambda value: html.escape(str(value), quote=True)
-    prefix = "../" if lang == "en" else "../../"
-    home = "../"
+    home = "../" * len(slug.split("/"))
+    prefix = home + ("../" if lang == "zh" else "")
     site_url = (studio.get("site_url") or "").rstrip("/")
-    path = "/services/" if lang == "en" else "/zh/services/"
+    path = ("/zh/" if lang == "zh" else "/") + slug + "/"
+    secondary_url = s.get("secondary_url", home + "#box")
+    breadcrumb = (f'<a class="scope-back text-link" href="../">← {e(s["back_label"])}</a>'
+                  if s.get("back_label") else "")
     title = s["title"] + " — " + studio["name"]
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
@@ -16,19 +19,26 @@ def render_services(lang, studio, c, s, asset_v, header, footer):
     extra = ""
     if site_url:
         extra = (f'<link rel="canonical" href="{e(site_url + path)}">\n'
-                 f'<link rel="alternate" hreflang="en-AU" href="{e(site_url)}/services/">\n'
-                 f'<link rel="alternate" hreflang="zh-CN" href="{e(site_url)}/zh/services/">\n'
-                 f'<link rel="alternate" hreflang="x-default" href="{e(site_url)}/services/">\n'
-                 f'<meta property="og:url" content="{e(site_url + path)}">')
+                 f'<link rel="alternate" hreflang="en-AU" href="{e(site_url)}/{e(slug)}/">\n'
+                 f'<link rel="alternate" hreflang="zh-CN" href="{e(site_url)}/zh/{e(slug)}/">\n'
+                 f'<link rel="alternate" hreflang="x-default" href="{e(site_url)}/{e(slug)}/">\n'
+                 f'<meta property="og:url" content="{e(site_url + path)}">\n'
+                 f'<meta property="og:image" content="{e(site_url)}/assets/emvalue-social.png">\n'
+                 '<meta property="og:image:width" content="1200">\n'
+                 '<meta property="og:image:height" content="630">\n'
+                 '<meta property="og:image:alt" content="emvalue — Websites, apps and digital tools">\n'
+                 '<meta name="twitter:card" content="summary_large_image">')
     index = "".join(
-        f'<li><a href="#{e(item["id"])}"><span class="svc-no">0{i + 1}</span>'
+        f'<li><a href="{e(item.get("href", "#" + item["id"]))}"><span class="svc-no">0{i + 1}</span>'
         f'<span>{e(item["short"])}</span><span class="arr" aria-hidden="true">↗</span></a></li>'
         for i, item in enumerate(s["items"]))
     services = "".join(
-        f'<li class="svc" id="{e(item["id"])}"><span class="svc-no">0{i + 1}</span>'
+        f'<li class="svc{" svc-featured" if item.get("href") else ""}" id="{e(item["id"])}"><span class="svc-no">0{i + 1}</span>'
         f'<h3>{e(item["title"])}</h3><p>{e(item["body"])}</p>'
         f'<ul class="scope-points">{"".join("<li>" + e(point) + "</li>" for point in item["points"])}</ul>'
-        f'<p class="svc-good">{e(item["for"])}</p></li>'
+        f'<p class="svc-good">{e(item["for"])}</p>'
+        + (f'<a class="text-link" href="{e(item["href"])}">{e(item["link_label"])} <span aria-hidden="true">→</span></a>' if item.get("href") else "")
+        + '</li>'
         for i, item in enumerate(s["items"]))
     steps = "".join(
         f'<li class="step"><span class="step-no">{i + 1}</span><h3>{e(item["title"])}</h3><p>{e(item["body"])}</p></li>'
@@ -53,7 +63,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer):
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(s['description'])}">
 {extra}
-<link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{prefix}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}&display=swap">
@@ -65,10 +75,11 @@ def render_services(lang, studio, c, s, asset_v, header, footer):
 <main id="main">
 <section class="hero scope-hero wrap" aria-labelledby="hero-title">
   <div class="hero-copy">
+{breadcrumb}
     <p class="eyebrow">{e(s['eyebrow'])}</p>
     <h1 id="hero-title">{e(s['headline'][0])}<br><em>{e(s['headline'][1])}</em></h1>
     <p class="lede">{e(s['intro'])}</p>
-    <div class="hero-ctas"><a class="btn btn-accent" href="{home}#contact">{e(s['cta'])} <span aria-hidden="true">→</span></a><a class="text-link" href="{home}#box">{e(s['work'])} <span aria-hidden="true">→</span></a></div>
+    <div class="hero-ctas"><a class="btn btn-accent" href="{home}#contact">{e(s['cta'])} <span aria-hidden="true">→</span></a><a class="text-link" href="{e(secondary_url)}">{e(s['work'])} <span aria-hidden="true">→</span></a></div>
     <p class="scope-caption">{e(s['caption'])}</p>
   </div>
   <nav class="scope-index" aria-label="{e(s['index_label'])}">
@@ -93,7 +104,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer):
 <section class="faq wrap" id="faq" aria-labelledby="faq-title"><div class="section-head"><p class="eyebrow">{e(s['faq']['eyebrow'])}</p><h2 id="faq-title">{e(s['faq']['title'])}</h2></div><div>{faqs}</div></section>
 <section class="contact scope-contact" aria-labelledby="contact-title"><div class="wrap">
   <div class="section-head"><p class="eyebrow">{e(s['closing']['eyebrow'])}</p><h2 id="contact-title">{e(s['closing']['title'])}</h2><p class="section-intro">{e(s['closing']['body'])}</p></div>
-  <div class="hero-ctas"><a class="btn btn-accent" href="{home}#contact">{e(s['cta'])} <span aria-hidden="true">→</span></a><a class="text-link" href="{home}#box">{e(s['work'])} <span aria-hidden="true">→</span></a></div>
+  <div class="hero-ctas"><a class="btn btn-accent" href="{home}#contact">{e(s['cta'])} <span aria-hidden="true">→</span></a><a class="text-link" href="{e(secondary_url)}">{e(s['work'])} <span aria-hidden="true">→</span></a></div>
 </div></section>
 </main>
 {footer}

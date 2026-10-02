@@ -13,12 +13,14 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
 from services_page import render_services
+from editorial_page import render_editorial
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -124,13 +126,32 @@ def scan_demo(d):
 
 # ---------------------------------------------------------------- page parts
 
-LOGO = ('<svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-        '<rect x="1" y="1" width="38" height="38" rx="9" fill="var(--accent)"/>'
-        '<g fill="var(--on-accent)">'
-        '<rect x="8" y="8" width="7" height="7" rx="1.6"/><rect x="16.5" y="8" width="7" height="7" rx="1.6"/><rect x="25" y="8" width="7" height="7" rx="1.6"/>'
-        '<rect x="8" y="16.5" width="7" height="7" rx="1.6"/><rect x="18.5" y="18.5" width="9" height="9" rx="1.8" opacity=".92"/><rect x="25" y="16.5" width="7" height="7" rx="1.6" opacity="0"/>'
-        '<rect x="8" y="25" width="7" height="7" rx="1.6"/><rect x="16.5" y="25" width="7" height="7" rx="1.6" opacity="0"/><rect x="25" y="25" width="7" height="7" rx="1.6" opacity="0"/>'
-        '</g></svg>')
+def brand_logo(prefix=""):
+    version = asset_hash(SITE / "assets" / "brand" / "emvalue-wordmark.png")
+    return (f'<img class="brand-wordmark" src="{prefix}assets/brand/emvalue-wordmark.png?v={version}" '
+            'width="2172" height="724" alt="" aria-hidden="true">')
+
+
+def social_links(studio, c):
+    icons = {
+        "instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="17.5" cy="6.5" r="1"/></svg>',
+        "xiaohongshu": '<svg class="xhs-icon" viewBox="0 0 48 24" aria-hidden="true"><text x="24" y="17" text-anchor="middle">小红书</text></svg>',
+    }
+    items = []
+    ct = c["contact"]
+    for key, icon in icons.items():
+        label = ct[key]
+        value = studio.get(key)
+        if value:
+            url = value if value.startswith("https://") else (
+                "https://www.instagram.com/" + quote(value.lstrip("@"), safe="") + "/" if key == "instagram" else "")
+            if not url:
+                raise ValueError("xiaohongshu must be a full https:// profile URL")
+            items.append(f'<a class="social-icon" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{esc(label)}" title="{esc(label)}">{icon}</a>')
+        else:
+            pending = fill(ct["social_pending"], platform=label)
+            items.append(f'<span class="social-icon is-pending" role="img" aria-label="{esc(pending)}" title="{esc(pending)}">{icon}</span>')
+    return f'<div class="social-links" role="group" aria-label="{esc(ct["social_label"])}">{"".join(items)}</div>'
 
 HEART = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3 4.6 13a4.9 4.9 0 0 1 0-7 4.8 4.8 0 0 1 6.9 0l.5.5.5-.5a4.8 4.8 0 0 1 6.9 0 4.9 4.9 0 0 1 0 7Z"/></svg>')
 
@@ -139,6 +160,7 @@ ARROW = '<span class="arr" aria-hidden="true">→</span>'
 
 def drawer_card(d, scan, c, p):
     lang = "zh" if c["lang"].startswith("zh") else "en"
+    thumb_version = asset_hash(SITE / "assets" / "thumbs" / f"{d['id']}.webp")
     name = d["name"]
     search_bits = [d["id"], name, d["type"]["en"], d["type"]["zh"], d["city"], d["style"]["en"], d["style"]["zh"],
                    d["interaction"]["en"], d["interaction"]["zh"], d["industry"]]
@@ -160,7 +182,7 @@ def drawer_card(d, scan, c, p):
         f'data-search="{esc(search)}">'
         f'<a class="drawer-link" href="{p}demos/{scan["folder"]}/" data-open="{d["id"]}">'
         f'<span class="drawer-frame" style="--c1:{esc(palette[0])};--c2:{esc(palette[min(2, len(palette) - 1)])}">'
-        f'<img class="drawer-img" src="{p}assets/thumbs/{d["id"]}.webp" width="720" height="450" loading="lazy" decoding="async" alt=""></span>'
+        f'<img class="drawer-img" src="{p}assets/thumbs/{d["id"]}.webp?v={thumb_version}" width="720" height="450" loading="lazy" decoding="async" alt=""></span>'
         f'<span class="drawer-label"><span class="drawer-no">No. {d["id"]}</span>'
         f'<span class="drawer-name">{esc(name)}</span>'
         f'<span class="drawer-type">{esc(d["type"][lang])} · {esc(d["city"])}</span></span>'
@@ -192,22 +214,23 @@ def hero_box(demos, c, p, sprite):
             f'<span class="tile-tip" hidden></span></div>')
 
 
-def page_chrome(lang, studio, c, services_page=False):
-    """One header and footer for the showcase and services, in both languages."""
-    home = "../" if services_page else ""
-    services_url = "./" if services_page else "services/"
-    other = ("../../services/" if lang == "zh" else "../zh/services/") if services_page else ("../" if lang == "zh" else "zh/")
+def page_chrome(lang, studio, c, services_page=False, page_slug=""):
+    """Shared navigation, including correctly paired language and policy links."""
+    slug = page_slug or ("services" if services_page else "")
+    home = "../" * len(slug.split("/")) if slug else ""
+    services_url = "./" if slug == "services" else home + "services/"
+    other = home + ("../" if lang == "zh" else "zh/") + (slug + "/" if slug else "")
+    section_home = home if page_slug and not services_page else ""
     other_lang = "en-AU" if lang == "zh" else "zh-CN"
     name = (studio.get("name_zh") or studio["name"]) if lang == "zh" else studio["name"]
-    brand = esc(name)
-    if lang == "en" and name.endswith(" Studio"):
-        brand = esc(name[:-7]) + '<span class="brand-suffix"> Studio</span>'
+    prefix = ("../" if lang == "zh" else "") + home
+    logo = brand_logo(prefix)
     links = (f'<a href="{home}#box">{esc(c["nav"]["box"])}</a>'
-             f'<a href="{services_url}"' + (' aria-current="page"' if services_page else '') + f'>{esc(c["nav"]["services"])}</a>'
-             f'<a href="#process">{esc(c["nav"]["process"])}</a><a href="#faq">{esc(c["nav"]["faq"])}</a>')
+             f'<a href="{services_url}"' + (' aria-current="page"' if slug == "services" else ' aria-current="location"' if slug.startswith("services/") else '') + f'>{esc(c["nav"]["services"])}</a>'
+             f'<a href="{section_home}#process">{esc(c["nav"]["process"])}</a><a href="{section_home}#faq">{esc(c["nav"]["faq"])}</a>')
     header = f'''<header class="top" id="top">
   <div class="top-inner wrap">
-    <a class="brand" href="{home or '#top'}" aria-label="{esc(name)}">{LOGO}<span class="brand-name">{brand}</span></a>
+    <a class="brand" href="{home or '#top'}" aria-label="{esc(name)}">{logo}</a>
     <nav class="top-nav" aria-label="{esc(c['nav']['menu'])}">{links}</nav>
     <div class="top-actions">
       <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
@@ -216,12 +239,36 @@ def page_chrome(lang, studio, c, services_page=False):
   </div>
 </header>'''
     abn = f' · {esc(c["footer"]["abn"])} {esc(studio["abn"])}' if studio.get("abn") else ""
+    footer_email = (f'<a class="foot-email" href="mailto:{esc(studio["email"])}">{esc(studio["email"])}</a>'
+                    if studio.get("email") else "")
+    policy_links = "".join(f'<a href="{home}{path}/"' + (' aria-current="page"' if path == slug else '') + f'>{esc(c["footer"][label])}</a>'
+                           for path, label in (("privacy", "privacy"), ("terms", "terms"), ("project-terms", "project_terms")))
+    footer_links = (links + f'<a href="{home}about/">{esc(c["footer"]["about"])}</a>'
+                    + f'<a href="{home}#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">↗</span></a>')
     footer = f'''<footer class="foot">
   <div class="wrap foot-inner">
-    <div class="foot-brand"><a class="brand" href="{home or '#top'}">{LOGO}<span class="brand-name">{esc(name)}</span></a><p>{esc(c['footer']['tagline'])}</p></div>
-    <nav class="foot-nav" aria-label="{'页尾导航' if lang == 'zh' else 'Footer'}">{links}<a href="{home}#contact">{esc(c['nav']['cta'])}</a><a href="{other}" hreflang="{other_lang}" lang="{other_lang}">{esc(c['nav']['lang_switch'])}</a></nav>
-    <p class="foot-disclaimer">{esc(c['footer']['disclaimer'])}</p>
-    <p class="foot-legal">© {date.today().year} {esc(studio['name'])}{abn} · {esc(c['footer']['made'])} <a href="#top">{esc(c['footer']['top'])} ↑</a></p>
+    <div class="foot-main">
+      <div class="foot-brand"><a class="brand brand-studio" href="{home or '#top'}" aria-label="{esc(name)}">{logo}<span class="brand-descriptor" aria-hidden="true">STUDIO</span></a><p>{esc(c['footer']['tagline'])}</p></div>
+      <nav class="foot-nav" aria-label="{esc(c['footer']['explore'])}">
+        <h2 class="foot-label">{esc(c['footer']['explore'])}</h2>
+        <div class="foot-nav-links">{footer_links}</div>
+      </nav>
+      <div class="foot-contact">
+        <h2 class="foot-label">{esc(c['footer']['contact'])}</h2>
+        {footer_email}
+        {social_links(studio, c)}
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-meta">
+        <p class="foot-legal">© {date.today().year} {esc(studio['name'])}{abn}</p>
+        <nav class="foot-policies" aria-label="{esc(c['footer']['policies'])}">{policy_links}</nav>
+      </div>
+      <div class="foot-utilities">
+        <a class="foot-language" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
+        <a class="foot-top" href="#top"><span>{esc(c['footer']['top'])}</span><span class="foot-top-icon" aria-hidden="true">↑</span></a>
+      </div>
+    </div>
   </div>
 </footer>'''
     return header, footer
@@ -243,7 +290,11 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
                        f'<link rel="alternate" hreflang="zh-CN" href="{esc(site_url)}/zh/">',
                        f'<link rel="alternate" hreflang="x-default" href="{esc(site_url)}/">',
                        f'<meta property="og:url" content="{esc(self_url)}">',
-                       f'<meta property="og:image" content="{esc(site_url)}/assets/og.jpg">']
+                       f'<meta property="og:image" content="{esc(site_url)}/assets/emvalue-social.png">',
+                       '<meta property="og:image:width" content="1200">',
+                       '<meta property="og:image:height" content="630">',
+                       '<meta property="og:image:alt" content="emvalue — Websites, apps and digital tools">',
+                       '<meta name="twitter:card" content="summary_large_image">']
     robots = "index, follow" if site_url else "noindex, nofollow"
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
@@ -290,12 +341,9 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         channels.append(f'<li><span>{esc(ct["whatsapp"])}</span><a href="https://wa.me/{esc(wa)}" rel="noopener">{esc(studio["whatsapp"])}</a></li>')
     if studio.get("wechat"):
         channels.append(f'<li><span>{esc(ct["wechat"])}</span><button type="button" class="copy-id" data-copy="{esc(studio["wechat"])}">{esc(studio["wechat"])}</button></li>')
-    if studio.get("instagram"):
-        handle = studio["instagram"].lstrip("@")
-        channels.append(f'<li><span>{esc(ct["instagram"])}</span><a href="https://www.instagram.com/{esc(quote(handle))}/" rel="noopener">@{esc(handle)}</a></li>')
     channels_html = (f'<ul class="channel-list">{"".join(channels)}</ul>' if channels
                      else f'<p class="channels-preview" id="channels-preview">{esc(ct["channels_preview"])}</p>')
-    email_btn = (f'<a class="btn btn-accent" id="brief-email" href="mailto:{esc(studio["email"])}">{esc(ct["email_button"])}</a>'
+    email_btn = (f'<a class="btn btn-line" id="brief-email" href="mailto:{esc(studio["email"])}">{esc(ct["email_button"])}</a>'
                  if studio.get("email") else
                  f'<button class="btn btn-accent" id="brief-email" type="button" disabled aria-describedby="channels-preview">{esc(ct["email_unavailable"])}</button>')
 
@@ -303,7 +351,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     config = {
         "lang": lang, "prefix": p, "studio": {k: studio.get(k) for k in ("name", "email", "phone", "whatsapp", "wechat", "instagram")},
         "count": count, "box": c["box"], "viewer": v, "hero": {k: c["hero"][k] for k in ("tryon_done", "tryon_cleared")},
-        "contact": {k: ct[k] for k in ("copied", "copy_failed", "emailed", "subject", "brief_empty", "remove", "email_button")},
+        "forms_enabled": bool(studio.get("forms_enabled")),
+        "contact": {k: ct[k] for k in ("copied", "copy_failed", "emailed", "subject", "brief_empty", "remove", "email_button", "email_hint", "email_long", "submit", "submitting", "submitted", "success", "failure", "pending", "required_name")},
         "brief": c["brief_labels"], "features": c["features"], "moods": c["moods"], "industries": c["industries"],
     }
     config_json = json.dumps(config, ensure_ascii=False).replace("</", "<\\/")
@@ -322,13 +371,14 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 <meta property="og:title" content="{esc(fill(c['title'], **vals))}">
 <meta property="og:description" content="{esc(fill(c['description'], **vals))}">
 {chr(10).join(head_extra)}
-<link rel="icon" href="{p}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{p}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}">
 <link rel="stylesheet" href="{p}assets/hub.css?v={asset_v['css']}">
 {('<style>.tile{background-image:url(' + p + 'assets/box-sprite.webp?v=' + sprite['v'] + ')}</style>') if sprite else ''}
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<script src="{p}assets/enquiry.js?v={asset_v['enquiry']}" defer></script>
 <script src="{p}assets/hub.js?v={asset_v['js']}" defer></script>
 </head>
 <body>
@@ -361,9 +411,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
   <ul class="proof-list wrap">
     <li><strong>{count}</strong><span>{esc(c['proof']['demos'])}</span></li>
     <li><strong>{stats['industries']}</strong><span>{esc(c['proof']['industries'])}</span></li>
-    <li><strong>{stats['typefaces']}</strong><span>{esc(c['proof']['typefaces'])}</span></li>
-    <li><strong>{stats['avg_kb']}</strong><span>{esc(c['proof']['avg'])}</span></li>
-    {'<li><strong>0</strong><span>' + esc(c['proof']['stock']) + '</span></li>' if stats['no_stock'] else ''}
+    <li><strong class="proof-word">{esc(c['proof']['languages'])}</strong><span>{esc(c['proof']['languages_detail'])}</span></li>
+    <li><strong class="proof-word">{esc(c['proof']['custom'])}</strong><span>{esc(c['proof']['custom_detail'])}</span></li>
   </ul>
 </section>
 
@@ -443,6 +492,12 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
   <div class="qa-list">{faq}</div>
 </section>
 
+<section class="studio-note wrap" aria-labelledby="studio-note-title">
+  <p class="eyebrow">EMVALUE / STUDIO</p>
+  <div><h2 id="studio-note-title">{esc(c['about_teaser']['title'])}</h2><p>{esc(c['about_teaser']['body'])}</p>
+    <a class="text-link" href="about/">{esc(c['about_teaser']['link'])} {ARROW}</a></div>
+</section>
+
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-grid">
     <div class="contact-main">
@@ -451,15 +506,23 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         <h2 id="contact-title">{esc(ct['title'])}</h2>
         <p class="section-intro">{esc(ct['intro'])}</p>
       </div>
-      <form class="brief-form" id="brief-form" novalidate data-kit-ignore>
+      <noscript><p class="note">{esc(ct['no_js'])}</p></noscript>
+      <form class="brief-form" id="brief-form" name="project-enquiry-{lang}" method="POST" action="{p or './'}" data-netlify="true" netlify-honeypot="bot-field" aria-describedby="form-hint" data-kit-ignore>
+        <input type="hidden" name="form-name" value="project-enquiry-{lang}">
+        <input type="hidden" name="language" value="{lang}">
+        <input type="hidden" name="brief" id="f-brief">
+        <input type="hidden" name="designs" id="f-designs">
+        <p hidden><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <p class="form-hint" id="form-hint">{esc(ct['form_hint'])}</p>
         <div class="field-row">
-          <div class="field"><label for="f-name">{esc(ct['your_name'])}</label><input id="f-name" name="name" autocomplete="name"></div>
+          <div class="field"><label for="f-name">{esc(ct['your_name'])}</label><input id="f-name" name="name" autocomplete="name" maxlength="100" required></div>
+          <div class="field"><label for="f-email">{esc(ct['reply_email'])}</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+        </div>
+        <div class="field-row">
           <div class="field"><label for="f-business">{esc(ct['business'])}</label><input id="f-business" name="business" autocomplete="organization" maxlength="60"></div>
-        </div>
-        <div class="field-row">
           <div class="field"><label for="f-type">{esc(ct['type'])}</label><select id="f-type" name="type"><option value="">{esc(ct['type_placeholder'])}</option>{type_opts}</select></div>
-          <div class="field"><label for="f-where">{esc(ct['where'])}</label><input id="f-where" name="where" autocomplete="address-level2"></div>
         </div>
+        <div class="field"><label for="f-where">{esc(ct['where'])}</label><input id="f-where" name="where" autocomplete="address-level2" maxlength="120"></div>
         <fieldset class="field"><legend>{esc(ct['needs'])}</legend><div class="checks">{needs}</div></fieldset>
         <div class="field">
           <span class="label" id="liked-label">{esc(ct['liked'])}</span>
@@ -468,8 +531,12 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         </div>
         <fieldset class="field"><legend>{esc(ct['when'])}</legend><div class="checks">{when}</div></fieldset>
         <fieldset class="field"><legend>{esc(ct['reach'])}</legend><div class="checks">{reach}</div>
-          <label class="sub-label" for="f-reach">{esc(ct['reach_detail'])}</label><input id="f-reach" name="reach_detail" autocomplete="email"></fieldset>
-        <div class="field"><label for="f-msg">{esc(ct['message'])}</label><textarea id="f-msg" name="message" rows="4" placeholder="{esc(ct['message_placeholder'])}"></textarea></div>
+          <label class="sub-label" for="f-reach">{esc(ct['reach_detail'])}</label><input id="f-reach" name="reach_detail" maxlength="150"></fieldset>
+        <div class="field"><label for="f-msg">{esc(ct['message'])}</label><textarea id="f-msg" name="message" rows="4" maxlength="5000" placeholder="{esc(ct['message_placeholder'])}"></textarea></div>
+        <p class="privacy">{esc(ct['privacy'])} <a href="privacy/">{esc(ct['privacy_link'])} →</a></p>
+        <button class="btn btn-accent" id="brief-submit" type="submit" aria-describedby="submission-note" disabled>{esc(ct['submit'])} {ARROW}</button>
+        <p class="form-hint" id="submission-note">{esc(ct['no_js'] if studio.get('forms_enabled') else ct['pending'])}</p>
+        <div class="submission-status" id="submission-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
       </form>
     </div>
     <aside class="brief-card" aria-labelledby="brief-title">
@@ -481,12 +548,14 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         {email_btn}
         <button class="btn btn-line" id="brief-copy" type="button">{esc(ct['copy_button'])}</button>
       </div>
+      <p class="email-hint" id="brief-email-hint">{esc(ct['email_hint'])}</p>
       <p class="brief-status" id="brief-status" role="status" aria-live="polite"></p>
       <div class="channels">
         <h3>{esc(ct['channels_title'])}</h3>
         {channels_html}
+        {social_links(studio, c)}
       </div>
-      <p class="privacy">{esc(ct['privacy'])}</p>
+      <div class="next-steps"><h3>{esc(ct['next_title'])}</h3><ol>{''.join('<li>' + esc(s) + '</li>' for s in ct['next_steps'])}</ol></div>
     </aside>
   </div>
 </section>
@@ -523,9 +592,6 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
       <dl>
         <dt>{esc(v['style'])}</dt><dd id="vp-style"></dd>
         <dt>{esc(v['interaction'])}</dt><dd id="vp-interaction"></dd>
-        <dt>{esc(v['built'])}</dt><dd id="vp-tech"></dd>
-        <dt>{esc(v['weight'])}</dt><dd id="vp-kb"></dd>
-        <dt>{esc(v['fonts'])}</dt><dd id="vp-fonts"></dd>
         <dt>{esc(v['language'])}</dt><dd id="vp-lang"></dd>
       </dl>
     </aside>
@@ -561,7 +627,7 @@ def render_404(studio, asset_v):
   (function () {{
     var m = /[.]github[.]io$/.test(location.hostname) && location.pathname.match(/^[/][^/]+[/]/);
     document.write('<base href="' + (m ? m[0] : "/") + '">' +
-      '<link rel="icon" href="favicon.svg" type="image/svg+xml">' +
+      '<link rel="icon" href="favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">' +
       '<link rel="stylesheet" href="assets/hub.css?v={asset_v['css']}">');
   }})();
 </script>
@@ -574,7 +640,7 @@ def render_404(studio, asset_v):
 </head>
 <body>
 <main id="main" class="wrap" style="min-height:100vh;display:grid;align-content:center;gap:18px;padding-block:64px">
-  <a class="brand" href="./">{LOGO}<span class="brand-name">{name}</span></a>
+  <a class="brand" href="./" aria-label="{name}">{brand_logo()}</a>
   <p class="eyebrow">404 · Empty drawer</p>
   <h1 style="font:400 clamp(48px,8vw,112px)/.95 var(--serif);margin:0;letter-spacing:-.02em">This drawer is empty.</h1>
   <p class="lede" lang="zh-CN">这个抽屉是空的——页面不存在或已移动。</p>
@@ -597,8 +663,16 @@ def main(argv=None):
     args = ap.parse_args(argv)
 
     studio = load("studio.json")
+    studio["forms_enabled"] = os.environ.get("EMVALUE_FORMS_ENABLED", "false").lower() == "true"
+    if os.environ.get("EMVALUE_SITE_URL"):
+        studio["site_url"] = os.environ["EMVALUE_SITE_URL"].rstrip("/")
+    if studio.get("site_url"):
+        parsed = urlparse(studio["site_url"])
+        if parsed.scheme != "https" or not parsed.hostname or parsed.query or parsed.fragment or parsed.username:
+            raise ValueError("EMVALUE_SITE_URL must be a public https:// site URL, without credentials, query or fragment")
     content = load("content.json")
     services_content = load("services.json")
+    pages = load("pages.json")
     CONTENT.update(content)
     catalogue = load("demos.json")
     scans = {d["id"]: scan_demo(d) for d in catalogue}
@@ -624,17 +698,32 @@ def main(argv=None):
     src = re.sub(r'var STUDIO = ".*?";', 'var STUDIO = ' + json.dumps(studio["name"]) + ';', src, count=1)
     kit.write_text(src, encoding="utf-8")
 
-    asset_v = {"css": asset_hash(SITE / "assets" / "hub.css"), "js": asset_hash(SITE / "assets" / "hub.js")}
+    asset_v = {"css": asset_hash(SITE / "assets" / "hub.css"), "js": asset_hash(SITE / "assets" / "hub.js"),
+               "favicon": asset_hash(SITE / "favicon.svg"), "enquiry": asset_hash(SITE / "assets" / "enquiry.js")}
     (SITE / "zh").mkdir(exist_ok=True)
     (SITE / "index.html").write_text(render("en", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
     (SITE / "zh" / "index.html").write_text(render("zh", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
 
-    for lang, relative in (("en", "services"), ("zh", "zh/services")):
-        target = SITE / relative
-        target.mkdir(parents=True, exist_ok=True)
-        header, footer = page_chrome(lang, studio, content[lang], services_page=True)
-        (target / "index.html").write_text(
-            render_services(lang, studio, content[lang], services_content[lang], asset_v, header, footer), encoding="utf-8")
+    service_pages = {"services": services_content}
+    service_paths = []
+    for slug, page_content in service_pages.items():
+        for lang in ("en", "zh"):
+            target = SITE / ("zh/" if lang == "zh" else "") / slug
+            target.mkdir(parents=True, exist_ok=True)
+            header, footer = page_chrome(lang, studio, content[lang], services_page=True,
+                                         page_slug=slug if slug != "services" else "")
+            (target / "index.html").write_text(
+                render_services(lang, studio, content[lang], page_content[lang], asset_v, header, footer, slug), encoding="utf-8")
+            service_paths.append(str((target / "index.html").relative_to(ROOT)))
+
+    editorial_paths = []
+    for lang in ("en", "zh"):
+        for slug, page in pages[lang].items():
+            target = SITE / ("zh/" if lang == "zh" else "") / slug
+            target.mkdir(parents=True, exist_ok=True)
+            header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
+            (target / "index.html").write_text(render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer), encoding="utf-8")
+            editorial_paths.append(str((target / "index.html").relative_to(ROOT)))
 
     (SITE / "404.html").write_text(render_404(studio, asset_v), encoding="utf-8")
     site_url = (studio.get("site_url") or "").rstrip("/")
@@ -647,14 +736,14 @@ def main(argv=None):
                 f'  <url><loc>{site_url}{path}</loc><lastmod>{today}</lastmod>'
                 f'<xhtml:link rel="alternate" hreflang="en-AU" href="{site_url}{en_path}"/>'
                 f'<xhtml:link rel="alternate" hreflang="zh-CN" href="{site_url}{zh_path}"/></url>\n'
-                for en_path, zh_path in (("/", "/zh/"), ("/services/", "/zh/services/"))
+                for en_path, zh_path in [("/", "/zh/")] + [(f"/{slug}/", f"/zh/{slug}/") for slug in list(service_pages) + list(pages["en"])]
                 for path in (en_path, zh_path)) + "</urlset>\n")
     else:
         (SITE / "robots.txt").write_text("# Preview build: no production domain configured in src/studio.json yet.\nUser-agent: *\nDisallow: /\n")
         if (SITE / "sitemap.xml").exists():
             (SITE / "sitemap.xml").unlink()
 
-    report = {"built": ["site/index.html", "site/zh/index.html", "site/services/index.html", "site/zh/services/index.html", "site/robots.txt"], "stats": stats,
+    report = {"built": ["site/index.html", "site/zh/index.html", "site/robots.txt"] + service_paths + editorial_paths, "stats": stats,
               "typeface_list": typefaces, "missing_demos": missing,
               "problems": {i: s["problems"] for i, s in scans.items() if s["exists"] and s["problems"]},
               "warnings": {i: s["warnings"] for i, s in scans.items() if s["exists"] and s["warnings"]},
