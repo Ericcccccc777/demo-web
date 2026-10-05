@@ -154,11 +154,18 @@ def social_links(studio, c):
     return f'<div class="social-links" role="group" aria-label="{esc(ct["social_label"])}">{"".join(items)}</div>'
 
 HEART = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.3 4.6 13a4.9 4.9 0 0 1 0-7 4.8 4.8 0 0 1 6.9 0l.5.5.5-.5a4.8 4.8 0 0 1 6.9 0 4.9 4.9 0 0 1 0 7Z"/></svg>')
+HEART_BUMP = HEART.replace("<svg ", '<svg class="bump" ', 1)
+CLOSE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>'
+SLIDERS_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/>'
+                '<circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>')
+LINK_ICON = ('<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/>'
+             '<path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>')
 
 ARROW = '<span class="arr" aria-hidden="true">→</span>'
+ARROW_OUT = '<span class="arr" aria-hidden="true">↗</span>'
 
 
-def drawer_card(d, scan, c, p):
+def drawer_card(d, scan, c, p, xy=None):
     lang = "zh" if c["lang"].startswith("zh") else "en"
     thumb_version = asset_hash(SITE / "assets" / "thumbs" / f"{d['id']}.webp")
     name = d["name"]
@@ -172,6 +179,8 @@ def drawer_card(d, scan, c, p):
     search = " ".join(search_bits).lower()
     kb = max(1, round(scan.get("bytes", 0) / 1024))
     palette = d.get("palette") or ["#ddd", "#999"]
+    # the drawer's cell in the hero sprite sits under the thumbnail until (or instead of) the full image
+    sprite_vars = f";--x:{xy[0]};--y:{xy[1]}" if xy else ""
     tech = " · ".join(scan.get("tech") or [])
     return (
         f'<li class="drawer" id="d-{d["id"]}" data-id="{d["id"]}" data-industry="{d["industry"]}" '
@@ -181,9 +190,9 @@ def drawer_card(d, scan, c, p):
         f'data-kb="{kb}" data-fonts="{esc(" · ".join(scan.get("fonts", [])))}" data-lang="{esc(c["langs"][d["lang"]])}" '
         f'data-search="{esc(search)}">'
         f'<a class="drawer-link" href="{p}demos/{scan["folder"]}/" data-open="{d["id"]}">'
-        f'<span class="drawer-frame" style="--c1:{esc(palette[0])};--c2:{esc(palette[min(2, len(palette) - 1)])}">'
+        f'<span class="drawer-frame{" sprite" if xy else ""}" style="--c1:{esc(palette[0])};--c2:{esc(palette[min(2, len(palette) - 1)])}{sprite_vars}">'
         f'<img class="drawer-img" src="{p}assets/thumbs/{d["id"]}.webp?v={thumb_version}" width="720" height="450" loading="lazy" decoding="async" alt=""></span>'
-        f'<span class="drawer-label"><span class="drawer-no">No. {d["id"]}</span>'
+        f'<span class="drawer-label"><span class="drawer-no"><span class="no-pre">No. </span>{d["id"]}</span>'
         f'<span class="drawer-name">{esc(name)}</span>'
         f'<span class="drawer-type">{esc(d["type"][lang])} · {esc(d["city"])}</span></span>'
         f'<span class="drawer-tags"><span class="tag">{esc(d["style"][lang])}</span>'
@@ -209,13 +218,16 @@ def hero_box(demos, c, p, sprite):
     last = demos[-1]["id"] if demos else "000"
     return (f'<div class="hero-box" aria-hidden="true">'
             f'<div class="case"><div class="case-inner"{sprite_style}>{"".join(tiles)}</div>'
-            f'<span class="case-plate">No. 001–{last}</span></div>'
-            f'<p class="case-caption">{esc(fill(c["hero"]["box_caption"], last=last))}<span class="hover-only"> · {esc(c["hero"]["box_hover"])}</span></p>'
+            f'<span class="case-plate">No. 001–{last}<span id="plate-brand"></span></span></div>'
+            f'<p class="case-caption">{esc(fill(c["hero"]["box_caption"], last=last))}'
+            f'<span class="hover-only"> · {esc(c["hero"]["box_hover"])}</span><span class="touch-only"> · {esc(c["hero"]["box_touch"])}</span></p>'
             f'<span class="tile-tip" hidden></span></div>')
 
 
-def page_chrome(lang, studio, c, services_page=False, page_slug=""):
-    """Shared navigation, including correctly paired language and policy links."""
+def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=False):
+    """Shared navigation, including correctly paired language and policy links.
+
+    is_home: the hub itself — navigation scrolls within the page and the header gets the phone menu button."""
     slug = page_slug or ("services" if services_page else "")
     home = "../" * len(slug.split("/")) if slug else ""
     services_url = "./" if slug == "services" else home + "services/"
@@ -225,16 +237,25 @@ def page_chrome(lang, studio, c, services_page=False, page_slug=""):
     name = (studio.get("name_zh") or studio["name"]) if lang == "zh" else studio["name"]
     prefix = ("../" if lang == "zh" else "") + home
     logo = brand_logo(prefix)
-    links = (f'<a href="{home}#box">{esc(c["nav"]["box"])}</a>'
-             f'<a href="{services_url}"' + (' aria-current="page"' if slug == "services" else ' aria-current="location"' if slug.startswith("services/") else '') + f'>{esc(c["nav"]["services"])}</a>'
-             f'<a href="{section_home}#process">{esc(c["nav"]["process"])}</a><a href="{section_home}#faq">{esc(c["nav"]["faq"])}</a>')
-    header = f'''<header class="top" id="top">
+    home_label = f'{name} — {c["nav"]["home_label"]}'
+    if is_home:
+        links = "".join(f'<a href="#{key}" data-section="{key}">{esc(c["nav"][key])}</a>' for key in ("box", "services", "process", "faq"))
+        brand_attrs = f'href="#top" aria-label="{esc(home_label)}" title="{esc(c["nav"]["home_label"])}"'
+        menu_button = (f'\n      <button class="menu-btn" type="button" id="menu-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">'
+                       f'<span class="menu-icon" aria-hidden="true"><span></span><span></span></span>{esc(c["nav"]["menu"])}</button>')
+    else:
+        links = (f'<a href="{home}#box">{esc(c["nav"]["box"])}</a>'
+                 f'<a href="{services_url}"' + (' aria-current="page"' if slug == "services" else ' aria-current="location"' if slug.startswith("services/") else '') + f'>{esc(c["nav"]["services"])}</a>'
+                 f'<a href="{section_home}#process">{esc(c["nav"]["process"])}</a><a href="{section_home}#faq">{esc(c["nav"]["faq"])}</a>')
+        brand_attrs = f'href="{home or "#top"}" aria-label="{esc(name)}"'
+        menu_button = ""
+    header = f'''<header class="top{' has-menu' if is_home else ''}">
   <div class="top-inner wrap">
-    <a class="brand" href="{home or '#top'}" aria-label="{esc(name)}">{logo}</a>
+    <a class="brand" {brand_attrs}>{logo}</a>
     <nav class="top-nav" aria-label="{esc(c['nav']['menu'])}">{links}</nav>
     <div class="top-actions">
       <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
-      <a class="btn btn-accent btn-small" href="{home}#contact">{esc(c['nav']['cta'])}</a>
+      <a class="btn btn-accent btn-small" href="{home}#contact">{esc(c['nav']['cta'])}</a>{menu_button}
     </div>
   </div>
 </header>'''
@@ -243,12 +264,17 @@ def page_chrome(lang, studio, c, services_page=False, page_slug=""):
                     if studio.get("email") else "")
     policy_links = "".join(f'<a href="{home}{path}/"' + (' aria-current="page"' if path == slug else '') + f'>{esc(c["footer"][label])}</a>'
                            for path, label in (("privacy", "privacy"), ("terms", "terms"), ("project-terms", "project_terms")))
-    footer_links = (links + f'<a href="{home}about/">{esc(c["footer"]["about"])}</a>'
-                    + f'<a href="{home}#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">↗</span></a>')
+    if is_home:
+        footer_links = (links + f'<a href="about/">{esc(c["footer"]["about"])} <span aria-hidden="true">↗</span></a>'
+                        + f'<a href="#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">→</span></a>')
+    else:
+        footer_links = (links + f'<a href="{home}about/">{esc(c["footer"]["about"])}</a>'
+                        + f'<a href="{home}#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">↗</span></a>')
+    foot_brand_label = home_label if is_home else name
     footer = f'''<footer class="foot">
   <div class="wrap foot-inner">
     <div class="foot-main">
-      <div class="foot-brand"><a class="brand brand-studio" href="{home or '#top'}" aria-label="{esc(name)}">{logo}<span class="brand-descriptor" aria-hidden="true">STUDIO</span></a><p>{esc(c['footer']['tagline'])}</p></div>
+      <div class="foot-brand"><a class="brand brand-studio" href="{home or '#top'}" aria-label="{esc(foot_brand_label)}">{logo}<span class="brand-descriptor" aria-hidden="true">STUDIO</span></a><p>{esc(c['footer']['tagline'])}</p></div>
       <nav class="foot-nav" aria-label="{esc(c['footer']['explore'])}">
         <h2 class="foot-label">{esc(c['footer']['explore'])}</h2>
         <div class="foot-nav-links">{footer_links}</div>
@@ -274,9 +300,16 @@ def page_chrome(lang, studio, c, services_page=False, page_slug=""):
     return header, footer
 
 
+def industry_chips(c, industries, ind_counts, count):
+    chips = [f'<button class="chip" type="button" data-industry="all" aria-pressed="true">{esc(c["box"]["all"])} <span class="n">{count}</span></button>']
+    chips += [f'<button class="chip" type="button" data-industry="{k}" aria-pressed="false">{esc(c["industries"][k])} <span class="n">{ind_counts[k]}</span></button>'
+              for k in industries]
+    return "".join(chips)
+
+
 def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     c = content[lang]
-    header, footer = page_chrome(lang, studio, c)
+    header, footer = page_chrome(lang, studio, c, is_home=True)
     p = "" if lang == "en" else "../"
     name = studio["name"]
     count = stats["count"]
@@ -304,17 +337,24 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 
     industries = sorted({d["industry"] for d in demos}, key=list(c["industries"]).index)
     ind_counts = {k: sum(1 for d in demos if d["industry"] == k) for k in industries}
-    chips = [f'<button class="chip" type="button" data-industry="all" aria-pressed="true">{esc(c["box"]["all"])} <span class="n">{count}</span></button>']
-    chips += [f'<button class="chip" type="button" data-industry="{k}" aria-pressed="false">{esc(c["industries"][k])} <span class="n">{ind_counts[k]}</span></button>' for k in industries]
+    chips = industry_chips(c, industries, ind_counts, count)
     mood_opts = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in c["moods"].items())
     used_feats = [k for k in c["features"] if any(k in scans[d["id"]].get("features", d["features"]) for d in demos)]
     feat_opts = "".join(f'<option value="{k}">{esc(c["features"][k])}</option>' for k in used_feats)
-    cards = "\n".join(drawer_card(d, scans[d["id"]], c, p) for d in demos)
+    mood_chips = "".join(f'<button class="chip" type="button" data-mood="{k}" aria-pressed="false">{esc(v)}</button>' for k, v in c["moods"].items())
+    feat_chips = "".join(f'<button class="chip" type="button" data-feature="{k}" aria-pressed="false">{esc(c["features"][k])}</button>' for k in used_feats)
+    sprite_xy = {did: (i % sprite["cols"], i // sprite["cols"]) for i, did in enumerate(sprite["order"])} if sprite else {}
+    cards = "\n".join(drawer_card(d, scans[d["id"]], c, p, sprite_xy.get(d["id"])) for d in demos)
+    bx = c["box"]
 
+    def service_link(s):
+        # "#contact" scrolls within the page; "?filter" links still work without JavaScript
+        if s["link"].startswith("#"):
+            return f'<a class="text-link" href="{esc(s["link"])}">{esc(s.get("cta") or c["services"]["examples"])} {ARROW}</a>'
+        return f'<a class="text-link" href="{esc(s["link"] + "#box")}" data-filter-link>{esc(c["services"]["examples"])} {ARROW}</a>'
     services = "".join(
         f'<li class="svc"><span class="svc-no">0{i + 1}</span><h3>{esc(s["title"])}</h3><p>{esc(s["body"])}</p>'
-        f'<p class="svc-good">{esc(s["good"])}</p>'
-        f'<a class="text-link" href="{esc(s["link"] if s["link"].startswith("#") else s["link"] + "#box")}" data-filter-link>{esc(c["services"]["examples"])} {ARROW}</a></li>'
+        f'<p class="svc-good">{esc(s["good"])}</p>{service_link(s)}</li>'
         for i, s in enumerate(c["services"]["items"]))
     steps = "".join(f'<li class="step"><span class="step-no">{i + 1}</span><h3>{esc(s["title"])}</h3><p>{esc(s["body"])}</p></li>'
                     for i, s in enumerate(c["process"]["steps"]))
@@ -343,16 +383,43 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         channels.append(f'<li><span>{esc(ct["wechat"])}</span><button type="button" class="copy-id" data-copy="{esc(studio["wechat"])}">{esc(studio["wechat"])}</button></li>')
     channels_html = (f'<ul class="channel-list">{"".join(channels)}</ul>' if channels
                      else f'<p class="channels-preview" id="channels-preview">{esc(ct["channels_preview"])}</p>')
-    email_btn = (f'<a class="btn btn-line" id="brief-email" href="mailto:{esc(studio["email"])}">{esc(ct["email_button"])}</a>'
-                 if studio.get("email") else
-                 f'<button class="btn btn-accent" id="brief-email" type="button" disabled aria-describedby="channels-preview">{esc(ct["email_unavailable"])}</button>')
+    forms_on = bool(studio.get("forms_enabled"))
+    unavailable_btn = f'<button class="btn btn-accent" id="brief-email" type="button" disabled aria-describedby="channels-preview">{esc(ct["email_unavailable"])}</button>'
+    copy_btn = f'<button class="btn btn-line" id="brief-copy" type="button">{esc(ct["copy_button"])}</button>'
+    status_html = '<p class="brief-status" id="brief-status" role="status" aria-live="polite"></p>'
+    if forms_on:
+        # online submission is the primary action; email and copy stay beside the brief as fallbacks
+        email_btn = (f'<a class="btn btn-line" id="brief-email" href="mailto:{esc(studio["email"])}">{esc(ct["email_button"])}</a>'
+                     if studio.get("email") else unavailable_btn)
+        form_end = (f'<button class="btn btn-accent" id="brief-submit" type="submit" aria-describedby="submission-note" disabled>{esc(ct["submit"])} {ARROW}</button>\n'
+                    f'        <p class="form-hint" id="submission-note">{esc(ct["no_js"])}</p>\n'
+                    '        <div class="submission-status" id="submission-status" role="status" aria-live="polite" tabindex="-1" hidden></div>')
+        aside_actions = (f'\n      <div class="brief-actions">\n        {email_btn}\n        {copy_btn}\n      </div>\n'
+                         f'      <p class="email-hint" id="brief-email-hint">{esc(ct["email_hint"])}</p>\n      {status_html}')
+    else:
+        # no disabled submit button: the brief goes out by email, with copy as the fallback
+        email_btn = (f'<a class="btn btn-accent" id="brief-email" href="mailto:{esc(studio["email"])}">{esc(ct["email_brief"])} {ARROW}</a>'
+                     if studio.get("email") else unavailable_btn)
+        form_end = (f'<div class="brief-actions form-actions">{email_btn}{copy_btn}</div>\n'
+                    f'        <p class="form-hint form-note" id="brief-email-hint">{esc(ct["pending_note"])}</p>\n'
+                    f'        {status_html}')
+        aside_actions = ""
 
     v = c["viewer"]
+    nav = c["nav"]
+    name_label = (studio.get("name_zh") or name) if lang == "zh" else name
+    other_home, other_lang = ("../", "en-AU") if lang == "zh" else ("zh/", "zh-CN")
+    menu_items = [("box", nav["box"]), ("services", nav["services"]), ("process", nav["process"]), ("faq", nav["faq"]), ("contact", nav["cta"])]
+    menu_list = "".join(f'<li><a class="menu-link" href="#{k}" data-section="{k}"><span class="menu-no">0{i + 1}</span>'
+                        f'<span class="menu-title">{esc(label)}</span><span class="menu-arr" aria-hidden="true">→</span></a></li>'
+                        for i, (k, label) in enumerate(menu_items))
+    menu_email = f'<a class="menu-email" href="mailto:{esc(studio["email"])}">{esc(studio["email"])}</a>' if studio.get("email") else ""
+
     config = {
         "lang": lang, "prefix": p, "studio": {k: studio.get(k) for k in ("name", "email", "phone", "whatsapp", "wechat", "instagram")},
-        "count": count, "box": c["box"], "viewer": v, "hero": {k: c["hero"][k] for k in ("tryon_done", "tryon_cleared")},
-        "forms_enabled": bool(studio.get("forms_enabled")),
-        "contact": {k: ct[k] for k in ("copied", "copy_failed", "emailed", "subject", "brief_empty", "remove", "email_button", "email_hint", "email_long", "submit", "submitting", "submitted", "success", "failure", "pending", "required_name")},
+        "count": count, "box": bx, "viewer": v, "hero": {"brand_on": c["hero"]["brand_on"]},
+        "forms_enabled": forms_on,
+        "contact": {k: ct[k] for k in ("copied", "copy_failed", "emailed", "subject", "brief_empty", "remove", "email_button", "email_hint", "email_long", "pending_note", "submit", "submitting", "submitted", "success", "failure", "pending", "required_name")},
         "brief": c["brief_labels"], "features": c["features"], "moods": c["moods"], "industries": c["industries"],
     }
     config_json = json.dumps(config, ensure_ascii=False).replace("</", "<\\/")
@@ -376,16 +443,16 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}">
 <link rel="stylesheet" href="{p}assets/hub.css?v={asset_v['css']}">
-{('<style>.tile{background-image:url(' + p + 'assets/box-sprite.webp?v=' + sprite['v'] + ')}</style>') if sprite else ''}
-<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+{('<style>:root{--cols:' + str(sprite['cols']) + ';--rows:' + str(sprite['rows']) + '}.tile,.sprite{background-image:url(' + p + 'assets/box-sprite.webp?v=' + sprite['v'] + ')}</style>') if sprite else ''}
+<script>(function(d){{d.className=d.className.replace('no-js','js');addEventListener('load',function(){{if(!d.classList.contains('hub-ready')){{d.classList.remove('js');d.classList.add('no-js');}}}});}})(document.documentElement);</script>
 <script src="{p}assets/enquiry.js?v={asset_v['enquiry']}" defer></script>
 <script src="{p}assets/hub.js?v={asset_v['js']}" defer></script>
 </head>
-<body>
+<body class="home-page">
 <a class="skip" href="#main">{esc(c['skip'])}</a>
 {header}
 <main id="main">
-<section class="hero wrap" aria-labelledby="hero-title">
+<section class="hero home-hero wrap" id="hero" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="eyebrow">{esc(c['hero']['eyebrow'])}</p>
     <h1 id="hero-title">{fill(c['hero']['title_html'], **vals)}</h1>
@@ -396,12 +463,15 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
         <input id="tryon-name" name="brand" maxlength="32" placeholder="{esc(c['hero']['tryon_placeholder'])}" autocomplete="organization" spellcheck="false">
         <button class="btn btn-accent" type="submit">{esc(c['hero']['tryon_button'])}</button>
       </div>
-      <p class="hint" id="tryon-hint" aria-live="polite">{esc(c['hero']['tryon_hint'])}</p>
+      <div class="tryon-status" aria-live="polite">
+        <p class="hint" id="tryon-hint">{esc(c['hero']['tryon_hint'])}</p>
+        <div class="tryon-state" id="tryon-state" hidden><span class="tryon-on" id="tryon-on"></span><button class="tryon-open" type="button" id="tryon-open">{esc(c['hero']['open_one'])} <span aria-hidden="true">→</span></button><button class="tryon-clear" type="button" id="tryon-clear">{esc(c['hero']['clear'])}</button></div>
+      </div>
     </form>
     <div class="hero-ctas">
       <a class="btn btn-ink" href="#box">{esc(c['hero']['open_box'])} <span aria-hidden="true">↓</span></a>
       <a class="text-link" href="#contact">{esc(c['hero']['start'])} {ARROW}</a>
-      <a class="text-link" href="services/">{esc(c['nav']['services'])} {ARROW}</a>
+      <a class="text-link" href="#services">{esc(nav['services'])} {ARROW}</a>
     </div>
   </div>
   {hero_box(demos, c, p, sprite)}
@@ -409,48 +479,60 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 
 <section class="proof" aria-label="{esc(c['proof']['label'])}">
   <ul class="proof-list wrap">
-    <li><strong>{count}</strong><span>{esc(c['proof']['demos'])}</span></li>
-    <li><strong>{stats['industries']}</strong><span>{esc(c['proof']['industries'])}</span></li>
-    <li><strong class="proof-word">{esc(c['proof']['languages'])}</strong><span>{esc(c['proof']['languages_detail'])}</span></li>
-    <li><strong class="proof-word">{esc(c['proof']['custom'])}</strong><span>{esc(c['proof']['custom_detail'])}</span></li>
+    <li><a href="#box"><strong>{count}</strong><span>{esc(c['proof']['demos'])} {ARROW}</span></a></li>
+    <li><a href="#filters" data-proof="industries"><strong>{stats['industries']}</strong><span>{esc(c['proof']['industries'])} {ARROW}</span></a></li>
+    <li><a href="?feature=bilingual#box" data-filter-link><strong class="proof-word">{esc(c['proof']['languages'])}</strong><span>{esc(c['proof']['languages_detail'])} {ARROW}</span></a></li>
+    <li><a href="#services"><strong class="proof-word">{esc(c['proof']['custom'])}</strong><span>{esc(c['proof']['custom_detail'])} {ARROW}</span></a></li>
   </ul>
 </section>
 
 <section class="box" id="box" aria-labelledby="box-title">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">{esc(c['box']['eyebrow'])}</p>
-      <h2 id="box-title">{esc(c['box']['title'])}</h2>
-      <p class="section-intro">{esc(c['box']['intro'])}</p>
-      <p class="note">{esc(c['box']['note'])}</p>
+      <p class="eyebrow">{esc(bx['eyebrow'])}</p>
+      <h2 id="box-title">{esc(bx['title'])}</h2>
+      <p class="section-intro">{esc(bx['intro'])}</p>
+      <p class="note">{esc(bx['note'])}</p>
     </div>
   </div>
   <div class="filters" id="filters">
     <div class="wrap filters-inner">
-      <div class="chips" role="group" aria-label="{esc(c['box']['industry_label'])}">{''.join(chips)}</div>
+      <div class="chips chips-bar" role="group" aria-label="{esc(bx['industry_label'])}">{chips}</div>
       <div class="filter-tools">
-        <label class="search"><span class="sr-only">{esc(c['box']['search_label'])}</span>
+        <label class="search"><span class="sr-only">{esc(bx['search_label'])}</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-          <input type="search" id="search" placeholder="{esc(c['box']['search_placeholder'])}" autocomplete="off" spellcheck="false"></label>
-        <label class="select"><span class="sr-only">{esc(c['box']['mood_label'])}</span><select id="mood"><option value="">{esc(c['box']['mood_any'])}</option>{mood_opts}</select></label>
-        <label class="select"><span class="sr-only">{esc(c['box']['feature_label'])}</span><select id="feature"><option value="">{esc(c['box']['feature_any'])}</option>{feat_opts}</select></label>
-        <button class="btn btn-small btn-line" type="button" id="saved-toggle" aria-pressed="false">{HEART}<span>{esc(c['box']['saved'])}</span> <span class="n" id="saved-count">0</span></button>
-        <button class="btn btn-small btn-line" type="button" id="shuffle"><span aria-hidden="true">⤨</span> {esc(c['box']['shuffle'])}</button>
-        <div class="view-toggle" role="group" aria-label="{esc(c['box']['view_label'])}">
-          <button type="button" data-view="cabinet" aria-pressed="true">{esc(c['box']['view_cabinet'])}</button><button type="button" data-view="index" aria-pressed="false">{esc(c['box']['view_index'])}</button>
+          <input type="search" id="search" placeholder="{esc(bx['search_placeholder'])}" data-short="{esc(bx['search_short'])}" autocomplete="off" spellcheck="false"></label>
+        <button class="filters-btn" type="button" id="filters-open" aria-haspopup="dialog" aria-controls="filter-sheet">{SLIDERS_ICON}{esc(bx['filters'])}<span class="filters-n" id="filters-n" hidden></span></button>
+        <label class="select"><span class="sr-only">{esc(bx['mood_label'])}</span><select id="mood"><option value="">{esc(bx['mood_any'])}</option>{mood_opts}</select></label>
+        <label class="select"><span class="sr-only">{esc(bx['feature_label'])}</span><select id="feature"><option value="">{esc(bx['feature_any'])}</option>{feat_opts}</select></label>
+        <button class="btn btn-small btn-line" type="button" id="saved-toggle" aria-pressed="false">{HEART}<span>{esc(bx['saved'])}</span> <span class="n bump" id="saved-count">0</span></button>
+        <button class="btn btn-small btn-line" type="button" id="shuffle"><span aria-hidden="true">⤨</span> {esc(bx['shuffle'])}</button>
+        <div class="view-toggle" role="group" aria-label="{esc(bx['view_label'])}">
+          <button type="button" data-view="cabinet" aria-pressed="true">{esc(bx['view_cabinet'])}</button><button type="button" data-view="index" aria-pressed="false">{esc(bx['view_index'])}</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="wrap">
-    <p class="count" id="count" aria-live="polite">{esc(fill(c['box']['count_all'], n=count))}</p>
+  <div class="wrap results" id="results" data-view="cabinet">
+    <div class="chips chips-inline" role="group" aria-label="{esc(bx['industry_label'])}">{chips}</div>
+    <div class="count-row">
+      <p class="count" id="count" aria-live="polite">{esc(fill(bx['count_all'], n=count))}</p>
+      <div class="active-filters" id="active-filters"></div>
+      <button class="clear-all" type="button" id="clear-all" hidden>{esc(bx['clear_all'])}</button>
+    </div>
+    <div class="index-head" aria-hidden="true"><span>{esc(bx['col_no'])}</span><span>{esc(bx['col_name'])}</span><span>{esc(bx['col_type'])}</span><span>{esc(bx['col_style'])} · {esc(bx['col_interaction'])}</span></div>
     <ol class="drawers" id="drawers" data-view="cabinet">
 {cards}
     </ol>
+    <div class="more" id="more" hidden>
+      <span class="more-bar" aria-hidden="true"><span id="more-fill"></span></span>
+      <p class="more-text" id="more-text"></p>
+      <div class="more-actions"><button class="btn btn-ink" type="button" id="more-btn"></button><button class="btn btn-line" type="button" id="more-all"></button></div>
+    </div>
     <div class="empty" id="empty" hidden>
-      <p class="empty-title">{esc(c['box']['empty_title'])}</p>
-      <p>{esc(c['box']['empty_body'])}</p>
-      <p><button class="btn btn-ink btn-small" type="button" id="clear-filters">{esc(c['box']['clear'])}</button></p>
+      <p class="empty-title">{esc(bx['empty_title'])}</p>
+      <p>{esc(bx['empty_body'])}</p>
+      <p class="empty-actions"><button class="btn btn-ink" type="button" id="clear-filters">{esc(bx['clear'])}</button><button class="btn btn-line" type="button" id="empty-shuffle"><span aria-hidden="true">⤨</span> {esc(bx['shuffle'])}</button></p>
     </div>
   </div>
 </section>
@@ -462,7 +544,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     <p class="section-intro">{esc(c['services']['intro'])}</p>
   </div>
   <ol class="svc-list">{services}</ol>
-  <p class="services-more"><a class="btn btn-line" href="services/">{esc(c['services']['more'])} {ARROW}</a></p>
+  <p class="services-more"><a class="btn btn-line" href="services/">{esc(c['services']['more'])} {ARROW_OUT}</a></p>
 </section>
 
 <section class="process" id="process" aria-labelledby="process-title">
@@ -488,6 +570,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
   <div class="section-head">
     <p class="eyebrow">{esc(c['faq']['eyebrow'])}</p>
     <h2 id="faq-title">{esc(c['faq']['title'])}</h2>
+    <a class="text-link faq-ask" href="#contact">{esc(c['faq']['ask'])} {ARROW}</a>
   </div>
   <div class="qa-list">{faq}</div>
 </section>
@@ -495,7 +578,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 <section class="studio-note wrap" aria-labelledby="studio-note-title">
   <p class="eyebrow">EMVALUE / STUDIO</p>
   <div><h2 id="studio-note-title">{esc(c['about_teaser']['title'])}</h2><p>{esc(c['about_teaser']['body'])}</p>
-    <a class="text-link" href="about/">{esc(c['about_teaser']['link'])} {ARROW}</a></div>
+    <a class="text-link" href="about/">{esc(c['about_teaser']['link'])} {ARROW_OUT}</a></div>
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-title">
@@ -534,26 +617,17 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
           <label class="sub-label" for="f-reach">{esc(ct['reach_detail'])}</label><input id="f-reach" name="reach_detail" maxlength="150"></fieldset>
         <div class="field"><label for="f-msg">{esc(ct['message'])}</label><textarea id="f-msg" name="message" rows="4" maxlength="5000" placeholder="{esc(ct['message_placeholder'])}"></textarea></div>
         <p class="privacy">{esc(ct['privacy'])} <a href="privacy/">{esc(ct['privacy_link'])} →</a></p>
-        <button class="btn btn-accent" id="brief-submit" type="submit" aria-describedby="submission-note" disabled>{esc(ct['submit'])} {ARROW}</button>
-        <p class="form-hint" id="submission-note">{esc(ct['no_js'] if studio.get('forms_enabled') else ct['pending'])}</p>
-        <div class="submission-status" id="submission-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+        {form_end}
       </form>
     </div>
     <aside class="brief-card" aria-labelledby="brief-title">
       <div class="brief-paper">
         <h3 id="brief-title">{esc(ct['brief_title'])}</h3>
         <pre class="brief-text" id="brief-text" tabindex="0">{esc(ct['brief_empty'])}</pre>
-      </div>
-      <div class="brief-actions">
-        {email_btn}
-        <button class="btn btn-line" id="brief-copy" type="button">{esc(ct['copy_button'])}</button>
-      </div>
-      <p class="email-hint" id="brief-email-hint">{esc(ct['email_hint'])}</p>
-      <p class="brief-status" id="brief-status" role="status" aria-live="polite"></p>
+      </div>{aside_actions}
       <div class="channels">
         <h3>{esc(ct['channels_title'])}</h3>
         {channels_html}
-        {social_links(studio, c)}
       </div>
       <div class="next-steps"><h3>{esc(ct['next_title'])}</h3><ol>{''.join('<li>' + esc(s) + '</li>' for s in ct['next_steps'])}</ol></div>
     </aside>
@@ -563,8 +637,60 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 
 {footer}
 
+<dialog class="menu" id="menu" aria-label="{esc(nav['menu'])}">
+  <div class="menu-top">
+    <a class="brand" href="#top" aria-label="{esc(name_label + ' — ' + nav['home_label'])}">{brand_logo(p)}</a>
+    <button class="menu-close" type="button" id="menu-close">{CLOSE_ICON}{esc(nav['close'])}</button>
+  </div>
+  <nav class="menu-nav" aria-label="{esc(nav['menu'])}">
+    <ol class="menu-list">{menu_list}</ol>
+    <div class="menu-more">
+      <a class="menu-pill" href="services/">{esc(nav['all_services'])} <span aria-hidden="true">↗</span></a>
+      <a class="menu-pill" href="about/">{esc(c['footer']['about'])} <span aria-hidden="true">↗</span></a>
+      <a class="menu-pill" href="{other_home}" hreflang="{other_lang}" lang="{other_lang}">{esc(nav['lang_menu'])}</a>
+    </div>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn-accent menu-cta" href="#contact">{esc(nav['cta'])} {ARROW}</a>
+    {menu_email}
+  </div>
+</dialog>
+
+<dialog class="sheet" id="filter-sheet" aria-labelledby="sheet-title">
+  <div class="sheet-head">
+    <span class="sheet-grip" aria-hidden="true"></span>
+    <div class="sheet-title-row"><h2 id="sheet-title">{esc(bx['filters'])}</h2><button class="sheet-close" type="button" id="sheet-close" aria-label="{esc(bx['filters_close'])}">{CLOSE_ICON}</button></div>
+  </div>
+  <div class="sheet-body">
+    <p class="sheet-label" id="sheet-l-industry">{esc(bx['industry_label'])}</p>
+    <div class="sheet-chips" role="group" aria-labelledby="sheet-l-industry">{chips}</div>
+    <p class="sheet-label" id="sheet-l-mood">{esc(bx['mood_label'])}</p>
+    <div class="sheet-chips" role="group" aria-labelledby="sheet-l-mood">{mood_chips}</div>
+    <p class="sheet-label" id="sheet-l-feature">{esc(bx['feature_label'])}</p>
+    <div class="sheet-chips" role="group" aria-labelledby="sheet-l-feature">{feat_chips}</div>
+    <p class="sheet-label" id="sheet-l-show">{esc(bx['show'])}</p>
+    <div class="sheet-chips sheet-show" role="group" aria-labelledby="sheet-l-show">
+      <button class="chip" type="button" id="sheet-saved" aria-pressed="false"><span aria-hidden="true">♥</span> {esc(bx['saved_only'])} <span class="n" id="sheet-saved-n">0</span></button>
+      <div class="view-toggle" role="group" aria-label="{esc(bx['view_label'])}">
+        <button type="button" data-view="cabinet" aria-pressed="true">{esc(bx['view_cabinet'])}</button><button type="button" data-view="index" aria-pressed="false">{esc(bx['view_index'])}</button>
+      </div>
+    </div>
+  </div>
+  <div class="sheet-foot">
+    <button class="btn btn-line" type="button" id="sheet-clear">{esc(bx['clear_all'])}</button>
+    <button class="btn btn-ink" type="button" id="sheet-done">{esc(fill(bx['show_n'], n=count))}</button>
+  </div>
+</dialog>
+
+<div class="mbar" id="mbar">
+  <button class="mbar-btn" type="button" id="mbar-saved" hidden>{HEART_BUMP}<span id="mbar-saved-text"></span></button>
+  <button class="mbar-btn" type="button" id="mbar-shuffle"><span aria-hidden="true">⤨</span> {esc(bx['shuffle'])}</button>
+  <a class="mbar-cta" href="#contact">{esc(nav['cta'])} {ARROW}</a>
+</div>
+
 <dialog class="viewer" id="viewer" aria-labelledby="v-name">
   <div class="v-bar">
+    <a class="v-home" href="#top" aria-label="{esc(v['home_label'])}" title="{esc(v['home_label'])}">{brand_logo(p)}</a>
     <div class="v-title"><span class="v-no" id="v-no">No. 000</span><h2 class="v-name" id="v-name" tabindex="-1" autofocus>—</h2><span class="v-meta" id="v-meta"></span></div>
     <div class="v-devices" role="group" aria-label="{esc(v['device_label'])}">
       <button type="button" data-device="desktop" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg><span>{esc(v['desktop'])}</span></button>
@@ -573,7 +699,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     </div>
     <label class="v-brand"><span>{esc(v['brand_label'])}</span><input id="v-brand" maxlength="32" placeholder="{esc(v['brand_placeholder'])}" autocomplete="organization" spellcheck="false"></label>
     <div class="v-actions">
-      <button type="button" class="v-btn" id="v-save" aria-pressed="false">{HEART}<span>{esc(v['save'])}</span></button>
+      <button type="button" class="v-btn" id="v-save" aria-pressed="false">{HEART_BUMP}<span>{esc(v['save'])}</span></button>
+      <button type="button" class="v-btn" id="v-copy" title="{esc(v['copy_link'])}">{LINK_ICON}<span>{esc(v['copy_link'])}</span></button>
       <a class="v-btn" id="v-newtab" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span>{esc(v['newtab'])}</span></a>
       <button type="button" class="v-btn" id="v-info" aria-expanded="false" aria-controls="v-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>{esc(v['about'])}</span></button>
       <button type="button" class="v-btn v-close" id="v-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span>{esc(v['close'])}</span></button>
@@ -583,29 +710,32 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     <div class="v-frame" id="v-frame" data-device="desktop">
       <div class="v-screen" id="v-screen">
         <span class="v-status" aria-hidden="true"><b>9:41</b><svg viewBox="0 0 68 12"><g fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="6" width="3" height="6" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/><path d="M29 11.6 31.3 9.2a3.3 3.3 0 0 0-4.6 0ZM24.4 6.9l1.3 1.3a5.8 5.8 0 0 1 6.6 0l1.3-1.3a7.8 7.8 0 0 0-9.2 0ZM21.9 4.2l1.3 1.3a9.5 9.5 0 0 1 11.6 0l1.3-1.3a11.4 11.4 0 0 0-14.2 0Z"/><rect x="43.5" y="1.5" width="20" height="9" rx="2.6" fill="none" stroke="currentColor" stroke-opacity=".5"/><rect x="45.5" y="3.5" width="14" height="5" rx="1.4"/><rect x="64.6" y="4.3" width="1.8" height="3.4" rx=".9" fill-opacity=".5"/></g></svg></span>
-        <div class="v-loading" id="v-loading"><img id="v-poster" alt="" src="data:,"><span id="v-loading-text"></span></div>
+        <div class="v-loading" id="v-loading"><span class="v-poster" id="v-poster" aria-hidden="true"></span><span class="v-loading-text" id="v-loading-text"></span></div>
         <iframe id="v-iframe" title="" src="about:blank" referrerpolicy="same-origin"></iframe>
       </div>
     </div>
     <aside class="v-panel" id="v-panel" hidden>
       <p class="v-concept">{esc(v['concept'])}</p>
       <dl>
+        <dt>{esc(v['business'])}</dt><dd id="vp-business"></dd>
         <dt>{esc(v['style'])}</dt><dd id="vp-style"></dd>
         <dt>{esc(v['interaction'])}</dt><dd id="vp-interaction"></dd>
         <dt>{esc(v['language'])}</dt><dd id="vp-lang"></dd>
       </dl>
+      <p class="v-keys">{esc(v['keys'])}</p>
     </aside>
   </div>
   <div class="v-foot">
     <div class="v-nav">
       <button type="button" class="v-btn" id="v-prev"><span aria-hidden="true">←</span><span class="sr-only">{esc(v['prev'])}</span></button>
-      <span class="v-pos" id="v-pos"></span>
+      <span class="v-posbox"><span class="v-pos" id="v-pos"></span><span class="v-swipe" aria-hidden="true">‹ {esc(v['swipe'])} ›</span></span>
       <button type="button" class="v-btn" id="v-next"><span class="sr-only">{esc(v['next'])}</span><span aria-hidden="true">→</span></button>
       <button type="button" class="v-btn v-play" id="v-play" aria-pressed="false"><span class="v-play-icon" aria-hidden="true"></span><span id="v-play-label">{esc(v['play'])}</span></button>
     </div>
     <div class="v-progress" aria-hidden="true"><span id="v-progress"></span></div>
     <a class="btn btn-accent btn-small v-want" id="v-want" href="#contact"><span class="want-long">{esc(v['want'])}</span><span class="want-short">{esc(v['want_short'])}</span> {ARROW}</a>
   </div>
+  <div class="hub-toast" role="status" aria-live="polite"></div>
 </dialog>
 <div class="hub-toast" id="hub-toast" role="status" aria-live="polite"></div>
 <script type="application/json" id="hub-config">{config_json}</script>
@@ -654,7 +784,13 @@ def render_404(studio, asset_v):
 # ---------------------------------------------------------------- main
 
 def asset_hash(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()[:10] if path.is_file() else "0"
+    # Text is hashed with LF line endings, so a Windows checkout (core.autocrlf) gets the same ?v= as the Linux build.
+    if not path.is_file():
+        return "0"
+    data = path.read_bytes()
+    if path.suffix in {".css", ".js", ".svg", ".json", ".html"}:
+        data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()[:10]
 
 
 def main(argv=None):

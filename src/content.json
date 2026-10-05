@@ -13,7 +13,11 @@
       "cta": "Start a project",
       "lang_switch": "中文",
       "lang_switch_label": "阅读中文版",
-      "menu": "Menu"
+      "menu": "Menu",
+      "close": "Close",
+      "home_label": "Back to the start",
+      "all_services": "All services",
+      "lang_menu": "中文版"
     },
     "hero": {
       "eyebrow": "Web studio for small businesses · Australia",
@@ -23,18 +27,20 @@
       "tryon_placeholder": "e.g. Rosie's Bakery",
       "tryon_button": "Try it on",
       "tryon_hint": "See your business name in every design you explore.",
-      "tryon_done": "Done — open any drawer to see “{brand}” on it.",
-      "tryon_cleared": "Name cleared — each design shows its original name.",
+      "brand_on": "Trying on “{brand}” in every drawer.",
+      "open_one": "Open one",
+      "clear": "Clear",
       "open_box": "Open the box",
       "start": "Start a project",
       "box_caption": "No. 001–{last}",
       "box_label": "A collection of {count} website designs",
-      "box_hover": "hover a drawer"
+      "box_hover": "hover a drawer, click to open",
+      "box_touch": "tap a drawer to open it"
     },
     "proof": {
       "label": "Made for your business",
       "demos": "interactive concepts",
-      "industries": "industries",
+      "industries": "industries — filter",
       "languages": "EN / 中文",
       "languages_detail": "Bilingual websites",
       "custom": "Bespoke",
@@ -58,8 +64,8 @@
       "view_label": "View",
       "view_cabinet": "Cabinet",
       "view_index": "Index",
-      "count_all": "Showing all {n} drawers",
-      "count_some": "Showing {n} of {total} drawers",
+      "count_all": "All {n} drawers",
+      "count_some": "{n} of {total} drawers match",
       "empty_title": "No drawer matches that.",
       "empty_body": "Try fewer filters — or let the box choose for you.",
       "clear": "Clear filters",
@@ -71,7 +77,26 @@
       "col_name": "Name",
       "col_type": "Business",
       "col_style": "Style",
-      "col_interaction": "Try this"
+      "col_interaction": "Try this",
+      "filters": "Filters",
+      "filters_close": "Close filters",
+      "search_short": "Search — “booking”",
+      "show": "Show",
+      "saved_only": "Saved only",
+      "clear_all": "Clear all",
+      "show_n": "Show {n} drawers",
+      "show_one": "Show 1 drawer",
+      "show_none": "No matches yet",
+      "more": "Show {n} more",
+      "show_all": "Show all {n}",
+      "shown": "{a} of {b} shown",
+      "showing": "Showing {n} drawers · {label}",
+      "showing_one": "Showing 1 drawer · {label}",
+      "showing_saved": "Showing your {n} saved drawers",
+      "showing_saved_one": "Showing your 1 saved drawer",
+      "saved_toast": "Saved “{name}” — it’s in your brief below.",
+      "remove_filter": "Remove filter {label}",
+      "bar_saved": "{n} saved"
     },
     "viewer": {
       "desktop": "Desktop",
@@ -97,7 +122,14 @@
       "language": "Language",
       "position": "{i} of {n}",
       "frame_title": "{name} — interactive concept",
-      "want_short": "I want this"
+      "want_short": "I want this",
+      "copy_link": "Copy link",
+      "link_copied": "Link copied — anyone who opens it lands right on this design.",
+      "link_fail": "Copy this link: {url}",
+      "swipe": "swipe to browse",
+      "home_label": "Close and go back to the start",
+      "keys": "← → browse · Esc close",
+      "business": "Business"
     },
     "services": {
       "eyebrow": "Services",
@@ -139,7 +171,8 @@
           "title": "Care after launch",
           "body": "Domain and hosting set up in your name, small updates when you need them, and a plain-English guide for changing the basics yourself.",
           "good": "Everyone who'd rather be running their business",
-          "link": "#contact"
+          "link": "#contact",
+          "cta": "Ask about care"
         }
       ],
       "more": "Explore all services — websites, apps & business tools"
@@ -200,6 +233,7 @@
     "faq": {
       "eyebrow": "FAQ",
       "title": "Good questions.",
+      "ask": "Ask us something else",
       "items": [
         {
           "q": "Are the businesses in the box real?",
@@ -286,9 +320,11 @@
       "reach_detail": "Phone number or messaging handle (optional)",
       "message": "Anything else?",
       "message_placeholder": "Your customers, your favourite websites, deadlines…",
-      "brief_title": "Your brief",
+      "brief_title": "Your brief · updates as you type",
       "brief_empty": "Start typing — your brief builds itself here.",
       "email_button": "Contact by email",
+      "email_brief": "Email this brief",
+      "pending_note": "Online submission isn’t switched on yet. “Email this brief” opens your email app with everything filled in — just press Send.",
       "email_unavailable": "Email not connected yet",
       "copy_button": "Copy brief",
       "copied": "Brief copied — paste it into your email to us.",
@@ -415,7 +451,11 @@
       "cta": "开始项目",
       "lang_switch": "English",
       "lang_switch_label": "Read in English",
-      "menu": "菜单"
+      "menu": "菜单",
+      "close": "关闭",
+      "home_label": "回到顶部",
+      "all_services": "全部服务",
+      "lang_menu": "English"
     },
     "hero": {
       "eyebrow": "澳洲小生意的网站工作室",
@@ -425,18 +465,20 @@
       "tryon_placeholder": "例如：Rosie's Bakery",
       "tryon_button": "试穿一下",
       "tryon_hint": "换上你的店名，看看哪一种设计适合你的生意。",
-      "tryon_done": "好了——打开任意抽屉，就能看到“{brand}”。",
-      "tryon_cleared": "已清除店名，作品恢复原本的名称。",
+      "brand_on": "正在试穿“{brand}”。",
+      "open_one": "打开一个",
+      "clear": "清除",
       "open_box": "打开盒子",
       "start": "开始项目",
       "box_caption": "No. 001–{last}",
       "box_label": "{count} 个网站设计作品",
-      "box_hover": "把鼠标移到抽屉上"
+      "box_hover": "鼠标移到抽屉上，点击打开",
+      "box_touch": "点任意抽屉打开"
     },
     "proof": {
       "label": "为你的生意而设计",
       "demos": "个互动设计作品",
-      "industries": "个行业",
+      "industries": "个行业 · 筛选",
       "languages": "EN / 中文",
       "languages_detail": "中英双语网站",
       "custom": "按需定制",
@@ -461,7 +503,7 @@
       "view_cabinet": "柜子",
       "view_index": "目录",
       "count_all": "共 {n} 个抽屉",
-      "count_some": "显示 {n} / {total} 个抽屉",
+      "count_some": "{n} / {total} 个抽屉符合条件",
       "empty_title": "没有符合条件的抽屉。",
       "empty_body": "少选几个条件试试——或者让盒子替你挑一个。",
       "clear": "清除筛选",
@@ -473,7 +515,26 @@
       "col_name": "名称",
       "col_type": "生意类型",
       "col_style": "风格",
-      "col_interaction": "可以试试"
+      "col_interaction": "可以试试",
+      "filters": "筛选",
+      "filters_close": "关闭筛选",
+      "search_short": "搜索——“预约”",
+      "show": "显示",
+      "saved_only": "只看收藏",
+      "clear_all": "清除全部",
+      "show_n": "显示 {n} 个抽屉",
+      "show_one": "显示 1 个抽屉",
+      "show_none": "暂无符合的抽屉",
+      "more": "再显示 {n} 个",
+      "show_all": "全部显示 {n} 个",
+      "shown": "已显示 {a} / {b}",
+      "showing": "显示 {n} 个抽屉 · {label}",
+      "showing_one": "显示 1 个抽屉 · {label}",
+      "showing_saved": "显示你收藏的 {n} 个抽屉",
+      "showing_saved_one": "显示你收藏的 1 个抽屉",
+      "saved_toast": "已收藏“{name}”——它会出现在下方需求单里。",
+      "remove_filter": "移除筛选 {label}",
+      "bar_saved": "已收藏 {n}"
     },
     "viewer": {
       "desktop": "电脑",
@@ -499,7 +560,14 @@
       "language": "语言",
       "position": "第 {i} / {n} 个",
       "frame_title": "{name}——互动设计作品",
-      "want_short": "我想要这种"
+      "want_short": "我想要这种",
+      "copy_link": "复制链接",
+      "link_copied": "链接已复制——打开就能直接看到这个作品。",
+      "link_fail": "复制这个链接：{url}",
+      "swipe": "左右滑动切换",
+      "home_label": "关闭预览，回到顶部",
+      "keys": "← → 切换 · Esc 关闭",
+      "business": "生意类型"
     },
     "services": {
       "eyebrow": "服务",
@@ -541,7 +609,8 @@
           "title": "上线后的照顾",
           "body": "域名和主机注册在你名下，需要时帮你做小改动，再附一份看得懂的说明，基础内容你自己也能改。",
           "good": "所有更想专心做生意的人",
-          "link": "#contact"
+          "link": "#contact",
+          "cta": "咨询上线后的照顾"
         }
       ],
       "more": "了解全部服务：网站、App 与业务工具"
@@ -602,6 +671,7 @@
     "faq": {
       "eyebrow": "常见问题",
       "title": "你可能想问。",
+      "ask": "还有别的问题？问我们",
       "items": [
         {
           "q": "盒子里的商家是真的吗？",
@@ -688,9 +758,11 @@
       "reach_detail": "电话或即时通讯账号（选填）",
       "message": "还有什么想说的？",
       "message_placeholder": "你的客人是谁、喜欢的网站、时间要求……",
-      "brief_title": "你的需求单",
+      "brief_title": "你的需求单 · 边填边生成",
       "brief_empty": "开始填写——需求单会在这里自动生成。",
       "email_button": "用邮件联系",
+      "email_brief": "用邮件发送需求单",
+      "pending_note": "在线提交暂未开放。“用邮件发送需求单”会打开邮件应用并自动填好内容，确认后发送即可。",
       "email_unavailable": "邮箱尚未接通",
       "copy_button": "复制需求单",
       "copied": "需求单已复制，请粘贴到发给我们的邮件中。",
