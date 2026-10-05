@@ -22,6 +22,11 @@
   var plainClick = function (e) { return e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey; };
   var usable = function (el) { return !!el && document.contains(el) && el.offsetParent !== null; };
 
+  // Browsers disagree on focus moved by script after a click or tap (Safari draws a ring where Chrome doesn't),
+  // so focus rings show only while the visitor is using the keyboard (see .pointer-input in hub.css).
+  document.addEventListener("pointerdown", function () { root.classList.add("pointer-input"); }, true);
+  document.addEventListener("keydown", function (e) { if (!e.metaKey && !e.ctrlKey) root.classList.remove("pointer-input"); }, true);
+
   /* ---------------- overlays: menu, filter sheet, viewer ---------------- */
   // Native <dialog>s give focus containment and Esc. They fade in with a CSS animation (no visibility delay, so focus
   // can land at once) and fade out before close(). While one is open the page is locked, and padded by the width of

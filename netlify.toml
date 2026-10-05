@@ -2,15 +2,41 @@
   command = "python3 tools/build.py --check"
   publish = "site"
 
-# Keep submissions off until Forms detection and Gmail notifications are configured.
-# Then set EMVALUE_FORMS_ENABLED=true in Netlify's environment and redeploy.
-# Set EMVALUE_SITE_URL to the canonical https:// hostname to enable search indexing.
+# EMVALUE_FORMS_ENABLED=true is set in Netlify's environment, where Forms detection and the Gmail
+# notification are configured.
+
+# Production only, so Deploy Previews stay out of search: the live address for canonical and hreflang
+# links, sitemap.xml and robots.txt.
+[context.production.environment]
+  EMVALUE_SITE_URL = "https://emvalue.com.au"
+
+# One address for the site. Netlify already sends www.emvalue.com.au and emvalue.au to it;
+# these hostnames are served as they are unless redirected.
+[[redirects]]
+  from = "https://www.emvalue.au/*"
+  to = "https://emvalue.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.emvalue.au/*"
+  to = "https://emvalue.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://emvalue.netlify.app/*"
+  to = "https://emvalue.com.au/:splat"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Netlify doesn't send HSTS for custom domains: browsers then always use https.
+    Strict-Transport-Security = "max-age=31536000"
 
 # These URLs include a content hash in ?v=. A changed file gets a new URL.
 # Cache in the visitor's browser to avoid repeat transfers and requests.
@@ -31,7 +57,7 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/assets/brand/emvalue-wordmark.png"
+  for = "/assets/brand/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 

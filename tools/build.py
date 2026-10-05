@@ -126,10 +126,17 @@ def scan_demo(d):
 
 # ---------------------------------------------------------------- page parts
 
-def brand_logo(prefix=""):
-    version = asset_hash(SITE / "assets" / "brand" / "emvalue-wordmark.png")
-    return (f'<img class="brand-wordmark" src="{prefix}assets/brand/emvalue-wordmark.png?v={version}" '
-            'width="2172" height="724" alt="" aria-hidden="true">')
+WORDMARK_WIDTHS = (120, 166, 249, 332, 498, 664)  # made by tools/wordmark.py
+
+
+def brand_logo(prefix="", sizes="(max-width: 359px) 116px, (max-width: 440px) 132px, 166px"):
+    """The wordmark at near its shown size (sizes: its CSS width), so it isn't shrunk with jagged edges."""
+    def url(width):
+        path = SITE / "assets" / "brand" / f"emvalue-wordmark-{width}.png"
+        return f"{prefix}assets/brand/emvalue-wordmark-{width}.png?v={asset_hash(path)}"
+    srcset = ", ".join(f"{url(width)} {width}w" for width in WORDMARK_WIDTHS)
+    return (f'<img class="brand-wordmark" src="{url(332)}" srcset="{srcset}" sizes="{sizes}" '
+            'width="166" height="34" alt="" aria-hidden="true">')
 
 
 def social_links(studio, c):
@@ -239,13 +246,15 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     logo = brand_logo(prefix)
     home_label = f'{name} — {c["nav"]["home_label"]}'
     if is_home:
-        links = "".join(f'<a href="#{key}" data-section="{key}">{esc(c["nav"][key])}</a>' for key in ("box", "services", "process", "faq"))
+        section_links = {key: f'<a href="#{key}" data-section="{key}">{esc(c["nav"][key])}</a>' for key in ("box", "services", "process", "faq")}
+        # the header goes to the full services page; the section stays in the hero, the menu and the footer
+        links = section_links["box"] + f'<a href="services/">{esc(c["nav"]["all_services"])}</a>' + section_links["process"] + section_links["faq"]
         brand_attrs = f'href="#top" aria-label="{esc(home_label)}" title="{esc(c["nav"]["home_label"])}"'
         menu_button = (f'\n      <button class="menu-btn" type="button" id="menu-open" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">'
                        f'<span class="menu-icon" aria-hidden="true"><span></span><span></span></span>{esc(c["nav"]["menu"])}</button>')
     else:
         links = (f'<a href="{home}#box">{esc(c["nav"]["box"])}</a>'
-                 f'<a href="{services_url}"' + (' aria-current="page"' if slug == "services" else ' aria-current="location"' if slug.startswith("services/") else '') + f'>{esc(c["nav"]["services"])}</a>'
+                 f'<a href="{services_url}"' + (' aria-current="page"' if slug == "services" else ' aria-current="location"' if slug.startswith("services/") else '') + f'>{esc(c["nav"]["all_services"])}</a>'
                  f'<a href="{section_home}#process">{esc(c["nav"]["process"])}</a><a href="{section_home}#faq">{esc(c["nav"]["faq"])}</a>')
         brand_attrs = f'href="{home or "#top"}" aria-label="{esc(name)}"'
         menu_button = ""
@@ -265,7 +274,9 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     policy_links = "".join(f'<a href="{home}{path}/"' + (' aria-current="page"' if path == slug else '') + f'>{esc(c["footer"][label])}</a>'
                            for path, label in (("privacy", "privacy"), ("terms", "terms"), ("project-terms", "project_terms")))
     if is_home:
-        footer_links = (links + f'<a href="about/">{esc(c["footer"]["about"])} <span aria-hidden="true">↗</span></a>'
+        footer_links = ("".join(section_links.values())
+                        + f'<a href="services/">{esc(c["nav"]["all_services"])} <span aria-hidden="true">↗</span></a>'
+                        + f'<a href="about/">{esc(c["footer"]["about"])} <span aria-hidden="true">↗</span></a>'
                         + f'<a href="#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">→</span></a>')
     else:
         footer_links = (links + f'<a href="{home}about/">{esc(c["footer"]["about"])}</a>'
@@ -274,7 +285,7 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     footer = f'''<footer class="foot">
   <div class="wrap foot-inner">
     <div class="foot-main">
-      <div class="foot-brand"><a class="brand brand-studio" href="{home or '#top'}" aria-label="{esc(foot_brand_label)}">{logo}<span class="brand-descriptor" aria-hidden="true">STUDIO</span></a><p>{esc(c['footer']['tagline'])}</p></div>
+      <div class="foot-brand"><a class="brand brand-studio" href="{home or '#top'}" aria-label="{esc(foot_brand_label)}">{brand_logo(prefix, '(max-width: 560px) 166px, 190px')}<span class="brand-descriptor" aria-hidden="true">STUDIO</span></a><p>{esc(c['footer']['tagline'])}</p></div>
       <nav class="foot-nav" aria-label="{esc(c['footer']['explore'])}">
         <h2 class="foot-label">{esc(c['footer']['explore'])}</h2>
         <div class="foot-nav-links">{footer_links}</div>
@@ -639,7 +650,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 
 <dialog class="menu" id="menu" aria-label="{esc(nav['menu'])}">
   <div class="menu-top">
-    <a class="brand" href="#top" aria-label="{esc(name_label + ' — ' + nav['home_label'])}">{brand_logo(p)}</a>
+    <a class="brand" href="#top" aria-label="{esc(name_label + ' — ' + nav['home_label'])}">{brand_logo(p, '(max-width: 440px) 132px, 166px')}</a>
     <button class="menu-close" type="button" id="menu-close">{CLOSE_ICON}{esc(nav['close'])}</button>
   </div>
   <nav class="menu-nav" aria-label="{esc(nav['menu'])}">
@@ -690,7 +701,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 
 <dialog class="viewer" id="viewer" aria-labelledby="v-name">
   <div class="v-bar">
-    <a class="v-home" href="#top" aria-label="{esc(v['home_label'])}" title="{esc(v['home_label'])}">{brand_logo(p)}</a>
+    <a class="v-home" href="#top" aria-label="{esc(v['home_label'])}" title="{esc(v['home_label'])}">{brand_logo(p, '92px')}</a>
     <div class="v-title"><span class="v-no" id="v-no">No. 000</span><h2 class="v-name" id="v-name" tabindex="-1" autofocus>—</h2><span class="v-meta" id="v-meta"></span></div>
     <div class="v-devices" role="group" aria-label="{esc(v['device_label'])}">
       <button type="button" data-device="desktop" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg><span>{esc(v['desktop'])}</span></button>
