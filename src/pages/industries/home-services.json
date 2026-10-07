@@ -1,0 +1,240 @@
+{
+  "en": {
+    "title": "Websites for tradies and home services",
+    "description": "Websites for tradies, cleaners, gardeners, removalists and other home-service businesses in Australia: clear service areas, quote requests and mobile-first pages.",
+    "h1": "Websites for tradies and home-service businesses",
+    "eyebrow": "EMVALUE / Industry websites",
+    "for_title": "Who this is for",
+    "included_title": "What we agree in the scope",
+    "not_included_title": "Scope separately",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "Written scope and costs",
+    "demos_title": "Interactive concepts",
+    "demos": [
+      {
+        "id": "032",
+        "shows": "A concept we designed for a fictional cleaning business: job choices feed an illustrative quote calculator."
+      },
+      {
+        "id": "028",
+        "shows": "A concept we designed for a fictional plumbing business: a problem finder and clear call action help organise an enquiry."
+      },
+      {
+        "id": "023",
+        "shows": "A concept we designed for a fictional removalist: packing a truck illustrates collecting information about a move."
+      }
+    ],
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_title": "Discuss the work you need",
+    "cta_button": "Start a project",
+    "answer": "We design websites for tradies, cleaners, gardeners, removalists and other home-service businesses in Australia. We organise the service information and enquiry flow, then quote the agreed pages and functions in writing before work starts. We mainly work online, with direct communication in English and Chinese.",
+    "for_items": [
+      "Sole traders who need a clear place to explain their services and receive enquiries from a phone.",
+      "Small teams whose customers need to check service areas, job types and the next step before asking for a quote.",
+      "Businesses considering a quote form, calculator or appointment request alongside their service information."
+    ],
+    "included": [
+      "An agreed page structure for services, actual service areas, enquiries and work photographs you provide.",
+      "Clear mobile contact actions and the fields needed to understand a job before you respond.",
+      "Your real licences and insurance information, only where you supply and confirm it for publication.",
+      "A written decision on which enquiry or appointment-request functions belong in the quoted scope."
+    ],
+    "not_included": [
+      "Photography, new copy and additional languages unless included in the written quote.",
+      "A calculator, booking connection or ongoing maintenance automatically included in a basic one-page price.",
+      "Invented work photographs, qualifications, service areas or response-time promises."
+    ],
+    "sections": [
+      {
+        "id": "customer-questions",
+        "title": "Answer the questions before the call",
+        "body": [
+          "Explain which jobs you take, where you travel and how a customer can request a quote. A visitor should be able to tell whether the service fits before sending a message. Separate the work you do from work that needs a different discussion, and describe any information needed to assess the request.",
+          "Set response expectations using your actual working arrangements. If you cannot promise an exact reply time, explain when messages are checked and which contact route to use. Work photographs should come from jobs you can genuinely show. Present licence and insurance details only when you actually hold them and have confirmed the wording."
+        ]
+      },
+      {
+        "id": "quote-and-contact",
+        "title": "Choose a useful enquiry flow",
+        "body": [
+          "A quote form can collect the job type, location and details you need to review a request. A click-to-call button helps visitors reach the phone number you provide. An appointment request can ask for a preferred time, while making clear that a request is not a confirmed booking until you accept it.",
+          "For an online calculator, agree the inputs and pricing rules before development. Decide whether the result is an estimate or a quote you will honour, and what requires a site assessment. We can assess an existing booking connection. The written scope explains the chosen functions and any third-party platform costs rather than treating every feature as standard."
+        ]
+      }
+    ],
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Quote calculators, booking connections, additional languages and photography are scoped separately. The website cost guide explains scope and ongoing costs. Timing depends on the pages, functions and content readiness; the written proposal states the milestones.",
+    "faq": [
+      {
+        "q": "What if I do not have work photos?",
+        "a": "Tell us what you can provide. We can discuss a page structure that uses clear service descriptions while you prepare genuine images. Photography is a separate scope. The concepts below are fictional design examples, not substitutes for your own completed work."
+      },
+      {
+        "q": "Can you build online quotes?",
+        "a": "We can assess a quote form or calculator against your actual pricing rules. Explain what changes the price and which jobs need inspection. We confirm the calculation, result wording and development scope before quoting; a concept calculator does not establish your business prices."
+      },
+      {
+        "q": "How should I describe service areas?",
+        "a": "List the suburbs or regions you really serve and any boundaries customers need to know. Confirm the list before publication and explain when a job outside it needs a separate discussion. A design example’s location is not evidence of your coverage."
+      },
+      {
+        "q": "How much does the website cost?",
+        "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. A calculator, additional pages or booking connection changes the scope. The website cost guide explains inclusions, exclusions and continuing costs; your written quote confirms the actual project before work starts."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/business-tools",
+        "label": "Quote tools and business tools"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
+      }
+    ],
+    "cta_body": "Send your service list, actual service areas, available photographs and the contact route you use. Tell us what you need to know before quoting a job. We can discuss the pages and enquiry flow and prepare a written scope."
+  },
+  "zh": {
+    "title": "技工与上门服务类小生意网站",
+    "description": "为技工、清洁、园艺、搬家等上门服务类小生意制作网站：写清服务区域、方便询价、手机上好用。",
+    "h1": "给技工和上门服务做的网站",
+    "eyebrow": "EMVALUE / 行业网站",
+    "for_title": "适合谁",
+    "included_title": "方案里确认的内容",
+    "not_included_title": "另行确认的范围",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "书面范围与费用",
+    "demos_title": "可操作的概念设计",
+    "demos": [
+      {
+        "id": "032",
+        "shows": "我们为一家虚构的清洁公司做的概念设计：工作选项进入示意报价计算器。"
+      },
+      {
+        "id": "028",
+        "shows": "我们为一家虚构的水管工商家做的概念设计：问题引导与明显的拨打入口展示咨询流程。"
+      },
+      {
+        "id": "023",
+        "shows": "我们为一家虚构的搬家公司做的概念设计：装载卡车的交互展示如何收集搬家规模信息。"
+      }
+    ],
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_title": "聊清楚你需要的工作",
+    "cta_button": "开始项目",
+    "answer": "我们为澳洲技工、清洁、园艺、搬家等上门服务类小生意设计网站。先整理服务信息和咨询流程，再按页面与功能书面报价，确认后开工。以线上合作为主，中英文直接沟通。",
+    "for_items": [
+      "需要清楚介绍服务、方便顾客用手机咨询的单人经营者。",
+      "顾客询价前需要核对服务区域、工作类型和下一步的小团队。",
+      "希望在服务介绍之外评估询价表单、计算器或预约请求的商家。"
+    ],
+    "included": [
+      "确认服务项目、实际服务区域、咨询及自备作品照片的页面结构。",
+      "整理手机联系入口及回复前需要了解的工作信息。",
+      "只展示你提供并确认可公开的真实牌照和保险信息。",
+      "书面确认哪些询价或预约请求功能属于报价范围。"
+    ],
+    "not_included": [
+      "拍摄、新文案或增加语言，须在书面报价里另行确认。",
+      "基础单页起步价不自动包含计算器、预约接入或长期维护。",
+      "不使用虚构作品照片、资质、服务区域或回复时间承诺。"
+    ],
+    "sections": [
+      {
+        "id": "customer-questions",
+        "title": "先回答顾客打电话前的问题",
+        "body": [
+          "说明承接哪些工作、到哪些区域，以及顾客怎么询价。访客发消息前，应能判断服务是否适合。把常规工作与需要另谈的工作分开，也说明评估询价需要哪些资料。",
+          "按真实工作安排说明回复预期。如果无法承诺准确时间，就说清查看消息的安排和适合的联系渠道。过往照片应来自你确实可以展示的工作。只有真实持有并确认措辞的牌照、保险信息才展示。"
+        ]
+      },
+      {
+        "id": "quote-and-contact",
+        "title": "选择实用的询价流程",
+        "body": [
+          "询价表单可收集工作类型、地点及你需要评估的资料。一键拨打连接你提供的电话号码。预约请求可收集偏好时间，但应说明请求需经你确认，不能默认视为已预约成功。",
+          "在线计算器开发前要确认输入和计价规则，区分结果是估算还是可执行的报价，也写清哪些情况需现场评估。可以评估接入现有预约工具。功能与第三方平台费用写入方案，不默认每个功能都包含。"
+        ]
+      }
+    ],
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。 报价计算器、预约接入、增加语言及拍摄另行确认。网站费用指南说明范围与后续费用。时间取决于页面、功能和内容准备情况，书面方案里会写明节点。",
+    "faq": [
+      {
+        "q": "我没有照片怎么办？",
+        "a": "先说明可提供的资料。准备真实照片期间，可以讨论用清楚服务介绍组织页面；拍摄另行报价。这里的概念作品是虚构设计示例，不能当成你已完成的工作。"
+      },
+      {
+        "q": "能做在线报价吗？",
+        "a": "可按真实计价规则评估询价表单或计算器。说明哪些因素改变价格、哪些工作需现场查看，再确认计算、结果措辞与开发范围。概念计算器不能作为你的实际价格。"
+      },
+      {
+        "q": "服务区域怎么写？",
+        "a": "列出真正服务的郊区或地区，以及顾客需要了解的边界。发布前确认，区域之外的工作另谈。设计示例里的地点不能证明你的服务覆盖。"
+      },
+      {
+        "q": "要多少钱？",
+        "a": "个人和单人经营者的基础单页网站 {price_one_page} 起。计算器、多页或预约接入会改变范围。网站费用指南说明包含、不包含及后续费用，实际项目以开工前确认的书面报价为准。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/business-tools",
+        "label": "报价工具与业务工具"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_body": "提供服务项目、真实服务区域、现有照片及联系渠道，说明报价前需要了解哪些资料。一起讨论页面和咨询流程，再准备书面范围。"
+  }
+}

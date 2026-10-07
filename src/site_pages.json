@@ -225,6 +225,44 @@
         "zh": "Token Forest 官网"
       },
       "parent": ""
+    },
+    {
+      "slug": "industries/home-services",
+      "template": "service_detail",
+      "source": "pages/industries/home-services.json",
+      "type": "industry",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Tradies and home services",
+        "zh": "技工与上门服务"
+      },
+      "parent": "",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Website design for tradies and home services"
+    },
+    {
+      "slug": "industries/beauty",
+      "template": "service_detail",
+      "source": "pages/industries/beauty.json",
+      "type": "industry",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Salons and beauty studios",
+        "zh": "美业工作室"
+      },
+      "parent": "",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Website design for salons and beauty studios"
     }
   ]
 }

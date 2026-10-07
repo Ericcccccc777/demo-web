@@ -1,0 +1,238 @@
+{
+  "en": {
+    "title": "Websites for salons and beauty studios",
+    "description": "Websites for hair, nail, brow and beauty studios in Australia: clear price lists, online booking connections and bilingual pages for Chinese-speaking clients.",
+    "h1": "Websites for salons and beauty studios",
+    "eyebrow": "EMVALUE / Industry websites",
+    "for_title": "Who this is for",
+    "included_title": "What we agree in the scope",
+    "not_included_title": "Scope separately",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "Written scope and costs",
+    "demos_title": "Interactive concepts",
+    "demos": [
+      {
+        "id": "052",
+        "shows": "A concept we designed for a fictional hair salon: an illustrated colour try-on sits alongside service information."
+      },
+      {
+        "id": "054",
+        "shows": "A concept we designed for a fictional nail salon: visitors customise an illustrated nail set."
+      },
+      {
+        "id": "056",
+        "shows": "A concept we designed for a fictional brow and lash studio: a style selector redraws the illustration and leads to a booking request."
+      }
+    ],
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_title": "Discuss the work you need",
+    "cta_button": "Start a project",
+    "answer": "We design websites for hair, nail, brow and beauty studios in Australia, with clear service information, prices and enquiries. We can assess connections to your existing booking tool and quote bilingual pages in writing before work starts. We mainly work online, with direct communication in English and Chinese.",
+    "for_items": [
+      "Studios that need a clear service and price list beyond their latest social post.",
+      "Owners who want customers to find their existing booking route, location and opening hours in one place.",
+      "Businesses serving English- and Chinese-speaking clients and considering a bilingual website."
+    ],
+    "included": [
+      "An agreed structure for service descriptions, price lists and the work images you provide.",
+      "Assessment of your current booking tool and an explanation of connection scope and platform fees.",
+      "Location, opening hours, contact details and your real Instagram and Xiaohongshu profile links.",
+      "A written decision on language versions and how you will maintain prices after handover."
+    ],
+    "not_included": [
+      "Photography, new copy and a second language automatically included in a basic one-page price.",
+      "Third-party booking subscriptions or ongoing updates unless agreed in the scope.",
+      "Invented customer images, social accounts, prices or booking availability."
+    ],
+    "sections": [
+      {
+        "id": "prices-and-booking",
+        "title": "Make prices and booking steps clear",
+        "body": [
+          "Group services in terms customers recognise, and explain the difference between a listed price and a price that depends on a consultation. Use the service names and prices you confirm. If an add-on or choice changes the amount, make that distinction visible so the page is useful before a visitor starts a booking.",
+          "Tell us which booking tool you currently use. We can assess whether to link to it or connect it more closely, based on the platform and access available. Platform fees and connection work are explained before agreement. Your live booking system determines availability; a website enquiry or concept interaction is not a promise of an appointment."
+        ]
+      },
+      {
+        "id": "work-and-languages",
+        "title": "Show your work to both audiences",
+        "body": [
+          "Use genuine work photographs you are able to publish, with service labels that help customers understand what they are viewing. Choose images to explain your work, rather than treating a concept design as a real client result. Photography and copy preparation can be discussed separately from the website build.",
+          "For a bilingual site, keep service names, prices and booking instructions aligned between English and Chinese. Visitors should be able to reach the corresponding language page. Decide who supplies and approves the wording, and how later changes will update both versions. An extra language has its own scope; it is not automatically included in a one-page starting price."
+        ]
+      },
+      {
+        "id": "visit-and-social",
+        "title": "Bring location and social profiles together",
+        "body": [
+          "Provide the location and hours you actually use, and explain how customers should contact you before visiting. We can include your real Instagram and Xiaohongshu (RedNote) profile links so visitors can move between the website and your own work updates. Confirm the account addresses and information before publication; the website should not invent an address or social presence."
+        ]
+      }
+    ],
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Booking connections, a second language, photographs and ongoing updates are quoted separately. Timing depends on the pages, functions and content readiness; the written proposal states the milestones.",
+    "faq": [
+      {
+        "q": "Can it connect to my current booking system?",
+        "a": "First tell us which system you use. We assess the platform, access and desired booking flow before confirming a connection. The quote describes the work and any platform fees; we do not assume every service supports the same integration."
+      },
+      {
+        "q": "Can I update the price list myself?",
+        "a": "We discuss that requirement when choosing the platform and handover scope. Agree which prices you need to edit and whether the site has a managed editing route or needs an update service. The proposal records the arrangement, including how bilingual changes are kept aligned."
+      },
+      {
+        "q": "Do I need a Chinese version?",
+        "a": "Consider whether your customers need Chinese service descriptions and booking guidance. A bilingual site can organise that information alongside English. It needs wording you can approve and a plan for keeping prices and instructions consistent; we scope the extra version separately."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "English–Chinese websites"
+      }
+    ],
+    "cta_body": "Send your current service and price list, booking platform, work images, location and hours. Tell us which languages your clients use. We can discuss a clear page structure, assess the booking route and prepare a written proposal."
+  },
+  "zh": {
+    "title": "美业网站：美发、美甲、美睫工作室",
+    "description": "为美发、美甲、美睫与美容工作室制作网站：价目清楚、可接入在线预约，并可做中英双语。",
+    "h1": "给美业工作室做的网站",
+    "eyebrow": "EMVALUE / 行业网站",
+    "for_title": "适合谁",
+    "included_title": "方案里确认的内容",
+    "not_included_title": "另行确认的范围",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "书面范围与费用",
+    "demos_title": "可操作的概念设计",
+    "demos": [
+      {
+        "id": "052",
+        "shows": "我们为一家虚构的美发沙龙做的概念设计：插画试发色与服务介绍组合展示。"
+      },
+      {
+        "id": "054",
+        "shows": "我们为一家虚构的美甲店做的概念设计：访客可定制插画美甲样式。"
+      },
+      {
+        "id": "056",
+        "shows": "我们为一家虚构的眉睫工作室做的概念设计：样式选择改变插画，并引导预约请求。"
+      }
+    ],
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_title": "聊清楚你需要的工作",
+    "cta_button": "开始项目",
+    "answer": "我们为澳洲美发、美甲、眉睫与美容工作室设计网站，整理服务、价目及咨询入口。可以评估接入现有预约工具，中英双语页面也先书面报价再开工。以线上合作为主，中英文直接沟通。",
+    "for_items": [
+      "希望在最新社交帖子之外，清楚展示服务和价目的工作室。",
+      "希望顾客在同一处找到现有预约入口、位置和营业时间的商家。",
+      "服务中英文顾客，正在考虑双语网站的商家。"
+    ],
+    "included": [
+      "确认服务介绍、价目表和自备作品图片的页面结构。",
+      "评估现有预约工具，并说明接入范围与平台费用。",
+      "整理位置、营业时间、联系方式及真实 Instagram、小红书主页链接。",
+      "书面确认语言版本及交接后更新价目的方式。"
+    ],
+    "not_included": [
+      "基础单页起步价不自动包含拍摄、新文案或第二种语言。",
+      "第三方预约订阅或持续更新，须在范围中另行确认。",
+      "不使用虚构顾客图片、社交账号、价格或可预约时间。"
+    ],
+    "sections": [
+      {
+        "id": "prices-and-booking",
+        "title": "写清价目与预约步骤",
+        "body": [
+          "用顾客看得懂的分类整理服务，区分固定标价与需要沟通后确定的价格。使用你确认的项目名和价目；如附加服务或选择影响金额，就写清差别，让顾客预约前能了解。",
+          "说明目前使用哪个预约工具。按平台及可用权限，评估直接链接还是进一步接入。平台费用与接入工作先说明再确认。可预约时间以实际系统为准，网站咨询或概念交互不能当作已预约承诺。"
+        ]
+      },
+      {
+        "id": "work-and-languages",
+        "title": "向两种语言的顾客展示作品",
+        "body": [
+          "使用确实可以公开的作品照片，并用服务名称说明图片内容。照片应帮助顾客了解你的工作，不能把概念设计写成真实顾客成果。拍摄与文案准备可在建站之外另行讨论。",
+          "双语网站的服务名称、价目和预约说明应在中英文保持一致，让访客切换到对应页面。确认谁提供、审核文案，以及后续改动如何同步两个版本。增加语言需另定范围，不自动包含在单页起步价内。"
+        ]
+      },
+      {
+        "id": "visit-and-social",
+        "title": "整理位置与社交主页",
+        "body": [
+          "提供真实位置、营业时间及到访前的联系安排。可以加入你真实的 Instagram 和小红书主页链接，方便顾客在网站与作品更新之间查看。发布前核对账号地址及信息，不虚构地址或社交账号。"
+        ]
+      }
+    ],
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。 预约接入、第二种语言、照片与持续更新另行报价。时间取决于页面、功能和内容准备情况，书面方案里会写明节点。",
+    "faq": [
+      {
+        "q": "能接我现在用的预约系统吗？",
+        "a": "先说明使用哪个系统。确认接入前，评估平台、权限和预约流程。报价写清工作及平台费用，不默认每个服务都支持相同接入。"
+      },
+      {
+        "q": "价目表我能自己改吗？",
+        "a": "选平台和交接范围时讨论这个需求。确认要修改哪些价目，采用内容编辑入口还是更新服务，并在方案里记录安排及双语同步方式。"
+      },
+      {
+        "q": "要不要做中文版？",
+        "a": "看顾客是否需要中文服务介绍和预约指引。双语网站可同时组织中英文信息，但需审核文案，并安排价目与说明同步。第二个版本单独确认范围。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
+      }
+    ],
+    "cta_body": "提供现有服务价目、预约平台、作品图片、位置和营业时间，也说明顾客使用哪些语言。一起整理页面结构，评估预约入口，再准备书面方案。"
+  }
+}
