@@ -57,7 +57,7 @@
         "id": "need",
         "title": "Decide whether an app is needed",
         "body": [
-          "Not always. We look at how often people will use it and what they need to do. An existing tool or a mobile-friendly website may be enough; a custom app makes sense when it solves a clear, repeat-use problem.",
+          "Not every business problem needs an app. We look at how often people will use it and what they need to do. An existing tool or a mobile-friendly website may be enough; a custom app makes sense when it solves a clear, repeat-use problem.",
           "Start with the action a person needs to take, how often it happens and the information involved. If a website explains the service and handles the required interaction, that may be sufficient. If an existing tool already solves the task, consider it before commissioning custom development."
         ]
       },
@@ -155,7 +155,7 @@
         "id": "need",
         "title": "先判断需不需要 App",
         "body": [
-          "不一定。我们会先看使用频率和实际场景。现成工具或手机友好的网站可能已经够用；当有明确、持续的使用需求时，再考虑定制 App。",
+          "不是每个业务问题都需要 App。我们会先看使用频率和实际场景。现成工具或手机友好的网站可能已经够用；当有明确、持续的使用需求时，再考虑定制 App。",
           "先说明使用者要做什么、多久做一次、涉及哪些信息。如果网站已能说明服务并完成所需交互，可能就够用；现成工具能解决问题时，也应先考虑。"
         ]
       },

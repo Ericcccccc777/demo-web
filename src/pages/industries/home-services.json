@@ -87,7 +87,7 @@
     "faq": [
       {
         "q": "What if I do not have work photos?",
-        "a": "Tell us what you can provide. We can discuss a page structure that uses clear service descriptions while you prepare genuine images. Photography is a separate scope. The concepts below are fictional design examples, not substitutes for your own completed work."
+        "a": "Tell us what you can provide. We can discuss a page structure that uses clear service descriptions while you prepare genuine images. Photography is a separate scope. The concepts on this page are fictional design examples, not substitutes for your own completed work."
       },
       {
         "q": "Can you build online quotes?",
@@ -202,7 +202,7 @@
         ]
       }
     ],
-    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。 报价计算器、预约接入、增加语言及拍摄另行确认。网站费用指南说明范围与后续费用。时间取决于页面、功能和内容准备情况，书面方案里会写明节点。",
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。报价计算器、预约接入、增加语言及拍摄另行确认。网站费用指南说明范围与后续费用。时间取决于页面、功能和内容准备情况，书面方案里会写明节点。",
     "faq": [
       {
         "q": "我没有照片怎么办？",

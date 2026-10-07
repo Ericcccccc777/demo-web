@@ -10,7 +10,7 @@
         "title": "1. An official home for the app",
         "body": [
           "Token Forest is available for Windows and macOS. Its public introduction describes turning the tokens spent with Claude Code and Codex into a growing pixel tree. The website brings that introduction together with downloads and a global leaderboard, giving visitors a place to learn about the app and find its public information.",
-          "This page describes the website we designed and built. The product publisher is Poietic Studio, and the relationship is stated above. The work shown here is the official website: its pages, visual design, languages and public data features.",
+          "Our work covered the official website: its pages, visual design, languages and public data features.",
           {
             "external": [
               {
@@ -54,15 +54,15 @@
         "id": "languages-and-search",
         "title": "4. Four languages and topic pages",
         "body": [
-          "English, Chinese, Japanese and Korean each have their own website addresses. The site selects a language from the browser preference, with a language control for visitors. We checked the four public versions and the language selection when preparing this case study. The screenshots show the English version; the language structure belongs to the same website.",
-          "The site also includes search-oriented topic pages, including Claude Code costs, usage limits and Codex usage tracking. Those pages explain related questions in separate places rather than putting every topic into the product homepage. This describes the content structure we built; it makes no claim about search positions, traffic or recommendations."
+          "English, Chinese, Japanese and Korean each have their own website addresses. The site selects a language from the browser preference, with a language control for visitors. The screenshots show the English version.",
+          "The site also includes search-oriented topic pages, including Claude Code costs, usage limits and Codex usage tracking. Those pages explain related questions in separate places rather than putting every topic into the product homepage."
         ]
       },
       {
         "id": "public-data",
         "title": "5. Public data and voluntary participation",
         "body": [
-          "Leaderboard data is provided through Supabase using Postgres. Players choose whether to join the leaderboard; the public website explains that choice. Player pages and embeddable badges give the public information another presentation. This case study stays with those website features and does not describe the app’s internal data collection or security implementation."
+          "Leaderboard data is provided through Supabase using Postgres. Players choose whether to join the leaderboard; the public website explains that choice. Player pages and embeddable badges give the public information another presentation."
         ]
       },
       {
@@ -70,7 +70,7 @@
         "title": "6. What this illustrates for a business website",
         "body": [
           "A website can combine several languages, pages backed by data, shareable content and clear privacy information within one visual identity. Token Forest shows that combination on its own official site. For another business, the useful starting point is which of those capabilities serves a real customer task, rather than copying the app’s subject or assuming the same feature list is needed.",
-          "The website uses Next.js with the App Router and TypeScript, Tailwind CSS for its visual styling and next-intl for the language structure, and is deployed on Netlify. These are website technologies documented for this project. A new project’s platform and scope still need their own assessment and written proposal."
+          "The website uses Next.js with the App Router and TypeScript, Tailwind CSS for its visual styling and next-intl for the language structure, and is deployed on Netlify. For a new project, the platform is chosen after its own assessment."
         ]
       },
       {
@@ -113,7 +113,7 @@
         "title": "1. 为应用建立官网",
         "body": [
           "Token Forest 面向 Windows 和 macOS。公开介绍说明它把 Claude Code 与 Codex 消耗的 token 变成一棵会长大的像素树。官网把介绍、下载与全球排行榜放在一起，让访客了解应用并找到公开资料。",
-          "本页展示我们设计和开发的官网。应用发布方是 Poietic Studio，双方关系已在开头说明。这里介绍的工作是官网页面、视觉设计、多语言和公开数据功能。",
+          "我们负责的是官网：页面、视觉设计、多语言和公开数据功能。",
           {
             "external": [
               {
@@ -157,15 +157,15 @@
         "id": "languages-and-search",
         "title": "4. 四种语言与专题内容",
         "body": [
-          "英文、中文、日文、韩文各有独立网址。网站按浏览器语言偏好选择版本，也提供语言切换。准备本案例时核对了四种公开版本及语言选择。截图为英文版，多语言结构属于同一个官网。",
-          "官网另有面向相关搜索主题的专题页，包括 Claude Code 费用、使用限制和 Codex 用量追踪。相关问题各有说明，不把所有内容挤在首页。这里介绍内容结构，不作搜索位置、流量或推荐效果的声明。"
+          "英文、中文、日文、韩文各有独立网址。网站按浏览器语言偏好选择版本，也提供语言切换。截图为英文版。",
+          "官网另有面向相关搜索主题的专题页，包括 Claude Code 费用、使用限制和 Codex 用量追踪。相关问题各有说明，不把所有内容挤在首页。"
         ]
       },
       {
         "id": "public-data",
         "title": "5. 公开数据与自愿参与",
         "body": [
-          "排行榜数据由 Supabase 的 Postgres 提供。玩家自行选择是否加入排行榜，官网有公开说明。玩家页面和嵌入徽章为公开信息提供不同展示方式。本案例只说明官网功能，不复述应用内部的数据收集或安全实现。"
+          "排行榜数据由 Supabase 的 Postgres 提供。玩家自行选择是否加入排行榜，官网有公开说明。玩家页面和嵌入徽章为公开信息提供不同展示方式。"
         ]
       },
       {
@@ -173,7 +173,7 @@
         "title": "6. 对业务网站的启发",
         "body": [
           "同一个视觉体系里，可以组合多语言、带数据的页面、可分享内容和清楚的隐私说明。Token Forest 官网展示了这些内容的组合。其他商家应先判断哪些能力解决实际顾客需求，不照搬应用主题，也不默认需要相同功能清单。",
-          "本官网使用 Next.js 的 App Router 与 TypeScript，Tailwind CSS 负责视觉样式，next-intl 组织多语言，并部署在 Netlify。这是本项目有记录的官网技术；新项目仍需单独评估平台与范围，形成书面方案。"
+          "本官网使用 Next.js 的 App Router 与 TypeScript，Tailwind CSS 负责视觉样式，next-intl 组织多语言，并部署在 Netlify。新项目的平台会在评估后另行选择。"
         ]
       },
       {
