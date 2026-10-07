@@ -211,6 +211,20 @@
         "zh": "网站费用"
       },
       "parent": ""
+    },
+    {
+      "slug": "work/token-forest",
+      "template": "editorial",
+      "source": "pages/work/token-forest.json",
+      "type": "case_study",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Token Forest website",
+        "zh": "Token Forest 官网"
+      },
+      "parent": ""
     }
   ]
 }

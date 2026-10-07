@@ -1,0 +1,208 @@
+{
+  "en": {
+    "title": "Case study: the Token Forest website",
+    "description": "How we designed and built tokenforest.com.au: a four-language website with downloads, a global leaderboard, player pages and README badges for a pixel-art desktop app.",
+    "eyebrow": "EMVALUE / Website case study",
+    "intro": "Token Forest is a pixel-art desktop app published by Poietic Studio, a studio both of us are part of. We designed and built its website, tokenforest.com.au.",
+    "sections": [
+      {
+        "id": "overview",
+        "title": "1. An official home for the app",
+        "body": [
+          "Token Forest is available for Windows and macOS. Its public introduction describes turning the tokens spent with Claude Code and Codex into a growing pixel tree. The website brings that introduction together with downloads and a global leaderboard, giving visitors a place to learn about the app and find its public information.",
+          "This page describes the website we designed and built. The product publisher is Poietic Studio, and the relationship is stated above. The work shown here is the official website: its pages, visual design, languages and public data features.",
+          {
+            "external": [
+              {
+                "url": "https://www.tokenforest.com.au/",
+                "label": "Visit tokenforest.com.au"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pages",
+        "title": "2. The pages we built",
+        "body": [
+          "The product introduction leads to a dedicated download page. The global leaderboard has multiple views, and players have public pages for their forest and standing. Together, these give the site information beyond a single promotional page: visitors can read about the product and explore its public activity.",
+          "A README badge page explains the embeddable badge images available to players who choose to join the leaderboard. Privacy, terms and security pages sit alongside the product information. These public explanations are part of the website, so people can find them without relying only on the short introduction.",
+          {
+            "img": "assets/work/token-forest/badge-page.webp",
+            "alt": "Token Forest official README badge page screenshot with its example badge",
+            "width": 1440,
+            "height": 900,
+            "caption": "Official badge page, captured on 2026-10-07. The badge displays example data, not a project outcome."
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "title": "3. A pixel-garden visual language",
+        "body": [
+          "The website uses a pixel-garden style with real pixel assets. Trees, the garden palette and pixel lettering connect the product introduction with the other public pages. The homepage screenshot shows how that visual language presents the app, while the badge-page screenshot shows the same identity within a practical explanation.",
+          {
+            "img": "assets/work/token-forest/homepage.webp",
+            "alt": "Token Forest official website homepage screenshot",
+            "width": 1440,
+            "height": 900,
+            "caption": "Official homepage, captured on 2026-10-07."
+          }
+        ]
+      },
+      {
+        "id": "languages-and-search",
+        "title": "4. Four languages and topic pages",
+        "body": [
+          "English, Chinese, Japanese and Korean each have their own website addresses. The site selects a language from the browser preference, with a language control for visitors. We checked the four public versions and the language selection when preparing this case study. The screenshots show the English version; the language structure belongs to the same website.",
+          "The site also includes search-oriented topic pages, including Claude Code costs, usage limits and Codex usage tracking. Those pages explain related questions in separate places rather than putting every topic into the product homepage. This describes the content structure we built; it makes no claim about search positions, traffic or recommendations."
+        ]
+      },
+      {
+        "id": "public-data",
+        "title": "5. Public data and voluntary participation",
+        "body": [
+          "Leaderboard data is provided through Supabase using Postgres. Players choose whether to join the leaderboard; the public website explains that choice. Player pages and embeddable badges give the public information another presentation. This case study stays with those website features and does not describe the app’s internal data collection or security implementation."
+        ]
+      },
+      {
+        "id": "for-businesses",
+        "title": "6. What this illustrates for a business website",
+        "body": [
+          "A website can combine several languages, pages backed by data, shareable content and clear privacy information within one visual identity. Token Forest shows that combination on its own official site. For another business, the useful starting point is which of those capabilities serves a real customer task, rather than copying the app’s subject or assuming the same feature list is needed.",
+          "The website uses Next.js with the App Router and TypeScript, Tailwind CSS for its visual styling and next-intl for the language structure, and is deployed on Netlify. These are website technologies documented for this project. A new project’s platform and scope still need their own assessment and written proposal."
+        ]
+      },
+      {
+        "id": "visit",
+        "title": "7. Visit the official website",
+        "body": [
+          "Explore the official website to see its introduction, language switching, download information and public pages. The link below goes to tokenforest.com.au.",
+          {
+            "external": [
+              {
+                "url": "https://www.tokenforest.com.au/",
+                "label": "Visit tokenforest.com.au"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contact_title": "Discuss a website with a similar scope",
+    "contact_body": "Tell us which languages, public pages or data features your website needs. We can discuss that scope and prepare a written proposal.",
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "English–Chinese websites"
+      }
+    ]
+  },
+  "zh": {
+    "title": "案例：Token Forest 官网",
+    "description": "我们为像素风桌面应用 Token Forest 设计和开发的官网：中英日韩四种语言，包含下载、全球排行榜、玩家页面和 README 徽章。",
+    "eyebrow": "EMVALUE / 官网案例",
+    "intro": "Token Forest 是 Poietic Studio 发布的一款像素风桌面应用，我们两人都是 Poietic Studio 的成员。它的官网 tokenforest.com.au 由我们设计和开发。",
+    "sections": [
+      {
+        "id": "overview",
+        "title": "1. 为应用建立官网",
+        "body": [
+          "Token Forest 面向 Windows 和 macOS。公开介绍说明它把 Claude Code 与 Codex 消耗的 token 变成一棵会长大的像素树。官网把介绍、下载与全球排行榜放在一起，让访客了解应用并找到公开资料。",
+          "本页展示我们设计和开发的官网。应用发布方是 Poietic Studio，双方关系已在开头说明。这里介绍的工作是官网页面、视觉设计、多语言和公开数据功能。",
+          {
+            "external": [
+              {
+                "url": "https://www.tokenforest.com.au/",
+                "label": "访问 Token Forest 官网"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pages",
+        "title": "2. 我们制作的页面",
+        "body": [
+          "产品介绍连接独立下载页。全球排行榜有多个榜单，玩家也有展示森林及榜单信息的公开页面。网站因此不只是单张宣传页，访客还可以了解产品并浏览公开内容。",
+          "README 徽章页介绍自愿加入排行榜的玩家可使用的嵌入图片。隐私、条款和安全说明页与产品信息一起提供，让读者不只依赖简短介绍来了解公开说明。",
+          {
+            "img": "assets/work/token-forest/badge-page.webp",
+            "alt": "Token Forest 官网 README 徽章页与示例徽章截图",
+            "width": 1440,
+            "height": 900,
+            "caption": "官网徽章页，截取于 2026-10-07。徽章为示例数据，不代表项目成果。"
+          }
+        ]
+      },
+      {
+        "id": "design",
+        "title": "3. 像素花园的视觉表达",
+        "body": [
+          "官网采用像素花园风格，使用真实像素素材。树木、花园配色与像素字形，把产品介绍和其他公开页面连接起来。首页截图展示这种视觉语言如何介绍应用，徽章页截图则展示它在实用说明中的延续。",
+          {
+            "img": "assets/work/token-forest/homepage.webp",
+            "alt": "Token Forest 官网首页截图",
+            "width": 1440,
+            "height": 900,
+            "caption": "官网首页，截取于 2026-10-07。"
+          }
+        ]
+      },
+      {
+        "id": "languages-and-search",
+        "title": "4. 四种语言与专题内容",
+        "body": [
+          "英文、中文、日文、韩文各有独立网址。网站按浏览器语言偏好选择版本，也提供语言切换。准备本案例时核对了四种公开版本及语言选择。截图为英文版，多语言结构属于同一个官网。",
+          "官网另有面向相关搜索主题的专题页，包括 Claude Code 费用、使用限制和 Codex 用量追踪。相关问题各有说明，不把所有内容挤在首页。这里介绍内容结构，不作搜索位置、流量或推荐效果的声明。"
+        ]
+      },
+      {
+        "id": "public-data",
+        "title": "5. 公开数据与自愿参与",
+        "body": [
+          "排行榜数据由 Supabase 的 Postgres 提供。玩家自行选择是否加入排行榜，官网有公开说明。玩家页面和嵌入徽章为公开信息提供不同展示方式。本案例只说明官网功能，不复述应用内部的数据收集或安全实现。"
+        ]
+      },
+      {
+        "id": "for-businesses",
+        "title": "6. 对业务网站的启发",
+        "body": [
+          "同一个视觉体系里，可以组合多语言、带数据的页面、可分享内容和清楚的隐私说明。Token Forest 官网展示了这些内容的组合。其他商家应先判断哪些能力解决实际顾客需求，不照搬应用主题，也不默认需要相同功能清单。",
+          "本官网使用 Next.js 的 App Router 与 TypeScript，Tailwind CSS 负责视觉样式，next-intl 组织多语言，并部署在 Netlify。这是本项目有记录的官网技术；新项目仍需单独评估平台与范围，形成书面方案。"
+        ]
+      },
+      {
+        "id": "visit",
+        "title": "7. 访问官网",
+        "body": [
+          "通过官网查看介绍、语言切换、下载信息和公开页面。下方链接指向 tokenforest.com.au。",
+          {
+            "external": [
+              {
+                "url": "https://www.tokenforest.com.au/",
+                "label": "访问 Token Forest 官网"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "contact_title": "讨论类似范围的网站需求",
+    "contact_body": "告诉我们网站需要哪些语言、公开页面或数据功能。一起讨论范围，再准备书面方案。",
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
+      }
+    ]
+  }
+}
