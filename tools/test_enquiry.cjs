@@ -15,6 +15,17 @@ test('complete bilingual briefs and multiple selected needs survive encoding', (
   assert.equal(body.get('bot-field'), '');
 });
 
+test('optional discovery source survives encoding, including an empty choice', () => {
+  for (const source of ['Google search', 'ChatGPT 等 AI 助手', '']) {
+    const fields = new FormData();
+    fields.set('form-name', 'project-enquiry-en');
+    fields.set('source', source);
+    const body = new URLSearchParams(encode(fields));
+    assert.equal(body.has('source'), true);
+    assert.equal(body.get('source'), source);
+  }
+});
+
 test('uses the provider POST format and resolves only after acceptance', async () => {
   let calls = 0;
   await send('/','form-name=project-enquiry-en&email=owner%40example.com', {

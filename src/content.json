@@ -361,6 +361,17 @@
         "We review your business and project needs.",
         "We clarify scope, content and timing with you.",
         "You receive a written proposal before any paid work begins."
+      ],
+      "source": "How did you find us?",
+      "source_placeholder": "Choose one (optional)",
+      "source_items": [
+        "Google search",
+        "ChatGPT or another AI assistant",
+        "Xiaohongshu (RedNote)",
+        "WeChat",
+        "Instagram",
+        "A friend or referral",
+        "Other"
       ]
     },
     "brief_labels": {
@@ -375,7 +386,8 @@
       "reach": "Contact me by",
       "message": "Notes",
       "sent_from": "Sent from the {name} website",
-      "email": "Reply email"
+      "email": "Reply email",
+      "source": "Found us via"
     },
     "footer": {
       "tagline": "Websites, apps & digital tools for small businesses.",
@@ -800,6 +812,17 @@
         "我们先了解你的生意与项目需求。",
         "与你确认范围、内容和时间安排。",
         "开始付费工作前，先提供书面方案与报价。"
+      ],
+      "source": "你是怎么找到我们的？",
+      "source_placeholder": "请选择（可不填）",
+      "source_items": [
+        "Google 搜索",
+        "ChatGPT 等 AI 助手",
+        "小红书",
+        "微信",
+        "Instagram",
+        "朋友介绍",
+        "其他"
       ]
     },
     "brief_labels": {
@@ -814,7 +837,8 @@
       "reach": "联系方式",
       "message": "备注",
       "sent_from": "来自 {name} 网站",
-      "email": "回复邮箱"
+      "email": "回复邮箱",
+      "source": "来源"
     },
     "footer": {
       "tagline": "为小生意定制网站、App 与数字工具。",

@@ -977,9 +977,9 @@
 
   function composeBrief() {
     var L = cfg.brief;
-    var v = { name: val("name"), email: val("email"), business: val("business"), type: val("type"), where: val("where"), needs: checked("needs"),
+    var v = { name: val("name"), email: val("email"), business: val("business"), type: val("type"), where: val("where"), source: val("source"), needs: checked("needs"),
       when: checked("when")[0] || "", reach: checked("reach")[0] || "", detail: val("reach_detail"), message: val("message") };
-    var any = v.name || v.email || v.business || v.type || v.where || v.needs.length || v.when || v.reach || v.detail || v.message || saved.length;
+    var any = v.name || v.email || v.business || v.type || v.where || v.source || v.needs.length || v.when || v.reach || v.detail || v.message || saved.length;
     if (!any) return null;
     var out = [L.heading + (v.business ? " — " + v.business : ""), ""];
     function add(label, value) { if (value) out.push(label + ": " + value); }
@@ -988,6 +988,7 @@
     add(L.business, v.business);
     add(L.type, v.type);
     add(L.where, v.where);
+    add(L.source, v.source);
     add(L.needs, v.needs.join(", "));
     if (saved.length) {
       out.push(L.liked + ":");

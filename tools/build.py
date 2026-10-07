@@ -446,6 +446,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry
                   for it in c["faq"]["items"])
 
     ct = c["contact"]
+    source_opts = "".join(f'<option value="{esc(value)}">{esc(value)}</option>' for value in ct["source_items"])
     type_opts = "".join(f'<option value="{esc(c["industries"][k])}">{esc(c["industries"][k])}</option>' for k in c["industries"])
     type_opts += f'<option value="{esc(ct["type_other"])}">{esc(ct["type_other"])}</option>'
     needs = "".join(f'<label class="check"><input type="checkbox" name="needs" value="{esc(v)}"><span>{esc(v)}</span></label>' for v in ct["needs_items"])
@@ -690,6 +691,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry
           <div class="field"><label for="f-type">{esc(ct['type'])}</label><select id="f-type" name="type"><option value="">{esc(ct['type_placeholder'])}</option>{type_opts}</select></div>
         </div>
         <div class="field"><label for="f-where">{esc(ct['where'])}</label><input id="f-where" name="where" autocomplete="address-level2" maxlength="120"></div>
+        <div class="field"><label for="f-source">{esc(ct['source'])}</label><select id="f-source" name="source"><option value="">{esc(ct['source_placeholder'])}</option>{source_opts}</select></div>
         <fieldset class="field"><legend>{esc(ct['needs'])}</legend><div class="checks">{needs}</div></fieldset>
         <div class="field">
           <span class="label" id="liked-label">{esc(ct['liked'])}</span>

@@ -58,7 +58,7 @@
           "id": "collect",
           "title": "2. Information we receive",
           "body": [
-            "When you contact us, we receive the information you send: your name, reply email, business details, location, project needs, preferred timing, selected design references, message and any optional alternative contact details. The website enquiry form requires a name and reply email; other fields are optional.",
+            "When you contact us, we receive the information you send: your name, reply email, business details, location, project needs, preferred timing, selected design references, how you found us (if provided), message and any optional alternative contact details. The website enquiry form requires a name and reply email; other fields are optional.",
             "During a project, we may also receive agreed project materials, approvals and billing details. Please do not put passwords, payment card details, identity documents or sensitive personal information in an enquiry. We can agree a suitable method if a project needs restricted access or other sensitive material."
           ]
         },
@@ -113,7 +113,7 @@
       ],
       "contact_title": "Questions? Talk to us.",
       "contact_body": "For project questions, these terms or requests about your personal information, email:",
-      "updated": "2026-10-02",
+      "updated": "2026-10-07",
       "form_live": "Online enquiries are processed through Netlify Forms. You can also contact us directly by email.",
       "form_pending": "Online submission is currently unavailable. Enquiries reach us only if you send an email; filling in this form does not send your details."
     },
@@ -316,7 +316,7 @@
           "id": "collect",
           "title": "2. 我们会收到哪些信息",
           "body": [
-            "当你联系我们时，我们会收到你主动提供的称呼、回复邮箱、生意信息、所在地、项目需求、期望时间、选择的设计参考、留言，以及可选的其他联系方式。网站咨询表单必填称呼和回复邮箱，其余字段均为选填。",
+            "当你联系我们时，我们会收到你主动提供的称呼、回复邮箱、生意信息、所在地、项目需求、期望时间、选择的设计参考、你是怎么找到我们的（如填写）、留言，以及可选的其他联系方式。网站咨询表单必填称呼和回复邮箱，其余字段均为选填。",
             "项目合作期间，我们也可能收到约定的项目素材、确认记录与开票信息。请勿在公开咨询表单中填写密码、银行卡信息、身份证件或敏感个人信息。项目确需受限访问权限或其他敏感资料时，我们会另行约定合适的提供方式。"
           ]
         },
@@ -371,7 +371,7 @@
       ],
       "contact_title": "有问题，直接与我们聊。",
       "contact_body": "关于项目、这些条款或个人信息的请求，请发送邮件至：",
-      "updated": "2026-10-02",
+      "updated": "2026-10-07",
       "form_live": "在线咨询由 Netlify Forms 接收处理，你也可以直接通过邮箱联系我们。",
       "form_pending": "在线提交目前尚未开放。只有你发送邮件后，我们才会收到咨询；填写此表单不会将内容发送给我们。"
     },
