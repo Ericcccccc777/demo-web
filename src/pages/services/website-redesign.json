@@ -1,0 +1,206 @@
+{
+  "en": {
+    "title": "Website redesign for small businesses",
+    "description": "Redesign or upgrade an existing small-business website: clearer mobile layouts, better enquiry paths, refreshed content and careful handling of existing page addresses.",
+    "h1": "Website redesigns that keep what works",
+    "eyebrow": "EMVALUE / Website & app services",
+    "for_title": "Who this is for",
+    "included_title": "What we agree in the scope",
+    "not_included_title": "Scope separately",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "Written scope and costs",
+    "demos_title": "Interactive concepts",
+    "demos": [],
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_title": "Discuss the work you need",
+    "cta_button": "Start a project",
+    "answer": "We review and redesign existing small-business websites, starting with the platform, account access, content and changes you need. The work may be a focused update, a full redesign or a migration, depending on what we find. We work mainly online in English and Chinese, with the scope, costs and milestones agreed in writing before work begins.",
+    "for_items": [
+      "Owners with a useful website whose mobile layout, content or enquiry path needs attention. Tell us what still works as well as what causes difficulty.",
+      "Businesses that have changed their services or information and need the website to explain the current offer clearly.",
+      "Teams considering a platform move who need a plan for content, account access and old page addresses before deciding."
+    ],
+    "included": [
+      "An assessment of the current platform and the permissions available to change it, before recommending a method.",
+      "A review of phone layouts, the path to an enquiry, existing content and page speed, with the requested changes listed.",
+      "An agreed list of pages and content to keep, change or move, tied to the written scope.",
+      "For a migration, an old-to-new address map and agreed redirects, rather than abandoning the previous page addresses."
+    ],
+    "not_included": [
+      "A commitment to change a particular platform before its structure and your access have been reviewed.",
+      "New content writing, photography, extra languages or connections unless they are part of the agreed quote.",
+      "Ongoing maintenance beyond the agreed handover and support arrangement."
+    ],
+    "sections": [
+      {
+        "id": "review",
+        "title": "Start with what is there",
+        "body": [
+          "Share the website address, the platform you use and what access is available. Explain the changes you want customers to notice. We review the content as well as the layout, so that useful information is not discarded simply because a new design is being considered.",
+          "On a phone, can visitors understand the service and find the contact route? Are important facts current? Does speed make browsing difficult? These questions help turn a general request to refresh the site into a list of work that can be assessed and quoted."
+        ]
+      },
+      {
+        "id": "options",
+        "title": "Update, redesign or migrate",
+        "body": [
+          "A focused update can address specific content or layout problems while retaining the useful structure. A fuller redesign can reorganise several pages around the current business. A migration changes the underlying platform as well. We recommend a route after examining your existing platform, rather than promising support for every system.",
+          "A migration needs an address plan. List the existing pages and their destinations, then agree the redirects to relevant new pages. This can reduce disruption from changed addresses, but search rankings cannot be guaranteed. Retained content and new material should both be included in the scope."
+        ]
+      }
+    ],
+    "pricing_body": "We quote redesign work after assessing the current site and the changes required. The number of pages, amount of content, platform constraints, connections and migration work all affect the scope. The written proposal explains deliverables, payment stages and ongoing costs. Changes are confirmed before additional work starts; the review is the basis for a practical quote, not a fixed price for every existing website.",
+    "faq": [
+      {
+        "q": "Can you change it on my current platform?",
+        "a": "We first check the platform, its structure and the access you have. Then we recommend an update or a migration and explain the work in writing. We do not make a platform commitment before that assessment."
+      },
+      {
+        "q": "Will a redesign affect search rankings?",
+        "a": "Changed content and addresses can affect how a site appears in search. Mapping old addresses and setting relevant redirects can reduce migration risk, but cannot guarantee rankings. We plan the handling of existing pages as part of the work."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "Timing depends on the pages, features and content readiness; milestones are set out in the written proposal. The assessment should identify what can be retained and what must be prepared before work proceeds."
+      },
+      {
+        "q": "Can we keep the old content?",
+        "a": "Yes, where it is still useful and accurate. We agree what to keep, revise or remove after reviewing it with you. Include photographs, service descriptions and existing addresses in that discussion so the migration or redesign scope reflects them."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
+      }
+    ],
+    "cta_body": "Send us your current website and the changes you need. Tell us what you want to keep, who prepares new content and which accounts you can access. We use that information to discuss a suitable route."
+  },
+  "zh": {
+    "title": "网站改版与升级",
+    "description": "为已有网站做改版或升级：手机端更清楚、咨询入口更顺、内容更新，并在迁移时处理好原有网址。",
+    "h1": "旧网站改版：保留有用的，改掉碍事的",
+    "eyebrow": "EMVALUE / 网站与应用服务",
+    "for_title": "适合谁",
+    "included_title": "方案里确认的内容",
+    "not_included_title": "另行确认的范围",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "书面范围与费用",
+    "demos_title": "可操作的概念设计",
+    "demos": [],
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_title": "聊清楚你需要的工作",
+    "cta_button": "开始项目",
+    "answer": "我们先检查现有网站的平台、账号权限、内容及需要的改动，再做改版或升级。根据检查结果，可能是局部更新、整体改版或迁移。以线上合作为主，中英文沟通，开工前书面确认范围、费用和节点。",
+    "for_items": [
+      "已有实用网站，但手机布局、内容或咨询路径需要调整的商家。先说清哪些仍有用、哪里不方便。",
+      "服务或业务信息变化，需要让网站清楚介绍当前业务的商家。",
+      "考虑更换平台，需要先规划内容、账号权限和旧网址处理的团队。"
+    ],
+    "included": [
+      "先评估现有平台和可用修改权限，再建议做法。",
+      "检查手机布局、咨询路径、现有内容和速度，列出需要的改动。",
+      "按书面范围确定哪些页面与内容保留、修改或迁移。",
+      "迁移时建立旧网址与新网址对应表，确认跳转，处理原有页面地址。"
+    ],
+    "not_included": [
+      "评估结构与权限前，不承诺能修改某个具体平台。",
+      "文案撰写、拍摄、额外语言或接入功能，需纳入约定报价。",
+      "超出约定交接和支持安排的长期维护，另行确认。"
+    ],
+    "sections": [
+      {
+        "id": "review",
+        "title": "先看现有网站",
+        "body": [
+          "提供网址、使用的平台与可用权限，并说明希望顾客看到哪些变化。检查内容和布局，让有用信息不因考虑新设计而被丢弃。",
+          "手机上能否看懂服务、找到联系方式？重要信息是否仍准确，速度是否影响浏览？把笼统的升级要求变成可评估、可报价的工作清单。"
+        ]
+      },
+      {
+        "id": "options",
+        "title": "局部更新、整体改版或迁移",
+        "body": [
+          "局部更新可保留有用结构，处理指定内容或布局问题；整体改版重新组织多个页面；迁移还涉及更换平台。先检查你现在的平台，再建议路线，不承诺支持所有系统。",
+          "迁移需要网址计划：列出旧页面与对应去向，确认跳转到相关新页面。这能降低地址变化的影响，但不能保证搜索排名。保留内容与新增材料都应纳入范围。"
+        ]
+      }
+    ],
+    "pricing_body": "改版在检查现有网站与所需改动后报价。页面、内容量、平台限制、接入与迁移都会影响范围。书面方案说明交付内容、付款节点和后续费用；新增工作先确认。检查结果是报价的依据，不能用同一个固定价格覆盖所有旧站。",
+    "faq": [
+      {
+        "q": "能在我现在的平台上改吗？",
+        "a": "先检查平台、结构与可用权限，再建议更新还是迁移，书面说明工作。评估前不作具体平台承诺。"
+      },
+      {
+        "q": "改版会影响搜索排名吗？",
+        "a": "内容和网址变化可能影响搜索表现。做好旧网址对应及相关跳转可以降低迁移风险，但不能保证排名；现有页面的处理纳入工作计划。"
+      },
+      {
+        "q": "需要多久？",
+        "a": "时间取决于页面、功能和内容准备情况，书面方案里会写明节点。评估时说明哪些可以保留、哪些需要准备。"
+      },
+      {
+        "q": "旧内容能保留吗？",
+        "a": "仍有用且准确的内容可以保留。检查后与你确认保留、修改或删除的部分，讨论照片、服务说明及原有网址，让改版或迁移范围包含这些内容。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_body": "提供现有网站与需要的改动，说明想保留什么、新内容由谁准备，以及可访问的账号。我们据此讨论合适的做法。"
+  }
+}

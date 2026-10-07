@@ -1,0 +1,224 @@
+{
+  "en": {
+    "title": "Business tools: client portals and quote tools",
+    "description": "Custom web tools for small teams in Australia: client portals, quote calculators, internal dashboards and integrations that stop you doing the same work twice.",
+    "h1": "Tools that stop you doing the same work twice",
+    "eyebrow": "EMVALUE / Website & app services",
+    "for_title": "Who this is for",
+    "included_title": "What we agree in the scope",
+    "not_included_title": "Scope separately",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "Written scope and costs",
+    "demos_title": "Interactive concepts",
+    "demos": [
+      {
+        "id": "032",
+        "shows": "A concept we designed for a fictional cleaning business: an illustrative calculator shows how job choices can feed a quote."
+      },
+      {
+        "id": "038",
+        "shows": "A concept we designed for a fictional solar business: a quote interaction demonstrates collecting inputs before showing an indicative result."
+      },
+      {
+        "id": "068",
+        "shows": "A concept we designed for a fictional accounting practice: a quote tool demonstrates organising choices around a professional service."
+      }
+    ],
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_title": "Discuss the work you need",
+    "cta_button": "Start a project",
+    "answer": "We build custom web tools for small teams in Australia, such as client portals, quote tools and internal dashboards. We start by mapping the process and choosing the smallest useful tool, including permissions and data handling from the beginning. Mainly online collaboration in English and Chinese leads to a written scope and quote before development starts.",
+    "for_items": [
+      "Teams entering the same information into several places, where a clear flow could avoid repeating the work.",
+      "Businesses preparing manual quotes or handling enquiries across separate channels and considering a more organised workflow.",
+      "Owners evaluating a client portal or an internal view of work, rather than adding features without a defined task."
+    ],
+    "included": [
+      "A map of the current process: who provides information, who uses it and where the same work is repeated.",
+      "An agreed first useful tool, with the input, calculation or view needed to support that task.",
+      "Permissions and data-handling arrangements planned alongside the flow, including who can see or change information.",
+      "Assessment of existing service connections and a written handover arrangement for the chosen scope."
+    ],
+    "not_included": [
+      "An automatic commitment to connect every existing system; we assess access and requirements first.",
+      "Every part of the business in one release. Further tasks can be scoped after the first useful tool is reviewed.",
+      "Ongoing changes or support beyond the written maintenance and handover scope."
+    ],
+    "sections": [
+      {
+        "id": "process-map",
+        "title": "Map the task before choosing the tool",
+        "body": [
+          "Explain a task from the first enquiry or input to the point where your team uses the result. Identify the information that is copied, calculations done by hand and places where a customer or colleague has to ask for an update. That map gives a tool a practical purpose.",
+          "A client portal, quote calculator or dashboard is useful when its role is clear. Choose a small starting scope instead of treating the tool name as the whole requirement. Define what people enter, what result they need and who is responsible for reviewing it."
+        ]
+      },
+      {
+        "id": "data-and-connections",
+        "title": "Plan permissions and connections",
+        "body": [
+          "Permissions and data processing are part of the first discussion. Agree which people can see or change each part of the tool, where information is stored and what handling is required. The proposal records these arrangements; a generic tool description is not a substitute for that decision.",
+          "We can assess connections to services you already use. Tell us the systems and access available before a connection is scoped. Handover should describe the agreed accounts, use and maintenance boundaries, so later changes can be discussed against a known first version."
+        ]
+      }
+    ],
+    "pricing_body": "Business tools are quoted to scope in writing after the process is understood. Inputs, calculations, permissions, data handling and system connections affect the work. The website cost guide explains common scope factors; it is not a fixed price for a custom tool. The proposal states deliverables, payment stages and ongoing costs, with additional tasks confirmed before work proceeds.",
+    "faq": [
+      {
+        "q": "How much does a tool cost?",
+        "a": "We quote after understanding the scope. Calculations, permissions, data handling and connections all affect it. Use the website cost guide’s factors as preparation for a discussion, then review the written tool proposal rather than assuming a website starting price applies."
+      },
+      {
+        "q": "Can it connect to our current systems?",
+        "a": "We assess the systems, access and required flow before confirming a connection. Explain which information needs to move and who uses it. The agreed quote states the connection work and its boundaries, rather than assuming every system can be linked."
+      },
+      {
+        "q": "Where is the data stored?",
+        "a": "The proposed storage and handling arrangements are explained in the written plan. We discuss the information involved and access permissions from the start. Ask about these before development so they are decisions within the scope, not unspecified details left until handover."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/app-development",
+        "label": "App development"
+      },
+      {
+        "slug": "industries/home-services",
+        "label": "Tradies and home-service websites"
+      }
+    ],
+    "cta_body": "Describe one repeated task and the information involved. Include the systems you use and who needs access. We can discuss the smallest useful first tool, assess connections and prepare a scope for you to review."
+  },
+  "zh": {
+    "title": "业务工具定制：客户门户、报价工具与内部看板",
+    "description": "为澳洲小团队定制网页工具：客户门户、自动报价、内部看板与系统对接，减少重复录入。",
+    "h1": "业务工具：把重复的手工活交给系统",
+    "eyebrow": "EMVALUE / 网站与应用服务",
+    "for_title": "适合谁",
+    "included_title": "方案里确认的内容",
+    "not_included_title": "另行确认的范围",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "书面范围与费用",
+    "demos_title": "可操作的概念设计",
+    "demos": [
+      {
+        "id": "032",
+        "shows": "我们为一家虚构的清洁公司做的概念设计：示意计算器展示不同工作选择如何进入报价。"
+      },
+      {
+        "id": "038",
+        "shows": "我们为一家虚构的太阳能商家做的概念设计：报价交互展示先收集输入再给出示意结果。"
+      },
+      {
+        "id": "068",
+        "shows": "我们为一家虚构的会计事务所做的概念设计：报价工具按专业服务整理选项。"
+      }
+    ],
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_title": "聊清楚你需要的工作",
+    "cta_button": "开始项目",
+    "answer": "我们为澳洲小团队定制网页工具，包括客户门户、报价工具和内部看板。先画出流程，选择最小的实用工具，从开始就规划权限和数据处理。以线上合作和中英文沟通为主，开发前书面确认范围与报价。",
+    "for_items": [
+      "同一份信息需要录入多个地方，希望用清楚流程减少重复工作的团队。",
+      "手工准备报价、咨询分散在不同渠道，希望整理工作流程的商家。",
+      "评估客户门户或内部工作看板，并希望先明确用途的商家。"
+    ],
+    "included": [
+      "梳理现有流程：谁提供信息、谁使用、重复工作发生在哪里。",
+      "确认第一个实用工具所需的输入、计算或展示方式。",
+      "随流程规划权限和数据处理，包括谁可以查看或修改信息。",
+      "评估现有服务接入，并书面约定所选范围的交接。"
+    ],
+    "not_included": [
+      "不默认承诺对接所有现有系统，先评估权限与需求。",
+      "不把所有业务一次塞进第一版，确认首个实用工具后再规划其他任务。",
+      "书面维护和交接范围之外的持续修改或支持，另行确认。"
+    ],
+    "sections": [
+      {
+        "id": "process-map",
+        "title": "先画流程，再选工具",
+        "body": [
+          "从最初咨询或输入，到团队使用结果，说明一项任务的全过程。找出重复复制的信息、手工计算，以及顾客或同事需要询问进度的地方，让工具有实际用途。",
+          "客户门户、报价计算器或看板，只有角色明确才有用。先选小范围起点，定义人们输入什么、需要什么结果，以及谁负责确认。"
+        ]
+      },
+      {
+        "id": "data-and-connections",
+        "title": "规划权限与接入",
+        "body": [
+          "权限和数据处理从第一次讨论就纳入：谁能查看或修改哪部分、数据存放在哪里、如何处理。方案记录这些安排，不能只用笼统的工具名称代替决定。",
+          "可以评估对接已有服务。确定范围前，说明系统及可用权限。交接应说明约定账号、使用方式与维护边界，后续改动据此讨论。"
+        ]
+      }
+    ],
+    "pricing_body": "了解流程后，业务工具按范围书面报价。输入、计算、权限、数据处理和系统接入都会影响工作量。网站费用指南说明常见影响因素，不是定制工具的固定价格。方案写明交付、付款节点与后续费用，新增任务先确认再做。",
+    "faq": [
+      {
+        "q": "要多少钱？",
+        "a": "了解范围后报价，计算、权限、数据处理及接入都会影响费用。可用费用指南中的因素准备讨论，再看工具的书面方案，不把网站起步价直接套用到工具。"
+      },
+      {
+        "q": "能接我们现有的系统吗？",
+        "a": "先评估系统、权限和流程，再确认接入。说明要传递哪些信息、谁来使用，报价中写清接入工作与边界，不假设所有系统都能连接。"
+      },
+      {
+        "q": "数据存在哪里？",
+        "a": "存储与处理方式在书面方案中说明。从开始就讨论涉及的信息和访问权限，开发前把这些纳入范围，不留到交接时才处理。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/app-development",
+        "label": "App 开发"
+      },
+      {
+        "slug": "industries/home-services",
+        "label": "技工与上门服务网站"
+      }
+    ],
+    "cta_body": "描述一项重复任务与涉及的信息，提供现有系统及需要访问的人。讨论最小的实用工具，评估接入并准备可审核的范围。"
+  }
+}

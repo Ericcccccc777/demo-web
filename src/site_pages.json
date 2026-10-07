@@ -140,6 +140,63 @@
         "name": "Australia"
       },
       "service_type": "Bilingual web design"
+    },
+    {
+      "slug": "services/website-redesign",
+      "template": "service_detail",
+      "source": "pages/services/website-redesign.json",
+      "type": "service",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Website redesign",
+        "zh": "网站改版"
+      },
+      "parent": "services",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Website redesign"
+    },
+    {
+      "slug": "services/app-development",
+      "template": "service_detail",
+      "source": "pages/services/app-development.json",
+      "type": "service",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "App development",
+        "zh": "App 开发"
+      },
+      "parent": "services",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "App development"
+    },
+    {
+      "slug": "services/business-tools",
+      "template": "service_detail",
+      "source": "pages/services/business-tools.json",
+      "type": "service",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Business tools",
+        "zh": "业务工具"
+      },
+      "parent": "services",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Custom business software"
     }
   ]
 }
