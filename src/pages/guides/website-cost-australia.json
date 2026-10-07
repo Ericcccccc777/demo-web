@@ -1,0 +1,150 @@
+{
+  "en": {
+    "title": "How much does a website cost in Australia?",
+    "description": "What affects the cost of a small-business website in Australia — pages, features, content, languages and ongoing fees — and how emvalue prices basic one-page sites ({price_one_page}+).",
+    "eyebrow": "EMVALUE / Website cost guide",
+    "intro": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. The useful question is what that price includes and which parts of your project need a separate scope. This guide explains the factors to discuss before comparing quotes.",
+    "sections": [
+      {
+        "id": "starting-scope",
+        "title": "1. The short answer and the basic scope",
+        "body": [
+          "For individuals and sole traders, our basic one-page website starts from {price_one_page}. It is one scrollable page with up to six content sections, not a multi-page website at the same starting price. A clear section list helps you decide whether this scope is enough: introduce the business, explain services and show the information needed to contact you.",
+          "The basic scope includes layouts for phones, tablets and computers; contact options such as an enquiry form or phone, email or WeChat buttons; basic search settings consisting of a title, description and sharing image; launch on your domain and hosting account; and one round of revisions. The agreed contact method should match how you actually want to handle enquiries.",
+          "Domain and hosting charges, copywriting, photography, a second language, booking or payment connections and long-term maintenance are not included in that basic build. They can be quoted separately. This distinction matters when comparing a page price with a larger proposal: list the work and continuing costs included in each, rather than assuming the first number covers everything you may need.",
+          "Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Use the basic scope as a reference for defining your project, not as a fixed rate for every feature. Confirm the page list, responsibilities and boundaries first; the proposal then explains the deliverables, payment stages and ongoing costs you need to review."
+        ]
+      },
+      {
+        "id": "cost-factors",
+        "title": "2. What changes the work involved",
+        "body": [
+          "Pages and design: a single introduction and a site with separate service, price, work and contact pages have different scopes. Decide what belongs on each page and whether the design needs to explain different kinds of information. A page list is more useful than simply asking for a small website, because it makes the proposed content and design work visible.",
+          "Functions: bookings, ordering, payments and forms introduce choices beyond displaying information. Explain what a visitor needs to do and which existing service you want to use. We can assess a connection to an established service and explain platform fees beforehand. Ask which setup work belongs to the build and which fees or operational tasks remain with the platform or business.",
+          "Content and photographs: identify who prepares service descriptions, prices, images and business details. A layout cannot make those facts accurate for you. If materials are not ready, list the missing items and agree whether content preparation is additional work. The basic one-page scope excludes copywriting and photography, so these responsibilities should be clear before comparing it with another quote.",
+          "Languages: a second version involves page correspondence, writing and review as well as a switch in the navigation. English and Chinese should carry consistent business facts while being written for their readers. Decide which pages need both languages and who maintains each version. A second language is outside the basic single-page scope, and its work should be described in the proposal.",
+          "System connections: if information must move between a website and an existing service, name that service and the required flow. Access, the information involved and the work to connect it need assessment before a commitment. A client portal or quote tool is a separate custom scope; do not assume that every connection is included because a proposal mentions a website.",
+          "An old-site migration: explain the current platform, account access and what should be retained. Moving a site can require a content review and an old-to-new address map with redirects. That is different from starting with an empty page. We assess the present site before recommending an update, redesign or migration, and include the agreed handling of existing addresses in the scope."
+        ]
+      },
+      {
+        "id": "ongoing-costs",
+        "title": "3. Costs that continue after the build",
+        "body": [
+          "Domain and hosting are continuing cost categories rather than part of the basic build price. The domain and service accounts should be registered in your name. Ask which accounts you need, who manages them and how renewal responsibilities are handled. Keeping the build and these services separate in the proposal helps you understand what you are paying for after launch.",
+          "Paid tools and third-party platforms may also be part of the agreed arrangement for a booking, ordering or payment connection. Their fees are explained before you decide. This guide lists categories rather than quoting changing supplier prices. Review the proposed platform and its continuing charges alongside the setup work, and check which service account remains under your control.",
+          "Maintenance and later changes need an agreed arrangement or a separate quote. Decide what you intend to update yourself and where you need help. A price adjustment, new page or connection may fall outside the original build scope. Ask the proposal to explain ongoing responsibilities and what happens when requirements change, so maintenance is not confused with an unlimited extension of the project."
+        ]
+      },
+      {
+        "id": "ways-to-build",
+        "title": "4. Choosing how to build",
+        "body": [
+          "A self-built site can suit an owner who wants to prepare and maintain the pages directly and is comfortable making the layout and service choices. Consider the time you can put into content, setup and updates as well as the service fees. Decide whether that route fits the pages and functions you need; a low initial outlay alone does not define a complete scope.",
+          "A freelancer can be a suitable route when the work and communication arrangements match your project. A studio can also suit a business seeking agreed design, development and handover work. Those labels alone do not tell you what a quote includes. Compare the responsibilities, deliverables, review process and support boundaries that are actually written down, rather than assuming a label guarantees an outcome.",
+          "Whichever route you choose, explain the same page list, functions, languages and content readiness when requesting a quote. Ask how accounts are held and what is handed over. That makes differences easier to understand without naming competitors or relying on an unsupported market average. The useful comparison is between clear scopes that meet your needs and the work you are prepared to handle yourself."
+        ]
+      },
+      {
+        "id": "written-quote",
+        "title": "5. How we prepare a quote",
+        "body": [
+          "We begin with a conversation about your business, customers, current tools and the problem the website should solve. The result should be a scope you can review: pages, functions, content responsibilities and proposed delivery milestones. Timing depends on the pages, features and content readiness; milestones are set out in the written proposal rather than assumed from a generic launch deadline.",
+          "Before paid work begins, the written proposal explains deliverables, costs and payment stages. Compare those stages with the agreed review and delivery points, and ask about anything unclear. The proposal also separates continuing service costs and maintenance from the build, so the starting price does not hide work or responsibilities that need another decision. No universal payment percentage is assumed in this guide.",
+          "New requirements are confirmed before additional work starts. Explain the proposed change and discuss its effect on cost and timing against the original scope. This lets you decide whether to include it now or treat it as later work. A written change agreement is more useful than allowing the original page or feature list to grow without a shared understanding."
+        ]
+      },
+      {
+        "id": "preparation",
+        "title": "6. Prepare these details before asking",
+        "body": [
+          "Write down your business name, service area, contact details and the information a visitor needs before making an enquiry. List the pages or up to six basic sections, and mark any content that is not ready. Include photographs and service descriptions you want to retain. Distinguish what you will supply from the writing or image work that would need an additional scope.",
+          "List the required actions: contact, bookings, ordering, payments or a particular form. Name existing tools and tell us what access is available. Note which languages customers need, who checks the business facts and who will maintain each version. If this is a redesign, provide the current address and say what still works. These details make the first conversation about actual work rather than an unexplained number.",
+          "Finally, explain your priorities, budget and any concept you want to discuss. Identify what must be in the first version and what can be considered later. We can use this preparation to clarify the scope and give a written proposal before work starts. You can begin through the project enquiry below; the purpose is to agree a useful build and understand its continuing costs."
+        ]
+      }
+    ],
+    "contact_title": "Discuss your website scope",
+    "contact_body": "Tell us your pages, functions, languages and what content is ready. We can clarify the work and prepare a written proposal.",
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design and the basic scope"
+      }
+    ]
+  },
+  "zh": {
+    "title": "在澳洲做一个网站要多少钱？",
+    "description": "澳洲小生意做网站的费用由什么决定：页面数量、功能、内容、语言和后续费用；以及 emvalue 基础单页网站 {price_one_page} 起的范围。",
+    "eyebrow": "EMVALUE / 网站费用指南",
+    "intro": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。比较报价前，先看起步价包含什么，以及哪些需求需要单独确定范围。这份指南说明沟通费用时应考虑的因素。",
+    "sections": [
+      {
+        "id": "starting-scope",
+        "title": "1. 简短回答与基础范围",
+        "body": [
+          "个人和单人经营者的基础单页网站 {price_one_page} 起。它是最多 6 个内容区块的可滚动页面，不是按同一起步价制作多页网站。先列出区块，判断是否足够介绍生意、说明服务和提供联系所需的信息。",
+          "基础范围包含手机、平板、电脑适配；咨询表单或电话、邮件、微信按钮等联系方式；标题、描述和分享图等基础搜索设置；上线到你名下的域名与主机账号，以及 1 轮修改。联系入口按你希望处理咨询的方式选择。",
+          "域名和主机费用、文案撰写、拍摄、第二种语言、预约或支付接入，以及长期维护，不在基础制作范围内，可另行报价。比较单页价格与更大方案时，应分别列出包含的工作与持续费用，不把起步数字当成所有需求的总价。",
+          "多页网站、App 与业务工具，在沟通后书面报价，确认后开工。基础范围可用来梳理项目，不代表每种功能都按固定价格提供。先确认页面、责任与边界，再看方案中的交付、付款节点和后续费用。"
+        ]
+      },
+      {
+        "id": "cost-factors",
+        "title": "2. 哪些因素影响工作量",
+        "body": [
+          "页面数量与设计程度：单页介绍，与分别展示服务、价目、作品和联系的多页网站，范围不同。确定每页放什么、是否需要不同的信息展示方式。页面清单比笼统地说“一个小网站”更便于确认内容与设计工作。",
+          "功能：预约、点单、支付和表单，都不只是展示信息。说明访客需要完成什么，以及希望使用的现有服务。可评估接入成熟服务，提前说明平台费用；确认制作包含哪些设置，哪些费用或运营工作由平台或商家承担。",
+          "内容和照片：先确认服务说明、价目、图片及业务资料由谁准备。页面设计不能代替你确认事实。材料未齐时列出缺项，约定准备内容是否属于额外工作。基础单页不包含文案撰写和拍摄，比较报价时应明确这些责任。",
+          "语言数量：第二种语言涉及页面对应、撰写、审核和导航切换。中英文的业务事实一致，但分别为读者表达。先决定哪些页面需要双语、谁分别维护。第二种语言不在基础单页范围内，应在方案中说明相关工作。",
+          "系统对接：信息需要在网站与已有服务之间传递时，说明服务及操作流程。先评估权限、信息和接入工作，再确认能做什么。客户门户或报价工具属于另行确定的定制范围，不能因为方案写了“网站”就默认包括全部对接。",
+          "旧站迁移：说明当前平台、账号权限及需要保留的内容。迁移可能涉及内容检查、旧网址与新网址对应表及跳转，与从空白页面开始不同。先评估旧站，再建议更新、改版或迁移，范围内明确原有网址的处理。"
+        ]
+      },
+      {
+        "id": "ongoing-costs",
+        "title": "3. 制作之后的持续费用",
+        "body": [
+          "域名和主机属于持续费用种类，不在基础制作价格内。域名与服务账号应注册在你名下，提前问清需要哪些账号、谁管理，以及续费由谁负责。方案里把制作与这些服务分开，便于了解上线后支付什么。",
+          "预约、点单或支付接入的安排中，也可能使用付费工具或第三方平台。相关费用在决定前说明。本指南列出种类，不提供会变化的供应商价格；把平台持续费用、设置工作与账号控制权一起审核。",
+          "维护和后续改动按约定安排，或单独报价。先决定哪些自己更新、哪些需要协助。调整价目、新增页面或接入可能超出原制作范围。方案说明后续责任和需求变化的处理，不把维护理解成无限扩展项目。"
+        ]
+      },
+      {
+        "id": "ways-to-build",
+        "title": "4. 不同建站方式的取舍",
+        "body": [
+          "自助建站适合愿意自己准备、维护页面，并能处理布局与服务选择的商家。除了服务费用，也考虑可投入内容、设置和更新的时间。按所需页面与功能判断是否适合，不只看初始花费。",
+          "自由职业者与工作室都可以按项目需要选择，关键是工作和沟通安排是否匹配。名称本身不能说明报价包括什么。比较实际写明的责任、交付、确认流程与支持边界，不把某种称呼当成效果承诺。",
+          "无论选哪种方式，询价时提供相同的页面、功能、语言和内容准备情况，并问清账号归属与交接。这样可以理解方案差别，不必依赖无来源的市场平均价；比较重点是范围是否满足需求，以及你愿意自己处理哪些工作。"
+        ]
+      },
+      {
+        "id": "written-quote",
+        "title": "5. 我们如何报价",
+        "body": [
+          "先讨论生意、顾客、现有工具与网站要解决的问题，再整理可审核范围：页面、功能、内容责任和交付节点。时间取决于页面、功能和内容准备情况，书面方案里会写明节点，不套用固定上线期限。",
+          "付费工作开始前，书面方案说明交付、费用与付款节点，结合确认和交付节点审核，不清楚的部分先问明。持续服务费用和维护与制作分开，起步价之外的工作与责任需要单独决定；本指南不设统一付款比例。",
+          "新增需求在额外工作开始前确认。对照原范围，讨论改动对费用和时间的影响，再决定现在加入还是留到以后。明确变更比让页面或功能清单不断扩大、双方理解不同更实用。"
+        ]
+      },
+      {
+        "id": "preparation",
+        "title": "6. 询价前准备清单",
+        "body": [
+          "整理生意名称、服务区域、联系方式和顾客咨询前需要的信息。列出页面或最多 6 个基础区块，标记未准备好的内容及要保留的照片、服务说明。分清自行提供的材料与需要额外确定范围的文案或图片工作。",
+          "列出联系、预约、点单、支付或表单等操作，说明现有工具与可用权限。记录顾客需要的语言、事实审核者及各版维护责任。改版时提供现有网址和仍有用的部分，让首次沟通围绕实际工作，而不是孤立数字。",
+          "最后说明重点、预算及想讨论的概念设计，区分第一版必需内容和可后续考虑的工作。据此确认范围，开工前提供书面方案。可通过下方项目咨询开始，让制作内容与持续费用都清楚。"
+        ]
+      }
+    ],
+    "contact_title": "讨论你的网站范围",
+    "contact_body": "告诉我们需要的页面、功能、语言，以及已准备好的内容。一起确认工作范围，再准备书面方案。",
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计与基础范围"
+      }
+    ]
+  }
+}

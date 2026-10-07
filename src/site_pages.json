@@ -197,6 +197,20 @@
         "name": "Australia"
       },
       "service_type": "Custom business software"
+    },
+    {
+      "slug": "guides/website-cost-australia",
+      "template": "editorial",
+      "source": "pages/guides/website-cost-australia.json",
+      "type": "guide",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Website costs",
+        "zh": "网站费用"
+      },
+      "parent": ""
     }
   ]
 }

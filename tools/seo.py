@@ -108,6 +108,18 @@ def json_ld(studio, slug, lang, registry, title="", description="", live=True):
                                     f"Basic one-page websites for individuals and sole traders start from {amount}."),
                     "priceSpecification": {"@type": "PriceSpecification", "minPrice": price["one_page_from"], "priceCurrency": price["currency"]},
                 }
+        if record["type"] in {"guide", "case_study"}:
+            article = {
+                "@type": "Article", "@id": site_url + page_path(slug, lang) + "#article",
+                "headline": title, "description": description, "inLanguage": LANGS[lang]["html_lang"],
+                "datePublished": record["date_published"], "dateModified": record["content_updated"],
+                "author": {"@id": organization_id}, "publisher": {"@id": organization_id},
+                "mainEntityOfPage": site_url + page_path(slug, lang),
+            }
+            if record["type"] == "case_study":
+                article["about"] = {"@type": "SoftwareApplication", "name": "Token Forest", "operatingSystem": "Windows, macOS",
+                                    "applicationCategory": "DesktopEnhancementApplication", "url": "https://www.tokenforest.com.au/"}
+            graph.append(article)
         graph.append(breadcrumb_node(site_url, slug, lang, registry, studio["name"]))
     data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
     return '<script type="application/ld+json">' + data + '</script>'
