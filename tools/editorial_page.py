@@ -1,5 +1,6 @@
 """Shared, bilingual studio and policy pages."""
 import html
+from seo import LANGS, head_links, robots_meta
 
 
 def render_editorial(lang, slug, studio, content, page, asset_v, header, footer):
@@ -7,16 +8,7 @@ def render_editorial(lang, slug, studio, content, page, asset_v, header, footer)
     prefix = "../../" if lang == "zh" else "../"
     title = page["title"] + " — " + studio["name"]
     site_url = (studio.get("site_url") or "").rstrip("/")
-    extra = ""
-    if site_url:
-        path = ("/zh/" if lang == "zh" else "/") + slug + "/"
-        extra = (f'<link rel="canonical" href="{e(site_url + path)}">'
-                 f'<link rel="alternate" hreflang="en-AU" href="{e(site_url)}/{slug}/">'
-                 f'<link rel="alternate" hreflang="zh-CN" href="{e(site_url)}/zh/{slug}/">'
-                 f'<link rel="alternate" hreflang="x-default" href="{e(site_url)}/{slug}/">'
-                 f'<meta property="og:url" content="{e(site_url + path)}">'
-                 f'<meta property="og:image" content="{e(site_url)}/assets/emvalue-social.png">'
-                 '<meta name="twitter:card" content="summary_large_image">')
+    extra = head_links(site_url, slug, lang)
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
@@ -31,10 +23,10 @@ def render_editorial(lang, slug, studio, content, page, asset_v, header, footer)
     if slug == "privacy":
         form_note = '<p class="editorial-note">' + e(page["form_live"] if studio.get("forms_enabled") else page["form_pending"]) + '</p>'
     return f'''<!doctype html>
-<html lang="{e(content['lang'])}"><head>
+<html lang="{LANGS[lang]['html_lang']}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(page['intro'])}">
-<meta name="robots" content="{'index, follow' if site_url else 'noindex, nofollow'}">
+<meta name="robots" content="{robots_meta(site_url)}">
 <meta name="theme-color" content="#F3EFE7"><meta name="color-scheme" content="light">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(page['intro'])}">{extra}

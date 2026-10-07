@@ -1,5 +1,6 @@
 """Bilingual service page, using the hub's shared layout and design tokens."""
 import html
+from seo import LANGS, head_links, robots_meta
 
 
 def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"):
@@ -7,7 +8,6 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
     home = "../" * len(slug.split("/"))
     prefix = home + ("../" if lang == "zh" else "")
     site_url = (studio.get("site_url") or "").rstrip("/")
-    path = ("/zh/" if lang == "zh" else "/") + slug + "/"
     secondary_url = s.get("secondary_url", home + "#box")
     breadcrumb = (f'<a class="scope-back text-link" href="../">← {e(s["back_label"])}</a>'
                   if s.get("back_label") else "")
@@ -16,18 +16,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
         fonts += "&family=Noto+Serif+SC:wght@500;700"
-    extra = ""
-    if site_url:
-        extra = (f'<link rel="canonical" href="{e(site_url + path)}">\n'
-                 f'<link rel="alternate" hreflang="en-AU" href="{e(site_url)}/{e(slug)}/">\n'
-                 f'<link rel="alternate" hreflang="zh-CN" href="{e(site_url)}/zh/{e(slug)}/">\n'
-                 f'<link rel="alternate" hreflang="x-default" href="{e(site_url)}/{e(slug)}/">\n'
-                 f'<meta property="og:url" content="{e(site_url + path)}">\n'
-                 f'<meta property="og:image" content="{e(site_url)}/assets/emvalue-social.png">\n'
-                 '<meta property="og:image:width" content="1200">\n'
-                 '<meta property="og:image:height" content="630">\n'
-                 '<meta property="og:image:alt" content="emvalue — Websites, apps and digital tools">\n'
-                 '<meta name="twitter:card" content="summary_large_image">')
+    extra = head_links(site_url, slug, lang)
     index = "".join(
         f'<li><a href="{e(item.get("href", "#" + item["id"]))}"><span class="svc-no">0{i + 1}</span>'
         f'<span>{e(item["short"])}</span><span class="arr" aria-hidden="true">↗</span></a></li>'
@@ -50,13 +39,13 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
         f'<details class="qa"><summary><span>{e(item["q"])}</span><span class="qa-icon" aria-hidden="true"></span></summary><p>{e(item["a"])}</p></details>'
         for item in s["faq"]["items"])
     return f'''<!doctype html>
-<html lang="{e(c['lang'])}" data-page-lang="{lang}">
+<html lang="{LANGS[lang]['html_lang']}" data-page-lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(s['description'])}">
-<meta name="robots" content="{'index, follow' if site_url else 'noindex, nofollow'}">
+<meta name="robots" content="{robots_meta(site_url)}">
 <meta name="theme-color" content="#F3EFE7">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">

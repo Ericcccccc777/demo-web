@@ -21,6 +21,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
 from services_page import render_services
 from editorial_page import render_editorial
+from seo import LANGS, head_links, other_lang, robots_meta
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -240,7 +241,7 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     services_url = "./" if slug == "services" else home + "services/"
     other = home + ("../" if lang == "zh" else "zh/") + (slug + "/" if slug else "")
     section_home = home if page_slug and not services_page else ""
-    other_lang = "en-AU" if lang == "zh" else "zh-CN"
+    switch_lang = other_lang(lang)
     name = (studio.get("name_zh") or studio["name"]) if lang == "zh" else studio["name"]
     prefix = ("../" if lang == "zh" else "") + home
     logo = brand_logo(prefix)
@@ -263,7 +264,7 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     <a class="brand" {brand_attrs}>{logo}</a>
     <nav class="top-nav" aria-label="{esc(c['nav']['menu'])}">{links}</nav>
     <div class="top-actions">
-      <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
+      <a class="lang-switch" id="lang-switch" href="{other}" hreflang="{switch_lang}" lang="{switch_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
       <a class="btn btn-accent btn-small" href="{home}#contact">{esc(c['nav']['cta'])}</a>{menu_button}
     </div>
   </div>
@@ -302,7 +303,7 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
         <nav class="foot-policies" aria-label="{esc(c['footer']['policies'])}">{policy_links}</nav>
       </div>
       <div class="foot-utilities">
-        <a class="foot-language" href="{other}" hreflang="{other_lang}" lang="{other_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
+        <a class="foot-language" href="{other}" hreflang="{switch_lang}" lang="{switch_lang}" aria-label="{esc(c['nav']['lang_switch_label'])}">{esc(c['nav']['lang_switch'])}</a>
         <a class="foot-top" href="#top"><span>{esc(c['footer']['top'])}</span><span class="foot-top-icon" aria-hidden="true">↑</span></a>
       </div>
     </div>
@@ -326,20 +327,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     count = stats["count"]
     vals = dict(name=name, count=count, industries=stats["industries"], typefaces=stats["typefaces"], avg_kb=stats["avg_kb"])
     site_url = (studio.get("site_url") or "").rstrip("/")
-    head_extra = []
-    if site_url:
-        self_url = site_url + ("/" if lang == "en" else "/zh/")
-        head_extra += [f'<link rel="canonical" href="{esc(self_url)}">',
-                       f'<link rel="alternate" hreflang="en-AU" href="{esc(site_url)}/">',
-                       f'<link rel="alternate" hreflang="zh-CN" href="{esc(site_url)}/zh/">',
-                       f'<link rel="alternate" hreflang="x-default" href="{esc(site_url)}/">',
-                       f'<meta property="og:url" content="{esc(self_url)}">',
-                       f'<meta property="og:image" content="{esc(site_url)}/assets/emvalue-social.png">',
-                       '<meta property="og:image:width" content="1200">',
-                       '<meta property="og:image:height" content="630">',
-                       '<meta property="og:image:alt" content="emvalue — Websites, apps and digital tools">',
-                       '<meta name="twitter:card" content="summary_large_image">']
-    robots = "index, follow" if site_url else "noindex, nofollow"
+    head_extra = head_links(site_url, "", lang)
+    robots = robots_meta(site_url)
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
@@ -419,7 +408,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     v = c["viewer"]
     nav = c["nav"]
     name_label = (studio.get("name_zh") or name) if lang == "zh" else name
-    other_home, other_lang = ("../", "en-AU") if lang == "zh" else ("zh/", "zh-CN")
+    other_home = "../" if lang == "zh" else "zh/"
+    switch_lang = other_lang(lang)
     menu_items = [("box", nav["box"]), ("services", nav["services"]), ("process", nav["process"]), ("faq", nav["faq"]), ("contact", nav["cta"])]
     menu_list = "".join(f'<li><a class="menu-link" href="#{k}" data-section="{k}"><span class="menu-no">0{i + 1}</span>'
                         f'<span class="menu-title">{esc(label)}</span><span class="menu-arr" aria-hidden="true">→</span></a></li>'
@@ -436,7 +426,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     config_json = json.dumps(config, ensure_ascii=False).replace("</", "<\\/")
 
     return f"""<!doctype html>
-<html lang="{c['lang']}" class="no-js" data-page-lang="{lang}">
+<html lang="{LANGS[lang]['html_lang']}" class="no-js" data-page-lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -448,7 +438,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 <meta property="og:type" content="website">
 <meta property="og:title" content="{esc(fill(c['title'], **vals))}">
 <meta property="og:description" content="{esc(fill(c['description'], **vals))}">
-{chr(10).join(head_extra)}
+{head_extra}
 <link rel="icon" href="{p}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -658,7 +648,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     <div class="menu-more">
       <a class="menu-pill" href="services/">{esc(nav['all_services'])} <span aria-hidden="true">↗</span></a>
       <a class="menu-pill" href="about/">{esc(c['footer']['about'])} <span aria-hidden="true">↗</span></a>
-      <a class="menu-pill" href="{other_home}" hreflang="{other_lang}" lang="{other_lang}">{esc(nav['lang_menu'])}</a>
+      <a class="menu-pill" href="{other_home}" hreflang="{switch_lang}" lang="{switch_lang}">{esc(nav['lang_menu'])}</a>
     </div>
   </nav>
   <div class="menu-foot">
@@ -758,7 +748,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
 def render_404(studio, asset_v):
     name = esc(studio["name"])
     return f"""<!doctype html>
-<html lang="en-AU">
+<html lang="{LANGS['en']['html_lang']}">
 <head>
 <meta charset="utf-8">
 <script>
@@ -784,8 +774,8 @@ def render_404(studio, asset_v):
   <a class="brand" href="./" aria-label="{name}">{brand_logo()}</a>
   <p class="eyebrow">404 · Empty drawer</p>
   <h1 style="font:400 clamp(48px,8vw,112px)/.95 var(--serif);margin:0;letter-spacing:-.02em">This drawer is empty.</h1>
-  <p class="lede" lang="zh-CN">这个抽屉是空的——页面不存在或已移动。</p>
-  <p style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0"><a class="btn btn-ink" href="./#box">Open the box</a><a class="btn btn-line" href="zh/#box" lang="zh-CN">打开盒子（中文）</a></p>
+  <p class="lede" lang="{LANGS['zh']['html_lang']}">这个抽屉是空的——页面不存在或已移动。</p>
+  <p style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0"><a class="btn btn-ink" href="./#box">Open the box</a><a class="btn btn-line" href="zh/#box" lang="{LANGS['zh']['html_lang']}">打开盒子（中文）</a></p>
 </main>
 </body>
 </html>
@@ -882,8 +872,8 @@ def main(argv=None):
             '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "".join(
                 f'  <url><loc>{site_url}{path}</loc><lastmod>{today}</lastmod>'
-                f'<xhtml:link rel="alternate" hreflang="en-AU" href="{site_url}{en_path}"/>'
-                f'<xhtml:link rel="alternate" hreflang="zh-CN" href="{site_url}{zh_path}"/></url>\n'
+                f'<xhtml:link rel="alternate" hreflang="{LANGS["en"]["hreflang"]}" href="{site_url}{en_path}"/>'
+                f'<xhtml:link rel="alternate" hreflang="{LANGS["zh"]["hreflang"]}" href="{site_url}{zh_path}"/></url>\n'
                 for en_path, zh_path in [("/", "/zh/")] + [(f"/{slug}/", f"/zh/{slug}/") for slug in list(service_pages) + list(pages["en"])]
                 for path in (en_path, zh_path)) + "</urlset>\n")
     else:
