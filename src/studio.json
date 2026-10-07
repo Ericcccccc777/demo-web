@@ -15,5 +15,9 @@
   "abn": null,
   "city": null,
   "site_url": null,
-  "xiaohongshu": null
+  "xiaohongshu": null,
+  "pricing": {
+    "currency": "AUD",
+    "one_page_from": 300
+  }
 }

@@ -2,8 +2,8 @@
   "_readme": "All hub copy, English and Chinese. {name}, {count}, {industries}, {typefaces}, {avg_kb} are filled in by tools/build.py from real data. Edit, then run: python3 tools/build.py",
   "en": {
     "lang": "en-AU",
-    "title": "{name} — Websites for small businesses across Australia",
-    "description": "Custom websites, website redesigns, apps and digital tools for small businesses. Based in Australia, working with clients worldwide. Explore our designs and discuss your project.",
+    "title": "{name} — Web design & apps for Australian small businesses",
+    "description": "Websites, apps and business tools for Australian small businesses, in English and Chinese. Basic one-page sites from {price_one_page}. Explore 108 interactive website concepts.",
     "skip": "Skip to content",
     "nav": {
       "box": "The box",
@@ -20,7 +20,7 @@
       "lang_menu": "中文版"
     },
     "hero": {
-      "eyebrow": "Web studio for small businesses · Australia",
+      "eyebrow": "Websites, apps & business tools · Australia · EN / 中文",
       "title_html": "One box.<br><em>{count} websites.</em>",
       "lede": "Open any drawer and step inside. Each one is a working website we designed and built by hand — for cafés, driving schools, tradies, clinics, creatives and more. Find the feel that fits your business, then let's make yours.",
       "tryon_label": "What's your business called?",
@@ -96,7 +96,8 @@
       "showing_saved_one": "Showing your 1 saved drawer",
       "saved_toast": "Saved “{name}” — it’s in your brief below.",
       "remove_filter": "Remove filter {label}",
-      "bar_saved": "{n} saved"
+      "bar_saved": "{n} saved",
+      "concept_label": "Concept"
     },
     "viewer": {
       "desktop": "Desktop",
@@ -245,7 +246,7 @@
         },
         {
           "q": "How much does a website cost?",
-          "a": "Every project is quoted to its scope and your budget. We explain the deliverables, payment stages and ongoing costs in writing before work starts. Fair pricing, with changes agreed before additional work begins."
+          "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. We explain the deliverables, payment stages and ongoing costs in writing before work starts."
         },
         {
           "q": "Do I need to know anything technical?",
@@ -257,7 +258,7 @@
         },
         {
           "q": "Do you work outside my city?",
-          "a": "Yes. We work remotely with businesses across Australia and internationally, using email and scheduled video calls."
+          "a": "Yes. We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth."
         },
         {
           "q": "Can you build in English and Chinese?",
@@ -440,8 +441,8 @@
   },
   "zh": {
     "lang": "zh-Hans",
-    "title": "{name} — 为澳洲小生意做网站",
-    "description": "emvalue 为澳洲及全球的小生意提供网站定制、旧站升级、App 与业务工具开发。浏览设计作品，与我们聊聊你的项目。",
+    "title": "{name}｜澳洲小企业网站设计、App 与业务系统开发（中英双语）",
+    "description": "emvalue 为澳洲小生意设计和开发网站、App 与业务工具，中英文直接沟通。基础单页网站 {price_one_page} 起。浏览 108 个可操作的网站概念设计。",
     "skip": "跳到正文",
     "nav": {
       "box": "盒子",
@@ -458,7 +459,7 @@
       "lang_menu": "English"
     },
     "hero": {
-      "eyebrow": "澳洲小生意的网站工作室",
+      "eyebrow": "澳洲小生意的网站、App 与业务工具 · 中英双语",
       "title_html": "一个盒子，<br>装着 <em>{count} 个网站</em>。",
       "lede": "打开任何一个抽屉，走进去看看。每一个都是我们亲手设计、能真正上手操作的网站——咖啡馆、驾校、装修师傅、诊所、手艺人……找到最像你生意的那种感觉，然后我们为你做一个。",
       "tryon_label": "你的店叫什么？",
@@ -534,7 +535,8 @@
       "showing_saved_one": "显示你收藏的 1 个抽屉",
       "saved_toast": "已收藏“{name}”——它会出现在下方需求单里。",
       "remove_filter": "移除筛选 {label}",
-      "bar_saved": "已收藏 {n}"
+      "bar_saved": "已收藏 {n}",
+      "concept_label": "概念作品"
     },
     "viewer": {
       "desktop": "电脑",
@@ -683,7 +685,7 @@
         },
         {
           "q": "做一个网站要多少钱？",
-          "a": "根据需求范围和预算单独报价。开工前书面说明交付内容、付款节点与后续费用；新增需求先确认，再开展额外工作。认真做事，实在报价。"
+          "a": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。开工前书面说明交付内容、付款节点与后续费用；新增需求先确认，再开展额外工作。"
         },
         {
           "q": "我需要懂技术吗？",
@@ -695,7 +697,7 @@
         },
         {
           "q": "不在同一个城市也能合作吗？",
-          "a": "可以。我们服务澳洲及其他国家和地区的客户，通过邮件和约定的视频会议远程沟通。"
+          "a": "可以。我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。"
         },
         {
           "q": "能做中英文网站吗？",

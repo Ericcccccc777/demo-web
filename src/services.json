@@ -10,7 +10,7 @@
     "intro": "A two-person studio for independent businesses. We design and build websites, apps and business tools, and coordinate Xiaohongshu campaigns for Melbourne businesses. You work directly with the people responsible for your project.",
     "cta": "Tell us what you need",
     "work": "Explore website examples",
-    "caption": "Website and app projects across Australia and overseas. Xiaohongshu creator campaigns currently focus on Melbourne.",
+    "caption": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth. Xiaohongshu creator campaigns currently focus on Melbourne.",
     "index_label": "What we can help with",
     "index_note": "Start with one useful improvement. Build from there.",
     "values_label": "How we work",
@@ -137,7 +137,7 @@
     "pricing": {
       "eyebrow": "Our approach to pricing",
       "title": "Fair pricing. Clearly scoped.",
-      "intro": "We shape the proposal around what your business actually needs and what you are comfortable investing. Every project is quoted individually, with the costs explained before you commit.",
+      "intro": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. We shape the proposal around what your business actually needs and what you are comfortable investing. Every project is quoted individually, with the costs explained before you commit.",
       "items": [
         {
           "title": "A written quote before work starts",
@@ -183,7 +183,7 @@
         },
         {
           "q": "Can we work together from another city or country?",
-          "a": "Website and app projects can be delivered remotely in English and Chinese. We confirm working hours, currency, payment stages and delivery arrangements for overseas projects. Xiaohongshu creator campaigns currently focus on Melbourne businesses."
+          "a": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth. Website and app projects can be delivered remotely in English and Chinese. We confirm working hours, currency, payment stages and delivery arrangements for overseas projects. Xiaohongshu creator campaigns currently focus on Melbourne businesses."
         }
       ]
     },
@@ -204,7 +204,7 @@
     "intro": "我们是一家两人工作室，为独立商家和小企业设计、开发网站与应用，并为墨尔本商家提供小红书推广支持。围绕你的业务需求，确定清楚、实用的方案，直接和负责项目的人沟通。",
     "cta": "说说你的需求",
     "work": "看看网站示例",
-    "caption": "网站与应用服务面向澳洲及海外；小红书博主推广目前聚焦墨尔本。支持中英文沟通。",
+    "caption": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。小红书博主推广目前聚焦墨尔本。",
     "index_label": "我们能帮你做什么",
     "index_note": "从一个实用的改进开始，按需要逐步完善。",
     "values_label": "我们的合作方式",
@@ -331,7 +331,7 @@
     "pricing": {
       "eyebrow": "关于费用",
       "title": "认真做事，实在报价。",
-      "intro": "结合实际需求和预算制定方案，每个项目单独报价。先明确范围，再说明费用，让你在决定之前了解交付内容与后续成本。",
+      "intro": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。结合实际需求和预算制定方案，每个项目单独报价。先明确范围，再说明费用，让你在决定之前了解交付内容与后续成本。",
       "items": [
         {
           "title": "开工前，先有书面报价",
@@ -377,7 +377,7 @@
         },
         {
           "q": "不在同一个城市，或人在海外，可以合作吗？",
-          "a": "网站与应用项目可以远程合作，支持中文与英文沟通。海外项目会确认沟通时段、结算币种、付款节点与交付安排；小红书博主推广目前聚焦墨尔本本地业务。"
+          "a": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。网站与应用项目可以远程合作，支持中文与英文沟通。海外项目会确认沟通时段、结算币种、付款节点与交付安排；小红书博主推广目前聚焦墨尔本本地业务。"
         }
       ]
     },

@@ -123,6 +123,25 @@ def fill(text, **values):
     return text
 
 
+def price_values(studio):
+    pricing = studio["pricing"]
+    amount = pricing["one_page_from"]
+    if pricing["currency"] != "AUD" or type(amount) not in (int, float) or amount <= 0:
+        raise ValueError("One-page pricing must be a positive AUD amount")
+    return {"price_one_page": f"A${amount:g}"}
+
+
+def fill_content(value, **values):
+    """Fill build-time values throughout copy, leaving browser-time tokens intact."""
+    if isinstance(value, str):
+        return fill(value, **values)
+    if isinstance(value, list):
+        return [fill_content(item, **values) for item in value]
+    if isinstance(value, dict):
+        return {key: fill_content(item, **values) for key, item in value.items()}
+    return value
+
+
 # ---------------------------------------------------------------- demo scan
 
 def google_families(markup):
@@ -265,7 +284,7 @@ def drawer_card(d, scan, c, p, xy=None):
         f'<img class="drawer-img" src="{p}assets/thumbs/{d["id"]}.webp?v={thumb_version}" width="720" height="450" loading="lazy" decoding="async" alt=""></span>'
         f'<span class="drawer-label"><span class="drawer-no"><span class="no-pre">No. </span>{d["id"]}</span>'
         f'<span class="drawer-name">{esc(name)}</span>'
-        f'<span class="drawer-type">{esc(d["type"][lang])} · {esc(d["city"])}</span></span>'
+        f'<span class="drawer-type"><span class="drawer-concept">{esc(c["box"]["concept_label"])}</span> · {esc(d["type"][lang])} · {esc(d["city"])}</span></span>'
         f'<span class="drawer-tags"><span class="tag">{esc(d["style"][lang])}</span>'
         f'<span class="tag tag-try">{esc(d["interaction"][lang])}</span></span></a>'
         f'<button class="drawer-save" type="button" aria-pressed="false" data-save="{d["id"]}" '
@@ -388,7 +407,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry
     p = "" if lang == "en" else "../"
     name = studio["name"]
     count = stats["count"]
-    vals = dict(name=name, count=count, industries=stats["industries"], typefaces=stats["typefaces"], avg_kb=stats["avg_kb"])
+    vals = dict(name=name, count=count, industries=stats["industries"], typefaces=stats["typefaces"], avg_kb=stats["avg_kb"], **price_values(studio))
     site_url = (studio.get("site_url") or "").rstrip("/")
     head_extra = head_links(site_url, "", lang, live=live)
     robots = robots_meta(site_url, live=live)
@@ -423,7 +442,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry
                     for i, s in enumerate(c["process"]["steps"]))
     included = "".join(f'<li><span class="inc-icon" aria-hidden="true">{INC_ICONS[i % len(INC_ICONS)]}</span><h3>{esc(it["title"])}</h3><p>{esc(fill(it["body"], **vals))}</p></li>'
                        for i, it in enumerate(c["included"]["items"]))
-    faq = "".join(f'<details class="qa"><summary><span>{esc(it["q"])}</span><span class="qa-icon" aria-hidden="true"></span></summary><p>{esc(it["a"])}</p></details>'
+    faq = "".join(f'<details class="qa"><summary><span>{esc(it["q"])}</span><span class="qa-icon" aria-hidden="true"></span></summary><p>{esc(fill(it["a"], **vals))}</p></details>'
                   for it in c["faq"]["items"])
 
     ct = c["contact"]
@@ -871,8 +890,10 @@ def main(argv=None):
         parsed = urlparse(studio["site_url"])
         if parsed.scheme != "https" or not parsed.hostname or parsed.query or parsed.fragment or parsed.username:
             raise ValueError("EMVALUE_SITE_URL must be a public https:// site URL, without credentials, query or fragment")
-    content = load("content.json")
+    pricing_values = price_values(studio)
+    content = fill_content(load("content.json"), **pricing_values)
     registry, page_contents = load_registry()
+    page_contents = fill_content(page_contents, **pricing_values)
     CONTENT.update(content)
     catalogue = load("demos.json")
     scans = {d["id"]: scan_demo(d) for d in catalogue}

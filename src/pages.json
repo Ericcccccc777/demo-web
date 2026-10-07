@@ -3,14 +3,14 @@
     "about": {
       "title": "Small team. Thoughtful work.",
       "eyebrow": "EMVALUE / WORKING TOGETHER",
-      "intro": "emvalue is a two-person studio creating websites, apps and useful digital tools for independent businesses in Australia and beyond.",
+      "intro": "emvalue is a two-person web studio in Australia. We design and build websites, apps and business tools for small businesses, in English and Chinese, and run Xiaohongshu creator campaigns in Melbourne.",
       "sections": [
         {
           "id": "people",
           "title": "Work directly with the people building it.",
           "body": [
             "We work as a small team, from understanding your business to designing and building the result. You can discuss the details directly with us, in English or Chinese.",
-            "We work remotely with business owners. Meetings, feedback and project updates are arranged around an agreed schedule."
+            "Meetings, feedback and project updates are arranged around an agreed schedule. We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth."
           ]
         },
         {
@@ -39,7 +39,8 @@
         }
       ],
       "contact_title": "Tell us what you have in mind.",
-      "contact_body": "Share your business, current website and the problem you would like to solve. We can work out a sensible next step together."
+      "contact_body": "Share your business, current website and the problem you would like to solve. We can work out a sensible next step together.",
+      "updated": "2026-10-07"
     },
     "privacy": {
       "title": "Privacy policy",
@@ -260,14 +261,14 @@
     "about": {
       "title": "小团队，认真做好每一件事。",
       "eyebrow": "EMVALUE / 合作与信任",
-      "intro": "emvalue 是一个两人工作室，为澳洲及全球的独立商家、小生意定制网站、App 与实用的数字工具。",
+      "intro": "emvalue 是一家澳洲的两人网站工作室，为小企业设计和开发网站、App 与业务工具，中英文直接沟通；在墨尔本提供小红书博主推广。",
       "sections": [
         {
           "id": "people",
           "title": "直接和做项目的人沟通。",
           "body": [
             "从了解生意、设计方案到开发交付，我们以小团队的方式参与。你可以直接与我们讨论细节，用中文或英文沟通。",
-            "我们通过远程协作服务不同地区的客户，按约定安排会议、反馈与项目进度沟通。"
+            "会议、反馈和进度按约定安排。我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。"
           ]
         },
         {
@@ -296,7 +297,8 @@
         }
       ],
       "contact_title": "聊聊你想做的项目。",
-      "contact_body": "告诉我们你的生意、现有网站与想解决的问题。我们一起确定合适的下一步。"
+      "contact_body": "告诉我们你的生意、现有网站与想解决的问题。我们一起确定合适的下一步。",
+      "updated": "2026-10-07"
     },
     "privacy": {
       "title": "隐私政策",
