@@ -854,3 +854,14 @@ a.social-icon:hover { background: var(--paper-2); }
   .editorial-index ol { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
 }
+
+/* Static service detail pages reuse the hub's type, spacing and colours. */
+.ev-detail .scope-hero { grid-template-columns: 1fr; }
+.ev-detail .hero-copy { max-width: 1100px; min-width: 0; }
+.ev-detail .hero h1 { overflow-wrap: anywhere; }
+:lang(zh) .ev-detail .hero h1 { word-break: normal; }
+.ev-detail h2 { font: 400 clamp(30px, 3.6vw, 52px)/1.15 var(--serif); }
+.ev-prose p { max-width: 72ch; color: var(--ink-2); line-height: 1.85; }
+.ev-prose .scope-points { max-width: 76ch; font-size: 17px; }
+.ev-concept-image { width: 100%; height: auto; border-radius: 8px; }
+.ev-detail .svc h3 a { text-decoration-thickness: 1px; text-underline-offset: 4px; }

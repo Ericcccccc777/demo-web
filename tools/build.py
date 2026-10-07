@@ -21,6 +21,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
 from services_page import render_services
 from editorial_page import render_editorial
+from service_detail_page import render_service_detail
 from seo import LANGS, head_links, json_ld, other_lang, page_path, robots_meta
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -938,6 +939,11 @@ def main(argv=None):
             elif record["template"] == "editorial":
                 header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
                 markup = render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer, registry, live=live)
+            elif record["template"] == "service_detail":
+                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
+                entry = dict(record, _registry=registry, _demos={d["id"]: d for d in demos}, _scans=scans)
+                markup = render_service_detail(lang, studio, content[lang], page, entry, asset_v, header, footer,
+                                               studio.get("site_url") or "", dict(name=studio["name"], **pricing_values))
             else:
                 raise ValueError(f"Template not implemented yet: {record['template']}")
             (target / "index.html").write_text(markup, encoding="utf-8")

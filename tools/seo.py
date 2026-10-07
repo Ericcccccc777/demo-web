@@ -99,6 +99,15 @@ def json_ld(studio, slug, lang, registry, title="", description="", live=True):
                 "provider": {"@id": organization_id}, "areaServed": record["area_served"],
                 "url": site_url + page_path(slug, lang),
             })
+            if slug == "services/web-design":
+                price = studio["pricing"]
+                amount = f"A${price['one_page_from']:g}"
+                graph[-1]["offers"] = {
+                    "@type": "Offer",
+                    "description": (f"个人和单人经营者的基础单页网站 {amount} 起。" if lang == "zh" else
+                                    f"Basic one-page websites for individuals and sole traders start from {amount}."),
+                    "priceSpecification": {"@type": "PriceSpecification", "minPrice": price["one_page_from"], "priceCurrency": price["currency"]},
+                }
         graph.append(breadcrumb_node(site_url, slug, lang, registry, studio["name"]))
     data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
     return '<script type="application/ld+json">' + data + '</script>'

@@ -102,6 +102,44 @@
       },
       "parent": "",
       "source": "pages.json#project-terms"
+    },
+    {
+      "slug": "services/web-design",
+      "template": "service_detail",
+      "source": "pages/services/web-design.json",
+      "type": "service",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "Website design",
+        "zh": "网站设计"
+      },
+      "parent": "services",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Web design"
+    },
+    {
+      "slug": "services/bilingual-websites",
+      "template": "service_detail",
+      "source": "pages/services/bilingual-websites.json",
+      "type": "service",
+      "status": "draft",
+      "content_updated": "2026-10-07",
+      "date_published": null,
+      "breadcrumb": {
+        "en": "English–Chinese websites",
+        "zh": "中英双语网站"
+      },
+      "parent": "services",
+      "area_served": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "service_type": "Bilingual web design"
     }
   ]
 }

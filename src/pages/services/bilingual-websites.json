@@ -1,0 +1,256 @@
+{
+  "en": {
+    "title": "Bilingual English–Chinese websites",
+    "description": "English and Chinese websites for Australian businesses: written for each audience, easy to maintain, and set up so search engines can tell the languages apart.",
+    "h1": "English and Chinese websites, written for both audiences",
+    "eyebrow": "EMVALUE / Website services",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "demos_title": "Interactive concepts",
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_button": "Start a project",
+    "answer": "We build English and Chinese websites for Australian businesses that serve both audiences. Each language is written for its readers, with matching page structures and clear language switching. We work mainly online, communicate in English and Chinese, and quote the agreed pages, content and maintenance responsibilities in writing before work starts.",
+    "for_title": "When two languages are useful",
+    "for_items": [
+      "Businesses whose customers ask about services, prices or bookings in both English and Chinese. A useful page lets each audience understand the same offer without having to translate it themselves.",
+      "Owners with an English website who want a Chinese version of the information their customers use most, rather than translating every page automatically.",
+      "Teams that need a clear plan for keeping service information consistent when prices, hours or contact details change in either language."
+    ],
+    "included_title": "What we agree in the scope",
+    "included": [
+      "The pages needed in each language, which information corresponds and whether any content belongs to only one audience.",
+      "A writing and review approach for both languages. Machine translation is not treated as final copy. Business details still need your confirmation.",
+      "A visible language switch that takes visitors to the corresponding page where both versions exist, rather than losing their place.",
+      "Language labels for search engines and a plan for the person responsible for keeping each version current. These are part of the agreed structure."
+    ],
+    "not_included_title": "Points to scope separately",
+    "not_included": [
+      "A second language is not included in the basic one-page website price; the bilingual page and content scope are quoted separately.",
+      "Changes to an existing platform, booking connections or other third-party services need assessment before a commitment is made.",
+      "Ongoing translation, content changes and maintenance need an agreed arrangement. Decide who reviews business facts and who updates each language."
+    ],
+    "sections": [
+      {
+        "id": "readers",
+        "title": "Write for the reader in each language",
+        "body": [
+          "English and Chinese readers need the same accurate business facts, but may need different explanations. We write for each audience instead of translating sentence by sentence. Services, prices and contact information should remain consistent even when the phrasing differs.",
+          "Decide who supplies business information and who checks each language. Machine translation is not final copy. The scope should state which writing and review work is included."
+        ]
+      },
+      {
+        "id": "structure",
+        "title": "Matching pages and a clear switch",
+        "body": [
+          "Map the two page lists together. An English service page needs a clear Chinese counterpart when both are required. Not every piece of content has to exist twice; decide that from the audiences and agreed scope.",
+          "The language switch should be easy to find and preserve context. Agree its placement and what happens when a page has only one language, so visitors understand where the link takes them."
+        ]
+      },
+      {
+        "id": "language-care",
+        "title": "Keep both versions current",
+        "body": [
+          "Decide who maintains English and who maintains Chinese before launch. Consider price, service and opening-hour changes in both versions. The editing approach depends on the platform and the updates you expect.",
+          "Correct language markers help search engines distinguish pages. They do not promise a particular language or search position. Page correspondence and accurate content are the work we scope; results remain the search engine’s decision."
+        ]
+      }
+    ],
+    "pricing_title": "Quote the language and content work",
+    "pricing_body": "Bilingual websites are quoted in writing after a conversation about the pages, existing content and review responsibilities. The second language is a separate scope from a basic one-page site. The proposal explains deliverables, payment stages, content preparation and ongoing costs; extra pages or changed requirements are confirmed before additional work begins.",
+    "demos": [
+      {
+        "id": "002",
+        "shows": "A concept we designed for a fictional yum cha restaurant: English and Chinese ordering content shows how one service can be explained to both audiences."
+      },
+      {
+        "id": "040",
+        "shows": "A concept we designed for a fictional family dentist: bilingual treatment information and a booking interaction provide a way to explore language switching."
+      },
+      {
+        "id": "061",
+        "shows": "A concept we designed for a fictional weekend Chinese school: bilingual pages demonstrate how families can read course information in either language."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Does every page need both languages?",
+        "a": "No. Start with what each audience needs to understand a service or make an enquiry. Map the pages needing counterparts and those remaining in one language. Explain those choices in the scope for navigation and updates."
+      },
+      {
+        "q": "Can you add Chinese to my existing English website?",
+        "a": "We review your platform, content and account access first. Then we suggest whether to add a language to the existing structure or change it. Work and content responsibilities are confirmed in writing after assessment."
+      },
+      {
+        "q": "How do customers switch languages?",
+        "a": "A clear navigation link takes visitors to the corresponding version when one exists. We agree its placement and how single-language pages are handled, letting customers continue reading the service they were looking at."
+      },
+      {
+        "q": "Will Google show the Chinese page to Chinese-speaking people?",
+        "a": "We set language markers correctly to distinguish the versions. The search engine decides which page appears; that cannot be guaranteed. Language settings promise neither rankings nor a specific result for an individual search."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/xiaohongshu",
+        "label": "Xiaohongshu (RedNote) campaigns in Melbourne"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
+      }
+    ],
+    "cta_title": "Plan the two versions together",
+    "cta_body": "Tell us what you sell or provide, who reads each language and whether you already have a website. We can use that information to discuss pages, content review and the practical work involved."
+  },
+  "zh": {
+    "title": "中英双语网站制作",
+    "description": "为澳洲商家制作中英双语网站：两种语言分别为读者撰写，后续好维护，并正确设置搜索引擎的语言识别。中英文直接沟通。",
+    "h1": "中英双语网站：两种客户都看得明白",
+    "eyebrow": "EMVALUE / 网站服务",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "demos_title": "可操作的概念设计",
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_button": "开始项目",
+    "answer": "我们为同时服务英文和中文顾客的澳洲商家制作中英双语网站。两种语言分别为读者撰写，页面结构对应，切换入口清楚。以线上合作为主，中英文直接沟通，开工前书面确认页面、内容及后续维护责任。",
+    "for_title": "什么情况下需要两种语言",
+    "for_items": [
+      "顾客会用英文和中文询问服务、价目或预约。实用的页面应让两种读者直接理解同一项业务，不必自己翻译。",
+      "已有英文网站，希望先为顾客经常查看的信息制作中文版，而不是自动翻译所有页面。",
+      "需要清楚的更新分工：价格、营业时间或联系方式变化时，知道两种语言应如何同步。"
+    ],
+    "included_title": "方案里确认的内容",
+    "included": [
+      "每种语言需要哪些页面、哪些信息对应，是否有只适合一种读者的内容。",
+      "两种语言的撰写和审核方式。机器翻译不作为最终文案，业务事实仍需你确认。",
+      "清楚可见的语言切换入口；两版都存在时，切换到对应页面，保留浏览位置。",
+      "搜索引擎的语言标记，以及每种语言由谁保持更新，都纳入约定结构。"
+    ],
+    "not_included_title": "需要另行确认的范围",
+    "not_included": [
+      "基础单页网站起步价不包含第二种语言；双语页面与内容工作另行报价。",
+      "现有平台调整、预约或其他第三方接入，先评估，再确认能做什么。",
+      "持续翻译、内容修改与维护需要约定安排，明确业务事实审核和两种语言更新各由谁负责。"
+    ],
+    "sections": [
+      {
+        "id": "readers",
+        "title": "分别为两种读者写清楚",
+        "body": [
+          "英文和中文读者需要相同、准确的业务事实，但可能需要不同的说明。按各自的阅读习惯组织表达，不逐字翻译。服务、价目和联系方式保持一致，措辞可以不同。",
+          "先确定谁提供业务信息、谁分别审核两种语言。机器翻译不作为最终文案；方案中写明包含哪些撰写与审核工作。"
+        ]
+      },
+      {
+        "id": "structure",
+        "title": "页面对应，切换不迷路",
+        "body": [
+          "先对应两种语言的页面清单。英文服务页需要中文版时，应有清楚的对应关系。并非每项内容都必须做两版，按读者需要和约定范围决定。",
+          "切换入口应容易找到，并保留浏览内容。约定入口位置与单一语言页面的处理方式，让访客知道链接会带到哪里。"
+        ]
+      },
+      {
+        "id": "language-care",
+        "title": "两版一起保持更新",
+        "body": [
+          "上线前确定英文和中文分别由谁维护。价格、服务与营业时间变化时，两版都应考虑更新。编辑方式取决于平台以及预期的改动。",
+          "正确语言标记帮助搜索引擎区分页面，不承诺显示某种版本或搜索位置。能确认的工作是页面对应和内容准确，结果由搜索引擎决定。"
+        ]
+      }
+    ],
+    "pricing_title": "把语言和内容工作算清楚",
+    "pricing_body": "双语网站根据页面、现有内容与审核责任，沟通后书面报价。第二种语言与基础单页网站分别确定范围。方案中说明交付内容、付款节点、内容准备与后续费用；新增页面或需求变化，先确认再开展额外工作。",
+    "demos": [
+      {
+        "id": "002",
+        "shows": "我们为一家虚构的港式早茶餐厅做的概念设计：中英文点单内容，展示同一项服务面向两种读者的表达。"
+      },
+      {
+        "id": "040",
+        "shows": "我们为一家虚构的家庭牙科诊所做的概念设计：双语治疗信息与预约交互，可以体验语言切换。"
+      },
+      {
+        "id": "061",
+        "shows": "我们为一家虚构的周末中文学校做的概念设计：双语页面让家庭用不同语言了解课程信息。"
+      }
+    ],
+    "faq": [
+      {
+        "q": "每一页都要两种语言吗？",
+        "a": "不一定。先看两种读者了解服务和咨询时需要什么。列出需要对应的页面，以及保留单一语言的内容，在方案里说明，便于安排导航与更新。"
+      },
+      {
+        "q": "能把我现有的英文网站改成双语吗？",
+        "a": "先检查平台、内容和账号访问权限，再建议在当前结构里增加语言，还是需要调整结构。评估后书面确认工作与内容责任。"
+      },
+      {
+        "q": "顾客怎么切换语言？",
+        "a": "两版都存在时，清楚的导航入口切换到对应页面。提前约定入口位置，以及单一语言页面如何处理，让顾客继续了解刚才关注的服务。"
+      },
+      {
+        "q": "Google 会给说中文的人显示中文页吗？",
+        "a": "我们会正确设置语言标记以区分版本。最终显示哪个页面由搜索引擎决定，不能保证。语言设置不承诺排名或某次搜索的具体结果。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/xiaohongshu",
+        "label": "墨尔本小红书博主推广"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_title": "两种语言一起规划",
+    "cta_body": "告诉我们你的业务、两种语言分别面向谁，以及有没有现成网站。以这些信息讨论页面、内容审核与实际工作。"
+  }
+}

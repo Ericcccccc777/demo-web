@@ -1,0 +1,256 @@
+{
+  "en": {
+    "title": "Website design for small businesses in Australia",
+    "description": "Custom websites for Australian small businesses, from basic one-page sites ({price_one_page}+) to multi-page sites with bookings or ordering. English and Chinese.",
+    "h1": "Websites for small businesses, designed around how you work",
+    "eyebrow": "EMVALUE / Website services",
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "demos_title": "Interactive concepts",
+    "cities_title": "Working together across cities",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions before you start",
+    "related_title": "Related pages",
+    "cta_button": "Start a project",
+    "answer": "We design and build websites for Australian small businesses, in English and Chinese. Basic one-page websites for individuals and sole traders start from {price_one_page}; larger sites are quoted to scope in writing. We work mainly online and agree the pages, functions, content responsibilities and delivery milestones before work begins.",
+    "for_title": "A website around your business",
+    "for_items": [
+      "Individuals and sole traders who need one clear page explaining their work, service area and contact options.",
+      "Small businesses needing separate pages for services, prices, photographs, frequently asked questions and an introduction.",
+      "Businesses considering bookings, ordering or a small online shop, with established service connections scoped separately."
+    ],
+    "included_title": "The basic one-page scope",
+    "included": [
+      "One scrollable page with up to six content sections. Agree the sections around the information your customers need before design starts.",
+      "Layouts for phones, tablets and computers, so the same business information remains readable at each screen size.",
+      "Contact options: an enquiry form, or phone, email or WeChat buttons, selected around how you want customers to reach you.",
+      "Basic search settings: a page title, description and sharing image. These explain the page without promising a search position.",
+      "Launch on a domain and hosting account in your name. Account access and handover arrangements are agreed with you.",
+      "One round of revisions within the agreed scope. Bring the requested changes together so the review can address them clearly."
+    ],
+    "not_included_title": "Quoted separately",
+    "not_included": [
+      "Domain registration and hosting fees are separate from the website build.",
+      "Copywriting and photography are not included in the basic scope; agree who prepares the text and images.",
+      "A second language is a separate scope, including the matching pages and their content.",
+      "Booking or payment connections are additional work; third-party platform fees are explained beforehand.",
+      "Long-term maintenance is not part of the basic build and needs an agreed arrangement or separate quote."
+    ],
+    "sections": [
+      {
+        "id": "bookings",
+        "title": "Multi-page sites, bookings and ordering",
+        "body": [
+          "A multi-page website can give services, prices, photographs, an about page and contact details their own space. We agree the page list and content before quoting.",
+          "We can help connect an established booking, ordering or small-shop service. We first consider the customer journey and your existing service. Setup work, subscriptions and payment-related fees are explained before you decide."
+        ]
+      },
+      {
+        "id": "care",
+        "title": "Care after launch",
+        "body": [
+          "Decide what you will update yourself and what needs our help. The editing approach depends on the agreed platform and the type of changes you expect to make. A website with occasional price updates has different needs from one with changing products.",
+          "Ongoing changes and maintenance are covered by an agreed arrangement or quoted separately. The written proposal should make that boundary clear, alongside the accounts and materials handed over at launch."
+        ]
+      }
+    ],
+    "pricing_title": "A written scope before a price",
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. The basic scope above is the starting point. Extra pages, languages, content preparation and connections change the work involved. We explain deliverables, payment stages and ongoing costs before you commit; changes to scope are confirmed before additional work starts.",
+    "demos": [
+      {
+        "id": "019",
+        "shows": "A concept we designed for a fictional driving school: bilingual pages and a lesson-slot booking interaction show how customers could explore a service."
+      },
+      {
+        "id": "032",
+        "shows": "A concept we designed for a fictional house-cleaning business: an illustrative quote calculator lets a visitor explore the effect of their choices."
+      },
+      {
+        "id": "052",
+        "shows": "A concept we designed for a fictional hair salon: a visual service presentation and booking interaction demonstrate a different way to browse."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How much is a one-page site, and what is included?",
+        "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. This covers up to six sections, responsive layouts, contact options, basic search settings, launch on your accounts and one revision round. The exclusions above are quoted separately."
+      },
+      {
+        "q": "What should I prepare?",
+        "a": "Prepare your business name, services, service area, contact details, text and images. Tell us what is missing. We agree who prepares each item so content work and the website build have a clear boundary."
+      },
+      {
+        "q": "Can I update it myself?",
+        "a": "We discuss the changes you expect before choosing the editing approach. Self-editing depends on the agreed platform and scope. Ask about prices, photographs or services you change regularly; the proposal explains which updates you handle and which need support."
+      },
+      {
+        "q": "Who owns the domain and website?",
+        "a": "The domain and service accounts should be registered in your name. Project-specific design and code ownership, third-party licences and handover conditions are set out in the written agreement before work starts."
+      },
+      {
+        "q": "Do we need to meet in person?",
+        "a": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth. Project discussions and reviews can take place online. Timing depends on the pages, features and content readiness; milestones are set out in the written proposal."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/bilingual-websites",
+        "label": "English–Chinese websites"
+      },
+      {
+        "slug": "services/website-redesign",
+        "label": "Website redesign"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
+      }
+    ],
+    "cta_title": "Tell us what your website needs to do",
+    "cta_body": "Share your business, the pages or connections you need and a concept you want to discuss. We clarify the scope and prepare a written proposal."
+  },
+  "zh": {
+    "title": "澳洲小企业网站设计与制作",
+    "description": "为澳洲小生意设计和制作网站：个人和单人经营者的基础单页网站 {price_one_page} 起，也可做带预约或点单的多页网站。中英文沟通，以线上合作为主。",
+    "h1": "为澳洲小生意设计和制作网站",
+    "eyebrow": "EMVALUE / 网站服务",
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "demos_title": "可操作的概念设计",
+    "cities_title": "跨城市合作",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "开始前常见问题",
+    "related_title": "相关页面",
+    "cta_button": "开始项目",
+    "answer": "我们为澳洲小生意设计和制作网站，中英文直接沟通。个人和单人经营者的基础单页网站 {price_one_page} 起；更大的项目按范围书面报价。以线上合作为主，开工前确认页面、功能、内容准备责任和交付节点。",
+    "for_title": "按你的生意安排页面",
+    "for_items": [
+      "个人和单人经营者：用一个清楚的页面介绍服务、服务区域和联系方式。",
+      "需要多页网站的小生意：分别介绍服务、价目、作品照片、常见问题和商家信息。",
+      "考虑预约、点单或小网店的商家：成熟服务的接入方式另行确定范围。"
+    ],
+    "included_title": "基础单页网站包含",
+    "included": [
+      "1 个可滚动页面，最多 6 个内容区块。设计前先确认顾客需要了解什么，再确定区块安排。",
+      "手机、平板、电脑适配，让不同屏幕上的生意信息都能清楚阅读。",
+      "联系方式：咨询表单，或电话、邮件、微信按钮，按你希望接收咨询的方式选择。",
+      "基础搜索设置：标题、描述、分享图。帮助说明页面内容，不承诺搜索位置。",
+      "上线到你名下的域名和主机账号，提前确认访问权限与交接安排。",
+      "约定范围内的 1 轮修改。把意见集中整理，便于一轮内清楚处理。"
+    ],
+    "not_included_title": "以下内容另行报价",
+    "not_included": [
+      "域名和主机费用，与网站制作费用分开。",
+      "文案撰写、拍摄不在基础范围内，提前确认文字与照片由谁准备。",
+      "第二种语言另行确定范围，包括对应页面及内容。",
+      "预约或支付接入属于额外工作，第三方平台费用事先说明。",
+      "长期维护不在基础制作范围内，按约定安排或单独报价。"
+    ],
+    "sections": [
+      {
+        "id": "bookings",
+        "title": "多页网站、预约和点单",
+        "body": [
+          "多页网站可分别展示服务、价目、照片、关于和联系方式。报价前先确定页面清单及内容。",
+          "可以协助接入现有成熟的预约、点单或小网店服务。先了解顾客操作路径和已有服务，再说明设置工作、订阅与相关支付费用，方便你决定。"
+        ]
+      },
+      {
+        "id": "care",
+        "title": "上线后的照顾",
+        "body": [
+          "先说明哪些内容你希望自己更新、哪些需要我们协助。更新方式取决于约定平台和改动类型：偶尔调整价目与经常更换产品，需要的安排不同。",
+          "后续改动和维护按约定的维护安排进行，或另行报价。书面方案中说明这条边界，以及上线时交接的账号和资料。"
+        ]
+      }
+    ],
+    "pricing_title": "先明确范围，再确认费用",
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。 上面列出的基础范围是起点。增加页面、语言、内容准备或系统接入，会改变工作量。决定前说明交付内容、付款节点与后续费用；范围变化先确认，再开展额外工作。",
+    "demos": [
+      {
+        "id": "019",
+        "shows": "我们为一家虚构的驾校做的概念设计：双语页面与选课时段的预约交互，展示顾客了解服务的方式。"
+      },
+      {
+        "id": "032",
+        "shows": "我们为一家虚构的家政保洁公司做的概念设计：示意报价计算器，让访客查看不同选择的影响。"
+      },
+      {
+        "id": "052",
+        "shows": "我们为一家虚构的美发沙龙做的概念设计：作品化的服务展示与预约交互，呈现另一种浏览方式。"
+      }
+    ],
+    "faq": [
+      {
+        "q": "单页网站多少钱、包含什么？",
+        "a": "个人和单人经营者的基础单页网站 {price_one_page} 起。包含最多 6 个区块、屏幕适配、联系方式、基础搜索设置、上线到你名下的账号及 1 轮修改。上面列出的不包含项目另行报价。"
+      },
+      {
+        "q": "我要准备什么？",
+        "a": "准备生意名称、服务、服务区域、联系方式、文字和图片。缺少的部分先告诉我们，确认各项由谁准备，让内容工作与网站制作的边界清楚。"
+      },
+      {
+        "q": "我能自己更新吗？",
+        "a": "先聊你预期的改动，再选择更新方式。是否能自行编辑取决于约定平台与范围。经常调整的价目、照片或服务，方案里说明哪些你自己处理、哪些需要支持。"
+      },
+      {
+        "q": "域名和网站归谁？",
+        "a": "域名与服务账号应注册在你名下。开工前在书面协议中明确项目专属设计与代码的归属、第三方许可及交接条件。"
+      },
+      {
+        "q": "一定要见面吗？",
+        "a": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。 项目沟通与确认可以线上进行。时间取决于页面、功能和内容准备情况，书面方案里会写明节点。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
+      },
+      {
+        "slug": "services/website-redesign",
+        "label": "网站改版"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_title": "告诉我们网站要解决什么",
+    "cta_body": "介绍你的生意、需要的页面或接入功能，以及想讨论的概念设计。我们据此确认范围并准备书面方案。"
+  }
+}
