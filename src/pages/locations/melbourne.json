@@ -1,0 +1,288 @@
+{
+  "en": {
+    "included_title": "The basic one-page scope",
+    "included": [
+      "One scrollable page with up to six content sections. Agree the sections around the information your customers need before design starts.",
+      "Layouts for phones, tablets and computers, so the same business information remains readable at each screen size.",
+      "Contact options: an enquiry form, or phone, email or WeChat buttons, selected around how you want customers to reach you.",
+      "Basic search settings: a page title, description and sharing image. These explain the page without promising a search position.",
+      "Launch on a domain and hosting account in your name. Account access and handover arrangements are agreed with you.",
+      "One round of revisions within the agreed scope. Bring the requested changes together so the review can address them clearly."
+    ],
+    "not_included_title": "Quoted separately",
+    "not_included": [
+      "Domain registration and hosting fees are separate from the website build.",
+      "Copywriting and photography are not included in the basic scope; agree who prepares the text and images.",
+      "A second language is a separate scope, including the matching pages and their content.",
+      "Booking or payment connections are additional work; third-party platform fees are explained beforehand.",
+      "Long-term maintenance is not part of the basic build and needs an agreed arrangement or separate quote."
+    ],
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "A written scope before a price",
+    "related_title": "Related pages",
+    "cta_button": "Start a project",
+    "title": "Web design Melbourne for small businesses",
+    "description": "Custom website design in Melbourne, in English and Chinese. Basic one-page websites for individuals and sole traders from {price_one_page}; meet in Melbourne or work online.",
+    "eyebrow": "EMVALUE / Melbourne",
+    "h1": "Web design in Melbourne: custom websites for small businesses",
+    "answer": "We design and develop custom websites for Melbourne small businesses, from a basic one-page site to multi-page websites with bookings or ordering. Basic one-page websites for individuals and sole traders start from {price_one_page}; larger websites, apps and business tools are quoted in writing. Meet us in Melbourne or work with us online, in English or Chinese.",
+    "for_title": "Who this is for",
+    "for_items": [
+      "Melbourne sole traders and small businesses that need a clear website explaining their services, prices and contact options.",
+      "Owners who serve both English- and Chinese-speaking customers and want a bilingual website rather than a translated copy.",
+      "Businesses planning a Xiaohongshu (RedNote) campaign in Melbourne that also need a website for the people who look them up."
+    ],
+    "sections": [
+      {
+        "id": "meet-in-melbourne",
+        "title": "Meet in Melbourne, or work online",
+        "body": [
+          "If you'd prefer to talk face to face, we can arrange a meeting in Melbourne to discuss your business, the pages you need and the materials you already have. Many projects can also run entirely online, by email and scheduled video calls. Either way, you talk directly with the people who design and develop your website, in English or Chinese.",
+          "Meetings are arranged in Melbourne time. You review layouts and working previews at agreed milestones, so you can see the website take shape before it launches."
+        ]
+      },
+      {
+        "id": "bilingual-melbourne",
+        "title": "English and Chinese websites in Melbourne",
+        "body": [
+          "When your customers read English or Chinese, we write each language for its readers instead of translating word for word. Services, prices and contact details stay consistent across both versions.",
+          "A bilingual website is scoped separately from the basic one-page price. We agree which pages need both languages and who keeps each version up to date."
+        ]
+      },
+      {
+        "id": "xiaohongshu-melbourne",
+        "title": "A website and a Xiaohongshu campaign together",
+        "body": [
+          "Our Xiaohongshu creator campaigns currently focus on Melbourne. If you are planning one, the website gives people who see the campaign a clear place to check your services, location and how to get in touch.",
+          "Campaign work is scoped separately from the website. Creators, scheduling and fees are confirmed after we discuss your brief."
+        ]
+      }
+    ],
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Extra pages, languages, content preparation and connections change the work involved; we explain deliverables, payment stages and ongoing costs before you commit.",
+    "demos_title": "Concepts set in Melbourne",
+    "demos": [
+      {
+        "id": "040",
+        "shows": "A concept we designed for a fictional family dentist set in Box Hill: bilingual pages and a tap-a-tooth treatment guide show how a clinic could explain its services in English and Chinese."
+      },
+      {
+        "id": "052",
+        "shows": "A concept we designed for a fictional hair salon set in South Yarra: visitors try hair colours on a portrait before moving to a booking request."
+      },
+      {
+        "id": "001",
+        "shows": "A concept we designed for a fictional specialty café set in Fitzroy: a latte-art interaction sits alongside the menu."
+      }
+    ],
+    "cities_title": "Also working across Australia",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions from Melbourne businesses",
+    "faq": [
+      {
+        "q": "How much does a website cost in Melbourne?",
+        "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Multi-page websites, bilingual pages, bookings and other connections are quoted in writing once we understand the scope."
+      },
+      {
+        "q": "Can we meet in person in Melbourne?",
+        "a": "Yes. If you'd prefer to meet face to face, we can arrange it in Melbourne. Project discussions and reviews can also take place online."
+      },
+      {
+        "q": "Do you build websites in English and Chinese?",
+        "a": "Yes. We write each language for its readers and agree how both versions will be maintained. A second language is scoped separately from the basic one-page price."
+      },
+      {
+        "q": "Can you help with Xiaohongshu promotion in Melbourne?",
+        "a": "Yes. Our Xiaohongshu creator campaigns currently focus on Melbourne businesses. Campaigns are discussed and quoted separately from website work."
+      },
+      {
+        "q": "What should I prepare for a new website?",
+        "a": "Prepare your business name, services, service area, contact details, text and images, and tell us what is missing. We agree who prepares each item before the build starts."
+      },
+      {
+        "q": "How long does a website take?",
+        "a": "Timing depends on the pages, features and content readiness; milestones are set out in the written proposal."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "Bilingual websites"
+      },
+      {
+        "slug": "services/xiaohongshu",
+        "label": "Xiaohongshu campaigns in Melbourne"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website costs"
+      }
+    ],
+    "cta_title": "Tell us about your Melbourne business",
+    "cta_body": "Share your business, the pages you need and whether you'd like to meet in Melbourne or work online. We'll clarify the scope and prepare a written proposal."
+  },
+  "zh": {
+    "included_title": "基础单页网站包含",
+    "included": [
+      "1 个可滚动页面，最多 6 个内容区块。设计前先确认顾客需要了解什么，再确定区块安排。",
+      "手机、平板、电脑适配，让不同屏幕上的生意信息都能清楚阅读。",
+      "联系方式：咨询表单，或电话、邮件、微信按钮，按你希望接收咨询的方式选择。",
+      "基础搜索设置：标题、描述、分享图。帮助说明页面内容，不承诺搜索位置。",
+      "上线到你名下的域名和主机账号，提前确认访问权限与交接安排。",
+      "约定范围内的 1 轮修改。把意见集中整理，便于一轮内清楚处理。"
+    ],
+    "not_included_title": "以下内容另行报价",
+    "not_included": [
+      "域名和主机费用，与网站制作费用分开。",
+      "文案撰写、拍摄不在基础范围内，提前确认文字与照片由谁准备。",
+      "第二种语言另行确定范围，包括对应页面及内容。",
+      "预约或支付接入属于额外工作，第三方平台费用事先说明。",
+      "长期维护不在基础制作范围内，按约定安排或单独报价。"
+    ],
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "先明确范围，再确认费用",
+    "related_title": "相关页面",
+    "cta_button": "开始项目",
+    "title": "墨尔本网站定制：网站设计、制作与开发",
+    "description": "墨尔本网站定制、网站设计与制作：为墨尔本小生意做网站，中英文直接沟通。个人和单人经营者的基础单页网站 {price_one_page} 起，可在墨尔本当面沟通，也可线上合作。",
+    "eyebrow": "EMVALUE / 墨尔本",
+    "h1": "墨尔本网站定制：为小生意设计和制作网站",
+    "answer": "我们为墨尔本的小生意定制网站，从基础单页网站，到带预约或点单的多页网站，都可以设计、制作和开发。个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价。可以在墨尔本当面聊，也可以全程线上合作，中英文直接沟通。",
+    "for_title": "适合谁",
+    "for_items": [
+      "需要清楚介绍服务、价目和联系方式的墨尔本个体经营者和小生意。",
+      "同时服务英文和中文顾客，想做中英双语网站、而不是简单翻译的商家。",
+      "准备在墨尔本做小红书推广，也需要一个网站承接搜索和咨询的商家。"
+    ],
+    "sections": [
+      {
+        "id": "meet-in-melbourne",
+        "title": "墨尔本网站设计与制作：当面聊，或全程线上",
+        "body": [
+          "如果你更习惯当面沟通，我们可以在墨尔本约时间见面，聊你的生意、需要的页面和已有资料。很多项目也可以全程线上完成，通过邮件和约定的视频会议推进。无论哪种方式，你都直接和设计、开发网站的人沟通，中英文都可以。",
+          "会议按墨尔本时间安排。设计稿和可操作预览按约定节点确认，上线前你能看到网站逐步成形。"
+        ]
+      },
+      {
+        "id": "bilingual-melbourne",
+        "title": "墨尔本的中英双语网站",
+        "body": [
+          "顾客既有说英文的，也有说中文的，我们会按两种读者分别撰写，不逐字翻译；服务、价目和联系方式在两个版本中保持一致。",
+          "中英双语网站与基础单页起步价分开确定范围：先约定哪些页面需要两种语言，以及两个版本由谁更新。"
+        ]
+      },
+      {
+        "id": "xiaohongshu-melbourne",
+        "title": "网站和小红书推广可以一起做",
+        "body": [
+          "我们的小红书博主推广目前聚焦墨尔本。如果你准备做推广，网站可以让看到推广的人查到你的服务、位置和联系方式。",
+          "推广工作与网站分开确定范围；博主人选、档期与费用，沟通需求后确认。"
+        ]
+      }
+    ],
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。增加页面、语言、内容准备或系统接入会改变工作量，决定前说明交付内容、付款节点与后续费用。",
+    "demos_title": "以墨尔本为背景的概念设计",
+    "demos": [
+      {
+        "id": "040",
+        "shows": "我们为一家虚构的 Box Hill 家庭牙科诊所做的概念设计：中英双语页面，点牙齿了解治疗，展示诊所如何用两种语言介绍服务。"
+      },
+      {
+        "id": "052",
+        "shows": "我们为一家虚构的 South Yarra 美发沙龙做的概念设计：在肖像上试发色，再进入预约请求。"
+      },
+      {
+        "id": "001",
+        "shows": "我们为一家虚构的 Fitzroy 精品咖啡馆做的概念设计：拿铁拉花互动与菜单放在一起。"
+      }
+    ],
+    "cities_title": "也服务全澳其他城市",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "墨尔本商家常问的问题",
+    "faq": [
+      {
+        "q": "在墨尔本做网站要多少钱？",
+        "a": "个人和单人经营者的基础单页网站 {price_one_page} 起。多页网站、双语页面、预约和其他接入，了解范围后书面报价。"
+      },
+      {
+        "q": "可以在墨尔本当面聊吗？",
+        "a": "可以。如需当面沟通，可以在墨尔本安排；项目讨论和确认也可以线上进行。"
+      },
+      {
+        "q": "能做中英文网站吗？",
+        "a": "可以。两种语言分别为读者撰写，并约定两个版本的维护方式。第二种语言与基础单页起步价分开确定范围。"
+      },
+      {
+        "q": "能在墨尔本做小红书推广吗？",
+        "a": "可以。我们的小红书博主推广目前聚焦墨尔本商家，推广与网站工作分开沟通和报价。"
+      },
+      {
+        "q": "墨尔本建站需要准备什么？",
+        "a": "准备生意名称、服务、服务区域、联系方式、文字和图片，缺少的部分先告诉我们。开工前确认每项资料由谁准备。"
+      },
+      {
+        "q": "墨尔本网站制作需要多久？",
+        "a": "时间取决于页面、功能和内容准备情况，书面方案里会写明节点。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
+      },
+      {
+        "slug": "services/xiaohongshu",
+        "label": "墨尔本小红书博主推广"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_title": "说说你在墨尔本的生意",
+    "cta_body": "介绍你的生意、需要的页面，以及希望在墨尔本当面聊还是线上合作。我们确认范围后准备书面方案。"
+  }
+}

@@ -92,7 +92,7 @@ def json_ld(studio, slug, lang, registry, title="", description="", live=True):
     else:
         record = registry[slug]
         graph = []
-        if record["type"] in {"service", "industry"}:
+        if record["type"] in {"service", "industry", "location"}:
             graph.append({
                 "@type": "Service", "@id": site_url + page_path(slug, lang) + "#service",
                 "name": title, "serviceType": record["service_type"], "description": description,

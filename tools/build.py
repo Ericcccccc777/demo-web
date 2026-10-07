@@ -70,7 +70,7 @@ def load_registry():
             raise ValueError(f"Invalid page status: {slug}")
         if page.get("template") not in {"home", "services_hub", "service_detail", "editorial"}:
             raise ValueError(f"Invalid page template: {slug}")
-        if page.get("type") not in {"home", "services_hub", "service", "industry", "guide", "case_study", "about", "legal"}:
+        if page.get("type") not in {"home", "services_hub", "service", "industry", "location", "guide", "case_study", "about", "legal"}:
             raise ValueError(f"Invalid page type: {slug}")
         for key in ("content_updated", "date_published"):
             value = page.get(key)
@@ -360,7 +360,9 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
     resource_links = "".join(
         f'<a href="{home}{target}">{esc(c["footer"][label])}'
         + (' <span aria-hidden="true">↗</span>' if is_home else '') + '</a>'
-        for target, label in (("guides/website-cost-australia/", "website_costs"), ("work/token-forest/", "token_forest"))
+        for target, label in (("guides/website-cost-australia/", "website_costs"), ("work/token-forest/", "token_forest"),
+                              ("locations/melbourne/", "city_melbourne"), ("locations/sydney/", "city_sydney"),
+                              ("locations/perth/", "city_perth"))
         if live_internal_href(registry or {}, target))
     if is_home:
         footer_links = ("".join(section_links.values())

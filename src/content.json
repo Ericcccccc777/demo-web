@@ -409,7 +409,10 @@
       "explore": "Explore",
       "contact": "Let’s talk",
       "website_costs": "Website costs",
-      "token_forest": "Case study: Token Forest website"
+      "token_forest": "Case study: Token Forest website",
+      "city_melbourne": "Web design Melbourne",
+      "city_sydney": "Web design Sydney",
+      "city_perth": "Web design Perth"
     },
     "industries": {
       "food": "Food & Drink",
@@ -869,7 +872,10 @@
       "explore": "探索 emvalue",
       "contact": "聊聊你的项目",
       "website_costs": "网站费用指南",
-      "token_forest": "案例：Token Forest 官网"
+      "token_forest": "案例：Token Forest 官网",
+      "city_melbourne": "墨尔本网站定制",
+      "city_sydney": "悉尼网站定制",
+      "city_perth": "珀斯网站定制"
     },
     "industries": {
       "food": "餐饮",

@@ -125,6 +125,18 @@
       {
         "slug": "guides/website-cost-australia",
         "label": "Website costs"
+      },
+      {
+        "slug": "locations/melbourne",
+        "label": "Web design Melbourne"
+      },
+      {
+        "slug": "locations/sydney",
+        "label": "Web design Sydney"
+      },
+      {
+        "slug": "locations/perth",
+        "label": "Web design Perth"
       }
     ],
     "cta_title": "Tell us what your website needs to do",
@@ -256,6 +268,18 @@
       {
         "slug": "guides/website-cost-australia",
         "label": "网站费用指南"
+      },
+      {
+        "slug": "locations/melbourne",
+        "label": "墨尔本网站定制"
+      },
+      {
+        "slug": "locations/sydney",
+        "label": "悉尼网站定制"
+      },
+      {
+        "slug": "locations/perth",
+        "label": "珀斯网站定制"
       }
     ],
     "cta_title": "告诉我们网站要解决什么",

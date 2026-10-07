@@ -6,7 +6,7 @@
       "template": "home",
       "type": "home",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "emvalue",
@@ -19,7 +19,7 @@
       "template": "services_hub",
       "type": "services_hub",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "Services",
@@ -33,7 +33,7 @@
       "template": "services_hub",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "Xiaohongshu campaigns",
@@ -52,7 +52,7 @@
       "template": "editorial",
       "type": "about",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "About",
@@ -66,7 +66,7 @@
       "template": "editorial",
       "type": "legal",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "Privacy policy",
@@ -80,7 +80,7 @@
       "template": "editorial",
       "type": "legal",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "Website terms",
@@ -94,7 +94,7 @@
       "template": "editorial",
       "type": "legal",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-05",
       "breadcrumb": {
         "en": "Project cooperation terms",
@@ -109,7 +109,7 @@
       "source": "pages/services/web-design.json",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website design",
@@ -128,7 +128,7 @@
       "source": "pages/services/bilingual-websites.json",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "English–Chinese websites",
@@ -147,7 +147,7 @@
       "source": "pages/services/website-redesign.json",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website redesign",
@@ -166,7 +166,7 @@
       "source": "pages/services/app-development.json",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "App development",
@@ -185,7 +185,7 @@
       "source": "pages/services/business-tools.json",
       "type": "service",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Business tools",
@@ -204,7 +204,7 @@
       "source": "pages/guides/website-cost-australia.json",
       "type": "guide",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website costs",
@@ -218,7 +218,7 @@
       "source": "pages/work/token-forest.json",
       "type": "case_study",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Token Forest website",
@@ -232,7 +232,7 @@
       "source": "pages/industries/home-services.json",
       "type": "industry",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Tradies and home services",
@@ -251,7 +251,7 @@
       "source": "pages/industries/beauty.json",
       "type": "industry",
       "status": "live",
-      "content_updated": "2026-10-07",
+      "content_updated": "2026-10-08",
       "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Salons and beauty studios",
@@ -263,6 +263,75 @@
         "name": "Australia"
       },
       "service_type": "Website design for salons and beauty studios"
+    },
+    {
+      "slug": "locations/melbourne",
+      "template": "service_detail",
+      "source": "pages/locations/melbourne.json",
+      "type": "location",
+      "status": "live",
+      "content_updated": "2026-10-08",
+      "date_published": "2026-10-08",
+      "breadcrumb": {
+        "en": "Web design Melbourne",
+        "zh": "墨尔本网站定制"
+      },
+      "parent": "",
+      "area_served": {
+        "@type": "City",
+        "name": "Melbourne",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Victoria"
+        }
+      },
+      "service_type": "Web design"
+    },
+    {
+      "slug": "locations/sydney",
+      "template": "service_detail",
+      "source": "pages/locations/sydney.json",
+      "type": "location",
+      "status": "live",
+      "content_updated": "2026-10-08",
+      "date_published": "2026-10-08",
+      "breadcrumb": {
+        "en": "Web design Sydney",
+        "zh": "悉尼网站定制"
+      },
+      "parent": "",
+      "area_served": {
+        "@type": "City",
+        "name": "Sydney",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "New South Wales"
+        }
+      },
+      "service_type": "Web design"
+    },
+    {
+      "slug": "locations/perth",
+      "template": "service_detail",
+      "source": "pages/locations/perth.json",
+      "type": "location",
+      "status": "live",
+      "content_updated": "2026-10-08",
+      "date_published": "2026-10-08",
+      "breadcrumb": {
+        "en": "Web design Perth",
+        "zh": "珀斯网站定制"
+      },
+      "parent": "",
+      "area_served": {
+        "@type": "City",
+        "name": "Perth",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Western Australia"
+        }
+      },
+      "service_type": "Web design"
     }
   ]
 }

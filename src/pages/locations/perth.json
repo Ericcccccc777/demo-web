@@ -1,0 +1,288 @@
+{
+  "en": {
+    "included_title": "The basic one-page scope",
+    "included": [
+      "One scrollable page with up to six content sections. Agree the sections around the information your customers need before design starts.",
+      "Layouts for phones, tablets and computers, so the same business information remains readable at each screen size.",
+      "Contact options: an enquiry form, or phone, email or WeChat buttons, selected around how you want customers to reach you.",
+      "Basic search settings: a page title, description and sharing image. These explain the page without promising a search position.",
+      "Launch on a domain and hosting account in your name. Account access and handover arrangements are agreed with you.",
+      "One round of revisions within the agreed scope. Bring the requested changes together so the review can address them clearly."
+    ],
+    "not_included_title": "Quoted separately",
+    "not_included": [
+      "Domain registration and hosting fees are separate from the website build.",
+      "Copywriting and photography are not included in the basic scope; agree who prepares the text and images.",
+      "A second language is a separate scope, including the matching pages and their content.",
+      "Booking or payment connections are additional work; third-party platform fees are explained beforehand.",
+      "Long-term maintenance is not part of the basic build and needs an agreed arrangement or separate quote."
+    ],
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "A written scope before a price",
+    "related_title": "Related pages",
+    "cta_button": "Start a project",
+    "title": "Web design Perth for small businesses",
+    "description": "Custom website design in Perth, WA, in English and Chinese. Basic one-page websites for individuals and sole traders from {price_one_page}; meet in Perth or work online.",
+    "eyebrow": "EMVALUE / Perth",
+    "h1": "Web design in Perth: custom websites for small businesses",
+    "answer": "We design and develop custom websites for small businesses in Perth, Western Australia, from a basic one-page site to multi-page websites with quote requests, bookings or a small online shop. Basic one-page websites for individuals and sole traders start from {price_one_page}; larger websites, apps and business tools are quoted in writing. Meet us in Perth or work with us online, in English or Chinese.",
+    "for_title": "Who this is for",
+    "for_items": [
+      "Perth sole traders and tradies who need a clear website for their services, service area and quote requests.",
+      "Clinics, studios and shops that want bookings, enquiries or a small online shop connected to an established service.",
+      "Businesses with English- and Chinese-speaking customers who want both languages kept consistent."
+    ],
+    "sections": [
+      {
+        "id": "meet-in-perth",
+        "title": "Meet in Perth, or work online",
+        "body": [
+          "If you'd prefer to talk face to face, we can arrange a meeting in Perth to discuss your business and the pages you need. Projects can also run entirely online, by email and scheduled video calls. Either way, you talk directly with the people who design and develop your website, in English or Chinese.",
+          "Meetings are arranged in Perth time (AWST). You review layouts and working previews at agreed milestones before launch."
+        ]
+      },
+      {
+        "id": "service-areas-and-quotes",
+        "title": "Service areas and quote requests",
+        "body": [
+          "For tradies and home-service businesses, a useful website states the jobs you take, the suburbs you actually serve and how a customer can request a quote, with a click-to-call button for people on their phones.",
+          "A quote form or online calculator is scoped separately and built around your real pricing rules. Licence and insurance details appear only when you hold them and confirm the wording."
+        ]
+      },
+      {
+        "id": "bookings-and-shops",
+        "title": "Bookings, online shops and ecommerce",
+        "body": [
+          "Clinics and studios can link to an established booking service, and small retailers can connect a hosted ecommerce platform or checkout for a small online shop. We assess the service you use or prefer before recommending a connection.",
+          "Setup work, subscriptions and payment-related fees are explained before you decide, and they are kept separate from the website build."
+        ]
+      }
+    ],
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Extra pages, languages, content preparation and connections change the work involved; we explain deliverables, payment stages and ongoing costs before you commit.",
+    "demos_title": "Concepts set in Perth",
+    "demos": [
+      {
+        "id": "023",
+        "shows": "A concept we designed for a fictional removalist set in Perth: visitors pack a truck to size their move before asking for a quote."
+      },
+      {
+        "id": "031",
+        "shows": "A concept we designed for a fictional landscape designer set in Fremantle: the garden switches between seasons to show the work."
+      },
+      {
+        "id": "057",
+        "shows": "A concept we designed for a fictional skin clinic set in Subiaco: visitors scroll through skin layers and build a care routine."
+      }
+    ],
+    "cities_title": "Also working across Australia",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions from Perth businesses",
+    "faq": [
+      {
+        "q": "How much does a website cost in Perth?",
+        "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Multi-page websites, quote tools, bookings, online shops and a second language are quoted in writing once we understand the scope."
+      },
+      {
+        "q": "Can we meet in person in Perth?",
+        "a": "Yes. If you'd prefer to meet face to face, we can arrange it in Perth. Project discussions and reviews can also take place online."
+      },
+      {
+        "q": "Can you build a website with quote requests for my trade business?",
+        "a": "Yes. We can include a quote form, and assess an online calculator against your actual pricing rules. The calculation, wording and development work are confirmed in the written scope."
+      },
+      {
+        "q": "Can you connect an online shop or booking system?",
+        "a": "We can connect an established online shop, checkout or booking service. We assess the platform and access first, and explain setup work and platform fees before you decide."
+      },
+      {
+        "q": "Do you offer Xiaohongshu promotion in Perth?",
+        "a": "Our Xiaohongshu creator campaigns currently focus on Melbourne. For Perth businesses we design and build the website and its English and Chinese content."
+      },
+      {
+        "q": "How long does a website take?",
+        "a": "Timing depends on the pages, features and content readiness; milestones are set out in the written proposal."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "industries/home-services",
+        "label": "Tradie websites"
+      },
+      {
+        "slug": "services/business-tools",
+        "label": "Quote tools and business tools"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website costs"
+      }
+    ],
+    "cta_title": "Tell us about your Perth business",
+    "cta_body": "Share your business, the pages you need and whether you'd like to meet in Perth or work online. We'll clarify the scope and prepare a written proposal."
+  },
+  "zh": {
+    "included_title": "基础单页网站包含",
+    "included": [
+      "1 个可滚动页面，最多 6 个内容区块。设计前先确认顾客需要了解什么，再确定区块安排。",
+      "手机、平板、电脑适配，让不同屏幕上的生意信息都能清楚阅读。",
+      "联系方式：咨询表单，或电话、邮件、微信按钮，按你希望接收咨询的方式选择。",
+      "基础搜索设置：标题、描述、分享图。帮助说明页面内容，不承诺搜索位置。",
+      "上线到你名下的域名和主机账号，提前确认访问权限与交接安排。",
+      "约定范围内的 1 轮修改。把意见集中整理，便于一轮内清楚处理。"
+    ],
+    "not_included_title": "以下内容另行报价",
+    "not_included": [
+      "域名和主机费用，与网站制作费用分开。",
+      "文案撰写、拍摄不在基础范围内，提前确认文字与照片由谁准备。",
+      "第二种语言另行确定范围，包括对应页面及内容。",
+      "预约或支付接入属于额外工作，第三方平台费用事先说明。",
+      "长期维护不在基础制作范围内，按约定安排或单独报价。"
+    ],
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "先明确范围，再确认费用",
+    "related_title": "相关页面",
+    "cta_button": "开始项目",
+    "title": "珀斯网站定制：网站设计、制作与开发",
+    "description": "珀斯网站定制、网站设计与制作：为珀斯小生意做网站，中英文直接沟通。个人和单人经营者的基础单页网站 {price_one_page} 起，可在珀斯当面沟通，也可线上合作。",
+    "eyebrow": "EMVALUE / 珀斯",
+    "h1": "珀斯网站定制：为小生意设计和制作网站",
+    "answer": "我们为西澳珀斯的小生意定制网站，从基础单页网站，到带询价、预约或小网店的多页网站，都可以设计、制作和开发。个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价。可以在珀斯当面聊，也可以全程线上合作，中英文直接沟通。",
+    "for_title": "适合谁",
+    "for_items": [
+      "需要清楚写明服务、服务区域和询价方式的珀斯个体经营者与技工。",
+      "希望接入预约、咨询或小网店的诊所、工作室和小店。",
+      "同时服务英文和中文顾客，希望两种语言信息保持一致的商家。"
+    ],
+    "sections": [
+      {
+        "id": "meet-in-perth",
+        "title": "珀斯网站设计与制作：当面聊，或全程线上",
+        "body": [
+          "如果你更习惯当面沟通，我们可以在珀斯约时间见面，聊你的生意和需要的页面。项目也可以全程线上进行，通过邮件和约定的视频会议推进。无论哪种方式，你都直接和设计、开发网站的人沟通，中英文都可以。",
+          "会议按珀斯时间（AWST）安排。上线前按约定节点确认设计稿和可操作预览。"
+        ]
+      },
+      {
+        "id": "service-areas-and-quotes",
+        "title": "服务区域与询价",
+        "body": [
+          "对技工和上门服务类生意来说，实用的网站要写清承接哪些工作、真正服务哪些区域、顾客怎么询价，并为用手机的顾客提供一键拨打。",
+          "询价表单或在线计算器另行确定范围，按你的真实计价规则制作。牌照和保险信息只在你真实持有并确认措辞后展示。"
+        ]
+      },
+      {
+        "id": "bookings-and-shops",
+        "title": "预约、网店与电商接入",
+        "body": [
+          "诊所和工作室可以链接成熟的预约服务，小店可以接入托管的电商平台或结账服务，开一个小网店。推荐接入方式前，先评估你正在用或想用的服务。",
+          "设置工作、订阅和支付相关费用在决定前说明，并与网站制作费用分开。"
+        ]
+      }
+    ],
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。增加页面、语言、内容准备或系统接入会改变工作量，决定前说明交付内容、付款节点与后续费用。",
+    "demos_title": "以珀斯为背景的概念设计",
+    "demos": [
+      {
+        "id": "023",
+        "shows": "我们为一家虚构的珀斯搬家公司做的概念设计：装满卡车估算搬家规模，再提出询价。"
+      },
+      {
+        "id": "031",
+        "shows": "我们为一家虚构的 Fremantle 园林景观设计公司做的概念设计：切换花园四季来展示作品。"
+      },
+      {
+        "id": "057",
+        "shows": "我们为一家虚构的 Subiaco 皮肤管理诊所做的概念设计：向下滚动穿过皮肤层，生成护肤流程。"
+      }
+    ],
+    "cities_title": "也服务全澳其他城市",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "珀斯商家常问的问题",
+    "faq": [
+      {
+        "q": "在珀斯做网站要多少钱？",
+        "a": "个人和单人经营者的基础单页网站 {price_one_page} 起。多页网站、报价工具、预约、网店和第二种语言，了解范围后书面报价。"
+      },
+      {
+        "q": "可以在珀斯当面聊吗？",
+        "a": "可以。如需当面沟通，可以在珀斯安排；项目讨论和确认也可以线上进行。"
+      },
+      {
+        "q": "技工生意能做带询价的网站吗？",
+        "a": "可以。可以加入询价表单，也可以按你的真实计价规则评估在线计算器；计算方式、结果措辞和开发工作在书面范围中确认。"
+      },
+      {
+        "q": "能接入网店或预约系统吗？",
+        "a": "可以接入成熟的网店、结账或预约服务。先评估平台和权限，再说明设置工作与平台费用，方便你决定。"
+      },
+      {
+        "q": "在珀斯能做小红书推广吗？",
+        "a": "我们的小红书博主推广目前聚焦墨尔本。珀斯商家可以找我们设计和开发网站，以及中英文内容。"
+      },
+      {
+        "q": "珀斯网站制作需要多久？",
+        "a": "时间取决于页面、功能和内容准备情况，书面方案里会写明节点。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "industries/home-services",
+        "label": "技工与上门服务网站"
+      },
+      {
+        "slug": "services/business-tools",
+        "label": "报价工具与业务工具"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_title": "说说你在珀斯的生意",
+    "cta_body": "介绍你的生意、需要的页面，以及希望在珀斯当面聊还是线上合作。我们确认范围后准备书面方案。"
+  }
+}

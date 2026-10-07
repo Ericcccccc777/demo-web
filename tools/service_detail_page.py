@@ -5,11 +5,14 @@ from seo import LANGS, head_links, json_ld, robots_meta
 
 
 def render_service_detail(lang, studio, c, page, entry, asset_v, header, footer, site_url, vals):
-    def e(value):
+    def fill(value):
         text = str(value)
         for key, replacement in vals.items():
             text = text.replace("{" + key + "}", str(replacement))
-        return html.escape(text, quote=True)
+        return text
+
+    def e(value):
+        return html.escape(fill(value), quote=True)
 
     zh = lang == "zh"
     slug = entry["slug"]
@@ -63,7 +66,7 @@ def render_service_detail(lang, studio, c, page, entry, asset_v, header, footer,
 <meta name="theme-color" content="#F3EFE7"><meta name="color-scheme" content="light">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(page['description'])}">
 {head_links(site_url, slug, lang, live=live)}
-{json_ld(studio, slug, lang, registry, page['title'], page['description'], live=live)}
+{json_ld(studio, slug, lang, registry, fill(page['title']), fill(page['description']), live=live)}
 <link rel="icon" href="{prefix}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}&display=swap"><link rel="stylesheet" href="{prefix}assets/hub.css?v={asset_v['css']}">

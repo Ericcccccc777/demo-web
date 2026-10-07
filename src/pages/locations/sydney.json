@@ -1,0 +1,288 @@
+{
+  "en": {
+    "included_title": "The basic one-page scope",
+    "included": [
+      "One scrollable page with up to six content sections. Agree the sections around the information your customers need before design starts.",
+      "Layouts for phones, tablets and computers, so the same business information remains readable at each screen size.",
+      "Contact options: an enquiry form, or phone, email or WeChat buttons, selected around how you want customers to reach you.",
+      "Basic search settings: a page title, description and sharing image. These explain the page without promising a search position.",
+      "Launch on a domain and hosting account in your name. Account access and handover arrangements are agreed with you.",
+      "One round of revisions within the agreed scope. Bring the requested changes together so the review can address them clearly."
+    ],
+    "not_included_title": "Quoted separately",
+    "not_included": [
+      "Domain registration and hosting fees are separate from the website build.",
+      "Copywriting and photography are not included in the basic scope; agree who prepares the text and images.",
+      "A second language is a separate scope, including the matching pages and their content.",
+      "Booking or payment connections are additional work; third-party platform fees are explained beforehand.",
+      "Long-term maintenance is not part of the basic build and needs an agreed arrangement or separate quote."
+    ],
+    "process_title": "How we work",
+    "process": [
+      {
+        "title": "Understand the job",
+        "body": "We discuss your business, audience, existing tools, budget and the problem you want to solve."
+      },
+      {
+        "title": "Agree the scope",
+        "body": "You receive a written proposal covering the work, deliverables, schedule, costs and payment stages."
+      },
+      {
+        "title": "Design, build, review",
+        "body": "Review layouts and working previews at agreed milestones. We confirm any change in scope before proceeding."
+      },
+      {
+        "title": "Launch & hand over",
+        "body": "We check the agreed flows, help you launch and hand over accounts and guidance. Ongoing support is agreed with you."
+      }
+    ],
+    "pricing_title": "A written scope before a price",
+    "related_title": "Related pages",
+    "cta_button": "Start a project",
+    "title": "Web design Sydney for small businesses",
+    "description": "Custom website design in Sydney, in English and Chinese. Basic one-page websites for individuals and sole traders from {price_one_page}; meet in Sydney or work online.",
+    "eyebrow": "EMVALUE / Sydney",
+    "h1": "Web design in Sydney: custom websites for small businesses",
+    "answer": "We design and develop custom websites for Sydney small businesses, from a basic one-page site to multi-page websites with bookings, menus or ordering. Basic one-page websites for individuals and sole traders start from {price_one_page}; larger websites, apps and business tools are quoted in writing. Meet us in Sydney or work with us online, in English or Chinese.",
+    "for_title": "Who this is for",
+    "for_items": [
+      "Sydney sole traders and small businesses that need a website explaining their services, prices and how to book or enquire.",
+      "Restaurants, schools, clinics and service businesses whose customers need the same information in English and Chinese.",
+      "Owners who want to start with a basic one-page website and add pages, bookings or a second language later."
+    ],
+    "sections": [
+      {
+        "id": "meet-in-sydney",
+        "title": "Meet in Sydney, or work online",
+        "body": [
+          "If you'd prefer to talk face to face, we can arrange a meeting in Sydney to go through your business, your customers and the pages you need. Projects can also run entirely online, by email and scheduled video calls. Either way, you talk directly with the people who design and develop your website, in English or Chinese.",
+          "Meetings are arranged in Sydney time, and you review layouts and working previews at agreed milestones before launch."
+        ]
+      },
+      {
+        "id": "bilingual-sydney",
+        "title": "Bilingual menus, bookings and enquiries",
+        "body": [
+          "For restaurants, tutoring schools and clinics, customers often need the same practical information in English and Chinese: menus, prices, lesson or appointment times, and how to book. We organise that information so both audiences can act on it.",
+          "Booking or ordering connections use an established service you choose. Setup work and platform fees are explained before you decide."
+        ]
+      },
+      {
+        "id": "grow-in-stages",
+        "title": "Start with one page, then grow",
+        "body": [
+          "A basic one-page website can be a sensible first step: one scrollable page with up to six sections that explains what you do and how to reach you.",
+          "When you need more, we scope additional pages, a second language or a booking connection as separate work, so you only add what your business uses."
+        ]
+      }
+    ],
+    "pricing_body": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. Extra pages, languages, content preparation and connections change the work involved; we explain deliverables, payment stages and ongoing costs before you commit.",
+    "demos_title": "Concepts set in Sydney",
+    "demos": [
+      {
+        "id": "002",
+        "shows": "A concept we designed for a fictional yum cha restaurant set in Chatswood: bilingual menus, and steamer baskets that stack as visitors order."
+      },
+      {
+        "id": "019",
+        "shows": "A concept we designed for a fictional driving school set in Burwood: bilingual pages and a lesson-slot booking interaction."
+      },
+      {
+        "id": "054",
+        "shows": "A concept we designed for a fictional nail salon set in Chatswood: visitors design a set nail by nail."
+      }
+    ],
+    "cities_title": "Also working across Australia",
+    "cities_body": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth.",
+    "faq_title": "Questions from Sydney businesses",
+    "faq": [
+      {
+        "q": "How much does a website cost in Sydney?",
+        "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Multi-page websites, bilingual pages, bookings and other connections are quoted in writing once we understand the scope."
+      },
+      {
+        "q": "Can we meet in person in Sydney?",
+        "a": "Yes. If you'd prefer to meet face to face, we can arrange it in Sydney. Project discussions and reviews can also take place online."
+      },
+      {
+        "q": "Do you build bilingual websites for Sydney businesses?",
+        "a": "Yes. We write English and Chinese for their readers and keep menus, prices and booking details consistent. A second language is scoped separately from the basic one-page price."
+      },
+      {
+        "q": "Do you offer Xiaohongshu promotion in Sydney?",
+        "a": "Our Xiaohongshu creator campaigns currently focus on Melbourne. For Sydney businesses we design and build the website and its English and Chinese content."
+      },
+      {
+        "q": "What should I prepare for a new website?",
+        "a": "Prepare your business name, services, service area, contact details, text and images, and tell us what is missing. We agree who prepares each item before the build starts."
+      },
+      {
+        "q": "How long does a website take?",
+        "a": "Timing depends on the pages, features and content readiness; milestones are set out in the written proposal."
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "Bilingual websites"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "Beauty websites"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website costs"
+      }
+    ],
+    "cta_title": "Tell us about your Sydney business",
+    "cta_body": "Share your business, the pages you need and whether you'd like to meet in Sydney or work online. We'll clarify the scope and prepare a written proposal."
+  },
+  "zh": {
+    "included_title": "基础单页网站包含",
+    "included": [
+      "1 个可滚动页面，最多 6 个内容区块。设计前先确认顾客需要了解什么，再确定区块安排。",
+      "手机、平板、电脑适配，让不同屏幕上的生意信息都能清楚阅读。",
+      "联系方式：咨询表单，或电话、邮件、微信按钮，按你希望接收咨询的方式选择。",
+      "基础搜索设置：标题、描述、分享图。帮助说明页面内容，不承诺搜索位置。",
+      "上线到你名下的域名和主机账号，提前确认访问权限与交接安排。",
+      "约定范围内的 1 轮修改。把意见集中整理，便于一轮内清楚处理。"
+    ],
+    "not_included_title": "以下内容另行报价",
+    "not_included": [
+      "域名和主机费用，与网站制作费用分开。",
+      "文案撰写、拍摄不在基础范围内，提前确认文字与照片由谁准备。",
+      "第二种语言另行确定范围，包括对应页面及内容。",
+      "预约或支付接入属于额外工作，第三方平台费用事先说明。",
+      "长期维护不在基础制作范围内，按约定安排或单独报价。"
+    ],
+    "process_title": "合作流程",
+    "process": [
+      {
+        "title": "了解需求",
+        "body": "聊清楚你的生意、顾客、现有工具、预算，以及这次希望解决的问题。"
+      },
+      {
+        "title": "确认方案与报价",
+        "body": "提供书面方案，说明工作范围、交付内容、时间安排、费用与付款节点。"
+      },
+      {
+        "title": "设计、开发与确认",
+        "body": "按约定节点查看设计和可操作预览。范围有变化时，先和你确认再继续。"
+      },
+      {
+        "title": "上线与交接",
+        "body": "检查约定功能、协助上线，交接账户与使用说明，再按需要安排后续支持。"
+      }
+    ],
+    "pricing_title": "先明确范围，再确认费用",
+    "related_title": "相关页面",
+    "cta_button": "开始项目",
+    "title": "悉尼网站定制：网站设计、制作与开发",
+    "description": "悉尼网站定制、网站设计与制作：为悉尼小生意做网站，中英文直接沟通。个人和单人经营者的基础单页网站 {price_one_page} 起，可在悉尼当面沟通，也可线上合作。",
+    "eyebrow": "EMVALUE / 悉尼",
+    "h1": "悉尼网站定制：为小生意设计和开发网站",
+    "answer": "我们为悉尼的小生意定制网站，从基础单页网站，到带预约、菜单或点单的多页网站，都可以设计、制作和开发。个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价。可以在悉尼当面聊，也可以全程线上合作，中英文直接沟通。",
+    "for_title": "适合谁",
+    "for_items": [
+      "需要清楚介绍服务、价目，以及如何预约或咨询的悉尼个体经营者和小生意。",
+      "顾客需要用英文和中文看到同样信息的餐厅、学校、诊所和服务类商家。",
+      "想先做一个基础单页网站，之后再加页面、预约或第二种语言的商家。"
+    ],
+    "sections": [
+      {
+        "id": "meet-in-sydney",
+        "title": "悉尼网站设计与开发：当面聊，或全程线上",
+        "body": [
+          "如果你更习惯当面沟通，我们可以在悉尼约时间见面，梳理你的生意、顾客和需要的页面。项目也可以全程线上进行，通过邮件和约定的视频会议推进。无论哪种方式，你都直接和设计、开发网站的人沟通，中英文都可以。",
+          "会议按悉尼时间安排，上线前按约定节点确认设计稿和可操作预览。"
+        ]
+      },
+      {
+        "id": "bilingual-sydney",
+        "title": "双语菜单、预约与咨询",
+        "body": [
+          "对餐厅、补习学校和诊所来说，顾客常常需要用英文和中文看到同样的实用信息：菜单、价目、上课或预约时间，以及怎么预约。我们把这些信息整理清楚，让两种语言的顾客都能直接行动。",
+          "预约或点单接入使用你选择的成熟服务，设置工作与平台费用在决定前说明。"
+        ]
+      },
+      {
+        "id": "grow-in-stages",
+        "title": "先做一页，再逐步扩展",
+        "body": [
+          "基础单页网站可以是合理的第一步：1 个可滚动页面，最多 6 个内容区块，说明你做什么、怎么联系你。",
+          "需要更多时，再把新增页面、第二种语言或预约接入作为单独工作确定范围，只加生意真正用得上的部分。"
+        ]
+      }
+    ],
+    "pricing_body": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。增加页面、语言、内容准备或系统接入会改变工作量，决定前说明交付内容、付款节点与后续费用。",
+    "demos_title": "以悉尼为背景的概念设计",
+    "demos": [
+      {
+        "id": "002",
+        "shows": "我们为一家虚构的 Chatswood 港式早茶餐厅做的概念设计：双语菜单，点单时蒸笼逐层叠起。"
+      },
+      {
+        "id": "019",
+        "shows": "我们为一家虚构的 Burwood 驾校做的概念设计：双语页面与选课时段的预约交互。"
+      },
+      {
+        "id": "054",
+        "shows": "我们为一家虚构的 Chatswood 美甲店做的概念设计：一只一只设计你的美甲。"
+      }
+    ],
+    "cities_title": "也服务全澳其他城市",
+    "cities_body": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。",
+    "faq_title": "悉尼商家常问的问题",
+    "faq": [
+      {
+        "q": "在悉尼做网站要多少钱？",
+        "a": "个人和单人经营者的基础单页网站 {price_one_page} 起。多页网站、双语页面、预约和其他接入，了解范围后书面报价。"
+      },
+      {
+        "q": "可以在悉尼当面聊吗？",
+        "a": "可以。如需当面沟通，可以在悉尼安排；项目讨论和确认也可以线上进行。"
+      },
+      {
+        "q": "能为悉尼商家做中英文网站吗？",
+        "a": "可以。英文和中文分别为读者撰写，菜单、价目和预约信息保持一致。第二种语言与基础单页起步价分开确定范围。"
+      },
+      {
+        "q": "在悉尼能做小红书推广吗？",
+        "a": "我们的小红书博主推广目前聚焦墨尔本。悉尼商家可以找我们设计和开发网站，以及中英文内容。"
+      },
+      {
+        "q": "悉尼建站需要准备什么？",
+        "a": "准备生意名称、服务、服务区域、联系方式、文字和图片，缺少的部分先告诉我们。开工前确认每项资料由谁准备。"
+      },
+      {
+        "q": "悉尼网站开发需要多久？",
+        "a": "时间取决于页面、功能和内容准备情况，书面方案里会写明节点。"
+      }
+    ],
+    "related": [
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "美业工作室网站"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
+      }
+    ],
+    "cta_title": "说说你在悉尼的生意",
+    "cta_body": "介绍你的生意、需要的页面，以及希望在悉尼当面聊还是线上合作。我们确认范围后准备书面方案。"
+  }
+}

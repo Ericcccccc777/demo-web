@@ -185,7 +185,7 @@ def check_structure(values, slug, label, registry, report):
             isinstance(item, dict) and item.get("@type") == "ListItem" and
             type(item.get("position")) is int and item["position"] == position
             for position, item in enumerate(items, 1)), f"{label}: breadcrumb positions must start at 1 and be continuous")
-    if registry.get(slug, {}).get("type") in {"service", "industry"}:
+    if registry.get(slug, {}).get("type") in {"service", "industry", "location"}:
         report.check("F9S", len(grouped["Service"]) == 1, f"{label}: registered service needs one Service")
     for service in grouped["Service"]:
         provider = service.get("provider")
