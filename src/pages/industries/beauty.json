@@ -57,13 +57,13 @@
     "included": [
       "An agreed structure for service descriptions, price lists and the work images you provide.",
       "Assessment of your current booking tool and an explanation of connection scope and platform fees.",
-      "Location, opening hours, contact details and your real Instagram and Xiaohongshu profile links.",
+      "Location, opening hours, contact details and your real Instagram and Xiaohongshu (RedNote) profile links.",
       "A written decision on language versions and how you will maintain prices after handover."
     ],
     "not_included": [
-      "Photography, new copy and a second language automatically included in a basic one-page price.",
+      "Basic one-page pricing does not automatically include photography, new copy or a second language.",
       "Third-party booking subscriptions or ongoing updates unless agreed in the scope.",
-      "Invented customer images, social accounts, prices or booking availability."
+      "We do not invent customer images, social accounts, prices or booking availability."
     ],
     "sections": [
       {
@@ -86,7 +86,7 @@
         "id": "visit-and-social",
         "title": "Bring location and social profiles together",
         "body": [
-          "Provide the location and hours you actually use, and explain how customers should contact you before visiting. We can include your real Instagram and Xiaohongshu (RedNote) profile links so visitors can move between the website and your own work updates. Confirm the account addresses and information before publication; the website should not invent an address or social presence."
+          "Provide the location and hours you actually use, and explain how customers should contact you before visiting. We can include your real Instagram and Xiaohongshu profile links so visitors can move between the website and your own work updates. Confirm the account addresses and information before publication; the website should not invent an address or social presence."
         ]
       }
     ],
