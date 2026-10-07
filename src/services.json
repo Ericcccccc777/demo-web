@@ -137,7 +137,7 @@
     "pricing": {
       "eyebrow": "Our approach to pricing",
       "title": "Fair pricing. Clearly scoped.",
-      "intro": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. We shape the proposal around what your business actually needs and what you are comfortable investing. Every project is quoted individually, with the costs explained before you commit.",
+      "intro": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. We shape each proposal around what your business actually needs and what you are comfortable investing.",
       "items": [
         {
           "title": "A written quote before work starts",
@@ -183,7 +183,7 @@
         },
         {
           "q": "Can we work together from another city or country?",
-          "a": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth. Website and app projects can be delivered remotely in English and Chinese. We confirm working hours, currency, payment stages and delivery arrangements for overseas projects. Xiaohongshu creator campaigns currently focus on Melbourne businesses."
+          "a": "We work online with businesses across Australia and overseas. If you'd prefer to meet in person, we can arrange it in Sydney, Melbourne or Perth. We communicate in English and Chinese, and for overseas projects we confirm working hours, currency, payment stages and delivery arrangements. Xiaohongshu creator campaigns currently focus on Melbourne businesses."
         }
       ]
     },
@@ -331,7 +331,7 @@
     "pricing": {
       "eyebrow": "关于费用",
       "title": "认真做事，实在报价。",
-      "intro": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。结合实际需求和预算制定方案，每个项目单独报价。先明确范围，再说明费用，让你在决定之前了解交付内容与后续成本。",
+      "intro": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。我们结合实际需求和预算制定方案，先明确范围，再说明费用。",
       "items": [
         {
           "title": "开工前，先有书面报价",
@@ -377,7 +377,7 @@
         },
         {
           "q": "不在同一个城市，或人在海外，可以合作吗？",
-          "a": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。网站与应用项目可以远程合作，支持中文与英文沟通。海外项目会确认沟通时段、结算币种、付款节点与交付安排；小红书博主推广目前聚焦墨尔本本地业务。"
+          "a": "我们以线上合作为主，服务全澳及海外客户；如需当面沟通，可在悉尼、墨尔本、珀斯安排。支持中文与英文沟通；海外项目会确认沟通时段、结算币种、付款节点与交付安排。小红书博主推广目前聚焦墨尔本本地业务。"
         }
       ]
     },

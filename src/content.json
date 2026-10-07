@@ -246,7 +246,7 @@
         },
         {
           "q": "How much does a website cost?",
-          "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation, before any work starts. We explain the deliverables, payment stages and ongoing costs in writing before work starts."
+          "a": "Basic one-page websites for individuals and sole traders start from {price_one_page}. Larger websites, apps and business tools are quoted in writing after a short conversation. Before any work starts, we explain the deliverables, payment stages and ongoing costs."
         },
         {
           "q": "Do I need to know anything technical?",
@@ -697,7 +697,7 @@
         },
         {
           "q": "做一个网站要多少钱？",
-          "a": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价，确认后再开工。开工前书面说明交付内容、付款节点与后续费用；新增需求先确认，再开展额外工作。"
+          "a": "个人和单人经营者的基础单页网站 {price_one_page} 起；多页网站、App 与业务工具，沟通后书面报价。开工前说明交付内容、付款节点与后续费用；新增需求先确认，再开展额外工作。"
         },
         {
           "q": "我需要懂技术吗？",
