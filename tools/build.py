@@ -21,7 +21,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
 from services_page import render_services
 from editorial_page import render_editorial
-from seo import LANGS, head_links, other_lang, robots_meta
+from seo import LANGS, head_links, other_lang, page_path, robots_meta
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -52,6 +52,69 @@ def esc(value):
 
 def load(name):
     return json.loads((SRC / name).read_text(encoding="utf-8"))
+
+
+def load_registry():
+    """Validate all registry entries and their bilingual content before writing files."""
+    registry, contents = {}, {}
+    for page in load("site_pages.json")["pages"]:
+        slug = page.get("slug")
+        if not isinstance(slug, str) or (slug and not re.fullmatch(r"[a-z0-9]+(?:[-/][a-z0-9]+)*", slug)):
+            raise ValueError(f"Invalid page slug: {slug!r}")
+        if slug in {"demos", "zh"} or slug.startswith(("demos/", "zh/")):
+            raise ValueError(f"Reserved page slug: {slug}")
+        if slug in registry:
+            raise ValueError(f"Duplicate page slug: {slug}")
+        if page.get("status") not in {"live", "draft"}:
+            raise ValueError(f"Invalid page status: {slug}")
+        if page.get("template") not in {"home", "services_hub", "service_detail", "editorial"}:
+            raise ValueError(f"Invalid page template: {slug}")
+        if page.get("type") not in {"home", "services_hub", "service", "industry", "guide", "case_study", "about", "legal"}:
+            raise ValueError(f"Invalid page type: {slug}")
+        for key in ("content_updated", "date_published"):
+            value = page.get(key)
+            if page["status"] == "live" and not value:
+                raise ValueError(f"Live page {slug!r} is missing {key}")
+            if value:
+                if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+                    raise ValueError(f"Invalid {key} for {slug!r}")
+                date.fromisoformat(value)
+        source = "content.json" if slug == "" else page.get("source")
+        if not isinstance(source, str) or not source:
+            raise ValueError(f"Missing source for {slug!r}")
+        filename, separator, key = source.partition("#")
+        source_path = (SRC / filename).resolve()
+        if SRC.resolve() not in source_path.parents or not source_path.is_file():
+            raise ValueError(f"Source does not exist in src/: {source}")
+        data = json.loads(source_path.read_text(encoding="utf-8"))
+        localized = {}
+        for lang in LANGS:
+            if lang not in data or not isinstance(data[lang], dict):
+                raise ValueError(f"Missing language {lang} in {source}")
+            if separator and key not in data[lang]:
+                raise ValueError(f"Missing key {key!r} for {lang} in {source}")
+            localized[lang] = data[lang][key] if separator else data[lang]
+            if not isinstance(localized[lang], dict):
+                raise ValueError(f"Invalid content for {lang} in {source}")
+            if not page.get("breadcrumb", {}).get(lang):
+                raise ValueError(f"Missing breadcrumb for {lang} on {slug!r}")
+        registry[slug] = page
+        contents[slug] = localized
+    if "" not in registry or registry[""]["template"] != "home":
+        raise ValueError("Registry must contain the homepage")
+    for slug, page in registry.items():
+        parent = page.get("parent")
+        if parent not in registry:
+            raise ValueError(f"Unknown parent {parent!r} for {slug!r}")
+        seen = {slug}
+        while parent:
+            if parent in seen:
+                raise ValueError(f"Cyclic parent chain for {slug!r}")
+            seen.add(parent)
+            parent = registry[parent].get("parent")
+            if parent not in registry:
+                raise ValueError(f"Unknown parent {parent!r}")
+    return registry, contents
 
 
 def fill(text, **values):
@@ -319,7 +382,7 @@ def industry_chips(c, industries, ind_counts, count):
     return "".join(chips)
 
 
-def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
+def render(lang, studio, content, demos, scans, stats, sprite, asset_v, live=True):
     c = content[lang]
     header, footer = page_chrome(lang, studio, c, is_home=True)
     p = "" if lang == "en" else "../"
@@ -327,8 +390,8 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v):
     count = stats["count"]
     vals = dict(name=name, count=count, industries=stats["industries"], typefaces=stats["typefaces"], avg_kb=stats["avg_kb"])
     site_url = (studio.get("site_url") or "").rstrip("/")
-    head_extra = head_links(site_url, "", lang)
-    robots = robots_meta(site_url)
+    head_extra = head_links(site_url, "", lang, live=live)
+    robots = robots_meta(site_url, live=live)
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
@@ -808,9 +871,7 @@ def main(argv=None):
         if parsed.scheme != "https" or not parsed.hostname or parsed.query or parsed.fragment or parsed.username:
             raise ValueError("EMVALUE_SITE_URL must be a public https:// site URL, without credentials, query or fragment")
     content = load("content.json")
-    services_content = load("services.json")
-    promotion_content = load("promotion.json")
-    pages = load("pages.json")
+    registry, page_contents = load_registry()
     CONTENT.update(content)
     catalogue = load("demos.json")
     scans = {d["id"]: scan_demo(d) for d in catalogue}
@@ -838,50 +899,45 @@ def main(argv=None):
 
     asset_v = {"css": asset_hash(SITE / "assets" / "hub.css"), "js": asset_hash(SITE / "assets" / "hub.js"),
                "favicon": asset_hash(SITE / "favicon.svg"), "enquiry": asset_hash(SITE / "assets" / "enquiry.js")}
-    (SITE / "zh").mkdir(exist_ok=True)
-    (SITE / "index.html").write_text(render("en", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
-    (SITE / "zh" / "index.html").write_text(render("zh", studio, content, demos, scans, stats, sprite, asset_v), encoding="utf-8")
-
-    service_pages = {"services": services_content, "services/xiaohongshu": promotion_content}
-    service_paths = []
-    for slug, page_content in service_pages.items():
-        for lang in ("en", "zh"):
-            target = SITE / ("zh/" if lang == "zh" else "") / slug
+    built_paths = []
+    for slug, record in registry.items():
+        live = record["status"] == "live"
+        for lang in LANGS:
+            target = SITE / page_path(slug, lang).lstrip("/")
             target.mkdir(parents=True, exist_ok=True)
-            header, footer = page_chrome(lang, studio, content[lang], services_page=True,
-                                         page_slug=slug if slug != "services" else "")
-            (target / "index.html").write_text(
-                render_services(lang, studio, content[lang], page_content[lang], asset_v, header, footer, slug), encoding="utf-8")
-            service_paths.append(str((target / "index.html").relative_to(ROOT)))
-
-    editorial_paths = []
-    for lang in ("en", "zh"):
-        for slug, page in pages[lang].items():
-            target = SITE / ("zh/" if lang == "zh" else "") / slug
-            target.mkdir(parents=True, exist_ok=True)
-            header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
-            (target / "index.html").write_text(render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer), encoding="utf-8")
-            editorial_paths.append(str((target / "index.html").relative_to(ROOT)))
+            page = page_contents[slug][lang]
+            if record["template"] == "home":
+                markup = render(lang, studio, content, demos, scans, stats, sprite, asset_v, live=live)
+            elif record["template"] == "services_hub":
+                header, footer = page_chrome(lang, studio, content[lang], services_page=True, page_slug=slug)
+                markup = render_services(lang, studio, content[lang], page, asset_v, header, footer, slug, live=live)
+            elif record["template"] == "editorial":
+                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
+                markup = render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer, live=live)
+            else:
+                raise ValueError(f"Template not implemented yet: {record['template']}")
+            (target / "index.html").write_text(markup, encoding="utf-8")
+            built_paths.append(str((target / "index.html").relative_to(ROOT)))
 
     (SITE / "404.html").write_text(render_404(studio, asset_v), encoding="utf-8")
     site_url = (studio.get("site_url") or "").rstrip("/")
     if site_url:
         (SITE / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {site_url}/sitemap.xml\n")
-        today = date.today().isoformat()
         (SITE / "sitemap.xml").write_text(
             '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "".join(
-                f'  <url><loc>{site_url}{path}</loc><lastmod>{today}</lastmod>'
-                f'<xhtml:link rel="alternate" hreflang="{LANGS["en"]["hreflang"]}" href="{site_url}{en_path}"/>'
-                f'<xhtml:link rel="alternate" hreflang="{LANGS["zh"]["hreflang"]}" href="{site_url}{zh_path}"/></url>\n'
-                for en_path, zh_path in [("/", "/zh/")] + [(f"/{slug}/", f"/zh/{slug}/") for slug in list(service_pages) + list(pages["en"])]
-                for path in (en_path, zh_path)) + "</urlset>\n")
+                f'  <url><loc>{esc(site_url + page_path(slug, lang))}</loc><lastmod>{record["content_updated"]}</lastmod>'
+                + "".join(f'<xhtml:link rel="alternate" hreflang="{config["hreflang"]}" href="{esc(site_url + page_path(slug, key))}"/>'
+                          for key, config in LANGS.items())
+                + f'<xhtml:link rel="alternate" hreflang="x-default" href="{esc(site_url + page_path(slug, "en"))}"/></url>\n'
+                for slug, record in sorted(registry.items()) if record["status"] == "live"
+                for lang in LANGS) + "</urlset>\n")
     else:
         (SITE / "robots.txt").write_text("# Preview build: no production domain configured in src/studio.json yet.\nUser-agent: *\nDisallow: /\n")
         if (SITE / "sitemap.xml").exists():
             (SITE / "sitemap.xml").unlink()
 
-    report = {"built": ["site/index.html", "site/zh/index.html", "site/robots.txt"] + service_paths + editorial_paths, "stats": stats,
+    report = {"built": built_paths + ["site/robots.txt"], "stats": stats,
               "typeface_list": typefaces, "missing_demos": missing,
               "problems": {i: s["problems"] for i, s in scans.items() if s["exists"] and s["problems"]},
               "warnings": {i: s["warnings"] for i, s in scans.items() if s["exists"] and s["warnings"]},

@@ -3,7 +3,7 @@ import html
 from seo import LANGS, head_links, robots_meta
 
 
-def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"):
+def render_services(lang, studio, c, s, asset_v, header, footer, slug="services", live=True):
     e = lambda value: html.escape(str(value), quote=True)
     home = "../" * len(slug.split("/"))
     prefix = home + ("../" if lang == "zh" else "")
@@ -16,7 +16,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
         fonts += "&family=Noto+Serif+SC:wght@500;700"
-    extra = head_links(site_url, slug, lang)
+    extra = head_links(site_url, slug, lang, live=live)
     index = "".join(
         f'<li><a href="{e(item.get("href", "#" + item["id"]))}"><span class="svc-no">0{i + 1}</span>'
         f'<span>{e(item["short"])}</span><span class="arr" aria-hidden="true">↗</span></a></li>'
@@ -45,7 +45,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(s['description'])}">
-<meta name="robots" content="{robots_meta(site_url)}">
+<meta name="robots" content="{robots_meta(site_url, live=live)}">
 <meta name="theme-color" content="#F3EFE7">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">

@@ -1,0 +1,107 @@
+{
+  "_readme": "Registry of every built page. status: live = indexable, in sitemap, linkable; draft = built with noindex, not in sitemap, not linked from live pages. content_updated: date (YYYY-MM-DD) of the last substantive content change — bump it only when the page's content materially changes, not for typos, CSS or JS. date_published: set once, the day the page first goes live; never change it afterwards.",
+  "pages": [
+    {
+      "slug": "",
+      "template": "home",
+      "type": "home",
+      "status": "live",
+      "content_updated": "2026-10-07",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "emvalue",
+        "zh": "emvalue"
+      },
+      "parent": ""
+    },
+    {
+      "slug": "services",
+      "template": "services_hub",
+      "type": "services_hub",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "Services",
+        "zh": "业务范围"
+      },
+      "parent": "",
+      "source": "services.json"
+    },
+    {
+      "slug": "services/xiaohongshu",
+      "template": "services_hub",
+      "type": "service",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "Xiaohongshu campaigns",
+        "zh": "小红书推广"
+      },
+      "parent": "services",
+      "source": "promotion.json",
+      "area_served": {
+        "@type": "City",
+        "name": "Melbourne"
+      },
+      "service_type": "Social media marketing"
+    },
+    {
+      "slug": "about",
+      "template": "editorial",
+      "type": "about",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "About",
+        "zh": "关于我们"
+      },
+      "parent": "",
+      "source": "pages.json#about"
+    },
+    {
+      "slug": "privacy",
+      "template": "editorial",
+      "type": "legal",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "Privacy policy",
+        "zh": "隐私政策"
+      },
+      "parent": "",
+      "source": "pages.json#privacy"
+    },
+    {
+      "slug": "terms",
+      "template": "editorial",
+      "type": "legal",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "Website terms",
+        "zh": "网站使用条款"
+      },
+      "parent": "",
+      "source": "pages.json#terms"
+    },
+    {
+      "slug": "project-terms",
+      "template": "editorial",
+      "type": "legal",
+      "status": "live",
+      "content_updated": "2026-10-02",
+      "date_published": "2026-10-05",
+      "breadcrumb": {
+        "en": "Project cooperation terms",
+        "zh": "项目合作条款"
+      },
+      "parent": "",
+      "source": "pages.json#project-terms"
+    }
+  ]
+}

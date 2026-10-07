@@ -3,12 +3,12 @@ import html
 from seo import LANGS, head_links, robots_meta
 
 
-def render_editorial(lang, slug, studio, content, page, asset_v, header, footer):
+def render_editorial(lang, slug, studio, content, page, asset_v, header, footer, live=True):
     e = lambda value: html.escape(str(value), quote=True)
     prefix = "../../" if lang == "zh" else "../"
     title = page["title"] + " — " + studio["name"]
     site_url = (studio.get("site_url") or "").rstrip("/")
-    extra = head_links(site_url, slug, lang)
+    extra = head_links(site_url, slug, lang, live=live)
     fonts = ("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700"
              "&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500")
     if lang == "zh":
@@ -26,7 +26,7 @@ def render_editorial(lang, slug, studio, content, page, asset_v, header, footer)
 <html lang="{LANGS[lang]['html_lang']}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title><meta name="description" content="{e(page['intro'])}">
-<meta name="robots" content="{robots_meta(site_url)}">
+<meta name="robots" content="{robots_meta(site_url, live=live)}">
 <meta name="theme-color" content="#F3EFE7"><meta name="color-scheme" content="light">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(page['intro'])}">{extra}
