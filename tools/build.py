@@ -21,7 +21,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
 from services_page import render_services
 from editorial_page import render_editorial
-from seo import LANGS, head_links, other_lang, page_path, robots_meta
+from seo import LANGS, head_links, json_ld, other_lang, page_path, robots_meta
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
@@ -382,7 +382,7 @@ def industry_chips(c, industries, ind_counts, count):
     return "".join(chips)
 
 
-def render(lang, studio, content, demos, scans, stats, sprite, asset_v, live=True):
+def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry, live=True):
     c = content[lang]
     header, footer = page_chrome(lang, studio, c, is_home=True)
     p = "" if lang == "en" else "../"
@@ -502,6 +502,7 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, live=Tru
 <meta property="og:title" content="{esc(fill(c['title'], **vals))}">
 <meta property="og:description" content="{esc(fill(c['description'], **vals))}">
 {head_extra}
+{json_ld(studio, '', lang, registry, live=live)}
 <link rel="icon" href="{p}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -907,13 +908,13 @@ def main(argv=None):
             target.mkdir(parents=True, exist_ok=True)
             page = page_contents[slug][lang]
             if record["template"] == "home":
-                markup = render(lang, studio, content, demos, scans, stats, sprite, asset_v, live=live)
+                markup = render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry, live=live)
             elif record["template"] == "services_hub":
                 header, footer = page_chrome(lang, studio, content[lang], services_page=True, page_slug=slug)
-                markup = render_services(lang, studio, content[lang], page, asset_v, header, footer, slug, live=live)
+                markup = render_services(lang, studio, content[lang], page, asset_v, header, footer, registry, slug, live=live)
             elif record["template"] == "editorial":
                 header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
-                markup = render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer, live=live)
+                markup = render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer, registry, live=live)
             else:
                 raise ValueError(f"Template not implemented yet: {record['template']}")
             (target / "index.html").write_text(markup, encoding="utf-8")

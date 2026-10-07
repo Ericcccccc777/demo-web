@@ -102,7 +102,7 @@ class Report:
         self.details.append(("WARN", code, detail))
 
     def show(self):
-        for code in ("BUILD", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "W7", "F8", "F9", "F10", "F11", "F12", "W12", "F13", "W14", "PREVIEW", "WORKTREE"):
+        for code in ("BUILD", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "W7", "F8", "F9", "F9S", "F10", "F11", "F12", "W12", "F13", "W14", "PREVIEW", "WORKTREE"):
             passed, failed, warned = self.counts[code]
             print(f"{code}: PASS={passed} FAIL={failed} WARN={warned}")
         for level, code, detail in self.details:
@@ -156,6 +156,49 @@ def is_negated(text, start):
         return True
     words = re.findall(r"[a-z]+(?:['’][a-z]+)?", text[:start].lower())[-3:]
     return bool(set(words) & {"no", "not", "never", "can't", "cannot", "don't", "won't", "can’t", "don’t", "won’t"})
+
+
+def check_structure(values, slug, label, registry, report):
+    """F9S: require the page's graph, rather than merely accepting valid JSON."""
+    nodes = []
+    allowed = {"Organization", "WebSite", "Service", "BreadcrumbList", "Article"}
+    for value in values:
+        graph = value.get("@graph") if isinstance(value, dict) else None
+        valid = isinstance(graph, list) and all(isinstance(node, dict) and
+                    isinstance(node.get("@type"), str) and node["@type"] in allowed for node in graph)
+        report.check("F9S", valid, f"{label}: JSON-LD needs an @graph with allowed top-level types")
+        if valid:
+            nodes.extend(graph)
+    grouped = defaultdict(list)
+    for node in nodes:
+        grouped[node["@type"]].append(node)
+    if slug == "":
+        report.check("F9S", len(grouped["Organization"]) == 1 and len(grouped["WebSite"]) == 1,
+                     f"{label}: homepage needs one Organization and one WebSite")
+    else:
+        report.check("F9S", len(grouped["BreadcrumbList"]) == 1,
+                     f"{label}: non-home page needs one BreadcrumbList")
+        report.check("F9S", not grouped["Organization"], f"{label}: reference Organization without redeclaring it")
+    for breadcrumb in grouped["BreadcrumbList"]:
+        items = breadcrumb.get("itemListElement")
+        report.check("F9S", isinstance(items, list) and bool(items) and all(
+            isinstance(item, dict) and item.get("@type") == "ListItem" and
+            type(item.get("position")) is int and item["position"] == position
+            for position, item in enumerate(items, 1)), f"{label}: breadcrumb positions must start at 1 and be continuous")
+    if registry.get(slug, {}).get("type") in {"service", "industry"}:
+        report.check("F9S", len(grouped["Service"]) == 1, f"{label}: registered service needs one Service")
+    for service in grouped["Service"]:
+        provider = service.get("provider")
+        report.check("F9S", isinstance(provider, dict) and provider.get("@id") == DOMAIN + "/#organization",
+                     f"{label}: Service provider must reference the Organization @id")
+        report.check("F9S", bool(service.get("areaServed")), f"{label}: Service needs areaServed")
+        if slug == "services/xiaohongshu":
+            report.check("F9S", service.get("areaServed") == {"@type": "City", "name": "Melbourne"},
+                         f"{label}: Xiaohongshu areaServed must be City Melbourne")
+    for value in values:
+        for node in walk_json(value):
+            if "offers" in node:
+                report.check("F9S", slug == "services/web-design", f"{label}: offers allowed only on services/web-design")
 
 
 def check_links(page, pages, registry, site, report):
@@ -284,6 +327,7 @@ def check_production(site, registry, legacy, report):
         placeholders = PLACEHOLDER.findall(" ".join(page.text + page.title + page.json_ld) + " " + attribute_text)
         report.check("F8", not placeholders, f"{label}: unresolved placeholders {sorted(set(placeholders))}")
         report.check("F9", live or not page.json_ld, f"{label}: non-live page contains JSON-LD")
+        structured = []
         for script in page.json_ld:
             try:
                 value = json.loads(script)
@@ -291,12 +335,15 @@ def check_production(site, registry, legacy, report):
                 report.check("F9", False, f"{label}: invalid JSON-LD: {exc}")
                 continue
             report.check("F9", True, "")
+            structured.append(value)
             for node in walk_json(value):
                 types = node.get("@type", [])
                 types = [types] if isinstance(types, str) else types
                 report.check("F9", isinstance(types, list) and not (set(types) & FORBIDDEN), f"{label}: forbidden JSON-LD type {types}")
                 if isinstance(types, list) and "Organization" in types:
                     report.check("F9", node.get("@id") == DOMAIN + "/#organization", f"{label}: inconsistent Organization @id")
+        if live:
+            check_structure(structured, page_slug(path, site), label, records, report)
         if not is_404:
             letters = [char for char in " ".join(page.main_text) if char.isalpha()]
             chinese = sum("\u4e00" <= char <= "\u9fff" for char in letters)

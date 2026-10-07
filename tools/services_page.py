@@ -1,9 +1,9 @@
 """Bilingual service page, using the hub's shared layout and design tokens."""
 import html
-from seo import LANGS, head_links, robots_meta
+from seo import LANGS, head_links, json_ld, robots_meta
 
 
-def render_services(lang, studio, c, s, asset_v, header, footer, slug="services", live=True):
+def render_services(lang, studio, c, s, asset_v, header, footer, registry, slug="services", live=True):
     e = lambda value: html.escape(str(value), quote=True)
     home = "../" * len(slug.split("/"))
     prefix = home + ("../" if lang == "zh" else "")
@@ -52,6 +52,7 @@ def render_services(lang, studio, c, s, asset_v, header, footer, slug="services"
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(s['description'])}">
 {extra}
+{json_ld(studio, slug, lang, registry, s['title'], s['description'], live=live)}
 <link rel="icon" href="{prefix}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

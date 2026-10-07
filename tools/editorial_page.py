@@ -1,9 +1,9 @@
 """Shared, bilingual studio and policy pages."""
 import html
-from seo import LANGS, head_links, robots_meta
+from seo import LANGS, head_links, json_ld, robots_meta
 
 
-def render_editorial(lang, slug, studio, content, page, asset_v, header, footer, live=True):
+def render_editorial(lang, slug, studio, content, page, asset_v, header, footer, registry, live=True):
     e = lambda value: html.escape(str(value), quote=True)
     prefix = "../../" if lang == "zh" else "../"
     title = page["title"] + " — " + studio["name"]
@@ -30,6 +30,7 @@ def render_editorial(lang, slug, studio, content, page, asset_v, header, footer,
 <meta name="theme-color" content="#F3EFE7"><meta name="color-scheme" content="light">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(page['intro'])}">{extra}
+{json_ld(studio, slug, lang, registry, page['title'], page['intro'], live=live)}
 <link rel="icon" href="{prefix}favicon.svg?v={asset_v['favicon']}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}&display=swap"><link rel="stylesheet" href="{prefix}assets/hub.css?v={asset_v['css']}">
