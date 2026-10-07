@@ -108,9 +108,9 @@
       "template": "service_detail",
       "source": "pages/services/web-design.json",
       "type": "service",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website design",
         "zh": "网站设计"
@@ -127,9 +127,9 @@
       "template": "service_detail",
       "source": "pages/services/bilingual-websites.json",
       "type": "service",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "English–Chinese websites",
         "zh": "中英双语网站"
@@ -146,9 +146,9 @@
       "template": "service_detail",
       "source": "pages/services/website-redesign.json",
       "type": "service",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website redesign",
         "zh": "网站改版"
@@ -165,9 +165,9 @@
       "template": "service_detail",
       "source": "pages/services/app-development.json",
       "type": "service",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "App development",
         "zh": "App 开发"
@@ -184,9 +184,9 @@
       "template": "service_detail",
       "source": "pages/services/business-tools.json",
       "type": "service",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Business tools",
         "zh": "业务工具"
@@ -203,9 +203,9 @@
       "template": "editorial",
       "source": "pages/guides/website-cost-australia.json",
       "type": "guide",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Website costs",
         "zh": "网站费用"
@@ -217,9 +217,9 @@
       "template": "editorial",
       "source": "pages/work/token-forest.json",
       "type": "case_study",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Token Forest website",
         "zh": "Token Forest 官网"
@@ -231,9 +231,9 @@
       "template": "service_detail",
       "source": "pages/industries/home-services.json",
       "type": "industry",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Tradies and home services",
         "zh": "技工与上门服务"
@@ -250,9 +250,9 @@
       "template": "service_detail",
       "source": "pages/industries/beauty.json",
       "type": "industry",
-      "status": "draft",
+      "status": "live",
       "content_updated": "2026-10-07",
-      "date_published": null,
+      "date_published": "2026-10-07",
       "breadcrumb": {
         "en": "Salons and beauty studios",
         "zh": "美业工作室"
