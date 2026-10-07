@@ -93,6 +93,14 @@
       {
         "slug": "services/business-tools",
         "label": "Business tools"
+      },
+      {
+        "slug": "services/web-design",
+        "label": "Website design"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
       }
     ],
     "cta_body": "Describe the repeated task you want the app to support and who would use it. If you have an initial idea or flow, include it. We can discuss a prototype, the first useful version and the work to quote."
@@ -191,6 +199,14 @@
       {
         "slug": "services/business-tools",
         "label": "业务工具"
+      },
+      {
+        "slug": "services/web-design",
+        "label": "网站设计"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
       }
     ],
     "cta_body": "描述 App 要支持的持续使用场景与使用者。有初步想法或流程也可以提供，一起讨论原型、实用第一版及报价范围。"

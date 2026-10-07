@@ -106,6 +106,14 @@
       {
         "slug": "industries/home-services",
         "label": "Tradies and home-service websites"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "Beauty websites"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
       }
     ],
     "cta_body": "Describe one repeated task and the information involved. Include the systems you use and who needs access. We can discuss the smallest useful first tool, assess connections and prepare a scope for you to review."
@@ -217,6 +225,14 @@
       {
         "slug": "industries/home-services",
         "label": "技工与上门服务网站"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "美业工作室网站"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
       }
     ],
     "cta_body": "描述一项重复任务与涉及的信息，提供现有系统及需要访问的人。讨论最小的实用工具，评估接入并准备可审核的范围。"

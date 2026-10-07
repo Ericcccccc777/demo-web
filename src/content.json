@@ -142,41 +142,48 @@
           "title": "One-page sites",
           "body": "For sole traders and new ventures. Everything a customer needs on one fast page: what you do, where, when, and how to reach you.",
           "good": "Tradies, freelancers, pop-ups",
-          "link": "?mood=minimal"
+          "link": "?mood=minimal",
+          "detail": "services/web-design/"
         },
         {
           "title": "Small business websites",
           "body": "A handful of well-made pages — services, prices, gallery, about, contact. Clear for first-time visitors, easy to keep up to date.",
           "good": "Clinics, salons, cafés, studios",
-          "link": "?industry=health"
+          "link": "?industry=health",
+          "detail": "services/web-design/"
         },
         {
           "title": "Bookings & enquiries",
           "body": "Lesson slots, appointments, tables and quotes. We connect a booking tool you trust, or build a simple enquiry flow that lands in your inbox.",
           "good": "Driving schools, trainers, beauty",
-          "link": "?feature=booking"
+          "link": "?feature=booking",
+          "detail": "services/web-design/"
         },
         {
           "title": "Menus, ordering & small shops",
           "body": "Menus that are easy to change, order-ahead and small product ranges — connected to proven platforms rather than home-made checkouts.",
           "good": "Restaurants, bakeries, makers",
-          "link": "?feature=ordering"
+          "link": "?feature=ordering",
+          "detail": "services/web-design/"
         },
         {
           "title": "Bilingual sites · 双语网站",
           "body": "English and Chinese side by side, each written for its readers rather than machine-translated. Right-to-left languages too.",
           "good": "Businesses serving more than one community",
-          "link": "?feature=bilingual"
+          "link": "?feature=bilingual",
+          "detail": "services/bilingual-websites/"
         },
         {
           "title": "Care after launch",
           "body": "Domain and hosting set up in your name, small updates when you need them, and a plain-English guide for changing the basics yourself.",
           "good": "Everyone who'd rather be running their business",
           "link": "#contact",
-          "cta": "Ask about care"
+          "cta": "Ask about care",
+          "detail": "services/web-design/#care"
         }
       ],
-      "more": "Explore all services — websites, apps & business tools"
+      "more": "Explore all services — websites, apps & business tools",
+      "detail_label": "About this service"
     },
     "process": {
       "eyebrow": "How it works",
@@ -400,7 +407,9 @@
       "project_terms": "Project terms",
       "policies": "Policies and terms",
       "explore": "Explore",
-      "contact": "Let’s talk"
+      "contact": "Let’s talk",
+      "website_costs": "Website costs",
+      "token_forest": "Case study: Token Forest website"
     },
     "industries": {
       "food": "Food & Drink",
@@ -593,41 +602,48 @@
           "title": "单页网站",
           "body": "适合个体经营和刚起步的生意。客人需要的一切都在一页里：做什么、在哪、什么时候营业、怎么联系你。",
           "good": "装修师傅、自由职业者、快闪店",
-          "link": "?mood=minimal"
+          "link": "?mood=minimal",
+          "detail": "services/web-design/"
         },
         {
           "title": "小生意官网",
           "body": "几页精心做好的页面：服务、价格、作品、关于、联系。第一次来的人看得懂，你自己也好维护。",
           "good": "诊所、美容美发、咖啡馆、工作室",
-          "link": "?industry=health"
+          "link": "?industry=health",
+          "detail": "services/web-design/"
         },
         {
           "title": "预约与咨询",
           "body": "练车时段、预约、订位、报价。接入你信得过的预约工具，或者做一个直接进你邮箱的咨询流程。",
           "good": "驾校、健身教练、美业",
-          "link": "?feature=booking"
+          "link": "?feature=booking",
+          "detail": "services/web-design/"
         },
         {
           "title": "菜单、点单与小网店",
           "body": "容易修改的菜单、提前点单、少量商品——接入成熟的平台，而不是自己拼凑结账系统。",
           "good": "餐厅、面包店、手作品牌",
-          "link": "?feature=ordering"
+          "link": "?feature=ordering",
+          "detail": "services/web-design/"
         },
         {
           "title": "中英双语网站",
           "body": "中文和英文分别为各自的读者来写，而不是机器翻译。阿拉伯语等从右到左的语言也可以。",
           "good": "服务不止一个社群的生意",
-          "link": "?feature=bilingual"
+          "link": "?feature=bilingual",
+          "detail": "services/bilingual-websites/"
         },
         {
           "title": "上线后的照顾",
           "body": "域名和主机注册在你名下，需要时帮你做小改动，再附一份看得懂的说明，基础内容你自己也能改。",
           "good": "所有更想专心做生意的人",
           "link": "#contact",
-          "cta": "咨询上线后的照顾"
+          "cta": "咨询上线后的照顾",
+          "detail": "services/web-design/#care"
         }
       ],
-      "more": "了解全部服务：网站、App 与业务工具"
+      "more": "了解全部服务：网站、App 与业务工具",
+      "detail_label": "了解这项服务"
     },
     "process": {
       "eyebrow": "流程",
@@ -851,7 +867,9 @@
       "project_terms": "合作条款",
       "policies": "政策与条款",
       "explore": "探索 emvalue",
-      "contact": "聊聊你的项目"
+      "contact": "聊聊你的项目",
+      "website_costs": "网站费用指南",
+      "token_forest": "案例：Token Forest 官网"
     },
     "industries": {
       "food": "餐饮",

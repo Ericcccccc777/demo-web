@@ -1,6 +1,23 @@
 """Bilingual service page, using the hub's shared layout and design tokens."""
 import html
+import posixpath
+from urllib.parse import urlsplit
 from seo import LANGS, head_links, json_ld, robots_meta
+
+
+def live_internal_href(registry, href, base_slug=""):
+    """Keep a relative internal link only when its destination is registered live."""
+    if not isinstance(href, str) or not href:
+        return None
+    target = urlsplit(href)
+    if target.scheme or target.netloc:
+        return None
+    path = (target.path.lstrip("/") if target.path.startswith("/")
+            else posixpath.join(base_slug, target.path))
+    slug = posixpath.normpath(path).strip("/")
+    if slug == ".":
+        slug = ""
+    return href if registry.get(slug, {}).get("status") == "live" else None
 
 
 def render_services(lang, studio, c, s, asset_v, header, footer, registry, slug="services", live=True):
@@ -17,18 +34,19 @@ def render_services(lang, studio, c, s, asset_v, header, footer, registry, slug=
     if lang == "zh":
         fonts += "&family=Noto+Serif+SC:wght@500;700"
     extra = head_links(site_url, slug, lang, live=live)
+    items = [(item, live_internal_href(registry, item.get("href"), slug)) for item in s["items"]]
     index = "".join(
-        f'<li><a href="{e(item.get("href", "#" + item["id"]))}"><span class="svc-no">0{i + 1}</span>'
+        f'<li><a href="{e(href or "#" + item["id"])}"><span class="svc-no">0{i + 1}</span>'
         f'<span>{e(item["short"])}</span><span class="arr" aria-hidden="true">↗</span></a></li>'
-        for i, item in enumerate(s["items"]))
+        for i, (item, href) in enumerate(items))
     services = "".join(
-        f'<li class="svc{" svc-featured" if item.get("href") else ""}" id="{e(item["id"])}"><span class="svc-no">0{i + 1}</span>'
+        f'<li class="svc{" svc-featured" if href else ""}" id="{e(item["id"])}"><span class="svc-no">0{i + 1}</span>'
         f'<h3>{e(item["title"])}</h3><p>{e(item["body"])}</p>'
         f'<ul class="scope-points">{"".join("<li>" + e(point) + "</li>" for point in item["points"])}</ul>'
         f'<p class="svc-good">{e(item["for"])}</p>'
-        + (f'<a class="text-link" href="{e(item["href"])}">{e(item["link_label"])} <span aria-hidden="true">→</span></a>' if item.get("href") else "")
+        + (f'<a class="text-link" href="{e(href)}">{e(item["link_label"])} <span aria-hidden="true">→</span></a>' if href else "")
         + '</li>'
-        for i, item in enumerate(s["items"]))
+        for i, (item, href) in enumerate(items))
     steps = "".join(
         f'<li class="step"><span class="step-no">{i + 1}</span><h3>{e(item["title"])}</h3><p>{e(item["body"])}</p></li>'
         for i, item in enumerate(s["process"]["items"]))

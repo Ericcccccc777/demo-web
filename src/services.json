@@ -34,7 +34,9 @@
           "Services, menus, projects and contact information organised clearly",
           "Content editing and search basics planned into the build"
         ],
-        "for": "New businesses, local shops, independent professionals"
+        "for": "New businesses, local shops, independent professionals",
+        "href": "web-design/",
+        "link_label": "Explore website design"
       },
       {
         "id": "upgrades",
@@ -46,7 +48,9 @@
           "Refreshed content, visuals and page structure",
           "Migration and existing page addresses considered before launch"
         ],
-        "for": "Established businesses, rebrands, outgrown websites"
+        "for": "Established businesses, rebrands, outgrown websites",
+        "href": "website-redesign/",
+        "link_label": "Explore website redesign"
       },
       {
         "id": "connections",
@@ -58,7 +62,9 @@
           "Product catalogues, menus and hosted checkout connections",
           "Tool compatibility and ongoing platform fees agreed upfront"
         ],
-        "for": "Salons, restaurants, classes, small retailers"
+        "for": "Salons, restaurants, classes, small retailers",
+        "href": "web-design/#bookings",
+        "link_label": "Explore bookings and ordering"
       },
       {
         "id": "apps",
@@ -70,7 +76,9 @@
           "iOS, Android or a web app, chosen after a feasibility review",
           "Development, testing, release support and maintenance scoped separately"
         ],
-        "for": "Businesses with repeat-use needs, new product ideas"
+        "for": "Businesses with repeat-use needs, new product ideas",
+        "href": "app-development/",
+        "link_label": "Explore app development"
       },
       {
         "id": "tools",
@@ -82,7 +90,9 @@
           "Forms, data workflows and integrations with existing services",
           "Access, data handling and handover planned from the start"
         ],
-        "for": "Service teams, growing businesses, manual workflows"
+        "for": "Service teams, growing businesses, manual workflows",
+        "href": "business-tools/",
+        "link_label": "Explore business tools"
       },
       {
         "id": "care",
@@ -94,7 +104,9 @@
           "Hosting setup, content updates and agreed maintenance",
           "Account ownership, editing guidance and a clear handover"
         ],
-        "for": "Bilingual businesses, existing websites, ongoing support"
+        "for": "Bilingual businesses, existing websites, ongoing support",
+        "href": "bilingual-websites/",
+        "link_label": "Explore bilingual websites"
       },
       {
         "id": "xiaohongshu",
@@ -228,7 +240,9 @@
           "清楚组织服务、菜单、作品与联系信息",
           "按需要规划内容编辑方式与搜索基础"
         ],
-        "for": "新开商家、本地店铺、独立专业人士"
+        "for": "新开商家、本地店铺、独立专业人士",
+        "href": "web-design/",
+        "link_label": "了解网站设计服务"
       },
       {
         "id": "upgrades",
@@ -240,7 +254,9 @@
           "更新品牌视觉、文案及页面结构",
           "上线前规划内容迁移与原有页面地址衔接"
         ],
-        "for": "已有官网、品牌升级、业务扩展"
+        "for": "已有官网、品牌升级、业务扩展",
+        "href": "website-redesign/",
+        "link_label": "了解网站改版服务"
       },
       {
         "id": "connections",
@@ -252,7 +268,9 @@
           "商品展示、在线菜单及支付平台接入",
           "提前确认工具兼容性与后续平台费用"
         ],
-        "for": "美业、餐饮、课程、小型零售"
+        "for": "美业、餐饮、课程、小型零售",
+        "href": "web-design/#bookings",
+        "link_label": "了解预约与点单接入"
       },
       {
         "id": "apps",
@@ -264,7 +282,9 @@
           "评估后选择 iOS、Android 或网页应用",
           "分别明确开发、测试、发布支持与维护范围"
         ],
-        "for": "有持续使用需求的商家、新产品想法"
+        "for": "有持续使用需求的商家、新产品想法",
+        "href": "app-development/",
+        "link_label": "了解 App 开发服务"
       },
       {
         "id": "tools",
@@ -276,7 +296,9 @@
           "表单、数据流程及现有服务集成",
           "提前规划权限、数据处理与交接方式"
         ],
-        "for": "服务团队、成长型企业、重复手工作业"
+        "for": "服务团队、成长型企业、重复手工作业",
+        "href": "business-tools/",
+        "link_label": "了解业务工具服务"
       },
       {
         "id": "care",
@@ -288,7 +310,9 @@
           "主机配置、内容更新及约定范围的维护",
           "账户归属、编辑说明与完整交接"
         ],
-        "for": "双语商家、已有网站、长期更新需求"
+        "for": "双语商家、已有网站、长期更新需求",
+        "href": "bilingual-websites/",
+        "link_label": "了解中英双语网站"
       },
       {
         "id": "xiaohongshu",

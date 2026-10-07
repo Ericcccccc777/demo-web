@@ -19,7 +19,7 @@ import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse, quote
-from services_page import render_services
+from services_page import live_internal_href, render_services
 from editorial_page import render_editorial
 from service_detail_page import render_service_detail
 from seo import LANGS, head_links, json_ld, other_lang, page_path, robots_meta
@@ -315,7 +315,7 @@ def hero_box(demos, c, p, sprite):
             f'<span class="tile-tip" hidden></span></div>')
 
 
-def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=False):
+def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=False, registry=None):
     """Shared navigation, including correctly paired language and policy links.
 
     is_home: the hub itself — navigation scrolls within the page and the header gets the phone menu button."""
@@ -357,13 +357,20 @@ def page_chrome(lang, studio, c, services_page=False, page_slug="", is_home=Fals
                     if studio.get("email") else "")
     policy_links = "".join(f'<a href="{home}{path}/"' + (' aria-current="page"' if path == slug else '') + f'>{esc(c["footer"][label])}</a>'
                            for path, label in (("privacy", "privacy"), ("terms", "terms"), ("project-terms", "project_terms")))
+    resource_links = "".join(
+        f'<a href="{home}{target}">{esc(c["footer"][label])}'
+        + (' <span aria-hidden="true">↗</span>' if is_home else '') + '</a>'
+        for target, label in (("guides/website-cost-australia/", "website_costs"), ("work/token-forest/", "token_forest"))
+        if live_internal_href(registry or {}, target))
     if is_home:
         footer_links = ("".join(section_links.values())
                         + f'<a href="services/">{esc(c["nav"]["all_services"])} <span aria-hidden="true">↗</span></a>'
                         + f'<a href="about/">{esc(c["footer"]["about"])} <span aria-hidden="true">↗</span></a>'
+                        + resource_links
                         + f'<a href="#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">→</span></a>')
     else:
         footer_links = (links + f'<a href="{home}about/">{esc(c["footer"]["about"])}</a>'
+                        + resource_links
                         + f'<a href="{home}#contact">{esc(c["nav"]["cta"])} <span aria-hidden="true">↗</span></a>')
     foot_brand_label = home_label if is_home else name
     footer = f'''<footer class="foot">
@@ -404,7 +411,7 @@ def industry_chips(c, industries, ind_counts, count):
 
 def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry, live=True):
     c = content[lang]
-    header, footer = page_chrome(lang, studio, c, is_home=True)
+    header, footer = page_chrome(lang, studio, c, is_home=True, registry=registry)
     p = "" if lang == "en" else "../"
     name = studio["name"]
     count = stats["count"]
@@ -433,8 +440,14 @@ def render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry
     def service_link(s):
         # "#contact" scrolls within the page; "?filter" links still work without JavaScript
         if s["link"].startswith("#"):
-            return f'<a class="text-link" href="{esc(s["link"])}">{esc(s.get("cta") or c["services"]["examples"])} {ARROW}</a>'
-        return f'<a class="text-link" href="{esc(s["link"] + "#box")}" data-filter-link>{esc(c["services"]["examples"])} {ARROW}</a>'
+            existing = f'<a class="text-link" href="{esc(s["link"])}">{esc(s.get("cta") or c["services"]["examples"])} {ARROW}</a>'
+        else:
+            existing = f'<a class="text-link" href="{esc(s["link"] + "#box")}" data-filter-link>{esc(c["services"]["examples"])} {ARROW}</a>'
+        detail = live_internal_href(registry, s.get("detail"))
+        if not detail:
+            return existing
+        return (f'<div class="hero-ctas">{existing}'
+                f'<a class="text-link" href="{esc(detail)}">{esc(c["services"]["detail_label"])} {ARROW}</a></div>')
     services = "".join(
         f'<li class="svc"><span class="svc-no">0{i + 1}</span><h3>{esc(s["title"])}</h3><p>{esc(s["body"])}</p>'
         f'<p class="svc-good">{esc(s["good"])}</p>{service_link(s)}</li>'
@@ -934,13 +947,13 @@ def main(argv=None):
             if record["template"] == "home":
                 markup = render(lang, studio, content, demos, scans, stats, sprite, asset_v, registry, live=live)
             elif record["template"] == "services_hub":
-                header, footer = page_chrome(lang, studio, content[lang], services_page=True, page_slug=slug)
+                header, footer = page_chrome(lang, studio, content[lang], services_page=True, page_slug=slug, registry=registry)
                 markup = render_services(lang, studio, content[lang], page, asset_v, header, footer, registry, slug, live=live)
             elif record["template"] == "editorial":
-                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
+                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug, registry=registry)
                 markup = render_editorial(lang, slug, studio, content[lang], page, asset_v, header, footer, registry, live=live)
             elif record["template"] == "service_detail":
-                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug)
+                header, footer = page_chrome(lang, studio, content[lang], page_slug=slug, registry=registry)
                 entry = dict(record, _registry=registry, _demos={d["id"]: d for d in demos}, _scans=scans)
                 markup = render_service_detail(lang, studio, content[lang], page, entry, asset_v, header, footer,
                                                studio.get("site_url") or "", dict(name=studio["name"], **pricing_values))

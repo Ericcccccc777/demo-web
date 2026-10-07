@@ -112,15 +112,19 @@
     "related": [
       {
         "slug": "services/bilingual-websites",
-        "label": "English–Chinese websites"
+        "label": "Bilingual websites"
       },
       {
-        "slug": "services/website-redesign",
-        "label": "Website redesign"
+        "slug": "industries/home-services",
+        "label": "Tradie websites"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "Beauty websites"
       },
       {
         "slug": "guides/website-cost-australia",
-        "label": "Website cost guide"
+        "label": "Website costs"
       }
     ],
     "cta_title": "Tell us what your website needs to do",
@@ -242,8 +246,12 @@
         "label": "中英双语网站"
       },
       {
-        "slug": "services/website-redesign",
-        "label": "网站改版"
+        "slug": "industries/home-services",
+        "label": "技工与上门服务网站"
+      },
+      {
+        "slug": "industries/beauty",
+        "label": "美业工作室网站"
       },
       {
         "slug": "guides/website-cost-australia",

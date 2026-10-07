@@ -113,6 +113,10 @@
       {
         "slug": "services/bilingual-websites",
         "label": "English–Chinese websites"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "Website cost guide"
       }
     ],
     "cta_body": "Send your current service and price list, booking platform, work images, location and hours. Tell us which languages your clients use. We can discuss a clear page structure, assess the booking route and prepare a written proposal."
@@ -231,6 +235,10 @@
       {
         "slug": "services/bilingual-websites",
         "label": "中英双语网站"
+      },
+      {
+        "slug": "guides/website-cost-australia",
+        "label": "网站费用指南"
       }
     ],
     "cta_body": "提供现有服务价目、预约平台、作品图片、位置和营业时间，也说明顾客使用哪些语言。一起整理页面结构，评估预约入口，再准备书面方案。"

@@ -95,6 +95,10 @@
         "label": "Website design"
       },
       {
+        "slug": "services/bilingual-websites",
+        "label": "Bilingual websites"
+      },
+      {
         "slug": "guides/website-cost-australia",
         "label": "Website cost guide"
       }
@@ -195,6 +199,10 @@
       {
         "slug": "services/web-design",
         "label": "网站设计"
+      },
+      {
+        "slug": "services/bilingual-websites",
+        "label": "中英双语网站"
       },
       {
         "slug": "guides/website-cost-australia",
